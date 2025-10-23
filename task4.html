@@ -1,53 +1,207 @@
-<!DOCTYPE html>
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex));
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarea 4 SIELE S4: Monólogo</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+      
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            text-align: center;
+            background: linear-gradient(to bottom, #000000, #0a0a0a);
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            overflow: auto;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyYWRpYWxHcmFkaWVudCBpZD0iZ3JhZCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzAwMDAwMDsiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3R5bGU9InN0b3AtY29sb3I6IzAwMDAwMDtvcGFjaXR5OjAuNSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6IzAwMDAwMDsiLz48L3JhZGlhbEdyYWRpZW50PjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiLz48L3N2Zz4=') repeat;
+            opacity: 0.1;
+            z-index: -1;
+        }
+        header {
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1DA1F2;
+            margin: 0;
+        }
+        select {
+            padding: 8px;
+            background: #FFFFFF;
+            color: #000000;
+            border-radius: 8px;
+            font-size: 12px;
+            border: none;
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 10px;
+        }
+        #generate-button, #assign-feeling, #suggest-button {
+            padding: 8px 16px;
+            background: #FFFFFF;
+            color: #000000;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 5px 0;
+        }
+        #generate-button:hover, #assign-feeling:hover, #suggest-button:hover {
+            background: #1DA1F2;
+            color: #FFFFFF;
+        }
+        #monologue-category, #monologue-prompt {
+            font-size: 14px;
+            color: #E0E0E0;
+            margin: 10px 0;
+        }
+        #feeling-output p {
+            font-size: 14px;
+            color: #E0E0E0;
+            margin: 10px 0;
+        }
+        #suggest-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            align-items: center;
+            justify-content: center;
+        }
+        #suggest-modal div {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid #1DA1F2;
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 400px;
+        }
+        #suggest-category {
+            width: 100%;
+            padding: 8px;
+            background: #FFFFFF;
+            color: #000000;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        #suggest-prompt {
+            width: 100%;
+            height: 100px;
+            padding: 8px;
+            background: #FFFFFF;
+            color: #000000;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        #submit-suggest, #close-suggest {
+            padding: 8px 16px;
+            background: #FFFFFF;
+            color: #000000;
+            border-radius: 50px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        #submit-suggest:hover, #close-suggest:hover {
+            background: #1DA1F2;
+            color: #FFFFFF;
+        }
+        @media (max-width: 767px) {
+            body {
+                padding: 20px 10px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            select, #generate-button, #assign-feeling, #suggest-button {
+                font-size: 11px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div id="header-placeholder">Loading header...</div>
+    <header>
+        <h1>Tarea 4 SIELE S4: Monólogo</h1>
+    </header>
     
-    <div class="content-card">
-        <p>Para la Tarea 4 del SIELE S4, el estudiante presenta un monólogo en español, practicando expresión oral sostenida.</p>
-        
-        <div class="tab-buttons">
-            <button class="tab-button active" data-tab="instructions">Instrucciones</button>
-            <button class="tab-button" data-tab="practice">Práctica</button>
-        </div>
-        
-        <div id="tab-instructions" class="tab-content active">
-            <h2>Instrucciones</h2>
-            <p>En esta tarea, generas un monólogo basado en un prompt. Elige una categoría, genera un prompt, asigna un feeling y practica hablando usando el temporizador.</p>
-            <ul>
-                <li>Selecciona una categoría o usa todas.</li>
-                <li>Genera un prompt aleatorio.</li>
-                <li>Asigna un feeling aleatorio.</li>
-                <li>Usa el micrófono y temporizador para grabar y practicar.</li>
-            </ul>
-        </div>
-        
-        <div id="tab-practice" class="tab-content">
-            <h2>Práctica</h2>
-            <select id="category-select">
-                <option value="">Todas las categorías</option>
-            </select>
-            <button id="generate-button">Generar Prompt</button>
-            <p id="monologue-category"></p>
-            <p id="monologue-prompt"></p>
-            <button id="assign-feeling">Asignar Feeling</button>
-            <div id="feeling-output"></div>
-            <button id="suggest-button">Sugerir Nuevo Prompt</button>
-        </div>
-        
-        <div id="suggest-modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); align-items: center; justify-content: center;">
-            <div style="background-color: rgba(255, 255, 255, 0.05); border: 1px solid #1DA1F2; border-radius: 15px; padding: 20px; max-width: 400px; width: 90%;">
-                <select id="suggest-category" style="width: 100%; padding: 8px; margin-bottom: 10px; background: #1a1a1a; color: white; border: 1px solid #1DA1F2; border-radius: 8px;"></select>
-                <textarea id="suggest-prompt" placeholder="Escribe el prompt..." style="width: 100%; height: 100px; margin: 10px 0; padding: 8px; background: #1a1a1a; color: white; border: 1px solid #1DA1F2; border-radius: 8px; font-family: 'Inter', sans-serif;"></textarea>
-                <button id="submit-suggest" style="background: #1DA1F2; color: black; padding: 8px 16px; border: none; border-radius: 50px; font-weight: bold; cursor: pointer; margin-right: 8px;">Enviar</button>
-                <button id="close-suggest" style="background: #FFFFFF; color: black; padding: 8px 16px; border: none; border-radius: 50px; font-weight: bold; cursor: pointer;">Cerrar</button>
-            </div>
+    <p style="font-size: 14px; color: #E0E0E0; max-width: 600px; margin: 0 auto 20px;">Genera un monólogo: elige categoría, genera prompt, asigna feeling y practica con el temporizador.</p>
+    
+    <select id="category-select">
+        <option value="">Todas las categorías</option>
+    </select>
+    <button id="generate-button">Generar Prompt</button>
+    <p id="monologue-category"></p>
+    <p id="monologue-prompt"></p>
+    <button id="assign-feeling">Asignar Feeling</button>
+    <div id="feeling-output"></div>
+    <button id="suggest-button">Sugerir Nuevo Prompt</button>
+    
+    <div id="suggest-modal">
+        <div>
+            <select id="suggest-category"></select>
+            <textarea id="suggest-prompt" placeholder="Escribe el prompt..."></textarea>
+            <button id="submit-suggest">Enviar</button>
+            <button id="close-suggest">Cerrar</button>
         </div>
     </div>
     
@@ -136,7 +290,7 @@
         
         submitSuggest.addEventListener('click', () => {
             const category = document.getElementById('suggest-category').value;
-            const prompt = document.getElementById('suggest-prompt').value.trim();
+            const prompt = document.getElementById('suggest-prompt').value;
             if (category && prompt) {
                 alert(`Sugerencia enviada: Categoría: ${category}, Prompt: ${prompt}`);
                 suggestModal.style.display = 'none';
@@ -147,24 +301,15 @@
         });
         
         assignFeeling.addEventListener('click', () => {
-            if (!currentItem || !currentItem.emotions.length) {
+            if (!currentItem) {
                 alert('Genera un prompt primero para asignar feeling.');
                 return;
             }
             const randomIndex = Math.floor(Math.random() * currentItem.emotions.length);
             const feeling = currentItem.emotions[randomIndex];
-            feelingOutput.innerHTML = `<p>Feeling: ${feeling}</p>`;
-        });
-        
-        const tabButtons = document.querySelectorAll('.tab-button');
-        const tabContents = document.querySelectorAll('.tab-content');
-        tabButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                tabButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-                tabContents.forEach(content => content.classList.remove('active'));
-                document.getElementById(`tab-${button.dataset.tab}`).classList.add('active');
-            });
+            feelingOutput.innerHTML = `
+                <p>Feeling: ${feeling}</p>
+            `;
         });
         
         window.addEventListener('load', () => {
