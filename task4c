@@ -1,0 +1,336 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex));
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 4 SIELE S4: Monólogo</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+      
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            text-align: center;
+            background: linear-gradient(to bottom, #000000, #0a0a0a);
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            overflow: auto;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyYWRpYWxHcmFkaWVudCBpZD0iZ3JhZCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzAwMDAwMDsiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3R5bGU9InN0b3AtY29sb3I6IzAwMDAwMDtvcGFjaXR5OjAuNSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6IzAwMDAwMDsiLz48L3JhZGlhbEdyYWRpZW50PjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiLz48L3N2Zz4=') repeat;
+            opacity: 0.1;
+            z-index: -1;
+        }
+        header {
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1DA1F2;
+            margin: 0;
+        }
+        select {
+            padding: 8px;
+            background: #FFFFFF;
+            color: #000000;
+            border-radius: 8px;
+            font-size: 12px;
+            border: none;
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 10px;
+        }
+        #generate-button, #assign-feeling, #suggest-button {
+            padding: 8px 16px;
+            background: #FFFFFF;
+            color: #000000;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 5px 0;
+        }
+        #generate-button:hover, #assign-feeling:hover, #suggest-button:hover {
+            background: #1DA1F2;
+            color: #FFFFFF;
+        }
+        #monologue-category, #monologue-prompt {
+            font-size: 14px;
+            color: #E0E0E0;
+            margin: 10px 0;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid #1DA1F2;
+            border-radius: 12px;
+            max-width: 560px;
+            text-align: left;
+            line-height: 1.5;
+            white-space: pre-wrap;
+        }
+        #feeling-output p {
+            font-size: 14px;
+            color: #E0E0E0;
+            margin: 10px 0;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid #1DA1F2;
+            border-radius: 12px;
+            max-width: 560px;
+            text-align: left;
+        }
+        #suggest-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            align-items: center;
+            justify-content: center;
+        }
+        #suggest-modal div {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid #1DA1F2;
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 400px;
+        }
+        #suggest-category {
+            width: 100%;
+            padding: 8px;
+            background: #FFFFFF;
+            color: #000000;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        #suggest-prompt {
+            width: 100%;
+            height: 100px;
+            padding: 8px;
+            background: #FFFFFF;
+            color: #000000;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        #submit-suggest, #close-suggest {
+            padding: 8px 16px;
+            background: #FFFFFF;
+            color: #000000;
+            border-radius: 50px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        #submit-suggest:hover, #close-suggest:hover {
+            background: #1DA1F2;
+            color: #FFFFFF;
+        }
+        @media (max-width: 767px) {
+            body {
+                padding: 20px 10px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            select, #generate-button, #assign-feeling, #suggest-button {
+                font-size: 11px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tarea 4 SIELE S4: Monólogo</h1>
+    </header>
+    
+    <p style="font-size: 14px; color: #E0E0E0; max-width: 600px; margin: 0 auto 20px;">Genera un monólogo: elige categoría, genera prompt, asigna feeling y practica con el temporizador.</p>
+    
+    <select id="category-select">
+        <option value="">Todas las categorías</option>
+    </select>
+    <button id="generate-button">Generar Prompt</button>
+    <p id="monologue-category"></p>
+    <p id="monologue-prompt"></p>
+    <button id="assign-feeling">Asignar Feeling</button>
+    <div id="feeling-output"></div>
+    <button id="suggest-button">Sugerir Nuevo Prompt</button>
+    
+    <div id="suggest-modal">
+        <div>
+            <select id="suggest-category"></select>
+            <textarea id="suggest-prompt" placeholder="Escribe el prompt..."></textarea>
+            <button id="submit-suggest">Enviar</button>
+            <button id="close-suggest">Cerrar</button>
+        </div>
+    </div>
+    
+    <div id="footer-placeholder">Loading footer...</div>
+
+    <script async src="https://tally.so/widgets/embed.js"></script>
+    <script src="common.js"></script>
+    <script>
+        const taskName = 'Tarea 4 SIELE S4';
+
+        const categorySelect = document.getElementById('category-select');
+        const generateButton = document.getElementById('generate-button');
+        const monologueCategory = document.getElementById('monologue-category');
+        const monologuePrompt = document.getElementById('monologue-prompt');
+        const suggestButton = document.getElementById('suggest-button');
+        const suggestModal = document.getElementById('suggest-modal');
+        const submitSuggest = document.getElementById('submit-suggest');
+        const closeSuggest = document.getElementById('close-suggest');
+        const assignFeeling = document.getElementById('assign-feeling');
+        const feelingOutput = document.getElementById('feeling-output');
+        let monologueData = [];
+        let uniqueCategories = [];
+        let currentItem = null;
+        
+        async function loadMonologueTopics() {
+            try {
+                const response = await fetch('monologuetopics.csv');
+                const csvText = await response.text();
+                const lines = csvText.trim().split('\n').slice(1);
+                monologueData = lines.map(line => {
+                    const parts = line.split(',');
+                    const category = parts[0].trim();
+                    const prompt = parts[1].trim();
+                    const emotions = parts.slice(2).map(e => e.trim()).filter(e => e !== '');
+                    return { category, prompt, emotions };
+                }).filter(item => item.category && item.prompt); // Remove invalid rows
+                uniqueCategories = [...new Set(monologueData.map(item => item.category))];
+                uniqueCategories.forEach(cat => {
+                    const option = document.createElement('option');
+                    option.value = cat;
+                    option.textContent = cat;
+                    categorySelect.appendChild(option);
+                });
+                const suggestCategory = document.getElementById('suggest-category');
+                uniqueCategories.forEach(cat => {
+                    const option = document.createElement('option');
+                    option.value = cat;
+                    option.textContent = cat;
+                    suggestCategory.appendChild(option);
+                });
+            } catch (error) {
+                console.error('Error loading CSV:', error);
+                monologueCategory.textContent = 'Error al cargar las categorías.';
+            }
+        }
+        
+        function generatePrompt() {
+            const selectedCategory = categorySelect.value;
+            let filteredPrompts = selectedCategory ? monologueData.filter(item => item.category === selectedCategory) : monologueData;
+            if (filteredPrompts.length === 0) {
+                monologueCategory.textContent = 'No hay prompts disponibles en esta categoría.';
+                monologuePrompt.textContent = '';
+                currentItem = null;
+                feelingOutput.innerHTML = '';
+                return;
+            }
+            currentItem = filteredPrompts[Math.floor(Math.random() * filteredPrompts.length)];
+            monologueCategory.textContent = `Categoría: ${currentItem.category}`;
+            monologuePrompt.textContent = currentItem.prompt;
+            feelingOutput.innerHTML = '';
+        }
+        
+        suggestButton.addEventListener('click', () => {
+            suggestModal.style.display = 'flex';
+        });
+        
+        closeSuggest.addEventListener('click', () => {
+            suggestModal.style.display = 'none';
+        });
+        
+        suggestModal.addEventListener('click', (e) => {
+            if (e.target === suggestModal) {
+                suggestModal.style.display = 'none';
+            }
+        });
+        
+        submitSuggest.addEventListener('click', () => {
+            const category = document.getElementById('suggest-category').value;
+            const prompt = document.getElementById('suggest-prompt').value.trim();
+            if (category && prompt) {
+                alert(`Sugerencia enviada: Categoría: ${category}, Prompt: ${prompt}`);
+                suggestModal.style.display = 'none';
+                document.getElementById('suggest-prompt').value = '';
+            } else {
+                alert('Por favor, selecciona una categoría y escribe un prompt.');
+            }
+        });
+        
+        assignFeeling.addEventListener('click', () => {
+            if (!currentItem || currentItem.emotions.length === 0) {
+                alert('Genera un prompt primero para asignar feeling.');
+                return;
+            }
+            const randomIndex = Math.floor(Math.random() * currentItem.emotions.length);
+            const feeling = currentItem.emotions[randomIndex];
+            feelingOutput.innerHTML = `<p>Feeling: ${feeling}</p>`;
+        });
+        
+        generateButton.addEventListener('click', generatePrompt); // Fixed: Add event listener
+        
+        window.addEventListener('load', () => {
+            loadIncludes();
+            loadMonologueTopics();
+            window.addEventListener('resize', handleResponsive);
+        });
+    </script>
+</body>
+</html>
