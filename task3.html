@@ -1,48 +1,10 @@
-<script type="text/javascript">
-        var gk_isXlsx = false;
-        var gk_xlsxFileLookup = {};
-        var gk_fileData = {};
-        function filledCell(cell) {
-          return cell !== '' && cell != null;
-        }
-        function loadFileData(filename) {
-        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
-            try {
-                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
-                var firstSheetName = workbook.SheetNames[0];
-                var worksheet = workbook.Sheets[firstSheetName];
-
-                // Convert sheet to JSON to filter blank rows
-                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
-                // Filter out blank rows (rows where all cells are empty, null, or undefined)
-                var filteredData = jsonData.filter(row => row.some(filledCell));
-
-                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
-                var headerRowIndex = filteredData.findIndex((row, index) =>
-                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
-                );
-                // Fallback
-                if (headerRowIndex === -1 || headerRowIndex > 25) {
-                  headerRowIndex = 0;
-                }
-
-                // Convert filtered JSON back to CSV
-                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
-                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
-                return csv;
-            } catch (e) {
-                console.error(e);
-                return "";
-            }
-        }
-        return gk_fileData[filename] || "";
-        }
-        </script><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarea 3 SIELE S4: Diálogo de Rol</title>
+    <title>Tarea 3 SIELE S4: Diálogo</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
       
@@ -64,58 +26,9 @@
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyYWRpYWxHcmFkaWVudCBpZD0iZ3JhZCI+PHN0b3Agb2Zfc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzAwMDAwMDsiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3R5bGU9InN0b3AtY29sb3I6IzAwMDAwMDtvcGFjaXR5OjAuNSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6IzAwMDAwMDsiLz48L3JhZGlhbEdyYWRpZW50PjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiLz48L3N2Zz4=') repeat;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyYWRpYWxHcmFkaWVudCBpZD0iZ3JhZCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzAwMDAwMDsiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3R5bGU9InN0b3AtY29sb3I6IzAwMDAwMDtvcGFjaXR5OjAuNSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6IzAwMDAwMDsiLz48L3JhZGlhbEdyYWRpZW50PjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiLz48L3N2Zz4=') repeat;
             opacity: 0.1;
             z-index: -1;
-        }
-        header {
-            margin-bottom: 20px;
-            width: 100%;
-            max-width: 800px;
-        }
-        h1 {
-            font-size: 32px;
-            font-weight: 700;
-            margin: 0;
-            color: #1DA1F2;
-            text-shadow: 0 0 10px rgba(29, 161, 242, 0.5);
-        }
-        h1::after {
-            content: ' 🤖';
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-            100% { transform: scale(1); }
-        }
-        h2 {
-            font-size: 24px;
-            color: #1DA1F2;
-            margin-top: 20px;
-        }
-        p, li {
-            font-size: 16px;
-            color: #E0E0E0;
-            text-align: left;
-            max-width: 800px;
-            margin: 10px auto;
-        }
-        ol, ul {
-            text-align: left;
-            max-width: 800px;
-            margin: 10px auto;
-            padding-left: 20px;
-        }
-        li {
-            margin: 10px 0;
-        }
-        a {
-            color: #1DA1F2;
-            text-decoration: none;
-        }
-        a:hover {
-            color: #FFFFFF;
         }
         .content-card {
             background-color: rgba(255, 255, 255, 0.05);
@@ -132,6 +45,76 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(29, 161, 242, 0.2);
         }
+        .tab-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .tab-button {
+            padding: 10px 20px;
+            background-color: transparent;
+            color: #FFFFFF;
+            border: 2px solid #1DA1F2;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .tab-button:hover, .tab-button.active {
+            background-color: #1DA1F2;
+            color: #000000;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        select {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #FFFFFF;
+            border: 1px solid #1DA1F2;
+        }
+        #generate-button, #assign-roles {
+            padding: 10px 20px;
+            background-color: #FFFFFF;
+            color: #000000;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 20px 0;
+        }
+        #generate-button:hover, #assign-roles:hover {
+            background-color: #1DA1F2;
+            color: #FFFFFF;
+        }
+        #roleplay-category {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #1DA1F2;
+        }
+        #roleplay-prompt {
+            font-size: 20px;
+            margin: 30px 0;
+            line-height: 1.5;
+        }
+        #role-output p {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #1DA1F2;
+        }
         .contribute-section {
             margin: 40px 0;
             display: flex;
@@ -147,479 +130,79 @@
             flex-wrap: wrap;
             justify-content: center;
         }
-        .button-group {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
         .tally-button {
             padding: 10px 20px;
-            background-color: #FFFFFF;
-            color: #000000;
-            text-decoration: none;
+            background: #FFFFFF;
+            color: #000;
             border-radius: 50px;
-            font-size: 14px;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            height: 42px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .tally-button:hover {
-            background-color: #1DA1F2;
-            color: #FFFFFF;
-        }
-        .social-link {
-            margin-top: 20px;
-            padding-top: 20px;
-        }
-        .social-link a {
-            color: #1DA1F2;
-            text-decoration: none;
             font-size: 16px;
             font-weight: bold;
-        }
-        .social-link a:hover {
-            color: #FFFFFF;
-        }
-        footer {
-            margin-top: auto;
-            font-size: 12px;
-            color: #888888;
-            padding-top: 20px;
-        }
-        .timer-card {
-            display: flex;
-            align-items: center;
-            background-color: rgba(255, 255, 255, 0.05);
-            border: 1px solid #1DA1F2;
-            border-radius: 50px;
-            padding: 8px 12px;
-            gap: 10px;
-            width: 200px;
-            height: 36px;
-            justify-content: space-between;
-        }
-        .timer-display {
-            font-size: 18px;
-            min-width: 50px;
-            color: #FFFFFF;
-            background-color: transparent;
-            border: none;
-        }
-        .timer-buttons {
-            display: flex;
-            gap: 5px;
-        }
-        .timer-button {
-            width: 28px;
-            height: 28px;
-            background-color: transparent;
-            color: #1DA1F2;
-            border: 1px solid #1DA1F2;
-            border-radius: 50%;
-            font-size: 12px;
-            cursor: pointer;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .timer-button:hover {
-            background-color: #1DA1F2;
-            color: #000000;
-            transform: scale(1.1);
-            box-shadow: 0 2px 8px rgba(29, 161, 242, 0.3);
-        }
-        .timer-button:active {
-            transform: scale(0.95);
-        }
-        @media (max-width: 768px) {
-            .action-panel {
-                flex-direction: column;
-                gap: 15px;
-            }
-            .timer-card {
-                width: 220px;
-                height: 38px;
-                padding: 6px 10px;
-                gap: 5px;
-            }
-            .timer-display {
-                font-size: 16px;
-                min-width: 45px;
-            }
-            .timer-button {
-                width: 26px;
-                height: 26px;
-                font-size: 11px;
-            }
-        }
-        .roleplay-tools {
-            background-color: rgba(255, 255, 255, 0.05);
-            border: 1px solid #1DA1F2;
-            border-radius: 20px;
-            padding: 20px;
-            width: 100%;
-            max-width: 800px;
-            margin: 20px auto;
-            backdrop-filter: blur(5px);
-            text-align: center;
-        }
-        .tab-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 15px;
-            flex-wrap: wrap;
-        }
-        .tab-button {
-            padding: 8px 16px;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: #FFFFFF;
-            border: 1px solid #1DA1F2;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .tab-button.active {
-            background-color: #1DA1F2;
-            color: #000000;
-        }
-        .tab-content {
-            display: none;
-        }
-        .tab-content.active {
-            display: block;
-        }
-        .generator-controls {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-        #category-select {
-            padding: 10px 20px;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: #FFFFFF;
-            border: 1px solid #1DA1F2;
-            border-radius: 50px;
-            font-size: 14px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        #category-select:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-        #generate-button {
-            padding: 10px 20px;
-            background-color: #FFFFFF;
-            color: #000000;
-            border-radius: 50px;
-            font-size: 14px;
-            font-weight: bold;
             border: none;
             cursor: pointer;
             transition: background-color 0.3s;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
-        #generate-button:hover {
-            background-color: #1DA1F2;
+        .tally-button:hover {
+            background: #1DA1F2;
             color: #FFFFFF;
-        }
-        #roleplay-output {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            color: #E0E0E0;
-            text-align: left;
-        }
-        #roleplay-category {
-            font-weight: bold;
-            color: #1DA1F2;
-        }
-        #roleplay-prompt {
-            margin-top: 5px;
-        }
-        #suggest-button, #assign-roles {
-            padding: 10px 20px;
-            background-color: #FFFFFF;
-            color: #000000;
-            border-radius: 50px;
-            font-size: 14px;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            height: 42px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-        }
-        #suggest-button:hover, #assign-roles:hover {
-            background-color: #1DA1F2;
-            color: #FFFFFF;
-        }
-        #role-output {
-            max-width: 200px;
-            padding: 10px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            color: #E0E0E0;
-            text-align: left;
-            font-size: 14px;
-            display: inline-block;
-            vertical-align: middle;
-        }
-        #suggest-modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.8);
-            align-items: center;
-            justify-content: center;
-        }
-        #suggest-modal-content {
-            background-color: rgba(255, 255, 255, 0.1);
-            border: 1px solid #1DA1F2;
-            border-radius: 20px;
-            padding: 20px;
-            max-width: 400px;
-            width: 90%;
-            text-align: center;
-            animation: fadeIn 0.3s;
-        }
-        #suggest-modal-content h3 {
-            color: #1DA1F2;
-            margin-bottom: 15px;
-        }
-        #suggest-category {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: #FFFFFF;
-            border: 1px solid #1DA1F2;
-            border-radius: 50px;
-        }
-        #suggest-prompt {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: #FFFFFF;
-            border: 1px solid #1DA1F2;
-            border-radius: 10px;
-        }
-        #submit-suggest {
-            padding: 10px 20px;
-            background-color: #FFFFFF;
-            color: #000000;
-            border-radius: 50px;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-        }
-        #submit-suggest:hover {
-            background-color: #1DA1F2;
-            color: #FFFFFF;
-        }
-        #close-suggest {
-            margin-top: 10px;
-            padding: 10px 20px;
-            background-color: transparent;
-            color: #FFFFFF;
-            border: 1px solid #1DA1F2;
-            border-radius: 50px;
-            cursor: pointer;
-        }
-        #close-suggest:hover {
-            background-color: #1DA1F2;
-            color: #000000;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.8); }
-            to { opacity: 1; transform: scale(1); }
-        }
-        @media (max-width: 768px) {
-            .button-group {
-                flex-direction: row;
-                gap: 10px;
-            }
-            #suggest-button, #assign-roles {
-                padding: 8px 16px;
-                font-size: 12px;
-                height: 36px;
-            }
-            #role-output {
-                max-width: 150px;
-                font-size: 12px;
-                padding: 8px;
-            }
-            .tab-buttons {
-                gap: 8px;
-            }
-            .tab-button {
-                padding: 6px 12px;
-                font-size: 12px;
-            }
         }
     </style>
 </head>
 <body>
-    <script type="text/javascript">
-        var gk_isXlsx = false;
-        var gk_xlsxFileLookup = {};
-        var gk_fileData = {};
-        function filledCell(cell) {
-          return cell !== '' && cell != null;
-        }
-        function loadFileData(filename) {
-        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
-            try {
-                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
-                var firstSheetName = workbook.SheetNames[0];
-                var worksheet = workbook.Sheets[firstSheetName];
-                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
-                var filteredData = jsonData.filter(row => row.some(filledCell));
-                var headerRowIndex = filteredData.findIndex((row, index) =>
-                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
-                );
-                if (headerRowIndex === -1 || headerRowIndex > 25) {
-                  headerRowIndex = 0;
-                }
-                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex));
-                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
-                return csv;
-            } catch (e) {
-                console.error(e);
-                return "";
-            }
-        }
-        return gk_fileData[filename] || "";
-        }
-    </script>
-    <header>
-        <h1>Tarea 3 SIELE S4: Diálogo de Rol</h1>
-    </header>
+    <div id="header-placeholder">Loading header...</div>
+    
     <div class="content-card">
-        <p>Para la Tarea 3 del SIELE S4, el estudiante practica un diálogo simulado en español, enfocándose en habilidades de interacción conversacional.</p>
-    </div>
-    <div class="roleplay-tools">
+        <p>Para la Tarea 3 del SIELE S4, el estudiante practica diálogos en español basados en escenarios, mejorando la interacción oral.</p>
         <div class="tab-buttons">
-            <button class="tab-button active" data-tab="generate">Generar</button>
-            <button class="tab-button" data-tab="suggest">Sugerir</button>
-            <button class="tab-button" data-tab="roles">Roles</button>
+            <button class="tab-button active" data-tab="generate">Generar Escenario</button>
+            <button class="tab-button" data-tab="contribute">Contribuir</button>
         </div>
         <div id="tab-generate" class="tab-content active">
-            <div class="generator-controls">
-                <select id="category-select">
-                    <option value="">Selecciona una Categoría (o Aleatorio)</option>
-                </select>
-                <button id="generate-button" class="tally-button">Generar Escenario</button>
-            </div>
-            <div id="roleplay-output">
-                <p id="roleplay-category"></p>
-                <p id="roleplay-prompt"></p>
-            </div>
-        </div>
-        <div id="tab-suggest" class="tab-content">
-            <button id="suggest-button" class="tally-button">Sugerir Nuevo Tema</button>
-        </div>
-        <div id="tab-roles" class="tab-content">
-            <button id="assign-roles" class="tally-button">Asignar Roles</button>
+            <select id="category-select">
+                <option value="">Todas las categorías</option>
+            </select>
+            <button id="generate-button">Generar Escenario</button>
+            <h3 id="roleplay-category"></h3>
+            <p id="roleplay-prompt"></p>
+            <button id="assign-roles">Asignar Roles</button>
             <div id="role-output"></div>
         </div>
-    </div>
-    <div id="suggest-modal">
-        <div id="suggest-modal-content">
-            <h3>Sugerir Nuevo Escenario</h3>
-            <select id="suggest-category">
-            </select>
-            <input type="text" id="suggest-prompt" placeholder="Escribe el nuevo escenario de roleplay">
-            <button id="submit-suggest">Enviar Sugerencia</button>
-            <button id="close-suggest">Cerrar</button>
-        </div>
-    </div>
-    <div class="contribute-section">
-        <div class="action-panel">
-            <div class="timer-card">
-                <div class="timer-display" id="timer">02:00</div>
-                <div class="timer-buttons">
-                    <button class="timer-button" onclick="startTimer()" title="Iniciar">▶</button>
-                    <button class="timer-button" onclick="stopTimer()" title="Detener">⏸</button>
-                    <button class="timer-button" onclick="resetTimer()" title="Reiniciar">↺</button>
+        <div id="tab-contribute" class="tab-content">
+            <div class="contribute-section">
+                <p>Contribuye sugiriendo nuevos escenarios de roleplay.</p>
+                <div class="action-panel">
+                    <button class="tally-button" data-tally-open="roleplayFormID" data-tally-hide-title="1" data-tally-layout="modal" data-tally-auto-close="1000">Sugerir Nuevo Escenario</button>
                 </div>
             </div>
-            <div class="button-group">
-                <button data-tally-open="nG2Jde" data-tally-hide-title="1" class="tally-button">Add Flashcard</button>
-                <button data-tally-open="wo47OO" class="tally-button">Add Feedback</button>
-            </div>
         </div>
     </div>
-    <div class="social-link">
-        <a href="https://www.instagram.com/bajamigospanish">@bajamigospanish</a>
-    </div>
-    <footer>
-    </footer>
+    
+    <div id="footer-placeholder">Loading footer...</div>
+
     <script async src="https://tally.so/widgets/embed.js"></script>
+    <script src="common.js"></script>
     <script>
-        let timer;
-        let seconds = 120;
-        let isRunning = false;
-        function updateTimerDisplay() {
-            const minutes = Math.floor(seconds / 60);
-            const secs = seconds % 60;
-            document.getElementById('timer').textContent =
-                `${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
-            if (seconds <= 0) {
-                stopTimer();
-                document.getElementById('timer').textContent = '00:00';
-            }
-        }
-        function startTimer() {
-            if (!isRunning && seconds > 0) {
-                isRunning = true;
-                timer = setInterval(() => {
-                    seconds--;
-                    updateTimerDisplay();
-                }, 1000);
-            }
-        }
-        function stopTimer() {
-            if (isRunning) {
-                isRunning = false;
-                clearInterval(timer);
-            }
-        }
-        function resetTimer() {
-            isRunning = false;
-            clearInterval(timer);
-            seconds = 120;
-            updateTimerDisplay();
-        }
-        updateTimerDisplay();
+        const taskName = 'Tarea 3 SIELE S4';
+
+        window.addEventListener('load', () => {
+            loadIncludes();
+            window.addEventListener('resize', handleResponsive);
+            loadRoleplayTopics();
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    document.getElementById(`tab-${button.dataset.tab}`).classList.add('active');
+                });
+            });
+        });
+
         const categorySelect = document.getElementById('category-select');
         const generateButton = document.getElementById('generate-button');
         const roleplayCategory = document.getElementById('roleplay-category');
         const roleplayPrompt = document.getElementById('roleplay-prompt');
-        const suggestButton = document.getElementById('suggest-button');
-        const suggestModal = document.getElementById('suggest-modal');
-        const submitSuggest = document.getElementById('submit-suggest');
-        const closeSuggest = document.getElementById('close-suggest');
         const assignRoles = document.getElementById('assign-roles');
         const roleOutput = document.getElementById('role-output');
         let roleplayData = [];
@@ -641,13 +224,6 @@
                     option.textContent = cat;
                     categorySelect.appendChild(option);
                 });
-                const suggestCategory = document.getElementById('suggest-category');
-                uniqueCategories.forEach(cat => {
-                    const option = document.createElement('option');
-                    option.value = cat;
-                    option.textContent = cat;
-                    suggestCategory.appendChild(option);
-                });
             } catch (error) {
                 console.error('Error loading CSV:', error);
                 roleplayCategory.textContent = 'Error al cargar las categorías.';
@@ -662,39 +238,17 @@
                 filteredPrompts = roleplayData.filter(item => item.category === selectedCategory);
             }
             if (filteredPrompts.length === 0) {
-                roleplayCategory.textContent = 'No hay escenarios disponibles.';
+                roleplayCategory.textContent = 'No hay prompts disponibles.';
                 roleplayPrompt.textContent = '';
                 currentItem = null;
                 roleOutput.innerHTML = '';
                 return;
             }
             currentItem = filteredPrompts[Math.floor(Math.random() * filteredPrompts.length)];
-            roleplayCategory.textContent = `Categoría: ${currentItem.category}`;
-            roleplayPrompt.textContent = `Escenario: ${currentItem.prompt}`;
+            roleplayCategory.textContent = currentItem.category;
+            roleplayPrompt.textContent = currentItem.prompt;
             roleOutput.innerHTML = '';
         }
-        suggestButton.addEventListener('click', () => {
-            suggestModal.style.display = 'flex';
-        });
-        closeSuggest.addEventListener('click', () => {
-            suggestModal.style.display = 'none';
-        });
-        suggestModal.addEventListener('click', (e) => {
-            if (e.target === suggestModal) {
-                suggestModal.style.display = 'none';
-            }
-        });
-        submitSuggest.addEventListener('click', () => {
-            const category = document.getElementById('suggest-category').value;
-            const prompt = document.getElementById('suggest-prompt').value;
-            if (category && prompt) {
-                alert(`Sugerencia enviada: Categoría: ${category}, Escenario: ${prompt}`);
-                suggestModal.style.display = 'none';
-                document.getElementById('suggest-prompt').value = '';
-            } else {
-                alert('Por favor, selecciona una categoría y escribe un escenario.');
-            }
-        });
         assignRoles.addEventListener('click', () => {
             if (!currentItem) {
                 alert('Genera un escenario primero para asignar roles.');
@@ -709,18 +263,7 @@
                 <p>Estudiante: ${studentRole}</p>
             `;
         });
-        loadRoleplayTopics();
         generateButton.addEventListener('click', generatePrompt);
-        const tabButtons = document.querySelectorAll('.tab-button');
-        const tabContents = document.querySelectorAll('.tab-content');
-        tabButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                tabButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-                tabContents.forEach(content => content.classList.remove('active'));
-                document.getElementById(`tab-${button.dataset.tab}`).classList.add('active');
-            });
-        });
     </script>
 </body>
 </html>
