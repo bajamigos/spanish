@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 6: Grammar Exercises</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* We add just a tiny bit here for the exercise sections – like extra stickers! It makes them look like mini cards inside the big one. */
+        .exercise-section {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid #1DA1F2;
+            border-radius: 10px;
+        }
+        /* Styles for the iframes to make them blend in */
+        iframe {
+            width: 100%;
+            border: none;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- This iframe loads header.html like a window -->
+    <iframe id="header-frame" src="header.html"></iframe>
+
+    <div class="content-card">
+        <h1>Task 6: Spanish Grammar Exercises</h1>
+        <p>Hey there! Let's practice some Spanish grammar. This page is like your fun workout for words and sentences. We'll use cool links from Kwiziq to help you learn. Click the buttons – they'll open in a popup window so you can focus!</p>
+        
+        <div class="exercise-section">
+            <h2>Notebook Exercise</h2>
+            <p>Check out your personal Spanish notebook for grammar notes.</p>
+            <button class="tally-button" onclick="openPopup('https://spanish.kwiziq.com/my-languages/spanish/notebook/3476989')">Open Notebook</button>
+        </div>
+        
+        <div class="exercise-section">
+            <h2>Brainmap Challenge</h2>
+            <p>See your progress on the Spanish brainmap – it's like a map of what you know!</p>
+            <button class="tally-button" onclick="openPopup('https://spanish.kwiziq.com/my-languages/spanish?modal=brainmap')">Open Brainmap</button>
+        </div>
+        
+        <div class="exercise-section">
+            <h2>Listening Practice</h2>
+            <p>Listen to Spanish and fill in the blanks or answer questions.</p>
+            <button class="tally-button" onclick="openPopup('https://spanish.kwiziq.com/learn/listening')">Open Listening Exercises</button>
+        </div>
+        
+        <div class="exercise-section">
+            <h2>Writing Drills</h2>
+            <p>Write sentences and get feedback on your grammar.</p>
+            <button class="tally-button" onclick="openPopup('https://spanish.kwiziq.com/learn/writing')">Open Writing Exercises</button>
+        </div>
+    </div>
+
+    <!-- This iframe loads footer.html like a window -->
+    <iframe id="footer-frame" src="footer.html"></iframe>
+
+    <script>
+        // This makes the links open in popup windows
+        function openPopup(url) {
+            window.open(url, 'popup', 'width=800,height=600,scrollbars=yes,resizable=yes');
+        }
+
+        // This magic fixes the iframe sizes so they fit perfectly
+        function resizeIframe(iframeId) {
+            var iframe = document.getElementById(iframeId);
+            if (iframe && iframe.contentDocument && iframe.contentDocument.body) {
+                iframe.style.height = iframe.contentDocument.body.scrollHeight + 'px';
+            }
+        }
+
+        // Run the magic when the page is ready
+        window.addEventListener('load', function() {
+            resizeIframe('header-frame');
+            resizeIframe('footer-frame');
+        });
+    </script>
+</body>
+</html>
