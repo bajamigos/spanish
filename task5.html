@@ -112,7 +112,7 @@
         }
         #role-output p {
             font-size: 18px;
-            margin: 10px 0;
+            margin: 20px 0;
             color: #1DA1F2;
         }
         .contribute-section {
@@ -149,7 +149,7 @@
 </head>
 <body>
     <div id="header-placeholder">Loading header...</div>
-    
+   
     <div class="content-card">
         <p>Para la Tarea 5 del SIELE S4, el estudiante debate una opinión basada en un prompt, practicando expresión oral argumentativa.</p>
         <div class="tab-buttons">
@@ -175,14 +175,12 @@
             </div>
         </div>
     </div>
-    
+   
     <div id="footer-placeholder">Loading footer...</div>
-
     <script async src="https://tally.so/widgets/embed.js"></script>
     <script src="common.js"></script>
     <script>
         const taskName = 'Tarea 5 SIELE S4';
-
         window.addEventListener('load', () => {
             loadIncludes();
             window.addEventListener('resize', handleResponsive);
@@ -198,7 +196,6 @@
                 });
             });
         });
-
         const categorySelect = document.getElementById('category-select');
         const generateButton = document.getElementById('generate-button');
         const debateCategory = document.getElementById('debate-category');
@@ -212,8 +209,7 @@
             try {
                 const response = await fetch('debatetopics.csv');
                 const csvText = await response.text();
-                const lines = csvText.trim().split('
-').slice(1);
+                const lines = csvText.trim().split('\n').slice(1);
                 debateData = lines.map(line => {
                     const [category, prompt] = line.split(',');
                     return { category, prompt };
@@ -241,6 +237,7 @@
             if (filteredPrompts.length === 0) {
                 debateCategory.textContent = 'No hay prompts disponibles.';
                 debatePrompt.textContent = '';
+                currentItem = null;
                 roleOutput.innerHTML = '';
                 return;
             }
@@ -258,10 +255,7 @@
             const randomIndex = Math.floor(Math.random() * 2);
             const tutorRole = roles[randomIndex];
             const studentRole = roles[1 - randomIndex];
-            roleOutput.innerHTML = `
-                <p>Tutor: ${tutorRole}</p>
-                <p>Estudiante: ${studentRole}</p>
-            `;
+            roleOutput.innerHTML = `<p>Tutor: ${tutorRole}</p><p>Estudiante: ${studentRole}</p>`;
         });
         generateButton.addEventListener('click', generatePrompt);
     </script>
