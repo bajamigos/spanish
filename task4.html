@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 3 SIELE S4: Diálogo de Rol</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header-placeholder">Loading header...</div>
+    
+    <div class="content-card">
+        <p>Para la Tarea 3 del SIELE S4, el estudiante participa en diálogos de rol en español, practicando interacción oral.</p>
+        
+        <div class="tab-buttons">
+            <button class="tab-button active" data-tab="instructions">Instrucciones</button>
+            <button class="tab-button" data-tab="practice">Práctica</button>
+        </div>
+        
+        <div id="tab-instructions" class="tab-content active">
+            <h2>Instrucciones</h2>
+            <p>En esta tarea, simulas un diálogo basado en un escenario dado. Elige una categoría, genera un prompt, asigna roles y practica la conversación usando el temporizador.</p>
+            <ul>
+                <li>Selecciona una categoría o usa todas.</li>
+                <li>Genera un escenario aleatorio.</li>
+                <li>Asigna roles al tutor y estudiante.</li>
+                <li>Usa el micrófono y temporizador para grabar y practicar.</li>
+            </ul>
+        </div>
+        
+        <div id="tab-practice" class="tab-content">
+            <h2>Práctica</h2>
+            <select id="category-select">
+                <option value="">Todas las categorías</option>
+            </select>
+            <button id="generate-button">Generar Escenario</button>
+            <p id="roleplay-category"></p>
+            <p id="roleplay-prompt"></p>
+            <button id="assign-roles">Asignar Roles</button>
+            <div id="role-output"></div>
+            <button id="suggest-button">Sugerir Nuevo Escenario</button>
+        </div>
+        
+        <div id="suggest-modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); align-items: center; justify-content: center;">
+            <div style="background-color: rgba(255, 255, 255, 0.05); border: 1px solid #1DA1F2; border-radius: 15px; padding: 20px; max-width: 400px;">
+                <select id="suggest-category"></select>
+                <textarea id="suggest-prompt" placeholder="Escribe el escenario..." style="width: 100%; height: 100px; margin: 10px 0;"></textarea>
+                <button id="submit-suggest">Enviar</button>
+                <button id="close-suggest">Cerrar</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="footer-placeholder">Loading footer...</div>
+
+    <script async src="https://tally.so/widgets/embed.js"></script>
+    <script src="common.js"></script>
+    <script>
+        const taskName = 'Tarea 3 SIELE S4';
+
+        const categorySelect = document.getElementById('category-select');
+        const generateButton = document.getElementById('generate-button');
+        const roleplayCategory = document.getElementById('roleplay-category');
+        const roleplayPrompt = document.getElementById('roleplay-prompt');
+        const suggestButton = document.getElementById('suggest-button');
+        const suggestModal = document.getElementById('suggest-modal');
+        const submitSuggest = document.getElementById('submit-suggest');
+        const closeSuggest = document.getElementById('close-suggest');
+        const assignRoles = document.getElementById('assign-roles');
+        const roleOutput = document.getElementById('role-output');
+        let roleplayData = [];
+        let uniqueCategories = [];
+        let currentItem = null;
+        
+        async function loadRoleplayTopics() {
+            try {
+                const response = await fetch('roleplaytopics.csv');
+                const csvText = await response.text();
+                const lines = csvText.trim().split('\n').slice(1);
+                roleplayData = lines.map(line => {
+                    const [category, prompt, character_a, character_b] = line.split(',');
+                    return { category, prompt, character_a, character_b };
+                });
+                uniqueCategories = [...new Set(roleplayData.map(item => item.category))];
+                uniqueCategories.forEach(cat => {
+                    const option = document.createElement('option');
+                    option.value = cat;
+                    option.textContent = cat;
+                    categorySelect.appendChild(option);
+                });
+                const suggestCategory = document.getElementById('suggest-category');
+                uniqueCategories.forEach(cat => {
+                    const option = document.createElement('option');
+                    option.value = cat;
+                    option.textContent = cat;
+                    suggestCategory.appendChild(option);
+                });
+            } catch (error) {
+                console.error('Error loading CSV:', error);
+                roleplayCategory.textContent = 'Error al cargar las categorías.';
+            }
+        }
+        
+        function generatePrompt() {
+            const selectedCategory = categorySelect.value;
+            let filteredPrompts;
+            if (!selectedCategory) {
+                filteredPrompts = roleplayData;
+            } else {
+                filteredPrompts = roleplayData.filter(item => item.category === selectedCategory);
+            }
+            if (filteredPrompts.length === 0) {
+                roleplayCategory.textContent = 'No hay escenarios disponibles.';
+                roleplayPrompt.textContent = '';
+                currentItem = null;
+                roleOutput.innerHTML = '';
+                return;
+            }
+            currentItem = filteredPrompts[Math.floor(Math.random() * filteredPrompts.length)];
+            roleplayCategory.textContent = `Categoría: ${currentItem.category}`;
+            roleplayPrompt.textContent = `Escenario: ${currentItem.prompt}`;
+            roleOutput.innerHTML = '';
+        }
+        
+        suggestButton.addEventListener('click', () => {
+            suggestModal.style.display = 'flex';
+        });
+        
+        closeSuggest.addEventListener('click', () => {
+            suggestModal.style.display = 'none';
+        });
+        
+        suggestModal.addEventListener('click', (e) => {
+            if (e.target === suggestModal) {
+                suggestModal.style.display = 'none';
+            }
+        });
+        
+        submitSuggest.addEventListener('click', () => {
+            const category = document.getElementById('suggest-category').value;
+            const prompt = document.getElementById('suggest-prompt').value;
+            if (category && prompt) {
+                alert(`Sugerencia enviada: Categoría: ${category}, Escenario: ${prompt}`);
+                suggestModal.style.display = 'none';
+                document.getElementById('suggest-prompt').value = '';
+            } else {
+                alert('Por favor, selecciona una categoría y escribe un escenario.');
+            }
+        });
+        
+        assignRoles.addEventListener('click', () => {
+            if (!currentItem) {
+                alert('Genera un escenario primero para asignar roles.');
+                return;
+            }
+            const characters = [currentItem.character_a, currentItem.character_b];
+            const randomIndex = Math.floor(Math.random() * 2);
+            const tutorRole = characters[randomIndex];
+            const studentRole = characters[1 - randomIndex];
+            roleOutput.innerHTML = `
+                <p>Tutor: ${tutorRole}</p>
+                <p>Estudiante: ${studentRole}</p>
+            `;
+        });
+        
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                tabContents.forEach(content => content.classList.remove('active'));
+                document.getElementById(`tab-${button.dataset.tab}`).classList.add('active');
+            });
+        });
+        
+        window.addEventListener('load', () => {
+            loadIncludes();
+            loadRoleplayTopics();
+            window.addEventListener('resize', handleResponsive);
+        });
+    </script>
+</body>
+</html>
