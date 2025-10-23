@@ -1,1 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIELE S4 Study Guide | Grok Mode 🚀</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap'); /* Fuente moderna como X */
+        
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            text-align: center;
+            background: linear-gradient(to bottom, #000000, #0a0a0a); /* Gradiente cósmico para xAI */
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            overflow: auto; /* Fixed scrolling para permitir contenido largo si es necesario */
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyYWRpYWxHcmFkaWVudCBpZD0iZ3JhZCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzAwMDAwMDsiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3R5bGU9InN0b3AtY29sb3I6IzAwMDAwMDtvcGFjaXR5OjAuNSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6IzAwMDAwMDsiLz48L3JhZGlhbEdncmFkaWVudD48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIi8+PC9zdmc+') repeat; /* Patrones sutiles */
+            opacity: 0.1;
+            z-index: -1;
+        }
+        header {
+            margin-bottom: 30px;
+            width: 100%;
+            max-width: 800px;
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin: 0;
+            color: #1DA1F2; /* Azul X */
+            text-shadow: 0 0 10px rgba(29, 161, 242, 0.5); /* Glow IA-like */
+            display: inline-block;
+            cursor: pointer; /* Indica que es clickable */
+        }
+        h1 .robot-emoji {
+            display: inline-block;
+            cursor: pointer;
+            user-select: none; /* Evita selección en mobile */
+        }
+        h1::after {
+            content: ' ';
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        .robot-emoji {
+            animation: pulse 2s infinite;
+        }
+        p.intro {
+            font-size: 18px;
+            color: #E0E0E0;
+            max-width: 600px;
+            margin: 10px auto 30px;
+        }
+        .tasks-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Grid responsiva para tarjetas */
+            gap: 20px;
+            max-width: 800px;
+            width: 100%;
+            margin-bottom: 40px;
+        }
+        .task-card {
+            background-color: rgba(255, 255, 255, 0.05); /* Vidrio oscuro */
+            border: 1px solid #1DA1F2;
+            border-radius: 20px; /* Esquinas suaves para rectángulo redondeado */
+            padding: 10px; /* Padding ajustado para el nuevo texto */
+            transition: transform 0.3s, box-shadow 0.3s;
+            backdrop-filter: blur(5px); /* Efecto glassmorphism */
+            display: flex; /* Para centrar verticalmente el contenido */
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .task-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(29, 161, 242, 0.2);
+        }
+        .task-button {
+            display: block;
+            width: 100%;
+            padding: 12px; /* Padding reducido para el título */
+            background-color: transparent;
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border: none; /* Sin borde interno redundante */
+            border-radius: 20px; /* Coincide con la tarjeta para integración */
+            transition: background-color 0.3s, color 0.3s;
+            text-align: center; /* Asegura centrado horizontal del texto */
+        }
+        .task-button:hover {
+            background-color: #1DA1F2;
+            color: #000000;
+        }
+        .task-summary {
+            font-size: 14px;
+            color: #E0E0E0;
+            margin-top: 8px;
+            text-align: center;
+            padding: 0 10px;
+        }
+        .contribute-section {
+            margin: 20px 0;
+        }
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .tally-button {
+            padding: 10px 20px;
+            background-color: #FFFFFF;
+            color: #000000;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .tally-button:hover {
+            background-color: #1DA1F2;
+            color: #FFFFFF;
+        }
+        .social-link {
+            margin-top: 20px;
+            padding-top: 20px;
+        }
+        .social-link a {
+            color: #1DA1F2;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .social-link a:hover {
+            color: #FFFFFF;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #888888;
+            width: 100%;
+        }
+        /* Estilos para el modal de número aleatorio */
+        #random-modal {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+        #random-modal-content {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid #1DA1F2;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            max-width: 300px;
+            animation: fadeIn 0.5s ease;
+        }
+        #random-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: #1DA1F2;
+            text-shadow: 0 0 10px rgba(29, 161, 242, 0.5);
+            margin: 20px 0;
+        }
+        #close-modal {
+            padding: 10px 20px;
+            background-color: transparent;
+            color: #FFFFFF;
+            border: 2px solid #1DA1F2;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        #close-modal:hover {
+            background-color: #1DA1F2;
+            color: #000000;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder">Loading header...</div>
+    
+    <div class="tasks-container">
+        <div class="task-card">
+            <a href="background.html" class="task-button">Información General</a>
+            <p class="task-summary">Sobre el examen SIELE S4</p>
+        </div>
+        <div class="task-card">
+            <a href="task1.html" class="task-button">Tarea 1</a>
+            <p class="task-summary">Descripción de foto</p>
+        </div>
+        <div class="task-card">
+            <a href="task2.html" class="task-button">Tarea 2</a>
+            <p class="task-summary">Descripción de video</p>
+        </div>
+        <div class="task-card">
+            <a href="task3.html" class="task-button">Tarea 3</a>
+            <p class="task-summary">Respuestas a escenarios</p>
+        </div>
+        <div class="task-card">
+            <a href="task4.html" class="task-button">Tarea 4</a>
+            <p class="task-summary">Monólogo corto</p>
+        </div>
+        <div class="task-card">
+            <a href="task5.html" class="task-button">Tarea 5</a>
+            <p class="task-summary">Debate de opinión</p>
+        </div>
+        <div class="task-card">
+            <a href="task6.html" class="task-button">Más</a>
+            <p class="task-summary">Ejercicios de Gramática</p>
+        </div>
+    </div>
+    
+    <div id="footer-placeholder">Loading footer...</div>
+    
+    <!-- Modal para el número aleatorio -->
+    <div id="random-modal">
+        <div id="random-modal-content">
+            <p>¡Tarea aleatoria generada!</p>
+            <div id="random-number"></div>
+            <button id="close-modal">Cerrar</button>
+        </div>
+    </div>
+    
+    <script async src="https://tally.so/widgets/embed.js"></script>
+    <script src="common.js"></script>
+    <script>
+        const taskName = 'Index Page Recording'; // Placeholder for index (recording not primary here)
+
+        function headerInit() {
+            const h1 = document.querySelector('h1');
+            if (h1) {
+                const robotSpan = document.createElement('span');
+                robotSpan.id = 'robot-emoji';
+                robotSpan.className = 'robot-emoji';
+                robotSpan.textContent = '🤖';
+                h1.appendChild(robotSpan);
+                attachRandomListener();
+            }
+        }
+
+        function attachRandomListener() {
+            const robotEmoji = document.getElementById('robot-emoji');
+            const modal = document.getElementById('random-modal');
+            const randomNumberEl = document.getElementById('random-number');
+            const closeModal = document.getElementById('close-modal');
+
+            function generateRandom() {
+                const randomNum = Math.floor(Math.random() * 6) + 1; // For 6 tasks
+                randomNumberEl.textContent = randomNum;
+                modal.style.display = 'flex';
+            }
+
+            robotEmoji.addEventListener('click', generateRandom);
+            robotEmoji.addEventListener('touchend', function(e) {
+                e.preventDefault();
+                generateRandom();
+            });
+
+            closeModal.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        }
+
+        window.addEventListener('load', () => {
+            loadIncludes(headerInit);
+            window.addEventListener('resize', handleResponsive);
+        });
+    </script>
+</body>
+</html>
 
