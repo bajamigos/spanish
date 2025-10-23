@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarea 4 SIELE S4: Monólogo</title>
+    <title>Tarea 5 SIELE S4: Debate de Opinión</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="header-placeholder">Loading header...</div>
     
     <div class="content-card">
-        <p>Para la Tarea 4 del SIELE S4, el estudiante presenta un monólogo en español, practicando expresión oral sostenida.</p>
+        <p>Para la Tarea 5 del SIELE S4, el estudiante debate opiniones en español, practicando argumentación oral.</p>
         
         <div class="tab-buttons">
             <button class="tab-button active" data-tab="instructions">Instrucciones</button>
@@ -19,11 +19,11 @@
         
         <div id="tab-instructions" class="tab-content active">
             <h2>Instrucciones</h2>
-            <p>En esta tarea, generas un monólogo basado en un prompt. Elige una categoría, genera un prompt, asigna un feeling y practica hablando usando el temporizador.</p>
+            <p>En esta tarea, generas un debate basado en un prompt. Elige una categoría, genera un prompt, asigna roles (Pro/Contra) y practica el debate usando el temporizador.</p>
             <ul>
                 <li>Selecciona una categoría o usa todas.</li>
                 <li>Genera un prompt aleatorio.</li>
-                <li>Asigna un feeling aleatorio.</li>
+                <li>Asigna roles al tutor y estudiante.</li>
                 <li>Usa el micrófono y temporizador para grabar y practicar.</li>
             </ul>
         </div>
@@ -34,10 +34,10 @@
                 <option value="">Todas las categorías</option>
             </select>
             <button id="generate-button">Generar Prompt</button>
-            <p id="monologue-category"></p>
-            <p id="monologue-prompt"></p>
-            <button id="assign-feeling">Asignar Feeling</button>
-            <div id="feeling-output"></div>
+            <p id="debate-category"></p>
+            <p id="debate-prompt"></p>
+            <button id="assign-roles">Asignar Roles</button>
+            <div id="role-output"></div>
             <button id="suggest-button">Sugerir Nuevo Prompt</button>
         </div>
         
@@ -56,32 +56,31 @@
     <script async src="https://tally.so/widgets/embed.js"></script>
     <script src="common.js"></script>
     <script>
-        const taskName = 'Tarea 4 SIELE S4';
+        const taskName = 'Tarea 5 SIELE S4';
 
         const categorySelect = document.getElementById('category-select');
         const generateButton = document.getElementById('generate-button');
-        const monologueCategory = document.getElementById('monologue-category');
-        const monologuePrompt = document.getElementById('monologue-prompt');
+        const debateCategory = document.getElementById('debate-category');
+        const debatePrompt = document.getElementById('debate-prompt');
         const suggestButton = document.getElementById('suggest-button');
         const suggestModal = document.getElementById('suggest-modal');
         const submitSuggest = document.getElementById('submit-suggest');
         const closeSuggest = document.getElementById('close-suggest');
-        const assignFeeling = document.getElementById('assign-feeling');
-        const feelingOutput = document.getElementById('feeling-output');
-        let monologueData = [];
+        const assignRoles = document.getElementById('assign-roles');
+        const roleOutput = document.getElementById('role-output');
+        let debateData = [];
         let uniqueCategories = [];
-        let currentItem = null;
         
-        async function loadMonologueTopics() {
+        async function loadDebateTopics() {
             try {
-                const response = await fetch('monologuetopics.csv');
+                const response = await fetch('debatetopics.csv');
                 const csvText = await response.text();
                 const lines = csvText.trim().split('\n').slice(1);
-                monologueData = lines.map(line => {
-                    const [category, prompt, emotion1, emotion2, emotion3, emotion4, emotion5] = line.split(',');
-                    return { category, prompt, emotions: [emotion1, emotion2, emotion3, emotion4, emotion5] };
+                debateData = lines.map(line => {
+                    const [category, prompt] = line.split(',');
+                    return { category, prompt };
                 });
-                uniqueCategories = [...new Set(monologueData.map(item => item.category))];
+                uniqueCategories = [...new Set(debateData.map(item => item.category))];
                 uniqueCategories.forEach(cat => {
                     const option = document.createElement('option');
                     option.value = cat;
@@ -97,7 +96,7 @@
                 });
             } catch (error) {
                 console.error('Error loading CSV:', error);
-                monologueCategory.textContent = 'Error al cargar las categorías.';
+                debateCategory.textContent = 'Error al cargar las categorías.';
             }
         }
         
@@ -105,21 +104,18 @@
             const selectedCategory = categorySelect.value;
             let filteredPrompts;
             if (!selectedCategory) {
-                filteredPrompts = monologueData;
+                filteredPrompts = debateData;
             } else {
-                filteredPrompts = monologueData.filter(item => item.category === selectedCategory);
+                filteredPrompts = debateData.filter(item => item.category === selectedCategory);
             }
             if (filteredPrompts.length === 0) {
-                monologueCategory.textContent = 'No hay prompts disponibles.';
-                monologuePrompt.textContent = '';
-                currentItem = null;
-                feelingOutput.innerHTML = '';
+                debateCategory.textContent = 'No hay prompts disponibles.';
+                debatePrompt.textContent = '';
                 return;
             }
-            currentItem = filteredPrompts[Math.floor(Math.random() * filteredPrompts.length)];
-            monologueCategory.textContent = `Categoría: ${currentItem.category}`;
-            monologuePrompt.textContent = `Prompt: ${currentItem.prompt}`;
-            feelingOutput.innerHTML = '';
+            const randomItem = filteredPrompts[Math.floor(Math.random() * filteredPrompts.length)];
+            debateCategory.textContent = `Categoría: ${randomItem.category}`;
+            debatePrompt.textContent = `Prompt: ${randomItem.prompt}`;
         }
         
         suggestButton.addEventListener('click', () => {
@@ -148,15 +144,14 @@
             }
         });
         
-        assignFeeling.addEventListener('click', () => {
-            if (!currentItem) {
-                alert('Genera un prompt primero para asignar feeling.');
-                return;
-            }
-            const randomIndex = Math.floor(Math.random() * currentItem.emotions.length);
-            const feeling = currentItem.emotions[randomIndex];
-            feelingOutput.innerHTML = `
-                <p>Feeling: ${feeling}</p>
+        assignRoles.addEventListener('click', () => {
+            const roles = ['Pro', 'Contra'];
+            const randomIndex = Math.floor(Math.random() * 2);
+            const tutorRole = roles[randomIndex];
+            const studentRole = roles[1 - randomIndex];
+            roleOutput.innerHTML = `
+                <p>Tutor: ${tutorRole}</p>
+                <p>Estudiante: ${studentRole}</p>
             `;
         });
         
@@ -173,7 +168,7 @@
         
         window.addEventListener('load', () => {
             loadIncludes();
-            loadMonologueTopics();
+            loadDebateTopics();
             window.addEventListener('resize', handleResponsive);
         });
     </script>
