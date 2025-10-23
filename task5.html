@@ -37,12 +37,14 @@
         }
         return gk_fileData[filename] || "";
         }
-        </script><!DOCTYPE html>
+        </script>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarea 5 SIELE S4: Debate de Opinión</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
       
@@ -89,12 +91,26 @@
             50% { transform: scale(1.2); }
             100% { transform: scale(1); }
         }
+        h2 {
+            font-size: 24px;
+            color: #1DA1F2;
+            margin-top: 20px;
+        }
         p, li {
             font-size: 16px;
             color: #E0E0E0;
             text-align: left;
             max-width: 800px;
             margin: 10px auto;
+        }
+        ol, ul {
+            text-align: left;
+            max-width: 800px;
+            margin: 10px auto;
+            padding-left: 20px;
+        }
+        li {
+            margin: 10px 0;
         }
         a {
             color: #1DA1F2;
@@ -139,139 +155,40 @@
             flex-wrap: wrap;
             justify-content: center;
         }
-        .tally-button {
+        .button {
             padding: 10px 20px;
-            background-color: #FFFFFF;
-            color: #000000;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 14px;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            height: 42px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .tally-button:hover {
-            background-color: #1DA1F2;
-            color: #FFFFFF;
-        }
-        .social-link {
-            margin-top: 20px;
-            padding-top: 20px;
-        }
-        .social-link a {
-            color: #1DA1F2;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-        }
-        .social-link a:hover {
-            color: #FFFFFF;
-        }
-        footer {
-            margin-top: auto;
-            font-size: 12px;
-            color: #888888;
-            padding-top: 20px;
-        }
-        .timer-card {
-            display: flex;
-            align-items: center;
-            background-color: rgba(255, 255, 255, 0.05);
-            border: 1px solid #1DA1F2;
-            border-radius: 50px;
-            padding: 8px 12px;
-            gap: 10px;
-            width: 200px;
-            height: 36px;
-            justify-content: space-between;
-        }
-        .timer-display {
-            font-size: 18px;
-            min-width: 50px;
-            color: #FFFFFF;
             background-color: transparent;
-            border: none;
-        }
-        .timer-buttons {
-            display: flex;
-            gap: 5px;
-        }
-        .timer-button {
-            width: 28px;
-            height: 28px;
-            background-color: transparent;
-            color: #1DA1F2;
-            border: 1px solid #1DA1F2;
-            border-radius: 50%;
-            font-size: 12px;
+            color: #FFFFFF;
+            border: 2px solid #1DA1F2;
+            border-radius: 50px;
+            font-weight: bold;
             cursor: pointer;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            transition: background-color 0.3s, color 0.3s;
         }
-        .timer-button:hover {
+        .button:hover {
             background-color: #1DA1F2;
             color: #000000;
-            transform: scale(1.1);
-            box-shadow: 0 2px 8px rgba(29, 161, 242, 0.3);
         }
-        .timer-button:active {
-            transform: scale(0.95);
-        }
-        @media (max-width: 768px) {
-            .action-panel {
-                flex-direction: column;
-                gap: 15px;
-            }
-            .timer-card {
-                width: 220px;
-                height: 38px;
-                padding: 6px 10px;
-                gap: 5px;
-            }
-            .timer-display {
-                font-size: 16px;
-                min-width: 45px;
-            }
-            .timer-button {
-                width: 26px;
-                height: 26px;
-                font-size: 11px;
-            }
-        }
-        .debate-tools {
-            background-color: rgba(255, 255, 255, 0.05);
-            border: 1px solid #1DA1F2;
-            border-radius: 20px;
-            padding: 20px;
+        .tab-container {
             width: 100%;
             max-width: 800px;
             margin: 20px auto;
-            backdrop-filter: blur(5px);
-            text-align: center;
         }
         .tab-buttons {
             display: flex;
             justify-content: center;
-            gap: 10px;
-            margin-bottom: 15px;
-            flex-wrap: wrap;
+            margin-bottom: 20px;
         }
         .tab-button {
-            padding: 8px 16px;
-            background-color: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            background-color: transparent;
             color: #FFFFFF;
-            border: 1px solid #1DA1F2;
-            border-radius: 50px;
+            border: 2px solid #1DA1F2;
+            border-radius: 50px 50px 0 0;
+            font-weight: bold;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, color 0.3s;
+            margin: 0 5px;
         }
         .tab-button.active {
             background-color: #1DA1F2;
@@ -283,361 +200,160 @@
         .tab-content.active {
             display: block;
         }
-        .generator-controls {
+        .select-container {
             display: flex;
             justify-content: center;
-            align-items: center;
-            gap: 10px;
             margin-bottom: 20px;
-            flex-wrap: wrap;
         }
-        #category-select {
-            padding: 10px 20px;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: #FFFFFF;
-            border: 1px solid #1DA1F2;
-            border-radius: 50px;
-            font-size: 14px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        #category-select:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-        #generate-button {
-            padding: 10px 20px;
-            background-color: #FFFFFF;
-            color: #000000;
-            border-radius: 50px;
-            font-size: 14px;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        #generate-button:hover {
-            background-color: #1DA1F2;
-            color: #FFFFFF;
-        }
-        #debate-output {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            color: #E0E0E0;
-            text-align: left;
-        }
-        #debate-category {
-            font-weight: bold;
-            color: #1DA1F2;
-        }
-        #debate-prompt {
-            margin-top: 5px;
-        }
-        #suggest-button, #assign-roles {
-            padding: 10px 20px;
-            background-color: #FFFFFF;
-            color: #000000;
-            border-radius: 50px;
-            font-size: 14px;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            height: 42px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-        }
-        #suggest-button:hover, #assign-roles:hover {
-            background-color: #1DA1F2;
-            color: #FFFFFF;
-        }
-        #role-output {
-            max-width: 200px;
+        .select-container select {
             padding: 10px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            color: #E0E0E0;
-            text-align: left;
-            font-size: 14px;
-            display: inline-block;
-            vertical-align: middle;
+            background-color: transparent;
+            color: #FFFFFF;
+            border: 2px solid #1DA1F2;
+            border-radius: 50px;
+            font-size: 16px;
+            cursor: pointer;
         }
-        #suggest-modal {
+        .output-container {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid #1DA1F2;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        .suggest-modal {
             display: none;
             position: fixed;
-            z-index: 1000;
+            z-index: 1;
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.8);
-            align-items: center;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
             justify-content: center;
+            align-items: center;
         }
-        #suggest-modal-content {
-            background-color: rgba(255, 255, 255, 0.1);
+        .suggest-modal-content {
+            background-color: #0a0a0a;
+            padding: 20px;
             border: 1px solid #1DA1F2;
             border-radius: 20px;
-            padding: 20px;
-            max-width: 400px;
-            width: 90%;
+            width: 80%;
+            max-width: 500px;
             text-align: center;
-            animation: fadeIn 0.3s;
         }
-        #suggest-modal-content h3 {
-            color: #1DA1F2;
-            margin-bottom: 15px;
-        }
-        #suggest-category {
+        .suggest-input {
             width: 100%;
             padding: 10px;
-            margin-bottom: 10px;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: #FFFFFF;
-            border: 1px solid #1DA1F2;
-            border-radius: 50px;
-        }
-        #suggest-prompt {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: #FFFFFF;
-            border: 1px solid #1DA1F2;
-            border-radius: 10px;
-        }
-        #submit-suggest {
-            padding: 10px 20px;
-            background-color: #FFFFFF;
-            color: #000000;
-            border-radius: 50px;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-        }
-        #submit-suggest:hover {
-            background-color: #1DA1F2;
-            color: #FFFFFF;
-        }
-        #close-suggest {
-            margin-top: 10px;
-            padding: 10px 20px;
+            margin: 10px 0;
             background-color: transparent;
             color: #FFFFFF;
-            border: 1px solid #1DA1F2;
+            border: 2px solid #1DA1F2;
             border-radius: 50px;
+        }
+        .close-suggest {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close-suggest:hover,
+        .close-suggest:focus {
+            color: #FFFFFF;
+            text-decoration: none;
             cursor: pointer;
         }
-        #close-suggest:hover {
-            background-color: #1DA1F2;
-            color: #000000;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.8); }
-            to { opacity: 1; transform: scale(1); }
+        .role-output p {
+            margin: 10px 0;
         }
         @media (max-width: 768px) {
+            body {
+                padding: 20px 10px;
+            }
+            .action-panel {
+                flex-direction: column;
+            }
             .button-group {
-                flex-direction: row;
-                gap: 10px;
-            }
-            #suggest-button, #assign-roles {
-                padding: 8px 16px;
-                font-size: 12px;
-                height: 36px;
-            }
-            #role-output {
-                max-width: 150px;
-                font-size: 12px;
-                padding: 8px;
+                flex-direction: column;
             }
             .tab-buttons {
-                gap: 8px;
+                flex-direction: column;
             }
             .tab-button {
-                padding: 6px 12px;
-                font-size: 12px;
+                margin: 5px 0;
+                border-radius: 50px;
             }
         }
     </style>
 </head>
 <body>
-    <script type="text/javascript">
-        var gk_isXlsx = false;
-        var gk_xlsxFileLookup = {};
-        var gk_fileData = {};
-        function filledCell(cell) {
-          return cell !== '' && cell != null;
-        }
-        function loadFileData(filename) {
-        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
-            try {
-                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
-                var firstSheetName = workbook.SheetNames[0];
-                var worksheet = workbook.Sheets[firstSheetName];
-                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
-                var filteredData = jsonData.filter(row => row.some(filledCell));
-                var headerRowIndex = filteredData.findIndex((row, index) =>
-                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
-                );
-                if (headerRowIndex === -1 || headerRowIndex > 25) {
-                  headerRowIndex = 0;
-                }
-                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex));
-                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
-                return csv;
-            } catch (e) {
-                console.error(e);
-                return "";
-            }
-        }
-        return gk_fileData[filename] || "";
-        }
-    </script>
-    <header>
-        <h1>Tarea 5 SIELE S4: Debate de Opinión</h1>
-    </header>
-    <div class="content-card">
-        <p>Para la Tarea 5 del SIELE S4, el estudiante debate un tema provocador en español, practicando argumentación y justificación. Debe abrir con su posición inicial, justificándola en 1 minuto, enfrentar argumentos contrarios en intercambios, y concluir con un resumen organizado usando expresiones sofisticadas y conectores.</p>
-    </div>
-    <div class="debate-tools">
+    <div id="header-placeholder">Loading header...</div>
+
+    <div class="tab-container">
         <div class="tab-buttons">
-            <button class="tab-button active" data-tab="generate">Generar</button>
-            <button class="tab-button" data-tab="suggest">Sugerir</button>
-            <button class="tab-button" data-tab="roles">Roles</button>
+            <button class="tab-button active" data-tab="instructions">Instrucciones</button>
+            <button class="tab-button" data-tab="generator">Generador</button>
         </div>
-        <div id="tab-generate" class="tab-content active">
-            <div class="generator-controls">
+        <div id="tab-instructions" class="tab-content active">
+            <div class="content-card">
+                <h2>Instrucciones para la Tarea 5</h2>
+                <p>En la Tarea 5 del SIELE S4, el estudiante participa en un debate de opinión con el tutor, defendiendo una posición pro o contra en un tema controvertido.</p>
+                <h2>Proceso</h2>
+                <ol>
+                    <li>Genera un prompt de debate aleatorio utilizando el generador.</li>
+                    <li>Selecciona una categoría o deja en blanco para un prompt aleatorio.</li>
+                    <li>Asigna roles pro/contra al tutor y al estudiante de manera aleatoria.</li>
+                    <li>El tutor inicia el debate según el rol asignado.</li>
+                    <li>El estudiante responde defendiendo su posición con argumentos.</li>
+                    <li>Continúa el debate alternando turnos hasta cubrir los puntos clave.</li>
+                    <li>Graba el debate y envíala para retroalimentación.</li>
+                </ol>
+                <h2>Ejemplo de Prompt</h2>
+                <p><strong>Categoría:</strong> Tecnología</p>
+                <p><strong>Prompt:</strong> ¿Debería prohibirse el uso de redes sociales en menores de 16 años?</p>
+                <p><strong>Roles:</strong> Tutor: Pro, Estudiante: Contra</p>
+            </div>
+        </div>
+        <div id="tab-generator" class="tab-content">
+            <div class="select-container">
                 <select id="category-select">
-                    <option value="">Selecciona una Categoría (o Aleatorio)</option>
+                    <option value="">Aleatorio</option>
                 </select>
-                <button id="generate-button" class="tally-button">Generar Tema</button>
             </div>
-            <div id="debate-output">
-                <p id="debate-category"></p>
-                <p id="debate-prompt"></p>
+            <div class="action-panel">
+                <button id="generate-button" class="button">Generar Prompt</button>
+                <button id="suggest-button" class="button">Sugerir Nuevo</button>
+                <button id="assign-roles" class="button">Asignar Roles</button>
             </div>
-        </div>
-        <div id="tab-suggest" class="tab-content">
-            <button id="suggest-button" class="tally-button">Sugerir Nuevo Tema</button>
-        </div>
-        <div id="tab-roles" class="tab-content">
-            <button id="assign-roles" class="tally-button">Asignar Roles</button>
-            <div id="role-output"></div>
+            <div class="output-container">
+                <p id="debate-category">Categoría: </p>
+                <p id="debate-prompt">Prompt: </p>
+                <div id="role-output"></div>
+            </div>
         </div>
     </div>
-    <div id="suggest-modal">
-        <div id="suggest-modal-content">
-            <h3>Sugerir Nuevo Prompt</h3>
-            <select id="suggest-category">
+
+    <div id="suggest-modal" class="suggest-modal">
+        <div class="suggest-modal-content">
+            <span id="close-suggest" class="close-suggest">&times;</span>
+            <h2>Sugerir Nuevo Prompt</h2>
+            <select id="suggest-category" class="suggest-input">
+                <option value="">Selecciona Categoría</option>
             </select>
-            <input type="text" id="suggest-prompt" placeholder="Escribe el nuevo prompt de debate">
-            <button id="submit-suggest">Enviar Sugerencia</button>
-            <button id="close-suggest">Cerrar</button>
+            <input type="text" id="suggest-prompt" class="suggest-input" placeholder="Escribe el nuevo prompt...">
+            <button id="submit-suggest" class="button">Enviar Sugerencia</button>
         </div>
     </div>
-    <div class="contribute-section">
-        <div class="action-panel">
-            <div class="timer-card">
-                <div class="timer-display" id="timer">02:00</div>
-                <div class="timer-buttons">
-                    <button class="timer-button" onclick="startTimer()" title="Iniciar">▶</button>
-                    <button class="timer-button" onclick="startRecording()" title="Grabar">🎤</button>
-                    <button class="timer-button" onclick="stopTimer()" title="Detener">⏸</button>
-                    <button class="timer-button" onclick="resetTimer()" title="Reiniciar">↺</button>
-                </div>
-            </div>
-            <div class="button-group">
-                <button data-tally-open="nG2Jde" data-tally-hide-title="1" class="tally-button">Add Flashcard</button>
-                <button data-tally-open="wo47OO" class="tally-button">Add Feedback</button>
-            </div>
-        </div>
-    </div>
-    <div class="social-link">
-        <a href="https://www.instagram.com/bajamigospanish">@bajamigospanish</a>
-    </div>
-    <footer>
-    </footer>
+
+    <div id="footer-placeholder">Loading footer...</div>
+
     <script async src="https://tally.so/widgets/embed.js"></script>
+    <script src="common.js"></script>
     <script>
-        let timer;
-        let seconds = 120;
-        let isRunning = false;
-        let mediaRecorder = null;
-        let audioChunks = [];
-        function updateTimerDisplay() {
-            const minutes = Math.floor(seconds / 60);
-            const secs = seconds % 60;
-            document.getElementById('timer').textContent =
-                `${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
-            if (seconds <= 0) {
-                stopTimer();
-                document.getElementById('timer').textContent = '00:00';
-            }
-        }
-        function startTimer() {
-            if (!isRunning && seconds > 0) {
-                isRunning = true;
-                timer = setInterval(() => {
-                    seconds--;
-                    updateTimerDisplay();
-                }, 1000);
-            }
-        }
-        async function startRecording() {
-            if (!isRunning && seconds > 0) {
-                try {
-                    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-                    mediaRecorder = new MediaRecorder(stream);
-                    audioChunks = [];
-                    mediaRecorder.ondataavailable = (event) => {
-                        if (event.data.size > 0) {
-                            audioChunks.push(event.data);
-                        }
-                    };
-                    mediaRecorder.onstop = () => {
-                        const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
-                        const url = URL.createObjectURL(audioBlob);
-                        const a = document.createElement('a');
-                        a.href = url;
-                        a.download = `recording_${new Date().toISOString()}.webm`;
-                        document.body.appendChild(a);
-                        a.click();
-                        document.body.removeChild(a);
-                        URL.revokeObjectURL(url);
-                        stream.getTracks().forEach(track => track.stop());
-                    };
-                    mediaRecorder.start();
-                    startTimer();
-                } catch (error) {
-                    console.error('Error starting recording:', error);
-                    alert('No se pudo acceder al micrófono. Por favor, verifica los permisos.');
-                }
-            }
-        }
-        function stopTimer() {
-            if (isRunning) {
-                isRunning = false;
-                clearInterval(timer);
-                if (mediaRecorder && mediaRecorder.state !== 'inactive') {
-                    mediaRecorder.stop();
-                }
-            }
-        }
-        function resetTimer() {
-            isRunning = false;
-            clearInterval(timer);
-            if (mediaRecorder && mediaRecorder.state !== 'inactive') {
-                mediaRecorder.stop();
-            }
-            seconds = 120;
-            updateTimerDisplay();
-        }
-        updateTimerDisplay();
+        const taskName = 'Tarea 5 SIELE S4';
+
         const categorySelect = document.getElementById('category-select');
         const generateButton = document.getElementById('generate-button');
         const debateCategory = document.getElementById('debate-category');
@@ -650,6 +366,7 @@
         const roleOutput = document.getElementById('role-output');
         let debateData = [];
         let uniqueCategories = [];
+
         async function loadDebateTopics() {
             try {
                 const response = await fetch('debatetopics.csv');
@@ -678,6 +395,7 @@
                 debateCategory.textContent = 'Error al cargar las categorías.';
             }
         }
+
         function generatePrompt() {
             const selectedCategory = categorySelect.value;
             let filteredPrompts;
@@ -695,6 +413,7 @@
             debateCategory.textContent = `Categoría: ${randomItem.category}`;
             debatePrompt.textContent = `Prompt: ${randomItem.prompt}`;
         }
+
         suggestButton.addEventListener('click', () => {
             suggestModal.style.display = 'flex';
         });
@@ -727,8 +446,7 @@
                 <p>Estudiante: ${studentRole}</p>
             `;
         });
-        loadDebateTopics();
-        generateButton.addEventListener('click', generatePrompt);
+
         const tabButtons = document.querySelectorAll('.tab-button');
         const tabContents = document.querySelectorAll('.tab-content');
         tabButtons.forEach(button => {
@@ -738,6 +456,13 @@
                 tabContents.forEach(content => content.classList.remove('active'));
                 document.getElementById(`tab-${button.dataset.tab}`).classList.add('active');
             });
+        });
+
+        window.addEventListener('load', () => {
+            loadIncludes();
+            loadDebateTopics();
+            generateButton.addEventListener('click', generatePrompt);
+            window.addEventListener('resize', handleResponsive);
         });
     </script>
 </body>
