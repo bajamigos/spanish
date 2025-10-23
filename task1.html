@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 1 SIELE S4: Descripción de Fotos</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .image-container img {
+            width: 100%;
+            max-width: 560px;
+            height: auto; /* Changed to auto for proportional scaling */
+            border-radius: 8px;
+            object-fit: contain; /* Changed to contain to show whole image without cropping */
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder">Loading header...</div>
+    
+    <div class="content-card">
+        <p>Para la Tarea 1 del SIELE S4, el estudiante describe fotos en español, practicando habilidades de expresión oral.</p>
+        <div class="image-container">
+            <img id="random-image" src="https://picsum.photos/500/500?random=1" alt="Random Photo for Description">
+        </div>
+        <button class="new-image-button" onclick="loadNewImage()">🔄 Nueva Foto</button>
+    </div>
+    
+    <div id="footer-placeholder">Loading footer...</div>
+
+    <script async src="https://tally.so/widgets/embed.js"></script>
+    <script src="common.js"></script>
+    <script>
+        const taskName = 'Tarea 1 SIELE S4';
+
+        function loadNewImage() {
+            const image = document.getElementById('random-image');
+            const randomNum = Math.floor(Math.random() * 1000);
+            image.src = `https://picsum.photos/500/500?random=${randomNum}`;
+            image.alt = 'New Random Photo for Description';
+        }
+
+        window.addEventListener('load', () => {
+            loadIncludes();
+            loadNewImage();
+            window.addEventListener('resize', handleResponsive);
+        });
+    </script>
+</body>
+</html>
