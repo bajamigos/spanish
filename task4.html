@@ -9,44 +9,53 @@
 <body>
     <div id="header-placeholder">Loading header...</div>
     
-    <div class="content-card">
-        <p>Para la Tarea 4 del SIELE S4, el estudiante presenta un monólogo en español, practicando expresión oral sostenida.</p>
-        
-        <div class="tab-buttons">
-            <button class="tab-button active" data-tab="instructions">Instrucciones</button>
-            <button class="tab-button" data-tab="practice">Práctica</button>
-        </div>
-        
-        <div id="tab-instructions" class="tab-content active">
-            <h2>Instrucciones</h2>
-            <p>En esta tarea, generas un monólogo basado en un prompt. Elige una categoría, genera un prompt, asigna un feeling y practica hablando usando el temporizador.</p>
-            <ul>
-                <li>Selecciona una categoría o usa todas.</li>
-                <li>Genera un prompt aleatorio.</li>
-                <li>Asigna un feeling aleatorio.</li>
-                <li>Usa el micrófono y temporizador para grabar y practicar.</li>
-            </ul>
-        </div>
-        
-        <div id="tab-practice" class="tab-content">
-            <h2>Práctica</h2>
-            <select id="category-select">
-                <option value="">Todas las categorías</option>
-            </select>
-            <button id="generate-button">Generar Prompt</button>
-            <p id="monologue-category"></p>
-            <p id="monologue-prompt"></p>
-            <button id="assign-feeling">Asignar Feeling</button>
-            <div id="feeling-output"></div>
-            <button id="suggest-button">Sugerir Nuevo Prompt</button>
-        </div>
-        
-        <div id="suggest-modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); align-items: center; justify-content: center;">
-            <div style="background-color: rgba(255, 255, 255, 0.05); border: 1px solid #1DA1F2; border-radius: 15px; padding: 20px; max-width: 400px;">
-                <select id="suggest-category"></select>
-                <textarea id="suggest-prompt" placeholder="Escribe el prompt..." style="width: 100%; height: 100px; margin: 10px 0;"></textarea>
-                <button id="submit-suggest">Enviar</button>
-                <button id="close-suggest">Cerrar</button>
+    <div class="dashboard-container">
+        <div class="studyplan-card">
+            <div class="kwizbot-message">
+                <div class="kwizbot-avatar">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iMzIiIGZpbGw9IiMyMTJGMzMiLz4KPHBhdGggZD0iTTIwIDI0QzIwIDI0IDIwIDI4IDI0IDM2QzI4IDQ0IDMyIDQ0IDMyIDQ0QzMyIDQ0IDM2IDQ0IDQwIDM2QzQ0IDI4IDQ0IDI0IDQ0IDI0IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjQiLz4KPGNpcmNsZSBjeD0iMjQiIGN5PSIyOCIgcj0iNCIgZmlsbD0id2hpdGUiLz4KPGNpcmNsZSBjeD0iNDAiIGN5PSIyOCIgcj0iNCIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTI0IDQ4QzI0IDQ4IDI2IDUwIDMyIDUwQzM4IDUwIDQwIDQ4IDQwIDQ4IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K" alt="Kwizbot">
+                </div>
+                <div class="kwizbot-bubble">
+                    <p>¡Prepárate para practicar tu expresión oral sostenida! Genera un monólogo basado en un prompt, asigna un feeling y practica hablando.</p>
+                </div>
+            </div>
+
+            <div class="tab-buttons">
+                <button class="tab-button active" data-tab="instructions">Instrucciones</button>
+                <button class="tab-button" data-tab="practice">Práctica</button>
+            </div>
+            
+            <div id="tab-instructions" class="tab-content active">
+                <h2>Instrucciones</h2>
+                <p>En esta tarea, generas un monólogo basado en un prompt. Elige una categoría, genera un prompt, asigna un feeling y practica hablando usando el temporizador.</p>
+                <ul>
+                    <li>Selecciona una categoría o usa todas.</li>
+                    <li>Genera un prompt aleatorio.</li>
+                    <li>Asigna un feeling aleatorio.</li>
+                    <li>Usa el micrófono y temporizador para grabar y practicar.</li>
+                </ul>
+            </div>
+            
+            <div id="tab-practice" class="tab-content">
+                <h2>Práctica</h2>
+                <select id="category-select">
+                    <option value="">Todas las categorías</option>
+                </select>
+                <button id="generate-button" class="action-btn primary">Generar Prompt</button>
+                <p id="monologue-category" class="display-text"></p>
+                <p id="monologue-prompt" class="display-text"></p>
+                <button id="assign-feeling" class="action-btn secondary">Asignar Feeling</button>
+                <div id="feeling-output" class="display-text"></div>
+                <button id="suggest-button" class="action-btn secondary">Sugerir Nuevo Prompt</button>
+            </div>
+            
+            <div id="suggest-modal" class="modal">
+                <div class="modal-content">
+                    <select id="suggest-category"></select>
+                    <textarea id="suggest-prompt" placeholder="Escribe el prompt..."></textarea>
+                    <button id="submit-suggest" class="action-btn primary">Enviar</button>
+                    <button id="close-suggest" class="action-btn secondary">Cerrar</button>
+                </div>
             </div>
         </div>
     </div>
@@ -79,7 +88,7 @@
                 const lines = csvText.trim().split('\n').slice(1);
                 monologueData = lines.map(line => {
                     const [category, prompt, emotion1, emotion2, emotion3, emotion4, emotion5] = line.split(',');
-                    return { category, prompt, emotions: [emotion1, emotion2, emotion3, emotion4, emotion5] };
+                    return { category, prompt, emotions: [emotion1, emotion2, emotion3, emotion4, emotion5].filter(e => e) };
                 });
                 uniqueCategories = [...new Set(monologueData.map(item => item.category))];
                 uniqueCategories.forEach(cat => {
@@ -103,12 +112,7 @@
         
         function generatePrompt() {
             const selectedCategory = categorySelect.value;
-            let filteredPrompts;
-            if (!selectedCategory) {
-                filteredPrompts = monologueData;
-            } else {
-                filteredPrompts = monologueData.filter(item => item.category === selectedCategory);
-            }
+            let filteredPrompts = selectedCategory ? monologueData.filter(item => item.category === selectedCategory) : monologueData;
             if (filteredPrompts.length === 0) {
                 monologueCategory.textContent = 'No hay prompts disponibles.';
                 monologuePrompt.textContent = '';
@@ -155,9 +159,7 @@
             }
             const randomIndex = Math.floor(Math.random() * currentItem.emotions.length);
             const feeling = currentItem.emotions[randomIndex];
-            feelingOutput.innerHTML = `
-                <p>Feeling: ${feeling}</p>
-            `;
+            feelingOutput.innerHTML = `<p>Feeling: ${feeling}</p>`;
         });
         
         const tabButtons = document.querySelectorAll('.tab-button');
