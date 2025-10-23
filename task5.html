@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 4 SIELE S4: Monólogo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header-placeholder">Loading header...</div>
+    
+    <div class="content-card">
+        <p>Para la Tarea 4 del SIELE S4, el estudiante presenta un monólogo en español, practicando expresión oral sostenida.</p>
+        
+        <div class="tab-buttons">
+            <button class="tab-button active" data-tab="instructions">Instrucciones</button>
+            <button class="tab-button" data-tab="practice">Práctica</button>
+        </div>
+        
+        <div id="tab-instructions" class="tab-content active">
+            <h2>Instrucciones</h2>
+            <p>En esta tarea, generas un monólogo basado en un prompt. Elige una categoría, genera un prompt, asigna un feeling y practica hablando usando el temporizador.</p>
+            <ul>
+                <li>Selecciona una categoría o usa todas.</li>
+                <li>Genera un prompt aleatorio.</li>
+                <li>Asigna un feeling aleatorio.</li>
+                <li>Usa el micrófono y temporizador para grabar y practicar.</li>
+            </ul>
+        </div>
+        
+        <div id="tab-practice" class="tab-content">
+            <h2>Práctica</h2>
+            <select id="category-select">
+                <option value="">Todas las categorías</option>
+            </select>
+            <button id="generate-button">Generar Prompt</button>
+            <p id="monologue-category"></p>
+            <p id="monologue-prompt"></p>
+            <button id="assign-feeling">Asignar Feeling</button>
+            <div id="feeling-output"></div>
+            <button id="suggest-button">Sugerir Nuevo Prompt</button>
+        </div>
+        
+        <div id="suggest-modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); align-items: center; justify-content: center;">
+            <div style="background-color: rgba(255, 255, 255, 0.05); border: 1px solid #1DA1F2; border-radius: 15px; padding: 20px; max-width: 400px;">
+                <select id="suggest-category"></select>
+                <textarea id="suggest-prompt" placeholder="Escribe el prompt..." style="width: 100%; height: 100px; margin: 10px 0;"></textarea>
+                <button id="submit-suggest">Enviar</button>
+                <button id="close-suggest">Cerrar</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="footer-placeholder">Loading footer...</div>
+
+    <script async src="https://tally.so/widgets/embed.js"></script>
+    <script src="common.js"></script>
+    <script>
+        const taskName = 'Tarea 4 SIELE S4';
+
+        const categorySelect = document.getElementById('category-select');
+        const generateButton = document.getElementById('generate-button');
+        const monologueCategory = document.getElementById('monologue-category');
+        const monologuePrompt = document.getElementById('monologue-prompt');
+        const suggestButton = document.getElementById('suggest-button');
+        const suggestModal = document.getElementById('suggest-modal');
+        const submitSuggest = document.getElementById('submit-suggest');
+        const closeSuggest = document.getElementById('close-suggest');
+        const assignFeeling = document.getElementById('assign-feeling');
+        const feelingOutput = document.getElementById('feeling-output');
+        let monologueData = [];
+        let uniqueCategories = [];
+        let currentItem = null;
+        
+        async function loadMonologueTopics() {
+            try {
+                const response = await fetch('monologuetopics.csv');
+                const csvText = await response.text();
+                const lines = csvText.trim().split('\n').slice(1);
+                monologueData = lines.map(line => {
+                    const [category, prompt, emotion1, emotion2, emotion3, emotion4, emotion5] = line.split(',');
+                    return { category, prompt, emotions: [emotion1, emotion2, emotion3, emotion4, emotion5] };
+                });
+                uniqueCategories = [...new Set(monologueData.map(item => item.category))];
+                uniqueCategories.forEach(cat => {
+                    const option = document.createElement('option');
+                    option.value = cat;
+                    option.textContent = cat;
+                    categorySelect.appendChild(option);
+                });
+                const suggestCategory = document.getElementById('suggest-category');
+                uniqueCategories.forEach(cat => {
+                    const option = document.createElement('option');
+                    option.value = cat;
+                    option.textContent = cat;
+                    suggestCategory.appendChild(option);
+                });
+            } catch (error) {
+                console.error('Error loading CSV:', error);
+                monologueCategory.textContent = 'Error al cargar las categorías.';
+            }
+        }
+        
+        function generatePrompt() {
+            const selectedCategory = categorySelect.value;
+            let filteredPrompts;
+            if (!selectedCategory) {
+                filteredPrompts = monologueData;
+            } else {
+                filteredPrompts = monologueData.filter(item => item.category === selectedCategory);
+            }
+            if (filteredPrompts.length === 0) {
+                monologueCategory.textContent = 'No hay prompts disponibles.';
+                monologuePrompt.textContent = '';
+                currentItem = null;
+                feelingOutput.innerHTML = '';
+                return;
+            }
+            currentItem = filteredPrompts[Math.floor(Math.random() * filteredPrompts.length)];
+            monologueCategory.textContent = `Categoría: ${currentItem.category}`;
+            monologuePrompt.textContent = `Prompt: ${currentItem.prompt}`;
+            feelingOutput.innerHTML = '';
+        }
+        
+        suggestButton.addEventListener('click', () => {
+            suggestModal.style.display = 'flex';
+        });
+        
+        closeSuggest.addEventListener('click', () => {
+            suggestModal.style.display = 'none';
+        });
+        
+        suggestModal.addEventListener('click', (e) => {
+            if (e.target === suggestModal) {
+                suggestModal.style.display = 'none';
+            }
+        });
+        
+        submitSuggest.addEventListener('click', () => {
+            const category = document.getElementById('suggest-category').value;
+            const prompt = document.getElementById('suggest-prompt').value;
+            if (category && prompt) {
+                alert(`Sugerencia enviada: Categoría: ${category}, Prompt: ${prompt}`);
+                suggestModal.style.display = 'none';
+                document.getElementById('suggest-prompt').value = '';
+            } else {
+                alert('Por favor, selecciona una categoría y escribe un prompt.');
+            }
+        });
+        
+        assignFeeling.addEventListener('click', () => {
+            if (!currentItem) {
+                alert('Genera un prompt primero para asignar feeling.');
+                return;
+            }
+            const randomIndex = Math.floor(Math.random() * currentItem.emotions.length);
+            const feeling = currentItem.emotions[randomIndex];
+            feelingOutput.innerHTML = `
+                <p>Feeling: ${feeling}</p>
+            `;
+        });
+        
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                tabContents.forEach(content => content.classList.remove('active'));
+                document.getElementById(`tab-${button.dataset.tab}`).classList.add('active');
+            });
+        });
+        
+        window.addEventListener('load', () => {
+            loadIncludes();
+            loadMonologueTopics();
+            window.addEventListener('resize', handleResponsive);
+        });
+    </script>
+</body>
+</html>
