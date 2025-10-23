@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 2 SIELE S4: Responder a Medios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header-placeholder">Loading header...</div>
+    
+    <div class="content-card">
+        <p>Para la Tarea 2 del SIELE S4, el estudiante responde a videos en español, practicando expresión oral.</p>
+        <div id="video-container" class="image-container">
+            <iframe id="video-iframe" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <p id="channel-info">Cargando video...</p>
+        <button class="new-image-button" onclick="loadNextVideo()">Siguiente Video</button>
+    </div>
+    
+    <div id="footer-placeholder">Loading footer...</div>
+
+    <script async src="https://tally.so/widgets/embed.js"></script>
+    <script src="common.js"></script>
+    <script>
+        const taskName = 'Tarea 2 SIELE S4';
+
+        const channels = [
+            { name: 'DW Español', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCT4Jg8h03dD0iN3Pb5L0PMA' },
+            { name: 'BBC Mundo', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCv8CkQ9wZHQMwlUZtIoyUAA' },
+            { name: 'France 24 Español', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCUdOoVWuWmgo1wByzcsyKDQ' },
+            { name: 'RT en Español', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCEIhICHOQOonjE6V0SLdrHQ' },
+            { name: 'El País', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCnsvJeZO4RigQ898WdDhkFQ' },
+            { name: 'CNN en Español', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UC_lEiu6917IJz03TnntWUaQ' },
+            { name: 'Univision Noticias', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UC32TdiIsh_5X8tKr_9rKQyA' },
+            { name: 'Telemundo Noticias', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCRwA1NUcUnwsly35ikGhp0A' },
+            { name: 'Voz de América', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCXQSHGZP6StIywcGofGdm0Q' },
+            { name: 'Al Jazeera Español', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UC6DcwP4bW65JrY1y2y5Vayw' }
+        ];
+
+        let allVideos = [];
+        let currentVideoIndex = -1;
+        let isLoading = false;
+        
+        async function fetchAllVideos() {
+            if (isLoading) return;
+            isLoading = true;
+            allVideos = [];
+            
+            for (const channel of channels) {
+                try {
+                    const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(channel.rss)}&count=10`;
+                    const response = await fetch(apiUrl);
+                    const data = await response.json();
+                    
+                    if (data.status === 'ok' && data.items) {
+                        data.items.forEach(item => {
+                            const match = item.link.match(/v=([^&]+)/);
+                            if (match) {
+                                allVideos.push({
+                                    id: match[1],
+                                    channel: channel.name,
+                                    title: item.title,
+                                    published: new Date(item.pubDate)
+                                });
+                            }
+                        });
+                    }
+                    
+                    await new Promise(resolve => setTimeout(resolve, 500));
+                } catch (error) {
+                    // Silent error handling
+                }
+            }
+            
+            allVideos.sort((a, b) => b.published - a.published);
+            
+            for (let i = allVideos.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [allVideos[i], allVideos[j]] = [allVideos[j], allVideos[i]];
+            }
+            
+            isLoading = false;
+            
+            if (allVideos.length > 0) {
+                loadVideo(allVideos[0]);
+            } else {
+                document.getElementById('channel-info').textContent = 'No videos found—try refreshing!';
+            }
+        }
+        
+        function loadVideo(video) {
+            document.getElementById('video-iframe').src = `https://www.youtube.com/embed/${video.id}?autoplay=0`;
+            document.getElementById('channel-info').textContent = `${video.channel}`;
+        }
+        
+        function loadNextVideo() {
+            if (allVideos.length === 0) {
+                document.getElementById('channel-info').textContent = 'Cargando videos...';
+                fetchAllVideos();
+                return;
+            }
+            
+            currentVideoIndex = (currentVideoIndex + 1) % allVideos.length;
+            loadVideo(allVideos[currentVideoIndex]);
+            
+            if (currentVideoIndex === 0) {
+                fetchAllVideos();
+            }
+        }
+
+        window.addEventListener('load', () => {
+            loadIncludes();
+            fetchAllVideos();
+            window.addEventListener('resize', handleResponsive);
+        });
+    </script>
+</body>
+</html>
