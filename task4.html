@@ -1,0 +1,717 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 4 SIELE S4: Monólogo</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+      
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            text-align: center;
+            background: linear-gradient(to bottom, #000000, #0a0a0a);
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            overflow: auto;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyYWRpYWxHcmFkaWVudCBpZD0iZ3JhZCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzAwMDAwMDsiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3R5bGU9InN0b3AtY29sb3I6IzAwMDAwMDtvcGFjaXR5OjAuNSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6IzAwMDAwMDsiLz48L3JhZGlhbEdyYWRpZW50PjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiLz48L3N2Zz4=') repeat;
+            opacity: 0.1;
+            z-index: -1;
+        }
+        header {
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin: 0;
+            color: #1DA1F2;
+            text-shadow: 0 0 10px rgba(29, 161, 242, 0.5);
+        }
+        h1::after {
+            content: ' 🤖';
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        p, li {
+            font-size: 16px;
+            color: #E0E0E0;
+            text-align: left;
+            max-width: 800px;
+            margin: 10px auto;
+        }
+        a {
+            color: #1DA1F2;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #FFFFFF;
+        }
+        .content-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid #1DA1F2;
+            border-radius: 20px;
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(29, 161, 242, 0.2);
+        }
+        .contribute-section {
+            margin: 40px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .action-panel {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .button-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .tally-button {
+            padding: 10px 20px;
+            background-color: #FFFFFF;
+            color: #000000;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .tally-button:hover {
+            background-color: #1DA1F2;
+            color: #FFFFFF;
+        }
+        .social-link {
+            margin-top: 20px;
+            padding-top: 20px;
+        }
+        .social-link a {
+            color: #1DA1F2;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .social-link a:hover {
+            color: #FFFFFF;
+        }
+        footer {
+            margin-top: auto;
+            font-size: 12px;
+            color: #888888;
+            padding-top: 20px;
+        }
+        .timer-card {
+            display: flex;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid #1DA1F2;
+            border-radius: 50px;
+            padding: 8px 12px;
+            gap: 10px;
+            width: 200px;
+            height: 36px;
+            justify-content: space-between;
+        }
+        .timer-display {
+            font-size: 18px;
+            min-width: 50px;
+            color: #FFFFFF;
+            background-color: transparent;
+            border: none;
+        }
+        .timer-buttons {
+            display: flex;
+            gap: 5px;
+        }
+        .timer-button {
+            width: 28px;
+            height: 28px;
+            background-color: transparent;
+            color: #1DA1F2;
+            border: 1px solid #1DA1F2;
+            border-radius: 50%;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .timer-button:hover {
+            background-color: #1DA1F2;
+            color: #000000;
+            transform: scale(1.1);
+            box-shadow: 0 2px 8px rgba(29, 161, 242, 0.3);
+        }
+        .timer-button:active {
+            transform: scale(0.95);
+        }
+        @media (max-width: 768px) {
+            .action-panel {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .timer-card {
+                width: 220px;
+                height: 38px;
+                padding: 6px 10px;
+                gap: 5px;
+            }
+            .timer-display {
+                font-size: 16px;
+                min-width: 45px;
+            }
+            .timer-button {
+                width: 26px;
+                height: 26px;
+                font-size: 11px;
+            }
+        }
+        .monologue-tools {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid #1DA1F2;
+            border-radius: 20px;
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            backdrop-filter: blur(5px);
+            text-align: center;
+        }
+        .tab-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        .tab-button {
+            padding: 8px 16px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #FFFFFF;
+            border: 1px solid #1DA1F2;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .tab-button.active {
+            background-color: #1DA1F2;
+            color: #000000;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .generator-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        #category-select {
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #FFFFFF;
+            border: 1px solid #1DA1F2;
+            border-radius: 50px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #category-select:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        #generate-button {
+            padding: 10px 20px;
+            background-color: #FFFFFF;
+            color: #000000;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        #generate-button:hover {
+            background-color: #1DA1F2;
+            color: #FFFFFF;
+        }
+        #monologue-output {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: #E0E0E0;
+            text-align: left;
+        }
+        #monologue-category {
+            font-weight: bold;
+            color: #1DA1F2;
+        }
+        #monologue-prompt {
+            margin-top: 5px;
+        }
+        #suggest-button, #assign-feeling {
+            padding: 10px 20px;
+            background-color: #FFFFFF;
+            color: #000000;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            height: 42px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #suggest-button:hover, #assign-feeling:hover {
+            background-color: #1DA1F2;
+            color: #FFFFFF;
+        }
+        #feeling-output {
+            max-width: 200px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: #E0E0E0;
+            text-align: left;
+            font-size: 14px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        #suggest-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            align-items: center;
+            justify-content: center;
+        }
+        #suggest-modal-content {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid #1DA1F2;
+            border-radius: 20px;
+            padding: 20px;
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+            animation: fadeIn 0.3s;
+        }
+        #suggest-modal-content h3 {
+            color: #1DA1F2;
+            margin-bottom: 15px;
+        }
+        #suggest-category {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #FFFFFF;
+            border: 1px solid #1DA1F2;
+            border-radius: 50px;
+        }
+        #suggest-prompt {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #FFFFFF;
+            border: 1px solid #1DA1F2;
+            border-radius: 10px;
+        }
+        #submit-suggest {
+            padding: 10px 20px;
+            background-color: #FFFFFF;
+            color: #000000;
+            border-radius: 50px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+        #submit-suggest:hover {
+            background-color: #1DA1F2;
+            color: #FFFFFF;
+        }
+        #close-suggest {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: transparent;
+            color: #FFFFFF;
+            border: 1px solid #1DA1F2;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        #close-suggest:hover {
+            background-color: #1DA1F2;
+            color: #000000;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @media (max-width: 768px) {
+            .button-group {
+                flex-direction: row;
+                gap: 10px;
+            }
+            #suggest-button, #assign-feeling {
+                padding: 8px 16px;
+                font-size: 12px;
+                height: 36px;
+            }
+            #feeling-output {
+                max-width: 150px;
+                font-size: 12px;
+                padding: 8px;
+            }
+            .tab-buttons {
+                gap: 8px;
+            }
+            .tab-button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tarea 4 SIELE S4: Monólogo</h1>
+    </header>
+    <div class="content-card">
+        <p>Para la Tarea 4 del SIELE S4, el estudiante graba un monólogo de 2 minutos en español, practicando expresión oral.</p>
+    </div>
+    <div class="monologue-tools">
+        <div class="tab-buttons">
+            <button class="tab-button active" data-tab="generate">Generar</button>
+            <button class="tab-button" data-tab="suggest">Sugerir</button>
+            <button class="tab-button" data-tab="feeling">Feeling</button>
+        </div>
+        <div id="tab-generate" class="tab-content active">
+            <div class="generator-controls">
+                <select id="category-select">
+                    <option value="">Selecciona una Categoría (o Aleatorio)</option>
+                </select>
+                <button id="generate-button" class="tally-button">Generar Monólogo</button>
+            </div>
+            <div id="monologue-output">
+                <p id="monologue-category"></p>
+                <p id="monologue-prompt"></p>
+            </div>
+        </div>
+        <div id="tab-suggest" class="tab-content">
+            <button id="suggest-button" class="tally-button">Sugerir Nuevo Tema</button>
+        </div>
+        <div id="tab-feeling" class="tab-content">
+            <button id="assign-feeling" class="tally-button">Asignar Feeling</button>
+            <div id="feeling-output"></div>
+        </div>
+    </div>
+    <div id="suggest-modal">
+        <div id="suggest-modal-content">
+            <h3>Sugerir Nuevo Prompt</h3>
+            <select id="suggest-category">
+            </select>
+            <input type="text" id="suggest-prompt" placeholder="Escribe el nuevo prompt de monólogo">
+            <button id="submit-suggest">Enviar Sugerencia</button>
+            <button id="close-suggest">Cerrar</button>
+        </div>
+    </div>
+    <div class="contribute-section">
+        <div class="action-panel">
+            <div class="timer-card">
+                <div class="timer-display" id="timer">02:00</div>
+                <div class="timer-buttons">
+                    <button class="timer-button" onclick="startTimer()" title="Iniciar">▶</button>
+                    <button class="timer-button" onclick="startRecording()" title="Grabar">🎤</button>
+                    <button class="timer-button" onclick="stopTimer()" title="Detener">⏸</button>
+                    <button class="timer-button" onclick="resetTimer()" title="Reiniciar">↺</button>
+                </div>
+            </div>
+            <div class="button-group">
+                <button data-tally-open="nG2Jde" data-tally-hide-title="1" class="tally-button">Add Flashcard</button>
+                <button data-tally-open="wo47OO" class="tally-button">Add Feedback</button>
+            </div>
+        </div>
+    </div>
+    <div class="social-link">
+        <a href="https://www.instagram.com/bajamigospanish">@bajamigospanish</a>
+    </div>
+    <footer>
+    </footer>
+    <script async src="https://tally.so/widgets/embed.js"></script>
+    <script>
+        let timer;
+        let seconds = 120;
+        let isRunning = false;
+        let mediaRecorder = null;
+        let audioChunks = [];
+        function updateTimerDisplay() {
+            const minutes = Math.floor(seconds / 60);
+            const secs = seconds % 60;
+            document.getElementById('timer').textContent =
+                `${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+            if (seconds <= 0) {
+                stopTimer();
+                document.getElementById('timer').textContent = '00:00';
+            }
+        }
+        function startTimer() {
+            if (!isRunning && seconds > 0) {
+                isRunning = true;
+                timer = setInterval(() => {
+                    seconds--;
+                    updateTimerDisplay();
+                }, 1000);
+            }
+        }
+        async function startRecording() {
+            if (!isRunning && seconds > 0) {
+                try {
+                    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                    mediaRecorder = new MediaRecorder(stream);
+                    audioChunks = [];
+                    mediaRecorder.ondataavailable = (event) => {
+                        if (event.data.size > 0) {
+                            audioChunks.push(event.data);
+                        }
+                    };
+                    mediaRecorder.onstop = () => {
+                        const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+                        const url = URL.createObjectURL(audioBlob);
+                        const a = document.createElement('a');
+                        a.href = url;
+                        a.download = `monologue_${new Date().toISOString()}.webm`;
+                        document.body.appendChild(a);
+                        a.click();
+                        document.body.removeChild(a);
+                        URL.revokeObjectURL(url);
+                        stream.getTracks().forEach(track => track.stop());
+                    };
+                    mediaRecorder.start();
+                    startTimer();
+                } catch (error) {
+                    console.error('Error starting recording:', error);
+                    alert('No se pudo acceder al micrófono. Por favor, verifica los permisos.');
+                }
+            }
+        }
+        function stopTimer() {
+            if (isRunning) {
+                isRunning = false;
+                clearInterval(timer);
+                if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+                    mediaRecorder.stop();
+                }
+            }
+        }
+        function resetTimer() {
+            isRunning = false;
+            clearInterval(timer);
+            if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+                mediaRecorder.stop();
+            }
+            seconds = 120;
+            updateTimerDisplay();
+        }
+        updateTimerDisplay();
+        const categorySelect = document.getElementById('category-select');
+        const generateButton = document.getElementById('generate-button');
+        const monologueCategory = document.getElementById('monologue-category');
+        const monologuePrompt = document.getElementById('monologue-prompt');
+        const suggestButton = document.getElementById('suggest-button');
+        const suggestModal = document.getElementById('suggest-modal');
+        const submitSuggest = document.getElementById('submit-suggest');
+        const closeSuggest = document.getElementById('close-suggest');
+        const assignFeeling = document.getElementById('assign-feeling');
+        const feelingOutput = document.getElementById('feeling-output');
+        let monologueData = [];
+        let uniqueCategories = [];
+        let currentItem = null;
+        async function loadMonologueTopics() {
+            try {
+                const response = await fetch('monologuetopics.csv');
+                const csvText = await response.text();
+                const lines = csvText.trim().split('\n').slice(1);
+                monologueData = lines.map(line => {
+                    const [category, prompt, emotion1, emotion2, emotion3, emotion4, emotion5] = line.split(',');
+                    return { category, prompt, emotions: [emotion1, emotion2, emotion3, emotion4, emotion5] };
+                });
+                uniqueCategories = [...new Set(monologueData.map(item => item.category))];
+                uniqueCategories.forEach(cat => {
+                    const option = document.createElement('option');
+                    option.value = cat;
+                    option.textContent = cat;
+                    categorySelect.appendChild(option);
+                });
+                const suggestCategory = document.getElementById('suggest-category');
+                uniqueCategories.forEach(cat => {
+                    const option = document.createElement('option');
+                    option.value = cat;
+                    option.textContent = cat;
+                    suggestCategory.appendChild(option);
+                });
+            } catch (error) {
+                console.error('Error loading CSV:', error);
+                monologueCategory.textContent = 'Error al cargar las categorías.';
+            }
+        }
+        function generatePrompt() {
+            const selectedCategory = categorySelect.value;
+            let filteredPrompts;
+            if (!selectedCategory) {
+                filteredPrompts = monologueData;
+            } else {
+                filteredPrompts = monologueData.filter(item => item.category === selectedCategory);
+            }
+            if (filteredPrompts.length === 0) {
+                monologueCategory.textContent = 'No hay prompts disponibles.';
+                monologuePrompt.textContent = '';
+                currentItem = null;
+                feelingOutput.innerHTML = '';
+                return;
+            }
+            currentItem = filteredPrompts[Math.floor(Math.random() * filteredPrompts.length)];
+            monologueCategory.textContent = `Categoría: ${currentItem.category}`;
+            monologuePrompt.textContent = `Prompt: ${currentItem.prompt}`;
+            feelingOutput.innerHTML = '';
+        }
+        suggestButton.addEventListener('click', () => {
+            suggestModal.style.display = 'flex';
+        });
+        closeSuggest.addEventListener('click', () => {
+            suggestModal.style.display = 'none';
+        });
+        suggestModal.addEventListener('click', (e) => {
+            if (e.target === suggestModal) {
+                suggestModal.style.display = 'none';
+            }
+        });
+        submitSuggest.addEventListener('click', () => {
+            const category = document.getElementById('suggest-category').value;
+            const prompt = document.getElementById('suggest-prompt').value;
+            if (category && prompt) {
+                alert(`Sugerencia enviada: Categoría: ${category}, Prompt: ${prompt}`);
+                suggestModal.style.display = 'none';
+                document.getElementById('suggest-prompt').value = '';
+            } else {
+                alert('Por favor, selecciona una categoría y escribe un prompt.');
+            }
+        });
+        assignFeeling.addEventListener('click', () => {
+            if (!currentItem) {
+                alert('Genera un prompt primero para asignar feeling.');
+                return;
+            }
+            const randomIndex = Math.floor(Math.random() * currentItem.emotions.length);
+            const feeling = currentItem.emotions[randomIndex];
+            feelingOutput.innerHTML = `
+                <p>Feeling: ${feeling}</p>
+            `;
+        });
+        loadMonologueTopics();
+        generateButton.addEventListener('click', generatePrompt);
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                tabContents.forEach(content => content.classList.remove('active'));
+                document.getElementById(`tab-${button.dataset.tab}`).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

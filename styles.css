@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+body {
+margin: 0;
+padding: 20px;
+text-align: center;
+background: linear-gradient(to bottom, #000000, #0a0a0a);
+color: #FFFFFF;
+font-family: 'Inter', sans-serif;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+position: relative;
+overflow: auto;
+}
+body::before {
+content: '';
+position: absolute;
+top: 0; left: 0; right: 0; bottom: 0;
+background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyYWRpYWxHcmFkaWVudCBpZD0iZ3JhZCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzAwMDAwMDsiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3R5bGU9InN0b3AtY29sb3I6IzAwMDAwMDtvcGFjaXR5OjAuNSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6IzAwMDAwMDsiLz48L3JhZGlhbEdyYWRpZW50PjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiLz48L3N2Zz4=') repeat;
+opacity: 0.1;
+z-index: -1;
+}
+.header-card, .footer-card, .content-card {
+background-color: rgba(255, 255, 255, 0.05);
+border: 1px solid #1DA1F2;
+border-radius: 15px;
+padding: 8px;
+width: 100%;
+max-width: 600px;
+margin: 8px auto;
+backdrop-filter: blur(5px);
+transition: transform 0.3s, box-shadow 0.3s;
+}
+.header-card:hover, .footer-card:hover, .content-card:hover {
+transform: translateY(-3px);
+box-shadow: 0 8px 15px rgba(29, 161, 242, 0.2);
+}
+.header-card {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 8px;
+}
+h1 {
+font-size: 22px;
+font-weight: 700;
+margin: 0;
+color: #1DA1F2;
+}
+.home-button {
+padding: 4px 8px;
+background: #1DA1F2;
+color: #000;
+border-radius: 50px;
+text-decoration: none;
+font-size: 10px;
+}
+.home-button:hover {
+background: #FFFFFF;
+color: #000;
+}
+p {
+font-size: 10px;
+color: #E0E0E0;
+margin: 3px 0;
+}
+.image-container {
+margin-bottom: 3px;
+}
+.image-container img {
+width: 100%;
+max-width: 560px;
+height: 180px;
+border-radius: 8px;
+object-fit: cover;
+}
+.new-image-button {
+padding: 5px 10px;
+background-color: #FFFFFF;
+color: #000000;
+border-radius: 50px;
+font-size: 10px;
+font-weight: bold;
+border: none;
+cursor: pointer;
+transition: background-color 0.3s;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.new-image-button:hover {
+background-color: #1DA1F2;
+color: #FFFFFF;
+}
+.timer-card {
+display: flex;
+align-items: center;
+gap: 3px;
+padding: 5px;
+background: rgba(255, 255, 255, 0.05);
+border: 1px solid #1DA1F2;
+border-radius: 50px;
+width: 160px;
+margin: 3px auto;
+}
+.timer-display {
+font-size: 12px;
+color: #FFFFFF;
+}
+.timer-button {
+width: 20px;
+height: 20px;
+background: transparent;
+color: #1DA1F2;
+border: 1px solid #1DA1F2;
+border-radius: 50%;
+font-size: 8px;
+cursor: pointer;
+}
+.timer-button:hover {
+background: #1DA1F2;
+color: #000;
+}
+.button-group {
+display: flex;
+gap: 3px;
+justify-content: center;
+flex-wrap: wrap;
+}
+.tally-button {
+padding: 5px 10px;
+background: #FFFFFF;
+color: #000;
+border-radius: 50px;
+font-size: 10px;
+font-weight: bold;
+border: none;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+.tally-button:hover {
+background: #1DA1F2;
+color: #FFFFFF;
+}
+.progress-text {
+font-size: 10px;
+color: #E0E0E0;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+margin: 3px 0;
+}
+.progress-bar-container {
+display: flex;
+justify-content: space-around;
+gap: 5px;
+margin: 3px 0;
+}
+.progress-column progress {
+width: 100%;
+height: 5px;
+background: #0a0a0a;
+border: 1px solid #1DA1F2;
+border-radius: 3px;
+}
+progress::-webkit-progress-bar {
+background: #0a0a0a;
+}
+progress::-webkit-progress-value {
+background: #1DA1F2;
+}
+.action-row {
+display: flex;
+gap: 5px;
+justify-content: center;
+flex-wrap: wrap;
+margin-bottom: 3px;
+}
+#top-tutors {
+font-size: 10px;
+list-style: none;
+padding: 0;
+margin: 3px 0;
+}
+#top-tutors li {
+margin: 2px 0;
+}
+.social-link a {
+color: #1DA1F2;
+font-size: 10px;
+text-decoration: none;
+}
+.social-link a:hover {
+color: #FFFFFF;
+}
+@media (max-width: 767px) {
+.progress-bar-container {
+flex-direction: column;
+justify-content: flex-start;
+}
+.header-card, .footer-card, .content-card {
+padding: 6px;
+margin: 6px auto;
+}
+.image-container img {
+height: 140px;
+}
+.new-image-button, .tally-button {
+font-size: 9px;
+padding: 4px 8px;
+}
+.timer-card {
+width: 140px;
+}
+.timer-display {
+font-size: 11px;
+}
+.timer-button {
+width: 18px;
+height: 18px;
+font-size: 7px;
+}
+.action-row {
+flex-direction: column;
+gap: 3px;
+}
+}
+@media (min-width: 768px) {
+.progress-bar-container {
+flex-direction: row;
+}
+}

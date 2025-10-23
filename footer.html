@@ -1,0 +1,38 @@
+<div class="footer-card">
+    <div class="action-row">
+        <div class="timer-card">
+            <div class="timer-display" id="timer">02:00</div>
+            <button class="timer-button" id="start-timer-btn" title="Iniciar">▶</button>
+            <button class="timer-button" id="start-record-btn" title="Grabar">🎤</button>
+            <button class="timer-button" id="stop-btn" title="Detener">⏸</button>
+            <button class="timer-button" id="reset-btn" title="Reiniciar">↺</button>
+        </div>
+    </div>
+    <div class="progress-section" style="display: flex; justify-content: space-around; gap: 5px; margin-top: 5px;">
+        <div class="contributors-column">
+            <p>🏆 Top Contributors:</p>
+            <ul id="top-tutors">
+                <li>Loading...</li>
+            </ul>
+        </div>
+        <div class="progress-column">
+            <button class="tally-button" data-tally-open="nG2Jde" data-tally-hide-title="1">📚 Vocabulary</button>
+            <p class="progress-text">Flashcards: <span id="flash-text">Loading...</span></p>
+            <progress id="flash-bar" max="50" value="0"></progress>
+        </div>
+        <div class="progress-column">
+            <button class="tally-button" data-tally-open="wo47OO" data-tally-hide-title="1">✏️ Corrections</button>
+            <p class="progress-text">Errors: <span id="error-text">Loading...</span></p>
+            <progress id="error-bar" max="50" value="0"></progress>
+        </div>
+        <div class="progress-column">
+            <button class="tally-button" data-tally-open="pronunciacionFormID" data-tally-hide-title="1">🎯 Pronunciación</button>
+            <p class="progress-text">Pronunciation: <span id="pron-text">Loading...</span></p>
+            <progress id="pron-bar" max="50" value="0"></progress>
+        </div>
+    </div>
+    <div class="social-link">
+        <a href="https://www.instagram.com/bajamigospanish">@bajamigospanish</a>
+    </div>
+</div>
+<script async src="https://tally.so/widgets/embed.js"></script>
