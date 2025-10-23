@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 6: Grammar Exercises</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header-placeholder">Loading header...</div>
+    
+    <div class="content-card">
+        <h1>Task 6: Spanish Grammar Exercises</h1>
+        <p>Hey there! Let's practice some Spanish grammar. This page is like your fun workout for words and sentences. We'll use cool links from Kwiziq to help you learn. Click the buttons – they'll open in a popup window so you can focus!</p>
+        
+        <div class="exercise-section">
+            <h2>Notebook Exercise</h2>
+            <p>Check out your personal Spanish notebook for grammar notes.</p>
+            <button class="tally-button" onclick="openPopup('https://spanish.kwiziq.com/my-languages/spanish/notebook/3476989')">Open Notebook</button>
+        </div>
+        
+        <div class="exercise-section">
+            <h2>Brainmap Challenge</h2>
+            <p>See your progress on the Spanish brainmap – it's like a map of what you know!</p>
+            <button class="tally-button" onclick="openPopup('https://spanish.kwiziq.com/my-languages/spanish?modal=brainmap')">Open Brainmap</button>
+        </div>
+        
+        <div class="exercise-section">
+            <h2>Listening Practice</h2>
+            <p>Listen to Spanish and fill in the blanks or answer questions.</p>
+            <button class="tally-button" onclick="openPopup('https://spanish.kwiziq.com/learn/listening')">Open Listening Exercises</button>
+        </div>
+        
+        <div class="exercise-section">
+            <h2>Writing Drills</h2>
+            <p>Write sentences and get feedback on your grammar.</p>
+            <button class="tally-button" onclick="openPopup('https://spanish.kwiziq.com/learn/writing')">Open Writing Exercises</button>
+        </div>
+    </div>
+
+    <div id="footer-placeholder">Loading footer...</div>
+
+    <script>
+        // Step like grabbing toys: Load header and footer from files.
+        async function loadIncludes() {
+            const headerPlaceholder = document.getElementById('header-placeholder');
+            const footerPlaceholder = document.getElementById('footer-placeholder');
+            try {
+                const headerResponse = await fetch('header.html');
+                if (!headerResponse.ok) throw new Error('Header not found');
+                headerPlaceholder.innerHTML = await headerResponse.text();
+                
+                const footerResponse = await fetch('footer.html');
+                if (!footerResponse.ok) throw new Error('Footer not found');
+                footerPlaceholder.innerHTML = await footerResponse.text();
+                
+                console.log('Header and footer are ready!');
+                
+                // Now that footer's here, make buttons listen, fix clock, fill bars, and check phone size!
+                attachEventListeners();
+                updateTimerDisplay();
+                updateProgress();
+                setInterval(updateProgress, 30000); // Check elf friend every 30 seconds.
+                handleResponsive();
+            } catch (error) {
+                console.error('Problem loading:', error);
+                // Backup toy if lost.
+                headerPlaceholder.innerHTML = '<div class="header-card"><a href="index.html" class="home-button">[HOME]</a><h1>SIELE S4 Study Guide</h1></div>';
+                footerPlaceholder.innerHTML = '<div class="footer-card"><p>Backup footer—find the real one!</p></div>';
+            }
+        }
+
+        // This makes the links open in popup windows
+        function openPopup(url) {
+            window.open(url, 'popup', 'width=800,height=600,scrollbars=yes,resizable=yes');
+        }
+
+        // Step for timer and recorder fun.
+        let timerInterval, seconds = 120, isRunning = false; // 2 minutes for grammar response, to match task1/2.
+        let mediaRecorder, audioChunks = [];
+        const webhookUrl = 'https://hooks.zapier.com/hooks/catch/25050495/urdpdfu/'; // Your magic key!
+        const taskName = 'Tarea 6 SIELE S4';
+        
+        function updateTimerDisplay() {
+            const minutes = Math.floor(seconds / 60);
+            const secs = seconds % 60;
+            document.getElementById('timer').textContent = `${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+            if (seconds <= 0) stopTimer();
+        }
+        
+        function startTimer() {
+            if (!isRunning && seconds > 0) {
+                timerInterval = setInterval(() => {
+                    seconds--;
+                    updateTimerDisplay();
+                    if (seconds <= 0) stopTimer();
+                }, 1000);
+                isRunning = true;
+            }
+        }
+        
+        function stopTimer() {
+            clearInterval(timerInterval);
+            isRunning = false;
+        }
+        
+        function resetTimer() {
+            stopTimer();
+            seconds = 120;
+            updateTimerDisplay();
+        }
+        
+        async function startRecording() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                mediaRecorder = new MediaRecorder(stream);
+                mediaRecorder.ondataavailable = (event) => audioChunks.push(event.data);
+                mediaRecorder.onstop = () => {
+                    const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+                    audioChunks = [];
+                    sendToZapier(audioBlob);
+                };
+                mediaRecorder.start();
+                startTimer(); // Timer starts with recording.
+                console.log('Recording—say something fun!');
+            } catch (error) {
+                alert('Mic trouble: ' + error.message);
+            }
+        }
+        
+        function stopRecording() {
+            if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+                mediaRecorder.stop();
+                stopTimer();
+            }
+        }
+        
+        async function sendToZapier(audioBlob) {
+            const formData = new FormData();
+            const timestamp = new Date().toISOString();
+            formData.append('file', audioBlob, 'recording.webm');
+            formData.append('timestamp', timestamp);
+            formData.append('task', taskName);
+            try {
+                const response = await fetch(webhookUrl, { method: 'POST', body: formData });
+                if (response.ok) {
+                    alert('Sent to your Drive—good job!');
+                } else {
+                    throw new Error('Send failed');
+                }
+            } catch (error) {
+                alert('Error: ' + error.message + '. Check wifi!');
+            }
+        }
+        
+        function attachEventListeners() {
+            document.getElementById('start-timer-btn').addEventListener('click', startTimer);
+            document.getElementById('start-record-btn').addEventListener('click', startRecording);
+            document.getElementById('stop-btn').addEventListener('click', () => {
+                stopTimer();
+                stopRecording();
+            });
+            document.getElementById('reset-btn').addEventListener('click', resetTimer);
+        }
+
+        // Step for getting numbers from your elf friend.
+        async function updateProgress() {
+            try {
+                const response = await fetch('https://siele-elf-6477d7a8fbd0.herokuapp.com/progress');
+                if (!response.ok) throw new Error('Elf is napping');
+                const data = await response.json();
+                document.getElementById('flash-text').textContent = `${data.flash.total}/50 (${data.flash.percent}%)`;
+                document.getElementById('pron-text').textContent = `${data.pron.total}/50 (${data.pron.percent}%)`;
+                document.getElementById('error-text').textContent = `${data.error.total}/50 (${data.error.percent}%)`;
+                document.getElementById('flash-bar').value = data.flash.total;
+                document.getElementById('pron-bar').value = data.pron.total;
+                document.getElementById('error-bar').value = data.error.total;
+                const tutorsList = document.getElementById('top-tutors');
+                tutorsList.innerHTML = data.topTutors.map((tutor, index) => `<li>${index + 1}. ${tutor}</li>`).join('');
+                console.log('Numbers updated!');
+            } catch (error) {
+                console.error('Elf trouble:', error);
+                // Backup numbers if elf is gone.
+                document.getElementById('flash-text').textContent = '28/50 (56%)';
+                document.getElementById('pron-text').textContent = '35/50 (70%)';
+                document.getElementById('error-text').textContent = '42/50 (84%)';
+                document.getElementById('flash-bar').value = 28;
+                document.getElementById('pron-bar').value = 35;
+                document.getElementById('error-bar').value = 42;
+                document.getElementById('top-tutors').innerHTML = '<li>1. Maria - 45</li><li>2. Alex - 38</li><li>3. Sofia - 32</li>';
+            }
+        }
+
+        // Step for phone or big screen—make bars fit.
+        function handleResponsive() {
+            const isMobile = window.innerWidth < 768;
+            const progressSection = document.querySelector('.progress-section');
+            if (progressSection) {
+                progressSection.style.flexDirection = isMobile ? 'column' : 'row';
+            }
+        }
+
+        // Start our game when the page opens!
+        window.addEventListener('load', () => {
+            loadIncludes(); // This starts loading and fixing everything inside.
+            window.addEventListener('resize', handleResponsive); // Watch if the screen changes size.
+        });
+    </script>
+</body>
+</html>
