@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Antonimo Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            position: relative;
+            min-height: 100vh;
+            background-color: white;
+            overflow-x: hidden;
+        }
+        #game {
+            max-width: 600px;
+            margin: auto;
+        }
+        .intermediary {
+            display: block;
+            margin: 10px auto;
+            width: 80%;
+            padding: 8px;
+            cursor: move;
+            background: #f0f0f0;
+        }
+        button {
+            padding: 10px 20px;
+        }
+        #result {
+            font-weight: bold;
+            color: green;
+        }
+        /* Large logo background styling */
+        .logo-bg {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 600px; /* much larger logo */
+            opacity: 0.25; /* subtle transparency */
+            z-index: -1; /* behind everything */
+            pointer-events: none; /* allows clicking through */
+        }
+        @media (max-width: 800px) {
+            .logo-bg {
+                width: 80vw; /* responsive scaling for smaller screens */
+                opacity: 0.3;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Antonimo: Word Ladder Game</h1>
+    <p>Drag to reorder intermediaries. Fill in 5 from start to end. Use the hint!</p>
+    <div id="game">
+        <p>Start: <strong id="start"></strong></p>
+        <div id="sortable">
+            <input class="intermediary" type="text" id="int1" placeholder="Intermediary 1" draggable="true">
+            <input class="intermediary" type="text" id="int2" placeholder="Intermediary 2" draggable="true">
+            <input class="intermediary" type="text" id="int3" placeholder="Intermediary 3" draggable="true">
+            <input class="intermediary" type="text" id="int4" placeholder="Intermediary 4" draggable="true">
+            <input class="intermediary" type="text" id="int5" placeholder="Intermediary 5" draggable="true">
+        </div>
+        <p>End: <strong id="end"></strong></p>
+        <p>Hint: <em id="hint"></em></p>
+        <button onclick="checkAnswers()">Submit Answers</button>
+        <p id="result"></p>
+        <button onclick="newGame()">New Game</button>
+    </div>
+    <!-- Add logo image -->
+    <img src="antonimo-logo.jpg" alt="Antonimo logo" class="logo-bg">
+    <script>
+        let pairs = [];
+        let currentPair;
+
+        async function loadData() {
+            const response = await fetch('game-data.csv');
+            const csvText = await response.text();
+            const lines = csvText.trim().split('\n').slice(1); // Skip header
+            pairs = lines.map(line => {
+                const [pair, intermediariesStr, pos, hint, gradType] = line.split(',');
+                const [low, high] = pair.split('-');
+                const intermediaries = intermediariesStr ? intermediariesStr.split(';') : [];
+                return { low, high, intermediaries, hint, type: pos, gradType };
+            });
+            loadGame();
+        }
+
+        function loadGame() {
+            if (pairs.length === 0) return;
+            currentPair = pairs[Math.floor(Math.random() * pairs.length)];
+            document.getElementById('start').textContent = currentPair.low;
+            document.getElementById('end').textContent = currentPair.high;
+            document.getElementById('hint').textContent = currentPair.hint;
+            document.getElementById('result').textContent = '';
+            const inputs = document.querySelectorAll('#sortable input');
+            inputs.forEach(input => input.value = '');
+        }
+
+        function checkAnswers() {
+            const inputs = Array.from(document.querySelectorAll('#sortable input')).map(input => input.value.trim().toLowerCase());
+            const correct = currentPair.intermediaries.map(word => word.toLowerCase());
+            const isCorrect = inputs.every((val, idx) => val === correct[idx]);
+            document.getElementById('result').textContent = isCorrect ? 'Correct! Great job!' : 'Not quite. Try again or start a new game.';
+            document.getElementById('result').style.color = isCorrect ? 'green' : 'red';
+        }
+
+        function newGame() {
+            loadGame();
+        }
+
+        const sortable = document.getElementById('sortable');
+        let draggedItem = null;
+        sortable.addEventListener('dragstart', (e) => {
+            draggedItem = e.target;
+            setTimeout(() => e.target.style.opacity = '0.5', 0);
+        });
+        sortable.addEventListener('dragend', (e) => {
+            setTimeout(() => e.target.style.opacity = '1', 0);
+            draggedItem = null;
+        });
+        sortable.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            const afterElement = getDragAfterElement(sortable, e.clientY);
+            if (afterElement == null) {
+                sortable.appendChild(draggedItem);
+            } else {
+                sortable.insertBefore(draggedItem, afterElement);
+            }
+        });
+        function getDragAfterElement(container, y) {
+            const draggableElements = [...container.querySelectorAll('.intermediary:not([style*="opacity: 0.5"])')];
+            return draggableElements.reduce((closest, child) => {
+                const box = child.getBoundingClientRect();
+                const offset = y - box.top - box.height / 2;
+                if (offset < 0 && offset > closest.offset) {
+                    return { offset: offset, element: child };
+                } else {
+                    return closest;
+                }
+            }, { offset: Number.NEGATIVE_INFINITY }).element;
+        }
+
+        loadData();
+    </script>
+</body>
+</html>
