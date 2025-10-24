@@ -1,0 +1,45 @@
+Pair (Low-High),Intermediaries,Part of Speech,Hint,Gradability Type
+reír-carcajear,sonreír;reírse;reír fuerte;destornillarse;partirse de risa,Verb,Esto aumenta la intensidad de la expresión de alegría.,Affective Depth
+llorar-sollozar,lagrimear;derramar lágrimas;gimotear;lloriquear;desconsolarse,Verb,Esto profundiza la intensidad del llanto.,Affective Depth
+empujar-lanzar,mover;impulsar;propulsar;arrojar;catapultar,Verb,Esto aumenta la fuerza del movimiento.,Force
+tirar-arrojar,soltar;dejar caer;echar;aventar;proyectar,Verb,Esto intensifica la fuerza del lanzamiento.,Force
+brillar-resplandecer,relucir;destellar;centellear;fulgurar;irradiar,Verb,Esto aumenta la intensidad de la luz emitida.,Luminosity
+parpadear-deslumbrar,titilar;centellear;relampaguear;fulgurar;cegar,Verb,Esto intensifica el efecto de la luz.,Luminosity
+saltar-brincar,dar un salto;botar;rebotar;dar un brinco;dar un gran salto,Verb,Esto aumenta la altura del salto.,Magnitude
+subir-escalar,ascender;trepar;elevarse;encaramarse;ascender a la cumbre,Verb,Esto intensifica la altura alcanzada.,Magnitude
+buscar-escudriñar,explorar;indagar;investigar;examinar;rastrear minuciosamente,Verb,Esto profundiza la intensidad de la búsqueda.,Affective Depth
+oler-olfatear,percibir;respirar;inhalar;husmear;rastrear por olor,Verb,Esto intensifica la acción de percibir olores.,Force
+arrastrar-remolcar,mover;tirar;jalar;halar;transportar,Verb,Esto aumenta la fuerza de tracción.,Force
+mojar-empapar,humedecer;remojar;calar;ensopar;inundar,Verb,Esto intensifica el nivel de humedad aplicado.,Moisture Level
+secar-desecar,enjugar;escurrir;deshidratar;resecar;dejar árido,Verb,Esto profundiza la eliminación de humedad.,Moisture Level
+romper-destrozar,agrietar;quebrar;partir;fragmentar;pulverizar,Verb,Esto aumenta el nivel de destrucción.,Magnitude
+rasgar-despedazar,cortar;hender;desgarrar;lacerar;hacer trizas,Verb,Esto intensifica la acción de separar.,Force
+dormir-descansar profundamente,dormitar;adormecerse;quedar dormido;dormir profundo;estar en coma,Verb,Esto profundiza el nivel de inconsciencia.,Affective Depth
+despertar-espabilar,abrir los ojos;despertarse;despabilarse;activarse;ponerse alerta,Verb,Esto aumenta el nivel de consciencia.,Affective Depth
+sonar-retumbar,hacer ruido;resonar;estruendo;tronar;estremecer,Verb,Esto aumenta la intensidad del sonido.,Volume
+silbar-chillar,pitar;silbar fuerte;chiflar;chirriar;gritar agudamente,Verb,Esto intensifica el tono agudo del sonido.,Volume
+apretar-estrujar,comprimir;prensar;compactar;aplastar;exprimir,Verb,Esto aumenta la presión aplicada.,Force
+temblar-convulsionar,estremecerse;tiritar;vibrar;sacudirse;agitarse violentamente,Verb,Esto intensifica el movimiento involuntario.,Magnitude
+grano-montaña,piedrecita;roca;peñasco;cerro;macizo,Noun,Esto aumenta el tamaño del objeto sólido.,Magnitude
+hilo-cuerda,hebra;cordón;cordel;soga;cable,Noun,Esto engrosa el grosor del objeto flexible.,Magnitude
+soplo-vendaval,brisa;viento;ráfaga;ventarrón;huracán,Noun,Esto intensifica la fuerza del viento.,Force
+rayo-relámpago,destello;fulgor;chispa eléctrica;centella;descarga,Noun,Esto aumenta la intensidad del fenómeno eléctrico.,Luminosity
+mancha-borrón,marca;salpicadura;manchón;tachón;desastre,Noun,Esto aumenta el tamaño del área sucia.,Magnitude
+grieta-abismo,fisura;hendidura;raja;precipicio;sima,Noun,Esto profundiza la abertura.,Depth
+niebla-neblina,vaho;bruma;calina;nube baja;cerrazón,Noun,Esto intensifica la densidad de la suspensión.,Magnitude
+rocío-lluvia,humedad;llovizna;chubasco;aguacero;tormenta,Noun,Esto aumenta la cantidad de agua caída.,Quantity
+humo-humareda,vaho;vapor;columna de humo;nube de humo;cortina de humo,Noun,Esto intensifica la densidad del humo.,Magnitude
+ola-tsunami,ondulación;oleaje;ola grande;marejada;ola gigante,Noun,Esto aumenta el tamaño de la ola.,Magnitude
+susurro-estruendo,rumor;murmullo;sonido;ruido;fragor,Noun,Esto aumenta el volumen del sonido.,Volume
+olor-hedor,aroma;fragancia;tufo;pestilencia;fetidez,Noun,Esto intensifica el olor desagradable.,Affective Depth
+sabor-gusto intenso,toque;matiz;saborcillo;sabor fuerte;explosión de sabor,Noun,Esto aumenta la intensidad del sabor.,Affective Depth
+toque-caricia,roce;contacto;palmada;abrazo;masaje,Noun,Esto aumenta la duración del contacto.,Duration
+luz-luminosidad,claridad;brillo;resplandor;fulgor;radiancia,Noun,Esto aumenta la intensidad lumínica.,Luminosity
+sombra-oscuridad,penumbra;umbra;tiniebla;negrura;lobreguez,Noun,Esto profundiza la ausencia de luz.,Luminosity
+calor-canícula,tibieza;calidez;ardor;bochorno;sofoco,Noun,Esto intensifica el nivel de temperatura alta.,Temperature
+frío-helada,frescor;frialdad;congelación;escarcha;glaciación,Noun,Esto profundiza el nivel de temperatura baja.,Temperature
+dolor-agonía,molestia;sufrimiento;tormento;martirio;suplicio,Noun,Esto intensifica el sufrimiento físico.,Affective Depth
+alegría-júbilo,contento;gozo;felicidad;alborozo;regocijo,Noun,Esto aumenta la intensidad de la emoción positiva.,Affective Depth
+diminuto-colosal,minúsculo;pequeño;mediano;grande;inmenso,Adjective,Esto escala el tamaño del objeto.,Magnitude
+helado-hirviente,frío;fresco;tibio;caliente;ardiente,Adjective,Esto aumenta el nivel de temperatura.,Temperature
+oscuro-luminoso,sombrío;opaco;ilumin
