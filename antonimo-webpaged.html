@@ -48,11 +48,26 @@
                 opacity: 0.3;
             }
         }
+        #category-select {
+            margin: 10px;
+            padding: 8px;
+        }
     </style>
 </head>
 <body>
     <h1>Antonimo: Word Ladder Game</h1>
     <p>Drag to reorder intermediaries. Fill in 5 from start to end. Use the hint!</p>
+    <select id="category-select" onchange="filterPairs()">
+        <option value="all">All Categories</option>
+        <option value="Verb">Verb</option>
+        <option value="Noun">Noun</option>
+        <option value="Adjective">Adjective</option>
+        <option value="Adverb">Adverb</option>
+        <option value="Pronoun">Pronoun</option>
+        <option value="Preposition">Preposition</option>
+        <option value="Conjunction">Conjunction</option>
+        <option value="Interjection">Interjection</option>
+    </select>
     <div id="game">
         <p>Start: <strong id="start"></strong></p>
         <div id="sortable">
@@ -64,26 +79,38 @@
         </div>
         <p>End: <strong id="end"></strong></p>
         <p>Hint: <em id="hint"></em></p>
-        <button onclick="checkAnswers()">Submit Answers</button>
+        <button onclick="showAnswers()">Show Answers</button>
         <p id="result"></p>
         <button onclick="newGame()">New Game</button>
     </div>
     <!-- Add logo image -->
     <img src="antonimo-logo.jpg" alt="Antonimo logo" class="logo-bg">
     <script>
+        let allPairs = [];
         let pairs = [];
         let currentPair;
+        let selectedCategory = 'all';
 
         async function loadData() {
             const response = await fetch('game-data.csv');
             const csvText = await response.text();
             const lines = csvText.trim().split('\n').slice(1); // Skip header
-            pairs = lines.map(line => {
+            allPairs = lines.map(line => {
                 const [pair, intermediariesStr, pos, hint, gradType] = line.split(',');
                 const [low, high] = pair.split('-');
                 const intermediaries = intermediariesStr ? intermediariesStr.split(';') : [];
                 return { low, high, intermediaries, hint, type: pos, gradType };
             });
+            filterPairs();
+        }
+
+        function filterPairs() {
+            selectedCategory = document.getElementById('category-select').value;
+            pairs = selectedCategory === 'all' ? allPairs : allPairs.filter(p => p.type === selectedCategory);
+            if (pairs.length === 0) {
+                alert('No pairs in this category.');
+                return;
+            }
             loadGame();
         }
 
@@ -95,21 +122,22 @@
             document.getElementById('hint').textContent = currentPair.hint;
             document.getElementById('result').textContent = '';
             const inputs = document.querySelectorAll('#sortable input');
-            inputs.forEach(input => input.value = '');
+            inputs.forEach(input => {
+                input.value = '';
+                input.style.color = 'black';
+            });
         }
-
-        function checkAnswers() {
-            const inputs = Array.from(document.querySelectorAll('#sortable input')).map(input => input.value.trim().toLowerCase());
-            const correct = currentPair.intermediaries.map(word => word.toLowerCase());
-            const isCorrect = inputs.every((val, idx) => val === correct[idx]);
-            document.getElementById('result').textContent = isCorrect ? 'Correct! Great job!' : 'Not quite. Try again or start a new game.';
-            document.getElementById('result').style.color = isCorrect ? 'green' : 'red';
+        function showAnswers() {
+            const inputs = Array.from(document.querySelectorAll('#sortable input'));
+            currentPair.intermediaries.forEach((word, idx) => {
+                inputs[idx].value = word;
+                inputs[idx].style.color = 'red';
+            });
+            document.getElementById('result').textContent = '';
         }
-
         function newGame() {
             loadGame();
         }
-
         const sortable = document.getElementById('sortable');
         let draggedItem = null;
         sortable.addEventListener('dragstart', (e) => {
@@ -141,7 +169,6 @@
                 }
             }, { offset: Number.NEGATIVE_INFINITY }).element;
         }
-
         loadData();
     </script>
 </body>
