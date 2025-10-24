@@ -90,24 +90,24 @@
     <div id="game">
         <p>Start: <strong id="start"></strong></p>
         <div id="sortable">
-            <div class="inter-row">
-                <input class="intermediary" type="text" id="int1" placeholder="Intermediary 1">
+            <div class="inter-row" data-id="1">
+                <input class="intermediary" type="text" id="int1" placeholder="Intermediary 1" draggable="true">
                 <span class="correct"></span>
             </div>
-            <div class="inter-row">
-                <input class="intermediary" type="text" id="int2" placeholder="Intermediary 2">
+            <div class="inter-row" data-id="2">
+                <input class="intermediary" type="text" id="int2" placeholder="Intermediary 2" draggable="true">
                 <span class="correct"></span>
             </div>
-            <div class="inter-row">
-                <input class="intermediary" type="text" id="int3" placeholder="Intermediary 3">
+            <div class="inter-row" data-id="3">
+                <input class="intermediary" type="text" id="int3" placeholder="Intermediary 3" draggable="true">
                 <span class="correct"></span>
             </div>
-            <div class="inter-row">
-                <input class="intermediary" type="text" id="int4" placeholder="Intermediary 4">
+            <div class="inter-row" data-id="4">
+                <input class="intermediary" type="text" id="int4" placeholder="Intermediary 4" draggable="true">
                 <span class="correct"></span>
             </div>
-            <div class="inter-row">
-                <input class="intermediary" type="text" id="int5" placeholder="Intermediary 5">
+            <div class="inter-row" data-id="5">
+                <input class="intermediary" type="text" id="int5" placeholder="Intermediary 5" draggable="true">
                 <span class="correct"></span>
             </div>
         </div>
@@ -172,8 +172,18 @@
                     input.classList.remove('has-answer');
                 }
             });
+            sortRows(); // Ensure initial order
         }
+
+        function sortRows() {
+            const sortable = document.getElementById('sortable');
+            const rows = Array.from(sortable.querySelectorAll('.inter-row'));
+            rows.sort((a, b) => parseInt(a.dataset.id) - parseInt(b.dataset.id));
+            rows.forEach(row => sortable.appendChild(row));
+        }
+
         function showAnswers() {
+            sortRows(); // Snap back to proper order
             const rows = document.querySelectorAll('.inter-row');
             rows.forEach((row, idx) => {
                 if (idx < currentPair.intermediaries.length) {
