@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Antonimo Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            position: relative;
+            min-height: 100vh;
+            background-color: white;
+            overflow-x: hidden;
+        }
+        #game {
+            max-width: 600px;
+            margin: auto;
+        }
+        .inter-row {
+            display: flex;
+            align-items: center;
+            margin: 10px auto;
+            width: 80%;
+            cursor: move;
+        }
+        .intermediary {
+            flex: 1;
+            padding: 8px;
+            background: #f0f0f0;
+            position: relative;
+        }
+        .correct {
+            color: red;
+            margin-left: 10px;
+            min-width: 150px;
+            text-align: left;
+        }
+        .has-answer::before {
+            content: '*';
+            color: red;
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            font-size: 1.2em;
+        }
+        button {
+            padding: 10px 20px;
+        }
+        #result {
+            font-weight: bold;
+            color: green;
+        }
+        /* Large logo background styling */
+        .logo-bg {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 600px; /* much larger logo */
+            opacity: 0.25; /* subtle transparency */
+            z-index: -1; /* behind everything */
+            pointer-events: none; /* allows clicking through */
+        }
+        @media (max-width: 800px) {
+            .logo-bg {
+                width: 80vw; /* responsive scaling for smaller screens */
+                opacity: 0.3;
+            }
+        }
+        #category-select {
+            margin: 10px;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Antonimo: Word Ladder Game</h1>
+    <p>Drag to reorder intermediaries. Fill in 5 from start to end. Use the hint!</p>
+    <select id="category-select" onchange="filterPairs()">
+        <option value="all">All Categories</option>
+        <option value="Verb">Verb</option>
+        <option value="Noun">Noun</option>
+        <option value="Adjective">Adjective</option>
+        <option value="Adverb">Adverb</option>
+        <option value="Pronoun">Pronoun</option>
+        <option value="Preposition">Preposition</option>
+        <option value="Conjunction">Conjunction</option>
+        <option value="Interjection">Interjection</option>
+    </select>
+    <div id="game">
+        <p>Start: <strong id="start"></strong></p>
+        <div id="sortable">
+            <div class="inter-row">
+                <input class="intermediary" type="text" id="int1" placeholder="Intermediary 1">
+                <span class="correct"></span>
+            </div>
+            <div class="inter-row">
+                <input class="intermediary" type="text" id="int2" placeholder="Intermediary 2">
+                <span class="correct"></span>
+            </div>
+            <div class="inter-row">
+                <input class="intermediary" type="text" id="int3" placeholder="Intermediary 3">
+                <span class="correct"></span>
+            </div>
+            <div class="inter-row">
+                <input class="intermediary" type="text" id="int4" placeholder="Intermediary 4">
+                <span class="correct"></span>
+            </div>
+            <div class="inter-row">
+                <input class="intermediary" type="text" id="int5" placeholder="Intermediary 5">
+                <span class="correct"></span>
+            </div>
+        </div>
+        <p>End: <strong id="end"></strong></p>
+        <p>Hint: <em id="hint"></em></p>
+        <button onclick="showAnswers()">Show Answers</button>
+        <p id="result"></p>
+        <button onclick="newGame()">New Game</button>
+    </div>
+    <!-- Add logo image -->
+    <img src="antonimo-logo.jpg" alt="Antonimo logo" class="logo-bg">
+    <script>
+        let allPairs = [];
+        let pairs = [];
+        let currentPair;
+        let selectedCategory = 'all';
+
+        async function loadData() {
+            const response = await fetch('game-data.csv');
+            const csvText = await response.text();
+            const lines = csvText.trim().split('\n').slice(1); // Skip header
+            allPairs = lines.map(line => {
+                const [pair, intermediariesStr, pos, hint, gradType] = line.split(',');
+                const [low, high] = pair.split('-');
+                const intermediaries = intermediariesStr ? intermediariesStr.split(';') : [];
+                return { low, high, intermediaries, hint, type: pos, gradType };
+            });
+            filterPairs();
+        }
+
+        function filterPairs() {
+            selectedCategory = document.getElementById('category-select').value;
+            pairs = selectedCategory === 'all' ? allPairs : allPairs.filter(p => p.type === selectedCategory);
+            if (pairs.length === 0) {
+                alert('No pairs in this category.');
+                return;
+            }
+            loadGame();
+        }
+
+        function loadGame() {
+            if (pairs.length === 0) return;
+            currentPair = pairs[Math.floor(Math.random() * pairs.length)];
+            document.getElementById('start').textContent = currentPair.low;
+            document.getElementById('end').textContent = currentPair.high;
+            document.getElementById('hint').textContent = currentPair.hint;
+            document.getElementById('result').textContent = '';
+            const rows = document.querySelectorAll('.inter-row');
+            rows.forEach((row, idx) => {
+                const input = row.querySelector('input');
+                const correctSpan = row.querySelector('.correct');
+                input.value = '';
+                input.style.color = 'black';
+                correctSpan.textContent = '';
+                if (idx < currentPair.intermediaries.length) {
+                    row.style.display = 'flex';
+                    input.placeholder = `Intermediary ${idx + 1}`;
+                    input.disabled = false;
+                    input.classList.add('has-answer');
+                } else {
+                    row.style.display = 'none';
+                    input.classList.remove('has-answer');
+                }
+            });
+        }
+        function showAnswers() {
+            const rows = document.querySelectorAll('.inter-row');
+            rows.forEach((row, idx) => {
+                if (idx < currentPair.intermediaries.length) {
+                    row.querySelector('.correct').textContent = currentPair.intermediaries[idx];
+                }
+            });
+            document.getElementById('result').textContent = '';
+        }
+        function newGame() {
+            loadGame();
+        }
+        const sortable = document.getElementById('sortable');
+        let draggedItem = null;
+        sortable.addEventListener('dragstart', (e) => {
+            draggedItem = e.target.closest('.inter-row');
+            setTimeout(() => draggedItem.style.opacity = '0.5', 0);
+        });
+        sortable.addEventListener('dragend', (e) => {
+            setTimeout(() => draggedItem.style.opacity = '1', 0);
+            draggedItem = null;
+        });
+        sortable.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            const afterElement = getDragAfterElement(sortable, e.clientY);
+            if (afterElement == null) {
+                sortable.appendChild(draggedItem);
+            } else {
+                sortable.insertBefore(draggedItem, afterElement);
+            }
+        });
+        function getDragAfterElement(container, y) {
+            const draggableElements = [...container.querySelectorAll('.inter-row:not([style*="opacity: 0.5"])')];
+            return draggableElements.reduce((closest, child) => {
+                const box = child.getBoundingClientRect();
+                const offset = y - box.top - box.height / 2;
+                if (offset < 0 && offset > closest.offset) {
+                    return { offset: offset, element: child };
+                } else {
+                    return closest;
+                }
+            }, { offset: Number.NEGATIVE_INFINITY }).element;
+        }
+        loadData();
+    </script>
+</body>
+</html>
