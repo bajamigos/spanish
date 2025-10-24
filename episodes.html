@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Antonimo Episodes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            position: relative;
+            min-height: 100vh;
+            background-color: white;
+            overflow-x: hidden;
+        }
+        .logo-bg {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 600px;
+            opacity: 0.25;
+            z-index: -1;
+            pointer-events: none;
+        }
+        @media (max-width: 800px) {
+            .logo-bg {
+                width: 80vw;
+                opacity: 0.3;
+            }
+        }
+        audio {
+            max-width: 100%;
+            margin: 20px auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Episodes</h1>
+    <audio controls>
+        <source src="example_podcast.m4a" type="audio/m4a">
+        Your browser does not support the audio tag.
+    </audio>
+    <img src="antonimo-logo.jpg" alt="Antonimo logo" class="logo-bg">
+</body>
+</html>
