@@ -266,6 +266,99 @@ ol, ul {
     border-radius: 4px;
 }
 
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    background: #000;
+    color: #ccc;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.tab-button:hover, .tab-button.active {
+    background: #222;
+    color: #fff;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+    color: #000;
+}
+
+#generate-button, #assign-roles {
+    padding: 10px 20px;
+    background: #000;
+    color: #ccc;
+    border-radius: 4px;
+    font-weight: bold;
+    border: 1px solid #aaa;
+}
+
+#generate-button:hover, #assign-roles:hover {
+    background: #222;
+    color: #fff;
+}
+
+#roleplay-category {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #000;
+}
+
+#roleplay-prompt {
+    font-size: 20px;
+    margin: 30px 0;
+    line-height: 1.5;
+    color: #666;
+}
+
+#role-output p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #000;
+}
+
+.contribute-section {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.action-panel {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 @media (max-width: 767px) {
     .progress-section {
         flex-direction: column;
