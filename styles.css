@@ -308,7 +308,7 @@ select {
     color: #000;
 }
 
-#generate-button, #assign-roles {
+#generate-button, #assign-roles, #assign-feeling {
     padding: 10px 20px;
     background: #000;
     color: #ccc;
@@ -317,26 +317,26 @@ select {
     border: 1px solid #aaa;
 }
 
-#generate-button:hover, #assign-roles:hover {
+#generate-button:hover, #assign-roles:hover, #assign-feeling:hover {
     background: #222;
     color: #fff;
 }
 
-#roleplay-category {
+#roleplay-category, #monologue-category {
     font-size: 24px;
     font-weight: bold;
     margin: 20px 0;
     color: #000;
 }
 
-#roleplay-prompt {
+#roleplay-prompt, #monologue-prompt {
     font-size: 20px;
     margin: 30px 0;
     line-height: 1.5;
     color: #666;
 }
 
-#role-output p {
+#role-output p, #feeling-output p {
     font-size: 18px;
     margin: 10px 0;
     color: #000;
