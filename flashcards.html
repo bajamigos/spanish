@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Antonimo Podcast</title>
+    <title>Antonimo Flashcards</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -28,45 +28,174 @@
                 opacity: 0.3;
             }
         }
-        .episode {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 20px auto;
+        #flashcard {
             max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #f9f9f9;
         }
-        .episode label {
-            margin-right: 10px;
-            color: black;
+        #front, #back {
+            font-size: 1.2em;
         }
-        audio {
-            flex: 1;
-        }
+        #back { display: none; margin-top: 50px; }
+        .hint { font-size: 1em; color: #666; }
+        .above-hint { margin-bottom: 20px; }
+        .below-hint { margin-top: 20px; }
     </style>
 </head>
 <body>
-    <h1>Podcast</h1>
-    <div class="episode">
-        <label>Episode 1 Susurrar a Gritar</label>
-        <audio controls>
-            <source src="Episode_1_Susurrar_a_Gritar.mp3" type="audio/mpeg">
-            Your browser does not support the audio tag.
-        </audio>
+    <h1>Flashcards ver 2025.10.20</h1>
+    <div id="flashcard">
+        <div id="front"></div>
+        <div id="back"></div>
     </div>
-    <div class="episode">
-        <label>Cloud Part 1</label>
-        <audio controls>
-            <source src="cloudpart1.mp3" type="audio/mpeg">
-            Your browser does not support the audio tag.
-        </audio>
-    </div>
-    <div class="episode">
-        <label>Episode 1 Susurrar a Gritar</label>
-        <audio controls>
-            <source src="Episode+1+Susurrar+a+Gritar.mp3" type="audio/mpeg">
-            Your browser does not support the audio tag.
-        </audio>
-    </div>
+    <button onclick="flip()">Flip</button>
+    <button onclick="prevCard()">Prev</button>
+    <button onclick="nextCard()">Next</button>
     <img src="antonimo-logo.jpg" alt="Antonimo logo" class="logo-bg">
+    <script>
+        const scale = ['susurrar', 'murmurar', 'hablar', 'alzar la voz', 'exclamar', 'gritar'];
+        let cards = [
+            { front: 'En la quietud de la noche, ella se inclinó hacia su amigo y decidió _____ el secreto para que nadie más pudiera oírlo.', back: 'susurrar' },
+            { front: 'Durante la película de terror, los niños empezaron a _____ comentarios asustados sin molestar a los demás espectadores.', back: 'susurrar' },
+            { front: 'En la iglesia, los feligreses optaron por _____ sus oraciones para mantener un ambiente de paz y respeto.', back: 'susurrar' },
+            { front: 'Mientras caminaban por el bosque, ella comenzó a _____ palabras de amor al oído de su pareja.', back: 'susurrar' },
+            { front: 'En la reunión confidencial, los participantes decidieron _____ sus ideas para evitar que se filtrara información.', back: 'susurrar' },
+            { front: 'Los conspiradores en la sombra empezaron a _____ planes para no alertar a los guardias cercanos.', back: 'susurrar' },
+            { front: 'Durante la siesta del bebé, la madre tuvo que _____ instrucciones a la niñera para no despertarlo.', back: 'susurrar' },
+            { front: 'En el teatro oscuro, los amigos comenzaron a _____ chistes sobre la obra sin interrumpir la función.', back: 'susurrar' },
+            { front: 'Los amantes en el parque optaron por _____ promesas eternas bajo la luz de la luna.', back: 'susurrar' },
+            { front: 'En la biblioteca silenciosa, los estudiantes decidieron _____ sus dudas para no molestar a los demás.', back: 'susurrar' },
+            { front: 'Durante la ceremonia solemne, los asistentes empezaron a _____ comentarios discretos.', back: 'susurrar' },
+            { front: 'Ella se acercó a su hermana y comenzó a _____ confidencias sobre su día en el colegio.', back: 'susurrar' },
+            { front: 'En el hospital, los visitantes optaron por _____ para no perturbar el descanso de los pacientes.', back: 'susurrar' },
+            { front: 'Los espías en la misión decidieron _____ códigos secretos para evitar ser detectados.', back: 'susurrar' },
+            { front: 'Durante el juego de escondite, los niños empezaron a _____ señales para coordinarse.', back: 'susurrar' },
+            { front: 'En la cena romántica, él comenzó a _____ palabras dulces al oído de ella.', back: 'susurrar' },
+            { front: 'No _____ quejas todo el tiempo, expresa tus opiniones de manera clara y directa.', back: 'murmurar' },
+            { front: 'Los trabajadores insatisfechos empezaron a _____ sobre las nuevas políticas de la empresa durante el almuerzo.', back: 'murmurar' },
+            { front: 'Deja de _____ excusas inentendibles y explica lo que realmente sucedió con detalles.', back: 'murmurar' },
+            { front: 'En la asamblea, algunos miembros comenzaron a _____ desacuerdos sin confrontar abiertamente al líder.', back: 'murmurar' },
+            { front: 'Los estudiantes frustrados optaron por _____ protestas sobre el examen difícil en el pasillo.', back: 'murmurar' },
+            { front: 'No _____ maldiciones bajo tu aliento, di lo que piensas con voz firme.', back: 'murmurar' },
+            { front: 'Los vecinos empezaron a _____ rumores sobre la nueva familia que se mudó al barrio.', back: 'murmurar' },
+            { front: 'Deja de _____ quejas sobre el clima y disfruta el día tal como es.', back: 'murmurar' },
+            { front: 'En la fila del supermercado, la gente comenzó a _____ impaciencia por la lentitud.', back: 'murmurar' },
+            { front: 'Los jugadores derrotados optaron por _____ excusas sobre el árbitro injusto.', back: 'murmurar' },
+            { front: 'No _____ secretos a tus amigos, comparte la información abiertamente con todos.', back: 'murmurar' },
+            { front: 'Los empleados descontentos empezaron a _____ sobre el aumento de horas laborales.', back: 'murmurar' },
+            { front: 'Deja de _____ críticas al profesor y levanta la mano para preguntar.', back: 'murmurar' },
+            { front: 'En el concierto, algunos fans comenzaron a _____ quejas sobre el sonido deficiente.', back: 'murmurar' },
+            { front: 'Los pasajeros impacientes optaron por _____ sobre el retraso del vuelo.', back: 'murmurar' },
+            { front: 'No _____ promesas vacías, cumple con lo que dices de forma clara.', back: 'murmurar' },
+            { front: 'Si no no estás de acuerdo con la decisión, debes _____ y expresar tu opinión con confianza.', back: 'alzar la voz' },
+            { front: 'En la manifestación pacífica, los líderes tuvieron que _____ para que todos los presentes los escucharan.', back: 'alzar la voz' },
+            { front: 'No temas _____ cuando defiendes tus derechos en una discusión acalorada.', back: 'alzar la voz' },
+            { front: 'Durante el debate, el orador decidió _____ para enfatizar su punto principal.', back: 'alzar la voz' },
+            { front: 'En la clase ruidosa, el profesor tuvo que _____ para captar la atención de los alumnos.', back: 'alzar la voz' },
+            { front: 'Si sientes injusticia, es momento de _____ y hacer valer tu perspectiva.', back: 'alzar la voz' },
+            { front: 'Los activistas optaron por _____ durante la protesta para llamar la atención de los medios.', back: 'alzar la voz' },
+            { front: 'No _____ innecesariamente, pero cuando sea importante, hazte oír.', back: 'alzar la voz' },
+            { front: 'En la reunión familiar, ella tuvo que _____ para mediar en la disputa.', back: 'alzar la voz' },
+            { front: 'Los sindicalistas decidieron _____ para negociar mejores condiciones laborales.', back: 'alzar la voz' },
+            { front: 'Si el ruido es demasiado, tendrás que _____ para comunicarte efectivamente.', back: 'alzar la voz' },
+            { front: 'Durante el concierto, el cantante tuvo que _____ para superar el ruido de la multitud.', back: 'alzar la voz' },
+            { front: 'No dudes en _____ cuando ves una irregularidad en el trabajo.', back: 'alzar la voz' },
+            { front: 'En el estadio, los aficionados empezaron a _____ consignas de apoyo.', back: 'alzar la voz' },
+            { front: 'Los estudiantes optaron por _____ en la asamblea escolar para pedir cambios.', back: 'alzar la voz' },
+            { front: 'Si la situación lo requiere, _____ y defiende tu posición con argumentos.', back: 'alzar la voz' },
+            { front: 'Es importante _____ con respeto en una discusión para mantener un diálogo constructivo.', back: 'hablar' },
+            { front: 'Vamos a sentarnos y _____ sobre el problema que ha surgido entre nosotros lately.', back: 'hablar' },
+            { front: 'Ella domina varios idiomas y puede _____ fluidamente en inglés, español y francés.', back: 'hablar' },
+            { front: 'En la terapia, es esencial _____ abiertamente sobre tus sentimientos y experiencias.', back: 'hablar' },
+            { front: 'Los diplomáticos decidieron _____ para resolver el conflicto internacional pacíficamente.', back: 'hablar' },
+            { front: 'No evites _____ con tu jefe sobre el ascenso que mereces por tu trabajo.', back: 'hablar' },
+            { front: 'Los amigos se reunieron para _____ de sus vidas y compartir anécdotas recientes.', back: 'hablar' },
+            { front: 'En la conferencia, el experto va a _____ sobre los avances en inteligencia artificial.', back: 'hablar' },
+            { front: 'Es mejor _____ las cosas claras desde el principio para evitar malentendidos.', back: 'hablar' },
+            { front: 'Los padres deben _____ con sus hijos sobre los peligros del internet.', back: 'hablar' },
+            { front: 'Vamos a _____ del plan para las vacaciones de summer en familia.', back: 'hablar' },
+            { front: 'Ella quiere _____ contigo sobre la posibilidad de mudarse a otra ciudad.', back: 'hablar' },
+            { front: 'En la entrevista, tendrás que _____ sobre tu experiencia laboral anterior.', back: 'hablar' },
+            { front: 'Los científicos van a _____ en el simposio sobre el cambio climático global.', back: 'hablar' },
+            { front: 'No olvides _____ con el doctor sobre los síntomas que has estado experimentando.', back: 'hablar' },
+            { front: 'Los vecinos se juntaron para _____ sobre la seguridad en el barrio.', back: 'hablar' },
+            { front: '¡No puedo creer que ganamos el premio! - _____ el ganador con gran sorpresa.', back: 'exclamar' },
+            { front: 'Todos los fans en el estadio empezaron a _____ de alegría cuando marcó el gol decisivo.', back: 'exclamar' },
+            { front: 'Ella abrió el regalo y no pudo evitar _____ al ver el hermoso collar dentro.', back: 'exclamar' },
+            { front: '¡Qué vista tan impresionante desde aquí! - _____ el turista al llegar a la cima.', back: 'exclamar' },
+            { front: 'Los niños _____ de emoción al entrar en el parque de atracciones por primera vez.', back: 'exclamar' },
+            { front: '¡Eso es increíble, no lo esperaba! - _____ ella al recibir la noticia inesperada.', back: 'exclamar' },
+            { front: 'Todos _____ de admiración ante el truco de magia del ilusionista.', back: 'exclamar' },
+            { front: '¡Qué delicioso está este pastel! - _____ el invitado después del primer bocado.', back: 'exclamar' },
+            { front: 'Los exploradores _____ al descubrir las ruinas antiguas ocultas en la jungla.', back: 'exclamar' },
+            { front: '¡No me digas que es verdad! - _____ él al oír el chisme sorprendente.', back: 'exclamar' },
+            { front: 'Ella _____ de felicidad al ver a su familia después de tanto tiempo.', back: 'exclamar' },
+            { front: '¡Qué coincidencia tan extraña! - _____ los amigos al encontrarse inesperadamente.', back: 'exclamar' },
+            { front: 'Todos _____ de sorpresa cuando el mago hizo desaparecer el conejo.', back: 'exclamar' },
+            { front: '¡Esto es fantástico! - _____ el equipo al completar el proyecto exitosamente.', back: 'exclamar' },
+            { front: 'Los espectadores _____ al ver el acrobata realizar el salto mortal.', back: 'exclamar' },
+            { front: '¡Ayuda, por favor! - _____ el nadador en problemas en el agua.', back: 'exclamar' },
+            { front: 'No _____ tan fuerte porque vas a asustar a los niños pequeños que están jugando cerca.', back: 'gritar' },
+            { front: 'En el partido de fútbol, la multitud entera empezó a _____ consignas de apoyo al equipo local.', back: 'gritar' },
+            { front: 'Deja de _____ órdenes a todo el mundo y trata de comunicarte con más calma.', back: 'gritar' },
+            { front: 'Los niños emocionados comenzaron a _____ de alegría al ver los regalos bajo el árbol.', back: 'gritar' },
+            { front: 'En la manifestación, los protestantes optaron por _____ sus demandas para ser oídos.', back: 'gritar' },
+            { front: 'No _____ en la casa, hay personas durmiendo y necesitas respetar el silencio.', back: 'gritar' },
+            { front: 'Los fans en el concierto empezaron a _____ el nombre de la banda favorita.', back: 'gritar' },
+            { front: 'Deja de _____ insultos durante el juego, mantén el espíritu deportivo.', back: 'gritar' },
+            { front: 'En el parque de diversiones, todos _____ de miedo en la montaña rusa.', back: 'gritar' },
+            { front: 'Los soldados tuvieron que _____ comandos para coordinarse en el campo de batalla.', back: 'gritar' },
+            { front: 'No _____ cuando estás enojado, respira profundo y habla con tranquilidad.', back: 'gritar' },
+            { front: 'La multitud en el festival comenzó a _____ al ritmo de la música alta.', back: 'gritar' },
+            { front: 'Deja de _____ advertencias, explica las cosas de manera razonable.', back: 'gritar' },
+            { front: 'En la emergencia, ella tuvo que _____ para alertar a los transeúntes.', back: 'gritar' },
+            { front: 'Los hinchas _____ de frustración cuando el equipo perdió el penal.', back: 'gritar' },
+            { front: 'No _____ en la biblioteca, es un lugar para el estudio silencioso.', back: 'gritar' },
+            { front: 'En la selva densa, los exploradores tuvieron que _____ para localizarse mutuamente entre la vegetación.', back: 'gritar' },
+            { front: 'No _____ tus frustraciones a los demás, busca una forma más calmada de expresarlas.', back: 'gritar' },
+            { front: 'Durante la tormenta, él empezó a _____ instrucciones para asegurar la casa.', back: 'gritar' },
+            { front: 'Los niños en el patio _____ de excitación mientras jugaban al fútbol.', back: 'gritar' }
+        ];
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+        shuffle(cards);
+        let current = 0;
+        let flipped = false;
+        function showCard() {
+            const correct = cards[current].back;
+            const index = scale.indexOf(correct);
+            const lower = index > 0 ? scale[index - 1] : '';
+            const higher = index < scale.length - 1 ? scale[index + 1] : '';
+            let frontHtml = '';
+            if (higher) frontHtml += `<div class="hint above-hint">${higher}</div>`;
+            frontHtml += cards[current].front;
+            if (lower) frontHtml += `<div class="hint below-hint">${lower}</div>`;
+            document.getElementById('front').innerHTML = frontHtml;
+            document.getElementById('back').textContent = correct;
+            document.getElementById('back').style.display = flipped ? 'block' : 'none';
+        }
+        function flip() {
+            flipped = !flipped;
+            showCard();
+        }
+        function nextCard() {
+            current = (current + 1) % cards.length;
+            flipped = false;
+            showCard();
+        }
+        function prevCard() {
+            current = (current - 1 + cards.length) % cards.length;
+            flipped = false;
+            showCard();
+        }
+        showCard();
+    </script>
 </body>
 </html>
