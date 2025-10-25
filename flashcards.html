@@ -1,422 +1,446 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Antonimo Flashcards</title>
-<style>
-body {
-font-family: Arial, sans-serif;
-text-align: center;
-margin: 20px;
-position: relative;
-min-height: 100vh;
-background-color: white;
-overflow-x: hidden;
-}
-.logo-bg {
-position: fixed;
-bottom: 0;
-left: 0;
-width: 600px;
-opacity: 0.25;
-z-index: -1;
-pointer-events: none;
-}
-@media (max-width: 800px) {
-.logo-bg {
-width: 80vw;
-opacity: 0.3;
-}
-}
-#flashcard {
-max-width: 600px;
-margin: 40px auto;
-padding: 20px;
-border: 1px solid #ddd;
-border-radius: 8px;
-background: #f9f9f9;
-display: none;
-}
-#front {
-font-size: 1.2em;
-}
-.hint { font-size: 1em; color: #666; }
-.above-hint { margin-bottom: 20px; }
-.below-hint { margin-top: 20px; }
-#card-num { font-size: 0.8em; color: #999; }
-button {
-padding: 10px 20px;
-margin: 10px;
-border: none;
-background: #f0f0f0;
-cursor: pointer;
-border-radius: 4px;
-}
-#buttons {
-display: flex;
-justify-content: center;
-}
-#login-form {
-max-width: 300px;
-margin: 40px auto;
-}
-#login-form input {
-display: block;
-width: 100%;
-margin: 10px 0;
-padding: 10px;
-border: 1px solid #ddd;
-border-radius: 4px;
-}
-#progress, #stats {
-font-size: 1em;
-color: #666;
-}
-#settings {
-max-width: 300px;
-margin: 20px auto;
-display: none;
-}
-#settings input {
-width: 50px;
-margin: 0 10px;
-padding: 5px;
-border: 1px solid #ddd;
-border-radius: 4px;
-}
-#ascii-stats {
-font-family: monospace;
-white-space: pre;
-background: transparent;
-text-align: left;
-margin: 20px auto;
-max-width: 600px;
-display: none;
-}
-</style>
+    <meta charset="UTF-8">
+    <title>Antonimo Flashcards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            position: relative;
+            min-height: 100vh;
+            background-color: white;
+            overflow-x: hidden;
+        }
+        .logo-bg {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 600px;
+            opacity: 0.25;
+            z-index: -1;
+            pointer-events: none;
+        }
+        @media (max-width: 800px) {
+            .logo-bg {
+                width: 80vw;
+                opacity: 0.3;
+            }
+        }
+        #flashcard {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #f9f9f9;
+            display: none;
+        }
+        #front {
+            font-size: 1.2em;
+        }
+        .hint { font-size: 1em; color: #666; }
+        .above-hint { margin-bottom: 20px; }
+        .below-hint { margin-top: 20px; }
+        #card-num { font-size: 0.8em; color: #999; }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            background: #f0f0f0;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        #buttons {
+            display: flex;
+            justify-content: center;
+        }
+        #login-form {
+            max-width: 300px;
+            margin: 40px auto;
+        }
+        #login-form input {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        #progress, #stats {
+            font-size: 1em;
+            color: #666;
+        }
+        #settings {
+            max-width: 300px;
+            margin: 20px auto;
+            display: none;
+        }
+        #settings input {
+            width: 50px;
+            margin: 0 10px;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        #ascii-stats {
+            font-family: monospace;
+            white-space: pre;
+            background: transparent;
+            text-align: left;
+            margin: 20px auto;
+            max-width: 600px;
+            display: none;
+        }
+    </style>
 </head>
 <body>
-<h1>Flashcards v.2025.10.26</h1>
-<p id="progress"></p>
-<div id="login-form">
-<input id="email" type="email" placeholder="Email">
-<input id="password" type="password" placeholder="Password">
-<button onclick="signup()">Sign Up</button>
-<button onclick="login()">Login</button>
-<div id="error" style="color: red;"></div>
-</div>
-<div id="settings">
-New cards per day: <input id="daily-limit" type="number" min="1" value="10">
-<button onclick="saveSettings()">Save</button>
-</div>
-<div id="flashcard">
-<div id="card-num"></div>
-<div id="front"></div>
-</div>
-<div id="buttons" style="display: none;">
-<button id="flipBtn" onclick="flip()">Show Answer</button>
-<div id="rate" style="display:none;">
-<button onclick="rate(false)">Incorrect</button>
-<button onclick="rate(true)">Correct</button>
-</div>
-</div>
-<button id="logout" onclick="auth.signOut()" style="display: none;">Logout</button>
-<pre id="ascii-stats"></pre>
-<img src="antonimo-logo.jpg" alt="Antonimo logo" class="logo-bg">
-<script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-auth-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore-compat.js"></script>
-<script>
-const firebaseConfig = {
-apiKey: "AIzaSyDJYgI-xgZAGj6780W8BqXS4thd8ODvfDA",
-authDomain: "antonimo-acbd9.firebaseapp.com",
-projectId: "antonimo-acbd9",
-storageBucket: "antonimo-acbd9.firebasestorage.app",
-messagingSenderId: "904238822187",
-appId: "1:904238822187:web:2c0488369954495f3b8b6e",
-measurementId: "G-GTP9X49KNP"
-};
-const app = firebase.initializeApp(firebaseConfig);
-const auth = firebase.auth();
-const db = firebase.firestore();
-const scale = ['susurrar', 'murmurar', 'hablar', 'alzar la voz', 'exclamar', 'gritar'];
-const cards = [
-{ front: 'En la quietud de la noche, ella se inclinó hacia su amigo y decidió _____ el secreto para que nadie más pudiera oírlo.', back: 'susurrar' },
-{ front: 'Durante la película de terror, los niños empezaron a _____ comentarios asustados sin molestar a los demás espectadores.', back: 'susurrar' },
-{ front: 'En la iglesia, los feligreses optaron por _____ sus oraciones para mantener un ambiente de paz y respeto.', back: 'susurrar' },
-{ front: 'Mientras caminaban por el bosque, ella comenzó a _____ palabras de amor al oído de su pareja.', back: 'susurrar' },
-{ front: 'En la reunión confidencial, los participantes decidieron _____ sus ideas para evitar que se filtrara información.', back: 'susurrar' },
-{ front: 'Los conspiradores en la sombra empezaron a _____ planes para no alertar a los guardias cercanos.', back: 'susurrar' },
-{ front: 'Durante la siesta del bebé, la madre tuvo que _____ instrucciones a la niñera para no despertarlo.', back: 'susurrar' },
-{ front: 'En el teatro oscuro, los amigos comenzaron a _____ chistes sobre la obra sin interrumpir la función.', back: 'susurrar' },
-{ front: 'Los amantes en el parque optaron por _____ promesas eternas bajo la luz de la luna.', back: 'susurrar' },
-{ front: 'En la biblioteca silenciosa, los estudiantes decidieron _____ sus dudas para no molestar a los demás.', back: 'susurrar' },
-{ front: 'Durante la ceremonia solemne, los asistentes empezaron a _____ comentarios discretos.', back: 'susurrar' },
-{ front: 'Ella se acercó a su hermana y comenzó a _____ confidencias sobre su día en el colegio.', back: 'susurrar' },
-{ front: 'En el hospital, los visitantes optaron por _____ para no perturbar el descanso de los pacientes.', back: 'susurrar' },
-{ front: 'Los espías en la misión decidieron _____ códigos secretos para evitar ser detectados.', back: 'susurrar' },
-{ front: 'Durante el juego de escondite, los niños empezaron a _____ señales para coordinarse.', back: 'susurrar' },
-{ front: 'En la cena romántica, él comenzó a _____ palabras dulces al oído de ella.', back: 'susurrar' },
-{ front: 'No _____ quejas todo el tiempo, expresa tus opiniones de manera clara y directa.', back: 'murmurar' },
-{ front: 'Los trabajadores insatisfechos empezaron a _____ sobre las nuevas políticas de la empresa durante el almuerzo.', back: 'murmurar' },
-{ front: 'Deja de _____ excusas inentendibles y explica lo que realmente sucedió con detalles.', back: 'murmurar' },
-{ front: 'En la asamblea, algunos miembros comenzaron a _____ desacuerdos sin confrontar abiertamente al líder.', back: 'murmurar' },
-{ front: 'Los estudiantes frustrados optaron por _____ protestas sobre el examen difícil en el pasillo.', back: 'murmurar' },
-{ front: 'No _____ maldiciones bajo tu aliento, di lo que piensas con voz firme.', back: 'murmurar' },
-{ front: 'Los vecinos empezaron a _____ rumores sobre la nueva familia que se mudó al barrio.', back: 'murmurar' },
-{ front: 'Deja de _____ quejas sobre el clima y disfruta el día tal como es.', back: 'murmurar' },
-{ front: 'En la fila del supermercado, la gente comenzó a _____ impaciencia por la lentitud.', back: 'murmurar' },
-{ front: 'Los jugadores derrotados optaron por _____ excusas sobre el árbitro injusto.', back: 'murmurar' },
-{ front: 'No _____ secretos a tus amigos, comparte la información abiertamente con todos.', back: 'murmurar' },
-{ front: 'Los empleados descontentos empezaron a _____ sobre el aumento de horas laborales.', back: 'murmurar' },
-{ front: 'Deja de _____ críticas al profesor y levanta la mano para preguntar.', back: 'murmurar' },
-{ front: 'En el concierto, algunos fans comenzaron a _____ quejas sobre el sonido deficiente.', back: 'murmurar' },
-{ front: 'Los pasajeros impacientes optaron por _____ sobre el retraso del vuelo.', back: 'murmurar' },
-{ front: 'No _____ promesas vacías, cumple con lo que dices de forma clara.', back: 'murmurar' },
-{ front: 'Si no estás de acuerdo con la decisión, debes _____ y expresar tu opinión con confianza.', back: 'alzar la voz' },
-{ front: 'En la manifestación pacífica, los líderes tuvieron que _____ para que todos los presentes los escucharan.', back: 'alzar la voz' },
-{ front: 'No temas _____ cuando defiendes tus derechos en una discusión acalorada.', back: 'alzar la voz' },
-{ front: 'Durante el debate, el orador decidió _____ para enfatizar su punto principal.', back: 'alzar la voz' },
-{ front: 'En la clase ruidosa, el profesor tuvo que _____ para captar la atención de los alumnos.', back: 'alzar la voz' },
-{ front: 'Si sientes injusticia, es momento de _____ y hacer valer tu perspectiva.', back: 'alzar la voz' },
-{ front: 'Los activistas optaron por _____ durante la protesta para llamar la atención de los medios.', back: 'alzar la voz' },
-{ front: 'No _____ innecesariamente, pero cuando sea importante, hazte oír.', back: 'alzar la voz' },
-{ front: 'En la reunión familiar, ella tuvo que _____ para mediar en la disputa.', back: 'alzar la voz' },
-{ front: 'Los sindicalistas decidieron _____ para negociar mejores condiciones laborales.', back: 'alzar la voz' },
-{ front: 'Si el ruido es demasiado, tendrás que _____ para comunicarte efectivamente.', back: 'alzar la voz' },
-{ front: 'Durante el concierto, el cantante tuvo que _____ para superar el ruido de la multitud.', back: 'alzar la voz' },
-{ front: 'No dudes en _____ cuando ves una irregularidad en el trabajo.', back: 'alzar la voz' },
-{ front: 'En el estadio, los aficionados empezaron a _____ consignas de apoyo.', back: 'alzar la voz' },
-{ front: 'Los estudiantes optaron por _____ en la asamblea escolar para pedir cambios.', back: 'alzar la voz' },
-{ front: 'Si la situación lo requiere, _____ y defiende tu posición con argumentos.', back: 'alzar la voz' },
-{ front: 'Es importante _____ con respeto en una discusión para mantener un diálogo constructivo.', back: 'hablar' },
-{ front: 'Vamos a sentarnos y _____ sobre el problema que ha surgido entre nosotros lately.', back: 'hablar' },
-{ front: 'Ella domina varios idiomas y puede _____ fluidamente en inglés, español y francés.', back: 'hablar' },
-{ front: 'En la terapia, es esencial _____ abiertamente sobre tus sentimientos y experiencias.', back: 'hablar' },
-{ front: 'Los diplomáticos decidieron _____ para resolver el conflicto internacional pacíficamente.', back: 'hablar' },
-{ front: 'No evites _____ con tu jefe sobre el ascenso que mereces por tu trabajo.', back: 'hablar' },
-{ front: 'Los amigos se reunieron para _____ de sus vidas y compartir anécdotas recientes.', back: 'hablar' },
-{ front: 'En la conferencia, el experto va a _____ sobre los avances en inteligencia artificial.', back: 'hablar' },
-{ front: 'Es mejor _____ las cosas claras desde el principio para evitar malentendidos.', back: 'hablar' },
-{ front: 'Los padres deben _____ con sus hijos sobre los peligros del internet.', back: 'hablar' },
-{ front: 'Vamos a _____ del plan para las vacaciones de summer en familia.', back: 'hablar' },
-{ front: 'Ella quiere _____ contigo sobre la posibilidad de mudarse a otra ciudad.', back: 'hablar' },
-{ front: 'En la entrevista, tendrás que _____ sobre tu experiencia laboral anterior.', back: 'hablar' },
-{ front: 'Los científicos van a _____ en el simposio sobre el cambio climático global.', back: 'hablar' },
-{ front: 'No olvides _____ con el doctor sobre los síntomas que has estado experimentando.', back: 'hablar' },
-{ front: 'Los vecinos se juntaron para _____ sobre la seguridad en el barrio.', back: 'hablar' },
-{ front: '¡No puedo creer que ganamos el premio! - _____ el ganador con gran sorpresa.', back: 'exclamar' },
-{ front: 'Todos los fans en el estadio empezaron a _____ de alegría cuando marcó el gol decisivo.', back: 'exclamar' },
-{ front: 'Ella abrió el regalo y no pudo evitar _____ al ver el hermoso collar dentro.', back: 'exclamar' },
-{ front: '¡Qué vista tan impresionante desde aquí! - _____ el turista al llegar a la cima.', back: 'exclamar' },
-{ front: 'Los niños _____ de emoción al entrar en el parque de atracciones por primera vez.', back: 'exclamar' },
-{ front: '¡Eso es increíble, no lo esperaba! - _____ ella al recibir la noticia inesperada.', back: 'exclamar' },
-{ front: 'Todos _____ de admiración ante el truco de magia del ilusionista.', back: 'exclamar' },
-{ front: '¡Qué delicioso está este pastel! - _____ el invitado después del primer bocado.', back: 'exclamar' },
-{ front: 'Los exploradores _____ al descubrir las ruinas antiguas ocultas en la jungla.', back: 'exclamar' },
-{ front: '¡No me digas que es verdad! - _____ él al oír el chisme sorprendente.', back: 'exclamar' },
-{ front: 'Ella _____ de felicidad al ver a su familia después de tanto tiempo.', back: 'exclamar' },
-{ front: '¡Qué coincidencia tan extraña! - _____ los amigos al encontrarse inesperadamente.', back: 'exclamar' },
-{ front: 'Todos _____ de sorpresa cuando el mago hizo desaparecer el conejo.', back: 'exclamar' },
-{ front: '¡Esto es fantástico! - _____ el equipo al completar el proyecto exitosamente.', back: 'exclamar' },
-{ front: 'Los espectadores _____ al ver el acrobata realizar el salto mortal.', back: 'exclamar' },
-{ front: '¡Ayuda, por favor! - _____ el nadador en problemas en el agua.', back: 'exclamar' },
-{ front: 'No _____ tan fuerte porque vas a asustar a los niños pequeños que están jugando cerca.', back: 'gritar' },
-{ front: 'En el partido de fútbol, la multitud entera empezó a _____ consignas de apoyo al equipo local.', back: 'gritar' },
-{ front: 'Deja de _____ órdenes a todo el mundo y trata de comunicarte con más calma.', back: 'gritar' },
-{ front: 'Los niños emocionados comenzaron a _____ de alegría al ver los regalos bajo el árbol.', back: 'gritar' },
-{ front: 'En la manifestación, los protestantes optaron por _____ sus demandas para ser oídos.', back: 'gritar' },
-{ front: 'No _____ en la casa, hay personas durmiendo y necesitas respetar el silencio.', back: 'gritar' },
-{ front: 'Los fans en el concierto empezaron a _____ el nombre de la banda favorita.', back: 'gritar' },
-{ front: 'Deja de _____ insultos durante el juego, mantén el espíritu deportivo.', back: 'gritar' },
-{ front: 'En el parque de diversiones, todos _____ de miedo en la montaña rusa.', back: 'gritar' },
-{ front: 'Los soldados tuvieron que _____ comandos para coordinarse en el campo de batalla.', back: 'gritar' },
-{ front: 'No _____ cuando estás enojado, respira profundo y habla con tranquilidad.', back: 'gritar' },
-{ front: 'La multitud en el festival comenzó a _____ al ritmo de la música alta.', back: 'gritar' },
-{ front: 'Deja de _____ advertencias, explica las cosas de manera razonable.', back: 'gritar' },
-{ front: 'En la emergencia, ella tuvo que _____ para alertar a los transeúntes.', back: 'gritar' },
-{ front: 'Los hinchas _____ de frustración cuando el equipo perdió el penal.', back: 'gritar' },
-{ front: 'No _____ en la biblioteca, es un lugar para el estudio silencioso.', back: 'gritar' },
-{ front: 'En la selva densa, los exploradores tuvieron que _____ para localizarse mutuamente entre la vegetación.', back: 'gritar' },
-{ front: 'No _____ tus frustraciones a los demás, busca una forma más calmada de expresarlas.', back: 'gritar' },
-{ front: 'Durante la tormenta, él empezó a _____ instrucciones para asegurar la casa.', back: 'gritar' },
-{ front: 'Los niños en el patio _____ de excitación mientras jugaban al fútbol.', back: 'gritar' }
-];
-let srsData = [];
-let userData = { dailyNewLimit: 10, lastIntroduced: {} }; // lastIntroduced: {date: count}
-let currentId = 0;
-let flipped = false;
-let uid = null;
-function showError(msg) {
-document.getElementById('error').textContent = msg;
-}
-function signup() {
-const email = document.getElementById('email').value;
-const password = document.getElementById('password').value;
-if (password.length < 6) {
-showError('Password must be at least 6 characters.');
-return;
-}
-auth.createUserWithEmailAndPassword(email, password).catch(err => showError(err.message));
-}
-function login() {
-const email = document.getElementById('email').value;
-const password = document.getElementById('password').value;
-auth.signInWithEmailAndPassword(email, password).catch(err => showError(err.message));
-}
-function loadData(userId) {
-uid = userId;
-db.collection('users').doc(uid).get().then(doc => {
-if (doc.exists) {
-srsData = doc.data().srsData || cards.map(() => ({ repetitions: 0, ef: 2.5, interval: 1, nextDue: Date.now() + 3153600000000, lastReview: 0 })); // far future for new
-userData = doc.data().userData || { dailyNewLimit: 10, lastIntroduced: {} };
-} else {
-srsData = cards.map(() => ({ repetitions: 0, ef: 2.5, interval: 1, nextDue: Date.now() + 3153600000000, lastReview: 0 }));
-userData = { dailyNewLimit: 10, lastIntroduced: {} };
-}
-document.getElementById('daily-limit').value = userData.dailyNewLimit;
-document.getElementById('login-form').style.display = 'none';
-document.getElementById('settings').style.display = 'block';
-document.getElementById('flashcard').style.display = 'block';
-document.getElementById('logout').style.display = 'block';
-document.getElementById('ascii-stats').style.display = 'block';
-showCard();
-});
-}
-function save() {
-if (uid) {
-db.collection('users').doc(uid).set({ srsData, userData });
-}
-}
-function saveSettings() {
-userData.dailyNewLimit = parseInt(document.getElementById('daily-limit').value) || 10;
-save();
-showCard();
-}
-function getTodayKey() {
-const today = new Date();
-return today.toISOString().split('T')[0];
-}
-function getDueIds() {
-const now = Date.now();
-return cards.map((_, i) => i).filter(i => srsData[i].nextDue <= now);
-}
-function getNewIds() {
-return cards.map((_, i) => i).filter(i => srsData[i].repetitions === 0);
-}
-function introduceNewCards() {
-const todayKey = getTodayKey();
-const introducedToday = userData.lastIntroduced[todayKey] || 0;
-const remainingNew = userData.dailyNewLimit - introducedToday;
-if (remainingNew > 0) {
-const newIds = getNewIds().slice(0, remainingNew);
-newIds.forEach(id => {
-srsData[id].nextDue = Date.now();
-});
-userData.lastIntroduced[todayKey] = (userData.lastIntroduced[todayKey] || 0) + newIds.length;
-save();
-}
-}
-function getLearnedTotal() {
-return srsData.filter(d => d.repetitions > 0).length;
-}
-function getLearnedToday() {
-const todayStart = new Date();
-todayStart.setHours(0, 0, 0, 0);
-const todayMs = todayStart.getTime();
-return srsData.filter(d => d.lastReview >= todayMs).length;
-}
-function getRemainingToday() {
-return getDueIds().length;
-}
-function updateAsciiStats() {
-const total = getLearnedTotal();
-const today = getLearnedToday();
-const remaining = getRemainingToday();
-const stats = `
-_______________________
-| Grok Stats |
-|======================|
-| Total Learned: ${total.toString().padStart(4)} |
-| Learned Today: ${today.toString().padStart(4)} |
-| Remaining Due: ${remaining.toString().padStart(4)} |
-|______________________|
-`;
-document.getElementById('ascii-stats').textContent = stats;
-}
-function updateProgress() {
-document.getElementById('progress').textContent = `Due: ${getDueIds().length} / Total: ${cards.length}`;
-updateAsciiStats();
-}
-function showCard() {
-introduceNewCards();
-updateProgress();
-const dueIds = getDueIds();
-if (dueIds.length === 0) {
-document.getElementById('front').innerHTML = 'No cards due right now. Come back later!';
-document.getElementById('buttons').style.display = 'none';
-return;
-}
-currentId = dueIds[Math.floor(Math.random() * dueIds.length)];
-const correct = cards[currentId].back;
-const index = scale.indexOf(correct);
-const lower = index > 0 ? scale[index - 1] : '';
-const higher = index < scale.length - 1 ? scale[index + 1] : '';
-let frontHtml = '';
-// if (higher) frontHtml += `<div class="hint above-hint">${higher}</div>`;
-let sentence = cards[currentId].front;
-if (flipped) {
-sentence = sentence.replace('_____', `<strong style="color: green;">${correct}</strong>`);
-}
-frontHtml += sentence;
-// if (lower) frontHtml += `<div class="hint below-hint">${lower}</div>`;
-document.getElementById('card-num').textContent = `Card ${currentId + 1}`;
-document.getElementById('front').innerHTML = frontHtml;
-document.getElementById('flipBtn').style.display = flipped ? 'none' : 'block';
-document.getElementById('rate').style.display = flipped ? 'block' : 'none';
-document.getElementById('buttons').style.display = 'block';
-}
-function flip() {
-flipped = true;
-showCard();
-}
-function rate(correct) {
-const now = Date.now();
-let data = srsData[currentId];
-let q = correct ? 5 : 0;
-data.ef = data.ef + (0.1 - (5 - q) * (0.08 + (5 - q) * 0.02));
-data.ef = Math.max(1.3, data.ef);
-if (q < 3) {
-data.repetitions = 0;
-data.interval = 1;
-} else {
-data.repetitions++;
-if (data.repetitions === 1) {
-data.interval = 1;
-} else if (data.repetitions === 2) {
-data.interval = 6;
-} else {
-data.interval = Math.ceil(data.interval * data.ef);
-}
-}
-data.nextDue = now + data.interval * 86400000;
-data.lastReview = now;
-save();
-flipped = false;
-showCard();
-}
-auth.onAuthStateChanged(user => {
-if (user) {
-loadData(user.uid);
-} else {
-document.getElementById('login-form').style.display = 'block';
-document.getElementById('settings').style.display = 'none';
-document.getElementById('flashcard').style.display = 'none';
-document.getElementById('buttons').style.display = 'none';
-document.getElementById('logout').style.display = 'none';
-document.getElementById('ascii-stats').style.display = 'none';
-document.getElementById('progress').textContent = '';
-}
-});
-</script>
+    <h1>Flashcards v.2025.10.26</h1>
+    <p id="progress"></p>
+    <div id="login-form">
+        <input id="email" type="email" placeholder="Email">
+        <input id="password" type="password" placeholder="Password">
+        <button onclick="signup()">Sign Up</button>
+        <button onclick="login()">Login</button>
+        <div id="error" style="color: red;"></div>
+    </div>
+    <div id="settings">
+        New cards per day: <input id="daily-limit" type="number" min="1" value="10">
+        <button onclick="saveSettings()">Save</button>
+    </div>
+    <div id="flashcard">
+        <div id="card-num"></div>
+        <div id="front"></div>
+    </div>
+    <div id="buttons" style="display: none;">
+        <button id="flipBtn" onclick="flip()">Show Answer</button>
+        <div id="rate" style="display:none;">
+            <button onclick="rate(false)">Incorrect</button>
+            <button onclick="rate(true)">Correct</button>
+        </div>
+    </div>
+    <button id="logout" onclick="auth.signOut()" style="display: none;">Logout</button>
+    <pre id="ascii-stats"></pre>
+    <img src="antonimo-logo.jpg" alt="Antonimo logo" class="logo-bg">
+    <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore-compat.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDJYgI-xgZAGj6780W8BqXS4thd8ODvfDA",
+            authDomain: "antonimo-acbd9.firebaseapp.com",
+            projectId: "antonimo-acbd9",
+            storageBucket: "antonimo-acbd9.firebasestorage.app",
+            messagingSenderId: "904238822187",
+            appId: "1:904238822187:web:2c0488369954495f3b8b6e",
+            measurementId: "G-GTP9X49KNP"
+        };
+        const app = firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+        const scale = ['susurrar', 'murmurar', 'hablar', 'alzar la voz', 'exclamar', 'gritar'];
+        const cards = [
+            { front: 'En la quietud de la noche, ella se inclinó hacia su amigo y decidió _____ el secreto para que nadie más pudiera oírlo.', back: 'susurrar' },
+            { front: 'Durante la película de terror, los niños empezaron a _____ comentarios asustados sin molestar a los demás espectadores.', back: 'susurrar' },
+            { front: 'En la iglesia, los feligreses optaron por _____ sus oraciones para mantener un ambiente de paz y respeto.', back: 'susurrar' },
+            { front: 'Mientras caminaban por el bosque, ella comenzó a _____ palabras de amor al oído de su pareja.', back: 'susurrar' },
+            { front: 'En la reunión confidencial, los participantes decidieron _____ sus ideas para evitar que se filtrara información.', back: 'susurrar' },
+            { front: 'Los conspiradores en la sombra empezaron a _____ planes para no alertar a los guardias cercanos.', back: 'susurrar' },
+            { front: 'Durante la siesta del bebé, la madre tuvo que _____ instrucciones a la niñera para no despertarlo.', back: 'susurrar' },
+            { front: 'En el teatro oscuro, los amigos comenzaron a _____ chistes sobre la obra sin interrumpir la función.', back: 'susurrar' },
+            { front: 'Los amantes en el parque optaron por _____ promesas eternas bajo la luz de la luna.', back: 'susurrar' },
+            { front: 'En la biblioteca silenciosa, los estudiantes decidieron _____ sus dudas para no molestar a los demás.', back: 'susurrar' },
+            { front: 'Durante la ceremonia solemne, los asistentes empezaron a _____ comentarios discretos.', back: 'susurrar' },
+            { front: 'Ella se acercó a su hermana y comenzó a _____ confidencias sobre su día en el colegio.', back: 'susurrar' },
+            { front: 'En el hospital, los visitantes optaron por _____ para no perturbar el descanso de los pacientes.', back: 'susurrar' },
+            { front: 'Los espías en la misión decidieron _____ códigos secretos para evitar ser detectados.', back: 'susurrar' },
+            { front: 'Durante el juego de escondite, los niños empezaron a _____ señales para coordinarse.', back: 'susurrar' },
+            { front: 'En la cena romántica, él comenzó a _____ palabras dulces al oído de ella.', back: 'susurrar' },
+            { front: 'No _____ quejas todo el tiempo, expresa tus opiniones de manera clara y directa.', back: 'murmurar' },
+            { front: 'Los trabajadores insatisfechos empezaron a _____ sobre las nuevas políticas de la empresa durante el almuerzo.', back: 'murmurar' },
+            { front: 'Deja de _____ excusas inentendibles y explica lo que realmente sucedió con detalles.', back: 'murmurar' },
+            { front: 'En la asamblea, algunos miembros comenzaron a _____ desacuerdos sin confrontar abiertamente al líder.', back: 'murmurar' },
+            { front: 'Los estudiantes frustrados optaron por _____ protestas sobre el examen difícil en el pasillo.', back: 'murmurar' },
+            { front: 'No _____ maldiciones bajo tu aliento, di lo que piensas con voz firme.', back: 'murmurar' },
+            { front: 'Los vecinos empezaron a _____ rumores sobre la nueva familia que se mudó al barrio.', back: 'murmurar' },
+            { front: 'Deja de _____ quejas sobre el clima y disfruta el día tal como es.', back: 'murmurar' },
+            { front: 'En la fila del supermercado, la gente comenzó a _____ impaciencia por la lentitud.', back: 'murmurar' },
+            { front: 'Los jugadores derrotados optaron por _____ excusas sobre el árbitro injusto.', back: 'murmurar' },
+            { front: 'No _____ secretos a tus amigos, comparte la información abiertamente con todos.', back: 'murmurar' },
+            { front: 'Los empleados descontentos empezaron a _____ sobre el aumento de horas laborales.', back: 'murmurar' },
+            { front: 'Deja de _____ críticas al profesor y levanta la mano para preguntar.', back: 'murmurar' },
+            { front: 'En el concierto, algunos fans comenzaron a _____ quejas sobre el sonido deficiente.', back: 'murmurar' },
+            { front: 'Los pasajeros impacientes optaron por _____ sobre el retraso del vuelo.', back: 'murmurar' },
+            { front: 'No _____ promesas vacías, cumple con lo que dices de forma clara.', back: 'murmurar' },
+            { front: 'Si no estás de acuerdo con la decisión, debes _____ y expresar tu opinión con confianza.', back: 'alzar la voz' },
+            { front: 'En la manifestación pacífica, los líderes tuvieron que _____ para que todos los presentes los escucharan.', back: 'alzar la voz' },
+            { front: 'No temas _____ cuando defiendes tus derechos en una discusión acalorada.', back: 'alzar la voz' },
+            { front: 'Durante el debate, el orador decidió _____ para enfatizar su punto principal.', back: 'alzar la voz' },
+            { front: 'En la clase ruidosa, el profesor tuvo que _____ para captar la atención de los alumnos.', back: 'alzar la voz' },
+            { front: 'Si sientes injusticia, es momento de _____ y hacer valer tu perspectiva.', back: 'alzar la voz' },
+            { front: 'Los activistas optaron por _____ durante la protesta para llamar la atención de los medios.', back: 'alzar la voz' },
+            { front: 'No _____ innecesariamente, pero cuando sea importante, hazte oír.', back: 'alzar la voz' },
+            { front: 'En la reunión familiar, ella tuvo que _____ para mediar en la disputa.', back: 'alzar la voz' },
+            { front: 'Los sindicalistas decidieron _____ para negociar mejores condiciones laborales.', back: 'alzar la voz' },
+            { front: 'Si el ruido es demasiado, tendrás que _____ para comunicarte efectivamente.', back: 'alzar la voz' },
+            { front: 'Durante el concierto, el cantante tuvo que _____ para superar el ruido de la multitud.', back: 'alzar la voz' },
+            { front: 'No dudes en _____ cuando ves una irregularidad en el trabajo.', back: 'alzar la voz' },
+            { front: 'En el estadio, los aficionados empezaron a _____ consignas de apoyo.', back: 'alzar la voz' },
+            { front: 'Los estudiantes optaron por _____ en la asamblea escolar para pedir cambios.', back: 'alzar la voz' },
+            { front: 'Si la situación lo requiere, _____ y defiende tu posición con argumentos.', back: 'alzar la voz' },
+            { front: 'Es importante _____ con respeto en una discusión para mantener un diálogo constructivo.', back: 'hablar' },
+            { front: 'Vamos a sentarnos y _____ sobre el problema que ha surgido entre nosotros lately.', back: 'hablar' },
+            { front: 'Ella domina varios idiomas y puede _____ fluidamente en inglés, español y francés.', back: 'hablar' },
+            { front: 'En la terapia, es esencial _____ abiertamente sobre tus sentimientos y experiencias.', back: 'hablar' },
+            { front: 'Los diplomáticos decidieron _____ para resolver el conflicto internacional pacíficamente.', back: 'hablar' },
+            { front: 'No evites _____ con tu jefe sobre el ascenso que mereces por tu trabajo.', back: 'hablar' },
+            { front: 'Los amigos se reunieron para _____ de sus vidas y compartir anécdotas recientes.', back: 'hablar' },
+            { front: 'En la conferencia, el experto va a _____ sobre los avances en inteligencia artificial.', back: 'hablar' },
+            { front: 'Es mejor _____ las cosas claras desde el principio para evitar malentendidos.', back: 'hablar' },
+            { front: 'Los padres deben _____ con sus hijos sobre los peligros del internet.', back: 'hablar' },
+            { front: 'Vamos a _____ del plan para las vacaciones de summer en familia.', back: 'hablar' },
+            { front: 'Ella quiere _____ contigo sobre la posibilidad de mudarse a otra ciudad.', back: 'hablar' },
+            { front: 'En la entrevista, tendrás que _____ sobre tu experiencia laboral anterior.', back: 'hablar' },
+            { front: 'Los científicos van a _____ en el simposio sobre el cambio climático global.', back: 'hablar' },
+            { front: 'No olvides _____ con el doctor sobre los síntomas que has estado experimentando.', back: 'hablar' },
+            { front: 'Los vecinos se juntaron para _____ sobre la seguridad en el barrio.', back: 'hablar' },
+            { front: '¡No puedo creer que ganamos el premio! - _____ el ganador con gran sorpresa.', back: 'exclamar' },
+            { front: 'Todos los fans en el estadio empezaron a _____ de alegría cuando marcó el gol decisivo.', back: 'exclamar' },
+            { front: 'Ella abrió el regalo y no pudo evitar _____ al ver el hermoso collar dentro.', back: 'exclamar' },
+            { front: '¡Qué vista tan impresionante desde aquí! - _____ el turista al llegar a la cima.', back: 'exclamar' },
+            { front: 'Los niños _____ de emoción al entrar en el parque de atracciones por primera vez.', back: 'exclamar' },
+            { front: '¡Eso es increíble, no lo esperaba! - _____ ella al recibir la noticia inesperada.', back: 'exclamar' },
+            { front: 'Todos _____ de admiración ante el truco de magia del ilusionista.', back: 'exclamar' },
+            { front: '¡Qué delicioso está este pastel! - _____ el invitado después del primer bocado.', back: 'exclamar' },
+            { front: 'Los exploradores _____ al descubrir las ruinas antiguas ocultas en la jungla.', back: 'exclamar' },
+            { front: '¡No me digas que es verdad! - _____ él al oír el chisme sorprendente.', back: 'exclamar' },
+            { front: 'Ella _____ de felicidad al ver a su familia después de tanto tiempo.', back: 'exclamar' },
+            { front: '¡Qué coincidencia tan extraña! - _____ los amigos al encontrarse inesperadamente.', back: 'exclamar' },
+            { front: 'Todos _____ de sorpresa cuando el mago hizo desaparecer el conejo.', back: 'exclamar' },
+            { front: '¡Esto es fantástico! - _____ el equipo al completar el proyecto exitosamente.', back: 'exclamar' },
+            { front: 'Los espectadores _____ al ver el acrobata realizar el salto mortal.', back: 'exclamar' },
+            { front: '¡Ayuda, por favor! - _____ el nadador en problemas en el agua.', back: 'exclamar' },
+            { front: 'No _____ tan fuerte porque vas a asustar a los niños pequeños que están jugando cerca.', back: 'gritar' },
+            { front: 'En el partido de fútbol, la multitud entera empezó a _____ consignas de apoyo al equipo local.', back: 'gritar' },
+            { front: 'Deja de _____ órdenes a todo el mundo y trata de comunicarte con más calma.', back: 'gritar' },
+            { front: 'Los niños emocionados comenzaron a _____ de alegría al ver los regalos bajo el árbol.', back: 'gritar' },
+            { front: 'En la manifestación, los protestantes optaron por _____ sus demandas para ser oídos.', back: 'gritar' },
+            { front: 'No _____ en la casa, hay personas durmiendo y necesitas respetar el silencio.', back: 'gritar' },
+            { front: 'Los fans en el concierto empezaron a _____ el nombre de la banda favorita.', back: 'gritar' },
+            { front: 'Deja de _____ insultos durante el juego, mantén el espíritu deportivo.', back: 'gritar' },
+            { front: 'En el parque de diversiones, todos _____ de miedo en la montaña rusa.', back: 'gritar' },
+            { front: 'Los soldados tuvieron que _____ comandos para coordinarse en el campo de batalla.', back: 'gritar' },
+            { front: 'No _____ cuando estás enojado, respira profundo y habla con tranquilidad.', back: 'gritar' },
+            { front: 'La multitud en el festival comenzó a _____ al ritmo de la música alta.', back: 'gritar' },
+            { front: 'Deja de _____ advertencias, explica las cosas de manera razonable.', back: 'gritar' },
+            { front: 'En la emergencia, ella tuvo que _____ para alertar a los transeúntes.', back: 'gritar' },
+            { front: 'Los hinchas _____ de frustración cuando el equipo perdió el penal.', back: 'gritar' },
+            { front: 'No _____ en la biblioteca, es un lugar para el estudio silencioso.', back: 'gritar' },
+            { front: 'En la selva densa, los exploradores tuvieron que _____ para localizarse mutuamente entre la vegetación.', back: 'gritar' },
+            { front: 'No _____ tus frustraciones a los demás, busca una forma más calmada de expresarlas.', back: 'gritar' },
+            { front: 'Durante la tormenta, él empezó a _____ instrucciones para asegurar la casa.', back: 'gritar' },
+            { front: 'Los niños en el patio _____ de excitación mientras jugaban al fútbol.', back: 'gritar' }
+        ];
+        let srsData = [];
+        let userData = { dailyNewLimit: 10, lastIntroduced: {} }; // lastIntroduced: {date: count}
+        let currentId = 0;
+        let flipped = false;
+        let uid = null;
+        function showError(msg) {
+            document.getElementById('error').textContent = msg;
+        }
+        function signup() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            if (password.length < 6) {
+                showError('Password must be at least 6 characters.');
+                return;
+            }
+            auth.createUserWithEmailAndPassword(email, password).catch(err => showError(err.message));
+        }
+        function login() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            auth.signInWithEmailAndPassword(email, password).catch(err => showError(err.message));
+        }
+        function loadData(userId) {
+            uid = userId;
+            db.collection('users').doc(uid).get().then(doc => {
+                if (doc.exists) {
+                    srsData = doc.data().srsData || cards.map(() => ({ repetitions: 0, ef: 2.5, interval: 1, nextDue: Date.now() + 3153600000000, lastReview: 0 })); // far future for new
+                    userData = doc.data().userData || { dailyNewLimit: 10, lastIntroduced: {} };
+                } else {
+                    srsData = cards.map(() => ({ repetitions: 0, ef: 2.5, interval: 1, nextDue: Date.now() + 3153600000000, lastReview: 0 }));
+                    userData = { dailyNewLimit: 10, lastIntroduced: {} };
+                }
+                document.getElementById('daily-limit').value = userData.dailyNewLimit;
+                document.getElementById('login-form').style.display = 'none';
+                document.getElementById('settings').style.display = 'block';
+                document.getElementById('flashcard').style.display = 'block';
+                document.getElementById('logout').style.display = 'block';
+                document.getElementById('ascii-stats').style.display = 'block';
+                showCard();
+            });
+        }
+        function save() {
+            if (uid) {
+                db.collection('users').doc(uid).set({ srsData, userData });
+            }
+        }
+        function saveSettings() {
+            userData.dailyNewLimit = parseInt(document.getElementById('daily-limit').value) || 10;
+            save();
+            showCard();
+        }
+        function getTodayKey() {
+            const today = new Date();
+            return today.toISOString().split('T')[0];
+        }
+        function getDueIds() {
+            const now = Date.now();
+            return cards.map((_, i) => i).filter(i => srsData[i].nextDue <= now);
+        }
+        function getNewIds() {
+            return cards.map((_, i) => i).filter(i => srsData[i].repetitions === 0);
+        }
+        function introduceNewCards() {
+            const todayKey = getTodayKey();
+            const introducedToday = userData.lastIntroduced[todayKey] || 0;
+            const remainingNew = userData.dailyNewLimit - introducedToday;
+            if (remainingNew > 0) {
+                const newIds = getNewIds().slice(0, remainingNew);
+                newIds.forEach(id => {
+                    srsData[id].nextDue = Date.now();
+                });
+                userData.lastIntroduced[todayKey] = (userData.lastIntroduced[todayKey] || 0) + newIds.length;
+                save();
+            }
+        }
+        function getLearnedTotal() {
+            return srsData.filter(d => d.repetitions > 0).length;
+        }
+        function getLearnedToday() {
+            const todayStart = new Date();
+            todayStart.setHours(0, 0, 0, 0);
+            const todayMs = todayStart.getTime();
+            return srsData.filter(d => d.lastReview >= todayMs).length;
+        }
+        function getRemainingToday() {
+            return getDueIds().length;
+        }
+        function updateAsciiStats() {
+            const total = getLearnedTotal();
+            const today = getLearnedToday();
+            const remaining = getRemainingToday();
+            const leftLines = [
+                '   _______________________',
+                '  | Grok Stats |',
+                '  |======================|',
+                `  | Total Learned: ${total.toString().padStart(4)} |`,
+                `  | Learned Today: ${today.toString().padStart(4)} |`,
+                `  | Remaining Due: ${remaining.toString().padStart(4)} |`,
+                '  |______________________|',
+                '            '
+            ];
+            const right = `
+.------------------------------------------------------------------.
+| # SM-2 Algorithm (P. Woźniak, 1987)  | def get_interval(q, EF, n):|
+|------------------------------------------------------------------|
+| if q < 3: n = 0${' '.repeat(51)}|
+| elif n == 0: interval = 1 # 1st repetition${' '.repeat(21)}|
+| elif n == 1: interval = 6 # 2nd repetition${' '.repeat(21)}|
+| else: interval *= EF; n += 1${' '.repeat(38)}|
+|${' '.repeat(66)}|
+| # EF Update: EF = max(1.3, EF + (0.1 - (5-q) * 0.1))${' '.repeat(18)}|
+| # return interval, EF, n${' '.repeat(42)}|
+'------------------------------------------------------------------'
+            `;
+            const rightLines = right.trim().split('\n');
+            const maxLines = Math.max(leftLines.length, rightLines.length);
+            const leftWidth = 26;
+            const combinedLines = [];
+            for (let i = 0; i < maxLines; i++) {
+                const leftLine = (leftLines[i] || '').padEnd(leftWidth, ' ');
+                const rightLine = rightLines[i] || '';
+                combinedLines.push(leftLine + '  ' + rightLine);
+            }
+            document.getElementById('ascii-stats').textContent = combinedLines.join('\n');
+        }
+        function updateProgress() {
+            document.getElementById('progress').textContent = `Due: ${getDueIds().length} / Total: ${cards.length}`;
+            updateAsciiStats();
+        }
+        function showCard() {
+            introduceNewCards();
+            updateProgress();
+            const dueIds = getDueIds();
+            if (dueIds.length === 0) {
+                document.getElementById('front').innerHTML = 'No cards due right now. Come back later!';
+                document.getElementById('buttons').style.display = 'none';
+                return;
+            }
+            currentId = dueIds[Math.floor(Math.random() * dueIds.length)];
+            const correct = cards[currentId].back;
+            const index = scale.indexOf(correct);
+            const lower = index > 0 ? scale[index - 1] : '';
+            const higher = index < scale.length - 1 ? scale[index + 1] : '';
+            let frontHtml = '';
+            // if (higher) frontHtml += `<div class="hint above-hint">${higher}</div>`;
+            let sentence = cards[currentId].front;
+            if (flipped) {
+                sentence = sentence.replace('_____', `<strong style="color: green;">${correct}</strong>`);
+            }
+            frontHtml += sentence;
+            // if (lower) frontHtml += `<div class="hint below-hint">${lower}</div>`;
+            document.getElementById('card-num').textContent = `Card ${currentId + 1}`;
+            document.getElementById('front').innerHTML = frontHtml;
+            document.getElementById('flipBtn').style.display = flipped ? 'none' : 'block';
+            document.getElementById('rate').style.display = flipped ? 'block' : 'none';
+            document.getElementById('buttons').style.display = 'block';
+        }
+        function flip() {
+            flipped = true;
+            showCard();
+        }
+        function rate(correct) {
+            const now = Date.now();
+            let data = srsData[currentId];
+            let q = correct ? 5 : 0;
+            data.ef = data.ef + (0.1 - (5 - q) * (0.08 + (5 - q) * 0.02));
+            data.ef = Math.max(1.3, data.ef);
+            if (q < 3) {
+                data.repetitions = 0;
+                data.interval = 1;
+            } else {
+                data.repetitions++;
+                if (data.repetitions === 1) {
+                    data.interval = 1;
+                } else if (data.repetitions === 2) {
+                    data.interval = 6;
+                } else {
+                    data.interval = Math.ceil(data.interval * data.ef);
+                }
+            }
+            data.nextDue = now + data.interval * 86400000;
+            data.lastReview = now;
+            save();
+            flipped = false;
+            showCard();
+        }
+        auth.onAuthStateChanged(user => {
+            if (user) {
+                loadData(user.uid);
+            } else {
+                document.getElementById('login-form').style.display = 'block';
+                document.getElementById('settings').style.display = 'none';
+                document.getElementById('flashcard').style.display = 'none';
+                document.getElementById('buttons').style.display = 'none';
+                document.getElementById('logout').style.display = 'none';
+                document.getElementById('ascii-stats').style.display = 'none';
+                document.getElementById('progress').textContent = '';
+            }
+        });
+    </script>
 </body>
 </html>
