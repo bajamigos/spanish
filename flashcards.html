@@ -57,7 +57,7 @@
             display: flex;
             justify-content: center;
             position: fixed;
-            bottom: 100px;
+            bottom: 150px;
             left: 50%;
             transform: translateX(-50%);
         }
@@ -332,7 +332,6 @@
         function saveSettings() {
             userData.dailyNewLimit = parseInt(document.getElementById('daily-limit').value) || 10;
             save();
-            showCard();
         }
         function getTodayKey() {
             const today = new Date();
