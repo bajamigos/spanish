@@ -3,46 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarea 3 SIELE S4: Diálogo</title>
+    <title>Tarea 4 SIELE S4: Monólogo</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="header-placeholder">Loading header...</div>
     
     <div class="content-card">
-        <p>Para la Tarea 3 del SIELE S4, el estudiante responde a escenarios cotidianos en español, practicando expresión oral.</p>
+        <p>Para la Tarea 4 del SIELE S4, el estudiante responde a un prompt con un monólogo corto en español, practicando expresión oral.</p>
         
         <div class="tab-buttons">
             <button class="tab-button active" data-tab="scenarios">Escenarios</button>
-            <button class="tab-button" data-tab="roleplay">Juego de Roles</button>
+            <button class="tab-button" data-tab="monologue">Monólogos</button>
         </div>
         
         <div id="tab-scenarios" class="tab-content active">
-            <p>Escoge un escenario y responde como si estuvieras en esa situación.</p>
+            <p>Escoge un escenario y responde con un monólogo corto.</p>
             <select id="scenario-select">
                 <option value="">Selecciona un escenario</option>
-                <option value="1">Solicitar información en una oficina de turismo</option>
-                <option value="2">Reclamar un producto defectuoso en una tienda</option>
-                <option value="3">Pedir direcciones en la calle</option>
-                <option value="4">Reservar una mesa en un restaurante</option>
-                <option value="5">Cancelar una cita médica</option>
+                <option value="1">Describe una experiencia personal</option>
+                <option value="2">Opina sobre un tema social</option>
+                <option value="3">Explica un proceso</option>
+                <option value="4">Compara dos cosas</option>
+                <option value="5">Propone una solución a un problema</option>
             </select>
             <div id="scenario-prompt"></div>
         </div>
         
-        <div id="tab-roleplay" class="tab-content">
-            <p>Genera un escenario de juego de roles aleatorio y asigna roles para practicar diálogos.</p>
+        <div id="tab-monologue" class="tab-content">
+            <p>Genera un prompt de monólogo aleatorio y asigna un feeling para practicar expresión.</p>
             <select id="category-select">
                 <option value="">Todas las categorías</option>
             </select>
-            <button id="generate-button">Generar Escenario</button>
-            <p id="roleplay-category"></p>
-            <p id="roleplay-prompt"></p>
-            <button id="assign-roles">Asignar Roles</button>
-            <div id="role-output"></div>
+            <button id="generate-button">Generar Prompt</button>
+            <p id="monologue-category"></p>
+            <p id="monologue-prompt"></p>
+            <button id="assign-feeling">Asignar Feeling</button>
+            <div id="feeling-output"></div>
             <div class="contribute-section">
                 <div class="action-panel">
-                    <button class="tally-button" data-tally-open="roleplayFormID" data-tally-hide-title="1" data-tally-layout="modal" data-tally-auto-close="1000">Sugerir Nuevo Escenario</button>
+                    <button class="tally-button" data-tally-open="monologueFormID" data-tally-hide-title="1" data-tally-layout="modal" data-tally-auto-close="1000">Sugerir Nuevo Monólogo</button>
                 </div>
             </div>
         </div>
@@ -53,12 +53,12 @@
     <script async src="https://tally.so/widgets/embed.js"></script>
     <script src="common.js"></script>
     <script>
-        const taskName = 'Tarea 3 SIELE S4';
+        const taskName = 'Tarea 4 SIELE S4';
 
         window.addEventListener('load', () => {
             loadIncludes();
             window.addEventListener('resize', handleResponsive);
-            loadRoleplayTopics();
+            loadMonologueTopics();
             const tabButtons = document.querySelectorAll('.tab-button');
             const tabContents = document.querySelectorAll('.tab-content');
             tabButtons.forEach(button => {
@@ -73,23 +73,23 @@
 
         const categorySelect = document.getElementById('category-select');
         const generateButton = document.getElementById('generate-button');
-        const roleplayCategory = document.getElementById('roleplay-category');
-        const roleplayPrompt = document.getElementById('roleplay-prompt');
-        const assignRoles = document.getElementById('assign-roles');
-        const roleOutput = document.getElementById('role-output');
-        let roleplayData = [];
+        const monologueCategory = document.getElementById('monologue-category');
+        const monologuePrompt = document.getElementById('monologue-prompt');
+        const assignFeeling = document.getElementById('assign-feeling');
+        const feelingOutput = document.getElementById('feeling-output');
+        let monologueData = [];
         let uniqueCategories = [];
         let currentItem = null;
-        async function loadRoleplayTopics() {
+        async function loadMonologueTopics() {
             try {
-                const response = await fetch('roleplaytopics.csv');
+                const response = await fetch('monologuetopics.csv');
                 const csvText = await response.text();
                 const lines = csvText.trim().split('\n').slice(1);
-                roleplayData = lines.map(line => {
-                    const [category, prompt, character_a, character_b] = line.split(',');
-                    return { category, prompt, character_a, character_b };
+                monologueData = lines.map(line => {
+                    const [category, prompt, emotion1, emotion2, emotion3, emotion4, emotion5] = line.split(',');
+                    return { category, prompt, emotions: [emotion1, emotion2, emotion3, emotion4, emotion5] };
                 });
-                uniqueCategories = [...new Set(roleplayData.map(item => item.category))];
+                uniqueCategories = [...new Set(monologueData.map(item => item.category))];
                 uniqueCategories.forEach(cat => {
                     const option = document.createElement('option');
                     option.value = cat;
@@ -98,42 +98,37 @@
                 });
             } catch (error) {
                 console.error('Error loading CSV:', error);
-                roleplayCategory.textContent = 'Error al cargar las categorías.';
+                monologueCategory.textContent = 'Error al cargar las categorías.';
             }
         }
         function generatePrompt() {
             const selectedCategory = categorySelect.value;
             let filteredPrompts;
             if (!selectedCategory) {
-                filteredPrompts = roleplayData;
+                filteredPrompts = monologueData;
             } else {
-                filteredPrompts = roleplayData.filter(item => item.category === selectedCategory);
+                filteredPrompts = monologueData.filter(item => item.category === selectedCategory);
             }
             if (filteredPrompts.length === 0) {
-                roleplayCategory.textContent = 'No hay prompts disponibles.';
-                roleplayPrompt.textContent = '';
+                monologueCategory.textContent = 'No hay prompts disponibles.';
+                monologuePrompt.textContent = '';
                 currentItem = null;
-                roleOutput.innerHTML = '';
+                feelingOutput.innerHTML = '';
                 return;
             }
             currentItem = filteredPrompts[Math.floor(Math.random() * filteredPrompts.length)];
-            roleplayCategory.textContent = currentItem.category;
-            roleplayPrompt.textContent = currentItem.prompt;
-            roleOutput.innerHTML = '';
+            monologueCategory.textContent = currentItem.category;
+            monologuePrompt.textContent = currentItem.prompt;
+            feelingOutput.innerHTML = '';
         }
-        assignRoles.addEventListener('click', () => {
+        assignFeeling.addEventListener('click', () => {
             if (!currentItem) {
-                alert('Genera un escenario primero para asignar roles.');
+                alert('Genera un prompt primero para asignar feeling.');
                 return;
             }
-            const characters = [currentItem.character_a, currentItem.character_b];
-            const randomIndex = Math.floor(Math.random() * 2);
-            const tutorRole = characters[randomIndex];
-            const studentRole = characters[1 - randomIndex];
-            roleOutput.innerHTML = `
-                <p>Tutor: ${tutorRole}</p>
-                <p>Estudiante: ${studentRole}</p>
-            `;
+            const randomIndex = Math.floor(Math.random() * currentItem.emotions.length);
+            const feeling = currentItem.emotions[randomIndex];
+            feelingOutput.innerHTML = `<p>${feeling}</p>`;
         });
         generateButton.addEventListener('click', generatePrompt);
     </script>
