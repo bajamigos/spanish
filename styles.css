@@ -9,6 +9,9 @@ body {
     background-color: white;
     overflow-x: hidden;
     color: black;
+    /* Added flex properties to make the body a full-height column */
+    display: flex;
+    flex-direction: column;
 }
 
 .header-card, .footer-card, .content-card {
@@ -79,6 +82,12 @@ a:hover {
     gap: 20px;
     max-width: 800px;
     width: 100%;
+    
+    /* Added properties to center the grid */
+    flex-grow: 1; /* Makes this container fill the space between header and footer */
+    place-content: center; /* Centers the 3x3 grid within this container */
+    margin-left: auto; /* Centers the container block horizontally */
+    margin-right: auto; /* Centers the container block horizontally */
 }
 
 .image-container {
@@ -372,3 +381,4 @@ select {
         flex-direction: column;
     }
 }
+
