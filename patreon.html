@@ -72,12 +72,12 @@
     <script>
         // Password prompt logic
         window.onload = function() {
-            const correctPassword = "demo123"; // Set your demo password here
+            const correctPassword = "demo123";
             const userInput = prompt("Enter Password for Premium Content:");
             
             if (userInput !== correctPassword) {
-                alert("Contraseña incorrecta. Redirigiendo a la página principal.");
-                window.location.href = "antonimo-webpage.html"; // Redirect to main page
+                alert("Contraseña incorrecta. Redirigiendo a la página de Patreon.");
+                window.location.href = "https://www.patreon.com";
                 return;
             }
             
@@ -169,3 +169,74 @@
             document.getElementById('loading-message').remove(); // Remove loading message once we have data
             
             // 1. Select a random pair
+            const randomIndex = Math.floor(Math.random() * gameData.length);
+            currentPair = gameData[randomIndex];
+
+            // 2. Set the display words (using the 'Pair (Low-High)' header)
+            // Fix: Ensures the split works even with extra spaces
+            const pairWords = currentPair['Pair (Low-High)'].split('-').map(w => w.trim());
+            const [lowWord, highWord] = pairWords.length === 2 ? pairWords : ["Error", "Error"];
+
+            document.getElementById('start').textContent = lowWord;
+            document.getElementById('end').textContent = highWord;
+
+            // 3. Set the hint and category (using English headers to access Spanish content)
+            document.getElementById('hint').textContent = currentPair['Hint'];
+            document.getElementById('pos-type').textContent = `Categoría: ${currentPair['Part of Speech']} | Tipo: ${currentPair['Gradability Type']}`;
+
+            // 4. Prepare the correct answers
+            // CRITICAL FIX: Intermediaries are separated by semicolons (;)
+            correctAnswer = currentPair.Intermediaries.split(';').map(w => w.trim()).filter(w => w.length > 0);
+            
+            if (correctAnswer.length !== 5) {
+                console.error("Par saltado: No hay 5 palabras intermedias.", currentPair);
+                loadGame(); // Try loading a new game if the data is faulty
+                return;
+            }
+
+            // 5. Prepare and render the shuffled inputs
+            let shuffledAnswers = [...correctAnswer];
+            shuffleArray(shuffledAnswers);
+
+            const sortable = document.getElementById('sortable');
+
+            shuffledAnswers.forEach((word, index) => {
+                const row = document.createElement('div');
+                row.className = 'inter-row bg-white p-3 border border-gray-300 rounded-lg shadow-sm hover:shadow-md flex items-center justify-center transition duration-150 ease-in-out';
+                row.setAttribute('draggable', 'true');
+                row.id = `row-${index}`;
+                
+                const input = document.createElement('input');
+                input.type = 'text';
+                input.value = word;
+                input.className = 'intermediary w-full text-center text-lg font-medium text-gray-700 bg-transparent focus:outline-none';
+                input.setAttribute('readonly', true); // Words are given, only reordering is allowed
+                
+                row.appendChild(input);
+                sortable.appendChild(row);
+            });
+        }
+
+        // Check Answer Logic
+        function checkAnswer() {
+            const sortable = document.getElementById('sortable');
+            const userOrder = [...sortable.querySelectorAll('.intermediary')].map(input => input.value);
+            
+            if (userOrder.length !== correctAnswer.length) {
+                document.getElementById('result').textContent = 'Error en el juego, por favor inicie un "Nuevo Juego".';
+                document.getElementById('result').className = 'text-center text-lg font-bold pt-4 text-red-500';
+                return;
+            }
+            
+            let isCorrect = true;
+            for (let i = 0; i < userOrder.length; i++) {
+                if (userOrder[i] !== correctAnswer[i]) {
+                    isCorrect = false;
+                    break;
+                }
+            }
+
+            const resultEl = document.getElementById('result');
+            if (isCorrect) {
+                resultEl.textContent = '¡Correcto! ¡Excelente trabajo semántico!';
+                resultEl.class
