@@ -93,18 +93,42 @@
             font-size: 1em;
             color: #666;
         }
+        
+        /* New CSS for bottom-right controls */
+        #controls-footer {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            max-width: 200px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #f9f9f9;
+            text-align: right;
+            font-size: 0.9em;
+            display: none; /* Controlled by auth state */
+        }
+        #controls-footer label, #controls-footer input, #controls-footer button {
+            margin-left: 5px;
+            margin-top: 5px;
+        }
         #settings {
-            max-width: 300px;
-            margin: 20px auto;
-            display: none;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-bottom: 5px;
         }
         #settings input {
             width: 50px;
-            margin: 0 10px;
             padding: 5px;
             border: 1px solid #ddd;
             border-radius: 4px;
         }
+        #controls-footer button {
+             margin: 5px 0 0 5px;
+             padding: 5px 10px;
+        }
+        
         #ascii-stats {
             font-family: monospace;
             white-space: pre;
@@ -126,10 +150,7 @@
         <button onclick="login()">Login</button>
         <div id="error" style="color: red;"></div>
     </div>
-    <div id="settings">
-        New cards per day: <input id="daily-limit" type="number" min="1" value="10">
-        <button onclick="saveSettings()">Save</button>
-    </div>
+    
     <div id="flashcard">
         <div id="card-num"></div>
         <div id="front">
@@ -141,16 +162,26 @@
             <div id="cloze-display" class="cloze-sentence"></div>
         </div>
     </div>
+    
     <div id="buttons" style="display: none;">
-        <button id="flipBtn" onclick="flip()">Show Answer</button>
         <div id="rate" style="display:none;">
+            <button id="flipBtn" onclick="flip()">Show Answer</button>
             <button onclick="rate(false)">Incorrect</button>
             <button onclick="rate(true)">Correct</button>
         </div>
     </div>
-    <button id="logout" onclick="auth.signOut()" style="display: none;">Logout</button>
+    
+    <div id="controls-footer" style="display: none;">
+        <div id="settings">
+            New cards/day: <input id="daily-limit" type="number" min="1" value="10">
+            <button onclick="saveSettings()">Save</button>
+        </div>
+        <button id="logout" onclick="auth.signOut()">Logout</button>
+    </div>
+    
     <pre id="ascii-stats"></pre>
     <img src="antonimo-logo.jpg" alt="Antonimo logo" class="logo-bg">
+    
     <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore-compat.js"></script>
@@ -304,9 +335,8 @@
                 }
                 document.getElementById('daily-limit').value = userData.dailyNewLimit;
                 document.getElementById('login-form').style.display = 'none';
-                document.getElementById('settings').style.display = 'block';
+                document.getElementById('controls-footer').style.display = 'block'; // Show controls
                 document.getElementById('flashcard').style.display = 'block';
-                document.getElementById('logout').style.display = 'block';
                 document.getElementById('ascii-stats').style.display = 'block';
                 showCard();
             });
@@ -388,6 +418,8 @@
             const answerBox = document.getElementById('answer-box');
             const higherNeighborBox = document.getElementById('higher-neighbor-box');
             const clozeDisplay = document.getElementById('cloze-display');
+            const flipBtn = document.getElementById('flipBtn');
+            const rateDiv = document.getElementById('rate');
 
             if (dueIds.length === 0) {
                 lowerNeighborBox.textContent = '';
@@ -425,17 +457,26 @@
                 // Complete cloze sentence with green text
                 sentence = sentence.replace('_____', `<strong style="color: green;">${correct}</strong>`);
                 clozeDisplay.innerHTML = sentence;
+                
+                flipBtn.style.display = 'none'; // Hide Show Answer button
             } else {
                 // Front of Card
                 answerBox.textContent = ''; // Center box is empty
                 answerBox.style.backgroundColor = '#fff'; // White background
                 answerBox.style.color = 'black';
                 clozeDisplay.textContent = sentence;
+                
+                flipBtn.style.display = 'block'; // Show Show Answer button
             }
 
             document.getElementById('card-num').textContent = `Card ${currentId + 1}`;
-            document.getElementById('flipBtn').style.display = flipped ? 'none' : 'block';
-            document.getElementById('rate').style.display = flipped ? 'block' : 'none';
+            rateDiv.style.display = 'flex'; // Always display the rate div, letting the buttons inside handle visibility
+            // When flipped is true, we want to show Incorrect/Correct and hide Show Answer (handled above)
+            // When flipped is false, we want to show Show Answer and hide Incorrect/Correct.
+            // Since Incorrect/Correct are permanently visible inside #rate, we must manually hide them.
+            const rateButtons = rateDiv.querySelectorAll('button:not(#flipBtn)');
+            rateButtons.forEach(btn => btn.style.display = flipped ? 'block' : 'none');
+            
             document.getElementById('buttons').style.display = 'block';
         }
 
@@ -473,10 +514,9 @@
                 loadData(user.uid);
             } else {
                 document.getElementById('login-form').style.display = 'block';
-                document.getElementById('settings').style.display = 'none';
+                document.getElementById('controls-footer').style.display = 'none'; // Hide controls
                 document.getElementById('flashcard').style.display = 'none';
                 document.getElementById('buttons').style.display = 'none';
-                document.getElementById('logout').style.display = 'none';
                 document.getElementById('ascii-stats').style.display = 'none';
                 document.getElementById('progress').textContent = '';
             }
