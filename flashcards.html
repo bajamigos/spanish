@@ -36,28 +36,45 @@
             border-radius: 8px;
             background: #f9f9f9;
         }
-        #front, #back {
+        #front {
             font-size: 1.2em;
         }
-        #back { display: none; margin-top: 50px; }
         .hint { font-size: 1em; color: #666; }
         .above-hint { margin-bottom: 20px; }
         .below-hint { margin-top: 20px; }
+        #card-num { font-size: 0.8em; color: #999; }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            background: #f0f0f0;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        #buttons {
+            display: flex;
+            justify-content: center;
+        }
     </style>
 </head>
 <body>
-    <h1>Flashcards ver 2025.10.20</h1>
+    <h1>Flashcards v.2025.10.26</h1>
+    <p id="learned">Learned cards: 0</p>
     <div id="flashcard">
+        <div id="card-num"></div>
         <div id="front"></div>
-        <div id="back"></div>
     </div>
-    <button onclick="flip()">Flip</button>
-    <button onclick="prevCard()">Prev</button>
-    <button onclick="nextCard()">Next</button>
+    <div id="buttons">
+        <button id="flipBtn" onclick="flip()">Show Answer</button>
+        <div id="rate" style="display:none;">
+            <button onclick="rate(false)">Incorrect</button>
+            <button onclick="rate(true)">Correct</button>
+        </div>
+    </div>
     <img src="antonimo-logo.jpg" alt="Antonimo logo" class="logo-bg">
     <script>
         const scale = ['susurrar', 'murmurar', 'hablar', 'alzar la voz', 'exclamar', 'gritar'];
-        let cards = [
+        const cards = [
             { front: 'En la quietud de la noche, ella se inclinó hacia su amigo y decidió _____ el secreto para que nadie más pudiera oírlo.', back: 'susurrar' },
             { front: 'Durante la película de terror, los niños empezaron a _____ comentarios asustados sin molestar a los demás espectadores.', back: 'susurrar' },
             { front: 'En la iglesia, los feligreses optaron por _____ sus oraciones para mantener un ambiente de paz y respeto.', back: 'susurrar' },
@@ -90,7 +107,7 @@
             { front: 'En el concierto, algunos fans comenzaron a _____ quejas sobre el sonido deficiente.', back: 'murmurar' },
             { front: 'Los pasajeros impacientes optaron por _____ sobre el retraso del vuelo.', back: 'murmurar' },
             { front: 'No _____ promesas vacías, cumple con lo que dices de forma clara.', back: 'murmurar' },
-            { front: 'Si no no estás de acuerdo con la decisión, debes _____ y expresar tu opinión con confianza.', back: 'alzar la voz' },
+            { front: 'Si no estás de acuerdo con la decisión, debes _____ y expresar tu opinión con confianza.', back: 'alzar la voz' },
             { front: 'En la manifestación pacífica, los líderes tuvieron que _____ para que todos los presentes los escucharan.', back: 'alzar la voz' },
             { front: 'No temas _____ cuando defiendes tus derechos en una discusión acalorada.', back: 'alzar la voz' },
             { front: 'Durante el debate, el orador decidió _____ para enfatizar su punto principal.', back: 'alzar la voz' },
@@ -159,42 +176,73 @@
             { front: 'Durante la tormenta, él empezó a _____ instrucciones para asegurar la casa.', back: 'gritar' },
             { front: 'Los niños en el patio _____ de excitación mientras jugaban al fútbol.', back: 'gritar' }
         ];
-        function shuffle(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
-            }
+        let srsData = JSON.parse(localStorage.getItem('srsData')) || Array(cards.length).fill().map(() => ({streak: 0, learnedTime: 0}));
+        let activeIds = JSON.parse(localStorage.getItem('activeIds')) || Array.from({length: 10}, (_, i) => i);
+        activeIds = activeIds.filter(id => srsData[id].learnedTime === 0);
+        while (activeIds.length < 10) {
+            let nextId = Math.max(-1, ...activeIds) + 1;
+            if (nextId >= cards.length) break;
+            activeIds.push(nextId);
         }
-        shuffle(cards);
-        let current = 0;
+        let currentId = activeIds[Math.floor(Math.random() * activeIds.length)];
         let flipped = false;
+        function save() {
+            localStorage.setItem('srsData', JSON.stringify(srsData));
+            localStorage.setItem('activeIds', JSON.stringify(activeIds));
+        }
+        function updateLearned() {
+            const now = Date.now();
+            const day = 24 * 60 * 60 * 1000;
+            const count = srsData.filter(d => d.learnedTime > now - day).length;
+            document.getElementById('learned').textContent = `Learned cards: ${count}/${cards.length}`;
+        }
         function showCard() {
-            const correct = cards[current].back;
+            const correct = cards[currentId].back;
             const index = scale.indexOf(correct);
             const lower = index > 0 ? scale[index - 1] : '';
             const higher = index < scale.length - 1 ? scale[index + 1] : '';
             let frontHtml = '';
             if (higher) frontHtml += `<div class="hint above-hint">${higher}</div>`;
-            frontHtml += cards[current].front;
+            let sentence = cards[currentId].front;
+            if (flipped) {
+                sentence = sentence.replace('_____', `<strong style="color: green;">${correct}</strong>`);
+            }
+            frontHtml += sentence;
             if (lower) frontHtml += `<div class="hint below-hint">${lower}</div>`;
+            document.getElementById('card-num').textContent = `Card ${currentId + 1}`;
             document.getElementById('front').innerHTML = frontHtml;
-            document.getElementById('back').textContent = correct;
-            document.getElementById('back').style.display = flipped ? 'block' : 'none';
+            document.getElementById('flipBtn').style.display = flipped ? 'none' : 'block';
+            document.getElementById('rate').style.display = flipped ? 'block' : 'none';
         }
         function flip() {
-            flipped = !flipped;
+            flipped = true;
             showCard();
         }
-        function nextCard() {
-            current = (current + 1) % cards.length;
+        function rate(correct) {
+            if (correct) {
+                srsData[currentId].streak++;
+                if (srsData[currentId].streak === 3) {
+                    srsData[currentId].learnedTime = Date.now();
+                    activeIds = activeIds.filter(id => id !== currentId);
+                    let nextId = Math.max(-1, ...activeIds) + 1;
+                    if (nextId < cards.length) {
+                        activeIds.push(nextId);
+                    }
+                }
+            } else {
+                srsData[currentId].streak = 0;
+            }
+            save();
+            updateLearned();
             flipped = false;
+            if (activeIds.length === 0) {
+                alert('All cards learned!');
+                return;
+            }
+            currentId = activeIds[Math.floor(Math.random() * activeIds.length)];
             showCard();
         }
-        function prevCard() {
-            current = (current - 1 + cards.length) % cards.length;
-            flipped = false;
-            showCard();
-        }
+        updateLearned();
         showCard();
     </script>
 </body>
