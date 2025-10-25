@@ -65,14 +65,27 @@
             margin-top: 20px;
         }
         #card-num { font-size: 0.8em; color: #999; }
+        
+        /* UPDATED BUTTON STYLE */
         button {
             padding: 10px 20px;
             margin: 10px;
-            border: none;
-            background: #f0f0f0;
+            border: 1px solid #aaa; /* Thin light grey border */
+            background: #000; /* Black background */
+            color: #ccc; /* Light grey text */
             cursor: pointer;
             border-radius: 4px;
+            /* 3D outline effect using box-shadow */
+            box-shadow: 1px 1px 0 #aaa, 2px 2px 0 #bbb;
+            transition: all 0.05s ease;
         }
+        button:hover {
+            background: #222; /* Slightly lighter black on hover */
+            color: #fff; /* White text on hover for contrast */
+            box-shadow: 0 0 0 #aaa; /* Flatten the shadow on hover/active */
+            transform: translate(2px, 2px);
+        }
+        
         #buttons {
             display: flex;
             justify-content: center;
@@ -125,6 +138,7 @@
             border-radius: 4px;
         }
         #controls-footer button {
+             /* Overriding some button defaults for a smaller footer button look */
              margin: 5px 0 0 5px;
              padding: 5px 10px;
         }
@@ -471,8 +485,6 @@
 
             document.getElementById('card-num').textContent = `Card ${currentId + 1}`;
             rateDiv.style.display = 'flex'; // Always display the rate div, letting the buttons inside handle visibility
-            // When flipped is true, we want to show Incorrect/Correct and hide Show Answer (handled above)
-            // When flipped is false, we want to show Show Answer and hide Incorrect/Correct.
             // Since Incorrect/Correct are permanently visible inside #rate, we must manually hide them.
             const rateButtons = rateDiv.querySelectorAll('button:not(#flipBtn)');
             rateButtons.forEach(btn => btn.style.display = flipped ? 'block' : 'none');
