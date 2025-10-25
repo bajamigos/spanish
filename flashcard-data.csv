@@ -1,0 +1,559 @@
+Pair,Part of Speech,Hint,Gradability Type,Order,Word,Sentences
+susurrar-gritar,Verb,Esto escala el volumen de producción de sonido.,Volume,0,susurrar,En la biblioteca, ella decidió _____ el secreto a su amiga.|Durante la noche, los amantes empezaron a _____ palabras de amor.|En la reunión, los participantes optaron por _____ sus opiniones.
+susurrar-gritar,Verb,Esto escala el volumen de producción de sonido.,Volume,1,murmurar,Los empleados comenzaron a _____ quejas sobre el jefe.|No _____ excusas, di lo que piensas claramente.|Los estudiantes optaron por _____ respuestas durante el examen.
+susurrar-gritar,Verb,Esto escala el volumen de producción de sonido.,Volume,2,hablar,Es importante _____ con claridad en la presentación.|Los amigos se reunieron para _____ sobre sus vidas.|El profesor pidió _____ sobre el tema en clase.
+susurrar-gritar,Verb,Esto escala el volumen de producción de sonido.,Volume,3,alzar la voz,En la protesta, los líderes decidieron _____ para ser oídos.|No temas _____ cuando defiendes tus derechos.|El maestro tuvo que _____ para llamar la atención.
+susurrar-gritar,Verb,Esto escala el volumen de producción de sonido.,Volume,4,vociferar,Los fans empezaron a _____ el nombre del equipo.|En la discusión, él optó por _____ sus argumentos.|La multitud comenzó a _____ consignas en la marcha.
+susurrar-gritar,Verb,Esto escala el volumen de producción de sonido.,Volume,5,chillar,Los niños _____ de miedo en la película de terror.|No _____ en la casa, hay gente durmiendo.|Ella decidió _____ para alertar a los demás.
+susurrar-gritar,Verb,Esto escala el volumen de producción de sonido.,Volume,6,gritar,En el concierto, todos empezaron a _____ las canciones.|Deja de _____ órdenes y explica con calma.|Los jugadores _____ de alegría al ganar el partido.
+caminar-correr,Verb,Esto aumenta la velocidad de locomoción.,Velocity,0,caminar,Me gusta _____ por el parque todas las mañanas.|Vamos a _____ juntos hasta la tienda.|Los turistas decidieron _____ por la ciudad antigua.
+caminar-correr,Verb,Esto aumenta la velocidad de locomoción.,Velocity,1,pasear,Los amigos optaron por _____ por el centro comercial.|Es relajante _____ junto al río al atardecer.|Ella decidió _____ con su perro en el barrio.
+caminar-correr,Verb,Esto aumenta la velocidad de locomoción.,Velocity,2,marchar,Los soldados comenzaron a _____ en formación.|Vamos a _____ hacia la meta con determinación.|Los manifestantes optaron por _____ por las calles.
+caminar-correr,Verb,Esto aumenta la velocidad de locomoción.,Velocity,3,trotar,Me gusta _____ en el parque para mantener la forma.|Los atletas decidieron _____ antes de la carrera.|Ella comenzó a _____ para calentar los músculos.
+caminar-correr,Verb,Esto aumenta la velocidad de locomoción.,Velocity,4,esprintar,En la competencia, él optó por _____ hacia la finish.|Los niños empezaron a _____ en el juego.|Vamos a _____ para alcanzar el autobús.
+caminar-correr,Verb,Esto aumenta la velocidad de locomoción.,Velocity,5,galopar,Los caballos comenzaron a _____ por el campo abierto.|El jinete decidió _____ para llegar rápido.|En la carrera, optaron por _____ con velocidad.
+caminar-correr,Verb,Esto aumenta la velocidad de locomoción.,Velocity,6,correr,Me gusta _____ por la playa al amanecer.|Los amigos _____ para llegar a tiempo.|Ella decidió _____ en la maratón anual.
+tocar-golpear,Verb,Esto construye la fuerza del contacto físico.,Force,0,tocar,Me gusta _____ el piano en mi tiempo libre.|Vamos a _____ la puerta antes de entrar.|Los músicos decidieron _____ sus instrumentos.
+tocar-golpear,Verb,Esto construye la fuerza del contacto físico.,Force,1,rozar,El viento comenzó a _____ las hojas de los árboles.|Ella optó por _____ suavemente su mano.|Los autos _____ en el accidente leve.
+tocar-golpear,Verb,Esto construye la fuerza del contacto físico.,Force,2,palmear,Los amigos decidieron _____ la espalda en felicitación.|En el juego, optaron por _____ la pelota.|Él comenzó a _____ el ritmo en la mesa.
+tocar-golpear,Verb,Esto construye la fuerza del contacto físico.,Force,3,abofetear,En la discusión, ella optó por _____ su cara.|No _____ a nadie, resuelve con palabras.|Los actores decidieron _____ en la escena dramática.
+tocar-golpear,Verb,Esto construye la fuerza del contacto físico.,Force,4,pegar,Los niños comenzaron a _____ carteles en la pared.|Vamos a _____ el sello en el sobre.|Él optó por _____ el golpe en el entrenamiento.
+tocar-golpear,Verb,Esto construye la fuerza del contacto físico.,Force,5,azotar,El viento decidió _____ las ramas durante la tormenta.|No _____ al animal, trátalo con cuidado.|Los marineros optaron por _____ las velas.
+tocar-golpear,Verb,Esto construye la fuerza del contacto físico.,Force,6,golpear,Los boxeadores comenzaron a _____ en el ring.|Vamos a _____ la piñata en la fiesta.|Él optó por _____ la puerta con fuerza.
+comer-devorar,Verb,Esto eleva la intensidad de la ingestión de comida.,Consumption Rate,0,comer,Me gusta _____ frutas frescas en el desayuno.|Vamos a _____ juntos en el restaurante.|Los invitados decidieron _____ el pastel.
+comer-devorar,Verb,Esto eleva la intensidad de la ingestión de comida.,Consumption Rate,1,mordisquear,Los niños optaron por _____ las galletas lentamente.|Ella comenzó a _____ el chocolate pensativa.|Vamos a _____ el pan durante la película.
+comer-devorar,Verb,Esto eleva la intensidad de la ingestión de comida.,Consumption Rate,2,masticar,Es importante _____ bien la comida para digerir.|Los animales decidieron _____ la hierba fresca.|Él optó por _____ el chicle todo el día.
+comer-devorar,Verb,Esto eleva la intensidad de la ingestión de comida.,Consumption Rate,3,engullir,En la prisa, comenzó a _____ el almuerzo.|No _____ la comida, disfrútala.|Los concursantes optaron por _____ hot dogs.
+comer-devorar,Verb,Esto eleva la intensidad de la ingestión de comida.,Consumption Rate,4,tragar,Vamos a _____ el medicamento con agua.|Ella decidió _____ el bocado entero.|Los pájaros comenzaron a _____ los insectos.
+comer-devorar,Verb,Esto eleva la intensidad de la ingestión de comida.,Consumption Rate,5,zampar,Los adolescentes optaron por _____ la pizza rápidamente.|No _____ todo de una vez, comparte.|Él comenzó a _____ las patatas fritas.
+comer-devorar,Verb,Esto eleva la intensidad de la ingestión de comida.,Consumption Rate,6,devorar,Los lobos decidieron _____ la presa en minutos.|Me gusta _____ libros interesantes.|Ella optó por _____ el helado con ansias.
+mirar-observar fijamente,Verb,Esto intensifica la duración de la observación visual.,Duration,0,mirar,Me gusta _____ las estrellas en la noche.|Vamos a _____ la película esta tarde.|Los turistas decidieron _____ el monumento.
+mirar-observar fijamente,Verb,Esto intensifica la duración de la observación visual.,Duration,1,ojear,Ella optó por _____ el libro en la tienda.|Los lectores comenzaron a _____ la revista.|Vamos a _____ el menú antes de pedir.
+mirar-observar fijamente,Verb,Esto intensifica la duración de la observación visual.,Duration,2,contemplar,Los artistas decidieron _____ el paisaje para pintar.|Me gusta _____ el mar en silencio.|Él optó por _____ la obra de arte.
+mirar-observar fijamente,Verb,Esto intensifica la duración de la observación visual.,Duration,3,escudriñar,El detective comenzó a _____ la escena del crimen.|Vamos a _____ el documento por errores.|Ella decidieron _____ el mapa detalladamente.
+mirar-observar fijamente,Verb,Esto intensifica la duración de la observación visual.,Duration,4,clavar la vista,Los espectadores optaron por _____ en el escenario.|No _____ así, es incómodo.|Él comenzó a _____ en el horizonte.
+mirar-observar fijamente,Verb,Esto intensifica la duración de la observación visual.,Duration,5,quedarse mirando,Los niños decidieron _____ al mago asombrados.|Me gusta _____ las nubes pasar.|Ella optó por _____ el fuego en la chimenea.
+mirar-observar fijamente,Verb,Esto intensifica la duración de la observación visual.,Duration,6,observar fijamente,El científico comenzó a _____ el experimento.|Vamos a _____ el comportamiento de los animales.|Los guardias optaron por _____ la entrada.
+mover-precipitarse,Verb,Esto aumenta la urgencia del desplazamiento.,Urgency,0,mover,Me gusta _____ los muebles para redecorar.|Vamos a _____ la caja al otro lado.|Los trabajadores decidieron _____ el equipo.
+mover-precipitarse,Verb,Esto aumenta la urgencia del desplazamiento.,Urgency,1,desplazar,Los empleados optaron por _____ el escritorio.|Ella comenzó a _____ las tropas en el mapa.|Vamos a _____ el coche del garaje.
+mover-precipitarse,Verb,Esto aumenta la urgencia del desplazamiento.,Urgency,2,proceder,Los invitados decidieron _____ hacia la sala.|Me gusta _____ con cautela en la oscuridad.|Él optó por _____ al siguiente paso.
+mover-precipitarse,Verb,Esto aumenta la urgencia del desplazamiento.,Urgency,3,apresurarse,Los estudiantes comenzaron a _____ para llegar a clase.|No _____ , toma tu tiempo.|Ella decidieron _____ en la preparación.
+mover-precipitarse,Verb,Esto aumenta la urgencia del desplazamiento.,Urgency,4,lanzarse,Los niños optaron por _____ al agua.|Vamos a _____ a la aventura.|Él comenzó a _____ hacia la oportunidad.
+mover-precipitarse,Verb,Esto aumenta la urgencia del desplazamiento.,Urgency,5,acelerar,Los conductores decidieron _____ en la autopista.|Me gusta _____ el proceso de aprendizaje.|Ella optó por _____ el ritmo del trabajo.
+mover-precipitarse,Verb,Esto aumenta la urgencia del desplazamiento.,Urgency,6,precipitarse,Los compradores comenzaron a _____ a las ofertas.|No _____ en decisiones importantes.|Él decidieron _____ hacia la salida.
+calentar-hervir,Verb,Esto acelera el aumento de temperatura.,Temperature,0,calentar,Me gusta _____ la sopa en el microondas.|Vamos a _____ el motor antes de partir.|Los cocineros decidieron _____ el aceite.
+calentar-hervir,Verb,Esto acelera el aumento de temperatura.,Temperature,1,entibiar,Ella optó por _____ el agua para el té.|Los padres comenzaron a _____ la leche para el bebé.|Vamos a _____ el ambiente con música.
+calentar-hervir,Verb,Esto acelera el aumento de temperatura.,Temperature,2,cocer a fuego lento,Los chefs decidieron _____ la salsa durante horas.|Me gusta _____ el guiso para sabores profundos.|Él optó por _____ la carne suavemente.
+calentar-hervir,Verb,Esto acelera el aumento de temperatura.,Temperature,3,escaldar,Los jardineros comenzaron a _____ las plantas con agua caliente.|Vamos a _____ los tomates para pelarlos.|Ella decidieron _____ los vegetales rápidamente.
+calentar-hervir,Verb,Esto acelera el aumento de temperatura.,Temperature,4,chamuscar,Los barbacoeros optaron por _____ la carne en la parrilla.|No _____ el pan en la tostadora.|Él comenzó a _____ el papel accidentalmente.
+calentar-hervir,Verb,Esto acelera el aumento de temperatura.,Temperature,5,burbujear,El agua decidió _____ en la olla.|Me gusta ver _____ la sopa al cocinar.|Los científicos optaron por _____ la solución.
+calentar-hervir,Verb,Esto acelera el aumento de temperatura.,Temperature,6,hervir,Los cocineros comenzaron a _____ las patatas.|Vamos a _____ el agua para el café.|Ella optó por _____ los huevos.
+enfriar-congelar,Verb,Esto profundiza la caída de temperatura.,Temperature,0,enfriar,Me gusta _____ la bebida en la nevera.|Vamos a _____ el motor después de usar.|Los chefs decidieron _____ la salsa.
+enfriar-congelar,Verb,Esto profundiza la caída de temperatura.,Temperature,1,refrescar,Ella optó por _____ el aire con el ventilador.|Los atletas comenzaron a _____ sus músculos.|Vamos a _____ la habitación abriendo ventanas.
+enfriar-congelar,Verb,Esto profundiza la caída de temperatura.,Temperature,2,refrigerar,Los tenderos decidieron _____ los productos lácteos.|Me gusta _____ la fruta para conservarla.|Él optó por _____ la comida sobrante.
+enfriar-congelar,Verb,Esto profundiza la caída de temperatura.,Temperature,3,helar,Los inviernos comenzaron a _____ los lagos.|Vamos a _____ el pastel con glaseado.|Ella decidieron _____ las bebidas con hielo.
+enfriar-congelar,Verb,Esto profundiza la caída de temperatura.,Temperature,4,solidificar,Los científicos optaron por _____ el líquido en el laboratorio.|No _____ la cera demasiado rápido.|Él comenzó a _____ el gel en el frío.
+enfriar-congelar,Verb,Esto profundiza la caída de temperatura.,Temperature,5,escarchar,Los climas decidieron _____ las ventanas en la mañana.|Me gusta ver _____ las hojas en otoño.|Los artistas optaron por _____ el vidrio.
+enfriar-congelar,Verb,Esto profundiza la caída de temperatura.,Temperature,6,congelar,Los cocineros comenzaron a _____ la carne para preservar.|Vamos a _____ el agua en cubitos.|Ella optó por _____ las verduras.
+crecer-expandir,Verb,Esto amplifica el aumento de tamaño.,Magnitude,0,crecer,Me gusta ver _____ las plantas en el jardín.|Los niños decidieron _____ rápidamente.|Vamos a _____ el negocio este año.
+crecer-expandir,Verb,Esto amplifica el aumento de tamaño.,Magnitude,1,brotar,Las semillas optaron por _____ en primavera.|Ella comenzó a _____ ideas nuevas.|Los hongos decidieron _____ después de la lluvia.
+crecer-expandir,Verb,Esto amplifica el aumento de tamaño.,Magnitude,2,desarrollar,Los ingenieros comenzaron a _____ el proyecto.|Me gusta _____ habilidades personales.|Él optó por _____ el músculo con ejercicio.
+crecer-expandir,Verb,Esto amplifica el aumento de tamaño.,Magnitude,3,agrandar,Los arquitectos decidieron _____ la casa.|Vamos a _____ la foto en la pantalla.|Ella comenzó a _____ el agujero en la pared.
+crecer-expandir,Verb,Esto amplifica el aumento de tamaño.,Magnitude,4,hinchar,Los globos optaron por _____ con aire.|No _____ la herida, cúrala.|Él decidió _____ el ego con elogios.
+crecer-expandir,Verb,Esto amplifica el aumento de tamaño.,Magnitude,5,inflar,Los niños comenzaron a _____ los neumáticos.|Me gusta _____ el colchón para dormir.|Los economistas optaron por _____ la moneda.
+crecer-expandir,Verb,Esto amplifica el aumento de tamaño.,Magnitude,6,expandir,Las empresas decidieron _____ sus operaciones.|Vamos a _____ el universo en la mente.|Ella optó por _____ el conocimiento.
+encoger-colapsar,Verb,Esto intensifica la reducción de tamaño.,Magnitude,0,encoger,Me gusta ver _____ la ropa en la lavadora.|Los materiales decidieron _____ con el frío.|Vamos a _____ el archivo para enviar.
+encoger-colapsar,Verb,Esto intensifica la reducción de tamaño.,Magnitude,1,disminuir,Los precios optaron por _____ en la venta.|Ella comenzó a _____ la velocidad.|Los poblaciones decidieron _____ con el tiempo.
+encoger-colapsar,Verb,Esto intensifica la reducción de tamaño.,Magnitude,2,contraer,Los músculos comenzaron a _____ en el ejercicio.|Me gusta _____ deudas para ahorrar.|Él optó por _____ el espacio disponible.
+encoger-colapsar,Verb,Esto intensifica la reducción de tamaño.,Magnitude,3,arrugar,Las hojas decidieron _____ en el otoño.|Vamos a _____ el papel para tirar.|Ella comenzó a _____ la cara con risa.
+encoger-colapsar,Verb,Esto intensifica la reducción de tamaño.,Magnitude,4,implotar,Los edificios optaron por _____ en la demolición.|No _____ bajo presión, resiste.|Los estrellas comenzaron a _____ en el universo.
+encoger-colapsar,Verb,Esto intensifica la reducción de tamaño.,Magnitude,5,desinflar,Los globos decidieron _____ después de la fiesta.|Me gusta _____ expectativas irreales.|Él optó por _____ el neumático pinchado.
+encoger-colapsar,Verb,Esto intensifica la reducción de tamaño.,Magnitude,6,colapsar,Los puentes comenzaron a _____ en el terremoto.|Vamos a evitar _____ bajo el peso.|Ella decidió _____ de cansancio.
+sugerir-ordenar,Verb,Esto formaliza el tono del discurso directivo.,Formality,0,sugerir,Me gusta _____ ideas en la reunión.|Los amigos decidieron _____ un restaurante.|Vamos a _____ cambios en el plan.
+sugerir-ordenar,Verb,Esto formaliza el tono del discurso directivo.,Formality,1,insinuar,Ella optó por _____ un secreto sutilmente.|Los rumores comenzaron a _____ problemas.|Él decidió _____ una posibilidad.
+sugerir-ordenar,Verb,Esto formaliza el tono del discurso directivo.,Formality,2,proponer,Los líderes comenzaron a _____ una solución.|Me gusta _____ matrimonio románticamente.|Vamos a _____ un trato beneficioso.
+sugerir-ordenar,Verb,Esto formaliza el tono del discurso directivo.,Formality,3,instar,Los activistas optaron por _____ a la acción.|Ella decidió _____ a votar.|Los profesores comenzaron a _____ estudiar.
+sugerir-ordenar,Verb,Esto formaliza el tono del discurso directivo.,Formality,4,mandar,Los jefes decidieron _____ tareas a empleados.|No _____ sin razón, explica.|Él optó por _____ un paquete.
+sugerir-ordenar,Verb,Esto formaliza el tono del discurso directivo.,Formality,5,dictar,Los profesores comenzaron a _____ notas en clase.|Me gusta _____ leyes justas.|Ella decidió _____ una carta.
+sugerir-ordenar,Verb,Esto formaliza el tono del discurso directivo.,Formality,6,ordenar,Los capitanes optaron por _____ a la tripulación.|Vamos a _____ la habitación.|Él decidió _____ comida en el restaurante.
+charlar-discursar,Verb,Esto eleva el registro de la comunicación.,Formality,0,charlar,Me gusta _____ con amigos en el café.|Los vecinos decidieron _____ sobre el tiempo.|Vamos a _____ durante el descanso.
+charlar-discursar,Verb,Esto eleva el registro de la comunicación.,Formality,1,conversar,Ella optó por _____ sobre libros interesantes.|Los diplomáticos comenzaron a _____ en la cumbre.|Él decidió _____ con el vecino.
+charlar-discursar,Verb,Esto eleva el registro de la comunicación.,Formality,2,dialogar,Los parejas comenzaron a _____ sobre su futuro.|Me gusta _____ en terapias.|Los líderes optaron por _____ por paz.
+charlar-discursar,Verb,Esto eleva el registro de la comunicación.,Formality,3,debatir,Los estudiantes decidieron _____ el tema en clase.|Vamos a _____ ideas políticas.|Ella comenzó a _____ con expertos.
+charlar-discursar,Verb,Esto eleva el registro de la comunicación.,Formality,4,disertar,Los profesores optaron por _____ sobre historia.|Me gusta _____ en conferencias.|Él decidió _____ el ensayo.
+charlar-discursar,Verb,Esto eleva el registro de la comunicación.,Formality,5,orar,Los sacerdotes comenzaron a _____ en la ceremonia.|Vamos a _____ por la paz.|Ella optó por _____ en público.
+charlar-discursar,Verb,Esto eleva el registro de la comunicación.,Formality,6,discursar,Los políticos decidieron _____ en el parlamento.|Me gusta _____ sobre temas importantes.|Él comenzó a _____ con elocuencia.
+gustar-adorar,Verb,Esto profundiza el nivel de apego emocional.,Affective Depth,0,gustar,Me gusta _____ el chocolate en moderación.|Los niños decidieron _____ los juguetes nuevos.|Vamos a _____ la música clásica.
+gustar-adorar,Verb,Esto profundiza el nivel de apego emocional.,Affective Depth,1,disfrutar,Ella optó por _____ las vacaciones en la playa.|Los amigos comenzaron a _____ la película.|Él decidió _____ el momento presente.
+gustar-adorar,Verb,Esto profundiza el nivel de apego emocional.,Affective Depth,2,apreciar,Los coleccionistas comenzaron a _____ el arte antiguo.|Me gusta _____ los esfuerzos de los demás.|Vamos a _____ la belleza de la naturaleza.
+gustar-adorar,Verb,Esto profundiza el nivel de apego emocional.,Affective Depth,3,querer,Las madres optaron por _____ a sus hijos incondicionalmente.|Él decidió _____ un futuro mejor.|Ella comenzó a _____ paz en el mundo.
+gustar-adorar,Verb,Esto profundiza el nivel de apego emocional.,Affective Depth,4,venerar,Los fieles decidieron _____ a sus dioses.|Me gusta _____ a los héroes históricos.|Los fans optaron por _____ al artista.
+gustar-adorar,Verb,Esto profundiza el nivel de apego emocional.,Affective Depth,5,idolatrar,Los adolescentes comenzaron a _____ a las estrellas pop.|No _____ objetos materiales.|Él optó por _____ a su mentor.
+gustar-adorar,Verb,Esto profundiza el nivel de apego emocional.,Affective Depth,6,adorar,Los devotos decidieron _____ a la divinidad.|Me gusta _____ a mi familia.|Ella optó por _____ el sol.
+disgustar-despreciar,Verb,Esto intensifica la respuesta emocional negativa.,Affective Depth,0,disgustar,Me _____ la comida picante.|Los críticos decidieron _____ la película.|Vamos a _____ la injusticia.
+disgustar-despreciar,Verb,Esto intensifica la respuesta emocional negativa.,Affective Depth,1,desagradar,Ella optó por _____ el ruido constante.|Los vecinos comenzaron a _____ el comportamiento.|Él decidió _____ la idea propuesta.
+disgustar-despreciar,Verb,Esto intensifica la respuesta emocional negativa.,Affective Depth,2,detestar,Los alérgicos comenzaron a _____ los gatos.|Me _____ la hipocresía.|Vamos a _____ la violencia.
+disgustar-despreciar,Verb,Esto intensifica la respuesta emocional negativa.,Affective Depth,3,aborrecer,Los pacifistas optaron por _____ la guerra.|Ella decidió _____ la traición.|Él comenzó a _____ la corrupción.
+disgustar-despreciar,Verb,Esto intensifica la respuesta emocional negativa.,Affective Depth,4,abominar,Los ecologistas decidieron _____ la contaminación.|Me _____ la crueldad animal.|Los moralistas optaron por _____ el pecado.
+disgustar-despreciar,Verb,Esto intensifica la respuesta emocional negativa.,Affective Depth,5,odiar,Los rivales comenzaron a _____ al equipo contrario.|No _____ a nadie, perdona.|Ella optó por _____ la oscuridad.
+disgustar-despreciar,Verb,Esto intensifica la respuesta emocional negativa.,Affective Depth,6,despreciar,Los arrogantes decidieron _____ a los débiles.|Me _____ el desprecio ajeno.|Él optó por _____ las opiniones contrarias.
+imaginar-visualizar,Verb,Esto abstrae el proceso de creación mental.,Abstraction,0,imaginar,Me gusta _____ mundos fantásticos.|Los niños decidieron _____ aventuras.|Vamos a _____ el futuro.
+imaginar-visualizar,Verb,Esto abstrae el proceso de creación mental.,Abstraction,1,figurar,Ella optó por _____ en la lista de invitados.|Los artistas comenzaron a _____ formas abstractas.|Él decidió _____ el resultado.
+imaginar-visualizar,Verb,Esto abstrae el proceso de creación mental.,Abstraction,2,conceptualizar,Los filósofos comenzaron a _____ ideas complejas.|Me gusta _____ proyectos innovadores.|Vamos a _____ el diseño.
+imaginar-visualizar,Verb,Esto abstrae el proceso de creación mental.,Abstraction,3,fantasear,Los soñadores optaron por _____ con riquezas.|Ella decidió _____ sobre viajes.|Los escritores comenzaron a _____ historias.
+imaginar-visualizar,Verb,Esto abstrae el proceso de creación mental.,Abstraction,4,soñar,Los durmientes decidieron _____ con éxito.|Me gusta _____ despierto sobre metas.|Él optó por _____ en grande.
+imaginar-visualizar,Verb,Esto abstrae el proceso de creación mental.,Abstraction,5,alucinar,Los enfermos comenzaron a _____ visiones.|No _____ , ve la realidad.|Ella optó por _____ bajo efectos.
+imaginar-visualizar,Verb,Esto abstrae el proceso de creación mental.,Abstraction,6,visualizar,Los atletas decidieron _____ la victoria.|Vamos a _____ el camino al éxito.|Me gusta _____ recuerdos felices.
+describir-alegorizar,Verb,Esto poetiza el modo de representación.,Poetic Complexity,0,describir,Me gusta _____ el paisaje con palabras.|Los testigos decidieron _____ el accidente.|Vamos a _____ el proceso.
+describir-alegorizar,Verb,Esto poetiza el modo de representación.,Poetic Complexity,1,retratar,Los pintores optaron por _____ la escena.|Ella comenzó a _____ el personaje.|Él decidió _____ la realidad.
+describir-alegorizar,Verb,Esto poetiza el modo de representación.,Poetic Complexity,2,ilustrar,Los libros comenzaron a _____ con dibujos.|Me gusta _____ conceptos con ejemplos.|Los profesores optaron por _____ la lección.
+describir-alegorizar,Verb,Esto poetiza el modo de representación.,Poetic Complexity,3,simbolizar,Los emblemas decidieron _____ la unidad.|Vamos a _____ el amor con corazones.|Ella comenzó a _____ la paz con palomas.
+describir-alegorizar,Verb,Esto poetiza el modo de representación.,Poetic Complexity,4,metaforizar,Los poetas optaron por _____ la vida como viaje.|Me gusta _____ el tiempo como río.|Él decidió _____ el dolor como fuego.
+describir-alegorizar,Verb,Esto poetiza el modo de representación.,Poetic Complexity,5,poetizar,Los escritores comenzaron a _____ la naturaleza.|Vamos a _____ el amor en versos.|Ella optó por _____ la tristeza.
+describir-alegorizar,Verb,Esto poetiza el modo de representación.,Poetic Complexity,6,alegorizar,Los fabulistas decidieron _____ moralejas con animales.|Me gusta _____ conceptos abstractos.|Los artistas optaron por _____ la justicia.
+mascullar-proclamar,Verb,Esto formaliza la manera de expresión vocal.,Formality,0,mascullar,Los enfadados optaron por _____ maldiciones.|Ella comenzó a _____ excusas.|No _____ , habla claro.
+mascullar-proclamar,Verb,Esto formaliza la manera de expresión vocal.,Formality,1,balbucear,Los bebés decidieron _____ palabras primeras.|Me gusta _____ cuando nervioso.|Los borrachos optaron por _____ incoherencias.
+mascullar-proclamar,Verb,Esto formaliza la manera de expresión vocal.,Formality,2,anunciar,Los presentadores comenzaron a _____ el evento.|Vamos a _____ la noticia.|Él decidió _____ la llegada.
+mascullar-proclamar,Verb,Esto formaliza la manera de expresión vocal.,Formality,3,declarar,Los jueces optaron por _____ el veredicto.|Me gusta _____ amor eterno.|Los gobiernos comenzaron a _____ independencia.
+mascullar-proclamar,Verb,Esto formaliza la manera de expresión vocal.,Formality,4,difundir,Los medios decidieron _____ la información.|Vamos a _____ el mensaje.|Ella optó por _____ rumores.
+mascullar-proclamar,Verb,Esto formaliza la manera de expresión vocal.,Formality,5,pregonar,Los vendedores comenzaron a _____ sus productos.|Me gusta _____ buenas nuevas.|Los heraldos optaron por _____ edictos.
+mascullar-proclamar,Verb,Esto formaliza la manera de expresión vocal.,Formality,6,proclamar,Los reyes decidieron _____ la ley.|Vamos a _____ la victoria.|Él optó por _____ la fe.
+sentir-empatizar,Verb,Esto profundiza la comprensión emocional.,Affective Depth,0,sentir,Me gusta _____ la música en el alma.|Los pacientes decidieron _____ dolor.|Vamos a _____ la brisa.
+sentir-empatizar,Verb,Esto profundiza la comprensión emocional.,Affective Depth,1,percibir,Los detectives optaron por _____ el peligro.|Ella comenzó a _____ la tensión.|Él decidió _____ el aroma.
+sentir-empatizar,Verb,Esto profundiza la comprensión emocional.,Affective Depth,2,simpatizar,Los amigos comenzaron a _____ con la causa.|Me gusta _____ con los oprimidos.|Vamos a _____ con el equipo.
+sentir-empatizar,Verb,Esto profundiza la comprensión emocional.,Affective Depth,3,conectar,Los amantes optaron por _____ emocionalmente.|Ella decidió _____ con la audiencia.|Los dispositivos comenzaron a _____ a la red.
+sentir-empatizar,Verb,Esto profundiza la comprensión emocional.,Affective Depth,4,identificarse,Los lectores decidieron _____ con el personaje.|Me gusta _____ con la historia.|Él optó por _____ con la cultura.
+sentir-empatizar,Verb,Esto profundiza la comprensión emocional.,Affective Depth,5,internalizar,Los estudiantes comenzaron a _____ el conocimiento.|Vamos a _____ los valores.|Ella optó por _____ las emociones.
+sentir-empatizar,Verb,Esto profundiza la comprensión emocional.,Affective Depth,6,empatizar,Los terapeutas decidieron _____ con los pacientes.|Me gusta _____ con los amigos.|Vamos a _____ con los afectados.
+pensar-filosofar,Verb,Esto abstrae la profundidad de la cognición.,Abstraction,0,pensar,Me gusta _____ en soluciones creativas.|Los estrategas decidieron _____ el plan.|Vamos a _____ sobre el problema.
+pensar-filosofar,Verb,Esto abstrae la profundidad de la cognición.,Abstraction,1,reflexionar,Los sabios optaron por _____ sobre la vida.|Ella comenzó a _____ en sus errores.|Él decidió _____ antes de actuar.
+pensar-filosofar,Verb,Esto abstrae la profundidad de la cognición.,Abstraction,2,meditar,Los monjes comenzaron a _____ en silencio.|Me gusta _____ para relajar.|Vamos a _____ sobre la paz.
+pensar-filosofar,Verb,Esto abstrae la profundidad de la cognición.,Abstraction,3,teorizar,Los científicos optaron por _____ sobre el universo.|Ella decidió _____ hipótesis.|Los historiadores comenzaron a _____ eventos.
+pensar-filosofar,Verb,Esto abstrae la profundidad de la cognición.,Abstraction,4,especular,Los inversores decidieron _____ sobre el mercado.|Me gusta _____ sobre el futuro.|Él optó por _____ posibilidades.
+pensar-filosofar,Verb,Esto abstrae la profundidad de la cognición.,Abstraction,5,contemplar,Los artistas comenzaron a _____ la belleza.|Vamos a _____ las estrellas.|Ella optó por _____ el sentido.
+pensar-filosofar,Verb,Esto abstrae la profundidad de la cognición.,Abstraction,6,filosofar,Los pensadores decidieron _____ sobre la existencia.|Me gusta _____ con amigos.|Vamos a _____ la ética.
+susurrar-cantar,Verb,Esto poetiza el estilo de la expresión.,Poetic Complexity,0,susurrar,Me gusta _____ secretos al oído.|Los amantes decidieron _____ promesas.|Vamos a _____ en la oscuridad.
+susurrar-cantar,Verb,Esto poetiza el estilo de la expresión.,Poetic Complexity,1,murmurar,Los descontentos optaron por _____ quejas.|Ella comenzó a _____ oraciones.|Él decidió _____ canciones bajas.
+susurrar-cantar,Verb,Esto poetiza el estilo de la expresión.,Poetic Complexity,2,recitar,Los poetas comenzaron a _____ versos.|Me gusta _____ poemas famosos.|Los actores optaron por _____ diálogos.
+susurrar-cantar,Verb,Esto poetiza el estilo de la expresión.,Poetic Complexity,3,entonar,Los cantores decidieron _____ himnos.|Vamos a _____ la melodía.|Ella optó por _____ con voz clara.
+susurrar-cantar,Verb,Esto poetiza el estilo de la expresión.,Poetic Complexity,4,vocalizar,Los músicos comenzaron a _____ notas.|Me gusta _____ ejercicios vocales.|Los pájaros optaron por _____ al amanecer.
+susurrar-cantar,Verb,Esto poetiza el estilo de la expresión.,Poetic Complexity,5,salmodiar,Los monjes decidieron _____ salmos.|Vamos a _____ en la ceremonia.|Él optó por _____ con ritmo.
+susurrar-cantar,Verb,Esto poetiza el estilo de la expresión.,Poetic Complexity,6,cantar,Los coros comenzaron a _____ juntos.|Me gusta _____ en la ducha.|Vamos a _____ feliz cumpleaños.
+gota-océano,Noun,Esto expande el volumen del cuerpo de agua.,Quantity,0,gota,Vi una _____ de lluvia en la ventana.|La _____ de medicina es suficiente.|Cada _____ cuenta en el desierto.
+gota-océano,Noun,Esto expande el volumen del cuerpo de agua.,Quantity,1,charco,El _____ de agua en el suelo es pequeño.|Los niños saltan en el _____ después de lluvia.|Evita el _____ en la calle.
+gota-océano,Noun,Esto expande el volumen del cuerpo de agua.,Quantity,2,estanque,El _____ en el parque tiene patos.|Pescamos en el _____ local.|El _____ se congeló en invierno.
+gota-océano,Noun,Esto expande el volumen del cuerpo de agua.,Quantity,3,lago,El _____ es grande y azul.|Nadamos en el _____ durante verano.|El _____ refleja las montañas.
+gota-océano,Noun,Esto expande el volumen del cuerpo de agua.,Quantity,4,mar,El _____ es salado y vasto.|Viajamos por el _____ en barco.|El _____ tiene olas altas.
+gota-océano,Noun,Esto expande el volumen del cuerpo de agua.,Quantity,5,río,El _____ fluye rápido.|Cruzamos el _____ en puente.|El _____ riega los campos.
+gota-océano,Noun,Esto expande el volumen del cuerpo de agua.,Quantity,6,océano,El _____ es profundo y misterioso.|Exploramos el _____ con submarino.|El _____ cubre gran parte del planeta.
+chispa-infierno,Noun,Esto intensifica la escala del evento de fuego.,Magnitude,0,chispa,Vi una _____ en la chimenea.|La _____ encendió el fuego.|Cada _____ puede iniciar algo grande.
+chispa-infierno,Noun,Esto intensifica la escala del evento de fuego.,Magnitude,1,llama,La _____ baila en la vela.|La _____ calienta la habitación.|Evita tocar la _____ caliente.
+chispa-infierno,Noun,Esto intensifica la escala del evento de fuego.,Magnitude,2,fuego,El _____ quema la madera.|Cocimos en el _____ del campamento.|El _____ ilumina la noche.
+chispa-infierno,Noun,Esto intensifica la escala del evento de fuego.,Magnitude,3,llamarada,La _____ subió alto en el cielo.|La _____ destruyó el edificio.|El _____ es intenso y brillante.
+chispa-infierno,Noun,Esto intensifica la escala del evento de fuego.,Magnitude,4,conflagración,La _____ arrasó la ciudad.|Luchamos contra la _____ con bomberos.|La _____ se extendió rápidamente.
+chispa-infierno,Noun,Esto intensifica la escala del evento de fuego.,Magnitude,5,incendio forestal,El _____ quema los árboles.|El _____ amenaza las casas.|El _____ se propaga con viento.
+chispa-infierno,Noun,Esto intensifica la escala del evento de fuego.,Magnitude,6,infierno,El _____ es un lugar de tormento.|El _____ consume todo.|El _____ arde eternamente.
+susurro-rugido,Noun,Esto aumenta el volumen de emisión de sonido.,Volume,0,susurro,Oí un _____ en el viento.|El _____ del secreto es discreto.|Cada _____ lleva un mensaje.
+susurro-rugido,Noun,Esto aumenta el volumen de emisión de sonido.,Volume,1,murmullo,El _____ de la multitud es bajo.|El _____ del río es calmante.|Evita el _____ en la clase.
+susurro-rugido,Noun,Esto aumenta el volumen de emisión de sonido.,Volume,2,voz,La _____ del cantante es hermosa.|La _____ del profesor es clara.|La _____ humana varía.
+susurro-rugido,Noun,Esto aumenta el volumen de emisión de sonido.,Volume,3,grito,El _____ de ayuda es urgente.|El _____ de alegría llena el aire.|El _____ asusta a los pájaros.
+susurro-rugido,Noun,Esto aumenta el volumen de emisión de sonido.,Volume,4,bramido,El _____ del león es poderoso.|El _____ de la tormenta es fuerte.|El _____ del motor ruge.
+susurro-rugido,Noun,Esto aumenta el volumen de emisión de sonido.,Volume,5,trueno,El _____ retumba en el cielo.|El _____ sigue al rayo.|El _____ asusta a los niños.
+susurro-rugido,Noun,Esto aumenta el volumen de emisión de sonido.,Volume,6,rugido,El _____ del tigre es feroz.|El _____ de la cascada es constante.|El _____ de la multitud es ensordecedor.
+guijarro-peñasco,Noun,Esto aumenta el tamaño del objeto de roca.,Magnitude,0,guijarro,Encontré un _____ en la playa.|El _____ es pequeño y liso.|Tira el _____ al agua.
+guijarro-peñasco,Noun,Esto aumenta el tamaño del objeto de roca.,Magnitude,1,piedra,La _____ en el camino es obstáculo.|La _____ preciosa brilla.|Usa la _____ para construir.
+guijarro-peñasco,Noun,Esto aumenta el tamaño del objeto de roca.,Magnitude,2,roca,La _____ en la montaña es grande.|La _____ se erosiona con tiempo.|Escala la _____ alta.
+guijarro-peñasco,Noun,Esto aumenta el tamaño del objeto de roca.,Magnitude,3,peña,La _____ en el acantilado es peligrosa.|La _____ ofrece vista panorámica.|La _____ es sólida.
+guijarro-peñasco,Noun,Esto aumenta el tamaño del objeto de roca.,Magnitude,4,monolito,El _____ antiguo es misterioso.|El _____ se erige alto.|Admira el _____ en el desierto.
+guijarro-peñasco,Noun,Esto aumenta el tamaño del objeto de roca.,Magnitude,5,montaña,La _____ nevada es impresionante.|Sube la _____ para aventura.|La _____ bloquea el sol.
+guijarro-peñasco,Noun,Esto aumenta el tamaño del objeto de roca.,Magnitude,6,peñasco,El _____ en el mar es rocoso.|El _____ cae con erosión.|El _____ es masivo.
+brote-bosque,Noun,Esto aumenta la extensión de la colección de plantas.,Quantity,0,brote,Vi un _____ nuevo en la planta.|El _____ crece rápido.|Cuida el _____ tierno.
+brote-bosque,Noun,Esto aumenta la extensión de la colección de plantas.,Quantity,1,retoño,El _____ del árbol es joven.|Planta el _____ en tierra.|El _____ necesita agua.
+brote-bosque,Noun,Esto aumenta la extensión de la colección de plantas.,Quantity,2,arbusto,El _____ en el jardín es verde.|Poda el _____ para forma.|El _____ da frutos.
+brote-bosque,Noun,Esto aumenta la extensión de la colección de plantas.,Quantity,3,árbol,El _____ da sombra.|Planta un _____ para el futuro.|El _____ es alto.
+brote-bosque,Noun,Esto aumenta la extensión de la colección de plantas.,Quantity,4,arboleda,La _____ es grupo de árboles.|Pasea por la _____ tranquila.|La _____ en el parque es linda.
+brote-bosque,Noun,Esto aumenta la extensión de la colección de plantas.,Quantity,5,selva,La _____ es densa y salvaje.|Explora la _____ amazónica.|La _____ tiene vida abundante.
+brote-bosque,Noun,Esto aumenta la extensión de la colección de plantas.,Quantity,6,bosque,El _____ es vasto y verde.|Camina por el _____ encantado.|El _____ protege animales.
+colina-montaña,Noun,Esto eleva la altura de la formación terrestre.,Magnitude,0,colina,La _____ es suave y baja.|Sube la _____ para vista.|La _____ está cubierta de hierba.
+colina-montaña,Noun,Esto eleva la altura de la formación terrestre.,Magnitude,1,loma,La _____ en el campo es pequeña.|Corre por la _____ juguetona.|La _____ ofrece paseo fácil.
+colina-montaña,Noun,Esto eleva la altura de la formación terrestre.,Magnitude,2,cerro,El _____ es rocoso y medio.|Escala el _____ local.|El _____ tiene senderos.
+colina-montaña,Noun,Esto eleva la altura de la formación terrestre.,Magnitude,3,cordillera,La _____ es cadena de montañas.|La _____ andina es larga.|Admira la _____ nevada.
+colina-montaña,Noun,Esto eleva la altura de la formación terrestre.,Magnitude,4,pico,El _____ es el punto más alto.|Alcanza el _____ del Everest.|El _____ es desafiante.
+colina-montaña,Noun,Esto eleva la altura de la formación terrestre.,Magnitude,5,cumbre,La _____ es la cima elevada.|Llega a la _____ victorioso.|La _____ está en nubes.
+colina-montaña,Noun,Esto eleva la altura de la formación terrestre.,Magnitude,6,montaña,La _____ es imponente y alta.|Escala la _____ para aventura.|La _____ tiene nieve eterna.
+goteo-inundación,Noun,Esto amplifica el flujo del volumen de agua.,Flow Rate,0,goteo,El _____ del grifo es molesto.|Escucha el _____ constante.|Arregla el _____ para ahorrar.
+goteo-inundación,Noun,Esto amplifica el flujo del volumen de agua.,Flow Rate,1,arroyo,El _____ fluye gentle.|Pasa por el _____ claro.|El _____ canta en el bosque.
+goteo-inundación,Noun,Esto amplifica el flujo del volumen de agua.,Flow Rate,2,río,El _____ lleva agua al mar.|Navega por el _____ ancho.|El _____ riega las tierras.
+goteo-inundación,Noun,Esto amplifica el flujo del volumen de agua.,Flow Rate,3,torrente,El _____ baja rápido de la montaña.|Evita el _____ peligroso.|El _____ arrastra todo.
+goteo-inundación,Noun,Esto amplifica el flujo del volumen de agua.,Flow Rate,4,diluvio,El _____ inunda las calles.|El _____ bíblico es legendario.|Soporta el _____ torrencial.
+goteo-inundación,Noun,Esto amplifica el flujo del volumen de agua.,Flow Rate,5,desbordamiento,El _____ del río causa daño.|Previene el _____ con diques.|El _____ afecta casas.
+goteo-inundación,Noun,Esto amplifica el flujo del volumen de agua.,Flow Rate,6,inundación,La _____ cubre la ciudad.|Lucha contra la _____ con sacos.|La _____ es desastre natural.
+mota-montón,Noun,Esto multiplica la cantidad de partículas pequeñas.,Quantity,0,mota,Vi una _____ de polvo en el aire.|Limpia la _____ del piso.|La _____ es minúscula.
+mota-montón,Noun,Esto multiplica la cantidad de partículas pequeñas.,Quantity,1,grano,El _____ de arena es fino.|Cuenta cada _____ de arroz.|El _____ de sal sazona.
+mota-montón,Noun,Esto multiplica la cantidad de partículas pequeñas.,Quantity,2,pila,La _____ de libros es alta.|Apila la _____ de ropa.|La _____ de baterías.
+mota-montón,Noun,Esto multiplica la cantidad de partículas pequeñas.,Quantity,3,cúmulo,El _____ de nubes es blanco.|Acumula el _____ de deudas.|El _____ de estrellas.
+mota-montón,Noun,Esto multiplica la cantidad de partículas pequeñas.,Quantity,4,apilamiento,El _____ de cajas es ordenado.|Evita el _____ desorganizado.|El _____ de troncos.
+mota-montón,Noun,Esto multiplica la cantidad de partículas pequeñas.,Quantity,5,cerro,El _____ de tierra es grande.|Sube el _____ pequeño.|El _____ de basura.
+mota-montón,Noun,Esto multiplica la cantidad de partículas pequeñas.,Quantity,6,montón,El _____ de hojas en otoño.|Recoge el _____ de juguetes.|El _____ de dinero.
+ramita-tronco,Noun,Esto engrosa el tamaño de la pieza de madera.,Magnitude,0,ramita,La _____ es delgada y frágil.|Recoge la _____ para fuego.|La _____ del árbol joven.
+ramita-tronco,Noun,Esto engrosa el tamaño de la pieza de madera.,Magnitude,1,rama,La _____ se rompe con viento.|Corta la _____ seca.|La _____ da frutos.
+ramita-tronco,Noun,Esto engrosa el tamaño de la pieza de madera.,Magnitude,2,palo,El _____ sirve para caminar.|Juega con el _____ en el suelo.|El _____ de golf.
+ramita-tronco,Noun,Esto engrosa el tamaño de la pieza de madera.,Magnitude,3,extremidad,La _____ del árbol es larga.|La _____ humana es brazo.|La _____ inferior es pierna.
+ramita-tronco,Noun,Esto engrosa el tamaño de la pieza de madera.,Magnitude,4,leño,El _____ arde en la chimenea.|Carga el _____ para invierno.|El _____ cortado.
+ramita-tronco,Noun,Esto engrosa el tamaño de la pieza de madera.,Magnitude,5,viga,La _____ soporta el techo.|Instala la _____ de madera.|La _____ es estructural.
+ramita-tronco,Noun,Esto engrosa el tamaño de la pieza de madera.,Magnitude,6,tronco,El _____ del árbol es grueso.|Corta el _____ con sierra.|El _____ flota en río.
+sorbo-trago,Noun,Esto aumenta la cantidad de ingesta de líquido.,Quantity,0,sorbo,Toma un _____ de agua fresca.|El _____ pequeño refresca.|Da un _____ al café.
+sorbo-trago,Noun,Esto aumenta la cantidad de ingesta de líquido.,Quantity,1,probada,Da una _____ al plato nuevo.|La _____ es tentativa.|Prueba con una _____ pequeña.
+sorbo-trago,Noun,Esto aumenta la cantidad de ingesta de líquido.,Quantity,2,deglución,La _____ es el acto de tragar.|Controla la _____ de comida.|La _____ rápida causa ahogo.
+sorbo-trago,Noun,Esto aumenta la cantidad de ingesta de líquido.,Quantity,3,bebida,La _____ es refrescante en verano.|Pide una _____ en el bar.|La _____ alcohólica.
+sorbo-trago,Noun,Esto aumenta la cantidad de ingesta de líquido.,Quantity,4,lingotazo,Da un _____ al licor fuerte.|El _____ es grande y rápido.|Evita el _____ excesivo.
+sorbo-trago,Noun,Esto aumenta la cantidad de ingesta de líquido.,Quantity,5,traguetazo,El _____ de cerveza es grande.|Toma un _____ para brindar.|El _____ refresca rápido.
+sorbo-trago,Noun,Esto aumenta la cantidad de ingesta de líquido.,Quantity,6,trago,Da un _____ al vaso lleno.|El _____ amargo es fuerte.|Bebe un _____ de jugo.
+compadre-señor,Noun,Esto formaliza el término de tratamiento.,Formality,0,compadre,El _____ es amigo cercano.|Saluda a tu _____ con abrazo.|El _____ en la fiesta.
+compadre-señor,Noun,Esto formaliza el término de tratamiento.,Formality,1,amigo,El _____ fiel siempre ayuda.|Invita a tu _____ a casa.|El _____ de infancia.
+compadre-señor,Noun,Esto formaliza el término de tratamiento.,Formality,2,compañero,El _____ de trabajo es colaborador.|Comparte con tu _____ el proyecto.|El _____ de viaje.
+compadre-señor,Noun,Esto formaliza el término de tratamiento.,Formality,3,colega,El _____ profesional es igual.|Reúnete con tu _____ en conferencia.|El _____ en la oficina.
+compadre-señor,Noun,Esto formaliza el término de tratamiento.,Formality,4,caballero,El _____ es cortés y educado.|Saluda al _____ con respeto.|El _____ en la sociedad.
+compadre-señor,Noun,Esto formaliza el término de tratamiento.,Formality,5,excelencia,Su _____ el embajador.|Dirígete a su _____ con formalidad.|La _____ en el cargo.
+compadre-señor,Noun,Esto formaliza el término de tratamiento.,Formality,6,señor,El _____ es título respetuoso.|Habla con el _____ educadamente.|El _____ de la casa.
+charla-simposio,Noun,Esto eleva el nivel de reunión de discurso.,Formality,0,charla,La _____ informal es relajada.|Disfruta la _____ con amigos.|La _____ en el café.
+charla-simposio,Noun,Esto eleva el nivel de reunión de discurso.,Formality,1,conversación,La _____ fluida es interesante.|Inicia una _____ profunda.|La _____ diaria.
+charla-simposio,Noun,Esto eleva el nivel de reunión de discurso.,Formality,2,plática,La _____ casual es ligera.|Mantén la _____ amena.|La _____ en familia.
+charla-simposio,Noun,Esto eleva el nivel de reunión de discurso.,Formality,3,discusión,La _____ acalorada es debatida.|Participa en la _____ grupal.|La _____ sobre temas.
+charla-simposio,Noun,Esto eleva el nivel de reunión de discurso.,Formality,4,conferencia,La _____ es ponencia formal.|Asiste a la _____ anual.|La _____ académica.
+charla-simposio,Noun,Esto eleva el nivel de reunión de discurso.,Formality,5,coloquio,El _____ es reunión experta.|Organiza el _____ científico.|El _____ literario.
+charla-simposio,Noun,Esto eleva el nivel de reunión de discurso.,Formality,6,simposio,El _____ es evento temático.|Presenta en el _____ internacional.|El _____ de especialistas.
+cariño-pasión,Noun,Esto profundiza la intensidad del vínculo emocional.,Affective Depth,0,cariño,El _____ familiar es cálido.|Muestra _____ a los niños.|El _____ por mascotas.
+cariño-pasión,Noun,Esto profundiza la intensidad del vínculo emocional.,Affective Depth,1,agrado,El _____ por la música es placentero.|Siente _____ por el lugar.|El _____ mutuo.
+cariño-pasión,Noun,Esto profundiza la intensidad del vínculo emocional.,Affective Depth,2,afecto,El _____ sincero es genuino.|Expresa _____ con abrazos.|El _____ hacia amigos.
+cariño-pasión,Noun,Esto profundiza la intensidad del vínculo emocional.,Affective Depth,3,amor,El _____ romántico es profundo.|Declara _____ eterno.|El _____ incondicional.
+cariño-pasión,Noun,Esto profundiza la intensidad del vínculo emocional.,Affective Depth,4,devoción,La _____ religiosa es fiel.|Muestra _____ al trabajo.|La _____ absoluta.
+cariño-pasión,Noun,Esto profundiza la intensidad del vínculo emocional.,Affective Depth,5,obsesión,La _____ enfermiza es peligrosa.|Evita la _____ por control.|La _____ por el poder.
+cariño-pasión,Noun,Esto profundiza la intensidad del vínculo emocional.,Affective Depth,6,pasión,La _____ ardiente es intensa.|Siente _____ por el arte.|La _____ por la vida.
+molestia-furia,Noun,Esto escala el estado emocional negativo.,Affective Depth,0,molestia,La _____ pequeña es irritante.|Siente _____ por el ruido.|La _____ pasajera.
+molestia-furia,Noun,Esto escala el estado emocional negativo.,Affective Depth,1,irritación,La _____ crece con tiempo.|Evita la _____ diaria.|La _____ por retrasos.
+molestia-furia,Noun,Esto escala el estado emocional negativo.,Affective Depth,2,enojo,El _____ momentáneo es controlable.|Expresa _____ con palabras.|El _____ justificado.
+molestia-furia,Noun,Esto escala el estado emocional negativo.,Affective Depth,3,rabia,La _____ ciega es destructiva.|Contén la _____ interior.|La _____ por injusticia.
+molestia-furia,Noun,Esto escala el estado emocional negativo.,Affective Depth,4,ira,La _____ divina es poderosa.|Siente _____ profunda.|La _____ acumulada.
+molestia-furia,Noun,Esto escala el estado emocional negativo.,Affective Depth,5,odio,El _____ eterno es amargo.|No guardes _____ en corazón.|El _____ irracional.
+molestia-furia,Noun,Esto escala el estado emocional negativo.,Affective Depth,6,furia,La _____ desatada es violenta.|Calma la _____ con respiración.|La _____ incontrolable.
+cosa-concepto,Noun,Esto abstrae la naturaleza de la entidad.,Abstraction,0,cosa,La _____ en la mesa es útil.|Compra una _____ nueva.|La _____ misteriosa.
+cosa-concepto,Noun,Esto abstrae la naturaleza de la entidad.,Abstraction,1,objeto,El _____ físico es tangible.|Estudia el _____ en museo.|El _____ cotidiano.
+cosa-concepto,Noun,Esto abstrae la naturaleza de la entidad.,Abstraction,2,artículo,El _____ de prensa es informativo.|Escribe un _____ científico.|El _____ de lujo.
+cosa-concepto,Noun,Esto abstrae la naturaleza de la entidad.,Abstraction,3,idea,La _____ brillante es innovadora.|Genera una _____ creativa.|La _____ abstracta.
+cosa-concepto,Noun,Esto abstrae la naturaleza de la entidad.,Abstraction,4,noción,La _____ básica es fundamental.|Comprende la _____ general.|La _____ vaga.
+cosa-concepto,Noun,Esto abstrae la naturaleza de la entidad.,Abstraction,5,abstracción,La _____ matemática es compleja.|Usa la _____ en arte.|La _____ filosófica.
+cosa-concepto,Noun,Esto abstrae la naturaleza de la entidad.,Abstraction,6,concepto,El _____ teórico es profundo.|Explica el _____ clave.|El _____ universal.
+cuento-épica,Noun,Esto poetiza la forma de la obra literaria.,Poetic Complexity,0,cuento,El _____ corto es entretenido.|Lee un _____ antes de dormir.|El _____ infantil.
+cuento-épica,Noun,Esto poetiza la forma de la obra literaria.,Poetic Complexity,1,relato,El _____ personal es inspirador.|Escribe un _____ de viaje.|El _____ histórico.
+cuento-épica,Noun,Esto poetiza la forma de la obra literaria.,Poetic Complexity,2,narrativa,La _____ fluida es cautivadora.|Crea una _____ original.|La _____ épica.
+cuento-épica,Noun,Esto poetiza la forma de la obra literaria.,Poetic Complexity,3,poema,El _____ rimado es bello.|Recita un _____ romántico.|El _____ lírico.
+cuento-épica,Noun,Esto poetiza la forma de la obra literaria.,Poetic Complexity,4,balada,La _____ musical es emotiva.|Canta una _____ tradicional.|La _____ de amor.
+cuento-épica,Noun,Esto poetiza la forma de la obra literaria.,Poetic Complexity,5,saga,La _____ familiar es larga.|Lee la _____ fantástica.|La _____ legendaria.
+cuento-épica,Noun,Esto poetiza la forma de la obra literaria.,Poetic Complexity,6,épica,La _____ heroica es grandiosa.|Estudia la _____ griega.|La _____ nacional.
+murmullo-oratoria,Noun,Esto formaliza el tipo de entrega vocal.,Formality,0,murmullo,El _____ bajo es discreto.|Escucha el _____ de la gente.|El _____ constante.
+murmullo-oratoria,Noun,Esto formaliza el tipo de entrega vocal.,Formality,1,susurro,El _____ secreto es íntimo.|El _____ del viento.|El _____ amoroso.
+murmullo-oratoria,Noun,Esto formaliza el tipo de entrega vocal.,Formality,2,discurso,El _____ político es inspirador.|Pronuncia un _____ motivador.|El _____ presidencial.
+murmullo-oratoria,Noun,Esto formaliza el tipo de entrega vocal.,Formality,3,alocución,La _____ formal es solemne.|Escucha la _____ radial.|La _____ en ceremonia.
+murmullo-oratoria,Noun,Esto formaliza el tipo de entrega vocal.,Formality,4,conferencia,La _____ académica es informativa.|Asiste a la _____ anual.|La _____ ted.
+murmullo-oratoria,Noun,Esto formaliza el tipo de entrega vocal.,Formality,5,sermón,El _____ religioso es moral.|Predica el _____ dominical.|El _____ inspirador.
+murmullo-oratoria,Noun,Esto formaliza el tipo de entrega vocal.,Formality,6,oratoria,La _____ elocuente es persuasiva.|Practica la _____ pública.|La _____ clásica.
+capricho-fervor,Noun,Esto intensifica el impulso emocional.,Affective Depth,0,capricho,El _____ infantil es pasajero.|Satisface el _____ momentáneo.|El _____ por dulces.
+capricho-fervor,Noun,Esto intensifica el impulso emocional.,Affective Depth,1,antojo,El _____ por comida es repentino.|Controla el _____ nocturno.|El _____ de embarazada.
+capricho-fervor,Noun,Esto intensifica el impulso emocional.,Affective Depth,2,deseo,El _____ fuerte es motivador.|Expresa el _____ interior.|El _____ prohibido.
+capricho-fervor,Noun,Esto intensifica el impulso emocional.,Affective Depth,3,entusiasmo,El _____ contagioso es positivo.|Muestra _____ por el proyecto.|El _____ juvenil.
+capricho-fervor,Noun,Esto intensifica el impulso emocional.,Affective Depth,4,ardor,El _____ apasionado es intenso.|Siente _____ por la causa.|El _____ revolucionario.
+capricho-fervor,Noun,Esto intensifica el impulso emocional.,Affective Depth,5,manía,La _____ obsesiva es extrema.|Evita la _____ destructiva.|La _____ por coleccionar.
+capricho-fervor,Noun,Esto intensifica el impulso emocional.,Affective Depth,6,fervor,El _____ religioso es devoto.|Con _____ patriótico.|El _____ entusiasta.
+hecho-teoría,Noun,Esto abstrae el nivel de conocimiento.,Abstraction,0,hecho,El _____ probado es irrefutable.|Acepta el _____ científico.|El _____ histórico.
+hecho-teoría,Noun,Esto abstrae el nivel de conocimiento.,Abstraction,1,dato,El _____ estadístico es útil.|Recopila el _____ preciso.|El _____ personal.
+hecho-teoría,Noun,Esto abstrae el nivel de conocimiento.,Abstraction,2,información,La _____ valiosa es clave.|Comparte la _____ relevante.|La _____ confidencial.
+hecho-teoría,Noun,Esto abstrae el nivel de conocimiento.,Abstraction,3,hipótesis,La _____ testable es inicial.|Formula una _____ nueva.|La _____ científica.
+hecho-teoría,Noun,Esto abstrae el nivel de conocimiento.,Abstraction,4,paradigma,El _____ dominante es aceptado.|Cambia el _____ científico.|El _____ cultural.
+hecho-teoría,Noun,Esto abstrae el nivel de conocimiento.,Abstraction,5,metafísica,La _____ filosófica es abstracta.|Estudia la _____ del ser.|La _____ trascendental.
+hecho-teoría,Noun,Esto abstrae el nivel de conocimiento.,Abstraction,6,teoría,La _____ explicativa es comprehensiva.|Desarrolla una _____ física.|La _____ evolutiva.
+copla-soneto,Noun,Esto poetiza el estilo de composición.,Poetic Complexity,0,copla,La _____ popular es rimada.|Canta la _____ tradicional.|La _____ festiva.
+copla-soneto,Noun,Esto poetiza el estilo de composición.,Poetic Complexity,1,tonada,La _____ melódica es pegajosa.|Toca la _____ en guitarra.|La _____ folk.
+copla-soneto,Noun,Esto poetiza el estilo de composición.,Poetic Complexity,2,canción,La _____ romántica es emotiva.|Escribe una _____ original.|La _____ pop.
+copla-soneto,Noun,Esto poetiza el estilo de composición.,Poetic Complexity,3,verso,El _____ poético es bello.|Recita el _____ libre.|El _____ rítmico.
+copla-soneto,Noun,Esto poetiza el estilo de composición.,Poetic Complexity,4,oda,La _____ laudatoria es exaltada.|Compone una _____ a la patria.|La _____ clásica.
+copla-soneto,Noun,Esto poetiza el estilo de composición.,Poetic Complexity,5,elegía,La _____ fúnebre es triste.|Lee la _____ conmovedora.|La _____ por loss.
+copla-soneto,Noun,Esto poetiza el estilo de composición.,Poetic Complexity,6,soneto,El _____ shakesperiano es estructurado.|Escribe un _____ amoroso.|El _____ petrarquista.
+pequeño-gigantesco,Adjective,Esto escala el grado de tamaño físico.,Magnitude,0,pequeño,El perro es _____.|La casa es _____.|El problema es _____.
+pequeño-gigantesco,Adjective,Esto escala el grado de tamaño físico.,Magnitude,1,chico,El niño es _____.|El auto es _____.|El jardín es _____.
+pequeño-gigantesco,Adjective,Esto escala el grado de tamaño físico.,Magnitude,2,mediano,El tamaño es _____.|La empresa es _____.|El esfuerzo es _____.
+pequeño-gigantesco,Adjective,Esto escala el grado de tamaño físico.,Magnitude,3,grande,El edificio es _____.|La familia es _____.|El sueño es _____.
+pequeño-gigantesco,Adjective,Esto escala el grado de tamaño físico.,Magnitude,4,enorme,El elefante es _____.|La deuda es _____.|La oportunidad es _____.
+pequeño-gigantesco,Adjective,Esto escala el grado de tamaño físico.,Magnitude,5,colosal,La estatua es _____.|El error es _____.|La montaña es _____.
+pequeño-gigantesco,Adjective,Esto escala el grado de tamaño físico.,Magnitude,6,gigantesco,El dinosaurio era _____.|El proyecto es _____.|El universo es _____.
+fresco-abrasador,Adjective,Esto intensifica el nivel de calor.,Temperature,0,fresco,El aire es _____.|El día es _____.|La bebida es _____.
+fresco-abrasador,Adjective,Esto intensifica el nivel de calor.,Temperature,1,templado,El clima es _____.|El agua es _____.|El ambiente es _____.
+fresco-abrasador,Adjective,Esto intensifica el nivel de calor.,Temperature,2,tibio,El sol es _____.|La sopa es _____.|El abrazo es _____.
+fresco-abrasador,Adjective,Esto intensifica el nivel de calor.,Temperature,3,caliente,El café es _____.|El motor es _____.|El debate es _____.
+fresco-abrasador,Adjective,Esto intensifica el nivel de calor.,Temperature,4,ardiente,La pasión es _____.|El desierto es _____.|La mirada es _____.
+fresco-abrasador,Adjective,Esto intensifica el nivel de calor.,Temperature,5,incandescente,La bombilla es _____.|El metal es _____.|La estrella es _____.
+fresco-abrasador,Adjective,Esto intensifica el nivel de calor.,Temperature,6,abrasador,El sol es _____.|El fuego es _____.|El calor es _____.
+tenue-cegador,Adjective,Esto aumenta la intensidad de la luz.,Luminosity,0,tenue,La luz es _____.|El amanecer es _____.|La esperanza es _____.
+tenue-cegador,Adjective,Esto aumenta la intensidad de la luz.,Luminosity,1,débil,La señal es _____.|El pulso es _____.|La voz es _____.
+tenue-cegador,Adjective,Esto aumenta la intensidad de la luz.,Luminosity,2,opaco,El vidrio es _____.|El futuro es _____.|El color es _____.
+tenue-cegador,Adjective,Esto aumenta la intensidad de la luz.,Luminosity,3,brillante,La idea es _____.|El diamante es _____.|El estudiante es _____.
+tenue-cegador,Adjective,Esto aumenta la intensidad de la luz.,Luminosity,4,deslumbrante,La sonrisa es _____.|El vestido es _____.|La victoria es _____.
+tenue-cegador,Adjective,Esto aumenta la intensidad de la luz.,Luminosity,5,resplandeciente,El sol es _____.|La corona es _____.|La nieve es _____.
+tenue-cegador,Adjective,Esto aumenta la intensidad de la luz.,Luminosity,6,cegador,El flash es _____.|El reflejo es _____.|El blanco es _____.
+silencioso-ensordecedor,Adjective,Esto amplifica el volumen del sonido.,Volume,0,silencioso,El bosque es _____.|El momento es _____.|El motor es _____.
+silencioso-ensordecedor,Adjective,Esto amplifica el volumen del sonido.,Volume,1,suave,El tacto es _____.|La música es _____.|La brisa es _____.
+silencioso-ensordecedor,Adjective,Esto amplifica el volumen del sonido.,Volume,2,moderado,El clima es _____.|El precio es _____.|El ejercicio es _____.
+silencioso-ensordecedor,Adjective,Esto amplifica el volumen del sonido.,Volume,3,ruidoso,El vecino es _____.|El mercado es _____.|El motor es _____.
+silencioso-ensordecedor,Adjective,Esto amplifica el volumen del sonido.,Volume,4,estruendoso,El trueno es _____.|El aplauso es _____.|El cañón es _____.
+silencioso-ensordecedor,Adjective,Esto amplifica el volumen del sonido.,Volume,5,atronador,El rugido es _____.|El concierto es _____.|El cañonazo es _____.
+silencioso-ensordecedor,Adjective,Esto amplifica el volumen del sonido.,Volume,6,ensordecedor,El ruido es _____.|La sirena es _____.|El estallido es _____.
+lento-rápido,Adjective,Esto aumenta la velocidad del movimiento.,Velocity,0,lento,El tortuga es _____.|El proceso es _____.|El ritmo es _____.
+lento-rápido,Adjective,Esto aumenta la velocidad del movimiento.,Velocity,1,pausado,El paseo es _____.|El discurso es _____.|El baile es _____.
+lento-rápido,Adjective,Esto aumenta la velocidad del movimiento.,Velocity,2,moderado,El tráfico es _____.|El crecimiento es _____.|El paso es _____.
+lento-rápido,Adjective,Esto aumenta la velocidad del movimiento.,Velocity,3,veloz,El halcón es _____.|La respuesta es _____.|El tren es _____.
+lento-rápido,Adjective,Esto aumenta la velocidad del movimiento.,Velocity,4,acelerado,El corazón es _____.|El desarrollo es _____.|El pulso es _____.
+lento-rápido,Adjective,Esto aumenta la velocidad del movimiento.,Velocity,5,vertiginoso,El vértigo es _____.|El cambio es _____.|El descenso es _____.
+lento-rápido,Adjective,Esto aumenta la velocidad del movimiento.,Velocity,6,rápido,El conejo es _____.|El servicio es _____.|El pensamiento es _____.
+débil-poderoso,Adjective,Esto fortalece el nivel de fuerza.,Force,0,débil,El viento es _____.|La señal es _____.|El argumento es _____.
+débil-poderoso,Adjective,Esto fortalece el nivel de fuerza.,Force,1,endeble,La estructura es _____.|La excusa es _____.|La salud es _____.
+débil-poderoso,Adjective,Esto fortalece el nivel de fuerza.,Force,2,flojo,El nudo es _____.|El equipo es _____.|El control es _____.
+débil-poderoso,Adjective,Esto fortalece el nivel de fuerza.,Force,3,fuerte,El castillo es _____.|La personalidad es _____.|El café es _____.
+débil-poderoso,Adjective,Esto fortalece el nivel de fuerza.,Force,4,robusto,El árbol es _____.|El sistema es _____.|El vino es _____.
+débil-poderoso,Adjective,Esto fortalece el nivel de fuerza.,Force,5,formidable,El oponente es _____.|La defensa es _____.|La inteligencia es _____.
+débil-poderoso,Adjective,Esto fortalece el nivel de fuerza.,Force,6,poderoso,El rey es _____.|El motor es _____.|El influjo es _____.
+triste-devastado,Adjective,Esto profundiza la intensidad del dolor.,Affective Depth,0,triste,El día es _____.|La noticia es _____.|El perrito es _____.
+triste-devastado,Adjective,Esto profundiza la intensidad del dolor.,Affective Depth,1,melancólico,El poema es _____.|El atardecer es _____.|El recuerdo es _____.
+triste-devastado,Adjective,Esto profundiza la intensidad del dolor.,Affective Depth,2,apesadumbrado,El corazón es _____.|El ánimo es _____.|El espíritu es _____.
+triste-devastado,Adjective,Esto profundiza la intensidad del dolor.,Affective Depth,3,afligido,El familiar es _____.|El pueblo es _____.|El alma es _____.
+triste-devastado,Adjective,Esto profundiza la intensidad del dolor.,Affective Depth,4,desconsolado,El niño es _____.|El amante es _____.|El perdedor es _____.
+triste-devastado,Adjective,Esto profundiza la intensidad del dolor.,Affective Depth,5,destrozado,El corazón es _____.|El hogar es _____.|El sueño es _____.
+triste-devastado,Adjective,Esto profundiza la intensidad del dolor.,Affective Depth,6,devastado,El paisaje es _____.|El país es _____.|El espíritu es _____.
+feliz-eufórico,Adjective,Esto eleva el grado de alegría.,Affective Depth,0,feliz,El niño es _____.|El día es _____.|La familia es _____.
+feliz-eufórico,Adjective,Esto eleva el grado de alegría.,Affective Depth,1,alegre,La fiesta es _____.|La canción es _____.|El corazón es _____.
+feliz-eufórico,Adjective,Esto eleva el grado de alegría.,Affective Depth,2,contento,El ganador es _____.|El perrito es _____.|El momento es _____.
+feliz-eufórico,Adjective,Esto eleva el grado de alegría.,Affective Depth,3,gozoso,El evento es _____.|El espíritu es _____.|El baile es _____.
+feliz-eufórico,Adjective,Esto eleva el grado de alegría.,Affective Depth,4,jubiloso,El triunfo es _____.|La multitud es _____.|El aniversario es _____.
+feliz-eufórico,Adjective,Esto eleva el grado de alegría.,Affective Depth,5,extasiado,El amante es _____.|El artista es _____.|El descubrimiento es _____.
+feliz-eufórico,Adjective,Esto eleva el grado de alegría.,Affective Depth,6,eufórico,El fan es _____.|El equipo es _____.|El éxito es _____.
+seco-árido,Adjective,Esto reduce la presencia de humedad.,Moisture Level,0,seco,El desierto es _____.|El pelo es _____.|El clima es _____.
+seco-árido,Adjective,Esto reduce la presencia de humedad.,Moisture Level,1,húmedo,El aire es _____.|La toalla es _____.|El bosque es _____.
+seco-árido,Adjective,Esto reduce la presencia de humedad.,Moisture Level,2,mojado,El piso es _____.|La ropa es _____.|El perro es _____.
+seco-árido,Adjective,Esto reduce la presencia de humedad.,Moisture Level,3,empapado,El papel es _____.|El suelo es _____.|El cabello es _____.
+seco-árido,Adjective,Esto reduce la presencia de humedad.,Moisture Level,4,saturado,El mercado es _____.|El esponja es _____.|El color es _____.
+seco-árido,Adjective,Esto reduce la presencia de humedad.,Moisture Level,5,encharcado,El campo es _____.|El camino es _____.|El jardín es _____.
+seco-árido,Adjective,Esto reduce la presencia de humedad.,Moisture Level,6,árido,El paisaje es _____.|El terreno es _____.|El ambiente es _____.
+estrecho-vasto,Adjective,Esto expande la medida de anchura.,Magnitude,0,estrecho,El pasillo es _____.|El río es _____.|El pensamiento es _____.
+estrecho-vasto,Adjective,Esto expande la medida de anchura.,Magnitude,1,angosto,El camino es _____.|El puente es _____.|El valle es _____.
+estrecho-vasto,Adjective,Esto expande la medida de anchura.,Magnitude,2,delgado,El lápiz es _____.|El modelo es _____.|El hilo es _____.
+estrecho-vasto,Adjective,Esto expande la medida de anchura.,Magnitude,3,ancho,El río es _____.|El sombrero es _____.|El conocimiento es _____.
+estrecho-vasto,Adjective,Esto expande la medida de anchura.,Magnitude,4,amplio,El salón es _____.|El repertorio es _____.|El horizonte es _____.
+estrecho-vasto,Adjective,Esto expande la medida de anchura.,Magnitude,5,expansivo,El territorio es _____.|El gesto es _____.|El negocio es _____.
+estrecho-vasto,Adjective,Esto expande la medida de anchura.,Magnitude,6,vasto,El océano es _____.|El desierto es _____.|El universo es _____.
+informal-formal,Adjective,Esto eleva el nivel de decoro.,Formality,0,informal,El vestido es _____.|La reunión es _____.|El lenguaje es _____.
+informal-formal,Adjective,Esto eleva el nivel de decoro.,Formality,1,desenfadado,El estilo es _____.|El ambiente es _____.|El comportamiento es _____.
+informal-formal,Adjective,Esto eleva el nivel de decoro.,Formality,2,relajado,El día es _____.|El músculo es _____.|El ritmo es _____.
+informal-formal,Adjective,Esto eleva el nivel de decoro.,Formality,3,correcto,El respuesta es _____.|El posture es _____.|El procedimiento es _____.
+informal-formal,Adjective,Esto eleva el nivel de decoro.,Formality,4,elegante,El traje es _____.|La cena es _____.|La escritura es _____.
+informal-formal,Adjective,Esto eleva el nivel de decoro.,Formality,5,solemne,La ceremonia es _____.|El juramento es _____.|El momento es _____.
+informal-formal,Adjective,Esto eleva el nivel de decoro.,Formality,6,formal,El evento es _____.|El acuerdo es _____.|El saludo es _____.
+coloquial-erudito,Adjective,Esto formaliza el registro lingüístico.,Formality,0,coloquial,El lenguaje es _____.|La charla es _____.|El expresión es _____.
+coloquial-erudito,Adjective,Esto formaliza el registro lingüístico.,Formality,1,popular,El canción es _____.|El opinión es _____.|El arte es _____.
+coloquial-erudito,Adjective,Esto formaliza el registro lingüístico.,Formality,2,vernáculo,El dialecto es _____.|La literatura es _____.|El habla es _____.
+coloquial-erudito,Adjective,Esto formaliza el registro lingüístico.,Formality,3,literario,El estilo es _____.|El texto es _____.|El género es _____.
+coloquial-erudito,Adjective,Esto formaliza el registro lingüístico.,Formality,4,académico,El estudio es _____.|El título es _____.|El ambiente es _____.
+coloquial-erudito,Adjective,Esto formaliza el registro lingüístico.,Formality,5,pedante,El discurso es _____.|El tono es _____.|El conocimiento es _____.
+coloquial-erudito,Adjective,Esto formaliza el registro lingüístico.,Formality,6,erudito,El profesor es _____.|El libro es _____.|El comentario es _____.
+neutral-apasionado,Adjective,Esto profundiza la implicación emocional.,Affective Depth,0,neutral,El posición es _____.|El color es _____.|El juez es _____.
+neutral-apasionado,Adjective,Esto profundiza la implicación emocional.,Affective Depth,1,indiferente,El actitud es _____.|El respuesta es _____.|El espectador es _____.
+neutral-apasionado,Adjective,Esto profundiza la implicación emocional.,Affective Depth,2,interesado,El estudiante es _____.|El comprador es _____.|El tema es _____.
+neutral-apasionado,Adjective,Esto profundiza la implicación emocional.,Affective Depth,3,entusiasta,El fan es _____.|El proyecto es _____.|El apoyo es _____.
+neutral-apasionado,Adjective,Esto profundiza la implicación emocional.,Affective Depth,4,ferviente,El seguidor es _____.|El deseo es _____.|El creencia es _____.
+neutral-apasionado,Adjective,Esto profundiza la implicación emocional.,Affective Depth,5,fanático,El devoto es _____.|El aficionado es _____.|El idea es _____.
+neutral-apasionado,Adjective,Esto profundiza la implicación emocional.,Affective Depth,6,apasionado,El amante es _____.|El discurso es _____.|El hobby es _____.
+calmado-furioso,Adjective,Esto escala la agitación emocional.,Affective Depth,0,calmado,El mar es _____.|El persona es _____.|El ambiente es _____.
+calmado-furioso,Adjective,Esto escala la agitación emocional.,Affective Depth,1,sereno,El lago es _____.|El mente es _____.|El expresión es _____.
+calmado-furioso,Adjective,Esto escala la agitación emocional.,Affective Depth,2,irritado,El conductor es _____.|El piel es _____.|El tono es _____.
+calmado-furioso,Adjective,Esto escala la agitación emocional.,Affective Depth,3,enojado,El niño es _____.|El cliente es _____.|El reacción es _____.
+calmado-furioso,Adjective,Esto escala la agitación emocional.,Affective Depth,4,enfurecido,El toro es _____.|El jefe es _____.|El multitud es _____.
+calmado-furioso,Adjective,Esto escala la agitación emocional.,Affective Depth,5,rabioso,El perro es _____.|El dolor es _____.|El ataque es _____.
+calmado-furioso,Adjective,Esto escala la agitación emocional.,Affective Depth,6,furioso,El viento es _____.|El debate es _____.|El mirada es _____.
+concreto-abstracto,Adjective,Esto abstrae el grado de ideación.,Abstraction,0,concreto,El plan es _____.|El material es _____.|El ejemplo es _____.
+concreto-abstracto,Adjective,Esto abstrae el grado de ideación.,Abstraction,1,tangible,El beneficio es _____.|El objeto es _____.|El resultado es _____.
+concreto-abstracto,Adjective,Esto abstrae el grado de ideación.,Abstraction,2,específico,El detalle es _____.|El caso es _____.|El instrucción es _____.
+concreto-abstracto,Adjective,Esto abstrae el grado de ideación.,Abstraction,3,general,El idea es _____.|El concepto es _____.|El descripción es _____.
+concreto-abstracto,Adjective,Esto abstrae el grado de ideación.,Abstraction,4,conceptual,El framework es _____.|El arte es _____.|El modelo es _____.
+concreto-abstracto,Adjective,Esto abstrae el grado de ideación.,Abstraction,5,metafísico,El pregunta es _____.|El estudio es _____.|El realm es _____.
+concreto-abstracto,Adjective,Esto abstrae el grado de ideación.,Abstraction,6,abstracto,El pintura es _____.|El pensamiento es _____.|El matemática es _____.
+prosaico-poético,Adjective,Esto poetiza el estilo expresivo.,Poetic Complexity,0,prosaico,El texto es _____.|El día es _____.|El lenguaje es _____.
+prosaico-poético,Adjective,Esto poetiza el estilo expresivo.,Poetic Complexity,1,mundano,El tarea es _____.|El vida es _____.|El preocupación es _____.
+prosaico-poético,Adjective,Esto poetiza el estilo expresivo.,Poetic Complexity,2,descriptivo,El relato es _____.|El guía es _____.|El pintura es _____.
+prosaico-poético,Adjective,Esto poetiza el estilo expresivo.,Poetic Complexity,3,lírico,El canción es _____.|El poema es _____.|El expresión es _____.
+prosaico-poético,Adjective,Esto poetiza el estilo expresivo.,Poetic Complexity,4,metafórico,El lenguaje es _____.|El comparación es _____.|El discurso es _____.
+prosaico-poético,Adjective,Esto poetiza el estilo expresivo.,Poetic Complexity,5,sublime,El experiencia es _____.|El arte es _____.|El momento es _____.
+prosaico-poético,Adjective,Esto poetiza el estilo expresivo.,Poetic Complexity,6,poético,El verso es _____.|El atardecer es _____.|El alma es _____.
+familiar-distinguido,Adjective,Esto formaliza el tono interpersonal.,Formality,0,familiar,El saludo es _____.|El ambiente es _____.|El trato es _____.
+familiar-distinguido,Adjective,Esto formaliza el tono interpersonal.,Formality,1,amistoso,El vecino es _____.|El sonrisa es _____.|El gesto es _____.
+familiar-distinguido,Adjective,Esto formaliza el tono interpersonal.,Formality,2,cortés,El gesto es _____.|El gesto es _____.|El comportamiento es _____.
+familiar-distinguido,Adjective,Esto formaliza el tono interpersonal.,Formality,3,respetuoso,El actitud es _____.|El gesto es _____.|El saludo es _____.
+familiar-distinguido,Adjective,Esto formaliza el tono interpersonal.,Formality,4,augusto,El título es _____.|El figura es _____.|El ocasión es _____.
+familiar-distinguido,Adjective,Esto formaliza el tono interpersonal.,Formality,5,majestuoso,El palacio es _____.|El rey es _____.|El montaña es _____.
+familiar-distinguido,Adjective,Esto formaliza el tono interpersonal.,Formality,6,distinguido,El invitado es _____.|El servicio es _____.|El apariencia es _____.
+satisfecho-extasiado,Adjective,Esto intensifica la emoción positiva.,Affective Depth,0,satisfecho,El cliente es _____.|El trabajo es _____.|El resultado es _____.
+satisfecho-extasiado,Adjective,Esto intensifica la emoción positiva.,Affective Depth,1,contento,El niño es _____.|El día es _____.|El familia es _____.
+satisfecho-extasiado,Adjective,Esto intensifica la emoción positiva.,Affective Depth,2,feliz,El pareja es _____.|El momento es _____.|El vida es _____.
+satisfecho-extasiado,Adjective,Esto intensifica la emoción positiva.,Affective Depth,3,dichoso,El ganador es _____.|El suerte es _____.|El alma es _____.
+satisfecho-extasiado,Adjective,Esto intensifica la emoción positiva.,Affective Depth,4,eufórico,El fan es _____.|El victoria es _____.|El celebración es _____.
+satisfecho-extasiado,Adjective,Esto intensifica la emoción positiva.,Affective Depth,5,arrobado,El devoto es _____.|El música es _____.|El experiencia es _____.
+satisfecho-extasiado,Adjective,Esto intensifica la emoción positiva.,Affective Depth,6,extasiado,El amante es _____.|El arte es _____.|El viaje es _____.
+real-hipotético,Adjective,Esto abstrae el estatus de realidad.,Abstraction,0,real,El mundo es _____.|El problema es _____.|El rey es _____.
+real-hipotético,Adjective,Esto abstrae el estatus de realidad.,Abstraction,1,actual,El situación es _____.|El noticia es _____.|El tiempo es _____.
+real-hipotético,Adjective,Esto abstrae el estatus de realidad.,Abstraction,2,posible,El solución es _____.|El viaje es _____.|El sueño es _____.
+real-hipotético,Adjective,Esto abstrae el estatus de realidad.,Abstraction,3,teórico,El modelo es _____.|El física es _____.|El concepto es _____.
+real-hipotético,Adjective,Esto abstrae el estatus de realidad.,Abstraction,4,imaginario,El amigo es _____.|El número es _____.|El mundo es _____.
+real-hipotético,Adjective,Esto abstrae el estatus de realidad.,Abstraction,5,filosófico,El pregunta es _____.|El debate es _____.|El idea es _____.
+real-hipotético,Adjective,Esto abstrae el estatus de realidad.,Abstraction,6,hipotético,El escenario es _____.|El caso es _____.|El supuesto es _____.
+literal-figurativo,Adjective,Esto poetiza la capa interpretativa.,Poetic Complexity,0,literal,El sentido es _____.|El traducción es _____.|El significado es _____.
+literal-figurativo,Adjective,Esto poetiza la capa interpretativa.,Poetic Complexity,1,directo,El camino es _____.|El respuesta es _____.|El golpe es _____.
+literal-figurativo,Adjective,Esto poetiza la capa interpretativa.,Poetic Complexity,2,simbólico,El gesto es _____.|El gesto es _____.|El bandera es _____.
+literal-figurativo,Adjective,Esto poetiza la capa interpretativa.,Poetic Complexity,3,metafórico,El lenguaje es _____.|El comparación es _____.|El poema es _____.
+literal-figurativo,Adjective,Esto poetiza la capa interpretativa.,Poetic Complexity,4,alegórico,El cuento es _____.|El pintura es _____.|El mensaje es _____.
+literal-figurativo,Adjective,Esto poetiza la capa interpretativa.,Poetic Complexity,5,figurativo,El arte es _____.|El expresión es _____.|El estilo es _____.
+suavemente-ruidosamente,Adverb,Esto escala el volumen de la ejecución de la acción.,Volume,0,suavemente,Habla _____.|Toca _____.|Camina _____.
+suavemente-ruidosamente,Adverb,Esto escala el volumen de la acción.,Volume,1,silenciosamente,Trabaja _____.|Entra _____.|Lee _____.
+suavemente-ruidosamente,Adverb,Esto escala el volumen de la acción.,Volume,2,moderadamente,Come _____.|Ejercita _____.|Habla _____.
+suavemente-ruidosamente,Adverb,Esto escala el volumen de la acción.,Volume,3,audiblemente,Pronuncia _____.|Golpea _____.|Canta _____.
+suavemente-ruidosamente,Adverb,Esto escala el volumen de la acción.,Volume,4,estrepitosamente,Cae _____.|Rompe _____.|Explota _____.
+suavemente-ruidosamente,Adverb,Esto escala el volumen de la acción.,Volume,5,ensordecedoramente,Suena _____.|Grita _____.|Toca _____.
+suavemente-ruidosamente,Adverb,Esto escala el volumen de la acción.,Volume,6,ruidosamente,Ríe _____.|Corre _____.|Baila _____.
+lentamente-rápidamente,Adverb,Esto aumenta la velocidad del movimiento.,Velocity,0,lentamente,Camina _____.|Lee _____.|Come _____.
+lentamente-rápidamente,Adverb,Esto aumenta la velocidad del movimiento.,Velocity,1,pausadamente,Habla _____.|Piensa _____.|Actúa _____.
+lentamente-rápidamente,Adverb,Esto aumenta la velocidad del movimiento.,Velocity,2,gradualmente,Cambia _____.|Crece _____.|Aprende _____.
+lentamente-rápidamente,Adverb,Esto aumenta la velocidad del movimiento.,Velocity,3,constantemente,Trabaja _____.|Corre _____.|Estudia _____.
+lentamente-rápidamente,Adverb,Esto aumenta la velocidad del movimiento.,Velocity,4,velozmente,Vuela _____.|Conduce _____.|Piensa _____.
+lentamente-rápidamente,Adverb,Esto aumenta la velocidad del movimiento.,Velocity,5,vertiginosamente,Gira _____.|Cae _____.|Sube _____.
+lentamente-rápidamente,Adverb,Esto aumenta la velocidad del movimiento.,Velocity,6,rápidamente,Responde _____.|Corre _____.|Decide _____.
+débilmente-poderosamente,Adverb,Esto fortalece la intensidad del esfuerzo.,Force,0,débilmente,Golpea _____.|Habla _____.|Ilumina _____.
+débilmente-poderosamente,Adverb,Esto fortalece la intensidad del esfuerzo.,Force,1,endeblemente,Construye _____.|Sostiene _____.|Defiende _____.
+débilmente-poderosamente,Adverb,Esto fortalece la intensidad del esfuerzo.,Force,2,levemente,Toca _____.|Mueve _____.|Sonríe _____.
+débilmente-poderosamente,Adverb,Esto fortalece la intensidad del esfuerzo.,Force,3,fuertemente,Abraza _____.|Golpea _____.|Defiende _____.
+débilmente-poderosamente,Adverb,Esto fortalece la intensidad del esfuerzo.,Force,4,vigorosamente,Ejercita _____.|Agita _____.|Lucha _____.
+débilmente-poderosamente,Adverb,Esto fortalece la intensidad del esfuerzo.,Force,5,potentemente,Influye _____.|Actúa _____.|Domina _____.
+débilmente-poderosamente,Adverb,Esto fortalece la intensidad del esfuerzo.,Force,6,poderosamente,Golpea _____.|Habla _____.|Mueve _____.
+tenuemente-brillantemente,Adverb,Esto aumenta el nivel de iluminación.,Luminosity,0,tenuemente,Ilumina _____.|Brilla _____.|Aparece _____.
+tenuemente-brillantemente,Adverb,Esto aumenta el nivel de iluminación.,Luminosity,1,débilmente,Suena _____.|Golpea _____.|Crece _____.
+tenuemente-brillantemente,Adverb,Esto aumenta el nivel de iluminación.,Luminosity,2,opacamente,Refleja _____.|Cubre _____.|Pinta _____.
+tenuemente-brillantemente,Adverb,Esto aumenta el nivel de iluminación.,Luminosity,3,claramente,Habla _____.|Ve _____.|Explica _____.
+tenuemente-brillantemente,Adverb,Esto aumenta el nivel de iluminación.,Luminosity,4,vívidamente,Recuerda _____.|Describe _____.|Sueña _____.
+tenuemente-brillantemente,Adverb,Esto aumenta el nivel de iluminación.,Luminosity,5,resplandecientement,Brilla _____.|Aparece _____.|Ilumina _____.
+tenuemente-brillantemente,Adverb,Esto aumenta el nivel de iluminación.,Luminosity,6,brillantemente,Piensa _____.|Actúa _____.|Resuelve _____.
+tristemente-devastadoramente,Adverb,Esto profundiza la emoción del dolor.,Affective Depth,0,tristemente,Mira _____.|Camina _____.|Habla _____.
+tristemente-devastadoramente,Adverb,Esto profundiza la emoción del dolor.,Affective Depth,1,melancólicamente,Canta _____.|Recuerda _____.|Sueña _____.
+tristemente-devastadoramente,Adverb,Esto profundiza la emoción del dolor.,Affective Depth,2,lamentablemente,Falla _____.|Pierde _____.|Sucede _____.
+tristemente-devastadoramente,Adverb,Esto profundiza la emoción del dolor.,Affective Depth,3,desesperadamente,Busca _____.|Llora _____.|Pide _____.
+tristemente-devastadoramente,Adverb,Esto profundiza la emoción del dolor.,Affective Depth,4,desconsoladamente,Grita _____.|Abraza _____.|Sufre _____.
+tristemente-devastadoramente,Adverb,Esto profundiza la emoción del dolor.,Affective Depth,5,desgarradoramente,Rompe _____.|Llora _____.|Pierde _____.
+tristemente-devastadoramente,Adverb,Esto profundiza la emoción del dolor.,Affective Depth,6,devastadoramente,Destruye _____.|Afecta _____.|Cambia _____.
+felizmente-eufóricamente,Adverb,Esto eleva la expresión de alegría.,Affective Depth,0,felizmente,Vive _____.|Sonríe _____.|Celebra _____.
+felizmente-eufóricamente,Adverb,Esto eleva la expresión de alegría.,Affective Depth,1,alegremente,Canta _____.|Baila _____.|Saluda _____.
+felizmente-eufóricamente,Adverb,Esto eleva la expresión de alegría.,Affective Depth,2,gozosamente,Recibe _____.|Comparte _____.|Disfruta _____.
+felizmente-eufóricamente,Adverb,Esto eleva la expresión de alegría.,Affective Depth,3,jubilosamente,Grita _____.|Abraza _____.|Celebra _____.
+felizmente-eufóricamente,Adverb,Esto eleva la expresión de alegría.,Affective Depth,4,extasiadamente,Mira _____.|Siente _____.|Vive _____.
+felizmente-eufóricamente,Adverb,Esto eleva la expresión de alegría.,Affective Depth,5,arrebatadamente,Ama _____.|Corre _____.|Sueña _____.
+felizmente-eufóricamente,Adverb,Esto eleva la expresión de alegría.,Affective Depth,6,eufóricamente,Gana _____.|Celebra _____.|Actúa _____.
+estrechamente-vastamente,Adverb,Esto expande el alcance de la extensión.,Magnitude,0,estrechamente,Abraza _____.|Vigila _____.|Relaciona _____.
+estrechamente-vastamente,Adverb,Esto expande el alcance de la extensión.,Magnitude,1,levemente,Toca _____.|Cambia _____.|Afecta _____.
+estrechamente-vastamente,Adverb,Esto expande el alcance de la extensión.,Magnitude,2,parcialmente,Cubre _____.|Entiende _____.|Completa _____.
+estrechamente-vastamente,Adverb,Esto expande el alcance de la extensión.,Magnitude,3,ampliamente,Difunde _____.|Conoce _____.|Usa _____.
+estrechamente-vastamente,Adverb,Esto expande el alcance de la extensión.,Magnitude,4,extensamente,Viaja _____.|Estudia _____.|Cubre _____.
+estrechamente-vastamente,Adverb,Esto expande el alcance de la extensión.,Magnitude,5,inmensamente,Crece _____.|Aprecia _____.|Sufre _____.
+estrechamente-vastamente,Adverb,Esto expande el alcance de la extensión.,Magnitude,6,vastamente,Extiende _____.|Explora _____.|Conoce _____.
+secamente-áridamente,Adverb,Esto reduce la manera de humedad.,Moisture Level,0,secamente,Responde _____.|Corta _____.|Habla _____.
+secamente-áridamente,Adverb,Esto reduce la manera de humedad.,Moisture Level,1,húmedamente,Mira _____.|Toca _____.|Llora _____.
+secamente-áridamente,Adverb,Esto reduce la manera de humedad.,Moisture Level,2,mojadamente,Camina _____.|Nada _____.|Llueve _____.
+secamente-áridamente,Adverb,Esto reduce la manera de humedad.,Moisture Level,3,empapadamente,Llega _____.|Sudor _____.|Baña _____.
+secamente-áridamente,Adverb,Esto reduce la manera de humedad.,Moisture Level,4,saturadamente,Colora _____.|Llena _____.|Absorbe _____.
+secamente-áridamente,Adverb,Esto reduce la manera de humedad.,Moisture Level,5,encharcadamente,Pisa _____.|Inunda _____.|Lluvia _____.
+secamente-áridamente,Adverb,Esto reduce la manera de humedad.,Moisture Level,6,áridamente,Crece _____.|Vive _____.|Habla _____.
+silenciosamente-ensordecedoramente,Adverb,Esto amplifica la forma de producción de sonido.,Volume,0,silenciosamente,Entra _____.|Lee _____.|Piensa _____.
+silenciosamente-ensordecedoramente,Adverb,Esto amplifica la forma de producción de sonido.,Volume,1,suavemente,Toca _____.|Habla _____.|Camina _____.
+silenciosamente-ensordecedoramente,Adverb,Esto amplifica la forma de producción de sonido.,Volume,2,moderadamente,Come _____.|Ejercita _____.|Canta _____.
+silenciosamente-ensordecedoramente,Adverb,Esto amplifica la forma de producción de sonido.,Volume,3,ruidosamente,Trabaja _____.|Juega _____.|Ríe _____.
+silenciosamente-ensordecedoramente,Adverb,Esto amplifica la forma de producción de sonido.,Volume,4,estruendosamente,Cae _____.|Golpea _____.|Explota _____.
+silenciosamente-ensordecedoramente,Adverb,Esto amplifica la forma de producción de sonido.,Volume,5,atronadoramente,Retumba _____.|Grita _____.|Suena _____.
+silenciosamente-ensordecedoramente,Adverb,Esto amplifica la forma de producción de sonido.,Volume,6,ensordecedoramente,Toca _____.|Aplaude _____.|Ruge _____.
+débilmente-robustamente,Adverb,Esto intensifica la manera de fuerza.,Force,0,débilmente,Golpea _____.|Ilumina _____.|Habla _____.
+débilmente-robustamente,Adverb,Esto intensifica la manera de fuerza.,Force,1,endeblemente,Construye _____.|Sostiene _____.|Defiende _____.
+débilmente-robustamente,Adverb,Esto intensifica la manera de fuerza.,Force,2,levemente,Toca _____.|Mueve _____.|Cambia _____.
+débilmente-robustamente,Adverb,Esto intensifica la manera de fuerza.,Force,3,fuertemente,Abraza _____.|Golpea _____.|Aprieta _____.
+débilmente-robustamente,Adverb,Esto intensifica la manera de fuerza.,Force,4,vigorosamente,Agita _____.|Lucha _____.|Ejercita _____.
+débilmente-robustamente,Adverb,Esto intensifica la manera de fuerza.,Force,5,poderosamente,Influye _____.|Domina _____.|Actúa _____.
+débilmente-robustamente,Adverb,Esto intensifica la manera de fuerza.,Force,6,robustamente,Crece _____.|Defiende _____.|Construye _____.
+informalmente-formalmente,Adverb,Esto eleva la manera de conducta.,Formality,0,informalmente,Habla _____.|Viste _____.|Reúne _____.
+informalmente-formalmente,Adverb,Esto eleva la manera de conducta.,Formality,1,casualmente,Camina _____.|Come _____.|Charla _____.
+informalmente-formalmente,Adverb,Esto eleva la manera de conducta.,Formality,2,coloquialmente,Expresa _____.|Escribe _____.|Habla _____.
+informalmente-formalmente,Adverb,Esto eleva la manera de conducta.,Formality,3,correctamente,Actúa _____.|Responde _____.|Coloca _____.
+informalmente-formalmente,Adverb,Esto eleva la manera de conducta.,Formality,4,elegantemente,Baila _____.|Viste _____.|Habla _____.
+informalmente-formalmente,Adverb,Esto eleva la manera de conducta.,Formality,5,solemnemente,Jura _____.|Celebra _____.|Habla _____.
+informalmente-formalmente,Adverb,Esto eleva la manera de conducta.,Formality,6,formalmente,Saluda _____.|Firma _____.|Reúne _____.
+coloquialmente-eruditamente,Adverb,Esto formaliza el enfoque lingüístico.,Formality,0,coloquialmente,Habla _____.|Escribe _____.|Explica _____.
+coloquialmente-eruditamente,Adverb,Esto formaliza el enfoque lingüístico.,Formality,1,popularmente,Conoce _____.|Llama _____.|Usa _____.
+coloquialmente-eruditamente,Adverb,Esto formaliza el enfoque lingüístico.,Formality,2,vernacularmente,Expresa _____.|Canta _____.|Escribe _____.
+coloquialmente-eruditamente,Adverb,Esto formaliza el enfoque lingüístico.,Formality,3,literariamente,Describe _____.|Lee _____.|Compone _____.
+coloquialmente-eruditamente,Adverb,Esto formaliza el enfoque lingüístico.,Formality,4,académicamente,Estudia _____.|Publica _____.|Debate _____.
+coloquialmente-eruditamente,Adverb,Esto formaliza el enfoque lingüístico.,Formality,5,pedantemente,Explica _____.|Corrige _____.|Habla _____.
+coloquialmente-eruditamente,Adverb,Esto formaliza el enfoque lingüístico.,Formality,6,eruditamente,Comenta _____.|Lee _____.|Investiga _____.
+indiferentemente-apasionadamente,Adverb,Esto profundiza el compromiso emocional.,Affective Depth,0,indiferentemente,Mira _____.|Responde _____.|Actúa _____.
+indiferentemente-apasionadamente,Adverb,Esto profundiza el compromiso emocional.,Affective Depth,1,neutralmente,Juzga _____.|Habla _____.|Permanece _____.
+indiferentemente-apasionadamente,Adverb,Esto profundiza el compromiso emocional.,Affective Depth,2,interesadamente,Escucha _____.|Mira _____.|Pregunta _____.
+indiferentemente-apasionadamente,Adverb,Esto profundiza el compromiso emocional.,Affective Depth,3,entusiastamente,Apoya _____.|Celebra _____.|Trabaja _____.
+indiferentemente-apasionadamente,Adverb,Esto profundiza el compromiso emocional.,Affective Depth,4,fervientemente,Ora _____.|Defiende _____.|Cree _____.
+indiferentemente-apasionadamente,Adverb,Esto profundiza el compromiso emocional.,Affective Depth,5,fanáticamente,Sigue _____.|Adora _____.|Defiende _____.
+indiferentemente-apasionadamente,Adverb,Esto profundiza el compromiso emocional.,Affective Depth,6,apasionadamente,Ama _____.|Habla _____.|Lucha _____.
+calmadamente-furiosamente,Adverb,Esto escala la intensidad emocional.,Affective Depth,0,calmadamente,Habla _____.|Camina _____.|Piensa _____.
+calmadamente-furiosamente,Adverb,Esto escala la intensidad emocional.,Affective Depth,1,serenamente,Mira _____.|Respira _____.|Actúa _____.
+calmadamente-furiosamente,Adverb,Esto escala la intensidad emocional.,Affective Depth,2,irritadamente,Responde _____.|Golpea _____.|Mira _____.
+calmadamente-furiosamente,Adverb,Esto escala la intensidad emocional.,Affective Depth,3,enojadamente,Grita _____.|Camina _____.|Actúa _____.
+calmadamente-furiosamente,Adverb,Esto escala la intensidad emocional.,Affective Depth,4,enfurecidamente,Ataca _____.|Defiende _____.|Mira _____.
+calmadamente-furiosamente,Adverb,Esto escala la intensidad emocional.,Affective Depth,5,rabiosamente,Muerde _____.|Lucha _____.|Grita _____.
+calmadamente-furiosamente,Adverb,Esto escala la intensidad emocional.,Affective Depth,6,furiosamente,Golpea _____.|Corre _____.|Reacciona _____.
+concretamente-abstractamente,Adverb,Esto abstrae el modo de pensar.,Abstraction,0,concretamente,Explica _____.|Actúa _____.|Describe _____.
+concretamente-abstractamente,Adverb,Esto abstrae el modo de pensar.,Abstraction,1,tangiblemente,Toca _____.|Siente _____.|Beneficia _____.
+concretamente-abstractamente,Adverb,Esto abstrae el modo de pensar.,Abstraction,2,específicamente,Menciona _____.|Detalla _____.|Enfoca _____.
+concretamente-abstractamente,Adverb,Esto abstrae el modo de pensar.,Abstraction,3,generalmente,Habla _____.|Ocurre _____.|Acepta _____.
+concretamente-abstractamente,Adverb,Esto abstrae el modo de pensar.,Abstraction,4,conceptualmente,Piensa _____.|Diseña _____.|Entiende _____.
+concretamente-abstractamente,Adverb,Esto abstrae el modo de pensar.,Abstraction,5,metafísicamente,Reflexiona _____.|Estudia _____.|Existe _____.
+concretamente-abstractamente,Adverb,Esto abstrae el modo de pensar.,Abstraction,6,abstractamente,Razona _____.|Arte _____.|Teoriza _____.
+prosaicamente-poéticamente,Adverb,Esto poetiza la manera expresiva.,Poetic Complexity,0,prosaicamente,Escribe _____.|Habla _____.|Vive _____.
+prosaicamente-poéticamente,Adverb,Esto poetiza la manera expresiva.,Poetic Complexity,1,mundanamente,Actúa _____.|Trabaja _____.|Piensa _____.
+prosaicamente-poéticamente,Adverb,Esto poetiza la manera expresiva.,Poetic Complexity,2,descriptivamente,Explica _____.|Pinta _____.|Cuenta _____.
+prosaicamente-poéticamente,Adverb,Esto poetiza la manera expresiva.,Poetic Complexity,3,líricamente,Canta _____.|Escribe _____.|Expresa _____.
+prosaicamente-poéticamente,Adverb,Esto poetiza la manera expresiva.,Poetic Complexity,4,metafóricamente,Habla _____.|Compara _____.|Piensa _____.
+prosaicamente-poéticamente,Adverb,Esto poetiza la manera expresiva.,Poetic Complexity,5,sublimemente,Inspira _____.|Crea _____.|Existe _____.
+prosaicamente-poéticamente,Adverb,Esto poetiza la manera expresiva.,Poetic Complexity,6,poéticamente,Describe _____.|Ama _____.|Sueña _____.
+familiarmente-distinguidamente,Adverb,Esto formaliza el estilo de interacción.,Formality,0,familiarmente,Saluda _____.|Habla _____.|Vive _____.
+familiarmente-distinguidamente,Adverb,Esto formaliza el estilo de interacción.,Formality,1,amistosamente,Actúa _____.|Sonríe _____.|Comparte _____.
+familiarmente-distinguidamente,Adverb,Esto formaliza el estilo de interacción.,Formality,2,cortésmente,Responde _____.|Pide _____.|Trata _____.
+familiarmente-distinguidamente,Adverb,Esto formaliza el estilo de interacción.,Formality,3,respetuosamente,Habla _____.|Escucha _____.|Actúa _____.
+familiarmente-distinguidamente,Adverb,Esto formaliza el estilo de interacción.,Formality,4,augustamente,Preside _____.|Habla _____.|Aparece _____.
+familiarmente-distinguidamente,Adverb,Esto formaliza el estilo de interacción.,Formality,5,majestuosamente,Camina _____.|Reina _____.|Existe _____.
+familiarmente-distinguidamente,Adverb,Esto formaliza el estilo de interacción.,Formality,6,distinguidamente,Viste _____.|Comporta _____.|Habla _____.
+satisfactoriamente-extasiadamente,Adverb,Esto intensifica la satisfacción emocional.,Affective Depth,0,satisfactoriamente,Trabaja _____.|Resuelve _____.|Come _____.
+satisfactoriamente-extasiadamente,Adverb,Esto intensifica la satisfacción emocional.,Affective Depth,1,contentamente,Vive _____.|Sonríe _____.|Duerme _____.
+satisfactoriamente-extasiadamente,Adverb,Esto intensifica la satisfacción emocional.,Affective Depth,2,felizmente,Celebra _____.|Ama _____.|Viaja _____.
+satisfactoriamente-extasiadamente,Adverb,Esto intensifica la satisfacción emocional.,Affective Depth,3,dichosamente,Existe _____.|Comparte _____.|Sueña _____.
+satisfactoriamente-extasiadamente,Adverb,Esto intensifica la satisfacción emocional.,Affective Depth,4,eufóricamente,Gana _____.|Baila _____.|Canta _____.
+satisfactoriamente-extasiadamente,Adverb,Esto intensifica la satisfacción emocional.,Affective Depth,5,arrobadamente,Mira _____.|Siente _____.|Adora _____.
+satisfactoriamente-extasiadamente,Adverb,Esto intensifica la satisfacción emocional.,Affective Depth,6,extasiadamente,Vive _____.|Ama _____.|Crea _____.
+realmente-hipotéticamente,Adverb,Esto abstrae la condición de verdad.,Abstraction,0,realmente,Existe _____.|Sucede _____.|Siente _____.
+realmente-hipotéticamente,Adverb,Esto abstrae la condición de verdad.,Abstraction,1,actualmente,Trabaja _____.|Vive _____.|Estudia _____.
+realmente-hipotéticamente,Adverb,Esto abstrae la condición de verdad.,Abstraction,2,posiblemente,Llega _____.|Cambia _____.|Gana _____.
+realmente-hipotéticamente,Adverb,Esto abstrae la condición de verdad.,Abstraction,3,teóricamente,Explica _____.|Funciona _____.|Existe _____.
+realmente-hipotéticamente,Adverb,Esto abstrae la condición de verdad.,Abstraction,4,imaginariamente,Viaja _____.|Crea _____.|Sueña _____.
+realmente-hipotéticamente,Adverb,Esto abstrae la condición de verdad.,Abstraction,5,filosóficamente,Piensa _____.|Debate _____.|Vive _____.
+realmente-hipotéticamente,Adverb,Esto abstrae la condición de verdad.,Abstraction,6,hipotéticamente,Supone _____.|Actúa _____.|Planea _____.
+literalmente-figurativamente,Adverb,Esto poetiza el método interpretativo.,Poetic Complexity,0,literalmente,Toma _____.|Entiende _____.|Traduce _____.
+literalmente-figurativamente,Adverb,Esto poetiza el método interpretativo.,Poetic Complexity,1,directamente,Va _____.|Habla _____.|Golpea _____.
+literalmente-figurativamente,Adverb,Esto poetiza el método interpretativo.,Poetic Complexity,2,simbólicamente,Representa _____.|Actúa _____.|Usa _____.
+literalmente-figurativamente,Adverb,Esto poetiza el método interpretativo.,Poetic Complexity,3,metafóricamente,Describe _____.|Compara _____.|Piensa _____.
+literalmente-figurativamente,Adverb,Esto poetiza el método interpretativo.,Poetic Complexity,4,alegóricamente,Cuenta _____.|Enseña _____.|Interpreta _____.
+literalmente-figurativamente,Adverb,Esto poetiza el método interpretativo.,Poetic Complexity,5,figurativamente,Habla _____.|Exagera _____.|Ilustra _____.
