@@ -43,7 +43,7 @@
         .hint { font-size: 1em; color: #666; }
         .above-hint { margin-bottom: 20px; }
         .below-hint { margin-top: 20px; }
-        #card-num { font-size: 0.8em; color: #999; }
+        #card-num { font-size: 0.8em; color: #999; position: fixed; bottom: 20px; right: 20px; }
         button {
             padding: 10px 20px;
             margin: 10px;
@@ -56,6 +56,10 @@
         #buttons {
             display: flex;
             justify-content: center;
+            position: fixed;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
         }
         #login-form {
             max-width: 300px;
@@ -109,6 +113,20 @@
             display: flex;
             align-items: center;
         }
+        #semantic-ladder {
+            max-width: 600px;
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .ladder-field {
+            width: 200px;
+            min-height: 30px;
+            margin: 10px 0;
+            text-align: center;
+            color: #333;
+        }
     </style>
 </head>
 <body>
@@ -122,6 +140,11 @@
         <div id="error" style="color: red;"></div>
     </div>
     <div id="flashcard">
+        <div id="semantic-ladder">
+            <div id="top-field" class="ladder-field"></div>
+            <div id="middle-field" class="ladder-field"></div>
+            <div id="bottom-field" class="ladder-field"></div>
+        </div>
         <div id="card-num"></div>
         <div id="front"></div>
     </div>
@@ -378,18 +401,17 @@
             currentId = dueIds[Math.floor(Math.random() * dueIds.length)];
             const correct = cards[currentId].back;
             const index = scale.indexOf(correct);
-            const lower = index > 0 ? scale[index - 1] : '';
-            const higher = index < scale.length - 1 ? scale[index + 1] : '';
-            let frontHtml = '';
-            if (higher) frontHtml += `<div class="hint above-hint">${higher}</div>`;
+            const lessIntense = index > 0 ? scale[index - 1] : '';
+            const moreIntense = index < scale.length - 1 ? scale[index + 1] : '';
+            document.getElementById('top-field').textContent = lessIntense;
+            document.getElementById('middle-field').textContent = flipped ? correct : '';
+            document.getElementById('bottom-field').textContent = moreIntense;
             let sentence = cards[currentId].front;
             if (flipped) {
                 sentence = sentence.replace('_____', `<strong style="color: green;">${correct}</strong>`);
             }
-            frontHtml += sentence;
-            if (lower) frontHtml += `<div class="hint below-hint">${lower}</div>`;
+            document.getElementById('front').innerHTML = sentence;
             document.getElementById('card-num').textContent = `Card ${currentId + 1}`;
-            document.getElementById('front').innerHTML = frontHtml;
             document.getElementById('flipBtn').style.display = flipped ? 'none' : 'block';
             document.getElementById('rate').style.display = flipped ? 'block' : 'none';
             document.getElementById('buttons').style.display = 'block';
