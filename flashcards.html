@@ -2,17 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Antonimo Flashcards</title>
     <style>
+        /* Base Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Inter', Arial, sans-serif;
             text-align: center;
             margin: 20px;
             position: relative;
             min-height: 100vh;
             background-color: white;
             overflow-x: hidden;
+            color: #333;
         }
+        
+        /* Utility for retro font style */
+        .retro-font {
+            font-family: monospace;
+            font-weight: bold;
+        }
+
+        /* Responsive Background Logo (Pelican) */
         .logo-bg {
             position: fixed;
             bottom: 0;
@@ -21,6 +32,8 @@
             opacity: 0.25;
             z-index: -1;
             pointer-events: none;
+            /* Placeholder for the ASCII Pelican graphic */
+            content: " "; 
         }
         @media (max-width: 800px) {
             .logo-bg {
@@ -28,270 +41,339 @@
                 opacity: 0.3;
             }
         }
+
+        /* Flashcard Container */
         #flashcard {
             max-width: 600px;
             margin: 40px auto;
             padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background: #f9f9f9;
+            border: 3px solid #6366f1; /* Indigo border */
+            border-radius: 12px;
+            background: #f8f8ff; /* Light, clean background */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
         }
-        #front {
-            font-size: 1.2em;
+        #flashcard:hover {
+            transform: translateY(-2px);
         }
-        .hint { font-size: 1em; color: #666; }
-        .above-hint { margin-bottom: 20px; }
-        .below-hint { margin-top: 20px; }
-        #card-num { font-size: 0.8em; color: #999; }
-        button {
-            padding: 10px 20px;
-            margin: 10px;
-            border: none;
-            background: #f0f0f0;
-            cursor: pointer;
+
+        /* Card Content */
+        #front, #back {
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 0;
+        }
+        .main-word {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #1e40af; /* Darker blue for focus */
+            margin-bottom: 10px;
+        }
+        .hint { 
+            font-size: 0.95em; 
+            color: #4b5563; 
+            font-style: italic;
+            padding: 5px 10px;
+            border-left: 3px solid #9ca3af;
+            background-color: #f3f4f6;
             border-radius: 4px;
         }
-        #buttons {
-            display: flex;
-            justify-content: center;
+        .below-hint { margin-top: 20px; }
+
+        /* Back of Card Details */
+        #back-details {
+            text-align: left;
+            padding-top: 20px;
+            border-top: 1px dashed #ccc;
+            width: 100%;
         }
-        #srs-status {
-            margin-top: 10px;
-            font-style: italic;
-            color: blue;
+        .back-detail-item {
+            margin-bottom: 8px;
+            font-size: 1em;
+            color: #444;
         }
-        #result {
-            margin: 20px;
+        .back-detail-item strong {
+            color: #6366f1;
+            font-weight: 600;
+        }
+        .intermediary-list {
+            margin-top: 5px;
+            padding-left: 20px;
+            list-style: disc;
+        }
+        .intermediary-list li {
+            margin: 4px 0;
+        }
+
+        /* UI Elements */
+        #card-num, #learned-status { 
+            font-size: 1.1em; 
+            margin-bottom: 10px;
+            color: #10b981; /* Green for status */
+            font-weight: 600;
+        }
+        #learned-count {
+            color: #ef4444; /* Red for emphasis */
             font-weight: bold;
         }
+
+        /* Buttons */
+        button {
+            padding: 12px 25px;
+            margin: 5px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            transition: background-color 0.2s, transform 0.1s;
+            box-shadow: 0 4px #9ca3af;
+        }
+        button:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px #9ca3af;
+        }
+
+        #flipBtn {
+            background-color: #6366f1;
+            color: white;
+            box-shadow: 0 4px #4f46e5;
+        }
+        #flipBtn:hover { background-color: #4f46e5; }
+        #flipBtn:active { box-shadow: 0 2px #4f46e5; }
+
+        .rate-btn {
+            color: white;
+        }
+        .rate-btn.easy {
+            background-color: #10b981; /* Green */
+            box-shadow: 0 4px #059669;
+        }
+        .rate-btn.easy:hover { background-color: #059669; }
+        .rate-btn.easy:active { box-shadow: 0 2px #059669; }
+        .rate-btn.hard {
+            background-color: #f59e0b; /* Amber */
+            box-shadow: 0 4px #d97706;
+        }
+        .rate-btn.hard:hover { background-color: #d97706; }
+        .rate-btn.hard:active { box-shadow: 0 2px #d97706; }
     </style>
 </head>
 <body>
-    <h1>Flashcards v.2025.10.25</h1>
-    <p id="learned">Learned cards: 0</p>
-    <div id="flashcard">
-        <div id="card-num"></div>
-        <div id="front"></div>
-        <div id="srs-status"></div>
+    
+    <div id="loading-message" class="retro-font" style="font-size: 1.5em; margin-top: 100px;">
+        LOADING LEXICAL DATA... 
     </div>
-    <div id="buttons">
-        <button id="flipBtn" onclick="flip()">Show Answer</button>
+
+    <div id="flashcard" style="display:none;">
+        <div id="card-num" class="retro-font"></div>
+        <div id="learned-status">Learned: <span id="learned-count">0</span> / 0</div>
+
+        <div id="front"></div>
+        <div id="back"></div>
+
+        <button id="flipBtn" onclick="flip()">REVEAL</button>
+
         <div id="rate" style="display:none;">
-            <button onclick="rate(false)">Incorrect</button>
-            <button onclick="rate(true)">Correct</button>
+            <button class="rate-btn hard" onclick="rate(false)">HARD (Repeat Soon)</button>
+            <button class="rate-btn easy" onclick="rate(true)">EASY (Next Level)</button>
         </div>
     </div>
-    <p id="result"></p>
-    <img src="antonimo-logo.jpg" alt="Antonimo logo" class="logo-bg">
-    <script type="module" src="https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js"></script>
-    <script type="module" src="https://www.gstatic.com/firebasejs/10.14.0/firebase-auth.js"></script>
-    <script type="module" src="https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore.js"></script>
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
-        import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-auth.js";
-        import { getFirestore, doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore.js";
 
-        const firebaseConfig = {
-            apiKey: "AIzaSyDOCAbC123dEf456GhI789jKl012-MnO",
-            authDomain: "myapp-project-123.firebaseapp.com",
-            projectId: "myapp-project-123",
-            storageBucket: "myapp-bucket.appspot.com",
-            messagingSenderId: "65211879809",
-            appId: "1:65211879909:web:3ae38ef1cdcb2e01fe5f0c"
-        };
-
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth(app);
-        const db = getFirestore(app);
-
-        let uid;
-        let scales = {};
+    <script>
+        // --- DATA STRUCTURES ---
         let cards = [];
         let srsData = [];
-        let currentId;
+        let activeIds = [];
+        let currentId = 0;
         let flipped = false;
 
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-                uid = user.uid;
-                loadProgress();
-            } else {
-                signInAnonymously(auth)
-                    .then(() => console.log('Signed in anonymously'))
-                    .catch((error) => console.error('Anonymous auth failed:', error));
-            }
-        });
+        const LOCAL_STORAGE_KEY_SRS = 'antonimo_srs_data';
+        const LOCAL_STORAGE_KEY_ACTIVE = 'antonimo_active_ids';
 
-        async function loadProgress() {
-            const progressRef = doc(db, 'users', uid, 'srs', 'progress');
-            const progressSnap = await getDoc(progressRef);
-            if (progressSnap.exists()) {
-                srsData = progressSnap.data().progress;
+        // --- LOCAL STORAGE FUNCTIONS (Persistence) ---
+
+        /** Saves the current SRS state (streaks and active card list) to localStorage. */
+        function save() {
+            localStorage.setItem(LOCAL_STORAGE_KEY_SRS, JSON.stringify(srsData));
+            localStorage.setItem(LOCAL_STORAGE_KEY_ACTIVE, JSON.stringify(activeIds));
+        }
+
+        /** Loads SRS state from localStorage or initializes it if no data is found. */
+        function load() {
+            const savedSrsData = localStorage.getItem(LOCAL_STORAGE_KEY_SRS);
+            if (savedSrsData) {
+                // If data exists, load it
+                srsData = JSON.parse(savedSrsData);
+                activeIds = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY_ACTIVE));
             } else {
-                srsData = Array(cards.length).fill().map(() => ({streak: 0, ef: 2.5, interval: 0, dueDate: 0, learnedTime: 0}));
+                // If no data, initialize all cards to streak 0 and start with the first card.
+                srsData = cards.map(() => ({ streak: 0, learnedTime: 0 }));
+                activeIds = [0];
             }
+            
+            // Safety check: ensure srsData size matches the new cards array size after CSV load
+            while (srsData.length < cards.length) {
+                srsData.push({ streak: 0, learnedTime: 0 });
+            }
+            
+            // Set currentId to a random active card, or the first one if only one exists
+            if (activeIds.length > 0) {
+                currentId = activeIds[Math.floor(Math.random() * activeIds.length)];
+            } else if (cards.length > 0) {
+                // Should only happen if all were previously learned, but we'll restart learning if activeIds is empty
+                currentId = 0;
+                activeIds = [0];
+            }
+        }
+
+        // --- DATA LOADING (CSV) ---
+
+        /** Fetches and parses the CSV data file. */
+        async function loadCSVData() {
+            try {
+                const response = await fetch('game-data.csv');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const text = await response.text();
+                const rows = text.trim().split('\n').slice(1); // Skip header row
+                
+                cards = rows.map((row, index) => {
+                    // Simple CSV parsing: split by comma, but be aware of semicolon for intermediary words
+                    // Columns: Pair (Low-High),Intermediaries,Part of Speech,Hint,Gradability Type
+                    const columns = row.split(',').map(c => c.trim()); 
+                    
+                    const [lowHighPair, intermediaries, pos, hint, gradability] = columns;
+                    
+                    const [lower, upper] = lowHighPair.split('-').map(w => w.trim());
+                    
+                    // Intermediaries are separated by semicolon (e.g., "murmurar;hablar")
+                    const middle = intermediaries.split(';').map(w => w.trim()).filter(w => w.length > 0);
+                    
+                    return {
+                        id: index,
+                        upper: upper,
+                        lower: lower,
+                        middle: middle, // Array of intermediary words
+                        hint: hint,
+                        pos: pos,
+                        gradability: gradability
+                    };
+                }).filter(card => card.upper && card.lower && card.middle.length > 0); // Only keep valid cards
+
+                console.log(`Loaded ${cards.length} cards successfully from CSV.`);
+                document.getElementById('loading-message').style.display = 'none';
+                document.getElementById('flashcard').style.display = 'block';
+                initializeGame();
+
+            } catch (error) {
+                console.error("Failed to load CSV data:", error);
+                document.getElementById('loading-message').textContent = 'ERROR: Could not load game data.';
+            }
+        }
+
+        // --- GAME LOGIC ---
+
+        /** Initializes the game after data is loaded. */
+        function initializeGame() {
+            if (cards.length === 0) {
+                document.getElementById('loading-message').textContent = 'No valid card data available.';
+                return;
+            }
+            load();
             updateLearned();
-            newGame();
+            showCard();
         }
 
-        async function saveProgress() {
-            const progressRef = doc(db, 'users', uid, 'srs', 'progress');
-            await setDoc(progressRef, { progress: srsData });
-        }
-
-        async function loadData() {
-            const response = await fetch('flashcard-data.csv');
-            const csvText = await response.text();
-            const lines = csvText.trim().split('\n').slice(1);
-            const data = lines.map(line => {
-                const [pair, pos, hint, gradtype, orderStr, word, sentencesStr] = line.split(',');
-                const order = parseInt(orderStr);
-                const sentences = sentencesStr ? sentencesStr.split('|') : [];
-                return {pair, pos, hint, gradtype, order, word, sentences};
-            });
-            data.forEach(d => {
-                if (!scales[d.pair]) scales[d.pair] = [];
-                scales[d.pair].push({order: d.order, word: d.word});
-                d.sentences.forEach(sent => {
-                    cards.push({front: sent, back: d.word, pair: d.pair, order: d.order});
-                });
-            });
-            for (let p in scales) {
-                scales[p].sort((a, b) => a.order - b.order);
-                scales[p] = scales[p].map(w => w.word);
-            }
-            if (uid) loadProgress();
-        }
-
+        /** Updates the count of learned/total cards in the status bar. */
         function updateLearned() {
-            const now = Date.now();
-            const day = 24 * 60 * 60 * 1000;
-            const count = srsData.filter((d, i) => d.learnedTime > now - day).length;
-            document.getElementById('learned').textContent = `Learned cards: ${count}/${cards.length}`;
+            const learnedCount = srsData.filter(data => data.learnedTime > 0).length;
+            document.getElementById('learned-status').innerHTML = 
+                `Learned: <span id="learned-count">${learnedCount}</span> / ${cards.length}`;
         }
-
+        
+        /** Renders the current card (front or back). */
         function showCard() {
-            if (!cards[currentId]) return;
             const card = cards[currentId];
-            const this_scale = scales[card.pair];
-            const index = card.order;
-            const lower = index > 0 ? this_scale[index - 1] : '';
-            const higher = index < this_scale.length - 1 ? this_scale[index + 1] : '';
-            let frontHtml = '';
-            if (higher) frontHtml += `<div class="hint above-hint">${higher}</div>`;
-            let sentence = card.front;
+            
+            // Front content (always visible)
+            let frontHtml = `<div class="main-word">${card.lower}</div>`;
+            frontHtml += `<div class="hint above-hint">${card.hint}</div>`;
+            
+            // Back content (only visible when flipped)
+            let backHtml = '';
             if (flipped) {
-                sentence = sentence.replace('_____', `<strong style="color: green;">${card.back}</strong>`);
+                backHtml += `<div id="back-details">`;
+                backHtml += `<div class="back-detail-item"><strong>Gradability Type:</strong> ${card.gradability}</div>`;
+                backHtml += `<div class="back-detail-item"><strong>Part of Speech:</strong> ${card.pos}</div>`;
+                backHtml += `<div class="back-detail-item"><strong>Scale (Low to High):</strong>`;
+                backHtml += `<ol class="intermediary-list">`;
+                backHtml += `<li>${card.lower} (Low)</li>`;
+                card.middle.forEach(word => {
+                    backHtml += `<li>${word}</li>`;
+                });
+                backHtml += `<li>${card.upper} (High)</li>`;
+                backHtml += `</ol></div>`;
+                backHtml += `</div>`;
             }
-            frontHtml += sentence;
-            if (lower) frontHtml += `<div class="hint below-hint">${lower}</div>`;
-            document.getElementById('front').innerHTML = frontHtml;
+
             document.getElementById('card-num').textContent = `Card ${currentId + 1}`;
+            document.getElementById('front').innerHTML = frontHtml;
+            document.getElementById('back').innerHTML = flipped ? backHtml : '';
+            
             document.getElementById('flipBtn').style.display = flipped ? 'none' : 'block';
             document.getElementById('rate').style.display = flipped ? 'block' : 'none';
-
-            const status = document.getElementById('srs-status');
-            const item = srsData[currentId];
-            if (item.streak === 0) {
-                status.textContent = 'New card';
-            } else if (item.dueDate <= Date.now()) {
-                status.textContent = 'DUE NOW';
-            } else {
-                const minutes = Math.ceil((item.dueDate - Date.now()) / 60000);
-                status.textContent = `Next review in ${minutes} minutes`;
-            }
         }
 
+        /** Flips the card to show the back. */
         function flip() {
             flipped = true;
             showCard();
         }
 
-        function updateSRS(index, isCorrect) {
-            let item = srsData[index];
-            let quality = isCorrect ? 5 : 0;
-            if (quality < 3) {
-                item.streak = 0;
+        /** Handles user rating, updates streak, saves state, and loads the next card. */
+        function rate(correct) {
+            if (correct) {
+                // Increase streak
+                srsData[currentId].streak++;
+                
+                // If streak reaches 3, mark as learned and remove from active list
+                if (srsData[currentId].streak === 3) {
+                    srsData[currentId].learnedTime = Date.now();
+                    activeIds = activeIds.filter(id => id !== currentId);
+                }
             } else {
-                item.streak++;
-            }
-            item.ef = item.ef + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02));
-            if (item.ef < 1.3) item.ef = 1.3;
-            let reps = item.streak;
-            let interval;
-            if (reps <= 1) {
-                interval = 1;
-            } else if (reps === 2) {
-                interval = 6;
-            } else {
-                interval = Math.round(item.interval * item.ef);
-            }
-            item.interval = interval;
-            item.dueDate = Date.now() + interval * 60000;
-            if (item.streak === 3 && item.learnedTime === 0) {
-                item.learnedTime = Date.now();
-            }
-        }
-
-        function getDueItemIndex() {
-            const now = Date.now();
-            let newCards = [];
-            let overdue = [];
-            let future = [];
-            for (let i = 0; i < cards.length; i++) {
-                const item = srsData[i];
-                if (item.streak === 0) {
-                    newCards.push(i);
-                } else if (item.dueDate <= now) {
-                    overdue.push({index: i, overdueTime: now - item.dueDate});
-                } else {
-                    future.push({index: i, dueDate: item.dueDate});
+                // If incorrect, reset streak to 0
+                srsData[currentId].streak = 0;
+                
+                // Ensure the card is back in the active list if it was mistakenly removed
+                if (!activeIds.includes(currentId)) {
+                    activeIds.push(currentId);
                 }
             }
-            if (newCards.length > 0) {
-                return newCards[Math.floor(Math.random() * newCards.length)];
-            } else if (overdue.length > 0) {
-                overdue.sort((a, b) => b.overdueTime - a.overdueTime);
-                return overdue[0].index;
-            } else if (future.length > 0) {
-                future.sort((a, b) => a.dueDate - b.dueDate);
-                return future[0].index;
-            } else {
-                return -1;
-            }
-        }
-
-        function rate(isCorrect) {
-            updateSRS(currentId, isCorrect);
-            saveProgress();
+            
+            save();
             updateLearned();
             flipped = false;
-            const nextId = getDueItemIndex();
-            if (nextId === -1) {
-                document.getElementById('flashcard').style.display = 'none';
-                document.getElementById('buttons').style.display = 'none';
-                document.getElementById('result').textContent = 'All cards up to date! Come back later.';
-            } else {
-                currentId = nextId;
-                showCard();
+            
+            if (activeIds.length === 0) {
+                // Use a non-blocking message box instead of alert
+                document.getElementById('flashcard').innerHTML = 
+                    `<h2 style="color: #10b981;">CONGRATULATIONS!</h2><p>You have learned all available cards. Press F5 to reset your progress.</p>`;
+                return;
             }
-        }
 
-        function newGame() {
-            const nextId = getDueItemIndex();
-            if (nextId === -1) {
-                document.getElementById('flashcard').style.display = 'none';
-                document.getElementById('buttons').style.display = 'none';
-                document.getElementById('result').textContent = 'All cards up to date! Come back later.';
-            } else {
-                document.getElementById('flashcard').style.display = 'block';
-                document.getElementById('buttons').style.display = 'flex';
-                currentId = nextId;
-                showCard();
-            }
+            // Select the next card (simple random selection from active list)
+            currentId = activeIds[Math.floor(Math.random() * activeIds.length)];
+            showCard();
         }
-
-        loadData();
+        
+        // --- STARTUP ---
+        loadCSVData(); // Start the process by loading data
     </script>
 </body>
 </html>
