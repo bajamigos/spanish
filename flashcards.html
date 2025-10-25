@@ -40,11 +40,11 @@
         .word-box-container {
             display: flex;
             flex-direction: column;
-            align-items: center; /* Center boxes horizontally */
-            margin-bottom: 20px; /* Space between boxes and sentence */
+            align-items: center;
+            margin-bottom: 20px;
         }
         .word-box {
-            width: 80%; /* Adjust as needed */
+            width: 80%;
             max-width: 250px;
             height: 40px;
             line-height: 40px;
@@ -57,13 +57,12 @@
             box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
         }
         .neighbor-word {
-            color: #666; /* Slightly less intense color for neighbors */
+            color: #666;
             font-size: 1em;
         }
         .cloze-sentence {
             font-size: 1.2em;
             margin-top: 20px;
-            /* FIX: Set a minimum height to prevent the "jiggle" when sentence length changes */
             min-height: 2.4em; 
             line-height: 1.2em;
         }
@@ -72,32 +71,32 @@
         button {
             padding: 10px 20px;
             margin: 10px;
-            border: 1px solid #aaa; /* Thin light grey border */
-            background: #000; /* Black background */
-            color: #ccc; /* Light grey text */
+            border: 1px solid #aaa;
+            background: #000;
+            color: #ccc;
             cursor: pointer;
             border-radius: 4px;
-            /* 3D outline effect using box-shadow */
             box-shadow: 1px 1px 0 #aaa, 2px 2px 0 #bbb;
             transition: all 0.05s ease;
         }
         button:hover {
-            background: #222; /* Slightly lighter black on hover */
-            color: #fff; /* White text on hover for contrast */
-            box-shadow: 0 0 0 #aaa; /* Flatten the shadow on hover/active */
+            background: #222;
+            color: #fff;
+            box-shadow: 0 0 0 #aaa;
             transform: translate(2px, 2px);
         }
         
         #buttons {
-            display: flex;
+            display: none;
             justify-content: center;
             max-width: 600px; 
             margin: 0px auto 20px auto;
         }
         #rate {
-            display: flex;
+            display: none;
             justify-content: center;
-            width: 100%; /* Ensure inner container takes full space */
+            width: 100%;
+            flex-wrap: wrap;
         }
         
         #login-form {
@@ -125,10 +124,14 @@
             margin: 20px auto; 
             max-width: 300px; 
             display: none;
+            padding: 20px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
         }
         
         #controls-footer {
-            max-width: 300px; 
+            max-width: 600px; 
             padding: 10px;
             border: 1px solid #ddd;
             border-radius: 8px;
@@ -137,10 +140,6 @@
             font-size: 0.9em;
             margin: 20px auto 40px auto; 
             display: none; 
-        }
-        #controls-footer label, #controls-footer input, #controls-footer button {
-            margin-left: 5px;
-            margin-top: 5px;
         }
         #settings {
             display: flex;
@@ -183,17 +182,17 @@
         </div>
     </div>
     
-    <div id="buttons" style="display: none;">
-        <div id="rate" style="display:none;">
+    <div id="buttons">
+        <div id="rate">
             <button id="flipBtn" onclick="flip()">Show Answer</button>
-            <button onclick="rate(false)">Incorrect</button>
-            <button onclick="rate(true)">Correct</button>
+            <button id="incorrectBtn" onclick="rate(false)">Incorrect</button>
+            <button id="correctBtn" onclick="rate(true)">Correct</button>
         </div>
     </div>
     
     <pre id="ascii-stats"></pre>
     
-    <div id="controls-footer" style="display: none;">
+    <div id="controls-footer">
         <div id="settings">
             New cards/day: <input id="daily-limit" type="number" min="1" value="10">
             <button onclick="saveSettings()">Save</button>
@@ -207,6 +206,7 @@
     <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore-compat.js"></script>
     <script>
+        // Firebase config
         const firebaseConfig = {
             apiKey: "AIzaSyDJYgI-xgZAGj6780W8BqXS4thd8ODvfDA",
             authDomain: "antonimo-acbd9.firebaseapp.com",
@@ -219,7 +219,18 @@
         const app = firebase.initializeApp(firebaseConfig);
         const auth = firebase.auth();
         const db = firebase.firestore();
+
+        // Globals
+        let uid = null;
+        let cardData = {};
+        let userSettings = {};
+        let currentCard = null;
+        let isFlipped = false;
+
+        // Scale of words
         const scale = ['susurrar', 'murmurar', 'hablar', 'alzar la voz', 'exclamar', 'gritar'];
+
+        // Cards array (fixed and completed, added cards for exclamar and gritar)
         const cards = [
             { front: 'En la quietud de la noche, ella se inclinó hacia su amigo y decidió _____ el secreto para que nadie más pudiera oírlo.', back: 'susurrar' },
             { front: 'Durante la película de terror, los niños empezaron a _____ comentarios asustados sin molestar a los demás espectadores.', back: 'susurrar' },
@@ -270,7 +281,7 @@
             { front: 'Los estudiantes optaron por _____ en la asamblea escolar para pedir cambios.', back: 'alzar la voz' },
             { front: 'Si la situación lo requiere, _____ y defiende tu posición con argumentos.', back: 'alzar la voz' },
             { front: 'Es importante _____ con respeto en una discusión para mantener un diálogo constructivo.', back: 'hablar' },
-            { front: 'Vamos a sentarnos y _____ sobre el problema que ha surgido entre nosotros lately.', back: 'hablar' },
+            { front: 'Vamos a sentarnos y _____ sobre el problema que ha surgido entre nosotros.', back: 'hablar' },
             { front: 'Ella domina varios idiomas y puede _____ fluidamente en inglés, español y francés.', back: 'hablar' },
             { front: 'En la terapia, es esencial _____ abiertamente sobre tus sentimientos y experiencias.', back: 'hablar' },
             { front: 'Los diplomáticos decidieron _____ para resolver el conflicto internacional pacíficamente.', back: 'hablar' },
@@ -279,4 +290,347 @@
             { front: 'En la conferencia, el experto va a _____ sobre los avances en inteligencia artificial.', back: 'hablar' },
             { front: 'Es mejor _____ las cosas claras desde el principio para evitar malentendidos.', back: 'hablar' },
             { front: 'Los padres deben _____ con sus hijos sobre los peligros del internet.', back: 'hablar' },
-            { front: 'Vamos a _____ del plan para las vacaciones de summer en familia
+            { front: 'Vamos a _____ del plan para las vacaciones en familia.', back: 'hablar' },
+            // Added cards for exclamar
+            { front: '"¡Qué sorpresa!", tuvo que _____.', back: 'exclamar' },
+            { front: 'La multitud _____ de alegría al ganar el equipo.', back: 'exclamar' },
+            { front: 'Él _____ : "¡Esto es imposible!"', back: 'exclamar' },
+            { front: 'No puedo _____ lo afortunado que soy.', back: 'exclamar' },
+            { front: 'Los niños _____ de emoción al abrir los regalos.', back: 'exclamar' },
+            // Added cards for gritar
+            { front: 'El entrenador _____ instrucciones a los jugadores.', back: 'gritar' },
+            { front: 'Ella _____ de dolor al golpearse.', back: 'gritar' },
+            { front: 'Los fans _____ el nombre de su ídolo en el concierto.', back: 'gritar' },
+            { front: 'No _____ , estamos en una biblioteca.', back: 'gritar' },
+            { front: 'En la protesta, la gente empezó a _____.', back: 'gritar' }
+        ];
+
+        // Load user data
+        async function loadUserData() {
+            const reviewsSnap = await db.collection(`users/${uid}/cardReviews`).get();
+            cardData = {};
+            reviewsSnap.forEach((doc) => {
+                const idx = parseInt(doc.id);
+                if (!isNaN(idx) && idx >= 0 && idx < cards.length) {
+                    cardData[idx] = doc.data();
+                }
+            });
+
+            const settingsRef = db.doc(`users/${uid}/settings`);
+            const settingsSnap = await settingsRef.get();
+            if (settingsSnap.exists) {
+                userSettings = settingsSnap.data();
+            } else {
+                userSettings = {
+                    dailyNewLimit: 10,
+                    newCardsToday: 0,
+                    reviewsToday: 0,
+                    lastNewDate: ''
+                };
+                await settingsRef.set(userSettings);
+            }
+
+            const todayStr = new Date().toDateString();
+            if (userSettings.lastNewDate !== todayStr) {
+                userSettings.newCardsToday = 0;
+                userSettings.reviewsToday = 0;
+                userSettings.lastNewDate = todayStr;
+                await settingsRef.update({
+                    newCardsToday: 0,
+                    reviewsToday: 0,
+                    lastNewDate: todayStr
+                });
+            }
+        }
+
+        // Get next card
+        function getNextCard() {
+            const now = new Date();
+            let dueCandidates = [];
+            for (let i = 0; i < cards.length; i++) {
+                const data = cardData[i];
+                if (data && data.due && data.due.toDate() <= now) {
+                    dueCandidates.push({
+                        index: i,
+                        data: data,
+                        dueTime: data.due.toDate().getTime()
+                    });
+                }
+            }
+            if (dueCandidates.length > 0) {
+                dueCandidates.sort((a, b) => a.dueTime - b.dueTime);
+                return dueCandidates[0];
+            }
+
+            if (userSettings.newCardsToday < userSettings.dailyNewLimit) {
+                let unseen = [];
+                for (let i = 0; i < cards.length; i++) {
+                    if (!cardData[i]) {
+                        unseen.push(i);
+                    }
+                }
+                if (unseen.length > 0) {
+                    const rand = Math.floor(Math.random() * unseen.length);
+                    return { index: unseen[rand], isNew: true };
+                }
+            }
+            return null;
+        }
+
+        // Show card
+        function showCard(cardObj) {
+            const { index, data } = cardObj;
+            currentCard = cardObj;
+            const card = cards[index];
+            const back = card.back;
+            const scaleIndex = scale.indexOf(back);
+            const lower = scaleIndex > 0 ? scale[scaleIndex - 1] : '';
+            const higher = scaleIndex < scale.length - 1 ? scale[scaleIndex + 1] : '';
+
+            document.getElementById('lower-neighbor-box').textContent = lower;
+            document.getElementById('higher-neighbor-box').textContent = higher;
+            document.getElementById('cloze-display').textContent = card.front;
+            document.getElementById('answer-box').textContent = '';
+            document.getElementById('card-num').textContent = `${index + 1} / ${cards.length}`;
+
+            isFlipped = false;
+            const flipBtn = document.getElementById('flipBtn');
+            const incBtn = document.getElementById('incorrectBtn');
+            const corBtn = document.getElementById('correctBtn');
+            flipBtn.style.display = 'inline-block';
+            flipBtn.textContent = 'Show Answer';
+            incBtn.style.display = 'none';
+            corBtn.style.display = 'none';
+        }
+
+        // Flip card
+        function flip() {
+            if (!currentCard || isFlipped) return;
+            const index = currentCard.index;
+            const back = cards[index].back;
+            document.getElementById('answer-box').textContent = back;
+            isFlipped = true;
+            document.getElementById('flipBtn').style.display = 'none';
+            document.getElementById('incorrectBtn').style.display = 'inline-block';
+            document.getElementById('correctBtn').style.display = 'inline-block';
+        }
+
+        // Rate card (SRS SM-2 implementation)
+        async function rate(correct) {
+            if (!currentCard || !isFlipped) return;
+            const index = currentCard.index;
+            const oldData = cardData[index];
+            const quality = correct ? 5 : 0;
+            let newReps = oldData.reps;
+            let newEf = oldData.ef;
+            let newInterval;
+
+            if (quality < 3) {
+                newReps = 0;
+                newInterval = 1;
+                newEf = Math.max(1.3, newEf - 0.20);
+            } else {
+                newReps = oldData.reps + 1;
+                if (newReps === 1) {
+                    newInterval = 1;
+                } else if (newReps === 2) {
+                    newInterval = 6;
+                } else {
+                    newInterval = Math.max(1, Math.round(oldData.interval * oldData.ef));
+                }
+                const delta = 0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02);
+                newEf += delta;
+                newEf = Math.max(1.3, newEf);
+            }
+
+            const now = new Date();
+            const dueTime = now.getTime() + newInterval * 86400000;
+            const newDue = firebase.firestore.Timestamp.fromDate(new Date(dueTime));
+
+            const newData = {
+                reps: newReps,
+                ef: parseFloat(newEf.toFixed(2)),
+                interval: newInterval,
+                due: newDue
+            };
+
+            const reviewRef = db.collection(`users/${uid}/cardReviews`).doc(index.toString());
+            await reviewRef.set(newData);
+            cardData[index] = newData;
+
+            // Increment reviews today
+            userSettings.reviewsToday = (userSettings.reviewsToday || 0) + 1;
+            const settingsRef = db.doc(`users/${uid}/settings`);
+            await settingsRef.update({ reviewsToday: userSettings.reviewsToday });
+
+            // Next card
+            await showNextCard();
+        }
+
+        // Show next card
+        async function showNextCard() {
+            const next = getNextCard();
+            if (!next) {
+                showStats();
+                return;
+            }
+
+            const index = next.index;
+            let data;
+            if (next.isNew) {
+                data = {
+                    reps: 0,
+                    ef: 2.5,
+                    interval: 0,
+                    due: firebase.firestore.Timestamp.now()
+                };
+                const reviewRef = db.collection(`users/${uid}/cardReviews`).doc(index.toString());
+                await reviewRef.set(data);
+                cardData[index] = data;
+                userSettings.newCardsToday += 1;
+                const settingsRef = db.doc(`users/${uid}/settings`);
+                await settingsRef.update({ newCardsToday: userSettings.newCardsToday });
+            } else {
+                data = next.data;
+            }
+
+            showCard({ index, data });
+            updateProgress();
+        }
+
+        // Update progress
+        function updateProgress() {
+            const now = new Date();
+            let dueCount = 0;
+            for (let i = 0; i < cards.length; i++) {
+                const data = cardData[i];
+                if (data && data.due && data.due.toDate() <= now) {
+                    dueCount++;
+                }
+            }
+            const newAvailable = Math.max(0, userSettings.dailyNewLimit - userSettings.newCardsToday);
+            const learned = Object.keys(cardData).length;
+            document.getElementById('progress').textContent = `${dueCount} pendientes | ${newAvailable} nuevas | ${learned}/${cards.length}`;
+        }
+
+        // Show stats
+        function showStats() {
+            const learned = Object.keys(cardData).length;
+            const total = cards.length;
+            const newToday = userSettings.newCardsToday || 0;
+            const reviewsToday = userSettings.reviewsToday || 0;
+            const limit = userSettings.dailyNewLimit || 10;
+            let statsText = '¡Felicitaciones! Estás al día con tus tarjetas.\n\n';
+            statsText += `Aprendidas: ${learned} / ${total}\n`;
+            statsText += `Nuevas hoy: ${newToday} / ${limit}\n`;
+            statsText += `Revisadas hoy: ${reviewsToday}\n`;
+            document.getElementById('ascii-stats').textContent = statsText;
+            document.getElementById('ascii-stats').style.display = 'block';
+            document.getElementById('flashcard').style.display = 'none';
+            document.getElementById('buttons').style.display = 'none';
+            document.getElementById('progress').textContent = '';
+        }
+
+        // Save settings
+        async function saveSettings() {
+            if (!uid) return;
+            const limit = parseInt(document.getElementById('daily-limit').value) || 10;
+            userSettings.dailyNewLimit = limit;
+            await db.doc(`users/${uid}/settings`).set(userSettings, { merge: true });
+        }
+
+        // Login
+        function login() {
+            const emailEl = document.getElementById('email');
+            const passwordEl = document.getElementById('password');
+            const errorEl = document.getElementById('error');
+            const email = emailEl.value.trim();
+            const password = passwordEl.value;
+            if (!email || !password) {
+                errorEl.textContent = 'Por favor, ingresa email y contraseña.';
+                return;
+            }
+            errorEl.textContent = '';
+            auth.signInWithEmailAndPassword(email, password).catch((error) => {
+                let msg = 'Error de inicio de sesión: ';
+                switch (error.code) {
+                    case 'auth/user-not-found': msg += 'Usuario no encontrado.'; break;
+                    case 'auth/wrong-password': msg += 'Contraseña incorrecta.'; break;
+                    case 'auth/invalid-email': msg += 'Email inválido.'; break;
+                    default: msg += error.message;
+                }
+                errorEl.textContent = msg;
+            });
+        }
+
+        // Signup
+        function signup() {
+            const emailEl = document.getElementById('email');
+            const passwordEl = document.getElementById('password');
+            const errorEl = document.getElementById('error');
+            const email = emailEl.value.trim();
+            const password = passwordEl.value;
+            if (!email || !password || password.length < 6) {
+                errorEl.textContent = 'Email y contraseña (mín. 6 chars) requeridos.';
+                return;
+            }
+            errorEl.textContent = '';
+            auth.createUserWithEmailAndPassword(email, password).catch((error) => {
+                let msg = 'Error al registrarse: ';
+                switch (error.code) {
+                    case 'auth/email-already-in-use': msg += 'Email ya registrado.'; break;
+                    case 'auth/weak-password': msg += 'Contraseña débil.'; break;
+                    case 'auth/invalid-email': msg += 'Email inválido.'; break;
+                    default: msg += error.message;
+                }
+                errorEl.textContent = msg;
+            });
+        }
+
+        // Auth state listener
+        auth.onAuthStateChanged(async (user) => {
+            const loginForm = document.getElementById('login-form');
+            const flashcard = document.getElementById('flashcard');
+            const buttons = document.getElementById('buttons');
+            const rate = document.getElementById('rate');
+            const controls = document.getElementById('controls-footer');
+            const asciiStats = document.getElementById('ascii-stats');
+            const progress = document.getElementById('progress');
+            const errorEl = document.getElementById('error');
+
+            if (user) {
+                uid = user.uid;
+                loginForm.style.display = 'none';
+                flashcard.style.display = 'block';
+                buttons.style.display = 'flex';
+                rate.style.display = 'flex';
+                controls.style.display = 'block';
+                asciiStats.style.display = 'none';
+                errorEl.textContent = '';
+                try {
+                    await loadUserData();
+                    document.getElementById('daily-limit').value = userSettings.dailyNewLimit || 10;
+                    await showNextCard();
+                } catch (e) {
+                    console.error('Error loading data:', e);
+                    progress.textContent = 'Error al cargar datos.';
+                }
+            } else {
+                uid = null;
+                cardData = {};
+                userSettings = {};
+                currentCard = null;
+                isFlipped = false;
+                loginForm.style.display = 'block';
+                flashcard.style.display = 'none';
+                buttons.style.display = 'none';
+                rate.style.display = 'none';
+                controls.style.display = 'none';
+                asciiStats.style.display = 'none';
+                progress.textContent = '';
+                errorEl.textContent = '';
+            }
+        });
+    </script>
+</body>
+</html>
