@@ -322,14 +322,14 @@ select {
     color: #fff;
 }
 
-#roleplay-category, #monologue-category {
+#roleplay-category, #monologue-category, #debate-category {
     font-size: 24px;
     font-weight: bold;
     margin: 20px 0;
     color: #000;
 }
 
-#roleplay-prompt, #monologue-prompt {
+#roleplay-prompt, #monologue-prompt, #debate-prompt {
     font-size: 20px;
     margin: 30px 0;
     line-height: 1.5;
@@ -357,6 +357,14 @@ select {
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.exercise-section {
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
 }
 
 @media (max-width: 767px) {
