@@ -83,10 +83,14 @@
     </div>
     <p id="result"></p>
     <img src="antonimo-logo.jpg" alt="Antonimo logo" class="logo-bg">
-    <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore.js"></script>
-    <script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.14.0/firebase-auth.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore.js"></script>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
+        import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-auth.js";
+        import { getFirestore, doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore.js";
+
         const firebaseConfig = {
             apiKey: "AIzaSyDOCAbC123dEf456GhI789jKl012-MnO",
             authDomain: "myapp-project-123.firebaseapp.com",
@@ -107,18 +111,14 @@
         let currentId;
         let flipped = false;
 
-        auth.onAuthStateChanged((user) => {
+        onAuthStateChanged(auth, (user) => {
             if (user) {
                 uid = user.uid;
                 loadProgress();
             } else {
                 signInAnonymously(auth)
-                    .then(() => {
-                        console.log('Signed in anonymously');
-                    })
-                    .catch((error) => {
-                        console.error('Anonymous auth failed:', error);
-                    });
+                    .then(() => console.log('Signed in anonymously'))
+                    .catch((error) => console.error('Anonymous auth failed:', error));
             }
         });
 
@@ -160,6 +160,7 @@
                 scales[p].sort((a, b) => a.order - b.order);
                 scales[p] = scales[p].map(w => w.word);
             }
+            if (uid) loadProgress();
         }
 
         function updateLearned() {
@@ -290,9 +291,7 @@
             }
         }
 
-        loadData().then(() => {
-            // Wait for auth
-        });
+        loadData();
     </script>
 </body>
 </html>
