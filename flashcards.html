@@ -92,6 +92,23 @@ margin: 20px auto;
 max-width: 600px;
 display: none;
 }
+.textbox {
+width: 25ch;
+max-width: 100%;
+border: 1px solid #ddd;
+padding: 5px;
+margin: 10px auto;
+background: white;
+text-align: center;
+display: block;
+}
+.correct {
+color: green;
+font-weight: bold;
+}
+.sentence {
+margin-top: 20px;
+}
 </style>
 </head>
 <body>
@@ -385,13 +402,18 @@ const index = scale.indexOf(correct);
 const lower = index > 0 ? scale[index - 1] : '';
 const higher = index < scale.length - 1 ? scale[index + 1] : '';
 let frontHtml = '';
-// if (higher) frontHtml += `<div class="hint above-hint">${higher}</div>`;
+frontHtml += `<div class="textbox">${higher}</div>`;
+if (flipped) {
+frontHtml += `<div class="textbox correct">${correct}</div>`;
+} else {
+frontHtml += `<div class="textbox"></div>`;
+}
+frontHtml += `<div class="textbox">${lower}</div>`;
 let sentence = cards[currentId].front;
 if (flipped) {
 sentence = sentence.replace('_____', `<strong style="color: green;">${correct}</strong>`);
 }
-frontHtml += sentence;
-// if (lower) frontHtml += `<div class="hint below-hint">${lower}</div>`;
+frontHtml += `<div class="sentence">${sentence}</div>`;
 document.getElementById('card-num').textContent = `Card ${currentId + 1}`;
 document.getElementById('front').innerHTML = frontHtml;
 document.getElementById('flipBtn').style.display = flipped ? 'none' : 'block';
