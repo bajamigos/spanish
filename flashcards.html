@@ -85,10 +85,21 @@
             transform: translate(2px, 2px);
         }
         
+        /* FIX: Ensure the button container is centered beneath the card */
         #buttons {
             display: flex;
             justify-content: center;
+            /* Added to center the button row on the page */
+            max-width: 600px; 
+            margin: 0px auto 20px auto;
         }
+        #rate {
+            display: flex;
+            justify-content: center;
+            width: 100%; /* Ensure inner container takes full space */
+        }
+        /* END FIX */
+        
         #login-form {
             max-width: 300px;
             margin: 40px auto;
@@ -106,31 +117,26 @@
             color: #666;
         }
         
-        /* UPDATED: Center-aligned Stats container */
         #ascii-stats {
             font-family: monospace;
             white-space: pre;
             background: transparent;
             text-align: left;
-            /* Center alignment */
             margin: 20px auto; 
-            max-width: 300px; /* Constrain width for centering */
+            max-width: 300px; 
             display: none;
         }
         
-        /* UPDATED: Center-aligned and scrollable Controls Footer */
         #controls-footer {
-            /* Removed position: fixed */
-            max-width: 300px; /* Constrain width for centering */
+            max-width: 300px; 
             padding: 10px;
             border: 1px solid #ddd;
             border-radius: 8px;
             background: #f9f9f9;
             text-align: right;
             font-size: 0.9em;
-            /* Center alignment */
             margin: 20px auto 40px auto; 
-            display: none; /* Controlled by auth state */
+            display: none; 
         }
         #controls-footer label, #controls-footer input, #controls-footer button {
             margin-left: 5px;
@@ -149,7 +155,6 @@
             border-radius: 4px;
         }
         #controls-footer button {
-             /* Overriding some button defaults for a smaller footer button look */
              margin: 5px 0 0 5px;
              padding: 5px 10px;
         }
