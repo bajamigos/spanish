@@ -1,1 +1,290 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antonimo: Juego de la Escalera de Palabras</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .inter-row { 
+            cursor: grab;
+            transition: all 0.2s ease-in-out;
+        }
+        .inter-row:active {
+            cursor: grabbing;
+        }
+        .correct-answer {
+            color: #10B981; /* Tailwind emerald-500 */
+        }
+        .incorrect-answer {
+            color: #EF4444; /* Tailwind red-500 */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 flex items-center justify-center min-h-screen p-4">
+
+    <div id="game" class="bg-white p-6 md:p-10 rounded-xl shadow-2xl w-full max-w-md">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-2">Antonimo</h1>
+        <p class="text-center text-gray-500 mb-6">Arrastra y suelta para crear la escalera de palabras gradual.</p>
+
+        <div class="space-y-4">
+            <!-- Game Display -->
+            <div class="bg-indigo-50 p-4 rounded-lg shadow-inner">
+                <p class="text-sm font-medium text-indigo-700 mb-2">
+                    <span id="pos-type">Cargando...</span>
+                </p>
+                <div class="flex justify-between items-center text-xl font-bold text-gray-900">
+                    <span id="start" class="text-green-600">INICIO</span>
+                    <span class="text-gray-400">→</span>
+                    <span id="end" class="text-red-600">FIN</span>
+                </div>
+            </div>
+
+            <!-- Hint -->
+            <div class="text-left bg-yellow-50 p-3 rounded-lg border border-yellow-200">
+                <p class="text-sm font-semibold text-yellow-700">Pista:</p>
+                <p id="hint" class="text-sm text-yellow-800 italic mt-1">Cargando datos...</p>
+            </div>
+
+            <!-- Sortable Intermediary List -->
+            <div id="sortable" class="bg-white p-2 rounded-lg shadow-inner border border-gray-200 space-y-2">
+                <!-- Intermediary words will be injected here -->
+                <p id="loading-message" class="text-center text-gray-500">Cargando juego...</p>
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex justify-between space-x-4 pt-4">
+                <button onclick="checkAnswer()" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-4 rounded-lg shadow-md transition duration-150 ease-in-out">
+                    Comprobar
+                </button>
+                <button onclick="loadGame()" class="flex-1 bg-gray-500 hover:bg-gray-600 text-white font-semibold py-3 px-4 rounded-lg shadow-md transition duration-150 ease-in-out">
+                    Nuevo Juego
+                </button>
+            </div>
+
+            <!-- Result Message -->
+            <div id="result" class="text-center text-lg font-bold pt-4 min-h-[40px]"></div>
+        </div>
+    </div>
+
+    <script>
+        let gameData = [];
+        let currentPair = null;
+        let correctAnswer = [];
+        const CSV_FILE = 'game-data.csv';
+
+        // Utility to shuffle an array
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        // CSV Parser - Made robust for clean, comma-separated data.
+        function parseCSV(csvText) {
+            const lines = csvText.split('\n').filter(line => line.trim() !== '');
+            if (lines.length < 2) return [];
+
+            // Headers must be consistent with the data structure
+            const headers = lines[0].split(',').map(h => h.trim()); 
+            const data = [];
+
+            for (let i = 1; i < lines.length; i++) {
+                // Split lines using the comma delimiter
+                const values = lines[i].split(',');
+                
+                // Skip malformed rows
+                if (values.length !== headers.length) {
+                    console.error("Skipping malformed row (length mismatch):", lines[i]);
+                    continue; 
+                }
+
+                let row = {};
+                headers.forEach((header, index) => {
+                    row[header] = values[index].trim();
+                });
+                data.push(row);
+            }
+            return data;
+        }
+
+        // Data Loader
+        async function loadData() {
+            try {
+                document.getElementById('loading-message').textContent = 'Cargando datos del juego...';
+                const response = await fetch(CSV_FILE);
+                
+                // If fetch fails (e.g., file not found or network error)
+                if (!response.ok) {
+                    throw new Error(`Error al cargar el archivo CSV: ${response.statusText}`);
+                }
+
+                const csvText = await response.text();
+                gameData = parseCSV(csvText);
+
+                if (gameData.length === 0) {
+                    document.getElementById('result').textContent = 'Error: No se encontraron datos válidos.';
+                    return;
+                }
+                
+                console.log(`Datos cargados: ${gameData.length} pares.`);
+                loadGame();
+
+            } catch (error) {
+                console.error("Error en loadData:", error);
+                document.getElementById('result').textContent = `Error: ${error.message}`;
+                document.getElementById('loading-message').textContent = 'Error al cargar datos. Verifique la consola.';
+            }
+        }
+
+        // Game Initializer
+        function loadGame() {
+            if (gameData.length === 0) {
+                document.getElementById('result').textContent = 'No hay pares de palabras para jugar. Cargando datos...';
+                loadData();
+                return;
+            }
+
+            // Clear previous state
+            document.getElementById('result').textContent = '';
+            document.getElementById('sortable').innerHTML = '';
+            document.getElementById('loading-message').remove(); // Remove loading message once we have data
+            
+            // 1. Select a random pair
+            const randomIndex = Math.floor(Math.random() * gameData.length);
+            currentPair = gameData[randomIndex];
+
+            // 2. Set the display words (using the 'Pair (Low-High)' header)
+            // Fix: Ensures the split works even with extra spaces
+            const pairWords = currentPair['Pair (Low-High)'].split('-').map(w => w.trim());
+            const [lowWord, highWord] = pairWords.length === 2 ? pairWords : ["Error", "Error"];
+
+            document.getElementById('start').textContent = lowWord;
+            document.getElementById('end').textContent = highWord;
+
+            // 3. Set the hint and category (using English headers to access Spanish content)
+            document.getElementById('hint').textContent = currentPair['Hint'];
+            document.getElementById('pos-type').textContent = `Categoría: ${currentPair['Part of Speech']} | Tipo: ${currentPair['Gradability Type']}`;
+
+            // 4. Prepare the correct answers
+            // CRITICAL FIX: Intermediaries are separated by semicolons (;)
+            correctAnswer = currentPair.Intermediaries.split(';').map(w => w.trim()).filter(w => w.length > 0);
+            
+            if (correctAnswer.length !== 5) {
+                console.error("Par saltado: No hay 5 palabras intermedias.", currentPair);
+                loadGame(); // Try loading a new game if the data is faulty
+                return;
+            }
+
+            // 5. Prepare and render the shuffled inputs
+            let shuffledAnswers = [...correctAnswer];
+            shuffleArray(shuffledAnswers);
+
+            const sortable = document.getElementById('sortable');
+
+            shuffledAnswers.forEach((word, index) => {
+                const row = document.createElement('div');
+                row.className = 'inter-row bg-white p-3 border border-gray-300 rounded-lg shadow-sm hover:shadow-md flex items-center justify-center transition duration-150 ease-in-out';
+                row.setAttribute('draggable', 'true');
+                row.id = `row-${index}`;
+                
+                const input = document.createElement('input');
+                input.type = 'text';
+                input.value = word;
+                input.className = 'intermediary w-full text-center text-lg font-medium text-gray-700 bg-transparent focus:outline-none';
+                input.setAttribute('readonly', true); // Words are given, only reordering is allowed
+                
+                row.appendChild(input);
+                sortable.appendChild(row);
+            });
+        }
+
+        // Check Answer Logic
+        function checkAnswer() {
+            const sortable = document.getElementById('sortable');
+            const userOrder = [...sortable.querySelectorAll('.intermediary')].map(input => input.value);
+            
+            if (userOrder.length !== correctAnswer.length) {
+                document.getElementById('result').textContent = 'Error en el juego, por favor inicie un "Nuevo Juego".';
+                document.getElementById('result').className = 'text-center text-lg font-bold pt-4 text-red-500';
+                return;
+            }
+            
+            let isCorrect = true;
+            for (let i = 0; i < userOrder.length; i++) {
+                if (userOrder[i] !== correctAnswer[i]) {
+                    isCorrect = false;
+                    break;
+                }
+            }
+
+            const resultEl = document.getElementById('result');
+            if (isCorrect) {
+                resultEl.textContent = '¡Correcto! ¡Excelente trabajo semántico!';
+                resultEl.className = 'text-center text-lg font-bold pt-4 text-green-600';
+            } else {
+                resultEl.textContent = 'Incorrecto. La secuencia es incorrecta. ¡Sigue intentándolo!';
+                resultEl.className = 'text-center text-lg font-bold pt-4 text-red-600';
+            }
+        }
+
+
+        // --- DRAG AND DROP LOGIC (Updated to target .inter-row) ---
+        const sortable = document.getElementById('sortable');
+        let draggedItem = null;
+
+        sortable.addEventListener('dragstart', (e) => {
+            // Target the entire row for dragging
+            draggedItem = e.target.closest('.inter-row');
+            if (draggedItem) {
+                setTimeout(() => draggedItem.style.opacity = '0.4', 0);
+            }
+        });
+
+        sortable.addEventListener('dragend', (e) => {
+            if (draggedItem) {
+                draggedItem.style.opacity = '1';
+                draggedItem = null;
+            }
+        });
+
+        sortable.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            const afterElement = getDragAfterElement(sortable, e.clientY);
+            if (draggedItem) {
+                if (afterElement == null) {
+                    sortable.appendChild(draggedItem);
+                } else {
+                    sortable.insertBefore(draggedItem, afterElement);
+                }
+            }
+        });
+
+        function getDragAfterElement(container, y) {
+            // Find all draggable rows that are not the currently dragged item
+            const draggableElements = [...container.querySelectorAll('.inter-row:not([style*="opacity: 0.4"])')];
+            
+            return draggableElements.reduce((closest, child) => {
+                const box = child.getBoundingClientRect();
+                const offset = y - box.top - box.height / 2;
+                // If the mouse is above the center of the child element, and this is the closest element found so far
+                if (offset < 0 && offset > closest.offset) {
+                    return { offset: offset, element: child };
+                } else {
+                    return closest;
+                }
+            }, { offset: Number.NEGATIVE_INFINITY }).element;
+        }
+
+
+        // Start the application by loading the data
+        window.onload = loadData;
+
+    </script>
+</body>
+</html>
+
