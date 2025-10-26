@@ -4,23 +4,133 @@
   <meta charset="UTF-8">
   <title>Antonimo Flashcards</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* === Style Adjustments to Match Word Ladder === */
+    body {
+      background-color: white;
+      color: black;
+      font-family: 'Inter', sans-serif;
+      text-align: center;
+    }
+
+    .content-card {
+      background: transparent !important;
+      border: none;
+      box-shadow: none;
+      padding: 10px;
+    }
+
+    .flashcard-ladder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .word-box-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .word-box {
+      font-size: 1.3rem;
+      min-width: 160px;
+      background: #f9f9f9;
+      border: 1px solid #000;
+      border-radius: 4px;
+      padding: 5px 8px;
+      text-align: center;
+    }
+
+    .english-hint {
+      font-size: 1rem;
+      color: red;
+      text-align: left;
+      width: 120px;
+    }
+
+    .cloze-sentence {
+      font-size: 1.1rem;
+      color: #333;
+      margin-top: 0.8rem;
+    }
+
+    .button-group {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.6rem;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: 1px solid #aaa;
+      background: #000;
+      color: #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 1px 1px 0 #aaa, 2px 2px 0 #bbb;
+    }
+
+    button:hover {
+      background: #222;
+      color: white;
+      transform: translate(1px, 1px);
+    }
+
+    #hintBtn {
+      margin-top: 0.6rem;
+      background: #900;
+      color: #fff;
+    }
+
+    #hintBtn:hover {
+      background: #b00;
+    }
+
+    .top-stats {
+      margin: 5px auto 20px;
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    .bottom-stats {
+      margin-top: 10px;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 
 <body>
   <h1>Antonimo Flashcards</h1>
 
+  <div class="top-stats">
+    <span id="cards-due">Cards Due: 0</span> |
+    <span id="cards-remaining">Remaining: 0</span>
+  </div>
+
   <div id="flashcard" class="content-card">
     <div id="card-num" style="font-weight: bold; margin-bottom: 10px;"></div>
 
     <div class="flashcard-ladder">
-      <div class="word-box" id="lower-neighbor-box"></div>
-      <div class="english-hint" id="lower-english"></div>
+      <div class="word-box-row">
+        <div class="word-box" id="lower-neighbor-box"></div>
+        <div class="english-hint" id="lower-english"></div>
+      </div>
 
-      <div class="word-box" id="answer-box"></div>
-      <div class="english-hint" id="answer-english"></div>
+      <div class="word-box-row">
+        <div class="word-box" id="answer-box"></div>
+        <div class="english-hint" id="answer-english"></div>
+      </div>
 
-      <div class="word-box" id="higher-neighbor-box"></div>
-      <div class="english-hint" id="higher-english"></div>
+      <div class="word-box-row">
+        <div class="word-box" id="higher-neighbor-box"></div>
+        <div class="english-hint" id="higher-english"></div>
+      </div>
     </div>
 
     <p id="cloze-display" class="cloze-sentence"></p>
@@ -35,8 +145,13 @@
   </div>
 
   <div class="content-card">
+    <div class="bottom-stats">
+      <span id="cards-learned-today">Learned Today: 0</span>
+    </div>
+
     <p>
-      New cards/day: <input id="daily-limit" type="number" min="1" value="10">
+      New cards/day:
+      <input id="daily-limit" type="number" min="1" value="10">
       <button onclick="saveSettings()">Save</button>
     </p>
     <button onclick="auth.signOut()">Logout</button>
@@ -45,16 +160,11 @@
 
   <img src="antonimo-logo.jpg" alt="Antonimo logo" class="logo-bg">
 
-  <!-- Firebase SDKs -->
   <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore-compat.js"></script>
 
   <script>
-  /* ======================================================
-     Antonimo Flashcards – CSV + Firebase + UI Integration
-     ====================================================== */
-
   const firebaseConfig = {
     apiKey: "AIzaSyDJYgI-xgZAGj6780W8BqXS4thd8ODvfDA",
     authDomain: "antonimo-acbd9.firebaseapp.com",
@@ -73,12 +183,10 @@
   let scales = {};
   let englishMap = {};
   let currentCard = null;
-  let hintsVisible = false;
   let currentIndex = 0;
+  let hintsVisible = false;
+  let learnedToday = 0;
 
-  // ======================================================
-  // CSV LOADING
-  // ======================================================
   async function loadCSV() {
     const res = await fetch('flashcard-data.csv');
     const text = await res.text();
@@ -103,14 +211,13 @@
         scales[pair].push(word);
         englishMap[word] = english;
       }
-
       if (sentence && sentence.includes('_____')) {
         cards.push({ pair, word, sentence });
       }
     }
 
-    // Shuffle cards to mix order
     cards = shuffle(cards);
+    updateStats();
   }
 
   function shuffle(array) {
@@ -125,9 +232,6 @@
     return array;
   }
 
-  // ======================================================
-  // DISPLAY FUNCTIONS
-  // ======================================================
   function getNeighbors(word, pair) {
     const list = scales[pair] || [];
     const i = list.indexOf(word);
@@ -139,7 +243,6 @@
 
   function showCard(index = 0) {
     if (cards.length === 0) return;
-
     currentIndex = index % cards.length;
     currentCard = cards[currentIndex];
 
@@ -151,12 +254,16 @@
     document.getElementById('answer-box').textContent = '';
     document.getElementById('cloze-display').textContent = sentence;
 
-    document.querySelectorAll('.english-hint').forEach(e => e.textContent = '');
-    document.getElementById('card-num').textContent = 
+    document.getElementById('lower-english').textContent = '';
+    document.getElementById('higher-english').textContent = '';
+    document.getElementById('answer-english').textContent = '';
+
+    document.getElementById('card-num').textContent =
       `Card ${currentIndex + 1} of ${cards.length}`;
 
     hintsVisible = false;
     document.getElementById('hintBtn').textContent = 'Show English Hints';
+    updateStats();
   }
 
   function flip() {
@@ -164,19 +271,15 @@
     document.getElementById('answer-box').textContent = currentCard.word;
   }
 
-  // ======================================================
-  // RATE & CYCLE
-  // ======================================================
   function rate(isCorrect) {
     console.log(`Card: ${currentCard.word}, Correct: ${isCorrect}`);
+    if (isCorrect) learnedToday++;
     currentIndex++;
     if (currentIndex >= cards.length) currentIndex = 0;
     showCard(currentIndex);
+    updateStats();
   }
 
-  // ======================================================
-  // HINT TOGGLE
-  // ======================================================
   function toggleEnglishHints() {
     if (!currentCard) return;
     hintsVisible = !hintsVisible;
@@ -195,9 +298,14 @@
       hintsVisible ? 'Hide English Hints' : 'Show English Hints';
   }
 
-  // ======================================================
-  // FIREBASE LOGIN HANDLER
-  // ======================================================
+  function updateStats() {
+    document.getElementById('cards-due').textContent = `Cards Due: ${cards.length}`;
+    document.getElementById('cards-remaining').textContent =
+      `Remaining: ${cards.length - currentIndex - 1}`;
+    document.getElementById('cards-learned-today').textContent =
+      `Learned Today: ${learnedToday}`;
+  }
+
   auth.onAuthStateChanged(async user => {
     if (user) {
       await loadCSV();
@@ -205,9 +313,6 @@
     }
   });
 
-  // ======================================================
-  // PLACEHOLDER SETTINGS FUNCTIONS
-  // ======================================================
   function saveSettings() {
     alert("Settings saved (placeholder)");
   }
