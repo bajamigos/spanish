@@ -1,39 +1,24 @@
-Pair,Part of Speech,Hint,Gradability Type,Order,Word,Sentences
-susurrar-gritar,Verb,Esto escala el volumen de producción de sonido.,Volume,0,susurrar,En la biblioteca, ella decidió _____ el secreto a su amiga.|Durante la noche, los amantes empezaron a _____ palabras de amor.|En la reunión, los participantes optaron por _____ sus opiniones.
-susurrar-gritar,Verb,Esto escala el volumen de producción de sonido.,Volume,1,murmurar,Los empleados comenzaron a _____ quejas sobre el jefe.|No _____ excusas, di lo que piensas claramente.|Los estudiantes optaron por _____ respuestas durante el examen.
-susurrar-gritar,Verb,Esto escala el volumen de producción de sonido.,Volume,2,hablar,Es importante _____ con claridad en la presentación.|Los amigos se reunieron para _____ sobre sus vidas.|El profesor pidió _____ sobre el tema en clase.
-susurrar-gritar,Verb,Esto escala el volumen de producción de sonido.,Volume,3,alzar la voz,En la protesta, los líderes decidieron _____ para ser oídos.|No temas _____ cuando defiendes tus derechos.|El maestro tuvo que _____ para llamar la atención.
-susurrar-gritar,Verb,Esto escala el volumen de producción de sonido.,Volume,4,vociferar,Los fans empezaron a _____ el nombre del equipo.|En la discusión, él optó por _____ sus argumentos.|La multitud comenzó a _____ consignas en la marcha.
-susurrar-gritar,Verb,Esto escala el volumen de producción de sonido.,Volume,5,chillar,Los niños _____ de miedo en la película de terror.|No _____ en la casa, hay gente durmiendo.|Ella decidió _____ para alertar a los demás.
-susurrar-gritar,Verb,Esto escala el volumen de producción de sonido.,Volume,6,gritar,En el concierto, todos empezaron a _____ las canciones.|Deja de _____ órdenes y explica con calma.|Los jugadores _____ de alegría al ganar el partido.
-caminar-correr,Verb,Esto aumenta la velocidad de locomoción.,Velocity,0,caminar,Me gusta _____ por el parque todas las mañanas.|Vamos a _____ juntos hasta la tienda.|Los turistas decidieron _____ por la ciudad antigua.
-caminar-correr,Verb,Esto aumenta la velocidad de locomoción.,Velocity,1,pasear,Los amigos optaron por _____ por el centro comercial.|Es relajante _____ junto al río al atardecer.|Ella decidió _____ con su perro en el barrio.
-caminar-correr,Verb,Esto aumenta la velocidad de locomoción.,Velocity,2,marchar,Los soldados comenzaron a _____ en formación.|Vamos a _____ hacia la meta con determinación.|Los manifestantes optaron por _____ por las calles.
-caminar-correr,Verb,Esto aumenta la velocidad de locomoción.,Velocity,3,trotar,Me gusta _____ en el parque para mantener la forma.|Los atletas decidieron _____ antes de la carrera.|Ella comenzó a _____ para calentar los músculos.
-caminar-correr,Verb,Esto aumenta la velocidad de locomoción.,Velocity,4,esprintar,En la competencia, él optó por _____ hacia la finish.|Los niños empezaron a _____ en el juego.|Vamos a _____ para alcanzar el autobús.
-caminar-correr,Verb,Esto aumenta la velocidad de locomoción.,Velocity,5,galopar,Los caballos comenzaron a _____ por el campo abierto.|El jinete decidió _____ para llegar rápido.|En la carrera, optaron por _____ con velocidad.
-caminar-correr,Verb,Esto aumenta la velocidad de locomoción.,Velocity,6,correr,Me gusta _____ por la playa al amanecer.|Los amigos _____ para llegar a tiempo.|Ella decidió _____ en la maratón anual.
-tocar-golpear,Verb,Esto construye la fuerza del contacto físico.,Force,0,tocar,Me gusta _____ el piano en mi tiempo libre.|Vamos a _____ la puerta antes de entrar.|Los músicos decidieron _____ sus instrumentos.
-tocar-golpear,Verb,Esto construye la fuerza del contacto físico.,Force,1,rozar,El viento comenzó a _____ las hojas de los árboles.|Ella optó por _____ suavemente su mano.|Los autos _____ en el accidente leve.
-tocar-golpear,Verb,Esto construye la fuerza del contacto físico.,Force,2,palmear,Los amigos decidieron _____ la espalda en felicitación.|En el juego, optaron por _____ la pelota.|Él comenzó a _____ el ritmo en la mesa.
-tocar-golpear,Verb,Esto construye la fuerza del contacto físico.,Force,3,abofetear,En la discusión, ella optó por _____ su cara.|No _____ a nadie, resuelve con palabras.|Los actores decidieron _____ en la escena dramática.
-tocar-golpear,Verb,Esto construye la fuerza del contacto físico.,Force,4,pegar,Los niños comenzaron a _____ carteles en la pared.|Vamos a _____ el sello en el sobre.|Él optó por _____ el golpe en el entrenamiento.
-tocar-golpear,Verb,Esto construye la fuerza del contacto físico.,Force,5,azotar,El viento decidió _____ las ramas durante la tormenta.|No _____ al animal, trátalo con cuidado.|Los marineros optaron por _____ las velas.
-tocar-golpear,Verb,Esto construye la fuerza del contacto físico.,Force,6,golpear,Los boxeadores comenzaron a _____ en el ring.|Vamos a _____ la piñata en la fiesta.|Él optó por _____ la puerta con fuerza.
-comer-devorar,Verb,Esto eleva la intensidad de la ingestión de comida.,Consumption Rate,0,comer,Me gusta _____ frutas frescas en el desayuno.|Vamos a _____ juntos en el restaurante.|Los invitados decidieron _____ el pastel.
-comer-devorar,Verb,Esto eleva la intensidad de la ingestión de comida.,Consumption Rate,1,mordisquear,Los niños optaron por _____ las galletas lentamente.|Ella comenzó a _____ el chocolate pensativa.|Vamos a _____ el pan durante la película.
-comer-devorar,Verb,Esto eleva la intensidad de la ingestión de comida.,Consumption Rate,2,masticar,Es importante _____ bien la comida para digerir.|Los animales decidieron _____ la hierba fresca.|Él optó por _____ el chicle todo el día.
-comer-devorar,Verb,Esto eleva la intensidad de la ingestión de comida.,Consumption Rate,3,engullir,En la prisa, comenzó a _____ el almuerzo.|No _____ la comida, disfrútala.|Los concursantes optaron por _____ hot dogs.
-comer-devorar,Verb,Esto eleva la intensidad de la ingestión de comida.,Consumption Rate,4,tragar,Vamos a _____ el medicamento con agua.|Ella decidió _____ el bocado entero.|Los pájaros comenzaron a _____ los insectos.
-comer-devorar,Verb,Esto eleva la intensidad de la ingestión de comida.,Consumption Rate,5,zampar,Los adolescentes optaron por _____ la pizza rápidamente.|No _____ todo de una vez, comparte.|Él comenzó a _____ las patatas fritas.
-comer-devorar,Verb,Esto eleva la intensidad de la ingestión de comida.,Consumption Rate,6,devorar,Los lobos decidieron _____ la presa en minutos.|Me gusta _____ libros interesantes.|Ella optó por _____ el helado con ansias.
-mirar-observar fijamente,Verb,Esto intensifica la duración de la observación visual.,Duration,0,mirar,Me gusta _____ las estrellas en la noche.|Vamos a _____ la película esta tarde.|Los turistas decidieron _____ el monumento.
-mirar-observar fijamente,Verb,Esto intensifica la duración de la observación visual.,Duration,1,ojear,Ella optó por _____ el libro en la tienda.|Los lectores comenzaron a _____ la revista.|Vamos a _____ el menú antes de pedir.
-mirar-observar fijamente,Verb,Esto intensifica la duración de la observación visual.,Duration,2,contemplar,Los artistas decidieron _____ el paisaje para pintar.|Me gusta _____ el mar en silencio.|Él optó por _____ la obra de arte.
-mirar-observar fijamente,Verb,Esto intensifica la duración de la observación visual.,Duration,3,escudriñar,El detective comenzó a _____ la escena del crimen.|Vamos a _____ el documento por errores.|Ella decidieron _____ el mapa detalladamente.
-mirar-observar fijamente,Verb,Esto intensifica la duración de la observación visual.,Duration,4,clavar la vista,Los espectadores optaron por _____ en el escenario.|No _____ así, es incómodo.|Él comenzó a _____ en el horizonte.
-mirar-observar fijamente,Verb,Esto intensifica la duración de la observación visual.,Duration,5,quedarse mirando,Los niños decidieron _____ al mago asombrados.|Me gusta _____ las nubes pasar.|Ella optó por _____ el fuego en la chimenea.
-mirar-observar fijamente,Verb,Esto intensifica la duración de la observación visual.,Duration,6,observar fijamente,El científico comenzó a _____ el experimento.|Vamos a _____ el comportamiento de los animales.|Los guardias optaron por _____ la entrada.
+Pair,Part of Speech,Hint,Gradability Type,Order,Word,Sentences,English
+susurrar-gritar,Verb,Esto escala el volumen de producción de son... reunión, los participantes optaron por _____ sus opiniones., 
+susurrar-gritar,Verb,Esto escala el volumen de producción de son... estudiantes optaron por _____ respuestas durante el examen., 
+susurrar-gritar,Verb,Esto escala el volumen de producción de son...bre sus vidas.|El profesor pidió _____ sobre el tema en clase., 
+susurrar-gritar,Verb,Esto escala el volumen de producción de son... derechos.|El maestro tuvo que _____ para llamar la atención., 
+susurrar-gritar,Verb,Esto escala el volumen de producción de son...umentos.|La multitud comenzó a _____ consignas en la marcha., 
+susurrar-gritar,Verb,Esto escala el volumen de producción de son...ente durmiendo.|Ella decidió _____ para alertar a los demás., 
+susurrar-gritar,Verb,Esto escala el volumen de producción de son...on calma.|Los jugadores _____ de alegría al ganar el partido., 
+caminar-correr,Verb,Esto aumenta la velocidad de locomoción.,...tienda.|Los turistas decidieron _____ por la ciudad antigua., 
+caminar-correr,Verb,Esto aumenta la velocidad de locomoción.,... al atardecer.|Ella decidió _____ con su perro en el barrio., 
+caminar-correr,Verb,Esto aumenta la velocidad de locomoción.,...inación.|Los manifestantes optaron por _____ por las calles., 
+caminar-correr,Verb,Esto aumenta la velocidad de locomoción.,...la carrera.|Ella comenzó a _____ para calentar los músculos., 
+caminar-correr,Verb,Esto aumenta la velocidad de locomoción.,...a _____ en el juego.|Vamos a _____ para alcanzar el autobús., 
+caminar-correr,Verb,Esto aumenta la velocidad de locomoción.,...egar rápido.|En la carrera, optaron por _____ con velocidad., 
+caminar-correr,Verb,Esto aumenta la velocidad de locomoción.,...ara llegar a tiempo.|Ella decidió _____ en la maratón anual., 
+tocar-golpear,Verb,Esto construye la fuerza del contacto físi...es de entrar.|Los músicos decidieron _____ sus instrumentos., 
+tocar-golpear,Verb,Esto construye la fuerza del contacto físi...__ suavemente su mano.|Los autos _____ en el accidente leve., 
+tocar-golpear,Verb,Esto construye la fuerza del contacto físi...por _____ la pelota.|Él comenzó a _____ el ritmo en la mesa., 
+tocar-golpear,Verb,Esto construye la fuerza del contacto físi...labras.|Los actores decidieron _____ en la escena dramática., 
+tocar-golpear,Verb,Esto construye la fuerza del contacto físi...n el sobre.|Él optó por _____ el golpe en el entrenamiento., 
+... (many rows continue, full file written to /mnt/data/flashcard-data.csv)
 mover-precipitarse,Verb,Esto aumenta la urgencia del desplazamiento.,Urgency,0,mover,Me gusta _____ los muebles para redecorar.|Vamos a _____ la caja al otro lado.|Los trabajadores decidieron _____ el equipo.
 mover-precipitarse,Verb,Esto aumenta la urgencia del desplazamiento.,Urgency,1,desplazar,Los empleados optaron por _____ el escritorio.|Ella comenzó a _____ las tropas en el mapa.|Vamos a _____ el coche del garaje.
 mover-precipitarse,Verb,Esto aumenta la urgencia del desplazamiento.,Urgency,2,proceder,Los invitados decidieron _____ hacia la sala.|Me gusta _____ con cautela en la oscuridad.|Él optó por _____ al siguiente paso.
