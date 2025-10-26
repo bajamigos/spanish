@@ -7,20 +7,11 @@
 </head>
 <body>
   <h1>Antonimo Flashcards</h1>
-  <p id="progress"></p>
-
-  <div id="login-form">
-    <input id="email" type="email" placeholder="Email">
-    <input id="password" type="password" placeholder="Password">
-    <button onclick="signup()">Sign Up</button>
-    <button onclick="login()">Login</button>
-    <div id="error" style="color:red;"></div>
-  </div>
 
   <div id="flashcard" class="content-card">
     <div id="card-num"></div>
 
-    <div class="word-box-container">
+    <div class="flashcard-ladder">
       <div class="word-box" id="lower-neighbor-box"></div>
       <div class="english-hint" id="lower-english"></div>
 
@@ -31,9 +22,9 @@
       <div class="english-hint" id="higher-english"></div>
     </div>
 
-    <div id="cloze-display" class="cloze-sentence"></div>
+    <p id="cloze-display" class="cloze-sentence"></p>
 
-    <div class="button-group" id="buttons">
+    <div class="button-group">
       <button id="flipBtn" onclick="flip()">Show Answer</button>
       <button id="incorrectBtn" onclick="rate(false)">Incorrect</button>
       <button id="correctBtn" onclick="rate(true)">Correct</button>
@@ -42,16 +33,13 @@
     <button id="hintBtn" onclick="toggleEnglishHints()">Show English Hints</button>
   </div>
 
-  <pre id="ascii-stats"></pre>
-
-  <div id="controls-footer">
-    <div id="settings">
+  <div class="content-card">
+    <p>
       New cards/day: <input id="daily-limit" type="number" min="1" value="10">
       <button onclick="saveSettings()">Save</button>
-    </div>
-    <button id="logout" onclick="auth.signOut()">Logout</button>
-    <div id="migration-note"></div>
-    <button id="download-updated-csv" onclick="downloadUpdatedCSV()">Download CSV with CardIDs</button>
+    </p>
+    <button onclick="auth.signOut()">Logout</button>
+    <button onclick="downloadUpdatedCSV()">Download CSV with CardIDs</button>
   </div>
 
   <img src="antonimo-logo.jpg" alt="Antonimo logo" class="logo-bg">
@@ -61,11 +49,6 @@
   <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore-compat.js"></script>
 
   <script>
-  /* 
-     The Firebase configuration, CSV loading, and SRS logic remain the same as before.
-     Only the layout, button centering, and English hint feature are new.
-  */
-
   const firebaseConfig = {
     apiKey: "AIzaSyDJYgI-xgZAGj6780W8BqXS4thd8ODvfDA",
     authDomain: "antonimo-acbd9.firebaseapp.com",
@@ -75,127 +58,82 @@
     appId: "1:904238822187:web:2c0488369954495f3b8b6e",
     measurementId: "G-GTP9X49KNP"
   };
-
   const app = firebase.initializeApp(firebaseConfig);
   const auth = firebase.auth();
   const db = firebase.firestore();
 
-  // Minimal parts we need to show hints
-  let uid = null;
-  let cards = [];
-  let scales = {};
-  let englishMap = {};
-  let currentCard = null;
-  let isFlipped = false;
+  let cards = [], scales = {}, englishMap = {}, currentCard = null;
   let hintsVisible = false;
 
-  // ---- CSV loader (simplified for clarity) ----
   async function loadCSV() {
-    const resp = await fetch('flashcard-data.csv');
-    const text = await resp.text();
-    const lines = text.trim().split('\n');
-    const header = lines.shift().split(',');
-    const getIndex = name => header.findIndex(h => h.trim().toLowerCase() === name);
+    const res = await fetch('flashcard-data.csv');
+    const text = await res.text();
+    const [headerLine, ...lines] = text.trim().split('\n');
+    const headers = headerLine.split(',');
+    const getIndex = n => headers.findIndex(h => h.trim().toLowerCase() === n);
     const cardIdIdx = getIndex('cardid');
     const pairIdx = getIndex('pair');
-    const orderIdx = getIndex('order');
     const wordIdx = getIndex('word');
     const sentencesIdx = getIndex('sentences');
     const englishIdx = getIndex('english');
-
     for (const line of lines) {
-      const parts = line.split(/,(?=(?:[^"]*"[^"]*")*[^"]*$)/); // split ignoring commas in quotes
-      const pair = parts[pairIdx]?.trim() || '';
-      const word = parts[wordIdx]?.trim() || '';
-      const sentence = parts[sentencesIdx]?.trim() || '';
-      const english = parts[englishIdx]?.trim() || '';
-      const id = parts[cardIdIdx]?.trim() || '';
+      const parts = line.split(/,(?=(?:[^"]*"[^"]*")*[^"]*$)/);
+      const pair = parts[pairIdx]?.trim();
+      const word = parts[wordIdx]?.trim();
+      const sentence = parts[sentencesIdx]?.trim();
+      const english = parts[englishIdx]?.trim();
       if (pair && word) {
         if (!scales[pair]) scales[pair] = [];
         scales[pair].push(word);
         englishMap[word] = english;
       }
       if (sentence.includes('_____')) {
-        cards.push({ id, pair, word, sentence });
+        cards.push({ pair, word, sentence });
       }
     }
   }
 
-  function getScaleNeighbors(word, pair) {
-    const scale = scales[pair] || [];
-    const idx = scale.indexOf(word);
-    const lower = idx > 0 ? scale[idx - 1] : '';
-    const higher = idx < scale.length - 1 ? scale[idx + 1] : '';
-    return { lower, higher };
+  function getNeighbors(word, pair) {
+    const list = scales[pair] || [];
+    const i = list.indexOf(word);
+    return {
+      lower: i > 0 ? list[i - 1] : '',
+      higher: i < list.length - 1 ? list[i + 1] : ''
+    };
   }
 
-  function showCard(index = 0) {
-    currentCard = cards[index];
-    const { word, sentence, pair } = currentCard;
-    const { lower, higher } = getScaleNeighbors(word, pair);
-
+  function showCard(i = 0) {
+    currentCard = cards[i];
+    const { pair, word, sentence } = currentCard;
+    const { lower, higher } = getNeighbors(word, pair);
     document.getElementById('lower-neighbor-box').textContent = lower;
     document.getElementById('higher-neighbor-box').textContent = higher;
-    document.getElementById('cloze-display').textContent = sentence;
     document.getElementById('answer-box').textContent = '';
-
-    // Hide English hints initially
-    document.getElementById('lower-english').textContent = '';
-    document.getElementById('higher-english').textContent = '';
-    document.getElementById('answer-english').textContent = '';
-
-    isFlipped = false;
+    document.getElementById('cloze-display').textContent = sentence;
+    document.querySelectorAll('.english-hint').forEach(e => e.textContent = '');
     hintsVisible = false;
   }
 
   function flip() {
-    if (!currentCard) return;
-    const word = currentCard.word;
-    document.getElementById('answer-box').textContent = word;
-    isFlipped = true;
+    document.getElementById('answer-box').textContent = currentCard.word;
   }
 
   function toggleEnglishHints() {
-    if (!currentCard) return;
     hintsVisible = !hintsVisible;
-    const { word, pair } = currentCard;
-    const { lower, higher } = getScaleNeighbors(word, pair);
-    const lowerE = englishMap[lower] || '';
-    const higherE = englishMap[higher] || '';
-    const mainE = englishMap[word] || '';
-
-    document.getElementById('lower-english').textContent = hintsVisible ? lowerE : '';
-    document.getElementById('higher-english').textContent = hintsVisible ? higherE : '';
-    document.getElementById('answer-english').textContent = hintsVisible ? mainE : '';
+    const { pair, word } = currentCard;
+    const { lower, higher } = getNeighbors(word, pair);
+    document.getElementById('lower-english').textContent = hintsVisible ? englishMap[lower] || '' : '';
+    document.getElementById('higher-english').textContent = hintsVisible ? englishMap[higher] || '' : '';
+    document.getElementById('answer-english').textContent = hintsVisible ? englishMap[word] || '' : '';
     document.getElementById('hintBtn').textContent = hintsVisible ? 'Hide English Hints' : 'Show English Hints';
   }
 
-  // ---- Firebase auth (simplified) ----
-  auth.onAuthStateChanged(async (user) => {
+  auth.onAuthStateChanged(async user => {
     if (user) {
-      uid = user.uid;
-      document.getElementById('login-form').style.display = 'none';
       await loadCSV();
       showCard(0);
-    } else {
-      uid = null;
-      document.getElementById('login-form').style.display = 'block';
     }
   });
-
-  function login() {
-    auth.signInWithEmailAndPassword(
-      document.getElementById('email').value,
-      document.getElementById('password').value
-    );
-  }
-
-  function signup() {
-    auth.createUserWithEmailAndPassword(
-      document.getElementById('email').value,
-      document.getElementById('password').value
-    );
-  }
   </script>
 </body>
 </html>
