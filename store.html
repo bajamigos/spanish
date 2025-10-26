@@ -3,99 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pelago.club Shop</title>
+  <title>Pelago.club | Tienda</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="pelagofavicon.png">
-  <style>
-    /* --- Store Layout Overrides --- */
-    .store-header {
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    .store-header h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-    }
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 10px;
-      animation: fadeIn 0.6s ease-in;
-    }
-
-    .product-card {
-      background: #f9f9f9;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 20px;
-      text-align: center;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .product-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    .product-image {
-      width: 100%;
-      max-width: 200px;
-      height: auto;
-      border-radius: 6px;
-      margin-bottom: 10px;
-    }
-
-    .product-title {
-      font-weight: bold;
-      color: #000;
-      font-size: 1.1rem;
-      margin-bottom: 5px;
-    }
-
-    .product-price {
-      color: #666;
-      margin-bottom: 10px;
-    }
-
-    .buy-button {
-      background: #000;
-      color: #ccc;
-      padding: 8px 16px;
-      border-radius: 4px;
-      font-weight: bold;
-      border: 1px solid #aaa;
-      cursor: pointer;
-      transition: 0.15s ease;
-    }
-
-    .buy-button:hover {
-      background: #222;
-      color: #fff;
-    }
-
-    .store-footer {
-      margin: 40px 0;
-      color: #666;
-      font-size: 0.9rem;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
 </head>
 
 <body>
-  <div class="store-header">
-    <h1>Pelago.club Shop</h1>
-    <p>Apoya el proyecto — compra gorras, playeras y sudaderas</p>
-  </div>
+  <h1>Pelago.club Shop</h1>
+  <p>Apoya el proyecto — compra gorras, playeras y sudaderas</p>
 
   <div class="product-grid">
     <!-- Hats -->
@@ -115,4 +30,52 @@
       <img src="hat_orange.png" alt="Pelago Orange Hat" class="product-image">
       <div class="product-title">Gorra Naranja</div>
       <div class="product-price">$25 USD</div>
-      <button class="buy-button">Agregar al Carrito
+      <button class="buy-button">Agregar al Carrito</button>
+    </div>
+
+    <!-- T-shirts -->
+    <div class="product-card">
+      <img src="shirt_white.png" alt="Pelago White T-shirt" class="product-image">
+      <div class="product-title">Playera Blanca</div>
+      <div class="product-price">$30 USD</div>
+      <button class="buy-button">Agregar al Carrito</button>
+    </div>
+    <div class="product-card">
+      <img src="shirt_navy.png" alt="Pelago Navy T-shirt" class="product-image">
+      <div class="product-title">Playera Azul Marino</div>
+      <div class="product-price">$30 USD</div>
+      <button class="buy-button">Agregar al Carrito</button>
+    </div>
+    <div class="product-card">
+      <img src="shirt_orange.png" alt="Pelago Orange T-shirt" class="product-image">
+      <div class="product-title">Playera Naranja</div>
+      <div class="product-price">$30 USD</div>
+      <button class="buy-button">Agregar al Carrito</button>
+    </div>
+
+    <!-- Hoodies -->
+    <div class="product-card">
+      <img src="hoodie_white.png" alt="Pelago White Hoodie" class="product-image">
+      <div class="product-title">Sudadera Blanca</div>
+      <div class="product-price">$45 USD</div>
+      <button class="buy-button">Agregar al Carrito</button>
+    </div>
+    <div class="product-card">
+      <img src="hoodie_navy.png" alt="Pelago Navy Hoodie" class="product-image">
+      <div class="product-title">Sudadera Azul Marino</div>
+      <div class="product-price">$45 USD</div>
+      <button class="buy-button">Agregar al Carrito</button>
+    </div>
+    <div class="product-card">
+      <img src="hoodie_orange.png" alt="Pelago Orange Hoodie" class="product-image">
+      <div class="product-title">Sudadera Naranja</div>
+      <div class="product-price">$45 USD</div>
+      <button class="buy-button">Agregar al Carrito</button>
+    </div>
+  </div>
+
+  <div class="store-footer">
+    <p>Pelago.club © 2025 | Diseño minimalista para mentes expansivas</p>
+  </div>
+</body>
+</html>
