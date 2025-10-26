@@ -1,3 +1,9 @@
+/* =========================================================
+   Antonimo Global Stylesheet
+   Unified for all games, media pages, flashcards, and admin UI
+   Author: Antonimo Project
+   ========================================================= */
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 body {
@@ -11,6 +17,7 @@ body {
     color: black;
 }
 
+/* ===== Universal Layout Components ===== */
 .header-card, .footer-card, .content-card {
     background: #f9f9f9;
     border: 1px solid #ddd;
@@ -20,6 +27,7 @@ body {
     margin: 20px auto;
 }
 
+/* ===== Buttons ===== */
 button, .tally-button, .new-image-button, .task-button, .nav-button {
     padding: 10px 20px;
     margin: 10px;
@@ -33,13 +41,15 @@ button, .tally-button, .new-image-button, .task-button, .nav-button {
     font-weight: bold;
 }
 
-button:hover, .tally-button:hover, .new-image-button:hover, .task-button:hover, .nav-button:hover {
+button:hover, .tally-button:hover, .new-image-button:hover, 
+.task-button:hover, .nav-button:hover {
     background: #222;
     color: #fff;
     box-shadow: 0 0 0 #aaa;
     transform: translate(2px, 2px);
 }
 
+/* ===== Links ===== */
 a {
     color: black;
     text-decoration: none;
@@ -49,6 +59,7 @@ a:hover {
     color: #222;
 }
 
+/* ===== Task / Card / Layout Containers ===== */
 .task-card {
     background: #f9f9f9;
     border: 1px solid #ddd;
@@ -82,6 +93,7 @@ a:hover {
     margin: 0 auto;
 }
 
+/* ===== Media Containers ===== */
 .image-container {
     margin: 5px 0;
     display: flex;
@@ -104,10 +116,36 @@ a:hover {
     height: 315px;
 }
 
-#channel-info {
-    font-size: 1.2em;
+/* ===== Typography ===== */
+h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 24px;
     margin-top: 20px;
+}
+
+p, li {
+    font-size: 16px;
     color: #666;
+    text-align: left;
+    margin: 10px 0;
+}
+
+ol, ul {
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* ===== Buttons & Progress UI ===== */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .progress-section {
@@ -115,12 +153,6 @@ a:hover {
     justify-content: space-around;
     gap: 5px;
     margin-top: 5px;
-}
-
-.contributors-column {
-    font-size: 10px;
-    text-align: left;
-    width: 100px;
 }
 
 .progress-column {
@@ -152,6 +184,7 @@ progress::-webkit-progress-value {
     background: #000;
 }
 
+/* ===== Timer Widget ===== */
 .timer-card {
     background: #f9f9f9;
     border: 1px solid #ddd;
@@ -180,60 +213,7 @@ progress::-webkit-progress-value {
     font-size: 1.2em;
 }
 
-.action-row {
-    display: flex;
-    gap: 5px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 3px;
-}
-
-#top-tutors {
-    list-style: none;
-    padding: 0;
-    margin: 3px 0;
-    color: #666;
-}
-
-.social-link a {
-    color: black;
-    font-weight: bold;
-}
-
-h1 {
-    margin: 0;
-    font-size: 32px;
-    font-weight: 700;
-}
-
-h2 {
-    font-size: 24px;
-    margin-top: 20px;
-}
-
-p, li {
-    font-size: 16px;
-    color: #666;
-    text-align: left;
-    margin: 10px 0;
-}
-
-ol, ul {
-    text-align: left;
-    padding-left: 20px;
-}
-
-.button-group {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.contribute-section {
-    margin: 20px 0;
-}
-
+/* ===== Modal UI ===== */
 #random-modal {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -260,13 +240,7 @@ ol, ul {
     margin: 20px 0;
 }
 
-#close-modal {
-    padding: 10px 20px;
-    background: #000;
-    color: #ccc;
-    border-radius: 4px;
-}
-
+/* ===== Tab Navigation ===== */
 .tab-buttons {
     display: flex;
     justify-content: center;
@@ -297,6 +271,7 @@ ol, ul {
     display: block;
 }
 
+/* ===== Form Elements ===== */
 select {
     padding: 10px;
     font-size: 16px;
@@ -309,48 +284,7 @@ select {
     color: #000;
 }
 
-#generate-button, #assign-roles, #assign-feeling {
-    padding: 10px 20px;
-    background: #000;
-    color: #ccc;
-    border-radius: 4px;
-    font-weight: bold;
-    border: 1px solid #aaa;
-}
-
-#generate-button:hover, #assign-roles:hover, #assign-feeling:hover {
-    background: #222;
-    color: #fff;
-}
-
-#roleplay-category, #monologue-category, #debate-category {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 20px 0;
-    color: #000;
-}
-
-#roleplay-prompt, #monologue-prompt, #debate-prompt {
-    font-size: 20px;
-    margin: 30px 0;
-    line-height: 1.5;
-    color: #666;
-}
-
-#role-output p, #feeling-output p {
-    font-size: 18px;
-    margin: 10px 0;
-    color: #000;
-}
-
-.contribute-section {
-    margin: 40px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
+/* ===== Action Panels ===== */
 .action-panel {
     display: flex;
     flex-direction: row;
@@ -374,75 +308,98 @@ select {
     }
 }
 
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background: #fdfdfd;
-}
+/* =========================================================
+   Antonimo: Word Ladder + Flashcards Shared Aesthetic
+   ========================================================= */
 
-.content-card {
-  margin: 2rem auto;
-  padding: 1rem;
-  width: 90%;
-  max-width: 500px;
-  border-radius: 1rem;
-  background: white;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.word-box-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.3rem;
+.flashcard-ladder, .word-ladder-style {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin: 20px auto;
+    max-width: 500px;
 }
 
 .word-box {
-  font-size: 1.4rem;
-  padding: 0.3rem;
-  min-width: 160px;
-  border-bottom: 2px solid #ccc;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
 }
 
 .english-hint {
-  font-size: 0.9rem;
-  color: red;
-  min-height: 1em;
+    color: red;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 8px;
 }
 
+/* Cloze sentences under cards */
 .cloze-sentence {
-  margin-top: 1.2rem;
-  font-size: 1.1rem;
-  color: #333;
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: #333;
+    text-align: center;
 }
 
-.button-group {
-  margin-top: 1rem;
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
+/* =========================================================
+   Antonimo Admin UI Styles
+   ========================================================= */
+
+.admin-dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
 }
 
-button {
-  background: #0077cc;
-  border: none;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  font-size: 1rem;
+.admin-card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
 }
 
-button:hover {
-  background: #005fa3;
+.admin-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 15px;
 }
 
-#hintBtn {
-  margin-top: 0.5rem;
-  background: #cc0000;
+.stat-box {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-weight: bold;
+    color: #000;
 }
 
-#hintBtn:hover {
-  background: #a30000;
+.csv-preview-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 0.9rem;
 }
 
+.csv-preview-table th, .csv-preview-table td {
+    border: 1px solid #ddd;
+    padding: 6px;
+    text-align: center;
+}
+
+.csv-preview-table th {
+    background: #eee;
+}
