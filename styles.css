@@ -1,6 +1,5 @@
 /* =========================================================
-   Pelago Global Stylesheet
-   Unified for all games, media pages, flashcards, and admin UI
+   Pelago Global Stylesheet — Scholarly Minimal Version
    ========================================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
@@ -26,26 +25,27 @@ body {
   margin: 20px auto;
 }
 
-/* ===== Buttons ===== */
+/* ===== Scholarly Minimal Buttons ===== */
 button, .tally-button, .new-image-button, .task-button, .nav-button {
   padding: 10px 20px;
   margin: 10px;
   border: 1px solid #aaa;
-  background: #000;
-  color: #ccc;
+  background: #fff;
+  color: #111;
+  font-weight: 600;
   cursor: pointer;
   border-radius: 4px;
-  box-shadow: 1px 1px 0 #aaa, 2px 2px 0 #bbb;
-  transition: all 0.05s ease;
-  font-weight: bold;
+  box-shadow: 1px 1px 0 #ccc, 2px 2px 0 #ddd;
+  transition: all 0.2s ease;
+  letter-spacing: 0.3px;
 }
 
-button:hover, .tally-button:hover, .new-image-button:hover, 
+button:hover, .tally-button:hover, .new-image-button:hover,
 .task-button:hover, .nav-button:hover {
-  background: #222;
-  color: #fff;
-  box-shadow: 0 0 0 #aaa;
-  transform: translate(2px, 2px);
+  background: #f2f2f2;
+  color: #000;
+  transform: translateY(-1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
 /* ===== Links ===== */
@@ -55,12 +55,12 @@ a {
 }
 
 a:hover {
-  color: #222;
+  color: #111;
 }
 
-/* ===== Task / Card / Layout Containers ===== */
+/* ===== Task Cards ===== */
 .task-card {
-  background: #f9f9f9;
+  background: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
@@ -70,6 +70,7 @@ a:hover {
   justify-content: center;
   animation: fadeIn 0.6s ease forwards;
   opacity: 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
 .task-button {
@@ -100,92 +101,7 @@ a:hover {
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* ===== Media Containers ===== */
-.image-container {
-  margin: 5px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  border-radius: 8px;
-}
-
-.image-container img {
-  width: 100%;
-  max-width: 560px;
-  height: auto;
-  object-fit: contain;
-}
-
-.image-container iframe {
-  width: 100%;
-  max-width: 560px;
-  height: 315px;
-}
-
-/* ===== Typography ===== */
-h1 {
-  margin: 0;
-  font-size: 32px;
-  font-weight: 700;
-}
-
-h2 {
-  font-size: 24px;
-  margin-top: 20px;
-}
-
-p, li {
-  font-size: 16px;
-  color: #666;
-  text-align: left;
-  margin: 10px 0;
-}
-
-ol, ul {
-  text-align: left;
-  padding-left: 20px;
-}
-
-/* ===== Buttons & Progress UI ===== */
-.button-group {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-/* ===== Modal UI ===== */
-#random-modal {
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(255, 255, 255, 0.8);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-#random-modal-content {
-  background: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 40px;
-  text-align: center;
-  max-width: 300px;
-}
-
-#random-number {
-  font-size: 48px;
-  font-weight: 700;
-  color: black;
-  margin: 20px 0;
-}
-
-/* =========================================================
-   Responsive Layout Fix: Task Cards Grid → Vertical Stack
-   ========================================================= */
-
+/* ===== Responsive Layout: Grid → Vertical Stack ===== */
 @media (max-width: 900px) {
   body {
     margin: 10px;
