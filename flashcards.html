@@ -1,167 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Antonimo Flashcards</title>
+    <!-- Link external stylesheet you uploaded -->
+    <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 20px;
-            position: relative;
-            min-height: 100vh;
-            background-color: white;
-            overflow-x: hidden;
-        }
-        .logo-bg {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 600px;
-            opacity: 0.25;
-            z-index: -1;
-            pointer-events: none;
-        }
-        @media (max-width: 800px) {
-            .logo-bg {
-                width: 80vw;
-                opacity: 0.3;
-            }
-        }
-        #flashcard {
-            max-width: 600px;
-            margin: 40px auto;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background: #f9f9f9;
-            display: none;
-        }
-        .word-box-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .word-box {
-            width: 80%;
-            max-width: 250px;
-            height: 40px;
-            line-height: 40px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            background-color: #fff;
-            font-size: 1.2em;
-            text-align: center;
-            box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-        }
-        .neighbor-word {
-            color: #666;
-            font-size: 1em;
-        }
-        .cloze-sentence {
-            font-size: 1.2em;
-            margin-top: 20px;
-            min-height: 2.4em;
-            line-height: 1.2em;
-        }
-        #card-num { font-size: 0.8em; color: #999; }
-       
-        button {
-            padding: 10px 20px;
-            margin: 10px;
-            border: 1px solid #aaa;
-            background: #000;
-            color: #ccc;
-            cursor: pointer;
-            border-radius: 4px;
-            box-shadow: 1px 1px 0 #aaa, 2px 2px 0 #bbb;
-            transition: all 0.05s ease;
-        }
-        button:hover {
-            background: #222;
-            color: #fff;
-            box-shadow: 0 0 0 #aaa;
-            transform: translate(2px, 2px);
-        }
-       
-        #buttons {
-            display: none;
-            justify-content: center;
-            max-width: 600px;
-            margin: 0px auto 20px auto;
-        }
-        #rate {
-            display: none;
-            justify-content: center;
-            width: 100%;
-            flex-wrap: wrap;
-        }
-       
-        #login-form {
-            max-width: 300px;
-            margin: 40px auto;
-        }
-        #login-form input {
-            display: block;
-            width: 100%;
-            margin: 10px 0;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        #progress, #stats {
-            font-size: 1em;
-            color: #666;
-        }
-       
-        #ascii-stats {
-            font-family: monospace;
-            white-space: pre;
-            background: transparent;
-            text-align: left;
-            margin: 20px auto;
-            max-width: 300px;
-            display: none;
-            padding: 20px;
-            background: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-        }
-       
-        #controls-footer {
-            max-width: 600px;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background: #f9f9f9;
-            text-align: right;
-            font-size: 0.9em;
-            margin: 20px auto 40px auto;
-            display: none;
-        }
-        #settings {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            margin-bottom: 5px;
-        }
-        #settings input {
-            width: 50px;
-            padding: 5px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        #controls-footer button {
-             margin: 5px 0 0 5px;
-             padding: 5px 10px;
-        }
+        /* Minimal critical overrides to guarantee layout if external CSS is missing */
+        #flashcard { display:none; }
+        #buttons { display:none; }
+        .word-box { text-align:center; }
+        .neighbor-word { color:#666; }
+        #download-updated-csv { display:none; margin-top: 6px; }
+        #migration-note { font-size: 0.9em; color: #666; margin-top:8px; }
     </style>
 </head>
 <body>
     <h1>Flashcards v.2025.10.26</h1>
     <p id="progress"></p>
+
     <div id="login-form">
         <input id="email" type="email" placeholder="Email">
         <input id="password" type="password" placeholder="Password">
@@ -169,8 +26,8 @@
         <button onclick="login()">Login</button>
         <div id="error" style="color: red;"></div>
     </div>
-   
-    <div id="flashcard">
+
+    <div id="flashcard" class="content-card">
         <div id="card-num"></div>
         <div id="front">
             <div class="word-box-container">
@@ -181,7 +38,7 @@
             <div id="cloze-display" class="cloze-sentence"></div>
         </div>
     </div>
-   
+
     <div id="buttons">
         <div id="rate">
             <button id="flipBtn" onclick="flip()">Show Answer</button>
@@ -189,1003 +46,612 @@
             <button id="correctBtn" onclick="rate(true)">Correct</button>
         </div>
     </div>
-   
+
     <pre id="ascii-stats"></pre>
-   
-    <div id="controls-footer">
+
+    <div id="controls-footer" class="footer-card">
         <div id="settings">
             New cards/day: <input id="daily-limit" type="number" min="1" value="10">
             <button onclick="saveSettings()">Save</button>
         </div>
         <button id="logout" onclick="auth.signOut()">Logout</button>
+        <div id="migration-note"></div>
+        <button id="download-updated-csv" onclick="downloadUpdatedCSV()">Download CSV with CardIDs</button>
     </div>
-   
+
     <img src="antonimo-logo.jpg" alt="Antonimo logo" class="logo-bg">
-   
+
     <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore-compat.js"></script>
+
     <script>
-        // Firebase config (unchanged)
-        const firebaseConfig = {
-            apiKey: "AIzaSyDJYgI-xgZAGj6780W8BqXS4thd8ODvfDA",
-            authDomain: "antonimo-acbd9.firebaseapp.com",
-            projectId: "antonimo-acbd9",
-            storageBucket: "antonimo-acbd9.firebasestorage.app",
-            messagingSenderId: "904238822187",
-            appId: "1:904238822187:web:2c0488369954495f3b8b6e",
-            measurementId: "G-GTP9X49KNP"
-        };
-        const app = firebase.initializeApp(firebaseConfig);
-        const auth = firebase.auth();
-        const db = firebase.firestore();
-        // Globals (will be populated from CSV)
-        let uid = null;
-        let cardData = {};
-        let userSettings = {};
-        let currentCard = null;
-        let isFlipped = false;
-        let cards = []; // {front, back, pair, englishBack}
-        let scales = {}; // pair -> [word0, word1, ...]
-        let englishMap = {}; // word -> english translation (can be empty)
-       
-        // Small CSV parser that handles quoted fields and commas
-        function parseCSV(text) {
-            const rows = [];
-            const re = /(?:\"([^\"]*(?:\"\"[^\"]*)*)\"|([^,]*))(,|$)/g;
-            let cur = [];
-            let m;
-            let col = 0;
+    // --- Firebase config (unchanged) ---
+    const firebaseConfig = {
+        apiKey: "AIzaSyDJYgI-xgZAGj6780W8BqXS4thd8ODvfDA",
+        authDomain: "antonimo-acbd9.firebaseapp.com",
+        projectId: "antonimo-acbd9",
+        storageBucket: "antonimo-acbd9.firebasestorage.app",
+        messagingSenderId: "904238822187",
+        appId: "1:904238822187:web:2c0488369954495f3b8b6e",
+        measurementId: "G-GTP9X49KNP"
+    };
+    const app = firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+
+    // Globals
+    let uid = null;
+    let cardData = {};         // user SRS data (by CardID)
+    let userSettings = {};     // user settings doc
+    let currentCard = null;    // {index, card}
+    let isFlipped = false;
+    let cards = [];            // array of card objects: { id, front, back, pair, englishBack }
+    let scales = {};           // pair -> [ordered words]
+    let englishMap = {};       // word -> english translation
+    let csvRowsRaw = null;     // raw parsed CSV rows (for download update)
+    let csvHeader = null;      // header array
+    let csvHadCardIDs = false; // whether original CSV had CardID column
+    let csvUpdatedWithIDs = false;
+
+    // ---------- CSV parsing helpers ----------
+    // Parse a CSV string into rows of arrays. Handles quoted fields and commas.
+    function parseCSV(text) {
+        const rows = [];
+        const lines = text.replace(/\r\n/g, '\n').split('\n');
+        for (let rawLine of lines) {
+            if (rawLine.trim() === '') continue;
+            const row = [];
             let i = 0;
-            while (i < text.length) {
-                let lineEnd = text.indexOf('\n', i);
-                if (lineEnd === -1) lineEnd = text.length;
-                const line = text.slice(i, lineEnd);
-                // parse line
-                cur = [];
-                re.lastIndex = 0;
-                let match;
-                while ((match = re.exec(line)) !== null) {
-                    let value = match[1] !== undefined ? match[1].replace(/\"\"/g, '\"') : match[2];
-                    cur.push(value);
-                    if (match[3] === '') break;
-                }
-                rows.push(cur);
-                i = lineEnd + 1;
-            }
-            return rows;
-        }
-       
-        // Load CSV and build cards + scales
-        async function loadCSVData() {
-            const res = await fetch('flashcard-data.csv');
-            const text = await res.text();
-            const parsed = parseCSV(text);
-            if (parsed.length < 2) throw new Error('CSV empty or malformed');
-            const header = parsed[0].map(h => h.trim());
-            const rows = parsed.slice(1);
-            // find column indexes (case-insensitive)
-            const idx = {};
-            header.forEach((h,i)=> idx[h.toLowerCase()]=i);
-            const hasEnglish = ('english' in idx);
-            cards = [];
-            scales = {};
-            englishMap = {};
-            // We'll iterate rows in file order to preserve existing card index mapping.
-            for (const r of rows) {
-                const pair = (r[idx['pair']]||'').trim();
-                const orderStr = r[idx['order']]||'';
-                const order = orderStr === '' ? null : parseInt(orderStr);
-                const word = (r[idx['word']]||'').trim();
-                const sentencesRaw = (r[idx['sentences']]||'').trim();
-                const english = hasEnglish ? (r[idx['english']]||'').trim() : '';
-                // store english translation
-                if (word) englishMap[word] = english;
-                // ensure scale array exists
-                if (pair) {
-                    if (!(pair in scales)) scales[pair] = [];
-                    if (order !== null && !isNaN(order)) {
-                        scales[pair][order] = word;
-                    } else {
-                        // push if no order
-                        scales[pair].push(word);
+            while (i < rawLine.length) {
+                if (rawLine[i] === '"') {
+                    // quoted field
+                    i++;
+                    let val = '';
+                    while (i < rawLine.length) {
+                        if (rawLine[i] === '"') {
+                            if (rawLine[i+1] === '"') { val += '"'; i += 2; continue; }
+                            i++;
+                            break;
+                        } else {
+                            val += rawLine[i++];
+                        }
                     }
-                }
-                // split sentences by '|' and create cards for each that looks like a cloze
-                const parts = sentencesRaw.split('|').map(s=>s.trim()).filter(s=>s.length>0);
-                for (const s of parts) {
-                    // Only include sentences that have a blank (____ or similar)
-                    if (s.includes('_____') || s.includes('____') || s.includes('___')) {
-                        cards.push({ front: s, back: word, pair: pair, englishBack: english });
-                    }
+                    // skip comma
+                    if (rawLine[i] === ',') i++;
+                    row.push(val);
+                } else {
+                    // unquoted field
+                    let j = rawLine.indexOf(',', i);
+                    if (j === -1) j = rawLine.length;
+                    row.push(rawLine.slice(i, j));
+                    i = j + 1;
                 }
             }
-            // Normalize scales: replace any undefined holes by filtering falsy
-            for (const p in scales) {
-                scales[p] = scales[p].filter(Boolean);
-            }
+            rows.push(row);
         }
-       
-        // Use existing functions with small tweaks to use dynamic cards and scales
-        // Load user data
-        async function loadUserData() {
-            const reviewsSnap = await db.collection(`users/${uid}/cardReviews`).get();
-            cardData = {};
-            reviewsSnap.forEach((doc) => {
-                const idx = parseInt(doc.id);
-                if (!isNaN(idx) && idx >= 0 && idx < cards.length) {
-                    cardData[idx] = doc.data();
-                }
-            });
-            const settingsRef = db.doc(`users/${uid}`);
-            const settingsSnap = await settingsRef.get();
-            if (settingsSnap.exists) {
-                userSettings = settingsSnap.data();
+        return rows;
+    }
+
+    // Build a CSV string from header + rows (array of arrays). Properly quote fields with commas/quotes.
+    function buildCSVString(header, rows) {
+        function quoteField(f) {
+            if (f === null || f === undefined) f = '';
+            f = String(f);
+            if (f.includes('"')) f = f.replace(/"/g, '""');
+            if (f.includes(',') || f.includes('"') || f.includes('\n')) {
+                return `"${f}"`;
             } else {
-                userSettings = {
-                    dailyNewLimit: 10,
-                    newCardsToday: 0,
-                    reviewsToday: 0,
-                    lastNewDate: ''
-                };
-                await settingsRef.set(userSettings);
-            }
-            const todayStr = new Date().toDateString();
-            if (userSettings.lastNewDate !== todayStr) {
-                userSettings.newCardsToday = 0;
-                userSettings.reviewsToday = 0;
-                userSettings.lastNewDate = todayStr;
-                await settingsRef.update({
-                    newCardsToday: 0,
-                    reviewsToday: 0,
-                    lastNewDate: todayStr
-                });
+                return f;
             }
         }
-        // Get next card
-        function getNextCard() {
-            const now = new Date();
-            let dueCandidates = [];
-            for (let i = 0; i < cards.length; i++) {
-                const data = cardData[i];
-                if (data && data.due && data.due.toDate && data.due.toDate() <= now) {
-                    dueCandidates.push({
-                        index: i,
-                        data: data,
-                        dueTime: data.due.toDate().getTime()
+        const out = [];
+        out.push(header.map(quoteField).join(','));
+        for (const r of rows) {
+            out.push(r.map(quoteField).join(','));
+        }
+        return out.join('\n');
+    }
+
+    // Generate a short unique CardID for a row, ensuring it doesn't collide with existing IDs
+    function generateCardID(pair, word, existingIDs, suffixCounterStart=1) {
+        // sanitize pair/word
+        const p = (pair || 'GEN').toString().toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0,6);
+        const w = (word || '').toString().toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0,6);
+        let base = p ? (p + (w ? '_' + w : '')) : (w || 'CARD');
+        base = base.slice(0, 20);
+        let candidate = base;
+        let counter = suffixCounterStart;
+        while (existingIDs.has(candidate)) {
+            candidate = `${base}_${counter}`;
+            counter++;
+        }
+        existingIDs.add(candidate);
+        return candidate;
+    }
+
+    // ---------- Load CSV and build cards/scales ----------
+    async function loadCSVAndBuild() {
+        const resp = await fetch('flashcard-data.csv', {cache: "no-store"});
+        if (!resp.ok) throw new Error('Could not fetch flashcard-data.csv (' + resp.status + ')');
+        const text = await resp.text();
+        const rows = parseCSV(text);
+        if (!rows || rows.length < 1) throw new Error('CSV empty or malformed');
+        csvRowsRaw = rows.slice(); // preserve raw rows for potential download later
+        csvHeader = rows[0].map(h => h.trim());
+        const headerMap = {};
+        csvHeader.forEach((h,i) => headerMap[h.toLowerCase()] = i);
+        // Find important columns (case-insensitive)
+        const hasCardIDCol = ('cardid' in headerMap);
+        csvHadCardIDs = hasCardIDCol;
+        const pairIdx = headerMap['pair'] !== undefined ? headerMap['pair'] : null;
+        const orderIdx = headerMap['order'] !== undefined ? headerMap['order'] : null;
+        const wordIdx = headerMap['word'] !== undefined ? headerMap['word'] : null;
+        const sentencesIdx = headerMap['sentences'] !== undefined ? headerMap['sentences'] : null;
+        const englishIdx = headerMap['english'] !== undefined ? headerMap['english'] : null;
+        const cardIdIdx = hasCardIDCol ? headerMap['cardid'] : null;
+
+        // Build existingIDs set from CSV if present
+        const existingIDs = new Set();
+        if (hasCardIDCol) {
+            for (let r=1; r<rows.length; r++) {
+                const id = (rows[r][cardIdIdx] || '').toString().trim();
+                if (id) existingIDs.add(id);
+            }
+        }
+
+        // Build scales map and cards
+        cards = [];
+        scales = {};
+        englishMap = {};
+        // iterate rows in file order; create cards for any row with sentences containing blanks
+        for (let r=1; r<rows.length; r++) {
+            const row = rows[r];
+            const pair = pairIdx !== null ? (row[pairIdx] || '').trim() : '';
+            const order = orderIdx !== null ? (row[orderIdx] || '').trim() : '';
+            const word = wordIdx !== null ? (row[wordIdx] || '').trim() : '';
+            const sentencesRaw = sentencesIdx !== null ? (row[sentencesIdx] || '').trim() : '';
+            const english = englishIdx !== null ? (row[englishIdx] || '').trim() : '';
+            let cardid = cardIdIdx !== null ? (row[cardIdIdx] || '').trim() : '';
+
+            // store english map
+            if (word) englishMap[word] = english || '';
+
+            // scales: place word by order if numeric, else push
+            if (pair) {
+                if (!(pair in scales)) scales[pair] = [];
+                if (order !== '' && !isNaN(parseInt(order))) {
+                    scales[pair][parseInt(order)] = word;
+                } else {
+                    scales[pair].push(word);
+                }
+            }
+
+            // ensure card id exists - if not we'll generate later (but we can generate now)
+            if (!cardid) {
+                // generate a unique id
+                cardid = generateCardID(pair || word || 'CARD', word || '', existingIDs);
+                // mark that CSV will need updating
+                csvUpdatedWithIDs = true;
+                // if the CSV header didn't have CardID, we'll later add a column and populate these IDs
+            }
+
+            // split sentences by '|' into multiple cloze sentences (only keep ones with blanks)
+            const parts = sentencesRaw.split('|').map(s=>s.trim()).filter(s=>s.length>0);
+            for (const s of parts) {
+                if (s.includes('_____') || s.includes('____') || s.includes('___')) {
+                    cards.push({
+                        id: cardid,
+                        front: s,
+                        back: word,
+                        pair: pair,
+                        englishBack: english || ''
                     });
                 }
             }
-            if (dueCandidates.length > 0) {
-                dueCandidates.sort((a, b) => a.dueTime - b.dueTime);
-                return dueCandidates[0];
-            }
-            if (userSettings.newCardsToday < userSettings.dailyNewLimit) {
-                let unseen = [];
-                for (let i = 0; i < cards.length; i++) {
-                    if (!cardData[i]) {
-                        unseen.push(i);
+        }
+
+        // Normalize scales (remove empty holes)
+        for (const p in scales) {
+            scales[p] = scales[p].filter(Boolean);
+        }
+
+        // If CSV did not originally have a CardID column, or we filled missing IDs, prepare a downloadable updated CSV
+        if (csvUpdatedWithIDs) {
+            // create new rows to download: clone csvRowsRaw and insert CardID column if needed
+            const rowsForDownload = csvRowsRaw.map(r => r.slice()); // deep-ish copy
+            if (!csvHadCardIDs) {
+                // add header
+                rowsForDownload[0].push('CardID');
+                // for each data row, compute id again the same way to ensure consistent mapping
+                const newExisting = new Set();
+                for (let r=1; r<rowsForDownload.length; r++) {
+                    const row = rowsForDownload[r];
+                    const pair = (pairIdx !== null && row[pairIdx]) ? row[pairIdx].trim() : '';
+                    const word = (wordIdx !== null && row[wordIdx]) ? row[wordIdx].trim() : '';
+                    const generated = generateCardID(pair || word || 'CARD', word || '', newExisting);
+                    row.push(generated);
+                }
+            } else {
+                // csv had CardID col but some rows were empty; fill empty ones using our earlier generated ids
+                const cardIdIndex = cardIdIdx;
+                // Build list of generated IDs in same order as cards building earlier: we used existingIDs and appended generated IDs
+                // To keep it simple: iterate rows and if empty create new one
+                const newExisting = new Set();
+                // add existing ones
+                for (let r=1; r<rowsForDownload.length; r++) {
+                    const val = (rowsForDownload[r][cardIdIndex] || '').toString().trim();
+                    if (val) newExisting.add(val);
+                }
+                for (let r=1; r<rowsForDownload.length; r++) {
+                    if (!(rowsForDownload[r][cardIdIndex] || '').toString().trim()) {
+                        const pair = (pairIdx !== null && rowsForDownload[r][pairIdx]) ? rowsForDownload[r][pairIdx].trim() : '';
+                        const word = (wordIdx !== null && rowsForDownload[r][wordIdx]) ? rowsForDownload[r][wordIdx].trim() : '';
+                        const generated = generateCardID(pair || word || 'CARD', word || '', newExisting);
+                        rowsForDownload[r][cardIdIndex] = generated;
                     }
                 }
-                if (unseen.length > 0) {
-                    const rand = Math.floor(Math.random() * unseen.length);
-                    return { index: unseen[rand], isNew: true };
-                }
             }
-            return null;
+            // store updated CSV content for download
+            window.__updatedCsvString = buildCSVString(rowsForDownload[0], rowsForDownload.slice(1));
+            document.getElementById('download-updated-csv').style.display = 'inline-block';
+            document.getElementById('migration-note').textContent = 'New CardIDs were generated for missing rows — you can download the CSV with CardIDs and replace the file.';
+        } else {
+            // No changes needed
+            document.getElementById('download-updated-csv').style.display = 'none';
+            document.getElementById('migration-note').textContent = csvHadCardIDs ? 'CSV includes CardID column.' : '';
         }
-        // Show card
-        function showCard(cardObj) {
-            const { index, data } = cardObj;
-            currentCard = cardObj;
-            const card = cards[index];
-            const back = card.back;
-            // find scale for this card
-            const pair = card.pair;
-            const scale = (pair && scales[pair]) ? scales[pair] : [];
-            const scaleIndex = scale.indexOf(back);
-            const lower = scaleIndex > 0 ? scale[scaleIndex - 1] : '';
-            const higher = scaleIndex < scale.length - 1 ? scale[scaleIndex + 1] : '';
-            document.getElementById('lower-neighbor-box').textContent = lower;
-            document.getElementById('higher-neighbor-box').textContent = higher;
-            document.getElementById('cloze-display').textContent = card.front;
-            document.getElementById('answer-box').textContent = '';
-            document.getElementById('card-num').textContent = `${index + 1} / ${cards.length}`;
-            isFlipped = false;
-            const flipBtn = document.getElementById('flipBtn');
-            const incBtn = document.getElementById('incorrectBtn');
-            const corBtn = document.getElementById('correctBtn');
-            flipBtn.style.display = 'inline-block';
-            flipBtn.textContent = 'Show Answer';
-            incBtn.style.display = 'none';
-            corBtn.style.display = 'none';
+    }
+
+    // ---------- Firestore migration & loading ----------
+    // load user cardReviews, but be smart: accept docs keyed by CardID OR numeric index.
+    // If numeric docs are present, and matching CardID for the index exists, copy to the new CardID doc (preserve existing destination if non-empty).
+    async function loadUserDataAndMigrate() {
+        const reviewsSnap = await db.collection(`users/${uid}/cardReviews`).get();
+        cardData = {};
+        const docs = [];
+        reviewsSnap.forEach(doc => docs.push({ id: doc.id, data: doc.data() }));
+        // First pass: store direct matches by CardID
+        const cardIdToIndex = {};
+        for (let i=0;i<cards.length;i++) cardIdToIndex[cards[i].id] = i;
+        for (const d of docs) {
+            if (cardIdToIndex[d.id] !== undefined) {
+                // this doc id is already a CardID -> use it directly
+                cardData[d.id] = d.data;
+            }
         }
-        // Flip card
-        function flip() {
-            if (!currentCard || isFlipped) return;
-            const index = currentCard.index;
-            const back = cards[index].back;
-            document.getElementById('answer-box').textContent = back;
-            isFlipped = true;
-            document.getElementById('flipBtn').style.display = 'none';
-            document.getElementById('incorrectBtn').style.display = 'inline-block';
-            document.getElementById('correctBtn').style.display = 'inline-block';
-        }
-        // Rate card (SRS SM-2 implementation)
-        async function rate(correct) {
-            if (!currentCard || !isFlipped) return;
-            const index = currentCard.index;
-            const oldData = cardData[index];
-            const quality = correct ? 5 : 0;
-            let newReps = oldData.reps;
-            let newEf = oldData.ef;
-            let newInterval;
-            if (quality < 3) {
-                newReps = 0;
-                newInterval = 1;
-                newEf = Math.max(1.3, newEf - 0.20);
-            } else {
-                newReps = oldData.reps + 1;
-                if (newReps === 1) {
-                    newInterval = 1;
-                } else if (newReps === 2) {
-                    newInterval = 6;
+        // Second pass: handle numeric-keyed docs from legacy format -> migrate if necessary
+        for (const d of docs) {
+            if (!/^[0-9]+$/.test(d.id)) continue; // not numeric
+            const numIdx = parseInt(d.id);
+            if (numIdx >= 0 && numIdx < cards.length) {
+                const destCardID = cards[numIdx].id;
+                // if we already have dest data from the new CardID doc, skip migrating
+                if (!cardData[destCardID]) {
+                    // copy data to new CardID doc
+                    const destRef = db.collection(`users/${uid}/cardReviews`).doc(destCardID);
+                    try {
+                        await destRef.set(d.data);
+                        cardData[destCardID] = d.data;
+                        // NOTE: we do NOT delete the old numeric doc automatically to be safe.
+                        // If you want to remove numeric docs after verification, I can add a cleanup routine.
+                    } catch (e) {
+                        console.error('Error migrating doc', d.id, '->', destCardID, e);
+                    }
                 } else {
-                    newInterval = Math.max(1, Math.round(oldData.interval * oldData.ef));
+                    // dest already exists; skip
                 }
-                const delta = 0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02);
-                newEf += delta;
-                newEf = Math.max(1.3, newEf);
             }
-            const now = new Date();
-            const dueTime = now.getTime() + newInterval * 86400000;
-            const newDue = firebase.firestore.Timestamp.fromDate(new Date(dueTime));
-            const newData = {
-                reps: newReps,
-                ef: parseFloat(newEf.toFixed(2)),
-                interval: newInterval,
-                due: newDue
+        }
+
+        // Now load settings doc (unchanged location)
+        const settingsRef = db.doc(`users/${uid}`);
+        const settingsSnap = await settingsRef.get();
+        if (settingsSnap.exists) {
+            userSettings = settingsSnap.data();
+        } else {
+            userSettings = {
+                dailyNewLimit: 10,
+                newCardsToday: 0,
+                reviewsToday: 0,
+                lastNewDate: ''
             };
-            const reviewRef = db.collection(`users/${uid}/cardReviews`).doc(index.toString());
-            await reviewRef.set(newData);
-            cardData[index] = newData;
-            // Increment reviews today
-            userSettings.reviewsToday = (userSettings.reviewsToday || 0) + 1;
-            const settingsRef = db.doc(`users/${uid}`);
-            await settingsRef.update({ reviewsToday: userSettings.reviewsToday });
-            // Next card
-            await showNextCard();
+            await settingsRef.set(userSettings);
         }
-        // Show next card
-        async function showNextCard() {
-            const next = getNextCard();
-            if (!next) {
-                showStats();
-                return;
-            }
-            const index = next.index;
-            let data;
-            if (next.isNew) {
-                data = {
-                    reps: 0,
-                    ef: 2.5,
-                    interval: 0,
-                    due: firebase.firestore.Timestamp.now()
-                };
-                const reviewRef = db.collection(`users/${uid}/cardReviews`).doc(index.toString());
-                await reviewRef.set(data);
-                cardData[index] = data;
-                userSettings.newCardsToday += 1;
-                const settingsRef = db.doc(`users/${uid}`);
-                await settingsRef.update({ newCardsToday: userSettings.newCardsToday });
-            } else {
-                data = next.data;
-            }
-            showCard({ index, data });
-            updateProgress();
-        }
-        // Update progress
-        function updateProgress() {
-            const now = new Date();
-            let dueCount = 0;
-            for (let i = 0; i < cards.length; i++) {
-                const data = cardData[i];
-                if (data && data.due && data.due.toDate && data.due.toDate() <= now) {
-                    dueCount++;
-                }
-            }
-            const newAvailable = Math.max(0, userSettings.dailyNewLimit - userSettings.newCardsToday);
-            const learned = Object.keys(cardData).length;
-            document.getElementById('progress').textContent = `${dueCount} pendientes | ${newAvailable} nuevas | ${learned}/${cards.length}`;
-        }
-        // Show stats
-        function showStats() {
-            const learned = Object.keys(cardData).length;
-            const total = cards.length;
-            const newToday = userSettings.newCardsToday || 0;
-            const reviewsToday = userSettings.reviewsToday || 0;
-            const limit = userSettings.dailyNewLimit || 10;
-            let statsText = '¡Felicitaciones! Estás al día con tus tarjetas.\n\n';
-            statsText += `Aprendidas: ${learned} / ${total}\n`;
-            statsText += `Nuevas hoy: ${newToday} / ${limit}\n`;
-            statsText += `Revisadas hoy: ${reviewsToday}\n`;
-            document.getElementById('ascii-stats').textContent = statsText;
-            document.getElementById('ascii-stats').style.display = 'block';
-            document.getElementById('flashcard').style.display = 'none';
-            document.getElementById('buttons').style.display = 'none';
-            document.getElementById('progress').textContent = '';
-        }
-        // Save settings
-        async function saveSettings() {
-            if (!uid) return;
-            const limit = parseInt(document.getElementById('daily-limit').value) || 10;
-            userSettings.dailyNewLimit = limit;
-            const settingsRef = db.doc(`users/${uid}`);
-            await settingsRef.set(userSettings, { merge: true });
-        }
-        // Login
-        function login() {
-            const emailEl = document.getElementById('email');
-            const passwordEl = document.getElementById('password');
-            const errorEl = document.getElementById('error');
-            const email = emailEl.value.trim();
-            const password = passwordEl.value;
-            if (!email || !password) {
-                errorEl.textContent = 'Por favor, ingresa email y contraseña.';
-                return;
-            }
-            errorEl.textContent = '';
-            auth.signInWithEmailAndPassword(email, password).catch((error) => {
-                let msg = 'Error de inicio de sesión: ';
-                switch (error.code) {
-                    case 'auth/user-not-found': msg += 'Usuario no encontrado.'; break;
-                    case 'auth/wrong-password': msg += 'Contraseña incorrecta.'; break;
-                    case 'auth/invalid-email': msg += 'Email inválido.'; break;
-                    default: msg += error.message;
-                }
-                errorEl.textContent = msg;
+        const todayStr = new Date().toDateString();
+        if (userSettings.lastNewDate !== todayStr) {
+            userSettings.newCardsToday = 0;
+            userSettings.reviewsToday = 0;
+            userSettings.lastNewDate = todayStr;
+            await settingsRef.update({
+                newCardsToday: 0,
+                reviewsToday: 0,
+                lastNewDate: todayStr
             });
         }
-        // Signup
-        function signup() {
-            const emailEl = document.getElementById('email');
-            const passwordEl = document.getElementById('password');
-            const errorEl = document.getElementById('error');
-            const email = emailEl.value.trim();
-            const password = passwordEl.value;
-            if (!email || !password || password.length < 6) {
-                errorEl.textContent = 'Email y contraseña (mín. 6 chars) requeridos.';
-                return;
+    }
+
+    // ---------- SRS handling and UI (modified to use CardID) ----------
+    function getNow() { return new Date(); }
+
+    // returns next card object: { index, card, isNew }
+    function getNextCard() {
+        const now = getNow();
+        // collect due candidates (document keys in cardData keyed by CardID)
+        let dueCandidates = [];
+        for (let i = 0; i < cards.length; i++) {
+            const c = cards[i];
+            const review = cardData[c.id];
+            if (review && review.due && review.due.toDate && review.due.toDate() <= now) {
+                dueCandidates.push({ index: i, card: c, review: review, dueTime: review.due.toDate().getTime() });
             }
-            errorEl.textContent = '';
-            auth.createUserWithEmailAndPassword(email, password).catch((error) => {
-                let msg = 'Error al registrarse: ';
-                switch (error.code) {
-                    case 'auth/email-already-in-use': msg += 'Email ya registrado.'; break;
-                    case 'auth/weak-password': msg += 'Contraseña débil.'; break;
-                    case 'auth/invalid-email': msg += 'Email inválido.'; break;
-                    default: msg += error.message;
-                }
-                errorEl.textContent = msg;
-            });
         }
-        // Auth state listener
-        auth.onAuthStateChanged(async (user) => {
-            const loginForm = document.getElementById('login-form');
-            const flashcard = document.getElementById('flashcard');
-            const buttons = document.getElementById('buttons');
-            const rate = document.getElementById('rate');
-            const controls = document.getElementById('controls-footer');
-            const asciiStats = document.getElementById('ascii-stats');
-            const progress = document.getElementById('progress');
-            const errorEl = document.getElementById('error');
-            if (user) {
-                uid = user.uid;
-                loginForm.style.display = 'none';
-                flashcard.style.display = 'block';
-                buttons.style.display = 'flex';
-                rate.style.display = 'flex';
-                controls.style.display = 'block';
-                asciiStats.style.display = 'none';
-                errorEl.textContent = '';
-                try {
-                    // Load CSV first, then user data so indexes match
-                    await loadCSVData();
-                    await loadUserData();
-                    document.getElementById('daily-limit').value = userSettings.dailyNewLimit || 10;
-                    await showNextCard();
-                } catch (e) {
-                    console.error('Error loading data:', e);
-                    progress.textContent = 'Error al cargar datos.';
-                }
-            } else {
-                uid = null;
-                cardData = {};
-                userSettings = {};
-                currentCard = null;
-                isFlipped = false;
-                loginForm.style.display = 'block';
-                flashcard.style.display = 'none';
-                buttons.style.display = 'none';
-                rate.style.display = 'none';
-                controls.style.display = 'none';
-                asciiStats.style.display = 'none';
-                progress.textContent = '';
-                errorEl.textContent = '';
+        if (dueCandidates.length > 0) {
+            dueCandidates.sort((a,b)=>a.dueTime - b.dueTime);
+            return { index: dueCandidates[0].index, card: dueCandidates[0].card, data: dueCandidates[0].review };
+        }
+        // show new if allowed
+        if ((userSettings.newCardsToday || 0) < (userSettings.dailyNewLimit || 10)) {
+            const unseen = [];
+            for (let i=0;i<cards.length;i++) {
+                if (!cardData[cards[i].id]) unseen.push(i);
             }
-        });
-    </script>
-</body>
-</html>
-            background: #f9f9f9;
-            display: none;
+            if (unseen.length > 0) {
+                const pick = unseen[Math.floor(Math.random()*unseen.length)];
+                return { index: pick, card: cards[pick], isNew: true };
+            }
         }
-        .word-box-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 20px;
+        return null;
+    }
+
+    function showCard(cardObj) {
+        if (!cardObj) { showStats(); return; }
+        currentCard = cardObj;
+        const index = cardObj.index;
+        const card = cards[index];
+        const back = card.back;
+        const pair = card.pair;
+        const scale = (pair && scales[pair]) ? scales[pair] : [];
+        const scaleIndex = scale.indexOf(back);
+        const lower = scaleIndex > 0 ? scale[scaleIndex-1] : '';
+        const higher = scaleIndex < scale.length-1 ? scale[scaleIndex+1] : '';
+        document.getElementById('lower-neighbor-box').textContent = lower;
+        document.getElementById('higher-neighbor-box').textContent = higher;
+        document.getElementById('cloze-display').textContent = card.front;
+        document.getElementById('answer-box').textContent = '';
+        document.getElementById('card-num').textContent = `${index+1} / ${cards.length}`;
+        isFlipped = false;
+        // show controls
+        document.getElementById('flashcard').style.display = 'block';
+        document.getElementById('buttons').style.display = 'flex';
+        document.getElementById('flipBtn').style.display = 'inline-block';
+        document.getElementById('flipBtn').textContent = 'Show Answer';
+        document.getElementById('incorrectBtn').style.display = 'none';
+        document.getElementById('correctBtn').style.display = 'none';
+    }
+
+    function flip() {
+        if (!currentCard || isFlipped) return;
+        const index = currentCard.index;
+        const back = cards[index].back;
+        document.getElementById('answer-box').textContent = back;
+        isFlipped = true;
+        document.getElementById('flipBtn').style.display = 'none';
+        document.getElementById('incorrectBtn').style.display = 'inline-block';
+        document.getElementById('correctBtn').style.display = 'inline-block';
+    }
+
+    async function rate(correct) {
+        if (!currentCard || !isFlipped) return;
+        const index = currentCard.index;
+        const card = cards[index];
+        const cardKey = card.id;
+        const oldData = cardData[cardKey] || { reps: 0, ef: 2.5, interval: 0 };
+        const quality = correct ? 5 : 0;
+        let newReps = oldData.reps || 0;
+        let newEf = oldData.ef || 2.5;
+        let newInterval = oldData.interval || 0;
+        if (quality < 3) {
+            newReps = 0;
+            newInterval = 1;
+            newEf = Math.max(1.3, (newEf - 0.20));
+        } else {
+            newReps = (oldData.reps || 0) + 1;
+            if (newReps === 1) newInterval = 1;
+            else if (newReps === 2) newInterval = 6;
+            else newInterval = Math.max(1, Math.round((oldData.interval || 1) * (oldData.ef || 2.5)));
+            const delta = 0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02);
+            newEf = (oldData.ef || 2.5) + delta;
+            newEf = Math.max(1.3, newEf);
         }
-        .word-box {
-            width: 80%;
-            max-width: 250px;
-            height: 40px;
-            line-height: 40px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            background-color: #fff;
-            font-size: 1.2em;
-            text-align: center;
-            box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-        }
-        .neighbor-word {
-            color: #666;
-            font-size: 1em;
-        }
-        .cloze-sentence {
-            font-size: 1.2em;
-            margin-top: 20px;
-            min-height: 2.4em;
-            line-height: 1.2em;
-        }
-        #card-num { font-size: 0.8em; color: #999; }
-       
-        button {
-            padding: 10px 20px;
-            margin: 10px;
-            border: 1px solid #aaa;
-            background: #000;
-            color: #ccc;
-            cursor: pointer;
-            border-radius: 4px;
-            box-shadow: 1px 1px 0 #aaa, 2px 2px 0 #bbb;
-            transition: all 0.05s ease;
-        }
-        button:hover {
-            background: #222;
-            color: #fff;
-            box-shadow: 0 0 0 #aaa;
-            transform: translate(2px, 2px);
-        }
-       
-        #buttons {
-            display: none;
-            justify-content: center;
-            max-width: 600px;
-            margin: 0px auto 20px auto;
-        }
-        #rate {
-            display: none;
-            justify-content: center;
-            width: 100%;
-            flex-wrap: wrap;
-        }
-       
-        #login-form {
-            max-width: 300px;
-            margin: 40px auto;
-        }
-        #login-form input {
-            display: block;
-            width: 100%;
-            margin: 10px 0;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        #progress, #stats {
-            font-size: 1em;
-            color: #666;
-        }
-       
-        #ascii-stats {
-            font-family: monospace;
-            white-space: pre;
-            background: transparent;
-            text-align: left;
-            margin: 20px auto;
-            max-width: 300px;
-            display: none;
-            padding: 20px;
-            background: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-        }
-       
-        #controls-footer {
-            max-width: 600px;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background: #f9f9f9;
-            text-align: right;
-            font-size: 0.9em;
-            margin: 20px auto 40px auto;
-            display: none;
-        }
-        #settings {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            margin-bottom: 5px;
-        }
-        #settings input {
-            width: 50px;
-            padding: 5px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        #controls-footer button {
-             margin: 5px 0 0 5px;
-             padding: 5px 10px;
-        }
-    </style>
-</head>
-<body>
-    <h1>Flashcards v.2025.10.26</h1>
-    <p id="progress"></p>
-    <div id="login-form">
-        <input id="email" type="email" placeholder="Email">
-        <input id="password" type="password" placeholder="Password">
-        <button onclick="signup()">Sign Up</button>
-        <button onclick="login()">Login</button>
-        <div id="error" style="color: red;"></div>
-    </div>
-   
-    <div id="flashcard">
-        <div id="card-num"></div>
-        <div id="front">
-            <div class="word-box-container">
-                <div id="lower-neighbor-box" class="word-box neighbor-word"></div>
-                <div id="answer-box" class="word-box"></div>
-                <div id="higher-neighbor-box" class="word-box neighbor-word"></div>
-            </div>
-            <div id="cloze-display" class="cloze-sentence"></div>
-        </div>
-    </div>
-   
-    <div id="buttons">
-        <div id="rate">
-            <button id="flipBtn" onclick="flip()">Show Answer</button>
-            <button id="incorrectBtn" onclick="rate(false)">Incorrect</button>
-            <button id="correctBtn" onclick="rate(true)">Correct</button>
-        </div>
-    </div>
-   
-    <pre id="ascii-stats"></pre>
-   
-    <div id="controls-footer">
-        <div id="settings">
-            New cards/day: <input id="daily-limit" type="number" min="1" value="10">
-            <button onclick="saveSettings()">Save</button>
-        </div>
-        <button id="logout" onclick="auth.signOut()">Logout</button>
-    </div>
-   
-    <img src="antonimo-logo.jpg" alt="Antonimo logo" class="logo-bg">
-   
-    <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-auth-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore-compat.js"></script>
-    <script>
-        // Firebase config
-        const firebaseConfig = {
-            apiKey: "AIzaSyDJYgI-xgZAGj6780W8BqXS4thd8ODvfDA",
-            authDomain: "antonimo-acbd9.firebaseapp.com",
-            projectId: "antonimo-acbd9",
-            storageBucket: "antonimo-acbd9.firebasestorage.app",
-            messagingSenderId: "904238822187",
-            appId: "1:904238822187:web:2c0488369954495f3b8b6e",
-            measurementId: "G-GTP9X49KNP"
+        const now = new Date();
+        const dueTime = now.getTime() + newInterval * 86400000;
+        const newDue = firebase.firestore.Timestamp.fromDate(new Date(dueTime));
+        const newData = {
+            reps: newReps,
+            ef: parseFloat(newEf.toFixed(2)),
+            interval: newInterval,
+            due: newDue
         };
-        const app = firebase.initializeApp(firebaseConfig);
-        const auth = firebase.auth();
-        const db = firebase.firestore();
-        // Globals
-        let uid = null;
-        let cardData = {};
-        let userSettings = {};
-        let currentCard = null;
-        let isFlipped = false;
-        // Scale of words
-        const scale = ['susurrar', 'murmurar', 'hablar', 'alzar la voz', 'exclamar', 'gritar'];
-        // Cards array (fixed and completed, added cards for exclamar and gritar)
-        const cards = [
-            { front: 'En la quietud de la noche, ella se inclinó hacia su amigo y decidió _____ el secreto para que nadie más pudiera oírlo.', back: 'susurrar' },
-            { front: 'Durante la película de terror, los niños empezaron a _____ comentarios asustados sin molestar a los demás espectadores.', back: 'susurrar' },
-            { front: 'En la iglesia, los feligreses optaron por _____ sus oraciones para mantener un ambiente de paz y respeto.', back: 'susurrar' },
-            { front: 'Mientras caminaban por el bosque, ella comenzó a _____ palabras de amor al oído de su pareja.', back: 'susurrar' },
-            { front: 'En la reunión confidencial, los participantes decidieron _____ sus ideas para evitar que se filtrara información.', back: 'susurrar' },
-            { front: 'Los conspiradores en la sombra empezaron a _____ planes para no alertar a los guardias cercanos.', back: 'susurrar' },
-            { front: 'Durante la siesta del bebé, la madre tuvo que _____ instrucciones a la niñera para no despertarlo.', back: 'susurrar' },
-            { front: 'En el teatro oscuro, los amigos comenzaron a _____ chistes sobre la obra sin interrumpir la función.', back: 'susurrar' },
-            { front: 'Los amantes en el parque optaron por _____ promesas eternas bajo la luz de la luna.', back: 'susurrar' },
-            { front: 'En la biblioteca silenciosa, los estudiantes decidieron _____ sus dudas para no molestar a los demás.', back: 'susurrar' },
-            { front: 'Durante la ceremonia solemne, los asistentes empezaron a _____ comentarios discretos.', back: 'susurrar' },
-            { front: 'Ella se acercó a su hermana y comenzó a _____ confidencias sobre su día en el colegio.', back: 'susurrar' },
-            { front: 'En el hospital, los visitantes optaron por _____ para no perturbar el descanso de los pacientes.', back: 'susurrar' },
-            { front: 'Los espías en la misión decidieron _____ códigos secretos para evitar ser detectados.', back: 'susurrar' },
-            { front: 'Durante el juego de escondite, los niños empezaron a _____ señales para coordinarse.', back: 'susurrar' },
-            { front: 'En la cena romántica, él comenzó a _____ palabras dulces al oído de ella.', back: 'susurrar' },
-            { front: 'No _____ quejas todo el tiempo, expresa tus opiniones de manera clara y directa.', back: 'murmurar' },
-            { front: 'Los trabajadores insatisfechos empezaron a _____ sobre las nuevas políticas de la empresa durante el almuerzo.', back: 'murmurar' },
-            { front: 'Deja de _____ excusas inentendibles y explica lo que realmente sucedió con detalles.', back: 'murmurar' },
-            { front: 'En la asamblea, algunos miembros comenzaron a _____ desacuerdos sin confrontar abiertamente al líder.', back: 'murmurar' },
-            { front: 'Los estudiantes frustrados optaron por _____ protestas sobre el examen difícil en el pasillo.', back: 'murmurar' },
-            { front: 'No _____ maldiciones bajo tu aliento, di lo que piensas con voz firme.', back: 'murmurar' },
-            { front: 'Los vecinos empezaron a _____ rumores sobre la nueva familia que se mudó al barrio.', back: 'murmurar' },
-            { front: 'Deja de _____ quejas sobre el clima y disfruta el día tal como es.', back: 'murmurar' },
-            { front: 'En la fila del supermercado, la gente comenzó a _____ impaciencia por la lentitud.', back: 'murmurar' },
-            { front: 'Los jugadores derrotados optaron por _____ excusas sobre el árbitro injusto.', back: 'murmurar' },
-            { front: 'No _____ secretos a tus amigos, comparte la información abiertamente con todos.', back: 'murmurar' },
-            { front: 'Los empleados descontentos empezaron a _____ sobre el aumento de horas laborales.', back: 'murmurar' },
-            { front: 'Deja de _____ críticas al profesor y levanta la mano para preguntar.', back: 'murmurar' },
-            { front: 'En el concierto, algunos fans comenzaron a _____ quejas sobre el sonido deficiente.', back: 'murmurar' },
-            { front: 'Los pasajeros impacientes optaron por _____ sobre el retraso del vuelo.', back: 'murmurar' },
-            { front: 'No _____ promesas vacías, cumple con lo que dices de forma clara.', back: 'murmurar' },
-            { front: 'Si no estás de acuerdo con la decisión, debes _____ y expresar tu opinión con confianza.', back: 'alzar la voz' },
-            { front: 'En la manifestación pacífica, los líderes tuvieron que _____ para que todos los presentes los escucharan.', back: 'alzar la voz' },
-            { front: 'No temas _____ cuando defiendes tus derechos en una discusión acalorada.', back: 'alzar la voz' },
-            { front: 'Durante el debate, el orador decidió _____ para enfatizar su punto principal.', back: 'alzar la voz' },
-            { front: 'En la clase ruidosa, el profesor tuvo que _____ para captar la atención de los alumnos.', back: 'alzar la voz' },
-            { front: 'Si sientes injusticia, es momento de _____ y hacer valer tu perspectiva.', back: 'alzar la voz' },
-            { front: 'Los activistas optaron por _____ durante la protesta para llamar la atención de los medios.', back: 'alzar la voz' },
-            { front: 'No _____ innecesariamente, pero cuando sea importante, hazte oír.', back: 'alzar la voz' },
-            { front: 'En la reunión familiar, ella tuvo que _____ para mediar en la disputa.', back: 'alzar la voz' },
-            { front: 'Los sindicalistas decidieron _____ para negociar mejores condiciones laborales.', back: 'alzar la voz' },
-            { front: 'Si el ruido es demasiado, tendrás que _____ para comunicarte efectivamente.', back: 'alzar la voz' },
-            { front: 'Durante el concierto, el cantante tuvo que _____ para superar el ruido de la multitud.', back: 'alzar la voz' },
-            { front: 'No dudes en _____ cuando ves una irregularidad en el trabajo.', back: 'alzar la voz' },
-            { front: 'En el estadio, los aficionados empezaron a _____ consignas de apoyo.', back: 'alzar la voz' },
-            { front: 'Los estudiantes optaron por _____ en la asamblea escolar para pedir cambios.', back: 'alzar la voz' },
-            { front: 'Si la situación lo requiere, _____ y defiende tu posición con argumentos.', back: 'alzar la voz' },
-            { front: 'Es importante _____ con respeto en una discusión para mantener un diálogo constructivo.', back: 'hablar' },
-            { front: 'Vamos a sentarnos y _____ sobre el problema que ha surgido entre nosotros.', back: 'hablar' },
-            { front: 'Ella domina varios idiomas y puede _____ fluidamente en inglés, español y francés.', back: 'hablar' },
-            { front: 'En la terapia, es esencial _____ abiertamente sobre tus sentimientos y experiencias.', back: 'hablar' },
-            { front: 'Los diplomáticos decidieron _____ para resolver el conflicto internacional pacíficamente.', back: 'hablar' },
-            { front: 'No evites _____ con tu jefe sobre el ascenso que mereces por tu trabajo.', back: 'hablar' },
-            { front: 'Los amigos se reunieron para _____ de sus vidas y compartir anécdotas recientes.', back: 'hablar' },
-            { front: 'En la conferencia, el experto va a _____ sobre los avances en inteligencia artificial.', back: 'hablar' },
-            { front: 'Es mejor _____ las cosas claras desde el principio para evitar malentendidos.', back: 'hablar' },
-            { front: 'Los padres deben _____ con sus hijos sobre los peligros del internet.', back: 'hablar' },
-            { front: 'Vamos a _____ del plan para las vacaciones en familia.', back: 'hablar' },
-            // Added cards for exclamar
-            { front: '"¡Qué sorpresa!", tuvo que _____.', back: 'exclamar' },
-            { front: 'La multitud _____ de alegría al ganar el equipo.', back: 'exclamar' },
-            { front: 'Él _____ : "¡Esto es imposible!"', back: 'exclamar' },
-            { front: 'No puedo _____ lo afortunado que soy.', back: 'exclamar' },
-            { front: 'Los niños _____ de emoción al abrir los regalos.', back: 'exclamar' },
-            // Added cards for gritar
-            { front: 'El entrenador _____ instrucciones a los jugadores.', back: 'gritar' },
-            { front: 'Ella _____ de dolor al golpearse.', back: 'gritar' },
-            { front: 'Los fans _____ el nombre de su ídolo en el concierto.', back: 'gritar' },
-            { front: 'No _____ , estamos en una biblioteca.', back: 'gritar' },
-            { front: 'En la protesta, la gente empezó a _____.', back: 'gritar' }
-        ];
-        // Load user data
-        async function loadUserData() {
-            const reviewsSnap = await db.collection(`users/${uid}/cardReviews`).get();
-            cardData = {};
-            reviewsSnap.forEach((doc) => {
-                const idx = parseInt(doc.id);
-                if (!isNaN(idx) && idx >= 0 && idx < cards.length) {
-                    cardData[idx] = doc.data();
-                }
-            });
-            const settingsRef = db.doc(`users/${uid}`);
-            const settingsSnap = await settingsRef.get();
-            if (settingsSnap.exists) {
-                userSettings = settingsSnap.data();
+        // store under cardKey
+        const reviewRef = db.collection(`users/${uid}/cardReviews`).doc(cardKey);
+        await reviewRef.set(newData);
+        cardData[cardKey] = newData;
+        // increment reviewsToday
+        userSettings.reviewsToday = (userSettings.reviewsToday || 0) + 1;
+        await db.doc(`users/${uid}`).update({ reviewsToday: userSettings.reviewsToday });
+        // next
+        await showNextCard();
+    }
+
+    async function showNextCard() {
+        const next = getNextCard();
+        if (!next) { showStats(); return; }
+        if (next.isNew) {
+            // initialize review doc under card.id if not present
+            const cardKey = next.card.id;
+            const initial = { reps: 0, ef: 2.5, interval: 0, due: firebase.firestore.Timestamp.now() };
+            const existing = await db.collection(`users/${uid}/cardReviews`).doc(cardKey).get();
+            if (!existing.exists) {
+                await db.collection(`users/${uid}/cardReviews`).doc(cardKey).set(initial);
+                cardData[cardKey] = initial;
             } else {
-                userSettings = {
-                    dailyNewLimit: 10,
-                    newCardsToday: 0,
-                    reviewsToday: 0,
-                    lastNewDate: ''
-                };
-                await settingsRef.set(userSettings);
+                cardData[cardKey] = existing.data();
             }
-            const todayStr = new Date().toDateString();
-            if (userSettings.lastNewDate !== todayStr) {
-                userSettings.newCardsToday = 0;
-                userSettings.reviewsToday = 0;
-                userSettings.lastNewDate = todayStr;
-                await settingsRef.update({
-                    newCardsToday: 0,
-                    reviewsToday: 0,
-                    lastNewDate: todayStr
-                });
-            }
+            userSettings.newCardsToday = (userSettings.newCardsToday || 0) + 1;
+            await db.doc(`users/${uid}`).update({ newCardsToday: userSettings.newCardsToday });
+            showCard({ index: next.index, data: cardData[cardKey] });
+        } else {
+            showCard({ index: next.index, data: next.data });
         }
-        // Get next card
-        function getNextCard() {
-            const now = new Date();
-            let dueCandidates = [];
-            for (let i = 0; i < cards.length; i++) {
-                const data = cardData[i];
-                if (data && data.due && data.due.toDate() <= now) {
-                    dueCandidates.push({
-                        index: i,
-                        data: data,
-                        dueTime: data.due.toDate().getTime()
-                    });
-                }
-            }
-            if (dueCandidates.length > 0) {
-                dueCandidates.sort((a, b) => a.dueTime - b.dueTime);
-                return dueCandidates[0];
-            }
-            if (userSettings.newCardsToday < userSettings.dailyNewLimit) {
-                let unseen = [];
-                for (let i = 0; i < cards.length; i++) {
-                    if (!cardData[i]) {
-                        unseen.push(i);
-                    }
-                }
-                if (unseen.length > 0) {
-                    const rand = Math.floor(Math.random() * unseen.length);
-                    return { index: unseen[rand], isNew: true };
-                }
-            }
-            return null;
+        updateProgress();
+    }
+
+    function updateProgress() {
+        const now = getNow();
+        let dueCount = 0;
+        for (let i=0;i<cards.length;i++) {
+            const c = cards[i];
+            const d = cardData[c.id];
+            if (d && d.due && d.due.toDate && d.due.toDate() <= now) dueCount++;
         }
-        // Show card
-        function showCard(cardObj) {
-            const { index, data } = cardObj;
-            currentCard = cardObj;
-            const card = cards[index];
-            const back = card.back;
-            const scaleIndex = scale.indexOf(back);
-            const lower = scaleIndex > 0 ? scale[scaleIndex - 1] : '';
-            const higher = scaleIndex < scale.length - 1 ? scale[scaleIndex + 1] : '';
-            document.getElementById('lower-neighbor-box').textContent = lower;
-            document.getElementById('higher-neighbor-box').textContent = higher;
-            document.getElementById('cloze-display').textContent = card.front;
-            document.getElementById('answer-box').textContent = '';
-            document.getElementById('card-num').textContent = `${index + 1} / ${cards.length}`;
-            isFlipped = false;
-            const flipBtn = document.getElementById('flipBtn');
-            const incBtn = document.getElementById('incorrectBtn');
-            const corBtn = document.getElementById('correctBtn');
-            flipBtn.style.display = 'inline-block';
-            flipBtn.textContent = 'Show Answer';
-            incBtn.style.display = 'none';
-            corBtn.style.display = 'none';
+        const newAvailable = Math.max(0, (userSettings.dailyNewLimit || 10) - (userSettings.newCardsToday || 0));
+        const learned = Object.keys(cardData).length;
+        document.getElementById('progress').textContent = `${dueCount} pendientes | ${newAvailable} nuevas | ${learned}/${cards.length}`;
+    }
+
+    function showStats() {
+        const learned = Object.keys(cardData).length;
+        const total = cards.length;
+        const newToday = userSettings.newCardsToday || 0;
+        const reviewsToday = userSettings.reviewsToday || 0;
+        const limit = userSettings.dailyNewLimit || 10;
+        let statsText = '¡Felicitaciones! Estás al día con tus tarjetas.\n\n';
+        statsText += `Aprendidas: ${learned} / ${total}\n`;
+        statsText += `Nuevas hoy: ${newToday} / ${limit}\n`;
+        statsText += `Revisadas hoy: ${reviewsToday}\n`;
+        document.getElementById('ascii-stats').textContent = statsText;
+        document.getElementById('ascii-stats').style.display = 'block';
+        document.getElementById('flashcard').style.display = 'none';
+        document.getElementById('buttons').style.display = 'none';
+        document.getElementById('progress').textContent = '';
+    }
+
+    async function saveSettings() {
+        if (!uid) return;
+        const limit = parseInt(document.getElementById('daily-limit').value) || 10;
+        userSettings.dailyNewLimit = limit;
+        const settingsRef = db.doc(`users/${uid}`);
+        await settingsRef.set(userSettings, { merge: true });
+    }
+
+    // ---------- Auth flows (unchanged) ----------
+    function login() {
+        const emailEl = document.getElementById('email');
+        const passwordEl = document.getElementById('password');
+        const errorEl = document.getElementById('error');
+        const email = emailEl.value.trim();
+        const password = passwordEl.value;
+        if (!email || !password) {
+            errorEl.textContent = 'Por favor, ingresa email y contraseña.';
+            return;
         }
-        // Flip card
-        function flip() {
-            if (!currentCard || isFlipped) return;
-            const index = currentCard.index;
-            const back = cards[index].back;
-            document.getElementById('answer-box').textContent = back;
-            isFlipped = true;
-            document.getElementById('flipBtn').style.display = 'none';
-            document.getElementById('incorrectBtn').style.display = 'inline-block';
-            document.getElementById('correctBtn').style.display = 'inline-block';
-        }
-        // Rate card (SRS SM-2 implementation)
-        async function rate(correct) {
-            if (!currentCard || !isFlipped) return;
-            const index = currentCard.index;
-            const oldData = cardData[index];
-            const quality = correct ? 5 : 0;
-            let newReps = oldData.reps;
-            let newEf = oldData.ef;
-            let newInterval;
-            if (quality < 3) {
-                newReps = 0;
-                newInterval = 1;
-                newEf = Math.max(1.3, newEf - 0.20);
-            } else {
-                newReps = oldData.reps + 1;
-                if (newReps === 1) {
-                    newInterval = 1;
-                } else if (newReps === 2) {
-                    newInterval = 6;
-                } else {
-                    newInterval = Math.max(1, Math.round(oldData.interval * oldData.ef));
-                }
-                const delta = 0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02);
-                newEf += delta;
-                newEf = Math.max(1.3, newEf);
+        errorEl.textContent = '';
+        auth.signInWithEmailAndPassword(email, password).catch((error) => {
+            let msg = 'Error de inicio de sesión: ';
+            switch (error.code) {
+                case 'auth/user-not-found': msg += 'Usuario no encontrado.'; break;
+                case 'auth/wrong-password': msg += 'Contraseña incorrecta.'; break;
+                case 'auth/invalid-email': msg += 'Email inválido.'; break;
+                default: msg += error.message;
             }
-            const now = new Date();
-            const dueTime = now.getTime() + newInterval * 86400000;
-            const newDue = firebase.firestore.Timestamp.fromDate(new Date(dueTime));
-            const newData = {
-                reps: newReps,
-                ef: parseFloat(newEf.toFixed(2)),
-                interval: newInterval,
-                due: newDue
-            };
-            const reviewRef = db.collection(`users/${uid}/cardReviews`).doc(index.toString());
-            await reviewRef.set(newData);
-            cardData[index] = newData;
-            // Increment reviews today
-            userSettings.reviewsToday = (userSettings.reviewsToday || 0) + 1;
-            const settingsRef = db.doc(`users/${uid}`);
-            await settingsRef.update({ reviewsToday: userSettings.reviewsToday });
-            // Next card
-            await showNextCard();
-        }
-        // Show next card
-        async function showNextCard() {
-            const next = getNextCard();
-            if (!next) {
-                showStats();
-                return;
-            }
-            const index = next.index;
-            let data;
-            if (next.isNew) {
-                data = {
-                    reps: 0,
-                    ef: 2.5,
-                    interval: 0,
-                    due: firebase.firestore.Timestamp.now()
-                };
-                const reviewRef = db.collection(`users/${uid}/cardReviews`).doc(index.toString());
-                await reviewRef.set(data);
-                cardData[index] = data;
-                userSettings.newCardsToday += 1;
-                const settingsRef = db.doc(`users/${uid}`);
-                await settingsRef.update({ newCardsToday: userSettings.newCardsToday });
-            } else {
-                data = next.data;
-            }
-            showCard({ index, data });
-            updateProgress();
-        }
-        // Update progress
-        function updateProgress() {
-            const now = new Date();
-            let dueCount = 0;
-            for (let i = 0; i < cards.length; i++) {
-                const data = cardData[i];
-                if (data && data.due && data.due.toDate() <= now) {
-                    dueCount++;
-                }
-            }
-            const newAvailable = Math.max(0, userSettings.dailyNewLimit - userSettings.newCardsToday);
-            const learned = Object.keys(cardData).length;
-            document.getElementById('progress').textContent = `${dueCount} pendientes | ${newAvailable} nuevas | ${learned}/${cards.length}`;
-        }
-        // Show stats
-        function showStats() {
-            const learned = Object.keys(cardData).length;
-            const total = cards.length;
-            const newToday = userSettings.newCardsToday || 0;
-            const reviewsToday = userSettings.reviewsToday || 0;
-            const limit = userSettings.dailyNewLimit || 10;
-            let statsText = '¡Felicitaciones! Estás al día con tus tarjetas.\n\n';
-            statsText += `Aprendidas: ${learned} / ${total}\n`;
-            statsText += `Nuevas hoy: ${newToday} / ${limit}\n`;
-            statsText += `Revisadas hoy: ${reviewsToday}\n`;
-            document.getElementById('ascii-stats').textContent = statsText;
-            document.getElementById('ascii-stats').style.display = 'block';
-            document.getElementById('flashcard').style.display = 'none';
-            document.getElementById('buttons').style.display = 'none';
-            document.getElementById('progress').textContent = '';
-        }
-        // Save settings
-        async function saveSettings() {
-            if (!uid) return;
-            const limit = parseInt(document.getElementById('daily-limit').value) || 10;
-            userSettings.dailyNewLimit = limit;
-            const settingsRef = db.doc(`users/${uid}`);
-            await settingsRef.set(userSettings, { merge: true });
-        }
-        // Login
-        function login() {
-            const emailEl = document.getElementById('email');
-            const passwordEl = document.getElementById('password');
-            const errorEl = document.getElementById('error');
-            const email = emailEl.value.trim();
-            const password = passwordEl.value;
-            if (!email || !password) {
-                errorEl.textContent = 'Por favor, ingresa email y contraseña.';
-                return;
-            }
-            errorEl.textContent = '';
-            auth.signInWithEmailAndPassword(email, password).catch((error) => {
-                let msg = 'Error de inicio de sesión: ';
-                switch (error.code) {
-                    case 'auth/user-not-found': msg += 'Usuario no encontrado.'; break;
-                    case 'auth/wrong-password': msg += 'Contraseña incorrecta.'; break;
-                    case 'auth/invalid-email': msg += 'Email inválido.'; break;
-                    default: msg += error.message;
-                }
-                errorEl.textContent = msg;
-            });
-        }
-        // Signup
-        function signup() {
-            const emailEl = document.getElementById('email');
-            const passwordEl = document.getElementById('password');
-            const errorEl = document.getElementById('error');
-            const email = emailEl.value.trim();
-            const password = passwordEl.value;
-            if (!email || !password || password.length < 6) {
-                errorEl.textContent = 'Email y contraseña (mín. 6 chars) requeridos.';
-                return;
-            }
-            errorEl.textContent = '';
-            auth.createUserWithEmailAndPassword(email, password).catch((error) => {
-                let msg = 'Error al registrarse: ';
-                switch (error.code) {
-                    case 'auth/email-already-in-use': msg += 'Email ya registrado.'; break;
-                    case 'auth/weak-password': msg += 'Contraseña débil.'; break;
-                    case 'auth/invalid-email': msg += 'Email inválido.'; break;
-                    default: msg += error.message;
-                }
-                errorEl.textContent = msg;
-            });
-        }
-        // Auth state listener
-        auth.onAuthStateChanged(async (user) => {
-            const loginForm = document.getElementById('login-form');
-            const flashcard = document.getElementById('flashcard');
-            const buttons = document.getElementById('buttons');
-            const rate = document.getElementById('rate');
-            const controls = document.getElementById('controls-footer');
-            const asciiStats = document.getElementById('ascii-stats');
-            const progress = document.getElementById('progress');
-            const errorEl = document.getElementById('error');
-            if (user) {
-                uid = user.uid;
-                loginForm.style.display = 'none';
-                flashcard.style.display = 'block';
-                buttons.style.display = 'flex';
-                rate.style.display = 'flex';
-                controls.style.display = 'block';
-                asciiStats.style.display = 'none';
-                errorEl.textContent = '';
-                try {
-                    await loadUserData();
-                    document.getElementById('daily-limit').value = userSettings.dailyNewLimit || 10;
-                    await showNextCard();
-                } catch (e) {
-                    console.error('Error loading data:', e);
-                    progress.textContent = 'Error al cargar datos.';
-                }
-            } else {
-                uid = null;
-                cardData = {};
-                userSettings = {};
-                currentCard = null;
-                isFlipped = false;
-                loginForm.style.display = 'block';
-                flashcard.style.display = 'none';
-                buttons.style.display = 'none';
-                rate.style.display = 'none';
-                controls.style.display = 'none';
-                asciiStats.style.display = 'none';
-                progress.textContent = '';
-                errorEl.textContent = '';
-            }
+            errorEl.textContent = msg;
         });
+    }
+
+    function signup() {
+        const emailEl = document.getElementById('email');
+        const passwordEl = document.getElementById('password');
+        const errorEl = document.getElementById('error');
+        const email = emailEl.value.trim();
+        const password = passwordEl.value;
+        if (!email || !password || password.length < 6) {
+            errorEl.textContent = 'Email y contraseña (mín. 6 chars) requeridos.';
+            return;
+        }
+        errorEl.textContent = '';
+        auth.createUserWithEmailAndPassword(email, password).catch((error) => {
+            let msg = 'Error al registrarse: ';
+            switch (error.code) {
+                case 'auth/email-already-in-use': msg += 'Email ya registrado.'; break;
+                case 'auth/weak-password': msg += 'Contraseña débil.'; break;
+                case 'auth/invalid-email': msg += 'Email inválido.'; break;
+                default: msg += error.message;
+            }
+            errorEl.textContent = msg;
+        });
+    }
+
+    // When user logs in, load CSV first, then perform migration and show cards
+    auth.onAuthStateChanged(async (user) => {
+        const loginForm = document.getElementById('login-form');
+        const flashcard = document.getElementById('flashcard');
+        const buttons = document.getElementById('buttons');
+        const rate = document.getElementById('rate');
+        const controls = document.getElementById('controls-footer');
+        const asciiStats = document.getElementById('ascii-stats');
+        const progress = document.getElementById('progress');
+        const errorEl = document.getElementById('error');
+
+        if (user) {
+            uid = user.uid;
+            loginForm.style.display = 'none';
+            flashcard.style.display = 'block';
+            buttons.style.display = 'flex';
+            rate.style.display = 'flex';
+            controls.style.display = 'block';
+            asciiStats.style.display = 'none';
+            errorEl.textContent = '';
+            try {
+                await loadCSVAndBuild();              // load CSV -> build cards, maybe generate ids
+                await loadUserDataAndMigrate();      // load user data and migrate numeric keys
+                document.getElementById('daily-limit').value = userSettings.dailyNewLimit || 10;
+                await showNextCard();
+            } catch (e) {
+                console.error('Error loading data:', e);
+                progress.textContent = 'Error al cargar datos: ' + (e.message || e);
+            }
+        } else {
+            uid = null;
+            cardData = {};
+            userSettings = {};
+            currentCard = null;
+            isFlipped = false;
+            loginForm.style.display = 'block';
+            flashcard.style.display = 'none';
+            buttons.style.display = 'none';
+            rate.style.display = 'none';
+            controls.style.display = 'none';
+            asciiStats.style.display = 'none';
+            progress.textContent = '';
+            errorEl.textContent = '';
+        }
+    });
+
+    // Provide a way to download the updated CSV (with CardIDs) if we generated missing ones
+    function downloadUpdatedCSV() {
+        if (!window.__updatedCsvString) return;
+        const blob = new Blob([window.__updatedCsvString], {type: 'text/csv;charset=utf-8;'});
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'flashcard-data-with-CardIDs.csv';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(url);
+    }
+
     </script>
 </body>
 </html>
