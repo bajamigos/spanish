@@ -5,11 +5,12 @@
   <title>Antonimo Flashcards</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <h1>Antonimo Flashcards</h1>
 
   <div id="flashcard" class="content-card">
-    <div id="card-num"></div>
+    <div id="card-num" style="font-weight: bold; margin-bottom: 10px;"></div>
 
     <div class="flashcard-ladder">
       <div class="word-box" id="lower-neighbor-box"></div>
@@ -44,11 +45,16 @@
 
   <img src="antonimo-logo.jpg" alt="Antonimo logo" class="logo-bg">
 
+  <!-- Firebase SDKs -->
   <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore-compat.js"></script>
 
   <script>
+  /* ======================================================
+     Antonimo Flashcards – CSV + Firebase + UI Integration
+     ====================================================== */
+
   const firebaseConfig = {
     apiKey: "AIzaSyDJYgI-xgZAGj6780W8BqXS4thd8ODvfDA",
     authDomain: "antonimo-acbd9.firebaseapp.com",
@@ -58,41 +64,70 @@
     appId: "1:904238822187:web:2c0488369954495f3b8b6e",
     measurementId: "G-GTP9X49KNP"
   };
+
   const app = firebase.initializeApp(firebaseConfig);
   const auth = firebase.auth();
   const db = firebase.firestore();
 
-  let cards = [], scales = {}, englishMap = {}, currentCard = null;
+  let cards = [];
+  let scales = {};
+  let englishMap = {};
+  let currentCard = null;
   let hintsVisible = false;
+  let currentIndex = 0;
 
+  // ======================================================
+  // CSV LOADING
+  // ======================================================
   async function loadCSV() {
     const res = await fetch('flashcard-data.csv');
     const text = await res.text();
     const [headerLine, ...lines] = text.trim().split('\n');
     const headers = headerLine.split(',');
     const getIndex = n => headers.findIndex(h => h.trim().toLowerCase() === n);
-    const cardIdIdx = getIndex('cardid');
+
     const pairIdx = getIndex('pair');
     const wordIdx = getIndex('word');
     const sentencesIdx = getIndex('sentences');
     const englishIdx = getIndex('english');
+
     for (const line of lines) {
       const parts = line.split(/,(?=(?:[^"]*"[^"]*")*[^"]*$)/);
       const pair = parts[pairIdx]?.trim();
       const word = parts[wordIdx]?.trim();
       const sentence = parts[sentencesIdx]?.trim();
       const english = parts[englishIdx]?.trim();
+
       if (pair && word) {
         if (!scales[pair]) scales[pair] = [];
         scales[pair].push(word);
         englishMap[word] = english;
       }
-      if (sentence.includes('_____')) {
+
+      if (sentence && sentence.includes('_____')) {
         cards.push({ pair, word, sentence });
       }
     }
+
+    // Shuffle cards to mix order
+    cards = shuffle(cards);
   }
 
+  function shuffle(array) {
+    let currentIndex = array.length, randomIndex;
+    while (currentIndex !== 0) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]
+      ];
+    }
+    return array;
+  }
+
+  // ======================================================
+  // DISPLAY FUNCTIONS
+  // ======================================================
   function getNeighbors(word, pair) {
     const list = scales[pair] || [];
     const i = list.indexOf(word);
@@ -102,38 +137,84 @@
     };
   }
 
-  function showCard(i = 0) {
-    currentCard = cards[i];
+  function showCard(index = 0) {
+    if (cards.length === 0) return;
+
+    currentIndex = index % cards.length;
+    currentCard = cards[currentIndex];
+
     const { pair, word, sentence } = currentCard;
     const { lower, higher } = getNeighbors(word, pair);
+
     document.getElementById('lower-neighbor-box').textContent = lower;
     document.getElementById('higher-neighbor-box').textContent = higher;
     document.getElementById('answer-box').textContent = '';
     document.getElementById('cloze-display').textContent = sentence;
+
     document.querySelectorAll('.english-hint').forEach(e => e.textContent = '');
+    document.getElementById('card-num').textContent = 
+      `Card ${currentIndex + 1} of ${cards.length}`;
+
     hintsVisible = false;
+    document.getElementById('hintBtn').textContent = 'Show English Hints';
   }
 
   function flip() {
+    if (!currentCard) return;
     document.getElementById('answer-box').textContent = currentCard.word;
   }
 
-  function toggleEnglishHints() {
-    hintsVisible = !hintsVisible;
-    const { pair, word } = currentCard;
-    const { lower, higher } = getNeighbors(word, pair);
-    document.getElementById('lower-english').textContent = hintsVisible ? englishMap[lower] || '' : '';
-    document.getElementById('higher-english').textContent = hintsVisible ? englishMap[higher] || '' : '';
-    document.getElementById('answer-english').textContent = hintsVisible ? englishMap[word] || '' : '';
-    document.getElementById('hintBtn').textContent = hintsVisible ? 'Hide English Hints' : 'Show English Hints';
+  // ======================================================
+  // RATE & CYCLE
+  // ======================================================
+  function rate(isCorrect) {
+    console.log(`Card: ${currentCard.word}, Correct: ${isCorrect}`);
+    currentIndex++;
+    if (currentIndex >= cards.length) currentIndex = 0;
+    showCard(currentIndex);
   }
 
+  // ======================================================
+  // HINT TOGGLE
+  // ======================================================
+  function toggleEnglishHints() {
+    if (!currentCard) return;
+    hintsVisible = !hintsVisible;
+
+    const { pair, word } = currentCard;
+    const { lower, higher } = getNeighbors(word, pair);
+
+    document.getElementById('lower-english').textContent =
+      hintsVisible ? englishMap[lower] || '' : '';
+    document.getElementById('higher-english').textContent =
+      hintsVisible ? englishMap[higher] || '' : '';
+    document.getElementById('answer-english').textContent =
+      hintsVisible ? englishMap[word] || '' : '';
+
+    document.getElementById('hintBtn').textContent =
+      hintsVisible ? 'Hide English Hints' : 'Show English Hints';
+  }
+
+  // ======================================================
+  // FIREBASE LOGIN HANDLER
+  // ======================================================
   auth.onAuthStateChanged(async user => {
     if (user) {
       await loadCSV();
       showCard(0);
     }
   });
+
+  // ======================================================
+  // PLACEHOLDER SETTINGS FUNCTIONS
+  // ======================================================
+  function saveSettings() {
+    alert("Settings saved (placeholder)");
+  }
+
+  function downloadUpdatedCSV() {
+    alert("Download feature not yet implemented.");
+  }
   </script>
 </body>
 </html>
