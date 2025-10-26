@@ -1,114 +1,108 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIELE S4 Study Guide | Grok Mode 🚀</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIELE S4 Study Guide | Grok Mode 🚀</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="header-placeholder">Loading header...</div>
-    
-    <div class="tasks-container">
-        <div class="task-card">
-            <a href="background.html" class="task-button">Información General</a>
-            <p class="task-summary">Sobre el examen SIELE S4</p>
-        </div>
-        <div class="task-card">
-            <a href="task1.html" class="task-button">Tarea 1</a>
-            <p class="task-summary">Descripción de foto</p>
-        </div>
-        <div class="task-card">
-            <a href="task2.html" class="task-button">Tarea 2</a>
-            <p class="task-summary">Descripción de video</p>
-        </div>
-        <div class="task-card">
-            <a href="task3.html" class="task-button">Tarea 3</a>
-            <p class="task-summary">Respuestas a escenarios</p>
-        </div>
-        <div class="task-card">
-            <a href="task4.html" class="task-button">Tarea 4</a>
-            <p class="task-summary">Monólogo corto</p>
-        </div>
-        <div class="task-card">
-            <a href="task5.html" class="task-button">Tarea 5</a>
-            <p class="task-summary">Debate de opinión</p>
-        </div>
-        <div class="task-card">
-            <a href="task6.html" class="task-button">Más</a>
-            <p class="task-summary">Ejercicios de Gramática</p>
-        </div>
-        <div class="task-card">
-            <a href="https://bajamigos.github.io/spanish/antonimoindex.html" class="task-button">Pelagos</a>
-            <p class="task-summary">.club de aprendizaje</p>
-        </div>
-        <div class="task-card">
-            <a href="antonimo-webpage.html" class="task-button">Juegos</a>
-            <p class="task-summary">Escalera Semántica</p>
-        </div>
+  <div id="header-placeholder">Loading header...</div>
+
+  <div class="tasks-container">
+    <div class="task-card fade-in">
+      <a href="background.html" class="task-button">Información General</a>
+      <p class="task-summary">Sobre el examen SIELE S4</p>
     </div>
-    
-    <div id="footer-placeholder">Loading footer...</div>
-    
-    <!-- Modal para el número aleatorio -->
-    <div id="random-modal">
-        <div id="random-modal-content">
-            <p>¡Tarea aleatoria generada!</p>
-            <div id="random-number"></div>
-            <button id="close-modal">Cerrar</button>
-        </div>
+    <div class="task-card fade-in">
+      <a href="task1.html" class="task-button">Tarea 1</a>
+      <p class="task-summary">Descripción de foto</p>
     </div>
-    
-    <script async src="https://tally.so/widgets/embed.js"></script>
-    <script src="common.js"></script>
-    <script>
-        const taskName = 'Index Page Recording'; // Placeholder for index (recording not primary here)
+    <div class="task-card fade-in">
+      <a href="task2.html" class="task-button">Tarea 2</a>
+      <p class="task-summary">Descripción de video</p>
+    </div>
+    <div class="task-card fade-in">
+      <a href="task3.html" class="task-button">Tarea 3</a>
+      <p class="task-summary">Respuestas a escenarios</p>
+    </div>
+    <div class="task-card fade-in">
+      <a href="task4.html" class="task-button">Tarea 4</a>
+      <p class="task-summary">Monólogo corto</p>
+    </div>
+    <div class="task-card fade-in">
+      <a href="task5.html" class="task-button">Tarea 5</a>
+      <p class="task-summary">Debate de opinión</p>
+    </div>
+    <div class="task-card fade-in">
+      <a href="task6.html" class="task-button">Más</a>
+      <p class="task-summary">Ejercicios de Gramática</p>
+    </div>
+    <div class="task-card fade-in">
+      <a href="https://bajamigos.github.io/spanish/antonimoindex.html" class="task-button">Pelagos</a>
+      <p class="task-summary">.club de aprendizaje</p>
+    </div>
+    <div class="task-card fade-in">
+      <a href="antonimo-webpage.html" class="task-button">Juegos</a>
+      <p class="task-summary">Escalera Semántica</p>
+    </div>
+  </div>
 
-        function headerInit() {
-            const h1 = document.querySelector('h1');
-            if (h1) {
-                const robotSpan = document.createElement('span');
-                robotSpan.id = 'robot-emoji';
-                robotSpan.className = 'robot-emoji';
-                robotSpan.textContent = '🤖';
-                h1.appendChild(robotSpan);
-                attachRandomListener();
-            }
-        }
+  <div id="footer-placeholder">Loading footer...</div>
 
-        function attachRandomListener() {
-            const robotEmoji = document.getElementById('robot-emoji');
-            const modal = document.getElementById('random-modal');
-            const randomNumberEl = document.getElementById('random-number');
-            const closeModal = document.getElementById('close-modal');
+  <!-- Modal para el número aleatorio -->
+  <div id="random-modal">
+    <div id="random-modal-content">
+      <p>¡Tarea aleatoria generada!</p>
+      <div id="random-number"></div>
+      <button id="close-modal">Cerrar</button>
+    </div>
+  </div>
 
-            function generateRandom() {
-                const randomNum = Math.floor(Math.random() * 6) + 1; // For 6 tasks
-                randomNumberEl.textContent = randomNum;
-                modal.style.display = 'flex';
-            }
+  <script async src="https://tally.so/widgets/embed.js"></script>
+  <script src="common.js"></script>
+  <script>
+    const taskName = 'Index Page Recording';
 
-            robotEmoji.addEventListener('click', generateRandom);
-            robotEmoji.addEventListener('touchend', function(e) {
-                e.preventDefault();
-                generateRandom();
-            });
+    function headerInit() {
+      const h1 = document.querySelector('h1');
+      if (h1) {
+        const robotSpan = document.createElement('span');
+        robotSpan.id = 'robot-emoji';
+        robotSpan.className = 'robot-emoji';
+        robotSpan.textContent = '🤖';
+        h1.appendChild(robotSpan);
+        attachRandomListener();
+      }
+    }
 
-            closeModal.addEventListener('click', function() {
-                modal.style.display = 'none';
-            });
+    function attachRandomListener() {
+      const robotEmoji = document.getElementById('robot-emoji');
+      const modal = document.getElementById('random-modal');
+      const randomNumberEl = document.getElementById('random-number');
+      const closeModal = document.getElementById('close-modal');
 
-            modal.addEventListener('click', function(e) {
-                if (e.target === modal) {
-                    modal.style.display = 'none';
-                }
-            });
-        }
+      function generateRandom() {
+        const randomNum = Math.floor(Math.random() * 6) + 1;
+        randomNumberEl.textContent = randomNum;
+        modal.style.display = 'flex';
+      }
 
-        window.addEventListener('load', () => {
-            loadIncludes(headerInit);
-            window.addEventListener('resize', handleResponsive);
-        });
-    </script>
+      robotEmoji.addEventListener('click', generateRandom);
+      robotEmoji.addEventListener('touchend', e => {
+        e.preventDefault();
+        generateRandom();
+      });
+
+      closeModal.addEventListener('click', () => modal.style.display = 'none');
+      modal.addEventListener('click', e => {
+        if (e.target === modal) modal.style.display = 'none';
+      });
+    }
+
+    window.addEventListener('load', () => {
+      loadIncludes(headerInit);
+    });
+  </script>
 </body>
 </html>
