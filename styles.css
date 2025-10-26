@@ -39,6 +39,7 @@ button, .tally-button, .new-image-button, .task-button, .nav-button, .buy-button
     box-shadow: 1px 1px 0 #aaa, 2px 2px 0 #bbb;
     transition: all 0.05s ease;
     font-weight: bold;
+    font-size: 1em;
 }
 
 button:hover, .tally-button:hover, .new-image-button:hover,
@@ -234,14 +235,6 @@ progress::-webkit-progress-value {
     color: #fff;
 }
 
-.tab-content {
-    display: none;
-}
-
-.tab-content.active {
-    display: block;
-}
-
 /* ===== Form Elements ===== */
 select {
     padding: 10px;
@@ -255,175 +248,7 @@ select {
     color: #000;
 }
 
-/* ===== Flashcards UI ===== */
-.flashcard-ladder, .word-ladder-style {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    margin: 20px auto;
-    max-width: 500px;
-}
-
-.word-box {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 10px;
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 500;
-    color: #000;
-    min-height: 2.5em;
-}
-
-.english-hint {
-    color: red;
-    font-size: 0.9rem;
-    font-weight: bold;
-    margin-left: 8px;
-    display: inline-block;
-}
-
-.cloze-sentence {
-    margin-top: 15px;
-    font-size: 1.1rem;
-    color: #333;
-    text-align: center;
-}
-
-/* ===== Admin UI ===== */
-.admin-dashboard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    margin-top: 30px;
-}
-
-.admin-card {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    max-width: 600px;
-    width: 90%;
-    text-align: center;
-}
-
-.admin-stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-    margin-top: 15px;
-}
-
-.stat-box {
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 10px;
-    font-weight: bold;
-    color: #000;
-}
-
-.csv-preview-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-    font-size: 0.9rem;
-}
-
-.csv-preview-table th, .csv-preview-table td {
-    border: 1px solid #ddd;
-    padding: 6px;
-    text-align: center;
-}
-
-.csv-preview-table th {
-    background: #eee;
-}
-
-/* =========================================================
-   Pelago Store
-   ========================================================= */
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 10px;
-    animation: fadeIn 0.6s ease-in;
-}
-
-.product-card {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.product-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.product-image {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    border-radius: 6px;
-    margin-bottom: 10px;
-}
-
-.product-title {
-    font-weight: bold;
-    color: #000;
-    font-size: 1.1rem;
-    margin-bottom: 5px;
-}
-
-.product-price {
-    color: #666;
-    margin-bottom: 10px;
-}
-
-.store-footer {
-    margin: 40px 0;
-    color: #666;
-    font-size: 0.9rem;
-}
-
-/* ===== Fake Cart Overlay ===== */
-#cart-notice {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: black;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 6px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.4s ease;
-    z-index: 2000;
-    font-weight: bold;
-}
-
-#cart-notice.show {
-    opacity: 1;
-}
-
-/* =========================================================
-   Footer Redesign: Pelago Player + Progress Bar Layout
-   ========================================================= */
-
+/* ===== Footer: Timer + Progress + Leaderboard ===== */
 .footer-card {
     background: #f9f9f9;
     border: 1px solid #ddd;
@@ -437,25 +262,30 @@ select {
 .player-bar {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 15px;
     background: #000;
-    padding: 10px;
+    padding: 10px 20px;
     border-radius: 8px;
     color: #ccc;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    width: 80%;
+    max-width: 600px; /* matches Vocabulary -> Pronunciación width */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .player-controls {
     display: flex;
     gap: 10px;
+    flex-wrap: nowrap;
 }
 
 .timer-display {
     background: #fff;
     color: #000;
     font-weight: bold;
-    font-size: 1.4rem;
+    font-size: 1.2em;
     padding: 5px 12px;
     border-radius: 6px;
     border: 1px solid #aaa;
@@ -472,11 +302,19 @@ select {
     font-weight: bold;
     cursor: pointer;
     transition: 0.15s ease;
+    font-size: 1em;
 }
 
 .timer-button:hover {
     background: #444;
     color: #fff;
+}
+
+.footer-divider {
+    width: 80%;
+    height: 1px;
+    background: #ddd;
+    margin: 20px auto;
 }
 
 .progress-section {
@@ -493,11 +331,27 @@ select {
     .tasks-container {
         grid-template-columns: 1fr;
     }
-    .progress-section {
-        flex-direction: column;
-    }
+
     .player-bar {
         flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        max-width: 90%;
+    }
+
+    .timer-button {
+        font-size: 0.9em;
+        padding: 6px 10px;
+    }
+
+    .timer-display {
+        font-size: 1em;
+        min-width: 60px;
+    }
+
+    .progress-section {
+        flex-direction: column;
+        align-items: center;
         gap: 10px;
     }
 }
