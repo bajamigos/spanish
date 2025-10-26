@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Antonimo Admin Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Antonimo Admin Dashboard</h1>
+
+  <div class="admin-dashboard">
+    <div class="admin-card">
+      <h2>Upload / Replace CSV</h2>
+      <input type="file" id="csvUpload" accept=".csv">
+      <button id="csvUploadBtn">Upload CSV</button>
+      <table class="csv-preview-table" id="csvPreview"></table>
+    </div>
+
+    <div class="admin-card">
+      <h2>User Management</h2>
+      <input type="text" id="userSearch" placeholder="Enter user email">
+      <button id="resetUserBtn">Reset User Progress</button>
+      <div id="userActionMsg"></div>
+    </div>
+
+    <div class="admin-card">
+      <h2>Stats Overview</h2>
+      <div class="admin-stats">
+        <div class="stat-box" id="totalUsers">Users: --</div>
+        <div class="stat-box" id="activeUsers">Active (7d): --</div>
+        <div class="stat-box" id="totalReviews">Reviews: --</div>
+        <div class="stat-box" id="avgEF">Avg EF: --</div>
+        <div class="stat-box" id="cardsAdded">Cards This Week: --</div>
+      </div>
+    </div>
+  </div>
+
+  <img src="antonimo-logo.jpg" alt="Antonimo logo" class="logo-bg">
+
+  <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore-compat.js"></script>
+
+  <script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyDJYgI-xgZAGj6780W8BqXS4thd8ODvfDA",
+    authDomain: "antonimo-acbd9.firebaseapp.com",
+    projectId: "antonimo-acbd9",
+    storageBucket: "antonimo-acbd9.firebasestorage.app",
+    messagingSenderId: "904238822187",
+    appId: "1:904238822187:web:2c0488369954495f3b8b6e",
+    measurementId: "G-GTP9X49KNP"
+  };
+  const app = firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+
+  // Dummy safe preview (no writes yet)
+  document.getElementById('csvUploadBtn').onclick = async () => {
+    const file = document.getElementById('csvUpload').files[0];
+    if (!file) return alert('Select a CSV first!');
+    const text = await file.text();
+    const [header, ...rows] = text.split('\n').filter(Boolean);
+    const headers = header.split(',');
+    const table = document.getElementById('csvPreview');
+    table.innerHTML = '<tr>' + headers.map(h => `<th>${h}</th>`).join('') + '</tr>' +
+      rows.slice(0, 5).map(r => `<tr>${r.split(',').map(c => `<td>${c}</td>`).join('')}</tr>`).join('');
+  };
+
+  async function loadStats() {
+    const usersSnap = await db.collection('users').get();
+    document.getElementById('totalUsers').textContent = `Users: ${usersSnap.size}`;
+  }
+  loadStats();
+  </script>
+</body>
+</html>
