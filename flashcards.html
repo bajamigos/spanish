@@ -3,21 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <title>Antonimo Flashcards</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* === Style Adjustments to Match Word Ladder === */
+    /* === Antonimo Flashcards Styling (Integrated with Global Theme) === */
     body {
+      font-family: 'Inter', sans-serif;
       background-color: white;
       color: black;
-      font-family: 'Inter', sans-serif;
       text-align: center;
     }
 
+    h1 {
+      font-weight: 700;
+      margin-bottom: 0.2em;
+    }
+
     .content-card {
-      background: transparent !important;
+      background: transparent;
       border: none;
       box-shadow: none;
-      padding: 10px;
+      padding: 0.5rem;
     }
 
     .flashcard-ladder {
@@ -25,35 +31,40 @@
       flex-direction: column;
       align-items: center;
       gap: 0.4rem;
-      margin-bottom: 1rem;
+      margin: 1rem auto;
     }
 
     .word-box-row {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
 
     .word-box {
-      font-size: 1.3rem;
-      min-width: 160px;
+      font-size: 1.2rem;
       background: #f9f9f9;
       border: 1px solid #000;
       border-radius: 4px;
-      padding: 5px 8px;
+      padding: 8px;
       text-align: center;
+      width: 180px;
+      height: 38px; /* fixed height for stability */
+      box-sizing: border-box;
     }
 
     .english-hint {
       font-size: 1rem;
       color: red;
-      text-align: left;
-      width: 120px;
+      width: 140px;
+      min-height: 38px; /* align height with box */
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
     }
 
     .cloze-sentence {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       color: #333;
       margin-top: 0.8rem;
     }
@@ -63,6 +74,7 @@
       display: flex;
       justify-content: center;
       gap: 0.6rem;
+      flex-wrap: wrap;
     }
 
     button {
@@ -74,33 +86,49 @@
       cursor: pointer;
       font-weight: bold;
       box-shadow: 1px 1px 0 #aaa, 2px 2px 0 #bbb;
+      transition: all 0.05s ease;
     }
 
     button:hover {
       background: #222;
-      color: white;
+      color: #fff;
       transform: translate(1px, 1px);
     }
 
     #hintBtn {
-      margin-top: 0.6rem;
-      background: #900;
-      color: #fff;
+      background: #000;
+      color: #ccc;
+      margin-top: 0.5rem;
     }
 
     #hintBtn:hover {
-      background: #b00;
+      background: #222;
+      color: #fff;
     }
 
     .top-stats {
-      margin: 5px auto 20px;
+      margin: 8px auto 16px;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    .bottom-panel {
+      background: #f9f9f9;
+      border: 1px solid #000;
+      border-radius: 6px;
+      padding: 15px;
+      max-width: 400px;
+      margin: 20px auto;
+    }
+
+    .bottom-panel p,
+    .bottom-panel span {
       font-size: 0.95rem;
       color: #333;
     }
 
-    .bottom-stats {
+    .bottom-panel .button-group {
       margin-top: 10px;
-      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -139,23 +167,25 @@
       <button id="flipBtn" onclick="flip()">Show Answer</button>
       <button id="incorrectBtn" onclick="rate(false)">Incorrect</button>
       <button id="correctBtn" onclick="rate(true)">Correct</button>
+      <button id="hintBtn" onclick="toggleEnglishHints()">Show English Hints</button>
     </div>
-
-    <button id="hintBtn" onclick="toggleEnglishHints()">Show English Hints</button>
   </div>
 
-  <div class="content-card">
-    <div class="bottom-stats">
+  <div class="bottom-panel">
+    <div>
       <span id="cards-learned-today">Learned Today: 0</span>
     </div>
 
     <p>
       New cards/day:
-      <input id="daily-limit" type="number" min="1" value="10">
+      <input id="daily-limit" type="number" min="1" value="10" style="width: 60px;">
       <button onclick="saveSettings()">Save</button>
     </p>
-    <button onclick="auth.signOut()">Logout</button>
-    <button onclick="downloadUpdatedCSV()">Download CSV with CardIDs</button>
+
+    <div class="button-group">
+      <button onclick="auth.signOut()">Logout</button>
+      <button onclick="downloadUpdatedCSV()">Download CSV with CardIDs</button>
+    </div>
   </div>
 
   <img src="antonimo-logo.jpg" alt="Antonimo logo" class="logo-bg">
@@ -272,7 +302,6 @@
   }
 
   function rate(isCorrect) {
-    console.log(`Card: ${currentCard.word}, Correct: ${isCorrect}`);
     if (isCorrect) learnedToday++;
     currentIndex++;
     if (currentIndex >= cards.length) currentIndex = 0;
