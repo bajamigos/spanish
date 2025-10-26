@@ -420,6 +420,74 @@ select {
     opacity: 1;
 }
 
+/* =========================================================
+   Footer Redesign: Pelago Player + Progress Bar Layout
+   ========================================================= */
+
+.footer-card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 900px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.player-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: #000;
+    padding: 10px;
+    border-radius: 8px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.player-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.timer-display {
+    background: #fff;
+    color: #000;
+    font-weight: bold;
+    font-size: 1.4rem;
+    padding: 5px 12px;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+    min-width: 70px;
+    text-align: center;
+}
+
+.timer-button {
+    background: #222;
+    color: #ccc;
+    border: 1px solid #aaa;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.15s ease;
+}
+
+.timer-button:hover {
+    background: #444;
+    color: #fff;
+}
+
+.progress-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 10px;
+    flex-wrap: nowrap;
+    margin-top: 20px;
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 767px) {
     .tasks-container {
@@ -427,6 +495,10 @@ select {
     }
     .progress-section {
         flex-direction: column;
+    }
+    .player-bar {
+        flex-direction: column;
+        gap: 10px;
     }
 }
 
