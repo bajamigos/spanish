@@ -42,20 +42,6 @@
     .cloze-sentence { font-size:1.05rem; color:#333; margin-top:0.8rem; }
 
     .button-group { margin-top:1rem; display:flex; justify-content:center; gap:0.6rem; flex-wrap:wrap; }
-    button {
-      padding:10px 18px;
-      border:1px solid #aaa;
-      background:#000;
-      color:#ccc;
-      border-radius:4px;
-      cursor:pointer;
-      font-weight:bold;
-      box-shadow:1px 1px 0 #aaa, 2px 2px 0 #bbb;
-      transition: all 0.05s ease;
-    }
-    button:hover { background:#222; color:#fff; transform: translate(1px,1px); }
-
-    #hintBtn { background:#000; color:#ccc; }
 
     .top-stats { margin:8px auto 16px; font-size:0.95rem; color:#444; }
     .bottom-panel {
@@ -119,11 +105,11 @@
   </div>
 
   <div id="button-group" class="button-group" style="display: none;">
-    <button id="hintBtn" onclick="toggleEnglishHints()">English</button>
-    <button onclick="rateCard(0)">Again</button>
-    <button onclick="rateCard(1)" style="display: none;">Hard</button>
-    <button id="combinedBtn" onclick="handleCombinedClick()">Answer</button>
-    <button onclick="rateCard(3)" style="display: none;">Easy</button>
+    <button id="hintBtn" class="unified-button" onclick="toggleEnglishHints()">English</button>
+    <button class="unified-button" onclick="rateCard(0)">Again</button>
+    <button class="unified-button" onclick="rateCard(1)" style="display: none;">Hard</button>
+    <button id="combinedBtn" class="unified-button" onclick="handleCombinedClick()">Answer</button>
+    <button class="unified-button" onclick="rateCard(3)" style="display: none;">Easy</button>
   </div>
 
   <div id="bottom-panel" class="bottom-panel" style="display: none;">
@@ -133,8 +119,8 @@
     </div>
     <div class="bottom-row">
       <label>Daily New Limit: <input id="daily-limit" type="number" value="10"></label>
-      <button onclick="saveSettings()">Save</button>
-      <button onclick="downloadUpdatedCSV()">Download CSV</button>
+      <button class="unified-button" onclick="saveSettings()">Save</button>
+      <button class="unified-button" onclick="downloadUpdatedCSV()">Download CSV</button>
     </div>
   </div>
 
