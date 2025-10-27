@@ -169,6 +169,7 @@
     let hintsVisible = false;
     let answerVisible = false; // Track if answer is shown
     let englishMap = {};
+    let currentSentence = ''; // Store the current cloze sentence
     const csvUrl = 'https://raw.githubusercontent.com/bajamigos/spanish/main/flashcards.csv';
 
     async function loadCSV() {
@@ -272,8 +273,8 @@
       document.getElementById('higher-english').textContent = hintsVisible ? (englishMap[higher] || '') : '';
       document.getElementById('answer-english').textContent = ''; // Never show English for answer
 
-      const sentence = sentences[Math.floor(Math.random() * sentences.length)];
-      document.getElementById('cloze-display').textContent = sentence;
+      currentSentence = sentences[Math.floor(Math.random() * sentences.length)];
+      document.getElementById('cloze-display').textContent = answerVisible ? currentSentence.replace('_____', word) : currentSentence;
 
       document.getElementById('flashcard').style.display = 'block';
       resetCombinedButton(); // Reset button state for new card
