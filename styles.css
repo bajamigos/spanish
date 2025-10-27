@@ -28,7 +28,7 @@ body {
 }
 
 /* ===== Buttons ===== */
-button, .tally-button, .new-image-button, .task-button, .nav-button, .buy-button {
+button, .new-image-button, .task-button, .nav-button, .buy-button {
     padding: 10px 20px;
     margin: 10px;
     border: 1px solid #aaa;
@@ -42,12 +42,72 @@ button, .tally-button, .new-image-button, .task-button, .nav-button, .buy-button
     font-size: 1em;
 }
 
-button:hover, .tally-button:hover, .new-image-button:hover,
+button:hover, .new-image-button:hover,
 .task-button:hover, .nav-button:hover, .buy-button:hover {
     background: #222;
     color: #fff;
     box-shadow: 0 0 0 #aaa;
     transform: translate(2px, 2px);
+}
+
+.tally-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: #007AFF; /* Apple system blue */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.tally-button:hover {
+    background: #0066CC; /* Darker blue on hover */
+    transform: scale(1.02);
+}
+
+.tally-button:active {
+    background: #005BB5;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.tally-button svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+.apple-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    background: #007AFF; /* Apple system blue */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.apple-button:hover {
+    background: #0066CC; /* Darker blue on hover */
+    transform: scale(1.02);
+}
+
+.apple-button:active {
+    background: #005BB5;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
 }
 
 /* ===== Links ===== */
@@ -344,6 +404,22 @@ select {
     margin-top: 20px;
 }
 
+/* ===== Header Layout ===== */
+.header-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+@media (max-width: 767px) {
+    .header-layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 767px) {
     .tasks-container {
@@ -377,6 +453,10 @@ select {
         flex-direction: column;
         align-items: center;
         gap: 10px;
+    }
+
+    .tally-button {
+        width: 100%; /* Full width on mobile for better touch */
     }
 }
 
