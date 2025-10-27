@@ -1,14 +1,32 @@
 <div class="footer-card">
-    <div class="action-row">
-        <div class="timer-card">
-            <div class="timer-display" id="timer">02:00</div>
-            <button class="timer-button" id="start-timer-btn" title="Iniciar">▶</button>
-            <button class="timer-button" id="start-record-btn" title="Grabar">🎤</button>
-            <button class="timer-button" id="stop-btn" title="Detener">⏸</button>
-            <button class="timer-button" id="reset-btn" title="Reiniciar">↺</button>
+    <div class="player-bar">
+        <div class="timer-display" id="timer">02:00</div>
+        <div class="player-controls">
+            <button class="timer-button" id="start-timer-btn" title="Iniciar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+                    <path d="M10.804 8 5 4.633v6.734zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696z"/>
+                </svg>
+            </button>
+            <button class="timer-button" id="start-record-btn" title="Grabar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mic" viewBox="0 0 16 16">
+                    <path d="M3.5 6.5A.5.5 0 0 1 4 7v1.5a3.5 3.5 0 1 0 7 0V7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1.5a5.5 5.5 0 1 1-11 0V7a.5.5 0 0 1 .5-.5z"/>
+                    <path d="M8 15a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+                </svg>
+            </button>
+            <button class="timer-button" id="stop-btn" title="Detener">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pause" viewBox="0 0 16 16">
+                    <path d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5m4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5"/>
+                </svg>
+            </button>
+            <button class="timer-button" id="reset-btn" title="Reiniciar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
+                    <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
+                </svg>
+            </button>
         </div>
     </div>
-    <div class="progress-section" style="display: flex; justify-content: space-around; gap: 5px; margin-top: 5px;">
+    <div class="progress-section">
         <div class="contributors-column">
             <p>🏆 Top Contributors:</p>
             <ul id="top-tutors">
