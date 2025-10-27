@@ -95,7 +95,7 @@
     <div id="error" style="color: red;"></div>
   </div>
 
-  <div id="flashcard" class="content-card">
+  <div id="flashcard" class="content-card" style="display: none;">
     <div id="card-num" style="font-weight:bold; margin-bottom:10px;"></div>
 
     <div class="flashcard-ladder">
@@ -118,15 +118,16 @@
     <p class="cloze-sentence" id="cloze-display"></p>
   </div>
 
-  <div id="button-group" class="button-group">
+  <div id="button-group" class="button-group" style="display: none;">
     <button id="hintBtn" onclick="toggleEnglishHints()">Show English Hints</button>
     <button onclick="rateCard(0)">Again</button>
     <button onclick="rateCard(1)">Hard</button>
     <button onclick="rateCard(2)">Good</button>
     <button onclick="rateCard(3)">Easy</button>
+    <button id="showAnswerBtn" onclick="showAnswer()">Show Answer</button>
   </div>
 
-  <div id="bottom-panel" class="bottom-panel">
+  <div id="bottom-panel" class="bottom-panel" style="display: none;">
     <div class="bottom-row">
       <span class="stat-pill">New Today: <span id="new-today">0</span></span>
       <span class="stat-pill">Reviews Today: <span id="reviews-today">0</span></span>
@@ -168,6 +169,7 @@
     let currentIndex = 0;
     let hintsVisible = false;
     let englishMap = {};
+    let answerVisible = false; // Track if answer is shown
     const csvUrl = 'https://raw.githubusercontent.com/bajamigos/spanish/main/flashcards.csv';
 
     async function loadCSV() {
@@ -265,16 +267,22 @@
       document.getElementById('card-num').textContent = `Card ${card.id}`;
       document.getElementById('lower-neighbor-box').textContent = lower;
       document.getElementById('higher-neighbor-box').textContent = higher;
-      document.getElementById('answer-box').textContent = '_____';
+      document.getElementById('answer-box').textContent = answerVisible ? word : '_____';
 
       document.getElementById('lower-english').textContent = hintsVisible ? (englishMap[lower] || '') : '';
       document.getElementById('higher-english').textContent = hintsVisible ? (englishMap[higher] || '') : '';
-      document.getElementById('answer-english').textContent = hintsVisible ? english : '';
+      document.getElementById('answer-english').textContent = ''; // Never show English for answer
 
       const sentence = sentences[Math.floor(Math.random() * sentences.length)];
       document.getElementById('cloze-display').textContent = sentence;
 
       document.getElementById('flashcard').style.display = 'block';
+      document.getElementById('showAnswerBtn').textContent = answerVisible ? 'Hide Answer' : 'Show Answer';
+    }
+
+    function showAnswer() {
+      answerVisible = !answerVisible;
+      showCard(currentIndex);
     }
 
     async function rateCard(quality) {
@@ -303,26 +311,10 @@
         reviewsToday: userSettings.reviewsToday
       }, { merge: true });
 
+      answerVisible = false; // Reset answer visibility after rating
       updateStats();
       currentIndex = (currentIndex + 1) % cards.length;
       showCard(currentIndex);
-    }
-
-    function toggleEnglishHints() {
-      hintsVisible = !hintsVisible;
-      showCard(currentIndex);
-      document.getElementById('hintBtn').textContent = hintsVisible ? 'Hide English Hints' : 'Show English Hints';
-    }
-
-    async function saveSettings() {
-      if (!auth.currentUser) return;
-      userSettings.dailyNewLimit = parseInt(document.getElementById('daily-limit').value) || 10;
-      await db.doc(`users/${auth.currentUser.uid}`).set({ dailyNewLimit: userSettings.dailyNewLimit }, { merge: true });
-      alert('Settings saved');
-    }
-
-    function downloadUpdatedCSV() {
-      alert('Download functionality placeholder - implement CSV export if needed');
     }
 
     async function signup() {
