@@ -1,0 +1,11 @@
+CardID,Pair,Part of Speech,Hint,Gradability Type,Order,Word,Sentences,English
+SUSU001,susurrar-gritar,Verb,"to whisper",,0,susurrar,"En la quietud de la noche, ella se inclinó hacia su amigo y decidió _____ el secreto para que nadie más pudiera oírlo.",whisper
+SUSU002,susurrar-gritar,Verb,"to murmur",,1,murmurar,"No _____ quejas todo el tiempo, expresa tus opiniones de manera clara y directa.",murmur
+SUSU003,susurrar-gritar,Verb,"to speak",,2,hablar,"A veces es mejor _____ claramente que quedarse callado.",speak
+SUSU004,susurrar-gritar,Verb,"to shout",,3,gritar,"Tuvo que _____ para que lo escucharan por encima del ruido.",shout
+SUSU005,susurrar-gritar,Verb,"to yell intensely",,4,berrear,"El bebé empezó a _____ cuando tuvo hambre.",yell
+CAL001,caliente-frio,Adjective,"to describe temperature",,0,caliente,"El café está tan _____ que no puedo beberlo.",hot
+CAL002,caliente-frio,Adjective,"slightly warm",,1,tibio,"Prefiero el agua _____ para lavar los platos.",warm
+CAL003,caliente-frio,Adjective,"to describe temperature",,2,templado,"El clima estaba agradablemente _____ durante la primavera.",mild
+CAL004,caliente-frio,Adjective,"to describe temperature",,3,frio,"El viento estaba tan _____ que me congeló las manos.",cold
+CAL005,caliente-frio,Adjective,"to describe temperature",,4,helado,"El río estaba tan _____ que dolía al tocarlo.",freezing
