@@ -25,12 +25,13 @@
       />
     </div>
 
-    <button class="new-image-button" onclick="loadNewImage()">Nueva Foto</button>
+    <div class="button-group">
+      <button class="new-image-button" onclick="loadNewImage()">Nueva Foto</button>
+      <button class="new-image-button" id="toggle-scoreboard">Mostrar Marcador</button>
+    </div>
 
     <!-- Scoreboard -->
-    <section id="scoreboard">
-      <button id="toggle-scoreboard">Ocultar Marcador</button>
-
+    <section id="scoreboard" class="hidden">
       <div class="word-display" id="word-box">Haz clic en "Iniciar"</div>
 
       <div class="score">
