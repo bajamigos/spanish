@@ -17,6 +17,62 @@
     </div>
 
     <div class="admin-card">
+      <h2>Upload / Replace Flashcard-data.csv</h2>
+      <input type="file" id="flashcardUpload" accept=".csv">
+      <button id="flashcardUploadBtn">Upload CSV</button>
+      <table class="csv-preview-table" id="flashcardPreview"></table>
+    </div>
+
+    <div class="admin-card">
+      <h2>Upload / Replace wordladder.csv</h2>
+      <input type="file" id="wordladderUpload" accept=".csv">
+      <button id="wordladderUploadBtn">Upload CSV</button>
+      <table class="csv-preview-table" id="wordladderPreview"></table>
+    </div>
+
+    <div class="admin-card">
+      <h2>Upload / Replace wordhunt.csv</h2>
+      <input type="file" id="wordhuntUpload" accept=".csv">
+      <button id="wordhuntUploadBtn">Upload CSV</button>
+      <table class="csv-preview-table" id="wordhuntPreview"></table>
+    </div>
+
+    <div class="admin-card">
+      <h2>Upload / Replace placeholder.csv</h2>
+      <input type="file" id="placeholderUpload" accept=".csv">
+      <button id="placeholderUploadBtn">Upload CSV</button>
+      <table class="csv-preview-table" id="placeholderPreview"></table>
+    </div>
+
+    <div class="admin-card">
+      <h2>Upload / Replace monologue-ideas.csv</h2>
+      <input type="file" id="monologueUpload" accept=".csv">
+      <button id="monologueUploadBtn">Upload CSV</button>
+      <table class="csv-preview-table" id="monologuePreview"></table>
+    </div>
+
+    <div class="admin-card">
+      <h2>Upload / Replace Debate-topics.csv</h2>
+      <input type="file" id="debateUpload" accept=".csv">
+      <button id="debateUploadBtn">Upload CSV</button>
+      <table class="csv-preview-table" id="debatePreview"></table>
+    </div>
+
+    <div class="admin-card">
+      <h2>Upload / Replace Rollplay-ideas.csv</h2>
+      <input type="file" id="rollplayUpload" accept=".csv">
+      <button id="rollplayUploadBtn">Upload CSV</button>
+      <table class="csv-preview-table" id="rollplayPreview"></table>
+    </div>
+
+    <div class="admin-card">
+      <h2>Upload / Replace Podcast-ideas.csv</h2>
+      <input type="file" id="podcastUpload" accept=".csv">
+      <button id="podcastUploadBtn">Upload CSV</button>
+      <table class="csv-preview-table" id="podcastPreview"></table>
+    </div>
+
+    <div class="admin-card">
       <h2>User Management</h2>
       <input type="text" id="userSearch" placeholder="Enter user email">
       <button id="resetUserBtn">Reset User Progress</button>
@@ -64,6 +120,95 @@
     const table = document.getElementById('csvPreview');
     table.innerHTML = '<tr>' + headers.map(h => `<th>${h}</th>`).join('') + '</tr>' +
       rows.slice(0, 5).map(r => `<tr>${r.split(',').map(c => `<td>${c}</td>`).join('')}</tr>`).join('');
+  };
+
+  // Duplicate dummy previews for added sections (no actual uploads)
+  document.getElementById('flashcardUploadBtn').onclick = async () => {
+    const file = document.getElementById('flashcardUpload').files[0];
+    if (!file) return alert('Select a CSV first!');
+    const text = await file.text();
+    const [header, ...rows] = text.split('\n').filter(Boolean);
+    const headers = header.split(',');
+    const table = document.getElementById('flashcardPreview');
+    table.innerHTML = '<tr>' + headers.map(h => `<th>${h}</th>`).join('') + '</tr>' +
+      rows.slice(0, 5).map(r => `<tr>${r.split(',').map(c => `<td>${c}</td>`).join('')}</tr>`).join('');
+  };
+
+  document.getElementById('wordladderUploadBtn').onclick = async () => {
+    const file = document.getElementById('wordladderUpload').files[0];
+    if (!file) return alert('Select a CSV first!');
+    const text = await file.text();
+    const [header, ...rows] = text.split('\n').filter(Boolean);
+    const headers = header.split(',');
+    const table = document.getElementById('wordladderPreview');
+    table.innerHTML = '<tr>' + headers.map(h => `<th>${h}</th>`).join('') + '</tr>' +
+      rows.slice(0, 5).map(r => `<tr>${r.split(',').map(c => `<td>${c}</td>`).join('')}</tr>`).join('');
+  };
+
+  document.getElementById('wordhuntUploadBtn').onclick = async () => {
+    const file = document.getElementById('wordhuntUpload').files[0];
+    if (!file) return alert('Select a CSV first!');
+    const text = await file.text();
+    const [header, ...rows] = text.split('\n').filter(Boolean);
+    const headers = header.split(',');
+    const table = document.getElementById('wordhuntPreview');
+    table.innerHTML = '<tr>' + headers.map(h => `<th>${h}</th>`).join('') + '</tr>' +
+      rows.slice(0, 5).map(r => `<tr>${r.split(',').map(c => `<td>${c}</td>`).join('">}</tr>`).join('');
+  };
+
+  document.getElementById('placeholderUploadBtn').onclick = async () => {
+    const file = document.getElementById('placeholderUpload').files[0];
+    if (!file) return alert('Select a CSV first!');
+    const text = await file.text();
+    const [header, ...rows] = text.split('\n').filter(Boolean);
+    const headers = header.split(',');
+    const table = document.getElementById('placeholderPreview');
+    table.innerHTML = '<tr>' + headers.map(h => `<th>${h}</th>`).join('') + '</tr>' +
+      rows.slice(0, 5).map(r => `<tr>${r.split(',').map(c => `<td>${c}</td>`).join('')}</tr>`).join('');
+  };
+
+  document.getElementById('monologueUploadBtn').onclick = async () => {
+    const file = document.getElementById('monologueUpload').files[0];
+    if (!file) return alert('Select a CSV first!');
+    const text = await file.text();
+    const [header, ...rows] = text.split('\n').filter(Boolean);
+    const headers = header.split(',');
+    const table = document.getElementById('monologuePreview');
+    table.innerHTML = '<tr>' + headers.map(h => `<th>${h}</th>`).join('') + '</tr>' +
+      rows.slice(0, 5).map(r => `<tr>${r.split(',').map(c => `<td>${c}</td>`).join('')}</tr>`).join('');
+  };
+
+  document.getElementById('debateUploadBtn').onclick = async () => {
+    const file = document.getElementById('debateUpload').files[0];
+    if (!file) return alert('Select a CSV first!');
+    const text = await file.text();
+    const [header, ...rows] = text.split('\n').filter(Boolean);
+    const headers = header.split(',');
+    const table = document.getElementById('debatePreview');
+    table.innerHTML = '<tr>' + headers.map(h => `<th>${h}</th>`).join('') + '</tr>' +
+      rows.slice(0, 5).map(r => `<tr>${r.split(',').map(c => `<td>${c}</td>`).join('">}</tr>`).join('');
+  };
+
+  document.getElementById('rollplayUploadBtn').onclick = async () => {
+    const file = document.getElementById('rollplayUpload').files[0];
+    if (!file) return alert('Select a CSV first!');
+    const text = await file.text();
+    const [header, ...rows] = text.split('\n').filter(Boolean);
+    const headers = header.split(',');
+    const table = document.getElementById('rollplayPreview');
+    table.innerHTML = '<tr>' + headers.map(h => `<th>${h}</th>`).join('') + '</tr>' +
+      rows.slice(0, 5).map(r => `<tr>${r.split(',').map(c => `<td>${c}</td>`).join('">}</tr>`).join('');
+  };
+
+  document.getElementById('podcastUploadBtn').onclick = async () => {
+    const file = document.getElementById('podcastUpload').files[0];
+    if (!file) return alert('Select a CSV first!');
+    const text = await file.text();
+    const [header, ...rows] = text.split('\n').filter(Boolean);
+    const headers = header.split(',');
+    const table = document.getElementById('podcastPreview');
+    table.innerHTML = '<tr>' + headers.map(h => `<th>${h}</th>`).join('') + '</tr>' +
+      rows.slice(0, 5).map(r => `<tr>${r.split(',').map(c => `<td>${c}</td>`).join('">}</tr>`).join('');
   };
 
   async function loadStats() {
