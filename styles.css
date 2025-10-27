@@ -66,6 +66,7 @@ button:hover, .new-image-button:hover,
     transition: background 0.2s ease, transform 0.1s ease;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     text-decoration: none; /* Ensure links match button style */
+    min-height: 36px; /* Ensure consistent height */
 }
 
 .tally-button:hover {
