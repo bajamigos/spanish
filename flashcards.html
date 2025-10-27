@@ -107,414 +107,240 @@
       </div>
     </div>
 
-    <p id="cloze-display" class="cloze-sentence"></p>
+    <p class="cloze-sentence" id="cloze-display"></p>
+  </div>
 
-    <div class="button-group">
-      <button id="flipBtn" onclick="flip()">Show Answer</button>
-      <button id="incorrectBtn" onclick="rate(false)">Incorrect</button>
-      <button id="correctBtn" onclick="rate(true)">Correct</button>
-      <button id="hintBtn" onclick="toggleEnglishHints()">Show English Hints</button>
-    </div>
+  <div class="button-group">
+    <button id="hintBtn" onclick="toggleEnglishHints()">Show English Hints</button>
+    <button onclick="rateCard(0)">Again</button>
+    <button onclick="rateCard(1)">Hard</button>
+    <button onclick="rateCard(2)">Good</button>
+    <button onclick="rateCard(3)">Easy</button>
   </div>
 
   <div class="bottom-panel">
     <div class="bottom-row">
-      <span class="stat-pill" id="cards-learned-today">Learned Today: 0</span>
-      <span id="reviews-today" style="color:#666;">(Reviews today: 0)</span>
+      <span class="stat-pill">New Today: <span id="new-today">0</span></span>
+      <span class="stat-pill">Reviews Today: <span id="reviews-today">0</span></span>
     </div>
-
     <div class="bottom-row">
-      <label>New cards/day:
-        <input id="daily-limit" type="number" min="1" value="10">
-      </label>
+      <label>Daily New Limit: <input id="daily-limit" type="number" value="10"></label>
       <button onclick="saveSettings()">Save</button>
-    </div>
-
-    <div class="bottom-row">
-      <button onclick="auth.signOut()">Logout</button>
-      <button onclick="downloadUpdatedCSV()">Download CSV with CardIDs</button>
+      <button onclick="downloadUpdatedCSV()">Download CSV</button>
     </div>
   </div>
 
-  <!-- Firebase SDKs -->
-  <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-auth-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore-compat.js"></script>
-
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
   <script>
-  // ---------------------------
-  // Firebase config
-  // ---------------------------
-  const firebaseConfig = {
-    apiKey: "AIzaSyDJYgI-xgZAGj6780W8BqXS4thd8ODvfDA",
-    authDomain: "antonimo-acbd9.firebaseapp.com",
-    projectId: "antonimo-acbd9",
-    storageBucket: "antonimo-acbd9.firebasestorage.app",
-    messagingSenderId: "904238822187",
-    appId: "1:904238822187:web:2c0488369954495f3b8b6e",
-    measurementId: "G-GTP9X49KNP"
-  };
-  const app = firebase.initializeApp(firebaseConfig);
-  const auth = firebase.auth();
-  const db = firebase.firestore();
+    const firebaseConfig = {
+      // Your Firebase config here
+    };
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+    const googleProvider = new firebase.auth.GoogleAuthProvider();
 
-  // ---------------------------
-  // State
-  // ---------------------------
-  let cards = [];               // array of { id, pair, word, sentence }
-  let scales = {};              // pair -> [words ordered by intensity]
-  let englishMap = {};          // word -> english
-  let cardReviewDocs = {};      // map cardId -> review doc data (from Firestore)
-  let userSettings = {};        // users/{uid} doc (dailyNewLimit, newCardsToday, reviewsToday, lastNewDate)
-  let currentIndex = 0;
-  let currentCard = null;
-  let hintsVisible = false;
+    let cards = [];
+    let cardReviewDocs = {};
+    let userSettings = {
+      newCardsToday: 0,
+      reviewsToday: 0,
+      dailyNewLimit: 10,
+      lastNewDate: new Date().toDateString()
+    };
+    let currentIndex = 0;
+    let hintsVisible = false;
+    let englishMap = {};
+    const csvUrl = 'https://raw.githubusercontent.com/bajamigos/spanish/main/flashcards.csv';
 
-  // ---------------------------
-  // CSV loading (supports CardID column)
-  // ---------------------------
-  async function loadCSV() {
-    cards = [];
-    scales = {};
-    englishMap = {};
-    const resp = await fetch('flashcard-data.csv', { cache: "no-store" });
-    if (!resp.ok) {
-      console.error('CSV fetch failed', resp.status);
-      return;
-    }
-    const text = await resp.text();
-    const rows = text.replace(/\r\n/g,'\n').split('\n').filter(Boolean);
-    if (rows.length < 2) return;
-    const headers = rows[0].split(',').map(h => h.trim());
-    const idx = name => headers.findIndex(h => h.toLowerCase() === name.toLowerCase());
-
-    const cardIdIdx = idx('cardid');
-    const pairIdx = idx('pair');
-    const wordIdx = idx('word');
-    const sentencesIdx = idx('sentences');
-    const englishIdx = idx('english');
-    const orderIdx = idx('order');
-
-    for (let r = 1; r < rows.length; r++) {
-      const line = rows[r];
-      // split respecting quoted commas
-      const parts = line.split(/,(?=(?:[^"]*"[^"]*")*[^"]*$)/).map(p => p.trim().replace(/^"|"$/g,''));
-      const id = cardIdIdx >= 0 ? (parts[cardIdIdx] || '') : '';
-      const pair = pairIdx >= 0 ? (parts[pairIdx] || '') : '';
-      const word = wordIdx >= 0 ? (parts[wordIdx] || '') : '';
-      const sentence = sentencesIdx >= 0 ? (parts[sentencesIdx] || '') : '';
-      const english = englishIdx >= 0 ? (parts[englishIdx] || '') : '';
-
-      // store scale
-      if (pair && word) {
-        if (!scales[pair]) scales[pair] = [];
-        // if order index present, try to place by order numeric; otherwise push
-        if (orderIdx >= 0 && parts[orderIdx] !== undefined && parts[orderIdx] !== '') {
-          const orderVal = parseInt(parts[orderIdx]);
-          if (!isNaN(orderVal)) {
-            scales[pair][orderVal] = word;
-          } else {
-            scales[pair].push(word);
-          }
-        } else {
-          scales[pair].push(word);
-        }
-        if (english) englishMap[word] = english;
-      }
-
-      // create card(s) for sentences containing blanks
-      if (sentence && (sentence.includes('_____') || sentence.includes('___'))) {
-        cards.push({ id: id || '', pair, word, sentence });
-      }
+    async function loadCSV() {
+      const response = await fetch(csvUrl);
+      const csvText = await response.text();
+      Papa.parse(csvText, {
+        header: true,
+        skipEmptyLines: true,
+        complete: (results) => {
+          cards = results.data.map(row => ({
+            id: row.CardID,
+            pair: row.Pair,
+            pos: row['Part of Speech'],
+            hint: row.Hint,
+            gradType: row['Gradability Type'],
+            order: parseInt(row.Order),
+            word: row.Word,
+            sentences: row.Sentences.split('|').map(s => s.trim()),
+            english: row.English
+          }));
+          cards = cards.filter(c => c.word);
+          englishMap = cards.reduce((map, c) => { map[c.word] = c.english; return map; }, {});
+          console.log('CSV loaded', cards.length, 'cards');
+          updateStats();
+        },
+        error: (err) => console.error('CSV parse error', err)
+      });
     }
 
-    // normalize scales to remove holes
-    for (const p in scales) {
-      scales[p] = scales[p].filter(Boolean);
-    }
-
-    // shuffle cards for session variety
-    cards = shuffle(cards);
-  }
-
-  function shuffle(arr) {
-    for (let i = arr.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [arr[i], arr[j]] = [arr[j], arr[i]];
-    }
-    return arr;
-  }
-
-  // ---------------------------
-  // Load user review docs & settings
-  // ---------------------------
-  async function loadUserData(uid) {
-    cardReviewDocs = {};
-    userSettings = {};
-    try {
-      // load user settings doc
+    async function loadUserData(uid) {
       const userRef = db.doc(`users/${uid}`);
-      const userSnap = await userRef.get();
-      if (userSnap.exists) {
-        userSettings = userSnap.data();
+      const userDoc = await userRef.get();
+      if (userDoc.exists) {
+        userSettings = { ...userSettings, ...userDoc.data() };
+        if (userSettings.lastNewDate !== new Date().toDateString()) {
+          userSettings.newCardsToday = 0;
+          userSettings.reviewsToday = 0;
+          userSettings.lastNewDate = new Date().toDateString();
+          await userRef.set(userSettings, { merge: true });
+        }
       } else {
-        // defaults
-        userSettings = {
-          dailyNewLimit: 10,
-          newCardsToday: 0,
-          reviewsToday: 0,
-          lastNewDate: ''
-        };
         await userRef.set(userSettings);
       }
 
-      // normalize daily counters if date changed
-      const todayStr = new Date().toDateString();
-      if (userSettings.lastNewDate !== todayStr) {
-        userSettings.newCardsToday = 0;
-        userSettings.reviewsToday = 0;
-        userSettings.lastNewDate = todayStr;
-        await userRef.update({
-          newCardsToday: 0,
-          reviewsToday: 0,
-          lastNewDate: todayStr
-        });
-      }
-
-      // load cardReviews collection
-      const reviewsSnap = await db.collection(`users/${uid}/cardReviews`).get();
-      const cardIdToIndex = {};
-      for (let i = 0; i < cards.length; i++) {
-        if (cards[i].id) cardIdToIndex[cards[i].id] = i;
-      }
-
-      reviewsSnap.forEach(doc => {
-        const id = doc.id;
-        const data = doc.data();
-        // If numeric doc id from legacy format, map to card id if possible
-        if (/^\d+$/.test(id)) {
-          const idx = parseInt(id, 10);
-          if (idx >= 0 && idx < cards.length && cards[idx].id) {
-            cardReviewDocs[cards[idx].id] = data;
-          } else {
-            // can't map; ignore
-          }
-        } else {
-          cardReviewDocs[id] = data;
-        }
+      // Load review docs
+      const reviewsRef = userRef.collection('reviews');
+      const snapshot = await reviewsRef.get();
+      snapshot.forEach(doc => {
+        cardReviewDocs[doc.id] = doc.data();
       });
-    } catch (e) {
-      console.error('Error loading user data:', e);
-    }
-  }
+      console.log('Loaded', Object.keys(cardReviewDocs).length, 'review docs');
 
-  // ---------------------------
-  // Stats calculation & display
-  // ---------------------------
-  function computeStats() {
-    const now = new Date();
-    // cardsDue: count of review docs where due <= now
-    let cardsDue = 0;
-    for (const card of cards) {
-      const cid = card.id || '';
-      const doc = cardReviewDocs[cid];
-      if (doc && doc.due && doc.due.toDate) {
-        try {
-          const dueDate = (typeof doc.due.toDate === 'function') ? doc.due.toDate() : new Date(doc.due);
-          if (dueDate <= now) cardsDue++;
-        } catch(e){ /* ignore parse errors */ }
-      }
-    }
-    // newNotSeen: number of cards with no review doc
-    let newNotSeen = 0;
-    for (const c of cards) {
-      const cid = c.id || '';
-      if (!cardReviewDocs[cid]) newNotSeen++;
-    }
-
-    const dailyLimit = userSettings.dailyNewLimit || 10;
-    const newToday = userSettings.newCardsToday || 0;
-    const reviewsToday = userSettings.reviewsToday || 0;
-    const newAvailable = Math.max(0, Math.min(newNotSeen, dailyLimit - newToday));
-    const remaining = cardsDue + newAvailable;
-
-    return { cardsDue, remaining, newAvailable, newNotSeen, newToday, reviewsToday };
-  }
-
-  function renderStats() {
-    const s = computeStats();
-    document.getElementById('cards-due').textContent = `Cards Due: ${s.cardsDue}`;
-    document.getElementById('cards-remaining').textContent = `Remaining: ${s.remaining}`;
-    document.getElementById('cards-learned-today').textContent = `Learned Today: ${s.newToday}`;
-    document.getElementById('reviews-today').textContent = `(Reviews today: ${s.reviewsToday})`;
-  }
-
-  // ---------------------------
-  // Card display and neighbors
-  // ---------------------------
-  function getNeighbors(word, pair) {
-    const list = scales[pair] || [];
-    const i = list.indexOf(word);
-    return {
-      lower: i > 0 ? list[i - 1] : '',
-      higher: i < list.length - 1 ? list[i + 1] : ''
-    };
-  }
-
-  function showCard(index = 0) {
-    if (cards.length === 0) {
-      document.getElementById('card-num').textContent = 'No cards available';
-      return;
-    }
-    currentIndex = index % cards.length;
-    currentCard = cards[currentIndex];
-    const { pair, word, sentence } = currentCard;
-    const { lower, higher } = getNeighbors(word, pair);
-
-    document.getElementById('lower-neighbor-box').textContent = lower;
-    document.getElementById('higher-neighbor-box').textContent = higher;
-    document.getElementById('answer-box').textContent = '';
-    document.getElementById('cloze-display').textContent = sentence;
-    document.getElementById('lower-english').textContent = '';
-    document.getElementById('higher-english').textContent = '';
-    document.getElementById('answer-english').textContent = '';
-    document.getElementById('card-num').textContent = `Card ${currentIndex + 1} of ${cards.length}`;
-    hintsVisible = false;
-    document.getElementById('hintBtn').textContent = 'Show English Hints';
-    renderStats();
-  }
-
-  function flip() {
-    if (!currentCard) return;
-    document.getElementById('answer-box').textContent = currentCard.word;
-  }
-
-  // ---------------------------
-  // Rating and Firestore updates (SM-2-ish)
-  // ---------------------------
-  async function rate(isCorrect) {
-    if (!currentCard) return;
-    const cid = currentCard.id || '';
-    const cardRef = db.collection(`users/${auth.currentUser.uid}/cardReviews`).doc(cid || String(currentIndex));
-
-    // load existing doc if present locally or fetch
-    let old = cardReviewDocs[cid] || null;
-    if (!old) {
-      // try fetch to be safe
-      const snap = await cardRef.get().catch(()=>null);
-      if (snap && snap.exists) old = snap.data();
-    }
-
-    // Simple SM-2 algorithm
-    let reps = (old && old.reps) ? old.reps : 0;
-    let ef = (old && old.ef) ? old.ef : 2.5;
-    let interval = (old && old.interval) ? old.interval : 0;
-
-    const quality = isCorrect ? 5 : 0;
-    if (quality < 3) {
-      reps = 0;
-      interval = 1;
-      ef = Math.max(1.3, ef - 0.2);
-    } else {
-      reps = reps + 1;
-      if (reps === 1) interval = 1;
-      else if (reps === 2) interval = 6;
-      else interval = Math.round(interval * ef);
-      // update ease factor
-      ef = ef + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02));
-      if (ef < 1.3) ef = 1.3;
-    }
-
-    const dueDate = new Date(Date.now() + interval * 86400000);
-    const newDoc = { reps, ef: parseFloat(ef.toFixed(2)), interval, due: firebase.firestore.Timestamp.fromDate(dueDate) };
-
-    // write doc
-    try {
-      await cardRef.set(newDoc);
-      // update local cache
-      if (cid) cardReviewDocs[cid] = newDoc;
-      else cardReviewDocs[String(currentIndex)] = newDoc;
-    } catch (e) {
-      console.error('Error writing review doc', e);
-    }
-
-    // Update user's counters (newCardsToday/reviewsToday)
-    try {
-      const userRef = db.doc(`users/${auth.currentUser.uid}`);
-      // Determine if this was a "new" card (no previous doc)
-      const wasNew = !(old && old.reps !== undefined);
-      if (wasNew) {
-        userSettings.newCardsToday = (userSettings.newCardsToday || 0) + 1;
-      }
-      userSettings.reviewsToday = (userSettings.reviewsToday || 0) + 1;
-      await userRef.set({
-        newCardsToday: userSettings.newCardsToday,
-        reviewsToday: userSettings.reviewsToday,
-        dailyNewLimit: userSettings.dailyNewLimit || 10,
-        lastNewDate: userSettings.lastNewDate || new Date().toDateString()
-      }, { merge: true });
-    } catch (e) {
-      console.error('Error updating user stats', e);
-    }
-
-    // move to next card
-    currentIndex++;
-    if (currentIndex >= cards.length) currentIndex = 0;
-    showCard(currentIndex);
-  }
-
-  // ---------------------------
-  // English hint toggle
-  // ---------------------------
-  function toggleEnglishHints() {
-    if (!currentCard) return;
-    hintsVisible = !hintsVisible;
-    const { pair, word } = currentCard;
-    const { lower, higher } = getNeighbors(word, pair);
-
-    document.getElementById('lower-english').textContent = hintsVisible ? (englishMap[lower] || '') : '';
-    document.getElementById('higher-english').textContent = hintsVisible ? (englishMap[higher] || '') : '';
-    document.getElementById('answer-english').textContent = hintsVisible ? (englishMap[word] || '') : '';
-
-    document.getElementById('hintBtn').textContent = hintsVisible ? 'Hide English Hints' : 'Show English Hints';
-  }
-
-  // ---------------------------
-  // Utility: updateStats + saveSettings + download placeholder
-  // ---------------------------
-  function updateStats() { renderStats(); }
-  function saveSettings() {
-    const v = parseInt(document.getElementById('daily-limit').value) || 10;
-    userSettings.dailyNewLimit = v;
-    db.doc(`users/${auth.currentUser.uid}`).set({ dailyNewLimit: v }, { merge: true }).then(()=> {
-      renderStats();
-      alert('Saved');
-    }).catch(e => { console.error(e); alert('Save failed'); });
-  }
-  function downloadUpdatedCSV() {
-    alert('Download CSV with CardIDs: (use the Download CSV button in earlier UI) — placeholder here.');
-  }
-
-  // ---------------------------
-  // Auth & app init
-  // ---------------------------
-  auth.onAuthStateChanged(async user => {
-    if (user) {
-      // load CSV, then user data, then show first card
-      await loadCSV();
-      await loadUserData(user.uid);
-      // set UI daily limit input
-      document.getElementById('daily-limit').value = userSettings.dailyNewLimit || 10;
+      document.getElementById('login-form').style.display = 'none';
+      document.getElementById('settings').style.display = 'block';
+      document.getElementById('flashcard').style.display = 'block';
       showCard(0);
-    } else {
-      // signed out state; still load CSV but skip user-specific parts
-      await loadCSV();
-      // reset UIs
-      document.getElementById('card-num').textContent = '';
-      document.getElementById('cloze-display').textContent = '';
-      renderStats();
     }
-  });
+
+    function getDueCards() {
+      const now = Date.now();
+      return cards.filter(c => {
+        const doc = cardReviewDocs[c.id] || {};
+        return !doc.nextDue || doc.nextDue <= now;
+      });
+    }
+
+    function updateStats() {
+      const due = getDueCards().length;
+      const remaining = cards.length - Object.keys(cardReviewDocs).length + due; // Approx remaining including reviews
+      document.getElementById('cards-due').textContent = due;
+      document.getElementById('cards-remaining').textContent = remaining;
+      document.getElementById('new-today').textContent = userSettings.newCardsToday;
+      document.getElementById('reviews-today').textContent = userSettings.reviewsToday;
+    }
+
+    function showCard(index) {
+      currentIndex = index;
+      const card = cards[currentIndex];
+      if (!card) return;
+
+      const { pair, word, sentences, english } = card;
+      const scale = cards.filter(c => c.pair === pair).sort((a,b) => a.order - b.order).map(c => c.word);
+      const idx = scale.indexOf(word);
+      const lower = idx > 0 ? scale[idx-1] : '';
+      const higher = idx < scale.length - 1 ? scale[idx+1] : '';
+
+      document.getElementById('card-num').textContent = `Card ${card.id || currentIndex + 1}`;
+      document.getElementById('lower-neighbor-box').textContent = lower;
+      document.getElementById('higher-neighbor-box').textContent = higher;
+      document.getElementById('answer-box').textContent = '_____'; // Placeholder for cloze
+
+      document.getElementById('lower-english').textContent = hintsVisible ? englishMap[lower] : '';
+      document.getElementById('higher-english').textContent = hintsVisible ? englishMap[higher] : '';
+      document.getElementById('answer-english').textContent = hintsVisible ? english : '';
+
+      const randomSentence = sentences[Math.floor(Math.random() * sentences.length)];
+      document.getElementById('cloze-display').textContent = randomSentence.replace('_____', '_____'); // Show cloze
+    }
+
+    async function rateCard(quality) {
+      if (!auth.currentUser) return alert('Login required');
+
+      const cid = cards[currentIndex].id || String(currentIndex);
+      let doc = cardReviewDocs[cid] || { ef: 2.5, interval: 1, reps: 0 };
+      doc.ef = doc.ef + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02));
+      doc.ef = Math.max(1.3, doc.ef);
+      if (quality < 3) {
+        doc.reps = 0;
+        doc.interval = 1;
+      } else {
+        doc.reps++;
+        if (doc.reps === 1) doc.interval = 1;
+        else if (doc.reps === 2) doc.interval = 6;
+        else doc.interval = Math.ceil(doc.interval * doc.ef);
+      }
+      doc.nextDue = Date.now() + doc.interval * 86400000;
+
+      // Save to Firestore
+      const reviewsRef = db.collection(`users/${auth.currentUser.uid}/reviews`);
+      await reviewsRef.doc(cid).set(doc);
+      cardReviewDocs[cid] = doc;
+
+      // Update counters
+      if (!cardReviewDocs[cid].reps) userSettings.newCardsToday++;
+      userSettings.reviewsToday++;
+      await db.doc(`users/${auth.currentUser.uid}`).set({
+        newCardsToday: userSettings.newCardsToday,
+        reviewsToday: userSettings.reviewsToday
+      }, { merge: true });
+
+      currentIndex = (currentIndex + 1) % cards.length;
+      showCard(currentIndex);
+    }
+
+    function toggleEnglishHints() {
+      hintsVisible = !hintsVisible;
+      showCard(currentIndex); // Refresh hints
+      document.getElementById('hintBtn').textContent = hintsVisible ? 'Hide English' : 'Show English';
+    }
+
+    async function saveSettings() {
+      if (!auth.currentUser) return alert('Login required');
+      userSettings.dailyNewLimit = parseInt(document.getElementById('daily-limit').value) || 10;
+      await db.doc(`users/${auth.currentUser.uid}`).set({ dailyNewLimit: userSettings.dailyNewLimit }, { merge: true });
+      alert('Settings saved');
+    }
+
+    // Auth functions
+    async function signup() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      try {
+        await auth.createUserWithEmailAndPassword(email, password);
+      } catch (e) {
+        document.getElementById('error').textContent = e.message;
+      }
+    }
+
+    async function login() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      try {
+        await auth.signInWithEmailAndPassword(email, password);
+      } catch (e) {
+        document.getElementById('error').textContent = e.message;
+      }
+    }
+
+    async function googleLogin() {
+      try {
+        await auth.signInWithPopup(googleProvider);
+      } catch (e) {
+        document.getElementById('error').textContent = e.message;
+      }
+    }
+
+    // Init
+    auth.onAuthStateChanged(user => {
+      if (user) {
+        loadUserData(user.uid);
+        document.getElementById('login-form').style.display = 'none';
+      } else {
+        document.getElementById('login-form').style.display = 'block';
+      }
+    });
+
+    loadCSV();
   </script>
 </body>
 </html>
