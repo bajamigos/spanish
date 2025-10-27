@@ -1,6 +1,6 @@
 (() => {
   /* ==========================
-     Word Hunt Game Logic (Scoped)
+     Simplified Static Word Game
      ========================== */
 
   let words = [];
@@ -11,8 +11,8 @@
   let gameRunning = false;
   let caught = 0;
   let missed = 0;
-  let dropSpeed = 5;
   let translationVisible = false;
+  let dropSpeed = 5; // still adjustable, controls how long before next word
 
   /* Load CSV Words */
   fetch("wordlist.csv")
@@ -27,8 +27,6 @@
     .catch((err) => console.error("Error loading CSV:", err));
 
   /* Elements */
-  const scoreboard = document.getElementById("scoreboard");
-  const toggleScoreboardBtn = document.getElementById("toggle-scoreboard");
   const timerDisplay = document.getElementById("timer");
   const caughtDisplay = document.getElementById("caught");
   const missedDisplay = document.getElementById("missed");
@@ -36,15 +34,9 @@
   const resetGameBtn = document.getElementById("reset-game");
   const toggleTranslationBtn = document.getElementById("toggle-translation");
   const speedControl = document.getElementById("speed-control");
-  const leftZone = document.getElementById("wordhunt-left");
-  const rightZone = document.getElementById("wordhunt-right");
+  const wordBox = document.getElementById("word-box");
 
-  /* Scoreboard toggle */
-  toggleScoreboardBtn.addEventListener("click", () => {
-    scoreboard.classList.toggle("collapsed");
-  });
-
-  /* Game control buttons */
+  /* Button Events */
   toggleGameBtn.addEventListener("click", () => {
     if (!gameRunning) startGame();
     else pauseGame();
@@ -55,12 +47,19 @@
   toggleTranslationBtn.addEventListener("click", () => {
     translationVisible = !translationVisible;
     toggleTranslationBtn.textContent = translationVisible
-      ? "🇬🇧 Ocultar Traducción"
-      : "🇪🇸 Mostrar Traducción";
+      ? "Ocultar Traducción"
+      : "Mostrar Traducción";
   });
 
   speedControl.addEventListener("input", () => {
     dropSpeed = Number(speedControl.value);
+  });
+
+  wordBox.addEventListener("click", () => {
+    if (!gameRunning || wordBox.textContent === "Haz clic en \"Iniciar\"") return;
+    caught++;
+    updateScoreboard();
+    showNextWord();
   });
 
   /* ==========================
@@ -73,14 +72,14 @@
     }
 
     gameRunning = true;
-    toggleGameBtn.textContent = "⏸️ Pausar";
+    toggleGameBtn.textContent = "Pausar";
     startTimer();
-    spawnNextWord();
+    showNextWord();
   }
 
   function pauseGame() {
     gameRunning = false;
-    toggleGameBtn.textContent = "▶️ Reanudar";
+    toggleGameBtn.textContent = "Reanudar";
     clearInterval(timerInterval);
   }
 
@@ -89,13 +88,12 @@
     timer = 120;
     caught = 0;
     missed = 0;
-    updateScoreboard();
-    clearWords();
     gameRunning = false;
-    toggleGameBtn.textContent = "▶️ Iniciar";
+    toggleGameBtn.textContent = "Iniciar";
+    updateScoreboard();
+    wordBox.textContent = "Haz clic en \"Iniciar\"";
   }
 
-  /* Timer */
   function startTimer() {
     clearInterval(timerInterval);
     timerInterval = setInterval(() => {
@@ -105,77 +103,33 @@
     }, 1000);
   }
 
-  /* End of round */
   function endGame() {
     clearInterval(timerInterval);
     gameRunning = false;
-    alert(`⏰ Tiempo terminado!\n✅ Acertadas: ${caught}\n❌ Falladas: ${missed}`);
+    alert(`Tiempo terminado.\nAcertadas: ${caught}\nFalladas: ${missed}`);
   }
 
-  /* Spawn one word at a time */
-  function spawnNextWord() {
+  function showNextWord() {
     if (!gameRunning || timer <= 0) return;
 
     const wordData = words[currentWordIndex % words.length];
     currentWordIndex++;
 
-    const wordEl = document.createElement("div");
-    wordEl.classList.add("falling-word");
-    wordEl.textContent = spanishMode ? wordData.spanish : wordData.english;
+    const text = translationVisible
+      ? `${wordData.spanish} (${wordData.english})`
+      : wordData.spanish;
 
-    const leftSide = Math.random() < 0.5;
-    const zone = leftSide ? leftZone : rightZone;
-    zone.appendChild(wordEl);
+    wordBox.textContent = text;
 
-    const zoneHeight = zone.clientHeight;
-    const zoneWidth = zone.clientWidth;
-    const xPos = Math.random() * (zoneWidth - 80);
-    wordEl.style.left = `${xPos}px`;
-    wordEl.style.top = `0px`;
-
-    const fallDuration = 4000 / (dropSpeed / 2);
-    const start = Date.now();
-
-    function fall() {
+    // Wait before next word
+    setTimeout(() => {
       if (!gameRunning) return;
-      const elapsed = Date.now() - start;
-      const progress = elapsed / fallDuration;
-      const y = progress * (zoneHeight - 40);
-      wordEl.style.top = `${y}px`;
-
-      if (translationVisible) {
-        wordEl.textContent = spanishMode
-          ? `${wordData.spanish} (${wordData.english})`
-          : `${wordData.english} (${wordData.spanish})`;
-      }
-
-      if (progress < 1) {
-        requestAnimationFrame(fall);
-      } else {
-        if (wordEl.parentElement) wordEl.remove();
-        missed++;
-        updateScoreboard();
-        if (gameRunning) setTimeout(spawnNextWord, 500);
-      }
-    }
-
-    requestAnimationFrame(fall);
-
-    wordEl.addEventListener("click", () => {
-      if (!gameRunning) return;
-      caught++;
+      missed++;
       updateScoreboard();
-      if (wordEl.parentElement) wordEl.remove();
-      setTimeout(spawnNextWord, 500);
-    });
+      showNextWord();
+    }, 4000 / (dropSpeed / 2));
   }
 
-  function clearWords() {
-    leftZone.innerHTML = "";
-    rightZone.innerHTML = "";
-  }
-
-  /* Update scoreboard */
   function updateScoreboard() {
     caughtDisplay.textContent = caught;
     missedDisplay.textContent = missed;
