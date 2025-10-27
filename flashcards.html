@@ -95,7 +95,7 @@
     <div id="error" style="color: red;"></div>
   </div>
 
-  <div id="flashcard" class="content-card" style="display: none;">
+  <div id="flashcard" class="content-card">
     <div id="card-num" style="font-weight:bold; margin-bottom:10px;"></div>
 
     <div class="flashcard-ladder">
@@ -118,7 +118,7 @@
     <p class="cloze-sentence" id="cloze-display"></p>
   </div>
 
-  <div class="button-group" style="display: none;">
+  <div id="button-group" class="button-group">
     <button id="hintBtn" onclick="toggleEnglishHints()">Show English Hints</button>
     <button onclick="rateCard(0)">Again</button>
     <button onclick="rateCard(1)">Hard</button>
@@ -126,7 +126,7 @@
     <button onclick="rateCard(3)">Easy</button>
   </div>
 
-  <div class="bottom-panel" style="display: none;">
+  <div id="bottom-panel" class="bottom-panel">
     <div class="bottom-row">
       <span class="stat-pill">New Today: <span id="new-today">0</span></span>
       <span class="stat-pill">Reviews Today: <span id="reviews-today">0</span></span>
@@ -224,7 +224,6 @@
         console.log(`Loaded ${Object.keys(cardReviewDocs).length} review docs`);
 
         document.getElementById('login-form').style.display = 'none';
-        document.getElementById('settings').style.display = 'block';
         document.getElementById('bottom-panel').style.display = 'block';
         document.getElementById('button-group').style.display = 'flex';
         document.getElementById('daily-limit').value = userSettings.dailyNewLimit || 10;
@@ -307,6 +306,23 @@
       updateStats();
       currentIndex = (currentIndex + 1) % cards.length;
       showCard(currentIndex);
+    }
+
+    function toggleEnglishHints() {
+      hintsVisible = !hintsVisible;
+      showCard(currentIndex);
+      document.getElementById('hintBtn').textContent = hintsVisible ? 'Hide English Hints' : 'Show English Hints';
+    }
+
+    async function saveSettings() {
+      if (!auth.currentUser) return;
+      userSettings.dailyNewLimit = parseInt(document.getElementById('daily-limit').value) || 10;
+      await db.doc(`users/${auth.currentUser.uid}`).set({ dailyNewLimit: userSettings.dailyNewLimit }, { merge: true });
+      alert('Settings saved');
+    }
+
+    function downloadUpdatedCSV() {
+      alert('Download functionality placeholder - implement CSV export if needed');
     }
 
     async function signup() {
