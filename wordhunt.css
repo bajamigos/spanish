@@ -7,28 +7,12 @@
   border: 1px solid #bbb;
   border-radius: 8px;
   padding: 1.5rem;
-  max-width: 600px; /* wider card */
+  max-width: 600px;
   margin: 2rem auto;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
   text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
   transition: all 0.3s ease;
-}
-
-/* Hide scoreboard toggle */
-#toggle-scoreboard {
-  background: linear-gradient(to bottom, #f6f6f6, #d9d9d9);
-  border: 1px solid #aaa;
-  border-radius: 6px;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.2s ease;
-  margin-bottom: 1rem;
-}
-
-#toggle-scoreboard:hover {
-  background: #cfcfcf;
 }
 
 /* Hidden state */
@@ -67,7 +51,7 @@
   font-size: 1rem;
 }
 
-/* Buttons and input */
+/* Controls */
 .controls {
   display: flex;
   justify-content: center;
