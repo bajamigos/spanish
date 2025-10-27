@@ -122,9 +122,8 @@
     <button id="hintBtn" onclick="toggleEnglishHints()">Show English Hints</button>
     <button onclick="rateCard(0)">Again</button>
     <button onclick="rateCard(1)" style="display: none;">Hard</button>
-    <button onclick="rateCard(2)">Good</button>
+    <button id="combinedBtn" onclick="handleCombinedClick()">Show Answer</button>
     <button onclick="rateCard(3)" style="display: none;">Easy</button>
-    <button id="showAnswerBtn" onclick="showAnswer()">Show Answer</button>
   </div>
 
   <div id="bottom-panel" class="bottom-panel" style="display: none;">
@@ -277,7 +276,7 @@
       document.getElementById('cloze-display').textContent = sentence;
 
       document.getElementById('flashcard').style.display = 'block';
-      document.getElementById('showAnswerBtn').textContent = answerVisible ? 'Hide Answer' : 'Show Answer';
+      resetCombinedButton(); // Reset button state for new card
     }
 
     function toggleEnglishHints() {
@@ -286,9 +285,21 @@
       document.getElementById('hintBtn').textContent = hintsVisible ? 'Hide English Hints' : 'Show English Hints';
     }
 
-    function showAnswer() {
-      answerVisible = !answerVisible;
-      showCard(currentIndex);
+    function handleCombinedClick() {
+      if (!answerVisible) {
+        answerVisible = true;
+        showCard(currentIndex);
+        document.getElementById('combinedBtn').textContent = 'Good';
+        document.getElementById('combinedBtn').onclick = () => rateCard(2);
+      } else {
+        rateCard(2);
+      }
+    }
+
+    function resetCombinedButton() {
+      answerVisible = false;
+      document.getElementById('combinedBtn').textContent = 'Show Answer';
+      document.getElementById('combinedBtn').onclick = handleCombinedClick;
     }
 
     async function rateCard(quality) {
@@ -317,7 +328,7 @@
         reviewsToday: userSettings.reviewsToday
       }, { merge: true });
 
-      answerVisible = false; // Reset answer visibility after rating
+      resetCombinedButton(); // Reset button after rating
       updateStats();
       currentIndex = (currentIndex + 1) % cards.length;
       showCard(currentIndex);
