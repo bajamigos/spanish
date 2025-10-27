@@ -264,16 +264,16 @@ select {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background: linear-gradient(#333, #222);
+    background: transparent;
     padding: 8px 15px;
     border-radius: 6px;
-    color: #ccc;
+    color: #000;
     margin-bottom: 15px;
     width: 80%;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .player-controls {
@@ -282,16 +282,17 @@ select {
 }
 
 .timer-display {
-    background: #000;
-    color: limegreen;
-    font-family: monospace;
-    font-weight: bold;
-    font-size: 1.2em;
+    background: transparent;
+    color: #000;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    font-size: 1.4em;
     padding: 5px 12px;
     border-radius: 4px;
-    border: 1px solid #444;
+    border: none;
     min-width: 70px;
     text-align: center;
+    letter-spacing: 1px;
 }
 
 .timer-button {
@@ -301,17 +302,24 @@ select {
     width: 40px; /* Fixed width for consistency */
     height: 40px; /* Fixed height for button size */
     padding: 0; /* Remove padding to center SVG */
-    background: #444;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
+    background: linear-gradient(to bottom, #f9f9f9, #e0e0e0);
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 50%; /* Rounded for iTunes-like buttons */
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.2s ease;
+    transition: background 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 
 .timer-button:hover {
-    background: #666;
+    background: linear-gradient(to bottom, #e0e0e0, #ccc);
+    transform: scale(1.05);
+}
+
+.timer-button:active {
+    background: linear-gradient(to bottom, #ccc, #bbb);
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
 }
 
 .timer-button svg {
@@ -353,7 +361,6 @@ select {
     .timer-button {
         width: 35px;
         height: 35px;
-        padding: 6px 8px;
     }
 
     .timer-button svg {
@@ -362,7 +369,7 @@ select {
     }
 
     .timer-display {
-        font-size: 1em;
+        font-size: 1.2em;
         min-width: 60px;
     }
 
