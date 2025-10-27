@@ -119,10 +119,10 @@
   </div>
 
   <div id="button-group" class="button-group" style="display: none;">
-    <button id="hintBtn" onclick="toggleEnglishHints()">Show English Hints</button>
+    <button id="hintBtn" onclick="toggleEnglishHints()">English</button>
     <button onclick="rateCard(0)">Again</button>
     <button onclick="rateCard(1)" style="display: none;">Hard</button>
-    <button id="combinedBtn" onclick="handleCombinedClick()">Show Answer</button>
+    <button id="combinedBtn" onclick="handleCombinedClick()">Answer</button>
     <button onclick="rateCard(3)" style="display: none;">Easy</button>
   </div>
 
@@ -163,7 +163,7 @@
       newCardsToday: 0,
       reviewsToday: 0,
       dailyNewLimit: 10,
-      lastNewDate: Date.now().toDateString()
+      lastNewDate: new Date().toDateString()
     };
     let currentIndex = 0;
     let hintsVisible = false;
@@ -283,7 +283,7 @@
     function toggleEnglishHints() {
       hintsVisible = !hintsVisible;
       showCard(currentIndex);
-      document.getElementById('hintBtn').textContent = hintsVisible ? 'Hide English Hints' : 'Show English Hints';
+      document.getElementById('hintBtn').textContent = hintsVisible ? 'Hide English' : 'English';
     }
 
     function handleCombinedClick() {
@@ -299,7 +299,7 @@
 
     function resetCombinedButton() {
       answerVisible = false;
-      document.getElementById('combinedBtn').textContent = 'Show Answer';
+      document.getElementById('combinedBtn').textContent = 'Answer';
       document.getElementById('combinedBtn').onclick = handleCombinedClick;
     }
 
@@ -330,6 +330,8 @@
       }, { merge: true });
 
       resetCombinedButton(); // Reset button after rating
+      hintsVisible = false; // Reset hints to off after rating
+      document.getElementById('hintBtn').textContent = 'English'; // Reset hints button text
       updateStats();
       currentIndex = (currentIndex + 1) % cards.length;
       showCard(currentIndex);
