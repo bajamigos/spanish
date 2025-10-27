@@ -18,7 +18,6 @@
       z-index: 2;
     }
 
-    /* Wrapper around image + falling words */
     .game-wrapper {
       position: relative;
       display: flex;
@@ -26,22 +25,9 @@
       align-items: center;
       margin: 2rem auto;
       width: 100%;
-      max-width: 800px;
+      max-width: 900px;
     }
 
-    /* Falling word area */
-    #wordhunt-area {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      pointer-events: none;
-      z-index: 1;
-    }
-
-    /* Scoreboard toggle styles (inline for now) */
     #toggle-scoreboard {
       display: inline-block;
       margin-top: 1rem;
@@ -63,21 +49,24 @@
     <p>Para la Tarea 1 del SIELE S4, el estudiante describe fotos en español, practicando habilidades de expresión oral.</p>
 
     <div class="game-wrapper">
-      <!-- Falling words layer -->
-      <div id="wordhunt-area"></div>
+      <!-- Left falling zone -->
+      <div id="wordhunt-left" class="wordhunt-zone"></div>
 
-      <!-- Existing image -->
+      <!-- Image -->
       <div class="image-container">
         <img id="random-image" src="https://picsum.photos/500/500?random=1" alt="Random Photo for Description">
       </div>
+
+      <!-- Right falling zone -->
+      <div id="wordhunt-right" class="wordhunt-zone"></div>
     </div>
 
     <button class="new-image-button" onclick="loadNewImage()">🔄 Nueva Foto</button>
 
-    <!-- Scoreboard toggle button -->
+    <!-- Scoreboard toggle -->
     <button id="toggle-scoreboard">📊 Mostrar / Ocultar Marcador</button>
 
-    <!-- Scoreboard (collapsible) -->
+    <!-- Scoreboard -->
     <section id="scoreboard" class="collapsed">
       <div class="score">
         <span>⏱️ Tiempo: <span id="timer">120</span>s</span>
