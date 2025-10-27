@@ -1,184 +1,82 @@
-(() => {
-  let words = [];
-  let spanishMode = true;
-  let currentWordIndex = 0;
-  let timer = 120;
-  let timerInterval = null;
-  let gameRunning = false;
-  let caught = 0;
-  let missed = 0;
-  let translationVisible = false;
-  let dropSpeed = 5;
-  let nextWordTimeout = null;
+/* ==========================
+   Minimalist Word Game Styles
+   ========================== */
 
-  document.addEventListener("DOMContentLoaded", async () => {
-    await loadWordCSV();
+#scoreboard {
+  background: linear-gradient(to bottom, #fafafa, #eaeaea);
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  transition: all 0.3s ease;
+}
 
-    const scoreboard = document.getElementById("scoreboard");
-    const toggleScoreboardBtn = document.getElementById("toggle-scoreboard");
-    const timerDisplay = document.getElementById("timer");
-    const caughtDisplay = document.getElementById("caught");
-    const missedDisplay = document.getElementById("missed");
-    const toggleGameBtn = document.getElementById("toggle-game");
-    const resetGameBtn = document.getElementById("reset-game");
-    const toggleTranslationBtn = document.getElementById("toggle-translation");
-    const speedControl = document.getElementById("speed-control");
-    const wordBox = document.getElementById("word-box");
+/* Hidden state */
+#scoreboard.hidden {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
+  margin: 0 auto;
+  border: none;
+}
 
-    // Safety check
-    if (!scoreboard || !toggleGameBtn || !wordBox) {
-      console.error("Missing essential elements in HTML.");
-      return;
-    }
+/* Word display box */
+.word-display {
+  background: #f0f0f0;
+  border: 1px solid #222;
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s ease;
+}
 
-    /* Toggle scoreboard visibility */
-    toggleScoreboardBtn.addEventListener("click", () => {
-      scoreboard.classList.toggle("hidden");
-      toggleScoreboardBtn.textContent = scoreboard.classList.contains("hidden")
-        ? "Mostrar Marcador"
-        : "Ocultar Marcador";
-    });
+.word-display:hover {
+  background: #e4e4e4;
+  transform: scale(1.01);
+}
 
-    /* Core controls */
-    toggleGameBtn.addEventListener("click", () => {
-      if (!gameRunning) startGame();
-      else pauseGame();
-    });
+/* Score section */
+.score {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+}
 
-    resetGameBtn.addEventListener("click", resetGame);
+/* Controls */
+.controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
 
-    toggleTranslationBtn.addEventListener("click", () => {
-      translationVisible = !translationVisible;
-      toggleTranslationBtn.textContent = translationVisible
-        ? "Ocultar Traducción"
-        : "Mostrar Traducción";
-      refreshCurrentBoxText();
-    });
+.controls button {
+  background: linear-gradient(to bottom, #f5f5f5, #d8d8d8);
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
 
-    speedControl.addEventListener("input", () => {
-      const val = Number(speedControl.value);
-      dropSpeed = isFinite(val) && val > 0 ? val : 5;
-    });
+.controls button:hover {
+  background: #cfcfcf;
+}
 
-    wordBox.addEventListener("click", () => {
-      if (!gameRunning || !wordBox.dataset.hasWord) return;
-      caught++;
-      updateScoreboard();
-      showNextWordImmediate();
-    });
-
-    updateScoreboard();
-    wordBox.textContent = 'Haz clic en "Iniciar"';
-
-    /* === Functions === */
-    async function loadWordCSV(path = "wordlist.csv") {
-      try {
-        const res = await fetch(path);
-        const text = await res.text();
-        const rows = text.trim().split("\n").slice(1).filter(Boolean);
-        words = rows.map((r) => {
-          const [spanish, english] = r.split(",");
-          return { spanish: spanish.trim(), english: english.trim() };
-        });
-      } catch (err) {
-        console.error("Error loading CSV:", err);
-      }
-    }
-
-    function startGame() {
-      if (words.length === 0) {
-        alert("Aún no se han cargado las palabras.");
-        return;
-      }
-      gameRunning = true;
-      toggleGameBtn.textContent = "Pausar";
-      startTimer();
-      showNextWordImmediate();
-    }
-
-    function pauseGame() {
-      gameRunning = false;
-      toggleGameBtn.textContent = "Reanudar";
-      clearInterval(timerInterval);
-      clearPendingWord();
-    }
-
-    function resetGame() {
-      clearInterval(timerInterval);
-      clearPendingWord();
-      timer = 120;
-      caught = 0;
-      missed = 0;
-      gameRunning = false;
-      toggleGameBtn.textContent = "Iniciar";
-      updateScoreboard();
-      wordBox.textContent = 'Haz clic en "Iniciar"';
-      wordBox.dataset.hasWord = "";
-      currentWordIndex = 0;
-    }
-
-    function startTimer() {
-      clearInterval(timerInterval);
-      timerInterval = setInterval(() => {
-        timer--;
-        updateScoreboard();
-        if (timer <= 0) endGame();
-      }, 1000);
-    }
-
-    function endGame() {
-      clearInterval(timerInterval);
-      clearPendingWord();
-      gameRunning = false;
-      toggleGameBtn.textContent = "Iniciar";
-      wordBox.dataset.hasWord = "";
-      alert(`Tiempo terminado.\nAcertadas: ${caught}\nFalladas: ${missed}`);
-    }
-
-    function clearPendingWord() {
-      if (nextWordTimeout) {
-        clearTimeout(nextWordTimeout);
-        nextWordTimeout = null;
-      }
-    }
-
-    function showNextWordImmediate() {
-      clearPendingWord();
-      if (!gameRunning || timer <= 0) return;
-
-      const wd = words[currentWordIndex % words.length];
-      currentWordIndex++;
-
-      const text = translationVisible
-        ? `${wd.spanish} (${wd.english})`
-        : wd.spanish;
-
-      wordBox.textContent = text;
-      wordBox.dataset.hasWord = "1";
-
-      const intervalMs = Math.max(600, Math.round(4000 / (dropSpeed / 2)));
-      nextWordTimeout = setTimeout(() => {
-        if (!gameRunning) return;
-        missed++;
-        updateScoreboard();
-        showNextWordImmediate();
-      }, intervalMs);
-    }
-
-    function refreshCurrentBoxText() {
-      if (!wordBox.dataset.hasWord) return;
-      const idx = ((currentWordIndex - 1) % words.length + words.length) % words.length;
-      const wd = words[idx];
-      if (!wd) return;
-      wordBox.textContent = translationVisible
-        ? `${wd.spanish} (${wd.english})`
-        : wd.spanish;
-    }
-
-    function updateScoreboard() {
-      timerDisplay.textContent = timer;
-      caughtDisplay.textContent = caught;
-      missedDisplay.textContent = missed;
-    }
-  });
-})();
+.controls input {
+  width: 60px;
+  text-align: center;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.3rem;
+}
