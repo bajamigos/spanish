@@ -121,9 +121,9 @@
   <div id="button-group" class="button-group" style="display: none;">
     <button id="hintBtn" onclick="toggleEnglishHints()">Show English Hints</button>
     <button onclick="rateCard(0)">Again</button>
-    <button onclick="rateCard(1)">Hard</button>
+    <button onclick="rateCard(1)" style="display: none;">Hard</button>
     <button onclick="rateCard(2)">Good</button>
-    <button onclick="rateCard(3)">Easy</button>
+    <button onclick="rateCard(3)" style="display: none;">Easy</button>
     <button id="showAnswerBtn" onclick="showAnswer()">Show Answer</button>
   </div>
 
@@ -168,8 +168,8 @@
     };
     let currentIndex = 0;
     let hintsVisible = false;
-    let englishMap = {};
     let answerVisible = false; // Track if answer is shown
+    let englishMap = {};
     const csvUrl = 'https://raw.githubusercontent.com/bajamigos/spanish/main/flashcards.csv';
 
     async function loadCSV() {
@@ -278,6 +278,12 @@
 
       document.getElementById('flashcard').style.display = 'block';
       document.getElementById('showAnswerBtn').textContent = answerVisible ? 'Hide Answer' : 'Show Answer';
+    }
+
+    function toggleEnglishHints() {
+      hintsVisible = !hintsVisible;
+      showCard(currentIndex);
+      document.getElementById('hintBtn').textContent = hintsVisible ? 'Hide English Hints' : 'Show English Hints';
     }
 
     function showAnswer() {
