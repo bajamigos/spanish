@@ -27,7 +27,7 @@ body {
     margin: 20px auto;
 }
 
-/* ===== Unified Button Style ===== */
+/* ===== Unified Button Style (for non-sound buttons) ===== */
 .unified-button {
     display: flex;
     flex-direction: column;
@@ -76,7 +76,7 @@ body {
     border-radius: 4px; /* Keep original shape */
 }
 
-/* ===== Sound Buttons (Restored) ===== */
+/* ===== Sound Buttons (Isolated Style) ===== */
 .timer-button {
     display: flex;
     align-items: center;
