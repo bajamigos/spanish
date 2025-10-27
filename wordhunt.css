@@ -4,31 +4,58 @@
 
 #scoreboard {
   background: linear-gradient(to bottom, #fafafa, #eaeaea);
-  border: 1px solid #ccc;
-  border-radius: 10px;
+  border: 1px solid #bbb;
+  border-radius: 8px;
   padding: 1.5rem;
-  max-width: 500px;
+  max-width: 600px; /* wider card */
   margin: 2rem auto;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
   text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* Hide scoreboard toggle */
+#toggle-scoreboard {
+  background: linear-gradient(to bottom, #f6f6f6, #d9d9d9);
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin-bottom: 1rem;
+}
+
+#toggle-scoreboard:hover {
+  background: #cfcfcf;
+}
+
+/* Hidden state */
+#scoreboard.hidden {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
+  margin: 0 auto;
+  border: none;
 }
 
 /* Word display box */
 .word-display {
   background: #f0f0f0;
-  border: 1px solid #333;
+  border: 1px solid #222;
   border-radius: 8px;
   padding: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 500;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.1s ease;
 }
 
 .word-display:hover {
-  background: #e0e0e0;
+  background: #e4e4e4;
   transform: scale(1.01);
 }
 
@@ -36,16 +63,16 @@
 .score {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   font-size: 1rem;
 }
 
-/* Buttons */
+/* Buttons and input */
 .controls {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 
 .controls button {
@@ -55,7 +82,7 @@
   padding: 0.5rem 1rem;
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: background 0.2s ease;
 }
 
 .controls button:hover {
