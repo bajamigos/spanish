@@ -2,18 +2,26 @@
    Word Hunt Game Styles
    ========================== */
 
-#wordhunt-area {
+/* Zones outside the image */
+.wordhunt-zone {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  width: 25%;
   height: 100%;
   overflow: hidden;
   pointer-events: none;
   z-index: 1;
 }
 
-/* Individual falling word */
+#wordhunt-left {
+  left: 0;
+}
+
+#wordhunt-right {
+  right: 0;
+}
+
+/* Falling words */
 .falling-word {
   position: absolute;
   font-size: 1.4rem;
@@ -22,7 +30,7 @@
   pointer-events: auto;
   cursor: pointer;
   user-select: none;
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition: transform 0.2s ease, color 0.2s ease, opacity 0.3s ease;
 }
 
 .falling-word:hover {
