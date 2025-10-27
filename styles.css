@@ -262,52 +262,62 @@ select {
 .player-bar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 15px;
-    background: #000;
-    padding: 10px 20px;
-    border-radius: 8px;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(#333, #222);
+    padding: 8px 15px;
+    border-radius: 6px;
     color: #ccc;
     margin-bottom: 15px;
     width: 80%;
-    max-width: 600px; /* matches Vocabulary -> Pronunciación width */
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .player-controls {
     display: flex;
-    gap: 10px;
-    flex-wrap: nowrap;
+    gap: 8px;
 }
 
 .timer-display {
-    background: #fff;
-    color: #000;
+    background: #000;
+    color: limegreen;
+    font-family: monospace;
     font-weight: bold;
     font-size: 1.2em;
     padding: 5px 12px;
-    border-radius: 6px;
-    border: 1px solid #aaa;
+    border-radius: 4px;
+    border: 1px solid #444;
     min-width: 70px;
     text-align: center;
 }
 
 .timer-button {
-    background: #222;
-    color: #ccc;
-    border: 1px solid #aaa;
-    padding: 6px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Fixed width for consistency */
+    height: 40px; /* Fixed height for button size */
+    padding: 0; /* Remove padding to center SVG */
+    background: #444;
+    color: #fff;
+    border: none;
     border-radius: 4px;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.15s ease;
-    font-size: 1em;
+    transition: background 0.2s ease;
 }
 
 .timer-button:hover {
-    background: #444;
-    color: #fff;
+    background: #666;
+}
+
+.timer-button svg {
+    width: 20px; /* SVG size within button */
+    height: 20px;
+    fill: currentColor; /* Inherit color from button text */
 }
 
 .footer-divider {
@@ -333,15 +343,22 @@ select {
     }
 
     .player-bar {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: row;
+        gap: 5px;
         width: 100%;
         max-width: 90%;
+        justify-content: center;
     }
 
     .timer-button {
-        font-size: 0.9em;
-        padding: 6px 10px;
+        width: 35px;
+        height: 35px;
+        padding: 6px 8px;
+    }
+
+    .timer-button svg {
+        width: 18px;
+        height: 18px;
     }
 
     .timer-display {
