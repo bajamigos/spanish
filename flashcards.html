@@ -87,7 +87,15 @@
     <span id="cards-remaining">Remaining: 0</span>
   </div>
 
-  <div id="flashcard" class="content-card">
+  <div id="login-form">
+    <input id="email" type="email" placeholder="Email">
+    <input id="password" type="password" placeholder="Password">
+    <button onclick="signup()">Sign Up</button>
+    <button onclick="login()">Login</button>
+    <div id="error" style="color: red;"></div>
+  </div>
+
+  <div id="flashcard" class="content-card" style="display: none;">
     <div id="card-num" style="font-weight:bold; margin-bottom:10px;"></div>
 
     <div class="flashcard-ladder">
@@ -110,7 +118,7 @@
     <p class="cloze-sentence" id="cloze-display"></p>
   </div>
 
-  <div class="button-group">
+  <div class="button-group" style="display: none;">
     <button id="hintBtn" onclick="toggleEnglishHints()">Show English Hints</button>
     <button onclick="rateCard(0)">Again</button>
     <button onclick="rateCard(1)">Hard</button>
@@ -118,7 +126,7 @@
     <button onclick="rateCard(3)">Easy</button>
   </div>
 
-  <div class="bottom-panel">
+  <div class="bottom-panel" style="display: none;">
     <div class="bottom-row">
       <span class="stat-pill">New Today: <span id="new-today">0</span></span>
       <span class="stat-pill">Reviews Today: <span id="reviews-today">0</span></span>
@@ -148,9 +156,6 @@
     firebase.initializeApp(firebaseConfig);
     const auth = firebase.auth();
     const db = firebase.firestore();
-    const googleProvider = new firebase.auth.GoogleAuthProvider();
-
-    const taskName = 'Flashcards'; // For recording integration
 
     let cards = [];
     let cardReviewDocs = {};
@@ -218,6 +223,10 @@
         snapshot.forEach(doc => cardReviewDocs[doc.id] = doc.data());
         console.log(`Loaded ${Object.keys(cardReviewDocs).length} review docs`);
 
+        document.getElementById('login-form').style.display = 'none';
+        document.getElementById('settings').style.display = 'block';
+        document.getElementById('bottom-panel').style.display = 'block';
+        document.getElementById('button-group').style.display = 'flex';
         document.getElementById('daily-limit').value = userSettings.dailyNewLimit || 10;
         showCard(0);
       } catch (err) {
@@ -227,13 +236,10 @@
 
     function getDueCards() {
       const now = Date.now();
-      const today = new Date().toDateString();
-      let newCount = 0;
       return cards.filter(c => {
-        const doc = cardReviewDocs[c.id] || { reps: 0 };
+        const doc = cardReviewDocs[c.id] || { reps: 0, nextDue: 0 };
         if (doc.reps === 0 && userSettings.newCardsToday >= userSettings.dailyNewLimit) return false;
-        if (doc.reps === 0) newCount++;
-        return !doc.nextDue || doc.nextDue <= now;
+        return doc.nextDue <= now;
       });
     }
 
@@ -241,17 +247,14 @@
       const due = getDueCards().length;
       const totalReviewed = Object.keys(cardReviewDocs).length;
       const remaining = cards.length - totalReviewed;
-      document.getElementById('cards-due').textContent = `Cards Due: ${due}`;
-      document.getElementById('cards-remaining').textContent = `Remaining: ${remaining}`;
+      document.getElementById('cards-due').textContent = due;
+      document.getElementById('cards-remaining').textContent = remaining;
       document.getElementById('new-today').textContent = userSettings.newCardsToday;
       document.getElementById('reviews-today').textContent = userSettings.reviewsToday;
     }
 
     function showCard(index) {
-      if (cards.length === 0) {
-        document.getElementById('flashcard').style.display = 'none';
-        return;
-      }
+      if (cards.length === 0) return;
       currentIndex = index % cards.length;
       const card = cards[currentIndex];
       const { pair, word, sentences, english } = card;
@@ -260,7 +263,7 @@
       const lower = idx > 0 ? scale[idx - 1] : '';
       const higher = idx < scale.length - 1 ? scale[idx + 1] : '';
 
-      document.getElementById('card-num').textContent = card.id;
+      document.getElementById('card-num').textContent = `Card ${card.id}`;
       document.getElementById('lower-neighbor-box').textContent = lower;
       document.getElementById('higher-neighbor-box').textContent = higher;
       document.getElementById('answer-box').textContent = '_____';
@@ -306,44 +309,40 @@
       showCard(currentIndex);
     }
 
-    function toggleEnglishHints() {
-      hintsVisible = !hintsVisible;
-      showCard(currentIndex);
-      document.getElementById('hintBtn').textContent = hintsVisible ? 'Hide English Hints' : 'Show English Hints';
-    }
-
-    async function saveSettings() {
-      if (!auth.currentUser) return;
-      userSettings.dailyNewLimit = parseInt(document.getElementById('daily-limit').value) || 10;
-      await db.doc(`users/${auth.currentUser.uid}`).set({ dailyNewLimit: userSettings.dailyNewLimit }, { merge: true });
-      alert('Settings saved');
-    }
-
-    function downloadUpdatedCSV() {
-      alert('Download functionality placeholder - implement CSV export if needed');
-    }
-
-    // Auth
-    async function googleLogin() {
+    async function signup() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
       try {
-        await auth.signInWithPopup(googleProvider);
+        await auth.createUserWithEmailAndPassword(email, password);
       } catch (e) {
-        console.error(e);
+        document.getElementById('error').textContent = e.message;
       }
     }
 
+    async function login() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      try {
+        await auth.signInWithEmailAndPassword(email, password);
+      } catch (e) {
+        document.getElementById('error').textContent = e.message;
+      }
+    }
+
+    // Init
     auth.onAuthStateChanged(user => {
       if (user) {
         loadUserData(user.uid);
+        document.getElementById('login-form').style.display = 'none';
       } else {
-        // Show login prompt or handle
-        alert('Please log in with Google to use flashcards');
-        googleLogin();
+        document.getElementById('login-form').style.display = 'block';
+        document.getElementById('flashcard').style.display = 'none';
+        document.getElementById('button-group').style.display = 'none';
+        document.getElementById('bottom-panel').style.display = 'none';
       }
     });
 
     loadCSV();
   </script>
-  <button onclick="googleLogin()" style="margin: 20px auto; display: block;">Login with Google</button>
 </body>
 </html>
