@@ -11,7 +11,7 @@
   let gameRunning = false;
   let caught = 0;
   let missed = 0;
-  let dropSpeed = 5; // user-adjustable
+  let dropSpeed = 5;
   let translationVisible = false;
 
   /* Load CSV Words */
@@ -36,8 +36,8 @@
   const resetGameBtn = document.getElementById("reset-game");
   const toggleTranslationBtn = document.getElementById("toggle-translation");
   const speedControl = document.getElementById("speed-control");
-  const wordArea = document.getElementById("wordhunt-area");
-  const imageContainer = document.querySelector(".image-container img");
+  const leftZone = document.getElementById("wordhunt-left");
+  const rightZone = document.getElementById("wordhunt-right");
 
   /* Scoreboard toggle */
   toggleScoreboardBtn.addEventListener("click", () => {
@@ -74,7 +74,6 @@
 
     gameRunning = true;
     toggleGameBtn.textContent = "⏸️ Pausar";
-
     startTimer();
     spawnNextWord();
   }
@@ -124,36 +123,24 @@
     wordEl.classList.add("falling-word");
     wordEl.textContent = spanishMode ? wordData.spanish : wordData.english;
 
-    // Random side: left or right of the image
-    const containerRect = document
-      .querySelector(".game-wrapper")
-      .getBoundingClientRect();
-    const imageRect = imageContainer.getBoundingClientRect();
-    const leftZone = Math.random() < 0.5;
+    const leftSide = Math.random() < 0.5;
+    const zone = leftSide ? leftZone : rightZone;
+    zone.appendChild(wordEl);
 
-    let xPos;
-    if (leftZone) {
-      // left side
-      xPos = Math.random() * (imageRect.left - containerRect.left - 100);
-    } else {
-      // right side
-      const rightStart = imageRect.right - containerRect.left + 100;
-      xPos =
-        rightStart + Math.random() * (containerRect.width - rightStart - 50);
-    }
-
+    const zoneHeight = zone.clientHeight;
+    const zoneWidth = zone.clientWidth;
+    const xPos = Math.random() * (zoneWidth - 80);
     wordEl.style.left = `${xPos}px`;
     wordEl.style.top = `0px`;
-    wordArea.appendChild(wordEl);
 
-    const fallDuration = 4000 / (dropSpeed / 2); // speed factor
+    const fallDuration = 4000 / (dropSpeed / 2);
     const start = Date.now();
 
     function fall() {
       if (!gameRunning) return;
       const elapsed = Date.now() - start;
       const progress = elapsed / fallDuration;
-      const y = progress * (wordArea.clientHeight - 40);
+      const y = progress * (zoneHeight - 40);
       wordEl.style.top = `${y}px`;
 
       if (translationVisible) {
@@ -165,7 +152,7 @@
       if (progress < 1) {
         requestAnimationFrame(fall);
       } else {
-        if (wordEl.parentElement) wordArea.removeChild(wordEl);
+        if (wordEl.parentElement) wordEl.remove();
         missed++;
         updateScoreboard();
         if (gameRunning) setTimeout(spawnNextWord, 500);
@@ -184,7 +171,8 @@
   }
 
   function clearWords() {
-    wordArea.innerHTML = "";
+    leftZone.innerHTML = "";
+    rightZone.innerHTML = "";
   }
 
   /* Update scoreboard */
