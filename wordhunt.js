@@ -1,82 +1,130 @@
-/* ==========================
-   Minimalist Word Game Styles
-   ========================== */
+// Word list for the game (example words; replace with actual if available)
+const words = [
+  { spanish: "casa", english: "house" },
+  { spanish: "perro", english: "dog" },
+  { spanish: "gato", english: "cat" },
+  { spanish: "libro", english: "book" },
+  { spanish: "amigo", english: "friend" },
+  { spanish: "agua", english: "water" },
+  { spanish: "comida", english: "food" },
+  { spanish: "ciudad", english: "city" },
+  { spanish: "montaña", english: "mountain" },
+  { spanish: "playa", english: "beach" }
+];
 
-#scoreboard {
-  background: linear-gradient(to bottom, #fafafa, #eaeaea);
-  border: 1px solid #bbb;
-  border-radius: 8px;
-  padding: 1.5rem;
-  max-width: 600px;
-  margin: 2rem auto;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
-  text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-  transition: all 0.3s ease;
+// Game variables
+let gameRunning = false;
+let timerInterval;
+let wordInterval;
+let timeLeft = 120;
+let caught = 0;
+let missed = 0;
+let currentWordIndex = -1;
+let translationVisible = false;
+let speed = 5; // Default speed (1-10, lower = faster)
+
+// Elements
+const wordBox = document.getElementById('word-box');
+const timerDisplay = document.getElementById('timer');
+const caughtDisplay = document.getElementById('caught');
+const missedDisplay = document.getElementById('missed');
+const toggleGameBtn = document.getElementById('toggle-game');
+const toggleTranslationBtn = document.getElementById('toggle-translation');
+const speedControl = document.getElementById('speed-control');
+const resetBtn = document.getElementById('reset-game');
+
+// Event listeners
+toggleGameBtn.addEventListener('click', toggleGame);
+toggleTranslationBtn.addEventListener('click', toggleTranslation);
+speedControl.addEventListener('input', updateSpeed);
+resetBtn.addEventListener('click', resetGame);
+wordBox.addEventListener('click', catchWord);
+
+// Functions
+function toggleGame() {
+  gameRunning = !gameRunning;
+  toggleGameBtn.textContent = gameRunning ? 'Pausar' : 'Iniciar';
+  if (gameRunning) {
+    startTimer();
+    showNextWord();
+  } else {
+    clearInterval(timerInterval);
+    clearTimeout(wordInterval);
+  }
 }
 
-/* Hidden state */
-#scoreboard.hidden {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  padding: 0;
-  margin: 0 auto;
-  border: none;
+function startTimer() {
+  timerInterval = setInterval(() => {
+    timeLeft--;
+    timerDisplay.textContent = timeLeft;
+    if (timeLeft <= 0) {
+      endGame();
+    }
+  }, 1000);
 }
 
-/* Word display box */
-.word-display {
-  background: #f0f0f0;
-  border: 1px solid #222;
-  border-radius: 8px;
-  padding: 1rem;
-  font-size: 1.6rem;
-  font-weight: 500;
-  margin-bottom: 1.5rem;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.1s ease;
+function showNextWord() {
+  if (!gameRunning) return;
+
+  currentWordIndex = Math.floor(Math.random() * words.length);
+  wordBox.textContent = words[currentWordIndex].spanish;
+  wordBox.style.color = 'black'; // Reset color if needed
+
+  const wordDuration = (11 - speed) * 1000; // Speed 1: 10s, Speed 10: 1s
+  wordInterval = setTimeout(() => {
+    if (gameRunning) {
+      missed++;
+      missedDisplay.textContent = missed;
+      showNextWord();
+    }
+  }, wordDuration);
 }
 
-.word-display:hover {
-  background: #e4e4e4;
-  transform: scale(1.01);
+function catchWord() {
+  if (gameRunning && currentWordIndex !== -1) {
+    clearTimeout(wordInterval);
+    caught++;
+    caughtDisplay.textContent = caught;
+    showNextWord();
+  }
 }
 
-/* Score section */
-.score {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 1.2rem;
-  font-size: 1rem;
+function toggleTranslation() {
+  translationVisible = !translationVisible;
+  toggleTranslationBtn.textContent = translationVisible ? 'Ocultar Traducción' : 'Mostrar Traducción';
+  if (translationVisible && currentWordIndex !== -1) {
+    wordBox.textContent = words[currentWordIndex].english;
+    wordBox.style.color = 'blue'; // Optional visual cue
+  } else if (currentWordIndex !== -1) {
+    wordBox.textContent = words[currentWordIndex].spanish;
+    wordBox.style.color = 'black';
+  }
 }
 
-/* Controls */
-.controls {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.6rem;
+function updateSpeed() {
+  speed = parseInt(speedControl.value);
 }
 
-.controls button {
-  background: linear-gradient(to bottom, #f5f5f5, #d8d8d8);
-  border: 1px solid #aaa;
-  border-radius: 6px;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.2s ease;
+function resetGame() {
+  endGame();
+  timeLeft = 120;
+  caught = 0;
+  missed = 0;
+  timerDisplay.textContent = timeLeft;
+  caughtDisplay.textContent = caught;
+  missedDisplay.textContent = missed;
+  wordBox.textContent = 'Haz clic en "Iniciar"';
+  toggleGameBtn.textContent = 'Iniciar';
+  translationVisible = false;
+  toggleTranslationBtn.textContent = 'Mostrar Traducción';
+  speedControl.value = 5;
+  speed = 5;
 }
 
-.controls button:hover {
-  background: #cfcfcf;
-}
-
-.controls input {
-  width: 60px;
-  text-align: center;
-  border: 1px solid #aaa;
-  border-radius: 4px;
-  padding: 0.3rem;
+function endGame() {
+  gameRunning = false;
+  clearInterval(timerInterval);
+  clearTimeout(wordInterval);
+  toggleGameBtn.textContent = 'Iniciar';
+  wordBox.textContent = 'Juego Terminado';
 }
