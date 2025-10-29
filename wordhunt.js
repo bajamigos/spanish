@@ -1,11 +1,23 @@
-// Word list (hardcoded from provided CSV for reliability; can be replaced with fetch if needed)
-const words = [
-  { spanish: "gato", english: "cat" },
-  { spanish: "perro", english: "dog" },
-  { spanish: "pájaro", english: "bird" },
-  { spanish: "pez", english: "fish" },
-  { spanish: "caballo", english: "horse" }
-];
+// Word list for the game (example words; replace with actual if available)
+let words = [];
+
+// Fetch words from CSV
+fetch('wordlist.csv')
+  .then(response => response.text())
+  .then(csvText => {
+    Papa.parse(csvText, {
+      header: true,
+      skipEmptyLines: true,
+      complete: (results) => {
+        words = results.data.map(row => ({
+          spanish: row.spanish,
+          english: row.english
+        }));
+        console.log('Words loaded from CSV:', words.length);
+      }
+    });
+  })
+  .catch(err => console.error('Error loading CSV:', err));
 
 // Game variables
 let gameRunning = false;
@@ -59,11 +71,11 @@ function startTimer() {
 }
 
 function showNextWord() {
-  if (!gameRunning) return;
+  if (!gameRunning || words.length === 0) return;
 
   currentWordIndex = Math.floor(Math.random() * words.length);
   wordBox.textContent = words[currentWordIndex].spanish;
-  wordBox.style.color = 'black'; // Reset color
+  wordBox.style.color = 'black'; // Reset color if needed
 
   const wordDuration = (11 - speed) * 1000; // Speed 1: 10s, Speed 10: 1s
   wordInterval = setTimeout(() => {
@@ -89,7 +101,7 @@ function toggleTranslation() {
   toggleTranslationBtn.textContent = translationVisible ? 'Ocultar Traducción' : 'Mostrar Traducción';
   if (translationVisible && currentWordIndex !== -1) {
     wordBox.textContent = words[currentWordIndex].english;
-    wordBox.style.color = 'blue'; // Visual cue
+    wordBox.style.color = 'blue'; // Optional visual cue
   } else if (currentWordIndex !== -1) {
     wordBox.textContent = words[currentWordIndex].spanish;
     wordBox.style.color = 'black';
