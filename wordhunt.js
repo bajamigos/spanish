@@ -1,15 +1,10 @@
-// Word list for the game (example words; replace with actual if available)
+// Word list (hardcoded from provided CSV for reliability; can be replaced with fetch if needed)
 const words = [
-  { spanish: "casa", english: "house" },
-  { spanish: "perro", english: "dog" },
   { spanish: "gato", english: "cat" },
-  { spanish: "libro", english: "book" },
-  { spanish: "amigo", english: "friend" },
-  { spanish: "agua", english: "water" },
-  { spanish: "comida", english: "food" },
-  { spanish: "ciudad", english: "city" },
-  { spanish: "montaña", english: "mountain" },
-  { spanish: "playa", english: "beach" }
+  { spanish: "perro", english: "dog" },
+  { spanish: "pájaro", english: "bird" },
+  { spanish: "pez", english: "fish" },
+  { spanish: "caballo", english: "horse" }
 ];
 
 // Game variables
@@ -23,9 +18,9 @@ let currentWordIndex = -1;
 let translationVisible = false;
 let speed = 5; // Default speed (1-10, lower = faster)
 
-// Elements
+// Elements (using unique IDs to avoid conflicts)
 const wordBox = document.getElementById('word-box');
-const timerDisplay = document.getElementById('timer');
+const timerDisplay = document.getElementById('game-timer');
 const caughtDisplay = document.getElementById('caught');
 const missedDisplay = document.getElementById('missed');
 const toggleGameBtn = document.getElementById('toggle-game');
@@ -68,7 +63,7 @@ function showNextWord() {
 
   currentWordIndex = Math.floor(Math.random() * words.length);
   wordBox.textContent = words[currentWordIndex].spanish;
-  wordBox.style.color = 'black'; // Reset color if needed
+  wordBox.style.color = 'black'; // Reset color
 
   const wordDuration = (11 - speed) * 1000; // Speed 1: 10s, Speed 10: 1s
   wordInterval = setTimeout(() => {
@@ -94,7 +89,7 @@ function toggleTranslation() {
   toggleTranslationBtn.textContent = translationVisible ? 'Ocultar Traducción' : 'Mostrar Traducción';
   if (translationVisible && currentWordIndex !== -1) {
     wordBox.textContent = words[currentWordIndex].english;
-    wordBox.style.color = 'blue'; // Optional visual cue
+    wordBox.style.color = 'blue'; // Visual cue
   } else if (currentWordIndex !== -1) {
     wordBox.textContent = words[currentWordIndex].spanish;
     wordBox.style.color = 'black';
