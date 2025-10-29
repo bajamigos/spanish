@@ -1,5 +1,5 @@
 (() => {
-  // Everything is scoped and isolated
+  // All scoped — nothing leaks to global scope.
   let words = [];
   let gameRunning = false;
   let translationVisible = false;
@@ -14,6 +14,7 @@
   async function loadWords() {
     try {
       const response = await fetch("wordlist.csv");
+      if (!response.ok) throw new Error(`CSV load failed: ${response.status}`);
       const text = await response.text();
       const lines = text.trim().split(/\r?\n/).filter(Boolean);
       const [header, ...rows] = lines;
@@ -30,7 +31,7 @@
   document.addEventListener("DOMContentLoaded", async () => {
     await loadWords();
 
-    // Local, isolated selectors
+    // Isolated elements
     const scoreboard = document.getElementById("wordhunt-scoreboard");
     const toggleScoreboardBtn = document.getElementById("toggle-wordhunt-scoreboard");
     const wordBox = document.getElementById("wordhunt-word-box");
@@ -42,20 +43,19 @@
     const speedControl = document.getElementById("wordhunt-speed-control");
     const resetBtn = document.getElementById("wordhunt-reset-game");
 
-    // Make sure all exist (defensive)
-    if (!wordBox) {
-      console.error("Wordhunt: missing game elements");
-      return;
-    }
+    // Safety check
+    if (!scoreboard || !toggleScoreboardBtn || !wordBox) return;
 
-    // Independent toggle button
+    // Start hidden
+    scoreboard.classList.add("hidden");
+
+    // Toggle scoreboard visibility
     toggleScoreboardBtn.addEventListener("click", () => {
-      scoreboard.classList.toggle("hidden");
-      toggleScoreboardBtn.textContent = scoreboard.classList.contains("hidden")
-        ? "Mostrar Marcador"
-        : "Ocultar Marcador";
+      const hidden = scoreboard.classList.toggle("hidden");
+      toggleScoreboardBtn.textContent = hidden ? "Mostrar Marcador" : "Ocultar Marcador";
     });
 
+    // Game controls
     toggleGameBtn.addEventListener("click", () => {
       if (!gameRunning) startGame();
       else pauseGame();
@@ -83,7 +83,7 @@
       nextWord();
     });
 
-    // Functions
+    // --- Game Logic ---
     function startGame() {
       if (words.length === 0) {
         alert("No se han cargado las palabras todavía.");
@@ -144,7 +144,13 @@
       wordBox.dataset.hasWord = "1";
 
       clearTimeout(nextWordTimeout);
-      const duration = Math.max(800, 4000 / (speed / 2));
+
+      // Linear mapping: speed 1 → 30s, speed 10 → 10s
+      const minTime = 10; // seconds
+      const maxTime = 30; // seconds
+      const durationSeconds = maxTime - ((speed - 1) * (maxTime - minTime) / 9);
+      const duration = durationSeconds * 1000;
+
       nextWordTimeout = setTimeout(() => {
         if (gameRunning) {
           missed++;
