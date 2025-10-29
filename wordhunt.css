@@ -2,7 +2,8 @@
    Minimalist Word Game Styles
    ========================== */
 
-#scoreboard {
+/* Wordhunt scoreboard container */
+#wordhunt-scoreboard {
   background: linear-gradient(to bottom, #fafafa, #eaeaea);
   border: 1px solid #bbb;
   border-radius: 8px;
@@ -12,13 +13,14 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
   text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease, opacity 0.3s ease;
 }
 
-/* Hidden state */
-#scoreboard.hidden {
-  max-height: 0;
+/* Hidden state — true display:none on first load */
+#wordhunt-scoreboard.hidden {
+  display: none !important;
   opacity: 0;
+  max-height: 0;
   overflow: hidden;
   padding: 0;
   margin: 0 auto;
