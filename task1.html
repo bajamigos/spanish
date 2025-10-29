@@ -29,7 +29,7 @@
     <section id="scoreboard" class="hidden">
       <div class="word-display" id="word-box">Haz clic en "Iniciar"</div>
       <div class="score">
-        <div>Tiempo: <span id="timer">120</span>s</div>
+        <div>Tiempo: <span id="game-timer">120</span>s</div>
         <div>Acertadas: <span id="caught">0</span></div>
         <div>Falladas: <span id="missed">0</span></div>
       </div>
@@ -55,7 +55,7 @@
       image.alt = "New Random Photo for Description";
     }
 
-    // Fix for toggle scoreboard
+    // Toggle scoreboard visibility
     document.getElementById('toggle-scoreboard').addEventListener('click', function() {
       const scoreboard = document.getElementById('scoreboard');
       scoreboard.classList.toggle('hidden');
