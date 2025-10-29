@@ -117,6 +117,8 @@
         <button onclick="showAnswers()">Show Answers</button>
         <p id="result"></p>
         <button onclick="newGame()">New Game</button>
+        <!-- Added Tally form embed button -->
+        <button data-tally-open="wQgkG1" data-tally-emoji-animation="none" data-tally-auto-close="1000">Submit Word Pair</button>
     </div>
     <!-- Add logo image -->
     <img src="antonimo-logo.jpg" alt="Antonimo logo" class="logo-bg">
@@ -125,7 +127,6 @@
         let pairs = [];
         let currentPair;
         let selectedCategory = 'all';
-
         async function loadData() {
             const response = await fetch('game-data.csv');
             const csvText = await response.text();
@@ -138,7 +139,6 @@
             });
             filterPairs();
         }
-
         function filterPairs() {
             selectedCategory = document.getElementById('category-select').value;
             pairs = selectedCategory === 'all' ? allPairs : allPairs.filter(p => p.type === selectedCategory);
@@ -148,7 +148,6 @@
             }
             loadGame();
         }
-
         function loadGame() {
             if (pairs.length === 0) return;
             currentPair = pairs[Math.floor(Math.random() * pairs.length)];
@@ -176,14 +175,12 @@
             });
             sortRows(); // Ensure initial order
         }
-
         function sortRows() {
             const sortable = document.getElementById('sortable');
             const rows = Array.from(sortable.querySelectorAll('.inter-row'));
             rows.sort((a, b) => parseInt(a.dataset.id) - parseInt(b.dataset.id));
             rows.forEach(row => sortable.appendChild(row));
         }
-
         function showAnswers() {
             sortRows(); // Snap back to proper order
             const rows = document.querySelectorAll('.inter-row');
