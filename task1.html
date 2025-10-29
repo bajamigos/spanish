@@ -27,25 +27,25 @@
 
     <div class="button-group">
       <button class="new-image-button" onclick="loadNewImage()">Nueva Foto</button>
-      <button class="new-image-button" id="toggle-scoreboard">Mostrar Marcador</button>
+      <button class="new-image-button" id="toggle-wordhunt-scoreboard">Mostrar Marcador</button>
     </div>
 
-    <!-- Scoreboard section -->
-    <section id="scoreboard" class="hidden">
-      <div class="word-display" id="word-box">Haz clic en "Iniciar"</div>
+    <!-- Word Hunt Game Scoreboard -->
+    <section id="wordhunt-scoreboard" class="hidden">
+      <div class="word-display" id="wordhunt-word-box">Haz clic en "Iniciar"</div>
 
       <div class="score">
-        <div>Tiempo: <span id="timer">120</span>s</div>
-        <div>Acertadas: <span id="caught">0</span></div>
-        <div>Falladas: <span id="missed">0</span></div>
+        <div>Tiempo: <span id="wordhunt-timer">120</span>s</div>
+        <div>Acertadas: <span id="wordhunt-caught">0</span></div>
+        <div>Falladas: <span id="wordhunt-missed">0</span></div>
       </div>
 
       <div class="controls">
-        <button id="toggle-game">Iniciar</button>
-        <button id="toggle-translation">Mostrar Traducción</button>
-        <label for="speed-control">Velocidad:</label>
-        <input type="number" id="speed-control" min="1" max="10" value="5" />
-        <button id="reset-game">Reiniciar</button>
+        <button id="wordhunt-toggle-game">Iniciar</button>
+        <button id="wordhunt-toggle-translation">Mostrar Traducción</button>
+        <label for="wordhunt-speed-control">Velocidad:</label>
+        <input type="number" id="wordhunt-speed-control" min="1" max="10" value="5" />
+        <button id="wordhunt-reset-game">Reiniciar</button>
       </div>
     </section>
   </div>
