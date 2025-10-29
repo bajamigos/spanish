@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tarea 1 SIELE S4: Descripción de Fotos</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="wordhunt.css" />
+</head>
+<body>
+  <div id="header-placeholder">Loading header...</div>
+  <div class="content-card">
+    <p>
+      Para la Tarea 1 del SIELE S4, el estudiante describe fotos en español,
+      practicando habilidades de expresión oral.
+    </p>
+    <div class="image-container">
+      <img
+        id="random-image"
+        src="https://picsum.photos/500/500?random=1"
+        alt="Random Photo for Description"
+      />
+    </div>
+    <div class="button-group">
+      <button class="new-image-button" onclick="loadNewImage()">Nueva Foto</button>
+      <button class="new-image-button" id="toggle-scoreboard">Mostrar Marcador</button>
+    </div>
+    <!-- Scoreboard -->
+    <section id="scoreboard" class="hidden">
+      <div class="word-display" id="word-box">Haz clic en "Iniciar"</div>
+      <div class="score">
+        <div>Tiempo: <span id="timer">120</span>s</div>
+        <div>Acertadas: <span id="caught">0</span></div>
+        <div>Falladas: <span id="missed">0</span></div>
+      </div>
+      <div class="controls">
+        <button id="toggle-game">Iniciar</button>
+        <button id="toggle-translation">Mostrar Traducción</button>
+        <label for="speed-control">Velocidad:</label>
+        <input type="number" id="speed-control" min="1" max="10" value="5" />
+        <button id="reset-game">Reiniciar</button>
+      </div>
+    </section>
+  </div>
+  <div id="footer-placeholder">Loading footer...</div>
+  <script async src="https://tally.so/widgets/embed.js"></script>
+  <script src="common.js"></script>
+  <script src="wordhunt.js"></script>
+  <script>
+    const taskName = "Tarea 1 SIELE S4";
+    function loadNewImage() {
+      const image = document.getElementById("random-image");
+      const randomNum = Math.floor(Math.random() * 1000);
+      image.src = `https://picsum.photos/500/500?random=${randomNum}`;
+      image.alt = "New Random Photo for Description";
+    }
+
+    // Fix for toggle scoreboard
+    document.getElementById('toggle-scoreboard').addEventListener('click', function() {
+      const scoreboard = document.getElementById('scoreboard');
+      scoreboard.classList.toggle('hidden');
+      this.textContent = scoreboard.classList.contains('hidden') ? 'Mostrar Marcador' : 'Ocultar Marcador';
+    });
+
+    window.addEventListener("load", () => {
+      loadIncludes();
+      loadNewImage();
+      window.addEventListener("resize", handleResponsive);
+    });
+  </script>
+</body>
+</html>
