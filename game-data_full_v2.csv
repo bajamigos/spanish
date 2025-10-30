@@ -1,0 +1,73 @@
+Pair (Low-High),Intermediaries,Part of Speech,Hint,Gradability Type,Cloze Example
+susurrar-gritar,murmurar;hablar;alzar la voz;vociferar;chillar,Verb,Esto escala el volumen de producción de sonido.,Volume,El niño _____ 'mamá' desde la habitación.
+caminar-correr,pasear;marchar;trotar;esprintar;galopar,Verb,Esto aumenta la velocidad de locomoción.,Velocity,Yo _____ al trabajo cada día.
+tocar-golpear,rozar;palmear;abofetear;pegar;azotar,Verb,Esto construye la fuerza del contacto físico.,Force,El guerrero _____ al enemigo con la espada.
+comer-devorar,mordisquear;masticar;engullir;tragar;zampar,Verb,Esto eleva la intensidad de la ingestión de comida.,Consumption Rate,El animal _____ la carne con avidez.
+mirar-observar fijamente,ojear;contemplar;escudriñar;clavar la vista;quedarse mirando,Verb,Esto intensifica la duración de la observación visual.,Duration,El detective _____ al sospechoso desde lejos.
+mover-precipitarse,desplazar;proceder;apresurarse;lanzarse;acelerar,Verb,Esto aumenta la urgencia del desplazamiento.,Urgency,La multitud se _____ hacia la salida.
+calentar-hervir,entibiar;cocer a fuego lento;escaldar;chamuscar;burbujear,Verb,Esto acelera el aumento de temperatura.,Temperature,La cocinera _____ el caldo en la olla.
+enfriar-congelar,refrescar;refrigerar;helar;solidificar;escarchar,Verb,Esto profundiza la caída de temperatura.,Temperature,El científico _____ la muestra en el laboratorio.
+crecer-expandir,brotar;desarrollar;agrandar;hinchar;inflar,Verb,Esto amplifica el aumento de tamaño.,Magnitude,La empresa _____ su presencia en el mercado.
+encoger-colapsar,disminuir;contraer;arrugar;implotar;desinflar,Verb,Esto intensifica la reducción de tamaño.,Magnitude,La tela _____ al lavarla con agua caliente.
+sugerir-ordenar,insinuar;proponer;instar;mandar;dictar,Verb,Esto formaliza el tono del discurso directivo.,Formality,El jefe _____ terminar el proyecto a tiempo.
+charlar-discursar,conversar;dialogar;debatir;disertar;orar,Verb,Esto eleva el registro de la comunicación.,Formality,El profesor _____ sobre el tema en clase.
+gustar-adorar,disfrutar;apreciar;querer;venerar;idolatrar,Verb,Esto profundiza el nivel de apego emocional.,Affective Depth,Todos deberían _____ la vida que tienen.
+disgustar-despreciar,desagradar;detestar;aborrecer;abominar;odiar,Verb,Esto intensifica la respuesta emocional negativa.,Affective Depth,Nadie debería _____ a los demás sin razón.
+imaginar-visualizar,figurar;conceptualizar;fantasear;soñar;alucinar,Verb,Esto abstrae el proceso de creación mental.,Abstraction,El artista _____ la obra antes de crearla.
+describir-alegorizar,retratar;ilustrar;simbolizar;metaforizar;poetizar,Verb,Esto poetiza el modo de representación.,Poetic Complexity,El escritor _____ la escena con detalles vívidos.
+mascullar-proclamar,balbucear;anunciar;declarar;difundir;pregonar,Verb,Esto formaliza la manera de expresión vocal.,Formality,El líder _____ la victoria a la multitud.
+sentir-empatizar,percibir;simpatizar;conectar;identificarse;internalizar,Verb,Esto profundiza la comprensión emocional.,Affective Depth,Yo _____ con tu dolor en este momento.
+pensar-filosofar,reflexionar;meditar;teorizar;especular;contemplar,Verb,Esto abstrae la profundidad de la cognición.,Abstraction,Los sabios _____ sobre el universo.
+susurrar-cantar,murmurar;recitar;entonar;vocalizar;salmodiar,Verb,Esto poetiza el estilo de la expresión.,Poetic Complexity,El coro _____ la melodía en la iglesia.
+gota-océano,charco;estanque;lago;mar;río,Noun,Esto expande el volumen del cuerpo de agua.,Quantity,El _____ de agua se extendía hasta el horizonte.
+chispa-infierno,llama;fuego;llamarada;conflagración;incendio forestal,Noun,Esto intensifica la escala del evento de fuego.,Magnitude,La _____ quemó todo a su paso.
+susurro-rugido,murmullo;voz;grito;bramido;trueno,Noun,Esto aumenta el volumen de emisión de sonido.,Volume,El _____ del animal asustó a todos.
+guijarro-peñasco,piedra;roca;peña;monolito;montaña,Noun,Esto aumenta el tamaño del objeto de roca.,Magnitude,El _____ bloqueaba el camino.
+brote-bosque,retoño;arbusto;árbol;arboleda;selva,Noun,Esto aumenta la extensión de la colección de plantas.,Quantity,El _____ cubría la ladera de la colina.
+colina-montaña,loma;cerro;cordillera;pico;cumbre,Noun,Esto eleva la altura de la formación terrestre.,Magnitude,La _____ dominaba el paisaje.
+goteo-inundación,arroyo;río;torrente;diluvio;desbordamiento,Noun,Esto amplifica el flujo del volumen de agua.,Flow Rate,El _____ destruyó las casas cercanas.
+mota-montón,grano;pila;cúmulo;apilamiento;cerro,Noun,Esto multiplica la cantidad de partículas pequeñas.,Quantity,El _____ de arena formaba una duna.
+ramita-tronco,rama;palo;extremidad;leño;viga,Noun,Esto engrosa el tamaño de la pieza de madera.,Magnitude,El _____ sostenía el techo de la casa.
+sorbo-trago,probada;deglución;bebida;lingotazo;traguetazo,Noun,Esto aumenta la cantidad de ingesta de líquido.,Quantity,Tomé un _____ de agua para refrescarme.
+compadre-señor,amigo;compañero;colega;caballero;excelencia,Noun,Esto formaliza el término de tratamiento.,Formality,Llamé a mi _____ para pedir consejo.
+charla-simposio,conversación;plática;discusión;conferencia;coloquio,Noun,Esto eleva el nivel de reunión de discurso.,Formality,La _____ duró toda la tarde.
+cariño-pasión,agrado;afecto;amor;devoción;obsesión,Noun,Esto profundiza la intensidad del vínculo emocional.,Affective Depth,Siento un _____ profundo por mi familia.
+molestia-furia,irritación;enojo;rabia;ira;odio,Noun,Esto escala el estado emocional negativo.,Affective Depth,La _____ me invadió de repente.
+cosa-concepto,objeto;artículo;idea;noción;abstracción,Noun,Esto abstrae la naturaleza de la entidad.,Abstraction,La _____ era difícil de entender.
+cuento-épica,relato;narrativa;poema;balada;saga,Noun,Esto poetiza la forma de la obra literaria.,Poetic Complexity,Leí una _____ antes de dormir.
+murmullo-oratoria,susurro;discurso;alocución;conferencia;sermón,Noun,Esto formaliza el tipo de entrega vocal.,Formality,El _____ llenó la sala de expectación.
+capricho-fervor,antojo;deseo;entusiasmo;ardor;manía,Noun,Esto intensifica el impulso emocional.,Affective Depth,Tengo un _____ por el chocolate.
+hecho-teoría,dato;información;hipótesis;paradigma;metafísica,Noun,Esto abstrae el nivel de conocimiento.,Abstraction,El _____ cambió nuestra comprensión.
+copla-soneto,tonada;canción;verso;oda;elegía,Noun,Esto poetiza el estilo de composición.,Poetic Complexity,Compuse una _____ para la ocasión.
+pequeño-gigantesco,chico;mediano;grande;enorme;colosal,Adjective,Esto escala el grado de tamaño físico.,Magnitude,El edificio era _____ comparado con los demás.
+fresco-abrasador,templado;tibio;caliente;ardiente;incandescente,Adjective,Esto intensifica el nivel de calor.,Temperature,El día estaba _____ para salir.
+tenue-cegador,débil;opaco;brillante;deslumbrante;resplandeciente,Adjective,Esto aumenta la intensidad de la luz.,Luminosity,La luz era _____ en la habitación oscura.
+silencioso-ensordecedor,suave;moderado;ruidoso;estruendoso;atronador,Adjective,Esto amplifica el volumen del sonido.,Volume,El ambiente era _____ durante la noche.
+lento-rápido,pausado;moderado;veloz;acelerado;vertiginoso,Adjective,Esto aumenta la velocidad del movimiento.,Velocity,El coche era _____ en la autopista.
+débil-poderoso,endeble;flojo;fuerte;robusto;formidable,Adjective,Esto fortalece el nivel de fuerza.,Force,El viento era _____ esa tarde.
+triste-devastado,melancólico;apesadumbrado;afligido;desconsolado;destrozado,Adjective,Esto profundiza la intensidad del dolor.,Affective Depth,Se sentía _____ por la noticia.
+feliz-eufórico,alegre;contento;gozoso;jubiloso;extasiado,Adjective,Esto eleva el grado de alegría.,Affective Depth,Estaba _____ con el resultado.
+seco-árido,húmedo;mojado;empapado;saturado;encharcado,Adjective,Esto reduce la presencia de humedad.,Moisture Level,El desierto es _____ y sin vida.
+estrecho-vasto,angosto;delgado;ancho;amplio;expansivo,Adjective,Esto expande la medida de anchura.,Magnitude,El camino era _____ para los coches.
+informal-formal,desenfadado;relajado;correcto;elegante;solemne,Adjective,Esto eleva el nivel de decoro.,Formality,La reunión era _____ y seria.
+coloquial-erudito,popular;vernáculo;literario;académico;pedante,Adjective,Esto formaliza el registro lingüístico.,Formality,El lenguaje era _____ en el libro.
+neutral-apasionado,indiferente;interesado;entusiasta;ferviente;fanático,Adjective,Esto profundiza la implicación emocional.,Affective Depth,Su actitud era _____ hacia el tema.
+calmado-furioso,sereno;irritado;enojado;enfurecido;rabioso,Adjective,Esto escala la agitación emocional.,Affective Depth,Se mantuvo _____ durante la discusión.
+concreto-abstracto,tangible;específico;general;conceptual;metafísico,Adjective,Esto abstrae el grado de ideación.,Abstraction,El concepto era _____ y difícil.
+prosaico-poético,mundano;descriptivo;lírico;metafórico;sublime,Adjective,Esto poetiza el estilo expresivo.,Poetic Complexity,El texto era _____ y hermoso.
+familiar-distinguido,amistoso;cortés;respetuoso;augusto;majestuoso,Adjective,Esto formaliza el tono interpersonal.,Formality,El saludo era _____ y cálido.
+satisfecho-extasiado,contento;feliz;dichoso;eufórico;arrobado,Adjective,Esto intensifica la emoción positiva.,Affective Depth,Se sentía _____ con su logro.
+real-hipotético,actual;posible;teórico;imaginario;filosófico,Adjective,Esto abstrae el estatus de realidad.,Abstraction,El escenario era _____ y no real.
+literal-figurativo,directo;simbólico;metafórico;alegórico,Adjective,Esto poetiza la capa interpretativa.,Poetic Complexity,La interpretación era _____ y profunda.
+hablando en plata – en otras palabras,o sea; es decir; dicho de otro modo,Connector,Reformulador: sirve para expresar la misma idea con otras palabras o más claridad.,Formality,"No me entendiste bien; _____, te lo explico de manera más sencilla."
+porque – dado que,ya que; puesto que; debido a que,Connector,Causal: introduce una explicación o motivo de lo que se dice.,Formality,No fuimos al parque _____ estaba lloviendo desde temprano.
+pero – no obstante,sin embargo; con todo; aun así,Connector,"Adversativo: contrapone una idea a otra anterior, expresando contraste o corrección.",Formality,"Quería ayudarte, _____ ya habías terminado el trabajo."
+por eso – en consecuencia,por lo tanto; así que; de ahí que,Connector,Consecutivo: muestra el resultado o la consecuencia de una acción previa.,Formality,Estudió mucho durante semanas; _____ aprobó el examen con buena nota.
+encima – asimismo,además; también; de igual modo,Connector,Aditivo: añade información complementaria o similar a lo ya dicho.,Formality,Compró una bicicleta nueva; _____ le regaló una a su hermano.
+aunque – aun así,a pesar de que; si bien; con todo y eso,Connector,Concesivo: expresa una dificultad o contradicción que no impide la acción principal.,Formality,"Estaba cansado, _____ siguió estudiando hasta la medianoche."
+por ejemplo – verbigracia,así; tal como; como muestra,Connector,Ejemplificativo: introduce casos que ilustran una idea general.,Formality,"Me encantan los deportes, _____ el tenis y el baloncesto."
+en fin – en resumen,total; por último; para concluir,Connector,"Conclusivo: indica cierre, resumen o conclusión de lo expuesto.",Formality,"Hemos hablado de todo; _____, creo que ya podemos terminar la reunión."
+mar en calma – mar embravecido,sereno; tranquilo; agitado; tormentoso,Noun,Describe la intensidad o tranquilidad del océano o de un ambiente marítimo.,Serenity,El mar estaba tan _____ que apenas se movía una ola.
+goteo – río,arroyo; riachuelo; corriente; torrente,Noun,Representa el aumento del flujo o volumen del agua en movimiento.,Flow,El arroyo creció hasta convertirse en un _____ caudaloso.
+parpadeo – sueño profundo,guiño; mueca; siesta; sueño,Noun,Representa el paso gradual de una breve acción ocular hasta un descanso profundo.,Duration,Pasó de un simple _____ a quedarse completamente dormido.
+discreto – llamativo,reservado; moderado; visible; vistoso,Adjective,Indica el grado de expresión o visibilidad con que alguien o algo se presenta.,Expressiveness,Su estilo pasó de ser muy _____ a atraer todas las miradas.
