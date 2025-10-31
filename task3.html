@@ -12,25 +12,7 @@
     <div class="content-card">
         <p>Para la Tarea 3 del SIELE S4, el estudiante responde a escenarios cotidianos en español, practicando expresión oral.</p>
         
-        <div class="tab-buttons">
-            <button class="tab-button active" data-tab="scenarios">Escenarios</button>
-            <button class="tab-button" data-tab="roleplay">Juego de Roles</button>
-        </div>
-        
-        <div id="tab-scenarios" class="tab-content active">
-            <p>Escoge un escenario y responde como si estuvieras en esa situación.</p>
-            <select id="scenario-select">
-                <option value="">Selecciona un escenario</option>
-                <option value="1">Solicitar información en una oficina de turismo</option>
-                <option value="2">Reclamar un producto defectuoso en una tienda</option>
-                <option value="3">Pedir direcciones en la calle</option>
-                <option value="4">Reservar una mesa en un restaurante</option>
-                <option value="5">Cancelar una cita médica</option>
-            </select>
-            <div id="scenario-prompt"></div>
-        </div>
-        
-        <div id="tab-roleplay" class="tab-content">
+        <div id="tab-roleplay">
             <p>Genera un escenario de juego de roles aleatorio y asigna roles para practicar diálogos.</p>
             <select id="category-select">
                 <option value="">Todas las categorías</option>
@@ -59,16 +41,6 @@
             loadIncludes();
             window.addEventListener('resize', handleResponsive);
             loadRoleplayTopics();
-            const tabButtons = document.querySelectorAll('.tab-button');
-            const tabContents = document.querySelectorAll('.tab-content');
-            tabButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    tabButtons.forEach(btn => btn.classList.remove('active'));
-                    button.classList.add('active');
-                    tabContents.forEach(content => content.classList.remove('active'));
-                    document.getElementById(`tab-${button.dataset.tab}`).classList.add('active');
-                });
-            });
         });
 
         const categorySelect = document.getElementById('category-select');
