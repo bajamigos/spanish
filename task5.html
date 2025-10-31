@@ -96,13 +96,6 @@
             window.addEventListener('resize', handleResponsive);
             loadDebateTopics();
 
-            const toggleScoreboardBtn = document.getElementById('toggle-wordhunt-scoreboard');
-            const scoreboard = document.getElementById('wordhunt-scoreboard');
-            toggleScoreboardBtn.addEventListener('click', () => {
-                const hidden = scoreboard.classList.toggle('hidden');
-                toggleScoreboardBtn.textContent = hidden ? 'Mostrar Marcador' : 'Ocultar Marcador';
-            });
-
             const toggleDebateBtn = document.getElementById('toggle-debate-ai');
             const debateSection = document.getElementById('debate-ai-section');
             toggleDebateBtn.addEventListener('click', () => {
