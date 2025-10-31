@@ -1,217 +1,284 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarea 5 SIELE S4: Debate de Opinión</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="wordhunt.css">
-    <style>
-        /* Ensure hidden sections truly stay hidden */
-        .hidden {
-            display: none !important;
-            visibility: hidden;
-            opacity: 0;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tarea 5 SIELE S4: Debate de Opinión</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="wordhunt.css" />
+  <style>
+    /* Ensure hidden sections truly stay hidden */
+    .hidden {
+      display: none !important;
+      visibility: hidden;
+      opacity: 0;
+    }
 
-        #debate-ai-section {
-            transition: opacity 0.3s ease;
-        }
-    </style>
+    #debate-ai-section {
+      transition: opacity 0.3s ease;
+    }
+
+    .argument-box {
+      margin-bottom: 1rem;
+    }
+
+    textarea {
+      width: 100%;
+      resize: vertical;
+      padding: 10px;
+      font-family: inherit;
+    }
+  </style>
 </head>
 <body>
-    <div id="header-placeholder">Loading header...</div>
-    
-    <div class="content-card">
-        <p>Para la Tarea 5 del SIELE S4, el estudiante debate opiniones en español, practicando expresión oral.</p>
-        
-        <div id="tab-debate">
-            <p>Genera un tema de debate aleatorio y asigna roles para practicar argumentos.</p>
-            <select id="category-select">
-                <option value="">Todas las categorías</option>
-            </select>
-            <button id="generate-button">Generar Tema</button>
-            <p id="debate-category"></p>
-            <p id="debate-prompt"></p>
-            <button id="assign-roles">Asignar Roles</button>
-            <div id="role-output"></div>
-            <div class="contribute-section">
-                <div class="action-panel">
-                    <button class="tally-button" data-tally-open="debateFormID" data-tally-hide-title="1" data-tally-layout="modal" data-tally-auto-close="1000">Sugerir Nuevo Tema</button>
-                </div>
-            </div>
+  <div id="header-placeholder">Loading header...</div>
+
+  <div class="content-card">
+    <p>
+      Para la Tarea 5 del SIELE S4, el estudiante debate opiniones en español,
+      practicando expresión oral.
+    </p>
+
+    <div id="tab-debate">
+      <p>
+        Genera un tema de debate aleatorio y asigna roles para practicar
+        argumentos.
+      </p>
+      <select id="category-select">
+        <option value="">Todas las categorías</option>
+      </select>
+      <button id="generate-button">Generar Tema</button>
+      <p id="debate-category"></p>
+      <p id="debate-prompt"></p>
+      <button id="assign-roles">Asignar Roles</button>
+      <div id="role-output"></div>
+
+      <div class="contribute-section">
+        <div class="action-panel">
+          <button
+            class="tally-button"
+            data-tally-open="debateFormID"
+            data-tally-hide-title="1"
+            data-tally-layout="modal"
+            data-tally-auto-close="1000"
+          >
+            Sugerir Nuevo Tema
+          </button>
         </div>
-
-        <div class="button-group">
-            <button class="new-image-button" id="toggle-wordhunt-scoreboard">Mostrar Marcador</button>
-            <button class="new-image-button" id="toggle-debate-ai">Debate Pelagos Ai</button>
-        </div>
-
-        <!-- Word Hunt Scoreboard -->
-        <section id="wordhunt-scoreboard" class="hidden">
-            <div class="word-display" id="wordhunt-word-box">Haz clic en "Iniciar"</div>
-
-            <div class="score">
-                <div>Tiempo: <span id="wordhunt-timer">120</span>s</div>
-                <div>Acertadas: <span id="wordhunt-caught">0</span></div>
-                <div>Falladas: <span id="wordhunt-missed">0</span></div>
-            </div>
-
-            <div class="controls">
-                <button id="wordhunt-toggle-game">Iniciar</button>
-                <button id="wordhunt-toggle-translation">Mostrar Traducción</button>
-                <label for="wordhunt-speed-control">Velocidad:</label>
-                <input type="number" id="wordhunt-speed-control" min="1" max="10" value="5" />
-                <button id="wordhunt-reset-game">Reiniciar</button>
-            </div>
-
-            <div class="controls" style="margin-top: 1rem;">
-                <button
-                    class="tally-button"
-                    data-tally-open="3xkzJy"
-                    data-tally-hide-title="1"
-                    data-tally-emoji-animation="none"
-                >
-                    Añadir conectores discursivos
-                </button>
-            </div>
-        </section>
-
-        <!-- Debate AI Section (initially hidden) -->
-        <section id="debate-ai-section" class="hidden">
-            <div class="argument-box">
-                <h3>Opening Argument</h3>
-                <textarea id="opening-argument" rows="10" cols="50" readonly></textarea>
-            </div>
-            <div class="argument-box">
-                <h3>Cross Examination</h3>
-                <textarea id="cross-examination" rows="10" cols="50" readonly></textarea>
-            </div>
-            <div class="argument-box">
-                <h3>Closing Arguments</h3>
-                <textarea id="closing-arguments" rows="10" cols="50" readonly></textarea>
-            </div>
-        </section>
+      </div>
     </div>
-    
-    <div id="footer-placeholder">Loading footer...</div>
 
-    <script async src="https://tally.so/widgets/embed.js"></script>
-    <script src="common.js"></script>
-    <script src="wordhunt.js"></script>
-    <script>
-        const taskName = 'Tarea 5 SIELE S4';
+    <div class="button-group">
+      <button class="new-image-button" id="toggle-wordhunt-scoreboard">
+        Mostrar Marcador
+      </button>
+      <button class="new-image-button" id="toggle-debate-ai">
+        Debate Pelagos Ai
+      </button>
+    </div>
 
-        window.addEventListener('load', () => {
-            loadIncludes();
-            window.addEventListener('resize', handleResponsive);
-            loadDebateTopics();
+    <!-- Word Hunt Scoreboard -->
+    <section id="wordhunt-scoreboard" class="hidden">
+      <div class="word-display" id="wordhunt-word-box">
+        Haz clic en "Iniciar"
+      </div>
 
-            // Word Hunt toggle
-            const toggleScoreboardBtn = document.getElementById('toggle-wordhunt-scoreboard');
-            const scoreboard = document.getElementById('wordhunt-scoreboard');
-            toggleScoreboardBtn.addEventListener('click', () => {
-                const hidden = scoreboard.classList.toggle('hidden');
-                toggleScoreboardBtn.textContent = hidden ? 'Mostrar Marcador' : 'Ocultar Marcador';
-            });
+      <div class="score">
+        <div>Tiempo: <span id="wordhunt-timer">120</span>s</div>
+        <div>Acertadas: <span id="wordhunt-caught">0</span></div>
+        <div>Falladas: <span id="wordhunt-missed">0</span></div>
+      </div>
 
-            // Debate AI toggle
-            const toggleDebateBtn = document.getElementById('toggle-debate-ai');
-            const debateSection = document.getElementById('debate-ai-section');
+      <div class="controls">
+        <button id="wordhunt-toggle-game">Iniciar</button>
+        <button id="wordhunt-toggle-translation">Mostrar Traducción</button>
+        <label for="wordhunt-speed-control">Velocidad:</label>
+        <input
+          type="number"
+          id="wordhunt-speed-control"
+          min="1"
+          max="10"
+          value="5"
+        />
+        <button id="wordhunt-reset-game">Reiniciar</button>
+      </div>
 
-            // Force it hidden on load
-            debateSection.classList.add('hidden');
+      <!-- New Button for Tally Embed -->
+      <div class="controls" style="margin-top: 1rem">
+        <button
+          class="tally-button"
+          data-tally-open="3xkzJy"
+          data-tally-hide-title="1"
+          data-tally-emoji-animation="none"
+        >
+          Añadir conectores discursivos
+        </button>
+      </div>
+    </section>
 
-            toggleDebateBtn.addEventListener('click', () => {
-                const isHidden = debateSection.classList.toggle('hidden');
-                toggleDebateBtn.textContent = isHidden ? 'Debate Pelagos Ai' : 'Ocultar Debate Ai';
+    <!-- Debate AI Section (initially hidden) -->
+    <section id="debate-ai-section" class="hidden">
+      <div class="argument-box">
+        <h3>Opening Argument</h3>
+        <textarea id="opening-argument" rows="8" readonly></textarea>
+      </div>
+      <div class="argument-box">
+        <h3>Cross Examination</h3>
+        <textarea id="cross-examination" rows="8" readonly></textarea>
+      </div>
+      <div class="argument-box">
+        <h3>Closing Arguments</h3>
+        <textarea id="closing-arguments" rows="8" readonly></textarea>
+      </div>
+    </section>
+  </div>
 
-                if (!isHidden) {
-                    if (currentItem && tutorSide) {
-                        const opening = tutorSide === 'Pro' ? currentItem.Apertura_Pro : currentItem.Apertura_Contra;
-                        const cross = tutorSide === 'Pro' ? currentItem.Contra_Examen_Pro : currentItem.Contra_Examen_Contra;
-                        const closing = tutorSide === 'Pro' ? currentItem.Cierre_Pro : currentItem.Cierre_Contra;
-                        document.getElementById('opening-argument').value = opening;
-                        document.getElementById('cross-examination').value = cross;
-                        document.getElementById('closing-arguments').value = closing;
-                    } else {
-                        document.getElementById('opening-argument').value = 'Genera un tema y asigna roles primero.';
-                        document.getElementById('cross-examination').value = 'Genera un tema y asigna roles primero.';
-                        document.getElementById('closing-arguments').value = 'Genera un tema y asigna roles primero.';
-                    }
-                }
-            });
+  <div id="footer-placeholder">Loading footer...</div>
+
+  <script async src="https://tally.so/widgets/embed.js"></script>
+  <script src="common.js"></script>
+  <script src="wordhunt.js"></script>
+
+  <script>
+    const taskName = "Tarea 5 SIELE S4";
+
+    window.addEventListener("load", () => {
+      loadIncludes();
+      window.addEventListener("resize", handleResponsive);
+      loadDebateTopics();
+
+      // --- DEBATE AI TOGGLE ---
+      const toggleDebateBtn = document.getElementById("toggle-debate-ai");
+      const debateSection = document.getElementById("debate-ai-section");
+
+      // Ensure hidden on load
+      debateSection.classList.add("hidden");
+
+      toggleDebateBtn.addEventListener("click", () => {
+        const isHidden = debateSection.classList.toggle("hidden");
+        toggleDebateBtn.textContent = isHidden
+          ? "Debate Pelagos Ai"
+          : "Ocultar Debate Ai";
+
+        if (!isHidden) {
+          if (currentItem && tutorSide) {
+            const opening =
+              tutorSide === "Pro"
+                ? currentItem.Apertura_Pro
+                : currentItem.Apertura_Contra;
+            const cross =
+              tutorSide === "Pro"
+                ? currentItem.Contra_Examen_Pro
+                : currentItem.Contra_Examen_Contra;
+            const closing =
+              tutorSide === "Pro"
+                ? currentItem.Cierre_Pro
+                : currentItem.Cierre_Contra;
+            document.getElementById("opening-argument").value = opening;
+            document.getElementById("cross-examination").value = cross;
+            document.getElementById("closing-arguments").value = closing;
+          } else {
+            document.getElementById("opening-argument").value =
+              "Genera un tema y asigna roles primero.";
+            document.getElementById("cross-examination").value =
+              "Genera un tema y asigna roles primero.";
+            document.getElementById("closing-arguments").value =
+              "Genera un tema y asigna roles primero.";
+          }
+        }
+      });
+    });
+
+    // --- DEBATE LOGIC ---
+    const categorySelect = document.getElementById("category-select");
+    const generateButton = document.getElementById("generate-button");
+    const debateCategory = document.getElementById("debate-category");
+    const debatePrompt = document.getElementById("debate-prompt");
+    const assignRoles = document.getElementById("assign-roles");
+    const roleOutput = document.getElementById("role-output");
+
+    let debateData = [];
+    let uniqueCategories = [];
+    let currentItem = null;
+    let tutorSide = null;
+
+    async function loadDebateTopics() {
+      try {
+        const response = await fetch("debatetopics.csv");
+        const csvText = await response.text();
+        const lines = csvText.trim().split("\n").slice(1);
+        debateData = lines.map((line) => {
+          const [
+            category,
+            prompt,
+            Apertura_Pro,
+            Apertura_Contra,
+            Contra_Examen_Pro,
+            Contra_Examen_Contra,
+            Cierre_Pro,
+            Cierre_Contra,
+          ] = line.split(",");
+          return {
+            category,
+            prompt,
+            Apertura_Pro,
+            Apertura_Contra,
+            Contra_Examen_Pro,
+            Contra_Examen_Contra,
+            Cierre_Pro,
+            Cierre_Contra,
+          };
         });
 
-        // Debate logic
-        const categorySelect = document.getElementById('category-select');
-        const generateButton = document.getElementById('generate-button');
-        const debateCategory = document.getElementById('debate-category');
-        const debatePrompt = document.getElementById('debate-prompt');
-        const assignRoles = document.getElementById('assign-roles');
-        const roleOutput = document.getElementById('role-output');
-        let debateData = [];
-        let uniqueCategories = [];
-        let currentItem = null;
-        let tutorSide = null;
-
-        async function loadDebateTopics() {
-            try {
-                const response = await fetch('debatetopics.csv');
-                const csvText = await response.text();
-                const lines = csvText.trim().split('\n').slice(1);
-                debateData = lines.map(line => {
-                    const [category, prompt, Apertura_Pro, Apertura_Contra, Contra_Examen_Pro, Contra_Examen_Contra, Cierre_Pro, Cierre_Contra] = line.split(',');
-                    return { category, prompt, Apertura_Pro, Apertura_Contra, Contra_Examen_Pro, Contra_Examen_Contra, Cierre_Pro, Cierre_Contra };
-                });
-                uniqueCategories = [...new Set(debateData.map(item => item.category))];
-                uniqueCategories.forEach(cat => {
-                    const option = document.createElement('option');
-                    option.value = cat;
-                    option.textContent = cat;
-                    categorySelect.appendChild(option);
-                });
-            } catch (error) {
-                console.error('Error loading CSV:', error);
-                debateCategory.textContent = 'Error al cargar las categorías.';
-            }
-        }
-
-        function generatePrompt() {
-            const selectedCategory = categorySelect.value;
-            const filteredPrompts = selectedCategory
-                ? debateData.filter(item => item.category === selectedCategory)
-                : debateData;
-
-            if (filteredPrompts.length === 0) {
-                debateCategory.textContent = 'No hay prompts disponibles.';
-                debatePrompt.textContent = '';
-                currentItem = null;
-                roleOutput.innerHTML = '';
-                tutorSide = null;
-                return;
-            }
-
-            currentItem = filteredPrompts[Math.floor(Math.random() * filteredPrompts.length)];
-            debateCategory.textContent = currentItem.category;
-            debatePrompt.textContent = currentItem.prompt;
-            roleOutput.innerHTML = '';
-            tutorSide = null;
-        }
-
-        assignRoles.addEventListener('click', () => {
-            if (!currentItem) {
-                alert('Genera un tema primero para asignar roles.');
-                return;
-            }
-            const roles = ['Pro', 'Contra'];
-            const randomIndex = Math.floor(Math.random() * 2);
-            tutorSide = roles[randomIndex];
-            const studentRole = roles[1 - randomIndex];
-            roleOutput.innerHTML = `<p>Tutor: ${tutorSide}</p><p>Estudiante: ${studentRole}</p>`;
+        uniqueCategories = [...new Set(debateData.map((i) => i.category))];
+        uniqueCategories.forEach((cat) => {
+          const option = document.createElement("option");
+          option.value = cat;
+          option.textContent = cat;
+          categorySelect.appendChild(option);
         });
+      } catch (error) {
+        console.error("Error loading CSV:", error);
+        debateCategory.textContent = "Error al cargar las categorías.";
+      }
+    }
 
-        generateButton.addEventListener('click', generatePrompt);
-    </script>
+    function generatePrompt() {
+      const selectedCategory = categorySelect.value;
+      const filtered = selectedCategory
+        ? debateData.filter((i) => i.category === selectedCategory)
+        : debateData;
+
+      if (!filtered.length) {
+        debateCategory.textContent = "No hay prompts disponibles.";
+        debatePrompt.textContent = "";
+        currentItem = null;
+        roleOutput.innerHTML = "";
+        tutorSide = null;
+        return;
+      }
+
+      currentItem = filtered[Math.floor(Math.random() * filtered.length)];
+      debateCategory.textContent = currentItem.category;
+      debatePrompt.textContent = currentItem.prompt;
+      roleOutput.innerHTML = "";
+      tutorSide = null;
+    }
+
+    assignRoles.addEventListener("click", () => {
+      if (!currentItem) {
+        alert("Genera un tema primero para asignar roles.");
+        return;
+      }
+
+      const roles = ["Pro", "Contra"];
+      const randomIndex = Math.floor(Math.random() * 2);
+      tutorSide = roles[randomIndex];
+      const studentRole = roles[1 - randomIndex];
+      roleOutput.innerHTML = `<p>Tutor: ${tutorSide}</p><p>Estudiante: ${studentRole}</p>`;
+    });
+
+    generateButton.addEventListener("click", generatePrompt);
+  </script>
 </body>
 </html>
