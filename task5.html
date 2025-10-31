@@ -13,25 +13,7 @@
     <div class="content-card">
         <p>Para la Tarea 5 del SIELE S4, el estudiante debate opiniones en español, practicando expresión oral.</p>
         
-        <div class="tab-buttons">
-            <button class="tab-button active" data-tab="scenarios">Escenarios</button>
-            <button class="tab-button" data-tab="debate">Debate</button>
-        </div>
-        
-        <div id="tab-scenarios" class="tab-content active">
-            <p>Escoge un escenario y debate tu opinión.</p>
-            <select id="scenario-select">
-                <option value="">Selecciona un escenario</option>
-                <option value="1">Tecnología en la educación</option>
-                <option value="2">Cambio climático</option>
-                <option value="3">Redes sociales</option>
-                <option value="4">Trabajo remoto</option>
-                <option value="5">Turismo sostenible</option>
-            </select>
-            <div id="scenario-prompt"></div>
-        </div>
-        
-        <div id="tab-debate" class="tab-content">
+        <div id="tab-debate">
             <p>Genera un tema de debate aleatorio y asigna roles para practicar argumentos.</p>
             <select id="category-select">
                 <option value="">Todas las categorías</option>
@@ -96,16 +78,6 @@
             loadIncludes();
             window.addEventListener('resize', handleResponsive);
             loadDebateTopics();
-            const tabButtons = document.querySelectorAll('.tab-button');
-            const tabContents = document.querySelectorAll('.tab-content');
-            tabButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    tabButtons.forEach(btn => btn.classList.remove('active'));
-                    button.classList.add('active');
-                    tabContents.forEach(content => content.classList.remove('active'));
-                    document.getElementById(`tab-${button.dataset.tab}`).classList.add('active');
-                });
-            });
         });
         const categorySelect = document.getElementById('category-select');
         const generateButton = document.getElementById('generate-button');
