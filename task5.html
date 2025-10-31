@@ -6,11 +6,6 @@
     <title>Tarea 5 SIELE S4: Debate de Opinión</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="wordhunt.css">
-    <style>
-        .hidden {
-            display: none !important;
-        }
-    </style>
 </head>
 <body>
     <div id="header-placeholder">Loading header...</div>
@@ -74,15 +69,15 @@
         <!-- Debate AI Section -->
         <section id="debate-ai-section" class="hidden">
             <div class="argument-box">
-                <h3>Opening Argument</h3>
+                <h3>Argumento de Apertura</h3>
                 <textarea id="opening-argument" rows="10" cols="50" readonly></textarea>
             </div>
             <div class="argument-box">
-                <h3>Cross Examination</h3>
+                <h3>Contraexamen</h3>
                 <textarea id="cross-examination" rows="10" cols="50" readonly></textarea>
             </div>
             <div class="argument-box">
-                <h3>Closing Arguments</h3>
+                <h3>Argumentos de Cierre</h3>
                 <textarea id="closing-arguments" rows="10" cols="50" readonly></textarea>
             </div>
         </section>
@@ -100,13 +95,6 @@
             loadIncludes();
             window.addEventListener('resize', handleResponsive);
             loadDebateTopics();
-
-            const toggleScoreboardBtn = document.getElementById('toggle-wordhunt-scoreboard');
-            const scoreboard = document.getElementById('wordhunt-scoreboard');
-            toggleScoreboardBtn.addEventListener('click', () => {
-                const hidden = scoreboard.classList.toggle('hidden');
-                toggleScoreboardBtn.textContent = hidden ? 'Mostrar Marcador' : 'Ocultar Marcador';
-            });
 
             const toggleDebateBtn = document.getElementById('toggle-debate-ai');
             const debateSection = document.getElementById('debate-ai-section');
