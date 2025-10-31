@@ -28,18 +28,21 @@
       font-family: inherit;
     }
 
-    /* Button layout for icon + text */
-    #toggle-debate-ai {
-      display: flex;
+    /* Grouping the button + external icon */
+    .debate-ai-wrapper {
+      display: inline-flex;
       align-items: center;
-      justify-content: center;
       gap: 8px;
     }
 
-    #toggle-debate-ai svg {
-      width: 20px;
-      height: 20px;
-      vertical-align: middle;
+    .debate-ai-icon {
+      width: 28px;
+      height: 28px;
+    }
+
+    .debate-ai-icon svg {
+      width: 100%;
+      height: 100%;
     }
   </style>
 </head>
@@ -86,23 +89,26 @@
         Mostrar Marcador
       </button>
 
-      <!-- Debate button with Gemini icon -->
-      <button class="new-image-button" id="toggle-debate-ai">
-        <!-- Inline Google Gemini icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-          <defs>
-            <linearGradient id="a" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#4285f4" />
-              <stop offset="100%" stop-color="#9b72cb" />
-            </linearGradient>
-          </defs>
-          <path
-            fill="url(#a)"
-            d="M128 16c-30.9 0-60.2 12.3-82 34.4S16 97.1 16 128c0 30.9 12.3 60.2 34.4 82S97.1 240 128 240s60.2-12.3 82-34.4S244 158.9 244 128c0-30.9-12.3-60.2-34.4-82S158.9 16 128 16zm0 204c-18.5 0-36.2-7.4-49.4-20.6C65.4 186.2 58 168.5 58 150s7.4-36.2 20.6-49.4C91.8 87.4 109.5 80 128 80s36.2 7.4 49.4 20.6C190.6 113.8 198 131.5 198 150s-7.4 36.2-20.6 49.4C164.2 212.6 146.5 220 128 220z"
-          />
-        </svg>
-        Debate Pelagos Ai
-      </button>
+      <!-- Debate button + external SVG wrapper -->
+      <div class="debate-ai-wrapper">
+        <button class="new-image-button" id="toggle-debate-ai">
+          Debate Pelagos Ai
+        </button>
+        <div class="debate-ai-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+            <defs>
+              <linearGradient id="a" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#4285f4" />
+                <stop offset="100%" stop-color="#9b72cb" />
+              </linearGradient>
+            </defs>
+            <path
+              fill="url(#a)"
+              d="M128 16c-30.9 0-60.2 12.3-82 34.4S16 97.1 16 128c0 30.9 12.3 60.2 34.4 82S97.1 240 128 240s60.2-12.3 82-34.4S244 158.9 244 128c0-30.9-12.3-60.2-34.4-82S158.9 16 128 16zm0 204c-18.5 0-36.2-7.4-49.4-20.6C65.4 186.2 58 168.5 58 150s7.4-36.2 20.6-49.4C91.8 87.4 109.5 80 128 80s36.2 7.4 49.4 20.6C190.6 113.8 198 131.5 198 150s-7.4 36.2-20.6 49.4C164.2 212.6 146.5 220 128 220z"
+            />
+          </svg>
+        </div>
+      </div>
     </div>
 
     <!-- Word Hunt Scoreboard -->
@@ -169,6 +175,32 @@
   <script>
     const taskName = "Tarea 5 SIELE S4";
 
+    // Robust CSV row parser for quoted fields
+    function parseCsvRow(line) {
+      const row = [];
+      let cur = "";
+      let inQuotes = false;
+      for (let i = 0; i < line.length; i++) {
+        const ch = line[i];
+        if (inQuotes) {
+          if (ch === '"') {
+            if (i + 1 < line.length && line[i + 1] === '"') {
+              cur += '"';
+              i++;
+            } else inQuotes = false;
+          } else cur += ch;
+        } else {
+          if (ch === '"') inQuotes = true;
+          else if (ch === ",") {
+            row.push(cur);
+            cur = "";
+          } else cur += ch;
+        }
+      }
+      row.push(cur);
+      return row;
+    }
+
     window.addEventListener("load", () => {
       loadIncludes();
       window.addEventListener("resize", handleResponsive);
@@ -181,8 +213,8 @@
 
       toggleDebateBtn.addEventListener("click", () => {
         const isHidden = debateSection.classList.toggle("hidden");
-        toggleDebateBtn.innerHTML = isHidden
-          ? `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'><defs><linearGradient id='a' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='#4285f4'/><stop offset='100%' stop-color='#9b72cb'/></linearGradient></defs><path fill='url(#a)' d='M128 16c-30.9 0-60.2 12.3-82 34.4S16 97.1 16 128c0 30.9 12.3 60.2 34.4 82S97.1 240 128 240s60.2-12.3 82-34.4S244 158.9 244 128c0-30.9-12.3-60.2-34.4-82S158.9 16 128 16zm0 204c-18.5 0-36.2-7.4-49.4-20.6C65.4 186.2 58 168.5 58 150s7.4-36.2 20.6-49.4C91.8 87.4 109.5 80 128 80s36.2 7.4 49.4 20.6C190.6 113.8 198 131.5 198 150s-7.4 36.2-20.6 49.4C164.2 212.6 146.5 220 128 220z'/></svg> Debate Pelagos Ai`
+        toggleDebateBtn.textContent = isHidden
+          ? "Debate Pelagos Ai"
           : "Ocultar Debate Ai";
 
         if (!isHidden) {
@@ -199,9 +231,10 @@
               tutorSide === "Pro"
                 ? currentItem.Cierre_Pro
                 : currentItem.Cierre_Contra;
-            document.getElementById("opening-argument").value = opening;
-            document.getElementById("cross-examination").value = cross;
-            document.getElementById("closing-arguments").value = closing;
+
+            document.getElementById("opening-argument").value = opening || "";
+            document.getElementById("cross-examination").value = cross || "";
+            document.getElementById("closing-arguments").value = closing || "";
           } else {
             document.getElementById("opening-argument").value =
               "Genera un tema y asigna roles primero.";
@@ -214,6 +247,7 @@
       });
     });
 
+    // --- Debate logic ---
     const categorySelect = document.getElementById("category-select");
     const generateButton = document.getElementById("generate-button");
     const debateCategory = document.getElementById("debate-category");
@@ -230,27 +264,19 @@
       try {
         const response = await fetch("debatetopics.csv");
         const csvText = await response.text();
-        const lines = csvText.trim().split("\n").slice(1);
+        const lines = csvText.replace(/\r/g, "").split("\n").filter(l => l.trim());
+        lines.shift(); // remove header
         debateData = lines.map((line) => {
-          const [
-            category,
-            prompt,
-            Apertura_Pro,
-            Apertura_Contra,
-            Contra_Examen_Pro,
-            Contra_Examen_Contra,
-            Cierre_Pro,
-            Cierre_Contra,
-          ] = line.split(",");
+          const cols = parseCsvRow(line);
           return {
-            category,
-            prompt,
-            Apertura_Pro,
-            Apertura_Contra,
-            Contra_Examen_Pro,
-            Contra_Examen_Contra,
-            Cierre_Pro,
-            Cierre_Contra,
+            category: cols[0],
+            prompt: cols[1],
+            Apertura_Pro: cols[2],
+            Apertura_Contra: cols[3],
+            Contra_Examen_Pro: cols[4],
+            Contra_Examen_Contra: cols[5],
+            Cierre_Pro: cols[6],
+            Cierre_Contra: cols[7],
           };
         });
 
