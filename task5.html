@@ -16,6 +16,41 @@
     #debate-ai-section {
       transition: opacity 0.3s ease;
     }
+
+    .argument-box {
+      margin-bottom: 1rem;
+    }
+
+    textarea {
+      width: 100%;
+      resize: vertical;
+      padding: 10px;
+      font-family: inherit;
+    }
+
+    /* Grouping the button + external icon */
+    .debate-ai-wrapper {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .debate-ai-icon {
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .debate-ai-icon:hover {
+      transform: scale(1.1);
+    }
+
+    .debate-ai-icon svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
   </style>
 </head>
 <body>
@@ -67,15 +102,15 @@
           Debate Pelagos Ai
         </button>
         <div class="debate-ai-icon" id="refresh-debate-ai" title="Actualizar debate">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
             <defs>
-              <radialGradient id="geminiGradient" cx="50%" cy="50%" r="75%">
-                <stop offset="0%" stop-color="#9b72cb"/>
-                <stop offset="100%" stop-color="#4285f4"/>
-              </radialGradient>
+              <linearGradient id="geminiGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#4285f4" />
+                <stop offset="100%" stop-color="#9b72cb" />
+              </linearGradient>
             </defs>
-            <path fill="url(#geminiGradient)"
-              d="M256 32C141 32 48 125 48 240s93 208 208 208 208-93 208-208S371 32 256 32zm79 114c31 0 58 27 58 58 0 29-23 58-59 61 36 4 59 32 59 61 0 31-27 58-58 58-33 0-60-26-79-56-19 30-46 56-79 56-31 0-58-27-58-58 0-29 23-58 59-61-36-4-59-32-59-61 0-31 27-58 58-58 33 0 60 26 79 56 19-30 46-56 79-56z"/>
+            <circle cx="24" cy="24" r="20" fill="url(#geminiGradient)" />
+            <circle cx="24" cy="24" r="8" fill="white" />
           </svg>
         </div>
       </div>
@@ -119,7 +154,7 @@
       </div>
     </section>
 
-    <!-- Debate AI Section -->
+    <!-- Debate AI Section (initially hidden) -->
     <section id="debate-ai-section" class="hidden">
       <div class="argument-box">
         <h3>Opening Argument</h3>
@@ -145,21 +180,26 @@
   <script>
     const taskName = "Tarea 5 SIELE S4";
 
-    // Parse CSV safely (handles commas inside quotes)
+    // Robust CSV row parser for quoted fields
     function parseCsvRow(line) {
       const row = [];
-      let cur = "", inQuotes = false;
+      let cur = "";
+      let inQuotes = false;
       for (let i = 0; i < line.length; i++) {
         const ch = line[i];
         if (inQuotes) {
           if (ch === '"') {
-            if (i + 1 < line.length && line[i + 1] === '"') { cur += '"'; i++; }
-            else inQuotes = false;
+            if (i + 1 < line.length && line[i + 1] === '"') {
+              cur += '"';
+              i++;
+            } else inQuotes = false;
           } else cur += ch;
         } else {
           if (ch === '"') inQuotes = true;
-          else if (ch === ",") { row.push(cur); cur = ""; }
-          else cur += ch;
+          else if (ch === ",") {
+            row.push(cur);
+            cur = "";
+          } else cur += ch;
         }
       }
       row.push(cur);
@@ -167,6 +207,7 @@
     }
 
     let debateData = [];
+    let uniqueCategories = [];
     let currentItem = null;
     let tutorSide = null;
 
@@ -175,54 +216,82 @@
         const response = await fetch("debatetopics.csv");
         const csvText = await response.text();
         const lines = csvText.replace(/\r/g, "").split("\n").filter(l => l.trim());
-        lines.shift();
-        debateData = lines.map(line => {
-          const c = parseCsvRow(line);
+        lines.shift(); // remove header
+        debateData = lines.map((line) => {
+          const cols = parseCsvRow(line);
           return {
-            category: c[0],
-            prompt: c[1],
-            Apertura_Pro: c[2],
-            Apertura_Contra: c[3],
-            Contra_Examen_Pro: c[4],
-            Contra_Examen_Contra: c[5],
-            Cierre_Pro: c[6],
-            Cierre_Contra: c[7],
+            category: cols[0],
+            prompt: cols[1],
+            Apertura_Pro: cols[2],
+            Apertura_Contra: cols[3],
+            Contra_Examen_Pro: cols[4],
+            Contra_Examen_Contra: cols[5],
+            Cierre_Pro: cols[6],
+            Cierre_Contra: cols[7],
           };
         });
-        const cats = [...new Set(debateData.map(i => i.category))];
-        const sel = document.getElementById("category-select");
-        cats.forEach(cat => {
-          const o = document.createElement("option");
-          o.value = cat;
-          o.textContent = cat;
-          sel.appendChild(o);
+
+        uniqueCategories = [...new Set(debateData.map((i) => i.category))];
+        uniqueCategories.forEach((cat) => {
+          const option = document.createElement("option");
+          option.value = cat;
+          option.textContent = cat;
+          document.getElementById("category-select").appendChild(option);
         });
-      } catch (err) {
-        console.error("Error loading CSV:", err);
+      } catch (error) {
+        console.error("Error loading CSV:", error);
+        document.getElementById("debate-category").textContent =
+          "Error al cargar las categorías.";
       }
     }
 
     function populateDebateBoxes() {
-      const open = document.getElementById("opening-argument");
-      const cross = document.getElementById("cross-examination");
-      const close = document.getElementById("closing-arguments");
       if (currentItem && tutorSide) {
-        open.value = tutorSide === "Pro" ? currentItem.Apertura_Pro : currentItem.Apertura_Contra;
-        cross.value = tutorSide === "Pro" ? currentItem.Contra_Examen_Pro : currentItem.Contra_Examen_Contra;
-        close.value = tutorSide === "Pro" ? currentItem.Cierre_Pro : currentItem.Cierre_Contra;
+        const opening =
+          tutorSide === "Pro"
+            ? currentItem.Apertura_Pro
+            : currentItem.Apertura_Contra;
+        const cross =
+          tutorSide === "Pro"
+            ? currentItem.Contra_Examen_Pro
+            : currentItem.Contra_Examen_Contra;
+        const closing =
+          tutorSide === "Pro"
+            ? currentItem.Cierre_Pro
+            : currentItem.Cierre_Contra;
+
+        document.getElementById("opening-argument").value = opening || "";
+        document.getElementById("cross-examination").value = cross || "";
+        document.getElementById("closing-arguments").value = closing || "";
       } else {
-        open.value = "Genera un tema y asigna roles primero.";
-        cross.value = "Genera un tema y asigna roles primero.";
-        close.value = "Genera un tema y asigna roles primero.";
+        document.getElementById("opening-argument").value =
+          "Genera un tema y asigna roles primero.";
+        document.getElementById("cross-examination").value =
+          "Genera un tema y asigna roles primero.";
+        document.getElementById("closing-arguments").value =
+          "Genera un tema y asigna roles primero.";
       }
     }
 
     function generatePrompt() {
-      const cat = document.getElementById("category-select").value;
-      const pool = cat ? debateData.filter(i => i.category === cat) : debateData;
-      if (!pool.length) return;
-      currentItem = pool[Math.floor(Math.random() * pool.length)];
-      document.getElementById("debate-category").textContent = currentItem.category;
+      const selectedCategory = document.getElementById("category-select").value;
+      const filtered = selectedCategory
+        ? debateData.filter((i) => i.category === selectedCategory)
+        : debateData;
+
+      if (!filtered.length) {
+        document.getElementById("debate-category").textContent =
+          "No hay prompts disponibles.";
+        document.getElementById("debate-prompt").textContent = "";
+        currentItem = null;
+        document.getElementById("role-output").innerHTML = "";
+        tutorSide = null;
+        return;
+      }
+
+      currentItem = filtered[Math.floor(Math.random() * filtered.length)];
+      document.getElementById("debate-category").textContent =
+        currentItem.category;
       document.getElementById("debate-prompt").textContent = currentItem.prompt;
       document.getElementById("role-output").innerHTML = "";
       tutorSide = null;
@@ -233,36 +302,47 @@
       window.addEventListener("resize", handleResponsive);
       loadDebateTopics();
 
-      const toggleBtn = document.getElementById("toggle-debate-ai");
+      const toggleDebateBtn = document.getElementById("toggle-debate-ai");
       const refreshIcon = document.getElementById("refresh-debate-ai");
       const debateSection = document.getElementById("debate-ai-section");
 
       debateSection.classList.add("hidden");
 
-      toggleBtn.addEventListener("click", () => {
-        const hidden = debateSection.classList.toggle("hidden");
-        toggleBtn.textContent = hidden ? "Debate Pelagos Ai" : "Ocultar Debate Ai";
-        if (!hidden) populateDebateBoxes();
+      toggleDebateBtn.addEventListener("click", () => {
+        const isHidden = debateSection.classList.toggle("hidden");
+        toggleDebateBtn.textContent = isHidden
+          ? "Debate Pelagos Ai"
+          : "Ocultar Debate Ai";
+
+        if (!isHidden) populateDebateBoxes();
       });
 
+      // Click Gemini icon to refresh debate text boxes
       refreshIcon.addEventListener("click", () => {
         populateDebateBoxes();
         refreshIcon.style.transform = "rotate(360deg)";
         setTimeout(() => (refreshIcon.style.transform = ""), 400);
       });
 
-      document.getElementById("generate-button").addEventListener("click", generatePrompt);
-      document.getElementById("assign-roles").addEventListener("click", () => {
-        if (!currentItem) {
-          alert("Genera un tema primero para asignar roles.");
-          return;
-        }
-        const roles = ["Pro", "Contra"];
-        const tIndex = Math.floor(Math.random() * 2);
-        tutorSide = roles[tIndex];
-        const student = roles[1 - tIndex];
-        document.getElementById("role-output").innerHTML = `<p>Tutor: ${tutorSide}</p><p>Estudiante: ${student}</p>`;
-      });
+      document
+        .getElementById("generate-button")
+        .addEventListener("click", generatePrompt);
+
+      document
+        .getElementById("assign-roles")
+        .addEventListener("click", () => {
+          if (!currentItem) {
+            alert("Genera un tema primero para asignar roles.");
+            return;
+          }
+          const roles = ["Pro", "Contra"];
+          const randomIndex = Math.floor(Math.random() * 2);
+          tutorSide = roles[randomIndex];
+          const studentRole = roles[1 - randomIndex];
+          document.getElementById(
+            "role-output"
+          ).innerHTML = `<p>Tutor: ${tutorSide}</p><p>Estudiante: ${studentRole}</p>`;
+        });
     });
   </script>
 </body>
