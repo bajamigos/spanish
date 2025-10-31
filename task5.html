@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="wordhunt.css" />
   <style>
-    /* Ensure hidden sections truly stay hidden */
     .hidden {
       display: none !important;
       visibility: hidden;
@@ -27,6 +26,20 @@
       resize: vertical;
       padding: 10px;
       font-family: inherit;
+    }
+
+    /* Button layout for icon + text */
+    #toggle-debate-ai {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    #toggle-debate-ai svg {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
     }
   </style>
 </head>
@@ -72,7 +85,22 @@
       <button class="new-image-button" id="toggle-wordhunt-scoreboard">
         Mostrar Marcador
       </button>
+
+      <!-- Debate button with Gemini icon -->
       <button class="new-image-button" id="toggle-debate-ai">
+        <!-- Inline Google Gemini icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+          <defs>
+            <linearGradient id="a" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#4285f4" />
+              <stop offset="100%" stop-color="#9b72cb" />
+            </linearGradient>
+          </defs>
+          <path
+            fill="url(#a)"
+            d="M128 16c-30.9 0-60.2 12.3-82 34.4S16 97.1 16 128c0 30.9 12.3 60.2 34.4 82S97.1 240 128 240s60.2-12.3 82-34.4S244 158.9 244 128c0-30.9-12.3-60.2-34.4-82S158.9 16 128 16zm0 204c-18.5 0-36.2-7.4-49.4-20.6C65.4 186.2 58 168.5 58 150s7.4-36.2 20.6-49.4C91.8 87.4 109.5 80 128 80s36.2 7.4 49.4 20.6C190.6 113.8 198 131.5 198 150s-7.4 36.2-20.6 49.4C164.2 212.6 146.5 220 128 220z"
+          />
+        </svg>
         Debate Pelagos Ai
       </button>
     </div>
@@ -103,7 +131,6 @@
         <button id="wordhunt-reset-game">Reiniciar</button>
       </div>
 
-      <!-- New Button for Tally Embed -->
       <div class="controls" style="margin-top: 1rem">
         <button
           class="tally-button"
@@ -147,17 +174,15 @@
       window.addEventListener("resize", handleResponsive);
       loadDebateTopics();
 
-      // --- DEBATE AI TOGGLE ---
       const toggleDebateBtn = document.getElementById("toggle-debate-ai");
       const debateSection = document.getElementById("debate-ai-section");
 
-      // Ensure hidden on load
       debateSection.classList.add("hidden");
 
       toggleDebateBtn.addEventListener("click", () => {
         const isHidden = debateSection.classList.toggle("hidden");
-        toggleDebateBtn.textContent = isHidden
-          ? "Debate Pelagos Ai"
+        toggleDebateBtn.innerHTML = isHidden
+          ? `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'><defs><linearGradient id='a' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='#4285f4'/><stop offset='100%' stop-color='#9b72cb'/></linearGradient></defs><path fill='url(#a)' d='M128 16c-30.9 0-60.2 12.3-82 34.4S16 97.1 16 128c0 30.9 12.3 60.2 34.4 82S97.1 240 128 240s60.2-12.3 82-34.4S244 158.9 244 128c0-30.9-12.3-60.2-34.4-82S158.9 16 128 16zm0 204c-18.5 0-36.2-7.4-49.4-20.6C65.4 186.2 58 168.5 58 150s7.4-36.2 20.6-49.4C91.8 87.4 109.5 80 128 80s36.2 7.4 49.4 20.6C190.6 113.8 198 131.5 198 150s-7.4 36.2-20.6 49.4C164.2 212.6 146.5 220 128 220z'/></svg> Debate Pelagos Ai`
           : "Ocultar Debate Ai";
 
         if (!isHidden) {
@@ -189,7 +214,6 @@
       });
     });
 
-    // --- DEBATE LOGIC ---
     const categorySelect = document.getElementById("category-select");
     const generateButton = document.getElementById("generate-button");
     const debateCategory = document.getElementById("debate-category");
