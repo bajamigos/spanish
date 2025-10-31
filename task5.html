@@ -32,6 +32,7 @@
 
         <div class="button-group">
             <button class="new-image-button" id="toggle-wordhunt-scoreboard">Mostrar Marcador</button>
+            <button class="new-image-button" id="toggle-debate-ai">Debate Pelagos Ai</button>
         </div>
 
         <!-- Word Hunt Scoreboard -->
@@ -64,6 +65,22 @@
                 </button>
             </div>
         </section>
+
+        <!-- Debate AI Section -->
+        <section id="debate-ai-section" class="hidden">
+            <div class="argument-box">
+                <h3>Opening Argument</h3>
+                <textarea id="opening-argument" rows="10" cols="50" readonly></textarea>
+            </div>
+            <div class="argument-box">
+                <h3>Cross Examination</h3>
+                <textarea id="cross-examination" rows="10" cols="50" readonly></textarea>
+            </div>
+            <div class="argument-box">
+                <h3>Closing Arguments</h3>
+                <textarea id="closing-arguments" rows="10" cols="50" readonly></textarea>
+            </div>
+        </section>
     </div>
     
     <div id="footer-placeholder">Loading footer...</div>
@@ -78,6 +95,19 @@
             loadIncludes();
             window.addEventListener('resize', handleResponsive);
             loadDebateTopics();
+
+            const toggleDebateBtn = document.getElementById('toggle-debate-ai');
+            const debateSection = document.getElementById('debate-ai-section');
+            toggleDebateBtn.addEventListener('click', () => {
+                const hidden = debateSection.classList.toggle('hidden');
+                toggleDebateBtn.textContent = hidden ? 'Debate Pelagos Ai' : 'Ocultar Debate Ai';
+                // Placeholder for populating text boxes; will be updated with CSV data later
+                if (!hidden) {
+                    document.getElementById('opening-argument').value = 'Placeholder for opening argument from CSV';
+                    document.getElementById('cross-examination').value = 'Placeholder for cross examination from CSV';
+                    document.getElementById('closing-arguments').value = 'Placeholder for closing arguments from CSV';
+                }
+            });
         });
         const categorySelect = document.getElementById('category-select');
         const generateButton = document.getElementById('generate-button');
