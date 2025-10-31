@@ -108,11 +108,19 @@
             toggleDebateBtn.addEventListener('click', () => {
                 const hidden = debateSection.classList.toggle('hidden');
                 toggleDebateBtn.textContent = hidden ? 'Debate Pelagos Ai' : 'Ocultar Debate Ai';
-                // Placeholder for populating text boxes; will be updated with CSV data later
                 if (!hidden) {
-                    document.getElementById('opening-argument').value = 'Placeholder for opening argument from CSV';
-                    document.getElementById('cross-examination').value = 'Placeholder for cross examination from CSV';
-                    document.getElementById('closing-arguments').value = 'Placeholder for closing arguments from CSV';
+                    if (currentItem && tutorSide) {
+                        const opening = tutorSide === 'Pro' ? currentItem.aperturaPro : currentItem.aperturaContra;
+                        const cross = tutorSide === 'Pro' ? currentItem.contraExamenPro : currentItem.contraExamenContra;
+                        const closing = tutorSide === 'Pro' ? currentItem.cierrePro : currentItem.cierreContra;
+                        document.getElementById('opening-argument').value = opening;
+                        document.getElementById('cross-examination').value = cross;
+                        document.getElementById('closing-arguments').value = closing;
+                    } else {
+                        document.getElementById('opening-argument').value = 'Genera un tema y asigna roles primero.';
+                        document.getElementById('cross-examination').value = 'Genera un tema y asigna roles primero.';
+                        document.getElementById('closing-arguments').value = 'Genera un tema y asigna roles primero.';
+                    }
                 }
             });
         });
@@ -125,14 +133,15 @@
         let debateData = [];
         let uniqueCategories = [];
         let currentItem = null;
+        let tutorSide = null;
         async function loadDebateTopics() {
             try {
                 const response = await fetch('debatetopics.csv');
                 const csvText = await response.text();
                 const lines = csvText.trim().split('\n').slice(1);
                 debateData = lines.map(line => {
-                    const [category, prompt] = line.split(',');
-                    return { category, prompt };
+                    const [category, prompt, aperturaPro, aperturaContra, contraExamenPro, contraExamenContra, cierrePro, cierreContra] = line.split(',');
+                    return { category, prompt, aperturaPro, aperturaContra, contraExamenPro, contraExamenContra, cierrePro, cierreContra };
                 });
                 uniqueCategories = [...new Set(debateData.map(item => item.category))];
                 uniqueCategories.forEach(cat => {
@@ -159,12 +168,14 @@
                 debatePrompt.textContent = '';
                 currentItem = null;
                 roleOutput.innerHTML = '';
+                tutorSide = null;
                 return;
             }
             currentItem = filteredPrompts[Math.floor(Math.random() * filteredPrompts.length)];
             debateCategory.textContent = currentItem.category;
             debatePrompt.textContent = currentItem.prompt;
             roleOutput.innerHTML = '';
+            tutorSide = null;
         }
         assignRoles.addEventListener('click', () => {
             if (!currentItem) {
@@ -175,6 +186,7 @@
             const randomIndex = Math.floor(Math.random() * 2);
             const tutorRole = roles[randomIndex];
             const studentRole = roles[1 - randomIndex];
+            tutorSide = tutorRole;
             roleOutput.innerHTML = `<p>Tutor: ${tutorRole}</p><p>Estudiante: ${studentRole}</p>`;
         });
         generateButton.addEventListener('click', generatePrompt);
