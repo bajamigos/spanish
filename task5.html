@@ -96,6 +96,13 @@
             window.addEventListener('resize', handleResponsive);
             loadDebateTopics();
 
+            const toggleScoreboardBtn = document.getElementById('toggle-wordhunt-scoreboard');
+            const scoreboard = document.getElementById('wordhunt-scoreboard');
+            toggleScoreboardBtn.addEventListener('click', () => {
+                const hidden = scoreboard.classList.toggle('hidden');
+                toggleScoreboardBtn.textContent = hidden ? 'Mostrar Marcador' : 'Ocultar Marcador';
+            });
+
             const toggleDebateBtn = document.getElementById('toggle-debate-ai');
             const debateSection = document.getElementById('debate-ai-section');
             toggleDebateBtn.addEventListener('click', () => {
@@ -103,9 +110,9 @@
                 toggleDebateBtn.textContent = hidden ? 'Debate Pelagos Ai' : 'Ocultar Debate Ai';
                 if (!hidden) {
                     if (currentItem && tutorSide) {
-                        const opening = tutorSide === 'Pro' ? currentItem.aperturaPro : currentItem.aperturaContra;
-                        const cross = tutorSide === 'Pro' ? currentItem.contraExamenPro : currentItem.contraExamenContra;
-                        const closing = tutorSide === 'Pro' ? currentItem.cierrePro : currentItem.cierreContra;
+                        const opening = tutorSide === 'Pro' ? currentItem.Apertura_Pro : currentItem.Apertura_Contra;
+                        const cross = tutorSide === 'Pro' ? currentItem.Contra_Examen_Pro : currentItem.Contra_Examen_Contra;
+                        const closing = tutorSide === 'Pro' ? currentItem.Cierre_Pro : currentItem.Cierre_Contra;
                         document.getElementById('opening-argument').value = opening;
                         document.getElementById('cross-examination').value = cross;
                         document.getElementById('closing-arguments').value = closing;
@@ -133,8 +140,8 @@
                 const csvText = await response.text();
                 const lines = csvText.trim().split('\n').slice(1);
                 debateData = lines.map(line => {
-                    const [category, prompt, aperturaPro, aperturaContra, contraExamenPro, contraExamenContra, cierrePro, cierreContra] = line.split(',');
-                    return { category, prompt, aperturaPro, aperturaContra, contraExamenPro, contraExamenContra, cierrePro, cierreContra };
+                    const [category, prompt, Apertura_Pro, Apertura_Contra, Contra_Examen_Pro, Contra_Examen_Contra, Cierre_Pro, Cierre_Contra] = line.split(',');
+                    return { category, prompt, Apertura_Pro, Apertura_Contra, Contra_Examen_Pro, Contra_Examen_Contra, Cierre_Pro, Cierre_Contra };
                 });
                 uniqueCategories = [...new Set(debateData.map(item => item.category))];
                 uniqueCategories.forEach(cat => {
@@ -177,10 +184,9 @@
             }
             const roles = ['Pro', 'Contra'];
             const randomIndex = Math.floor(Math.random() * 2);
-            const tutorRole = roles[randomIndex];
+            tutorSide = roles[randomIndex];
             const studentRole = roles[1 - randomIndex];
-            tutorSide = tutorRole;
-            roleOutput.innerHTML = `<p>Tutor: ${tutorRole}</p><p>Estudiante: ${studentRole}</p>`;
+            roleOutput.innerHTML = `<p>Tutor: ${tutorSide}</p><p>Estudiante: ${studentRole}</p>`;
         });
         generateButton.addEventListener('click', generatePrompt);
     </script>
