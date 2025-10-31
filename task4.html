@@ -13,24 +13,6 @@
     <div class="content-card">
         <p>Para la Tarea 4 del SIELE S4, el estudiante responde a un prompt con un monólogo corto en español, practicando expresión oral.</p>
         
-        <div class="tab-buttons">
-            <button class="tab-button active" data-tab="scenarios">Escenarios</button>
-            <button class="tab-button" data-tab="monologue">Monólogos</button>
-        </div>
-        
-        <div id="tab-scenarios" class="tab-content active">
-            <p>Escoge un escenario y responde con un monólogo corto.</p>
-            <select id="scenario-select">
-                <option value="">Selecciona un escenario</option>
-                <option value="1">Describe una experiencia personal</option>
-                <option value="2">Opina sobre un tema social</option>
-                <option value="3">Explica un proceso</option>
-                <option value="4">Compara dos cosas</option>
-                <option value="5">Propone una solución a un problema</option>
-            </select>
-            <div id="scenario-prompt"></div>
-        </div>
-        
         <div id="tab-monologue" class="tab-content">
             <p>Genera un prompt de monólogo aleatorio y asigna un feeling para practicar expresión.</p>
             <select id="category-select">
@@ -96,16 +78,6 @@
             loadIncludes();
             window.addEventListener('resize', handleResponsive);
             loadMonologueTopics();
-            const tabButtons = document.querySelectorAll('.tab-button');
-            const tabContents = document.querySelectorAll('.tab-content');
-            tabButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    tabButtons.forEach(btn => btn.classList.remove('active'));
-                    button.classList.add('active');
-                    tabContents.forEach(content => content.classList.remove('active'));
-                    document.getElementById(`tab-${button.dataset.tab}`).classList.add('active');
-                });
-            });
         });
 
         const categorySelect = document.getElementById('category-select');
