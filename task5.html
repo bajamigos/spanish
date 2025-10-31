@@ -6,6 +6,18 @@
     <title>Tarea 5 SIELE S4: Debate de Opinión</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="wordhunt.css">
+    <style>
+        /* Ensure hidden sections truly stay hidden */
+        .hidden {
+            display: none !important;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        #debate-ai-section {
+            transition: opacity 0.3s ease;
+        }
+    </style>
 </head>
 <body>
     <div id="header-placeholder">Loading header...</div>
@@ -53,7 +65,6 @@
                 <button id="wordhunt-reset-game">Reiniciar</button>
             </div>
 
-            <!-- New Button for Tally Embed -->
             <div class="controls" style="margin-top: 1rem;">
                 <button
                     class="tally-button"
@@ -66,18 +77,18 @@
             </div>
         </section>
 
-        <!-- Debate AI Section -->
+        <!-- Debate AI Section (initially hidden) -->
         <section id="debate-ai-section" class="hidden">
             <div class="argument-box">
-                <h3>Argumento de Apertura</h3>
+                <h3>Opening Argument</h3>
                 <textarea id="opening-argument" rows="10" cols="50" readonly></textarea>
             </div>
             <div class="argument-box">
-                <h3>Contraexamen</h3>
+                <h3>Cross Examination</h3>
                 <textarea id="cross-examination" rows="10" cols="50" readonly></textarea>
             </div>
             <div class="argument-box">
-                <h3>Argumentos de Cierre</h3>
+                <h3>Closing Arguments</h3>
                 <textarea id="closing-arguments" rows="10" cols="50" readonly></textarea>
             </div>
         </section>
@@ -96,12 +107,26 @@
             window.addEventListener('resize', handleResponsive);
             loadDebateTopics();
 
+            // Word Hunt toggle
+            const toggleScoreboardBtn = document.getElementById('toggle-wordhunt-scoreboard');
+            const scoreboard = document.getElementById('wordhunt-scoreboard');
+            toggleScoreboardBtn.addEventListener('click', () => {
+                const hidden = scoreboard.classList.toggle('hidden');
+                toggleScoreboardBtn.textContent = hidden ? 'Mostrar Marcador' : 'Ocultar Marcador';
+            });
+
+            // Debate AI toggle
             const toggleDebateBtn = document.getElementById('toggle-debate-ai');
             const debateSection = document.getElementById('debate-ai-section');
+
+            // Force it hidden on load
+            debateSection.classList.add('hidden');
+
             toggleDebateBtn.addEventListener('click', () => {
-                const hidden = debateSection.classList.toggle('hidden');
-                toggleDebateBtn.textContent = hidden ? 'Debate Pelagos Ai' : 'Ocultar Debate Ai';
-                if (!hidden) {
+                const isHidden = debateSection.classList.toggle('hidden');
+                toggleDebateBtn.textContent = isHidden ? 'Debate Pelagos Ai' : 'Ocultar Debate Ai';
+
+                if (!isHidden) {
                     if (currentItem && tutorSide) {
                         const opening = tutorSide === 'Pro' ? currentItem.Apertura_Pro : currentItem.Apertura_Contra;
                         const cross = tutorSide === 'Pro' ? currentItem.Contra_Examen_Pro : currentItem.Contra_Examen_Contra;
@@ -117,6 +142,8 @@
                 }
             });
         });
+
+        // Debate logic
         const categorySelect = document.getElementById('category-select');
         const generateButton = document.getElementById('generate-button');
         const debateCategory = document.getElementById('debate-category');
@@ -127,6 +154,7 @@
         let uniqueCategories = [];
         let currentItem = null;
         let tutorSide = null;
+
         async function loadDebateTopics() {
             try {
                 const response = await fetch('debatetopics.csv');
@@ -148,14 +176,13 @@
                 debateCategory.textContent = 'Error al cargar las categorías.';
             }
         }
+
         function generatePrompt() {
             const selectedCategory = categorySelect.value;
-            let filteredPrompts;
-            if (!selectedCategory) {
-                filteredPrompts = debateData;
-            } else {
-                filteredPrompts = debateData.filter(item => item.category === selectedCategory);
-            }
+            const filteredPrompts = selectedCategory
+                ? debateData.filter(item => item.category === selectedCategory)
+                : debateData;
+
             if (filteredPrompts.length === 0) {
                 debateCategory.textContent = 'No hay prompts disponibles.';
                 debatePrompt.textContent = '';
@@ -164,12 +191,14 @@
                 tutorSide = null;
                 return;
             }
+
             currentItem = filteredPrompts[Math.floor(Math.random() * filteredPrompts.length)];
             debateCategory.textContent = currentItem.category;
             debatePrompt.textContent = currentItem.prompt;
             roleOutput.innerHTML = '';
             tutorSide = null;
         }
+
         assignRoles.addEventListener('click', () => {
             if (!currentItem) {
                 alert('Genera un tema primero para asignar roles.');
@@ -181,6 +210,7 @@
             const studentRole = roles[1 - randomIndex];
             roleOutput.innerHTML = `<p>Tutor: ${tutorSide}</p><p>Estudiante: ${studentRole}</p>`;
         });
+
         generateButton.addEventListener('click', generatePrompt);
     </script>
 </body>
