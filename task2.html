@@ -62,17 +62,18 @@
     <script>
         const taskName = 'Tarea 2 SIELE S4';
 
+        // 🧠 Updated list: Pop science, nature, health & learning in Spanish
         const channels = [
-            { name: 'DW Español', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCT4Jg8h03dD0iN3Pb5L0PMA' },
-            { name: 'BBC Mundo', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCv8CkQ9wZHQMwlUZtIoyUAA' },
-            { name: 'France 24 Español', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCUdOoVWuWmgo1wByzcsyKDQ' },
-            { name: 'RT en Español', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCEIhICHOQOonjE6V0SLdrHQ' },
-            { name: 'El País', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCnsvJeZO4RigQ898WdDhkFQ' },
-            { name: 'CNN en Español', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UC_lEiu6917IJz03TnntWUaQ' },
-            { name: 'Univision Noticias', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UC32TdiIsh_5X8tKr_9rKQyA' },
-            { name: 'Telemundo Noticias', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCRwA1NUcUnwsly35ikGhp0A' },
-            { name: 'Voz de América', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCXQSHGZP6StIywcGofGdm0Q' },
-            { name: 'Al Jazeera Español', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UC6DcwP4bW65JrY1y2y5Vayw' }
+            { name: 'QuantumFracture', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCV7UOhZ2XuPZcV0CjH0XGpA' },
+            { name: 'Date un Vlog', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCt8y1xdHoRj1sZ4fHfN8O8w' },
+            { name: 'CuriosaMente', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCX0LJHhMYJtUcbm1sR5IToA' },
+            { name: 'C de Ciencia', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCzR-rom72PHN9Zg7RML9EbA' },
+            { name: 'Dot CSV', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCy5znSnfMsDwaLlROnZ7Qbg' },
+            { name: 'National Geographic en Español', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCQ1t91xvQYJYIHUQ3r-LH3w' },
+            { name: 'El Robot de Platón', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCBa659QWEk1AI4Tg--mrJ2A' },
+            { name: 'Aprendemos Juntos BBVA', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCzpXoZQWXU0cG9c7SgRZrUg' },
+            { name: 'Médicos en Acción', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCx-9zFzWUGQYZOkxzQax7oA' },
+            { name: 'Vida Sana con Juan', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCxBuOzPNl2yWhn4D6aA8R5A' }
         ];
 
         let allVideos = [];
@@ -106,7 +107,7 @@
                     
                     await new Promise(resolve => setTimeout(resolve, 500));
                 } catch (error) {
-                    // Silent error handling
+                    console.error('Error fetching', channel.name, error);
                 }
             }
             
@@ -122,7 +123,7 @@
             if (allVideos.length > 0) {
                 loadVideo(allVideos[0]);
             } else {
-                document.getElementById('channel-info').textContent = 'No videos found—try refreshing!';
+                document.getElementById('channel-info').textContent = 'No se encontraron videos. ¡Intenta actualizar la página!';
             }
         }
         
