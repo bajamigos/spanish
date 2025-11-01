@@ -424,6 +424,15 @@ select {
     .unified-button {
         width: 100%; /* Full width on mobile for better touch */
     }
+
+    .unified-button.tally-button {
+        min-height: 80px;
+    }
+
+    .progress-text {
+        text-align: center;
+        line-height: 1.2;
+    }
 }
 
 @keyframes fadeIn {
