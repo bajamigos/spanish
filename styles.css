@@ -433,6 +433,74 @@ select {
         text-align: center;
         line-height: 1.2;
     }
+
+    /* Hide arrows on mobile */
+    .arrow-button {
+        display: none;
+    }
+}
+
+/* Carousel Styles */
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.arrow-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px 15px;
+    z-index: 10;
+    transition: background 0.2s ease;
+}
+
+.arrow-button:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#left-arrow {
+    left: 0;
+}
+
+#right-arrow {
+    right: 0;
+}
+
+.refresh-button {
+    margin: 20px auto;
+    display: block;
+    max-width: 300px;
+}
+
+@media (min-width: 768px) {
+    .tasks-container {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+    .tasks-container::-webkit-scrollbar {
+        display: none;  /* Chrome, Safari, Opera */
+    }
+
+    .task-card {
+        flex: 0 0 250px;
+        scroll-snap-align: start;
+    }
 }
 
 @keyframes fadeIn {
