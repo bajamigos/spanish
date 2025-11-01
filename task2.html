@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="wordhunt.css">
     <style>
-        /* === Local Styles for the Carousel Section === */
         .carousel-wrapper {
             position: relative;
             margin-top: 1rem;
@@ -53,7 +52,7 @@
             color: #333;
         }
         .carousel-btn {
-            display: none; /* Hidden on mobile */
+            display: none;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
@@ -67,16 +66,11 @@
             cursor: pointer;
             transition: background 0.2s ease;
             box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            z-index: 5;
         }
-        .carousel-btn:hover {
-            background: rgba(240,240,240,0.9);
-        }
-        .carousel-btn.left {
-            left: -10px;
-        }
-        .carousel-btn.right {
-            right: -10px;
-        }
+        .carousel-btn:hover { background: rgba(240,240,240,0.9); }
+        .carousel-btn.left { left: -10px; }
+        .carousel-btn.right { right: -10px; }
         @media (min-width: 768px) {
             .carousel-btn {
                 display: flex;
@@ -92,15 +86,12 @@
     <div class="content-card">
         <p>Para la Tarea 2 del SIELE S4, el estudiante responde a videos en español, practicando expresión oral.</p>
         
-        <!-- Main Video -->
         <div id="video-container" class="image-container">
             <iframe id="video-iframe" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
         </div>
-
         <p id="channel-info">Cargando video...</p>
         <button class="new-image-button" onclick="loadNextVideo()">Siguiente Video</button>
 
-        <!-- New Carousel Section -->
         <h3 style="margin-top: 1.5rem;">Más videos sugeridos</h3>
         <div class="carousel-wrapper">
             <button class="carousel-btn left" id="scroll-left">‹</button>
@@ -108,7 +99,6 @@
             <button class="carousel-btn right" id="scroll-right">›</button>
         </div>
 
-        <!-- Wordhunt Section -->
         <div class="button-group">
             <button class="new-image-button" id="toggle-wordhunt-scoreboard">Mostrar Marcador</button>
         </div>
@@ -131,12 +121,7 @@
             </div>
 
             <div class="controls" style="margin-top: 1rem;">
-                <button
-                    class="tally-button"
-                    data-tally-open="3xkzJy"
-                    data-tally-hide-title="1"
-                    data-tally-emoji-animation="none"
-                >
+                <button class="tally-button" data-tally-open="3xkzJy" data-tally-hide-title="1" data-tally-emoji-animation="none">
                     Añadir conectores discursivos
                 </button>
             </div>
@@ -151,18 +136,30 @@
     <script>
         const taskName = 'Tarea 2 SIELE S4';
 
-        // 🧠 Curated science/nature/health channels in Spanish
+        // ✅ Updated, balanced list of Spanish-language channels
         const channels = [
+            // Your original high-quality Spanish news sources
+            { name: 'DW Español', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCT4Jg8h03dD0iN3Pb5L0PMA' },
+            { name: 'BBC Mundo', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCv8CkQ9wZHQMwlUZtIoyUAA' },
+            { name: 'France 24 Español', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCUdOoVWuWmgo1wByzcsyKDQ' },
+            { name: 'RT en Español', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCEIhICHOQOonjE6V0SLdrHQ' },
+            { name: 'El País', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCnsvJeZO4RigQ898WdDhkFQ' },
+            { name: 'CNN en Español', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UC_lEiu6917IJz03TnntWUaQ' },
+            { name: 'Univision Noticias', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UC32TdiIsh_5X8tKr_9rKQyA' },
+            { name: 'Telemundo Noticias', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCRwA1NUcUnwsly35ikGhp0A' },
+            { name: 'Voz de América', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCXQSHGZP6StIywcGofGdm0Q' },
+            { name: 'Al Jazeera Español', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UC6DcwP4bW65JrY1y2y5Vayw' },
+
+            // Added modern, short, pop-science/nature/learning channels
             { name: 'QuantumFracture', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCV7UOhZ2XuPZcV0CjH0XGpA' },
             { name: 'Date un Vlog', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCt8y1xdHoRj1sZ4fHfN8O8w' },
             { name: 'CuriosaMente', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCX0LJHhMYJtUcbm1sR5IToA' },
             { name: 'C de Ciencia', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCzR-rom72PHN9Zg7RML9EbA' },
             { name: 'Dot CSV', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCy5znSnfMsDwaLlROnZ7Qbg' },
             { name: 'National Geographic en Español', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCQ1t91xvQYJYIHUQ3r-LH3w' },
-            { name: 'El Robot de Platón', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCBa659QWEk1AI4Tg--mrJ2A' },
             { name: 'Aprendemos Juntos BBVA', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCzpXoZQWXU0cG9c7SgRZrUg' },
-            { name: 'Médicos en Acción', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCx-9zFzWUGQYZOkxzQax7oA' },
-            { name: 'Vida Sana con Juan', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCxBuOzPNl2yWhn4D6aA8R5A' }
+            { name: 'La Capital', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCZDxJPcxo5eK6aYybx4Lz-A' },
+            { name: 'Ter', rss: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCz6mp8cDK0nZvjYbSmF8Rxg' }
         ];
 
         let allVideos = [];
@@ -173,47 +170,39 @@
             if (isLoading) return;
             isLoading = true;
             allVideos = [];
-            
-            for (const channel of channels) {
+
+            const fetchPromises = channels.map(async channel => {
                 try {
-                    const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(channel.rss)}&count=10`;
+                    const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(channel.rss)}&count=6`;
                     const response = await fetch(apiUrl);
                     const data = await response.json();
-                    
                     if (data.status === 'ok' && data.items) {
-                        data.items.forEach(item => {
+                        return data.items.map(item => {
                             const match = item.link.match(/v=([^&]+)/);
-                            if (match) {
-                                allVideos.push({
-                                    id: match[1],
-                                    channel: channel.name,
-                                    title: item.title,
-                                    published: new Date(item.pubDate)
-                                });
-                            }
-                        });
+                            return match ? {
+                                id: match[1],
+                                channel: channel.name,
+                                title: item.title,
+                                published: new Date(item.pubDate)
+                            } : null;
+                        }).filter(Boolean);
                     }
-                    
-                    await new Promise(resolve => setTimeout(resolve, 400));
-                } catch (error) {
-                    console.warn('Error fetching', channel.name, error);
-                }
-            }
-            
-            allVideos.sort((a, b) => b.published - a.published);
+                } catch { return []; }
+            });
+
+            const results = await Promise.all(fetchPromises);
+            allVideos = results.flat();
+
             for (let i = allVideos.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
                 [allVideos[i], allVideos[j]] = [allVideos[j], allVideos[i]];
             }
-            
+
             isLoading = false;
-            if (allVideos.length > 0) {
-                loadVideo(allVideos[0]);
-            } else {
-                document.getElementById('channel-info').textContent = 'No se encontraron videos. Intenta actualizar la página.';
-            }
+            if (allVideos.length > 0) loadVideo(allVideos[0]);
+            else document.getElementById('channel-info').textContent = 'No se encontraron videos. Intenta actualizar la página.';
         }
-        
+
         function loadVideo(video) {
             document.getElementById('video-iframe').src = `https://www.youtube.com/embed/${video.id}?autoplay=0`;
             document.getElementById('channel-info').textContent = `${video.channel}`;
@@ -240,14 +229,12 @@
                 div.className = 'carousel-item';
                 div.innerHTML = `
                     <img src="https://img.youtube.com/vi/${video.id}/mqdefault.jpg" alt="${video.title}">
-                    <p>${video.channel}</p>
-                `;
+                    <p>${video.channel}</p>`;
                 div.onclick = () => loadVideo(video);
                 container.appendChild(div);
             });
         }
 
-        // Scroll buttons
         window.addEventListener('load', () => {
             loadIncludes();
             fetchAllVideos();
@@ -257,12 +244,8 @@
             const rightBtn = document.getElementById('scroll-right');
             const carousel = document.getElementById('suggested-videos');
 
-            leftBtn.addEventListener('click', () => {
-                carousel.scrollBy({ left: -600, behavior: 'smooth' });
-            });
-            rightBtn.addEventListener('click', () => {
-                carousel.scrollBy({ left: 600, behavior: 'smooth' });
-            });
+            leftBtn.addEventListener('click', () => carousel.scrollBy({ left: -600, behavior: 'smooth' }));
+            rightBtn.addEventListener('click', () => carousel.scrollBy({ left: 600, behavior: 'smooth' }));
         });
     </script>
 </body>
