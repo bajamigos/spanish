@@ -7,90 +7,193 @@
   <link rel="stylesheet" href="styles.css">
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <style>
-    /* Existing styles remain */
-    /* New tooltip styles */
-    .ease-table td {
-      position: relative;  /* For absolute positioning of tooltip */
-      cursor: pointer;     /* Indicate hoverable */
+    /* Page-specific styles for the hexagonal grid */
+    body { font-family: 'Inter', sans-serif; background: white; color: black; text-align: center; padding: 20px; }
+    h1 { font-weight: 700; margin-bottom: 1em; }
+    #ease-table-container { margin: 20px auto; max-width: 100%; overflow-x: auto; display: flex; justify-content: center; } /* Centered container */
+    
+    .hex-grid {
+      display: inline-flex; /* Flex for honeycomb alignment */
+      flex-wrap: wrap;
+      width: calc(10 * 75px); /* Approximate width for 10 columns */
+      position: relative;
     }
-    .ease-table td:hover::after,
-    .ease-table td:focus::after {
-      content: attr(data-cp);  /* Display CP from data attribute */
-      position: absolute;
-      top: -40px;              /* Position above cell; adjust as needed */
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: #333;
-      color: white;
-      padding: 5px 10px;
-      border-radius: 4px;
+    
+    .hex-cell {
+      width: 100px; /* Base width for hexagon */
+      height: 86.6px; /* Height for regular hexagon (width * sqrt(3)/2) */
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      background-color: #f0f0f0; /* Default background */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin: 0 5px 5px 0; /* Spacing between hexes */
       font-size: 0.8rem;
-      white-space: nowrap;
-      z-index: 10;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      text-align: center;
+      transition: transform 0.2s; /* Optional hover effect */
     }
-    .ease-table td:hover::before,
-    .ease-table td:focus::before {
-      content: '';
-      position: absolute;
-      top: -10px;              /* Arrow below tooltip */
-      left: 50%;
-      transform: translateX(-50%);
-      border-left: 5px solid transparent;
-      border-right: 5px solid transparent;
-      border-top: 5px solid #333;
-      z-index: 10;
+    
+    .hex-cell:hover {
+      transform: scale(1.05);
     }
-    /* For empty cells, disable hover */
-    .ease-table td.empty:hover::after,
-    .ease-table td.empty:hover::before { display: none; }
+    
+    /* Offset for honeycomb pattern: every even row shifted */
+    .hex-row:nth-child(even) .hex-cell {
+      transform: translateY(43.3px); /* Half height offset */
+    }
+    
+    .hex-cell.empty {
+      background-color: #f9f9f9; /* Style for empty cells */
+    }
+    
+    @media (max-width: 768px) {
+      .hex-cell {
+        width: 60px;
+        height: 52px;
+        font-size: 0.7rem;
+      }
+      .hex-grid { width: calc(10 * 45px); } /* Adjust for mobile */
+      .hex-row:nth-child(even) .hex-cell { transform: translateY(26px); }
+    }
   </style>
 </head>
 <body>
-  <!-- Existing HTML structure remains unchanged -->
+  <h1>Tabla de Factores de Facilidad (10x10 Hexagonal)</h1>
+
+  <div id="login-form">
+    <input id="email" type="email" placeholder="Email">
+    <input id="password" type="password" placeholder="Password">
+    <button onclick="signup()">Signup</button>
+    <button onclick="login()">Login</button>
+    <div id="error"></div>
+  </div>
+
+  <button id="show-ease-table" style="display: none;" onclick="displayEaseTable()">Actualizar Tabla</button>
+  <div id="ease-table-container"></div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 
   <script>
-    // ... Existing code up to displayEaseTable() ...
+    // Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyDJYgI-xgZAGj6780W8BqXS4thd8ODvfDA",
+      authDomain: "antonimo-acbd9.firebaseapp.com",
+      projectId: "antonimo-acbd9",
+      storageBucket: "antonimo-acbd9.firebasestorage.app",
+      messagingSenderId: "904238822187",
+      appId: "1:904238822187:web:2c0488369954495f3b8b6e",
+      measurementId: "G-GTP9X49KNP"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.firestore();
 
-    // Updated table display function
+    let cards = [];
+    let cardReviewDocs = {};
+    let userSettings = { newCardsToday: 0, reviewsToday: 0 };
+
+    // Load CSV (adapted from your app)
+    async function loadCSV() {
+      try {
+        const response = await fetch('flashcard-data.csv');
+        const csvText = await response.text();
+        const lines = csvText.trim().split('\n').slice(1);
+        cards = lines.map(line => {
+          const [id, pair, pos, hint, gradType, order, word, sentences, english] = line.split(',');
+          return { id, pair, pos, hint, gradType: gradType || '', order: parseInt(order), word, sentences, english };
+        });
+      } catch (error) {
+        console.error('Error loading CSV:', error);
+      }
+    }
+
+    // Load user review data (adapted)
+    async function loadUserData(uid) {
+      const reviewsRef = db.collection(`users/${uid}/reviews`);
+      const snapshot = await reviewsRef.get();
+      cardReviewDocs = {};
+      snapshot.forEach(doc => {
+        cardReviewDocs[doc.id] = doc.data();
+      });
+
+      const userDoc = await db.doc(`users/${uid}`).get();
+      if (userDoc.exists) {
+        userSettings = userDoc.data();
+      }
+
+      document.getElementById('login-form').style.display = 'none';
+      document.getElementById('show-ease-table').style.display = 'block';
+      displayEaseTable();  // Auto-display table after login
+    }
+
+    // Table display function (updated to use hexagonal div grid)
     function displayEaseTable() {
       const container = document.getElementById('ease-table-container');
       container.innerHTML = '';
 
-      const table = document.createElement('table');
-      table.className = 'ease-table';
-
-      const headerRow = table.insertRow();
-      for (let col = 1; col <= 10; col++) {
-        const th = document.createElement('th');
-        th.textContent = `Col ${col}`;
-        headerRow.appendChild(th);
-      }
+      const grid = document.createElement('div');
+      grid.className = 'hex-grid';
 
       for (let row = 0; row < 10; row++) {
-        const tr = table.insertRow();
+        const rowDiv = document.createElement('div');
+        rowDiv.className = 'hex-row';
         for (let col = 0; col < 10; col++) {
           const index = row * 10 + col;
-          const td = tr.insertCell();
+          const cell = document.createElement('div');
+          cell.className = 'hex-cell';
           if (index < cards.length) {
             const card = cards[index];
-            const review = cardReviewDocs[card.id] || { ef: null };
-            let ef = review.ef;
-            let cp = calculateConfidence(ef);
-            td.textContent = card.word;  // Only show the word
-            td.setAttribute('data-cp', `Confianza: ${cp}%`);  // Store CP for tooltip
-            td.setAttribute('aria-label', `${card.word}: Confianza ${cp}%`);  // For accessibility
+            const review = cardReviewDocs[card.id] || { ef: 2.5 };
+            cell.textContent = `EF: ${review.ef.toFixed(2)} | ${card.word}`;  // Adjust content as needed
           } else {
-            td.textContent = 'N/A';
-            td.className = 'empty';
+            cell.className += ' empty';
+            cell.textContent = 'N/A';
           }
+          rowDiv.appendChild(cell);
         }
+        grid.appendChild(rowDiv);
       }
 
-      container.appendChild(table);
+      container.appendChild(grid);
     }
 
-    // ... Rest of the script remains unchanged ...
+    // Signup and Login functions (copied from your app)
+    async function signup() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      try {
+        await auth.createUserWithEmailAndPassword(email, password);
+      } catch (e) {
+        document.getElementById('error').textContent = e.message;
+      }
+    }
+
+    async function login() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      try {
+        await auth.signInWithEmailAndPassword(email, password);
+      } catch (e) {
+        document.getElementById('error').textContent = e.message;
+      }
+    }
+
+    // Auth state listener
+    auth.onAuthStateChanged(user => {
+      if (user) {
+        loadUserData(user.uid);
+      } else {
+        document.getElementById('login-form').style.display = 'block';
+        document.getElementById('show-ease-table').style.display = 'none';
+        document.getElementById('ease-table-container').innerHTML = '';
+      }
+    });
+
+    loadCSV();
   </script>
 </body>
 </html>
