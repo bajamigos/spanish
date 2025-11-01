@@ -89,7 +89,18 @@
       displayEaseTable();  // Auto-display table after login
     }
 
-    // Table display function (updated to use 'word' column and simplified format)
+    // Confidence percentage calculation function
+    function calculateConfidence(ef) {
+      const minEF = 1.3;
+      const maxEF = 2.5;
+      if (ef === null) {
+        return 50;  // Unreviewed cards
+      }
+      ef = Math.max(minEF, Math.min(maxEF, ef));  // Clamp
+      return Math.round(((ef - minEF) / (maxEF - minEF)) * 100);
+    }
+
+    // Table display function (updated to use 'word' column and confidence percentage)
     function displayEaseTable() {
       const container = document.getElementById('ease-table-container');
       container.innerHTML = '';
@@ -113,7 +124,8 @@
             const card = cards[index];
             const review = cardReviewDocs[card.id] || { ef: null };  // Null if unreviewed
             let ef = review.ef;
-            let text = ef ? `${card.word}: ${ef.toFixed(2)}` : `${card.word}: N/A`;
+            let cp = calculateConfidence(ef);
+            let text = `${card.word}: ${cp}%`;
             td.textContent = text;
           } else {
             td.textContent = 'N/A';
