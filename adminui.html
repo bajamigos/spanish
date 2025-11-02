@@ -84,25 +84,34 @@
       rows.slice(0, 5).map(r => `<tr>${r.split(',').map(c => `<td>${c}</td>`).join('')}</tr>`).join('');
   };
 
-  // Updated Stats Loading with Anonymous Authentication Fix
+  // Enhanced Stats Loading with Improved Anonymous Authentication and Error Handling
   async function loadStats() {
     try {
+      console.log('Initiating stats load...');
+      
       // Ensure anonymous sign-in for admin access
       if (!firebase.auth().currentUser) {
+        console.log('No current user; attempting anonymous sign-in...');
         await firebase.auth().signInAnonymously();
-        console.log('Signed in anonymously for stats access.');
+        // Brief delay to ensure auth state propagates
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        console.log('Anonymous sign-in completed.');
+      } else {
+        console.log('User already authenticated.');
       }
 
+      console.log('Querying Firestore users collection...');
       const usersSnap = await db.collection('users').get();
       document.getElementById('totalUsers').textContent = `Users: ${usersSnap.size}`;
+      console.log(`Stats loaded: ${usersSnap.size} users.`);
     } catch (error) {
       console.error('Stats loading error:', error);
-      document.getElementById('totalUsers').textContent = 'Users: N/A (Authentication required)';
+      document.getElementById('totalUsers').textContent = 'Users: N/A (Permissions or network issue)';
     }
   }
   loadStats();
 
-  // New Leaderboard Reset Functionality
+  // New Leaderboard Reset Functionality with Enhanced Error Logging
   const resetEndpoint = 'https://siele-elf-6477d7a8fbd0.herokuapp.com/reset-leaderboard';
   const leaderboardActionMsg = document.getElementById('leaderboardActionMsg');
 
@@ -112,6 +121,7 @@
     }
 
     try {
+      console.log('Reset button clicked; initiating fetch...');
       leaderboardActionMsg.textContent = 'Resetting leaderboard...';
       leaderboardActionMsg.style.color = '#007bff'; // Blue for processing
 
@@ -123,17 +133,21 @@
         body: JSON.stringify({ timestamp: new Date().toISOString(), action: 'monthly_reset' })
       });
 
+      console.log('Fetch response status:', response.status);
       if (response.ok) {
+        const data = await response.json();
+        console.log('Reset successful:', data);
         leaderboardActionMsg.textContent = 'Leaderboard reset successfully. Counters initialized for the new month.';
         leaderboardActionMsg.style.color = '#28a745'; // Green for success
-        console.log('Leaderboard reset completed at:', new Date().toISOString());
       } else {
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        const errorText = await response.text();
+        console.error('Non-OK response:', response.status, errorText);
+        throw new Error(`HTTP ${response.status}: ${response.statusText} - ${errorText}`);
       }
     } catch (error) {
-      leaderboardActionMsg.textContent = `Reset failed: ${error.message}. Please check the backend endpoint.`;
+      console.error('Full reset error:', error);
+      leaderboardActionMsg.textContent = `Reset failed: ${error.message}. Please check console and backend.`;
       leaderboardActionMsg.style.color = '#dc3545'; // Red for error
-      console.error('Leaderboard reset error:', error);
     }
   };
   </script>
