@@ -84,10 +84,21 @@
       rows.slice(0, 5).map(r => `<tr>${r.split(',').map(c => `<td>${c}</td>`).join('')}</tr>`).join('');
   };
 
-  // Existing Stats Loading
+  // Updated Stats Loading with Anonymous Authentication Fix
   async function loadStats() {
-    const usersSnap = await db.collection('users').get();
-    document.getElementById('totalUsers').textContent = `Users: ${usersSnap.size}`;
+    try {
+      // Ensure anonymous sign-in for admin access
+      if (!firebase.auth().currentUser) {
+        await firebase.auth().signInAnonymously();
+        console.log('Signed in anonymously for stats access.');
+      }
+
+      const usersSnap = await db.collection('users').get();
+      document.getElementById('totalUsers').textContent = `Users: ${usersSnap.size}`;
+    } catch (error) {
+      console.error('Stats loading error:', error);
+      document.getElementById('totalUsers').textContent = 'Users: N/A (Authentication required)';
+    }
   }
   loadStats();
 
