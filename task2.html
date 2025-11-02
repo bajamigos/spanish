@@ -84,6 +84,14 @@
         justify-content: center;
       }
     }
+    #suggestions-section {
+      transition: opacity 0.3s ease, max-height 0.3s ease;
+    }
+    #suggestions-section.hidden {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+    }
   </style>
 </head>
 <body>
@@ -104,14 +112,16 @@
       ></iframe>
     </div>
     <p id="channel-info">Cargando video...</p>
-    <button class="new-image-button" onclick="loadNextVideo()">
-      Siguiente Video
+    <button class="new-image-button" id="toggle-suggestions">
+      Ocultar Videos Sugeridos
     </button>
-    <h3 style="margin-top: 1.5rem">Más videos sugeridos</h3>
-    <div class="carousel-wrapper">
-      <button class="carousel-btn left" id="scroll-left">‹</button>
-      <div id="suggested-videos" class="carousel"></div>
-      <button class="carousel-btn right" id="scroll-right">›</button>
+    <div id="suggestions-section">
+      <h3 style="margin-top: 1.5rem">Más videos sugeridos</h3>
+      <div class="carousel-wrapper">
+        <button class="carousel-btn left" id="scroll-left">‹</button>
+        <div id="suggested-videos" class="carousel"></div>
+        <button class="carousel-btn right" id="scroll-right">›</button>
+      </div>
     </div>
     <div class="button-group">
       <button class="new-image-button" id="toggle-wordhunt-scoreboard">
@@ -229,15 +239,6 @@
       document.getElementById("channel-info").textContent = video.channel;
       showCarousel();
     }
-    function loadNextVideo() {
-      if (allVideos.length === 0) {
-        document.getElementById("channel-info").textContent = "Cargando videos...";
-        fetchAllVideos();
-        return;
-      }
-      currentVideoIndex = (currentVideoIndex + 1) % allVideos.length;
-      loadVideo(allVideos[currentVideoIndex]);
-    }
     function showCarousel() {
       const carousel = document.getElementById("suggested-videos");
       carousel.innerHTML = ""; // Clear previous
@@ -288,6 +289,19 @@
       const carousel = document.getElementById("suggested-videos");
       if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - ITEM_WIDTH) {
         appendMoreVideos(3);
+      }
+    });
+
+    // Toggle suggestions section
+    document.getElementById("toggle-suggestions").addEventListener("click", () => {
+      const section = document.getElementById("suggestions-section");
+      const button = document.getElementById("toggle-suggestions");
+      if (section.classList.contains("hidden")) {
+        section.classList.remove("hidden");
+        button.textContent = "Ocultar Videos Sugeridos";
+      } else {
+        section.classList.add("hidden");
+        button.textContent = "Mostrar Videos Sugeridos";
       }
     });
 
