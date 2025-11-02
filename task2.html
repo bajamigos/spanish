@@ -180,6 +180,7 @@
     let allVideos = [];
     let currentVideoIndex = -1;
     let isLoading = false;
+    const ITEM_WIDTH = 212; // 200px width + 12px gap
 
     async function fetchAllVideos() {
       if (isLoading) return;
@@ -223,13 +224,11 @@
       loadVideo(allVideos[0]);
       isLoading = false;
     }
-
     function loadVideo(video) {
       document.getElementById("video-iframe").src = `https://www.youtube.com/embed/${video.id}?autoplay=0`;
       document.getElementById("channel-info").textContent = video.channel;
       showCarousel();
     }
-
     function loadNextVideo() {
       if (allVideos.length === 0) {
         document.getElementById("channel-info").textContent = "Cargando videos...";
@@ -239,7 +238,6 @@
       currentVideoIndex = (currentVideoIndex + 1) % allVideos.length;
       loadVideo(allVideos[currentVideoIndex]);
     }
-
     function showCarousel() {
       const carousel = document.getElementById("suggested-videos");
       carousel.innerHTML = ""; // Clear previous
@@ -255,16 +253,42 @@
         carousel.appendChild(item);
       });
     }
-
+    function appendMoreVideos(num) {
+      const carousel = document.getElementById("suggested-videos");
+      let nextIndex = (currentVideoIndex + 1 + carousel.children.length) % allVideos.length;
+      for (let i = 0; i < num; i++) {
+        const video = allVideos[nextIndex];
+        const item = document.createElement("div");
+        item.classList.add("carousel-item");
+        item.innerHTML = `
+          <img src="https://img.youtube.com/vi/${video.id}/mqdefault.jpg" alt="${video.title}" />
+          <p>${video.title.substring(0, 50)}...</p>
+        `;
+        item.addEventListener("click", () => loadVideo(video));
+        carousel.appendChild(item);
+        nextIndex = (nextIndex + 1) % allVideos.length;
+      }
+    }
     // Carousel arrow navigation
     document.getElementById("scroll-left").addEventListener("click", () => {
       const carousel = document.getElementById("suggested-videos");
-      carousel.scrollBy({ left: -220, behavior: "smooth" });
+      carousel.scrollBy({ left: -ITEM_WIDTH * 3, behavior: "smooth" });
     });
 
     document.getElementById("scroll-right").addEventListener("click", () => {
       const carousel = document.getElementById("suggested-videos");
-      carousel.scrollBy({ left: 220, behavior: "smooth" });
+      if (carousel.scrollLeft + carousel.clientWidth + ITEM_WIDTH * 3 > carousel.scrollWidth) {
+        appendMoreVideos(3);
+      }
+      carousel.scrollBy({ left: ITEM_WIDTH * 3, behavior: "smooth" });
+    });
+
+    // Optional: Append on manual scroll near end
+    document.getElementById("suggested-videos").addEventListener('scroll', () => {
+      const carousel = document.getElementById("suggested-videos");
+      if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - ITEM_WIDTH) {
+        appendMoreVideos(3);
+      }
     });
 
     window.addEventListener('load', () => {
