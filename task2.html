@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tarea 2 Sieve S4: Responder a Medios</title>
+  <title>Tarea 2 SIELE S4: Responder a Medios</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="wordhunt.css" />
   <style>
@@ -88,13 +88,11 @@
 </head>
 <body>
   <div id="header-placeholder">Loading header...</div>
-
   <div class="content-card">
     <p>
       Para la Tarea 2 del SIELE S4, el estudiante responde a videos en español,
       practicando expresión oral.
     </p>
-
     <div id="video-container" class="image-container">
       <iframe
         id="video-iframe"
@@ -109,31 +107,26 @@
     <button class="new-image-button" onclick="loadNextVideo()">
       Siguiente Video
     </button>
-
     <h3 style="margin-top: 1.5rem">Más videos sugeridos</h3>
     <div class="carousel-wrapper">
       <button class="carousel-btn left" id="scroll-left">‹</button>
       <div id="suggested-videos" class="carousel"></div>
       <button class="carousel-btn right" id="scroll-right">›</button>
     </div>
-
     <div class="button-group">
       <button class="new-image-button" id="toggle-wordhunt-scoreboard">
         Mostrar Marcador
       </button>
     </div>
-
     <section id="wordhunt-scoreboard" class="hidden">
       <div class="word-display" id="wordhunt-word-box">
         Haz clic en "Iniciar"
       </div>
-
       <div class="score">
         <div>Tiempo: <span id="wordhunt-timer">120</span>s</div>
         <div>Acertadas: <span id="wordhunt-caught">0</span></div>
         <div>Falladas: <span id="wordhunt-missed">0</span></div>
       </div>
-
       <div class="controls">
         <button id="wordhunt-toggle-game">Iniciar</button>
         <button id="wordhunt-toggle-translation">Mostrar Traducción</button>
@@ -147,7 +140,6 @@
         />
         <button id="wordhunt-reset-game">Reiniciar</button>
       </div>
-
       <div class="controls" style="margin-top: 1rem">
         <button
           class="tally-button"
@@ -160,14 +152,12 @@
       </div>
     </section>
   </div>
-
   <div id="footer-placeholder">Loading footer...</div>
-
   <script async src="https://tally.so/widgets/embed.js"></script>
   <script src="common.js"></script>
   <script src="wordhunt.js"></script>
-
   <script>
+    const taskName = 'Tarea 2 SIELE S4';
     const channels = [
       { name: "DW Español", id: "UCT4Jg8h03dD0iN3Pb5L0PMA" },
       { name: "BBC Mundo", id: "UCv8CkQ9wZHQMwlUZtIoyUAA" },
@@ -189,11 +179,13 @@
       { name: "La Capital", id: "UCZDxJPcxo5eK6aYybx4Lz-A" },
       { name: "Ter", id: "UCz6mp8cDK0nZvjYbSmF8Rxg" }
     ];
-
     let allVideos = [];
     let currentVideoIndex = -1;
+    let isLoading = false;
 
     async function fetchAllVideos() {
+      if (isLoading) return;
+      isLoading = true;
       allVideos = [];
       const fetchPromises = channels.map(async ch => {
         const feedUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${ch.id}`;
@@ -203,46 +195,87 @@
           const xmlText = await res.text();
           const parser = new DOMParser();
           const xmlDoc = parser.parseFromString(xmlText, "text/xml");
-          const entries = [...xmlDoc.getElementsByTagName("entry")].slice(0, 5);
-          return entries.map(e => ({
+          const entries = [...xmlDoc.getElementsByTagName("entry")].slice(0, 10);
+          const videos = entries.map(e => ({
             id: e.getElementsByTagName("yt:videoId")[0].textContent,
             title: e.getElementsByTagName("title")[0].textContent,
             channel: ch.name,
             published: new Date(e.getElementsByTagName("published")[0].textContent)
           }));
+          await new Promise(resolve => setTimeout(resolve, 500)); // Delay to avoid rate limits
+          return videos;
         } catch (err) {
           console.warn(`Error fetching ${ch.name}:`, err.message);
           return [];
         }
       });
-
       const results = await Promise.all(fetchPromises);
       allVideos = results.flat();
-
+      allVideos.sort((a, b) => b.published - a.published); // Sort by newest first
       if (allVideos.length === 0) {
         document.getElementById("channel-info").textContent =
           "No se encontraron videos. Intenta más tarde.";
+        isLoading = false;
         return;
       }
-
-      // Shuffle
+      // Shuffle after sorting
       for (let i = allVideos.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [allVideos[i], allVideos[j]] = [allVideos[j], allVideos[i]];
       }
       loadVideo(allVideos[0]);
+      isLoading = false;
     }
 
     function loadVideo(video) {
       document.getElementById("video-iframe").src =
-        `https://www.youtube.com/embed/${video.id}`;
+        `https://www.youtube.com/embed/${video.id}?autoplay=0`;
       document.getElementById("channel-info").textContent = video.channel;
       showCarousel();
     }
 
     function loadNextVideo() {
+      if (allVideos.length === 0) {
+        document.getElementById("channel-info").textContent = "Cargando videos...";
+        fetchAllVideos();
+        return;
+      }
       currentVideoIndex = (currentVideoIndex + 1) % allVideos.length;
       loadVideo(allVideos[currentVideoIndex]);
     }
 
     function showCarousel() {
+      const carousel = document.getElementById("suggested-videos");
+      carousel.innerHTML = ""; // Clear previous
+      const suggested = allVideos.slice(currentVideoIndex + 1, currentVideoIndex + 11); // Next 10 videos
+      suggested.forEach(video => {
+        const item = document.createElement("div");
+        item.classList.add("carousel-item");
+        item.innerHTML = `
+          <img src="https://img.youtube.com/vi/${video.id}/mqdefault.jpg" alt="${video.title}" />
+          <p>${video.title.substring(0, 50)}...</p>
+        `;
+        item.addEventListener("click", () => loadVideo(video));
+        carousel.appendChild(item);
+      });
+    }
+
+    // Carousel arrow navigation
+    document.getElementById("scroll-left").addEventListener("click", () => {
+      const carousel = document.getElementById("suggested-videos");
+      carousel.scrollBy({ left: -220, behavior: "smooth" });
+    });
+
+    document.getElementById("scroll-right").addEventListener("click", () => {
+      const carousel = document.getElementById("suggested-videos");
+      carousel.scrollBy({ left: 220, behavior: "smooth" });
+    });
+
+    window.addEventListener('load', () => {
+      loadIncludes();
+      fetchAllVideos();
+      window.addEventListener('resize', handleResponsive);
+    });
+  </script>
+</body>
+</html>
