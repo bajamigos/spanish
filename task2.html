@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tarea 2 SIELE S4: Responder a Medios</title>
+  <title>Tarea 2 Sieve S4: Responder a Medios</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="wordhunt.css" />
   <style>
@@ -118,10 +118,7 @@
     </div>
 
     <div class="button-group">
-      <button
-        class="new-image-button"
-        id="toggle-wordhunt-scoreboard"
-      >
+      <button class="new-image-button" id="toggle-wordhunt-scoreboard">
         Mostrar Marcador
       </button>
     </div>
@@ -139,9 +136,7 @@
 
       <div class="controls">
         <button id="wordhunt-toggle-game">Iniciar</button>
-        <button id="wordhunt-toggle-translation">
-          Mostrar Traducción
-        </button>
+        <button id="wordhunt-toggle-translation">Mostrar Traducción</button>
         <label for="wordhunt-speed-control">Velocidad:</label>
         <input
           type="number"
@@ -173,147 +168,81 @@
   <script src="wordhunt.js"></script>
 
   <script>
-    const taskName = "Tarea 2 SIELE S4";
-
     const channels = [
-      { name: "DW Español", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCT4Jg8h03dD0iN3Pb5L0PMA" },
-      { name: "BBC Mundo", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCv8CkQ9wZHQMwlUZtIoyUAA" },
-      { name: "France 24 Español", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCUdOoVWuWmgo1wByzcsyKDQ" },
-      { name: "RT en Español", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCEIhICHOQOonjE6V0SLdrHQ" },
-      { name: "El País", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCnsvJeZO4RigQ898WdDhkFQ" },
-      { name: "CNN en Español", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UC_lEiu6917IJz03TnntWUaQ" },
-      { name: "Univision Noticias", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UC32TdiIsh_5X8tKr_9rKQyA" },
-      { name: "Telemundo Noticias", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCRwA1NUcUnwsly35ikGhp0A" },
-      { name: "Voz de América", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCXQSHGZP6StIywcGofGdm0Q" },
-      { name: "Al Jazeera Español", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UC6DcwP4bW65JrY1y2y5Vayw" },
-      { name: "QuantumFracture", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCV7UOhZ2XuPZcV0CjH0XGpA" },
-      { name: "Date un Vlog", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCt8y1xdHoRj1sZ4fHfN8O8w" },
-      { name: "CuriosaMente", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCX0LJHhMYJtUcbm1sR5IToA" },
-      { name: "C de Ciencia", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCzR-rom72PHN9Zg7RML9EbA" },
-      { name: "Dot CSV", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCy5znSnfMsDwaLlROnZ7Qbg" },
-      { name: "National Geographic en Español", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCQ1t91xvQYJYIHUQ3r-LH3w" },
-      { name: "Aprendemos Juntos BBVA", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCzpXoZQWXU0cG9c7SgRZrUg" },
-      { name: "La Capital", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCZDxJPcxo5eK6aYybx4Lz-A" },
-      { name: "Ter", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCz6mp8cDK0nZvjYbSmF8Rxg" }
+      { name: "DW Español", id: "UCT4Jg8h03dD0iN3Pb5L0PMA" },
+      { name: "BBC Mundo", id: "UCv8CkQ9wZHQMwlUZtIoyUAA" },
+      { name: "France 24 Español", id: "UCUdOoVWuWmgo1wByzcsyKDQ" },
+      { name: "RT en Español", id: "UCEIhICHOQOonjE6V0SLdrHQ" },
+      { name: "El País", id: "UCnsvJeZO4RigQ898WdDhkFQ" },
+      { name: "CNN en Español", id: "UC_lEiu6917IJz03TnntWUaQ" },
+      { name: "Univision Noticias", id: "UC32TdiIsh_5X8tKr_9rKQyA" },
+      { name: "Telemundo Noticias", id: "UCRwA1NUcUnwsly35ikGhp0A" },
+      { name: "Voz de América", id: "UCXQSHGZP6StIywcGofGdm0Q" },
+      { name: "Al Jazeera Español", id: "UC6DcwP4bW65JrY1y2y5Vayw" },
+      { name: "QuantumFracture", id: "UCV7UOhZ2XuPZcV0CjH0XGpA" },
+      { name: "Date un Vlog", id: "UCt8y1xdHoRj1sZ4fHfN8O8w" },
+      { name: "CuriosaMente", id: "UCX0LJHhMYJtUcbm1sR5IToA" },
+      { name: "C de Ciencia", id: "UCzR-rom72PHN9Zg7RML9EbA" },
+      { name: "Dot CSV", id: "UCy5znSnfMsDwaLlROnZ7Qbg" },
+      { name: "National Geographic en Español", id: "UCQ1t91xvQYJYIHUQ3r-LH3w" },
+      { name: "Aprendemos Juntos BBVA", id: "UCzpXoZQWXU0cG9c7SgRZrUg" },
+      { name: "La Capital", id: "UCZDxJPcxo5eK6aYybx4Lz-A" },
+      { name: "Ter", id: "UCz6mp8cDK0nZvjYbSmF8Rxg" }
     ];
 
     let allVideos = [];
     let currentVideoIndex = -1;
-    let isLoading = false;
 
     async function fetchAllVideos() {
-      if (isLoading) return;
-      isLoading = true;
       allVideos = [];
-
-      const fetchPromises = channels.map(async (channel) => {
+      const fetchPromises = channels.map(async ch => {
+        const feedUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${ch.id}`;
         try {
-          const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(channel.rss)}&count=6`;
-          const response = await fetch(apiUrl);
-          if (!response.ok) throw new Error(`${response.status}`);
-          const data = await response.json();
-
-          if (data.status === "ok" && Array.isArray(data.items)) {
-            return data.items
-              .map((item) => {
-                const match = item.link.match(/v=([^&]+)/);
-                if (!match) return null;
-                return {
-                  id: match[1],
-                  channel: channel.name,
-                  title: item.title,
-                  published: new Date(item.pubDate),
-                };
-              })
-              .filter(Boolean);
-          } else {
-            console.warn(`⚠️ ${channel.name}: no items found`);
-          }
-        } catch (error) {
-          console.warn(`❌ Error fetching ${channel.name}:`, error.message);
+          const res = await fetch(feedUrl);
+          if (!res.ok) throw new Error(res.statusText);
+          const xmlText = await res.text();
+          const parser = new DOMParser();
+          const xmlDoc = parser.parseFromString(xmlText, "text/xml");
+          const entries = [...xmlDoc.getElementsByTagName("entry")].slice(0, 5);
+          return entries.map(e => ({
+            id: e.getElementsByTagName("yt:videoId")[0].textContent,
+            title: e.getElementsByTagName("title")[0].textContent,
+            channel: ch.name,
+            published: new Date(e.getElementsByTagName("published")[0].textContent)
+          }));
+        } catch (err) {
+          console.warn(`Error fetching ${ch.name}:`, err.message);
           return [];
         }
-        return [];
       });
 
       const results = await Promise.all(fetchPromises);
-      allVideos = results.flat().filter((v) => v && v.id);
+      allVideos = results.flat();
 
       if (allVideos.length === 0) {
-        console.error("❌ No valid videos were loaded from any channel.");
         document.getElementById("channel-info").textContent =
           "No se encontraron videos. Intenta más tarde.";
-        isLoading = false;
         return;
       }
 
+      // Shuffle
       for (let i = allVideos.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [allVideos[i], allVideos[j]] = [allVideos[j], allVideos[i]];
       }
-
-      isLoading = false;
       loadVideo(allVideos[0]);
     }
 
     function loadVideo(video) {
-      if (!video || !video.id) {
-        console.error("⚠️ Tried to load an invalid video object:", video);
-        document.getElementById("channel-info").textContent =
-          "Error cargando video.";
-        return;
-      }
-      document.getElementById("video-iframe").src = `https://www.youtube.com/embed/${video.id}?autoplay=0`;
-      document.getElementById("channel-info").textContent = `${video.channel}`;
+      document.getElementById("video-iframe").src =
+        `https://www.youtube.com/embed/${video.id}`;
+      document.getElementById("channel-info").textContent = video.channel;
       showCarousel();
     }
 
     function loadNextVideo() {
-      if (allVideos.length === 0) {
-        document.getElementById("channel-info").textContent = "Cargando videos...";
-        fetchAllVideos();
-        return;
-      }
       currentVideoIndex = (currentVideoIndex + 1) % allVideos.length;
       loadVideo(allVideos[currentVideoIndex]);
-      if (currentVideoIndex === 0) fetchAllVideos();
     }
 
     function showCarousel() {
-      const container = document.getElementById("suggested-videos");
-      if (!container) return;
-      container.innerHTML = "";
-
-      const suggestions = allVideos
-        .filter((v) => v !== allVideos[currentVideoIndex])
-        .slice(0, 12);
-
-      suggestions.forEach((video) => {
-        const div = document.createElement("div");
-        div.className = "carousel-item";
-        div.innerHTML = `
-          <img src="https://img.youtube.com/vi/${video.id}/mqdefault.jpg" alt="${video.title}">
-          <p>${video.channel}</p>`;
-        div.onclick = () => loadVideo(video);
-        container.appendChild(div);
-      });
-    }
-
-    window.addEventListener("load", () => {
-      loadIncludes();
-      fetchAllVideos();
-
-      const leftBtn = document.getElementById("scroll-left");
-      const rightBtn = document.getElementById("scroll-right");
-      const carousel = document.getElementById("suggested-videos");
-
-      leftBtn?.addEventListener("click", () =>
-        carousel.scrollBy({ left: -600, behavior: "smooth" })
-      );
-      rightBtn?.addEventListener("click", () =>
-        carousel.scrollBy({ left: 600, behavior: "smooth" })
-      );
-    });
-  </script>
-</body>
-</html>
