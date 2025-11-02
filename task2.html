@@ -159,25 +159,25 @@
   <script>
     const taskName = 'Tarea 2 SIELE S4';
     const channels = [
-      { name: "DW Español", id: "UCT4Jg8h03dD0iN3Pb5L0PMA" },
-      { name: "BBC Mundo", id: "UCv8CkQ9wZHQMwlUZtIoyUAA" },
-      { name: "France 24 Español", id: "UCUdOoVWuWmgo1wByzcsyKDQ" },
-      { name: "RT en Español", id: "UCEIhICHOQOonjE6V0SLdrHQ" },
-      { name: "El País", id: "UCnsvJeZO4RigQ898WdDhkFQ" },
-      { name: "CNN en Español", id: "UC_lEiu6917IJz03TnntWUaQ" },
-      { name: "Univision Noticias", id: "UC32TdiIsh_5X8tKr_9rKQyA" },
-      { name: "Telemundo Noticias", id: "UCRwA1NUcUnwsly35ikGhp0A" },
-      { name: "Voz de América", id: "UCXQSHGZP6StIywcGofGdm0Q" },
-      { name: "Al Jazeera Español", id: "UC6DcwP4bW65JrY1y2y5Vayw" },
-      { name: "QuantumFracture", id: "UCV7UOhZ2XuPZcV0CjH0XGpA" },
-      { name: "Date un Vlog", id: "UCt8y1xdHoRj1sZ4fHfN8O8w" },
-      { name: "CuriosaMente", id: "UCX0LJHhMYJtUcbm1sR5IToA" },
-      { name: "C de Ciencia", id: "UCzR-rom72PHN9Zg7RML9EbA" },
-      { name: "Dot CSV", id: "UCy5znSnfMsDwaLlROnZ7Qbg" },
-      { name: "National Geographic en Español", id: "UCQ1t91xvQYJYIHUQ3r-LH3w" },
-      { name: "Aprendemos Juntos BBVA", id: "UCzpXoZQWXU0cG9c7SgRZrUg" },
-      { name: "La Capital", id: "UCZDxJPcxo5eK6aYybx4Lz-A" },
-      { name: "Ter", id: "UCz6mp8cDK0nZvjYbSmF8Rxg" }
+      { name: "DW Español", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCT4Jg8h03dD0iN3Pb5L0PMA" },
+      { name: "BBC Mundo", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCv8CkQ9wZHQMwlUZtIoyUAA" },
+      { name: "France 24 Español", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCUdOoVWuWmgo1wByzcsyKDQ" },
+      { name: "RT en Español", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCEIhICHOQOonjE6V0SLdrHQ" },
+      { name: "El País", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCnsvJeZO4RigQ898WdDNoBw" },
+      { name: "CNN en Español", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UC_lEiu6917IJz03TnntWUaQ" },
+      { name: "Univision Noticias", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UC32TdiIsh_5X8tKr_9rKQyA" },
+      { name: "Telemundo Noticias", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCRwA1NUcUnwsly35ikGhp0A" },
+      { name: "Voz de América", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCXQSHGZP6StIywcGofGdm0Q" },
+      { name: "Al Jazeera Español", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCS0lmlVIYVz2qeWlZ_ynIWg" }, // Updated to AJ+ Español
+      { name: "QuantumFracture", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCbdSYaPD-lr1kW27UJuk8Pw" },
+      { name: "Date un Vlog", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCQX_MZRCaluNKxkywkLEgfA" },
+      { name: "CuriosaMente", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCX16cLWl6dCjlZMgUBxgGkA" },
+      { name: "C de Ciencia", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCzR-rom72PHN9Zg7RML9EbA" },
+      { name: "Dot CSV", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCy5znSnfMsDwaLlROnZ7Qbg" },
+      { name: "National Geographic en Español", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCQ1t91xvQYJYIHUQ3r-LH3w" },
+      { name: "Aprendemos Juntos BBVA", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCzpXoZQWXU0cG9c7SgRZrUg" },
+      { name: "La Capital", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCEwl20VxZ3AwOgiKMZtI1GQ" },
+      { name: "Ter", rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCz6mp8cDK0nZvjYbSmF8Rxg" }
     ];
     let allVideos = [];
     let currentVideoIndex = -1;
@@ -187,34 +187,33 @@
       if (isLoading) return;
       isLoading = true;
       allVideos = [];
-      const fetchPromises = channels.map(async ch => {
-        const feedUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${ch.id}`;
+      for (const channel of channels) {
         try {
-          const res = await fetch(feedUrl);
-          if (!res.ok) throw new Error(res.statusText);
-          const xmlText = await res.text();
-          const parser = new DOMParser();
-          const xmlDoc = parser.parseFromString(xmlText, "text/xml");
-          const entries = [...xmlDoc.getElementsByTagName("entry")].slice(0, 10);
-          const videos = entries.map(e => ({
-            id: e.getElementsByTagName("yt:videoId")[0].textContent,
-            title: e.getElementsByTagName("title")[0].textContent,
-            channel: ch.name,
-            published: new Date(e.getElementsByTagName("published")[0].textContent)
-          }));
+          const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(channel.rss)}&count=10`;
+          const response = await fetch(apiUrl);
+          if (!response.ok) throw new Error(`Status: ${response.status}`);
+          const data = await response.json();
+          if (data.status === 'ok' && data.items) {
+            data.items.forEach(item => {
+              const match = item.link.match(/v=([^&]+)/);
+              if (match) {
+                allVideos.push({
+                  id: match[1],
+                  title: item.title,
+                  channel: channel.name,
+                  published: new Date(item.pubDate)
+                });
+              }
+            });
+          }
           await new Promise(resolve => setTimeout(resolve, 500)); // Delay to avoid rate limits
-          return videos;
         } catch (err) {
-          console.warn(`Error fetching ${ch.name}:`, err.message);
-          return [];
+          console.warn(`Error fetching ${channel.name}: ${err.message}`);
         }
-      });
-      const results = await Promise.all(fetchPromises);
-      allVideos = results.flat();
+      }
       allVideos.sort((a, b) => b.published - a.published); // Sort by newest first
       if (allVideos.length === 0) {
-        document.getElementById("channel-info").textContent =
-          "No se encontraron videos. Intenta más tarde.";
+        document.getElementById("channel-info").textContent = "No se encontraron videos. Intenta más tarde.";
         isLoading = false;
         return;
       }
@@ -228,8 +227,7 @@
     }
 
     function loadVideo(video) {
-      document.getElementById("video-iframe").src =
-        `https://www.youtube.com/embed/${video.id}?autoplay=0`;
+      document.getElementById("video-iframe").src = `https://www.youtube.com/embed/${video.id}?autoplay=0`;
       document.getElementById("channel-info").textContent = video.channel;
       showCarousel();
     }
