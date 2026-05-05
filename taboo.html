@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabú: Guía de Estudio SIELE SR</title>
+    <style>
+        :root {
+            --primary-blue: #1a237e;
+            --accent-gold: #c5a059;
+            --bg-gray: #f8f9fa;
+            --text-dark: #212121;
+        }
+
+        body {
+            font-family: 'Garamond', 'Georgia', serif;
+            background-color: var(--bg-gray);
+            color: var(--text-dark);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            background: var(--primary-blue);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 4px solid var(--accent-gold);
+            margin-bottom: 40px;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 90%;
+        }
+
+        /* Study Guide Style Card */
+        #game-card {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 40px;
+            border-radius: 2px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            position: relative;
+        }
+
+        #game-card::before {
+            content: "";
+            position: absolute;
+            top: 10px; left: 10px; right: 10px; bottom: 10px;
+            border: 1px solid #eee;
+            pointer-events: none;
+        }
+
+        .target-word {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--accent-gold);
+            display: inline-block;
+            padding: 0 20px 5px 20px;
+        }
+
+        .taboo-label {
+            font-style: italic;
+            color: #777;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .taboo-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px 0;
+        }
+
+        .taboo-list li {
+            font-size: 1.4rem;
+            margin: 8px 0;
+            color: #444;
+        }
+
+        /* Buttons */
+        .btn-group { display: flex; justify-content: center; gap: 15px; }
+
+        button {
+            background-color: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-family: inherit;
+            font-variant: small-caps;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover { background-color: #0d47a1; }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-blue);
+            border: 1px solid var(--primary-blue);
+        }
+
+        /* Admin Area */
+        #admin-panel {
+            margin-top: 50px;
+            padding: 20px;
+            border-top: 1px dashed #ccc;
+        }
+
+        textarea {
+            width: 100%;
+            height: 120px;
+            margin-bottom: 10px;
+            font-family: monospace;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Práctica de Vocabulario: Tabú</h1>
+    <p>Preparación para la Expresión Oral SIELE</p>
+</header>
+
+<div class="container">
+    <div id="game-card">
+        <div class="target-word" id="main-word">Preparado</div>
+        <div class="taboo-label">Palabras Prohibidas:</div>
+        <ul class="taboo-list" id="taboo-words">
+            <li>Presiona el botón para iniciar</li>
+        </ul>
+        <div class="btn-group">
+            <button onclick="nextCard()">Nueva Palabra</button>
+        </div>
+    </div>
+
+    <div id="admin-panel">
+        <button class="btn-secondary" onclick="toggleSettings()">⚙️ Importar de Anki / Editar</button>
+        <div id="settings-content" class="hidden">
+            <p><small>Formato: Palabra|Tabu1,Tabu2,Tabu3 (Una por línea)</small></p>
+            <textarea id="data-input"></textarea>
+            <button onclick="saveData()">Cargar Vocabulario</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Initial content focused on your Mexican Spanish and Automotive goals
+    let vocabulary = [
+        { word: "Yo Picho", taboo: ["Pagar", "Invitar", "Cuenta"] },
+        { word: "Cerrajería", taboo: ["Llave", "Control", "Abrir"] },
+        { word: "Chela", taboo: ["Cerveza", "Bebida", "Modelo"] },
+        { word: "Oye Compa", taboo: ["Amigo", "Güey", "Llamar"] },
+        { word: "Inmovilizador", taboo: ["Chip", "Sistema", "Auto"] }
+    ];
+
+    function nextCard() {
+        const card = vocabulary[Math.floor(Math.random() * vocabulary.length)];
+        document.getElementById('main-word').innerText = card.word;
+        const list = document.getElementById('taboo-words');
+        list.innerHTML = "";
+        card.taboo.forEach(t => {
+            let li = document.createElement('li');
+            li.innerText = t;
+            list.appendChild(li);
+        });
+    }
+
+    function toggleSettings() {
+        const content = document.getElementById('settings-content');
+        content.classList.toggle('hidden');
+        if(!content.classList.contains('hidden')) {
+            document.getElementById('data-input').value = vocabulary.map(v => `${v.word}|${v.taboo.join(',')}`).join('\n');
+        }
+    }
+
+    function saveData() {
+        const text = document.getElementById('data-input').value;
+        vocabulary = text.split('\n').filter(line => line.includes('|')).map(line => {
+            const [word, taboos] = line.split('|');
+            return { word: word.trim(), taboo: taboos.split(',').map(t => t.trim()) };
+        });
+        alert("¡Vocabulario cargado correctamente!");
+        toggleSettings();
+    }
+</script>
+
+</body>
+</html>
