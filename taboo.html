@@ -3,38 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabú: Guía de Estudio SIELE SR</title>
+    <title>Práctica de Tabú - SIELE SR</title>
+    <!-- Linking your existing stylesheet -->
+    <link rel="stylesheet" href="styles.css">
     <style>
-        :root {
-            --primary-blue: #1a237e;
-            --accent-gold: #c5a059;
-            --bg-gray: #f8f9fa;
-            --text-dark: #212121;
-        }
-
-        body {
-            font-family: 'Garamond', 'Georgia', serif;
-            background-color: var(--bg-gray);
-            color: var(--text-dark);
-            margin: 0;
+        /* Specific layout for the game card that may not be in your global styles */
+        .taboo-container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-height: 100vh;
+            padding: 20px;
         }
-
-        header {
-            width: 100%;
-            background: var(--primary-blue);
-            color: white;
-            padding: 20px 0;
+        .card-display {
+            background: #fff;
+            border: 2px solid var(--primary-color, #1a237e); /* Fallback to navy */
+            padding: 30px;
             text-align: center;
-            border-bottom: 4px solid var(--accent-gold);
-            margin-bottom: 40px;
+            max-width: 400px;
+            width: 100%;
+            margin: 20px 0;
+        }
+        .word-title {
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            color: var(--accent-color, #c5a059); /* Fallback to gold */
+        }
+        .taboo-list {
+            list-style: none;
+            padding: 0;
+            font-size: 1.3rem;
+            line-height: 2;
+        }
+        .hidden { display: none; }
+        textarea { width: 100%; height: 100px; margin-top: 10px; }
+    </style>
+</head>
+<body class="study-guide-theme">
+
+    <header>
+        <h1>Examen SIELE: Expresión Oral</h1>
+        <p>Entrenamiento de Circunloquio (Tabú)</p>
+    </header>
+
+    <main class="taboo-container">
+        <section class="card-display" id="game-card">
+            <h2 class="word-title" id="main-word">¡Listo!</h2>
+            <hr>
+            <p><em>No puedes decir:</em></p>
+            <ul class="taboo-list" id="taboo-words">
+                <li>Presiona el botón para generar una palabra</li>
+            </ul>
+        </section>
+
+        <div class="controls">
+            <button class="btn-primary" onclick="nextCard()">Siguiente Palabra</button>
+        </div>
+
+        <section id="admin-area" style="margin-top: 50px; opacity: 0.7;">
+            <button class="btn-secondary" onclick="toggleSettings()">⚙️ Editar Vocabulario / Anki</button>
+            <div id="settings-content" class="hidden">
+                <textarea id="data-input"></textarea>
+                <button class="btn-small" onclick="saveData()">Cargar Cambios</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Default list matching your interests
+        let vocabulary = [
+            { word: "Yo Picho", taboo: ["Pagar", "Dinero", "Invitar"] },
+            { word: "Cerrajería", taboo: ["Llave", "Control", "Auto"] },
+            { word: "Chela", taboo: ["Modelo", "Cerveza", "Bote"] },
+            { word: "Ganzúa", taboo: ["Abrir", "Herramienta", "Cerradura"] }
+        ];
+
+        function nextCard() {
+            const card = vocabulary[Math.floor(Math.random() * vocabulary.length)];
+            document.getElementById('main-word').innerText = card.word;
+            const list = document.getElementById('taboo-words');
+            list.innerHTML = "";
+            card.taboo.forEach(t => {
+                let li = document.createElement('li');
+                li.innerText = t;
+                list.appendChild(li);
+            });
         }
 
-        .container {
-            max-width: 600px;
+        function toggleSettings() {
+            const content = document.getElementById('settings-content');
+            content.classList.toggle('hidden');
+            if(!content.classList.contains('hidden')) {
+                document.getElementById('data-input').value = vocabulary.map(v => `${v.word}|${v.taboo.join(',')}`).join('\n');
+            }
+        }
+
+        function saveData() {
+            const text = document.getElementById('data-input').value;
+            vocabulary = text.split('\n').filter(line => line.includes('|')).map(line => {
+                const [word, taboos] = line.split('|');
+                return { word: word.trim(), taboo: taboos.split(',').map(t => t.trim()) };
+            });
+            toggleSettings();
+        }
+    </script>
+</body>
+</html>            max-width: 600px;
             width: 90%;
         }
 
