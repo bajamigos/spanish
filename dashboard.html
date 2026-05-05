@@ -1,1 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spanish Learning Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    :root {
+      --xl-navy:     #1F3864;
+      --xl-blue:     #2E5FA3;
+      --xl-row:      #D6E4F0;
+      --xl-yellow:   #FFF3CD;
+      --xl-row2:     #CFE2F3;
+      --xl-wt:       #FFFFFF;
+      --xl-dt:       #1F1F1F;
+      --xl-grid:     #B8CCE4;
+    }
 
+    body {
+      background: #fff;
+      color: #1F1F1F;
+      text-align: left;
+      margin: 0;
+      padding: 24px 20px 60px;
+      font-family: 'Inter', sans-serif;
+      max-width: 980px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .back-link { font-size: 11px; color: #888; text-decoration: none; display: inline-block; margin-bottom: 14px; }
+    .back-link:hover { color: #000; }
+
+    .page-title { font-size: 15px; font-weight: 700; margin: 0 0 3px; letter-spacing: -0.2px; }
+    .page-sub   { font-size: 11px; color: #888; margin: 0 0 20px; }
+
+    /* ── Tabs ── */
+    .tabs {
+      display: flex;
+      gap: 2px;
+      border-bottom: 2px solid var(--xl-blue);
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .tab {
+      padding: 7px 15px;
+      font-size: 12px;
+      font-weight: 600;
+      background: #f0f0f0;
+      border: 1px solid #ddd;
+      border-bottom: none;
+      border-radius: 4px 4px 0 0;
+      cursor: pointer;
+      color: #555;
+      user-select: none;
+    }
+    .tab:hover  { background: #e4e4e4; }
+    .tab.active { background: var(--xl-blue); color: #fff; border-color: var(--xl-blue); }
+
+    .sheet         { display: none; }
+    .sheet.active  { display: block; }
+
+    /* ── Table chrome ── */
+    .xl-wrap { overflow-x: auto; border: 1px solid var(--xl-grid); border-radius: 4px; }
+
+    table.xl {
+      border-collapse: collapse;
+      font-size: 12.5px;
+      min-width: 100%;
+      white-space: nowrap;
+    }
+    table.xl td {
+      border: 1px solid var(--xl-grid);
+      padding: 5px 10px;
+      vertical-align: middle;
+    }
+
+    /* Row flavours */
+    .rt  td { background: var(--xl-navy);   color: var(--xl-wt);  font-weight: 700; font-size: 13px; }
+    .rh  td { background: var(--xl-blue);   color: var(--xl-wt);  font-weight: 700; }
+    .rd  td { background: var(--xl-row);    color: var(--xl-dt); }
+    .rd2 td { background: var(--xl-row2);   color: var(--xl-dt); }
+    .ry  td { background: var(--xl-yellow); color: var(--xl-dt);  font-weight: 700; }
+    .rp  td { background: #fff;             color: var(--xl-dt); }
+    .rb  td { background: #fff; border-color: #e8e8e8; height: 7px; padding: 0; }
+
+    /* Cell helpers */
+    .r  { text-align: right;  font-variant-numeric: tabular-nums; }
+    .c  { text-align: center; }
+    .b  { font-weight: 700; }
+
+    /* Inline yellow cell within a navy title row */
+    .ycell { background: var(--xl-yellow) !important; color: var(--xl-dt) !important; }
+
+    /* ── Podcast 3-col layout ── */
+    .pod-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; }
+    .pod-col .ph {
+      background: var(--xl-blue); color: #fff; font-weight: 700;
+      font-size: 12.5px; padding: 5px 10px;
+      border: 1px solid var(--xl-grid);
+    }
+    .pod-col .pi {
+      background: var(--xl-row); font-size: 12.5px;
+      padding: 5px 10px; border: 1px solid var(--xl-grid);
+      color: var(--xl-dt); min-height: 26px;
+    }
+
+    .refresh-btn {
+      font-size: 10px; padding: 2px 8px;
+      border: 1px solid #ccc; border-radius: 4px;
+      background: #f9f9f9; cursor: pointer;
+    }
+
+    @media (max-width:600px) {
+      .tab { padding: 5px 9px; font-size: 11px; }
+      table.xl { font-size: 11px; }
+      table.xl td { padding: 4px 6px; }
+    }
+  </style>
+</head>
+<body>
+
+<a href="index.html" class="back-link">← Back to Study Guide</a>
+<p class="page-title">Spanish Learning Tracker &nbsp;2019–2026</p>
+<p class="page-sub">
+  <span id="ts">–</span> &nbsp;
+  <button class="refresh-btn" onclick="refreshTs()">↻ Refresh</button>
+</p>
+
+<div class="tabs">
+  <div class="tab active"  onclick="sw(this,'dashboard')">Dashboard</div>
+  <div class="tab"         onclick="sw(this,'lessons')">Lessons</div>
+  <div class="tab"         onclick="sw(this,'shows')">Shows &amp; Movies</div>
+  <div class="tab"         onclick="sw(this,'books')">Book Tracker</div>
+  <div class="tab"         onclick="sw(this,'podcasts')">Podcasts</div>
+  <div class="tab"         onclick="sw(this,'grammar')">Grammar</div>
+</div>
+
+<!-- ════════════ DASHBOARD ════════════ -->
+<div class="sheet active" id="sheet-dashboard">
+<div class="xl-wrap"><table class="xl">
+<colgroup><col style="width:220px"><col style="width:150px"><col style="width:120px"><col style="width:90px"></colgroup>
+<tbody>
+<tr class="rt"><td colspan="4">Spanish Learning Log 2019–2026</td></tr>
+<tr class="rb"><td colspan="4"></td></tr>
+<tr class="rh"><td>Category</td><td></td><td class="r">Total Hours</td><td class="r">Goal</td></tr>
+<tr class="rd"><td>1on1 Tutor Via Video Call</td><td></td><td class="r">936.5</td><td class="r">1,500</td></tr>
+<tr class="rd"><td>Watching Shows &amp; Movies</td><td></td><td class="r">95.99</td><td class="r">100</td></tr>
+<tr class="rd"><td>Vocab Study</td><td></td><td class="r">73.08</td><td class="r">100</td></tr>
+<tr class="rd"><td>Reading</td><td></td><td class="r">976.5</td><td class="r">1,000</td></tr>
+<tr class="rd"><td>Grammar Study</td><td></td><td class="r">213.17</td><td class="r">1,000</td></tr>
+<tr class="rd"><td>Listening to Podcasts</td><td></td><td class="r">3,263</td><td class="r">5,000</td></tr>
+<tr class="rb"><td colspan="4"></td></tr>
+<tr class="ry"><td class="b">Total Hours</td><td></td><td class="r b">5,558.23</td><td class="r b">8,700</td></tr>
+<tr class="rb"><td colspan="4"></td></tr>
+<tr class="rd"><td class="b">Total Active Study</td><td></td><td class="r">1,222.74</td><td class="r">2,600</td></tr>
+<tr class="rp"><td class="b">Total Passive Study</td><td></td><td class="r">1,145.57</td><td class="r">1,200</td></tr>
+<tr class="rb"><td colspan="4"></td></tr>
+<tr class="rd"><td class="b">Current Goal</td><td>Improve Writing</td><td></td><td></td></tr>
+</tbody>
+</table></div>
+</div>
+
+<!-- ════════════ LESSONS ════════════ -->
+<div class="sheet" id="sheet-lessons">
+<div class="xl-wrap"><table class="xl">
+<colgroup>
+  <col style="width:70px"><col style="width:95px"><col style="width:95px">
+  <col style="width:135px"><col style="width:105px"><col style="width:105px">
+  <col style="width:100px"><col style="width:115px">
+</colgroup>
+<tbody>
+<tr class="rt"><td colspan="8">Spanish Tutoring Record</td></tr>
+<tr class="rb"><td colspan="8"></td></tr>
+<tr class="rh">
+  <td>Year</td><td class="r">italki (hrs)</td><td class="r">Skype (hrs)</td>
+  <td class="r">Worlds Across (hrs)</td><td class="r">Total Hrs/Year</td>
+  <td class="r">Cost/Year ($)</td><td class="r">Avg Hrs/Week</td><td class="r">Avg Cost/Hr ($)</td>
+</tr>
+<tr class="rd"><td>2019</td><td class="r">217</td><td class="r">40</td><td class="r">–</td><td class="r">257</td><td class="r">$1,285</td><td class="r">4.94</td><td class="r">$5.00</td></tr>
+<tr class="rd"><td>2020</td><td class="r">4</td><td class="r">140</td><td class="r">–</td><td class="r">144</td><td class="r">$720</td><td class="r">2.77</td><td class="r">$5.00</td></tr>
+<tr class="rd"><td>2021</td><td class="r">3</td><td class="r">20</td><td class="r">–</td><td class="r">23</td><td class="r">$138</td><td class="r">0.44</td><td class="r">$6.00</td></tr>
+<tr class="rd"><td>2022</td><td class="r">–</td><td class="r">90</td><td class="r">–</td><td class="r">90</td><td class="r">$540</td><td class="r">1.73</td><td class="r">$6.00</td></tr>
+<tr class="rd"><td>2023</td><td class="r">23</td><td class="r">20</td><td class="r">–</td><td class="r">43</td><td class="r">$258</td><td class="r">0.83</td><td class="r">$6.00</td></tr>
+<tr class="rd"><td>2024</td><td class="r">14</td><td class="r">10</td><td class="r">–</td><td class="r">24</td><td class="r">$144</td><td class="r">0.46</td><td class="r">$6.00</td></tr>
+<tr class="rd"><td>2025</td><td class="r">–</td><td class="r">–</td><td class="r">200</td><td class="r">200</td><td class="r">$920</td><td class="r">3.85</td><td class="r">$4.60</td></tr>
+<tr class="rd"><td>2026</td><td class="r">–</td><td class="r">–</td><td class="r">155.5</td><td class="r">155.5</td><td class="r">$1,548</td><td class="r">2.99</td><td class="r">$9.95</td></tr>
+<tr class="rb"><td colspan="8"></td></tr>
+<tr class="ry"><td class="b">Hours per Platform</td><td class="r b">261</td><td class="r b">320</td><td class="r b">355.5</td><td class="r">–</td><td class="r b">$5,553</td><td class="r">–</td><td class="r">–</td></tr>
+<tr class="rb"><td colspan="8"></td></tr>
+<tr class="ry"><td colspan="2" class="b">Total Class Hours</td><td class="r b">936.5</td><td colspan="5"></td></tr>
+<tr class="rb"><td colspan="8"></td></tr>
+<tr class="rb"><td colspan="8"></td></tr>
+<tr class="rp"><td colspan="8" class="b" style="padding-top:6px">Tutors</td></tr>
+<tr class="rp"><td colspan="8">Juan Carlos</td></tr>
+<tr class="rp"><td colspan="8">Christian Jesus</td></tr>
+<tr class="rp"><td colspan="8">Jesus cdmx</td></tr>
+<tr class="rp"><td colspan="8">Mauricio</td></tr>
+<tr class="rp"><td colspan="8">Juan San Juan</td></tr>
+</tbody>
+</table></div>
+</div>
+
+<!-- ════════════ SHOWS ════════════ -->
+<div class="sheet" id="sheet-shows">
+<div class="xl-wrap"><table class="xl">
+<colgroup>
+  <col style="width:250px"><col style="width:65px"><col style="width:210px">
+  <col style="width:72px"><col style="width:58px"><col style="width:78px">
+</colgroup>
+<tbody>
+<tr class="rt">
+  <td colspan="2">Shows &amp; Movies Watched</td>
+  <td></td>
+  <td class="b ycell">TOTAL HOURS</td>
+  <td class="r b ycell">95.99</td>
+  <td></td>
+</tr>
+<tr class="rb"><td colspan="6"></td></tr>
+<tr class="rh"><td>Show Name</td><td class="r">Hours</td><td>Genre</td><td class="c">Rating</td><td class="c">Type</td><td>Status</td></tr>
+<tr class="rd"><td>Club de Cuervos</td><td class="r">33.8</td><td>Comedy-drama / Sports</td><td class="c">★★★★</td><td class="c">Show</td><td>Finished</td></tr>
+<tr class="rd"><td>Yankee</td><td class="r">15.8</td><td>Crime / Action</td><td class="c">★★★★</td><td class="c">Show</td><td>Finished</td></tr>
+<tr class="rd"><td>Gringo Hunters</td><td class="r">9.5</td><td>Crime / Thriller</td><td class="c">★★★★★</td><td class="c">Show</td><td>Finished</td></tr>
+<tr class="rd"><td>Diablero</td><td class="r">9.3</td><td>Horror / Fantasy</td><td class="c">★★★★★</td><td class="c">Show</td><td>Finished</td></tr>
+<tr class="rd"><td>Mentiras</td><td class="r">6.5</td><td>Drama / Thriller</td><td class="c">★★★★</td><td class="c">Show</td><td>Finished</td></tr>
+<tr class="rd"><td>La Oficina</td><td class="r">5.4</td><td>Comedy</td><td class="c">★★★★</td><td class="c">Show</td><td>Finished</td></tr>
+<tr class="rd"><td>Las Muertas</td><td class="r">5.0</td><td>True Crime / Drama</td><td class="c">★★★★★</td><td class="c">Show</td><td>Finished</td></tr>
+<tr class="rd"><td>Belascoarán</td><td class="r">4.0</td><td>Detective / Drama</td><td class="c">★★★★★</td><td class="c">Show</td><td>Finished</td></tr>
+<tr class="rd"><td>La ley de Herodes</td><td class="r">2.0</td><td>Sátira política / Comedia</td><td class="c">★★★★</td><td class="c">Movie</td><td>Finished</td></tr>
+<tr class="rd"><td>Ya no estoy aquí</td><td class="r">1.87</td><td>Drama / Musical</td><td class="c">★★★★</td><td class="c">Movie</td><td>Finished</td></tr>
+<tr class="rd"><td>Sueño en otro idioma</td><td class="r">1.72</td><td>Drama / Fantasía</td><td class="c">★★★★★</td><td class="c">Movie</td><td>Finished</td></tr>
+<tr class="rd"><td>Casa de Flores</td><td class="r">1.1</td><td>Drama / Musical</td><td class="c">★</td><td class="c">Show</td><td>Abandoned</td></tr>
+<tr class="rd"><td>Ingobernable</td><td class="r">5.2</td><td>Thriller / Drama</td><td class="c">★</td><td class="c">Show</td><td>Abandoned</td></tr>
+<tr class="rd"><td>El Mantequilla: Maestro de la Estafa</td><td class="r">6.0</td><td>Crime/Comedy</td><td class="c">–</td><td class="c">Show</td><td>Watching</td></tr>
+<tr class="rd"><td>La Cabeza de Joaquín Murrieta</td><td class="r">6.3</td><td>Western/Action</td><td class="c">–</td><td class="c">Show</td><td>Queued</td></tr>
+<tr class="rd"><td>Historia de un Crimen: Colosio</td><td class="r">6.0</td><td>True Crime Anthology</td><td class="c">–</td><td class="c">Show</td><td>Queued</td></tr>
+<tr class="rd"><td>ZeroZeroZero</td><td class="r">7.5</td><td>Crime Drama</td><td class="c">–</td><td class="c">Show</td><td>Queued</td></tr>
+<tr class="rd"><td>Bandidos</td><td class="r">5.3</td><td>Action/Adventure</td><td class="c">–</td><td class="c">Show</td><td>Queued</td></tr>
+<tr class="rd"><td>La Máquina</td><td class="r">4.8</td><td>Sports Drama</td><td class="c">–</td><td class="c">Show</td><td>Queued</td></tr>
+<tr class="rd"><td>Celda 211</td><td class="r">1.9</td><td>Prison Thriller</td><td class="c">–</td><td class="c">Show</td><td>Queued</td></tr>
+<tr class="rd"><td>Somos</td><td class="r">5.0</td><td>Social Drama/Crime</td><td class="c">–</td><td class="c">Show</td><td>Queued</td></tr>
+<tr class="rd"><td>Los Azules</td><td class="r">–</td><td>–</td><td class="c">–</td><td class="c">Movie</td><td>Queued</td></tr>
+<tr class="rd"><td>Pedro Paramo</td><td class="r">–</td><td>–</td><td class="c">–</td><td class="c">Movie</td><td>Queued</td></tr>
+</tbody>
+</table></div>
+</div>
+
+<!-- ════════════ BOOKS ════════════ -->
+<div class="sheet" id="sheet-books">
+<div class="xl-wrap"><table class="xl">
+<colgroup>
+  <col style="width:270px"><col style="width:42px"><col style="width:52px"><col style="width:55px">
+  <col style="width:155px"><col style="width:60px"><col style="width:72px">
+  <col style="width:62px"><col style="width:72px"><col style="width:88px">
+</colgroup>
+<tbody>
+<tr class="rt">
+  <td colspan="4">Books Read (Spanish)</td>
+  <td class="b" style="background:var(--xl-blue);color:#fff">Pages Read</td>
+  <td class="r b" style="background:var(--xl-blue);color:#fff">Pages Listened</td>
+  <td class="r b" style="background:var(--xl-blue);color:#fff">Books Finished</td>
+  <td class="r b" style="background:var(--xl-blue);color:#fff">Hrs Reading</td>
+  <td colspan="2"></td>
+</tr>
+<tr class="ry">
+  <td colspan="4"></td>
+  <td class="r b">11,718</td><td class="r b">92</td><td class="r b">20</td><td class="r b">976.5</td>
+  <td colspan="2"></td>
+</tr>
+<tr class="rb"><td colspan="10"></td></tr>
+<tr class="rh">
+  <td>Title</td><td class="c">Read</td><td class="r">Pages</td><td class="r">Hours</td>
+  <td>Author</td><td>Medium</td><td>Status</td><td class="c">Rating</td><td>Genre</td><td>Date</td>
+</tr>
+<tr class="rd"><td>Artemesia</td><td class="c">1</td><td class="r">335</td><td class="r">27.9</td><td>Andy Weir</td><td>kindle</td><td>Finished</td><td class="c">★★★★</td><td>Sci-fi</td><td>–</td></tr>
+<tr class="rd"><td>Proyecto hail mary</td><td class="c">1</td><td class="r">482</td><td class="r">40.2</td><td>Andy Weir</td><td>kindle</td><td>Finished</td><td class="c">★★★★</td><td>Sci-fi</td><td>–</td></tr>
+<tr class="rd"><td>El Despertar del Leviatan</td><td class="c">1</td><td class="r">561</td><td class="r">46.8</td><td>Corey, James S. A.</td><td>kindle</td><td>Finished</td><td class="c">★★★★★</td><td>Sci-fi</td><td>–</td></tr>
+<tr class="rd"><td>La Guerra de Caliban</td><td class="c">1</td><td class="r">595</td><td class="r">49.6</td><td>Corey, James S. A.</td><td>kindle</td><td>Finished</td><td class="c">★★★★★</td><td>Sci-fi</td><td>–</td></tr>
+<tr class="rd"><td>La Puerta de Abadon</td><td class="c">1</td><td class="r">539</td><td class="r">44.9</td><td>Corey, James S. A.</td><td>kindle</td><td>Finished</td><td class="c">★★★★</td><td>Sci-fi</td><td>–</td></tr>
+<tr class="rd"><td>La Quema de cibola</td><td class="c">1</td><td class="r">583</td><td class="r">48.6</td><td>Corey, James S. A.</td><td>kindle</td><td>Finished</td><td class="c">★★★★</td><td>Sci-fi</td><td>–</td></tr>
+<tr class="rd"><td>Los Juegos de Nemesis</td><td class="c">1</td><td class="r">544</td><td class="r">45.3</td><td>Corey, James S. A.</td><td>kindle</td><td>Finished</td><td class="c">★★★★★</td><td>Sci-fi</td><td>–</td></tr>
+<tr class="rd"><td>Las cenizas de Babilonia</td><td class="c">1</td><td class="r">608</td><td class="r">50.7</td><td>Corey, James S. A.</td><td>kindle</td><td>Finished</td><td class="c">★★★★★</td><td>Sci-fi</td><td>–</td></tr>
+<tr class="rd"><td>El alzamiento de Persepolis (the expanse 7)</td><td class="c">1</td><td class="r">560</td><td class="r">46.7</td><td>Corey, James S. A.</td><td>kindle</td><td>Finished</td><td class="c">★★★★★</td><td>Sci-fi</td><td>–</td></tr>
+<tr class="rd"><td>La colera de Tiamat 8</td><td class="c">1</td><td class="r">544</td><td class="r">45.3</td><td>Corey, James S. A.</td><td>kindle</td><td>Finished</td><td class="c">★★★★★</td><td>Sci-fi</td><td>–</td></tr>
+<tr class="rd"><td>La Caida de Leviatan</td><td class="c">1</td><td class="r">528</td><td class="r">44.0</td><td>Corey, James S. A.</td><td>kindle</td><td>Finished</td><td class="c">★★★★★</td><td>Sci-fi</td><td>–</td></tr>
+<tr class="rd"><td>El secreto maya</td><td class="c">1</td><td class="r">363</td><td class="r">30.3</td><td>Clive Cussler</td><td>kindle</td><td>Finished</td><td class="c">★★★</td><td>Adventure</td><td>–</td></tr>
+<tr class="rd"><td>El oro de Esparta</td><td class="c">1</td><td class="r">446</td><td class="r">37.2</td><td>Clive Cussler</td><td>kindle</td><td>Finished</td><td class="c">★★★</td><td>Adventure</td><td>–</td></tr>
+<tr class="rd"><td>Imperio perdido</td><td class="c">1</td><td class="r">452</td><td class="r">37.7</td><td>Clive Cussler</td><td>kindle</td><td>Finished</td><td class="c">★★★</td><td>Adventure</td><td>–</td></tr>
+<tr class="rd"><td>El reino</td><td class="c">0.52</td><td class="r">409</td><td class="r">34.1</td><td>Clive Cussler</td><td>kindle</td><td>Abandoned</td><td class="c">★★</td><td>Adventure</td><td>2024-02-05</td></tr>
+<tr class="rd"><td>Muerte y vida de Bobby Z</td><td class="c">1</td><td class="r">274</td><td class="r">22.8</td><td>Don Winslow</td><td>kindle</td><td>Finished</td><td class="c">★★★★★</td><td>Adventure</td><td>2024-02-06</td></tr>
+<tr class="rd"><td>La Sombra de Mitzlán</td><td class="c">0.5</td><td class="r">185</td><td class="r">5.0</td><td>Jesús Escudero</td><td>audio</td><td>Abandoned</td><td class="c">★★</td><td>Fantasy</td><td>2024-02-10</td></tr>
+<tr class="rd"><td>El Poder del Perro</td><td class="c">1</td><td class="r">752</td><td class="r">62.7</td><td>Don Winslow</td><td>kindle</td><td>Finished</td><td class="c">★★★★★</td><td>Adventure</td><td>–</td></tr>
+<tr class="rd"><td>El Cartel</td><td class="c">1</td><td class="r">870</td><td class="r">72.5</td><td>Don Winslow</td><td>kindle</td><td>Finished</td><td class="c">★★★★★</td><td>Adventure</td><td>–</td></tr>
+<tr class="rd"><td>La Frontera</td><td class="c">1</td><td class="r">816</td><td class="r">68.0</td><td>Don Winslow</td><td>kindle</td><td>Finished</td><td class="c">★★★★</td><td>Adventure</td><td>–</td></tr>
+<tr class="rd"><td>Proyecto hail mary <em style="font-size:10px;opacity:.6">(reread)</em></td><td class="c">1</td><td class="r">482</td><td class="r">40.2</td><td>Andy Weir</td><td>kindle</td><td>Finished</td><td class="c">★★★★★</td><td>Sci-fi</td><td>2026-04-16</td></tr>
+<tr class="rd"><td>el marciano</td><td class="c">0.2</td><td class="r">375</td><td class="r">31.3</td><td>Andy Weir</td><td>kindle</td><td>Reading</td><td class="c">★★★★</td><td>Sci-fi</td><td>–</td></tr>
+<tr class="rd"><td>El Invierno de Frankie Machine</td><td class="c">1</td><td class="r">415</td><td class="r">34.6</td><td>Don Winslow</td><td>kindle</td><td>Finished</td><td class="c">★★★★</td><td>Adventure</td><td>–</td></tr>
+<tr class="rb"><td colspan="10"></td></tr>
+<tr class="rh"><td colspan="10">Queued</td></tr>
+<tr class="rd"><td>Cosa fácil</td><td class="c">–</td><td class="r">176</td><td class="r">14.7</td><td>Paco Ignacio Taibo</td><td>kindle</td><td>Queued</td><td class="c">–</td><td>Mystery</td><td>–</td></tr>
+<tr class="rd"><td>Algunas nubes</td><td class="c">–</td><td class="r">176</td><td class="r">14.7</td><td>Paco Ignacio Taibo</td><td>kindle</td><td>Queued</td><td class="c">–</td><td>Mystery</td><td>–</td></tr>
+<tr class="rd"><td>No habrá final feliz</td><td class="c">–</td><td class="r">175</td><td class="r">14.6</td><td>Paco Ignacio Taibo</td><td>kindle</td><td>Queued</td><td class="c">–</td><td>Mystery</td><td>–</td></tr>
+<tr class="rd"><td>La sombra de la sombra</td><td class="c">–</td><td class="r">240</td><td class="r">20.0</td><td>Paco Ignacio Taibo</td><td>kindle</td><td>Queued</td><td class="c">–</td><td>History</td><td>–</td></tr>
+<tr class="rd"><td>De paso</td><td class="c">–</td><td class="r">120</td><td class="r">10.0</td><td>Paco Ignacio Taibo</td><td>kindle</td><td>Queued</td><td class="c">–</td><td>Mystery</td><td>–</td></tr>
+<tr class="rd"><td>Ernesto Guevara también conocido como el Che</td><td class="c">–</td><td class="r">624</td><td class="r">52.0</td><td>Paco Ignacio Taibo</td><td>kindle</td><td>Queued</td><td class="c">–</td><td>Biography</td><td>–</td></tr>
+</tbody>
+</table></div>
+</div>
+
+<!-- ════════════ PODCASTS ════════════ -->
+<div class="sheet" id="sheet-podcasts">
+<div class="xl-wrap">
+  <table class="xl" style="min-width:500px">
+  <colgroup><col style="width:220px"><col style="width:80px"><col style="width:120px"><col style="width:80px"><col style="width:160px"></colgroup>
+  <tbody>
+    <tr class="rt"><td colspan="5">Podcasts Listened (Spanish)</td></tr>
+    <tr class="rb"><td colspan="5"></td></tr>
+    <tr class="ry">
+      <td colspan="2" class="b">Total Hours Listened (since Sept 3, 2019)</td>
+      <td class="r b">3,263</td><td></td>
+      <td class="b">13.25 Hours / Week</td>
+    </tr>
+    <tr class="rb"><td colspan="5"></td></tr>
+    <tr class="rh"><td colspan="5">Podcasts</td></tr>
+  </tbody>
+  </table>
+  <div class="pod-grid">
+    <div class="pod-col">
+      <div class="ph">★★★</div>
+      <div class="pi">GusGri Podcast</div><div class="pi">Ya te digo</div>
+      <div class="pi">Valle de el Cielo Gris</div><div class="pi">Leyendas Legendarias</div>
+      <div class="pi">El Pasquin</div><div class="pi">Diego Ruzarrin</div>
+      <div class="pi">Migala</div><div class="pi">Academia de Conspiraciones</div>
+      <div class="pi">Cronicas de la Espiral</div><div class="pi">Pasando guardia</div>
+      <div class="pi">La vida me da acidez</div><div class="pi">10 minute spanish tips</div>
+      <div class="pi">Mundo Futuro</div>
+    </div>
+    <div class="pod-col">
+      <div class="ph">★★</div>
+      <div class="pi">Idolo the ballad of Chalino Sanchez</div>
+      <div class="pi">Broojula</div><div class="pi">Radio Ambulante</div>
+      <div class="pi">Broojula</div><div class="pi">Bote Pronto</div>
+      <div class="pi">No Hay Tos</div><div class="pi">Toxicomania</div>
+      <div class="pi">Status Clo</div><div class="pi">Nadie me Pregunto</div>
+      <div class="pi">EC Podcast</div><div class="pi">El Hilo</div>
+      <div class="pi">El Dollop</div><div class="pi">Grips and Mics</div>
+      <div class="pi">Caza Gringos</div><div class="pi">Ed's Manifesto</div>
+      <div class="pi">Historia para tontos</div>
+    </div>
+    <div class="pod-col">
+      <div class="ph">★</div>
+      <div class="pi">Ted en Espanol</div>
+      <div class="pi">Conclusiones Ferdnano del Rincon</div>
+      <div class="pi">Callate Y Vende</div><div class="pi">Dimes y Billetes</div>
+      <div class="pi">Peras y Manzanas</div><div class="pi">Status Clo</div>
+      <div class="pi">Curiosidades de la Historia</div>
+      <div class="pi">La mesa Leon Krauze</div>
+      <div class="pi">Aprender de Grandes</div>
+      <div class="pi">Conversaciones</div><div class="pi">El Washington Post</div>
+      <div class="pi">Sinergeticos</div><div class="pi">TJ XP</div>
+      <div class="pi">Todo BJJ</div><div class="pi">Maldiza Probreza</div>
+      <div class="pi">Tras las Lineas Gafe423</div>
+      <div class="pi">Central</div><div class="pi">Historias Unicas</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ════════════ GRAMMAR ════════════ -->
+<div class="sheet" id="sheet-grammar">
+<div class="xl-wrap"><table class="xl" style="max-width:430px">
+<colgroup><col style="width:240px"><col style="width:190px"></colgroup>
+<tbody>
+<tr class="rt"><td colspan="2">Grammar Study</td></tr>
+<tr class="rb"><td colspan="2"></td></tr>
+<tr class="rh"><td colspan="2">Anki</td></tr>
+<tr class="rd"><td>Days studied:</td><td>730 of 2,584 (28.25%)</td></tr>
+<tr class="rd"><td>Total Reviews:</td><td class="r">87,693</td></tr>
+<tr class="rd"><td>Ave over period:</td><td>34 reviews/day</td></tr>
+<tr class="rd"><td>Ave for days studied:</td><td>120 reviews/day</td></tr>
+<tr class="rd"><td>Total Cards</td><td class="r">4,822</td></tr>
+<tr class="rd2"><td>Ave Time per Review (minutes)</td><td class="r">0.05</td></tr>
+<tr class="rd"><td>Total Hours Studied</td><td class="r">73.08</td></tr>
+<tr class="rd"><td>Ave New Cards/day</td><td>2 cards/day</td></tr>
+<tr class="rb"><td colspan="2"></td></tr>
+<tr class="rb"><td colspan="2"></td></tr>
+<tr class="rh"><td colspan="2">Kwiziq</td></tr>
+<tr class="rd"><td>Tests Taken</td><td class="r">1,279</td></tr>
+<tr class="rd"><td>Ave Time per Test incl Review</td><td>10 mins</td></tr>
+<tr class="rd"><td>Total Grammar Study Hours</td><td class="r">213.17</td></tr>
+</tbody>
+</table></div>
+</div>
+
+<script>
+  function sw(el, name) {
+    document.querySelectorAll('.sheet').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('sheet-' + name).classList.add('active');
+    el.classList.add('active');
+  }
+  function refreshTs() {
+    document.getElementById('ts').textContent = 'Loaded ' + new Date().toLocaleTimeString();
+  }
+  refreshTs();
+</script>
+</body>
+</html>
