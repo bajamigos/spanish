@@ -1,6 +1,6 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=2d5a465754";
-import * as A from "./almacen.js?v=2d5a465754";
+import * as N from "./nucleo.js?v=5c76b92bf8";
+import * as A from "./almacen.js?v=5c76b92bf8";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -131,6 +131,7 @@ function poner(html, { titulo: t = "Pelagos", pie = "", nav = "", conserva = fal
     if (a.dataset.nav === nav) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
   }
   vestir(vista);
+  document.body.classList.toggle("conandrea", !!vista.querySelector(".hoy.confoto"));      // con el retrato al fondo, la página entera se oscurece
   if (conserva) {
     window.scrollTo(0, arriba);
     if (conFoco && $(conFoco)) $(conFoco).focus({ preventScroll: true });
@@ -152,7 +153,7 @@ function vestir(raiz) {
     // Sin retrato (no llegó, o no hay conexión) la página de Hoy se acomoda como si no hubiera foto.
     A.foto(retratos.get(img.dataset.retrato), "andrea").then((u) => {
       if (!img.isConnected) return;
-      if (u) img.src = u; else { const h = img.closest(".hoy"); if (h) h.classList.remove("confoto"); }
+      if (u) img.src = u; else { const h = img.closest(".hoy"); if (h) h.classList.remove("confoto"); document.body.classList.remove("conandrea"); }
     });
   }
   bocinas(raiz);
@@ -295,10 +296,10 @@ function resumenNiveles() {
   return [...filas.values()].filter((f) => f.temas).map((f) => ({ ...f, promedio: f.con ? f.suma / f.con : null }));
 }
 
-function botonNivel(n, conLecciones) {
+function botonNivel(n, conLecciones, corto = false) {
   return `<a class="tb" href="#/gramatica/${n.nivel.toLowerCase()}">
     <span class="lv">${n.nivel}</span><span class="nm">${NIVELES[n.nivel]}</span><span class="pc">${pct(n.promedio)}</span>
-    <span class="sm">${plural(n.temas, "tema", "temas")} · ${n.bajo} bajo ${meta()}%${conLecciones ? ` · ${n.lecciones} con lección` : ""}</span>
+    ${corto ? "" : `<span class="sm">${plural(n.temas, "tema", "temas")} · ${n.bajo} bajo ${meta()}%${conLecciones ? ` · ${n.lecciones} con lección` : ""}</span>`}
     ${barra(n.promedio)}</a>`;
 }
 
@@ -331,8 +332,7 @@ function cuadro(nombre, valor, de, unidad, estado, hecho) {
 
 function verInicio(o) {
   const niveles = resumenNiveles();
-  const total = niveles.reduce((s, n) => s + n.temas, 0), bajo = niveles.reduce((s, n) => s + n.bajo, 0);
-  const abierto = N.kwizAbierto(E), hechos = N.kwizzesHechos(E).length;
+  const abierto = N.kwizAbierto(E);
   const hoy = N.fechaLocal(new Date());
   const T = N.leerTablero(A.tablero());
   const deHoy = !!T && T.dia === hoy;
@@ -340,75 +340,60 @@ function verInicio(o) {
   const cuadernos = (P.cuadernos || []).map((c) => `
   <section class="card">
     <h2>${esc(c.nombre)}</h2>
-    <p>Los temas que traes entre manos.</p>
-    <div class="links">${c.temas.map((id) => porId.get(id)).filter(Boolean).map((t) => {
-      const i = info(t.id);
-      return botonTema(t, { sub: (t.leccion ? "Con lección · " : "") + (i.n === 0 ? "de Kwiziq" : plural(i.n, "respuesta", "respuestas")) });
-    }).join("")}</div>
+    <div class="links">${c.temas.map((id) => porId.get(id)).filter(Boolean).map((t) => botonTema(t)).join("")}</div>
   </section>`).join("");
   const lista = N.listaDeEstudio(P, E);
 
   // ---- Las medidas del día. Los kwizzes los cuenta Pelagos; lo demás viene del tablero.
   const kw = N.kwizzesDelDia(E, hoy), metaKw = N.KWIZZES_AL_DIA;
-  const cuadros = [cuadro("Kwizzes en Pelagos", kw, metaKw, "", kw >= metaKw ? "Cumplido" : `Faltan ${metaKw - kw}`, kw >= metaKw)];
+  const cuadros = [cuadro("Kwizzes", kw, metaKw, "", kw >= metaKw ? "Cumplido" : `Faltan ${metaKw - kw}`, kw >= metaKw)];
   for (const m of T ? T.medidas : []) {
     const hecho = m.de === 0 ? m.valor === 0 : m.valor >= m.de;
     const falta = Math.round((m.de - m.valor) * 10) / 10;
-    cuadros.push(cuadro(m.nombre, m.valor, m.de, m.unidad, hecho ? "Cumplido" : m.de === 0 ? "La meta es cero" : `Faltan ${falta}${m.unidad ? " " + m.unidad : ""}`, hecho));
+    cuadros.push(cuadro(m.nombre, m.valor, m.de, m.unidad, hecho ? "Cumplido" : m.de === 0 ? "Meta: cero" : `Faltan ${falta}`, hecho));
   }
-  const sello = !T ? "" : deHoy
-    ? (T.leido ? `Lo de fuera de Pelagos se leyó hoy a las ${horaCorta(T.leido)}.` : "")
-    : `Lo de fuera de Pelagos no es de hoy: es del ${diaLargo(T.dia)}.`;
+  // Solo se dice de cuándo son los números de fuera si no son de hoy.
   const medidas = `
   <section class="card" id="medidas">
-    <h2>Tus medidas de hoy</h2>
+    <h2 class="sr">Tus medidas de hoy</h2>
     <div class="cuadros" role="list">${cuadros.join("")}</div>
     ${T && T.extras.length ? `<div class="extras">${T.extras.map((x) => `<div><b>${esc(x.valor)}</b>${esc(x.nombre)}</div>`).join("")}</div>` : ""}
-    ${sello ? `<p class="small${deHoy ? "" : " viejo"}">${sello}</p>` : ""}
-    ${T ? "" : '<p class="small">Lo que escuchas, tu clase y tus tarjetas todavía no llegan a Pelagos.</p>'}
+    ${T && !deHoy ? `<p class="small viejo">No es de hoy: es del ${diaLargo(T.dia)}.</p>` : ""}
   </section>`;
 
-  // ---- El check-in: qué episodio te espera y qué trae.
+  // ---- El check-in: si hay episodio esperándote y qué trae.
   const c = T && T.checkin;
-  const ESTADOS = { nuevo: "Hay un check-in nuevo sin escuchar", oido: "Al corriente: ya lo escuchaste", ninguno: "Todavía no hay check-in hoy" };
+  const ESTADOS = { nuevo: "Check-in nuevo", oido: "Check-in escuchado", ninguno: "Sin check-in hoy" };
   const checkin = !c ? "" : `
   <section class="card" id="checkin">
-    <h2>Check-in</h2>
-    <p class="chip ${c.estado}">${esc(deHoy ? ESTADOS[c.estado] : "El último check-in que llegó")}</p>
-    ${c.estado !== "ninguno" && (c.nombre || c.titulo) ? `
-      ${c.nombre ? `<p class="nivelCi">${c.nivel !== null ? `Nivel ${c.nivel} · ` : ""}${esc(c.nombre)}</p>` : ""}
-      ${c.titulo ? `<p class="small">${esc(c.titulo)}${c.minutos ? ` · ${c.minutos} min` : ""}</p>` : ""}
-      ${c.partes.length ? `<ul class="partes">${c.partes.map((x) => `<li class="${x.va ? "va" : "nova"}">${x.va ? ICONO_SI : ICONO_NO}<span>${esc(x.nombre)}</span><span class="sr">${x.va ? ": incluido" : ": no incluido"}</span></li>`).join("")}</ul>` : ""}
-      ${c.falta ? `<p>${esc(c.falta)}</p>` : ""}` : ""}
+    <h2 class="sr">Check-in</h2>
+    <div class="ciTop"><p class="chip ${c.estado}">${esc(deHoy ? ESTADOS[c.estado] : "Check-in anterior")}</p>
+      ${c.estado !== "ninguno" && c.nombre ? `<p class="nivelCi">${c.nivel !== null ? `Nivel ${c.nivel} · ` : ""}${esc(c.nombre)}</p>` : ""}</div>
+    ${c.estado !== "ninguno" && c.partes.length ? `<ul class="partes">${c.partes.map((x) => `<li class="${x.va ? "va" : "nova"}">${x.va ? ICONO_SI : ICONO_NO}<span>${esc(x.nombre)}</span><span class="sr">${x.va ? ": incluido" : ": no incluido"}</span></li>`).join("")}</ul>` : ""}
   </section>`;
 
   poner(`
   <div class="hoy${retrato ? " confoto" : ""}">
     ${retrato ? `<div class="fondo"><img data-retrato="${esc(retrato)}" alt="${esc(T.atuendo ? "Andrea hoy: " + T.atuendo : "Andrea hoy")}"></div>` : ""}
     <div class="sobre">
-      <section class="card">
-        <h1 class="h">Hoy</h1>
+      <section class="card" id="arranque">
+        <h1 class="sr">Hoy</h1>
         <p class="fechaHoy">${esc(diaLargo(hoy))}</p>
-        ${retrato && T.atuendo ? `<p class="small">Andrea trae hoy: ${esc(T.atuendo)}.</p>` : ""}
-        ${abierto
-          ? `<p>Tienes un kwiz a medias.</p><div class="go"><a class="ub grande" href="#/kwiz/${esc(abierto.id)}">Seguir el kwiz</a></div>`
-          : `${lista.temas.length
-               ? `<div class="go"><button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Pelagos Kwiz</button></div>
-                  <p class="small">${plural(lista.temas.length, "pregunta", "preguntas")}, una de cada tema de tu plan de estudio${E.enfoque ? `. Enfoque: ${esc(E.enfoque)}` : ""}.</p>`
-               : `<div class="go"><a class="ub grande" href="#/kwiz">Ver los kwizzes</a></div>`}
-             <p class="small">${E.respuestas ? `En total llevas ${plural(E.respuestas, "respuesta", "respuestas")} en ${plural(hechos, "kwiz", "kwizzes")}.` : "Todavía no has hecho ningún kwiz aquí."}</p>`}
+        <div class="go">${abierto
+          ? `<a class="ub grande" href="#/kwiz/${esc(abierto.id)}">Seguir el kwiz</a>`
+          : lista.temas.length
+            ? `<button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Pelagos Kwiz</button>`
+            : `<a class="ub grande" href="#/kwiz">Ver los kwizzes</a>`}</div>
       </section>
       ${checkin}
       ${medidas}
       <section class="card" id="niveles">
-        <h2>Tu promedio por nivel</h2>
-        <p>${total} temas. ${bajo} están bajo la meta de ${meta()}%.</p>
-        <div class="links">${niveles.map((n) => botonNivel(n, false)).join("")}</div>
-        <p class="small">Lo calcula Pelagos con lo que contestas aquí. Donde todavía no has contestado, cuenta tu arranque de Kwiziq.</p>
+        <h2>Promedio por nivel</h2>
+        <div class="links">${niveles.map((n) => botonNivel(n, false, true)).join("")}</div>
       </section>${cuadernos}
     </div>
   </div>`,
-  { nav: "inicio", conserva: o.conserva, pie: "<p>Los porcentajes que dicen «de Kwiziq» son tu arranque: todavía no has contestado ese tema aquí.</p>" });
+  { nav: "inicio", conserva: o.conserva });
 }
 
 function verBiblioteca(o) {

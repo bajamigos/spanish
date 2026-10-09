@@ -253,21 +253,41 @@ dialog.sheet::backdrop { background: rgba(0,0,0,0.5); }
 .sheet .sc { display: grid; gap: 4px; font-size: 14px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
 .sheet .acts { display: flex; flex-wrap: wrap; gap: 8px; }
 
-/* ---- La página de Hoy: el retrato de Andrea queda fijo al fondo y las tarjetas pasan por encima. */
+/* ---- La página de Hoy. Con el retrato de Andrea, la página entera se oscurece (como las tarjetas Reef):
+   la foto queda fija al fondo y las tarjetas son de vidrio oscuro, para que ella se siga viendo al bajar.
+   Los colores son fijos porque debajo siempre hay foto o fondo oscuro. */
+body.conandrea {
+  --page: #0b0b0b; --card: #171716; --line: #383835;
+  --ink: #ffffff; --ink-2: #ececec; --ink-3: #d2d2d2;
+  --btn-top: #333331; --btn-bot: #1f1f1e; --btn-ink: #f2f2f2; --outline: #9a9a94;
+  --shadow: rgba(0,0,0,0.6); --bar: #ffffff; --bar-bg: rgba(255,255,255,0.2);
+  --tab: #f2f2f2; --tab-ink: #111111; --no: #ffb3ab; --si: #8ff0b8; --pen: #ffb3ab;
+  color-scheme: dark;
+}
 .hoy { position: relative; }
 .hoy .fondo { display: none; }
 .hoy .sobre { position: relative; z-index: 1; display: grid; gap: 14px; }
 .hoy .sobre > * { min-width: 0; }
-.hoy.confoto .fondo { display: block; position: sticky; top: 8px; z-index: 0; }
-.hoy.confoto .fondo img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: center top; border-radius: 8px; background: var(--bar-bg); border: 1px solid var(--line); box-sizing: border-box; }
-.hoy.confoto .sobre { margin-top: -22%; }
-.hoy.confoto .sobre > .card:first-child { box-shadow: 0 -6px 18px var(--shadow); }
-.card p.fechaHoy { font-size: 17px; font-weight: 600; color: var(--ink); margin-top: -8px; }
+.card p.fechaHoy { font-size: 19px; font-weight: 700; color: var(--ink); }
 .card p.fechaHoy::first-letter { text-transform: uppercase; }
+#arranque { grid-template-columns: minmax(0, 1fr) auto; align-items: center; }
+
+.hoy.confoto .fondo { display: block; position: sticky; top: 0; z-index: 0; margin-inline: -16px; }
+.hoy.confoto .fondo img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: center top; background: #151515; }
+.hoy.confoto .fondo::after { content: ""; position: absolute; inset: auto 0 0 0; height: 30%; background: linear-gradient(to bottom, rgba(11,11,11,0), #0b0b0b); }
+.hoy.confoto .sobre { margin-top: -20%; gap: 18px; }
+.hoy.confoto .card { background: rgba(10,10,10,0.5); border: 1px solid rgba(255,255,255,0.22); border-radius: 16px;
+  -webkit-backdrop-filter: blur(5px) saturate(1.15); backdrop-filter: blur(5px) saturate(1.15);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.12); text-shadow: 0 1px 6px rgba(0,0,0,0.7); }
+.hoy.confoto .card h2 { font-size: 17px; }
+.hoy.confoto .cuadro { background: rgba(0,0,0,0.28); border-color: rgba(255,255,255,0.3); border-radius: 12px; }
+.hoy.confoto .tb { background: rgba(0,0,0,0.28); border-color: rgba(255,255,255,0.3); border-radius: 12px; box-shadow: none; color: #ffffff; }
+.hoy.confoto .ub.grande { background: #ffffff; color: #111111; border-color: #ffffff; text-shadow: none; box-shadow: 0 4px 14px rgba(0,0,0,0.5); }
+.hoy.confoto .tic { stroke: #0b0b0b; }
 
 .cuadros { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
 .cuadro { display: grid; gap: 6px; align-content: start; border: 1px solid var(--outline); border-radius: 6px; padding: 10px; background: var(--page); }
-.cuadro .cn { font-size: 13.5px; font-weight: 600; line-height: 1.25; color: var(--ink-2); min-height: 2.5em; }
+.cuadro .cn { font-size: 14px; font-weight: 600; line-height: 1.25; color: var(--ink-2); }
 .cuadro .cv { font-size: 30px; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; }
 .cuadro .cv small { font-size: 14px; font-weight: 400; color: var(--ink-3); }
 .cuadro .ce { display: flex; align-items: center; gap: 6px; font-size: 13.5px; font-weight: 600; color: var(--ink-3); }
@@ -278,9 +298,10 @@ dialog.sheet::backdrop { background: rgba(0,0,0,0.5); }
 .extras b { display: block; font-size: 20px; line-height: 1.2; color: var(--ink); }
 .card p.viejo { color: var(--no); font-weight: 600; }
 
-.card p.chip { justify-self: start; font-size: 15px; font-weight: 700; color: var(--ink); border: 2px solid var(--outline); border-radius: 999px; padding: 4px 14px; }
-.card p.chip.nuevo { background: var(--tab); color: var(--tab-ink); border-color: var(--tab); }
-.card p.nivelCi { font-size: 19px; font-weight: 700; color: var(--ink); }
+.ciTop { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; }
+.card p.chip { font-size: 15px; font-weight: 700; color: var(--ink); border: 2px solid var(--outline); border-radius: 999px; padding: 4px 14px; }
+.card p.chip.nuevo { background: var(--tab); color: var(--tab-ink); border-color: var(--tab); text-shadow: none; }
+.card p.nivelCi { font-size: 17px; font-weight: 700; color: var(--ink); }
 ul.partes { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
 ul.partes li { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--outline); border-radius: 999px; padding: 4px 12px 4px 8px; font-size: 14.5px; font-weight: 600; }
 ul.partes li.va { color: var(--si); border-color: var(--si); }
