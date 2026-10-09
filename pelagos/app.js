@@ -1,6 +1,6 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=64c14c8b6e";
-import * as A from "./almacen.js?v=64c14c8b6e";
+import * as N from "./nucleo.js?v=2d5a465754";
+import * as A from "./almacen.js?v=2d5a465754";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -22,7 +22,7 @@ const CATEGORIAS = {
   "Negative Words & Constructions": "Negación",
 };
 const GRUPOS = [["antes", "Antes de esta"], ["confunde", "Se confunde con"], ["sigue", "Sigue con"]];
-const TIPOS_KWIZ = { lista: "Kwiz de tu plan Pelagos", general: "Kwiz general", cuaderno: "Kwiz del cuaderno", tema: "Kwiz de un tema" };
+const TIPOS_KWIZ = { lista: "Pelagos Kwiz", general: "Kwiz general", cuaderno: "Kwiz del cuaderno", tema: "Kwiz de un tema" };
 const MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
   "septiembre", "octubre", "noviembre", "diciembre"];
 
@@ -393,7 +393,7 @@ function verInicio(o) {
         ${abierto
           ? `<p>Tienes un kwiz a medias.</p><div class="go"><a class="ub grande" href="#/kwiz/${esc(abierto.id)}">Seguir el kwiz</a></div>`
           : `${lista.temas.length
-               ? `<div class="go"><button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Kwiz de tu plan Pelagos</button></div>
+               ? `<div class="go"><button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Pelagos Kwiz</button></div>
                   <p class="small">${plural(lista.temas.length, "pregunta", "preguntas")}, una de cada tema de tu plan de estudio${E.enfoque ? `. Enfoque: ${esc(E.enfoque)}` : ""}.</p>`
                : `<div class="go"><a class="ub grande" href="#/kwiz">Ver los kwizzes</a></div>`}
              <p class="small">${E.respuestas ? `En total llevas ${plural(E.respuestas, "respuesta", "respuestas")} en ${plural(hechos, "kwiz", "kwizzes")}.` : "Todavía no has hecho ningún kwiz aquí."}</p>`}
@@ -606,7 +606,7 @@ function verKwiz(o) {
     ${deLista.length ? `
     <h3>${plural(deLista.length, "tema", "temas")} en tu plan</h3>
     <div class="links">${deLista.map((t) => botonTema(t, { sub: motivoEnLista(t, lista) })).join("")}</div>
-    ${lista.abierto ? "" : `<div class="go"><button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Kwiz de tu plan Pelagos</button></div>`}
+    ${lista.abierto ? "" : `<div class="go"><button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Pelagos Kwiz</button></div>`}
     <p class="small">Una pregunta de cada tema. El que aciertas sale del plan y entra otro. El que fallas se queda hasta que lo aciertes dos veces seguidas.</p>
     ${deLista.length < N.LISTA ? `<p class="small">${E.enfoque ? `En ${esc(E.enfoque)} solo hay` : "Solo hay"} ${plural(deLista.length, "tema", "temas")} con preguntas. El plan se llena cuando se escriban más.</p>` : ""}
     <p class="small">Hoy llevas ${plural(hechosHoy, "kwiz", "kwizzes")}.</p>`
