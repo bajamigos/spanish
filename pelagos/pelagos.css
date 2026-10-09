@@ -163,7 +163,7 @@ details.q .a span { font-size: 14.5px; color: var(--ink-3); }
 .tb .nm.ancho { grid-column: 1 / 3; }
 .tb .nm[lang="en"] { font-style: normal; }
 .tb .pc { font-size: 15px; font-weight: 700; font-variant-numeric: tabular-nums; }
-.tb .pc.bajo { color: var(--no); }
+/* El número va siempre en el color del texto, para que se lea. El color lo lleva la barra. */
 .tb .sm { grid-column: 2 / -1; font-size: 13px; color: var(--ink-3); }
 .tb .sm.ancho { grid-column: 1 / -1; }
 .tb .bar { grid-column: 1 / -1; }
