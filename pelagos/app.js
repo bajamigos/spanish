@@ -1,6 +1,6 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=095d28c378";
-import * as A from "./almacen.js?v=095d28c378";
+import * as N from "./nucleo.js?v=9984c9ca9a";
+import * as A from "./almacen.js?v=9984c9ca9a";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -366,11 +366,15 @@ function verInicio(o) {
 
   // ---- El check-in: si hay episodio esperándote y qué trae.
   const c = T && T.checkin;
-  const ESTADOS = { nuevo: "Check-in nuevo", oido: "Check-in escuchado", ninguno: "Sin check-in hoy" };
+  // Un renglón de texto, no un botón: «Check-in nuevo: 07 · Viernes 9-Oct · 2pm», y abajo si ya lo escuchaste.
+  const nombreCi = c && c.titulo ? c.titulo.replace(/^check-?in\s*/i, "") : "";
+  const rotuloCi = !c ? "" : c.estado === "ninguno" ? "Sin check-in hoy"
+    : (!deHoy ? "Check-in anterior" : c.estado === "nuevo" ? "Check-in nuevo" : "Check-in") + (nombreCi ? ": " + nombreCi : "");
   const checkin = !c ? "" : `
   <section class="card" id="checkin">
     <h2 class="sr">Check-in</h2>
-    <p class="chip ${c.estado}">${esc(deHoy ? ESTADOS[c.estado] : "Check-in anterior")}</p>
+    <p class="ciLinea">${esc(rotuloCi)}</p>
+    ${c.estado === "ninguno" ? "" : `<p class="ciOido ${c.estado === "oido" ? "si" : "no"}">${c.estado === "oido" ? ICONO_SI + "Escuchado" : ICONO_NO + "Sin escuchar"}</p>`}
     ${c.estado !== "ninguno" && c.partes.length ? `<ul class="partes" data-n="${c.partes.length}">${c.partes.map((x) => `<li class="${x.va ? "va" : "nova"}"><span>${esc(x.nombre)}</span><span class="sr">${x.va ? ": incluido" : ": no incluido"}</span></li>`).join("")}</ul>` : ""}
   </section>`;
 

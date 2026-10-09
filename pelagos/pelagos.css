@@ -305,8 +305,10 @@ body.conandrea {
 .extras b { display: block; font-size: 17px; line-height: 1.25; color: var(--ink); white-space: nowrap; }
 .card p.viejo { color: var(--no); font-weight: 600; }
 
-.card p.chip { justify-self: start; font-size: 15px; font-weight: 700; color: var(--ink); border: 2px solid var(--outline); border-radius: 999px; padding: 4px 14px; }
-.card p.chip.nuevo { background: var(--tab); color: var(--tab-ink); border-color: var(--tab); text-shadow: none; }
+.card p.ciLinea { font-size: 17px; font-weight: 700; line-height: 1.3; color: var(--ink); overflow-wrap: anywhere; }
+.card p.ciOido { display: flex; align-items: center; gap: 6px; margin-top: -6px; font-size: 14.5px; font-weight: 600; color: var(--ink-3); }
+.card p.ciOido.si { color: var(--si); }
+.card p.ciOido svg { width: 16px; height: 16px; flex: none; }
 /* Las partes del check-in: todas en un solo renglón. La que viene va rellena; la que no, punteada y apagada. */
 ul.partes { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: nowrap; gap: 4px; }
 ul.partes li { flex: 1 1 auto; min-width: 0; text-align: center; white-space: nowrap; border: 1px solid var(--outline); border-radius: 999px; padding: 5px 5px; font-size: 13px; font-weight: 700; line-height: 1.3; }
