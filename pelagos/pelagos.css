@@ -225,6 +225,7 @@ details.cat .tb .nm { font-size: 15px; }
 ol.pasos { padding-left: 24px; display: grid; gap: 8px; color: var(--ink-2); }
 ol.pasos b { color: var(--ink); font-style: normal; }
 .bar.gorda { height: 14px; }
+ul.rota { margin: 0; padding-left: 22px; display: grid; gap: 4px; font-size: 16.5px; color: var(--ink); }
 .pair.rq .row { grid-template-columns: 46px minmax(0, 1fr); }
 .pair.rq .fq { font-size: 17px; font-weight: 600; color: var(--ink); text-decoration: none; }
 

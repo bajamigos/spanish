@@ -22,7 +22,7 @@ const CATEGORIAS = {
   "Negative Words & Constructions": "Negación",
 };
 const GRUPOS = [["antes", "Antes de esta"], ["confunde", "Se confunde con"], ["sigue", "Sigue con"]];
-const TIPOS_KWIZ = { general: "Kwiz general", cuaderno: "Kwiz del cuaderno", tema: "Kwiz de un tema" };
+const TIPOS_KWIZ = { lista: "Kwiz de tu lista", general: "Kwiz general", cuaderno: "Kwiz del cuaderno", tema: "Kwiz de un tema" };
 const MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
   "septiembre", "octubre", "noviembre", "diciembre"];
 
@@ -306,13 +306,17 @@ function verInicio(o) {
       return botonTema(t, { sub: (t.leccion ? "Con lección · " : "") + (i.n === 0 ? "de Kwiziq" : plural(i.n, "respuesta", "respuestas")) });
     }).join("")}</div>
   </section>`).join("");
+  const lista = N.listaDeEstudio(P, E);
   poner(`
   <section class="card">
     <h1 class="h">Hoy</h1>
     ${abierto
       ? `<p>Tienes un kwiz a medias.</p><div class="go"><a class="ub grande" href="#/kwiz/${esc(abierto.id)}">Seguir el kwiz</a></div>`
       : `<p>${E.respuestas ? `Llevas ${plural(E.respuestas, "respuesta", "respuestas")} en ${plural(hechos, "kwiz", "kwizzes")}.` : "Todavía no has hecho ningún kwiz aquí."}</p>
-         <div class="go"><a class="ub grande" href="#/kwiz">Hacer un kwiz</a></div>`}
+         ${lista.temas.length
+           ? `<div class="go"><button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Hacer el kwiz de tu lista</button></div>
+              <p class="small">${plural(lista.temas.length, "pregunta", "preguntas")}, una de cada tema de tu lista de estudio.</p>`
+           : `<div class="go"><a class="ub grande" href="#/kwiz">Ver los kwizzes</a></div>`}`}
   </section>
   <section class="card">
     <h2>Tu español, por nivel</h2>
@@ -476,12 +480,25 @@ function pintarLeccion(tema, lec) {
 
 // ---------------------------------------------------------------- El kwiz
 
+/** Por qué está un tema en la lista, en una línea. */
+function motivoEnLista(t, lista) {
+  const debe = E.debe.get(t.id) || 0;
+  if (debe >= N.ACIERTOS_PARA_SALIR) return "Se queda: la fallaste. Sale con dos aciertos seguidos";
+  if (debe === 1) return "Se queda: le falta un acierto más";
+  if (lista.quedan.includes(t.id)) return "Se queda: no la contestaste";
+  const i = info(t.id);
+  if (i.toca) return "Toca repasarlo";
+  return i.n === 0 ? "Nuevo aquí · de Kwiziq" : "Vuelve a la lista";
+}
+
 function verKwiz(o) {
   const abierto = N.kwizAbierto(E);
   const banco = P.preguntas.filter((q) => q.estado === "revisada" && !E.retiradas.has(q.id));
   const temasBanco = new Set(banco.map((q) => q.tema));
   const cuadernos = (P.cuadernos || []).map((c) => ({ ...c, con: c.temas.filter((t) => temasBanco.has(t)).length })).filter((c) => c.con);
   const hechos = N.kwizzesHechos(E).slice(0, 10);
+  const lista = N.listaDeEstudio(P, E);
+  const deLista = lista.temas.map((id) => porId.get(id)).filter(Boolean);
   poner(`
   ${abierto ? `
   <section class="card">
@@ -490,19 +507,25 @@ function verKwiz(o) {
     <div class="go"><a class="ub grande" href="#/kwiz/${esc(abierto.id)}">Seguir el kwiz</a><button type="button" class="ub" id="dejarKwiz">Dejarlo así</button></div>
     <p class="small">Si lo dejas, se cierra con lo que ya contestaste. Tus respuestas siguen contando.</p>
   </section>` : ""}
+  <section class="card" id="lista">
+    ${abierto ? "<h2>Tu lista de estudio</h2>" : '<h1 class="h">Tu lista de estudio</h1>'}
+    ${deLista.length ? `
+    <p>${plural(deLista.length, "tema", "temas")}. El kwiz trae una pregunta de cada uno.</p>
+    <div class="links">${deLista.map((t) => botonTema(t, { sub: motivoEnLista(t, lista) })).join("")}</div>
+    ${lista.abierto ? "" : `<div class="go"><button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Hacer el kwiz de tu lista</button></div>`}
+    <p class="small">El tema que aciertas sale de la lista y entra otro. El que fallas se queda hasta que lo aciertes dos veces seguidas.</p>
+    ${temasBanco.size <= N.LISTA ? `<p class="small">Hoy solo hay ${plural(temasBanco.size, "tema", "temas")} con preguntas, así que la lista no tiene de dónde cambiar. Va a rotar cuando se escriban más.</p>` : ""}`
+    : "<p>Todavía no hay preguntas revisadas.</p>"}
+  </section>
+  ${cuadernos.length ? `
   <section class="card">
-    ${abierto ? "<h2>Kwiz nuevo</h2>" : '<h1 class="h">Kwiz nuevo</h1>'}
-    <p>Diez preguntas. Cada respuesta se guarda al momento y mueve el porcentaje de su tema.</p>
+    <h2>Otros kwizzes</h2>
     <div class="links">
       ${cuadernos.map((c) => `<button type="button" class="tb" data-kwiz='{"tipo":"cuaderno","cuaderno":${c.id}}'>
-        <span class="nm ancho">${esc(c.nombre)}</span><span class="pc">10</span><span class="sm ancho">Solo sus temas: ${c.con} con preguntas</span></button>`).join("")}
-      ${banco.length ? `<button type="button" class="tb" data-kwiz='{"tipo":"general"}'>
-        <span class="nm ancho">Kwiz general</span><span class="pc">10</span><span class="sm ancho">Tus temas más bajos, los que toca repasar y los nuevos</span></button>` : ""}
+        <span class="nm ancho">${esc(c.nombre)}</span><span class="pc">${N.TOTAL}</span><span class="sm ancho">Solo sus temas: ${c.con} con preguntas</span></button>`).join("")}
     </div>
-    ${banco.length
-      ? `<p class="small">Hoy hay ${plural(banco.length, "pregunta revisada", "preguntas revisadas")} de ${plural(temasBanco.size, "tema", "temas")}. Por eso los dos kwizzes se parecen: crecen conforme se escriben más.</p>`
-      : "<p>Todavía no hay preguntas revisadas.</p>"}
-  </section>
+    <p class="small">Hay ${plural(banco.length, "pregunta revisada", "preguntas revisadas")} de ${plural(temasBanco.size, "tema", "temas")}.</p>
+  </section>` : ""}
   ${hechos.length ? `
   <section class="card">
     <h2>Tus últimos kwizzes</h2>
@@ -523,7 +546,11 @@ let armando = false;
 function empezarKwiz({ tipo = "general", cuaderno = null, tema = null }) {
   if (armando) return;          // dos toques seguidos no arman dos kwizzes: el seguro se quita al pintar la página que sigue
   armando = true;
-  const ids = N.armar(P, E, { tipo, cuaderno, tema });
+  if (tipo === "lista") {
+    const lista = N.listaDeEstudio(P, E);
+    if (lista.abierto) return ir("/kwiz/" + lista.abierto.id);       // la lista no cambia hasta terminar el que está a medias
+  }
+  const ids = tipo === "lista" ? N.armarLista(P, E) : N.armar(P, E, { tipo, cuaderno, tema });
   if (!ids.length) return verNoExiste("Todavía no hay preguntas revisadas para ese kwiz.");
   const k = { t: "kwiz", id: N.nuevoId("k"), tipo, cuaderno, tema, cuando: new Date().toISOString(), preguntas: ids };
   A.apuntar(k);
@@ -760,13 +787,24 @@ function verResultado(o, kid) {
   const filas = k.preguntas.filter((p) => k.resp.has(p)).map((p) => ({ r: k.resp.get(p), q: preguntas.get(p) }));
   const temas = [...new Set(filas.map((f) => f.r.tema))].map((id) => porId.get(id)).filter(Boolean);
   const igual = JSON.stringify({ tipo: k.tipo, cuaderno: k.cuaderno, tema: k.tema });
+  const cambios = N.cambiosDeLista(P, E, kid);
+  const nombres = (ids) => ids.map((id) => porId.get(id)).filter(Boolean).map((t) => `<li>${esc(titulo(t))}</li>`).join("");
+  const renglon = (rotulo, ids, vacio) => `<h3>${rotulo}</h3>${ids.length ? `<ul class="rota">${nombres(ids)}</ul>` : `<p class="small">${vacio}</p>`}`;
   poner(`
   <section class="card">
     <h1 class="h">${k.bien} de ${k.total}</h1>
     <p>${TIPOS_KWIZ[k.tipo] || "Kwiz"} · ${cuando(k.terminado)}</p>
     ${barra(k.total ? 100 * k.bien / k.total : 0, " gorda")}
-    <div class="go"><button type="button" class="ub grande" data-kwiz='${esc(igual)}'>Otro kwiz igual</button><a class="ub" href="#/">Inicio</a></div>
+    <div class="go"><button type="button" class="ub grande" data-kwiz='${esc(igual)}'>${k.tipo === "lista" ? "Seguir con la lista" : "Otro kwiz igual"}</button><a class="ub" href="#/">Inicio</a></div>
   </section>
+  ${cambios ? `
+  <section class="card" id="rota">
+    <h2>Tu lista de estudio</h2>
+    ${renglon("Salen", cambios.salen, "Ninguno salió esta vez.")}
+    ${renglon("Entran", cambios.entran, cambios.salen.length ? "Ninguno nuevo." : "Ninguno: no hubo lugar.")}
+    ${renglon("Se quedan", cambios.quedan, "Ninguno.")}
+    <p class="small">Sale el tema que aciertas. El que fallas se queda hasta que lo aciertes dos veces seguidas.</p>
+  </section>` : ""}
   <section class="card">
     <h2>Cómo se movieron tus temas</h2>
     <div class="links">${temas.map((t) => {

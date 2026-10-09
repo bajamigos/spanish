@@ -17,9 +17,12 @@ export const PESO_ARRANQUE = 4;
 export const META = 80;
 // Días hasta que vuelve a tocar un tema, según cuántas veces seguidas lo has sostenido.
 export const ESCALONES = [1, 2, 5, 12, 30, 75];
-export const TOTAL = 10;
+export const TOTAL = 5;
 export const TOTAL_TEMA = 5;
 export const TOPE_POR_TEMA = 3;
+// La lista de estudio: cuántos temas trae y cuántos aciertos seguidos pide un tema que fallaste para poder salir.
+export const LISTA = 5;
+export const ACIERTOS_PARA_SALIR = 2;
 
 // ---------------------------------------------------------------- El porcentaje
 
@@ -210,6 +213,16 @@ export function calcular(paquete, sucesos) {
     if (!porTema.has(r.tema)) porTema.set(r.tema, []);
     porTema.get(r.tema).push(r);
   }
+  // Lo que cada tema «debe»: al fallar, queda debiendo dos aciertos seguidos. Cada acierto paga uno.
+  // También se guarda cuál fue la última pregunta fallada, para volver a preguntarla.
+  const debe = new Map();
+  const fallada = new Map();
+  for (const r of respuestas) {
+    if (retiradas.has(r.p)) continue;
+    if (r.bien) { if ((debe.get(r.tema) || 0) > 0) debe.set(r.tema, debe.get(r.tema) - 1); }
+    else { debe.set(r.tema, ACIERTOS_PARA_SALIR); fallada.set(r.tema, r.p); }
+  }
+
   const temas = new Map();
   for (const t of paquete.temas || []) {
     const suyas = porTema.get(t.id) || [];
@@ -255,7 +268,7 @@ export function calcular(paquete, sucesos) {
     }
   }
 
-  return { temas, kwizzes, retiradas, ultimaVez, respuestas: respuestas.length, porTema, parametros };
+  return { temas, kwizzes, retiradas, ultimaVez, respuestas: respuestas.length, porTema, parametros, debe, fallada };
 }
 
 /** El kwiz a medias más reciente, o null. */
@@ -352,4 +365,117 @@ export function armar(paquete, estado, { tipo = "general", cuaderno = null, tema
     for (const t of bajosPrimero) avanzo = tomar(t) || avanzo;
   }
   return barajar(elegidas, azar);
+}
+
+// ---------------------------------------------------------------- La lista de estudio
+//
+// Funciona como la de Kwiziq, que se observó el 9 de octubre de 2026 con tres exámenes de verdad:
+// el examen trae una pregunta de cada tema de la lista; el tema que aciertas sale; el que fallas o saltas
+// se queda, y después de acertarlo una vez sigue ahí una vuelta más. En su lugar entran temas nuevos.
+// Aquí la lista es de cinco temas en lugar de diez.
+
+function temasCon(paquete, estado) {
+  const con = new Map();      // tema -> sus preguntas que se pueden usar
+  for (const q of paquete.preguntas || []) {
+    if (q.estado !== "revisada" || estado.retiradas.has(q.id) || !estado.temas.has(q.tema)) continue;
+    if (!con.has(q.tema)) con.set(q.tema, []);
+    con.get(q.tema).push(q);
+  }
+  return con;
+}
+
+function kwizzesDeLista(estado) {
+  return [...estado.kwizzes.values()].filter((k) => k.tipo === "lista")
+    .sort((a, b) => Date.parse(a.cuando) - Date.parse(b.cuando) || (a.id < b.id ? -1 : 1));
+}
+
+function temasDeKwiz(paquete, k) {
+  const deQue = new Map((paquete.preguntas || []).map((q) => [q.id, q.tema]));
+  const vistos = [];
+  for (const p of k.preguntas) {
+    const t = deQue.has(p) ? deQue.get(p) : (k.resp.get(p) || {}).tema;
+    if (t !== undefined && !vistos.includes(t)) vistos.push(t);
+  }
+  return vistos;
+}
+
+/**
+ * La lista de estudio de ahora.
+ * Devuelve { temas, quedan, salen, entran, abierto, ultimo }:
+ *   temas   los temas de la lista, en orden;
+ *   abierto el kwiz de la lista que está a medias, si hay uno (mientras no lo termines, la lista no se mueve);
+ *   quedan, salen, entran  qué pasó con la lista después del último kwiz terminado.
+ */
+export function listaDeEstudio(paquete, estado, hoy = fechaLocal(new Date())) {
+  const con = temasCon(paquete, estado);
+  const todos = kwizzesDeLista(estado);
+  const ultimo = todos.length ? todos[todos.length - 1] : null;
+  if (ultimo && ultimo.pendientes.length) {
+    return { temas: temasDeKwiz(paquete, ultimo), quedan: [], salen: [], entran: [], abierto: ultimo, ultimo };
+  }
+  const anteriores = ultimo ? temasDeKwiz(paquete, ultimo) : [];
+  const quedan = [];
+  for (const t of anteriores) {
+    if (!con.has(t)) continue;
+    const suyas = [...ultimo.resp.values()].filter((r) => r.tema === t && !estado.retiradas.has(r.p));
+    const fallo = suyas.some((r) => !r.bien);
+    if (!suyas.length || fallo || (estado.debe.get(t) || 0) > 0) quedan.push(t);     // sin contestar, fallado o todavía debe aciertos
+  }
+  const salen = anteriores.filter((t) => !quedan.includes(t));
+
+  // Quién entra: se alternan los que ya toca repasar y los más bajos que todavía no tienen fecha.
+  const info = (t) => estado.temas.get(t);
+  const libres = [...con.keys()].filter((t) => !quedan.includes(t) && !salen.includes(t));
+  const porBajo = (a, b) => (info(a).pct ?? 0) - (info(b).pct ?? 0) || a - b;
+  const tocan = libres.filter((t) => info(t).toca && info(t).toca <= hoy).sort((a, b) => (info(a).toca < info(b).toca ? -1 : info(a).toca > info(b).toca ? 1 : porBajo(a, b)));
+  const nuevos = libres.filter((t) => !info(t).toca).sort(porBajo);
+  const despues = libres.filter((t) => info(t).toca && info(t).toca > hoy).sort((a, b) => (info(a).toca < info(b).toca ? -1 : info(a).toca > info(b).toca ? 1 : porBajo(a, b)));
+  const temas = quedan.slice();
+  let turno = 0;
+  while (temas.length < LISTA && (tocan.length || nuevos.length)) {
+    const fila = (turno++ % 2 === 0 ? (tocan.length ? tocan : nuevos) : (nuevos.length ? nuevos : tocan));
+    temas.push(fila.shift());
+  }
+  // Si no alcanza, vuelven los que acaban de salir y luego los que todavía no toca: mejor repetir que quedarse sin kwiz.
+  for (const t of [...salen.filter((x) => con.has(x)).sort(porBajo), ...despues]) {
+    if (temas.length >= LISTA) break;
+    temas.push(t);
+  }
+  return { temas, quedan, salen: salen.filter((t) => !temas.includes(t)), entran: temas.filter((t) => !anteriores.includes(t)), abierto: null, ultimo };
+}
+
+/** Qué pasó con la lista después de un kwiz ya terminado: { quedan, salen, entran }, o null si no es de la lista. */
+export function cambiosDeLista(paquete, estado, kwizId, hoy = fechaLocal(new Date())) {
+  const k = estado.kwizzes.get(kwizId);
+  if (!k || k.tipo !== "lista" || !k.terminado) return null;
+  const todos = kwizzesDeLista(estado);
+  const sigue = todos[todos.indexOf(k) + 1];
+  const suyos = temasDeKwiz(paquete, k);
+  const despues = sigue ? temasDeKwiz(paquete, sigue) : listaDeEstudio(paquete, estado, hoy).temas;
+  return {
+    quedan: suyos.filter((t) => despues.includes(t)),
+    salen: suyos.filter((t) => !despues.includes(t)),
+    entran: despues.filter((t) => !suyos.includes(t)),
+  };
+}
+
+/**
+ * Las preguntas del kwiz de la lista: una por tema, en el orden de la lista.
+ * Un tema que acabas de fallar trae primero otra pregunta; a la vuelta siguiente regresa la que fallaste.
+ */
+export function armarLista(paquete, estado, hoy = fechaLocal(new Date()), azar = Math.random) {
+  const con = temasCon(paquete, estado);
+  const elegidas = [];
+  for (const t of listaDeEstudio(paquete, estado, hoy).temas) {
+    const suyas = (con.get(t) || []).map((q) => ({ id: q.id, ultima: estado.ultimaVez.get(q.id) || 0, suerte: azar() }))
+      .sort((a, b) => a.ultima - b.ultima || a.suerte - b.suerte);
+    if (!suyas.length) continue;
+    const fallada = estado.fallada.get(t);
+    const debe = estado.debe.get(t) || 0;
+    let elegida = suyas[0].id;
+    if (debe === 1 && suyas.some((q) => q.id === fallada)) elegida = fallada;
+    else if (debe >= ACIERTOS_PARA_SALIR && elegida === fallada && suyas.length > 1) elegida = suyas[1].id;
+    elegidas.push(elegida);
+  }
+  return elegidas;
 }
