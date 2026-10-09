@@ -9,6 +9,7 @@
   --tab: #000000; --tab-ink: #ececec;
   --mark: #ffe27a; --mark-ink: #000000;
   --no: #b3261e; --si: #14713d; --pen: #b3261e;
+  --verde: #1e9e57; --ambar: #e3a900; --rojo: #d23b32;
   --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-pen: Georgia, "Times New Roman", serif;
   color-scheme: light;
@@ -22,6 +23,7 @@
     --tab: #f2f2f2; --tab-ink: #111111;
     --mark: #5c4500; --mark-ink: #ffeeb0;
     --no: #ff9d93; --si: #7fdca6; --pen: #ff9d93;
+    --verde: #46d98a; --ambar: #ffd24a; --rojo: #ff6b62;
     color-scheme: dark;
   }
 }
@@ -44,7 +46,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 /* ---- El marco de Pelagos ---- */
 .brand { text-align: center; font-size: 22px; font-weight: 700; letter-spacing: -0.01em; }
 .brand a { text-decoration: none; }
-.top { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.top { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.top .ub { white-space: nowrap; font-size: 16px; }
 .ub { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box;
   min-height: 44px; padding: 6px 14px; font: inherit; font-size: 14px; font-weight: 600; line-height: 1.25; text-decoration: none; text-align: center;
   color: var(--btn-ink); background: linear-gradient(to bottom, var(--btn-top), var(--btn-bot));
@@ -166,6 +169,9 @@ details.q .a span { font-size: 14.5px; color: var(--ink-3); }
 .tb .bar { grid-column: 1 / -1; }
 .bar { display: block; height: 8px; border-radius: 4px; background: var(--bar-bg); border: 1px solid var(--line); overflow: hidden; }
 .bar i { display: block; height: 100%; background: var(--bar); }
+.bar.verde i { background: var(--verde); }
+.bar.ambar i { background: var(--ambar); }
+.bar.rojo i { background: var(--rojo); }
 .lib { list-style: none; padding: 0; display: grid; gap: 0; }
 .lib li { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 2px 10px; padding: 9px 0; border-top: 1px solid var(--line); font-size: 15.5px; color: var(--ink); }
 .lib li:first-child { border-top: 0; }
@@ -262,6 +268,7 @@ body.conandrea {
   --btn-top: #333331; --btn-bot: #1f1f1e; --btn-ink: #f2f2f2; --outline: #9a9a94;
   --shadow: rgba(0,0,0,0.6); --bar: #ffffff; --bar-bg: rgba(255,255,255,0.2);
   --tab: #f2f2f2; --tab-ink: #111111; --no: #ffb3ab; --si: #8ff0b8; --pen: #ffb3ab;
+  --verde: #46d98a; --ambar: #ffd24a; --rojo: #ff6b62;
   color-scheme: dark;
 }
 .hoy { position: relative; }
@@ -295,17 +302,15 @@ body.conandrea {
 .cuadro.hecho .ce { color: var(--si); }
 .bar.vacia { background: none; border-style: dashed; }
 .extras { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; text-align: center; font-size: 13px; line-height: 1.3; color: var(--ink-3); }
-.extras b { display: block; font-size: 20px; line-height: 1.2; color: var(--ink); }
+.extras b { display: block; font-size: 17px; line-height: 1.25; color: var(--ink); white-space: nowrap; }
 .card p.viejo { color: var(--no); font-weight: 600; }
 
-.ciTop { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; }
-.card p.chip { font-size: 15px; font-weight: 700; color: var(--ink); border: 2px solid var(--outline); border-radius: 999px; padding: 4px 14px; }
+.card p.chip { justify-self: start; font-size: 15px; font-weight: 700; color: var(--ink); border: 2px solid var(--outline); border-radius: 999px; padding: 4px 14px; }
 .card p.chip.nuevo { background: var(--tab); color: var(--tab-ink); border-color: var(--tab); text-shadow: none; }
-.card p.nivelCi { font-size: 17px; font-weight: 700; color: var(--ink); }
-ul.partes { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
-ul.partes li { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--outline); border-radius: 999px; padding: 4px 12px 4px 8px; font-size: 14.5px; font-weight: 600; }
-ul.partes li.va { color: var(--si); border-color: var(--si); }
-ul.partes li.va span { color: var(--ink); }
-ul.partes li.nova { color: var(--ink-3); border-style: dashed; }
+/* Las partes del check-in: todas en un solo renglón. La que viene va rellena; la que no, punteada y apagada. */
+ul.partes { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: nowrap; gap: 4px; }
+ul.partes li { flex: 1 1 auto; min-width: 0; text-align: center; white-space: nowrap; border: 1px solid var(--outline); border-radius: 999px; padding: 5px 5px; font-size: 13px; font-weight: 700; line-height: 1.3; }
+ul.partes li.va { color: var(--tab-ink); background: var(--verde); border-color: var(--verde); text-shadow: none; }
+ul.partes li.nova { color: var(--ink-3); border-style: dashed; font-weight: 600; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .tic { stroke: var(--page); }

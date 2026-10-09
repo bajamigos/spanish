@@ -1,6 +1,6 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=5c76b92bf8";
-import * as A from "./almacen.js?v=5c76b92bf8";
+import * as N from "./nucleo.js?v=a050b93fd2";
+import * as A from "./almacen.js?v=a050b93fd2";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -57,7 +57,9 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "
 const pct = N.textoPct;
 const titulo = (t) => t.titulo || t.titulo_kwiziq;
 const ancho = (v) => Math.max(0, Math.min(100, Number(v) || 0));
-const barra = (v, clase = "") => `<span class="bar${clase}"><i data-w="${ancho(v)}"></i></span>`;
+/** El color de una barra: verde de 90 para arriba, amarillo de 70 para arriba, rojo abajo de 70. */
+const tono = (v) => (v === null || v === undefined ? "" : ancho(v) >= 90 ? " verde" : ancho(v) >= 70 ? " ambar" : " rojo");
+const barra = (v, clase = "") => `<span class="bar${clase}${tono(v)}"><i data-w="${ancho(v)}"></i></span>`;
 const esBajo = (v) => v !== null && v !== undefined && v < meta();
 const plural = (n, uno, muchos) => n + " " + (n === 1 ? uno : muchos);
 
@@ -367,9 +369,8 @@ function verInicio(o) {
   const checkin = !c ? "" : `
   <section class="card" id="checkin">
     <h2 class="sr">Check-in</h2>
-    <div class="ciTop"><p class="chip ${c.estado}">${esc(deHoy ? ESTADOS[c.estado] : "Check-in anterior")}</p>
-      ${c.estado !== "ninguno" && c.nombre ? `<p class="nivelCi">${c.nivel !== null ? `Nivel ${c.nivel} · ` : ""}${esc(c.nombre)}</p>` : ""}</div>
-    ${c.estado !== "ninguno" && c.partes.length ? `<ul class="partes">${c.partes.map((x) => `<li class="${x.va ? "va" : "nova"}">${x.va ? ICONO_SI : ICONO_NO}<span>${esc(x.nombre)}</span><span class="sr">${x.va ? ": incluido" : ": no incluido"}</span></li>`).join("")}</ul>` : ""}
+    <p class="chip ${c.estado}">${esc(deHoy ? ESTADOS[c.estado] : "Check-in anterior")}</p>
+    ${c.estado !== "ninguno" && c.partes.length ? `<ul class="partes" data-n="${c.partes.length}">${c.partes.map((x) => `<li class="${x.va ? "va" : "nova"}"><span>${esc(x.nombre)}</span><span class="sr">${x.va ? ": incluido" : ": no incluido"}</span></li>`).join("")}</ul>` : ""}
   </section>`;
 
   poner(`
@@ -991,6 +992,7 @@ function abrirHoja(id) {
   $("shR").textContent = t.regla || "Este tema todavía no tiene lección ni resumen propio.";
   $("shP").textContent = "Tu porcentaje: " + pct(i.pct) + (i.n === 0 ? " · de Kwiziq" : " · " + plural(i.n, "respuesta", "respuestas"));
   $("shB").style.width = ancho(i.pct) + "%";
+  $("shB").parentElement.className = "bar" + tono(i.pct);
   const conLeccion = !!(t.slug && t.leccion);
   $("shL").hidden = !conLeccion;
   if (conLeccion) $("shL").href = "#/leccion/" + t.slug;
