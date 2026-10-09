@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' blob:; manifest-src 'self'; connect-src https://api.github.com; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light dark">
+<title>Pelagos</title>
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Pelagos">
+<link rel="manifest" href="pelagos.webmanifest">
+<link rel="icon" href="icono-192.png">
+<link rel="apple-touch-icon" href="icono-180.png">
+<link rel="stylesheet" href="pelagos.css">
+</head>
+<body>
+<div class="app">
+  <p class="brand"><a href="#/">Pelagos</a></p>
+  <nav class="top" aria-label="Pelagos" id="nav" hidden>
+    <a class="ub" href="#/" data-nav="inicio">Inicio<span class="sum">hoy</span></a>
+    <a class="ub" href="#/gramatica" data-nav="gramatica">Biblioteca<span class="sum">por nivel</span></a>
+    <a class="ub" href="#/kwiz" data-nav="kwiz">Kwiz<span class="sum">10 preguntas</span></a>
+  </nav>
+  <main class="vista" id="vista">
+    <section class="card"><h1 class="h">Pelagos</h1><p>Abriendo…</p></section>
+  </main>
+  <footer class="foot">
+    <div id="pie"></div>
+    <p id="sinc" role="status" hidden></p>
+    <p><a href="#/ajustes" id="ajustesLink" hidden>Ajustes</a></p>
+    <p>@bajamigospanish</p>
+  </footer>
+</div>
+<noscript><p>Pelagos necesita JavaScript para abrir tu contenido.</p></noscript>
+
+<dialog class="sheet" id="sheet" aria-labelledby="shT">
+  <div class="in">
+    <span class="k" id="shK"></span>
+    <h2 id="shT"></h2>
+    <p class="r" id="shR"></p>
+    <div class="sc"><span id="shP"></span><span class="bar"><i id="shB"></i></span></div>
+    <div class="acts">
+      <a class="ub" id="shL" href="#/" hidden>Abrir la lección</a>
+      <a class="ub" id="shKw" href="https://spanish.kwiziq.com/" rel="noopener noreferrer" target="_blank" hidden>Ver en Kwiziq</a>
+      <button type="button" class="ub" id="shX">Cerrar</button>
+    </div>
+  </div>
+</dialog>
+<script type="module" src="app.js"></script>
+</body>
+</html>
