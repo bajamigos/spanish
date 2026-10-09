@@ -1,6 +1,6 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=0023a591bb";
-import * as A from "./almacen.js?v=0023a591bb";
+import * as N from "./nucleo.js?v=02e61a827c";
+import * as A from "./almacen.js?v=02e61a827c";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -22,7 +22,7 @@ const CATEGORIAS = {
   "Negative Words & Constructions": "Negación",
 };
 const GRUPOS = [["antes", "Antes de esta"], ["confunde", "Se confunde con"], ["sigue", "Sigue con"]];
-const TIPOS_KWIZ = { lista: "Kwiz de tu lista", general: "Kwiz general", cuaderno: "Kwiz del cuaderno", tema: "Kwiz de un tema" };
+const TIPOS_KWIZ = { lista: "Kwiz de tu plan Pelagos", general: "Kwiz general", cuaderno: "Kwiz del cuaderno", tema: "Kwiz de un tema" };
 const MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
   "septiembre", "octubre", "noviembre", "diciembre"];
 
@@ -314,8 +314,8 @@ function verInicio(o) {
       ? `<p>Tienes un kwiz a medias.</p><div class="go"><a class="ub grande" href="#/kwiz/${esc(abierto.id)}">Seguir el kwiz</a></div>`
       : `<p>${E.respuestas ? `Llevas ${plural(E.respuestas, "respuesta", "respuestas")} en ${plural(hechos, "kwiz", "kwizzes")}.` : "Todavía no has hecho ningún kwiz aquí."}</p>
          ${lista.temas.length
-           ? `<div class="go"><button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Hacer el kwiz de tu lista</button></div>
-              <p class="small">${plural(lista.temas.length, "pregunta", "preguntas")}, una de cada tema de tu lista de estudio.</p>`
+           ? `<div class="go"><button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Kwiz de tu plan Pelagos</button></div>
+              <p class="small">${plural(lista.temas.length, "pregunta", "preguntas")}, una de cada tema de tu plan de estudio${E.enfoque ? `. Enfoque: ${esc(E.enfoque)}` : ""}.</p>`
            : `<div class="go"><a class="ub grande" href="#/kwiz">Ver los kwizzes</a></div>`}`}
   </section>
   <section class="card">
@@ -488,7 +488,7 @@ function motivoEnLista(t, lista) {
   if (lista.quedan.includes(t.id)) return "Se queda: no la contestaste";
   const i = info(t.id);
   if (i.toca) return "Toca repasarlo";
-  return i.n === 0 ? "Nuevo aquí · de Kwiziq" : "Vuelve a la lista";
+  return i.n === 0 ? "Nuevo aquí · de Kwiziq" : "Vuelve al plan";
 }
 
 function verKwiz(o) {
@@ -499,6 +499,9 @@ function verKwiz(o) {
   const hechos = N.kwizzesHechos(E).slice(0, 10);
   const lista = N.listaDeEstudio(P, E);
   const deLista = lista.temas.map((id) => porId.get(id)).filter(Boolean);
+  const porNivel = N.nivelesConPreguntas(P, E);
+  const hoy = N.fechaLocal(new Date());
+  const hechosHoy = N.kwizzesHechos(E).filter((k) => N.fechaLocal(k.terminado) === hoy).length;
   poner(`
   ${abierto ? `
   <section class="card">
@@ -508,14 +511,21 @@ function verKwiz(o) {
     <p class="small">Si lo dejas, se cierra con lo que ya contestaste. Tus respuestas siguen contando.</p>
   </section>` : ""}
   <section class="card" id="lista">
-    ${abierto ? "<h2>Tu lista de estudio</h2>" : '<h1 class="h">Tu lista de estudio</h1>'}
+    ${abierto ? "<h2>Tu plan de estudio Pelagos</h2>" : '<h1 class="h">Tu plan de estudio Pelagos</h1>'}
+    <h3 id="enfoqueT">Enfoque</h3>
+    <div class="enfoque" role="group" aria-labelledby="enfoqueT">
+      <button type="button" class="nv ancho" data-enfoque="" aria-pressed="${E.enfoque ? "false" : "true"}">Guiado: todos los niveles</button>
+      ${Object.keys(NIVELES).map((n) => `<button type="button" class="nv" data-enfoque="${n}" aria-pressed="${E.enfoque === n ? "true" : "false"}"${porNivel[n] ? "" : " disabled"} aria-label="${n}, ${porNivel[n] ? plural(porNivel[n], "tema con preguntas", "temas con preguntas") : "todavía sin preguntas"}">${n}<span>${porNivel[n] || 0}</span></button>`).join("")}
+    </div>
+    <p class="small">${E.enfoque ? `Tu plan solo trae temas de ${esc(E.enfoque)}.` : "Tu plan toma temas de todos los niveles."} El número es cuántos temas tienen preguntas.${lista.abierto ? " El cambio se ve al terminar el kwiz que está a medias." : ""}</p>
     ${deLista.length ? `
-    <p>${plural(deLista.length, "tema", "temas")}. El kwiz trae una pregunta de cada uno.</p>
+    <h3>${plural(deLista.length, "tema", "temas")} en tu plan</h3>
     <div class="links">${deLista.map((t) => botonTema(t, { sub: motivoEnLista(t, lista) })).join("")}</div>
-    ${lista.abierto ? "" : `<div class="go"><button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Hacer el kwiz de tu lista</button></div>`}
-    <p class="small">El tema que aciertas sale de la lista y entra otro. El que fallas se queda hasta que lo aciertes dos veces seguidas.</p>
-    ${temasBanco.size <= N.LISTA ? `<p class="small">Hoy solo hay ${plural(temasBanco.size, "tema", "temas")} con preguntas, así que la lista no tiene de dónde cambiar. Va a rotar cuando se escriban más.</p>` : ""}`
-    : "<p>Todavía no hay preguntas revisadas.</p>"}
+    ${lista.abierto ? "" : `<div class="go"><button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Kwiz de tu plan Pelagos</button></div>`}
+    <p class="small">Una pregunta de cada tema. El que aciertas sale del plan y entra otro. El que fallas se queda hasta que lo aciertes dos veces seguidas.</p>
+    ${deLista.length < N.LISTA ? `<p class="small">${E.enfoque ? `En ${esc(E.enfoque)} solo hay` : "Solo hay"} ${plural(deLista.length, "tema", "temas")} con preguntas. El plan se llena cuando se escriban más.</p>` : ""}
+    <p class="small">Hoy llevas ${plural(hechosHoy, "kwiz", "kwizzes")}.</p>`
+    : `<p>${E.enfoque ? `Todavía no hay preguntas de ${esc(E.enfoque)}. Elige otro enfoque.` : "Todavía no hay preguntas revisadas."}</p>`}
   </section>
   ${cuadernos.length ? `
   <section class="card">
@@ -533,6 +543,15 @@ function verKwiz(o) {
       <span class="nm ancho">${cuando(h.terminado)}</span><span class="pc">${h.bien} de ${h.total}</span>
       <span class="sm ancho">${TIPOS_KWIZ[h.tipo] || "Kwiz"}</span>${barra(h.total ? 100 * h.bien / h.total : 0)}</a>`).join("")}</div>
   </section>` : ""}`, { titulo: "Kwiz · Pelagos", nav: "kwiz", conserva: o.conserva });
+  for (const b of vista.querySelectorAll("[data-enfoque]")) {
+    b.addEventListener("click", () => {
+      const nivel = b.dataset.enfoque || null;
+      if (nivel === E.enfoque) return;
+      A.apuntar({ t: "enfoque", id: N.nuevoId("f"), nivel, cuando: new Date().toISOString() });
+      recalcular();
+      pintar({ conserva: true });
+    });
+  }
   if (abierto) {
     $("dejarKwiz").addEventListener("click", () => {
       A.apuntar({ t: "dejar", id: N.nuevoId("d"), kwiz: abierto.id, cuando: new Date().toISOString() });
@@ -605,6 +624,8 @@ function verPregunta(o, kid) {
     </div>
     <div class="card" id="veredicto" tabindex="-1" hidden>
       <p><span class="pill" id="vPill"></span></p>
+      <div class="go arriba" id="vJuicio" hidden><button type="button" class="ub grande" id="jMal">Mal</button><button type="button" class="ub grande" id="jBien">Bien</button></div>
+      <div class="go arriba" id="vSeguir" hidden><button type="button" class="ub grande" id="siguiente">Siguiente</button></div>
       <p class="vtuya" id="vTuya" hidden></p>
       <p class="vresp" id="vResp"></p>
       <p class="small" id="vTambien" hidden></p>
@@ -612,8 +633,6 @@ function verPregunta(o, kid) {
       <p class="small" id="vNota" hidden></p>
       <p class="small" id="vTema" hidden></p>
       <p class="small" id="vPct" hidden></p>
-      <div class="go" id="vJuicio" hidden><button type="button" class="ub grande" id="jMal">Mal</button><button type="button" class="ub grande" id="jBien">Bien</button></div>
-      <div class="go" id="vSeguir" hidden><button type="button" class="ub grande" id="siguiente">Siguiente</button></div>
       <div class="mala" id="vMala" hidden>
         <button type="button" class="lk" id="malaBtn">Pregunta mala</button>
         <span id="malaSeguro" hidden>¿La retiro? Ya no sale y esta respuesta deja de contar. <button type="button" class="lk" id="malaSi">Sí, retírala</button> · <button type="button" class="lk" id="malaNo">No</button></span>
@@ -795,11 +814,11 @@ function verResultado(o, kid) {
     <h1 class="h">${k.bien} de ${k.total}</h1>
     <p>${TIPOS_KWIZ[k.tipo] || "Kwiz"} · ${cuando(k.terminado)}</p>
     ${barra(k.total ? 100 * k.bien / k.total : 0, " gorda")}
-    <div class="go"><button type="button" class="ub grande" data-kwiz='${esc(igual)}'>${k.tipo === "lista" ? "Seguir con la lista" : "Otro kwiz igual"}</button><a class="ub" href="#/">Inicio</a></div>
+    <div class="go"><button type="button" class="ub grande" data-kwiz='${esc(igual)}'>${k.tipo === "lista" ? "Otro kwiz de tu plan" : "Otro kwiz igual"}</button><a class="ub" href="#/">Inicio</a></div>
   </section>
   ${cambios ? `
   <section class="card" id="rota">
-    <h2>Tu lista de estudio</h2>
+    <h2>Tu plan de estudio Pelagos</h2>
     ${renglon("Salen", cambios.salen, "Ninguno salió esta vez.")}
     ${renglon("Entran", cambios.entran, cambios.salen.length ? "Ninguno nuevo." : "Ninguno: no hubo lugar.")}
     ${renglon("Se quedan", cambios.quedan, "Ninguno.")}

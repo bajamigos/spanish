@@ -225,6 +225,16 @@ details.cat .tb .nm { font-size: 15px; }
 ol.pasos { padding-left: 24px; display: grid; gap: 8px; color: var(--ink-2); }
 ol.pasos b { color: var(--ink); font-style: normal; }
 .bar.gorda { height: 14px; }
+.go.arriba { margin-top: -2px; }
+/* El enfoque: un botón para todos los niveles y uno por nivel, con cuántos temas tienen preguntas. */
+.enfoque { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 6px; }
+.enfoque .nv { display: grid; justify-items: center; gap: 0; padding: 8px 2px; font: inherit; font-size: 15px; font-weight: 700; line-height: 1.3; cursor: pointer;
+  background: var(--page); color: var(--ink); border: 2px solid var(--outline); border-radius: 4px; }
+.enfoque .nv.ancho { grid-column: 1 / -1; padding: 10px 8px; }
+.enfoque .nv span { font-size: 12.5px; font-weight: 400; color: var(--ink-3); }
+.enfoque .nv[aria-pressed="true"] { background: var(--tab); color: var(--tab-ink); border-color: var(--tab); }
+.enfoque .nv[aria-pressed="true"] span { color: var(--tab-ink); }
+.enfoque .nv:disabled { opacity: 0.45; cursor: default; }
 ul.rota { margin: 0; padding-left: 22px; display: grid; gap: 4px; font-size: 16.5px; color: var(--ink); }
 .pair.rq .row { grid-template-columns: 46px minmax(0, 1fr); }
 .pair.rq .fq { font-size: 17px; font-weight: 600; color: var(--ink); text-decoration: none; }

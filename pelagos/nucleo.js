@@ -162,7 +162,8 @@ export function ordenar(sucesos) {
 
 /**
  * Rehace todo desde cero: el paquete de contenido más la lista de sucesos.
- * Sucesos: «kwiz» (empieza uno), «r» (una respuesta), «retirar» (pregunta mala), «dejar» (dejas un kwiz a medias).
+ * Sucesos: «kwiz» (empieza uno), «r» (una respuesta), «retirar» (pregunta mala), «dejar» (dejas un kwiz a medias),
+ * «enfoque» (eliges un nivel para tu plan de estudio, o lo sueltas).
  * Los de un tipo que no conoce los salta, así una versión vieja de la página no se rompe con sucesos nuevos.
  * Devuelve { temas, kwizzes, retiradas, ultimaVez, respuestas, parametros }.
  */
@@ -183,9 +184,11 @@ export function calcular(paquete, sucesos) {
   const respuestas = [];
   const dadas = new Set();
   const dejados = new Set();
+  let enfoque = null;          // el nivel en el que te enfocas («A2»), o null si van todos los niveles
 
   for (const e of lista) {
-    if (e.t === "retirar" && e.p) retiradas.add(e.p);
+    if (e.t === "enfoque") enfoque = typeof e.nivel === "string" && e.nivel ? e.nivel : null;
+    else if (e.t === "retirar" && e.p) retiradas.add(e.p);
     else if (e.t === "dejar" && e.kwiz) dejados.add(e.kwiz);
     else if (e.t === "kwiz" && Array.isArray(e.preguntas) && !kwizzes.has(e.id)) {
       kwizzes.set(e.id, {
@@ -268,7 +271,7 @@ export function calcular(paquete, sucesos) {
     }
   }
 
-  return { temas, kwizzes, retiradas, ultimaVez, respuestas: respuestas.length, porTema, parametros, debe, fallada };
+  return { temas, kwizzes, retiradas, ultimaVez, respuestas: respuestas.length, porTema, parametros, debe, fallada, enfoque };
 }
 
 /** El kwiz a medias más reciente, o null. */
@@ -374,10 +377,12 @@ export function armar(paquete, estado, { tipo = "general", cuaderno = null, tema
 // se queda, y después de acertarlo una vez sigue ahí una vuelta más. En su lugar entran temas nuevos.
 // Aquí la lista es de cinco temas en lugar de diez.
 
-function temasCon(paquete, estado) {
+function temasCon(paquete, estado, nivel = null) {
   const con = new Map();      // tema -> sus preguntas que se pueden usar
+  const nivelDe = nivel ? new Map((paquete.temas || []).map((t) => [t.id, t.nivel])) : null;
   for (const q of paquete.preguntas || []) {
     if (q.estado !== "revisada" || estado.retiradas.has(q.id) || !estado.temas.has(q.tema)) continue;
+    if (nivelDe && nivelDe.get(q.tema) !== nivel) continue;
     if (!con.has(q.tema)) con.set(q.tema, []);
     con.get(q.tema).push(q);
   }
@@ -407,7 +412,7 @@ function temasDeKwiz(paquete, k) {
  *   quedan, salen, entran  qué pasó con la lista después del último kwiz terminado.
  */
 export function listaDeEstudio(paquete, estado, hoy = fechaLocal(new Date())) {
-  const con = temasCon(paquete, estado);
+  const con = temasCon(paquete, estado, estado.enfoque);       // con enfoque, el plan solo trae temas de ese nivel
   const todos = kwizzesDeLista(estado);
   const ultimo = todos.length ? todos[todos.length - 1] : null;
   if (ultimo && ultimo.pendientes.length) {
@@ -465,6 +470,7 @@ export function cambiosDeLista(paquete, estado, kwizId, hoy = fechaLocal(new Dat
  */
 export function armarLista(paquete, estado, hoy = fechaLocal(new Date()), azar = Math.random) {
   const con = temasCon(paquete, estado);
+
   const elegidas = [];
   for (const t of listaDeEstudio(paquete, estado, hoy).temas) {
     const suyas = (con.get(t) || []).map((q) => ({ id: q.id, ultima: estado.ultimaVez.get(q.id) || 0, suerte: azar() }))
@@ -478,4 +484,12 @@ export function armarLista(paquete, estado, hoy = fechaLocal(new Date()), azar =
     elegidas.push(elegida);
   }
   return elegidas;
+}
+
+/** Cuántos temas con preguntas hay en cada nivel: { A2: 18, B1: 2 }. Sirve para ofrecer el enfoque. */
+export function nivelesConPreguntas(paquete, estado) {
+  const nivelDe = new Map((paquete.temas || []).map((t) => [t.id, t.nivel]));
+  const cuenta = {};
+  for (const t of temasCon(paquete, estado).keys()) cuenta[nivelDe.get(t)] = (cuenta[nivelDe.get(t)] || 0) + 1;
+  return cuenta;
 }
