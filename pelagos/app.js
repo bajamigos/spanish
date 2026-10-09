@@ -1,6 +1,6 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=034cb82bb8";
-import * as A from "./almacen.js?v=034cb82bb8";
+import * as N from "./nucleo.js?v=41a0cdb4d8";
+import * as A from "./almacen.js?v=41a0cdb4d8";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -937,8 +937,19 @@ function textoSinc(s) {
   return "";
 }
 
+// ---- Pelagos como app: su propio ícono y su propia ventana. El navegador avisa cuando se puede instalar.
+let ofertaDeInstalar = null;
+const yaEsApp = () => window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
+window.addEventListener("beforeinstallprompt", (ev) => {
+  ev.preventDefault();
+  ofertaDeInstalar = ev;
+  if ($("ajInstalar")) $("ajInstalar").hidden = false;
+});
+window.addEventListener("appinstalled", () => { ofertaDeInstalar = null; if ($("ajInstalar")) $("ajInstalar").hidden = true; });
+
 function verAjustes(o) {
   const s = A.estadoSinc();
+  const esIphone = /iPhone|iPad|iPod/i.test(navigator.userAgent);
   const archivos = A.archivosDeSucesos();
   const aparatos = [...new Set(archivos.map((a) => a.aparato))];
   poner(`
@@ -950,6 +961,17 @@ function verAjustes(o) {
     <p id="ajSinc">${esc(textoSinc(s) || "Todo guardado.")}</p>
     <div class="go"><button type="button" class="ub" id="ajAlDia">Poner al día ahora</button></div>
     <p class="small" id="ajAviso" role="status" hidden></p>
+  </section>
+  <section class="card" id="ajApp">
+    <h2>Pelagos como app</h2>
+    ${yaEsApp()
+      ? "<p>Ya la estás usando como app, en su propia ventana.</p>"
+      : `<p>Con su propio ícono y su propia ventana, sin las barras del navegador.</p>
+         <div class="go"><button type="button" class="ub grande" id="ajInstalar"${ofertaDeInstalar ? "" : " hidden"}>Instalar Pelagos</button></div>
+         <p class="small">${esIphone
+           ? "En iPhone: abre esta página en Safari, toca Compartir y luego «Agregar a inicio». Ahí dentro vas a poner tu llave otra vez, una sola vez."
+           : "Si no ves el botón: en el menú de tu navegador busca «Instalar Pelagos» o «Agregar a la pantalla principal»."}</p>`}
+    <div class="go"><button type="button" class="ub" id="ajRecargar">Recargar Pelagos</button></div>
   </section>
   <section class="card">
     <h2>Lo que hay</h2>
@@ -969,6 +991,14 @@ function verAjustes(o) {
     aviso.textContent = "Poniendo al día…";
     const bien = await ponerAlDia(true);
     if ($("ajAviso")) { $("ajAviso").hidden = false; $("ajAviso").textContent = bien ? "Listo, al día." : "No se pudo. Revisa la conexión."; }
+  });
+  $("ajRecargar").addEventListener("click", () => { ir("/", true); window.location.reload(); });
+  if ($("ajInstalar")) $("ajInstalar").addEventListener("click", async () => {
+    if (!ofertaDeInstalar) return;
+    const oferta = ofertaDeInstalar;
+    ofertaDeInstalar = null;
+    $("ajInstalar").hidden = true;
+    try { await oferta.prompt(); } catch { /* el navegador ya no la ofrece: queda el menú */ }
   });
   $("ajQuitar").addEventListener("click", () => { $("ajSeguro").hidden = false; $("ajNo").focus(); });
   $("ajNo").addEventListener("click", () => { $("ajSeguro").hidden = true; });
