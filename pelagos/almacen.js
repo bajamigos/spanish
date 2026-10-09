@@ -4,13 +4,15 @@
 // - Tu avance son sucesos que solo se agregan, en la rama de avance:
 //       sucesos/<aparato>/<año-mes>.jsonl
 //   Cada aparato escribe en su propio archivo, así dos aparatos nunca se pisan.
+// - El tablero del día (tablero/hoy.json, en la misma rama) solo se lee: la página nunca lo escribe.
 // - Lo que contestas entra primero a una fila en este aparato y de ahí sube.
 //   Sin internet, la fila espera y sube sola cuando vuelve.
 // - La llave vive solo en este navegador y solo viaja a la dirección de CONFIG.api.
-import { CONFIG } from "./config.js?v=02e61a827c";
+import { CONFIG } from "./config.js?v=64c14c8b6e";
 
 const CLAVES = { llave: "pelagos.llave", aparato: "pelagos.aparato", fila: "pelagos.fila." };      // la fila: una clave por suceso
 const RUTA_SUCESOS = /^sucesos\/([A-Za-z0-9_-]+)\/(\d{4}-\d{2})\.jsonl$/;
+const RUTA_TABLERO = "tablero/hoy.json";
 
 export class Fallo extends Error {
   /** tipo: «llave», «permiso», «falta», «red», «github», «choque», «paquete» */
@@ -206,6 +208,7 @@ export async function salir() {
   sinc.guardado = null;
   archivos.clear();
   leidos.clear();
+  tableroActual = null;
   for (const u of fotosVivas.values()) u.then((x) => x && URL.revokeObjectURL(x)).catch(() => {});
   fotosVivas.clear();
   await kvVaciar();
@@ -231,6 +234,11 @@ function revisarPaquete(p) {
 // ---------------------------------------------------------------- Leer: paquete y sucesos
 
 const archivos = new Map();     // ruta -> { sha, texto }
+let tableroActual = null;       // { sha, datos }: el tablero del día, tal como llegó
+
+/** El tablero del día tal como está en el repositorio, o null. La forma la revisa quien lo usa. */
+export function tablero() { return tableroActual ? tableroActual.datos : null; }
+export function huellaTablero() { return tableroActual ? tableroActual.sha : ""; }
 const leidos = new Map();       // ruta -> { sha, lista }   (los sucesos ya separados, para no repetir el trabajo)
 
 function separar(texto) {
@@ -276,6 +284,8 @@ export async function cargarLocal() {
     const a = await kvLeer("ev:" + camino);
     if (a && typeof a.texto === "string") archivos.set(camino, a);
   }
+  const t = await kvLeer("tablero");
+  tableroActual = t && typeof t.sha === "string" && t.datos && typeof t.datos === "object" ? t : null;
   if (!guardado || !guardado.datos) return null;
   try { revisarPaquete(guardado.datos); } catch { return null; }
   return guardado.datos;
@@ -306,8 +316,12 @@ export function sincronizar() {
       else throw new Fallo("github", "GitHub contestó algo raro (" + r.status + ").", r.status);
 
       const t = await api(REPO + "/git/trees/" + encodeURIComponent(CONFIG.ramaAvance) + "?recursive=1");
-      let arbol = [];
-      if (t.ok) arbol = ((await t.json()).tree || []).filter((x) => x.type === "blob" && RUTA_SUCESOS.test(x.path));
+      let arbol = [], hojaTablero = null;
+      if (t.ok) {
+        const blobs = ((await t.json()).tree || []).filter((x) => x.type === "blob");
+        arbol = blobs.filter((x) => RUTA_SUCESOS.test(x.path));
+        hojaTablero = blobs.find((x) => x.path === RUTA_TABLERO) || null;
+      }
       else if (t.status !== 404 && t.status !== 409) throw new Fallo("github", "GitHub contestó algo raro (" + t.status + ").", t.status);
 
       const cambiados = arbol.filter((x) => !archivos.has(x.path) || archivos.get(x.path).sha !== x.sha);
@@ -331,6 +345,20 @@ export function sincronizar() {
         archivos.delete(camino); leidos.delete(camino); await kvQuitar("ev:" + camino);
       }
       await guardarIndice();
+      // El tablero es un adorno: si no se puede leer o viene roto, se queda el de antes y lo demás sigue.
+      if (!hojaTablero) {
+        if (t.ok && tableroActual) { tableroActual = null; await kvQuitar("tablero"); }
+      } else if (!tableroActual || tableroActual.sha !== hojaTablero.sha) {
+        try {
+          const b = await api(REPO + "/git/blobs/" + encodeURIComponent(hojaTablero.sha), { crudo: true });
+          if (b.ok) {
+            const datos = JSON.parse(await b.text());
+            if (datos && typeof datos === "object") { tableroActual = { sha: hojaTablero.sha, datos }; await kvPoner("tablero", tableroActual); }
+          }
+        } catch (e) {
+          if (e instanceof Fallo && e.tipo === "llave") throw e;
+        }
+      }
       sinc.leido = Date.now();
       return paquete;
     } finally {
@@ -509,16 +537,17 @@ export async function leccion(info) {
 const fotosVivas = new Map();   // nombre -> promesa de una dirección blob:
 
 /** Una portada como dirección que la página puede mostrar. Las portadas son privadas: se bajan con la llave. */
-export function foto(info) {
-  if (!info || !info.nombre) return Promise.resolve(null);
-  if (!fotosVivas.has(info.nombre)) {
-    fotosVivas.set(info.nombre, (async () => {
-      const clave = "foto:" + info.nombre;
+export function foto(info, carpeta = "reef") {
+  if (!info || !info.nombre || !/^[a-z]+$/.test(carpeta)) return Promise.resolve(null);
+  const nombre = carpeta + "/" + info.nombre;
+  if (!fotosVivas.has(nombre)) {
+    fotosVivas.set(nombre, (async () => {
+      const clave = carpeta === "reef" ? "foto:" + info.nombre : "foto:" + nombre;
       const guardada = await kvLeer(clave);
       let bytes = guardada && guardada.huella === info.huella ? guardada.bytes : null;
       if (!bytes) {
         try {
-          const r = await api(REPO + "/contents/" + ruta("contenido/img/reef/" + info.nombre) + "?ref=" + encodeURIComponent(CONFIG.ramaContenido), { crudo: true });
+          const r = await api(REPO + "/contents/" + ruta("contenido/img/" + nombre) + "?ref=" + encodeURIComponent(CONFIG.ramaContenido), { crudo: true });
           if (!r.ok) throw new Fallo("github", "No se pudo bajar la portada.", r.status);
           bytes = await r.arrayBuffer();
           await kvPoner(clave, { huella: info.huella, bytes });
@@ -526,9 +555,9 @@ export function foto(info) {
           bytes = guardada ? guardada.bytes : null;
         }
       }
-      if (!bytes) { fotosVivas.delete(info.nombre); return null; }
+      if (!bytes) { fotosVivas.delete(nombre); return null; }
       return URL.createObjectURL(new Blob([bytes], { type: "image/jpeg" }));
     })());
   }
-  return fotosVivas.get(info.nombre);
+  return fotosVivas.get(nombre);
 }

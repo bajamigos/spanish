@@ -252,3 +252,39 @@ dialog.sheet::backdrop { background: rgba(0,0,0,0.5); }
 .sheet .r { font-size: 17.5px; color: var(--ink); }
 .sheet .sc { display: grid; gap: 4px; font-size: 14px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
 .sheet .acts { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* ---- La página de Hoy: el retrato de Andrea queda fijo al fondo y las tarjetas pasan por encima. */
+.hoy { position: relative; }
+.hoy .fondo { display: none; }
+.hoy .sobre { position: relative; z-index: 1; display: grid; gap: 14px; }
+.hoy .sobre > * { min-width: 0; }
+.hoy.confoto .fondo { display: block; position: sticky; top: 8px; z-index: 0; }
+.hoy.confoto .fondo img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: center top; border-radius: 8px; background: var(--bar-bg); border: 1px solid var(--line); box-sizing: border-box; }
+.hoy.confoto .sobre { margin-top: -22%; }
+.hoy.confoto .sobre > .card:first-child { box-shadow: 0 -6px 18px var(--shadow); }
+.card p.fechaHoy { font-size: 17px; font-weight: 600; color: var(--ink); margin-top: -8px; }
+.card p.fechaHoy::first-letter { text-transform: uppercase; }
+
+.cuadros { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.cuadro { display: grid; gap: 6px; align-content: start; border: 1px solid var(--outline); border-radius: 6px; padding: 10px; background: var(--page); }
+.cuadro .cn { font-size: 13.5px; font-weight: 600; line-height: 1.25; color: var(--ink-2); min-height: 2.5em; }
+.cuadro .cv { font-size: 30px; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; }
+.cuadro .cv small { font-size: 14px; font-weight: 400; color: var(--ink-3); }
+.cuadro .ce { display: flex; align-items: center; gap: 6px; font-size: 13.5px; font-weight: 600; color: var(--ink-3); }
+.cuadro .ce svg, .partes svg { width: 16px; height: 16px; flex: none; }
+.cuadro.hecho .ce { color: var(--si); }
+.bar.vacia { background: none; border-style: dashed; }
+.extras { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; text-align: center; font-size: 13px; line-height: 1.3; color: var(--ink-3); }
+.extras b { display: block; font-size: 20px; line-height: 1.2; color: var(--ink); }
+.card p.viejo { color: var(--no); font-weight: 600; }
+
+.card p.chip { justify-self: start; font-size: 15px; font-weight: 700; color: var(--ink); border: 2px solid var(--outline); border-radius: 999px; padding: 4px 14px; }
+.card p.chip.nuevo { background: var(--tab); color: var(--tab-ink); border-color: var(--tab); }
+.card p.nivelCi { font-size: 19px; font-weight: 700; color: var(--ink); }
+ul.partes { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+ul.partes li { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--outline); border-radius: 999px; padding: 4px 12px 4px 8px; font-size: 14.5px; font-weight: 600; }
+ul.partes li.va { color: var(--si); border-color: var(--si); }
+ul.partes li.va span { color: var(--ink); }
+ul.partes li.nova { color: var(--ink-3); border-style: dashed; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.tic { stroke: var(--page); }

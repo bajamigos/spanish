@@ -1,6 +1,6 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=02e61a827c";
-import * as A from "./almacen.js?v=02e61a827c";
+import * as N from "./nucleo.js?v=64c14c8b6e";
+import * as A from "./almacen.js?v=64c14c8b6e";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -34,6 +34,7 @@ let porId = new Map();        // tema por número
 let porSlug = new Map();      // tema por nombre de lección
 let preguntas = new Map();    // pregunta por id
 let fotos = new Map();        // portada por nombre
+let retratos = new Map();     // retrato de Andrea por nombre
 let enPregunta = false;       // hay una pregunta en pantalla: no se repinta debajo de ti
 let turnoDePintar = 0;        // para que una lección que llega tarde no pise otra página
 let teclas = null;            // qué hacen las teclas B y M en la pantalla de ahora
@@ -44,6 +45,7 @@ function ponerPaquete(paquete) {
   porSlug = new Map(P.temas.filter((t) => t.slug && t.leccion).map((t) => [t.slug, t]));
   preguntas = new Map(P.preguntas.map((q) => [q.id, q]));
   fotos = new Map((P.fotos || []).map((f) => [f.nombre, f]));
+  retratos = new Map((P.retratos || []).map((f) => [f.nombre, f]));
 }
 function recalcular() { if (P) E = N.calcular(P, A.sucesos()); }
 const meta = () => (E ? E.parametros.meta : N.META);
@@ -145,6 +147,13 @@ function vestir(raiz) {
   for (const e of raiz.querySelectorAll("[data-x]")) e.style.left = e.dataset.x + "%";
   for (const img of raiz.querySelectorAll("img[data-foto]")) {
     A.foto(fotos.get(img.dataset.foto)).then((u) => { if (u && img.isConnected) img.src = u; });
+  }
+  for (const img of raiz.querySelectorAll("img[data-retrato]")) {
+    // Sin retrato (no llegó, o no hay conexión) la página de Hoy se acomoda como si no hubiera foto.
+    A.foto(retratos.get(img.dataset.retrato), "andrea").then((u) => {
+      if (!img.isConnected) return;
+      if (u) img.src = u; else { const h = img.closest(".hoy"); if (h) h.classList.remove("confoto"); }
+    });
   }
   bocinas(raiz);
 }
@@ -293,10 +302,41 @@ function botonNivel(n, conLecciones) {
     ${barra(n.promedio)}</a>`;
 }
 
+const DIAS = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"];
+const ICONO_SI = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="currentColor"/><path d="M7 12.5l3.4 3.4L17 9" class="tic" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+const ICONO_NO = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="3 3"/></svg>';
+
+/** «viernes 9 de octubre», del día de este aparato. */
+function diaLargo(iso) {
+  const [a, m, d] = iso.split("-").map(Number);
+  return `${DIAS[new Date(a, m - 1, d).getDay()]} ${d} de ${MESES[m - 1]}`;
+}
+/** Una hora -> «1:27 pm», en la hora de este aparato. */
+function horaCorta(iso) {
+  const d = new Date(iso);
+  const h = d.getHours();
+  return `${h % 12 || 12}:${String(d.getMinutes()).padStart(2, "0")} ${h < 12 ? "am" : "pm"}`;
+}
+
+/** Una medida del día como cuadro: nombre, número grande, barra y si ya se cumplió. */
+function cuadro(nombre, valor, de, unidad, estado, hecho) {
+  const aCero = de === 0;       // medidas que se cumplen al llegar a cero, como las tarjetas pendientes
+  return `<div class="cuadro${hecho ? " hecho" : ""}" role="listitem">
+    <span class="cn">${esc(nombre)}</span>
+    <span class="cv">${esc(valor)}${aCero ? "" : `<small> de ${esc(de)}${unidad ? " " + esc(unidad) : ""}</small>`}</span>
+    ${aCero ? '<span class="bar vacia"></span>' : barra(de ? (valor / de) * 100 : 0)}
+    <span class="ce">${hecho ? ICONO_SI : ICONO_NO}${esc(estado)}</span>
+  </div>`;
+}
+
 function verInicio(o) {
   const niveles = resumenNiveles();
   const total = niveles.reduce((s, n) => s + n.temas, 0), bajo = niveles.reduce((s, n) => s + n.bajo, 0);
   const abierto = N.kwizAbierto(E), hechos = N.kwizzesHechos(E).length;
+  const hoy = N.fechaLocal(new Date());
+  const T = N.leerTablero(A.tablero());
+  const deHoy = !!T && T.dia === hoy;
+  const retrato = T && T.foto && retratos.has(T.foto) ? T.foto : null;
   const cuadernos = (P.cuadernos || []).map((c) => `
   <section class="card">
     <h2>${esc(c.nombre)}</h2>
@@ -307,22 +347,67 @@ function verInicio(o) {
     }).join("")}</div>
   </section>`).join("");
   const lista = N.listaDeEstudio(P, E);
+
+  // ---- Las medidas del día. Los kwizzes los cuenta Pelagos; lo demás viene del tablero.
+  const kw = N.kwizzesDelDia(E, hoy), metaKw = N.KWIZZES_AL_DIA;
+  const cuadros = [cuadro("Kwizzes en Pelagos", kw, metaKw, "", kw >= metaKw ? "Cumplido" : `Faltan ${metaKw - kw}`, kw >= metaKw)];
+  for (const m of T ? T.medidas : []) {
+    const hecho = m.de === 0 ? m.valor === 0 : m.valor >= m.de;
+    const falta = Math.round((m.de - m.valor) * 10) / 10;
+    cuadros.push(cuadro(m.nombre, m.valor, m.de, m.unidad, hecho ? "Cumplido" : m.de === 0 ? "La meta es cero" : `Faltan ${falta}${m.unidad ? " " + m.unidad : ""}`, hecho));
+  }
+  const sello = !T ? "" : deHoy
+    ? (T.leido ? `Lo de fuera de Pelagos se leyó hoy a las ${horaCorta(T.leido)}.` : "")
+    : `Lo de fuera de Pelagos no es de hoy: es del ${diaLargo(T.dia)}.`;
+  const medidas = `
+  <section class="card" id="medidas">
+    <h2>Tus medidas de hoy</h2>
+    <div class="cuadros" role="list">${cuadros.join("")}</div>
+    ${T && T.extras.length ? `<div class="extras">${T.extras.map((x) => `<div><b>${esc(x.valor)}</b>${esc(x.nombre)}</div>`).join("")}</div>` : ""}
+    ${sello ? `<p class="small${deHoy ? "" : " viejo"}">${sello}</p>` : ""}
+    ${T ? "" : '<p class="small">Lo que escuchas, tu clase y tus tarjetas todavía no llegan a Pelagos.</p>'}
+  </section>`;
+
+  // ---- El check-in: qué episodio te espera y qué trae.
+  const c = T && T.checkin;
+  const ESTADOS = { nuevo: "Hay un check-in nuevo sin escuchar", oido: "Al corriente: ya lo escuchaste", ninguno: "Todavía no hay check-in hoy" };
+  const checkin = !c ? "" : `
+  <section class="card" id="checkin">
+    <h2>Check-in</h2>
+    <p class="chip ${c.estado}">${esc(deHoy ? ESTADOS[c.estado] : "El último check-in que llegó")}</p>
+    ${c.estado !== "ninguno" && (c.nombre || c.titulo) ? `
+      ${c.nombre ? `<p class="nivelCi">${c.nivel !== null ? `Nivel ${c.nivel} · ` : ""}${esc(c.nombre)}</p>` : ""}
+      ${c.titulo ? `<p class="small">${esc(c.titulo)}${c.minutos ? ` · ${c.minutos} min` : ""}</p>` : ""}
+      ${c.partes.length ? `<ul class="partes">${c.partes.map((x) => `<li class="${x.va ? "va" : "nova"}">${x.va ? ICONO_SI : ICONO_NO}<span>${esc(x.nombre)}</span><span class="sr">${x.va ? ": incluido" : ": no incluido"}</span></li>`).join("")}</ul>` : ""}
+      ${c.falta ? `<p>${esc(c.falta)}</p>` : ""}` : ""}
+  </section>`;
+
   poner(`
-  <section class="card">
-    <h1 class="h">Hoy</h1>
-    ${abierto
-      ? `<p>Tienes un kwiz a medias.</p><div class="go"><a class="ub grande" href="#/kwiz/${esc(abierto.id)}">Seguir el kwiz</a></div>`
-      : `<p>${E.respuestas ? `Llevas ${plural(E.respuestas, "respuesta", "respuestas")} en ${plural(hechos, "kwiz", "kwizzes")}.` : "Todavía no has hecho ningún kwiz aquí."}</p>
-         ${lista.temas.length
-           ? `<div class="go"><button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Kwiz de tu plan Pelagos</button></div>
-              <p class="small">${plural(lista.temas.length, "pregunta", "preguntas")}, una de cada tema de tu plan de estudio${E.enfoque ? `. Enfoque: ${esc(E.enfoque)}` : ""}.</p>`
-           : `<div class="go"><a class="ub grande" href="#/kwiz">Ver los kwizzes</a></div>`}`}
-  </section>
-  <section class="card">
-    <h2>Tu español, por nivel</h2>
-    <p>${total} temas. ${bajo} están bajo la meta de ${meta()}%.</p>
-    <div class="links">${niveles.map((n) => botonNivel(n, false)).join("")}</div>
-  </section>${cuadernos}`,
+  <div class="hoy${retrato ? " confoto" : ""}">
+    ${retrato ? `<div class="fondo"><img data-retrato="${esc(retrato)}" alt="${esc(T.atuendo ? "Andrea hoy: " + T.atuendo : "Andrea hoy")}"></div>` : ""}
+    <div class="sobre">
+      <section class="card">
+        <h1 class="h">Hoy</h1>
+        <p class="fechaHoy">${esc(diaLargo(hoy))}</p>
+        ${retrato && T.atuendo ? `<p class="small">Andrea trae hoy: ${esc(T.atuendo)}.</p>` : ""}
+        ${abierto
+          ? `<p>Tienes un kwiz a medias.</p><div class="go"><a class="ub grande" href="#/kwiz/${esc(abierto.id)}">Seguir el kwiz</a></div>`
+          : `${lista.temas.length
+               ? `<div class="go"><button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Kwiz de tu plan Pelagos</button></div>
+                  <p class="small">${plural(lista.temas.length, "pregunta", "preguntas")}, una de cada tema de tu plan de estudio${E.enfoque ? `. Enfoque: ${esc(E.enfoque)}` : ""}.</p>`
+               : `<div class="go"><a class="ub grande" href="#/kwiz">Ver los kwizzes</a></div>`}
+             <p class="small">${E.respuestas ? `En total llevas ${plural(E.respuestas, "respuesta", "respuestas")} en ${plural(hechos, "kwiz", "kwizzes")}.` : "Todavía no has hecho ningún kwiz aquí."}</p>`}
+      </section>
+      ${checkin}
+      ${medidas}
+      <section class="card" id="niveles">
+        <h2>Tu promedio por nivel</h2>
+        <p>${total} temas. ${bajo} están bajo la meta de ${meta()}%.</p>
+        <div class="links">${niveles.map((n) => botonNivel(n, false)).join("")}</div>
+        <p class="small">Lo calcula Pelagos con lo que contestas aquí. Donde todavía no has contestado, cuenta tu arranque de Kwiziq.</p>
+      </section>${cuadernos}
+    </div>
+  </div>`,
   { nav: "inicio", conserva: o.conserva, pie: "<p>Los porcentajes que dicen «de Kwiziq» son tu arranque: todavía no has contestado ese tema aquí.</p>" });
 }
 
@@ -983,12 +1068,12 @@ A.alCambiar((s) => {
 let ultimaPuesta = 0;
 async function ponerAlDia(repinta) {
   try {
-    const antes = P ? P.huella + "|" + A.sucesos().length : "";
+    const antes = P ? P.huella + "|" + A.sucesos().length + "|" + A.huellaTablero() : "";
     const paquete = await A.sincronizar();
     ultimaPuesta = Date.now();
     ponerPaquete(paquete);
     recalcular();
-    const cambio = antes !== P.huella + "|" + A.sucesos().length;
+    const cambio = antes !== P.huella + "|" + A.sucesos().length + "|" + A.huellaTablero();
     if (repinta && (cambio || !antes)) pintar({ conserva: !!antes });
     A.subir();
     return true;

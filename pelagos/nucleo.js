@@ -22,6 +22,7 @@ export const TOTAL_TEMA = 5;
 export const TOPE_POR_TEMA = 3;
 // La lista de estudio: cuántos temas trae y cuántos aciertos seguidos pide un tema que fallaste para poder salir.
 export const LISTA = 5;
+export const KWIZZES_AL_DIA = 5;                 // la medida diaria de kwizzes
 export const ACIERTOS_PARA_SALIR = 2;
 
 // ---------------------------------------------------------------- El porcentaje
@@ -288,6 +289,47 @@ export function kwizAbierto(estado) {
 export function kwizzesHechos(estado) {
   return [...estado.kwizzes.values()].filter((k) => k.terminado)
     .sort((a, b) => Date.parse(b.terminado) - Date.parse(a.terminado));
+}
+
+/** Cuántos kwizzes terminaste ese día (por la fecha de este aparato). */
+export function kwizzesDelDia(estado, dia = fechaLocal(new Date())) {
+  return kwizzesHechos(estado).filter((k) => fechaLocal(k.terminado) === dia).length;
+}
+
+/**
+ * El tablero del día: lo que Pelagos no puede contar solo (lo que escuchaste, tu clase, tus tarjetas, el check-in).
+ * Lo escribe alguien más en tablero/hoy.json. Aquí solo se revisa su forma; lo que venga mal hecho se tira.
+ * Devuelve { dia, leido, atuendo, foto, medidas, extras, checkin } o null.
+ */
+export function leerTablero(crudo) {
+  if (!crudo || typeof crudo !== "object" || crudo.version !== 1 || !/^\d{4}-\d{2}-\d{2}$/.test(crudo.dia || "")) return null;
+  const texto = (v, tope = 200) => (typeof v === "string" && v.trim() ? v.trim().slice(0, tope) : null);
+  const numero = (v) => (typeof v === "number" && Number.isFinite(v) && v >= 0 ? v : null);
+  const momento = (v) => (typeof v === "string" && !Number.isNaN(Date.parse(v)) ? v : null);
+  const medidas = [];
+  for (const m of Array.isArray(crudo.medidas) ? crudo.medidas.slice(0, 8) : []) {
+    const nombre = texto(m && m.nombre, 60), valor = numero(m && m.valor), de = numero(m && m.de);
+    if (nombre === null || valor === null || de === null) continue;
+    medidas.push({ nombre, valor, de, unidad: texto(m.unidad, 12) || "" });
+  }
+  const extras = [];
+  for (const x of Array.isArray(crudo.extras) ? crudo.extras.slice(0, 6) : []) {
+    const nombre = texto(x && x.nombre, 60), valor = texto(String((x && x.valor) ?? ""), 24);
+    if (nombre !== null && valor !== null) extras.push({ nombre, valor });
+  }
+  let checkin = null;
+  const c = crudo.checkin;
+  if (c && typeof c === "object" && ["nuevo", "oido", "ninguno"].includes(c.estado)) {
+    const partes = [];
+    for (const x of Array.isArray(c.partes) ? c.partes.slice(0, 8) : []) {
+      const nombre = texto(x && x.nombre, 30);
+      if (nombre !== null) partes.push({ nombre, va: x.va === true });
+    }
+    checkin = { estado: c.estado, nivel: numero(c.nivel), nombre: texto(c.nombre, 40), titulo: texto(c.titulo, 120),
+      minutos: numero(c.minutos), partes, falta: texto(c.falta, 400), puesto: momento(c.puesto) };
+  }
+  const foto = typeof crudo.foto === "string" && /^[a-z0-9-]+\.jpg$/.test(crudo.foto) ? crudo.foto : null;
+  return { dia: crudo.dia, leido: momento(crudo.leido), atuendo: texto(crudo.atuendo, 200), foto, medidas, extras, checkin };
 }
 
 /** La pregunta que sigue en un kwiz: { p, orden, total }, o null si ya no quedan. */
