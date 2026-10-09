@@ -1,6 +1,6 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=41a0cdb4d8";
-import * as A from "./almacen.js?v=41a0cdb4d8";
+import * as N from "./nucleo.js?v=095d28c378";
+import * as A from "./almacen.js?v=095d28c378";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -215,9 +215,10 @@ function verNoExiste(mensaje) {
 
 // ---------------------------------------------------------------- La llave
 
+/** El nombre que se le propone a GitHub para la llave. GitHub no deja repetir nombres: lleva el aparato, el día y la hora. */
 function nombreDeLlave() {
-  const clase = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) ? "telefono" : "compu";
-  return "Pelagos " + clase + " " + N.fechaLocal(new Date());
+  const d = new Date(), dos = (n) => String(n).padStart(2, "0");
+  return "Pelagos " + A.aparato() + " " + dos(d.getMonth() + 1) + "-" + dos(d.getDate()) + " " + dos(d.getHours()) + dos(d.getMinutes());
 }
 
 function verLlave(aviso = "") {
