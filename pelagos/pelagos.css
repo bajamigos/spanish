@@ -1,7 +1,9 @@
 /* Pelagos. Una columna del ancho de un teléfono. El marco es el de pelagos.club:
    blanco y negro, botones grises con borde negro, barras negras. La portada Reef es el único color.
-   El texto sobre la foto usa colores fijos porque la foto siempre queda oscura debajo. */
-:root {
+   El texto sobre la portada de una lección o de un kwiz usa colores fijos porque esa foto siempre queda oscura debajo.
+   Hay dos modos, claro y oscuro, que se eligen en Ajustes y cambian todas las páginas de una vez (html[data-tema]).
+   Solo cambian los colores: el acomodo y las transparencias son los mismos en los dos. */
+:root, :root[data-tema="claro"] {
   --page: #ffffff; --card: #f9f9f9; --line: #dddddd;
   --ink: #000000; --ink-2: #3d3d3d; --ink-3: #5c5c5c;
   --btn-top: #f9f9f9; --btn-bot: #e0e0e0; --btn-ink: #2b2b2b; --outline: #000000;
@@ -12,20 +14,30 @@
   --verde: #1e9e57; --ambar: #e3a900; --rojo: #d23b32;
   --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-pen: Georgia, "Times New Roman", serif;
+  /* El vidrio de las tarjetas que van sobre una foto (Hoy y el mapa). */
+  --vidrio: rgba(255,255,255,0.55); --vidrio-2: rgba(255,255,255,0.4); --vidrio-mapa: rgba(255,255,255,0.36);
+  --vidrio-borde: rgba(0,0,0,0.28); --vidrio-luz: rgba(255,255,255,0.6); --vidrio-sombra: rgba(0,0,0,0.28);
+  --halo: 0 1px 5px rgba(255,255,255,0.9);
+  /* Los seis colores del mapa, del más bajo al más alto, y el color de su letra. */
+  --k0: rgba(168,58,18,0.9); --k1: rgba(226,89,31,0.9); --k2: rgba(245,166,124,0.9); --k3: rgba(169,205,245,0.9); --k4: rgba(91,157,230,0.9); --k5: rgba(31,95,181,0.9);
+  --t0: #ffffff; --t1: #000000; --t2: #000000; --t3: #000000; --t4: #000000; --t5: #ffffff;
   color-scheme: light;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --page: #0b0b0b; --card: #171716; --line: #383835;
-    --ink: #ffffff; --ink-2: #d6d5cf; --ink-3: #b3b2ab;
-    --btn-top: #333331; --btn-bot: #1f1f1e; --btn-ink: #f2f2f2; --outline: #9a9a94;
-    --shadow: rgba(0,0,0,0.6); --bar: #ffffff; --bar-bg: #2e2e2c;
-    --tab: #f2f2f2; --tab-ink: #111111;
-    --mark: #5c4500; --mark-ink: #ffeeb0;
-    --no: #ff9d93; --si: #7fdca6; --pen: #ff9d93;
-    --verde: #46d98a; --ambar: #ffd24a; --rojo: #ff6b62;
-    color-scheme: dark;
-  }
+:root[data-tema="oscuro"] {
+  --page: #0b0b0b; --card: #171716; --line: #383835;
+  --ink: #ffffff; --ink-2: #d6d5cf; --ink-3: #b3b2ab;
+  --btn-top: #333331; --btn-bot: #1f1f1e; --btn-ink: #f2f2f2; --outline: #9a9a94;
+  --shadow: rgba(0,0,0,0.6); --bar: #ffffff; --bar-bg: #2e2e2c;
+  --tab: #f2f2f2; --tab-ink: #111111;
+  --mark: #5c4500; --mark-ink: #ffeeb0;
+  --no: #ff9d93; --si: #7fdca6; --pen: #ff9d93;
+  --verde: #46d98a; --ambar: #ffd24a; --rojo: #ff6b62;
+  --vidrio: rgba(10,10,10,0.5); --vidrio-2: rgba(0,0,0,0.28); --vidrio-mapa: rgba(10,10,10,0.3);
+  --vidrio-borde: rgba(255,255,255,0.28); --vidrio-luz: rgba(255,255,255,0.12); --vidrio-sombra: rgba(0,0,0,0.45);
+  --halo: 0 1px 6px rgba(0,0,0,0.7);
+  --k0: rgba(255,138,82,0.88); --k1: rgba(217,89,38,0.88); --k2: rgba(168,86,47,0.88); --k3: rgba(28,63,112,0.88); --k4: rgba(47,111,196,0.88); --k5: rgba(127,182,255,0.88);
+  --t0: #000000; --t1: #000000; --t2: #ffffff; --t3: #ffffff; --t4: #ffffff; --t5: #000000;
+  color-scheme: dark;
 }
 
 html { -webkit-text-size-adjust: 100%; }
@@ -260,18 +272,11 @@ dialog.sheet::backdrop { background: rgba(0,0,0,0.5); }
 .sheet .sc { display: grid; gap: 4px; font-size: 14px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
 .sheet .acts { display: flex; flex-wrap: wrap; gap: 8px; }
 
-/* ---- La página de Hoy. Con el retrato de Andrea, la página entera se oscurece (como las tarjetas Reef):
-   la foto queda fija al fondo y las tarjetas son de vidrio oscuro, para que ella se siga viendo al bajar.
-   Los colores son fijos porque debajo siempre hay foto o fondo oscuro. */
-body.conandrea {
-  --page: #0b0b0b; --card: #171716; --line: #383835;
-  --ink: #ffffff; --ink-2: #ececec; --ink-3: #d2d2d2;
-  --btn-top: #333331; --btn-bot: #1f1f1e; --btn-ink: #f2f2f2; --outline: #9a9a94;
-  --shadow: rgba(0,0,0,0.6); --bar: #ffffff; --bar-bg: rgba(255,255,255,0.2);
-  --tab: #f2f2f2; --tab-ink: #111111; --no: #ffb3ab; --si: #8ff0b8; --pen: #ffb3ab;
-  --verde: #46d98a; --ambar: #ffd24a; --rojo: #ff6b62;
-  color-scheme: dark;
-}
+/* ---- La página de Hoy. Con el retrato de Andrea, la foto queda fija al fondo y las tarjetas son de vidrio
+   (oscuro o claro, según el modo), para que ella se siga viendo al bajar.
+   Sobre una foto el texto secundario va un poco más marcado, para que se lea. */
+body.conandrea { --ink-2: #1c1c1c; --ink-3: #333333; --bar-bg: rgba(0,0,0,0.16); }
+:root[data-tema="oscuro"] body.conandrea { --ink-2: #ececec; --ink-3: #d2d2d2; --bar-bg: rgba(255,255,255,0.2); --no: #ffb3ab; --si: #8ff0b8; --pen: #ffb3ab; }
 .hoy { position: relative; }
 .hoy .fondo { display: none; }
 .hoy .sobre { position: relative; z-index: 1; display: grid; gap: 14px; }
@@ -281,20 +286,19 @@ body.conandrea {
 #arranque { grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; }
 .ub.redondo { width: 44px; min-height: 44px; padding: 0; border-radius: 50%; }
 .ub.redondo svg { width: 22px; height: 22px; }
-.hoy.confoto .ub.redondo { background: rgba(0,0,0,0.28); color: #ffffff; border-color: rgba(255,255,255,0.45); box-shadow: none; }
+.hoy.confoto .ub.redondo { background: var(--vidrio-2); color: var(--ink); border-color: var(--vidrio-borde); box-shadow: none; }
 
 .hoy.confoto .fondo { display: block; position: sticky; top: 0; z-index: 0; margin-inline: -16px; }
-.hoy.confoto .fondo img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: center top; background: #151515; }
-.hoy.confoto .fondo::after { content: ""; position: absolute; inset: auto 0 0 0; height: 30%; background: linear-gradient(to bottom, rgba(11,11,11,0), #0b0b0b); }
+.hoy.confoto .fondo img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: center top; background: var(--card); }
+.hoy.confoto .fondo::after { content: ""; position: absolute; inset: auto 0 0 0; height: 30%; background: linear-gradient(to bottom, transparent, var(--page)); }
 .hoy.confoto .sobre { margin-top: -20%; gap: 18px; }
-.hoy.confoto .card { background: rgba(10,10,10,0.5); border: 1px solid rgba(255,255,255,0.22); border-radius: 16px;
+.hoy.confoto .card { background: var(--vidrio); border: 1px solid var(--vidrio-borde); border-radius: 16px;
   -webkit-backdrop-filter: blur(5px) saturate(1.15); backdrop-filter: blur(5px) saturate(1.15);
-  box-shadow: 0 10px 28px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.12); text-shadow: 0 1px 6px rgba(0,0,0,0.7); }
+  box-shadow: 0 10px 28px var(--vidrio-sombra), inset 0 1px 0 var(--vidrio-luz); text-shadow: var(--halo); }
 .hoy.confoto .card h2 { font-size: 17px; }
-.hoy.confoto .cuadro { background: rgba(0,0,0,0.28); border-color: rgba(255,255,255,0.3); border-radius: 12px; }
-.hoy.confoto .tb { background: rgba(0,0,0,0.28); border-color: rgba(255,255,255,0.3); border-radius: 12px; box-shadow: none; color: #ffffff; }
-.hoy.confoto .ub.grande { background: #ffffff; color: #111111; border-color: #ffffff; text-shadow: none; box-shadow: 0 4px 14px rgba(0,0,0,0.5); }
-.hoy.confoto .tic { stroke: #0b0b0b; }
+.hoy.confoto .cuadro { background: var(--vidrio-2); border-color: var(--vidrio-borde); border-radius: 12px; }
+.hoy.confoto .tb { background: var(--vidrio-2); border-color: var(--vidrio-borde); border-radius: 12px; box-shadow: none; color: var(--ink); }
+.hoy.confoto .ub.grande { background: var(--ink); color: var(--page); border-color: var(--ink); text-shadow: none; box-shadow: 0 4px 14px var(--vidrio-sombra); }
 
 .cuadros { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
 .cuadro { display: grid; gap: 6px; align-content: start; border: 1px solid var(--outline); border-radius: 6px; padding: 10px; background: var(--page); }
@@ -323,15 +327,13 @@ ul.partes li.nova { color: var(--ink-3); border-style: dashed; font-weight: 600;
 .tic { stroke: var(--page); }
 
 /* ---- El mapa de árbol. Una tarjeta de vidrio por nivel, con la portada Reef del día fija al fondo.
-   Cada cuadro es un tema; el color dice en qué franja va. Los colores son fijos porque el fondo siempre es oscuro. */
-.mapa { --k0: rgba(255,138,82,0.88); --k1: rgba(217,89,38,0.88); --k2: rgba(168,86,47,0.88); --k3: rgba(28,63,112,0.88); --k4: rgba(47,111,196,0.88); --k5: rgba(127,182,255,0.88);
-  --t0: #000000; --t1: #000000; --t2: #ffffff; --t3: #ffffff; --t4: #ffffff; --t5: #000000; }
+   Cada cuadro es un tema; el color dice en qué franja va (--k0 a --k5, arriba, uno por modo). */
 .hoy.mapa.confoto .fondo img { aspect-ratio: auto; height: 100vh; height: 100dvh; object-position: center; }
 .hoy.mapa.confoto .fondo::after { display: none; }
 .hoy.mapa.confoto .sobre { margin-top: -46vh; gap: 16px; }
 .hoy.mapa .card { padding: 10px 8px 8px; gap: 8px; }
 /* Sin desenfoque: la foto se tiene que seguir viendo entre los cuadros. */
-.hoy.mapa.confoto .card { background: rgba(10,10,10,0.3); -webkit-backdrop-filter: none; backdrop-filter: none; }
+.hoy.mapa.confoto .card { background: var(--vidrio-mapa); -webkit-backdrop-filter: none; backdrop-filter: none; }
 .hoy.mapa .card h2 { display: flex; align-items: center; gap: 8px; padding-inline: 4px; font-size: 18px; }
 .hoy.mapa .card h2 .lv { font-size: 14px; padding: 1px 7px; }
 .hoy.mapa .card h2 .mpc { margin-left: auto; font-variant-numeric: tabular-nums; }
@@ -342,7 +344,7 @@ ul.partes li.nova { color: var(--ink-3); border-style: dashed; font-weight: 600;
 .mcuerpo { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; gap: 2px; }
 .mfila { flex: 1 1 0; min-height: 0; display: flex; gap: 2px; }
 .mc { flex: 1 1 0; min-width: 0; min-height: 0; margin: 0; padding: 0; border: 0; border-radius: 4px; overflow: hidden; cursor: pointer;
-  font: inherit; font-size: 12px; line-height: 1.15; text-shadow: none; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.22); color: #ffffff; }
+  font: inherit; font-size: 12px; line-height: 1.15; text-shadow: none; display: flex; align-items: center; justify-content: center; background: var(--vidrio-2); color: var(--ink); }
 .mc.vacio { visibility: hidden; cursor: default; }
 .mc.k0 { background: var(--k0); color: var(--t0); } .mc.k1 { background: var(--k1); color: var(--t1); } .mc.k2 { background: var(--k2); color: var(--t2); }
 .mc.k3 { background: var(--k3); color: var(--t3); } .mc.k4 { background: var(--k4); color: var(--t4); } .mc.k5 { background: var(--k5); color: var(--t5); }
@@ -353,7 +355,7 @@ ul.partes li.nova { color: var(--ink-3); border-style: dashed; font-weight: 600;
 .mc.m2 b { font-size: 17px; line-height: 1.1; }
 .mc .mt { display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; font-size: 11.5px; line-height: 13px; font-style: normal; overflow-wrap: anywhere; -webkit-line-clamp: 1; line-clamp: 1; }
 .mc .mt.r2 { -webkit-line-clamp: 2; line-clamp: 2; } .mc .mt.r3 { -webkit-line-clamp: 3; line-clamp: 3; } .mc .mt.r4 { -webkit-line-clamp: 4; line-clamp: 4; }
-.mc:focus-visible { outline: 3px solid #ffffff; outline-offset: -3px; }
+.mc:focus-visible { outline: 3px solid var(--ink); outline-offset: -3px; }
 ul.clave { list-style: none; margin: 0; padding: 2px 4px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 14px; font-size: 15px; }
 ul.clave li { display: grid; grid-template-columns: 22px minmax(0, 1fr) auto; gap: 8px; align-items: center; }
 ul.clave .mc { display: block; flex: none; width: 22px; height: 22px; cursor: default; }

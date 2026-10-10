@@ -1,6 +1,6 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=a80e863a7a";
-import * as A from "./almacen.js?v=a80e863a7a";
+import * as N from "./nucleo.js?v=dd9bdeeb1c";
+import * as A from "./almacen.js?v=dd9bdeeb1c";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1185,6 +1185,13 @@ function verAjustes(o) {
     <div class="go"><button type="button" class="ub" id="ajAlDia">Poner al día ahora</button></div>
     <p class="small" id="ajAviso" role="status" hidden></p>
   </section>
+  <section class="card" id="ajTema">
+    <h2>Colores</h2>
+    <nav class="jump dos" aria-label="Modo de color">
+      <button type="button" data-tema-ir="claro">Claro</button><button type="button" data-tema-ir="oscuro">Oscuro</button>
+    </nav>
+    <p class="small">Cambia todas las páginas de una vez. Se guarda en este aparato.</p>
+  </section>
   <section class="card" id="ajApp">
     <h2>Pelagos como app</h2>
     ${yaEsApp()
@@ -1216,6 +1223,12 @@ function verAjustes(o) {
     if ($("ajAviso")) { $("ajAviso").hidden = false; $("ajAviso").textContent = bien ? "Listo, al día." : "No se pudo. Revisa la conexión."; }
   });
   $("ajRecargar").addEventListener("click", () => { ir("/", true); window.location.reload(); });
+  // Claro u oscuro: cambia todas las páginas de una vez. Solo cambian los colores.
+  const marcarTema = () => { for (const b of vista.querySelectorAll("[data-tema-ir]")) b.setAttribute("aria-current", b.dataset.temaIr === document.documentElement.dataset.tema ? "page" : "false"); };
+  for (const b of vista.querySelectorAll("[data-tema-ir]")) {
+    b.addEventListener("click", () => { document.documentElement.dataset.tema = b.dataset.temaIr; guardar("pelagos.tema", b.dataset.temaIr); marcarTema(); });
+  }
+  marcarTema();
   if ($("ajInstalar")) $("ajInstalar").addEventListener("click", async () => {
     if (!ofertaDeInstalar) return;
     const oferta = ofertaDeInstalar;
