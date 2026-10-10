@@ -1,6 +1,6 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=03224c9c69";
-import * as A from "./almacen.js?v=03224c9c69";
+import * as N from "./nucleo.js?v=35e5100a85";
+import * as A from "./almacen.js?v=35e5100a85";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -512,6 +512,7 @@ function verInicio(o) {
             ? `<button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Pelagos Quiz</button>`
             : `<a class="ub grande" href="#${QUIZ}">Ver los quizzes</a>`}</div>
       </section>
+      ${deHoy && T.frase ? `<section class="card" id="frase"><h2 class="sr">Andrea dice</h2><p class="frase">${esc(T.frase)}</p></section>` : ""}
       ${checkin}
       ${medidas}
       <section class="card" id="niveles">

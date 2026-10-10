@@ -585,7 +585,8 @@ export function leerTablero(crudo) {
       minutos: numero(c.minutos), partes, falta: texto(c.falta, 400), puesto: momento(c.puesto) };
   }
   const foto = typeof crudo.foto === "string" && /^[a-z0-9-]+\.jpg$/.test(crudo.foto) ? crudo.foto : null;
-  return { dia: crudo.dia, leido: momento(crudo.leido), atuendo: texto(crudo.atuendo, 200), foto, medidas, extras, checkin };
+  // «frase»: la línea del día de Andrea, coqueta y con tus números de esa lectura.
+  return { dia: crudo.dia, leido: momento(crudo.leido), atuendo: texto(crudo.atuendo, 200), foto, frase: texto(crudo.frase, 240), medidas, extras, checkin };
 }
 
 /** La pregunta que sigue en un kwiz: { p, orden, total }, o null si ya no quedan. */
