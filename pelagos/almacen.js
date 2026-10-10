@@ -8,7 +8,7 @@
 // - Lo que contestas entra primero a una fila en este aparato y de ahí sube.
 //   Sin internet, la fila espera y sube sola cuando vuelve.
 // - La llave vive solo en este navegador y solo viaja a la dirección de CONFIG.api.
-import { CONFIG } from "./config.js?v=9a43f5a7a1";
+import { CONFIG } from "./config.js?v=9310708d21";
 
 const CLAVES = { llave: "pelagos.llave", aparato: "pelagos.aparato", fila: "pelagos.fila." };      // la fila: una clave por suceso
 const RUTA_SUCESOS = /^sucesos\/([A-Za-z0-9_-]+)\/(\d{4}-\d{2})\.jsonl$/;
@@ -634,6 +634,18 @@ export async function escenaSubir(sala, archivo, desc = "") {
 export async function escenaQuitar(sala, archivo) {
   if (!salaBuena(sala)) return [];
   const lista = await escribirIndiceEscenas(sala, (items) => items.filter((x) => x.archivo !== archivo));
+  return lista.sort((a, b) => (a.orden || 0) - (b.orden || 0));
+}
+
+/** Cambia el orden de las escenas de un lugar: `archivos` es la lista de nombres en el orden nuevo. */
+export async function escenaOrdenar(sala, archivos) {
+  if (!salaBuena(sala) || !Array.isArray(archivos)) return [];
+  const lista = await escribirIndiceEscenas(sala, (items) => {
+    const pos = new Map(archivos.map((a, i) => [a, i]));
+    items.sort((a, b) => (pos.has(a.archivo) ? pos.get(a.archivo) : 1e6 + (a.orden || 0)) - (pos.has(b.archivo) ? pos.get(b.archivo) : 1e6 + (b.orden || 0)));
+    items.forEach((x, i) => { x.orden = i + 1; });
+    return items;
+  });
   return lista.sort((a, b) => (a.orden || 0) - (b.orden || 0));
 }
 

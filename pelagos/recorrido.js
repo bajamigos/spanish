@@ -484,7 +484,8 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
     const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
     $("recHojaC").innerHTML = `<h2>Cinemáticas de «${esc(actual.titulo)}»</h2>
       <p class="rec-nota" role="status">${esc(aviso || error)}</p>
-      <ol class="rec-lista">${lista.map((x, i) => `<li>${i + 1}. ${esc(x.desc || "Sin descripción")} <button type="button" class="rec-b" data-quitar="${esc(x.archivo)}">Quitar</button></li>`).join("") || "<li>Todavía no hay escenas aquí.</li>"}</ol>
+      ${lista.length > 1 ? '<p class="rec-nota">Para cambiar el orden, arrastra ☰ o usa ▲ ▼.</p>' : ""}
+      <ol class="rec-lista rec-orden">${lista.map((x, i) => `<li data-archivo="${esc(x.archivo)}"><span class="rec-asa" aria-hidden="true">☰</span><span class="rec-esc-t">${i + 1}. ${esc(x.desc || "Sin descripción")}</span>${lista.length > 1 ? `<button type="button" class="rec-b rec-mini" data-subir="${i}" aria-label="Subir la ${i + 1}" ${i === 0 ? "disabled" : ""}>▲</button><button type="button" class="rec-b rec-mini" data-bajar="${i}" aria-label="Bajar la ${i + 1}" ${i === lista.length - 1 ? "disabled" : ""}>▼</button>` : ""}<button type="button" class="rec-b rec-mini" data-quitar="${esc(x.archivo)}">Quitar</button></li>`).join("") || "<li>Todavía no hay escenas aquí.</li>"}</ol>
       ${lista.length ? '<p><button type="button" class="rec-b" id="recEscVer">▶ Ver la escena</button></p>' : ""}
       <p><label>Descripción en palabras (opcional)<br><input type="text" id="recEscDesc" maxlength="600"></label></p>
       <p><label class="rec-b">＋ Subir GIF, imagen o video<input type="file" id="recEscArch" accept=".gif,.webp,.png,.jpg,.jpeg,.mp4,.webm,image/*,video/*" hidden></label></p>
@@ -501,8 +502,50 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
     if (!(ev.target instanceof Element)) return;
     if (ev.target.closest("#recEscVer")) { cerrarHoja(); const it = await itemsDe(actual.id); if (it.length) await reproducir(it); return; }
     const q = ev.target.closest("[data-quitar]");
-    if (q && escenas) { await escenas.quitar(actual.id, q.dataset.quitar).catch(() => {}); pintarEscenas("Quitada de la lista."); }
+    if (q && escenas) { await escenas.quitar(actual.id, q.dataset.quitar).catch(() => {}); pintarEscenas("Quitada de la lista."); return; }
+    const sube = ev.target.closest("[data-subir]"), baja = ev.target.closest("[data-bajar]");
+    if ((sube || baja) && escenas && escenas.ordenar) {
+      const orden = Array.from($("recHojaC").querySelectorAll(".rec-orden li[data-archivo]")).map((li) => li.dataset.archivo);
+      const i = Number((sube || baja).dataset[sube ? "subir" : "bajar"]), j = sube ? i - 1 : i + 1;
+      if (j < 0 || j >= orden.length) return;
+      [orden[i], orden[j]] = [orden[j], orden[i]];
+      await guardarOrden(orden, "Ahora es la " + (j + 1) + ".");
+    }
   });
+  // Ordenar arrastrando: se toma la escena por ☰ y se suelta donde va (sirve con mouse y con el dedo)
+  async function guardarOrden(orden, aviso) {
+    try { await escenas.ordenar(actual.id, orden); pintarEscenas(aviso || "Orden guardado."); }
+    catch (e) { pintarEscenas("No se pudo guardar el orden: " + (e && e.message ? e.message : "")); }
+  }
+  let arrastre = null;
+  $("recHojaC").addEventListener("pointerdown", (ev) => {
+    const asa = ev.target instanceof Element && ev.target.closest(".rec-asa");
+    if (!asa || !escenas || !escenas.ordenar) return;
+    const li = asa.closest("li[data-archivo]"), ol = li && li.parentElement;
+    if (!li || !ol || ol.children.length < 2) return;
+    ev.preventDefault();
+    arrastre = { li, ol, id: ev.pointerId, antes: Array.from(ol.children).map((x) => x.dataset.archivo).join(",") };
+    li.classList.add("rec-arrastrando");
+    try { asa.setPointerCapture(ev.pointerId); } catch { /* sin captura igual funciona */ }
+  });
+  $("recHojaC").addEventListener("pointermove", (ev) => {
+    if (!arrastre || ev.pointerId !== arrastre.id) return;
+    ev.preventDefault();
+    const { li, ol } = arrastre;
+    const otros = Array.from(ol.children).filter((x) => x !== li);
+    const sig = otros.find((x) => { const r = x.getBoundingClientRect(); return ev.clientY < r.top + r.height / 2; });
+    if (sig) { if (li.nextElementSibling !== sig) ol.insertBefore(li, sig); } else if (ol.lastElementChild !== li) ol.appendChild(li);
+  });
+  const soltarEscena = async (ev) => {
+    if (!arrastre || ev.pointerId !== arrastre.id) return;
+    const { li, ol, antes } = arrastre; arrastre = null;
+    li.classList.remove("rec-arrastrando");
+    const orden = Array.from(ol.children).map((x) => x.dataset.archivo);
+    if (orden.join(",") !== antes) await guardarOrden(orden, "Orden guardado: ahora es la " + (orden.indexOf(li.dataset.archivo) + 1) + ".");
+  };
+  // En el documento: al mover el renglón, el asa pierde la captura y el dedo puede soltarse fuera de la hoja
+  document.addEventListener("pointerup", soltarEscena);
+  document.addEventListener("pointercancel", soltarEscena);
   $("recHojaC").addEventListener("change", async (ev) => {
     const t = ev.target;
     if (!(t instanceof HTMLInputElement) || t.id !== "recEscArch" || !t.files || !t.files.length || !escenas) return;

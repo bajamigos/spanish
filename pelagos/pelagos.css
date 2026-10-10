@@ -525,6 +525,11 @@ ul.hclave .hc { width: 15px; height: 15px; border-radius: 3px; }
 .rec-barra { position: absolute; left: 12px; right: 12px; bottom: max(12px, env(safe-area-inset-bottom)); display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
 .rec-barra .rec-b { flex: 1 1 28%; max-width: 150px; }
 .rec-barra .rec-b[aria-pressed="true"] { background: #f2b441; color: #1a1208; border-color: #1a1208; }
+.rec-orden li { display: flex; align-items: center; gap: 6px; padding: 6px 0; }
+.rec-orden .rec-esc-t { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.rec-orden .rec-asa { cursor: grab; touch-action: none; user-select: none; font-size: 22px; padding: 6px 10px; }
+.rec-orden li.rec-arrastrando { opacity: .6; outline: 2px dashed #f2b441; }
+.rec-lista .rec-b.rec-mini { width: auto; min-width: 44px; padding: 0 10px; justify-content: center; }
 .rec-barra .rec-b.rec-b-dest { border-color: #f2b441; color: #f2b441; }   /* «🎞 Cinemáticas» resaltado en los cuartos de misión */
 .rec-hoja { position: absolute; left: 0; right: 0; bottom: 0; z-index: 8; max-height: 74%; overflow: auto; box-sizing: border-box;
   padding: 16px 16px calc(max(16px, env(safe-area-inset-bottom)) + 8px); border-radius: 18px 18px 0 0; border-top: 2px solid rgba(255,255,255,0.4);

@@ -1,7 +1,7 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=9a43f5a7a1";
-import * as A from "./almacen.js?v=9a43f5a7a1";
-import { abrirRecorrido } from "./recorrido.js?v=9a43f5a7a1";
+import * as N from "./nucleo.js?v=9310708d21";
+import * as A from "./almacen.js?v=9310708d21";
+import { abrirRecorrido } from "./recorrido.js?v=9310708d21";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -357,7 +357,7 @@ function verRecorrido(o, id) {
     bajarFoto: (nombre) => A.foto(FOTOS.get(nombre), CARPETA),
     hojaMision,
     tinte,
-    escenas: { listar: (sala) => A.escenasDe(sala), subir: (sala, f, d) => A.escenaSubir(sala, f, d), quitar: (sala, a) => A.escenaQuitar(sala, a), url: (sala, x) => A.escenaUrl(sala, x), gif: (sala, x) => A.escenaGif(sala, x) },
+    escenas: { listar: (sala) => A.escenasDe(sala), subir: (sala, f, d) => A.escenaSubir(sala, f, d), quitar: (sala, a) => A.escenaQuitar(sala, a), ordenar: (sala, l) => A.escenaOrdenar(sala, l), url: (sala, x) => A.escenaUrl(sala, x), gif: (sala, x) => A.escenaGif(sala, x) },
     esDeNoche: () => { const h = new Date().getHours(); return h >= 19 || h < 6; },
     escenaVista: (id) => (guardado("pelagos.escenas") || "").split(",").includes(id),
     escenaMarcar: (id) => { const v = (guardado("pelagos.escenas") || "").split(",").filter(Boolean); if (!v.includes(id)) guardar("pelagos.escenas", [...v, id].join(",")); },
