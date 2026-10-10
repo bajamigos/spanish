@@ -1,6 +1,6 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=ae467d263e";
-import * as A from "./almacen.js?v=ae467d263e";
+import * as N from "./nucleo.js?v=a80e863a7a";
+import * as A from "./almacen.js?v=a80e863a7a";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -51,6 +51,7 @@ let tarjetas = new Map();     // tarjeta por id
 let enPregunta = false;       // hay una pregunta en pantalla: no se repinta debajo de ti
 let turnoDePintar = 0;        // para que una lección que llega tarde no pise otra página
 let teclas = null;            // qué hacen las teclas B y M en la pantalla de ahora
+let toque = null;             // qué hace un toque en cualquier parte de la pantalla de ahora (destapar una tarjeta)
 
 function ponerPaquete(paquete) {
   P = { ...paquete, enlaces: paquete.enlaces || [], cuadernos: paquete.cuadernos || [], fotos: paquete.fotos || [], tarjetas: paquete.tarjetas || [] };
@@ -138,6 +139,7 @@ function poner(html, { titulo: t = "Pelagos", pie = "", nav = "", conserva = fal
   delete vista.dataset.leccion;
   enPregunta = false;
   teclas = null;
+  toque = null;
   vista.innerHTML = html;
   $("pie").innerHTML = pie;
   document.title = t;
@@ -594,7 +596,10 @@ window.addEventListener("resize", () => {
 
 let enTarjetaDe = null;       // la tarjeta que está en pantalla: no se repinta debajo de ti
 
-/** Tu mazo. Sale una tarjeta a la vez: el frente en inglés, tú lo dices o lo escribes en español, y te calificas. */
+/**
+ * Tu mazo. Sale una tarjeta a la vez: el frente en inglés. Lo dices en español, tocas en cualquier parte para ver
+ * la respuesta y te calificas con «Mal» o «Bien», que están siempre en el mismo lugar. Al calificar sale la siguiente.
+ */
 function verTarjetas(o) {
   if (o.conserva && enTarjetaDe) { enPregunta = true; return; }
   const hoy = N.fechaLocal(new Date());
@@ -616,115 +621,57 @@ function verTarjetas(o) {
 
   poner(`
   <section class="kw tj">
-    <header class="hero kwh">
+    <header class="hero kwh tjh">
       <div class="ratio"></div>
       ${foto ? `<img data-foto="${esc(foto.nombre)}" alt="">` : ""}
       <div class="over">
-        <p class="lead"><span id="tjFaltan">${dia.pendientes.length === 1 ? "Falta 1" : "Faltan " + dia.pendientes.length}</span><span>Dilo en español</span></p>
+        <p class="lead"><span id="tjFaltan">${dia.pendientes.length === 1 ? "Falta 1" : "Faltan " + dia.pendientes.length}</span><span id="tjAviso">Dilo en español</span></p>
         <div class="score"><div class="track" role="img" aria-label="Llevas ${dia.hechasHoy} de ${total}"><i data-w="${100 * dia.hechasHoy / total}"></i></div></div>
         <h1 class="cue" id="cue" lang="en">${esc(c.frente)}</h1>
       </div>
+      <div class="rule tjResp" id="tjResp" tabindex="-1" aria-live="polite" hidden>
+        <ul class="exs"><li class="ex" data-di="${esc(c.reverso)}"><span class="es" id="vResp">${esc(c.reverso)}</span>${c.nota ? `<span class="en" lang="es">${esc(c.nota)}</span>` : ""}</li></ul>
+        ${c.tambien_vale && c.tambien_vale.length ? `<p class="small">También vale: ${esc(c.tambien_vale.join(" · "))}</p>` : ""}
+      </div>
     </header>
-    <div class="card" id="controles">
-      <nav class="jump dos" aria-label="Cómo contestas">
-        <button type="button" id="modoEscribir">Escribir</button><button type="button" id="modoDecir">Decir en voz alta</button>
-      </nav>
-      <div id="zonaEscribir">
-        <label class="small" for="campo">Tu respuesta</label>
-        <input id="campo" class="campo" type="text" lang="es" aria-describedby="cue" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="send">
-        <div class="teclas" role="group" aria-label="Letras con acento">${["á", "é", "í", "ó", "ú", "ñ", "ü", "¿", "¡"].map((x) => `<button type="button" class="tecla" data-c="${x}">${x}</button>`).join("")}</div>
-        <div class="go"><button type="button" class="ub" id="noSe1">No sé</button><button type="button" class="ub grande" id="revisar">Revisar</button></div>
-      </div>
-      <div id="zonaDecir" hidden>
-        <p>Dilo en voz alta. Luego mira la respuesta y califícate.</p>
-        <div class="go"><button type="button" class="ub" id="noSe2">No sé</button><button type="button" class="ub grande" id="ver">Ver la respuesta</button></div>
-      </div>
-    </div>
-    <div class="card" id="veredicto" tabindex="-1" hidden>
-      <p><span class="pill" id="vPill"></span></p>
-      <div class="go arriba" id="vJuicio" hidden><button type="button" class="ub grande" id="jMal">Mal</button><button type="button" class="ub grande" id="jBien">Bien</button></div>
-      <div class="go arriba" id="vSeguir" hidden><button type="button" class="ub grande" id="siguiente">Siguiente</button></div>
-      <p class="vtuya" id="vTuya" hidden></p>
-      <ul class="exs"><li class="ex" data-di="${esc(c.reverso)}"><span class="es" id="vResp">${esc(c.reverso)}</span>${c.nota ? `<span class="en" lang="es">${esc(c.nota)}</span>` : ""}</li></ul>
-      ${c.tambien_vale && c.tambien_vale.length ? `<p class="small">También vale: ${esc(c.tambien_vale.join(" · "))}</p>` : ""}
-      <p class="small" id="vVuelve" hidden></p>
+    <div class="tjZona">
+      <p class="tjToca" id="tjToca">Toca para ver la respuesta</p>
+      <div class="tjBotones" id="tjBotones" role="group" aria-label="¿La supiste?" hidden><button type="button" class="ub" id="jMal">Mal</button><button type="button" class="ub" id="jBien">Bien</button></div>
     </div>
   </section>`,
-  { titulo: "Tarjetas · Pelagos", nav: "tarjetas", pie: "<p>Cada tarjeta que calificas se guarda al momento. La que fallas vuelve a salir hoy.</p>" });
+  { titulo: "Tarjetas · Pelagos", nav: "tarjetas" });
   enPregunta = true;
   enTarjetaDe = c.id;
 
-  let contestada = false, escrito = null, modo = "escribir";
-  const campo = $("campo");
+  // Dos toques seguidos no deben contar dos veces: el segundo toque de «Bien» no destapa la tarjeta nueva,
+  // y el toque que destapa no califica si cae justo donde aparecen los botones.
+  const ESPERA = 350;
+  const pintadaEn = Date.now();
+  let destapadaEn = 0, calificada = false;
 
-  function veredicto(d) {
-    $("veredicto").hidden = false;
-    $("controles").hidden = true;
-    const pill = $("vPill");
-    pill.className = "pill " + (d.juicio ? "duda" : d.bien ? "bien" : "mal");
-    pill.textContent = d.juicio ? "Tú decides" : d.bien ? (d.casi ? "Bien, pero revisa los acentos" : "Bien") : "Mal";
-    const tuya = $("vTuya");
-    tuya.hidden = !escrito || (d.bien && !d.casi);
-    tuya.textContent = escrito ? "Tu respuesta: " + escrito : "";
-    tuya.classList.toggle("mal", !d.juicio && !d.bien);
-    $("vJuicio").hidden = !d.juicio;
-    $("vSeguir").hidden = !!d.juicio;
-    $("veredicto").focus({ preventScroll: true });
-    $("veredicto").scrollIntoView({ block: "nearest" });
-    if (d.juicio) { teclas = { b: () => apuntar(true), m: () => apuntar(false) }; return; }
-    const ahora = E.tarjetas.get(c.id), quedan = N.tarjetasDelDia(P, E, hoy).pendientes.length;
-    $("vVuelve").hidden = false;
-    $("vVuelve").textContent = d.bien ? "Vuelve el " + fecha(ahora.toca) + "." : "Vuelve a salir hoy.";
-    $("tjFaltan").textContent = quedan === 0 ? "En cero" : quedan === 1 ? "Falta 1" : "Faltan " + quedan;
-    $("siguiente").textContent = quedan ? "Siguiente" : "Terminar";
-    teclas = { enter: avanzar };
+  function destapar(conTecla = false) {
+    if (destapadaEn || (!conTecla && Date.now() - pintadaEn < ESPERA)) return;
+    destapadaEn = Date.now();
+    toque = null;
+    $("tjResp").hidden = false;
+    $("tjToca").hidden = true;
+    $("tjBotones").hidden = false;
+    $("tjAviso").textContent = "¿La supiste?";
+    $("tjResp").focus({ preventScroll: true });
+    teclas = { b: () => calificar(true, true), m: () => calificar(false, true) };
   }
-  function avanzar() { enTarjetaDe = null; pintar(); }
-  function apuntar(bien, casi = false) {
-    if (contestada) return;
-    contestada = true;
-    A.apuntar({ t: "tj", id: N.nuevoId("t"), tarjeta: c.id, cuando: new Date().toISOString(), bien: bien ? 1 : 0, modo, escrito: escrito || null });
+  function calificar(bien, conTecla = false) {
+    if (calificada || !destapadaEn || (!conTecla && Date.now() - destapadaEn < ESPERA)) return;
+    calificada = true;
+    A.apuntar({ t: "tj", id: N.nuevoId("t"), tarjeta: c.id, cuando: new Date().toISOString(), bien: bien ? 1 : 0, modo: "tocar" });
     recalcular();
-    veredicto({ bien, casi });
+    enTarjetaDe = null;
+    pintar();        // sin paso intermedio: sale la siguiente, o «Tarjetas en cero»
   }
-
-  const ponerModo = (m) => {
-    modo = m;
-    guardar("pelagos.modo", m);
-    $("zonaEscribir").hidden = m !== "escribir";
-    $("zonaDecir").hidden = m !== "decir";
-    $("modoEscribir").setAttribute("aria-current", m === "escribir" ? "page" : "false");
-    $("modoDecir").setAttribute("aria-current", m === "decir" ? "page" : "false");
-    if (m === "escribir") campo.focus({ preventScroll: true }); else $("ver").focus({ preventScroll: true });
-  };
-  $("modoEscribir").addEventListener("click", () => ponerModo("escribir"));
-  $("modoDecir").addEventListener("click", () => ponerModo("decir"));
-  ponerModo(guardado("pelagos.modo") === "decir" ? "decir" : "escribir");
-
-  const revisar = () => {
-    escrito = campo.value.trim();
-    if (!escrito) { campo.focus(); return; }
-    const nota = N.calificarEscrito(escrito, c.reverso, c.tambien_vale);
-    if (nota === null) veredicto({ juicio: true });
-    else apuntar(true, nota === "casi");
-  };
-  $("revisar").addEventListener("click", revisar);
-  campo.addEventListener("keydown", (ev) => { if (ev.key === "Enter") { ev.preventDefault(); revisar(); } });
-  for (const t of vista.querySelectorAll(".tecla")) {
-    t.addEventListener("click", () => {
-      const a = campo.selectionStart, b = campo.selectionEnd;
-      campo.value = campo.value.slice(0, a) + t.dataset.c + campo.value.slice(b);
-      campo.focus();
-      campo.setSelectionRange(a + 1, a + 1);
-    });
-  }
-  $("ver").addEventListener("click", () => { escrito = null; veredicto({ juicio: true }); });
-  const noSe = () => { escrito = null; apuntar(false); };
-  $("noSe1").addEventListener("click", noSe);
-  $("noSe2").addEventListener("click", noSe);
-  $("jBien").addEventListener("click", () => apuntar(true));
-  $("jMal").addEventListener("click", () => apuntar(false));
-  $("siguiente").addEventListener("click", avanzar);
+  toque = () => destapar();
+  teclas = { " ": () => destapar(true), enter: () => destapar(true) };
+  $("jBien").addEventListener("click", () => calificar(true));
+  $("jMal").addEventListener("click", () => calificar(false));
 }
 
 // ---------------------------------------------------------------- La lección
@@ -1317,6 +1264,7 @@ document.addEventListener("click", (ev) => {
   const objetivo = ev.target instanceof Element ? ev.target : null;
   if (!objetivo) return;
   if (objetivo === hoja || objetivo.closest("#shX") || objetivo.closest("#shL")) { cerrarHoja(); return; }
+  if (toque && !hoja.hasAttribute("open") && !objetivo.closest("a, button, summary, input, label, dialog")) { toque(); return; }
   const previa = objetivo.closest("[data-l]");
   if (previa) { abrirHoja(previa.dataset.l); return; }
   const kwiz = objetivo.closest("[data-kwiz]");
