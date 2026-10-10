@@ -1,6 +1,6 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=a041ffb5f2";
-import * as A from "./almacen.js?v=a041ffb5f2";
+import * as N from "./nucleo.js?v=a1d14b5555";
+import * as A from "./almacen.js?v=a1d14b5555";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -52,7 +52,8 @@ let E = null;                 // el estado calculado de los sucesos
 let porId = new Map();        // tema por número
 let porSlug = new Map();      // tema por nombre de lección
 let preguntas = new Map();    // pregunta por id
-let fotos = new Map();        // portada por nombre
+let fotos = new Map();        // portada por nombre (Reef)
+let fotosExpanse = new Map(); // portada por nombre (ambiente Expanse)
 let retratos = new Map();     // retrato de Andrea por nombre
 let tarjetas = new Map();     // tarjeta por id
 let enPregunta = false;       // hay una pregunta en pantalla: no se repinta debajo de ti
@@ -66,6 +67,7 @@ function ponerPaquete(paquete) {
   porSlug = new Map(P.temas.filter((t) => t.slug && t.leccion).map((t) => [t.slug, t]));
   preguntas = new Map(P.preguntas.map((q) => [q.id, q]));
   fotos = new Map((P.fotos || []).map((f) => [f.nombre, f]));
+  fotosExpanse = new Map((P.fotosExpanse || []).map((f) => [f.nombre, f]));
   retratos = new Map((P.retratos || []).map((f) => [f.nombre, f]));
   tarjetas = new Map(P.tarjetas.map((c) => [c.id, c]));
 }
@@ -189,7 +191,8 @@ function vestir(raiz) {
   for (const e of raiz.querySelectorAll("[data-w]")) e.style.width = e.dataset.w + "%";
   for (const e of raiz.querySelectorAll("[data-x]")) e.style.left = e.dataset.x + "%";
   for (const img of raiz.querySelectorAll("img[data-foto]")) {
-    A.foto(fotos.get(img.dataset.foto)).then((u) => {
+    const n = img.dataset.foto;
+    (fotosExpanse.has(n) ? A.foto(fotosExpanse.get(n), "expanse") : A.foto(fotos.get(n))).then((u) => {
       if (!img.isConnected) return;
       if (u) img.src = u;
       else if (img.closest(".fondo")) { img.closest(".hoy").classList.remove("confoto"); document.body.classList.remove("conandrea"); }     // sin foto de fondo, la página se acomoda sin ella
@@ -408,7 +411,10 @@ function verInicio(o) {
   const hoy = N.fechaLocal(new Date());
   const T = N.leerTablero(A.tablero());
   const deHoy = !!T && T.dia === hoy;
-  const retrato = T && T.foto && retratos.has(T.foto) ? T.foto : null;
+  // En el ambiente Expanse no sale Andrea: al fondo va la portada Expanse del día.
+  const expanse = ambiente() === "expanse";
+  const retrato = !expanse && T && T.foto && retratos.has(T.foto) ? T.foto : null;
+  const fondoExpanse = expanse ? portadaDelDia() : null;
   const cuadernos = (P.cuadernos || []).map((c) => `
   <section class="card">
     <h2>${esc(c.nombre)}</h2>
@@ -467,8 +473,9 @@ function verInicio(o) {
   </section>`;
 
   poner(`
-  <div class="hoy${retrato ? " confoto" : ""}">
+  <div class="hoy${retrato || fondoExpanse ? " confoto" : ""}">
     ${retrato ? `<div class="fondo"><img data-retrato="${esc(retrato)}" alt="${esc(T.atuendo ? "Andrea hoy: " + T.atuendo : "Andrea hoy")}"></div>` : ""}
+    ${fondoExpanse ? `<div class="fondo"><img data-foto="${esc(fondoExpanse)}" alt=""></div>` : ""}
     <div class="sobre">
       <section class="card" id="arranque">
         <h1 class="sr">Tablero</h1>
@@ -731,7 +738,8 @@ function verTarjetas(o) {
   }
   const antes = E.tarjetas.get(dia.pendientes[0]);
   const c = N.tarjetaVista(tarjetas.get(dia.pendientes[0]), antes);
-  const foto = P.fotos.length ? P.fotos[Math.floor(N.azarDe(c.id + "#" + hoy + "#" + antes.n)() * P.fotos.length)] : null;
+  const juego = juegoDeFotos();
+  const foto = juego.length ? juego[Math.floor(N.azarDe(c.id + "#" + hoy + "#" + antes.n)() * juego.length)] : null;
   const total = dia.hechasHoy + dia.pendientes.length;
 
   poner(`
@@ -814,9 +822,20 @@ function palabras() {
   return mazo().map((c) => { const s = E.tarjetas.get(c.id); return { id: c.id, c: N.tarjetaVista(c, s), s, pct: N.aciertoDeTarjeta(s) }; });
 }
 
-/** La portada Reef del día: cambia cada día. */
+/** El ambiente de las fotos (Ajustes): «reef» o «expanse». Se guarda en este aparato. Sin fotos Expanse, Reef. */
+function ambiente() { return guardado("pelagos.ambiente") === "expanse" && fotosExpanse.size ? "expanse" : "reef"; }
+/** Las portadas del ambiente de este aparato. */
+function juegoDeFotos() { return ambiente() === "expanse" ? (P.fotosExpanse || []) : (P.fotos || []); }
+/** La portada fija de una lección (es Reef); en Expanse, su pareja: la que ocupa el mismo lugar en el otro juego. */
+function fotoDeLeccion(nombre) {
+  if (!nombre || ambiente() !== "expanse") return nombre;
+  const i = Math.max(0, (P.fotos || []).findIndex((f) => f.nombre === nombre)), lista = P.fotosExpanse;
+  return lista[i % lista.length].nombre;
+}
+
+/** La portada del día: cambia cada día. */
 function portadaDelDia() {
-  const hoy = new Date(), lista = P.fotos || [];
+  const hoy = new Date(), lista = juegoDeFotos();
   return lista.length ? lista[Math.floor(Date.UTC(hoy.getFullYear(), hoy.getMonth(), hoy.getDate()) / 86400000) % lista.length].nombre : null;
 }
 
@@ -1086,7 +1105,7 @@ function pintarLeccion(tema, lec) {
   <p class="crumb"><a href="#/gramatica">Gramática</a> · <a href="#/gramatica/${esc(tema.nivel.toLowerCase())}">${esc(tema.nivel)}</a> · ${esc(CATEGORIAS[tema.categoria] || tema.categoria)}</p>
   <header class="hero">
     <div class="ratio"></div>
-    ${lec.foto ? `<img data-foto="${esc(lec.foto)}" alt="">` : ""}
+    ${lec.foto ? `<img data-foto="${esc(fotoDeLeccion(lec.foto))}" alt="">` : ""}
     <div class="over">
       <p class="lead"><span>${esc(tema.nivel)} · ${esc(NIVELES[tema.nivel] || "")}</span><span>${i.n === 0 ? "de Kwiziq" : plural(i.n, "respuesta", "respuestas")}</span></p>
       <h1>${esc(lec.titulo)}</h1>
@@ -1244,7 +1263,8 @@ function verPregunta(o, kid) {
   const tema = porId.get(q.tema);
   const escribir = q.tipo === "escribir";
   const opciones = escribir ? [] : N.barajar(q.opciones, N.azarDe(kid + "-" + q.id));
-  const foto = P.fotos.length ? P.fotos[Math.floor(N.azarDe(kid + "#" + sig.orden)() * P.fotos.length)] : null;
+  const juego = juegoDeFotos();
+  const foto = juego.length ? juego[Math.floor(N.azarDe(kid + "#" + sig.orden)() * juego.length)] : null;
 
   poner(`
   <section class="kw">
@@ -1552,6 +1572,13 @@ function verAjustes(o) {
     </nav>
     <p class="small">Cambia todas las páginas de una vez. Se guarda en este aparato.</p>
   </section>
+  ${fotosExpanse.size ? `<section class="card" id="ajAmbiente">
+    <h2>Ambiente</h2>
+    <nav class="jump dos" aria-label="Ambiente de las fotos">
+      <button type="button" data-ambiente-ir="reef">Reef</button><button type="button" data-ambiente-ir="expanse">Expanse</button>
+    </nav>
+    <p class="small">Cambia las fotos de todas las páginas: las portadas Reef o el mundo de The Expanse. Se guarda en este aparato.</p>
+  </section>` : ""}
   <section class="card" id="ajApp">
     <h2>Pelagos como app</h2>
     ${yaEsApp()
@@ -1589,6 +1616,12 @@ function verAjustes(o) {
     b.addEventListener("click", () => { document.documentElement.dataset.tema = b.dataset.temaIr; guardar("pelagos.tema", b.dataset.temaIr); marcarTema(); });
   }
   marcarTema();
+  // Reef o Expanse: solo cambian las fotos.
+  const marcarAmbiente = () => { for (const b of vista.querySelectorAll("[data-ambiente-ir]")) b.setAttribute("aria-current", b.dataset.ambienteIr === ambiente() ? "page" : "false"); };
+  for (const b of vista.querySelectorAll("[data-ambiente-ir]")) {
+    b.addEventListener("click", () => { guardar("pelagos.ambiente", b.dataset.ambienteIr); marcarAmbiente(); });
+  }
+  marcarAmbiente();
   if ($("ajInstalar")) $("ajInstalar").addEventListener("click", async () => {
     if (!ofertaDeInstalar) return;
     const oferta = ofertaDeInstalar;
