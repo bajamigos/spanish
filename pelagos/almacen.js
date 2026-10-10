@@ -8,7 +8,7 @@
 // - Lo que contestas entra primero a una fila en este aparato y de ahí sube.
 //   Sin internet, la fila espera y sube sola cuando vuelve.
 // - La llave vive solo en este navegador y solo viaja a la dirección de CONFIG.api.
-import { CONFIG } from "./config.js?v=34fe3f3d0d";
+import { CONFIG } from "./config.js?v=0e741613bd";
 
 const CLAVES = { llave: "pelagos.llave", aparato: "pelagos.aparato", fila: "pelagos.fila." };      // la fila: una clave por suceso
 const RUTA_SUCESOS = /^sucesos\/([A-Za-z0-9_-]+)\/(\d{4}-\d{2})\.jsonl$/;
@@ -645,8 +645,39 @@ export function escenaUrl(sala, item) {
     escenasVivas.set(clave, (async () => {
       const r = await api(REPO + "/contents/" + ruta("escenas/" + clave) + "?ref=" + encodeURIComponent(CONFIG.ramaAvance), { crudo: true });
       if (!r.ok) throw new Fallo("github", "No se pudo bajar la escena.", r.status);
-      return URL.createObjectURL(new Blob([await r.arrayBuffer()], { type: item.tipo || "application/octet-stream" }));
+      const bytes = await r.arrayBuffer();
+      if (item.tipo === "image/gif") duracionesGif.set(clave, medirGif(new Uint8Array(bytes)));
+      return URL.createObjectURL(new Blob([bytes], { type: item.tipo || "application/octet-stream" }));
     })().catch((e) => { escenasVivas.delete(clave); throw e; }));
   }
   return escenasVivas.get(clave);
 }
+
+const duracionesGif = new Map();
+/** Cuánto dura una vuelta de un GIF y si se repite solo: { ms, infinito }. Lee los retardos de cada cuadro. */
+function medirGif(b) {
+  let ms = 0, infinito = false;
+  try {
+    let i = 13;
+    if (b[10] & 0x80) i += 3 * (1 << ((b[10] & 7) + 1));
+    while (i < b.length && b[i] !== 0x3b) {
+      if (b[i] === 0x21) {
+        const tipo = b[i + 1];
+        if (tipo === 0xf9) ms += (b[i + 4] | (b[i + 5] << 8)) * 10 || 100;
+        if (tipo === 0xff && b[i + 2] === 11 && String.fromCharCode(...b.subarray(i + 3, i + 11)) === "NETSCAPE") infinito = (b[i + 16] | (b[i + 17] << 8)) === 0;
+        i += 2;
+        while (b[i]) i += b[i] + 1;
+        i++;
+      } else if (b[i] === 0x2c) {
+        const flags = b[i + 9];
+        i += 10;
+        if (flags & 0x80) i += 3 * (1 << ((flags & 7) + 1));
+        i++;
+        while (b[i]) i += b[i] + 1;
+        i++;
+      } else break;
+    }
+  } catch { /* GIF raro: se trata como si se repitiera solo */ return { ms: 0, infinito: true }; }
+  return { ms: Math.max(ms, 100), infinito };
+}
+export function escenaGif(sala, item) { return duracionesGif.get(sala + "/" + (item && item.archivo)) || null; }

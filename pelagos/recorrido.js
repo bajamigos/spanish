@@ -440,12 +440,13 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
           playT.hidden = !it.texto;
           if (it.tipo === "video") {
             playI.hidden = true; playV.hidden = false;
-            playV.src = it.url; playV.onended = sigue; playV.onerror = sigue;
-            playV.play().catch(() => { reloj = setTimeout(sigue, 8000); });
+            playV.src = it.url; playV.loop = true; playV.onended = null; playV.onerror = sigue;     // se repite hasta «Siguiente»
+            playV.play().catch(() => {});
           } else {
             playV.hidden = true; playV.pause(); playV.onended = null; playI.hidden = false;
             playI.src = it.url;
-            reloj = setTimeout(sigue, Math.max(1, it.seg || 8) * 1000);
+            // Se queda hasta «Siguiente». Un GIF que no se repite solo se reinicia al terminar su vuelta.
+            if (it.gifMs) { const vuelta = () => { if (hecho || playI.hidden) return; playI.src = ""; playI.src = it.url; reloj = setTimeout(vuelta, it.gifMs); }; reloj = setTimeout(vuelta, it.gifMs); }
           }
           playCaja.classList.remove("negro");
         }, 350);
@@ -466,7 +467,8 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
     const hechos = [];
     for (const x of lista) {
       const url = await escenas.url(sala, x).catch(() => null);
-      if (url) hechos.push({ url, tipo: /^video\//.test(x.tipo || "") ? "video" : "imagen", texto: x.desc || "", seg: 8 });
+      const g = x.tipo === "image/gif" && escenas.gif ? escenas.gif(sala, x) : null;
+      if (url) hechos.push({ url, tipo: /^video\//.test(x.tipo || "") ? "video" : "imagen", texto: x.desc || "", gifMs: g && !g.infinito ? g.ms : 0 });
     }
     return hechos;
   }
@@ -522,7 +524,7 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
     try {
       cerrarHoja();
       const toma = await bajarFoto(q.img).catch(() => null);
-      const partes = toma ? [{ url: toma, tipo: "imagen", texto: q.texto || "", seg: 5 }] : [];
+      const partes = toma ? [{ url: toma, tipo: "imagen", texto: q.texto || "" }] : [];
       partes.push(...(await itemsDe(actual.id)));
       if (partes.length) await reproducir(partes);
       await ir(q.despues, null);
