@@ -1,7 +1,7 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=da4b0969ae";
-import * as A from "./almacen.js?v=da4b0969ae";
-import { abrirRecorrido } from "./recorrido.js?v=da4b0969ae";
+import * as N from "./nucleo.js?v=e43c75c8d9";
+import * as A from "./almacen.js?v=e43c75c8d9";
+import { abrirRecorrido } from "./recorrido.js?v=e43c75c8d9";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -57,6 +57,8 @@ let preguntas = new Map();    // pregunta por id
 let fotos = new Map();        // portada por nombre (Reef)
 let fotosExpanse = new Map(); // portada por nombre (ambiente Expanse)
 let retratos = new Map();     // retrato de Andrea por nombre
+// El video de fondo del Tablero (Andrea bailando, por ejemplo): vive en escenas/inicio/ de la rama de avance. null = todavía no se sabe.
+let videosFondo = null;
 let fotosGan = new Map();     // panorama del Recorrido de Ganímedes (modo Expanse)
 let fotosTour = new Map();    // panorama del Recorrido por nombre
 let recorridoVivo = null;     // el visor 360 abierto, si lo hay
@@ -219,6 +221,17 @@ function vestir(raiz) {
       if (!img.isConnected) return;
       if (u) img.src = u; else { const h = img.closest(".hoy"); if (h) h.classList.remove("confoto"); document.body.classList.remove("conandrea"); }
     });
+  }
+  for (const v of raiz.querySelectorAll("[data-videofondo]")) {
+    const item = (videosFondo || []).find((x) => x.archivo === v.dataset.videofondo);
+    // Si el video no llega, el Tablero se queda con la foto del día.
+    const sinVideo = () => { if (v.isConnected) { videosFondo = (videosFondo || []).filter((x) => x !== item); pintar({ conserva: true }); } };
+    if (!item) { sinVideo(); continue; }
+    A.escenaUrl("inicio", item).then((u) => {
+      if (!v.isConnected || !u) return;
+      v.src = u;
+      if (v.play) v.play().catch(() => {});
+    }).catch(sinVideo);
   }
   bocinas(raiz);
 }
@@ -523,14 +536,37 @@ function conFondo(html, clases = "") {
   return `<div class="hoy${clases ? " " + clases : ""}${f.hay ? " confoto" : ""}">${f.html}<div class="sobre">${html}</div></div>`;
 }
 
+/** Lo que se mueve: un video o un GIF. */
+const esMovimiento = (x) => /^video\//.test(x.tipo || "") || x.tipo === "image/gif";
+/** El último video o GIF subido para el fondo del Tablero, o null. */
+const videoFondo = () => (videosFondo || []).filter((x) => esMovimiento(x)).slice(-1)[0] || null;
+const sinMovimiento = () => window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+/** Pregunta una sola vez qué video de fondo hay; cuando llega la respuesta, vuelve a pintar el Tablero si está a la vista. */
+function cargarVideosFondo() {
+  if (videosFondo) return;
+  videosFondo = [];
+  A.escenasDe("inicio").then((l) => {
+    videosFondo = l;
+    if (videoFondo() && (window.location.hash.replace(/^#/, "") || "/") === "/") pintar({ conserva: true });
+  }).catch(() => {});
+}
+/** El fondo del Tablero: el video si hay (y si el aparato no pide menos movimiento), si no, la foto del día. */
+function fondoDeInicio() {
+  const v = videoFondo();
+  if (!v || ambiente() === "limpio" || sinMovimiento()) return fondoDelDia(false);
+  const cosa = v.tipo === "image/gif" ? `<img data-videofondo="${esc(v.archivo)}" alt="">` : `<video data-videofondo="${esc(v.archivo)}" muted loop autoplay playsinline preload="auto" aria-hidden="true"></video>`;
+  return { hay: true, html: `<div class="fondo">${cosa}${LOGO}</div>` };
+}
+
 function verInicio(o) {
+  cargarVideosFondo();
   const niveles = resumenNiveles();
   const abierto = N.kwizAbierto(E);
   const hoy = N.fechaLocal(new Date());
   const T = N.leerTablero(A.tablero());
   const deHoy = !!T && T.dia === hoy;
-  // Al fondo, el retrato de Andrea del día; en el ambiente Expanse, la portada Expanse del día (ver fondoDelDia).
-  const fondo = fondoDelDia(false);
+  // Al fondo, el video que subiste; si no hay, el retrato de Andrea del día (en Expanse, la portada Expanse del día; ver fondoDelDia).
+  const fondo = fondoDeInicio();
   const cuadernos = (P.cuadernos || []).map((c) => `
   <section class="card">
     <h2>${esc(c.nombre)}</h2>
@@ -1846,6 +1882,13 @@ function verAjustes(o) {
     </nav>
     <p class="small">Cambia las fotos de todas las páginas: las portadas Reef, el mundo de The Expanse, o Limpio, sin fotos ni dibujos, solo negro o blanco según tu modo de color. Se guarda en este aparato.</p>
   </section>
+  <section class="card" id="ajVideo">
+    <h2>Fondo con movimiento</h2>
+    <p id="ajVideoHay">${videoFondo() ? "Ya tienes un fondo con movimiento." : "Ahora el Tablero usa la foto del día."}</p>
+    <div class="go"><label class="ub">Subir un GIF o video<input type="file" id="ajVideoArch" accept=".gif,.mp4,.webm,image/gif,video/mp4,video/webm" hidden></label>
+      <button type="button" class="ub" id="ajVideoQuitar"${videoFondo() ? "" : " hidden"}>Quitar el video</button></div>
+    <p class="small" id="ajVideoAviso" role="status">Un GIF o un video (MP4 o WebM) que se repite sin sonido detrás del Tablero, en lugar de la foto. Mejor de menos de 10 MB. Sale en todos tus aparatos. En Limpio, o si tu aparato pide reducir el movimiento, se queda la foto.</p>
+  </section>
   <section class="card" id="ajApp">
     <h2>Pelagos como app</h2>
     ${yaEsApp()
@@ -1893,6 +1936,30 @@ function verAjustes(o) {
     });
   }
   marcarAmbiente();
+  // El video de fondo: subirlo o quitarlo.
+  cargarVideosFondo();
+  const avisoVideo = (t) => { $("ajVideoAviso").textContent = t; };
+  const listoVideo = (l) => {
+    videosFondo = l;
+    $("ajVideoHay").textContent = videoFondo() ? "Ya tienes un fondo con movimiento." : "Ahora el Tablero usa la foto del día.";
+    $("ajVideoQuitar").hidden = !videoFondo();
+  };
+  $("ajVideoArch").addEventListener("change", async (ev) => {
+    const f = ev.target.files && ev.target.files[0];
+    ev.target.value = "";
+    if (!f) return;
+    avisoVideo("Subiendo el video…");
+    try { listoVideo(await A.escenaSubir("inicio", f, "Fondo del Tablero")); avisoVideo("¡Listo! Ve al Tablero para verlo."); }
+    catch (e) { avisoVideo(e && e.message ? e.message : "No se pudo subir el video."); }
+  });
+  $("ajVideoQuitar").addEventListener("click", async () => {
+    avisoVideo("Quitando el video…");
+    try {
+      let l = videosFondo || [];
+      for (const x of l.filter(esMovimiento)) l = await A.escenaQuitar("inicio", x.archivo);
+      listoVideo(l); avisoVideo("Listo: el Tablero vuelve a la foto del día.");
+    } catch (e) { avisoVideo(e && e.message ? e.message : "No se pudo quitar el video."); }
+  });
   if ($("ajInstalar")) $("ajInstalar").addEventListener("click", async () => {
     if (!ofertaDeInstalar) return;
     const oferta = ofertaDeInstalar;
