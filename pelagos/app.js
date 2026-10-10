@@ -1,6 +1,6 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=0caa2dcbe9";
-import * as A from "./almacen.js?v=0caa2dcbe9";
+import * as N from "./nucleo.js?v=009ce0793c";
+import * as A from "./almacen.js?v=009ce0793c";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -661,7 +661,21 @@ const SEMANAS = 28;           // columnas de cada medio año: alcanzan para 184 
  * Medio año como tira de calor: cada columna es una semana (de lunes a domingo, de arriba abajo) y cada cuadro un día.
  * Los días que todavía no llegan no se dibujan.
  */
-function tiraDeCalor(anio, mesInicial, hoy) {
+/** El color de un día en la Bitácora: «jv» vocabulario (amarillo), «jg» gramática (azul), «ja» los dos (verde), más su escalón. */
+function colorDelDia(dia, modo) {
+  const v = E.actividadVoc.get(dia) || 0, g = E.actividadGram.get(dia) || 0;
+  const nv = N.nivelDeCalor(v), ng = N.nivelDeCalor(g, N.CALOR_GRAM);
+  if (modo === "vocabulario") return nv ? `jv c${nv}` : "c0";
+  if (modo === "gramatica") return ng ? `jg c${ng}` : "c0";
+  const n = E.actividad.get(dia) || 0;
+  if (v && g) return `ja c${Math.max(nv, ng)}`;
+  if (g) return `jg c${ng}`;
+  if (n) return `jv c${N.nivelDeCalor(n)}`;           // repasos de vocabulario (o respuestas sueltas de gramática sin quiz terminado)
+  return "c0";
+}
+let calorModo = null;         // «juntos», «vocabulario» o «gramatica»: lo que enseña la Bitácora (se guarda en el aparato)
+
+function tiraDeCalor(anio, mesInicial, hoy, modo = "juntos") {
   const dos = (n) => String(n).padStart(2, "0");
   const cuadros = [], meses = [];
   const primero = new Date(anio, mesInicial, 1);
@@ -672,7 +686,7 @@ function tiraDeCalor(anio, mesInicial, hoy) {
     if (dia > hoy) break;
     if (d.getDate() === 1) meses.push(`<span data-col="${Math.floor(cuadros.length / 7) + 1}">${MESES_CORTOS[d.getMonth()]}</span>`);
     const n = E.actividad.get(dia) || 0;
-    cuadros.push(`<i class="hc c${N.nivelDeCalor(n)}${dia === hoy ? " hoy" : ""}" data-dia="${dia}" data-n="${n}"></i>`);
+    cuadros.push(`<i class="hc ${colorDelDia(dia, modo)}${dia === hoy ? " hoy" : ""}" data-dia="${dia}" data-n="${n}" data-v="${E.actividadVoc.get(dia) || 0}" data-g="${E.actividadGram.get(dia) || 0}"></i>`);
   }
   if (cuadros.length === hueco) return "";
   return `<div class="hmeses" aria-hidden="true">${meses.join("")}</div><div class="htira">${cuadros.join("")}</div>`;
@@ -681,9 +695,14 @@ function tiraDeCalor(anio, mesInicial, hoy) {
 /** Tu historia de estudio, día por día: entre más repasos, más caliente el color. Un año por tarjeta, el más nuevo arriba. */
 function verCalor(o) {
   const hoy = N.fechaLocal(new Date());
-  const R = N.rachas(E.actividad, hoy);
+  if (!calorModo) calorModo = ["juntos", "vocabulario", "gramatica"].includes(guardado("pelagos.bitacora")) ? guardado("pelagos.bitacora") : "juntos";
+  const modo = calorModo;
+  const mapa = modo === "vocabulario" ? E.actividadVoc : modo === "gramatica" ? E.actividadGram : E.actividad;
+  const unidad = modo === "gramatica" ? ["quiz", "quizzes"] : ["repaso", "repasos"];
+  const R = N.rachas(mapa, hoy);
+  const ambos = [...E.actividadGram.keys()].filter((d) => E.actividadVoc.get(d) > 0).length;
   const porAnio = new Map();
-  for (const [dia, n] of E.actividad) {
+  for (const [dia, n] of mapa) {
     const a = Number(dia.slice(0, 4));
     if (!porAnio.has(a)) porAnio.set(a, { dias: 0, total: 0 });
     porAnio.get(a).dias++; porAnio.get(a).total += n;
@@ -701,14 +720,19 @@ function verCalor(o) {
       ${entradas("tablero", "bitacora")}
       <section class="card" id="calorCabeza">
         <h1 class="h">Bitácora</h1>
+        <div class="jump tres" role="group" aria-label="Qué enseña la Bitácora" id="calorModo">
+          ${[["juntos", "Juntos"], ["vocabulario", "Vocabulario"], ["gramatica", "Gramática"]].map(([clave, nombre]) => `<button type="button" data-modo="${clave}" aria-pressed="${clave === modo}">${nombre}</button>`).join("")}
+        </div>
         <div class="extras">
           <div><b>${dias(R.actual)}</b>racha de ahora</div>
           <div><b>${dias(R.larga)}</b>tu racha más larga</div>
           <div><b>${miles(R.dias)}</b>días estudiados</div>
         </div>
-        ${R.mejor.dia ? `<p class="small">${miles(R.total)} repasos en total. Tu mejor día fue el ${fecha(R.mejor.dia)}, con ${miles(R.mejor.n)}.${R.largaFin ? ` Tu racha más larga terminó el ${fecha(R.largaFin)}.` : ""}</p>` : "<p>Todavía no hay días de estudio. Aquí se van a ir prendiendo.</p>"}
+        ${R.mejor.dia ? `<p class="small">${miles(R.total)} ${unidad[1]} en total. Tu mejor día fue el ${fecha(R.mejor.dia)}, con ${miles(R.mejor.n)}.${R.largaFin ? ` Tu racha más larga terminó el ${fecha(R.largaFin)}.` : ""}${modo === "juntos" ? ` ${ambos === 1 ? "1 día" : miles(ambos) + " días"} con los dos.` : ""}</p>` : `<p>Todavía no hay días${modo === "gramatica" ? " con quizzes" : " de estudio"}. Aquí se van a ir prendiendo.</p>`}
         <ul class="hclave" aria-label="Qué significa cada color">
-          <li><i class="hc c0"></i>Nada</li>${N.CALOR.map((desde, i) => `<li><i class="hc c${i + 1}"></i>${desde}${i === N.CALOR.length - 1 ? " o más" : " a " + (N.CALOR[i + 1] - 1)}</li>`).join("")}
+          <li><i class="hc c0"></i>Nada</li>${modo === "juntos"
+            ? '<li><i class="hc jv c3"></i>Vocabulario</li><li><i class="hc jg c3"></i>Gramática</li><li><i class="hc ja c3"></i>Los dos</li>'
+            : (modo === "gramatica" ? N.CALOR_GRAM : N.CALOR).map((desde, i, esc_) => `<li><i class="hc ${modo === "gramatica" ? "jg" : "jv"} c${i + 1}"></i>${desde}${i === esc_.length - 1 ? " o más" : esc_[i + 1] - 1 === desde ? "" : " a " + (esc_[i + 1] - 1)}</li>`).join("")}
         </ul>
         <p class="small" id="calorDia" role="status">Toca un cuadro para ver ese día.</p>
       </section>
@@ -717,7 +741,7 @@ function verCalor(o) {
         return `
       <section class="card anioCalor" id="calor${a}">
         <h2>${a} <span class="mpc">${x.dias ? `${dias(x.dias)} · ${miles(x.total)}` : "sin estudio"}</span></h2>
-        <div class="hanio" role="img" aria-label="${a}: ${x.dias ? `${dias(x.dias)} de estudio y ${miles(x.total)} repasos` : "sin estudio"}">${tiraDeCalor(a, 0, hoy)}${tiraDeCalor(a, 6, hoy)}</div>
+        <div class="hanio" role="img" aria-label="${a}: ${x.dias ? `${dias(x.dias)} de estudio y ${miles(x.total)} ${unidad[1]}` : "sin estudio"}">${tiraDeCalor(a, 0, hoy, modo)}${tiraDeCalor(a, 6, hoy, modo)}</div>
       </section>`;
       }).join("")}
     </div>
@@ -726,12 +750,17 @@ function verCalor(o) {
   // Un toque en un cuadro dice qué día es y cuánto estudiaste.
   let marcado = null;
   vista.querySelector(".sobre").addEventListener("click", (ev) => {
+    const b = ev.target instanceof Element ? ev.target.closest("[data-modo]") : null;
+    if (b) { calorModo = b.dataset.modo; guardar("pelagos.bitacora", calorModo); return pintar({ conserva: true }); }
     const c = ev.target instanceof Element ? ev.target.closest(".hc[data-dia]") : null;
     if (!c) return;
     if (marcado) marcado.classList.remove("sel");
     marcado = c; c.classList.add("sel");
-    const n = Number(c.dataset.n);
-    $("calorDia").textContent = `${diaLargo(c.dataset.dia)} de ${c.dataset.dia.slice(0, 4)}: ${n ? plural(n, "repaso", "repasos") : "sin estudio"}.`;
+    const n = Number(c.dataset.n), v = Number(c.dataset.v), g = Number(c.dataset.g);
+    const que = modo === "vocabulario" ? (v ? plural(v, "repaso de vocabulario", "repasos de vocabulario") : "sin vocabulario")
+      : modo === "gramatica" ? (g ? plural(g, "quiz de gramática", "quizzes de gramática") : "sin quizzes")
+        : n ? plural(n, "repaso", "repasos") + (g ? ` y ${plural(g, "quiz de gramática", "quizzes de gramática")}` : "") : "sin estudio";
+    $("calorDia").textContent = `${diaLargo(c.dataset.dia)} de ${c.dataset.dia.slice(0, 4)}: ${que}.`;
   });
 }
 

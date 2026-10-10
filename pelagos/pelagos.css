@@ -23,6 +23,10 @@
   --t0: #ffffff; --t1: #000000; --t2: #000000; --t3: #000000; --t4: #000000; --t5: #ffffff;
   /* El mapa de calor: de nada (--c0) al día más caliente (--c4). */
   --c0: rgba(0,0,0,0.09); --c1: #f8cf9a; --c2: #f39a3d; --c3: #d9531a; --c4: #86190a;
+  /* La Bitácora por materia: vocabulario amarillo, gramática azul, los dos verde. */
+  --y1: #fbe7a1; --y2: #f5cf48; --y3: #dba400; --y4: #946800;
+  --b1: #c9ddff; --b2: #84b3f6; --b3: #2f74d6; --b4: #133f8a;
+  --g1: #c4ecd0; --g2: #74cf93; --g3: #27a356; --g4: #12632f;
   color-scheme: light;
 }
 :root[data-tema="oscuro"] {
@@ -40,6 +44,9 @@
   --k0: rgba(255,138,82,0.88); --k1: rgba(217,89,38,0.88); --k2: rgba(168,86,47,0.88); --k3: rgba(28,63,112,0.88); --k4: rgba(47,111,196,0.88); --k5: rgba(127,182,255,0.88);
   --t0: #000000; --t1: #000000; --t2: #ffffff; --t3: #ffffff; --t4: #ffffff; --t5: #000000;
   --c0: rgba(255,255,255,0.09); --c1: #743813; --c2: #c9581c; --c3: #ff9130; --c4: #ffe36e;
+  --y1: #5a4a12; --y2: #9c7c12; --y3: #e0b52a; --y4: #ffe680;
+  --b1: #17335f; --b2: #2059a8; --b3: #4d93f0; --b4: #b2d3ff;
+  --g1: #16432a; --g2: #1f7a44; --g3: #3fcf73; --g4: #a8f2c2;
   color-scheme: dark;
 }
 
@@ -80,8 +87,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .jump.tres { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .jump a, .jump button { display: block; box-sizing: border-box; width: 100%; padding: 10px 4px; text-align: center; font: inherit; font-size: 14px; font-weight: 700; line-height: 1.55; text-decoration: none;
   background: var(--tab); color: var(--tab-ink); border: 2px solid var(--tab); border-radius: 4px; cursor: pointer; }
-.jump.niveles a, .jump.dos a, .jump.dos button, .jump.tres a { background: var(--page); color: var(--ink); border-color: var(--outline); }
-.jump.niveles a[aria-current="page"], .jump.dos a[aria-current="page"], .jump.dos button[aria-current="page"], .jump.tres a[aria-current="page"] { background: var(--tab); color: var(--tab-ink); border-color: var(--tab); }
+.jump.niveles a, .jump.dos a, .jump.dos button, .jump.tres a, .jump.tres button { background: var(--page); color: var(--ink); border-color: var(--outline); }
+.jump.niveles a[aria-current="page"], .jump.dos a[aria-current="page"], .jump.dos button[aria-current="page"], .jump.tres a[aria-current="page"], .jump.tres button[aria-pressed="true"] { background: var(--tab); color: var(--tab-ink); border-color: var(--tab); }
 /* Las dos entradas de una sección (lecciones y quiz; quiz y lista). El nombre puede partirse en dos renglones sin descuadrar. */
 .jump.sec a { display: grid; place-items: center; min-height: 44px; padding: 6px 4px; line-height: 1.2; text-wrap: balance; }
 .jump.cuatro button { background: var(--page); color: var(--ink); border-color: var(--outline); font-size: 13px; padding: 9px 0; }
@@ -466,6 +473,10 @@ ul.clave .mc.kx { box-sizing: border-box; border: 1px dashed var(--vidrio-borde)
 .hc { display: block; aspect-ratio: 1; border-radius: 2px; background: var(--c0); }
 .hc.vacio { background: none; }
 .hc.c1 { background: var(--c1); } .hc.c2 { background: var(--c2); } .hc.c3 { background: var(--c3); } .hc.c4 { background: var(--c4); }
+.hc.jv.c1 { background: var(--y1); } .hc.jv.c2 { background: var(--y2); } .hc.jv.c3 { background: var(--y3); } .hc.jv.c4 { background: var(--y4); }
+.hc.jg.c1 { background: var(--b1); } .hc.jg.c2 { background: var(--b2); } .hc.jg.c3 { background: var(--b3); } .hc.jg.c4 { background: var(--b4); }
+.hc.ja.c1 { background: var(--g1); } .hc.ja.c2 { background: var(--g2); } .hc.ja.c3 { background: var(--g3); } .hc.ja.c4 { background: var(--g4); }
+#calorModo { margin-block: 2px 4px; }
 .htira .hc[data-dia] { cursor: pointer; }
 .hc.hoy { outline: 1.5px solid var(--ink); outline-offset: 0; }
 .hc.sel { outline: 2px solid var(--ink); outline-offset: 1px; position: relative; z-index: 1; }

@@ -282,9 +282,10 @@ export function calcular(paquete, sucesos) {
 
   // Cuánto estudiaste cada día: lo que ya traías contado de antes (tu mazo de Anki) más lo que contestas aquí,
   // sea vocabulario o gramática. Es lo que pinta el mapa de calor.
-  const actividad = new Map();
+  // Además, por materia: «actividadVoc» (lo de antes más tus repasos de vocabulario) y «actividadGram» (quizzes terminados).
+  const actividad = new Map(), actividadVoc = new Map(), actividadGram = new Map();
   for (const [dia, n] of Object.entries(paquete.historial?.dias || {})) {
-    if (/^\d{4}-\d{2}-\d{2}$/.test(dia) && Number.isInteger(n) && n > 0) actividad.set(dia, n);
+    if (/^\d{4}-\d{2}-\d{2}$/.test(dia) && Number.isInteger(n) && n > 0) { actividad.set(dia, n); actividadVoc.set(dia, n); }
   }
   const cuenta = (cuando) => {
     if (Number.isNaN(Date.parse(cuando))) return;
@@ -302,6 +303,7 @@ export function calcular(paquete, sucesos) {
       c.ultima = e.cuando;
       c.historia.push({ cuando: e.cuando, bien: !!e.bien });
       cuenta(e.cuando);
+      actividadVoc.set(dia, (actividadVoc.get(dia) || 0) + 1);
       if (!e.bien) { c.escalon = 0; c.toca = dia; c.fallada = dia; }                     // fallada: vuelve a salir hoy mismo
       else {
         c.bien++;
@@ -407,17 +409,25 @@ export function calcular(paquete, sucesos) {
     }
   }
 
-  return { temas, kwizzes, retiradas, ultimaVez, respuestas: respuestas.length, porTema, parametros, debe, fallada, enfoque, tarjetas, agregadas, actividad };
+  for (const k of kwizzes.values()) {
+    if (!k.terminado || Number.isNaN(Date.parse(k.terminado))) continue;
+    const dia = fechaLocal(k.terminado);
+    actividadGram.set(dia, (actividadGram.get(dia) || 0) + 1);
+  }
+
+  return { temas, kwizzes, retiradas, ultimaVez, respuestas: respuestas.length, porTema, parametros, debe, fallada, enfoque, tarjetas, agregadas, actividad, actividadVoc, actividadGram };
 }
 
 // ---------------------------------------------------------------- El mapa de calor
 
 /** Desde cuántos repasos en un día sube el color: 1, 20, 60 y 150. */
 export const CALOR = [1, 20, 60, 150];
+/** Los escalones de la Bitácora de gramática: quizzes terminados en el día (5 es tu meta). */
+export const CALOR_GRAM = [1, 3, 5, 10];
 /** El color de un día, de 0 (nada) a 4 (el más caliente). */
-export function nivelDeCalor(n) {
+export function nivelDeCalor(n, escala = CALOR) {
   let nivel = 0;
-  for (const desde of CALOR) if (n >= desde) nivel++;
+  for (const desde of Array.isArray(escala) ? escala : CALOR) if (n >= desde) nivel++;
   return nivel;
 }
 
