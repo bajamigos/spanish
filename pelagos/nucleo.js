@@ -280,6 +280,18 @@ export function calcular(paquete, sucesos) {
   }
   const agregadas = [];        // las tarjetas que agregaste a mano: no vienen en el contenido, viven en tus sucesos
 
+  // Cuánto estudiaste cada día: lo que ya traías contado de antes (tu mazo de Anki) más lo que contestas aquí,
+  // sea vocabulario o gramática. Es lo que pinta el mapa de calor.
+  const actividad = new Map();
+  for (const [dia, n] of Object.entries(paquete.historial?.dias || {})) {
+    if (/^\d{4}-\d{2}-\d{2}$/.test(dia) && Number.isInteger(n) && n > 0) actividad.set(dia, n);
+  }
+  const cuenta = (cuando) => {
+    if (Number.isNaN(Date.parse(cuando))) return;
+    const dia = fechaLocal(cuando);
+    actividad.set(dia, (actividad.get(dia) || 0) + 1);
+  };
+
   for (const e of lista) {
     if (e.t === "tj") {
       const c = tarjetas.get(e.tarjeta);
@@ -289,6 +301,7 @@ export function calcular(paquete, sucesos) {
       if (!c.primera) c.primera = e.cuando;
       c.ultima = e.cuando;
       c.historia.push({ cuando: e.cuando, bien: !!e.bien });
+      cuenta(e.cuando);
       if (!e.bien) { c.escalon = 0; c.toca = dia; c.fallada = dia; }                     // fallada: vuelve a salir hoy mismo
       else {
         c.bien++;
@@ -324,6 +337,8 @@ export function calcular(paquete, sucesos) {
       respuestas.push(e);
     }
   }
+
+  for (const r of respuestas) cuenta(r.cuando);
 
   // Porcentaje de cada tema.
   const porTema = new Map();
@@ -392,7 +407,38 @@ export function calcular(paquete, sucesos) {
     }
   }
 
-  return { temas, kwizzes, retiradas, ultimaVez, respuestas: respuestas.length, porTema, parametros, debe, fallada, enfoque, tarjetas, agregadas };
+  return { temas, kwizzes, retiradas, ultimaVez, respuestas: respuestas.length, porTema, parametros, debe, fallada, enfoque, tarjetas, agregadas, actividad };
+}
+
+// ---------------------------------------------------------------- El mapa de calor
+
+/** Desde cuántos repasos en un día sube el color: 1, 20, 60 y 150. */
+export const CALOR = [1, 20, 60, 150];
+/** El color de un día, de 0 (nada) a 4 (el más caliente). */
+export function nivelDeCalor(n) {
+  let nivel = 0;
+  for (const desde of CALOR) if (n >= desde) nivel++;
+  return nivel;
+}
+
+/**
+ * Tus rachas: días seguidos con al menos un repaso. «actual» cuenta hasta hoy; si hoy todavía no estudias, hasta ayer.
+ * Devuelve { actual, larga, largaFin, dias, total, mejor: { dia, n } }.
+ */
+export function rachas(actividad, hoy = fechaLocal(new Date())) {
+  const dias = [...actividad.keys()].filter((d) => actividad.get(d) > 0).sort();
+  let larga = 0, largaFin = null, seguidos = 0, anterior = null, total = 0, mejor = { dia: null, n: 0 };
+  for (const d of dias) {
+    seguidos = anterior && sumarDias(anterior, 1) === d ? seguidos + 1 : 1;
+    if (seguidos > larga) { larga = seguidos; largaFin = d; }
+    anterior = d;
+    const n = actividad.get(d);
+    total += n;
+    if (n > mejor.n) mejor = { dia: d, n };
+  }
+  let actual = 0;
+  for (let d = actividad.get(hoy) > 0 ? hoy : sumarDias(hoy, -1); actividad.get(d) > 0; d = sumarDias(d, -1)) actual++;
+  return { actual, larga, largaFin, dias: dias.length, total, mejor };
 }
 
 const TEXTO_MAX = 300;

@@ -1,6 +1,6 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=2737c61ba6";
-import * as A from "./almacen.js?v=2737c61ba6";
+import * as N from "./nucleo.js?v=82ce90a88f";
+import * as A from "./almacen.js?v=82ce90a88f";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -40,6 +40,7 @@ const QUIZ = "/gramatica/quiz";       // dónde vive el quiz de gramática
 const SECCIONES = {
   gramatica: ["Gramática", [["lecciones", "#/gramatica", "Lecciones de gramática"], ["quiz", "#" + QUIZ, "Quiz de gramática"]]],
   vocabulario: ["Vocabulario", [["quiz", "#/vocabulario", "Quiz de vocabulario"], ["lista", "#/vocabulario/lista", "Lista de vocabulario"]]],
+  mapa: ["Mapa", [["temas", "#/mapa", "Mapa de gramática"], ["calor", "#/mapa/calor", "Mapa de calor"]]],
 };
 const MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
   "septiembre", "octubre", "noviembre", "diciembre"];
@@ -200,6 +201,7 @@ function vestir(raiz) {
     e.style.left = x + "%"; e.style.top = y + "px"; e.style.width = w + "%"; e.style.height = h + "px";
   }
   for (const e of raiz.querySelectorAll("[data-alto]")) e.style.height = e.dataset.alto + "px";
+  for (const e of raiz.querySelectorAll("[data-col]")) e.style.gridColumnStart = e.dataset.col;        // los meses del mapa de calor
   for (const img of raiz.querySelectorAll("img[data-retrato]")) {
     // Sin retrato (no llegó, o no hay conexión) la página de Hoy se acomoda como si no hubiera foto.
     A.foto(retratos.get(img.dataset.retrato), "andrea").then((u) => {
@@ -241,6 +243,7 @@ const RUTAS = [
   [/^\/gramatica\/quiz\/([A-Za-z0-9_-]+)\/resultado$/, verResultado],
   [/^\/gramatica\/([a-z0-9]+)(\/bajo)?$/, verNivel],
   [/^\/mapa$/, verMapa],
+  [/^\/mapa\/calor$/, verCalor],
   [/^\/leccion\/([a-z0-9-]+)$/, verLeccion],
   [/^\/vocabulario$/, verTarjetas],
   [/^\/vocabulario\/lista$/, verLista],
@@ -601,7 +604,8 @@ function verMapa(o) {
   <div class="hoy mapa${foto ? " confoto" : ""}">
     ${foto ? `<div class="fondo"><img data-foto="${esc(foto)}" alt=""></div>` : ""}
     <div class="sobre">
-      <h1 class="sr">Mapa de tus temas</h1>
+      ${entradas("mapa", "temas")}
+      <h1 class="sr">Mapa de gramática</h1>
       ${tarjetas}
       <section class="card" id="clave">
         <h2 class="sr">Qué significa cada color</h2>
@@ -609,13 +613,97 @@ function verMapa(o) {
       </section>
     </div>
   </div>`,
-  { titulo: "Mapa · Pelagos", nav: "mapa", conserva: o.conserva });
+  { titulo: "Mapa de gramática · Pelagos", nav: "mapa", conserva: o.conserva });
 }
 
 window.addEventListener("resize", () => {
   // Si la pantalla cambia de ancho (o el teléfono se voltea), el mapa se vuelve a dibujar a la medida.
   if (vista.querySelector(".nivelMapa") && Math.abs(vista.clientWidth - anchoDelMapa) > 8) pintar({ conserva: true });
 });
+
+// ---------------------------------------------------------------- El mapa de calor
+
+const MESES_CORTOS = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
+const miles = (n) => Number(n).toLocaleString("es-MX");
+const SEMANAS = 28;           // columnas de cada medio año: alcanzan para 184 días más el arranque de la primera semana
+
+/**
+ * Medio año como tira de calor: cada columna es una semana (de lunes a domingo, de arriba abajo) y cada cuadro un día.
+ * Los días que todavía no llegan no se dibujan.
+ */
+function tiraDeCalor(anio, mesInicial, hoy) {
+  const dos = (n) => String(n).padStart(2, "0");
+  const cuadros = [], meses = [];
+  const primero = new Date(anio, mesInicial, 1);
+  const hueco = (primero.getDay() + 6) % 7;                 // lunes = 0
+  for (let k = 0; k < hueco; k++) cuadros.push('<i class="hc vacio"></i>');
+  for (let d = new Date(primero); d.getMonth() < mesInicial + 6 && d.getFullYear() === anio; d.setDate(d.getDate() + 1)) {
+    const dia = `${anio}-${dos(d.getMonth() + 1)}-${dos(d.getDate())}`;
+    if (dia > hoy) break;
+    if (d.getDate() === 1) meses.push(`<span data-col="${Math.floor(cuadros.length / 7) + 1}">${MESES_CORTOS[d.getMonth()]}</span>`);
+    const n = E.actividad.get(dia) || 0;
+    cuadros.push(`<i class="hc c${N.nivelDeCalor(n)}${dia === hoy ? " hoy" : ""}" data-dia="${dia}" data-n="${n}"></i>`);
+  }
+  if (cuadros.length === hueco) return "";
+  return `<div class="hmeses" aria-hidden="true">${meses.join("")}</div><div class="htira">${cuadros.join("")}</div>`;
+}
+
+/** Tu historia de estudio, día por día: entre más repasos, más caliente el color. Un año por tarjeta, el más nuevo arriba. */
+function verCalor(o) {
+  const hoy = N.fechaLocal(new Date());
+  const R = N.rachas(E.actividad, hoy);
+  const porAnio = new Map();
+  for (const [dia, n] of E.actividad) {
+    const a = Number(dia.slice(0, 4));
+    if (!porAnio.has(a)) porAnio.set(a, { dias: 0, total: 0 });
+    porAnio.get(a).dias++; porAnio.get(a).total += n;
+  }
+  const esteAnio = Number(hoy.slice(0, 4));
+  const primerAnio = porAnio.size ? Math.min(...porAnio.keys()) : esteAnio;
+  const anios = [];
+  for (let a = esteAnio; a >= primerAnio; a--) anios.push(a);
+  const foto = portadaDelDia();
+  const dias = (n) => plural(n, "día", "días");
+  poner(`
+  <div class="hoy mapa calor${foto ? " confoto" : ""}">
+    ${foto ? `<div class="fondo"><img data-foto="${esc(foto)}" alt=""></div>` : ""}
+    <div class="sobre">
+      ${entradas("mapa", "calor")}
+      <section class="card" id="calorCabeza">
+        <h1 class="h">Mapa de calor</h1>
+        <div class="extras">
+          <div><b>${dias(R.actual)}</b>racha de ahora</div>
+          <div><b>${dias(R.larga)}</b>tu racha más larga</div>
+          <div><b>${miles(R.dias)}</b>días estudiados</div>
+        </div>
+        ${R.mejor.dia ? `<p class="small">${miles(R.total)} repasos en total. Tu mejor día fue el ${fecha(R.mejor.dia)}, con ${miles(R.mejor.n)}.${R.largaFin ? ` Tu racha más larga terminó el ${fecha(R.largaFin)}.` : ""}</p>` : "<p>Todavía no hay días de estudio. Aquí se van a ir prendiendo.</p>"}
+        <ul class="hclave" aria-label="Qué significa cada color">
+          <li><i class="hc c0"></i>Nada</li>${N.CALOR.map((desde, i) => `<li><i class="hc c${i + 1}"></i>${desde}${i === N.CALOR.length - 1 ? " o más" : " a " + (N.CALOR[i + 1] - 1)}</li>`).join("")}
+        </ul>
+        <p class="small" id="calorDia" role="status">Toca un cuadro para ver ese día.</p>
+      </section>
+      ${anios.map((a) => {
+        const x = porAnio.get(a) || { dias: 0, total: 0 };
+        return `
+      <section class="card anioCalor" id="calor${a}">
+        <h2>${a} <span class="mpc">${x.dias ? `${dias(x.dias)} · ${miles(x.total)}` : "sin estudio"}</span></h2>
+        <div class="hanio" role="img" aria-label="${a}: ${x.dias ? `${dias(x.dias)} de estudio y ${miles(x.total)} repasos` : "sin estudio"}">${tiraDeCalor(a, 0, hoy)}${tiraDeCalor(a, 6, hoy)}</div>
+      </section>`;
+      }).join("")}
+    </div>
+  </div>`,
+  { titulo: "Mapa de calor · Pelagos", nav: "mapa", conserva: o.conserva });
+  // Un toque en un cuadro dice qué día es y cuánto estudiaste.
+  let marcado = null;
+  vista.querySelector(".sobre").addEventListener("click", (ev) => {
+    const c = ev.target instanceof Element ? ev.target.closest(".hc[data-dia]") : null;
+    if (!c) return;
+    if (marcado) marcado.classList.remove("sel");
+    marcado = c; c.classList.add("sel");
+    const n = Number(c.dataset.n);
+    $("calorDia").textContent = `${diaLargo(c.dataset.dia)} de ${c.dataset.dia.slice(0, 4)}: ${n ? plural(n, "repaso", "repasos") : "sin estudio"}.`;
+  });
+}
 
 // ---------------------------------------------------------------- El quiz de vocabulario
 

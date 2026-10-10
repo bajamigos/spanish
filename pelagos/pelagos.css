@@ -21,6 +21,8 @@
   /* Los seis colores del mapa, del más bajo al más alto, y el color de su letra. */
   --k0: rgba(168,58,18,0.9); --k1: rgba(226,89,31,0.9); --k2: rgba(245,166,124,0.9); --k3: rgba(169,205,245,0.9); --k4: rgba(91,157,230,0.9); --k5: rgba(31,95,181,0.9);
   --t0: #ffffff; --t1: #000000; --t2: #000000; --t3: #000000; --t4: #000000; --t5: #ffffff;
+  /* El mapa de calor: de nada (--c0) al día más caliente (--c4). */
+  --c0: rgba(0,0,0,0.09); --c1: #f8cf9a; --c2: #f39a3d; --c3: #d9531a; --c4: #86190a;
   color-scheme: light;
 }
 :root[data-tema="oscuro"] {
@@ -37,6 +39,7 @@
   --halo: 0 1px 6px rgba(0,0,0,0.7);
   --k0: rgba(255,138,82,0.88); --k1: rgba(217,89,38,0.88); --k2: rgba(168,86,47,0.88); --k3: rgba(28,63,112,0.88); --k4: rgba(47,111,196,0.88); --k5: rgba(127,182,255,0.88);
   --t0: #000000; --t1: #000000; --t2: #ffffff; --t3: #ffffff; --t4: #ffffff; --t5: #000000;
+  --c0: rgba(255,255,255,0.09); --c1: #743813; --c2: #c9581c; --c3: #ff9130; --c4: #ffe36e;
   color-scheme: dark;
 }
 
@@ -450,3 +453,28 @@ ul.clave .mc.kx { box-sizing: border-box; border: 1px dashed var(--vidrio-borde)
 .hvDatos dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
 .sheet textarea.campo { font-size: 17px; line-height: 1.4; resize: vertical; }
 .sheet .forma .go { margin-top: 6px; }
+
+/* ---- El mapa de calor. Un año por tarjeta, en dos tiras de medio año. Cada columna es una semana y cada cuadro un día;
+   entre más repasos, más caliente el color (--c0 a --c4, arriba, uno por modo). Aquí el vidrio sí va más cerrado,
+   para que la foto no se confunda con los colores. */
+.hoy.calor.confoto .sobre { margin-top: calc(8px - 100vh); margin-top: calc(8px - 100dvh); }
+.hoy.calor.confoto .card { background: var(--vidrio); -webkit-backdrop-filter: blur(6px) saturate(1.1); backdrop-filter: blur(6px) saturate(1.1); }
+.hoy.calor .card { padding: 14px 12px; gap: 10px; }
+.hoy.calor .card h1.h { font-size: 22px; }
+.hoy.calor .extras b { font-size: 19px; }
+.hanio { display: grid; gap: 4px; text-shadow: none; }
+.htira, .hmeses { display: grid; grid-template-columns: repeat(28, minmax(0, 1fr)); gap: 2px; }
+.htira { grid-template-rows: repeat(7, auto); grid-auto-flow: column; }
+.hmeses { margin-top: 6px; font-size: 11.5px; line-height: 1.2; color: var(--ink-3); }
+.hmeses span { grid-row: 1; white-space: nowrap; }
+.hc { display: block; aspect-ratio: 1; border-radius: 2px; background: var(--c0); }
+.hc.vacio { background: none; }
+.hc.c1 { background: var(--c1); } .hc.c2 { background: var(--c2); } .hc.c3 { background: var(--c3); } .hc.c4 { background: var(--c4); }
+.htira .hc[data-dia] { cursor: pointer; }
+.hc.hoy { outline: 1.5px solid var(--ink); outline-offset: 0; }
+.hc.sel { outline: 2px solid var(--ink); outline-offset: 1px; position: relative; z-index: 1; }
+ul.hclave { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 12px; font-size: 13.5px; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+ul.hclave li { display: flex; align-items: center; gap: 5px; white-space: nowrap; }
+ul.hclave .hc { width: 15px; height: 15px; border-radius: 3px; }
+#calorDia { min-height: 1.5em; font-weight: 600; color: var(--ink); }
+#calorDia::first-letter { text-transform: uppercase; }
