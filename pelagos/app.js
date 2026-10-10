@@ -1,7 +1,7 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=b7b47c1a5e";
-import * as A from "./almacen.js?v=b7b47c1a5e";
-import { abrirRecorrido } from "./recorrido.js?v=b7b47c1a5e";
+import * as N from "./nucleo.js?v=da4b0969ae";
+import * as A from "./almacen.js?v=da4b0969ae";
+import { abrirRecorrido } from "./recorrido.js?v=da4b0969ae";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -509,6 +509,7 @@ function cuadro(nombre, valor, de, unidad, estado, hecho, enlace = "", sello = n
 // El logo de Pelagos (la medusa cerebro) va encima de la foto del día, chiquito, en la esquina de arriba a la izquierda (su opción 4).
 const LOGO = `<img class="logoFondo" src="logo.png" alt="Pelagos" width="760" height="519">`;
 function fondoDelDia(respaldo = true) {
+  if (ambiente() === "limpio") return { hay: false, html: "" };
   const T = N.leerTablero(A.tablero());
   if (ambiente() !== "expanse" && T && T.foto && retratos.has(T.foto)) {
     return { hay: true, html: `<div class="fondo"><img data-retrato="${esc(T.foto)}" alt="${esc(T.atuendo ? "Andrea hoy: " + T.atuendo : "Andrea hoy")}">${LOGO}</div>` };
@@ -991,11 +992,15 @@ function palabras() {
 }
 
 /** El ambiente de las fotos (Ajustes): «reef» o «expanse». Se guarda en este aparato. Sin fotos Expanse, Reef. */
-function ambiente() { return guardado("pelagos.ambiente") === "expanse" && fotosExpanse.size ? "expanse" : "reef"; }
+function ambiente() {
+  const a = guardado("pelagos.ambiente");
+  return a === "limpio" ? "limpio" : a === "expanse" && fotosExpanse.size ? "expanse" : "reef";
+}
 /** Las portadas del ambiente de este aparato. */
-function juegoDeFotos() { return ambiente() === "expanse" ? (P.fotosExpanse || []) : (P.fotos || []); }
+function juegoDeFotos() { const a = ambiente(); return a === "limpio" ? [] : a === "expanse" ? (P.fotosExpanse || []) : (P.fotos || []); }
 /** La portada fija de una lección (es Reef); en Expanse, su pareja: la que ocupa el mismo lugar en el otro juego. */
 function fotoDeLeccion(nombre) {
+  if (ambiente() === "limpio") return null;
   if (!nombre || ambiente() !== "expanse") return nombre;
   const i = Math.max(0, (P.fotos || []).findIndex((f) => f.nombre === nombre)), lista = P.fotosExpanse;
   return lista[i % lista.length].nombre;
@@ -1367,7 +1372,7 @@ function pintarLeccion(tema, lec) {
   <p class="crumb"><a href="#/gramatica">Gramática</a> · <a href="#/gramatica/${esc(tema.nivel.toLowerCase())}">${esc(tema.nivel)}</a> · ${esc(CATEGORIAS[tema.categoria] || tema.categoria)}</p>
   <header class="hero">
     <div class="ratio"></div>
-    ${lec.foto ? `<img data-foto="${esc(fotoDeLeccion(lec.foto))}" alt="">` : ""}
+    ${lec.foto && fotoDeLeccion(lec.foto) ? `<img data-foto="${esc(fotoDeLeccion(lec.foto))}" alt="">` : ""}
     <div class="over">
       <p class="lead"><span>${esc(tema.nivel)} · ${esc(NIVELES[tema.nivel] || "")}</span><span>${i.n === 0 ? "de Kwiziq" : plural(i.n, "respuesta", "respuestas")}</span></p>
       <h1>${esc(lec.titulo)}</h1>
@@ -1834,13 +1839,13 @@ function verAjustes(o) {
     </nav>
     <p class="small">Cambia todas las páginas de una vez. Se guarda en este aparato.</p>
   </section>
-  ${fotosExpanse.size ? `<section class="card" id="ajAmbiente">
+  <section class="card" id="ajAmbiente">
     <h2>Ambiente</h2>
-    <nav class="jump dos" aria-label="Ambiente de las fotos">
-      <button type="button" data-ambiente-ir="reef">Reef</button><button type="button" data-ambiente-ir="expanse">Expanse</button>
+    <nav class="jump ${fotosExpanse.size ? "tres" : "dos"}" aria-label="Ambiente de las fotos">
+      <button type="button" data-ambiente-ir="reef">Reef</button>${fotosExpanse.size ? '<button type="button" data-ambiente-ir="expanse">Expanse</button>' : ""}<button type="button" data-ambiente-ir="limpio">Limpio</button>
     </nav>
-    <p class="small">Cambia las fotos de todas las páginas: las portadas Reef o el mundo de The Expanse. Se guarda en este aparato.</p>
-  </section>` : ""}
+    <p class="small">Cambia las fotos de todas las páginas: las portadas Reef, el mundo de The Expanse, o Limpio, sin fotos ni dibujos, solo negro o blanco según tu modo de color. Se guarda en este aparato.</p>
+  </section>
   <section class="card" id="ajApp">
     <h2>Pelagos como app</h2>
     ${yaEsApp()
@@ -1881,7 +1886,11 @@ function verAjustes(o) {
   // Reef o Expanse: solo cambian las fotos.
   const marcarAmbiente = () => { for (const b of vista.querySelectorAll("[data-ambiente-ir]")) b.setAttribute("aria-current", b.dataset.ambienteIr === ambiente() ? "page" : "false"); };
   for (const b of vista.querySelectorAll("[data-ambiente-ir]")) {
-    b.addEventListener("click", () => { guardar("pelagos.ambiente", b.dataset.ambienteIr); marcarAmbiente(); });
+    b.addEventListener("click", () => {
+      guardar("pelagos.ambiente", b.dataset.ambienteIr);
+      if (b.dataset.ambienteIr === "limpio") document.documentElement.dataset.ambiente = "limpio"; else delete document.documentElement.dataset.ambiente;
+      marcarAmbiente();
+    });
   }
   marcarAmbiente();
   if ($("ajInstalar")) $("ajInstalar").addEventListener("click", async () => {

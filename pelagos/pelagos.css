@@ -88,7 +88,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .jump a, .jump button { display: block; box-sizing: border-box; width: 100%; padding: 10px 4px; text-align: center; font: inherit; font-size: 14px; font-weight: 700; line-height: 1.55; text-decoration: none;
   background: var(--tab); color: var(--tab-ink); border: 2px solid var(--tab); border-radius: 4px; cursor: pointer; }
 .jump.niveles a, .jump.dos a, .jump.dos button, .jump.tres a, .jump.tres button { background: var(--page); color: var(--ink); border-color: var(--outline); }
-.jump.niveles a[aria-current="page"], .jump.dos a[aria-current="page"], .jump.dos button[aria-current="page"], .jump.tres a[aria-current="page"], .jump.tres button[aria-pressed="true"] { background: var(--tab); color: var(--tab-ink); border-color: var(--tab); }
+.jump.niveles a[aria-current="page"], .jump.dos a[aria-current="page"], .jump.dos button[aria-current="page"], .jump.tres a[aria-current="page"], .jump.tres button[aria-pressed="true"], .jump.tres button[aria-current="page"] { background: var(--tab); color: var(--tab-ink); border-color: var(--tab); }
 /* Las dos entradas de una sección (lecciones y quiz; quiz y lista). El nombre puede partirse en dos renglones sin descuadrar. */
 .jump.sec a { display: grid; place-items: center; min-height: 44px; padding: 6px 4px; line-height: 1.2; text-wrap: balance; }
 .jump.cuatro button { background: var(--page); color: var(--ink); border-color: var(--outline); font-size: 13px; padding: 9px 0; }
@@ -580,3 +580,19 @@ button.score { all: unset; box-sizing: border-box; margin-top: 10px; display: gr
 button.score:focus-visible { outline: 2px solid var(--b3); outline-offset: 3px; }
 button.score .vergraf { text-decoration: underline; text-underline-offset: 2px; }
 .hvLinea { display: grid; gap: 6px; }
+
+/* Ambiente «limpio»: sin fotos; las cabeceras toman los colores de la página (negro o blanco según el modo) */
+[data-ambiente="limpio"] .hero { background: var(--card); border: 1px solid var(--line); }
+[data-ambiente="limpio"] .hero .ratio { display: none; }
+[data-ambiente="limpio"] .over { background: none; color: var(--ink); padding-bottom: 18px; }
+[data-ambiente="limpio"] .kwh .over { min-height: 30vh; padding-bottom: 56px; }
+[data-ambiente="limpio"] .lead, [data-ambiente="limpio"] .hero .sub, [data-ambiente="limpio"] .score, [data-ambiente="limpio"] button.score { color: var(--ink-2); }
+[data-ambiente="limpio"] .hero h1, [data-ambiente="limpio"] .cue { text-shadow: none; }
+[data-ambiente="limpio"] .score .track { background: var(--line); border-color: var(--ink-3); }
+[data-ambiente="limpio"] .score .track i, [data-ambiente="limpio"] .score .track b { background: var(--ink); }
+[data-ambiente="limpio"] .hole { border-bottom-color: var(--ink); color: var(--ink-3); }
+[data-ambiente="limpio"] .rule { position: static; margin: 0 16px 16px; color: var(--ink); background: var(--page); border-color: var(--line); -webkit-backdrop-filter: none; backdrop-filter: none; }
+[data-ambiente="limpio"] .rule .k { color: var(--ink-3); }
+[data-ambiente="limpio"] .rule button { color: var(--page); background: var(--ink); border-color: var(--ink); }
+[data-ambiente="limpio"] .back { position: static; margin: 0 16px 16px; color: var(--ink); background: var(--page); border-color: var(--line); }
+[data-ambiente="limpio"] .hero button:focus-visible { outline-color: var(--ink); }
