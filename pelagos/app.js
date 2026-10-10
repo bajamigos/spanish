@@ -1,7 +1,7 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=76d9269f9c";
-import * as A from "./almacen.js?v=76d9269f9c";
-import { abrirRecorrido } from "./recorrido.js?v=76d9269f9c";
+import * as N from "./nucleo.js?v=730a56c6bf";
+import * as A from "./almacen.js?v=730a56c6bf";
+import { abrirRecorrido } from "./recorrido.js?v=730a56c6bf";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -57,6 +57,7 @@ let preguntas = new Map();    // pregunta por id
 let fotos = new Map();        // portada por nombre (Reef)
 let fotosExpanse = new Map(); // portada por nombre (ambiente Expanse)
 let retratos = new Map();     // retrato de Andrea por nombre
+let fotosGan = new Map();     // panorama del Recorrido de Ganímedes (modo Expanse)
 let fotosTour = new Map();    // panorama del Recorrido por nombre
 let recorridoVivo = null;     // el visor 360 abierto, si lo hay
 let tarjetas = new Map();     // tarjeta por id
@@ -74,6 +75,7 @@ function ponerPaquete(paquete) {
   fotosExpanse = new Map((P.fotosExpanse || []).map((f) => [f.nombre, f]));
   retratos = new Map((P.retratos || []).map((f) => [f.nombre, f]));
   fotosTour = new Map((P.fotosTour || []).map((f) => [f.nombre, f]));
+  fotosGan = new Map((P.fotosGanimedes || []).map((f) => [f.nombre, f]));
   tarjetas = new Map(P.tarjetas.map((c) => [c.id, c]));
 }
 function recalcular() {
@@ -336,25 +338,30 @@ function hojaMision(lugar) {
 }
 
 function verRecorrido(o, id) {
-  if (!P.tour || !P.tour.lugares || !P.tour.lugares.length) { verNoExiste("El recorrido todavía no está en tu contenido."); return; }
+  // Modo Expanse → Ganímedes; modo Reef → Tijuana cyberpunk. Si no hay Ganímedes en el contenido, se queda en Tijuana.
+  const gan = ambiente() === "expanse" && P.tourGanimedes && P.tourGanimedes.lugares && P.tourGanimedes.lugares.length;
+  const TOUR = gan ? P.tourGanimedes : P.tour, FOTOS = gan ? fotosGan : fotosTour, CARPETA = gan ? "ganimedes" : "tour";
+  const CLAVE = gan ? CLAVE_RECORRIDO + ".gan" : CLAVE_RECORRIDO;
+  if (!TOUR || !TOUR.lugares || !TOUR.lugares.length) { verNoExiste("El recorrido todavía no está en tu contenido."); return; }
   if (o.conserva && recorridoVivo) { enPregunta = true; return; }        // un aviso de guardado no reinicia el visor
-  const lugares = P.tour.lugares;
+  const lugares = TOUR.lugares;
   const nivel = new Map(resumenNiveles().map((n) => [n.nivel, n.promedio]));
   const tinte = (l) => (l.nivel && nivel.has(l.nivel) ? N.franja(nivel.get(l.nivel)) : null);
-  const ultimo = guardado(CLAVE_RECORRIDO);
-  const desde = id && lugares.some((l) => l.id === id) ? id : lugares.some((l) => l.id === ultimo) ? ultimo : P.tour.inicio;
+  const ultimo = guardado(CLAVE);
+  const desde = id && lugares.some((l) => l.id === id) ? id : lugares.some((l) => l.id === ultimo) ? ultimo : TOUR.inicio;
   poner('<div id="recRaiz"></div>', { titulo: "Recorrido · Pelagos", nav: "recorrido" });
   enPregunta = true;
   recorridoVivo = abrirRecorrido($("recRaiz"), {
-    tour: P.tour,
+    tour: TOUR,
     desde,
-    bajarFoto: (nombre) => A.foto(fotosTour.get(nombre), "tour"),
+    bajarFoto: (nombre) => A.foto(FOTOS.get(nombre), CARPETA),
     hojaMision,
     tinte,
+    esDeNoche: () => { const h = new Date().getHours(); return h >= 19 || h < 6; },
     escenaVista: (id) => (guardado("pelagos.escenas") || "").split(",").includes(id),
     escenaMarcar: (id) => { const v = (guardado("pelagos.escenas") || "").split(",").filter(Boolean); if (!v.includes(id)) guardar("pelagos.escenas", [...v, id].join(",")); },
     alMover: (l) => {
-      guardar(CLAVE_RECORRIDO, l.id);
+      guardar(CLAVE, l.id);
       try { window.history.replaceState(null, "", "#/recorrido/" + l.id); } catch { /* sin historia: no pasa nada */ }
     },
   });

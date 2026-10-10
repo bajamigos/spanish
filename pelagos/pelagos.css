@@ -544,3 +544,5 @@ ul.hclave .hc { width: 15px; height: 15px; border-radius: 3px; }
 .rec-escena[hidden] { display: none; }
 .rec-escena img { width: 100%; height: 100%; object-fit: contain; image-rendering: auto; }
 .rec-saltar { position: absolute; right: 14px; bottom: max(14px, env(safe-area-inset-bottom)); }
+
+.rec-describe{position:absolute;left:12px;right:12px;bottom:70px;max-height:38%;overflow:auto;margin:0;padding:12px 14px;border-radius:12px;background:rgba(10,12,18,.88);color:#f4efe2;font-size:1rem;line-height:1.5;z-index:6}

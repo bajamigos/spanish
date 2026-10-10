@@ -43,7 +43,7 @@ void main(){
  *  alMover     (lugar) -> aviso de que llegaste a un lugar
  * Devuelve { cerrar }.
  */
-export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte, alMover, escenaVista, escenaMarcar, salirHref = "#/" }) {
+export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte, alMover, esDeNoche, escenaVista, escenaMarcar, salirHref = "#/" }) {
   const lugares = new Map(tour.lugares.map((l) => [l.id, l]));
   let actual = lugares.get(desde) || lugares.get(tour.inicio) || tour.lugares[0];
 
@@ -60,11 +60,14 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
     <div class="rec-titulo" id="recTitulo"><b id="recT"></b><span id="recS"></span></div>
     <div class="rec-flechas" id="recFlechas"></div>
     <div class="rec-andrea" id="recAndrea" hidden><b>Andrea</b><span id="recAndreaT"></span></div>
+    <p class="rec-describe" id="recDescribe" role="status" aria-live="polite" hidden></p>
     <div class="rec-mapa" id="recMapa"><canvas id="recMapaC" aria-label="Mapa de Tijuana. Toca para agrandarlo."></canvas></div>
     <div class="rec-barra">
       <button type="button" class="rec-b" id="recBMapa" aria-pressed="false">Mapa</button>
       <button type="button" class="rec-b" id="recBSalidas">Salidas</button>
+      <button type="button" class="rec-b" id="recBLuz" hidden>Apagar las luces</button>
       <button type="button" class="rec-b" id="recBEscena" hidden>▶ Escena</button>
+      <button type="button" class="rec-b" id="recBDescribe" aria-pressed="false" hidden>Describir</button>
       <button type="button" class="rec-b" id="recBMision">Misión</button>
     </div>
     <section class="rec-hoja" id="recHoja" hidden aria-label="Hoja del recorrido"><button type="button" class="rec-b rec-x" id="recX">Cerrar</button><div id="recHojaC"></div></section>
@@ -114,7 +117,13 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
     return [w, h];
   }
 
-  async function cargarTextura(lugar) {
+  // Un lugar con `fotoNoche` tiene dos luces: sola según la hora del aparato, o la que elijas con el botón.
+  const luzElegida = new Map();                                   // id de lugar -> "dia" | "noche"
+  const luzDe = (l) => (!l.fotoNoche ? "dia" : luzElegida.get(l.id) || (esDeNoche && esDeNoche() ? "noche" : "dia"));
+  const variante = (l) => (luzDe(l) === "noche" ? { ...l, id: l.id + ":noche", foto: l.fotoNoche } : l);
+
+  async function cargarTextura(lugar0) {
+    const lugar = variante(lugar0);
     if (texturas.has(lugar.id)) { const t = texturas.get(lugar.id); texturas.delete(lugar.id); texturas.set(lugar.id, t); return t; }      // la más usada al final
     const url = await bajarFoto(lugar.foto);
     if (!url) throw new Error("sin foto");
@@ -358,6 +367,29 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
   $("recBEscena").addEventListener("click", () => verEscena(actual));
   document.addEventListener("fullscreenchange", () => { if (!document.fullscreenElement && !escenaCaja.hidden) cerrarEscena(); });
 
+  // ---------------------------------------------------------------- Cambiar la luz del lugar (día / noche)
+  $("recBDescribe").addEventListener("click", () => {
+    const p = $("recDescribe"), b = $("recBDescribe"), abre = p.hidden;
+    p.hidden = !abre; b.setAttribute("aria-pressed", String(abre));
+    p.textContent = abre ? actual.describe : "";
+  });
+  $("recBLuz").addEventListener("click", async () => {
+    if (!actual.fotoNoche || moviendo) return;
+    moviendo = true;
+    try {
+      luzElegida.set(actual.id, luzDe(actual) === "noche" ? "dia" : "noche");
+      $("recBLuz").textContent = luzDe(actual) === "noche" ? "Prender las luces" : "Apagar las luces";
+      const t = await cargarTextura(actual);
+      texB = t; mezcla = 0;
+      const t1 = performance.now();
+      for (let k = 0; k < 1;) { await cuadro(); k = Math.min(1, (performance.now() - t1) / 700); mezcla = k; pedir(); }
+      texA = t; texB = null; mezcla = 0; pedir();
+    } catch {
+      $("recError").hidden = false;
+      $("recError").textContent = "No se pudo cambiar la luz. Revisa tu conexión.";
+    } finally { moviendo = false; }
+  });
+
   // ---------------------------------------------------------------- Ir a otro lugar
   function mostrarLugar() {
     $("recT").textContent = actual.titulo;
@@ -367,6 +399,10 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
     $("recAndreaT").textContent = actual.andrea ? "«" + actual.andrea + "»" : "";
     $("recBMision").hidden = !(actual.acciones && actual.acciones.length);
     $("recBEscena").hidden = !actual.escena;
+    $("recBDescribe").hidden = !actual.describe;
+    $("recDescribe").textContent = ""; $("recDescribe").hidden = true; $("recBDescribe").setAttribute("aria-pressed", "false");
+    $("recBLuz").hidden = !actual.fotoNoche;
+    $("recBLuz").textContent = luzDe(actual) === "noche" ? "Prender las luces" : "Apagar las luces";
     armarMarcas();
     pintarMapa();
     pedir();
@@ -377,7 +413,7 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
     (async () => {
       for (const [, d] of actual.salidas) {
         const l = lugares.get(d);
-        if (l && viva) { try { await bajarFoto(l.foto); } catch { /* no pasa nada: se baja cuando vayas */ } }
+        if (l && viva) { try { await bajarFoto(variante(l).foto); } catch { /* no pasa nada: se baja cuando vayas */ } }
       }
     })();
   }
