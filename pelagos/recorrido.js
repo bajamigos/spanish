@@ -74,7 +74,7 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
       <button type="button" class="rec-b" id="recBEscena" hidden>▶ Escena</button>
       <button type="button" class="rec-b" id="recBHombro" hidden>Acercarte</button>
       <button type="button" class="rec-b" id="recBQuedarte" hidden>Quedarte</button>
-      <button type="button" class="rec-b" id="recBEscenas" hidden>🎞 Escenas</button>
+      <button type="button" class="rec-b" id="recBEscenas" hidden>🎞 Cinemáticas</button>
       <button type="button" class="rec-b" id="recBDescribe" aria-pressed="false" hidden>Describir</button>
       <button type="button" class="rec-b" id="recBMision">Misión</button>
     </div>
@@ -362,7 +362,8 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
     try { if (escenaCaja.requestFullscreen) await escenaCaja.requestFullscreen(); } catch { /* sin pantalla completa: cubre la página igual */ }
     $("recSaltar").focus({ preventScroll: true });
     if (escenaMarcar) escenaMarcar(lugar.id);
-    setTimeout(() => { if (yo === escenaHilo) cerrarEscena(); }, Math.max(1, e.segundos || 5) * 1000);
+    // Pedido de CJ: la escena se repite en bucle hasta que toque «Saltar»; ya no se cierra sola.
+    void yo;
   }
   function cerrarEscena() {
     escenaHilo++;
@@ -481,7 +482,7 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
     try { lista = await escenas.listar(sala); } catch (e) { error = e && e.message ? e.message : "No se pudieron leer."; }
     if (hoja.dataset.que !== "escenas" || hoja.hidden || actual.id !== sala) return;
     const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
-    $("recHojaC").innerHTML = `<h2>Escenas de «${esc(actual.titulo)}»</h2>
+    $("recHojaC").innerHTML = `<h2>Cinemáticas de «${esc(actual.titulo)}»</h2>
       <p class="rec-nota" role="status">${esc(aviso || error)}</p>
       <ol class="rec-lista">${lista.map((x, i) => `<li>${i + 1}. ${esc(x.desc || "Sin descripción")} <button type="button" class="rec-b" data-quitar="${esc(x.archivo)}">Quitar</button></li>`).join("") || "<li>Todavía no hay escenas aquí.</li>"}</ol>
       ${lista.length ? '<p><button type="button" class="rec-b" id="recEscVer">▶ Ver la escena</button></p>' : ""}
@@ -492,7 +493,7 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
   $("recBEscenas").addEventListener("click", () => {
     if (!hoja.hidden && hoja.dataset.que === "escenas") { cerrarHoja(); return; }
     hoja.hidden = false; hoja.dataset.que = "escenas"; hoja.scrollTop = 0;
-    $("recHojaC").innerHTML = "<h2>Escenas</h2><p>Un momento…</p>";
+    $("recHojaC").innerHTML = "<h2>Cinemáticas</h2><p>Un momento…</p>";
     $("recX").focus({ preventScroll: true });
     pintarEscenas();
   });
@@ -545,6 +546,7 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
     $("recBHombro").hidden = !actual.hombro;
     $("recBQuedarte").hidden = !actual.quedarte;
     $("recBEscenas").hidden = !escenas;
+    $("recBEscenas").classList.toggle("rec-b-dest", !!(actual.cinematica || actual.quedarte));   // resaltado donde hay cinemáticas
     $("recBDescribe").hidden = !actual.describe;
     $("recDescribe").textContent = ""; $("recDescribe").hidden = true; $("recBDescribe").setAttribute("aria-pressed", "false");
     $("recBLuz").hidden = !actual.fotoNoche;

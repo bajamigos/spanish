@@ -1,7 +1,7 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=b6aec2fc8d";
-import * as A from "./almacen.js?v=b6aec2fc8d";
-import { abrirRecorrido } from "./recorrido.js?v=b6aec2fc8d";
+import * as N from "./nucleo.js?v=9a43f5a7a1";
+import * as A from "./almacen.js?v=9a43f5a7a1";
+import { abrirRecorrido } from "./recorrido.js?v=9a43f5a7a1";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");

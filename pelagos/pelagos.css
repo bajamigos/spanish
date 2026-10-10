@@ -525,6 +525,7 @@ ul.hclave .hc { width: 15px; height: 15px; border-radius: 3px; }
 .rec-barra { position: absolute; left: 12px; right: 12px; bottom: max(12px, env(safe-area-inset-bottom)); display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
 .rec-barra .rec-b { flex: 1 1 28%; max-width: 150px; }
 .rec-barra .rec-b[aria-pressed="true"] { background: #f2b441; color: #1a1208; border-color: #1a1208; }
+.rec-barra .rec-b.rec-b-dest { border-color: #f2b441; color: #f2b441; }   /* «🎞 Cinemáticas» resaltado en los cuartos de misión */
 .rec-hoja { position: absolute; left: 0; right: 0; bottom: 0; z-index: 8; max-height: 74%; overflow: auto; box-sizing: border-box;
   padding: 16px 16px calc(max(16px, env(safe-area-inset-bottom)) + 8px); border-radius: 18px 18px 0 0; border-top: 2px solid rgba(255,255,255,0.4);
   background: rgba(14,12,10,0.96); touch-action: pan-y; -webkit-user-select: text; user-select: text; }
