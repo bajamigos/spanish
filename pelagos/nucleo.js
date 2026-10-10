@@ -442,7 +442,10 @@ export function leerTablero(crudo) {
     const partes = [];
     for (const x of Array.isArray(c.partes) ? c.partes.slice(0, 8) : []) {
       const nombre = texto(x && x.nombre, 30);
-      if (nombre !== null) partes.push({ nombre, va: x.va === true });
+      // «con» dice con qué se gana la parte, para que la página la prenda al momento sin esperar a la siguiente lectura:
+      // «siempre», «tarjetas» (tus tarjetas en cero), «kwizzes» (tu meta de kwizzes), «medida:<nombre>» o «todas» (las demás juntas).
+      const con = typeof x?.con === "string" && /^(siempre|tarjetas|kwizzes|todas|medida:.{1,60})$/.test(x.con) ? x.con : null;
+      if (nombre !== null) partes.push({ nombre, va: x.va === true, con });
     }
     checkin = { estado: c.estado, nivel: numero(c.nivel), nombre: texto(c.nombre, 40), titulo: texto(c.titulo, 120),
       minutos: numero(c.minutos), partes, falta: texto(c.falta, 400), puesto: momento(c.puesto) };

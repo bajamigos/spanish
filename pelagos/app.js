@@ -1,6 +1,6 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=13cf660c79";
-import * as A from "./almacen.js?v=13cf660c79";
+import * as N from "./nucleo.js?v=8d5a43e02d";
+import * as A from "./almacen.js?v=8d5a43e02d";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -378,8 +378,8 @@ function verInicio(o) {
   const kw = N.kwizzesDelDia(E, hoy), metaKw = N.KWIZZES_AL_DIA;
   const cuadros = [cuadro("Kwizzes", kw, metaKw, "", kw >= metaKw ? "Cumplido" : `Faltan ${metaKw - kw}`, kw >= metaKw)];
   // Las tarjetas también las cuenta Pelagos: las que tocan hoy y siguen pendientes. La meta es cero.
-  if (P.tarjetas.length) {
-    const tj = N.tarjetasDelDia(P, E, hoy).pendientes.length;
+  const tj = P.tarjetas.length ? N.tarjetasDelDia(P, E, hoy).pendientes.length : null;
+  if (tj !== null) {
     cuadros.push(cuadro("Tarjetas", tj, 0, "", tj === 0 ? "Cumplido" : "Meta: cero", tj === 0, "#/tarjetas"));
   }
   for (const m of T ? T.medidas : []) {
@@ -403,12 +403,20 @@ function verInicio(o) {
   const nombreCi = c && c.titulo ? c.titulo.replace(/^check-?in\s*/i, "") : "";
   const rotuloCi = !c ? "" : c.estado === "ninguno" ? "Sin check-in hoy"
     : (!deHoy ? "Check-in anterior" : c.estado === "nuevo" ? "Check-in nuevo" : "Check-in") + (nombreCi ? ": " + nombreCi : "");
+  // Las partes: lo que llevas ganado hoy. Las que dicen con qué se ganan se prenden aquí mismo, al momento;
+  // las demás valen lo que diga el tablero.
+  const cumplida = (nombre) => { const m = T.medidas.find((x) => x.nombre === nombre); return m ? (m.de === 0 ? m.valor === 0 : m.valor >= m.de) : null; };
+  const sola = (x) => (x.con === "siempre" ? true : x.con === "tarjetas" ? tj === 0 : x.con === "kwizzes" ? kw >= metaKw
+    : x.con && x.con.startsWith("medida:") ? (deHoy ? cumplida(x.con.slice(7)) ?? x.va : false) : x.va);
+  const partes = !c ? [] : c.partes.map((x) => ({ ...x, va: x.con === "todas" ? null : sola(x) }));
+  const ganables = partes.filter((x) => x.con && x.con !== "siempre" && x.con !== "todas");
+  for (const x of partes) if (x.va === null) x.va = ganables.length > 0 && ganables.every((y) => y.va);
   const checkin = !c ? "" : `
   <section class="card" id="checkin">
     <h2 class="sr">Check-in</h2>
     <p class="ciLinea">${esc(rotuloCi)}</p>
     ${c.estado === "ninguno" ? "" : `<p class="ciOido ${c.estado === "oido" ? "si" : "no"}">${c.estado === "oido" ? ICONO_SI + "Escuchado" : ICONO_NO + "Sin escuchar"}</p>`}
-    ${c.estado !== "ninguno" && c.partes.length ? `<ul class="partes" data-n="${c.partes.length}">${c.partes.map((x) => `<li class="${x.va ? "va" : "nova"}"><span>${esc(x.nombre)}</span><span class="sr">${x.va ? ": incluido" : ": no incluido"}</span></li>`).join("")}</ul>` : ""}
+    ${partes.length ? `<ul class="partes" data-n="${partes.length}">${partes.map((x) => `<li class="${x.va ? "va" : "nova"}"><span>${esc(x.nombre)}</span><span class="sr">${x.va ? ": ganado" : ": falta"}</span></li>`).join("")}</ul>` : ""}
   </section>`;
 
   poner(`
