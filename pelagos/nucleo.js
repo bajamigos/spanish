@@ -593,12 +593,11 @@ export function leerTablero(crudo) {
 export const INICIO_HISTORIA = "2026-10-10";
 
 /**
- * El promedio de un nivel al cierre de cada día, de «desde» a «hasta» (los dos incluidos).
+ * El promedio de unos temas al cierre de cada día, de «desde» a «hasta» (los dos incluidos).
  * Cada día se calcula con los sucesos que había hasta ese día, como si la página se abriera esa noche.
- * Devuelve [{ dia, pct }]; pct es null si ese día no había ningún tema del nivel con porcentaje.
+ * Devuelve [{ dia, pct }]; pct es null si ese día ninguno de los temas tenía porcentaje.
  */
-export function historiaNivel(paquete, sucesos, nivel, hasta = fechaLocal(new Date()), desde = INICIO_HISTORIA) {
-  const ids = (paquete.temas || []).filter((t) => t.nivel === nivel).map((t) => t.id);
+export function historiaTemas(paquete, sucesos, ids, hasta = fechaLocal(new Date()), desde = INICIO_HISTORIA) {
   const lista = (sucesos || []).filter((e) => e && typeof e === "object").map((e) => ({ e, dia: fechaLocal(new Date(ms(e))) }));
   const salida = [];
   for (let dia = desde, vueltas = 0; dia <= hasta && vueltas < 800; dia = sumarDias(dia, 1), vueltas++) {
@@ -606,6 +605,23 @@ export function historiaNivel(paquete, sucesos, nivel, hasta = fechaLocal(new Da
     let suma = 0, con = 0;
     for (const id of ids) { const v = estado.temas.get(id)?.pct; if (v !== null && v !== undefined) { suma += v; con++; } }
     salida.push({ dia, pct: con ? suma / con : null });
+  }
+  return salida;
+}
+
+/** El promedio de un nivel, día por día (ver historiaTemas). */
+export function historiaNivel(paquete, sucesos, nivel, hasta = fechaLocal(new Date()), desde = INICIO_HISTORIA) {
+  return historiaTemas(paquete, sucesos, (paquete.temas || []).filter((t) => t.nivel === nivel).map((t) => t.id), hasta, desde);
+}
+
+/** Los aciertos de una tarjeta al cierre de cada día: lo que traía de antes más sus repasos hasta ese día. */
+export function historiaTarjeta(suya, hasta = fechaLocal(new Date()), desde = INICIO_HISTORIA) {
+  const repasos = (suya?.historia || []).map((h) => ({ dia: fechaLocal(new Date(Date.parse(h.cuando) || 0)), bien: !!h.bien }));
+  const salida = [];
+  for (let dia = desde, vueltas = 0; dia <= hasta && vueltas < 800; dia = sumarDias(dia, 1), vueltas++) {
+    let n = suya?.baseN || 0, bien = suya?.baseBien || 0;
+    for (const r of repasos) if (r.dia <= dia) { n++; if (r.bien) bien++; }
+    salida.push({ dia, pct: n ? (100 * bien) / n : null });
   }
   return salida;
 }

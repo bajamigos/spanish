@@ -1,7 +1,7 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=9366028b04";
-import * as A from "./almacen.js?v=9366028b04";
-import { abrirRecorrido } from "./recorrido.js?v=9366028b04";
+import * as N from "./nucleo.js?v=b7b47c1a5e";
+import * as A from "./almacen.js?v=b7b47c1a5e";
+import { abrirRecorrido } from "./recorrido.js?v=b7b47c1a5e";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1172,6 +1172,7 @@ function abrirPalabra(id) {
         h.bien ? `<rect class="gb" x="${i * 11}" y="2" width="8" height="38" rx="2"/>` : `<rect class="gm" x="${i * 11}" y="27" width="8" height="13" rx="2"/>`).join("")}</svg>
       <figcaption class="small">${ultimos.length === 1 ? "Tu último repaso" : `Tus últimos ${ultimos.length} repasos, del más viejo al más nuevo`}. Barra alta: bien. Barra bajita: mal.</figcaption>
     </figure>`;
+  const serieV = N.historiaTarjeta(s, hoy);
   const datos = [
     ["Próximo repaso", s.quitada ? "Ninguno: la quitaste" : !s.toca ? "Todavía no la has visto" : s.toca < hoy ? "Atrasado: tocaba el " + fechaCorta(s.toca)
       : s.toca === hoy ? "Hoy" : s.toca === N.sumarDias(hoy, 1) ? "Mañana" : "El " + fechaCorta(s.toca)],
@@ -1186,6 +1187,7 @@ function abrirPalabra(id) {
     <ul class="exs"><li class="ex" data-di="${esc(c.reverso)}"><h2 class="es" id="hvT" lang="es-MX" tabindex="-1">${esc(c.reverso)}</h2><span class="en" lang="en">${esc(c.frente)}</span></li></ul>
     <div class="sc"><span>Aciertos: ${v === null ? "todavía sin datos" : `${pct(v)} · ${bien} de ${n}`}</span>${v === null ? "" : barra(v)}</div>
     ${grafica}
+    <div class="hvLinea">${htmlGrafica(serieV, "gV", c.reverso, false)}</div>
     <dl class="hvDatos">${datos.map(([k, t]) => `<div><dt>${k}</dt><dd>${esc(t)}</dd></div>`).join("")}</dl>
     <div class="acts" id="hvActos">
       <button type="button" class="ub" id="hvEditar">Editar</button>
@@ -1195,6 +1197,7 @@ function abrirPalabra(id) {
     <p id="hvSeguro" hidden>¿La quito de tu vocabulario? Ya no sale en tu quiz. <button type="button" class="lk" id="hvSi">Sí, quítala</button> · <button type="button" class="lk" id="hvNo">No</button></p>
     ${formaPalabra(c, true)}`;
   vestir(hojaV);
+  activarGrafica(serieV, "gV");
   const editar = (si) => { $("hvForma").hidden = !si; $("hvActos").hidden = si; $("hvSeguro").hidden = true; if (si) $("hvEs").focus(); };
   $("hvEditar").addEventListener("click", () => editar(true));
   $("hvCancelar").addEventListener("click", () => editar(false));
@@ -1222,56 +1225,57 @@ function abrirPalabra(id) {
   $("hvT").focus({ preventScroll: true });
 }
 
-// La gráfica de un nivel: su porcentaje al cierre de cada día, desde el día en que la pidió.
+// Las gráficas de porcentaje por día (nivel, tema y palabra): una línea con un marcador que se mueve con el dedo o las flechas.
 const diaCorto = (d) => `${Number(d.slice(8, 10))} ${MESES_CORTOS[Number(d.slice(5, 7)) - 1]}`;
-function abrirGrafica(nivel) {
-  const hoy = N.fechaLocal(new Date());
-  const serie = N.historiaNivel(P, A.sucesos(), nivel, hoy);
-  const W = 320, H = 210, iz = 36, de = 14, ar = 14, ab = 30, an = W - iz - de, al = H - ar - ab;
-  const xs = (i) => serie.length === 1 ? iz + an / 2 : iz + (i * an) / (serie.length - 1);
-  const ys = (v) => ar + al - (Math.max(0, Math.min(100, v)) / 100) * al;
+const GW = 320, GH = 210, GIZ = 36, GDE = 14, GAR = 14, GAB = 30, GAN = GW - GIZ - GDE, GAL = GH - GAR - GAB;
+/** El HTML de la gráfica. «pre» distingue las piezas de cada gráfica (pueden estar dos hojas abiertas). */
+function htmlGrafica(serie, pre, nombre, conMeta = true) {
+  if (serie.every((p) => p.pct === null)) return `<p class="small">La gráfica de tu porcentaje por día aparece cuando haya datos.</p>`;
+  const xs = (i) => serie.length === 1 ? GIZ + GAN / 2 : GIZ + (i * GAN) / (serie.length - 1);
+  const ys = (v) => GAR + GAL - (Math.max(0, Math.min(100, v)) / 100) * GAL;
   const puntos = serie.map((p, i) => (p.pct === null ? null : [xs(i), ys(p.pct)]));
-  // La línea se corta donde no hay dato.
-  let trazo = "", abierta = false;
+  let trazo = "", abierta = false;       // la línea se corta donde no hay dato
   for (const p of puntos) { if (!p) { abierta = false; continue; } trazo += `${abierta ? "L" : "M"}${p[0].toFixed(1)} ${p[1].toFixed(1)}`; abierta = true; }
-  const paso = Math.max(1, Math.ceil(serie.length / 6));
-  const ult = serie.length - 1;
+  const paso = Math.max(1, Math.ceil(serie.length / 6)), ult = serie.length - 1;
   const etiquetas = serie.map((p, i) => (i % paso === 0 || i === ult) && !(i !== ult && ult - i < paso)
-    ? `<text class="gx" x="${xs(i).toFixed(1)}" y="${H - 10}" text-anchor="${serie.length > 1 && i === ult ? "end" : serie.length > 1 && i === 0 ? "start" : "middle"}">${diaCorto(p.dia)}</text>` : "").join("");
-  const rejilla = [0, 25, 50, 75, 100].map((v) => `<line class="gr" x1="${iz}" x2="${W - de}" y1="${ys(v)}" y2="${ys(v)}"/><text class="gy" x="${iz - 6}" y="${ys(v) + 4}" text-anchor="end">${v}</text>`).join("");
+    ? `<text class="gx" x="${xs(i).toFixed(1)}" y="${GH - 10}" text-anchor="${serie.length > 1 && i === ult ? "end" : serie.length > 1 && i === 0 ? "start" : "middle"}">${diaCorto(p.dia)}</text>` : "").join("");
+  const rejilla = [0, 25, 50, 75, 100].map((v) => `<line class="gr" x1="${GIZ}" x2="${GW - GDE}" y1="${ys(v)}" y2="${ys(v)}"/><text class="gy" x="${GIZ - 6}" y="${ys(v) + 4}" text-anchor="end">${v}</text>`).join("");
   const m = meta();
-  const ultimo = serie[serie.length - 1];
-  $("hvIn").innerHTML = `
-    <span class="k">Atlas · ${esc(NIVELES[nivel])}</span>
-    <h2 id="hvT" tabindex="-1"><span class="lv">${nivel}</span> Tu porcentaje, día por día</h2>
-    <p class="r" id="gLee" aria-live="polite"></p>
-    <svg class="ggraf" id="gSvg" viewBox="0 0 ${W} ${H}" role="img" tabindex="0" aria-label="Gráfica de línea: porcentaje del nivel ${nivel} por día. Usa las flechas para moverte de día.">
+  return `
+    <p class="gLee" id="${pre}Lee" aria-live="polite"></p>
+    <svg class="ggraf" id="${pre}Svg" viewBox="0 0 ${GW} ${GH}" role="img" tabindex="0" aria-label="Gráfica de línea: ${esc(nombre)}, porcentaje por día. Usa las flechas para moverte de día.">
       ${rejilla}
-      <line class="gmeta" x1="${iz}" x2="${W - de}" y1="${ys(m)}" y2="${ys(m)}"/><text class="gmt" x="${W - de}" y="${ys(m) - 5}" text-anchor="end">meta ${m}%</text>
+      ${conMeta ? `<line class="gmeta" x1="${GIZ}" x2="${GW - GDE}" y1="${ys(m)}" y2="${ys(m)}"/><text class="gmt" x="${GW - GDE}" y="${ys(m) - 5}" text-anchor="end">meta ${m}%</text>` : ""}
       ${etiquetas}
       <path class="gl" d="${trazo}"/>
       ${puntos.map((p) => (p ? `<circle class="gp" cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="3.2"/>` : "")).join("")}
-      <line class="gt" id="gTv" y1="${ar}" y2="${ar + al}"/>
-      <circle class="gtp" id="gTp" r="6"/>
+      <line class="gt" id="${pre}Tv" y1="${GAR}" y2="${GAR + GAL}"/>
+      <circle class="gtp" id="${pre}Tp" r="6"/>
     </svg>
-    <p class="small">${serie.length === 1 ? "La gráfica empieza hoy: cada día que pase se agrega un punto. " : ""}Toca la línea para ver el porcentaje exacto de cada día. La raya punteada es tu meta.</p>
-    <ul class="sr">${serie.map((p) => `<li>${esc(fechaCorta(p.dia))}: ${esc(pct(p.pct))}</li>`).join("")}</ul>
-    <div class="acts"><button type="button" class="ub" data-cerrar>Cerrar</button></div>`;
-  const svg = $("gSvg");
+    <p class="small">${serie.length === 1 ? "La gráfica empieza hoy: cada día que pase se agrega un punto. " : ""}Toca la línea para ver el porcentaje exacto de cada día.${conMeta ? " La raya punteada es tu meta." : ""}</p>
+    <ul class="sr">${serie.map((p) => `<li>${esc(fechaCorta(p.dia))}: ${esc(pct(p.pct))}</li>`).join("")}</ul>`;
+}
+/** Le da vida a una gráfica ya puesta: el marcador empieza en hoy. */
+function activarGrafica(serie, pre) {
+  const svg = $(pre + "Svg");
+  if (!svg) return;
+  const hoy = N.fechaLocal(new Date());
+  const xs = (i) => serie.length === 1 ? GIZ + GAN / 2 : GIZ + (i * GAN) / (serie.length - 1);
+  const ys = (v) => GAR + GAL - (Math.max(0, Math.min(100, v)) / 100) * GAL;
   let actual = serie.length - 1;
   const marcar = (i) => {
     actual = Math.max(0, Math.min(serie.length - 1, i));
     const p = serie[actual], x = xs(actual);
-    $("gTv").setAttribute("x1", x); $("gTv").setAttribute("x2", x);
-    const tp = $("gTp");
+    $(pre + "Tv").setAttribute("x1", x); $(pre + "Tv").setAttribute("x2", x);
+    const tp = $(pre + "Tp");
     if (p.pct === null) tp.setAttribute("visibility", "hidden");
     else { tp.setAttribute("visibility", "visible"); tp.setAttribute("cx", x); tp.setAttribute("cy", ys(p.pct)); }
-    $("gLee").textContent = `${p.dia === hoy ? "Hoy" : fecha(p.dia).replace(/ de \d{4}$/, "")}: ${pct(p.pct)}`;
+    $(pre + "Lee").textContent = `${p.dia === hoy ? "Hoy" : fecha(p.dia).replace(/ de \d{4}$/, "")}: ${pct(p.pct)}`;
   };
   const tocar = (ev) => {
     const r = svg.getBoundingClientRect();
-    const x = ((ev.clientX - r.left) / r.width) * W;
-    marcar(serie.length === 1 ? 0 : Math.round(((x - iz) / an) * (serie.length - 1)));
+    const x = ((ev.clientX - r.left) / r.width) * GW;
+    marcar(serie.length === 1 ? 0 : Math.round(((x - GIZ) / GAN) * (serie.length - 1)));
   };
   svg.addEventListener("pointerdown", (ev) => { tocar(ev); svg.setPointerCapture?.(ev.pointerId); });
   svg.addEventListener("pointermove", (ev) => { if (ev.buttons || ev.pointerType === "mouse") tocar(ev); });
@@ -1280,9 +1284,34 @@ function abrirGrafica(nivel) {
     else if (ev.key === "ArrowRight") { marcar(actual + 1); ev.preventDefault(); }
   });
   marcar(serie.length - 1);
+}
+
+// La gráfica de un tema, desde su lección.
+function abrirGraficaTema(id) {
+  const t = porId.get(Number(id));
+  if (!t) return;
+  const serie = N.historiaTemas(P, A.sucesos(), [t.id], N.fechaLocal(new Date()));
+  $("hvIn").innerHTML = `
+    <span class="k">Lección · ${esc(t.nivel)}</span>
+    <h2 id="hvT" tabindex="-1">${esc(titulo(t))}</h2>
+    ${htmlGrafica(serie, "gL", titulo(t))}
+    <div class="acts"><button type="button" class="ub" data-cerrar>Cerrar</button></div>`;
+  activarGrafica(serie, "gL");
   if (!hojaV.hasAttribute("open")) { if (hojaV.showModal) hojaV.showModal(); else hojaV.setAttribute("open", ""); }
   $("hvT").focus({ preventScroll: true });
-  return ultimo;
+}
+
+// La gráfica de un nivel: su promedio al cierre de cada día, desde el día en que la pidió.
+function abrirGrafica(nivel) {
+  const serie = N.historiaNivel(P, A.sucesos(), nivel, N.fechaLocal(new Date()));
+  $("hvIn").innerHTML = `
+    <span class="k">Atlas · ${esc(NIVELES[nivel])}</span>
+    <h2 id="hvT" tabindex="-1"><span class="lv">${nivel}</span> Tu porcentaje, día por día</h2>
+    ${htmlGrafica(serie, "gN", "nivel " + nivel)}
+    <div class="acts"><button type="button" class="ub" data-cerrar>Cerrar</button></div>`;
+  activarGrafica(serie, "gN");
+  if (!hojaV.hasAttribute("open")) { if (hojaV.showModal) hojaV.showModal(); else hojaV.setAttribute("open", ""); }
+  $("hvT").focus({ preventScroll: true });
 }
 
 // ---------------------------------------------------------------- La lección
@@ -1343,10 +1372,10 @@ function pintarLeccion(tema, lec) {
       <p class="lead"><span>${esc(tema.nivel)} · ${esc(NIVELES[tema.nivel] || "")}</span><span>${i.n === 0 ? "de Kwiziq" : plural(i.n, "respuesta", "respuestas")}</span></p>
       <h1>${esc(lec.titulo)}</h1>
       ${lec.subtitulo ? `<p class="sub">${esc(lec.subtitulo)}</p>` : ""}
-      <div class="score">
-        <span>Tu porcentaje: ${pct(i.pct)} · meta ${meta()}%</span>
+      <button type="button" class="score" data-graftema="${tema.id}" aria-label="Tu porcentaje: ${pct(i.pct)}, meta ${meta()}%. Ver tu porcentaje día por día">
+        <span>Tu porcentaje: ${pct(i.pct)} · meta ${meta()}% <span class="vergraf" aria-hidden="true">· ver gráfica</span></span>
         <div class="track" role="img" aria-label="${pct(i.pct)} de 100, meta en ${meta()}"><i data-w="${ancho(i.pct)}"></i><b data-x="${meta()}"></b></div>
-      </div>
+      </button>
     </div>
     ${lec.regla ? `
     <div class="rule" id="rule"><span class="k">La regla en una línea</span><p>${esc(lec.regla)}</p><button type="button" id="ruleOff">Ya me la sé</button></div>
@@ -1885,6 +1914,9 @@ function abrirHoja(id) {
   $("shP").textContent = "Tu porcentaje: " + pct(i.pct) + (i.n === 0 ? " · de Kwiziq" : " · " + plural(i.n, "respuesta", "respuestas"));
   $("shB").style.width = ancho(i.pct) + "%";
   $("shB").parentElement.className = "bar" + tono(i.pct);
+  const serieT = N.historiaTemas(P, A.sucesos(), [t.id], N.fechaLocal(new Date()));
+  $("shG").innerHTML = htmlGrafica(serieT, "gT", titulo(t));
+  activarGrafica(serieT, "gT");
   const conLeccion = !!(t.slug && t.leccion);
   $("shL").hidden = !conLeccion;
   if (conLeccion) $("shL").href = "#/leccion/" + t.slug;
@@ -1910,6 +1942,8 @@ document.addEventListener("click", (ev) => {
   if (toque && !hoja.hasAttribute("open") && !objetivo.closest("a, button, summary, input, label, dialog")) { toque(); return; }
   const graf = objetivo.closest("[data-grafnivel]");
   if (graf && P && E) { abrirGrafica(graf.dataset.grafnivel); return; }
+  const grafT = objetivo.closest("[data-graftema]");
+  if (grafT && P && E) { abrirGraficaTema(grafT.dataset.graftema); return; }
   const previa = objetivo.closest("[data-l]");
   if (previa) { abrirHoja(previa.dataset.l); return; }
   const kwiz = objetivo.closest("[data-kwiz]");
