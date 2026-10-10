@@ -1,7 +1,7 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=a0fe1c1093";
-import * as A from "./almacen.js?v=a0fe1c1093";
-import { abrirRecorrido } from "./recorrido.js?v=a0fe1c1093";
+import * as N from "./nucleo.js?v=fa01171791";
+import * as A from "./almacen.js?v=fa01171791";
+import { abrirRecorrido } from "./recorrido.js?v=fa01171791";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -267,7 +267,7 @@ const RUTAS = [
   [/^\/gramatica\/quiz\/([A-Za-z0-9_-]+)\/resultado$/, verResultado],
   [/^\/gramatica\/atlas$/, verMapa],
   [/^\/gramatica\/nodos$/, () => ir("/gramatica/atlas", true)],     // los Nodos ahora se llaman Atlas
-  [/^\/gramatica\/([a-z0-9]+)(\/bajo)?$/, verNivel],
+  [/^\/gramatica\/([a-z0-9]+)(\/bajo|\/mision)?$/, verNivel],
   [/^\/bitacora$/, verCalor],
   [/^\/leccion\/([a-z0-9-]+)$/, verLeccion],
   [/^\/vocabulario$/, verTarjetas],
@@ -370,6 +370,7 @@ function verRecorrido(o, id) {
     bajarFoto: (nombre) => A.foto(FOTOS.get(nombre), CARPETA),
     hojaMision,
     tinte,
+    misiones: { lista: P.misiones || [], estado: estadoMisiones, hecha: (mision, lugar, aciertos) => apuntarMision(mision, "hecha", { lugar, aciertos }) },
     escenas: { listar: (sala) => A.escenasDe(sala), subir: (sala, f, d) => A.escenaSubir(sala, f, d), quitar: (sala, a) => A.escenaQuitar(sala, a), ordenar: (sala, l) => A.escenaOrdenar(sala, l), url: (sala, x) => A.escenaUrl(sala, x), gif: (sala, x) => A.escenaGif(sala, x) },
     esDeNoche: () => { const h = new Date().getHours(); return h >= 19 || h < 6; },
     escenaVista: (id) => (guardado("pelagos.escenas") || "").split(",").includes(id),
@@ -651,6 +652,49 @@ function verInicio(o) {
   $("hoyRecargar").addEventListener("click", () => window.location.reload());
 }
 
+// ---------------------------------------------------------------- Misiones del Recorrido de Ganímedes
+// Cada misión va ligada a sus temas de gramática. Se prende o se apaga con la lucecita de la lista de temas;
+// cuando está prendida, sus personajes salen en el Recorrido. Todo es un suceso «mision», así sale en todos tus aparatos.
+
+/** id de misión -> { activa, hechas: { lugar: true }, aciertos } */
+function estadoMisiones() {
+  const st = new Map((P.misiones || []).map((m) => [m.id, { activa: false, hechas: {}, aciertos: 0 }]));
+  const vistos = new Set();
+  const ev = A.sucesos().filter((e) => e.t === "mision" && st.has(e.mision) && !vistos.has(e.id) && vistos.add(e.id))
+    .sort((a, b) => String(a.cuando).localeCompare(String(b.cuando)));
+  for (const e of ev) {
+    const s = st.get(e.mision);
+    if (e.accion === "prender") s.activa = true;
+    else if (e.accion === "apagar") s.activa = false;
+    else if (e.accion === "hecha" && e.lugar) { if (!s.hechas[e.lugar]) s.aciertos += Number(e.aciertos) || 0; s.hechas[e.lugar] = true; }
+    else if (e.accion === "reiniciar") { s.hechas = {}; s.aciertos = 0; }
+  }
+  return st;
+}
+const misionesDeTema = (id) => (P.misiones || []).filter((m) => (m.temas || []).includes(id));
+function apuntarMision(mision, accion, extra = {}) {
+  A.apuntar({ t: "mision", id: N.nuevoId("m"), mision, accion, cuando: new Date().toISOString(), ...extra });
+}
+/** La lucecita junto a un tema: prendida si alguna de sus misiones corre en el juego. Tocarla la prende o la apaga. */
+function luzMision(t, st) {
+  const ms = misionesDeTema(t.id);
+  if (!ms.length) return "";
+  const m = ms[0], on = st.get(m.id).activa;
+  return `<button type="button" class="luz-mision" data-mision="${esc(m.id)}" aria-pressed="${on}" ` +
+    `aria-label="Misión «${esc(m.titulo)}»: ${on ? "prendida" : "apagada"}. Toca para ${on ? "apagarla" : "prenderla"}." ` +
+    `title="Misión «${esc(m.titulo)}» · ${on ? "prendida" : "apagada"}"><span aria-hidden="true"></span></button>`;
+}
+vista.addEventListener("click", (ev) => {
+  const b = ev.target instanceof Element ? ev.target.closest(".luz-mision") : null;
+  if (!b) return;
+  const id = b.dataset.mision, on = b.getAttribute("aria-pressed") === "true";
+  // Prender una misión que ya terminaste la empieza de nuevo
+  const m = (P.misiones || []).find((x) => x.id === id), s0 = estadoMisiones().get(id);
+  if (!on && m && s0 && (m.paradas || []).length && m.paradas.every((p) => s0.hechas[p.lugar])) apuntarMision(id, "reiniciar");
+  apuntarMision(id, on ? "apagar" : "prender");
+  pintar({ conserva: true });
+});
+
 function verBiblioteca(o) {
   poner(conFondo(`
   ${entradas("gramatica", "lecciones")}
@@ -661,16 +705,20 @@ function verBiblioteca(o) {
   </section>`), { titulo: "Lecciones de gramática · Pelagos", nav: "gramatica", conserva: o.conserva });
 }
 
-function verNivel(o, clave, soloBajo) {
+function verNivel(o, clave, filtro) {
   const nivel = clave.toUpperCase();
   if (!NIVELES[nivel]) return verNoExiste();
-  const cola = soloBajo ? "/bajo" : "";
+  const soloBajo = filtro === "/bajo", soloMision = filtro === "/mision";
+  const cola = filtro || "";
+  const st = estadoMisiones();
+  const conMision = (t) => misionesDeTema(t.id).some((m) => st.get(m.id).activa);
   const suyos = P.temas.filter((t) => t.nivel === nivel).sort((a, b) => a.orden - b.orden);
   const bajo = suyos.filter((t) => esBajo(info(t.id).pct)).length;
   const categorias = [];
   for (const t of suyos) {
     const i = info(t.id);
     if (soloBajo && !esBajo(i.pct)) continue;
+    if (soloMision && !conMision(t)) continue;
     const nombre = CATEGORIAS[t.categoria] || t.categoria;
     if (!categorias.length || categorias[categorias.length - 1].nombre !== nombre) categorias.push({ nombre, temas: [], bajo: 0 });
     categorias[categorias.length - 1].temas.push(t);
@@ -685,23 +733,26 @@ function verNivel(o, clave, soloBajo) {
   <header class="card">
     <h1 class="h">${nivel} · ${NIVELES[nivel]}</h1>
     <p>${suyos.length} temas. ${bajo} bajo ${meta()}%.</p>
-    <nav class="jump dos" aria-label="Qué temas mostrar">
-      <a href="#/gramatica/${clave}"${soloBajo ? "" : ' aria-current="page"'}>Todos</a>
+    <nav class="jump tres" aria-label="Qué temas mostrar">
+      <a href="#/gramatica/${clave}"${filtro ? "" : ' aria-current="page"'}>Todos</a>
       <a href="#/gramatica/${clave}/bajo"${soloBajo ? ' aria-current="page"' : ""}>Bajo ${meta()}%</a>
+      <a href="#/gramatica/${clave}/mision"${soloMision ? ' aria-current="page"' : ""}>Misión activa</a>
     </nav>
   </header>
   ${categorias.length ? categorias.map((c) => `
-  <details class="card cat"${soloBajo || (o.conserva && abiertas.has(c.nombre)) ? " open" : ""}>
-    <summary><span class="cn">${esc(c.nombre)}</span><span class="cc">${plural(c.temas.length, "tema", "temas")}${soloBajo ? "" : ` · ${c.bajo} bajo ${meta()}%`}</span></summary>
+  <details class="card cat"${filtro || (o.conserva && abiertas.has(c.nombre)) ? " open" : ""}>
+    <summary><span class="cn">${esc(c.nombre)}</span><span class="cc">${plural(c.temas.length, "tema", "temas")}${filtro ? "" : ` · ${c.bajo} bajo ${meta()}%`}</span></summary>
     <div class="links">${c.temas.map((t) => {
       const i = info(t.id);
       const sub = [t.leccion ? "Con lección" : "", i.n ? plural(i.n, "respuesta", "respuestas") : ""].filter(Boolean).join(" · ");
-      return botonTema(t, { nivel: false, anchoNombre: true, ingles: true, sub });
+      const luz = luzMision(t, st);
+      const boton = botonTema(t, { nivel: false, anchoNombre: true, ingles: true, sub });
+      return luz ? `<div class="tb-mision">${boton}${luz}</div>` : boton;
     }).join("")}</div>
-  </details>`).join("") : `<section class="card"><p>Ningún tema de ${nivel} está bajo ${meta()}%.</p></section>`}`),
+  </details>`).join("") : `<section class="card"><p>${soloMision ? `Ningún tema de ${nivel} tiene una misión prendida. Prende una con la lucecita que sale junto a sus temas.` : `Ningún tema de ${nivel} está bajo ${meta()}%.`}</p></section>`}`),
   {
     titulo: nivel + " · Lecciones de gramática · Pelagos", nav: "gramatica", conserva: o.conserva,
-    pie: "<p>Toca una categoría para abrirla. Los temas en inglés todavía no tienen lección propia: llevan el nombre que les da Kwiziq.</p><p>Un porcentaje sin número de respuestas es tu arranque de Kwiziq.</p>",
+    pie: "<p>La lucecita junto a un tema prende o apaga su misión en el Recorrido de Ganímedes.</p><p>Toca una categoría para abrirla. Los temas en inglés todavía no tienen lección propia: llevan el nombre que les da Kwiziq.</p><p>Un porcentaje sin número de respuestas es tu arranque de Kwiziq.</p>",
   });
 }
 

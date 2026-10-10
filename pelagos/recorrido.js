@@ -43,7 +43,7 @@ void main(){
  *  alMover     (lugar) -> aviso de que llegaste a un lugar
  * Devuelve { cerrar }.
  */
-export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte, alMover, esDeNoche, escenaVista, escenaMarcar, escenas, salirHref = "#/" }) {
+export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte, alMover, esDeNoche, escenaVista, escenaMarcar, escenas, misiones = null, salirHref = "#/" }) {
   const lugares = new Map(tour.lugares.map((l) => [l.id, l]));
   let actual = lugares.get(desde) || lugares.get(tour.inicio) || tour.lugares[0];
 
@@ -57,7 +57,8 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
     <canvas class="rec-lienzo" aria-label="Panorama 360. Arrastra para mirar alrededor."></canvas>
     <a class="rec-b rec-salir" href="${salirHref}">Salir</a>
     <p class="rec-b rec-brujula" id="recBrujula" aria-live="off"></p>
-    <div class="rec-titulo" id="recTitulo"><b id="recT"></b><span id="recS"></span></div>
+    <div class="rec-titulo" id="recTitulo"><b id="recT"></b><span id="recS"></span><span class="rec-mis" id="recMis" hidden></span></div>
+    <div class="rec-recortes" id="recRecortes" aria-hidden="true"></div>
     <div class="rec-flechas" id="recFlechas"></div>
     <div class="rec-andrea" id="recAndrea" hidden><b>Andrea</b><span id="recAndreaT"></span></div>
     <div class="rec-play" id="recPlay" role="dialog" aria-label="Escena" hidden>
@@ -77,9 +78,21 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
       <button type="button" class="rec-b" id="recBEscenas" hidden>🎞 Cinemáticas</button>
       <button type="button" class="rec-b" id="recBDescribe" aria-pressed="false" hidden>Describir</button>
       <button type="button" class="rec-b" id="recBMision">Misión</button>
+      <button type="button" class="rec-b rec-platicar" id="recBPlaticar" hidden>💬 Platicar</button>
     </div>
     <section class="rec-hoja" id="recHoja" hidden aria-label="Hoja del recorrido"><button type="button" class="rec-b rec-x" id="recX">Cerrar</button><div id="recHojaC"></div></section>
     <div class="rec-escena" id="recEscena" hidden role="dialog" aria-modal="true" aria-label="Escena"><img id="recEscenaG" alt=""><button type="button" class="rec-b rec-saltar" id="recSaltar">Saltar ›</button></div>
+    <div class="rec-charla" id="recCharla" hidden role="dialog" aria-modal="true" aria-labelledby="recCharlaT">
+      <div class="rec-charla-caja">
+        <h2 id="recCharlaT">Plática</h2>
+        <div class="rec-charla-cabeza"><img id="recCharlaF" alt=""><p id="recCharlaDice" aria-live="polite"></p></div>
+        <p id="recCharlaPide"></p>
+        <div class="rec-charla-ops" id="recCharlaOps"></div>
+        <p id="recCharlaNota" aria-live="assertive"></p>
+        <button type="button" class="rec-b" id="recCharlaSeguir" hidden>Seguir ▶</button>
+        <button type="button" class="rec-b" id="recCharlaSalir">Salir de la plática</button>
+      </div>
+    </div>
     <p class="rec-carga" id="recCarga" role="status" hidden>Cargando…</p>
     <p class="rec-carga rec-error" id="recError" role="alert" hidden></p>`;
   raiz.appendChild(caja);
@@ -394,7 +407,7 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
   $("recBDescribe").addEventListener("click", () => {
     const p = $("recDescribe"), b = $("recBDescribe"), abre = p.hidden;
     p.hidden = !abre; b.setAttribute("aria-pressed", String(abre));
-    p.textContent = abre ? actual.describe : "";
+    p.textContent = abre ? textos(actual).describe : "";
   });
   $("recBLuz").addEventListener("click", async () => {
     if (!actual.fotoNoche || moviendo) return;
@@ -577,20 +590,168 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
   }
   $("recBQuedarte").addEventListener("click", quedarte);
 
+
+  // ---------------------------------------------------------------- Recortes: personajes de pie dentro de la foto (Fresa bailando, Renata en su misión)
+  // Cada recorte es una imagen con fondo transparente puesta en un rumbo y a una distancia; se proyecta como las flechas.
+  // Los que tienen varias poses las cambian con un fundido (la transición es de CSS: no hay que redibujar el panorama).
+  const contRecortes = $("recRecortes");
+  let recortes = [], relojRecortes = 0, armadoDe = 0;
+  const brillo = (hex) => { const m = /^#?([0-9a-f]{6})$/i.exec(hex || ""); if (!m) return 1; const n = parseInt(m[1], 16); return (((n >> 16) & 255) + ((n >> 8) & 255) + (n & 255)) / 765; };
+
+  // Misiones: dónde está cada personaje según lo que ya platicaste (la primera parada sin hacer)
+  function estadoMis() { return misiones && misiones.estado ? misiones.estado() : new Map(); }
+  function paradaDe(m, st) { const s = st.get(m.id); if (!s || !s.activa) return null; return (m.paradas || []).find((p) => !s.hechas[p.lugar]) || null; }
+  function aqui(id, st = estadoMis()) {
+    for (const m of (misiones && misiones.lista) || []) { const p = paradaDe(m, st); if (p && p.lugar === id) return { m, p }; }
+    return null;
+  }
+  /** Los textos del lugar: si es parada de una misión y el personaje no está aquí ahorita, va el texto sin él. */
+  function textos(l) {
+    if (aqui(l.id)) return { andrea: l.andrea, describe: l.describe };
+    for (const m of (misiones && misiones.lista) || []) {
+      const p = (m.paradas || []).find((x) => x.lugar === l.id);
+      if (p) return { andrea: p.andreaSin || l.andrea, describe: p.describeSin || l.describe };
+    }
+    return { andrea: l.andrea, describe: l.describe };
+  }
+
+  async function armarRecortes() {
+    const yo = ++armadoDe;
+    clearInterval(relojRecortes);
+    contRecortes.textContent = ""; recortes = [];
+    const lista = [...(actual.recortes || [])];
+    const a = aqui(actual.id);
+    if (a && a.p.recorte) lista.push({ ...a.p.recorte, quieta: true });
+    for (const r of lista) {
+      const nombres = Array.isArray(r.img) ? r.img : [r.img];
+      const urls = await Promise.all(nombres.map((n) => bajarFoto(n).catch(() => null)));
+      if (yo !== armadoDe || !viva) return;
+      const caja2 = document.createElement("div");
+      caja2.className = "rec-recorte" + (r.quieta ? " quieta" : "");
+      const f = brillo(r.tinte);
+      if (f < 0.97) caja2.style.filter = `brightness(${(0.55 + f * 0.45).toFixed(2)})`;
+      const imgs = urls.filter(Boolean).map((u, i) => { const im = document.createElement("img"); im.alt = ""; im.onload = pedir; im.src = u; if (i === 0) im.className = "va"; caja2.appendChild(im); return im; });
+      if (!imgs.length) continue;
+      contRecortes.appendChild(caja2);
+      recortes.push({ el: caja2, imgs, r, k: 0 });
+    }
+    const animados = recortes.filter((x) => x.imgs.length > 1);
+    if (animados.length) {
+      const cada = Math.max(0.5, animados[0].r.cada || 1.2) * 1000;
+      relojRecortes = setInterval(() => {
+        for (const x of animados) { x.imgs[x.k].classList.remove("va"); x.k = (x.k + 1) % x.imgs.length; x.imgs[x.k].classList.add("va"); }
+      }, cada);
+    }
+    pedir();
+  }
+  function colocarRecortes() {
+    for (const x of recortes) {
+      const { r } = x, d = Math.max(0.3, r.dist || 2);
+      const pies = proyectar(r.rumbo, Math.atan2((r.y || 0) - 1.6, d) / RAD);
+      const cabeza = proyectar(r.rumbo, Math.atan2((r.y || 0) + r.alto - 1.6, d) / RAD);
+      if (!pies || !cabeza) { x.el.hidden = true; continue; }
+      const alto = pies[1] - cabeza[1], im = x.imgs[0], rel = im.naturalWidth ? im.naturalWidth / im.naturalHeight : 0.4;
+      if (alto < 4) { x.el.hidden = true; continue; }
+      x.el.hidden = false;
+      x.el.style.height = alto.toFixed(1) + "px"; x.el.style.width = (alto * rel).toFixed(1) + "px";
+      x.el.style.transform = `translate(${(pies[0] - alto * rel / 2).toFixed(1)}px, ${cabeza[1].toFixed(1)}px)`;
+    }
+  }
+
+  // ---------------------------------------------------------------- La plática de la misión: el personaje dice algo y tú escoges la frase buena
+  const charlaCaja = $("recCharla");
+  const charla = { m: null, p: null, i: 0, primera: true, aciertos: 0, fin: false };
+  const revolver = (a) => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const k = Math.floor(Math.random() * (i + 1)); [a[i], a[k]] = [a[k], a[i]]; } return a; };
+  async function abrirCharla() {
+    const a = aqui(actual.id); if (!a) return;
+    Object.assign(charla, { m: a.m, p: a.p, i: 0, aciertos: 0, fin: false });
+    $("recCharlaF").src = (a.p.recorte && (await bajarFoto(a.p.recorte.img).catch(() => ""))) || "";
+    charlaCaja.hidden = false;
+    turno();
+  }
+  function turno() {
+    const t = charla.p.turnos[charla.i];
+    charla.primera = true;
+    $("recCharlaT").textContent = `${charla.m.quien || "Plática"} · ${charla.i + 1} de ${charla.p.turnos.length}`;
+    $("recCharlaDice").textContent = "«" + t.dice + "»";
+    $("recCharlaPide").innerHTML = "";
+    const b = document.createElement("b"); b.textContent = "Tú: ";
+    $("recCharlaPide").append(b, t.pide + " ¿Qué le dices?");
+    $("recCharlaNota").textContent = ""; $("recCharlaSeguir").hidden = true;
+    const ops = $("recCharlaOps"); ops.textContent = "";
+    for (const op of revolver(t.ops)) {
+      const bt = document.createElement("button"); bt.type = "button"; bt.className = "rec-b"; bt.textContent = op.t;
+      bt.addEventListener("click", () => elegir(op, bt));
+      ops.appendChild(bt);
+    }
+    ops.firstChild.focus({ preventScroll: true });
+  }
+  function elegir(op, bt) {
+    if (op.ok) {
+      if (charla.primera) charla.aciertos++;
+      bt.classList.add("bien");
+      for (const x of $("recCharlaOps").children) x.disabled = true;
+      $("recCharlaNota").textContent = "¡Eso! " + op.nota;
+      $("recCharlaSeguir").hidden = false; $("recCharlaSeguir").textContent = "Seguir ▶"; $("recCharlaSeguir").focus({ preventScroll: true });
+    } else {
+      charla.primera = false; bt.classList.add("mal"); bt.disabled = true;
+      $("recCharlaNota").textContent = "Casi. " + op.nota + " Prueba otra.";
+      const otra = [...$("recCharlaOps").children].find((x) => !x.disabled); if (otra) otra.focus({ preventScroll: true });
+    }
+  }
+  $("recCharlaSeguir").addEventListener("click", () => {
+    if (charla.fin) { cerrarCharla(); return; }
+    charla.i++;
+    if (charla.i < charla.p.turnos.length) { turno(); return; }
+    charla.fin = true;
+    if (misiones && misiones.hecha) misiones.hecha(charla.m.id, charla.p.lugar, charla.aciertos);
+    const st = estadoMis().get(charla.m.id), total = (charla.m.paradas || []).length;
+    const todas = st && (charla.m.paradas || []).every((p) => st.hechas[p.lugar]);
+    $("recCharlaT").textContent = todas ? "¡Misión cumplida!" : charla.m.quien || "Plática";
+    $("recCharlaDice").textContent = charla.p.fin;
+    $("recCharlaOps").textContent = "";
+    $("recCharlaPide").textContent = "Andrea: «" + charla.p.andrea + "»" + (todas ? ` Acertaste ${st.aciertos} de ${total * 3} a la primera.` : "");
+    $("recCharlaNota").textContent = "";
+    $("recCharlaSeguir").textContent = "Volver"; $("recCharlaSeguir").focus({ preventScroll: true });
+  });
+  function cerrarCharla() {
+    charlaCaja.hidden = true;
+    mostrarLugar(); armarRecortes();
+    caja.focus({ preventScroll: true });
+  }
+  $("recCharlaSalir").addEventListener("click", cerrarCharla);
+  $("recBPlaticar").addEventListener("click", abrirCharla);
+  /** La línea de misión del título: qué te toca y dónde. */
+  function pintarMisiones() {
+    const st = estadoMis(), partes = [];
+    for (const m of (misiones && misiones.lista) || []) {
+      const s = st.get(m.id); if (!s || !s.activa) continue;
+      const p = paradaDe(m, st), l = p && lugares.get(p.lugar);
+      partes.push(p ? `${m.titulo}: ${m.quien || "te"} espera en ${l ? l.titulo.replace(/^(El|La|Los|Las) /, (x) => x.toLowerCase()) : p.lugar}` : `${m.titulo}: ¡cumplida!`);
+    }
+    $("recMis").hidden = !partes.length;
+    $("recMis").textContent = partes.length ? "Misión · " + partes.join(" · ") : "";
+  }
+
   // ---------------------------------------------------------------- Ir a otro lugar
   function mostrarLugar() {
     $("recT").textContent = actual.titulo;
     $("recS").textContent = actual.sub || "";
+    const tx = textos(actual);
     const a = $("recAndrea");
-    a.hidden = !actual.andrea;
-    $("recAndreaT").textContent = actual.andrea ? "«" + actual.andrea + "»" : "";
+    a.hidden = !tx.andrea;
+    $("recAndreaT").textContent = tx.andrea ? "«" + tx.andrea + "»" : "";
+    const conQuien = aqui(actual.id);
+    $("recBPlaticar").hidden = !conQuien;
+    if (conQuien) $("recBPlaticar").textContent = "💬 Platicar con " + (conQuien.m.quien || "ella");
+    pintarMisiones();
     $("recBMision").hidden = !(actual.acciones && actual.acciones.length);
     $("recBEscena").hidden = !actual.escena;
     $("recBHombro").hidden = !actual.hombro;
     $("recBQuedarte").hidden = !actual.quedarte;
     $("recBEscenas").hidden = !escenas;
     $("recBEscenas").classList.toggle("rec-b-dest", !!(actual.cinematica || actual.quedarte));   // resaltado donde hay cinemáticas
-    $("recBDescribe").hidden = !actual.describe;
+    $("recBDescribe").hidden = !tx.describe;
     $("recDescribe").textContent = ""; $("recDescribe").hidden = true; $("recBDescribe").setAttribute("aria-pressed", "false");
     $("recBLuz").hidden = !actual.fotoNoche;
     $("recBLuz").textContent = luzDe(actual) === "noche" ? "Prender las luces" : "Apagar las luces";
@@ -635,6 +796,7 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
       $("recCarga").hidden = true;
       texB = t; mezcla = 0;
       const f1 = fov, t1 = performance.now();
+      contRecortes.classList.add("pasando");
       actual = destino;
       if (rumbo !== null) yaw = norm(rumbo);
       pitch = 0;
@@ -646,6 +808,8 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
         pedir();
       }
       texA = t; texB = null; mezcla = 0; fov = FOV_INICIAL;
+      contRecortes.classList.remove("pasando");
+      armarRecortes();
       pedir();
       precargar();
       if (actual.escena && !(escenaVista && escenaVista(actual.id))) verEscena(actual);
@@ -703,7 +867,8 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
     if (ev.ctrlKey || ev.metaKey || ev.altKey || !caja.isConnected) return;
     if (ev.target instanceof HTMLInputElement || ev.target instanceof HTMLTextAreaElement) return;
     const tecla = ev.key;
-    if (!playCaja.hidden) { if (tecla === "Escape" && playFin) playFin(); return; }       // con una escena en pantalla, las teclas no mueven el visor
+    if (!playCaja.hidden) { if (tecla === "Escape" && playFin) playFin(); return; }
+    if (!charlaCaja.hidden) { if (tecla === "Escape") cerrarCharla(); return; }       // con una escena en pantalla, las teclas no mueven el visor
     const paso = 7;
     if (tecla === "ArrowLeft") yaw = norm(yaw - paso);
     else if (tecla === "ArrowRight") yaw = norm(yaw + paso);
@@ -731,6 +896,7 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
     if (sucio) {
       sucio = false;
       dibujar();
+      colocarRecortes();
       colocarMarcas();
       pintarBrujula();
       pintarMapa();
@@ -746,6 +912,7 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
     try {
       texA = await cargarTextura(actual);
       $("recCarga").hidden = true;
+      armarRecortes();
       pedir();
       precargar();
       if (actual.escena && !(escenaVista && escenaVista(actual.id))) verEscena(actual);
@@ -761,6 +928,7 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
     ir: (id) => ir(id, null),
     cerrar() {
       viva = false;
+      clearInterval(relojRecortes);
       if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
       document.removeEventListener("keydown", teclas);
       window.removeEventListener("resize", alRedimensionar);
