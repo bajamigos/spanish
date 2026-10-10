@@ -46,8 +46,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 /* ---- El marco de Pelagos ---- */
 .brand { text-align: center; font-size: 22px; font-weight: 700; letter-spacing: -0.01em; }
 .brand a { text-decoration: none; }
-.top { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
-.top .ub { white-space: nowrap; font-size: 16px; }
+.top { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+.top .ub { white-space: nowrap; font-size: 16px; padding-inline: 4px; }
 .ub { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box;
   min-height: 44px; padding: 6px 14px; font: inherit; font-size: 14px; font-weight: 600; line-height: 1.25; text-decoration: none; text-align: center;
   color: var(--btn-ink); background: linear-gradient(to bottom, var(--btn-top), var(--btn-bot));
@@ -316,3 +316,40 @@ ul.partes li.va { color: var(--tab-ink); background: var(--verde); border-color:
 ul.partes li.nova { color: var(--ink-3); border-style: dashed; font-weight: 600; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .tic { stroke: var(--page); }
+
+/* ---- El mapa de árbol. Una tarjeta de vidrio por nivel, con la portada Reef del día fija al fondo.
+   Cada cuadro es un tema; el color dice en qué franja va. Los colores son fijos porque el fondo siempre es oscuro. */
+.mapa { --k0: rgba(255,138,82,0.88); --k1: rgba(217,89,38,0.88); --k2: rgba(168,86,47,0.88); --k3: rgba(28,63,112,0.88); --k4: rgba(47,111,196,0.88); --k5: rgba(127,182,255,0.88);
+  --t0: #000000; --t1: #000000; --t2: #ffffff; --t3: #ffffff; --t4: #ffffff; --t5: #000000; }
+.hoy.mapa.confoto .fondo img { aspect-ratio: auto; height: 100vh; height: 100dvh; object-position: center; }
+.hoy.mapa.confoto .fondo::after { display: none; }
+.hoy.mapa.confoto .sobre { margin-top: -46vh; gap: 16px; }
+.hoy.mapa .card { padding: 10px 8px 8px; gap: 8px; }
+/* Sin desenfoque: la foto se tiene que seguir viendo entre los cuadros. */
+.hoy.mapa.confoto .card { background: rgba(10,10,10,0.3); -webkit-backdrop-filter: none; backdrop-filter: none; }
+.hoy.mapa .card h2 { display: flex; align-items: center; gap: 8px; padding-inline: 4px; font-size: 18px; }
+.hoy.mapa .card h2 .lv { font-size: 14px; padding: 1px 7px; }
+.hoy.mapa .card h2 .mpc { margin-left: auto; font-variant-numeric: tabular-nums; }
+.mmapa { position: relative; width: 100%; }
+.mcaja { position: absolute; box-sizing: border-box; padding: 3px; display: flex; flex-direction: column; min-width: 0; }
+.mrot { flex: none; height: 22px; padding: 0 2px; font-size: 13px; line-height: 20px; font-weight: 700; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mrot span { font-weight: 400; color: var(--ink-3); }
+.mcuerpo { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; gap: 2px; }
+.mfila { flex: 1 1 0; min-height: 0; display: flex; gap: 2px; }
+.mc { flex: 1 1 0; min-width: 0; min-height: 0; margin: 0; padding: 0; border: 0; border-radius: 4px; overflow: hidden; cursor: pointer;
+  font: inherit; font-size: 12px; line-height: 1.15; text-shadow: none; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.22); color: #ffffff; }
+.mc.vacio { visibility: hidden; cursor: default; }
+.mc.k0 { background: var(--k0); color: var(--t0); } .mc.k1 { background: var(--k1); color: var(--t1); } .mc.k2 { background: var(--k2); color: var(--t2); }
+.mc.k3 { background: var(--k3); color: var(--t3); } .mc.k4 { background: var(--k4); color: var(--t4); } .mc.k5 { background: var(--k5); color: var(--t5); }
+.mc b { font-weight: 700; font-variant-numeric: tabular-nums; }
+.mc.g b { font-size: 15px; }
+.mc.ch b { font-size: 10.5px; letter-spacing: -0.4px; }
+.mc.m2 { flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 1px; text-align: left; padding: 4px 5px; }
+.mc.m2 b { font-size: 17px; line-height: 1.1; }
+.mc .mt { display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; font-size: 11.5px; line-height: 13px; font-style: normal; overflow-wrap: anywhere; -webkit-line-clamp: 1; line-clamp: 1; }
+.mc .mt.r2 { -webkit-line-clamp: 2; line-clamp: 2; } .mc .mt.r3 { -webkit-line-clamp: 3; line-clamp: 3; } .mc .mt.r4 { -webkit-line-clamp: 4; line-clamp: 4; }
+.mc:focus-visible { outline: 3px solid #ffffff; outline-offset: -3px; }
+ul.clave { list-style: none; margin: 0; padding: 2px 4px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 14px; font-size: 15px; }
+ul.clave li { display: grid; grid-template-columns: 22px minmax(0, 1fr) auto; gap: 8px; align-items: center; }
+ul.clave .mc { display: block; flex: none; width: 22px; height: 22px; cursor: default; }
+ul.clave b { font-variant-numeric: tabular-nums; }

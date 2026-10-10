@@ -52,6 +52,81 @@ export function textoPct(valor) {
   return String(Math.round(valor * 10) / 10) + "%";
 }
 
+// ---------------------------------------------------------------- El mapa de árbol
+
+/** Los seis colores del mapa, del más bajo al más alto. */
+export const FRANJAS = ["Menos de 60", "60 a 69", "70 a 79", "80 a 89", "90 a 99", "100"];
+
+/** En qué color cae un porcentaje: 0 (menos de 60) a 5 (100). Sin número, null. */
+export function franja(v) {
+  if (v === null || v === undefined) return null;
+  return v < 60 ? 0 : v < 70 ? 1 : v < 80 ? 2 : v < 90 ? 3 : v < 99.995 ? 4 : 5;
+}
+
+/**
+ * Reparte un rectángulo de W por H en cajas lo más cuadradas posible, una por valor y con área proporcional a él.
+ * Los valores van del más grande al más chico. Devuelve { x, y, w, h } por cada uno, en el mismo orden.
+ */
+export function cuadricular(valores, W, H) {
+  const total = valores.reduce((a, v) => a + v, 0), cajas = [];
+  if (!(total > 0) || !(W > 0) || !(H > 0)) return valores.map(() => ({ x: 0, y: 0, w: 0, h: 0 }));
+  const a = valores.map((v) => v * W * H / total);
+  let x = 0, y = 0, w = W, h = H, i = 0;
+  while (i < a.length) {
+    const lado = Math.min(w, h);
+    let j = i, suma = 0, menor = Infinity, mayor = 0, mejor = Infinity;
+    while (j < a.length) {
+      const s2 = suma + a[j], menor2 = Math.min(menor, a[j]), mayor2 = Math.max(mayor, a[j]);
+      const peor = Math.max(lado * lado * mayor2 / (s2 * s2), s2 * s2 / (lado * lado * menor2));
+      if (j > i && peor > mejor) break;
+      suma = s2; menor = menor2; mayor = mayor2; mejor = peor; j++;
+    }
+    const grueso = suma / lado;
+    let corrido = 0;
+    for (let q = i; q < j; q++) {
+      const largo = a[q] / grueso;
+      cajas[q] = w >= h ? { x, y: y + corrido, w: grueso, h: largo } : { x: x + corrido, y, w: largo, h: grueso };
+      corrido += largo;
+    }
+    if (w >= h) { x += grueso; w -= grueso; } else { y += grueso; h -= grueso; }
+    i = j;
+  }
+  return cajas;
+}
+
+/**
+ * Acomoda un nivel del mapa: una caja por tipo de palabra y, dentro, una cuadrícula con un cuadro por tema.
+ * cuantos: temas de cada tipo, del más grande al más chico. area: los pixeles cuadrados que le tocan a cada tema.
+ * Devuelve { alto, cajas: [{ x, y, w, h, rotulo, columnas, filas, cw, ch }] }; cw y ch son el tamaño de cada cuadro.
+ */
+export function acomodarMapa(cuantos, W, area, { cabeza = 22, margen = 3, hueco = 2, forma = 1.7 } = {}) {
+  // El rótulo solo va en cajas con lugar: en una de dos o tres temas se comería los cuadros.
+  const conRotulo = (n, caja) => n >= 4 && caja.h >= 52;
+  // Un tipo con un solo tema pesa como si tuviera dos, para que su cuadro no quede como una rayita.
+  const peso = (n) => Math.max(n, 2) * area;
+  // Dos pasadas: la segunda le da a cada tipo el lugar de su propio rótulo y de sus márgenes.
+  let valores = cuantos.map(peso);
+  let alto = Math.max(60, valores.reduce((a, v) => a + v, 0) / W);
+  let cajas = cuadricular(valores, W, alto);
+  valores = cuantos.map((n, i) => peso(n) + (conRotulo(n, cajas[i]) ? cabeza * cajas[i].w : 0) + 2 * margen * (cajas[i].w + cajas[i].h));
+  alto = Math.max(60, Math.round(valores.reduce((a, v) => a + v, 0) / W));
+  cajas = cuadricular(valores, W, alto);
+  return {
+    alto,
+    cajas: cajas.map((c, i) => {
+      const n = cuantos[i], rotulo = conRotulo(n, c);
+      const bw = Math.max(4, c.w - 2 * margen - hueco), bh = Math.max(4, c.h - 2 * margen - hueco - (rotulo ? cabeza : 0));
+      let columnas = 1, mejor = Infinity;
+      for (let k = 1; k <= n; k++) {
+        const f = Math.abs(Math.log((bw / k) / (bh / Math.ceil(n / k)) / forma));
+        if (f < mejor) { mejor = f; columnas = k; }
+      }
+      const filas = Math.ceil(n / columnas);
+      return { ...c, rotulo, columnas, filas, cw: bw / columnas - hueco, ch: bh / filas - hueco };
+    }),
+  };
+}
+
 // ---------------------------------------------------------------- Fechas
 
 function dos(n) { return String(n).padStart(2, "0"); }

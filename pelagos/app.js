@@ -1,6 +1,6 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=9984c9ca9a";
-import * as A from "./almacen.js?v=9984c9ca9a";
+import * as N from "./nucleo.js?v=9ce10fa35b";
+import * as A from "./almacen.js?v=9ce10fa35b";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -19,6 +19,18 @@ const CATEGORIAS = {
   "Nouns & Articles": "Sustantivos y artículos",
   "Questions & Interrogatives": "Preguntas",
   "Numbers, Time & Date": "Números, hora y fecha",
+  "Negative Words & Constructions": "Negación",
+};
+// Los mismos tipos de palabra, en corto, para los rótulos del mapa.
+const CATEGORIAS_CORTAS = {
+  "Idioms, Idiomatic Usage, and Structures": "Estructuras",
+  "Verbs Tenses & Conjugation": "Verbos",
+  "Prepositions & Conjunctions": "Preposiciones",
+  "Adjectives & Adverbs": "Adjetivos",
+  "Pronouns": "Pronombres",
+  "Nouns & Articles": "Sustantivos",
+  "Questions & Interrogatives": "Preguntas",
+  "Numbers, Time & Date": "Números",
   "Negative Words & Constructions": "Negación",
 };
 const GRUPOS = [["antes", "Antes de esta"], ["confunde", "Se confunde con"], ["sigue", "Sigue con"]];
@@ -149,8 +161,18 @@ function vestir(raiz) {
   for (const e of raiz.querySelectorAll("[data-w]")) e.style.width = e.dataset.w + "%";
   for (const e of raiz.querySelectorAll("[data-x]")) e.style.left = e.dataset.x + "%";
   for (const img of raiz.querySelectorAll("img[data-foto]")) {
-    A.foto(fotos.get(img.dataset.foto)).then((u) => { if (u && img.isConnected) img.src = u; });
+    A.foto(fotos.get(img.dataset.foto)).then((u) => {
+      if (!img.isConnected) return;
+      if (u) img.src = u;
+      else if (img.closest(".fondo")) { img.closest(".hoy").classList.remove("confoto"); document.body.classList.remove("conandrea"); }     // sin foto de fondo, la página se acomoda sin ella
+    });
   }
+  // Las cajas del mapa: su lugar y su tamaño no pueden venir escritos en el HTML.
+  for (const e of raiz.querySelectorAll("[data-caja]")) {
+    const [x, y, w, h] = e.dataset.caja.split(",");
+    e.style.left = x + "%"; e.style.top = y + "px"; e.style.width = w + "%"; e.style.height = h + "px";
+  }
+  for (const e of raiz.querySelectorAll("[data-alto]")) e.style.height = e.dataset.alto + "px";
   for (const img of raiz.querySelectorAll("img[data-retrato]")) {
     // Sin retrato (no llegó, o no hay conexión) la página de Hoy se acomoda como si no hubiera foto.
     A.foto(retratos.get(img.dataset.retrato), "andrea").then((u) => {
@@ -188,6 +210,7 @@ const RUTAS = [
   [/^\/$/, verInicio],
   [/^\/gramatica$/, verBiblioteca],
   [/^\/gramatica\/([a-z0-9]+)(\/bajo)?$/, verNivel],
+  [/^\/mapa$/, verMapa],
   [/^\/leccion\/([a-z0-9-]+)$/, verLeccion],
   [/^\/kwiz$/, verKwiz],
   [/^\/kwiz\/([A-Za-z0-9_-]+)$/, verPregunta],
@@ -455,6 +478,81 @@ function verNivel(o, clave, soloBajo) {
     pie: "<p>Toca una categoría para abrirla. Los temas en inglés todavía no tienen lección propia: llevan el nombre que les da Kwiziq.</p><p>Un porcentaje sin número de respuestas es tu arranque de Kwiziq.</p>",
   });
 }
+
+// ---------------------------------------------------------------- El mapa de árbol
+
+let anchoDelMapa = 0;         // el ancho con el que se dibujó, para volver a dibujarlo si la pantalla cambia
+
+/** Todos los temas en un mapa: una tarjeta por nivel, de C1 a A0; dentro, una caja por tipo de palabra y un cuadro de color por tema. */
+function verMapa(o) {
+  const W = Math.max(240, vista.clientWidth - 18);       // lo que queda dentro de la tarjeta
+  anchoDelMapa = vista.clientWidth;
+  const cuenta = [0, 0, 0, 0, 0, 0];
+  const tarjetas = Object.keys(NIVELES).reverse().map((nivel) => {
+    const suyos = P.temas.filter((t) => t.nivel === nivel).sort((a, b) => a.orden - b.orden);
+    if (!suyos.length) return "";
+    const porTipo = new Map();
+    let suma = 0, con = 0;
+    for (const t of suyos) {
+      if (!porTipo.has(t.categoria)) porTipo.set(t.categoria, []);
+      porTipo.get(t.categoria).push(t);
+      const v = info(t.id).pct;
+      if (v !== null) { suma += v; con++; cuenta[N.franja(v)]++; }
+    }
+    const tipos = [...porTipo.entries()].sort((a, b) => b[1].length - a[1].length);
+    const area = Math.max(1300, Math.min(5200, W * 720 / suyos.length));      // cada nivel ocupa más o menos una pantalla
+    const lugar = N.acomodarMapa(tipos.map(([, temas]) => temas.length), W, area);
+    const cajas = tipos.map(([categoria, temas], k) => {
+      const c = lugar.cajas[k];
+      const modo = c.cw >= 78 && c.ch >= 38 ? 2 : c.cw >= 15 && c.ch >= 12 ? 1 : 0;      // 2: número y título; 1: solo el número; 0: solo el color
+      const renglones = Math.max(1, Math.min(4, Math.floor((c.ch - 24) / 13)));
+      const nombre = CATEGORIAS[categoria] || categoria;
+      const filas = [];
+      for (let i = 0; i < temas.length; i += c.columnas) {
+        const fila = temas.slice(i, i + c.columnas).map((t) => {
+          const v = info(t.id).pct, f = N.franja(v);
+          const numero = v === null ? "–" : String(Math.round(v));
+          const dentro = modo === 2 ? `<b>${numero}</b><span class="mt r${renglones}"${t.titulo ? "" : ' lang="en"'}>${esc(titulo(t))}</span>` : modo === 1 ? `<b>${numero}</b>` : "";
+          return `<button type="button" class="mc m${modo} ${f === null ? "kx" : "k" + f}${c.cw >= 40 && c.ch >= 22 ? " g" : c.cw < 26 ? " ch" : ""}" data-l="${t.id}" aria-label="${esc(titulo(t))}: ${esc(pct(v))}">${dentro}</button>`;
+        });
+        while (fila.length < c.columnas) fila.push('<span class="mc vacio"></span>');
+        filas.push(`<div class="mfila">${fila.join("")}</div>`);
+      }
+      return `<div class="mcaja" role="group" aria-label="${esc(nombre)}: ${plural(temas.length, "tema", "temas")}" data-caja="${(c.x / W * 100).toFixed(3)},${c.y.toFixed(1)},${(c.w / W * 100).toFixed(3)},${c.h.toFixed(1)}">
+        ${c.rotulo ? `<div class="mrot" aria-hidden="true">${esc(CATEGORIAS_CORTAS[categoria] || nombre)}${c.w >= 120 ? ` <span>${temas.length}</span>` : ""}</div>` : ""}
+        <div class="mcuerpo">${filas.join("")}</div>
+      </div>`;
+    });
+    return `
+    <section class="card nivelMapa" id="mapa${nivel}">
+      <h2><span class="lv">${nivel}</span> ${NIVELES[nivel]} <span class="mpc">${pct(con ? suma / con : null)}</span></h2>
+      <div class="mmapa" data-alto="${lugar.alto}">${cajas.join("")}</div>
+    </section>`;
+  }).join("");
+
+  // La portada Reef del día va fija al fondo; cambia cada día.
+  const hoy = new Date();
+  const lista = P.fotos || [];
+  const foto = lista.length ? lista[Math.floor(Date.UTC(hoy.getFullYear(), hoy.getMonth(), hoy.getDate()) / 86400000) % lista.length].nombre : null;
+  poner(`
+  <div class="hoy mapa${foto ? " confoto" : ""}">
+    ${foto ? `<div class="fondo"><img data-foto="${esc(foto)}" alt=""></div>` : ""}
+    <div class="sobre">
+      <h1 class="sr">Mapa de tus temas</h1>
+      ${tarjetas}
+      <section class="card" id="clave">
+        <h2 class="sr">Qué significa cada color</h2>
+        <ul class="clave">${N.FRANJAS.map((nombre, i) => `<li><i class="mc k${i}"></i><span>${nombre}</span><b>${cuenta[i]}</b></li>`).join("")}</ul>
+      </section>
+    </div>
+  </div>`,
+  { titulo: "Mapa · Pelagos", nav: "mapa", conserva: o.conserva });
+}
+
+window.addEventListener("resize", () => {
+  // Si la pantalla cambia de ancho (o el teléfono se voltea), el mapa se vuelve a dibujar a la medida.
+  if (vista.querySelector(".mapa") && Math.abs(vista.clientWidth - anchoDelMapa) > 8) pintar({ conserva: true });
+});
 
 // ---------------------------------------------------------------- La lección
 
@@ -1022,7 +1120,7 @@ function abrirHoja(id) {
   const t = porId.get(Number(id));
   if (!t || !E) return;
   const i = info(t.id);
-  $("shK").textContent = "Vista previa · " + t.nivel;
+  $("shK").textContent = "Vista previa · " + t.nivel + " · " + (CATEGORIAS[t.categoria] || t.categoria);
   $("shT").textContent = titulo(t);
   $("shR").textContent = t.regla || "Este tema todavía no tiene lección ni resumen propio.";
   $("shP").textContent = "Tu porcentaje: " + pct(i.pct) + (i.n === 0 ? " · de Kwiziq" : " · " + plural(i.n, "respuesta", "respuestas"));
