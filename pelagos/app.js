@@ -1,6 +1,6 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=6e8e8a8553";
-import * as A from "./almacen.js?v=6e8e8a8553";
+import * as N from "./nucleo.js?v=c184f4403c";
+import * as A from "./almacen.js?v=c184f4403c";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -39,8 +39,8 @@ const QUIZ = "/gramatica/quiz";       // dónde vive el quiz de gramática
 // Cada sección trae dos entradas, que van como dos botones arriba de sus páginas.
 const SECCIONES = {
   gramatica: ["Gramática", [["lecciones", "#/gramatica", "Lecciones de gramática"], ["quiz", "#" + QUIZ, "Quiz de gramática"]]],
-  vocabulario: ["Vocabulario", [["quiz", "#/vocabulario", "Quiz de vocabulario"], ["lista", "#/vocabulario/lista", "Lista de vocabulario"]]],
-  mapa: ["Mapa", [["temas", "#/mapa", "Mapa de gramática"], ["calor", "#/mapa/calor", "Mapa de calor"]]],
+  vocabulario: ["Vocabulario", [["quiz", "#/vocabulario", "Quiz de vocabulario"], ["lista", "#/vocabulario/acervo", "Acervo"]]],
+  mapa: ["Red", [["temas", "#/red", "Nodos"], ["calor", "#/red/bitacora", "Bitácora"]]],
 };
 const MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
   "septiembre", "octubre", "noviembre", "diciembre"];
@@ -245,15 +245,18 @@ const RUTAS = [
   [/^\/gramatica\/quiz\/([A-Za-z0-9_-]+)$/, verPregunta],
   [/^\/gramatica\/quiz\/([A-Za-z0-9_-]+)\/resultado$/, verResultado],
   [/^\/gramatica\/([a-z0-9]+)(\/bajo)?$/, verNivel],
-  [/^\/mapa$/, verMapa],
-  [/^\/mapa\/calor$/, verCalor],
+  [/^\/red$/, verMapa],
+  [/^\/red\/bitacora$/, verCalor],
   [/^\/leccion\/([a-z0-9-]+)$/, verLeccion],
   [/^\/vocabulario$/, verTarjetas],
-  [/^\/vocabulario\/lista$/, verLista],
+  [/^\/vocabulario\/acervo$/, verLista],
   [/^\/ajustes$/, verAjustes],
   // Las direcciones de antes siguen llevando a su página.
   [/^\/kwiz((?:\/[A-Za-z0-9_-]+){0,2})$/, (o, resto) => ir(QUIZ + (resto || ""), true)],
   [/^\/tarjetas$/, () => ir("/vocabulario", true)],
+  [/^\/mapa$/, () => ir("/red", true)],                          // el Mapa ahora es la Red: Nodos y Bitácora
+  [/^\/mapa\/calor$/, () => ir("/red/bitacora", true)],
+  [/^\/vocabulario\/lista$/, () => ir("/vocabulario/acervo", true)],      // la Lista de vocabulario ahora es el Acervo
 ];
 
 function pintar(opciones = {}) {
@@ -612,7 +615,7 @@ function verMapa(o) {
     ${foto ? `<div class="fondo"><img data-foto="${esc(foto)}" alt=""></div>` : ""}
     <div class="sobre">
       ${entradas("mapa", "temas")}
-      <h1 class="sr">Mapa de gramática</h1>
+      <h1 class="sr">Nodos</h1>
       ${tarjetas}
       <section class="card" id="clave">
         <h2 class="sr">Qué significa cada color</h2>
@@ -620,7 +623,7 @@ function verMapa(o) {
       </section>
     </div>
   </div>`,
-  { titulo: "Mapa de gramática · Pelagos", nav: "mapa", conserva: o.conserva });
+  { titulo: "Nodos · Pelagos", nav: "mapa", conserva: o.conserva });
 }
 
 window.addEventListener("resize", () => {
@@ -677,7 +680,7 @@ function verCalor(o) {
     <div class="sobre">
       ${entradas("mapa", "calor")}
       <section class="card" id="calorCabeza">
-        <h1 class="h">Mapa de calor</h1>
+        <h1 class="h">Bitácora</h1>
         <div class="extras">
           <div><b>${dias(R.actual)}</b>racha de ahora</div>
           <div><b>${dias(R.larga)}</b>tu racha más larga</div>
@@ -699,7 +702,7 @@ function verCalor(o) {
       }).join("")}
     </div>
   </div>`,
-  { titulo: "Mapa de calor · Pelagos", nav: "mapa", conserva: o.conserva });
+  { titulo: "Bitácora · Pelagos", nav: "mapa", conserva: o.conserva });
   // Un toque en un cuadro dice qué día es y cuánto estudiaste.
   let marcado = null;
   vista.querySelector(".sobre").addEventListener("click", (ev) => {
@@ -892,7 +895,7 @@ function verLista(o) {
     <div class="sobre">
       ${entradas("vocabulario", "lista")}
       <section class="card" id="lvCabeza">
-        <h1 class="h">Lista de vocabulario</h1>
+        <h1 class="h">Acervo</h1>
         <p>${plural(vivas.length, "palabra", "palabras")}. ${tocan === 0 ? "Hoy no queda ninguna por repasar." : tocan === 1 ? "Hoy queda 1 por repasar." : `Hoy quedan ${tocan} por repasar.`}</p>
         <label class="sr" for="lvBusca">Buscar una palabra</label>
         <input id="lvBusca" class="campo" type="search" placeholder="Buscar una palabra" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="search">
@@ -920,7 +923,7 @@ function verLista(o) {
       </details>` : ""}
     </div>
   </div>`,
-  { titulo: "Lista de vocabulario · Pelagos", nav: "vocabulario", conserva: o.conserva });
+  { titulo: "Acervo · Pelagos", nav: "vocabulario", conserva: o.conserva });
 
   const campo = $("lvBusca");
   campo.value = lvBusca;
