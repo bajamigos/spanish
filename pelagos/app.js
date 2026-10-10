@@ -1,6 +1,6 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=03f68f9d23";
-import * as A from "./almacen.js?v=03f68f9d23";
+import * as N from "./nucleo.js?v=025d585d10";
+import * as A from "./almacen.js?v=025d585d10";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -40,7 +40,7 @@ const QUIZ = "/gramatica/quiz";       // dónde vive el quiz de gramática
 // Regla del acomodo: cada materia trae cómo se estudia y cómo se ve; lo que es de todo va en el Tablero.
 const SECCIONES = {
   tablero: ["Tablero", [["hoy", "#/", "Hoy"], ["bitacora", "#/bitacora", "Bitácora"]]],
-  gramatica: ["Gramática", [["lecciones", "#/gramatica", "Lecciones"], ["quiz", "#" + QUIZ, "Quiz"], ["nodos", "#/gramatica/nodos", "Nodos"]]],
+  gramatica: ["Gramática", [["lecciones", "#/gramatica", "Lecciones"], ["quiz", "#" + QUIZ, "Quiz"], ["atlas", "#/gramatica/atlas", "Atlas"]]],
   vocabulario: ["Vocabulario", [["quiz", "#/vocabulario", "Quiz"], ["lista", "#/vocabulario/acervo", "Acervo"], ["agregar", "#/vocabulario/agregar", "Agregar"]]],
 };
 const MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
@@ -245,7 +245,8 @@ const RUTAS = [
   [/^\/gramatica\/quiz$/, verKwiz],
   [/^\/gramatica\/quiz\/([A-Za-z0-9_-]+)$/, verPregunta],
   [/^\/gramatica\/quiz\/([A-Za-z0-9_-]+)\/resultado$/, verResultado],
-  [/^\/gramatica\/nodos$/, verMapa],
+  [/^\/gramatica\/atlas$/, verMapa],
+  [/^\/gramatica\/nodos$/, () => ir("/gramatica/atlas", true)],     // los Nodos ahora se llaman Atlas
   [/^\/gramatica\/([a-z0-9]+)(\/bajo)?$/, verNivel],
   [/^\/bitacora$/, verCalor],
   [/^\/leccion\/([a-z0-9-]+)$/, verLeccion],
@@ -256,7 +257,7 @@ const RUTAS = [
   // Las direcciones de antes siguen llevando a su página.
   [/^\/kwiz((?:\/[A-Za-z0-9_-]+){0,2})$/, (o, resto) => ir(QUIZ + (resto || ""), true)],
   [/^\/tarjetas$/, () => ir("/vocabulario", true)],
-  [/^\/(mapa|red)$/, () => ir("/gramatica/nodos", true)],          // los Nodos viven en Gramática
+  [/^\/(mapa|red)$/, () => ir("/gramatica/atlas", true)],          // el Atlas vive en Gramática
   [/^\/(mapa\/calor|red\/bitacora)$/, () => ir("/bitacora", true)],    // la Bitácora vive en el Tablero
   [/^\/vocabulario\/lista$/, () => ir("/vocabulario/acervo", true)],      // la Lista de vocabulario ahora es el Acervo
 ];
@@ -633,8 +634,8 @@ function verMapa(o) {
   <div class="hoy mapa${fondo.hay ? " confoto" : ""}">
     ${fondo.html}
     <div class="sobre">
-      ${entradas("gramatica", "nodos")}
-      <h1 class="sr">Nodos</h1>
+      ${entradas("gramatica", "atlas")}
+      <h1 class="sr">Atlas</h1>
       ${tarjetas}
       <section class="card" id="clave">
         <h2 class="sr">Qué significa cada color</h2>
@@ -642,7 +643,7 @@ function verMapa(o) {
       </section>
     </div>
   </div>`,
-  { titulo: "Nodos · Pelagos", nav: "gramatica", conserva: o.conserva });
+  { titulo: "Atlas · Pelagos", nav: "gramatica", conserva: o.conserva });
 }
 
 window.addEventListener("resize", () => {
