@@ -241,7 +241,7 @@ export function ordenar(sucesos) {
  * Rehace todo desde cero: el paquete de contenido más la lista de sucesos.
  * Sucesos: «kwiz» (empieza uno), «r» (una respuesta), «retirar» (pregunta mala), «dejar» (dejas un kwiz a medias),
  * «enfoque» (eliges un nivel para tu plan de estudio, o lo sueltas), «tj» (calificas una tarjeta),
- * «tjq» (quitas una tarjeta de tu vocabulario, o la devuelves), «tje» (le corriges el texto a una tarjeta)
+ * «tjq» (quitas una tarjeta de tu vocabulario, o la devuelves), «tje» (le corriges el frente o el reverso a una tarjeta)
  * y «tjn» (agregas a mano una tarjeta nueva).
  * Los de un tipo que no conoce los salta, así una versión vieja de la página no se rompe con sucesos nuevos.
  * Devuelve { temas, kwizzes, retiradas, ultimaVez, respuestas, parametros, tarjetas… }.
@@ -312,7 +312,7 @@ export function calcular(paquete, sucesos) {
       // Una tarjeta nueva, hecha a mano. Si ya hay una con ese id (del contenido o de otro suceso), vale la que ya estaba.
       const texto = limpiarCambio(e);
       if (typeof e.tarjeta !== "string" || !/^[A-Za-z0-9_-]{1,40}$/.test(e.tarjeta) || tarjetas.has(e.tarjeta) || !texto || !texto.frente || !texto.reverso) continue;
-      agregadas.push({ id: e.tarjeta, mazo: "A mano", frente: texto.frente, reverso: texto.reverso, tambien_vale: texto.tambien_vale || [], nota: texto.nota || null, agregada: fechaLocal(e.cuando) });
+      agregadas.push({ id: e.tarjeta, mazo: "A mano", frente: texto.frente, reverso: texto.reverso, agregada: fechaLocal(e.cuando) });
       tarjetas.set(e.tarjeta, { escalon: 0, toca: null, traia: false, n: 0, bien: 0, primera: null, ultima: null, fallada: null, historia: [], baseN: 0, baseBien: 0, quitada: false, cambio: null });
     } else if (e.t === "tjq") {
       const c = tarjetas.get(e.tarjeta);
@@ -442,15 +442,13 @@ export function rachas(actividad, hoy = fechaLocal(new Date())) {
 }
 
 const TEXTO_MAX = 300;
-/** Lo que se le puede corregir a una tarjeta: frente, reverso, «también vale» y nota. Lo demás se tira. */
+/** Lo que se le puede corregir a una tarjeta: el frente y el reverso. Una tarjeta no lleva nada más; lo demás se tira. */
 function limpiarCambio(e) {
   const texto = (v) => (typeof v === "string" ? v.replace(/\s+/g, " ").trim().slice(0, TEXTO_MAX) : null);
   const cambio = {};
-  const frente = texto(e.frente), reverso = texto(e.reverso), nota = texto(e.nota);
+  const frente = texto(e.frente), reverso = texto(e.reverso);
   if (frente) cambio.frente = frente;
   if (reverso) cambio.reverso = reverso;
-  if (nota !== null) cambio.nota = nota || null;                          // la nota sí se puede dejar vacía
-  if (Array.isArray(e.tambien_vale)) cambio.tambien_vale = e.tambien_vale.map(texto).filter(Boolean).slice(0, 12);
   return Object.keys(cambio).length ? cambio : null;
 }
 

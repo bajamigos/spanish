@@ -1,6 +1,6 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=82ce90a88f";
-import * as A from "./almacen.js?v=82ce90a88f";
+import * as N from "./nucleo.js?v=a041ffb5f2";
+import * as A from "./almacen.js?v=a041ffb5f2";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -710,7 +710,8 @@ function verCalor(o) {
 let enTarjetaDe = null;       // la tarjeta que está en pantalla: no se repinta debajo de ti
 
 /**
- * Tu vocabulario. Sale una tarjeta a la vez: el frente en inglés. Lo dices en español, tocas en cualquier parte para ver
+ * Tu vocabulario. Las tarjetas son sencillas a propósito: inglés al frente, español atrás, y nada más. Te la sabes o no.
+ * Sale una tarjeta a la vez: el frente en inglés. Lo dices en español, tocas en cualquier parte para ver
  * la respuesta y te calificas con «Mal» o «Bien», que están siempre en el mismo lugar. Al calificar sale la siguiente.
  */
 function verTarjetas(o) {
@@ -745,8 +746,7 @@ function verTarjetas(o) {
         <h1 class="cue" id="cue" lang="en">${esc(c.frente)}</h1>
       </div>
       <div class="rule tjResp" id="tjResp" tabindex="-1" aria-live="polite" hidden>
-        <ul class="exs"><li class="ex" data-di="${esc(c.reverso)}"><span class="es" id="vResp">${esc(c.reverso)}</span>${c.nota ? `<span class="en" lang="es">${esc(c.nota)}</span>` : ""}</li></ul>
-        ${c.tambien_vale && c.tambien_vale.length ? `<p class="small">También vale: ${esc(c.tambien_vale.join(" · "))}</p>` : ""}
+        <ul class="exs"><li class="ex" data-di="${esc(c.reverso)}"><span class="es" id="vResp">${esc(c.reverso)}</span></li></ul>
       </div>
     </header>
     <div class="tjZona">
@@ -884,7 +884,7 @@ function verLista(o) {
   campo.value = lvBusca;
   function celdas() {
     const q = paraBuscar(lvBusca);
-    const salen = (q ? vivas.filter((x) => [x.c.reverso, x.c.frente, ...(x.c.tambien_vale || [])].some((t) => paraBuscar(t).includes(q))) : vivas.slice()).sort(ORDENAR[lvOrden] || alfabeto);
+    const salen = (q ? vivas.filter((x) => [x.c.reverso, x.c.frente].some((t) => paraBuscar(t).includes(q))) : vivas.slice()).sort(ORDENAR[lvOrden] || alfabeto);
     $("lvCeldas").innerHTML = salen.slice(0, lvCuantas).map((x) => {
       const f = N.franja(x.pct);
       return `<button type="button" class="vc ${f === null ? "kx" : "k" + f}" data-v="${esc(x.id)}" lang="es-MX" aria-label="${esc(x.c.reverso)}: ${x.pct === null ? "sin ver" : pct(x.pct) + " de aciertos"}">${esc(x.c.reverso)}</button>`;
@@ -922,7 +922,7 @@ function quitarPalabra(id, quitar) {
   pintar({ conserva: true });
 }
 
-/** Los cuatro renglones de una palabra, para corregirla o para agregar una nueva. */
+/** Los dos renglones de una palabra (español e inglés), para corregirla o para agregar una nueva. */
 function formaPalabra(c, escondida) {
   return `
     <form id="hvForma" class="forma" autocomplete="off"${escondida ? " hidden" : ""}>
@@ -930,10 +930,6 @@ function formaPalabra(c, escondida) {
       <input id="hvEs" class="campo" type="text" lang="es" value="${esc(c.reverso || "")}" autocapitalize="off" autocorrect="off" spellcheck="false">
       <label class="small" for="hvEn">En inglés</label>
       <input id="hvEn" class="campo" type="text" lang="en" value="${esc(c.frente || "")}" autocapitalize="off" autocorrect="off" spellcheck="false">
-      <label class="small" for="hvTv">También vale (separadas con punto y coma)</label>
-      <input id="hvTv" class="campo" type="text" lang="es" value="${esc((c.tambien_vale || []).join("; "))}" autocapitalize="off" autocorrect="off" spellcheck="false">
-      <label class="small" for="hvNt">Nota</label>
-      <textarea id="hvNt" class="campo" rows="2" lang="es">${esc(c.nota || "")}</textarea>
       <p class="err" id="hvError" role="alert" hidden></p>
       <div class="go"><button type="button" class="ub" id="hvCancelar">Cancelar</button><button type="submit" class="ub grande">Guardar</button></div>
     </form>`;
@@ -941,10 +937,9 @@ function formaPalabra(c, escondida) {
 /** Lo que hay escrito en la forma, ya limpio; null (y un aviso) si le falta el español o el inglés. */
 function leerForma() {
   const limpio = (t) => t.replace(/\s+/g, " ").trim();
-  const reverso = limpio($("hvEs").value), frente = limpio($("hvEn").value), nota = limpio($("hvNt").value);
-  const tambienVale = $("hvTv").value.split(";").map(limpio).filter(Boolean);
+  const reverso = limpio($("hvEs").value), frente = limpio($("hvEn").value);
   if (!reverso || !frente) { $("hvError").hidden = false; $("hvError").textContent = "Le falta el español o el inglés."; return null; }
-  return { reverso, frente, nota, tambienVale };
+  return { reverso, frente };
 }
 
 /** Agregar una palabra a mano: es un renglón más de tu avance, y entra a tu quiz como palabra nueva. */
@@ -959,7 +954,7 @@ function nuevaPalabra() {
     const f = leerForma();
     if (!f) return;
     if (palabras().some((x) => !x.s.quitada && paraBuscar(x.c.reverso) === paraBuscar(f.reverso))) { $("hvError").hidden = false; $("hvError").textContent = "Esa palabra ya está en tu vocabulario."; return; }
-    A.apuntar({ t: "tjn", id: N.nuevoId("n"), tarjeta: N.nuevoId("tm"), cuando: new Date().toISOString(), frente: f.frente, reverso: f.reverso, tambien_vale: f.tambienVale, nota: f.nota });
+    A.apuntar({ t: "tjn", id: N.nuevoId("n"), tarjeta: N.nuevoId("tm"), cuando: new Date().toISOString(), frente: f.frente, reverso: f.reverso });
     recalcular();
     lvAviso = { nueva: true, texto: f.reverso };
     lvBusca = "";
@@ -981,7 +976,6 @@ function abrirPalabra(id) {
   const n = s.baseN + s.n, bien = s.baseBien + s.bien;
   const ultimos = s.historia.slice(-REPASOS_A_LA_VISTA);
   const buenos = ultimos.filter((h) => h.bien).length;
-  const tambien = (c.tambien_vale || []).join(" · ");
   // Cada repaso es una barrita, del más viejo al más nuevo: alta si la supiste, bajita si no.
   const grafica = !ultimos.length ? "" : `
     <figure class="hvG">
@@ -1001,8 +995,6 @@ function abrirPalabra(id) {
   $("hvIn").innerHTML = `
     <span class="k">Vocabulario · ${esc(cuandoToca(s, hoy))}</span>
     <ul class="exs"><li class="ex" data-di="${esc(c.reverso)}"><h2 class="es" id="hvT" lang="es-MX" tabindex="-1">${esc(c.reverso)}</h2><span class="en" lang="en">${esc(c.frente)}</span></li></ul>
-    ${tambien ? `<p class="small">También vale: ${esc(tambien)}</p>` : ""}
-    ${c.nota ? `<p class="hvNota">${esc(c.nota)}</p>` : ""}
     <div class="sc"><span>Aciertos: ${v === null ? "todavía sin datos" : `${pct(v)} · ${bien} de ${n}`}</span>${v === null ? "" : barra(v)}</div>
     ${grafica}
     <dl class="hvDatos">${datos.map(([k, t]) => `<div><dt>${k}</dt><dd>${esc(t)}</dd></div>`).join("")}</dl>
@@ -1025,13 +1017,11 @@ function abrirPalabra(id) {
     ev.preventDefault();
     const f = leerForma();
     if (!f) return;
-    const { reverso, frente, nota, tambienVale } = f;
+    const { reverso, frente } = f;
     // Solo se apunta lo que cambió.
     const cambio = {};
     if (reverso !== c.reverso) cambio.reverso = reverso;
     if (frente !== c.frente) cambio.frente = frente;
-    if (nota !== (c.nota || "")) cambio.nota = nota;
-    if (tambienVale.join(";") !== (c.tambien_vale || []).join(";")) cambio.tambien_vale = tambienVale;
     if (Object.keys(cambio).length) {
       A.apuntar({ t: "tje", id: N.nuevoId("e"), tarjeta: id, cuando: new Date().toISOString(), ...cambio });
       recalcular();
