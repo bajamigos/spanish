@@ -1,7 +1,7 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=fa01171791";
-import * as A from "./almacen.js?v=fa01171791";
-import { abrirRecorrido } from "./recorrido.js?v=fa01171791";
+import * as N from "./nucleo.js?v=9ca82f4740";
+import * as A from "./almacen.js?v=9ca82f4740";
+import { abrirRecorrido } from "./recorrido.js?v=9ca82f4740";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -526,11 +526,8 @@ function fondoDelDia(respaldo = true) {
   if (ambiente() === "limpio") return { hay: false, html: "" };
   // Si subiste un GIF o video de fondo (Ajustes), va en todas las páginas de arriba, en lugar de la foto.
   cargarVideosFondo();
-  const v = videoFondo();
-  if (v && !sinMovimiento()) {
-    const cosa = v.tipo === "image/gif" ? `<img data-videofondo="${esc(v.archivo)}" alt="">` : `<video data-videofondo="${esc(v.archivo)}" muted loop autoplay playsinline preload="auto" aria-hidden="true"></video>`;
-    return { hay: true, html: `<div class="fondo">${cosa}${LOGO}</div>` };
-  }
+  const cosa = etiquetaMovimiento();
+  if (cosa) return { hay: true, html: `<div class="fondo">${cosa}${LOGO}</div>` };
   const T = N.leerTablero(A.tablero());
   if (ambiente() !== "expanse" && T && T.foto && retratos.has(T.foto)) {
     return { hay: true, html: `<div class="fondo"><img data-retrato="${esc(T.foto)}" alt="${esc(T.atuendo ? "Andrea hoy: " + T.atuendo : "Andrea hoy")}">${LOGO}</div>` };
@@ -550,12 +547,25 @@ const esMovimiento = (x) => /^video\//.test(x.tipo || "") || x.tipo === "image/g
 const videoFondo = () => (videosFondo || []).filter((x) => esMovimiento(x)).slice(-1)[0] || null;
 const sinMovimiento = () => window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 /** Pregunta una sola vez qué video de fondo hay; cuando llega la respuesta, vuelve a pintar el Tablero si está a la vista. */
+/** El GIF o video de fondo como etiqueta (o "" si no hay, o si el aparato pide menos movimiento). */
+function etiquetaMovimiento() {
+  const v = videoFondo();
+  if (!v || ambiente() === "limpio" || sinMovimiento()) return "";
+  return v.tipo === "image/gif" ? `<img data-videofondo="${esc(v.archivo)}" alt="">` : `<video data-videofondo="${esc(v.archivo)}" muted loop autoplay playsinline preload="auto" aria-hidden="true"></video>`;
+}
+/** Si él lo prendió en Ajustes: en lecciones, quizzes y tarjetas va el GIF de fondo en lugar de la foto. */
+const movimientoEnTodo = () => guardado("pelagos.movimientoEnTodo") === "si";
+/** La imagen de arriba de una lección, pregunta o tarjeta: el GIF de fondo si está prendido, si no, la foto. */
+function imagenDeArriba(foto) {
+  const m = movimientoEnTodo() ? (cargarVideosFondo(), etiquetaMovimiento()) : "";
+  return m || (foto ? `<img data-foto="${esc(foto)}" alt="">` : "");
+}
 function cargarVideosFondo() {
   if (videosFondo) return;
   videosFondo = [];
   A.escenasDe("inicio").then((l) => {
     videosFondo = l;
-    if (videoFondo() && vista.querySelector(".hoy .fondo, .hoy")) pintar({ conserva: true });
+    if (videoFondo() && (vista.querySelector(".hoy") || (movimientoEnTodo() && vista.querySelector(".hero")))) pintar({ conserva: true });
   }).catch(() => {});
 }
 function verInicio(o) {
@@ -991,7 +1001,7 @@ function verTarjetas(o) {
   <section class="kw tj">
     <header class="hero kwh tjh">
       <div class="ratio"></div>
-      ${foto ? `<img data-foto="${esc(foto.nombre)}" alt="">` : ""}
+      ${imagenDeArriba(foto && foto.nombre)}
       <div class="over">
         <p class="lead"><span id="tjFaltan">${faltan}</span><span id="tjAviso">Dilo en español</span></p>
         <div class="score"><div class="track" role="img" aria-label="Llevas ${hechas} de ${total}"><i data-w="${100 * hechas / total}"></i></div></div>
@@ -1457,7 +1467,7 @@ function pintarLeccion(tema, lec) {
   <p class="crumb"><a href="#/gramatica">Gramática</a> · <a href="#/gramatica/${esc(tema.nivel.toLowerCase())}">${esc(tema.nivel)}</a> · ${esc(CATEGORIAS[tema.categoria] || tema.categoria)}</p>
   <header class="hero">
     <div class="ratio"></div>
-    ${lec.foto && fotoDeLeccion(lec.foto) ? `<img data-foto="${esc(fotoDeLeccion(lec.foto))}" alt="">` : ""}
+    ${imagenDeArriba(lec.foto && fotoDeLeccion(lec.foto))}
     <div class="over">
       <p class="lead"><span>${esc(tema.nivel)} · ${esc(NIVELES[tema.nivel] || "")}</span><span>${i.n === 0 ? "de Kwiziq" : plural(i.n, "respuesta", "respuestas")}</span></p>
       <h1>${esc(lec.titulo)}</h1>
@@ -1622,7 +1632,7 @@ function verPregunta(o, kid) {
   <section class="kw">
     <header class="hero kwh">
       <div class="ratio"></div>
-      ${foto ? `<img data-foto="${esc(foto.nombre)}" alt="">` : ""}
+      ${imagenDeArriba(foto && foto.nombre)}
       <div class="over">
         <p class="lead"><span>Pregunta ${sig.orden} de ${sig.total}</span><span>${escribir ? "Dilo en español" : "Toca la respuesta"}</span></p>
         <div class="score"><div class="track" role="img" aria-label="Vas en la ${sig.orden} de ${sig.total}"><i data-w="${100 * (sig.orden - 1) / sig.total}"></i></div></div>
@@ -1935,8 +1945,9 @@ function verAjustes(o) {
     <h2>Fondo con movimiento</h2>
     <p id="ajVideoHay">${videoFondo() ? "Ya tienes un fondo con movimiento." : "Ahora se usa la foto del día."}</p>
     <div class="go"><label class="ub">Subir un GIF o video<input type="file" id="ajVideoArch" accept=".gif,.mp4,.webm,image/gif,video/mp4,video/webm" hidden></label>
-      <button type="button" class="ub" id="ajVideoQuitar"${videoFondo() ? "" : " hidden"}>Quitar el video</button></div>
-    <p class="small" id="ajVideoAviso" role="status">Un GIF o un video (MP4 o WebM) que se repite sin sonido detrás del Tablero, Gramática y Vocabulario, en lugar de la foto. Mejor de menos de 10 MB. Sale en todos tus aparatos. En Limpio, o si tu aparato pide reducir el movimiento, se queda la foto.</p>
+      <button type="button" class="ub" id="ajVideoTodo" aria-pressed="${movimientoEnTodo()}">${movimientoEnTodo() ? "También en lecciones y tarjetas: Sí" : "También en lecciones y tarjetas: No"}</button>
+      <button type="button" class="ub" id="ajVideoQuitar"${videoFondo() ? "" : " hidden"}>Quitar el GIF o video</button></div>
+    <p class="small" id="ajVideoAviso" role="status">Un GIF o un video (MP4 o WebM) que se repite sin sonido detrás del Tablero, Gramática y Vocabulario, en lugar de la foto. Mejor de menos de 10 MB. Con «También en lecciones y tarjetas» sale también arriba de cada lección, pregunta y tarjeta de vocabulario. Sale en todos tus aparatos. En Limpio, o si tu aparato pide reducir el movimiento, se queda la foto.</p>
   </section>
   <section class="card" id="ajApp">
     <h2>Pelagos como app</h2>
@@ -2000,6 +2011,13 @@ function verAjustes(o) {
     avisoVideo("Subiendo el video…");
     try { listoVideo(await A.escenaSubir("inicio", f, "Fondo del Tablero")); avisoVideo("¡Listo! Ve al Tablero para verlo."); }
     catch (e) { avisoVideo(e && e.message ? e.message : "No se pudo subir el video."); }
+  });
+  $("ajVideoTodo").addEventListener("click", () => {
+    const si = !movimientoEnTodo();
+    guardar("pelagos.movimientoEnTodo", si ? "si" : "no");
+    $("ajVideoTodo").setAttribute("aria-pressed", String(si));
+    $("ajVideoTodo").textContent = "También en lecciones y tarjetas: " + (si ? "Sí" : "No");
+    avisoVideo(si ? "Listo: las lecciones, los quizzes y las tarjetas llevan tu GIF en lugar de la foto." : "Listo: las lecciones, los quizzes y las tarjetas vuelven a sus fotos.");
   });
   $("ajVideoQuitar").addEventListener("click", async () => {
     avisoVideo("Quitando el video…");
