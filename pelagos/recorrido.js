@@ -67,6 +67,7 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
       <button type="button" class="rec-b" id="recBSalidas">Salidas</button>
       <button type="button" class="rec-b" id="recBLuz" hidden>Apagar las luces</button>
       <button type="button" class="rec-b" id="recBEscena" hidden>▶ Escena</button>
+      <button type="button" class="rec-b" id="recBHombro" hidden>Acercarte</button>
       <button type="button" class="rec-b" id="recBDescribe" aria-pressed="false" hidden>Describir</button>
       <button type="button" class="rec-b" id="recBMision">Misión</button>
     </div>
@@ -365,6 +366,18 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
   $("recSaltar").addEventListener("click", cerrarEscena);
   escenaCaja.addEventListener("click", cerrarEscena);
   $("recBEscena").addEventListener("click", () => verEscena(actual));
+  // «Acercarte»: la toma por encima de tu hombro, para hablarle a quien está en el lugar. Se cierra tocando.
+  async function verHombro(lugar) {
+    if (!lugar || !lugar.hombro || !viva) return;
+    const url = await bajarFoto(lugar.hombro).catch(() => null);
+    if (!url || !viva || actual !== lugar) return;
+    escenaHilo++;
+    $("recEscenaG").src = url;
+    $("recEscena").setAttribute("aria-label", "Frente a frente. Toca para volver.");
+    escenaCaja.hidden = false;
+    $("recSaltar").focus({ preventScroll: true });
+  }
+  $("recBHombro").addEventListener("click", () => verHombro(actual));
   document.addEventListener("fullscreenchange", () => { if (!document.fullscreenElement && !escenaCaja.hidden) cerrarEscena(); });
 
   // ---------------------------------------------------------------- Cambiar la luz del lugar (día / noche)
@@ -399,6 +412,7 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
     $("recAndreaT").textContent = actual.andrea ? "«" + actual.andrea + "»" : "";
     $("recBMision").hidden = !(actual.acciones && actual.acciones.length);
     $("recBEscena").hidden = !actual.escena;
+    $("recBHombro").hidden = !actual.hombro;
     $("recBDescribe").hidden = !actual.describe;
     $("recDescribe").textContent = ""; $("recDescribe").hidden = true; $("recBDescribe").setAttribute("aria-pressed", "false");
     $("recBLuz").hidden = !actual.fotoNoche;
