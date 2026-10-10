@@ -578,7 +578,8 @@ export function leerTablero(crudo) {
       const con = typeof x?.con === "string" && /^(siempre|tarjetas|kwizzes|todas|medida:.{1,60})$/.test(x.con) ? x.con : null;
       // «icono» es el nombre de un dibujito que la página conoce; va en la esquina del cuadro de esa medida.
       const icono = typeof x?.icono === "string" && /^[a-z]{2,12}$/.test(x.icono) ? x.icono : null;
-      if (nombre !== null) partes.push({ nombre, va: x.va === true, con, icono });
+      // «extra»: una parte de más (la Amiga, por la clase). Se gana sola y no cuenta para «todas».
+      if (nombre !== null) partes.push({ nombre, va: x.va === true, con, icono, ...(x.extra === true ? { extra: true } : {}) });
     }
     checkin = { estado: c.estado, nivel: numero(c.nivel), nombre: texto(c.nombre, 40), titulo: texto(c.titulo, 120),
       minutos: numero(c.minutos), partes, falta: texto(c.falta, 400), puesto: momento(c.puesto) };
