@@ -1,6 +1,6 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=9ce10fa35b";
-import * as A from "./almacen.js?v=9ce10fa35b";
+import * as N from "./nucleo.js?v=13cf660c79";
+import * as A from "./almacen.js?v=13cf660c79";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -47,17 +47,19 @@ let porSlug = new Map();      // tema por nombre de lección
 let preguntas = new Map();    // pregunta por id
 let fotos = new Map();        // portada por nombre
 let retratos = new Map();     // retrato de Andrea por nombre
+let tarjetas = new Map();     // tarjeta por id
 let enPregunta = false;       // hay una pregunta en pantalla: no se repinta debajo de ti
 let turnoDePintar = 0;        // para que una lección que llega tarde no pise otra página
 let teclas = null;            // qué hacen las teclas B y M en la pantalla de ahora
 
 function ponerPaquete(paquete) {
-  P = { ...paquete, enlaces: paquete.enlaces || [], cuadernos: paquete.cuadernos || [], fotos: paquete.fotos || [] };
+  P = { ...paquete, enlaces: paquete.enlaces || [], cuadernos: paquete.cuadernos || [], fotos: paquete.fotos || [], tarjetas: paquete.tarjetas || [] };
   porId = new Map(P.temas.map((t) => [t.id, t]));
   porSlug = new Map(P.temas.filter((t) => t.slug && t.leccion).map((t) => [t.slug, t]));
   preguntas = new Map(P.preguntas.map((q) => [q.id, q]));
   fotos = new Map((P.fotos || []).map((f) => [f.nombre, f]));
   retratos = new Map((P.retratos || []).map((f) => [f.nombre, f]));
+  tarjetas = new Map(P.tarjetas.map((c) => [c.id, c]));
 }
 function recalcular() { if (P) E = N.calcular(P, A.sucesos()); }
 const meta = () => (E ? E.parametros.meta : N.META);
@@ -212,6 +214,7 @@ const RUTAS = [
   [/^\/gramatica\/([a-z0-9]+)(\/bajo)?$/, verNivel],
   [/^\/mapa$/, verMapa],
   [/^\/leccion\/([a-z0-9-]+)$/, verLeccion],
+  [/^\/tarjetas$/, verTarjetas],
   [/^\/kwiz$/, verKwiz],
   [/^\/kwiz\/([A-Za-z0-9_-]+)$/, verPregunta],
   [/^\/kwiz\/([A-Za-z0-9_-]+)\/resultado$/, verResultado],
@@ -346,14 +349,15 @@ function horaCorta(iso) {
 }
 
 /** Una medida del día como cuadro: nombre, número grande, barra y si ya se cumplió. */
-function cuadro(nombre, valor, de, unidad, estado, hecho) {
+function cuadro(nombre, valor, de, unidad, estado, hecho, enlace = "") {
   const aCero = de === 0;       // medidas que se cumplen al llegar a cero, como las tarjetas pendientes
-  return `<div class="cuadro${hecho ? " hecho" : ""}" role="listitem">
+  const [abre, cierra] = enlace ? [`a href="${enlace}"`, "a"] : ["div", "div"];
+  return `<${abre} class="cuadro${hecho ? " hecho" : ""}" role="listitem">
     <span class="cn">${esc(nombre)}</span>
     <span class="cv">${esc(valor)}${aCero ? "" : `<small> de ${esc(de)}${unidad ? " " + esc(unidad) : ""}</small>`}</span>
     ${aCero ? '<span class="bar vacia"></span>' : barra(de ? (valor / de) * 100 : 0)}
     <span class="ce">${hecho ? ICONO_SI : ICONO_NO}${esc(estado)}</span>
-  </div>`;
+  </${cierra}>`;
 }
 
 function verInicio(o) {
@@ -373,7 +377,13 @@ function verInicio(o) {
   // ---- Las medidas del día. Los kwizzes los cuenta Pelagos; lo demás viene del tablero.
   const kw = N.kwizzesDelDia(E, hoy), metaKw = N.KWIZZES_AL_DIA;
   const cuadros = [cuadro("Kwizzes", kw, metaKw, "", kw >= metaKw ? "Cumplido" : `Faltan ${metaKw - kw}`, kw >= metaKw)];
+  // Las tarjetas también las cuenta Pelagos: las que tocan hoy y siguen pendientes. La meta es cero.
+  if (P.tarjetas.length) {
+    const tj = N.tarjetasDelDia(P, E, hoy).pendientes.length;
+    cuadros.push(cuadro("Tarjetas", tj, 0, "", tj === 0 ? "Cumplido" : "Meta: cero", tj === 0, "#/tarjetas"));
+  }
   for (const m of T ? T.medidas : []) {
+    if (P.tarjetas.length && /anki/i.test(m.nombre)) continue;        // con tarjetas propias, las de fuera ya no se enseñan
     const hecho = m.de === 0 ? m.valor === 0 : m.valor >= m.de;
     const falta = Math.round((m.de - m.valor) * 10) / 10;
     cuadros.push(cuadro(m.nombre, m.valor, m.de, m.unidad, hecho ? "Cumplido" : m.de === 0 ? "Meta: cero" : `Faltan ${falta}`, hecho));
@@ -553,6 +563,143 @@ window.addEventListener("resize", () => {
   // Si la pantalla cambia de ancho (o el teléfono se voltea), el mapa se vuelve a dibujar a la medida.
   if (vista.querySelector(".mapa") && Math.abs(vista.clientWidth - anchoDelMapa) > 8) pintar({ conserva: true });
 });
+
+// ---------------------------------------------------------------- Las tarjetas
+
+let enTarjetaDe = null;       // la tarjeta que está en pantalla: no se repinta debajo de ti
+
+/** Tu mazo. Sale una tarjeta a la vez: el frente en inglés, tú lo dices o lo escribes en español, y te calificas. */
+function verTarjetas(o) {
+  if (o.conserva && enTarjetaDe) { enPregunta = true; return; }
+  const hoy = N.fechaLocal(new Date());
+  const dia = N.tarjetasDelDia(P, E, hoy);
+  if (!dia.pendientes.length) {
+    // Cuándo vuelve a tocar algo, para que «en cero» no parezca que se acabaron para siempre.
+    const fechas = P.tarjetas.map((c) => E.tarjetas.get(c.id)).filter((x) => x && x.toca && x.toca > hoy).map((x) => x.toca).sort();
+    return poner(`
+    <section class="card" id="tjCero">
+      <h1 class="h">${dia.total ? "Tarjetas en cero" : "Todavía no hay tarjetas"}</h1>
+      ${dia.total ? `<p>Hoy hiciste ${dia.hechasHoy} de tus ${plural(dia.total, "tarjeta", "tarjetas")}.${fechas.length ? ` Las siguientes tocan el ${fecha(fechas[0])}.` : ""}</p>` : "<p>Cuando haya un mazo en el contenido, aquí salen las de cada día.</p>"}
+      <div class="go"><a class="ub grande" href="#/">Hoy</a></div>
+    </section>`, { titulo: "Tarjetas · Pelagos", nav: "tarjetas", conserva: o.conserva });
+  }
+  const c = tarjetas.get(dia.pendientes[0]);
+  const antes = E.tarjetas.get(c.id);
+  const foto = P.fotos.length ? P.fotos[Math.floor(N.azarDe(c.id + "#" + hoy + "#" + antes.n)() * P.fotos.length)] : null;
+  const total = dia.hechasHoy + dia.pendientes.length;
+
+  poner(`
+  <section class="kw tj">
+    <header class="hero kwh">
+      <div class="ratio"></div>
+      ${foto ? `<img data-foto="${esc(foto.nombre)}" alt="">` : ""}
+      <div class="over">
+        <p class="lead"><span id="tjFaltan">${dia.pendientes.length === 1 ? "Falta 1" : "Faltan " + dia.pendientes.length}</span><span>Dilo en español</span></p>
+        <div class="score"><div class="track" role="img" aria-label="Llevas ${dia.hechasHoy} de ${total}"><i data-w="${100 * dia.hechasHoy / total}"></i></div></div>
+        <h1 class="cue" id="cue" lang="en">${esc(c.frente)}</h1>
+      </div>
+    </header>
+    <div class="card" id="controles">
+      <nav class="jump dos" aria-label="Cómo contestas">
+        <button type="button" id="modoEscribir">Escribir</button><button type="button" id="modoDecir">Decir en voz alta</button>
+      </nav>
+      <div id="zonaEscribir">
+        <label class="small" for="campo">Tu respuesta</label>
+        <input id="campo" class="campo" type="text" lang="es" aria-describedby="cue" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="send">
+        <div class="teclas" role="group" aria-label="Letras con acento">${["á", "é", "í", "ó", "ú", "ñ", "ü", "¿", "¡"].map((x) => `<button type="button" class="tecla" data-c="${x}">${x}</button>`).join("")}</div>
+        <div class="go"><button type="button" class="ub" id="noSe1">No sé</button><button type="button" class="ub grande" id="revisar">Revisar</button></div>
+      </div>
+      <div id="zonaDecir" hidden>
+        <p>Dilo en voz alta. Luego mira la respuesta y califícate.</p>
+        <div class="go"><button type="button" class="ub" id="noSe2">No sé</button><button type="button" class="ub grande" id="ver">Ver la respuesta</button></div>
+      </div>
+    </div>
+    <div class="card" id="veredicto" tabindex="-1" hidden>
+      <p><span class="pill" id="vPill"></span></p>
+      <div class="go arriba" id="vJuicio" hidden><button type="button" class="ub grande" id="jMal">Mal</button><button type="button" class="ub grande" id="jBien">Bien</button></div>
+      <div class="go arriba" id="vSeguir" hidden><button type="button" class="ub grande" id="siguiente">Siguiente</button></div>
+      <p class="vtuya" id="vTuya" hidden></p>
+      <ul class="exs"><li class="ex" data-di="${esc(c.reverso)}"><span class="es" id="vResp">${esc(c.reverso)}</span>${c.nota ? `<span class="en" lang="es">${esc(c.nota)}</span>` : ""}</li></ul>
+      ${c.tambien_vale && c.tambien_vale.length ? `<p class="small">También vale: ${esc(c.tambien_vale.join(" · "))}</p>` : ""}
+      <p class="small" id="vVuelve" hidden></p>
+    </div>
+  </section>`,
+  { titulo: "Tarjetas · Pelagos", nav: "tarjetas", pie: "<p>Cada tarjeta que calificas se guarda al momento. La que fallas vuelve a salir hoy.</p>" });
+  enPregunta = true;
+  enTarjetaDe = c.id;
+
+  let contestada = false, escrito = null, modo = "escribir";
+  const campo = $("campo");
+
+  function veredicto(d) {
+    $("veredicto").hidden = false;
+    $("controles").hidden = true;
+    const pill = $("vPill");
+    pill.className = "pill " + (d.juicio ? "duda" : d.bien ? "bien" : "mal");
+    pill.textContent = d.juicio ? "Tú decides" : d.bien ? (d.casi ? "Bien, pero revisa los acentos" : "Bien") : "Mal";
+    const tuya = $("vTuya");
+    tuya.hidden = !escrito || (d.bien && !d.casi);
+    tuya.textContent = escrito ? "Tu respuesta: " + escrito : "";
+    tuya.classList.toggle("mal", !d.juicio && !d.bien);
+    $("vJuicio").hidden = !d.juicio;
+    $("vSeguir").hidden = !!d.juicio;
+    $("veredicto").focus({ preventScroll: true });
+    $("veredicto").scrollIntoView({ block: "nearest" });
+    if (d.juicio) { teclas = { b: () => apuntar(true), m: () => apuntar(false) }; return; }
+    const ahora = E.tarjetas.get(c.id), quedan = N.tarjetasDelDia(P, E, hoy).pendientes.length;
+    $("vVuelve").hidden = false;
+    $("vVuelve").textContent = d.bien ? "Vuelve el " + fecha(ahora.toca) + "." : "Vuelve a salir hoy.";
+    $("tjFaltan").textContent = quedan === 0 ? "En cero" : quedan === 1 ? "Falta 1" : "Faltan " + quedan;
+    $("siguiente").textContent = quedan ? "Siguiente" : "Terminar";
+    teclas = { enter: avanzar };
+  }
+  function avanzar() { enTarjetaDe = null; pintar(); }
+  function apuntar(bien, casi = false) {
+    if (contestada) return;
+    contestada = true;
+    A.apuntar({ t: "tj", id: N.nuevoId("t"), tarjeta: c.id, cuando: new Date().toISOString(), bien: bien ? 1 : 0, modo, escrito: escrito || null });
+    recalcular();
+    veredicto({ bien, casi });
+  }
+
+  const ponerModo = (m) => {
+    modo = m;
+    guardar("pelagos.modo", m);
+    $("zonaEscribir").hidden = m !== "escribir";
+    $("zonaDecir").hidden = m !== "decir";
+    $("modoEscribir").setAttribute("aria-current", m === "escribir" ? "page" : "false");
+    $("modoDecir").setAttribute("aria-current", m === "decir" ? "page" : "false");
+    if (m === "escribir") campo.focus({ preventScroll: true }); else $("ver").focus({ preventScroll: true });
+  };
+  $("modoEscribir").addEventListener("click", () => ponerModo("escribir"));
+  $("modoDecir").addEventListener("click", () => ponerModo("decir"));
+  ponerModo(guardado("pelagos.modo") === "decir" ? "decir" : "escribir");
+
+  const revisar = () => {
+    escrito = campo.value.trim();
+    if (!escrito) { campo.focus(); return; }
+    const nota = N.calificarEscrito(escrito, c.reverso, c.tambien_vale);
+    if (nota === null) veredicto({ juicio: true });
+    else apuntar(true, nota === "casi");
+  };
+  $("revisar").addEventListener("click", revisar);
+  campo.addEventListener("keydown", (ev) => { if (ev.key === "Enter") { ev.preventDefault(); revisar(); } });
+  for (const t of vista.querySelectorAll(".tecla")) {
+    t.addEventListener("click", () => {
+      const a = campo.selectionStart, b = campo.selectionEnd;
+      campo.value = campo.value.slice(0, a) + t.dataset.c + campo.value.slice(b);
+      campo.focus();
+      campo.setSelectionRange(a + 1, a + 1);
+    });
+  }
+  $("ver").addEventListener("click", () => { escrito = null; veredicto({ juicio: true }); });
+  const noSe = () => { escrito = null; apuntar(false); };
+  $("noSe1").addEventListener("click", noSe);
+  $("noSe2").addEventListener("click", noSe);
+  $("jBien").addEventListener("click", () => apuntar(true));
+  $("jMal").addEventListener("click", () => apuntar(false));
+  $("siguiente").addEventListener("click", avanzar);
+}
 
 // ---------------------------------------------------------------- La lección
 
@@ -1162,7 +1309,7 @@ document.addEventListener("keydown", (ev) => {
   if (teclas[tecla]) { ev.preventDefault(); teclas[tecla](); }
 });
 
-window.addEventListener("hashchange", () => { cerrarHoja(); enPreguntaDe = null; pintar(); });
+window.addEventListener("hashchange", () => { cerrarHoja(); enPreguntaDe = null; enTarjetaDe = null; pintar(); });
 
 // ---------------------------------------------------------------- Guardado: el renglón de abajo
 

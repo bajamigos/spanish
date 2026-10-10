@@ -46,8 +46,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 /* ---- El marco de Pelagos ---- */
 .brand { text-align: center; font-size: 22px; font-weight: 700; letter-spacing: -0.01em; }
 .brand a { text-decoration: none; }
-.top { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
-.top .ub { white-space: nowrap; font-size: 16px; padding-inline: 4px; }
+/* Cinco botones en un renglón: cada uno del ancho de su palabra, y lo que sobra se reparte. */
+.top { display: flex; gap: 5px; }
+.top .ub { flex: 1 1 auto; min-width: 0; white-space: nowrap; font-size: 15px; padding-inline: 4px; }
 .ub { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box;
   min-height: 44px; padding: 6px 14px; font: inherit; font-size: 14px; font-weight: 600; line-height: 1.25; text-decoration: none; text-align: center;
   color: var(--btn-ink); background: linear-gradient(to bottom, var(--btn-top), var(--btn-bot));
@@ -294,6 +295,7 @@ body.conandrea {
 
 .cuadros { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
 .cuadro { display: grid; gap: 6px; align-content: start; border: 1px solid var(--outline); border-radius: 6px; padding: 10px; background: var(--page); }
+a.cuadro { color: inherit; text-decoration: none; }
 .cuadro .cn { font-size: 14px; font-weight: 600; line-height: 1.25; color: var(--ink-2); }
 .cuadro .cv { font-size: 30px; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; }
 .cuadro .cv small { font-size: 14px; font-weight: 400; color: var(--ink-3); }

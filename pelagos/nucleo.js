@@ -24,6 +24,7 @@ export const TOPE_POR_TEMA = 3;
 export const LISTA = 5;
 export const KWIZZES_AL_DIA = 5;                 // la medida diaria de kwizzes
 export const ACIERTOS_PARA_SALIR = 2;
+export const NUEVAS_AL_DIA = 20;                 // cuántas tarjetas nuevas entran al día, como mucho
 
 // ---------------------------------------------------------------- El porcentaje
 
@@ -239,9 +240,9 @@ export function ordenar(sucesos) {
 /**
  * Rehace todo desde cero: el paquete de contenido más la lista de sucesos.
  * Sucesos: «kwiz» (empieza uno), «r» (una respuesta), «retirar» (pregunta mala), «dejar» (dejas un kwiz a medias),
- * «enfoque» (eliges un nivel para tu plan de estudio, o lo sueltas).
+ * «enfoque» (eliges un nivel para tu plan de estudio, o lo sueltas), «tj» (calificas una tarjeta).
  * Los de un tipo que no conoce los salta, así una versión vieja de la página no se rompe con sucesos nuevos.
- * Devuelve { temas, kwizzes, retiradas, ultimaVez, respuestas, parametros }.
+ * Devuelve { temas, kwizzes, retiradas, ultimaVez, respuestas, parametros, tarjetas… }.
  */
 export function calcular(paquete, sucesos) {
   const parametros = {
@@ -262,8 +263,29 @@ export function calcular(paquete, sucesos) {
   const dejados = new Set();
   let enfoque = null;          // el nivel en el que te enfocas («A2»), o null si van todos los niveles
 
+  // Las tarjetas. Cada una sube por la misma escalera de días que los temas. Una tarjeta que viene de otro
+  // lado (tu mazo de antes) puede traer ya su escalón y su fecha; una nueva no trae nada.
+  const tarjetas = new Map();
+  for (const c of paquete.tarjetas || []) {
+    const toca = typeof c.toca === "string" && /^\d{4}-\d{2}-\d{2}$/.test(c.toca) ? c.toca : null;
+    tarjetas.set(c.id, { escalon: toca ? Math.max(0, Math.min(ESCALONES.length - 1, c.escalon | 0)) : 0, toca, traia: !!toca, n: 0, bien: 0, primera: null, ultima: null, fallada: null });
+  }
+
   for (const e of lista) {
-    if (e.t === "enfoque") enfoque = typeof e.nivel === "string" && e.nivel ? e.nivel : null;
+    if (e.t === "tj") {
+      const c = tarjetas.get(e.tarjeta);
+      if (!c) continue;
+      const dia = fechaLocal(e.cuando);
+      c.n++;
+      if (!c.primera) c.primera = e.cuando;
+      c.ultima = e.cuando;
+      if (!e.bien) { c.escalon = 0; c.toca = dia; c.fallada = dia; }                     // fallada: vuelve a salir hoy mismo
+      else {
+        c.bien++;
+        if (c.fallada === dia) { c.escalon = 0; c.toca = sumarDias(dia, ESCALONES[0]); c.fallada = null; }      // la rescataste hoy: mañana otra vez
+        else if (!c.toca || c.toca <= dia) [c.escalon, c.toca] = siguienteToca(c.n === 1 && !c.traia ? -1 : c.escalon, true, dia);
+      }
+    } else if (e.t === "enfoque") enfoque = typeof e.nivel === "string" && e.nivel ? e.nivel : null;
     else if (e.t === "retirar" && e.p) retiradas.add(e.p);
     else if (e.t === "dejar" && e.kwiz) dejados.add(e.kwiz);
     else if (e.t === "kwiz" && Array.isArray(e.preguntas) && !kwizzes.has(e.id)) {
@@ -347,7 +369,7 @@ export function calcular(paquete, sucesos) {
     }
   }
 
-  return { temas, kwizzes, retiradas, ultimaVez, respuestas: respuestas.length, porTema, parametros, debe, fallada, enfoque };
+  return { temas, kwizzes, retiradas, ultimaVez, respuestas: respuestas.length, porTema, parametros, debe, fallada, enfoque, tarjetas };
 }
 
 /** El kwiz a medias más reciente, o null. */
@@ -369,6 +391,28 @@ export function kwizzesHechos(estado) {
 /** Cuántos kwizzes terminaste ese día (por la fecha de este aparato). */
 export function kwizzesDelDia(estado, dia = fechaLocal(new Date())) {
   return kwizzesHechos(estado).filter((k) => fechaLocal(k.terminado) === dia).length;
+}
+
+/**
+ * Las tarjetas de hoy: las que ya tocan (repasos, primero las más atrasadas), después las nuevas que caben hoy
+ * y al final las que fallaste hoy, para que no te salgan de inmediato otra vez.
+ * Devuelve { pendientes: [id…], repasos, nuevas, hechasHoy, total }. «pendientes» va en el orden en que salen.
+ */
+export function tarjetasDelDia(paquete, estado, hoy = fechaLocal(new Date())) {
+  const repasos = [], nuevas = [], falladas = [];
+  let hechasHoy = 0, nuevasHoy = 0;
+  for (const c of paquete.tarjetas || []) {
+    const s = estado.tarjetas && estado.tarjetas.get(c.id);
+    if (!s) continue;
+    if (s.primera && !s.traia && fechaLocal(s.primera) === hoy) nuevasHoy++;
+    if (!s.toca) nuevas.push(c.id);
+    else if (s.toca <= hoy) (s.fallada === hoy ? falladas : repasos).push({ id: c.id, toca: s.toca, ultima: s.ultima ? Date.parse(s.ultima) : 0 });
+    else if (s.ultima && fechaLocal(s.ultima) === hoy) hechasHoy++;
+  }
+  repasos.sort((a, b) => (a.toca < b.toca ? -1 : a.toca > b.toca ? 1 : 0) || a.ultima - b.ultima || (a.id < b.id ? -1 : 1));
+  const caben = nuevas.slice(0, Math.max(0, NUEVAS_AL_DIA - nuevasHoy));
+  falladas.sort((a, b) => a.ultima - b.ultima || (a.id < b.id ? -1 : 1));      // las que fallaste hoy van al final, la más vieja primero
+  return { pendientes: [...repasos.map((r) => r.id), ...caben, ...falladas.map((r) => r.id)], repasos: repasos.length + falladas.length, nuevas: caben.length, hechasHoy, total: (paquete.tarjetas || []).length };
 }
 
 /**
