@@ -241,7 +241,8 @@ export function ordenar(sucesos) {
  * Rehace todo desde cero: el paquete de contenido más la lista de sucesos.
  * Sucesos: «kwiz» (empieza uno), «r» (una respuesta), «retirar» (pregunta mala), «dejar» (dejas un kwiz a medias),
  * «enfoque» (eliges un nivel para tu plan de estudio, o lo sueltas), «tj» (calificas una tarjeta),
- * «tjq» (quitas una tarjeta de tu vocabulario, o la devuelves) y «tje» (le corriges el texto a una tarjeta).
+ * «tjq» (quitas una tarjeta de tu vocabulario, o la devuelves), «tje» (le corriges el texto a una tarjeta)
+ * y «tjn» (agregas a mano una tarjeta nueva).
  * Los de un tipo que no conoce los salta, así una versión vieja de la página no se rompe con sucesos nuevos.
  * Devuelve { temas, kwizzes, retiradas, ultimaVez, respuestas, parametros, tarjetas… }.
  */
@@ -277,6 +278,7 @@ export function calcular(paquete, sucesos) {
       historia: [], baseN, baseBien, quitada: false, cambio: null,
     });
   }
+  const agregadas = [];        // las tarjetas que agregaste a mano: no vienen en el contenido, viven en tus sucesos
 
   for (const e of lista) {
     if (e.t === "tj") {
@@ -293,6 +295,12 @@ export function calcular(paquete, sucesos) {
         if (c.fallada === dia) { c.escalon = 0; c.toca = sumarDias(dia, ESCALONES[0]); c.fallada = null; }      // la rescataste hoy: mañana otra vez
         else if (!c.toca || c.toca <= dia) [c.escalon, c.toca] = siguienteToca(c.n === 1 && !c.traia ? -1 : c.escalon, true, dia);
       }
+    } else if (e.t === "tjn") {
+      // Una tarjeta nueva, hecha a mano. Si ya hay una con ese id (del contenido o de otro suceso), vale la que ya estaba.
+      const texto = limpiarCambio(e);
+      if (typeof e.tarjeta !== "string" || !/^[A-Za-z0-9_-]{1,40}$/.test(e.tarjeta) || tarjetas.has(e.tarjeta) || !texto || !texto.frente || !texto.reverso) continue;
+      agregadas.push({ id: e.tarjeta, mazo: "A mano", frente: texto.frente, reverso: texto.reverso, tambien_vale: texto.tambien_vale || [], nota: texto.nota || null, agregada: fechaLocal(e.cuando) });
+      tarjetas.set(e.tarjeta, { escalon: 0, toca: null, traia: false, n: 0, bien: 0, primera: null, ultima: null, fallada: null, historia: [], baseN: 0, baseBien: 0, quitada: false, cambio: null });
     } else if (e.t === "tjq") {
       const c = tarjetas.get(e.tarjeta);
       if (c) c.quitada = !(e.quitar === 0 || e.quitar === false);        // quitar: 0 la devuelve
@@ -384,7 +392,7 @@ export function calcular(paquete, sucesos) {
     }
   }
 
-  return { temas, kwizzes, retiradas, ultimaVez, respuestas: respuestas.length, porTema, parametros, debe, fallada, enfoque, tarjetas };
+  return { temas, kwizzes, retiradas, ultimaVez, respuestas: respuestas.length, porTema, parametros, debe, fallada, enfoque, tarjetas, agregadas };
 }
 
 const TEXTO_MAX = 300;
@@ -398,6 +406,11 @@ function limpiarCambio(e) {
   if (nota !== null) cambio.nota = nota || null;                          // la nota sí se puede dejar vacía
   if (Array.isArray(e.tambien_vale)) cambio.tambien_vale = e.tambien_vale.map(texto).filter(Boolean).slice(0, 12);
   return Object.keys(cambio).length ? cambio : null;
+}
+
+/** Todo tu vocabulario: las tarjetas del contenido y, después, las que agregaste a mano. */
+export function mazo(paquete, estado) {
+  return [...(paquete.tarjetas || []), ...((estado && estado.agregadas) || [])];
 }
 
 /** Una tarjeta como se ve hoy: lo que trae el contenido, con lo que tú le hayas corregido encima. */
@@ -442,7 +455,7 @@ export function kwizzesDelDia(estado, dia = fechaLocal(new Date())) {
 export function tarjetasDelDia(paquete, estado, hoy = fechaLocal(new Date())) {
   const repasos = [], nuevas = [], falladas = [];
   let hechasHoy = 0, nuevasHoy = 0, total = 0;
-  for (const c of paquete.tarjetas || []) {
+  for (const c of mazo(paquete, estado)) {
     const s = estado.tarjetas && estado.tarjetas.get(c.id);
     if (!s) continue;
     if (s.primera && !s.traia && fechaLocal(s.primera) === hoy) nuevasHoy++;

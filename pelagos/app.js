@@ -1,6 +1,6 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=7e8db41f00";
-import * as A from "./almacen.js?v=7e8db41f00";
+import * as N from "./nucleo.js?v=2737c61ba6";
+import * as A from "./almacen.js?v=2737c61ba6";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -68,7 +68,12 @@ function ponerPaquete(paquete) {
   retratos = new Map((P.retratos || []).map((f) => [f.nombre, f]));
   tarjetas = new Map(P.tarjetas.map((c) => [c.id, c]));
 }
-function recalcular() { if (P) E = N.calcular(P, A.sucesos()); }
+function recalcular() {
+  if (!P) return;
+  E = N.calcular(P, A.sucesos());
+  tarjetas = new Map(mazo().map((c) => [c.id, c]));       // con las que agregaste a mano
+}
+const mazo = () => N.mazo(P, E);                          // todo tu vocabulario: el del contenido y el hecho a mano
 const meta = () => (E ? E.parametros.meta : N.META);
 const info = (id) => E.temas.get(id) || { pct: null, n: 0, toca: null };
 
@@ -410,7 +415,7 @@ function verInicio(o) {
 
   // ---- Lo que cuenta Pelagos solo: los quizzes de gramática de hoy y las palabras que tocan hoy y siguen pendientes (la meta es cero).
   const kw = N.kwizzesDelDia(E, hoy), metaKw = N.KWIZZES_AL_DIA;
-  const tj = P.tarjetas.length ? N.tarjetasDelDia(P, E, hoy).pendientes.length : null;
+  const tj = tarjetas.size ? N.tarjetasDelDia(P, E, hoy).pendientes.length : null;
 
   // ---- Las partes: lo que llevas ganado hoy. Las que dicen con qué se ganan se prenden aquí mismo, al momento;
   // las demás valen lo que diga el tablero.
@@ -430,7 +435,7 @@ function verInicio(o) {
   const cuadros = [cuadro("Gramática", kw, metaKw, "quizzes", kw >= metaKw ? "Cumplido" : `Faltan ${metaKw - kw}`, kw >= metaKw, "#" + QUIZ, sello("kwizzes"))];
   if (tj !== null) cuadros.push(cuadro("Vocabulario", tj, 0, "", tj === 0 ? "Cumplido" : "Por repasar", tj === 0, "#/vocabulario", sello("tarjetas")));
   for (const m of T ? T.medidas : []) {
-    if (P.tarjetas.length && /anki/i.test(m.nombre)) continue;        // con tarjetas propias, las de fuera ya no se enseñan
+    if (tarjetas.size && /anki/i.test(m.nombre)) continue;        // con tarjetas propias, las de fuera ya no se enseñan
     const hecho = m.de === 0 ? m.valor === 0 : m.valor >= m.de;
     const falta = Math.round((m.de - m.valor) * 10) / 10;
     cuadros.push(cuadro(m.nombre, m.valor, m.de, m.unidad, hecho ? "Cumplido" : m.de === 0 ? "Meta: cero" : `Faltan ${falta}`, hecho, "", sello("medida:" + m.nombre)));
@@ -626,7 +631,7 @@ function verTarjetas(o) {
   const dia = N.tarjetasDelDia(P, E, hoy);
   if (!dia.pendientes.length) {
     // Cuándo vuelve a tocar algo, para que «en cero» no parezca que se acabaron para siempre.
-    const fechas = P.tarjetas.map((c) => E.tarjetas.get(c.id)).filter((x) => x && x.toca && x.toca > hoy).map((x) => x.toca).sort();
+    const fechas = mazo().map((c) => E.tarjetas.get(c.id)).filter((x) => x && !x.quitada && x.toca && x.toca > hoy).map((x) => x.toca).sort();
     return poner(`
     ${entradas("vocabulario", "quiz")}
     <section class="card" id="tjCero">
@@ -699,7 +704,7 @@ function verTarjetas(o) {
 // ---------------------------------------------------------------- La lista de vocabulario
 
 const TANDA = 300;            // cuántas palabras se pintan de un jalón
-const ORDENES = [["fallo", "Falladas"], ["az", "A–Z"], ["toca", "Próximas"]];
+const ORDENES = [["fallo", "Falladas"], ["az", "A–Z"], ["toca", "Próximas"], ["nueva", "Nuevas"]];
 let lvBusca = "";             // lo que escribiste en el buscador
 let lvOrden = "fallo";
 let lvCuantas = TANDA;
@@ -712,11 +717,13 @@ const ORDENAR = {
   fallo: (a, b) => (a.pct === null) - (b.pct === null) || a.pct - b.pct || alfabeto(a, b),                    // las que más fallas primero; las que no has visto, al final
   az: alfabeto,
   toca: (a, b) => (!a.s.toca) - (!b.s.toca) || (a.s.toca < b.s.toca ? -1 : a.s.toca > b.s.toca ? 1 : 0) || alfabeto(a, b),
+  // Por fecha de alta: las que agregaste más recién primero; las que no traen fecha, al final.
+  nueva: (a, b) => (!a.c.agregada) - (!b.c.agregada) || (a.c.agregada > b.c.agregada ? -1 : a.c.agregada < b.c.agregada ? 1 : 0) || alfabeto(a, b),
 };
 
 /** Todas tus palabras, cada una con lo que le hayas corregido, su avance y su porcentaje de aciertos. */
 function palabras() {
-  return P.tarjetas.map((c) => { const s = E.tarjetas.get(c.id); return { id: c.id, c: N.tarjetaVista(c, s), s, pct: N.aciertoDeTarjeta(s) }; });
+  return mazo().map((c) => { const s = E.tarjetas.get(c.id); return { id: c.id, c: N.tarjetaVista(c, s), s, pct: N.aciertoDeTarjeta(s) }; });
 }
 
 /** La portada Reef del día: cambia cada día. */
@@ -759,8 +766,11 @@ function verLista(o) {
         <p>${plural(vivas.length, "palabra", "palabras")}. ${tocan === 0 ? "Hoy no queda ninguna por repasar." : tocan === 1 ? "Hoy queda 1 por repasar." : `Hoy quedan ${tocan} por repasar.`}</p>
         <label class="sr" for="lvBusca">Buscar una palabra</label>
         <input id="lvBusca" class="campo" type="search" placeholder="Buscar una palabra" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="search">
-        <div class="jump tres" role="group" aria-label="En qué orden salen">${ORDENES.map(([clave, nombre]) => `<button type="button" data-orden="${clave}" aria-pressed="${clave === lvOrden}">${nombre}</button>`).join("")}</div>
-        ${lvAviso ? `<p class="small" id="lvAviso" role="status">Quitaste «${esc(lvAviso.texto)}». <button type="button" class="lk" id="lvDeshacer">Deshacer</button></p>` : ""}
+        <div class="jump cuatro" role="group" aria-label="En qué orden salen">${ORDENES.map(([clave, nombre]) => `<button type="button" data-orden="${clave}" aria-pressed="${clave === lvOrden}">${nombre}</button>`).join("")}</div>
+        <div class="go"><button type="button" class="ub" id="lvAgregar">Agregar una palabra</button></div>
+        ${!lvAviso ? "" : lvAviso.nueva
+          ? `<p class="small" id="lvAviso" role="status">Agregaste «${esc(lvAviso.texto)}». Va a salir en tu quiz como palabra nueva.</p>`
+          : `<p class="small" id="lvAviso" role="status">Quitaste «${esc(lvAviso.texto)}». <button type="button" class="lk" id="lvDeshacer">Deshacer</button></p>`}
       </section>
       <section class="card" id="lvLista">
         <h2 class="sr">Tus palabras</h2>
@@ -810,6 +820,7 @@ function verLista(o) {
   }
   for (const b of vista.querySelectorAll("[data-devolver]")) b.addEventListener("click", () => quitarPalabra(b.dataset.devolver, false));
   if ($("lvDeshacer")) $("lvDeshacer").addEventListener("click", () => quitarPalabra(lvAviso.id, false));
+  $("lvAgregar").addEventListener("click", nuevaPalabra);
 }
 
 /** Quita una palabra de tu vocabulario, o la devuelve. No se borra nada: tu historial con ella se queda guardado. */
@@ -821,6 +832,54 @@ function quitarPalabra(id, quitar) {
   lvAviso = quitar ? { id, texto: N.tarjetaVista(c, E.tarjetas.get(id)).reverso } : null;
   cerrarHoja();
   pintar({ conserva: true });
+}
+
+/** Los cuatro renglones de una palabra, para corregirla o para agregar una nueva. */
+function formaPalabra(c, escondida) {
+  return `
+    <form id="hvForma" class="forma" autocomplete="off"${escondida ? " hidden" : ""}>
+      <label class="small" for="hvEs">En español</label>
+      <input id="hvEs" class="campo" type="text" lang="es" value="${esc(c.reverso || "")}" autocapitalize="off" autocorrect="off" spellcheck="false">
+      <label class="small" for="hvEn">En inglés</label>
+      <input id="hvEn" class="campo" type="text" lang="en" value="${esc(c.frente || "")}" autocapitalize="off" autocorrect="off" spellcheck="false">
+      <label class="small" for="hvTv">También vale (separadas con punto y coma)</label>
+      <input id="hvTv" class="campo" type="text" lang="es" value="${esc((c.tambien_vale || []).join("; "))}" autocapitalize="off" autocorrect="off" spellcheck="false">
+      <label class="small" for="hvNt">Nota</label>
+      <textarea id="hvNt" class="campo" rows="2" lang="es">${esc(c.nota || "")}</textarea>
+      <p class="err" id="hvError" role="alert" hidden></p>
+      <div class="go"><button type="button" class="ub" id="hvCancelar">Cancelar</button><button type="submit" class="ub grande">Guardar</button></div>
+    </form>`;
+}
+/** Lo que hay escrito en la forma, ya limpio; null (y un aviso) si le falta el español o el inglés. */
+function leerForma() {
+  const limpio = (t) => t.replace(/\s+/g, " ").trim();
+  const reverso = limpio($("hvEs").value), frente = limpio($("hvEn").value), nota = limpio($("hvNt").value);
+  const tambienVale = $("hvTv").value.split(";").map(limpio).filter(Boolean);
+  if (!reverso || !frente) { $("hvError").hidden = false; $("hvError").textContent = "Le falta el español o el inglés."; return null; }
+  return { reverso, frente, nota, tambienVale };
+}
+
+/** Agregar una palabra a mano: es un renglón más de tu avance, y entra a tu quiz como palabra nueva. */
+function nuevaPalabra() {
+  $("hvIn").innerHTML = `
+    <span class="k">Vocabulario · Palabra nueva</span>
+    <h2 id="hvT" tabindex="-1">Agregar una palabra</h2>
+    ${formaPalabra({}, false)}`;
+  $("hvCancelar").addEventListener("click", cerrarHoja);
+  $("hvForma").addEventListener("submit", (ev) => {
+    ev.preventDefault();
+    const f = leerForma();
+    if (!f) return;
+    if (palabras().some((x) => !x.s.quitada && paraBuscar(x.c.reverso) === paraBuscar(f.reverso))) { $("hvError").hidden = false; $("hvError").textContent = "Esa palabra ya está en tu vocabulario."; return; }
+    A.apuntar({ t: "tjn", id: N.nuevoId("n"), tarjeta: N.nuevoId("tm"), cuando: new Date().toISOString(), frente: f.frente, reverso: f.reverso, tambien_vale: f.tambienVale, nota: f.nota });
+    recalcular();
+    lvAviso = { nueva: true, texto: f.reverso };
+    lvBusca = "";
+    cerrarHoja();
+    pintar({ conserva: true });
+  });
+  if (!hojaV.hasAttribute("open")) { if (hojaV.showModal) hojaV.showModal(); else hojaV.setAttribute("open", ""); }
+  $("hvEs").focus();
 }
 
 // La ficha de una palabra: sube desde abajo, como la vista previa de un tema.
@@ -847,6 +906,7 @@ function abrirPalabra(id) {
       : s.toca === hoy ? "Hoy" : s.toca === N.sumarDias(hoy, 1) ? "Mañana" : "El " + fechaCorta(s.toca)],
     s.toca && !s.quitada ? ["La ves cada", plural(N.ESCALONES[s.escalon], "día", "días")] : null,
     s.ultima ? ["Última vez", cuando(s.ultima)] : null,
+    c.agregada ? ["Agregada", "El " + fechaCorta(c.agregada)] : null,
     s.n ? ["En Pelagos", `${plural(s.n, "repaso", "repasos")}, ${s.bien} bien`] : null,
     s.baseN ? ["Antes de Pelagos", `${plural(s.baseN, "repaso", "repasos")}, ${s.baseBien} bien`] : null,
   ].filter(Boolean);
@@ -864,18 +924,7 @@ function abrirPalabra(id) {
       <button type="button" class="ub" data-cerrar>Cerrar</button>
     </div>
     <p id="hvSeguro" hidden>¿La quito de tu vocabulario? Ya no sale en tu quiz. <button type="button" class="lk" id="hvSi">Sí, quítala</button> · <button type="button" class="lk" id="hvNo">No</button></p>
-    <form id="hvForma" class="forma" autocomplete="off" hidden>
-      <label class="small" for="hvEs">En español</label>
-      <input id="hvEs" class="campo" type="text" lang="es" value="${esc(c.reverso)}" autocapitalize="off" autocorrect="off" spellcheck="false">
-      <label class="small" for="hvEn">En inglés</label>
-      <input id="hvEn" class="campo" type="text" lang="en" value="${esc(c.frente)}" autocapitalize="off" autocorrect="off" spellcheck="false">
-      <label class="small" for="hvTv">También vale (separadas con punto y coma)</label>
-      <input id="hvTv" class="campo" type="text" lang="es" value="${esc((c.tambien_vale || []).join("; "))}" autocapitalize="off" autocorrect="off" spellcheck="false">
-      <label class="small" for="hvNt">Nota</label>
-      <textarea id="hvNt" class="campo" rows="2" lang="es">${esc(c.nota || "")}</textarea>
-      <p class="err" id="hvError" role="alert" hidden></p>
-      <div class="go"><button type="button" class="ub" id="hvCancelar">Cancelar</button><button type="submit" class="ub grande">Guardar</button></div>
-    </form>`;
+    ${formaPalabra(c, true)}`;
   vestir(hojaV);
   const editar = (si) => { $("hvForma").hidden = !si; $("hvActos").hidden = si; $("hvSeguro").hidden = true; if (si) $("hvEs").focus(); };
   $("hvEditar").addEventListener("click", () => editar(true));
@@ -886,10 +935,9 @@ function abrirPalabra(id) {
   $("hvSi").addEventListener("click", () => quitarPalabra(id, true));
   $("hvForma").addEventListener("submit", (ev) => {
     ev.preventDefault();
-    const limpio = (t) => t.replace(/\s+/g, " ").trim();
-    const reverso = limpio($("hvEs").value), frente = limpio($("hvEn").value), nota = limpio($("hvNt").value);
-    const tambienVale = $("hvTv").value.split(";").map(limpio).filter(Boolean);
-    if (!reverso || !frente) { $("hvError").hidden = false; $("hvError").textContent = "Le falta el español o el inglés."; return; }
+    const f = leerForma();
+    if (!f) return;
+    const { reverso, frente, nota, tambienVale } = f;
     // Solo se apunta lo que cambió.
     const cambio = {};
     if (reverso !== c.reverso) cambio.reverso = reverso;
@@ -1439,7 +1487,7 @@ function verAjustes(o) {
   </section>
   <section class="card">
     <h2>Lo que hay</h2>
-    <p>${P.temas.length} temas, ${P.temas.filter((t) => t.leccion).length} con lección, ${plural(P.preguntas.length, "pregunta", "preguntas")}, ${plural(P.tarjetas.length, "palabra de vocabulario", "palabras de vocabulario")}.</p>
+    <p>${P.temas.length} temas, ${P.temas.filter((t) => t.leccion).length} con lección, ${plural(P.preguntas.length, "pregunta", "preguntas")}, ${plural(tarjetas.size, "palabra de vocabulario", "palabras de vocabulario")}.</p>
     <p>${plural(E.respuestas, "respuesta tuya", "respuestas tuyas")} en ${plural(E.kwizzes.size, "quiz", "quizzes")}${aparatos.length ? `, desde ${plural(aparatos.length, "aparato", "aparatos")}: ${aparatos.map(esc).join(", ")}` : ""}.</p>
     <p class="small">Contenido: versión ${esc(P.huella || "sin número")}.</p>
   </section>
