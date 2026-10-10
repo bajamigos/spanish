@@ -1,6 +1,6 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=1a351d0997";
-import * as A from "./almacen.js?v=1a351d0997";
+import * as N from "./nucleo.js?v=0caa2dcbe9";
+import * as A from "./almacen.js?v=0caa2dcbe9";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -40,7 +40,7 @@ const QUIZ = "/gramatica/quiz";       // dónde vive el quiz de gramática
 // Regla del acomodo: cada materia trae cómo se estudia y cómo se ve; lo que es de todo va en el Tablero.
 const SECCIONES = {
   tablero: ["Tablero", [["hoy", "#/", "Hoy"], ["bitacora", "#/bitacora", "Bitácora"]]],
-  gramatica: ["Gramática", [["lecciones", "#/gramatica", "Lecciones"], ["quiz", "#" + QUIZ, "Quiz"], ["atlas", "#/gramatica/atlas", "Atlas"]]],
+  gramatica: ["Gramática", [["quiz", "#" + QUIZ, "Quiz"], ["lecciones", "#/gramatica", "Lecciones"], ["atlas", "#/gramatica/atlas", "Atlas"]]],
   vocabulario: ["Vocabulario", [["quiz", "#/vocabulario", "Quiz"], ["lista", "#/vocabulario/acervo", "Acervo"], ["agregar", "#/vocabulario/agregar", "Agregar"]]],
 };
 const MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
