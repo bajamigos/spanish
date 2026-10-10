@@ -1,6 +1,6 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=c184f4403c";
-import * as A from "./almacen.js?v=c184f4403c";
+import * as N from "./nucleo.js?v=90478f814f";
+import * as A from "./almacen.js?v=90478f814f";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -37,10 +37,11 @@ const GRUPOS = [["antes", "Antes de esta"], ["confunde", "Se confunde con"], ["s
 const TIPOS_KWIZ = { lista: "Pelagos Quiz", general: "Quiz general", cuaderno: "Quiz del cuaderno", tema: "Quiz de un tema" };
 const QUIZ = "/gramatica/quiz";       // dónde vive el quiz de gramática
 // Cada sección trae dos entradas, que van como dos botones arriba de sus páginas.
+// Regla del acomodo: cada materia trae cómo se estudia y cómo se ve; lo que es de todo va en el Tablero.
 const SECCIONES = {
-  gramatica: ["Gramática", [["lecciones", "#/gramatica", "Lecciones de gramática"], ["quiz", "#" + QUIZ, "Quiz de gramática"]]],
-  vocabulario: ["Vocabulario", [["quiz", "#/vocabulario", "Quiz de vocabulario"], ["lista", "#/vocabulario/acervo", "Acervo"]]],
-  mapa: ["Red", [["temas", "#/red", "Nodos"], ["calor", "#/red/bitacora", "Bitácora"]]],
+  tablero: ["Tablero", [["hoy", "#/", "Hoy"], ["bitacora", "#/bitacora", "Bitácora"]]],
+  gramatica: ["Gramática", [["lecciones", "#/gramatica", "Lecciones"], ["quiz", "#" + QUIZ, "Quiz"], ["nodos", "#/gramatica/nodos", "Nodos"]]],
+  vocabulario: ["Vocabulario", [["quiz", "#/vocabulario", "Quiz"], ["lista", "#/vocabulario/acervo", "Acervo"]]],
 };
 const MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
   "septiembre", "octubre", "noviembre", "diciembre"];
@@ -133,7 +134,7 @@ function cuando(iso) {
 /** Las dos entradas de una sección, con la de ahora marcada. */
 function entradas(seccion, actual) {
   const [nombre, lista] = SECCIONES[seccion];
-  return `<nav class="jump dos sec" aria-label="${nombre}">${lista.map(([clave, href, texto]) =>
+  return `<nav class="jump ${lista.length === 3 ? "tres" : "dos"} sec" aria-label="${nombre}">${lista.map(([clave, href, texto]) =>
     `<a href="${href}"${clave === actual ? ' aria-current="page"' : ""}>${texto}</a>`).join("")}</nav>`;
 }
 
@@ -244,9 +245,9 @@ const RUTAS = [
   [/^\/gramatica\/quiz$/, verKwiz],
   [/^\/gramatica\/quiz\/([A-Za-z0-9_-]+)$/, verPregunta],
   [/^\/gramatica\/quiz\/([A-Za-z0-9_-]+)\/resultado$/, verResultado],
+  [/^\/gramatica\/nodos$/, verMapa],
   [/^\/gramatica\/([a-z0-9]+)(\/bajo)?$/, verNivel],
-  [/^\/red$/, verMapa],
-  [/^\/red\/bitacora$/, verCalor],
+  [/^\/bitacora$/, verCalor],
   [/^\/leccion\/([a-z0-9-]+)$/, verLeccion],
   [/^\/vocabulario$/, verTarjetas],
   [/^\/vocabulario\/acervo$/, verLista],
@@ -254,8 +255,8 @@ const RUTAS = [
   // Las direcciones de antes siguen llevando a su página.
   [/^\/kwiz((?:\/[A-Za-z0-9_-]+){0,2})$/, (o, resto) => ir(QUIZ + (resto || ""), true)],
   [/^\/tarjetas$/, () => ir("/vocabulario", true)],
-  [/^\/mapa$/, () => ir("/red", true)],                          // el Mapa ahora es la Red: Nodos y Bitácora
-  [/^\/mapa\/calor$/, () => ir("/red/bitacora", true)],
+  [/^\/(mapa|red)$/, () => ir("/gramatica/nodos", true)],          // los Nodos viven en Gramática
+  [/^\/(mapa\/calor|red\/bitacora)$/, () => ir("/bitacora", true)],    // la Bitácora vive en el Tablero
   [/^\/vocabulario\/lista$/, () => ir("/vocabulario/acervo", true)],      // la Lista de vocabulario ahora es el Acervo
 ];
 
@@ -480,6 +481,7 @@ function verInicio(o) {
     ${retrato ? `<div class="fondo"><img data-retrato="${esc(retrato)}" alt="${esc(T.atuendo ? "Andrea hoy: " + T.atuendo : "Andrea hoy")}"></div>` : ""}
     ${fondoExpanse ? `<div class="fondo"><img data-foto="${esc(fondoExpanse)}" alt=""></div>` : ""}
     <div class="sobre">
+      ${entradas("tablero", "hoy")}
       <section class="card" id="arranque">
         <h1 class="sr">Tablero</h1>
         <p class="fechaHoy">${esc(diaLargo(hoy))}</p>
@@ -614,7 +616,7 @@ function verMapa(o) {
   <div class="hoy mapa${foto ? " confoto" : ""}">
     ${foto ? `<div class="fondo"><img data-foto="${esc(foto)}" alt=""></div>` : ""}
     <div class="sobre">
-      ${entradas("mapa", "temas")}
+      ${entradas("gramatica", "nodos")}
       <h1 class="sr">Nodos</h1>
       ${tarjetas}
       <section class="card" id="clave">
@@ -623,7 +625,7 @@ function verMapa(o) {
       </section>
     </div>
   </div>`,
-  { titulo: "Nodos · Pelagos", nav: "mapa", conserva: o.conserva });
+  { titulo: "Nodos · Pelagos", nav: "gramatica", conserva: o.conserva });
 }
 
 window.addEventListener("resize", () => {
@@ -678,7 +680,7 @@ function verCalor(o) {
   <div class="hoy mapa calor${foto ? " confoto" : ""}">
     ${foto ? `<div class="fondo"><img data-foto="${esc(foto)}" alt=""></div>` : ""}
     <div class="sobre">
-      ${entradas("mapa", "calor")}
+      ${entradas("tablero", "bitacora")}
       <section class="card" id="calorCabeza">
         <h1 class="h">Bitácora</h1>
         <div class="extras">
@@ -702,7 +704,7 @@ function verCalor(o) {
       }).join("")}
     </div>
   </div>`,
-  { titulo: "Bitácora · Pelagos", nav: "mapa", conserva: o.conserva });
+  { titulo: "Bitácora · Pelagos", nav: "inicio", conserva: o.conserva });
   // Un toque en un cuadro dice qué día es y cuánto estudiaste.
   let marcado = null;
   vista.querySelector(".sobre").addEventListener("click", (ev) => {

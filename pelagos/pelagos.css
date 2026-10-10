@@ -77,10 +77,11 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .jump { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
 .jump.niveles { grid-template-columns: repeat(6, minmax(0, 1fr)); }
 .jump.dos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.jump.tres { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .jump a, .jump button { display: block; box-sizing: border-box; width: 100%; padding: 10px 4px; text-align: center; font: inherit; font-size: 14px; font-weight: 700; line-height: 1.55; text-decoration: none;
   background: var(--tab); color: var(--tab-ink); border: 2px solid var(--tab); border-radius: 4px; cursor: pointer; }
-.jump.niveles a, .jump.dos a, .jump.dos button { background: var(--page); color: var(--ink); border-color: var(--outline); }
-.jump.niveles a[aria-current="page"], .jump.dos a[aria-current="page"], .jump.dos button[aria-current="page"] { background: var(--tab); color: var(--tab-ink); border-color: var(--tab); }
+.jump.niveles a, .jump.dos a, .jump.dos button, .jump.tres a { background: var(--page); color: var(--ink); border-color: var(--outline); }
+.jump.niveles a[aria-current="page"], .jump.dos a[aria-current="page"], .jump.dos button[aria-current="page"], .jump.tres a[aria-current="page"] { background: var(--tab); color: var(--tab-ink); border-color: var(--tab); }
 /* Las dos entradas de una sección (lecciones y quiz; quiz y lista). El nombre puede partirse en dos renglones sin descuadrar. */
 .jump.sec a { display: grid; place-items: center; min-height: 44px; padding: 6px 4px; line-height: 1.2; text-wrap: balance; }
 .jump.cuatro button { background: var(--page); color: var(--ink); border-color: var(--outline); font-size: 13px; padding: 9px 0; }
