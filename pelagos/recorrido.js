@@ -43,7 +43,7 @@ void main(){
  *  alMover     (lugar) -> aviso de que llegaste a un lugar
  * Devuelve { cerrar }.
  */
-export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte, alMover, esDeNoche, escenaVista, escenaMarcar, salirHref = "#/" }) {
+export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte, alMover, esDeNoche, escenaVista, escenaMarcar, escenas, salirHref = "#/" }) {
   const lugares = new Map(tour.lugares.map((l) => [l.id, l]));
   let actual = lugares.get(desde) || lugares.get(tour.inicio) || tour.lugares[0];
 
@@ -60,6 +60,11 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
     <div class="rec-titulo" id="recTitulo"><b id="recT"></b><span id="recS"></span></div>
     <div class="rec-flechas" id="recFlechas"></div>
     <div class="rec-andrea" id="recAndrea" hidden><b>Andrea</b><span id="recAndreaT"></span></div>
+    <div class="rec-play" id="recPlay" role="dialog" aria-label="Escena" hidden>
+      <img id="recPlayI" alt="" hidden><video id="recPlayV" playsinline hidden></video>
+      <p class="rec-play-t" id="recPlayT" role="status" aria-live="polite"></p>
+      <div class="rec-play-b"><button type="button" class="rec-b" id="recPlaySig">Siguiente ▶</button><button type="button" class="rec-b" id="recPlaySaltar">Saltar</button></div>
+    </div>
     <p class="rec-describe" id="recDescribe" role="status" aria-live="polite" hidden></p>
     <div class="rec-mapa" id="recMapa"><canvas id="recMapaC" aria-label="Mapa de Tijuana. Toca para agrandarlo."></canvas></div>
     <div class="rec-barra">
@@ -68,6 +73,8 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
       <button type="button" class="rec-b" id="recBLuz" hidden>Apagar las luces</button>
       <button type="button" class="rec-b" id="recBEscena" hidden>▶ Escena</button>
       <button type="button" class="rec-b" id="recBHombro" hidden>Acercarte</button>
+      <button type="button" class="rec-b" id="recBQuedarte" hidden>Quedarte</button>
+      <button type="button" class="rec-b" id="recBEscenas" hidden>🎞 Escenas</button>
       <button type="button" class="rec-b" id="recBDescribe" aria-pressed="false" hidden>Describir</button>
       <button type="button" class="rec-b" id="recBMision">Misión</button>
     </div>
@@ -252,9 +259,10 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
     nodos = [];
     g.lineWidth = mapaGrande ? 2 : 1.5;
     g.strokeStyle = "rgba(255,243,214,0.5)";
-    for (const l of tour.lugares) for (const [, d] of l.salidas) {
+    const veo = (l) => !l.oculto || l === actual;               // «La mañana siguiente» solo se ve cuando estás en ella
+    for (const l of tour.lugares) if (veo(l)) for (const [, d] of l.salidas) {
       const o = lugares.get(d);
-      if (!o) continue;
+      if (!o || !veo(o)) continue;
       const [a, b] = pos(l), [c, e] = pos(o);
       g.beginPath(); g.moveTo(a, b); g.lineTo(c, e); g.stroke();
     }
@@ -262,6 +270,7 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
     g.font = "600 12px system-ui, sans-serif";
     g.textAlign = "center";
     for (const l of tour.lugares) {
+      if (!veo(l)) continue;
       const [px, py] = pos(l);
       nodos.push({ l, px, py });
       const t = tinte ? tinte(l) : null;
@@ -403,6 +412,125 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
     } finally { moviendo = false; }
   });
 
+  // ---------------------------------------------------------------- Reproductor de escenas (las que subes tú y la toma de «Quedarte»)
+  const playCaja = $("recPlay"), playI = $("recPlayI"), playV = $("recPlayV"), playT = $("recPlayT");
+  let playFin = null, playSig = null;
+  /** Muestra en orden [{ url, tipo: "imagen"|"video", texto, seg }] a pantalla completa. Se resuelve al terminar o al saltar. */
+  function reproducir(items) {
+    return new Promise((listo) => {
+      let i = -1, reloj = 0, hecho = false;
+      const salir = () => {
+        if (hecho) return;
+        hecho = true; clearTimeout(reloj); playFin = playSig = null;
+        playV.pause(); playV.removeAttribute("src"); playI.removeAttribute("src");
+        playCaja.hidden = true;
+        if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
+        caja.focus({ preventScroll: true });
+        listo();
+      };
+      const sigue = () => {
+        clearTimeout(reloj);
+        i++;
+        if (i >= items.length) { salir(); return; }
+        const it = items[i];
+        playCaja.classList.add("negro");
+        setTimeout(() => {
+          if (hecho) return;
+          playT.textContent = it.texto || "";
+          playT.hidden = !it.texto;
+          if (it.tipo === "video") {
+            playI.hidden = true; playV.hidden = false;
+            playV.src = it.url; playV.onended = sigue; playV.onerror = sigue;
+            playV.play().catch(() => { reloj = setTimeout(sigue, 8000); });
+          } else {
+            playV.hidden = true; playV.pause(); playV.onended = null; playI.hidden = false;
+            playI.src = it.url;
+            reloj = setTimeout(sigue, Math.max(1, it.seg || 8) * 1000);
+          }
+          playCaja.classList.remove("negro");
+        }, 350);
+      };
+      playFin = salir; playSig = sigue;
+      playCaja.hidden = false; playCaja.classList.add("negro");
+      try { if (playCaja.requestFullscreen) playCaja.requestFullscreen().catch(() => {}); } catch { /* cubre la página igual */ }
+      $("recPlaySaltar").focus({ preventScroll: true });
+      sigue();
+    });
+  }
+  $("recPlaySig").addEventListener("click", () => playSig && playSig());
+  $("recPlaySaltar").addEventListener("click", () => playFin && playFin());
+
+  async function itemsDe(sala) {
+    if (!escenas) return [];
+    const lista = await escenas.listar(sala).catch(() => []);
+    const hechos = [];
+    for (const x of lista) {
+      const url = await escenas.url(sala, x).catch(() => null);
+      if (url) hechos.push({ url, tipo: /^video\//.test(x.tipo || "") ? "video" : "imagen", texto: x.desc || "", seg: 8 });
+    }
+    return hechos;
+  }
+
+  // Panel «🎞 Escenas»: lista, subir y quitar
+  async function pintarEscenas(aviso = "") {
+    const sala = actual.id;
+    let lista = [];
+    let error = "";
+    try { lista = await escenas.listar(sala); } catch (e) { error = e && e.message ? e.message : "No se pudieron leer."; }
+    if (hoja.dataset.que !== "escenas" || hoja.hidden || actual.id !== sala) return;
+    const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+    $("recHojaC").innerHTML = `<h2>Escenas de «${esc(actual.titulo)}»</h2>
+      <p class="rec-nota" role="status">${esc(aviso || error)}</p>
+      <ol class="rec-lista">${lista.map((x, i) => `<li>${i + 1}. ${esc(x.desc || "Sin descripción")} <button type="button" class="rec-b" data-quitar="${esc(x.archivo)}">Quitar</button></li>`).join("") || "<li>Todavía no hay escenas aquí.</li>"}</ol>
+      ${lista.length ? '<p><button type="button" class="rec-b" id="recEscVer">▶ Ver la escena</button></p>' : ""}
+      <p><label>Descripción en palabras (opcional)<br><input type="text" id="recEscDesc" maxlength="600"></label></p>
+      <p><label class="rec-b">＋ Subir GIF, imagen o video<input type="file" id="recEscArch" accept=".gif,.webp,.png,.jpg,.jpeg,.mp4,.webm,image/*,video/*" hidden></label></p>
+      <p class="rec-nota">Se guardan en tu carpeta privada, con tu llave, y salen en todos tus aparatos. Máximo 30 MB cada una.</p>`;
+  }
+  $("recBEscenas").addEventListener("click", () => {
+    if (!hoja.hidden && hoja.dataset.que === "escenas") { cerrarHoja(); return; }
+    hoja.hidden = false; hoja.dataset.que = "escenas"; hoja.scrollTop = 0;
+    $("recHojaC").innerHTML = "<h2>Escenas</h2><p>Un momento…</p>";
+    $("recX").focus({ preventScroll: true });
+    pintarEscenas();
+  });
+  $("recHojaC").addEventListener("click", async (ev) => {
+    if (!(ev.target instanceof Element)) return;
+    if (ev.target.closest("#recEscVer")) { cerrarHoja(); const it = await itemsDe(actual.id); if (it.length) await reproducir(it); return; }
+    const q = ev.target.closest("[data-quitar]");
+    if (q && escenas) { await escenas.quitar(actual.id, q.dataset.quitar).catch(() => {}); pintarEscenas("Quitada de la lista."); }
+  });
+  $("recHojaC").addEventListener("change", async (ev) => {
+    const t = ev.target;
+    if (!(t instanceof HTMLInputElement) || t.id !== "recEscArch" || !t.files || !t.files.length || !escenas) return;
+    const desc = ($("recEscDesc") && $("recEscDesc").value) || "";
+    const archivos = Array.from(t.files);
+    let hechas = 0, falla = "";
+    for (const f of archivos) {
+      $("recHojaC").querySelector(".rec-nota").textContent = "Subiendo " + (hechas + 1) + " de " + archivos.length + "…";
+      try { await escenas.subir(actual.id, f, archivos.length === 1 ? desc : ""); hechas++; } catch (e) { falla = e && e.message ? e.message : "No se pudo subir."; break; }
+    }
+    pintarEscenas(falla ? "No se pudo: " + falla : hechas + (hechas === 1 ? " escena subida." : " escenas subidas."));
+  });
+
+  // «Quedarte»: la toma, fundido a negro, tus escenas del cuarto y la mañana siguiente
+  let quedando = false;
+  async function quedarte() {
+    const q = actual.quedarte;
+    if (!q || quedando || moviendo) return;
+    quedando = true;
+    try {
+      cerrarHoja();
+      const toma = await bajarFoto(q.img).catch(() => null);
+      const partes = toma ? [{ url: toma, tipo: "imagen", texto: q.texto || "", seg: 5 }] : [];
+      partes.push(...(await itemsDe(actual.id)));
+      if (partes.length) await reproducir(partes);
+      await ir(q.despues, null);
+      if (q.aviso) { $("recAndrea").hidden = false; $("recAndreaT").textContent = "«" + q.aviso + "»"; }
+    } finally { quedando = false; }
+  }
+  $("recBQuedarte").addEventListener("click", quedarte);
+
   // ---------------------------------------------------------------- Ir a otro lugar
   function mostrarLugar() {
     $("recT").textContent = actual.titulo;
@@ -413,6 +541,8 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
     $("recBMision").hidden = !(actual.acciones && actual.acciones.length);
     $("recBEscena").hidden = !actual.escena;
     $("recBHombro").hidden = !actual.hombro;
+    $("recBQuedarte").hidden = !actual.quedarte;
+    $("recBEscenas").hidden = !escenas;
     $("recBDescribe").hidden = !actual.describe;
     $("recDescribe").textContent = ""; $("recDescribe").hidden = true; $("recBDescribe").setAttribute("aria-pressed", "false");
     $("recBLuz").hidden = !actual.fotoNoche;
@@ -526,6 +656,7 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
     if (ev.ctrlKey || ev.metaKey || ev.altKey || !caja.isConnected) return;
     if (ev.target instanceof HTMLInputElement || ev.target instanceof HTMLTextAreaElement) return;
     const tecla = ev.key;
+    if (!playCaja.hidden) { if (tecla === "Escape" && playFin) playFin(); return; }       // con una escena en pantalla, las teclas no mueven el visor
     const paso = 7;
     if (tecla === "ArrowLeft") yaw = norm(yaw - paso);
     else if (tecla === "ArrowRight") yaw = norm(yaw + paso);

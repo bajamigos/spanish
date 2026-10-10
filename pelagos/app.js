@@ -1,7 +1,7 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=3ec6acbb50";
-import * as A from "./almacen.js?v=3ec6acbb50";
-import { abrirRecorrido } from "./recorrido.js?v=3ec6acbb50";
+import * as N from "./nucleo.js?v=34fe3f3d0d";
+import * as A from "./almacen.js?v=34fe3f3d0d";
+import { abrirRecorrido } from "./recorrido.js?v=34fe3f3d0d";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -357,6 +357,7 @@ function verRecorrido(o, id) {
     bajarFoto: (nombre) => A.foto(FOTOS.get(nombre), CARPETA),
     hojaMision,
     tinte,
+    escenas: { listar: (sala) => A.escenasDe(sala), subir: (sala, f, d) => A.escenaSubir(sala, f, d), quitar: (sala, a) => A.escenaQuitar(sala, a), url: (sala, x) => A.escenaUrl(sala, x) },
     esDeNoche: () => { const h = new Date().getHours(); return h >= 19 || h < 6; },
     escenaVista: (id) => (guardado("pelagos.escenas") || "").split(",").includes(id),
     escenaMarcar: (id) => { const v = (guardado("pelagos.escenas") || "").split(",").filter(Boolean); if (!v.includes(id)) guardar("pelagos.escenas", [...v, id].join(",")); },

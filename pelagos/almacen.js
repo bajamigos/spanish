@@ -8,7 +8,7 @@
 // - Lo que contestas entra primero a una fila en este aparato y de ahí sube.
 //   Sin internet, la fila espera y sube sola cuando vuelve.
 // - La llave vive solo en este navegador y solo viaja a la dirección de CONFIG.api.
-import { CONFIG } from "./config.js?v=3ec6acbb50";
+import { CONFIG } from "./config.js?v=34fe3f3d0d";
 
 const CLAVES = { llave: "pelagos.llave", aparato: "pelagos.aparato", fila: "pelagos.fila." };      // la fila: una clave por suceso
 const RUTA_SUCESOS = /^sucesos\/([A-Za-z0-9_-]+)\/(\d{4}-\d{2})\.jsonl$/;
@@ -560,4 +560,93 @@ export function foto(info, carpeta = "reef") {
     })());
   }
   return fotosVivas.get(nombre);
+}
+
+// ---------------------------------------------------------------- Escenas que sube él (GIF, imágenes, video)
+// Viven en la rama de avance, en escenas/<lugar>/: un archivo por escena y un indice.json con el orden y la descripción.
+// Así son privadas (se bajan con la llave), permanentes y salen en todos sus aparatos.
+
+const TIPOS_ESCENA = { gif: "image/gif", webp: "image/webp", png: "image/png", jpg: "image/jpeg", jpeg: "image/jpeg", mp4: "video/mp4", webm: "video/webm" };
+const MAX_ESCENA = 30 * 1024 * 1024;       // la API de GitHub aguanta más, pero el celular no
+const escenasVivas = new Map();
+
+function salaBuena(sala) { return /^[a-z0-9-]+$/.test(String(sala || "")); }
+
+async function leerIndiceEscenas(sala) {
+  const r = await api(REPO + "/contents/" + ruta("escenas/" + sala + "/indice.json") + "?ref=" + encodeURIComponent(CONFIG.ramaAvance));
+  if (r.status === 404) return { sha: null, items: [] };
+  if (!r.ok) throw new Fallo("github", "No se pudieron leer las escenas.", r.status);
+  const j = await r.json();
+  let items = [];
+  try { items = JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(String(j.content || "").replace(/\s/g, "")), (c) => c.charCodeAt(0)))); } catch { items = []; }
+  return { sha: j.sha, items: Array.isArray(items) ? items.filter((x) => x && typeof x.archivo === "string" && /^[a-z0-9-]+\.[a-z0-9]+$/.test(x.archivo)) : [] };
+}
+
+async function escribirIndiceEscenas(sala, cambia) {
+  for (let intento = 0; intento < 4; intento++) {
+    const { sha, items } = await leerIndiceEscenas(sala);
+    const nuevos = cambia(items.slice());
+    const r = await api(REPO + "/contents/" + ruta("escenas/" + sala + "/indice.json"), {
+      metodo: "PUT",
+      cuerpo: { message: "escenas: " + sala + " (" + aparato() + ")", content: aBase64(JSON.stringify(nuevos, null, 1)), branch: CONFIG.ramaAvance, ...(sha ? { sha } : {}) },
+    });
+    if (r.status === 200 || r.status === 201) return nuevos;
+    if (r.status === 409 || r.status === 422) continue;
+    if (r.status === 404) throw new Fallo("falta", "No se pudo guardar: falta la rama «" + CONFIG.ramaAvance + "» o la llave no deja escribir.", 404);
+    throw new Fallo("github", "GitHub no quiso guardar la escena (" + r.status + ").", r.status);
+  }
+  throw new Fallo("choque", "No se pudo guardar la escena después de varios intentos.");
+}
+
+/** Las escenas de un lugar, en orden: [{ archivo, tipo, desc, orden }]. */
+export async function escenasDe(sala) {
+  if (!salaBuena(sala)) return [];
+  const { items } = await leerIndiceEscenas(sala);
+  return items.sort((a, b) => (a.orden || 0) - (b.orden || 0));
+}
+
+/** Sube un archivo (GIF, imagen o video) a un lugar. Devuelve la lista nueva. */
+export async function escenaSubir(sala, archivo, desc = "") {
+  if (!salaBuena(sala)) throw new Fallo("escena", "Ese lugar no admite escenas.");
+  const ext = (String(archivo.name || "").split(".").pop() || "").toLowerCase();
+  const tipo = TIPOS_ESCENA[ext];
+  if (!tipo) throw new Fallo("escena", "Solo GIF, WebP, PNG, JPG, MP4 o WebM.");
+  if (archivo.size > MAX_ESCENA) throw new Fallo("escena", "Pesa más de 30 MB. Hazlo más chico o más corto.");
+  const bytes = new Uint8Array(await archivo.arrayBuffer());
+  let s = "";
+  for (let i = 0; i < bytes.length; i += 0x8000) s += String.fromCharCode.apply(null, bytes.subarray(i, i + 0x8000));
+  const nombre = Date.now().toString(36) + (ext === "jpeg" ? "jpg" : ext).replace(/^/, ".");
+  const r = await api(REPO + "/contents/" + ruta("escenas/" + sala + "/" + nombre), {
+    metodo: "PUT",
+    cuerpo: { message: "escena: " + sala + " (" + aparato() + ")", content: btoa(s), branch: CONFIG.ramaAvance },
+  });
+  if (r.status === 404) throw new Fallo("falta", "No se pudo guardar: falta la rama «" + CONFIG.ramaAvance + "» o la llave no deja escribir.", 404);
+  if (r.status !== 200 && r.status !== 201) throw new Fallo("github", "GitHub no quiso guardar la escena (" + r.status + ").", r.status);
+  const lista = await escribirIndiceEscenas(sala, (items) => {
+    const orden = items.reduce((m, x) => Math.max(m, x.orden || 0), 0) + 1;
+    items.push({ archivo: nombre, tipo, desc: String(desc || "").slice(0, 600), orden });
+    return items;
+  });
+  return lista.sort((a, b) => (a.orden || 0) - (b.orden || 0));
+}
+
+/** Quita una escena de la lista. El archivo se queda en el historial del repositorio: nada se borra para siempre. */
+export async function escenaQuitar(sala, archivo) {
+  if (!salaBuena(sala)) return [];
+  const lista = await escribirIndiceEscenas(sala, (items) => items.filter((x) => x.archivo !== archivo));
+  return lista.sort((a, b) => (a.orden || 0) - (b.orden || 0));
+}
+
+/** Una escena como dirección blob: que la página puede reproducir. */
+export function escenaUrl(sala, item) {
+  if (!salaBuena(sala) || !item || !/^[a-z0-9-]+\.[a-z0-9]+$/.test(item.archivo || "")) return Promise.resolve(null);
+  const clave = sala + "/" + item.archivo;
+  if (!escenasVivas.has(clave)) {
+    escenasVivas.set(clave, (async () => {
+      const r = await api(REPO + "/contents/" + ruta("escenas/" + clave) + "?ref=" + encodeURIComponent(CONFIG.ramaAvance), { crudo: true });
+      if (!r.ok) throw new Fallo("github", "No se pudo bajar la escena.", r.status);
+      return URL.createObjectURL(new Blob([await r.arrayBuffer()], { type: item.tipo || "application/octet-stream" }));
+    })().catch((e) => { escenasVivas.delete(clave); throw e; }));
+  }
+  return escenasVivas.get(clave);
 }
