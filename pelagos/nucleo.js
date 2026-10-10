@@ -445,7 +445,9 @@ export function leerTablero(crudo) {
       // «con» dice con qué se gana la parte, para que la página la prenda al momento sin esperar a la siguiente lectura:
       // «siempre», «tarjetas» (tus tarjetas en cero), «kwizzes» (tu meta de kwizzes), «medida:<nombre>» o «todas» (las demás juntas).
       const con = typeof x?.con === "string" && /^(siempre|tarjetas|kwizzes|todas|medida:.{1,60})$/.test(x.con) ? x.con : null;
-      if (nombre !== null) partes.push({ nombre, va: x.va === true, con });
+      // «icono» es el nombre de un dibujito que la página conoce; va en la esquina del cuadro de esa medida.
+      const icono = typeof x?.icono === "string" && /^[a-z]{2,12}$/.test(x.icono) ? x.icono : null;
+      if (nombre !== null) partes.push({ nombre, va: x.va === true, con, icono });
     }
     checkin = { estado: c.estado, nivel: numero(c.nivel), nombre: texto(c.nombre, 40), titulo: texto(c.titulo, 120),
       minutos: numero(c.minutos), partes, falta: texto(c.falta, 400), puesto: momento(c.puesto) };
