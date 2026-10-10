@@ -306,7 +306,7 @@ export function calcular(paquete, sucesos) {
       else {
         c.bien++;
         if (c.fallada === dia) { c.escalon = 0; c.toca = sumarDias(dia, ESCALONES[0]); c.fallada = null; }      // la rescataste hoy: mañana otra vez
-        else if (!c.toca || c.toca <= dia) [c.escalon, c.toca] = siguienteToca(c.n === 1 && !c.traia ? -1 : c.escalon, true, dia);
+        else if (!c.toca || c.toca <= dia || e.adelanto) [c.escalon, c.toca] = siguienteToca(c.n === 1 && !c.traia ? -1 : c.escalon, true, dia);    // adelantada a propósito: sí sube
       }
     } else if (e.t === "tjn") {
       // Una tarjeta nueva, hecha a mano. Si ya hay una con ese id (del contenido o de otro suceso), vale la que ya estaba.
@@ -513,6 +513,27 @@ export function tarjetasDelDia(paquete, estado, hoy = fechaLocal(new Date())) {
   const caben = nuevas.slice(0, Math.max(0, NUEVAS_AL_DIA - nuevasHoy));
   falladas.sort((a, b) => a.ultima - b.ultima || (a.id < b.id ? -1 : 1));      // las que fallaste hoy van al final, la más vieja primero
   return { pendientes: [...repasos.map((r) => r.id), ...caben, ...falladas.map((r) => r.id)], repasos: repasos.length + falladas.length, nuevas: caben.length, hechasHoy, total };
+}
+
+export const ADELANTO = 20;
+
+/**
+ * Para adelantar cuando ya estás en cero: las que tocan más pronto (la más cercana primero) y, si no alcanzan,
+ * nuevas que ya no cupieron hoy. Las quitadas no salen. Devuelve hasta «cuantas» ids, en el orden en que salen.
+ * Al calificarlas con «adelanto», la que aciertas sube su escalón desde hoy; la que fallas vuelve a salir hoy.
+ */
+export function tarjetasAdelante(paquete, estado, hoy = fechaLocal(new Date()), cuantas = ADELANTO) {
+  const dia = tarjetasDelDia(paquete, estado, hoy);
+  const yaHoy = new Set(dia.pendientes);
+  const proximas = [], nuevas = [];
+  for (const c of mazo(paquete, estado)) {
+    const s = estado.tarjetas && estado.tarjetas.get(c.id);
+    if (!s || s.quitada || yaHoy.has(c.id)) continue;
+    if (!s.toca) nuevas.push(c.id);
+    else if (s.toca > hoy) proximas.push({ id: c.id, toca: s.toca, ultima: s.ultima ? Date.parse(s.ultima) : 0 });
+  }
+  proximas.sort((a, b) => (a.toca < b.toca ? -1 : a.toca > b.toca ? 1 : 0) || a.ultima - b.ultima || (a.id < b.id ? -1 : 1));
+  return [...proximas.map((x) => x.id), ...nuevas].slice(0, cuantas);
 }
 
 /**

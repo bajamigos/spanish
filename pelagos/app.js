@@ -1,6 +1,6 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=a1d14b5555";
-import * as A from "./almacen.js?v=a1d14b5555";
+import * as N from "./nucleo.js?v=6e8e8a8553";
+import * as A from "./almacen.js?v=6e8e8a8553";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -725,7 +725,13 @@ function verTarjetas(o) {
   if (o.conserva && enTarjetaDe) { enPregunta = true; return; }
   const hoy = N.fechaLocal(new Date());
   const dia = N.tarjetasDelDia(P, E, hoy);
-  if (!dia.pendientes.length) {
+  // Adelanto: cuando ya estás en cero, «Adelantar» trae una tanda de las que tocan pronto. Vive solo en esta página;
+  // cada calificación es un suceso «tj» con «adelanto». Una tarjeta sale de la tanda en cuanto la calificas.
+  if (adelanto && adelanto.dia !== hoy) adelanto = null;                                  // la tanda es de hoy nada más
+  const restan = adelanto ? adelanto.ids.filter((id) => { const s = E.tarjetas.get(id); return s && !s.quitada && !(s.ultima && s.ultima >= adelanto.desde); }) : [];
+  if (adelanto && !restan.length) adelanto = null;
+  if (!dia.pendientes.length && !restan.length) {
+    const masTarde = N.tarjetasAdelante(P, E, hoy);
     // Cuándo vuelve a tocar algo, para que «en cero» no parezca que se acabaron para siempre.
     const fechas = mazo().map((c) => E.tarjetas.get(c.id)).filter((x) => x && !x.quitada && x.toca && x.toca > hoy).map((x) => x.toca).sort();
     return poner(`
@@ -733,14 +739,21 @@ function verTarjetas(o) {
     <section class="card" id="tjCero">
       <h1 class="h">${dia.total ? "Vocabulario en cero" : "Todavía no hay vocabulario"}</h1>
       ${dia.total ? `<p>Hoy repasaste ${dia.hechasHoy} de tus ${plural(dia.total, "palabra", "palabras")}.${fechas.length ? ` Las siguientes tocan el ${fecha(fechas[0])}.` : ""}</p>` : "<p>Cuando haya palabras en el contenido, aquí salen las de cada día.</p>"}
-      <div class="go"><a class="ub grande" href="#/">Tablero</a></div>
+      <div class="go">${masTarde.length ? `<button type="button" class="ub grande" id="tjAdelantar">Adelantar ${masTarde.length}</button>` : ""}<a class="ub${masTarde.length ? "" : " grande"}" href="#/">Tablero</a></div>
+      ${masTarde.length ? `<p class="small">Estudia ahora ${plural(masTarde.length, "palabra que toca", "palabras que tocan")} más adelante. La que aciertes sube su escalón desde hoy; la que falles vuelve a salir hoy.</p>` : ""}
     </section>`, { titulo: "Quiz de vocabulario · Pelagos", nav: "vocabulario", conserva: o.conserva });
+    return;
   }
-  const antes = E.tarjetas.get(dia.pendientes[0]);
-  const c = N.tarjetaVista(tarjetas.get(dia.pendientes[0]), antes);
+  // Primero se termina la tanda; las que falles en ella quedan para hoy y salen después, como cualquier fallada.
+  const enAdelanto = restan.length > 0;
+  const cola = enAdelanto ? restan : dia.pendientes;
+  const antes = E.tarjetas.get(cola[0]);
+  const c = N.tarjetaVista(tarjetas.get(cola[0]), antes);
   const juego = juegoDeFotos();
   const foto = juego.length ? juego[Math.floor(N.azarDe(c.id + "#" + hoy + "#" + antes.n)() * juego.length)] : null;
-  const total = dia.hechasHoy + dia.pendientes.length;
+  const hechas = enAdelanto ? adelanto.ids.length - restan.length : dia.hechasHoy;
+  const total = enAdelanto ? adelanto.ids.length : dia.hechasHoy + dia.pendientes.length;
+  const faltan = (enAdelanto ? "Adelanto: " : "") + (cola.length === 1 ? (enAdelanto ? "falta 1" : "Falta 1") : (enAdelanto ? "faltan " : "Faltan ") + cola.length);
 
   poner(`
   ${entradas("vocabulario", "quiz")}
@@ -749,8 +762,8 @@ function verTarjetas(o) {
       <div class="ratio"></div>
       ${foto ? `<img data-foto="${esc(foto.nombre)}" alt="">` : ""}
       <div class="over">
-        <p class="lead"><span id="tjFaltan">${dia.pendientes.length === 1 ? "Falta 1" : "Faltan " + dia.pendientes.length}</span><span id="tjAviso">Dilo en español</span></p>
-        <div class="score"><div class="track" role="img" aria-label="Llevas ${dia.hechasHoy} de ${total}"><i data-w="${100 * dia.hechasHoy / total}"></i></div></div>
+        <p class="lead"><span id="tjFaltan">${faltan}</span><span id="tjAviso">Dilo en español</span></p>
+        <div class="score"><div class="track" role="img" aria-label="Llevas ${hechas} de ${total}"><i data-w="${100 * hechas / total}"></i></div></div>
         <h1 class="cue" id="cue" lang="en">${esc(c.frente)}</h1>
       </div>
       <div class="rule tjResp" id="tjResp" tabindex="-1" aria-live="polite" hidden>
@@ -786,7 +799,7 @@ function verTarjetas(o) {
   function calificar(bien, conTecla = false) {
     if (calificada || !destapadaEn || (!conTecla && Date.now() - destapadaEn < ESPERA)) return;
     calificada = true;
-    A.apuntar({ t: "tj", id: N.nuevoId("t"), tarjeta: c.id, cuando: new Date().toISOString(), bien: bien ? 1 : 0, modo: "tocar" });
+    A.apuntar({ t: "tj", id: N.nuevoId("t"), tarjeta: c.id, cuando: new Date().toISOString(), bien: bien ? 1 : 0, modo: "tocar", ...(enAdelanto ? { adelanto: 1 } : {}) });
     recalcular();
     enTarjetaDe = null;
     pintar();        // sin paso intermedio: sale la siguiente, o «Vocabulario en cero»
@@ -798,6 +811,16 @@ function verTarjetas(o) {
 }
 
 // ---------------------------------------------------------------- La lista de vocabulario
+
+let adelanto = null;          // la tanda de «Adelantar»: { dia, desde, ids }. Solo en esta página.
+// El botón se escucha desde el documento: la página se puede volver a pintar sola (al guardar) y el botón cambia.
+document.addEventListener("click", (ev) => {
+  if (!ev.target.closest || !ev.target.closest("#tjAdelantar")) return;
+  const hoy = N.fechaLocal(new Date()), ids = N.tarjetasAdelante(P, E, hoy);
+  if (!ids.length) return;
+  adelanto = { dia: hoy, desde: new Date().toISOString(), ids };
+  pintar();
+});
 
 const TANDA = 300;            // cuántas palabras se pintan de un jalón
 const ORDENES = [["fallo", "Falladas"], ["az", "A–Z"], ["toca", "Próximas"], ["nueva", "Nuevas"]];
