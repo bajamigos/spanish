@@ -561,3 +561,18 @@ ul.hclave .hc { width: 15px; height: 15px; border-radius: 3px; }
 .rec-play-t{position:absolute;left:12px;right:12px;bottom:70px;margin:0;padding:10px 14px;border-radius:12px;background:rgba(10,12,18,.82);color:#f4efe2;font-size:1rem;line-height:1.5}
 .rec-play-t[hidden]{display:none}
 .rec-play-b{position:absolute;right:14px;bottom:max(14px,env(safe-area-inset-bottom));display:flex;gap:8px}
+
+/* La gráfica de un nivel en el Atlas */
+.hoy.mapa .card h2 .mgraf { all: unset; display: flex; align-items: center; gap: 8px; width: 100%; cursor: pointer; border-radius: 8px; }
+.hoy.mapa .card h2 .mgraf:focus-visible { outline: 2px solid var(--b3); outline-offset: 3px; }
+.ggraf { width: 100%; height: auto; display: block; touch-action: none; cursor: crosshair; }
+.ggraf:focus-visible { outline: 2px solid var(--b3); outline-offset: 2px; border-radius: 6px; }
+.ggraf .gr { stroke: var(--line, rgba(127,127,127,.25)); stroke-width: 1; }
+.ggraf .gy, .ggraf .gx { fill: var(--ink-3); font-size: 11px; font-variant-numeric: tabular-nums; }
+.ggraf .gmeta { stroke: var(--g3); stroke-width: 1.5; stroke-dasharray: 4 4; }
+.ggraf .gmt { fill: var(--ink-2); font-size: 11px; font-weight: 700; }
+.ggraf .gl { fill: none; stroke: var(--b3); stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
+.ggraf .gp { fill: var(--b3); stroke: var(--card); stroke-width: 2; }
+.ggraf .gt { stroke: var(--ink-3); stroke-width: 1; stroke-dasharray: 2 3; }
+.ggraf .gtp { fill: var(--y2); stroke: var(--ink); stroke-width: 2; }
+#gLee { font-size: 22px; font-weight: 800; font-variant-numeric: tabular-nums; }

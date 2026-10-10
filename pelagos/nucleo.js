@@ -589,6 +589,27 @@ export function leerTablero(crudo) {
   return { dia: crudo.dia, leido: momento(crudo.leido), atuendo: texto(crudo.atuendo, 200), foto, frase: texto(crudo.frase, 240), medidas, extras, checkin };
 }
 
+/** Desde qué día se dibuja la historia de cada nivel en el Atlas (su pedido del 10 de octubre: «starting today»). */
+export const INICIO_HISTORIA = "2026-10-10";
+
+/**
+ * El promedio de un nivel al cierre de cada día, de «desde» a «hasta» (los dos incluidos).
+ * Cada día se calcula con los sucesos que había hasta ese día, como si la página se abriera esa noche.
+ * Devuelve [{ dia, pct }]; pct es null si ese día no había ningún tema del nivel con porcentaje.
+ */
+export function historiaNivel(paquete, sucesos, nivel, hasta = fechaLocal(new Date()), desde = INICIO_HISTORIA) {
+  const ids = (paquete.temas || []).filter((t) => t.nivel === nivel).map((t) => t.id);
+  const lista = (sucesos || []).filter((e) => e && typeof e === "object").map((e) => ({ e, dia: fechaLocal(new Date(ms(e))) }));
+  const salida = [];
+  for (let dia = desde, vueltas = 0; dia <= hasta && vueltas < 800; dia = sumarDias(dia, 1), vueltas++) {
+    const estado = calcular(paquete, lista.filter((x) => x.dia <= dia).map((x) => x.e));
+    let suma = 0, con = 0;
+    for (const id of ids) { const v = estado.temas.get(id)?.pct; if (v !== null && v !== undefined) { suma += v; con++; } }
+    salida.push({ dia, pct: con ? suma / con : null });
+  }
+  return salida;
+}
+
 /** La pregunta que sigue en un kwiz: { p, orden, total }, o null si ya no quedan. */
 export function siguiente(estado, kwizId) {
   const k = estado.kwizzes.get(kwizId);
