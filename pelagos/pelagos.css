@@ -68,7 +68,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 /* ---- El marco de Pelagos ---- */
 .brand { text-align: center; font-size: 22px; font-weight: 700; letter-spacing: -0.01em; }
 .brand a { text-decoration: none; display: inline-block; }
-.brand img.logo { display: block; height: 60px; width: auto; border-radius: 14px; background: #010100; box-shadow: 0 2px 10px rgba(0,0,0,.35); }
 /* Cuatro botones en un renglón: cada uno del ancho de su palabra, y lo que sobra se reparte. */
 .top { display: flex; gap: 5px; }
 .top .ub { flex: 1 1 auto; min-width: 0; white-space: nowrap; font-size: 15px; padding-inline: 4px; }
@@ -306,6 +305,8 @@ body.conandrea { --ink-2: #1c1c1c; --ink-3: #333333; --bar-bg: rgba(0,0,0,0.16);
 
 .hoy.confoto .fondo { display: block; position: sticky; top: 0; z-index: 0; margin-inline: -16px; }
 .hoy.confoto .fondo img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: center top; background: var(--card); }
+.hoy.confoto .fondo img.logoFondo { position: absolute; z-index: 1; left: 50%; top: 42%; width: 84%; height: auto; aspect-ratio: auto; object-fit: contain; background: none; transform: translate(-50%, -50%); pointer-events: none;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,.65)) drop-shadow(0 0 18px rgba(0,0,0,.35)); }
 .hoy.confoto .fondo::after { content: ""; position: absolute; inset: auto 0 0 0; height: 30%; background: linear-gradient(to bottom, transparent, var(--page)); }
 .hoy.confoto .sobre { margin-top: -20%; gap: 18px; }
 .hoy.confoto .card { background: var(--vidrio); border: 1px solid var(--vidrio-borde); border-radius: 16px;

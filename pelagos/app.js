@@ -1,6 +1,6 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=56df78139a";
-import * as A from "./almacen.js?v=56df78139a";
+import * as N from "./nucleo.js?v=f0914d9a9c";
+import * as A from "./almacen.js?v=f0914d9a9c";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -418,13 +418,15 @@ function cuadro(nombre, valor, de, unidad, estado, hecho, enlace = "", sello = n
  * Reef: el retrato de Andrea del día (el que dice el tablero), o la portada del día si no hay. Expanse: la portada Expanse del día.
  * Devuelve { html, hay }: el <div class="fondo"> y si hay foto (para la clase «confoto»).
  */
+// El logo de Pelagos (la medusa cerebro) va encima de la foto del día, a la mitad. Es de marketing: tapa parte del dibujo a propósito.
+const LOGO = `<img class="logoFondo" src="logo.png" alt="Pelagos" width="760" height="519">`;
 function fondoDelDia(respaldo = true) {
   const T = N.leerTablero(A.tablero());
   if (ambiente() !== "expanse" && T && T.foto && retratos.has(T.foto)) {
-    return { hay: true, html: `<div class="fondo"><img data-retrato="${esc(T.foto)}" alt="${esc(T.atuendo ? "Andrea hoy: " + T.atuendo : "Andrea hoy")}"></div>` };
+    return { hay: true, html: `<div class="fondo"><img data-retrato="${esc(T.foto)}" alt="${esc(T.atuendo ? "Andrea hoy: " + T.atuendo : "Andrea hoy")}">${LOGO}</div>` };
   }
   const foto = ambiente() === "expanse" || respaldo ? portadaDelDia() : null;      // el Tablero sin retrato se queda sin foto
-  return foto ? { hay: true, html: `<div class="fondo"><img data-foto="${esc(foto)}" alt=""></div>` } : { hay: false, html: "" };
+  return foto ? { hay: true, html: `<div class="fondo"><img data-foto="${esc(foto)}" alt="">${LOGO}</div>` } : { hay: false, html: "" };
 }
 /** Una página de arriba con el fondo del día y sus tarjetas de vidrio encima. */
 function conFondo(html, clases = "") {
