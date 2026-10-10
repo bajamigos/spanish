@@ -1,7 +1,7 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=e43c75c8d9";
-import * as A from "./almacen.js?v=e43c75c8d9";
-import { abrirRecorrido } from "./recorrido.js?v=e43c75c8d9";
+import * as N from "./nucleo.js?v=a0fe1c1093";
+import * as A from "./almacen.js?v=a0fe1c1093";
+import { abrirRecorrido } from "./recorrido.js?v=a0fe1c1093";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -523,6 +523,13 @@ function cuadro(nombre, valor, de, unidad, estado, hecho, enlace = "", sello = n
 const LOGO = `<img class="logoFondo" src="logo.png" alt="Pelagos" width="760" height="519">`;
 function fondoDelDia(respaldo = true) {
   if (ambiente() === "limpio") return { hay: false, html: "" };
+  // Si subiste un GIF o video de fondo (Ajustes), va en todas las páginas de arriba, en lugar de la foto.
+  cargarVideosFondo();
+  const v = videoFondo();
+  if (v && !sinMovimiento()) {
+    const cosa = v.tipo === "image/gif" ? `<img data-videofondo="${esc(v.archivo)}" alt="">` : `<video data-videofondo="${esc(v.archivo)}" muted loop autoplay playsinline preload="auto" aria-hidden="true"></video>`;
+    return { hay: true, html: `<div class="fondo">${cosa}${LOGO}</div>` };
+  }
   const T = N.leerTablero(A.tablero());
   if (ambiente() !== "expanse" && T && T.foto && retratos.has(T.foto)) {
     return { hay: true, html: `<div class="fondo"><img data-retrato="${esc(T.foto)}" alt="${esc(T.atuendo ? "Andrea hoy: " + T.atuendo : "Andrea hoy")}">${LOGO}</div>` };
@@ -547,26 +554,17 @@ function cargarVideosFondo() {
   videosFondo = [];
   A.escenasDe("inicio").then((l) => {
     videosFondo = l;
-    if (videoFondo() && (window.location.hash.replace(/^#/, "") || "/") === "/") pintar({ conserva: true });
+    if (videoFondo() && vista.querySelector(".hoy .fondo, .hoy")) pintar({ conserva: true });
   }).catch(() => {});
 }
-/** El fondo del Tablero: el video si hay (y si el aparato no pide menos movimiento), si no, la foto del día. */
-function fondoDeInicio() {
-  const v = videoFondo();
-  if (!v || ambiente() === "limpio" || sinMovimiento()) return fondoDelDia(false);
-  const cosa = v.tipo === "image/gif" ? `<img data-videofondo="${esc(v.archivo)}" alt="">` : `<video data-videofondo="${esc(v.archivo)}" muted loop autoplay playsinline preload="auto" aria-hidden="true"></video>`;
-  return { hay: true, html: `<div class="fondo">${cosa}${LOGO}</div>` };
-}
-
 function verInicio(o) {
-  cargarVideosFondo();
   const niveles = resumenNiveles();
   const abierto = N.kwizAbierto(E);
   const hoy = N.fechaLocal(new Date());
   const T = N.leerTablero(A.tablero());
   const deHoy = !!T && T.dia === hoy;
   // Al fondo, el video que subiste; si no hay, el retrato de Andrea del día (en Expanse, la portada Expanse del día; ver fondoDelDia).
-  const fondo = fondoDeInicio();
+  const fondo = fondoDelDia(false);
   const cuadernos = (P.cuadernos || []).map((c) => `
   <section class="card">
     <h2>${esc(c.nombre)}</h2>
@@ -1884,10 +1882,10 @@ function verAjustes(o) {
   </section>
   <section class="card" id="ajVideo">
     <h2>Fondo con movimiento</h2>
-    <p id="ajVideoHay">${videoFondo() ? "Ya tienes un fondo con movimiento." : "Ahora el Tablero usa la foto del día."}</p>
+    <p id="ajVideoHay">${videoFondo() ? "Ya tienes un fondo con movimiento." : "Ahora se usa la foto del día."}</p>
     <div class="go"><label class="ub">Subir un GIF o video<input type="file" id="ajVideoArch" accept=".gif,.mp4,.webm,image/gif,video/mp4,video/webm" hidden></label>
       <button type="button" class="ub" id="ajVideoQuitar"${videoFondo() ? "" : " hidden"}>Quitar el video</button></div>
-    <p class="small" id="ajVideoAviso" role="status">Un GIF o un video (MP4 o WebM) que se repite sin sonido detrás del Tablero, en lugar de la foto. Mejor de menos de 10 MB. Sale en todos tus aparatos. En Limpio, o si tu aparato pide reducir el movimiento, se queda la foto.</p>
+    <p class="small" id="ajVideoAviso" role="status">Un GIF o un video (MP4 o WebM) que se repite sin sonido detrás del Tablero, Gramática y Vocabulario, en lugar de la foto. Mejor de menos de 10 MB. Sale en todos tus aparatos. En Limpio, o si tu aparato pide reducir el movimiento, se queda la foto.</p>
   </section>
   <section class="card" id="ajApp">
     <h2>Pelagos como app</h2>
@@ -1941,7 +1939,7 @@ function verAjustes(o) {
   const avisoVideo = (t) => { $("ajVideoAviso").textContent = t; };
   const listoVideo = (l) => {
     videosFondo = l;
-    $("ajVideoHay").textContent = videoFondo() ? "Ya tienes un fondo con movimiento." : "Ahora el Tablero usa la foto del día.";
+    $("ajVideoHay").textContent = videoFondo() ? "Ya tienes un fondo con movimiento." : "Ahora se usa la foto del día.";
     $("ajVideoQuitar").hidden = !videoFondo();
   };
   $("ajVideoArch").addEventListener("change", async (ev) => {
@@ -1957,7 +1955,7 @@ function verAjustes(o) {
     try {
       let l = videosFondo || [];
       for (const x of l.filter(esMovimiento)) l = await A.escenaQuitar("inicio", x.archivo);
-      listoVideo(l); avisoVideo("Listo: el Tablero vuelve a la foto del día.");
+      listoVideo(l); avisoVideo("Listo: vuelve la foto del día.");
     } catch (e) { avisoVideo(e && e.message ? e.message : "No se pudo quitar el video."); }
   });
   if ($("ajInstalar")) $("ajInstalar").addEventListener("click", async () => {
