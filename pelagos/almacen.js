@@ -8,7 +8,7 @@
 // - Lo que contestas entra primero a una fila en este aparato y de ahí sube.
 //   Sin internet, la fila espera y sube sola cuando vuelve.
 // - La llave vive solo en este navegador y solo viaja a la dirección de CONFIG.api.
-import { CONFIG } from "./config.js?v=e6e7dfb0e5";
+import { CONFIG } from "./config.js?v=76d9269f9c";
 
 const CLAVES = { llave: "pelagos.llave", aparato: "pelagos.aparato", fila: "pelagos.fila." };      // la fila: una clave por suceso
 const RUTA_SUCESOS = /^sucesos\/([A-Za-z0-9_-]+)\/(\d{4}-\d{2})\.jsonl$/;
@@ -556,7 +556,7 @@ export function foto(info, carpeta = "reef") {
         }
       }
       if (!bytes) { fotosVivas.delete(nombre); return null; }
-      return URL.createObjectURL(new Blob([bytes], { type: "image/jpeg" }));
+      return URL.createObjectURL(new Blob([bytes], { type: info.nombre.endsWith(".gif") ? "image/gif" : "image/jpeg" }));
     })());
   }
   return fotosVivas.get(nombre);

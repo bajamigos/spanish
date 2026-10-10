@@ -1,6 +1,7 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=e6e7dfb0e5";
-import * as A from "./almacen.js?v=e6e7dfb0e5";
+import * as N from "./nucleo.js?v=76d9269f9c";
+import * as A from "./almacen.js?v=76d9269f9c";
+import { abrirRecorrido } from "./recorrido.js?v=76d9269f9c";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -56,6 +57,8 @@ let preguntas = new Map();    // pregunta por id
 let fotos = new Map();        // portada por nombre (Reef)
 let fotosExpanse = new Map(); // portada por nombre (ambiente Expanse)
 let retratos = new Map();     // retrato de Andrea por nombre
+let fotosTour = new Map();    // panorama del Recorrido por nombre
+let recorridoVivo = null;     // el visor 360 abierto, si lo hay
 let tarjetas = new Map();     // tarjeta por id
 let enPregunta = false;       // hay una pregunta en pantalla: no se repinta debajo de ti
 let turnoDePintar = 0;        // para que una lección que llega tarde no pise otra página
@@ -70,6 +73,7 @@ function ponerPaquete(paquete) {
   fotos = new Map((P.fotos || []).map((f) => [f.nombre, f]));
   fotosExpanse = new Map((P.fotosExpanse || []).map((f) => [f.nombre, f]));
   retratos = new Map((P.retratos || []).map((f) => [f.nombre, f]));
+  fotosTour = new Map((P.fotosTour || []).map((f) => [f.nombre, f]));
   tarjetas = new Map(P.tarjetas.map((c) => [c.id, c]));
 }
 function recalcular() {
@@ -159,6 +163,7 @@ function ir(camino, reemplazar = false) {
 }
 
 function poner(html, { titulo: t = "Pelagos", pie = "", nav = "", conserva = false } = {}) {
+  if (recorridoVivo) { recorridoVivo.cerrar(); recorridoVivo = null; }       // otra página: el visor 360 se cierra
   const arriba = window.scrollY;
   const conFoco = conserva && document.activeElement && vista.contains(document.activeElement) ? document.activeElement.id : "";
   turnoDePintar++;
@@ -254,6 +259,7 @@ const RUTAS = [
   [/^\/vocabulario\/acervo$/, verLista],
   [/^\/vocabulario\/agregar$/, verAgregar],
   [/^\/ajustes$/, verAjustes],
+  [/^\/recorrido(?:\/([a-z0-9-]+))?$/, verRecorrido],
   // Las direcciones de antes siguen llevando a su página.
   [/^\/kwiz((?:\/[A-Za-z0-9_-]+){0,2})$/, (o, resto) => ir(QUIZ + (resto || ""), true)],
   [/^\/tarjetas$/, () => ir("/vocabulario", true)],
@@ -278,6 +284,80 @@ function verNoExiste(mensaje) {
     ? `<section class="card"><h1 class="h">No se pudo</h1><p>${esc(mensaje)} Vuelve al <a href="#/">tablero</a>.</p></section>`
     : `<section class="card"><h1 class="h">Esa página no existe</h1><p>Puede que la lección todavía no esté escrita. Vuelve a las <a href="#/gramatica">lecciones de gramática</a>.</p></section>`,
   { titulo: "No existe · Pelagos" });
+}
+
+// ---------------------------------------------------------------- El Recorrido (Tour of Cyberpunk TJ)
+
+const CLAVE_RECORRIDO = "pelagos.recorrido";       // el último lugar donde estuviste, en este aparato
+
+/** Las palabras de tu vocabulario, las que más fallas primero (o las más nuevas), para los carteles de las escenas. */
+function palabrasParaTour(n, orden) {
+  const vivas = palabras().filter((x) => !x.s.quitada);
+  if (orden === "nuevas") vivas.sort(ORDENAR.nueva);
+  else vivas.sort(ORDENAR.fallo);
+  return vivas.slice(0, n);
+}
+
+/** La hoja de misión de un lugar: lo que Andrea te pone a hacer, sacado de tus datos de verdad. */
+function hojaMision(lugar) {
+  const acciones = lugar.acciones || [];
+  if (!acciones.length) return "";
+  const partes = acciones.map((a) => {
+    const id = `data-accion="${esc(a.id)}"`;
+    if (a.tipo === "quiz") {
+      return `<section class="rec-sec" ${id}><h3>${esc(a.texto)}</h3><div class="go"><button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Pelagos Quiz</button></div></section>`;
+    }
+    if (a.tipo === "enlace") {
+      return `<section class="rec-sec" ${id}><h3>${esc(a.texto)}</h3><div class="go"><a class="ub grande" href="${esc(a.href)}">Abrir</a></div></section>`;
+    }
+    if (a.tipo === "temas") {
+      let patron;
+      try { patron = new RegExp(a.buscar, "i"); } catch { return ""; }
+      const temas = P.temas.filter((t) => patron.test(t.titulo_kwiziq || "") || patron.test(t.titulo || ""))
+        .sort((x, y) => (info(x.id).pct ?? 50) - (info(y.id).pct ?? 50) || x.id - y.id)
+        .slice(0, a.n || 6);
+      if (!temas.length) return "";
+      return `<section class="rec-sec" ${id}><h3>${esc(a.texto)}</h3>
+        <p class="small">Tus temas de esto, del que menos dominas al que más.</p>
+        <div class="links">${temas.map((t) => botonTema(t)).join("")}</div>
+        <div class="go"><button type="button" class="ub grande" data-kwiz='${esc(JSON.stringify({ tipo: "tema", tema: temas[0].id }))}'>Quiz del primero</button></div></section>`;
+    }
+    if (a.tipo === "palabras") {
+      const lista = palabrasParaTour(a.n || 6, a.orden);
+      if (!lista.length) return "";
+      return `<section class="rec-sec" ${id}><h3>${esc(a.texto)}</h3>
+        <p class="small">${a.orden === "nuevas" ? "Las que agregaste más recién." : "Las que más fallas."} Toca una para ver su ficha.</p>
+        <div class="links">${lista.map((x) => `<button type="button" class="tb" data-v="${esc(x.id)}"><span class="nm">${esc(x.c.reverso)}</span><span class="pc${esBajo(x.pct) ? " bajo" : ""}">${pct(x.pct)}</span>${barra(x.pct)}</button>`).join("")}</div>
+        <div class="go"><a class="ub grande" href="#/vocabulario">Quiz de vocabulario</a></div></section>`;
+    }
+    return "";
+  }).filter(Boolean);
+  return `<h2>${esc(lugar.titulo)}</h2>${lugar.andrea ? `<p class="rec-voz"><b>Andrea:</b> «${esc(lugar.andrea)}»</p>` : ""}${partes.join("")}`;
+}
+
+function verRecorrido(o, id) {
+  if (!P.tour || !P.tour.lugares || !P.tour.lugares.length) { verNoExiste("El recorrido todavía no está en tu contenido."); return; }
+  if (o.conserva && recorridoVivo) { enPregunta = true; return; }        // un aviso de guardado no reinicia el visor
+  const lugares = P.tour.lugares;
+  const nivel = new Map(resumenNiveles().map((n) => [n.nivel, n.promedio]));
+  const tinte = (l) => (l.nivel && nivel.has(l.nivel) ? N.franja(nivel.get(l.nivel)) : null);
+  const ultimo = guardado(CLAVE_RECORRIDO);
+  const desde = id && lugares.some((l) => l.id === id) ? id : lugares.some((l) => l.id === ultimo) ? ultimo : P.tour.inicio;
+  poner('<div id="recRaiz"></div>', { titulo: "Recorrido · Pelagos", nav: "recorrido" });
+  enPregunta = true;
+  recorridoVivo = abrirRecorrido($("recRaiz"), {
+    tour: P.tour,
+    desde,
+    bajarFoto: (nombre) => A.foto(fotosTour.get(nombre), "tour"),
+    hojaMision,
+    tinte,
+    escenaVista: (id) => (guardado("pelagos.escenas") || "").split(",").includes(id),
+    escenaMarcar: (id) => { const v = (guardado("pelagos.escenas") || "").split(",").filter(Boolean); if (!v.includes(id)) guardar("pelagos.escenas", [...v, id].join(",")); },
+    alMover: (l) => {
+      guardar(CLAVE_RECORRIDO, l.id);
+      try { window.history.replaceState(null, "", "#/recorrido/" + l.id); } catch { /* sin historia: no pasa nada */ }
+    },
+  });
 }
 
 // ---------------------------------------------------------------- La llave
