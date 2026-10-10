@@ -240,7 +240,8 @@ export function ordenar(sucesos) {
 /**
  * Rehace todo desde cero: el paquete de contenido más la lista de sucesos.
  * Sucesos: «kwiz» (empieza uno), «r» (una respuesta), «retirar» (pregunta mala), «dejar» (dejas un kwiz a medias),
- * «enfoque» (eliges un nivel para tu plan de estudio, o lo sueltas), «tj» (calificas una tarjeta).
+ * «enfoque» (eliges un nivel para tu plan de estudio, o lo sueltas), «tj» (calificas una tarjeta),
+ * «tjq» (quitas una tarjeta de tu vocabulario, o la devuelves) y «tje» (le corriges el texto a una tarjeta).
  * Los de un tipo que no conoce los salta, así una versión vieja de la página no se rompe con sucesos nuevos.
  * Devuelve { temas, kwizzes, retiradas, ultimaVez, respuestas, parametros, tarjetas… }.
  */
@@ -268,7 +269,13 @@ export function calcular(paquete, sucesos) {
   const tarjetas = new Map();
   for (const c of paquete.tarjetas || []) {
     const toca = typeof c.toca === "string" && /^\d{4}-\d{2}-\d{2}$/.test(c.toca) ? c.toca : null;
-    tarjetas.set(c.id, { escalon: toca ? Math.max(0, Math.min(ESCALONES.length - 1, c.escalon | 0)) : 0, toca, traia: !!toca, n: 0, bien: 0, primera: null, ultima: null, fallada: null });
+    // «repasos» y «aciertos»: lo que la tarjeta ya traía contado de tu mazo de antes. Solo sirven para su porcentaje.
+    const baseN = Number.isInteger(c.repasos) && c.repasos > 0 ? c.repasos : 0;
+    const baseBien = Number.isInteger(c.aciertos) && c.aciertos > 0 ? Math.min(c.aciertos, baseN) : 0;
+    tarjetas.set(c.id, {
+      escalon: toca ? Math.max(0, Math.min(ESCALONES.length - 1, c.escalon | 0)) : 0, toca, traia: !!toca, n: 0, bien: 0, primera: null, ultima: null, fallada: null,
+      historia: [], baseN, baseBien, quitada: false, cambio: null,
+    });
   }
 
   for (const e of lista) {
@@ -279,12 +286,20 @@ export function calcular(paquete, sucesos) {
       c.n++;
       if (!c.primera) c.primera = e.cuando;
       c.ultima = e.cuando;
+      c.historia.push({ cuando: e.cuando, bien: !!e.bien });
       if (!e.bien) { c.escalon = 0; c.toca = dia; c.fallada = dia; }                     // fallada: vuelve a salir hoy mismo
       else {
         c.bien++;
         if (c.fallada === dia) { c.escalon = 0; c.toca = sumarDias(dia, ESCALONES[0]); c.fallada = null; }      // la rescataste hoy: mañana otra vez
         else if (!c.toca || c.toca <= dia) [c.escalon, c.toca] = siguienteToca(c.n === 1 && !c.traia ? -1 : c.escalon, true, dia);
       }
+    } else if (e.t === "tjq") {
+      const c = tarjetas.get(e.tarjeta);
+      if (c) c.quitada = !(e.quitar === 0 || e.quitar === false);        // quitar: 0 la devuelve
+    } else if (e.t === "tje") {
+      const c = tarjetas.get(e.tarjeta);
+      const cambio = c && limpiarCambio(e);
+      if (cambio) c.cambio = { ...(c.cambio || {}), ...cambio };          // vale lo último que corregiste de cada renglón
     } else if (e.t === "enfoque") enfoque = typeof e.nivel === "string" && e.nivel ? e.nivel : null;
     else if (e.t === "retirar" && e.p) retiradas.add(e.p);
     else if (e.t === "dejar" && e.kwiz) dejados.add(e.kwiz);
@@ -372,6 +387,31 @@ export function calcular(paquete, sucesos) {
   return { temas, kwizzes, retiradas, ultimaVez, respuestas: respuestas.length, porTema, parametros, debe, fallada, enfoque, tarjetas };
 }
 
+const TEXTO_MAX = 300;
+/** Lo que se le puede corregir a una tarjeta: frente, reverso, «también vale» y nota. Lo demás se tira. */
+function limpiarCambio(e) {
+  const texto = (v) => (typeof v === "string" ? v.replace(/\s+/g, " ").trim().slice(0, TEXTO_MAX) : null);
+  const cambio = {};
+  const frente = texto(e.frente), reverso = texto(e.reverso), nota = texto(e.nota);
+  if (frente) cambio.frente = frente;
+  if (reverso) cambio.reverso = reverso;
+  if (nota !== null) cambio.nota = nota || null;                          // la nota sí se puede dejar vacía
+  if (Array.isArray(e.tambien_vale)) cambio.tambien_vale = e.tambien_vale.map(texto).filter(Boolean).slice(0, 12);
+  return Object.keys(cambio).length ? cambio : null;
+}
+
+/** Una tarjeta como se ve hoy: lo que trae el contenido, con lo que tú le hayas corregido encima. */
+export function tarjetaVista(tarjeta, suya) {
+  return suya && suya.cambio ? { ...tarjeta, ...suya.cambio } : tarjeta;
+}
+
+/** El porcentaje de aciertos de una tarjeta, de 0 a 100, o null si nunca la has contestado. */
+export function aciertoDeTarjeta(suya) {
+  if (!suya) return null;
+  const n = (suya.baseN || 0) + suya.n;
+  return n ? 100 * ((suya.baseBien || 0) + suya.bien) / n : null;
+}
+
 /** El kwiz a medias más reciente, o null. */
 export function kwizAbierto(estado) {
   let mejor = null;
@@ -396,15 +436,18 @@ export function kwizzesDelDia(estado, dia = fechaLocal(new Date())) {
 /**
  * Las tarjetas de hoy: las que ya tocan (repasos, primero las más atrasadas), después las nuevas que caben hoy
  * y al final las que fallaste hoy, para que no te salgan de inmediato otra vez.
+ * Las que quitaste de tu vocabulario no salen ni cuentan.
  * Devuelve { pendientes: [id…], repasos, nuevas, hechasHoy, total }. «pendientes» va en el orden en que salen.
  */
 export function tarjetasDelDia(paquete, estado, hoy = fechaLocal(new Date())) {
   const repasos = [], nuevas = [], falladas = [];
-  let hechasHoy = 0, nuevasHoy = 0;
+  let hechasHoy = 0, nuevasHoy = 0, total = 0;
   for (const c of paquete.tarjetas || []) {
     const s = estado.tarjetas && estado.tarjetas.get(c.id);
     if (!s) continue;
     if (s.primera && !s.traia && fechaLocal(s.primera) === hoy) nuevasHoy++;
+    if (s.quitada) continue;                 // la quitaste de tu vocabulario: ya no sale ni cuenta
+    total++;
     if (!s.toca) nuevas.push(c.id);
     else if (s.toca <= hoy) (s.fallada === hoy ? falladas : repasos).push({ id: c.id, toca: s.toca, ultima: s.ultima ? Date.parse(s.ultima) : 0 });
     else if (s.ultima && fechaLocal(s.ultima) === hoy) hechasHoy++;
@@ -412,7 +455,7 @@ export function tarjetasDelDia(paquete, estado, hoy = fechaLocal(new Date())) {
   repasos.sort((a, b) => (a.toca < b.toca ? -1 : a.toca > b.toca ? 1 : 0) || a.ultima - b.ultima || (a.id < b.id ? -1 : 1));
   const caben = nuevas.slice(0, Math.max(0, NUEVAS_AL_DIA - nuevasHoy));
   falladas.sort((a, b) => a.ultima - b.ultima || (a.id < b.id ? -1 : 1));      // las que fallaste hoy van al final, la más vieja primero
-  return { pendientes: [...repasos.map((r) => r.id), ...caben, ...falladas.map((r) => r.id)], repasos: repasos.length + falladas.length, nuevas: caben.length, hechasHoy, total: (paquete.tarjetas || []).length };
+  return { pendientes: [...repasos.map((r) => r.id), ...caben, ...falladas.map((r) => r.id)], repasos: repasos.length + falladas.length, nuevas: caben.length, hechasHoy, total };
 }
 
 /**

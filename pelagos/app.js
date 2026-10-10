@@ -1,6 +1,6 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=dd9bdeeb1c";
-import * as A from "./almacen.js?v=dd9bdeeb1c";
+import * as N from "./nucleo.js?v=7e8db41f00";
+import * as A from "./almacen.js?v=7e8db41f00";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -34,7 +34,13 @@ const CATEGORIAS_CORTAS = {
   "Negative Words & Constructions": "Negación",
 };
 const GRUPOS = [["antes", "Antes de esta"], ["confunde", "Se confunde con"], ["sigue", "Sigue con"]];
-const TIPOS_KWIZ = { lista: "Pelagos Kwiz", general: "Kwiz general", cuaderno: "Kwiz del cuaderno", tema: "Kwiz de un tema" };
+const TIPOS_KWIZ = { lista: "Pelagos Quiz", general: "Quiz general", cuaderno: "Quiz del cuaderno", tema: "Quiz de un tema" };
+const QUIZ = "/gramatica/quiz";       // dónde vive el quiz de gramática
+// Cada sección trae dos entradas, que van como dos botones arriba de sus páginas.
+const SECCIONES = {
+  gramatica: ["Gramática", [["lecciones", "#/gramatica", "Lecciones de gramática"], ["quiz", "#" + QUIZ, "Quiz de gramática"]]],
+  vocabulario: ["Vocabulario", [["quiz", "#/vocabulario", "Quiz de vocabulario"], ["lista", "#/vocabulario/lista", "Lista de vocabulario"]]],
+};
 const MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
   "septiembre", "octubre", "noviembre", "diciembre"];
 
@@ -104,11 +110,23 @@ function fecha(iso) {
   if (!a || !MESES[m - 1] || !d) return "";
   return `${d} de ${MESES[m - 1]} de ${a}`;
 }
+/** Como «fecha», pero sin el año cuando es de este año: «12 de octubre». */
+function fechaCorta(iso) {
+  const larga = fecha(iso);
+  return iso && iso.slice(0, 4) === String(new Date().getFullYear()) ? larga.replace(/ de \d{4}$/, "") : larga;
+}
 /** Un momento -> la hora de este aparato: «9 de octubre, 9:41». */
 function cuando(iso) {
   if (!iso) return "";
   const d = new Date(iso);
   return `${d.getDate()} de ${MESES[d.getMonth()]}, ${d.getHours()}:${String(d.getMinutes()).padStart(2, "0")}`;
+}
+
+/** Las dos entradas de una sección, con la de ahora marcada. */
+function entradas(seccion, actual) {
+  const [nombre, lista] = SECCIONES[seccion];
+  return `<nav class="jump dos sec" aria-label="${nombre}">${lista.map(([clave, href, texto]) =>
+    `<a href="${href}"${clave === actual ? ' aria-current="page"' : ""}>${texto}</a>`).join("")}</nav>`;
 }
 
 /** Un tema como botón de dos líneas. Con lección, lleva a ella; sin lección, sube la vista previa. */
@@ -213,14 +231,18 @@ function bocinas(raiz) {
 const RUTAS = [
   [/^\/$/, verInicio],
   [/^\/gramatica$/, verBiblioteca],
+  [/^\/gramatica\/quiz$/, verKwiz],
+  [/^\/gramatica\/quiz\/([A-Za-z0-9_-]+)$/, verPregunta],
+  [/^\/gramatica\/quiz\/([A-Za-z0-9_-]+)\/resultado$/, verResultado],
   [/^\/gramatica\/([a-z0-9]+)(\/bajo)?$/, verNivel],
   [/^\/mapa$/, verMapa],
   [/^\/leccion\/([a-z0-9-]+)$/, verLeccion],
-  [/^\/tarjetas$/, verTarjetas],
-  [/^\/kwiz$/, verKwiz],
-  [/^\/kwiz\/([A-Za-z0-9_-]+)$/, verPregunta],
-  [/^\/kwiz\/([A-Za-z0-9_-]+)\/resultado$/, verResultado],
+  [/^\/vocabulario$/, verTarjetas],
+  [/^\/vocabulario\/lista$/, verLista],
   [/^\/ajustes$/, verAjustes],
+  // Las direcciones de antes siguen llevando a su página.
+  [/^\/kwiz((?:\/[A-Za-z0-9_-]+){0,2})$/, (o, resto) => ir(QUIZ + (resto || ""), true)],
+  [/^\/tarjetas$/, () => ir("/vocabulario", true)],
 ];
 
 function pintar(opciones = {}) {
@@ -236,8 +258,8 @@ function pintar(opciones = {}) {
 
 function verNoExiste(mensaje) {
   poner(mensaje
-    ? `<section class="card"><h1 class="h">No se pudo</h1><p>${esc(mensaje)} Vuelve al <a href="#/">inicio</a>.</p></section>`
-    : `<section class="card"><h1 class="h">Esa página no existe</h1><p>Puede que la lección todavía no esté escrita. Vuelve a la <a href="#/gramatica">biblioteca</a>.</p></section>`,
+    ? `<section class="card"><h1 class="h">No se pudo</h1><p>${esc(mensaje)} Vuelve al <a href="#/">tablero</a>.</p></section>`
+    : `<section class="card"><h1 class="h">Esa página no existe</h1><p>Puede que la lección todavía no esté escrita. Vuelve a las <a href="#/gramatica">lecciones de gramática</a>.</p></section>`,
   { titulo: "No existe · Pelagos" });
 }
 
@@ -386,7 +408,7 @@ function verInicio(o) {
   </section>`).join("");
   const lista = N.listaDeEstudio(P, E);
 
-  // ---- Lo que cuenta Pelagos solo: los kwizzes de hoy y las tarjetas que tocan hoy y siguen pendientes (la meta es cero).
+  // ---- Lo que cuenta Pelagos solo: los quizzes de gramática de hoy y las palabras que tocan hoy y siguen pendientes (la meta es cero).
   const kw = N.kwizzesDelDia(E, hoy), metaKw = N.KWIZZES_AL_DIA;
   const tj = P.tarjetas.length ? N.tarjetasDelDia(P, E, hoy).pendientes.length : null;
 
@@ -405,8 +427,8 @@ function verInicio(o) {
   const conSellos = partes.some((x) => x.icono && SELLOS[x.icono]);
 
   // ---- Las medidas del día. Los kwizzes y las tarjetas los cuenta Pelagos; lo demás viene del tablero.
-  const cuadros = [cuadro("Kwizzes", kw, metaKw, "", kw >= metaKw ? "Cumplido" : `Faltan ${metaKw - kw}`, kw >= metaKw, "", sello("kwizzes"))];
-  if (tj !== null) cuadros.push(cuadro("Tarjetas", tj, 0, "", tj === 0 ? "Cumplido" : "Meta: cero", tj === 0, "#/tarjetas", sello("tarjetas")));
+  const cuadros = [cuadro("Gramática", kw, metaKw, "quizzes", kw >= metaKw ? "Cumplido" : `Faltan ${metaKw - kw}`, kw >= metaKw, "#" + QUIZ, sello("kwizzes"))];
+  if (tj !== null) cuadros.push(cuadro("Vocabulario", tj, 0, "", tj === 0 ? "Cumplido" : "Por repasar", tj === 0, "#/vocabulario", sello("tarjetas")));
   for (const m of T ? T.medidas : []) {
     if (P.tarjetas.length && /anki/i.test(m.nombre)) continue;        // con tarjetas propias, las de fuera ya no se enseñan
     const hecho = m.de === 0 ? m.valor === 0 : m.valor >= m.de;
@@ -441,14 +463,14 @@ function verInicio(o) {
     ${retrato ? `<div class="fondo"><img data-retrato="${esc(retrato)}" alt="${esc(T.atuendo ? "Andrea hoy: " + T.atuendo : "Andrea hoy")}"></div>` : ""}
     <div class="sobre">
       <section class="card" id="arranque">
-        <h1 class="sr">Hoy</h1>
+        <h1 class="sr">Tablero</h1>
         <p class="fechaHoy">${esc(diaLargo(hoy))}</p>
         <button type="button" class="ub redondo" id="hoyRecargar" aria-label="Recargar Pelagos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.500 12a7.500 7.500 0 1 1-2.300-5.400" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round"/><path d="M18.500 2.800v4.700h-4.700" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         <div class="go">${abierto
-          ? `<a class="ub grande" href="#/kwiz/${esc(abierto.id)}">Seguir el kwiz</a>`
+          ? `<a class="ub grande" href="#${QUIZ}/${esc(abierto.id)}">Seguir el quiz</a>`
           : lista.temas.length
-            ? `<button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Pelagos Kwiz</button>`
-            : `<a class="ub grande" href="#/kwiz">Ver los kwizzes</a>`}</div>
+            ? `<button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Pelagos Quiz</button>`
+            : `<a class="ub grande" href="#${QUIZ}">Ver los quizzes</a>`}</div>
       </section>
       ${checkin}
       ${medidas}
@@ -458,19 +480,19 @@ function verInicio(o) {
       </section>${cuadernos}
     </div>
   </div>`,
-  { nav: "inicio", conserva: o.conserva });
+  { titulo: "Tablero · Pelagos", nav: "inicio", conserva: o.conserva });
   // Recargar trae lo último de todo: tu avance, el tablero y la página misma. En la app instalada no hay otro botón para eso.
   $("hoyRecargar").addEventListener("click", () => window.location.reload());
 }
 
 function verBiblioteca(o) {
   poner(`
-  <p class="crumb">Gramática</p>
+  ${entradas("gramatica", "lecciones")}
   <section class="card">
-    <h1 class="h">Biblioteca de gramática</h1>
+    <h1 class="h">Lecciones de gramática</h1>
     <p>Todos los temas, por nivel. Elige uno.</p>
     <div class="links">${resumenNiveles().map((n) => botonNivel(n, true)).join("")}</div>
-  </section>`, { titulo: "Biblioteca · Pelagos", nav: "gramatica", conserva: o.conserva });
+  </section>`, { titulo: "Lecciones de gramática · Pelagos", nav: "gramatica", conserva: o.conserva });
 }
 
 function verNivel(o, clave, soloBajo) {
@@ -512,7 +534,7 @@ function verNivel(o, clave, soloBajo) {
     }).join("")}</div>
   </details>`).join("") : `<section class="card"><p>Ningún tema de ${nivel} está bajo ${meta()}%.</p></section>`}`,
   {
-    titulo: nivel + " · Biblioteca · Pelagos", nav: "gramatica", conserva: o.conserva,
+    titulo: nivel + " · Lecciones de gramática · Pelagos", nav: "gramatica", conserva: o.conserva,
     pie: "<p>Toca una categoría para abrirla. Los temas en inglés todavía no tienen lección propia: llevan el nombre que les da Kwiziq.</p><p>Un porcentaje sin número de respuestas es tu arranque de Kwiziq.</p>",
   });
 }
@@ -568,10 +590,8 @@ function verMapa(o) {
     </section>`;
   }).join("");
 
-  // La portada Reef del día va fija al fondo; cambia cada día.
-  const hoy = new Date();
-  const lista = P.fotos || [];
-  const foto = lista.length ? lista[Math.floor(Date.UTC(hoy.getFullYear(), hoy.getMonth(), hoy.getDate()) / 86400000) % lista.length].nombre : null;
+  // La portada Reef del día va fija al fondo.
+  const foto = portadaDelDia();
   poner(`
   <div class="hoy mapa${foto ? " confoto" : ""}">
     ${foto ? `<div class="fondo"><img data-foto="${esc(foto)}" alt=""></div>` : ""}
@@ -589,15 +609,15 @@ function verMapa(o) {
 
 window.addEventListener("resize", () => {
   // Si la pantalla cambia de ancho (o el teléfono se voltea), el mapa se vuelve a dibujar a la medida.
-  if (vista.querySelector(".mapa") && Math.abs(vista.clientWidth - anchoDelMapa) > 8) pintar({ conserva: true });
+  if (vista.querySelector(".nivelMapa") && Math.abs(vista.clientWidth - anchoDelMapa) > 8) pintar({ conserva: true });
 });
 
-// ---------------------------------------------------------------- Las tarjetas
+// ---------------------------------------------------------------- El quiz de vocabulario
 
 let enTarjetaDe = null;       // la tarjeta que está en pantalla: no se repinta debajo de ti
 
 /**
- * Tu mazo. Sale una tarjeta a la vez: el frente en inglés. Lo dices en español, tocas en cualquier parte para ver
+ * Tu vocabulario. Sale una tarjeta a la vez: el frente en inglés. Lo dices en español, tocas en cualquier parte para ver
  * la respuesta y te calificas con «Mal» o «Bien», que están siempre en el mismo lugar. Al calificar sale la siguiente.
  */
 function verTarjetas(o) {
@@ -608,18 +628,20 @@ function verTarjetas(o) {
     // Cuándo vuelve a tocar algo, para que «en cero» no parezca que se acabaron para siempre.
     const fechas = P.tarjetas.map((c) => E.tarjetas.get(c.id)).filter((x) => x && x.toca && x.toca > hoy).map((x) => x.toca).sort();
     return poner(`
+    ${entradas("vocabulario", "quiz")}
     <section class="card" id="tjCero">
-      <h1 class="h">${dia.total ? "Tarjetas en cero" : "Todavía no hay tarjetas"}</h1>
-      ${dia.total ? `<p>Hoy hiciste ${dia.hechasHoy} de tus ${plural(dia.total, "tarjeta", "tarjetas")}.${fechas.length ? ` Las siguientes tocan el ${fecha(fechas[0])}.` : ""}</p>` : "<p>Cuando haya un mazo en el contenido, aquí salen las de cada día.</p>"}
-      <div class="go"><a class="ub grande" href="#/">Hoy</a></div>
-    </section>`, { titulo: "Tarjetas · Pelagos", nav: "tarjetas", conserva: o.conserva });
+      <h1 class="h">${dia.total ? "Vocabulario en cero" : "Todavía no hay vocabulario"}</h1>
+      ${dia.total ? `<p>Hoy repasaste ${dia.hechasHoy} de tus ${plural(dia.total, "palabra", "palabras")}.${fechas.length ? ` Las siguientes tocan el ${fecha(fechas[0])}.` : ""}</p>` : "<p>Cuando haya palabras en el contenido, aquí salen las de cada día.</p>"}
+      <div class="go"><a class="ub grande" href="#/">Tablero</a></div>
+    </section>`, { titulo: "Quiz de vocabulario · Pelagos", nav: "vocabulario", conserva: o.conserva });
   }
-  const c = tarjetas.get(dia.pendientes[0]);
-  const antes = E.tarjetas.get(c.id);
+  const antes = E.tarjetas.get(dia.pendientes[0]);
+  const c = N.tarjetaVista(tarjetas.get(dia.pendientes[0]), antes);
   const foto = P.fotos.length ? P.fotos[Math.floor(N.azarDe(c.id + "#" + hoy + "#" + antes.n)() * P.fotos.length)] : null;
   const total = dia.hechasHoy + dia.pendientes.length;
 
   poner(`
+  ${entradas("vocabulario", "quiz")}
   <section class="kw tj">
     <header class="hero kwh tjh">
       <div class="ratio"></div>
@@ -639,7 +661,7 @@ function verTarjetas(o) {
       <div class="tjBotones" id="tjBotones" role="group" aria-label="¿La supiste?" hidden><button type="button" class="ub" id="jMal">Mal</button><button type="button" class="ub" id="jBien">Bien</button></div>
     </div>
   </section>`,
-  { titulo: "Tarjetas · Pelagos", nav: "tarjetas" });
+  { titulo: "Quiz de vocabulario · Pelagos", nav: "vocabulario" });
   enPregunta = true;
   enTarjetaDe = c.id;
 
@@ -666,12 +688,223 @@ function verTarjetas(o) {
     A.apuntar({ t: "tj", id: N.nuevoId("t"), tarjeta: c.id, cuando: new Date().toISOString(), bien: bien ? 1 : 0, modo: "tocar" });
     recalcular();
     enTarjetaDe = null;
-    pintar();        // sin paso intermedio: sale la siguiente, o «Tarjetas en cero»
+    pintar();        // sin paso intermedio: sale la siguiente, o «Vocabulario en cero»
   }
   toque = () => destapar();
   teclas = { " ": () => destapar(true), enter: () => destapar(true) };
   $("jBien").addEventListener("click", () => calificar(true));
   $("jMal").addEventListener("click", () => calificar(false));
+}
+
+// ---------------------------------------------------------------- La lista de vocabulario
+
+const TANDA = 300;            // cuántas palabras se pintan de un jalón
+const ORDENES = [["fallo", "Falladas"], ["az", "A–Z"], ["toca", "Próximas"]];
+let lvBusca = "";             // lo que escribiste en el buscador
+let lvOrden = "fallo";
+let lvCuantas = TANDA;
+let lvAviso = null;           // la palabra que acabas de quitar, para poder deshacerlo
+
+const paraBuscar = (texto) => N.sinAcentos(N.normalizar(texto));
+const sinArticulo = (texto) => paraBuscar(texto).replace(/^(el|la|los|las|un|una|unos|unas)\s+/, "");
+const alfabeto = (a, b) => sinArticulo(a.c.reverso).localeCompare(sinArticulo(b.c.reverso), "es");
+const ORDENAR = {
+  fallo: (a, b) => (a.pct === null) - (b.pct === null) || a.pct - b.pct || alfabeto(a, b),                    // las que más fallas primero; las que no has visto, al final
+  az: alfabeto,
+  toca: (a, b) => (!a.s.toca) - (!b.s.toca) || (a.s.toca < b.s.toca ? -1 : a.s.toca > b.s.toca ? 1 : 0) || alfabeto(a, b),
+};
+
+/** Todas tus palabras, cada una con lo que le hayas corregido, su avance y su porcentaje de aciertos. */
+function palabras() {
+  return P.tarjetas.map((c) => { const s = E.tarjetas.get(c.id); return { id: c.id, c: N.tarjetaVista(c, s), s, pct: N.aciertoDeTarjeta(s) }; });
+}
+
+/** La portada Reef del día: cambia cada día. */
+function portadaDelDia() {
+  const hoy = new Date(), lista = P.fotos || [];
+  return lista.length ? lista[Math.floor(Date.UTC(hoy.getFullYear(), hoy.getMonth(), hoy.getDate()) / 86400000) % lista.length].nombre : null;
+}
+
+/** Cuándo toca una palabra, en pocas palabras. */
+function cuandoToca(s, hoy) {
+  if (s.quitada) return "Quitada";
+  if (!s.toca) return "Sin ver";
+  if (s.toca < hoy) return "Tocaba el " + fechaCorta(s.toca);
+  if (s.toca === hoy) return "Toca hoy";
+  return s.toca === N.sumarDias(hoy, 1) ? "Toca mañana" : "Toca el " + fechaCorta(s.toca);
+}
+
+/**
+ * Todo tu vocabulario a la vista, como el mapa: un cuadro por palabra, solo en español, y el color dice qué tan
+ * seguido la aciertas. Se puede buscar y ordenar. Al tocar una palabra sube su ficha.
+ */
+function verLista(o) {
+  if (!o.conserva) { lvBusca = ""; lvCuantas = TANDA; lvAviso = null; }
+  const hoy = N.fechaLocal(new Date());
+  const todas = palabras();
+  const vivas = todas.filter((x) => !x.s.quitada), quitadas = todas.filter((x) => x.s.quitada).sort(alfabeto);
+  const cuenta = [0, 0, 0, 0, 0, 0];
+  let sinVer = 0;
+  for (const x of vivas) { if (x.pct === null) sinVer++; else cuenta[N.franja(x.pct)]++; }
+  const tocan = N.tarjetasDelDia(P, E, hoy).pendientes.length;
+  const foto = portadaDelDia();
+  const abiertas = !!vista.querySelector("#lvQuitadas[open]");
+  poner(`
+  <div class="hoy mapa lista${foto ? " confoto" : ""}">
+    ${foto ? `<div class="fondo"><img data-foto="${esc(foto)}" alt=""></div>` : ""}
+    <div class="sobre">
+      ${entradas("vocabulario", "lista")}
+      <section class="card" id="lvCabeza">
+        <h1 class="h">Lista de vocabulario</h1>
+        <p>${plural(vivas.length, "palabra", "palabras")}. ${tocan === 0 ? "Hoy no queda ninguna por repasar." : tocan === 1 ? "Hoy queda 1 por repasar." : `Hoy quedan ${tocan} por repasar.`}</p>
+        <label class="sr" for="lvBusca">Buscar una palabra</label>
+        <input id="lvBusca" class="campo" type="search" placeholder="Buscar una palabra" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="search">
+        <div class="jump tres" role="group" aria-label="En qué orden salen">${ORDENES.map(([clave, nombre]) => `<button type="button" data-orden="${clave}" aria-pressed="${clave === lvOrden}">${nombre}</button>`).join("")}</div>
+        ${lvAviso ? `<p class="small" id="lvAviso" role="status">Quitaste «${esc(lvAviso.texto)}». <button type="button" class="lk" id="lvDeshacer">Deshacer</button></p>` : ""}
+      </section>
+      <section class="card" id="lvLista">
+        <h2 class="sr">Tus palabras</h2>
+        <p class="small" id="lvCuenta" role="status"></p>
+        <div class="lvCeldas" id="lvCeldas"></div>
+        <div class="go"><button type="button" class="ub" id="lvMas" hidden></button></div>
+      </section>
+      <section class="card" id="clave">
+        <h2 class="sr">Qué significa cada color</h2>
+        <p class="small">El color es tu porcentaje de aciertos.</p>
+        <ul class="clave">${N.FRANJAS.map((nombre, i) => `<li><i class="mc k${i}"></i><span>${nombre}</span><b>${cuenta[i]}</b></li>`).join("")}<li><i class="mc kx"></i><span>Sin ver</span><b>${sinVer}</b></li></ul>
+      </section>
+      ${quitadas.length ? `
+      <details class="card cat" id="lvQuitadas"${abiertas ? " open" : ""}>
+        <summary><span class="cn">Quitadas</span><span class="cc">${plural(quitadas.length, "palabra", "palabras")}. Ya no salen en tu quiz.</span></summary>
+        <div class="links">${quitadas.map((x) => `<button type="button" class="tb" data-devolver="${esc(x.id)}"><span class="nm ancho" lang="es-MX">${esc(x.c.reverso)}</span><span class="pc">Devolver</span><span class="sm ancho" lang="en">${esc(x.c.frente)}</span></button>`).join("")}</div>
+      </details>` : ""}
+    </div>
+  </div>`,
+  { titulo: "Lista de vocabulario · Pelagos", nav: "vocabulario", conserva: o.conserva });
+
+  const campo = $("lvBusca");
+  campo.value = lvBusca;
+  function celdas() {
+    const q = paraBuscar(lvBusca);
+    const salen = (q ? vivas.filter((x) => [x.c.reverso, x.c.frente, ...(x.c.tambien_vale || [])].some((t) => paraBuscar(t).includes(q))) : vivas.slice()).sort(ORDENAR[lvOrden] || alfabeto);
+    $("lvCeldas").innerHTML = salen.slice(0, lvCuantas).map((x) => {
+      const f = N.franja(x.pct);
+      return `<button type="button" class="vc ${f === null ? "kx" : "k" + f}" data-v="${esc(x.id)}" lang="es-MX" aria-label="${esc(x.c.reverso)}: ${x.pct === null ? "sin ver" : pct(x.pct) + " de aciertos"}">${esc(x.c.reverso)}</button>`;
+    }).join("");
+    $("lvCuenta").textContent = !vivas.length ? "Todavía no hay palabras en tu vocabulario."
+      : q ? (salen.length ? `${salen.length} de ${vivas.length} con «${lvBusca.trim()}».` : `Ninguna palabra con «${lvBusca.trim()}».`)
+        : "Toca una palabra para ver su traducción y cómo te ha ido con ella.";
+    $("lvMas").hidden = salen.length <= lvCuantas;
+    $("lvMas").textContent = `Ver más (faltan ${salen.length - lvCuantas})`;
+  }
+  celdas();
+  campo.addEventListener("input", () => { lvBusca = campo.value; lvCuantas = TANDA; celdas(); });
+  campo.addEventListener("keydown", (ev) => { if (ev.key === "Enter") campo.blur(); });       // en el teléfono, «Buscar» guarda el teclado
+  $("lvMas").addEventListener("click", () => { lvCuantas += TANDA; celdas(); });
+  for (const b of vista.querySelectorAll("[data-orden]")) {
+    b.addEventListener("click", () => {
+      lvOrden = b.dataset.orden; lvCuantas = TANDA;
+      for (const otro of vista.querySelectorAll("[data-orden]")) otro.setAttribute("aria-pressed", String(otro === b));
+      celdas();
+    });
+  }
+  for (const b of vista.querySelectorAll("[data-devolver]")) b.addEventListener("click", () => quitarPalabra(b.dataset.devolver, false));
+  if ($("lvDeshacer")) $("lvDeshacer").addEventListener("click", () => quitarPalabra(lvAviso.id, false));
+}
+
+/** Quita una palabra de tu vocabulario, o la devuelve. No se borra nada: tu historial con ella se queda guardado. */
+function quitarPalabra(id, quitar) {
+  const c = tarjetas.get(id);
+  if (!c) return;
+  A.apuntar({ t: "tjq", id: N.nuevoId("q"), tarjeta: id, cuando: new Date().toISOString(), quitar: quitar ? 1 : 0 });
+  recalcular();
+  lvAviso = quitar ? { id, texto: N.tarjetaVista(c, E.tarjetas.get(id)).reverso } : null;
+  cerrarHoja();
+  pintar({ conserva: true });
+}
+
+// La ficha de una palabra: sube desde abajo, como la vista previa de un tema.
+const hojaV = $("hojaV");
+const REPASOS_A_LA_VISTA = 26;
+
+function abrirPalabra(id) {
+  const cruda = tarjetas.get(id), s = E && E.tarjetas.get(id);
+  if (!cruda || !s) return;
+  const c = N.tarjetaVista(cruda, s), v = N.aciertoDeTarjeta(s), hoy = N.fechaLocal(new Date());
+  const n = s.baseN + s.n, bien = s.baseBien + s.bien;
+  const ultimos = s.historia.slice(-REPASOS_A_LA_VISTA);
+  const buenos = ultimos.filter((h) => h.bien).length;
+  const tambien = (c.tambien_vale || []).join(" · ");
+  // Cada repaso es una barrita, del más viejo al más nuevo: alta si la supiste, bajita si no.
+  const grafica = !ultimos.length ? "" : `
+    <figure class="hvG">
+      <svg width="${ultimos.length * 11 - 3}" height="40" viewBox="0 0 ${ultimos.length * 11 - 3} 40" role="img" aria-label="${ultimos.length === 1 ? "Tu último repaso" : `Tus últimos ${ultimos.length} repasos`}: ${buenos} bien y ${ultimos.length - buenos} mal">${ultimos.map((h, i) =>
+        h.bien ? `<rect class="gb" x="${i * 11}" y="2" width="8" height="38" rx="2"/>` : `<rect class="gm" x="${i * 11}" y="27" width="8" height="13" rx="2"/>`).join("")}</svg>
+      <figcaption class="small">${ultimos.length === 1 ? "Tu último repaso" : `Tus últimos ${ultimos.length} repasos, del más viejo al más nuevo`}. Barra alta: bien. Barra bajita: mal.</figcaption>
+    </figure>`;
+  const datos = [
+    ["Próximo repaso", s.quitada ? "Ninguno: la quitaste" : !s.toca ? "Todavía no la has visto" : s.toca < hoy ? "Atrasado: tocaba el " + fechaCorta(s.toca)
+      : s.toca === hoy ? "Hoy" : s.toca === N.sumarDias(hoy, 1) ? "Mañana" : "El " + fechaCorta(s.toca)],
+    s.toca && !s.quitada ? ["La ves cada", plural(N.ESCALONES[s.escalon], "día", "días")] : null,
+    s.ultima ? ["Última vez", cuando(s.ultima)] : null,
+    s.n ? ["En Pelagos", `${plural(s.n, "repaso", "repasos")}, ${s.bien} bien`] : null,
+    s.baseN ? ["Antes de Pelagos", `${plural(s.baseN, "repaso", "repasos")}, ${s.baseBien} bien`] : null,
+  ].filter(Boolean);
+  $("hvIn").innerHTML = `
+    <span class="k">Vocabulario · ${esc(cuandoToca(s, hoy))}</span>
+    <ul class="exs"><li class="ex" data-di="${esc(c.reverso)}"><h2 class="es" id="hvT" lang="es-MX" tabindex="-1">${esc(c.reverso)}</h2><span class="en" lang="en">${esc(c.frente)}</span></li></ul>
+    ${tambien ? `<p class="small">También vale: ${esc(tambien)}</p>` : ""}
+    ${c.nota ? `<p class="hvNota">${esc(c.nota)}</p>` : ""}
+    <div class="sc"><span>Aciertos: ${v === null ? "todavía sin datos" : `${pct(v)} · ${bien} de ${n}`}</span>${v === null ? "" : barra(v)}</div>
+    ${grafica}
+    <dl class="hvDatos">${datos.map(([k, t]) => `<div><dt>${k}</dt><dd>${esc(t)}</dd></div>`).join("")}</dl>
+    <div class="acts" id="hvActos">
+      <button type="button" class="ub" id="hvEditar">Editar</button>
+      ${s.quitada ? '<button type="button" class="ub" id="hvDevolver">Devolver</button>' : '<button type="button" class="ub" id="hvQuitar">Quitar</button>'}
+      <button type="button" class="ub" data-cerrar>Cerrar</button>
+    </div>
+    <p id="hvSeguro" hidden>¿La quito de tu vocabulario? Ya no sale en tu quiz. <button type="button" class="lk" id="hvSi">Sí, quítala</button> · <button type="button" class="lk" id="hvNo">No</button></p>
+    <form id="hvForma" class="forma" autocomplete="off" hidden>
+      <label class="small" for="hvEs">En español</label>
+      <input id="hvEs" class="campo" type="text" lang="es" value="${esc(c.reverso)}" autocapitalize="off" autocorrect="off" spellcheck="false">
+      <label class="small" for="hvEn">En inglés</label>
+      <input id="hvEn" class="campo" type="text" lang="en" value="${esc(c.frente)}" autocapitalize="off" autocorrect="off" spellcheck="false">
+      <label class="small" for="hvTv">También vale (separadas con punto y coma)</label>
+      <input id="hvTv" class="campo" type="text" lang="es" value="${esc((c.tambien_vale || []).join("; "))}" autocapitalize="off" autocorrect="off" spellcheck="false">
+      <label class="small" for="hvNt">Nota</label>
+      <textarea id="hvNt" class="campo" rows="2" lang="es">${esc(c.nota || "")}</textarea>
+      <p class="err" id="hvError" role="alert" hidden></p>
+      <div class="go"><button type="button" class="ub" id="hvCancelar">Cancelar</button><button type="submit" class="ub grande">Guardar</button></div>
+    </form>`;
+  vestir(hojaV);
+  const editar = (si) => { $("hvForma").hidden = !si; $("hvActos").hidden = si; $("hvSeguro").hidden = true; if (si) $("hvEs").focus(); };
+  $("hvEditar").addEventListener("click", () => editar(true));
+  $("hvCancelar").addEventListener("click", () => editar(false));
+  if ($("hvQuitar")) $("hvQuitar").addEventListener("click", () => { $("hvSeguro").hidden = false; $("hvNo").focus(); });
+  if ($("hvDevolver")) $("hvDevolver").addEventListener("click", () => quitarPalabra(id, false));
+  $("hvNo").addEventListener("click", () => { $("hvSeguro").hidden = true; });
+  $("hvSi").addEventListener("click", () => quitarPalabra(id, true));
+  $("hvForma").addEventListener("submit", (ev) => {
+    ev.preventDefault();
+    const limpio = (t) => t.replace(/\s+/g, " ").trim();
+    const reverso = limpio($("hvEs").value), frente = limpio($("hvEn").value), nota = limpio($("hvNt").value);
+    const tambienVale = $("hvTv").value.split(";").map(limpio).filter(Boolean);
+    if (!reverso || !frente) { $("hvError").hidden = false; $("hvError").textContent = "Le falta el español o el inglés."; return; }
+    // Solo se apunta lo que cambió.
+    const cambio = {};
+    if (reverso !== c.reverso) cambio.reverso = reverso;
+    if (frente !== c.frente) cambio.frente = frente;
+    if (nota !== (c.nota || "")) cambio.nota = nota;
+    if (tambienVale.join(";") !== (c.tambien_vale || []).join(";")) cambio.tambien_vale = tambienVale;
+    if (Object.keys(cambio).length) {
+      A.apuntar({ t: "tje", id: N.nuevoId("e"), tarjeta: id, cuando: new Date().toISOString(), ...cambio });
+      recalcular();
+      pintar({ conserva: true });
+    }
+    abrirPalabra(id);
+  });
+  if (!hojaV.hasAttribute("open")) { if (hojaV.showModal) hojaV.showModal(); else hojaV.setAttribute("open", ""); }
+  $("hvT").focus({ preventScroll: true });
 }
 
 // ---------------------------------------------------------------- La lección
@@ -721,7 +954,7 @@ function pintarLeccion(tema, lec) {
     .sort((a, b) => (a.nivel < b.nivel ? -1 : a.nivel > b.nivel ? 1 : a.orden - b.orden));
   const banco = P.preguntas.filter((q) => q.tema === tema.id && q.estado === "revisada" && !E.retiradas.has(q.id)).length;
   const secciones = lec.secciones || [];
-  const saltos = [["regla", "Regla"], ["ejemplos", "Ejemplos"], ["kwiz", "Kwiz"], ["enlaces", "Enlaces"]]
+  const saltos = [["regla", "Regla"], ["ejemplos", "Ejemplos"], ["kwiz", "Quiz"], ["enlaces", "Enlaces"]]
     .filter(([id]) => id === "enlaces" || secciones.some((s) => s.id === id));
   poner(`
   <p class="crumb"><a href="#/gramatica">Gramática</a> · <a href="#/gramatica/${esc(tema.nivel.toLowerCase())}">${esc(tema.nivel)}</a> · ${esc(CATEGORIAS[tema.categoria] || tema.categoria)}</p>
@@ -745,7 +978,7 @@ function pintarLeccion(tema, lec) {
   ${secciones.map((s) => `<section class="card" id="${esc(s.id)}"><h2>${esc(s.titulo)}</h2>${(s.bloques || []).map(bloque).join("")}</section>`).join("")}
   ${banco ? `
   <section class="card" id="practica">
-    <h2>Kwiz de este tema</h2>
+    <h2>Quiz de este tema</h2>
     <p>Cinco preguntas solo de esta regla. Cada respuesta mueve tu porcentaje.</p>
     <div class="go"><button type="button" class="ub grande" data-kwiz='{"tipo":"tema","tema":${tema.id}}'>Empezar</button></div>
     <p class="small">Hay ${plural(banco, "pregunta revisada", "preguntas revisadas")} de este tema.</p>
@@ -797,11 +1030,12 @@ function verKwiz(o) {
   const hoy = N.fechaLocal(new Date());
   const hechosHoy = N.kwizzesHechos(E).filter((k) => N.fechaLocal(k.terminado) === hoy).length;
   poner(`
+  ${entradas("gramatica", "quiz")}
   ${abierto ? `
   <section class="card">
-    <h1 class="h">Tienes un kwiz a medias</h1>
+    <h1 class="h">Tienes un quiz a medias</h1>
     <p>Lo que ya contestaste está guardado.</p>
-    <div class="go"><a class="ub grande" href="#/kwiz/${esc(abierto.id)}">Seguir el kwiz</a><button type="button" class="ub" id="dejarKwiz">Dejarlo así</button></div>
+    <div class="go"><a class="ub grande" href="#${QUIZ}/${esc(abierto.id)}">Seguir el quiz</a><button type="button" class="ub" id="dejarKwiz">Dejarlo así</button></div>
     <p class="small">Si lo dejas, se cierra con lo que ya contestaste. Tus respuestas siguen contando.</p>
   </section>` : ""}
   <section class="card" id="lista">
@@ -811,19 +1045,19 @@ function verKwiz(o) {
       <button type="button" class="nv ancho" data-enfoque="" aria-pressed="${E.enfoque ? "false" : "true"}">Guiado: todos los niveles</button>
       ${Object.keys(NIVELES).map((n) => `<button type="button" class="nv" data-enfoque="${n}" aria-pressed="${E.enfoque === n ? "true" : "false"}"${porNivel[n] ? "" : " disabled"} aria-label="${n}, ${porNivel[n] ? plural(porNivel[n], "tema con preguntas", "temas con preguntas") : "todavía sin preguntas"}">${n}<span>${porNivel[n] || 0}</span></button>`).join("")}
     </div>
-    <p class="small">${E.enfoque ? `Tu plan solo trae temas de ${esc(E.enfoque)}.` : "Tu plan toma temas de todos los niveles."} El número es cuántos temas tienen preguntas.${lista.abierto ? " El cambio se ve al terminar el kwiz que está a medias." : ""}</p>
+    <p class="small">${E.enfoque ? `Tu plan solo trae temas de ${esc(E.enfoque)}.` : "Tu plan toma temas de todos los niveles."} El número es cuántos temas tienen preguntas.${lista.abierto ? " El cambio se ve al terminar el quiz que está a medias." : ""}</p>
     ${deLista.length ? `
     <h3>${plural(deLista.length, "tema", "temas")} en tu plan</h3>
     <div class="links">${deLista.map((t) => botonTema(t, { sub: motivoEnLista(t, lista) })).join("")}</div>
-    ${lista.abierto ? "" : `<div class="go"><button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Pelagos Kwiz</button></div>`}
+    ${lista.abierto ? "" : `<div class="go"><button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Pelagos Quiz</button></div>`}
     <p class="small">Una pregunta de cada tema. El que aciertas sale del plan y entra otro. El que fallas se queda hasta que lo aciertes dos veces seguidas.</p>
     ${deLista.length < N.LISTA ? `<p class="small">${E.enfoque ? `En ${esc(E.enfoque)} solo hay` : "Solo hay"} ${plural(deLista.length, "tema", "temas")} con preguntas. El plan se llena cuando se escriban más.</p>` : ""}
-    <p class="small">Hoy llevas ${plural(hechosHoy, "kwiz", "kwizzes")}.</p>`
+    <p class="small">Hoy llevas ${plural(hechosHoy, "quiz", "quizzes")}.</p>`
     : `<p>${E.enfoque ? `Todavía no hay preguntas de ${esc(E.enfoque)}. Elige otro enfoque.` : "Todavía no hay preguntas revisadas."}</p>`}
   </section>
   ${cuadernos.length ? `
   <section class="card">
-    <h2>Otros kwizzes</h2>
+    <h2>Otros quizzes</h2>
     <div class="links">
       ${cuadernos.map((c) => `<button type="button" class="tb" data-kwiz='{"tipo":"cuaderno","cuaderno":${c.id}}'>
         <span class="nm ancho">${esc(c.nombre)}</span><span class="pc">${N.TOTAL}</span><span class="sm ancho">Solo sus temas: ${c.con} con preguntas</span></button>`).join("")}
@@ -832,11 +1066,11 @@ function verKwiz(o) {
   </section>` : ""}
   ${hechos.length ? `
   <section class="card">
-    <h2>Tus últimos kwizzes</h2>
-    <div class="links">${hechos.map((h) => `<a class="tb" href="#/kwiz/${esc(h.id)}/resultado">
+    <h2>Tus últimos quizzes</h2>
+    <div class="links">${hechos.map((h) => `<a class="tb" href="#${QUIZ}/${esc(h.id)}/resultado">
       <span class="nm ancho">${cuando(h.terminado)}</span><span class="pc">${h.bien} de ${h.total}</span>
-      <span class="sm ancho">${TIPOS_KWIZ[h.tipo] || "Kwiz"}</span>${barra(h.total ? 100 * h.bien / h.total : 0)}</a>`).join("")}</div>
-  </section>` : ""}`, { titulo: "Kwiz · Pelagos", nav: "kwiz", conserva: o.conserva });
+      <span class="sm ancho">${TIPOS_KWIZ[h.tipo] || "Quiz"}</span>${barra(h.total ? 100 * h.bien / h.total : 0)}</a>`).join("")}</div>
+  </section>` : ""}`, { titulo: "Quiz de gramática · Pelagos", nav: "gramatica", conserva: o.conserva });
   for (const b of vista.querySelectorAll("[data-enfoque]")) {
     b.addEventListener("click", () => {
       const nivel = b.dataset.enfoque || null;
@@ -857,18 +1091,18 @@ function verKwiz(o) {
 
 let armando = false;
 function empezarKwiz({ tipo = "general", cuaderno = null, tema = null }) {
-  if (armando) return;          // dos toques seguidos no arman dos kwizzes: el seguro se quita al pintar la página que sigue
+  if (armando) return;          // dos toques seguidos no arman dos quizzes: el seguro se quita al pintar la página que sigue
   armando = true;
   if (tipo === "lista") {
     const lista = N.listaDeEstudio(P, E);
-    if (lista.abierto) return ir("/kwiz/" + lista.abierto.id);       // la lista no cambia hasta terminar el que está a medias
+    if (lista.abierto) return ir(QUIZ + "/" + lista.abierto.id);       // la lista no cambia hasta terminar el que está a medias
   }
   const ids = tipo === "lista" ? N.armarLista(P, E) : N.armar(P, E, { tipo, cuaderno, tema });
-  if (!ids.length) return verNoExiste("Todavía no hay preguntas revisadas para ese kwiz.");
+  if (!ids.length) return verNoExiste("Todavía no hay preguntas revisadas para ese quiz.");
   const k = { t: "kwiz", id: N.nuevoId("k"), tipo, cuaderno, tema, cuando: new Date().toISOString(), preguntas: ids };
   A.apuntar(k);
   recalcular();
-  ir("/kwiz/" + k.id);
+  ir(QUIZ + "/" + k.id);
 }
 
 const guardado = (clave) => { try { return window.localStorage.getItem(clave); } catch { return null; } };
@@ -879,7 +1113,7 @@ function verPregunta(o, kid) {
   const k = E.kwizzes.get(kid);
   if (!k) return verNoExiste();
   const sig = N.siguiente(E, kid);
-  if (!sig) return k.terminado ? ir("/kwiz/" + kid + "/resultado", true) : verNoExiste(k.dejado ? "Ese kwiz lo dejaste sin contestar nada." : "Ese kwiz se quedó sin preguntas.");
+  if (!sig) return k.terminado ? ir(QUIZ + "/" + kid + "/resultado", true) : verNoExiste(k.dejado ? "Ese quiz lo dejaste sin contestar nada." : "Ese quiz se quedó sin preguntas.");
   const q = preguntas.get(sig.p);
   const tema = porId.get(q.tema);
   const escribir = q.tipo === "escribir";
@@ -935,7 +1169,7 @@ function verPregunta(o, kid) {
     </div>
   </section>`,
   {
-    titulo: `Pregunta ${sig.orden} de ${sig.total} · Pelagos`, nav: "kwiz",
+    titulo: `Pregunta ${sig.orden} de ${sig.total} · Pelagos`, nav: "gramatica",
     pie: (escribir ? "" : "<p>Para seguir, toca otra vez la respuesta correcta.</p>") +
       "<p>Lo que contestas se guarda al momento; puedes cerrar y seguir después, en este aparato o en otro.</p>",
   });
@@ -986,7 +1220,7 @@ function verPregunta(o, kid) {
 
   function avanzar() {
     enPreguntaDe = null;
-    if (N.siguiente(E, kid)) pintar(); else ir("/kwiz/" + kid + "/resultado");
+    if (N.siguiente(E, kid)) pintar(); else ir(QUIZ + "/" + kid + "/resultado");
   }
 
   function apuntarRespuesta(bien, extra = {}) {
@@ -1096,7 +1330,7 @@ let saltoPorOpcion = 0;
 function verResultado(o, kid) {
   const k = E.kwizzes.get(kid);
   if (!k) return verNoExiste();
-  if (!k.terminado) return k.pendientes.length ? ir("/kwiz/" + kid, true) : verNoExiste("Ese kwiz se quedó sin preguntas.");
+  if (!k.terminado) return k.pendientes.length ? ir(QUIZ + "/" + kid, true) : verNoExiste("Ese quiz se quedó sin preguntas.");
   const filas = k.preguntas.filter((p) => k.resp.has(p)).map((p) => ({ r: k.resp.get(p), q: preguntas.get(p) }));
   const temas = [...new Set(filas.map((f) => f.r.tema))].map((id) => porId.get(id)).filter(Boolean);
   const igual = JSON.stringify({ tipo: k.tipo, cuaderno: k.cuaderno, tema: k.tema });
@@ -1106,9 +1340,9 @@ function verResultado(o, kid) {
   poner(`
   <section class="card">
     <h1 class="h">${k.bien} de ${k.total}</h1>
-    <p>${TIPOS_KWIZ[k.tipo] || "Kwiz"} · ${cuando(k.terminado)}</p>
+    <p>${TIPOS_KWIZ[k.tipo] || "Quiz"} · ${cuando(k.terminado)}</p>
     ${barra(k.total ? 100 * k.bien / k.total : 0, " gorda")}
-    <div class="go"><button type="button" class="ub grande" data-kwiz='${esc(igual)}'>${k.tipo === "lista" ? "Otro kwiz de tu plan" : "Otro kwiz igual"}</button><a class="ub" href="#/">Inicio</a></div>
+    <div class="go"><button type="button" class="ub grande" data-kwiz='${esc(igual)}'>${k.tipo === "lista" ? "Otro quiz de tu plan" : "Otro quiz igual"}</button><a class="ub" href="#/">Tablero</a></div>
   </section>
   ${cambios ? `
   <section class="card" id="rota">
@@ -1143,7 +1377,7 @@ function verResultado(o, kid) {
       </div>`;
     }).join("")}</div>
   </section>`,
-  { titulo: "Resultado del kwiz · Pelagos", nav: "kwiz", conserva: o.conserva, pie: "<p>«Antes» es tu porcentaje justo antes de este kwiz.</p>" });
+  { titulo: "Resultado del quiz · Pelagos", nav: "gramatica", conserva: o.conserva, pie: "<p>«Antes» es tu porcentaje justo antes de este quiz.</p>" });
 }
 
 // ---------------------------------------------------------------- Ajustes
@@ -1205,8 +1439,8 @@ function verAjustes(o) {
   </section>
   <section class="card">
     <h2>Lo que hay</h2>
-    <p>${P.temas.length} temas, ${P.temas.filter((t) => t.leccion).length} con lección, ${plural(P.preguntas.length, "pregunta", "preguntas")}.</p>
-    <p>${plural(E.respuestas, "respuesta tuya", "respuestas tuyas")} en ${plural(E.kwizzes.size, "kwiz", "kwizzes")}${aparatos.length ? `, desde ${plural(aparatos.length, "aparato", "aparatos")}: ${aparatos.map(esc).join(", ")}` : ""}.</p>
+    <p>${P.temas.length} temas, ${P.temas.filter((t) => t.leccion).length} con lección, ${plural(P.preguntas.length, "pregunta", "preguntas")}, ${plural(P.tarjetas.length, "palabra de vocabulario", "palabras de vocabulario")}.</p>
+    <p>${plural(E.respuestas, "respuesta tuya", "respuestas tuyas")} en ${plural(E.kwizzes.size, "quiz", "quizzes")}${aparatos.length ? `, desde ${plural(aparatos.length, "aparato", "aparatos")}: ${aparatos.map(esc).join(", ")}` : ""}.</p>
     <p class="small">Contenido: versión ${esc(P.huella || "sin número")}.</p>
   </section>
   <section class="card">
@@ -1267,8 +1501,10 @@ function abrirHoja(id) {
   if (hoja.showModal) hoja.showModal(); else hoja.setAttribute("open", "");
 }
 function cerrarHoja() {
-  if (!hoja.hasAttribute("open")) return;
-  if (hoja.close) hoja.close(); else hoja.removeAttribute("open");
+  for (const h of [hoja, hojaV]) {
+    if (!h.hasAttribute("open")) continue;
+    if (h.close) h.close(); else h.removeAttribute("open");
+  }
 }
 
 // ---------------------------------------------------------------- Toques y teclas de toda la página
@@ -1276,12 +1512,14 @@ function cerrarHoja() {
 document.addEventListener("click", (ev) => {
   const objetivo = ev.target instanceof Element ? ev.target : null;
   if (!objetivo) return;
-  if (objetivo === hoja || objetivo.closest("#shX") || objetivo.closest("#shL")) { cerrarHoja(); return; }
+  if (objetivo === hoja || objetivo === hojaV || objetivo.closest("#shX") || objetivo.closest("#shL") || objetivo.closest("[data-cerrar]")) { cerrarHoja(); return; }
+  const palabra = objetivo.closest("[data-v]");
+  if (palabra && P && E) { abrirPalabra(palabra.dataset.v); return; }
   if (toque && !hoja.hasAttribute("open") && !objetivo.closest("a, button, summary, input, label, dialog")) { toque(); return; }
   const previa = objetivo.closest("[data-l]");
   if (previa) { abrirHoja(previa.dataset.l); return; }
   const kwiz = objetivo.closest("[data-kwiz]");
-  if (kwiz && P && E) { try { empezarKwiz(JSON.parse(kwiz.dataset.kwiz)); } catch { verNoExiste("No se pudo armar ese kwiz."); } return; }
+  if (kwiz && P && E) { try { empezarKwiz(JSON.parse(kwiz.dataset.kwiz)); } catch { verNoExiste("No se pudo armar ese quiz."); } return; }
   const salto = objetivo.closest("[data-ir]");
   if (salto) { const e = document.getElementById(salto.dataset.ir); if (e) e.scrollIntoView({ behavior: "smooth", block: "start" }); return; }
   if (objetivo.closest("#ruleOff")) { $("rule").hidden = true; $("ruleOn").hidden = false; $("ruleOn").focus(); return; }
@@ -1290,7 +1528,7 @@ document.addEventListener("click", (ev) => {
 
 document.addEventListener("keydown", (ev) => {
   if (!teclas || ev.ctrlKey || ev.metaKey || ev.altKey || ev.repeat) return;
-  if (ev.target instanceof HTMLInputElement) return;
+  if (ev.target instanceof HTMLInputElement || ev.target instanceof HTMLTextAreaElement) return;
   const tecla = ev.key.toLowerCase();
   if (tecla === "enter" && ev.target instanceof Element && ev.target.closest("button, a, summary")) return;    // ese Enter ya es del botón
   if (teclas[tecla]) { ev.preventDefault(); teclas[tecla](); }

@@ -58,7 +58,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 /* ---- El marco de Pelagos ---- */
 .brand { text-align: center; font-size: 22px; font-weight: 700; letter-spacing: -0.01em; }
 .brand a { text-decoration: none; }
-/* Cinco botones en un renglón: cada uno del ancho de su palabra, y lo que sobra se reparte. */
+/* Cuatro botones en un renglón: cada uno del ancho de su palabra, y lo que sobra se reparte. */
 .top { display: flex; gap: 5px; }
 .top .ub { flex: 1 1 auto; min-width: 0; white-space: nowrap; font-size: 15px; padding-inline: 4px; }
 .ub { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box;
@@ -78,6 +78,11 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   background: var(--tab); color: var(--tab-ink); border: 2px solid var(--tab); border-radius: 4px; cursor: pointer; }
 .jump.niveles a, .jump.dos a, .jump.dos button { background: var(--page); color: var(--ink); border-color: var(--outline); }
 .jump.niveles a[aria-current="page"], .jump.dos a[aria-current="page"], .jump.dos button[aria-current="page"] { background: var(--tab); color: var(--tab-ink); border-color: var(--tab); }
+/* Las dos entradas de una sección (lecciones y quiz; quiz y lista). El nombre puede partirse en dos renglones sin descuadrar. */
+.jump.sec a { display: grid; place-items: center; min-height: 44px; padding: 6px 4px; line-height: 1.2; text-wrap: balance; }
+.jump.tres { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.jump.tres button { background: var(--page); color: var(--ink); border-color: var(--outline); font-size: 13.5px; padding: 9px 2px; }
+.jump.tres button[aria-pressed="true"] { background: var(--tab); color: var(--tab-ink); border-color: var(--tab); }
 
 /* ---- Tarjetas y texto ---- */
 .card { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 18px 16px; display: grid; gap: 12px; scroll-margin-top: 12px; }
@@ -391,10 +396,10 @@ ul.clave b { font-variant-numeric: tabular-nums; }
 .sello.no .s3 { display: none; }
 @media (max-width: 359px) { .sello { width: 36px; height: 36px; top: -13px; right: -9px; } .sello.grande { width: 46px; height: 46px; } }
 
-/* ---- Las tarjetas. La foto arriba con el frente; la respuesta sale en un panel de vidrio sobre la foto.
+/* ---- El quiz de vocabulario. La foto arriba con el frente; la respuesta sale en un panel de vidrio sobre la foto.
    «Mal» y «Bien» están siempre en el mismo lugar: en el tercio de abajo de la pantalla, al centro. */
 .tj { padding-bottom: 34vh; cursor: pointer; }
-.tjh .ratio { max-height: min(56vh, calc(72vh - 124px)); }
+.tjh .ratio { max-height: min(56vh, calc(72vh - 184px)); }
 .tjResp { cursor: auto; gap: 6px; }
 .tjResp .exs { gap: 0; }
 .tjResp .ex .es { font-size: 25px; line-height: 1.2; font-weight: 700; color: #ffffff; }
@@ -407,3 +412,42 @@ ul.clave b { font-variant-numeric: tabular-nums; }
 .tjBotones .ub { min-height: 72px; font-size: 22px; font-weight: 700; border-radius: 14px; border-width: 2px; }
 .tjBotones #jMal { border-color: var(--no); color: var(--no); }
 .tjBotones #jBien { border-color: var(--si); color: var(--si); }
+
+/* ---- La lista de vocabulario. Como el mapa: tarjetas de vidrio sobre la portada Reef del día, un cuadro por palabra
+   y el color dice qué tan seguido la aciertas (los mismos seis colores, --k0 a --k5). Aquí todo empieza hasta arriba. */
+.hoy.lista.confoto .sobre { margin-top: calc(8px - 100vh); margin-top: calc(8px - 100dvh); }
+.hoy.lista .card { padding: 14px 12px; gap: 10px; }
+.hoy.lista.confoto #lvCabeza, .hoy.lista.confoto #lvQuitadas { -webkit-backdrop-filter: blur(5px) saturate(1.15); backdrop-filter: blur(5px) saturate(1.15); background: var(--vidrio); }
+.hoy.lista #lvLista { padding: 8px; }
+.hoy.lista .campo { margin-top: 0; }
+.hoy.lista.confoto .campo, .hoy.lista.confoto .jump.tres button:not([aria-pressed="true"]) { background: var(--vidrio); text-shadow: none; }
+.hoy.lista .card h1.h { font-size: 22px; }
+.hoy.lista details.cat { padding: 0; }
+.lvCeldas { display: flex; flex-wrap: wrap; gap: 4px; }
+/* El relleno invisible del final se queda con lo que sobra, para que el último renglón no se estire. */
+.lvCeldas::after { content: ""; flex: 1000 1 0; }
+.vc { flex: 1 1 auto; max-width: 100%; min-height: 44px; margin: 0; padding: 6px 12px; border: 1px dashed var(--vidrio-borde); border-radius: 6px; cursor: pointer;
+  font: inherit; font-size: 16.5px; font-weight: 600; line-height: 1.2; text-align: center; text-shadow: none; overflow-wrap: anywhere; background: var(--vidrio-2); color: var(--ink); }
+.vc.k0 { background: var(--k0); color: var(--t0); } .vc.k1 { background: var(--k1); color: var(--t1); } .vc.k2 { background: var(--k2); color: var(--t2); }
+.vc.k3 { background: var(--k3); color: var(--t3); } .vc.k4 { background: var(--k4); color: var(--t4); } .vc.k5 { background: var(--k5); color: var(--t5); }
+.vc.k0, .vc.k1, .vc.k2, .vc.k3, .vc.k4, .vc.k5 { border: 1px solid transparent; }
+.vc:focus-visible { outline: 3px solid var(--ink); outline-offset: -3px; }
+ul.clave .mc.kx { box-sizing: border-box; border: 1px dashed var(--vidrio-borde); }
+#lvAviso .lk { font-size: inherit; }
+
+/* La ficha de una palabra. */
+.sheet .ex .es { font-size: 26px; line-height: 1.15; font-weight: 700; }
+.sheet .ex .en { font-size: 18px; color: var(--ink-2); }
+.sheet .ex .es:focus { outline: none; }
+.sheet .hvNota { font-size: 15.5px; color: var(--ink-2); }
+.sheet .sc .bar { height: 10px; }
+.hvG { margin: 0; display: grid; gap: 6px; }
+.hvG svg { display: block; max-width: 100%; }
+.hvG .gb { fill: var(--si); }
+.hvG .gm { fill: var(--no); }
+.hvDatos { margin: 0; display: grid; gap: 0; font-size: 15.5px; }
+.hvDatos div { display: grid; grid-template-columns: minmax(0, 11em) minmax(0, 1fr); gap: 10px; padding: 7px 0; border-top: 1px solid var(--line); }
+.hvDatos dt { color: var(--ink-3); }
+.hvDatos dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+.sheet textarea.campo { font-size: 17px; line-height: 1.4; resize: vertical; }
+.sheet .forma .go { margin-top: 6px; }
