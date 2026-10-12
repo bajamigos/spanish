@@ -665,7 +665,9 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
   async function abrirCharla() {
     const a = aqui(actual.id); if (!a) return;
     Object.assign(charla, { m: a.m, p: a.p, i: 0, aciertos: 0, fin: false });
-    $("recCharlaF").src = (a.p.recorte && (await bajarFoto(a.p.recorte.img).catch(() => ""))) || "";
+    const foto = (a.p.recorte && a.p.recorte.img) || a.m.foto || actual.hombro;   // sin recorte: su toma por encima del hombro
+    $("recCharlaF").src = (foto && (await bajarFoto(foto).catch(() => ""))) || "";
+    $("recCharlaF").classList.toggle("foto", !!foto && !/\.webp$/i.test(foto));
     charlaCaja.hidden = false;
     turno();
   }
@@ -799,6 +801,8 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
       contRecortes.classList.add("pasando");
       actual = destino;
       if (rumbo !== null) yaw = norm(rumbo);
+      const conQuien = aqui(actual.id);                           // si te espera alguien de una misión, llegas viéndolo
+      if (conQuien && conQuien.p.recorte) yaw = norm(conQuien.p.recorte.rumbo);
       pitch = 0;
       mostrarLugar();
       for (let k = 0; k < 1;) {                                  // fundido y vuelta al ángulo normal
@@ -908,6 +912,7 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
   (async () => {
     mostrarLugar();
     yaw = actual.mira !== undefined ? actual.mira : 0;
+    { const q = aqui(actual.id); if (q && q.p.recorte) yaw = norm(q.p.recorte.rumbo); }   // te espera alguien: lo ves al llegar
     $("recCarga").hidden = false;
     try {
       texA = await cargarTextura(actual);

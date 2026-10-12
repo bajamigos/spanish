@@ -195,6 +195,13 @@ details.q .a span { font-size: 14.5px; color: var(--ink-3); }
 .tb .sm { grid-column: 2 / -1; font-size: 13px; color: var(--ink-3); }
 .tb .sm.ancho { grid-column: 1 / -1; }
 .tb .bar { grid-column: 1 / -1; }
+.marcas { display: inline-flex; flex-wrap: wrap; gap: 4px 10px; vertical-align: middle; }
+.marcas .marca { display: inline-flex; align-items: center; gap: 4px; color: var(--ink-3); }
+.marcas .marca.si { color: var(--ink); font-weight: 600; }
+.marcas .marca svg { width: 14px; height: 14px; flex: none; }
+.marcas .marca.si svg { color: var(--verde); }
+.tb .resp { margin-left: 10px; }
+.tb .sm.listos { grid-column: 1 / -1; }
 .bar { display: block; height: 8px; border-radius: 4px; background: var(--bar-bg); border: 1px solid var(--line); overflow: hidden; }
 .bar i { display: block; height: 100%; background: var(--bar); }
 .bar.verde i { background: var(--verde); }
@@ -403,8 +410,18 @@ ul.clave b { font-variant-numeric: tabular-nums; }
 .sello.durazno.ok .s1 { fill: #ff9a76; stroke: #c9453c; }
 .sello.durazno.ok .s2 { fill: #58a62e; stroke: #2f6b14; }
 .sello.durazno.ok .s3 { fill: none; stroke: #d6453d; stroke-width: 1.5; }
-.sello.besos.ok .s1 { fill: #e11d48; stroke: #8f0f2c; }
-.sello.besos.ok .s2 { fill: #c026d3; stroke: #6b0f75; }
+.sello.manzana.ok .s1 { fill: #dc2626; stroke: #7f1d1d; }
+.sello.manzana.ok .s2 { fill: #58a62e; stroke: #2f6b14; }
+.sello.manzana.ok .s3 { fill: none; stroke: #6b4423; stroke-width: 1.8; }
+/* Un premio ganado con GIF se puede tocar: su GIF pasa al fondo del Tablero. Prendido, brilla más y crece un poquito. */
+.sello.toca { pointer-events: auto; cursor: pointer; border-radius: 50%; }
+.sello.toca:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+.sello.toca.activo { filter: drop-shadow(0 0 9px rgba(255,214,102,1)) drop-shadow(0 0 3px rgba(255,255,255,.9)); scale: 1.18; }
+/* Ajustes: un botón por premio, con su dibujito. */
+.premiosGif { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 8px; }
+.premioSube { display: grid; grid-template-columns: 36px 1fr; grid-template-rows: auto auto; align-items: center; column-gap: 8px; text-align: left; min-height: 56px; }
+.premioSube .sello { position: static; transform: none; width: 32px; height: 32px; grid-row: span 2; }
+.premioSube .small { margin: 0; }
 /* El premio de todas juntas va más grande, en la esquina de la tarjeta del check-in. */
 .sello.grande { width: 52px; height: 52px; top: -16px; right: -8px; transform: rotate(12deg); }
 .sello.no { color: var(--ink-3); opacity: 0.9; }
@@ -623,6 +640,7 @@ button.score .vergraf { text-decoration: underline; text-underline-offset: 2px; 
 .rec-charla-caja h2 { font-size: 19px; margin: 0; color: #f2b441; }
 .rec-charla-cabeza { display: flex; gap: 12px; align-items: flex-end; min-width: 0; }
 .rec-charla-cabeza img { height: 110px; width: auto; flex: none; }
+.rec-charla-cabeza img.foto { width: 88px; object-fit: cover; object-position: 60% 30%; border-radius: 12px; }
 .rec-charla-cabeza img:not([src]), .rec-charla-cabeza img[src=""] { display: none; }
 #recCharlaDice { margin: 0; font-size: 18px; line-height: 1.4; min-width: 0; }
 #recCharlaPide { margin: 0; color: #cfcabc; }

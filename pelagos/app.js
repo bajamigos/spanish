@@ -1,7 +1,7 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=9ca82f4740";
-import * as A from "./almacen.js?v=9ca82f4740";
-import { abrirRecorrido } from "./recorrido.js?v=9ca82f4740";
+import * as N from "./nucleo.js?v=2aac6121f1";
+import * as A from "./almacen.js?v=2aac6121f1";
+import { abrirRecorrido } from "./recorrido.js?v=2aac6121f1";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -159,6 +159,24 @@ function botonTema(t, { nivel = true, sub = "", anchoNombre = false, ingles = fa
     barra(i.pct) + cierra;
 }
 
+/** Si algún tema ya tiene una misión escrita. */
+function tieneMision(t) { return misionesDeTema(t.id).length > 0; }
+
+/** Cuántas preguntas revisadas (y no retiradas) tiene cada tema. */
+function bancoPorTema() {
+  const m = new Map();
+  for (const q of P.preguntas) if (q.estado === "revisada" && !E.retiradas.has(q.id)) m.set(q.tema, (m.get(q.tema) || 0) + 1);
+  return m;
+}
+
+/** Las tres marcas de un tema: lección, misión y preguntas listas. Se leen igual con lector de pantalla. */
+function marcas(t, banco) {
+  const n = banco.get(t.id) || 0;
+  const una = (si, texto) => `<span class="marca${si ? " si" : ""}">${si ? ICONO_SI : ICONO_NO}${texto}</span>`;
+  const dicho = `Lección: ${t.leccion ? "sí" : "no"}. Misión: ${tieneMision(t) ? "sí" : "no"}. Preguntas: ${n ? n : "ninguna"}.`;
+  return `<span class="marcas" role="img" aria-label="${dicho}">${una(!!t.leccion, "Lección")}${una(tieneMision(t), "Misión")}${una(n > 0, n ? plural(n, "pregunta", "preguntas") : "Preguntas")}</span>`;
+}
+
 // ---------------------------------------------------------------- Poner una página
 
 function ir(camino, reemplazar = false) {
@@ -223,11 +241,17 @@ function vestir(raiz) {
     });
   }
   for (const v of raiz.querySelectorAll("[data-videofondo]")) {
-    const item = (videosFondo || []).find((x) => x.archivo === v.dataset.videofondo);
+    const sala = v.dataset.sala || "inicio";
+    const lista = () => (sala === "inicio" ? videosFondo : escenasPorSala.get(sala)) || [];
+    const item = lista().find((x) => x.archivo === v.dataset.videofondo);
     // Si el video no llega, el Tablero se queda con la foto del día.
-    const sinVideo = () => { if (v.isConnected) { videosFondo = (videosFondo || []).filter((x) => x !== item); pintar({ conserva: true }); } };
+    const sinVideo = () => {
+      if (!v.isConnected) return;
+      if (sala === "inicio") videosFondo = lista().filter((x) => x !== item); else { escenasPorSala.set(sala, lista().filter((x) => x !== item)); premioFondo = null; }
+      pintar({ conserva: true });
+    };
     if (!item) { sinVideo(); continue; }
-    A.escenaUrl("inicio", item).then((u) => {
+    A.escenaUrl(sala, item).then((u) => {
       if (!v.isConnected || !u) return;
       v.src = u;
       if (v.play) v.play().catch(() => {});
@@ -455,7 +479,8 @@ function verLlave(aviso = "") {
 // ---------------------------------------------------------------- Inicio y biblioteca
 
 function resumenNiveles() {
-  const filas = new Map(Object.keys(NIVELES).map((n) => [n, { nivel: n, temas: 0, bajo: 0, suma: 0, con: 0, lecciones: 0 }]));
+  const filas = new Map(Object.keys(NIVELES).map((n) => [n, { nivel: n, temas: 0, bajo: 0, suma: 0, con: 0, lecciones: 0, misiones: 0, preguntas: 0 }]));
+  const banco = bancoPorTema();
   for (const t of P.temas) {
     const f = filas.get(t.nivel);
     if (!f) continue;
@@ -464,6 +489,8 @@ function resumenNiveles() {
     if (i.pct !== null) { f.suma += i.pct; f.con++; }
     if (esBajo(i.pct)) f.bajo++;
     if (t.leccion) f.lecciones++;
+    if (tieneMision(t)) f.misiones++;
+    if (banco.get(t.id)) f.preguntas++;
   }
   return [...filas.values()].filter((f) => f.temas).map((f) => ({ ...f, promedio: f.con ? f.suma / f.con : null }));
 }
@@ -471,7 +498,8 @@ function resumenNiveles() {
 function botonNivel(n, conLecciones, corto = false) {
   return `<a class="tb" href="#/gramatica/${n.nivel.toLowerCase()}">
     <span class="lv">${n.nivel}</span><span class="nm">${NIVELES[n.nivel]}</span><span class="pc">${pct(n.promedio)}</span>
-    ${corto ? "" : `<span class="sm">${plural(n.temas, "tema", "temas")} · ${n.bajo} bajo ${meta()}%${conLecciones ? ` · ${n.lecciones} con lección` : ""}</span>`}
+    ${corto ? "" : `<span class="sm">${plural(n.temas, "tema", "temas")} · ${n.bajo} bajo ${meta()}%</span>`}
+    ${corto || !conLecciones ? "" : `<span class="sm listos">Listos: ${n.lecciones} con lección · ${n.misiones} con misión · ${n.preguntas} con preguntas</span>`}
     ${barra(n.promedio)}</a>`;
 }
 
@@ -493,12 +521,28 @@ function horaCorta(iso) {
 
 // Los dibujitos que van en la esquina de un cuadro: lo que se gana con esa medida. El tablero dice cuál va en cuál.
 // Ganado se ve a color e iluminado; por ganar, solo el contorno punteado. Los colores los pone la hoja de estilo.
+// El durazno es de la Amiga (antes eran dos besos); el Ánimo es la manzana, diga lo que diga el tablero.
+const iconoDe = (x) => (!x ? null : x.con === "todas" && x.icono ? "manzana" : x.icono === "besos" ? "durazno" : x.icono);
+// Cada premio ganado puede traer su GIF (lo subes en Ajustes). Al tocar el dibujito, el GIF pasa al fondo del Tablero.
+const PREMIOS = [["animo", "Ánimo", "manzana"], ["boca", "Boca", "labios"], ["mano", "Mano", "puno"], ["papaya", "Papaya", "papaya"], ["durazno", "Durazno", "durazno"]];
+const PREMIO_DE = Object.fromEntries(PREMIOS.map(([k, , ic]) => [ic, k]));
+const salaPremio = (k) => "premio-" + k;
+let premioFondo = null;      // el premio cuyo GIF está ahorita de fondo en el Tablero
+/** Un dibujito de premio. Ganado y con GIF: se puede tocar para poner su GIF de fondo (y otra vez para quitarlo). */
+function selloHtml(x, grande = false) {
+  const ic = iconoDe(x), k = PREMIO_DE[ic];
+  const gif = x.va && k ? ultimaEscena(salaPremio(k)) : null;
+  const clase = `sello${grande ? " grande" : ""} ${esc(ic)} ${x.va ? "ok" : "no"}`;
+  if (!gif) return `<span class="${clase}">${SELLOS[ic]}</span><span class="sr">${esc(x.nombre)}: ${x.va ? "ganado" : "falta"}. </span>`;
+  const on = premioFondo === k;
+  return `<span class="${clase} toca${on ? " activo" : ""}" role="button" tabindex="0" data-premio="${k}" aria-pressed="${on}" aria-label="${esc(x.nombre)}: ganado. ${on ? "Quitar su GIF del fondo" : "Poner su GIF de fondo"}">${SELLOS[ic]}</span>`;
+}
 const SELLOS = {
   puno: '<svg viewBox="0 0 32 32" aria-hidden="true"><rect class="s1" x="10" y="22.5" width="12" height="7" rx="1.6"/><rect class="s1" x="6.5" y="5.4" width="4.7" height="11" rx="2.35"/><rect class="s1" x="11.3" y="4" width="4.7" height="12" rx="2.35"/><rect class="s1" x="16.1" y="4" width="4.7" height="12" rx="2.35"/><rect class="s1" x="20.9" y="5.4" width="4.7" height="11" rx="2.35"/><rect class="s1" x="6.5" y="11.5" width="19.1" height="12.6" rx="4.6"/><path class="s2" d="M5.6 15.2c2.4-1.5 8-1.9 11-.8 1.9.7 2.1 3.3.3 4.2-2.9 1.4-7.9 1.5-10.9.5-1.9-.7-2.100-2.800-.4-3.900z"/></svg>',
   labios: '<svg viewBox="0 0 32 32" aria-hidden="true"><path class="s1" d="M2.5 15.200C6.500 8.800 11.800 7.300 16 10.800c4.200-3.500 9.500-2 13.500 4.400-4.600-1-9-.2-13.500-.200s-8.900-.8-13.500.2z"/><path class="s1" d="M3.200 16.700c4.300.9 8.500.3 12.800.3s8.500.6 12.800-.3C25.600 23.200 20.900 26 16 26s-9.600-2.800-12.800-9.300z"/><path class="s3" d="M9.500 19.600c2 1.700 4.200 2.500 6.500 2.500s4.500-.8 6.500-2.500"/></svg>',
   papaya: '<svg viewBox="0 0 32 32" aria-hidden="true"><path class="s1" d="M16 2.600c5.800 0 10.200 7.200 10.200 15.200 0 7.100-4.400 11.800-10.200 11.800S5.800 24.900 5.800 17.800C5.800 9.800 10.200 2.600 16 2.600z"/><path class="s2" d="M16 9.800c2.900 0 4.800 4.200 4.800 8.800 0 4-1.900 6.600-4.800 6.600s-4.800-2.600-4.800-6.600c0-4.600 1.900-8.800 4.800-8.800z"/><g class="s3"><circle cx="15" cy="13.600" r="1"/><circle cx="17.400" cy="15.800" r="1"/><circle cx="14.600" cy="17.400" r="1"/><circle cx="17.200" cy="19.600" r="1"/><circle cx="14.800" cy="21.400" r="1"/><circle cx="17" cy="22.900" r=".9"/></g></svg>',
-  // Dos besos, uno rojo y uno morado, uno encima del otro: la Amiga que se une, ganada con la clase de Worldsacross.
-  besos: '<svg viewBox="0 0 32 32" aria-hidden="true"><g transform="translate(-2.500 -2) scale(.8)"><path class="s1" d="M5 15.300Q16 14.300 27 15.300L27 16.900Q16 17.600 5 16.900z"/><path class="s1" d="M2.500 15.200C6.500 8.800 11.800 7.300 16 10.800c4.200-3.500 9.500-2 13.500 4.400-4.600-1-9-.2-13.500-.2s-8.900-.8-13.500.2z"/><path class="s1" d="M3.200 16.700c4.300.9 8.500.3 12.800.3s8.500.6 12.800-.3C25.600 23.200 20.900 26 16 26s-9.600-2.800-12.800-9.300z"/></g><g transform="translate(9.500 9) scale(.72) rotate(14 16 16)"><path class="s2" d="M5 15.300Q16 14.300 27 15.300L27 16.900Q16 17.600 5 16.900z"/><path class="s2" d="M2.500 15.200C6.500 8.800 11.800 7.300 16 10.800c4.200-3.500 9.500-2 13.500 4.400-4.600-1-9-.2-13.500-.2s-8.900-.8-13.500.2z"/><path class="s2" d="M3.200 16.700c4.300.9 8.500.3 12.800.3s8.500.6 12.800-.3C25.600 23.200 20.900 26 16 26s-9.600-2.800-12.800-9.300z"/></g></svg>',
+  // La manzana: el Ánimo, lo que se gana con todas juntas.
+  manzana: '<svg viewBox="0 0 32 32" aria-hidden="true"><path class="s1" d="M16 9.500C13 7.500 5.500 7.800 5.500 16.500 5.500 23.500 10 29.500 13.500 29.500c1.300 0 1.700-.7 2.500-.7s1.200.7 2.500.7c3.500 0 8-6 8-13 0-8.700-7.500-9-10.500-7z"/><path class="s3" d="M16 9.500c0-2.500.6-4.500 1.800-6"/><path class="s2" d="M17.200 6.600c1.500-2.800 4.600-3.800 7.600-3-1 2.800-4.200 4-7.600 3z"/></svg>',
   durazno: '<svg viewBox="0 0 32 32" aria-hidden="true"><path class="s1" d="M16 8.200C9.200 5.800 3.600 10.800 4 18c.4 7 5.800 11.600 12 11.600S27.600 25 28 18c.4-7.200-5.200-12.200-12-9.800z"/><path class="s3" d="M16.400 8.600c-3.600 4.800-4 12.800-1.200 19.800"/><path class="s2" d="M16 8.200c.8-4 4.400-6 8.600-4.800-.8 3.800-4.200 5.600-8.600 4.800z"/></svg>',
 };
 
@@ -507,7 +551,7 @@ function cuadro(nombre, valor, de, unidad, estado, hecho, enlace = "", sello = n
   const aCero = de === 0;       // medidas que se cumplen al llegar a cero, como las tarjetas pendientes
   const [abre, cierra] = enlace ? [`a href="${enlace}"`, "a"] : ["div", "div"];
   return `<${abre} class="cuadro${hecho ? " hecho" : ""}${sello ? " consello" : ""}" role="listitem">
-    ${sello ? `<span class="sello ${esc(sello.icono)} ${sello.va ? "ok" : "no"}">${SELLOS[sello.icono]}</span><span class="sr">${esc(sello.nombre)}: ${sello.va ? "ganado" : "falta"}. </span>` : ""}
+    ${sello ? selloHtml(sello) : ""}
     <span class="cn">${esc(nombre)}</span>
     <span class="cv">${esc(valor)}${aCero ? "" : `<small> de ${esc(de)}${unidad ? " " + esc(unidad) : ""}</small>`}</span>
     ${aCero ? '<span class="bar vacia"></span>' : barra(de ? (valor / de) * 100 : 0)}
@@ -560,6 +604,25 @@ function imagenDeArriba(foto) {
   const m = movimientoEnTodo() ? (cargarVideosFondo(), etiquetaMovimiento()) : "";
   return m || (foto ? `<img data-foto="${esc(foto)}" alt="">` : "");
 }
+const escenasPorSala = new Map();     // sala -> lista de escenas (vacía mientras llega)
+/** El último GIF o video de una sala (los premios). Pregunta una vez; cuando llega, vuelve a pintar el Tablero. */
+function ultimaEscena(sala) {
+  if (!escenasPorSala.has(sala)) {
+    escenasPorSala.set(sala, []);
+    A.escenasDe(sala).then((l) => {
+      escenasPorSala.set(sala, l);
+      const k = sala.replace(/^premio-/, ""), rotulo = vista.querySelector(`[data-premiohay="${k}"]`);
+      if (rotulo) rotulo.textContent = l.some(esMovimiento) ? "✓ Tiene GIF" : "Sin GIF";
+      else if (l.some(esMovimiento) && vista.querySelector("#medidas, #checkin")) pintar({ conserva: true });
+    }).catch(() => {});
+  }
+  return escenasPorSala.get(sala).filter(esMovimiento).slice(-1)[0] || null;
+}
+/** Un GIF o video de cualquier sala como etiqueta que se repite sola. */
+function etiquetaEscena(sala, v) {
+  const d = `data-videofondo="${esc(v.archivo)}" data-sala="${esc(sala)}"`;
+  return v.tipo === "image/gif" ? `<img ${d} alt="">` : `<video ${d} muted loop autoplay playsinline preload="auto" aria-hidden="true"></video>`;
+}
 function cargarVideosFondo() {
   if (videosFondo) return;
   videosFondo = [];
@@ -575,7 +638,10 @@ function verInicio(o) {
   const T = N.leerTablero(A.tablero());
   const deHoy = !!T && T.dia === hoy;
   // Al fondo, el video que subiste; si no hay, el retrato de Andrea del día (en Expanse, la portada Expanse del día; ver fondoDelDia).
-  const fondo = fondoDelDia(false);
+  // Si tocaste un premio ganado, su GIF va de fondo hasta que lo vuelvas a tocar (o te vayas del Tablero).
+  if (!o.conserva) premioFondo = null;
+  const gifPremio = premioFondo ? ultimaEscena(salaPremio(premioFondo)) : null;
+  const fondo = gifPremio ? { hay: true, html: `<div class="fondo">${etiquetaEscena(salaPremio(premioFondo), gifPremio)}${LOGO}</div>` } : fondoDelDia(false);
   const cuadernos = (P.cuadernos || []).map((c) => `
   <section class="card">
     <h2>${esc(c.nombre)}</h2>
@@ -597,9 +663,9 @@ function verInicio(o) {
   const ganables = partes.filter((x) => x.con && x.con !== "siempre" && x.con !== "todas" && !x.extra);      // las partes de más no cuentan para el Ánimo
   for (const x of partes) if (x.va === null) x.va = ganables.length > 0 && ganables.every((y) => y.va);
   // Una parte con dibujito va en la esquina del cuadro de su medida, en lugar de ocupar un renglón aparte.
-  const sello = (con) => partes.find((x) => x.con === con && x.icono && SELLOS[x.icono]) || null;
+  const sello = (con) => partes.find((x) => x.con === con && SELLOS[iconoDe(x)]) || null;
   const premio = sello("todas");        // lo que se gana con todas juntas no tiene cuadro propio: va en la esquina de la tarjeta del check-in
-  const conSellos = partes.some((x) => x.icono && SELLOS[x.icono]);
+  const conSellos = partes.some((x) => SELLOS[iconoDe(x)]);
 
   // ---- Las medidas del día. Los kwizzes y las tarjetas los cuenta Pelagos; lo demás viene del tablero.
   const cuadros = [cuadro("Gramática", kw, metaKw, "quizzes", kw >= metaKw ? "Cumplido" : `Faltan ${metaKw - kw}`, kw >= metaKw, "#" + QUIZ, sello("kwizzes"))];
@@ -626,7 +692,7 @@ function verInicio(o) {
     : (!deHoy ? "Check-in anterior" : c.estado === "nuevo" ? "Check-in nuevo" : "Check-in") + (nombreCi ? ": " + nombreCi : "");
   const checkin = !c ? "" : `
   <section class="card${premio ? " consello" : ""}" id="checkin">
-    ${premio ? `<span class="sello grande ${esc(premio.icono)} ${premio.va ? "ok" : "no"}">${SELLOS[premio.icono]}</span><span class="sr">${esc(premio.nombre)}: ${premio.va ? "ganado" : "falta"}. </span>` : ""}
+    ${premio ? selloHtml(premio, true) : ""}
     <h2 class="sr">Check-in</h2>
     <p class="ciLinea">${esc(rotuloCi)}</p>
     ${c.estado === "ninguno" ? "" : `<p class="ciOido ${c.estado === "oido" ? "si" : "no"}">${c.estado === "oido" ? ICONO_SI + "Escuchado" : ICONO_NO + "Sin escuchar"}</p>`}
@@ -725,6 +791,7 @@ function verNivel(o, clave, filtro) {
   const suyos = P.temas.filter((t) => t.nivel === nivel).sort((a, b) => a.orden - b.orden);
   const bajo = suyos.filter((t) => esBajo(info(t.id).pct)).length;
   const categorias = [];
+  const banco = bancoPorTema();
   for (const t of suyos) {
     const i = info(t.id);
     if (soloBajo && !esBajo(i.pct)) continue;
@@ -743,6 +810,7 @@ function verNivel(o, clave, filtro) {
   <header class="card">
     <h1 class="h">${nivel} · ${NIVELES[nivel]}</h1>
     <p>${suyos.length} temas. ${bajo} bajo ${meta()}%.</p>
+    <p class="small">Listos: ${suyos.filter((t) => t.leccion).length} con lección · ${suyos.filter((t) => tieneMision(t)).length} con misión · ${suyos.filter((t) => banco.get(t.id)).length} con preguntas.</p>
     <nav class="jump tres" aria-label="Qué temas mostrar">
       <a href="#/gramatica/${clave}"${filtro ? "" : ' aria-current="page"'}>Todos</a>
       <a href="#/gramatica/${clave}/bajo"${soloBajo ? ' aria-current="page"' : ""}>Bajo ${meta()}%</a>
@@ -754,7 +822,7 @@ function verNivel(o, clave, filtro) {
     <summary><span class="cn">${esc(c.nombre)}</span><span class="cc">${plural(c.temas.length, "tema", "temas")}${filtro ? "" : ` · ${c.bajo} bajo ${meta()}%`}</span></summary>
     <div class="links">${c.temas.map((t) => {
       const i = info(t.id);
-      const sub = [t.leccion ? "Con lección" : "", i.n ? plural(i.n, "respuesta", "respuestas") : ""].filter(Boolean).join(" · ");
+      const sub = marcas(t, banco) + (i.n ? ` <span class="resp">${plural(i.n, "respuesta", "respuestas")}</span>` : "");
       const luz = luzMision(t, st);
       const boton = botonTema(t, { nivel: false, anchoNombre: true, ingles: true, sub });
       return luz ? `<div class="tb-mision">${boton}${luz}</div>` : boton;
@@ -762,7 +830,7 @@ function verNivel(o, clave, filtro) {
   </details>`).join("") : `<section class="card"><p>${soloMision ? `Ningún tema de ${nivel} tiene una misión prendida. Prende una con la lucecita que sale junto a sus temas.` : `Ningún tema de ${nivel} está bajo ${meta()}%.`}</p></section>`}`),
   {
     titulo: nivel + " · Lecciones de gramática · Pelagos", nav: "gramatica", conserva: o.conserva,
-    pie: "<p>La lucecita junto a un tema prende o apaga su misión en el Recorrido de Ganímedes.</p><p>Toca una categoría para abrirla. Los temas en inglés todavía no tienen lección propia: llevan el nombre que les da Kwiziq.</p><p>Un porcentaje sin número de respuestas es tu arranque de Kwiziq.</p>",
+    pie: "<p>La lucecita junto a un tema prende o apaga su misión en el Recorrido de Ganímedes.</p><p>Toca una categoría para abrirla. Los temas en inglés todavía no tienen lección propia: llevan el nombre que les da Kwiziq.</p><p>Un porcentaje sin número de respuestas es tu arranque de Kwiziq.</p><p>Cada tema lleva tres marcas: lección, misión y preguntas. La marca llena es que ya está lista; la punteada, que falta.</p>",
   });
 }
 
@@ -1949,6 +2017,12 @@ function verAjustes(o) {
       <button type="button" class="ub" id="ajVideoQuitar"${videoFondo() ? "" : " hidden"}>Quitar el GIF o video</button></div>
     <p class="small" id="ajVideoAviso" role="status">Un GIF o un video (MP4 o WebM) que se repite sin sonido detrás del Tablero, Gramática y Vocabulario, en lugar de la foto. Mejor de menos de 10 MB. Con «También en lecciones y tarjetas» sale también arriba de cada lección, pregunta y tarjeta de vocabulario. Sale en todos tus aparatos. En Limpio, o si tu aparato pide reducir el movimiento, se queda la foto.</p>
   </section>
+  <section class="card" id="ajPremios">
+    <h2>GIFs de los premios</h2>
+    <p class="small">Cuando ganas un premio, tocas su dibujito en el Tablero y su GIF pasa al fondo. Lo vuelves a tocar y regresa el fondo de siempre.</p>
+    <div class="premiosGif">${PREMIOS.map(([k, nombre, ic]) => `<label class="ub premioSube"><span class="sello ${ic} ok">${SELLOS[ic]}</span><span>${nombre}</span><span class="small" data-premiohay="${k}">${ultimaEscena(salaPremio(k)) ? "✓ Tiene GIF" : "Sin GIF"}</span><input type="file" data-premiosube="${k}" accept=".gif,.mp4,.webm,image/gif,video/mp4,video/webm" hidden></label>`).join("")}</div>
+    <p class="small" id="ajPremiosAviso" role="status"></p>
+  </section>
   <section class="card" id="ajApp">
     <h2>Pelagos como app</h2>
     ${yaEsApp()
@@ -2012,6 +2086,24 @@ function verAjustes(o) {
     try { listoVideo(await A.escenaSubir("inicio", f, "Fondo del Tablero")); avisoVideo("¡Listo! Ve al Tablero para verlo."); }
     catch (e) { avisoVideo(e && e.message ? e.message : "No se pudo subir el video."); }
   });
+  // Los GIFs de los premios: uno por premio; el nuevo reemplaza al anterior.
+  for (const inp of vista.querySelectorAll("[data-premiosube]")) {
+    inp.addEventListener("change", async () => {
+      const f = inp.files && inp.files[0], k = inp.dataset.premiosube, nombre = PREMIOS.find((x) => x[0] === k)[1];
+      inp.value = "";
+      if (!f) return;
+      const aviso = $("ajPremiosAviso");
+      aviso.textContent = "Subiendo el GIF de " + nombre + "…";
+      try {
+        let l = await A.escenaSubir(salaPremio(k), f, "Premio: " + nombre);
+        const nuevo = l.filter(esMovimiento).slice(-1)[0];
+        for (const x of l.filter((y) => esMovimiento(y) && y !== nuevo)) l = await A.escenaQuitar(salaPremio(k), x.archivo);
+        escenasPorSala.set(salaPremio(k), l);
+        vista.querySelector(`[data-premiohay="${k}"]`).textContent = "✓ Tiene GIF";
+        aviso.textContent = "¡Listo! Ya está el GIF de " + nombre + ".";
+      } catch (e) { aviso.textContent = e && e.message ? e.message : "No se pudo subir el GIF."; }
+    });
+  }
   $("ajVideoTodo").addEventListener("click", () => {
     const si = !movimientoEnTodo();
     guardar("pelagos.movimientoEnTodo", si ? "si" : "no");
@@ -2083,6 +2175,16 @@ document.addEventListener("click", (ev) => {
   const palabra = objetivo.closest("[data-v]");
   if (palabra && P && E) { abrirPalabra(palabra.dataset.v); return; }
   if (toque && !hoja.hasAttribute("open") && !objetivo.closest("a, button, summary, input, label, dialog")) { toque(); return; }
+  const prem = objetivo.closest("[data-premio]");
+  if (prem) {
+    ev.preventDefault();
+    premioFondo = premioFondo === prem.dataset.premio ? null : prem.dataset.premio;
+    pintar({ conserva: true });
+    const otra = vista.querySelector(`[data-premio="${prem.dataset.premio}"]`);
+    if (otra) otra.focus({ preventScroll: true });
+    window.scrollTo({ top: 0, behavior: sinMovimiento() ? "auto" : "smooth" });
+    return;
+  }
   const graf = objetivo.closest("[data-grafnivel]");
   if (graf && P && E) { abrirGrafica(graf.dataset.grafnivel); return; }
   const grafT = objetivo.closest("[data-graftema]");
@@ -2097,6 +2199,10 @@ document.addEventListener("click", (ev) => {
   if (objetivo.closest("#ruleOn")) { $("rule").hidden = false; $("ruleOn").hidden = true; $("ruleOff").focus(); }
 });
 
+// Los premios son dibujitos que se pueden tocar: con el teclado, Enter o espacio.
+document.addEventListener("keydown", (ev) => {
+  if ((ev.key === "Enter" || ev.key === " ") && ev.target instanceof Element && ev.target.matches("[data-premio]")) { ev.preventDefault(); ev.target.click(); }
+});
 document.addEventListener("keydown", (ev) => {
   if (!teclas || ev.ctrlKey || ev.metaKey || ev.altKey || ev.repeat) return;
   if (ev.target instanceof HTMLInputElement || ev.target instanceof HTMLTextAreaElement) return;
