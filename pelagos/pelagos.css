@@ -755,3 +755,5 @@ dialog.sheet.conFoto:not([open]) { display: none; }
 .hvFondo::after { content: ""; position: absolute; inset: 0;
   background: linear-gradient(to bottom, color-mix(in srgb, var(--page) 35%, transparent), color-mix(in srgb, var(--page) 78%, transparent) 30%, color-mix(in srgb, var(--page) 88%, transparent)); }
 .sheet.conFoto .ex .es, .sheet.conFoto .ex .en { text-shadow: 0 1px 6px var(--page); }
+
+.voz audio { display: block; width: 100%; margin-top: 10px; }

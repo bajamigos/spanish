@@ -9,7 +9,7 @@
 // - Lo que contestas entra primero a una fila en este aparato y de ahí sube.
 //   Sin internet, la fila espera y sube sola cuando vuelve.
 // - La llave vive solo en este navegador y solo viaja a la dirección de CONFIG.api.
-import { CONFIG } from "./config.js?v=59605b9117";
+import { CONFIG } from "./config.js?v=661252a035";
 
 const CLAVES = { llave: "pelagos.llave", aparato: "pelagos.aparato", fila: "pelagos.fila." };      // la fila: una clave por suceso
 const RUTA_SUCESOS = /^sucesos\/([A-Za-z0-9_-]+)\/(\d{4}-\d{2})\.jsonl$/;
@@ -621,7 +621,7 @@ export function fotoTutor(archivo) {
 // Viven en la rama de avance, en escenas/<lugar>/: un archivo por escena y un indice.json con el orden y la descripción.
 // Así son privadas (se bajan con la llave), permanentes y salen en todos sus aparatos.
 
-const TIPOS_ESCENA = { gif: "image/gif", webp: "image/webp", png: "image/png", jpg: "image/jpeg", jpeg: "image/jpeg", mp4: "video/mp4", webm: "video/webm" };
+const TIPOS_ESCENA = { gif: "image/gif", webp: "image/webp", png: "image/png", jpg: "image/jpeg", jpeg: "image/jpeg", mp4: "video/mp4", webm: "video/webm", mp3: "audio/mpeg", m4a: "audio/mp4" };
 const MAX_ESCENA = 30 * 1024 * 1024;       // la API de GitHub aguanta más, pero el celular no
 const escenasVivas = new Map();
 
@@ -665,7 +665,7 @@ export async function escenaSubir(sala, archivo, desc = "") {
   if (!salaBuena(sala)) throw new Fallo("escena", "Ese lugar no admite escenas.");
   const ext = (String(archivo.name || "").split(".").pop() || "").toLowerCase();
   const tipo = TIPOS_ESCENA[ext];
-  if (!tipo) throw new Fallo("escena", "Solo GIF, WebP, PNG, JPG, MP4 o WebM.");
+  if (!tipo) throw new Fallo("escena", "Solo GIF, WebP, PNG, JPG, MP4, WebM, MP3 o M4A.");
   if (archivo.size > MAX_ESCENA) throw new Fallo("escena", "Pesa más de 30 MB. Hazlo más chico o más corto.");
   const bytes = new Uint8Array(await archivo.arrayBuffer());
   let s = "";
