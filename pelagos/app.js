@@ -1,8 +1,8 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=009d7d7e76";
-import * as A from "./almacen.js?v=009d7d7e76";
-import { abrirRecorrido } from "./recorrido.js?v=009d7d7e76";
-import * as V from "./videos.js?v=009d7d7e76";
+import * as N from "./nucleo.js?v=00aa00cccf";
+import * as A from "./almacen.js?v=00aa00cccf";
+import { abrirRecorrido } from "./recorrido.js?v=00aa00cccf";
+import * as V from "./videos.js?v=00aa00cccf";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -580,7 +580,7 @@ function cuadro(nombre, valor, de, unidad, estado, hecho, enlace = "", sello = n
     <span class="cn">${esc(nombre)}</span>
     <span class="cv">${esc(valor)}${aCero ? "" : `<small> de ${esc(de)}${unidad ? " " + esc(unidad) : ""}</small>`}</span>
     ${aCero ? '<span class="bar vacia"></span>' : barra(de ? (valor / de) * 100 : 0)}
-    <span class="ce">${hecho ? ICONO_SI : ICONO_NO}${esc(estado)}</span>
+    ${hecho ? `<span class="ce">${ICONO_SI}${esc(estado)}</span>` : ""}
   </${cierra}>`;
 }
 
