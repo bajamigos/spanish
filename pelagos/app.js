@@ -1,7 +1,7 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=0823cd67d4";
-import * as A from "./almacen.js?v=0823cd67d4";
-import { abrirRecorrido } from "./recorrido.js?v=0823cd67d4";
+import * as N from "./nucleo.js?v=73137c32a6";
+import * as A from "./almacen.js?v=73137c32a6";
+import { abrirRecorrido } from "./recorrido.js?v=73137c32a6";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1567,11 +1567,9 @@ function verLeccion(o, slug) {
   });
 }
 
-/**
- * El clip de la tutora de un tema (su mnemónico): el último GIF o video de escenas/tutora-<tema>/ en la rama de avance.
- * Pregunta una vez; si llega después de pintar la lección, lo pone arriba sin mover la página.
- */
+// El clip de la tutora (escenas/tutora-<tema>/). Ver README.
 function clipDeTutora(tema) {
+  if (!movimientoEnTodo() || ambiente() === "limpio" || sinMovimiento()) return "";
   const sala = "tutora-" + tema.id;
   if (!escenasPorSala.has(sala)) {
     escenasPorSala.set(sala, []);
@@ -1579,7 +1577,7 @@ function clipDeTutora(tema) {
       escenasPorSala.set(sala, l);
       const v = l.filter(esMovimiento).slice(-1)[0];
       const hero = vista.dataset.leccion === tema.slug && vista.querySelector(".hero");
-      if (!v || !hero) return;
+      if (!v || !hero || !movimientoEnTodo()) return;
       for (const x of hero.querySelectorAll(":scope > img, :scope > video")) x.remove();
       hero.querySelector(".ratio").insertAdjacentHTML("afterend", etiquetaEscena(sala, v));
       hero.classList.add("contutora");
@@ -2166,7 +2164,7 @@ function verAjustes(o) {
     <div class="go"><label class="ub">Subir un GIF o video<input type="file" id="ajVideoArch" accept=".gif,.mp4,.webm,image/gif,video/mp4,video/webm" hidden></label>
       <button type="button" class="ub" id="ajVideoTodo" aria-pressed="${movimientoEnTodo()}">${movimientoEnTodo() ? "También en lecciones y tarjetas: Sí" : "También en lecciones y tarjetas: No"}</button>
       <button type="button" class="ub" id="ajVideoQuitar"${videoFondo() ? "" : " hidden"}>Quitar el GIF o video</button></div>
-    <p class="small" id="ajVideoAviso" role="status">Un GIF o un video (MP4 o WebM) que se repite sin sonido detrás del Tablero, Gramática y Vocabulario, en lugar de la foto. Mejor de menos de 10 MB. Con «También en lecciones y tarjetas» sale también arriba de cada lección, pregunta y tarjeta de vocabulario. Sale en todos tus aparatos. En Limpio, o si tu aparato pide reducir el movimiento, se queda la foto.</p>
+    <p class="small" id="ajVideoAviso" role="status">Un GIF o un video (MP4 o WebM) que se repite sin sonido detrás del Tablero, Gramática y Vocabulario, en lugar de la foto. Mejor de menos de 10 MB. Con «También en lecciones y tarjetas» sale también arriba de cada lección, pregunta y tarjeta de vocabulario, y en las lecciones con tutora sale su clip. Sale en todos tus aparatos. En Limpio, o si tu aparato pide reducir el movimiento, se queda la foto.</p>
   </section>
   <section class="card" id="ajPremios">
     <h2>GIFs de los premios</h2>
