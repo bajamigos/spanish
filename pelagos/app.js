@@ -1,8 +1,8 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=d98df24b68";
-import * as A from "./almacen.js?v=d98df24b68";
-import { abrirRecorrido } from "./recorrido.js?v=d98df24b68";
-import * as V from "./videos.js?v=d98df24b68";
+import * as N from "./nucleo.js?v=e8984eec19";
+import * as A from "./almacen.js?v=e8984eec19";
+import { abrirRecorrido } from "./recorrido.js?v=e8984eec19";
+import * as V from "./videos.js?v=e8984eec19";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1612,7 +1612,7 @@ function clipDeTutora(tema) {
 
 let leccionPintada = null;
 // Con clip de tutora, la lección va como el Tablero: el clip fijo al fondo y todo lo demás pasa por encima.
-const conClipDeFondo = (clip, html) => clip ? `<div class="hoy confoto contutora"><div class="fondo">${clip}</div><div class="sobre">${html}</div></div>` : html;
+const conClipDeFondo = (clip, html) => clip ? `<div class="hoy confoto contutora"><div class="fondo">${clip}${LOGO}</div><div class="sobre">${html}</div></div>` : html;
 
 function pintarLeccion(tema, lec, conserva = false) {
   leccionPintada = { tema, lec };
