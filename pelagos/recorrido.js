@@ -85,6 +85,7 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
     <div class="rec-charla" id="recCharla" hidden role="dialog" aria-modal="true" aria-labelledby="recCharlaT">
       <div class="rec-charla-caja">
         <h2 id="recCharlaT">Plática</h2>
+        <figure class="rec-charla-escena" id="recCharlaEsc" hidden><img id="recCharlaE" alt=""><figcaption id="recCharlaEst"></figcaption></figure>
         <div class="rec-charla-cabeza"><img id="recCharlaF" alt=""><p id="recCharlaDice" aria-live="polite"></p></div>
         <p id="recCharlaPide"></p>
         <div class="rec-charla-ops" id="recCharlaOps"></div>
@@ -664,15 +665,34 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
   const revolver = (a) => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const k = Math.floor(Math.random() * (i + 1)); [a[i], a[k]] = [a[k], a[i]]; } return a; };
   async function abrirCharla() {
     const a = aqui(actual.id); if (!a) return;
-    Object.assign(charla, { m: a.m, p: a.p, i: 0, aciertos: 0, fin: false });
+    Object.assign(charla, { m: a.m, p: a.p, i: 0, aciertos: 0, fin: false, intro: !!a.p.img });
     const foto = (a.p.recorte && a.p.recorte.img) || a.m.foto || actual.hombro;   // sin recorte: su toma por encima del hombro
     $("recCharlaF").src = (foto && (await bajarFoto(foto).catch(() => ""))) || "";
     $("recCharlaF").classList.toggle("foto", !!foto && !/\.webp$/i.test(foto));
     charlaCaja.hidden = false;
-    turno();
+    if (charla.intro) entrada(); else turno();
+  }
+  /** La puerta: la vista de la entrada antes del primer turno, para pararte en el palacio antes de recorrerlo. */
+  function entrada() {
+    pintarEstacion({ img: charla.p.img, estacion: "La entrada" });
+    $("recCharlaT").textContent = charla.m.quien || "Plática";
+    $("recCharlaDice").textContent = charla.m.resumen || charla.p.paso || "";
+    $("recCharlaPide").textContent = ""; $("recCharlaOps").textContent = ""; $("recCharlaNota").textContent = "";
+    $("recCharlaSeguir").hidden = false; $("recCharlaSeguir").textContent = "Entrar ▶"; $("recCharlaSeguir").focus({ preventScroll: true });
+  }
+  /** La imagen grande de la estación: la del turno, o la de la parada (la puerta). Cada estación es un lugar del palacio. */
+  async function pintarEstacion(t) {
+    const img = (t && t.img) || charla.p.img, fig = $("recCharlaEsc");
+    if (!img) { fig.hidden = true; return; }
+    const url = await bajarFoto(img).catch(() => "");
+    fig.hidden = !url;
+    $("recCharlaE").src = url || "";
+    $("recCharlaE").alt = (t && t.estacion) || charla.p.paso || "";
+    $("recCharlaEst").textContent = (t && t.estacion) || "";
   }
   function turno() {
     const t = charla.p.turnos[charla.i];
+    pintarEstacion(t);
     charla.primera = true;
     $("recCharlaT").textContent = `${charla.m.quien || "Plática"} · ${charla.i + 1} de ${charla.p.turnos.length}`;
     $("recCharlaDice").textContent = "«" + t.dice + "»";
@@ -703,6 +723,7 @@ export function abrirRecorrido(raiz, { tour, bajarFoto, desde, hojaMision, tinte
   }
   $("recCharlaSeguir").addEventListener("click", () => {
     if (charla.fin) { cerrarCharla(); return; }
+    if (charla.intro) { charla.intro = false; turno(); return; }
     charla.i++;
     if (charla.i < charla.p.turnos.length) { turno(); return; }
     charla.fin = true;

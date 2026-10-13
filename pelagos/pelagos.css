@@ -638,6 +638,10 @@ button.score .vergraf { text-decoration: underline; text-underline-offset: 2px; 
 .rec-charla-caja { box-sizing: border-box; width: 100%; max-width: 34rem; max-height: 100%; overflow: auto; display: grid; gap: 10px; padding: 16px;
   border-radius: 16px; border: 1.5px solid rgba(255,255,255,.35); background: rgba(16,14,12,.97); }
 .rec-charla-caja h2 { font-size: 19px; margin: 0; color: #f2b441; }
+.rec-charla-escena { margin: 0; display: grid; gap: 4px; }
+.rec-charla-escena img { width: 100%; height: auto; max-height: 42vh; object-fit: cover; border-radius: 12px; }
+.rec-charla-escena figcaption { font-size: 14px; color: #f2b441; font-weight: 600; }
+.rec-charla-escena figcaption:empty { display: none; }
 .rec-charla-cabeza { display: flex; gap: 12px; align-items: flex-end; min-width: 0; }
 .rec-charla-cabeza img { height: 110px; width: auto; flex: none; }
 .rec-charla-cabeza img.foto { width: 88px; object-fit: cover; object-position: 60% 30%; border-radius: 12px; }
@@ -651,3 +655,11 @@ button.score .vergraf { text-decoration: underline; text-underline-offset: 2px; 
 .rec-charla-ops .rec-b.mal { border-color: #e2725b; color: #f2a592; }
 .rec-charla-ops .rec-b:disabled { cursor: default; }
 #recCharlaNota { margin: 0; min-height: 1.4em; }
+
+/* Las tutoras: el episodio se lee como texto hablado; las notas, una lista sencilla. */
+.episodio { display: grid; gap: 10px; font-size: 18px; line-height: 1.5; }
+.episodio p { margin: 0; }
+.notas { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.notas li { border-top: 1px solid var(--line); padding-top: 10px; display: grid; gap: 4px; }
+.notas li p { margin: 0; }
+textarea.campo { resize: vertical; min-height: 5em; line-height: 1.4; }

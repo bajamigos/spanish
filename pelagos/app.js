@@ -1,7 +1,7 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=c26bda0805";
-import * as A from "./almacen.js?v=c26bda0805";
-import { abrirRecorrido } from "./recorrido.js?v=c26bda0805";
+import * as N from "./nucleo.js?v=0823cd67d4";
+import * as A from "./almacen.js?v=0823cd67d4";
+import { abrirRecorrido } from "./recorrido.js?v=0823cd67d4";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -294,6 +294,8 @@ const RUTAS = [
   [/^\/gramatica\/([a-z0-9]+)(\/bajo|\/mision)?$/, verNivel],
   [/^\/bitacora$/, verCalor],
   [/^\/leccion\/([a-z0-9-]+)$/, verLeccion],
+  [/^\/tutoras$/, verTutoras],
+  [/^\/tutoras\/(\d+)$/, verTutora],
   [/^\/vocabulario$/, verTarjetas],
   [/^\/vocabulario\/acervo$/, verLista],
   [/^\/vocabulario\/agregar$/, verAgregar],
@@ -771,14 +773,58 @@ vista.addEventListener("click", (ev) => {
   pintar({ conserva: true });
 });
 
+/** Busca un tema por lo que escribas: palabras del título (en inglés o en español), el número de la lección o su slug. En el orden de Kwiziq. */
+function buscarTemas(texto) {
+  const q = paraBuscar(texto).trim();
+  if (!q) return [];
+  const niveles = Object.keys(NIVELES);
+  const palabras = q.split(/\s+/).filter(Boolean);
+  const encaja = (t) => {
+    if (/^\d+$/.test(q)) return String(t.id) === q || String(t.id).startsWith(q);
+    const pajar = paraBuscar([t.titulo, t.titulo_kwiziq, t.slug, t.slug_kwiziq, t.regla].filter(Boolean).join(" "));
+    return palabras.every((w) => pajar.includes(w));
+  };
+  return P.temas.filter(encaja).sort((a, b) => niveles.indexOf(a.nivel) - niveles.indexOf(b.nivel) || a.orden - b.orden).slice(0, 40);
+}
+
+function pintarBusqueda(texto) {
+  const caja = $("bzRes");
+  if (!caja) return;
+  const q = texto.trim();
+  if (!q) { caja.innerHTML = ""; $("bzNota").textContent = ""; return; }
+  const temas = buscarTemas(q);
+  $("bzNota").textContent = temas.length ? (temas.length === 40 ? "Los primeros 40. Escribe más para afinar." : plural(temas.length, "tema", "temas") + ", en el orden de Kwiziq.") : "Nada con eso. Prueba otra palabra, o el número de la lección.";
+  caja.innerHTML = temas.map((t) => botonTema(t, { ingles: true, sub: `${esc(t.nivel)} · #${t.orden} · lección ${t.id}${t.leccion ? "" : " · sin lección aún"}${tutoraDe(t.id) ? " · tutora: " + esc(tutoraDe(t.id).tutora.split(",")[0]) : ""}` })).join("");
+}
+
 function verBiblioteca(o) {
+  const antes = o.conserva && $("bzBusca") ? $("bzBusca").value : "";
   poner(conFondo(`
   ${entradas("gramatica", "lecciones")}
   <section class="card">
     <h1 class="h">Lecciones de gramática</h1>
+    <form id="bzForma" class="forma" role="search" autocomplete="off">
+      <label class="small" for="bzBusca">Buscar una lección</label>
+      <input id="bzBusca" class="campo" type="search" value="${esc(antes)}" placeholder="Palabra del título, o número de lección" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="search">
+    </form>
+    <p class="small" id="bzNota" aria-live="polite"></p>
+    <div class="links" id="bzRes"></div>
     <p>Todos los temas, por nivel. Elige uno.</p>
     <div class="links">${resumenNiveles().map((n) => botonNivel(n, true)).join("")}</div>
-  </section>`), { titulo: "Lecciones de gramática · Pelagos", nav: "gramatica", conserva: o.conserva });
+  </section>
+  ${(P.tutoras || []).length ? `<section class="card">
+    <h2>Tutoras</h2>
+    <p>Una tutora por regla: su episodio y tus notas para cambiarlo. ${plural(P.tutoras.length, "tutora escrita", "tutoras escritas")}.</p>
+    <div class="go"><a class="ub grande" href="#/tutoras">Ver las tutoras</a></div>
+  </section>` : ""}`), { titulo: "Lecciones de gramática · Pelagos", nav: "gramatica", conserva: o.conserva });
+  $("bzBusca").addEventListener("input", () => pintarBusqueda($("bzBusca").value));
+  $("bzForma").addEventListener("submit", (ev) => {
+    ev.preventDefault();
+    const temas = buscarTemas($("bzBusca").value);
+    if (temas.length === 1 && temas[0].slug && temas[0].leccion) ir("/leccion/" + temas[0].slug);    // una sola: ve directo
+    else pintarBusqueda($("bzBusca").value);
+  });
+  if (antes) pintarBusqueda(antes);
 }
 
 function verNivel(o, clave, filtro) {
@@ -1582,6 +1628,12 @@ function pintarLeccion(tema, lec) {
     <div class="go"><button type="button" class="ub grande" data-kwiz='{"tipo":"tema","tema":${tema.id}}'>Empezar</button></div>
     <p class="small">Hay ${plural(banco, "pregunta revisada", "preguntas revisadas")} de este tema.</p>
   </section>` : ""}
+  ${tutoraDe(tema.id) ? `
+  <section class="card" id="tutora">
+    <h2>Tu tutora</h2>
+    <p>${esc(tutoraDe(tema.id).tutora)} te enseña esta regla a su manera.</p>
+    <div class="go"><a class="ub grande" href="#/tutoras/${tema.id}">Ir con ella</a></div>
+  </section>` : ""}
   <section class="card" id="enlaces">
     <h2>Esta lección en la red</h2>
     <p>Cada lección apunta a otras. Toca una y ves su regla sin salir de aquí.</p>
@@ -1602,6 +1654,81 @@ function pintarLeccion(tema, lec) {
       (i.n === 0 && tema.arranque_fuente ? `<p>Tu porcentaje es el arranque: viene del ${esc(tema.arranque_fuente)}, leído el ${fecha(tema.arranque_leido)}.</p>` : ""),
   });
   vista.dataset.leccion = tema.slug;
+}
+
+// ---------------------------------------------------------------- Las tutoras
+
+/** La tutora de un tema, si ya está escrita. */
+const tutoraDe = (id) => (P.tutoras || []).find((t) => t.leccion === id) || null;
+
+function verTutoras(o) {
+  const lista = (P.tutoras || []).slice().sort((a, b) => {
+    const ta = porId.get(a.leccion), tb = porId.get(b.leccion);
+    return (ta ? Object.keys(NIVELES).indexOf(ta.nivel) : 9) - (tb ? Object.keys(NIVELES).indexOf(tb.nivel) : 9) || ((ta && ta.orden) || 0) - ((tb && tb.orden) || 0);
+  });
+  poner(conFondo(`
+  ${entradas("gramatica", "lecciones")}
+  <section class="card">
+    <h1 class="h">Tutoras</h1>
+    <p>Una tutora por regla. Abre una, lee su episodio y, abajo, apunta lo que quieres que le cambie. Yo leo tus notas desde el repositorio.</p>
+    <div class="links">${lista.map((t) => {
+      const tema = porId.get(t.leccion), i = info(t.leccion), notas = N.notasSobre(E, "tutora:" + t.leccion).length;
+      return `<a class="tb" href="#/tutoras/${t.leccion}"><span class="lv">${esc(tema ? tema.nivel : "")}</span><span class="nm">${esc(t.tutora)}</span><span class="pc${esBajo(i.pct) ? " bajo" : ""}">${pct(i.pct)}</span><span class="sm">${esc(tema ? titulo(tema) : "Lección " + t.leccion)}${notas ? " · " + plural(notas, "nota", "notas") : ""}</span>${barra(i.pct)}</a>`;
+    }).join("")}</div>
+    ${lista.length ? "" : '<p class="small">Todavía no hay ninguna.</p>'}
+  </section>`), { titulo: "Tutoras · Pelagos", nav: "gramatica", conserva: o.conserva });
+}
+
+function verTutora(o, idTexto) {
+  const id = Number(idTexto);
+  const t = tutoraDe(id);
+  if (!t) return verNoExiste("Esa tutora todavía no está escrita.");
+  const tema = porId.get(id);
+  const sobre = "tutora:" + id;
+  const notas = N.notasSobre(E, sobre);
+  const borrador = o.conserva && $("ntTexto") ? $("ntTexto").value : "";
+  poner(`
+  <p class="crumb"><a href="#/gramatica">Gramática</a> · <a href="#/tutoras">Tutoras</a>${tema && tema.slug && tema.leccion ? ` · <a href="#/leccion/${esc(tema.slug)}">${esc(titulo(tema))}</a>` : ""}</p>
+  <section class="card">
+    <h1 class="h">${esc(t.tutora)}</h1>
+    <p class="small">${esc(tema ? tema.nivel + " · " + titulo(tema) : "Lección " + id)} · lección ${id}${t.estado ? " · " + esc(t.estado) : ""}</p>
+    <div class="rule"><span class="k">La regla en una línea</span><p>${esc(t.regla)}</p></div>
+  </section>
+  <section class="card" id="episodio">
+    <h2>El episodio</h2>
+    <div class="episodio" lang="es-MX">${esc(t.episodio).split(/\n\s*\n/).map((p) => `<p>${p.replace(/\n/g, "<br>")}</p>`).join("")}</div>
+    <h3>Ficha</h3>
+    <dl class="hvDatos">
+      ${t.frase ? `<div><dt>Frase clave</dt><dd>${esc(t.frase)}</dd></div>` : ""}
+      ${t.movimiento ? `<div><dt>Movimiento</dt><dd>${esc(t.movimiento)}</dd></div>` : ""}
+      ${t.set ? `<div><dt>Set</dt><dd>${esc(t.set)}</dd></div>` : ""}
+      ${t.arquetipo ? `<div><dt>Arquetipo</dt><dd lang="en">${esc(t.arquetipo)}</dd></div>` : ""}
+    </dl>
+  </section>
+  <section class="card" id="notas">
+    <h2>Tus notas</h2>
+    <p class="small">Lo que quieres que le cambie a este episodio. Cada nota se guarda en tu repositorio y yo la leo desde ahí.</p>
+    ${notas.length ? `<ul class="notas">${notas.map((n) => `<li><p>${esc(n.texto).replace(/\n/g, "<br>")}</p><p class="small">${esc(cuando(n.cuando))} · <button type="button" class="lk" data-notaq="${esc(n.id)}">Quitar</button></p></li>`).join("")}</ul>` : '<p class="small">Todavía no hay notas.</p>'}
+    <form id="ntForma" class="forma" autocomplete="off">
+      <label class="small" for="ntTexto">Nota nueva</label>
+      <textarea id="ntTexto" class="campo" rows="4" lang="es" maxlength="${N.NOTA_MAX}" placeholder="Por ejemplo: quita el chiste de las palmeras; di el nombre una vez más al final.">${esc(borrador)}</textarea>
+      <div class="go"><button type="submit" class="ub grande">Guardar la nota</button></div>
+    </form>
+  </section>`, { titulo: t.tutora + " · Tutoras · Pelagos", nav: "gramatica", conserva: o.conserva });
+  $("ntForma").addEventListener("submit", (ev) => {
+    ev.preventDefault();
+    const texto = $("ntTexto").value.replace(/\r/g, "").trim();
+    if (!texto) { $("ntTexto").focus(); return; }
+    A.apuntar({ t: "nota", id: N.nuevoId("nt"), sobre, texto: texto.slice(0, N.NOTA_MAX), cuando: new Date().toISOString() });
+    $("ntTexto").value = "";
+    recalcular();
+    pintar();
+  });
+  for (const b of vista.querySelectorAll("[data-notaq]")) b.addEventListener("click", () => {
+    A.apuntar({ t: "notaq", id: N.nuevoId("nq"), nota: b.dataset.notaq, cuando: new Date().toISOString() });
+    recalcular();
+    pintar();
+  });
 }
 
 // ---------------------------------------------------------------- El kwiz

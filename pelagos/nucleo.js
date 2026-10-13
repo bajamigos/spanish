@@ -279,6 +279,7 @@ export function calcular(paquete, sucesos) {
     });
   }
   const agregadas = [];        // las tarjetas que agregaste a mano: no vienen en el contenido, viven en tus sucesos
+  const notas = new Map();     // tus notas sobre las tutoras (y lo que sea): id -> { id, sobre, texto, cuando }; «notaq» quita una
 
   // Cuánto estudiaste cada día: lo que ya traías contado de antes (tu mazo de Anki) más lo que contestas aquí,
   // sea vocabulario o gramática. Es lo que pinta el mapa de calor.
@@ -323,6 +324,12 @@ export function calcular(paquete, sucesos) {
       const c = tarjetas.get(e.tarjeta);
       const cambio = c && limpiarCambio(e);
       if (cambio) c.cambio = { ...(c.cambio || {}), ...cambio };          // vale lo último que corregiste de cada renglón
+    } else if (e.t === "nota") {
+      const sobre = typeof e.sobre === "string" && /^[a-z]+:[A-Za-z0-9_-]{1,40}$/.test(e.sobre) ? e.sobre : null;
+      const texto = typeof e.texto === "string" ? e.texto.replace(/\r/g, "").trim().slice(0, NOTA_MAX) : "";
+      if (sobre && texto && !notas.has(e.id)) notas.set(e.id, { id: e.id, sobre, texto, cuando: e.cuando });
+    } else if (e.t === "notaq") {
+      if (typeof e.nota === "string") notas.delete(e.nota);
     } else if (e.t === "enfoque") enfoque = typeof e.nivel === "string" && e.nivel ? e.nivel : null;
     else if (e.t === "retirar" && e.p) retiradas.add(e.p);
     else if (e.t === "dejar" && e.kwiz) dejados.add(e.kwiz);
@@ -415,7 +422,7 @@ export function calcular(paquete, sucesos) {
     actividadGram.set(dia, (actividadGram.get(dia) || 0) + 1);
   }
 
-  return { temas, kwizzes, retiradas, ultimaVez, respuestas: respuestas.length, porTema, parametros, debe, fallada, enfoque, tarjetas, agregadas, actividad, actividadVoc, actividadGram };
+  return { temas, kwizzes, retiradas, ultimaVez, respuestas: respuestas.length, porTema, parametros, debe, fallada, enfoque, tarjetas, agregadas, actividad, actividadVoc, actividadGram, notas };
 }
 
 // ---------------------------------------------------------------- El mapa de calor
@@ -452,6 +459,12 @@ export function rachas(actividad, hoy = fechaLocal(new Date())) {
 }
 
 const TEXTO_MAX = 300;
+export const NOTA_MAX = 2000;
+
+/** Tus notas sobre algo («tutora:9542»), de la más vieja a la más nueva. */
+export function notasSobre(estado, sobre) {
+  return [...((estado && estado.notas) || new Map()).values()].filter((n) => n.sobre === sobre).sort((a, b) => ms(a) - ms(b));
+}
 /** Lo que se le puede corregir a una tarjeta: el frente y el reverso. Una tarjeta no lleva nada más; lo demás se tira. */
 function limpiarCambio(e) {
   const texto = (v) => (typeof v === "string" ? v.replace(/\s+/g, " ").trim().slice(0, TEXTO_MAX) : null);
