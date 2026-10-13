@@ -1,7 +1,8 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=73137c32a6";
-import * as A from "./almacen.js?v=73137c32a6";
-import { abrirRecorrido } from "./recorrido.js?v=73137c32a6";
+import * as N from "./nucleo.js?v=ebcb171c0d";
+import * as A from "./almacen.js?v=ebcb171c0d";
+import { abrirRecorrido } from "./recorrido.js?v=ebcb171c0d";
+import * as V from "./videos.js?v=ebcb171c0d";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1631,6 +1632,7 @@ function pintarLeccion(tema, lec) {
     <h2>Tu tutora</h2>
     <p>${esc(tutoraDe(tema.id).tutora)} te enseña esta regla a su manera.</p>
     <div class="go"><a class="ub grande" href="#/tutoras/${tema.id}">Ir con ella</a></div>
+    ${botonEscena(tema.id)}
   </section>` : ""}
   <section class="card" id="enlaces">
     <h2>Esta lección en la red</h2>
@@ -1652,12 +1654,50 @@ function pintarLeccion(tema, lec) {
       (i.n === 0 && tema.arranque_fuente ? `<p>Tu porcentaje es el arranque: viene del ${esc(tema.arranque_fuente)}, leído el ${fecha(tema.arranque_leido)}.</p>` : ""),
   });
   vista.dataset.leccion = tema.slug;
+  conectarEscenas(vista);
 }
 
 // ---------------------------------------------------------------- Las tutoras
 
 /** La tutora de un tema, si ya está escrita. */
 const tutoraDe = (id) => (P.tutoras || []).find((t) => t.leccion === id) || null;
+
+// La escena completa de una tutora: el video vive solo en el aparato (ver web/videos.js).
+const botonEscena = (id) => `<div class="go"><button type="button" class="ub grande" data-escena="${id}">Ver la escena completa</button></div><p class="small" data-escenaaviso="${id}" role="status"></p>`;
+function conectarEscenas(raiz) {
+  for (const b of raiz.querySelectorAll("[data-escena]")) b.addEventListener("click", () => verEscena(Number(b.dataset.escena)));
+}
+async function verEscena(id) {
+  const aviso = vista.querySelector(`[data-escenaaviso="${id}"]`);
+  const decir = (t) => { if (aviso) aviso.textContent = t; };
+  decir("Buscando el video…");
+  let f = await V.video(id, true);
+  if (!f && V.puedeCarpeta() && !(await V.nombreCarpeta())) {
+    try { await V.elegirCarpeta(); f = await V.video(id, true); } catch { /* no eligió */ }
+  }
+  if (!f) {
+    decir(V.puedeCarpeta()
+      ? "No encuentro su video en tu carpeta. Revisa que se llame con el número de la lección al principio, por ejemplo «" + id + " - Nombre.mp4». La carpeta se cambia en Ajustes, «Videos de las tutoras»."
+      : "Este aparato todavía no tiene su video. Pásalo por USB y luego, en Ajustes, «Videos de las tutoras», toca «Importar videos».");
+    return;
+  }
+  decir("");
+  let d = $("escenaHoja");
+  if (!d) {
+    d = document.createElement("dialog");
+    d.id = "escenaHoja"; d.className = "sheet escena";
+    d.setAttribute("aria-label", "La escena completa");
+    d.innerHTML = '<div class="in"><video controls autoplay playsinline></video><div class="acts"><button type="button" class="ub grande" id="escenaX">Cerrar</button></div></div>';
+    document.body.appendChild(d);
+    const cerrar = () => { const v = d.querySelector("video"); v.pause(); if (v.src) URL.revokeObjectURL(v.src); v.removeAttribute("src"); v.load(); if (d.open) d.close(); };
+    $("escenaX").addEventListener("click", cerrar);
+    d.addEventListener("cancel", (ev) => { ev.preventDefault(); cerrar(); });
+  }
+  const v = d.querySelector("video");
+  v.src = URL.createObjectURL(f);
+  if (d.showModal) d.showModal(); else d.setAttribute("open", "");
+  v.play().catch(() => {});
+}
 
 function verTutoras(o) {
   const lista = (P.tutoras || []).slice().sort((a, b) => {
@@ -1691,6 +1731,7 @@ function verTutora(o, idTexto) {
     <h1 class="h">${esc(t.tutora)}</h1>
     <p class="small">${esc(tema ? tema.nivel + " · " + titulo(tema) : "Lección " + id)} · lección ${id}${t.estado ? " · " + esc(t.estado) : ""}</p>
     <div class="rule"><span class="k">La regla en una línea</span><p>${esc(t.regla)}</p></div>
+    ${botonEscena(id)}
   </section>
   <section class="card" id="episodio">
     <h2>El episodio</h2>
@@ -1713,6 +1754,7 @@ function verTutora(o, idTexto) {
       <div class="go"><button type="submit" class="ub grande">Guardar la nota</button></div>
     </form>
   </section>`, { titulo: t.tutora + " · Tutoras · Pelagos", nav: "gramatica", conserva: o.conserva });
+  conectarEscenas(vista);
   $("ntForma").addEventListener("submit", (ev) => {
     ev.preventDefault();
     const texto = $("ntTexto").value.replace(/\r/g, "").trim();
@@ -2166,6 +2208,13 @@ function verAjustes(o) {
       <button type="button" class="ub" id="ajVideoQuitar"${videoFondo() ? "" : " hidden"}>Quitar el GIF o video</button></div>
     <p class="small" id="ajVideoAviso" role="status">Un GIF o un video (MP4 o WebM) que se repite sin sonido detrás del Tablero, Gramática y Vocabulario, en lugar de la foto. Mejor de menos de 10 MB. Con «También en lecciones y tarjetas» sale también arriba de cada lección, pregunta y tarjeta de vocabulario, y en las lecciones con tutora sale su clip. Sale en todos tus aparatos. En Limpio, o si tu aparato pide reducir el movimiento, se queda la foto.</p>
   </section>
+  <section class="card" id="ajEscenas">
+    <h2>Videos de las tutoras</h2>
+    <p id="ajEscenasHay">Revisando…</p>
+    <div class="go">${V.puedeCarpeta() ? '<button type="button" class="ub" id="ajEscenasCarpeta">Elegir carpeta</button>' : ""}
+      <label class="ub">Importar videos<input type="file" id="ajEscenasArch" accept="video/*,.mp4,.webm,.m4v,.mov" multiple hidden></label></div>
+    <p class="small" id="ajEscenasAviso" role="status">El video completo de cada tutora vive solo en tus aparatos, nunca en GitHub. Cada archivo empieza con el número de su lección, por ejemplo «6010 - Esperanza.mp4». En la computadora eliges tu carpeta «Pelagos videos» una vez. En el celular, pásala por USB y toca «Importar videos».</p>
+  </section>
   <section class="card" id="ajPremios">
     <h2>GIFs de los premios</h2>
     <p class="small">Cuando ganas un premio, tocas su dibujito en el Tablero y su GIF pasa al fondo. Lo vuelves a tocar y regresa el fondo de siempre.</p>
@@ -2253,6 +2302,26 @@ function verAjustes(o) {
       } catch (e) { aviso.textContent = e && e.message ? e.message : "No se pudo subir el GIF."; }
     });
   }
+  const escenasHay = async () => {
+    const c = await V.nombreCarpeta(), n = await V.cuantosImportados();
+    if ($("ajEscenasHay")) $("ajEscenasHay").textContent = [c ? "Carpeta: «" + c + "»." : "", n ? plural(n, "video guardado", "videos guardados") + " en este aparato." : ""].filter(Boolean).join(" ") || "Todavía no hay videos en este aparato.";
+  };
+  escenasHay();
+  if ($("ajEscenasCarpeta")) $("ajEscenasCarpeta").addEventListener("click", async () => {
+    try { await V.elegirCarpeta(); $("ajEscenasAviso").textContent = "Listo. Pelagos ya sabe dónde están tus videos."; } catch { /* no eligió */ }
+    escenasHay();
+  });
+  $("ajEscenasArch").addEventListener("change", async (ev) => {
+    const archivos = [...(ev.target.files || [])];
+    if (!archivos.length) return;
+    $("ajEscenasAviso").textContent = "Guardando " + plural(archivos.length, "video", "videos") + "…";
+    try {
+      const n = await V.importar(archivos);
+      $("ajEscenasAviso").textContent = n ? "Listo: " + plural(n, "video guardado", "videos guardados") + "." : "Ninguno empezaba con el número de su lección. Ejemplo: «6010 - Esperanza.mp4».";
+    } catch { $("ajEscenasAviso").textContent = "Este aparato no dejó guardar los videos. Puede que no tenga espacio."; }
+    ev.target.value = "";
+    escenasHay();
+  });
   $("ajVideoTodo").addEventListener("click", () => {
     const si = !movimientoEnTodo();
     guardar("pelagos.movimientoEnTodo", si ? "si" : "no");
