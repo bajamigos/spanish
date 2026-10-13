@@ -1,8 +1,8 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=35db4393ef";
-import * as A from "./almacen.js?v=35db4393ef";
-import { abrirRecorrido } from "./recorrido.js?v=35db4393ef";
-import * as V from "./videos.js?v=35db4393ef";
+import * as N from "./nucleo.js?v=3e0674e3a4";
+import * as A from "./almacen.js?v=3e0674e3a4";
+import { abrirRecorrido } from "./recorrido.js?v=3e0674e3a4";
+import * as V from "./videos.js?v=3e0674e3a4";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -2150,7 +2150,7 @@ function verResultado(o, kid) {
     return ` <span class="delta ${d > 0 ? "sube" : "baja"}">${d > 0 ? "+" : "−"}${Math.abs(d)}</span>`;
   };
   const renglon = (rotulo, ids, vacio) => `<h3>${rotulo}</h3>${ids.length ? `<ul class="rota">${nombres(ids)}</ul>` : `<p class="small">${vacio}</p>`}`;
-  poner(`
+  poner(conFondo(`
   ${cambios ? `
   <section class="card" id="rota">
     <h2>Tu plan de estudio Pelagos</h2>
@@ -2189,7 +2189,7 @@ function verResultado(o, kid) {
         <p class="why">${enlace}${E.retiradas.has(r.p) ? " · pregunta retirada, ya no cuenta" : ""}</p>
       </div>`;
     }).join("")}</div>
-  </section>`,
+  </section>`),
   { titulo: "Resultado del quiz · Pelagos", nav: "gramatica", conserva: o.conserva, pie: "<p>El número junto al porcentaje es cuánto se movió el tema en este quiz.</p>" });
 }
 
