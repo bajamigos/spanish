@@ -14,7 +14,7 @@
 // - Las fotos de los tutores viven en tablero/tutores/ (misma rama) y se bajan con la llave, como todo lo privado.
 // - De 6 am a 9 pm, horas de 12. Se desliza a los lados (o con las flechas) para cambiar de días.
 // - Todo lo que trae el archivo se escribe como texto, nunca como HTML.
-import * as A from "./almacen.js?v=661252a035";
+import * as A from "./almacen.js?v=3163e73b84";
 
 export const HORA0 = 6, HORA1 = 21, PX = 56;      // la cuadrícula: de 6 am a 9 pm, 56 px por hora
 const ATRAS = 7, ADELANTE = 13;                    // hasta dónde se puede deslizar, en días desde hoy
@@ -111,8 +111,11 @@ export function armarClases(L, ahora = new Date(), corr = 0) {
     // Los huecos libres solo cuentan si no chocan con una clase tuya y todavía no pasan.
     for (const x of L.libres) {
       if (!mismoDia(x.ini, d) || fin(x) <= ahora) continue;
-      if (eventos.some((c) => c.ini < fin(x) && x.ini < fin(c))) continue;
-      eventos.push({ ...x, clase: "libre", hecha: false, sigue: false, cuando: "" });
+      if (eventos.some((c) => c.clase !== "libre" && c.ini < fin(x) && x.ini < fin(c))) continue;
+      // Varios favoritos libres a la misma hora van en un solo bloque: sale el primero (el archivo los trae por tu orden).
+      const mismo = eventos.find((c) => c.clase === "libre" && c.ini.getTime() === x.ini.getTime());
+      if (mismo) { if (mismo.tutor !== x.tutor && !mismo.otros.includes(x.tutor)) mismo.otros.push(x.tutor); continue; }
+      eventos.push({ ...x, clase: "libre", hecha: false, sigue: false, cuando: "", otros: [] });
     }
     eventos.sort((a, b) => a.ini - b.ini);
     return { fecha: d, esHoy, nombre, corto: DIAS[d.getDay()], num: d.getDate(), eventos };
@@ -142,8 +145,8 @@ export function htmlClases(datos, ahora = new Date()) {
   const bloque = (e) => {
     const n = i++;
     const nombre = e.tutor.split(" ")[0];
-    const linea = e.clase === "libre" ? "libre" : hora12(e.ini);
-    const dicho = `${e.tutor}, ${hora12(e.ini)}${e.tema ? ", " + e.tema : ""}${e.hecha ? ", hecha" : e.clase === "libre" ? ", hueco libre" : e.sigue ? ", la que sigue" : ""}`;
+    const linea = e.clase === "libre" ? hora12(e.ini) + (e.otros.length ? ` · +${e.otros.length}` : "") : hora12(e.ini);
+    const dicho = `${e.tutor}, ${hora12(e.ini)}${e.tema ? ", " + e.tema : ""}${e.hecha ? ", hecha" : e.clase === "libre" ? `, hueco libre${e.otros?.length ? "; también " + e.otros.join(", ") : ""}` : e.sigue ? ", la que sigue" : ""}`;
     return `<button type="button" class="clB${e.clase ? " " + e.clase : ""}" data-top="${arriba(e.ini)}" data-cl="${n}" aria-label="${esc(dicho)}">
       ${e.foto ? `<img data-tutor="${esc(e.foto)}" alt="">` : `<span class="clIni" aria-hidden="true">${esc(nombre.slice(0, 1))}</span>`}
       <span class="clT"><span class="clN">${esc(nombre)}${e.hecha ? " ✓" : ""}</span><span class="clH">${esc(linea)}</span>${e.tema ? `<span class="clTema">${esc(e.tema)}</span>` : ""}</span></button>`;
@@ -231,6 +234,7 @@ function abrir(e) {
       <h2 id="hvT" tabindex="-1">${esc(e.tutor)}</h2>
       <p class="clCuando">${esc(dia)}, ${esc(hora12(e.ini))} – ${esc(hora12(fin(e)))}</p>
       <p class="clEstado">${esc(estado)}</p>
+      ${e.otros?.length ? `<p class="clOtros">También libres: ${esc(e.otros.join(", "))}</p>` : ""}
       ${e.tema ? `<p class="clFTema">${esc(e.tema)}</p>` : ""}
       ${e.leccion ? `<p class="clLeccion">Lección: <a href="${esc(e.leccion.url)}" target="_blank" rel="noopener noreferrer">${esc(e.leccion.titulo)}</a></p>` : ""}
     </div>

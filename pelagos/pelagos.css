@@ -741,6 +741,7 @@ dialog.sheet.escena { width: min(100%, 720px); max-height: 92%; }
 .clFicha h2 { margin: 6px 0 0; font-size: 24px; }
 .clCuando { font-size: 18px; }
 .clEstado { font-weight: 700; color: var(--ink-2); }
+.clOtros { font-size: 17px; font-weight: 600; color: var(--ambar); }
 .clFTema { font-size: 18px; font-weight: 700; text-wrap: balance; }
 .clLeccion { font-size: 17px; }
 .clLeccion a { color: var(--ink); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
