@@ -1,9 +1,9 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=8ae7269937";
-import * as A from "./almacen.js?v=8ae7269937";
-import { abrirRecorrido } from "./recorrido.js?v=8ae7269937";
-import * as V from "./videos.js?v=8ae7269937";
-import * as CL from "./clases.js?v=8ae7269937";
+import * as N from "./nucleo.js?v=08c0ba263c";
+import * as A from "./almacen.js?v=08c0ba263c";
+import { abrirRecorrido } from "./recorrido.js?v=08c0ba263c";
+import * as V from "./videos.js?v=08c0ba263c";
+import * as CL from "./clases.js?v=08c0ba263c";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -44,7 +44,7 @@ const QUIZ = "/gramatica/quiz";       // dónde vive el quiz de gramática
 const SECCIONES = {
   tablero: ["Tablero", [["hoy", "#/", "Hoy"], ["clases", "#/clases", "Clases"], ["bitacora", "#/bitacora", "Bitácora"]]],
   gramatica: ["Gramática", [["quiz", "#" + QUIZ, "Quiz"], ["lecciones", "#/gramatica", "Lecciones"], ["atlas", "#/gramatica/atlas", "Atlas"]]],
-  vocabulario: ["Vocabulario", [["quiz", "#/vocabulario", "Quiz"], ["lista", "#/vocabulario/acervo", "Acervo"], ["agregar", "#/vocabulario/agregar", "Agregar"]]],
+  vocabulario: ["Vocabulario", [["quiz", "#/vocabulario", "Quiz"], ["agregar", "#/vocabulario/agregar", "Agregar"], ["lista", "#/vocabulario/acervo", "Acervo"]]],
 };
 const MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
   "septiembre", "octubre", "noviembre", "diciembre"];
