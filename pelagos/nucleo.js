@@ -242,7 +242,7 @@ export function ordenar(sucesos) {
  * Sucesos: «kwiz» (empieza uno), «r» (una respuesta), «retirar» (pregunta mala), «dejar» (dejas un kwiz a medias),
  * «enfoque» (eliges un nivel para tu plan de estudio, o lo sueltas), «tj» (calificas una tarjeta),
  * «tjq» (quitas una tarjeta de tu vocabulario, o la devuelves), «tje» (le corriges el frente o el reverso a una tarjeta)
- * y «tjn» (agregas a mano una tarjeta nueva).
+ * «tjn» (agregas a mano una tarjeta nueva) y «ftj» (una foto se le presta a una tarjeta; ver fotoDeTarjeta).
  * Los de un tipo que no conoce los salta, así una versión vieja de la página no se rompe con sucesos nuevos.
  * Devuelve { temas, kwizzes, retiradas, ultimaVez, respuestas, parametros, tarjetas… }.
  */
@@ -268,6 +268,8 @@ export function calcular(paquete, sucesos) {
   // Las tarjetas. Cada una sube por la misma escalera de días que los temas. Una tarjeta que viene de otro
   // lado (tu mazo de antes) puede traer ya su escalón y su fecha; una nueva no trae nada.
   const tarjetas = new Map();
+  // La foto prestada a cada tarjeta: tarjeta -> { foto, cuando }. Vale el último préstamo.
+  const fotosTarjeta = new Map();
   for (const c of paquete.tarjetas || []) {
     const toca = typeof c.toca === "string" && /^\d{4}-\d{2}-\d{2}$/.test(c.toca) ? c.toca : null;
     // «repasos» y «aciertos»: lo que la tarjeta ya traía contado de tu mazo de antes. Solo sirven para su porcentaje.
@@ -330,6 +332,8 @@ export function calcular(paquete, sucesos) {
       if (sobre && texto && !notas.has(e.id)) notas.set(e.id, { id: e.id, sobre, texto, cuando: e.cuando });
     } else if (e.t === "notaq") {
       if (typeof e.nota === "string") notas.delete(e.nota);
+    } else if (e.t === "ftj") {
+      if (typeof e.tarjeta === "string" && typeof e.foto === "string" && /^[a-z0-9-]+\.jpg$/.test(e.foto)) fotosTarjeta.set(e.tarjeta, { foto: e.foto, cuando: e.cuando || "" });
     } else if (e.t === "enfoque") enfoque = typeof e.nivel === "string" && e.nivel ? e.nivel : null;
     else if (e.t === "retirar" && e.p) retiradas.add(e.p);
     else if (e.t === "dejar" && e.kwiz) dejados.add(e.kwiz);
@@ -422,7 +426,7 @@ export function calcular(paquete, sucesos) {
     actividadGram.set(dia, (actividadGram.get(dia) || 0) + 1);
   }
 
-  return { temas, kwizzes, retiradas, ultimaVez, respuestas: respuestas.length, porTema, parametros, debe, fallada, enfoque, tarjetas, agregadas, actividad, actividadVoc, actividadGram, notas };
+  return { temas, kwizzes, retiradas, ultimaVez, respuestas: respuestas.length, porTema, parametros, debe, fallada, enfoque, tarjetas, fotosTarjeta, agregadas, actividad, actividadVoc, actividadGram, notas };
 }
 
 // ---------------------------------------------------------------- El mapa de calor
@@ -841,4 +845,48 @@ export function nivelesConPreguntas(paquete, estado) {
   const cuenta = {};
   for (const t of temasCon(paquete, estado).keys()) cuenta[nivelDe.get(t)] = (cuenta[nivelDe.get(t)] || 0) + 1;
   return cuenta;
+}
+
+// ---------------------------------------------------------------- Fotos prestadas a las tarjetas
+
+/** Una tarjeta conserva su foto mientras toque en los próximos FOTO_DIAS días (o siga sin fecha). */
+export const FOTO_DIAS = 30;
+
+/**
+ * La foto de una tarjeta de vocabulario. Cada tarjeta «viva» tiene una foto propia que ninguna otra tarjeta viva tiene.
+ * Viva: no la quitaste y toca dentro de FOTO_DIAS días, o todavía no tiene fecha. Cuando se aleja, su foto regresa al montón.
+ * Si la tarjeta ya tuvo una foto y nadie vivo la tiene, se queda con la misma. Si no, toma una libre: primero las que
+ * nunca se han prestado, luego la que lleva más tiempo sin prestarse. Si todas están ocupadas, repite la de menos uso.
+ * Devuelve { foto, nueva }: «nueva» dice si hay que apuntar el préstamo («ftj»).
+ */
+export function fotoDeTarjeta(estado, idTarjeta, nombres, hoy = fechaLocal(new Date())) {
+  if (!nombres || !nombres.length) return { foto: null, nueva: false };
+  const disponibles = new Set(nombres);
+  const limite = sumarDias(hoy, FOTO_DIAS);
+  const prestamos = (estado && estado.fotosTarjeta) || new Map();
+  const viva = (id) => {
+    const s = estado.tarjetas && estado.tarjetas.get(id);
+    return !!s && !s.quitada && (!s.toca || s.toca <= limite);
+  };
+  // Quién tiene cada foto: entre las vivas, el préstamo más reciente gana.
+  const duenos = new Map(), ultimoUso = new Map();
+  for (const [id, p] of prestamos) {
+    if (!disponibles.has(p.foto)) continue;
+    if (!ultimoUso.has(p.foto) || p.cuando > ultimoUso.get(p.foto)) ultimoUso.set(p.foto, p.cuando);
+    if (id === idTarjeta || !viva(id)) continue;
+    const d = duenos.get(p.foto);
+    if (!d || p.cuando > d.cuando) duenos.set(p.foto, { id, cuando: p.cuando });
+  }
+  const mia = prestamos.get(idTarjeta);
+  if (mia && disponibles.has(mia.foto)) {
+    const d = duenos.get(mia.foto);
+    if (!d || d.cuando < mia.cuando) return { foto: mia.foto, nueva: false };
+  }
+  const libres = nombres.filter((n) => !duenos.has(n));
+  const azar = azarDe("foto#" + idTarjeta);
+  const nunca = libres.filter((n) => !ultimoUso.has(n));
+  if (nunca.length) return { foto: nunca[Math.floor(azar() * nunca.length)], nueva: true };
+  const pool = libres.length ? libres : nombres.slice();
+  pool.sort((a, b) => ((ultimoUso.get(a) || "") < (ultimoUso.get(b) || "") ? -1 : (ultimoUso.get(a) || "") > (ultimoUso.get(b) || "") ? 1 : a < b ? -1 : 1));
+  return { foto: pool[0], nueva: true };
 }

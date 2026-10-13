@@ -1,8 +1,8 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=1a9b99ff9a";
-import * as A from "./almacen.js?v=1a9b99ff9a";
-import { abrirRecorrido } from "./recorrido.js?v=1a9b99ff9a";
-import * as V from "./videos.js?v=1a9b99ff9a";
+import * as N from "./nucleo.js?v=04d2751c1f";
+import * as A from "./almacen.js?v=04d2751c1f";
+import { abrirRecorrido } from "./recorrido.js?v=04d2751c1f";
+import * as V from "./videos.js?v=04d2751c1f";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -56,7 +56,8 @@ let porId = new Map();        // tema por número
 let porSlug = new Map();      // tema por nombre de lección
 let preguntas = new Map();    // pregunta por id
 let fotos = new Map();        // portada por nombre (Reef)
-let fotosExpanse = new Map(); // portada por nombre (ambiente Expanse)
+let fotosExpanse = new Map(); // portada por nombre (ambiente Expanse; ya no se ofrece en Ajustes, pero las lecciones viejas pueden nombrarlas)
+let fotosVocab = new Map();   // fotos de las tarjetas de vocabulario (contenido/img/vocab), prestadas una por tarjeta
 let retratos = new Map();     // retrato de Andrea por nombre
 // El video de fondo del Tablero (Andrea bailando, por ejemplo): vive en escenas/inicio/ de la rama de avance. null = todavía no se sabe.
 let videosFondo = null;
@@ -79,6 +80,7 @@ function ponerPaquete(paquete) {
   preguntas = new Map(P.preguntas.map((q) => [q.id, q]));
   fotos = new Map((P.fotos || []).map((f) => [f.nombre, f]));
   fotosExpanse = new Map((P.fotosExpanse || []).map((f) => [f.nombre, f]));
+  fotosVocab = new Map((P.fotosVocab || []).map((f) => [f.nombre, f]));
   retratos = new Map((P.retratos || []).map((f) => [f.nombre, f]));
   fotosTour = new Map((P.fotosTour || []).map((f) => [f.nombre, f]));
   fotosGan = new Map((P.fotosGanimedes || []).map((f) => [f.nombre, f]));
@@ -241,7 +243,7 @@ function vestir(raiz) {
   for (const e of raiz.querySelectorAll("[data-x]")) e.style.left = e.dataset.x + "%";
   for (const img of raiz.querySelectorAll("img[data-foto]")) {
     const n = img.dataset.foto;
-    (fotosExpanse.has(n) ? A.foto(fotosExpanse.get(n), "expanse") : A.foto(fotos.get(n))).then((u) => {
+    (img.dataset.vocab ? A.foto(fotosVocab.get(n), "vocab") : fotosExpanse.has(n) ? A.foto(fotosExpanse.get(n), "expanse") : A.foto(fotos.get(n))).then((u) => {
       if (!img.isConnected) return;
       if (u) img.src = u;
       else if (img.closest(".fondo")) { img.closest(".hoy").classList.remove("confoto"); document.body.classList.remove("conandrea"); }     // sin foto de fondo, la página se acomoda sin ella
@@ -1130,8 +1132,7 @@ function verTarjetas(o) {
   const cola = enAdelanto ? restan : dia.pendientes;
   const antes = E.tarjetas.get(cola[0]);
   const c = N.tarjetaVista(tarjetas.get(cola[0]), antes);
-  const juego = juegoDeFotos();
-  const foto = juego.length ? juego[Math.floor(N.azarDe(c.id + "#" + hoy + "#" + antes.n)() * juego.length)] : null;
+  const foto = fotoDeLaTarjeta(c.id, hoy, antes);
   const hechas = enAdelanto ? adelanto.ids.length - restan.length : dia.hechasHoy;
   const total = enAdelanto ? adelanto.ids.length : dia.hechasHoy + dia.pendientes.length;
   const faltan = (enAdelanto ? "Adelanto: " : "") + (cola.length === 1 ? (enAdelanto ? "falta 1" : "Falta 1") : (enAdelanto ? "faltan " : "Faltan ") + cola.length);
@@ -1141,7 +1142,7 @@ function verTarjetas(o) {
   <section class="kw tj">
     <header class="hero kwh tjh">
       <div class="ratio"></div>
-      ${imagenDeArriba(foto && foto.nombre)}
+      ${foto ? `<img data-foto="${esc(foto.nombre)}"${foto.vocab ? ' data-vocab="1"' : ""} alt="">` : ""}
       <div class="over">
         <p class="lead"><span id="tjFaltan">${faltan}</span><span id="tjAviso">Dilo en español</span></p>
         <div class="score"><div class="track" role="img" aria-label="Llevas ${hechas} de ${total}"><i data-w="${100 * hechas / total}"></i></div></div>
@@ -1226,10 +1227,10 @@ function palabras() {
   return mazo().map((c) => { const s = E.tarjetas.get(c.id); return { id: c.id, c: N.tarjetaVista(c, s), s, pct: N.aciertoDeTarjeta(s) }; });
 }
 
-/** El ambiente de las fotos (Ajustes): «reef» o «expanse». Se guarda en este aparato. Sin fotos Expanse, Reef. */
+/** El ambiente de las fotos (Ajustes): «reef» o «limpio». Se guarda en este aparato. Expanse se juntó con Reef
+ *  (pedido del 13-Oct-2026): quien lo tenía guardado ve Reef. */
 function ambiente() {
-  const a = guardado("pelagos.ambiente");
-  return a === "limpio" ? "limpio" : a === "expanse" && fotosExpanse.size ? "expanse" : "reef";
+  return guardado("pelagos.ambiente") === "limpio" ? "limpio" : "reef";
 }
 /** Las portadas del ambiente de este aparato. */
 function juegoDeFotos() { const a = ambiente(); return a === "limpio" ? [] : a === "expanse" ? (P.fotosExpanse || []) : (P.fotos || []); }
@@ -1239,6 +1240,23 @@ function fotoDeLeccion(nombre) {
   if (!nombre || ambiente() !== "expanse") return nombre;
   const i = Math.max(0, (P.fotos || []).findIndex((f) => f.nombre === nombre)), lista = P.fotosExpanse;
   return lista[i % lista.length].nombre;
+}
+
+/**
+ * La foto de una tarjeta de vocabulario: en Reef, la que tiene prestada (siempre la misma mientras la tarjeta toque
+ * en los próximos 30 días; ver N.fotoDeTarjeta). Sin fotos de vocabulario, una portada Reef al azar. En Limpio, ninguna.
+ * Las tarjetas llevan siempre foto fija, aunque el fondo en movimiento esté prendido.
+ */
+function fotoDeLaTarjeta(id, hoy, antes) {
+  if (ambiente() === "limpio") return null;
+  if (fotosVocab.size) {
+    const r = N.fotoDeTarjeta(E, id, [...fotosVocab.keys()], hoy);
+    if (!r.foto) return null;
+    if (r.nueva) { A.apuntar({ t: "ftj", id: N.nuevoId("ft"), tarjeta: id, foto: r.foto, cuando: new Date().toISOString() }); recalcular(); }
+    return { nombre: r.foto, vocab: true };
+  }
+  const juego = juegoDeFotos();
+  return juego.length ? juego[Math.floor(N.azarDe(id + "#" + hoy + "#" + antes.n)() * juego.length)] : null;
 }
 
 /** La portada del día: cambia cada día. */
@@ -2241,8 +2259,8 @@ function verAjustes(o) {
   </section>
   <section class="card" id="ajAmbiente">
     <h2>Ambiente</h2>
-    <nav class="jump ${fotosExpanse.size ? "tres" : "dos"}" aria-label="Ambiente de las fotos">
-      <button type="button" data-ambiente-ir="reef">Reef</button>${fotosExpanse.size ? '<button type="button" data-ambiente-ir="expanse">Expanse</button>' : ""}<button type="button" data-ambiente-ir="limpio">Limpio</button>
+    <nav class="jump dos" aria-label="Ambiente de las fotos">
+      <button type="button" data-ambiente-ir="reef">Reef</button><button type="button" data-ambiente-ir="limpio">Limpio</button>
     </nav>
     <p class="small">Cambia las fotos de todas las páginas: las portadas Reef, el mundo de The Expanse, o Limpio, sin fotos ni dibujos, solo negro o blanco según tu modo de color. Se guarda en este aparato.</p>
   </section>
