@@ -1,8 +1,8 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=3e0674e3a4";
-import * as A from "./almacen.js?v=3e0674e3a4";
-import { abrirRecorrido } from "./recorrido.js?v=3e0674e3a4";
-import * as V from "./videos.js?v=3e0674e3a4";
+import * as N from "./nucleo.js?v=d98df24b68";
+import * as A from "./almacen.js?v=d98df24b68";
+import { abrirRecorrido } from "./recorrido.js?v=d98df24b68";
+import * as V from "./videos.js?v=d98df24b68";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -589,7 +589,7 @@ function cuadro(nombre, valor, de, unidad, estado, hecho, enlace = "", sello = n
  * Reef: el retrato de Andrea del día (el que dice el tablero), o la portada del día si no hay. Expanse: la portada Expanse del día.
  * Devuelve { html, hay }: el <div class="fondo"> y si hay foto (para la clase «confoto»).
  */
-// El logo de Pelagos (la medusa cerebro) va encima de la foto del día, chiquito, en la esquina de arriba a la izquierda (su opción 4).
+// El logo de Pelagos (la medusa cerebro) va encima del fondo, en la esquina de abajo a la derecha: tapa la marca que traen algunos loops.
 const LOGO = `<img class="logoFondo" src="logo.png" alt="Pelagos" width="760" height="519">`;
 function fondoDelDia(respaldo = true) {
   if (ambiente() === "limpio") return { hay: false, html: "" };

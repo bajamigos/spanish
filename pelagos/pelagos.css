@@ -318,7 +318,7 @@ body.conandrea { --ink-2: #1c1c1c; --ink-3: #333333; --bar-bg: rgba(0,0,0,0.16);
 .hoy.confoto .fondo { display: block; position: sticky; top: 0; z-index: 0; margin-inline: -16px; }
 .hoy.confoto .fondo img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: center top; background: var(--card); }
 .hoy.confoto .fondo video { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: center top; background: var(--card); }
-.hoy.confoto .fondo img.logoFondo { position: absolute; z-index: 1; left: 1.5%; top: 1%; width: 36%; height: auto; aspect-ratio: auto; object-fit: contain; background: none; pointer-events: none;
+.hoy.confoto .fondo img.logoFondo { position: absolute; z-index: 1; right: 1.5%; bottom: 1%; width: 26%; height: auto; aspect-ratio: auto; object-fit: contain; background: none; pointer-events: none;
   filter: drop-shadow(0 2px 6px rgba(0,0,0,.65)) drop-shadow(0 0 18px rgba(0,0,0,.35)); }
 .hoy.confoto .fondo::after { content: ""; position: absolute; inset: auto 0 0 0; height: 30%; background: linear-gradient(to bottom, transparent, var(--page)); }
 .hoy.confoto .sobre { margin-top: -20%; gap: 18px; }
