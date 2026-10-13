@@ -1,9 +1,9 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=943eacb9cb";
-import * as A from "./almacen.js?v=943eacb9cb";
-import { abrirRecorrido } from "./recorrido.js?v=943eacb9cb";
-import * as V from "./videos.js?v=943eacb9cb";
-import * as CL from "./clases.js?v=943eacb9cb";
+import * as N from "./nucleo.js?v=5ed19fe9f0";
+import * as A from "./almacen.js?v=5ed19fe9f0";
+import { abrirRecorrido } from "./recorrido.js?v=5ed19fe9f0";
+import * as V from "./videos.js?v=5ed19fe9f0";
+import * as CL from "./clases.js?v=5ed19fe9f0";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1430,6 +1430,26 @@ function verAgregar(o) {
 const hojaV = $("hojaV");
 const REPASOS_A_LA_VISTA = 26;
 
+// La hoja de una palabra lleva de fondo la foto de Reef de esa tarjeta (la misma del quiz).
+// Una tarjeta quitada solo enseña la foto que ya tenía; no se le presta una nueva.
+function ponerFondoPalabra(id, s, hoy) {
+  hojaV.querySelectorAll(".hvFondo").forEach((x) => x.remove());
+  hojaV.classList.remove("conFoto");
+  if (ambiente() === "limpio") return;
+  let foto = null;
+  if (s.quitada) {
+    const p = E.fotosTarjeta && E.fotosTarjeta.get(id);
+    if (p && fotosVocab.has(p.foto)) foto = { nombre: p.foto, vocab: true };
+  } else foto = fotoDeLaTarjeta(id, hoy, { n: 0 });
+  if (!foto) return;
+  const capa = document.createElement("div");
+  capa.className = "hvFondo";
+  capa.setAttribute("aria-hidden", "true");
+  capa.innerHTML = `<img data-foto="${esc(foto.nombre)}"${foto.vocab ? ' data-vocab="1"' : ""} alt="">`;
+  hojaV.prepend(capa);
+  hojaV.classList.add("conFoto");
+}
+
 function abrirPalabra(id) {
   const cruda = tarjetas.get(id), s = E && E.tarjetas.get(id);
   if (!cruda || !s) return;
@@ -1468,6 +1488,7 @@ function abrirPalabra(id) {
     </div>
     <p id="hvSeguro" hidden>¿La quito de tu vocabulario? Ya no sale en tu quiz. <button type="button" class="lk" id="hvSi">Sí, quítala</button> · <button type="button" class="lk" id="hvNo">No</button></p>
     ${formaPalabra(c, true)}`;
+  ponerFondoPalabra(id, s, hoy);
   vestir(hojaV);
   activarGrafica(serieV, "gV");
   const editar = (si) => { $("hvForma").hidden = !si; $("hvActos").hidden = si; $("hvSeguro").hidden = true; if (si) $("hvEs").focus(); };

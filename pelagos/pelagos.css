@@ -740,3 +740,14 @@ dialog.sheet.escena { width: min(100%, 720px); max-height: 92%; }
 .clFicha h2 { margin: 6px 0 0; font-size: 24px; }
 .clCuando { font-size: 18px; }
 .clEstado { font-weight: 700; color: var(--ink-2); }
+
+/* ---- Hoja de una palabra con su foto de Reef de fondo ---- */
+dialog.sheet.conFoto { overflow: hidden; padding: 0; display: flex; flex-direction: column; }
+dialog.sheet.conFoto:not([open]) { display: none; }
+.sheet.conFoto > .in { position: relative; z-index: 1; overflow: auto; min-height: 0;
+  padding: 18px 16px calc(18px + env(safe-area-inset-bottom, 0px)); }
+.hvFondo { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.hvFondo img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; display: block; }
+.hvFondo::after { content: ""; position: absolute; inset: 0;
+  background: linear-gradient(to bottom, color-mix(in srgb, var(--page) 35%, transparent), color-mix(in srgb, var(--page) 78%, transparent) 30%, color-mix(in srgb, var(--page) 88%, transparent)); }
+.sheet.conFoto .ex .es, .sheet.conFoto .ex .en { text-shadow: 0 1px 6px var(--page); }
