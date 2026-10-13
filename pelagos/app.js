@@ -1,8 +1,8 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=66d75f084b";
-import * as A from "./almacen.js?v=66d75f084b";
-import { abrirRecorrido } from "./recorrido.js?v=66d75f084b";
-import * as V from "./videos.js?v=66d75f084b";
+import * as N from "./nucleo.js?v=35db4393ef";
+import * as A from "./almacen.js?v=35db4393ef";
+import { abrirRecorrido } from "./recorrido.js?v=35db4393ef";
+import * as V from "./videos.js?v=35db4393ef";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -2138,15 +2138,19 @@ function verResultado(o, kid) {
   const temas = [...new Set(filas.map((f) => f.r.tema))].map((id) => porId.get(id)).filter(Boolean);
   const igual = JSON.stringify({ tipo: k.tipo, cuaderno: k.cuaderno, tema: k.tema });
   const cambios = N.cambiosDeLista(P, E, kid);
-  const nombres = (ids) => ids.map((id) => porId.get(id)).filter(Boolean).map((t) => `<li>${esc(titulo(t))}</li>`).join("");
+  const nombres = (ids) => ids.map((id) => porId.get(id)).filter(Boolean).map((t) => {
+    const tu = tutoraDe(t.id);
+    return `<li>${esc(titulo(t))}${tu ? ` <span class="tutoraDe">· ${esc(tu.tutora.split(",")[0])}</span>` : ""}</li>`;
+  }).join("");
+  /** Cuánto se movió el tema en este quiz, junto a su porcentaje: «+2.6» o «−16.7». */
+  const movio = (antes, despues) => {
+    if (antes === null || antes === undefined || despues === null || despues === undefined) return "";
+    const d = Math.round((despues - antes) * 10) / 10;
+    if (!d) return ` <span class="delta">±0</span>`;
+    return ` <span class="delta ${d > 0 ? "sube" : "baja"}">${d > 0 ? "+" : "−"}${Math.abs(d)}</span>`;
+  };
   const renglon = (rotulo, ids, vacio) => `<h3>${rotulo}</h3>${ids.length ? `<ul class="rota">${nombres(ids)}</ul>` : `<p class="small">${vacio}</p>`}`;
   poner(`
-  <section class="card">
-    <h1 class="h">${k.bien} de ${k.total}</h1>
-    <p>${TIPOS_KWIZ[k.tipo] || "Quiz"} · ${cuando(k.terminado)}</p>
-    ${barra(k.total ? 100 * k.bien / k.total : 0, " gorda")}
-    <div class="go"><button type="button" class="ub grande" data-kwiz='${esc(igual)}'>${k.tipo === "lista" ? "Otro quiz de tu plan" : "Otro quiz igual"}</button><a class="ub" href="#/">Tablero</a></div>
-  </section>
   ${cambios ? `
   <section class="card" id="rota">
     <h2>Tu plan de estudio Pelagos</h2>
@@ -2156,13 +2160,19 @@ function verResultado(o, kid) {
     <p class="small">Sale el tema que aciertas. El que fallas se queda hasta que lo aciertes dos veces seguidas.</p>
   </section>` : ""}
   <section class="card">
+    <h1 class="h">${k.bien} de ${k.total}</h1>
+    <p>${TIPOS_KWIZ[k.tipo] || "Quiz"} · ${cuando(k.terminado)}</p>
+    ${barra(k.total ? 100 * k.bien / k.total : 0, " gorda")}
+    <div class="go"><button type="button" class="ub grande" data-kwiz='${esc(igual)}'>${k.tipo === "lista" ? "Otro quiz de tu plan" : "Otro quiz igual"}</button><a class="ub" href="#/">Tablero</a></div>
+  </section>
+  <section class="card">
     <h2>Cómo se movieron tus temas</h2>
     <div class="links">${temas.map((t) => {
       const c = N.cambioDeTema(E, kid, t.id), i = info(t.id);
       const abre = t.slug && t.leccion ? `<a class="tb" href="#/leccion/${esc(t.slug)}">` : `<button type="button" class="tb" data-l="${t.id}">`;
       return `${abre}<span class="lv">${esc(t.nivel)}</span><span class="nm">${esc(titulo(t))}</span>
-        <span class="pc${esBajo(c.despues) ? " bajo" : ""}">${pct(c.despues)}</span>
-        <span class="sm">${c.de ? `${c.bien} de ${c.de} bien · ` : ""}antes ${pct(c.antes)}${i.toca ? ` · toca el ${fecha(i.toca)}` : ""}</span>
+        <span class="pc${esBajo(c.despues) ? " bajo" : ""}">${pct(c.despues)}${movio(c.antes, c.despues)}</span>
+        ${c.de || i.toca ? `<span class="sm">${[c.de ? `${c.bien} de ${c.de} bien` : "", i.toca ? `toca el ${fecha(i.toca)}` : ""].filter(Boolean).join(" · ")}</span>` : ""}
         ${barra(c.despues)}${t.slug && t.leccion ? "</a>" : "</button>"}`;
     }).join("")}</div>
   </section>
@@ -2180,7 +2190,7 @@ function verResultado(o, kid) {
       </div>`;
     }).join("")}</div>
   </section>`,
-  { titulo: "Resultado del quiz · Pelagos", nav: "gramatica", conserva: o.conserva, pie: "<p>«Antes» es tu porcentaje justo antes de este quiz.</p>" });
+  { titulo: "Resultado del quiz · Pelagos", nav: "gramatica", conserva: o.conserva, pie: "<p>El número junto al porcentaje es cuánto se movió el tema en este quiz.</p>" });
 }
 
 // ---------------------------------------------------------------- Ajustes

@@ -278,6 +278,10 @@ ol.pasos b { color: var(--ink); font-style: normal; }
 .enfoque .nv[aria-pressed="true"] span { color: var(--tab-ink); }
 .enfoque .nv:disabled { opacity: 0.45; cursor: default; }
 ul.rota { margin: 0; padding-left: 22px; display: grid; gap: 4px; font-size: 16.5px; color: var(--ink); }
+ul.rota .tutoraDe { color: var(--ink-3); }
+.tb .pc .delta { font-size: 13px; font-weight: 600; margin-left: 4px; color: var(--ink-3); }
+.tb .pc .delta.sube { color: var(--verde); }
+.tb .pc .delta.baja { color: var(--rojo); }
 .pair.rq .row { grid-template-columns: 46px minmax(0, 1fr); }
 .pair.rq .fq { font-size: 17px; font-weight: 600; color: var(--ink); text-decoration: none; }
 
