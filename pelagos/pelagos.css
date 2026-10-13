@@ -310,7 +310,7 @@ body.conandrea { --ink-2: #1c1c1c; --ink-3: #333333; --bar-bg: rgba(0,0,0,0.16);
 .hoy .sobre > * { min-width: 0; }
 .card p.fechaHoy { font-size: 19px; font-weight: 700; color: var(--ink); }
 .card p.fechaHoy::first-letter { text-transform: uppercase; }
-#arranque { grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; }
+
 .ub.redondo { width: 44px; min-height: 44px; padding: 0; border-radius: 50%; }
 .ub.redondo svg { width: 22px; height: 22px; }
 .hoy.confoto .ub.redondo { background: var(--vidrio-2); color: var(--ink); border-color: var(--vidrio-borde); box-shadow: none; }

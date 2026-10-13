@@ -1,9 +1,9 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=5ed19fe9f0";
-import * as A from "./almacen.js?v=5ed19fe9f0";
-import { abrirRecorrido } from "./recorrido.js?v=5ed19fe9f0";
-import * as V from "./videos.js?v=5ed19fe9f0";
-import * as CL from "./clases.js?v=5ed19fe9f0";
+import * as N from "./nucleo.js?v=8ae7269937";
+import * as A from "./almacen.js?v=8ae7269937";
+import { abrirRecorrido } from "./recorrido.js?v=8ae7269937";
+import * as V from "./videos.js?v=8ae7269937";
+import * as CL from "./clases.js?v=8ae7269937";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -662,7 +662,6 @@ function cargarVideosFondo() {
 }
 function verInicio(o) {
   const niveles = resumenNiveles();
-  const abierto = N.kwizAbierto(E);
   const hoy = N.fechaLocal(new Date());
   const T = N.leerTablero(A.tablero());
   const deHoy = !!T && T.dia === hoy;
@@ -676,7 +675,6 @@ function verInicio(o) {
     <h2>${esc(c.nombre)}</h2>
     <div class="links">${c.temas.map((id) => porId.get(id)).filter(Boolean).map((t) => botonTema(t)).join("")}</div>
   </section>`).join("");
-  const lista = N.listaDeEstudio(P, E);
 
   // ---- Lo que cuenta Pelagos solo: los quizzes de gramática de hoy y las palabras que tocan hoy y siguen pendientes (la meta es cero).
   const kw = N.kwizzesDelDia(E, hoy), metaKw = N.KWIZZES_AL_DIA;
@@ -733,16 +731,7 @@ function verInicio(o) {
     ${fondo.html}
     <div class="sobre">
       ${entradas("tablero", "hoy")}
-      <section class="card" id="arranque">
-        <h1 class="sr">Tablero</h1>
-        <p class="fechaHoy">${esc(diaLargo(hoy))}</p>
-        <button type="button" class="ub redondo" id="hoyRecargar" aria-label="Recargar Pelagos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.500 12a7.500 7.500 0 1 1-2.300-5.400" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round"/><path d="M18.500 2.800v4.700h-4.700" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-        <div class="go">${abierto
-          ? `<a class="ub grande" href="#${QUIZ}/${esc(abierto.id)}">Seguir el quiz</a>`
-          : lista.temas.length
-            ? `<button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Pelagos Quiz</button>`
-            : `<a class="ub grande" href="#${QUIZ}">Ver los quizzes</a>`}</div>
-      </section>
+      <h1 class="sr">Tablero</h1>
       ${deHoy && T.frase ? `<section class="card" id="frase"><h2 class="sr">Andrea dice</h2><p class="frase">${esc(T.frase)}</p></section>` : ""}
       ${checkin}
       ${medidas}
@@ -753,8 +742,6 @@ function verInicio(o) {
     </div>
   </div>`,
   { titulo: "Tablero · Pelagos", nav: "inicio", conserva: o.conserva });
-  // Recargar trae lo último de todo: tu avance, el tablero y la página misma. En la app instalada no hay otro botón para eso.
-  $("hoyRecargar").addEventListener("click", () => window.location.reload());
 }
 
 // ---------------------------------------------------------------- Misiones del Recorrido de Ganímedes
