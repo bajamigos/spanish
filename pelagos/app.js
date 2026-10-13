@@ -1,9 +1,9 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=08c0ba263c";
-import * as A from "./almacen.js?v=08c0ba263c";
-import { abrirRecorrido } from "./recorrido.js?v=08c0ba263c";
-import * as V from "./videos.js?v=08c0ba263c";
-import * as CL from "./clases.js?v=08c0ba263c";
+import * as N from "./nucleo.js?v=2c335eb465";
+import * as A from "./almacen.js?v=2c335eb465";
+import { abrirRecorrido } from "./recorrido.js?v=2c335eb465";
+import * as V from "./videos.js?v=2c335eb465";
+import * as CL from "./clases.js?v=2c335eb465";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1729,10 +1729,47 @@ function pintarLeccion(tema, lec, conserva = false) {
 const tutoraDe = (id) => (P.tutoras || []).find((t) => t.leccion === id) || null;
 
 // La escena completa de una tutora: el video vive solo en el aparato (ver web/videos.js).
-const botonEscena = (id) => `<div class="go"><button type="button" class="ub grande" data-escena="${id}">Ver la escena completa</button></div><p class="small" data-escenaaviso="${id}" role="status"></p>`;
+// «Escuchar»: el episodio de la tutora en voz alta, con la voz que trae el aparato (prueba del 13-Oct-2026; luego vendrán los MP3).
+const hayVoz = () => typeof window.speechSynthesis !== "undefined" && typeof window.SpeechSynthesisUtterance !== "undefined";
+const nombreCorto = (t) => t.tutora.split(",")[0];
+const botonEscena = (id) => {
+  const t = tutoraDe(id);
+  const oir = t && t.episodio && hayVoz() ? `<button type="button" class="ub grande" data-escuchar="${id}" aria-pressed="false">Escuchar a ${esc(nombreCorto(t))}</button>` : "";
+  return `<div class="go"><button type="button" class="ub grande" data-escena="${id}">Ver la escena completa</button>${oir}</div><p class="small" data-escenaaviso="${id}" role="status"></p>`;
+};
 function conectarEscenas(raiz) {
   for (const b of raiz.querySelectorAll("[data-escena]")) b.addEventListener("click", () => verEscena(Number(b.dataset.escena)));
+  for (const b of raiz.querySelectorAll("[data-escuchar]")) b.addEventListener("click", () => escuchar(b));
 }
+/** La mejor voz en español del aparato: primero de México, luego de Estados Unidos o Latinoamérica, luego cualquiera. */
+function vozEspanol() {
+  const voces = window.speechSynthesis.getVoices().filter((v) => /^es/i.test(v.lang));
+  const orden = [/es[-_]MX/i, /es[-_]US/i, /es[-_]419/i, /es[-_](CO|AR|CL|PE)/i, /^es/i];
+  for (const r of orden) { const v = voces.filter((x) => r.test(x.lang)).sort((a, b) => (b.localService === false) - (a.localService === false))[0]; if (v) return v; }
+  return null;
+}
+function callar() { if (hayVoz()) window.speechSynthesis.cancel(); }
+function escuchar(b) {
+  const id = Number(b.dataset.escuchar), t = tutoraDe(id);
+  const aviso = vista.querySelector(`[data-escenaaviso="${id}"]`);
+  const ponerBoton = (sonando) => { b.textContent = sonando ? "Parar" : "Escuchar a " + nombreCorto(t); b.setAttribute("aria-pressed", sonando ? "true" : "false"); };
+  if (b.getAttribute("aria-pressed") === "true") { callar(); ponerBoton(false); return; }
+  callar();
+  const voz = vozEspanol();
+  if (aviso) aviso.textContent = voz ? `Voz del aparato: ${voz.name}.` : "Este aparato no trae voz en español; va con la que tenga.";
+  // Un pedazo por párrafo: algunos navegadores cortan las frases muy largas.
+  const pedazos = t.episodio.split(/\n\s*\n/).map((x) => x.replace(/\s+/g, " ").trim()).filter(Boolean);
+  pedazos.forEach((texto, i) => {
+    const u = new SpeechSynthesisUtterance(texto);
+    u.lang = voz ? voz.lang : "es-MX";
+    if (voz) u.voice = voz;
+    u.rate = 0.95;
+    if (i === pedazos.length - 1) u.onend = () => ponerBoton(false);
+    window.speechSynthesis.speak(u);
+  });
+  ponerBoton(true);
+}
+if (hayVoz()) window.speechSynthesis.getVoices();      // algunos navegadores cargan las voces hasta que se piden
 async function verEscena(id) {
   const aviso = vista.querySelector(`[data-escenaaviso="${id}"]`);
   const decir = (t) => { if (aviso) aviso.textContent = t; };
@@ -2515,7 +2552,7 @@ document.addEventListener("keydown", (ev) => {
   if (teclas[tecla]) { ev.preventDefault(); teclas[tecla](); }
 });
 
-window.addEventListener("hashchange", () => { cerrarHoja(); enPreguntaDe = null; enTarjetaDe = null; pintar(); });
+window.addEventListener("hashchange", () => { callar(); cerrarHoja(); enPreguntaDe = null; enTarjetaDe = null; pintar(); });
 
 // ---------------------------------------------------------------- Guardado: el renglón de abajo
 
