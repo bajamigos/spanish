@@ -1,8 +1,8 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=efe090177c";
-import * as A from "./almacen.js?v=efe090177c";
-import { abrirRecorrido } from "./recorrido.js?v=efe090177c";
-import * as V from "./videos.js?v=efe090177c";
+import * as N from "./nucleo.js?v=009d7d7e76";
+import * as A from "./almacen.js?v=009d7d7e76";
+import { abrirRecorrido } from "./recorrido.js?v=009d7d7e76";
+import * as V from "./videos.js?v=009d7d7e76";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -63,6 +63,9 @@ let videosFondo = null;
 let fotosGan = new Map();     // panorama del Recorrido de Ganímedes (modo Expanse)
 let fotosTour = new Map();    // panorama del Recorrido por nombre
 let recorridoVivo = null;     // el visor 360 abierto, si lo hay
+// El Recorrido está escondido por ahora (lo pidió el 13-Oct-2026): sin pestaña, sin lucecitas de misión, y #/recorrido lleva al Tablero.
+// El código sigue aquí; para que vuelva, pon true y regresa su botón a index.html.
+const CON_RECORRIDO = false;
 let tarjetas = new Map();     // tarjeta por id
 let enPregunta = false;       // hay una pregunta en pantalla: no se repinta debajo de ti
 let turnoDePintar = 0;        // para que una lección que llega tarde no pise otra página
@@ -160,8 +163,23 @@ function botonTema(t, { nivel = true, sub = "", anchoNombre = false, ingles = fa
     barra(i.pct) + cierra;
 }
 
-/** Si algún tema ya tiene una misión escrita. */
-function tieneMision(t) { return misionesDeTema(t.id).length > 0; }
+// Video completo y loop de la tutora: se revisan solos y las marcas se llenan conforme llegan.
+let videosAqui = new Set(), videosRevisados = 0;
+/** Si la tutora del tema ya tiene su video completo: en este aparato, o anotado en su ficha (campo `archivo`). */
+function tieneVideo(t) { const tu = tutoraDe(t.id); return videosAqui.has(t.id) || !!(tu && tu.archivo); }
+/** Si la tutora del tema ya tiene loop subido (escenas/tutora-<tema>/). */
+function tieneLoop(t) { return A.leccionesConLoop().has(t.id); }
+/** Busca otra vez qué videos hay en este aparato (cada medio minuto como mucho). Si cambió algo, vuelve a pintar la página. */
+function revisarVideos() {
+  if (Date.now() - videosRevisados < 30000) return;
+  videosRevisados = Date.now();
+  const donde = window.location.hash;
+  V.cuales().then((s) => {
+    const cambio = s.size !== videosAqui.size || [...s].some((id) => !videosAqui.has(id));
+    videosAqui = s;
+    if (cambio && window.location.hash === donde) pintar({ conserva: true });
+  }).catch(() => {});
+}
 
 /** Cuántas preguntas revisadas (y no retiradas) tiene cada tema. */
 function bancoPorTema() {
@@ -170,12 +188,14 @@ function bancoPorTema() {
   return m;
 }
 
-/** Las tres marcas de un tema: lección, misión y preguntas listas. Se leen igual con lector de pantalla. */
+/** Las cinco marcas de un tema: lección, tutora (con su nombre), video completo, loop y preguntas. Se leen igual con lector de pantalla. */
 function marcas(t, banco) {
   const n = banco.get(t.id) || 0;
-  const una = (si, texto) => `<span class="marca${si ? " si" : ""}">${si ? ICONO_SI : ICONO_NO}${texto}</span>`;
-  const dicho = `Lección: ${t.leccion ? "sí" : "no"}. Misión: ${tieneMision(t) ? "sí" : "no"}. Preguntas: ${n ? n : "ninguna"}.`;
-  return `<span class="marcas" role="img" aria-label="${dicho}">${una(!!t.leccion, "Lección")}${una(tieneMision(t), "Misión")}${una(n > 0, n ? plural(n, "pregunta", "preguntas") : "Preguntas")}</span>`;
+  const tu = tutoraDe(t.id), nombre = tu ? tu.tutora.split(",")[0] : "";
+  const video = tieneVideo(t), loop = tieneLoop(t);
+  const una = (si, texto) => `<span class="marca${si ? " si" : ""}">${si ? ICONO_SI : ICONO_NO}${esc(texto)}</span>`;
+  const dicho = `Lección: ${t.leccion ? "sí" : "no"}. Tutora: ${nombre || "todavía no"}. Video completo: ${video ? "sí" : "no"}. Loop: ${loop ? "sí" : "no"}. Preguntas: ${n ? n : "ninguna"}.`;
+  return `<span class="marcas" role="img" aria-label="${esc(dicho)}">${una(!!t.leccion, "Lección")}${una(!!tu, nombre || "Tutora")}${una(video, "Video completo")}${una(loop, "Loop")}${una(n > 0, n ? plural(n, "pregunta", "preguntas") : "Preguntas")}</span>`;
 }
 
 // ---------------------------------------------------------------- Poner una página
@@ -301,7 +321,7 @@ const RUTAS = [
   [/^\/vocabulario\/acervo$/, verLista],
   [/^\/vocabulario\/agregar$/, verAgregar],
   [/^\/ajustes$/, verAjustes],
-  [/^\/recorrido(?:\/([a-z0-9-]+))?$/, verRecorrido],
+  [/^\/recorrido(?:\/([a-z0-9-]+))?$/, (o, id) => (CON_RECORRIDO ? verRecorrido(o, id) : ir("/", true))],
   // Las direcciones de antes siguen llevando a su página.
   [/^\/kwiz((?:\/[A-Za-z0-9_-]+){0,2})$/, (o, resto) => ir(QUIZ + (resto || ""), true)],
   [/^\/tarjetas$/, () => ir("/vocabulario", true)],
@@ -482,7 +502,7 @@ function verLlave(aviso = "") {
 // ---------------------------------------------------------------- Inicio y biblioteca
 
 function resumenNiveles() {
-  const filas = new Map(Object.keys(NIVELES).map((n) => [n, { nivel: n, temas: 0, bajo: 0, suma: 0, con: 0, lecciones: 0, misiones: 0, preguntas: 0 }]));
+  const filas = new Map(Object.keys(NIVELES).map((n) => [n, { nivel: n, temas: 0, bajo: 0, suma: 0, con: 0, lecciones: 0, tutoras: 0, videos: 0, loops: 0, preguntas: 0 }]));
   const banco = bancoPorTema();
   for (const t of P.temas) {
     const f = filas.get(t.nivel);
@@ -492,7 +512,9 @@ function resumenNiveles() {
     if (i.pct !== null) { f.suma += i.pct; f.con++; }
     if (esBajo(i.pct)) f.bajo++;
     if (t.leccion) f.lecciones++;
-    if (tieneMision(t)) f.misiones++;
+    if (tutoraDe(t.id)) f.tutoras++;
+    if (tieneVideo(t)) f.videos++;
+    if (tieneLoop(t)) f.loops++;
     if (banco.get(t.id)) f.preguntas++;
   }
   return [...filas.values()].filter((f) => f.temas).map((f) => ({ ...f, promedio: f.con ? f.suma / f.con : null }));
@@ -502,7 +524,7 @@ function botonNivel(n, conLecciones, corto = false) {
   return `<a class="tb" href="#/gramatica/${n.nivel.toLowerCase()}">
     <span class="lv">${n.nivel}</span><span class="nm">${NIVELES[n.nivel]}</span><span class="pc">${pct(n.promedio)}</span>
     ${corto ? "" : `<span class="sm">${plural(n.temas, "tema", "temas")} · ${n.bajo} bajo ${meta()}%</span>`}
-    ${corto || !conLecciones ? "" : `<span class="sm listos">Listos: ${n.lecciones} con lección · ${n.misiones} con misión · ${n.preguntas} con preguntas</span>`}
+    ${corto || !conLecciones ? "" : `<span class="sm listos">Listos: ${n.lecciones} con lección · ${n.tutoras} con tutora · ${n.videos} con video completo · ${n.loops} con loop · ${n.preguntas} con preguntas</span>`}
     ${barra(n.promedio)}</a>`;
 }
 
@@ -800,6 +822,7 @@ function pintarBusqueda(texto) {
 }
 
 function verBiblioteca(o) {
+  revisarVideos();
   const antes = o.conserva && $("bzBusca") ? $("bzBusca").value : "";
   poner(conFondo(`
   ${entradas("gramatica", "lecciones")}
@@ -832,7 +855,7 @@ function verBiblioteca(o) {
 function verNivel(o, clave, filtro) {
   const nivel = clave.toUpperCase();
   if (!NIVELES[nivel]) return verNoExiste();
-  const soloBajo = filtro === "/bajo", soloMision = filtro === "/mision";
+  const soloBajo = filtro === "/bajo", soloMision = CON_RECORRIDO && filtro === "/mision";
   const cola = filtro || "";
   const st = estadoMisiones();
   const conMision = (t) => misionesDeTema(t.id).some((m) => st.get(m.id).activa);
@@ -840,6 +863,7 @@ function verNivel(o, clave, filtro) {
   const bajo = suyos.filter((t) => esBajo(info(t.id).pct)).length;
   const categorias = [];
   const banco = bancoPorTema();
+  revisarVideos();
   for (const t of suyos) {
     const i = info(t.id);
     if (soloBajo && !esBajo(i.pct)) continue;
@@ -858,11 +882,11 @@ function verNivel(o, clave, filtro) {
   <header class="card">
     <h1 class="h">${nivel} · ${NIVELES[nivel]}</h1>
     <p>${suyos.length} temas. ${bajo} bajo ${meta()}%.</p>
-    <p class="small">Listos: ${suyos.filter((t) => t.leccion).length} con lección · ${suyos.filter((t) => tieneMision(t)).length} con misión · ${suyos.filter((t) => banco.get(t.id)).length} con preguntas.</p>
-    <nav class="jump tres" aria-label="Qué temas mostrar">
-      <a href="#/gramatica/${clave}"${filtro ? "" : ' aria-current="page"'}>Todos</a>
+    <p class="small">Listos: ${suyos.filter((t) => t.leccion).length} con lección · ${suyos.filter((t) => tutoraDe(t.id)).length} con tutora · ${suyos.filter(tieneVideo).length} con video completo · ${suyos.filter(tieneLoop).length} con loop · ${suyos.filter((t) => banco.get(t.id)).length} con preguntas.</p>
+    <nav class="jump ${CON_RECORRIDO ? "tres" : "dos"}" aria-label="Qué temas mostrar">
+      <a href="#/gramatica/${clave}"${soloBajo || soloMision ? "" : ' aria-current="page"'}>Todos</a>
       <a href="#/gramatica/${clave}/bajo"${soloBajo ? ' aria-current="page"' : ""}>Bajo ${meta()}%</a>
-      <a href="#/gramatica/${clave}/mision"${soloMision ? ' aria-current="page"' : ""}>Misión activa</a>
+      ${CON_RECORRIDO ? `<a href="#/gramatica/${clave}/mision"${soloMision ? ' aria-current="page"' : ""}>Misión activa</a>` : ""}
     </nav>
   </header>
   ${categorias.length ? categorias.map((c) => `
@@ -871,14 +895,14 @@ function verNivel(o, clave, filtro) {
     <div class="links">${c.temas.map((t) => {
       const i = info(t.id);
       const sub = marcas(t, banco) + (i.n ? ` <span class="resp">${plural(i.n, "respuesta", "respuestas")}</span>` : "");
-      const luz = luzMision(t, st);
+      const luz = CON_RECORRIDO ? luzMision(t, st) : "";
       const boton = botonTema(t, { nivel: false, anchoNombre: true, ingles: true, sub });
       return luz ? `<div class="tb-mision">${boton}${luz}</div>` : boton;
     }).join("")}</div>
   </details>`).join("") : `<section class="card"><p>${soloMision ? `Ningún tema de ${nivel} tiene una misión prendida. Prende una con la lucecita que sale junto a sus temas.` : `Ningún tema de ${nivel} está bajo ${meta()}%.`}</p></section>`}`),
   {
     titulo: nivel + " · Lecciones de gramática · Pelagos", nav: "gramatica", conserva: o.conserva,
-    pie: "<p>La lucecita junto a un tema prende o apaga su misión en el Recorrido de Ganímedes.</p><p>Toca una categoría para abrirla. Los temas en inglés todavía no tienen lección propia: llevan el nombre que les da Kwiziq.</p><p>Un porcentaje sin número de respuestas es tu arranque de Kwiziq.</p><p>Cada tema lleva tres marcas: lección, misión y preguntas. La marca llena es que ya está lista; la punteada, que falta.</p>",
+    pie: (CON_RECORRIDO ? "<p>La lucecita junto a un tema prende o apaga su misión en el Recorrido de Ganímedes.</p>" : "") + "<p>Toca una categoría para abrirla. Los temas en inglés todavía no tienen lección propia: llevan el nombre que les da Kwiziq.</p><p>Un porcentaje sin número de respuestas es tu arranque de Kwiziq.</p><p>Cada tema lleva cinco marcas: lección, tutora (con su nombre), video completo, loop y preguntas. La marca llena es que ya está lista; la punteada, que falta. El video completo cuenta lo que hay en este aparato (tu carpeta «Pelagos videos» o los importados); el loop, lo que ya está subido. Se llenan solas conforme llegan.</p>",
   });
 }
 

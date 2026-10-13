@@ -8,11 +8,17 @@
 // - Lo que contestas entra primero a una fila en este aparato y de ahí sube.
 //   Sin internet, la fila espera y sube sola cuando vuelve.
 // - La llave vive solo en este navegador y solo viaja a la dirección de CONFIG.api.
-import { CONFIG } from "./config.js?v=efe090177c";
+import { CONFIG } from "./config.js?v=009d7d7e76";
 
 const CLAVES = { llave: "pelagos.llave", aparato: "pelagos.aparato", fila: "pelagos.fila." };      // la fila: una clave por suceso
 const RUTA_SUCESOS = /^sucesos\/([A-Za-z0-9_-]+)\/(\d{4}-\d{2})\.jsonl$/;
 const RUTA_TABLERO = "tablero/hoy.json";
+// Un loop de tutora: un GIF o video en escenas/tutora-<lección>/ de la rama de avance.
+const RUTA_LOOP = /^escenas\/tutora-(\d+)\/[a-z0-9-]+\.(gif|mp4|webm)$/;
+let conLoop = new Set();        // lecciones cuya tutora ya tiene loop; se renueva en cada sincronización
+
+/** Las lecciones cuya tutora ya tiene loop (lo que vio la última sincronización, más lo que subiste desde aquí). */
+export const leccionesConLoop = () => conLoop;
 
 export class Fallo extends Error {
   /** tipo: «llave», «permiso», «falta», «red», «github», «choque», «paquete» */
@@ -284,6 +290,8 @@ export async function cargarLocal() {
     const a = await kvLeer("ev:" + camino);
     if (a && typeof a.texto === "string") archivos.set(camino, a);
   }
+  const loops = await kvLeer("loops");
+  if (Array.isArray(loops)) conLoop = new Set(loops.filter(Number.isInteger));
   const t = await kvLeer("tablero");
   tableroActual = t && typeof t.sha === "string" && t.datos && typeof t.datos === "object" ? t : null;
   if (!guardado || !guardado.datos) return null;
@@ -321,6 +329,8 @@ export function sincronizar() {
         const blobs = ((await t.json()).tree || []).filter((x) => x.type === "blob");
         arbol = blobs.filter((x) => RUTA_SUCESOS.test(x.path));
         hojaTablero = blobs.find((x) => x.path === RUTA_TABLERO) || null;
+        conLoop = new Set(blobs.map((x) => RUTA_LOOP.exec(x.path)).filter(Boolean).map((m) => Number(m[1])));
+        await kvPoner("loops", [...conLoop]);
       }
       else if (t.status !== 404 && t.status !== 409) throw new Fallo("github", "GitHub contestó algo raro (" + t.status + ").", t.status);
 
@@ -622,6 +632,8 @@ export async function escenaSubir(sala, archivo, desc = "") {
   });
   if (r.status === 404) throw new Fallo("falta", "No se pudo guardar: falta la rama «" + CONFIG.ramaAvance + "» o la llave no deja escribir.", 404);
   if (r.status !== 200 && r.status !== 201) throw new Fallo("github", "GitHub no quiso guardar la escena (" + r.status + ").", r.status);
+  const loop = RUTA_LOOP.exec("escenas/" + sala + "/" + nombre);
+  if (loop) { conLoop = new Set([...conLoop, Number(loop[1])]); kvPoner("loops", [...conLoop]).catch(() => {}); }
   const lista = await escribirIndiceEscenas(sala, (items) => {
     const orden = items.reduce((m, x) => Math.max(m, x.orden || 0), 0) + 1;
     items.push({ archivo: nombre, tipo, desc: String(desc || "").slice(0, 600), orden });

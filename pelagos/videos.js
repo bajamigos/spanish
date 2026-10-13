@@ -82,3 +82,24 @@ export async function video(id, conPermiso = true) {
   try { const f = await leer("video:" + id); if (f) return f; } catch { /* sigue con la carpeta */ }
   try { return await deLaCarpeta(id, conPermiso); } catch { return null; }
 }
+
+/** Las lecciones que ya tienen su video completo en este aparato: importados y, si ya diste permiso, los de tu carpeta. Nunca pide permiso. */
+export async function cuales() {
+  const ids = new Set();
+  try {
+    for (const k of (await pedir("readonly", (c) => c.getAllKeys())) || []) {
+      const m = /^video:(\d+)$/.exec(String(k));
+      if (m) ids.add(Number(m[1]));
+    }
+  } catch { /* sin base todavía */ }
+  try {
+    const h = await leer("carpeta");
+    if (h && (await h.queryPermission({ mode: "read" })) === "granted") {
+      for await (const [nombre, e] of h.entries()) {
+        const id = e.kind === "file" ? leccionDelNombre(nombre) : null;
+        if (id) ids.add(id);
+      }
+    }
+  } catch { /* la carpeta ya no está o no deja leer */ }
+  return ids;
+}
