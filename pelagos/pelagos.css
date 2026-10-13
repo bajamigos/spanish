@@ -679,3 +679,62 @@ dialog.sheet.escena { width: min(100%, 720px); max-height: 92%; }
 .hoy.contutora .over { background: none; padding-bottom: 14px; }
 .hoy.contutora .rule, .hoy.contutora .back { position: static; margin: 0 14px 14px; }
 .hoy.contutora .crumb { text-shadow: 0 1px 6px var(--page); }
+
+/* ---- Clases (Tablero, entrada «Clases»): tus clases de Worldsacross, tres días a la vez. Ver web/clases.js.
+   Al fondo, una chica Reef distinta cada día, fija a toda la ventana y centrada en la cadera. */
+:root { --clBloque: rgba(255,255,255,0.72); --clLinea: rgba(0,0,0,0.12); --clHoy: rgba(0,0,0,0.04); }
+:root[data-tema="oscuro"] { --clBloque: rgba(255,255,255,0.16); --clLinea: rgba(255,255,255,0.12); --clHoy: rgba(255,255,255,0.06); }
+.hoy.clases.confoto .fondo { position: fixed; inset: 0; margin: 0; z-index: 0; }
+.hoy.clases.confoto .fondo img:not(.logoFondo) { width: 100%; height: 100%; aspect-ratio: auto; object-fit: cover; object-position: 50% 78%; }
+.hoy.clases.confoto .fondo::after { inset: 0; height: auto; background: rgba(0,0,0,0.22); }
+:root:not([data-tema="oscuro"]) .hoy.clases.confoto .fondo::after { background: rgba(255,255,255,0.12); }
+.hoy.clases.confoto .sobre { margin-top: 0; }
+.clFila { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 10px; }
+.clRango { font-size: 17px; font-weight: 600; color: var(--ink); }
+.clNav { display: flex; gap: 6px; }
+.clNav .ub { min-width: 44px; padding-inline: 12px; font-size: 18px; }
+.clNav .ub:disabled { opacity: 0.4; }
+.clHoras b { font-size: 26px; font-variant-numeric: tabular-nums; }
+.clSigue { font-size: 16px; }
+.clSigue b { color: var(--c3); }
+.clCal { padding: 0 6px 22px 0; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+.clDias, .clCuerpo { display: grid; grid-template-columns: 44px repeat(3, minmax(0, 1fr)); }
+.clDias { text-align: center; padding-block: 10px 6px; }
+.clDias small { display: block; font-size: 13px; color: var(--ink-3); }
+.clDias b { display: inline-grid; place-items: center; width: 36px; height: 36px; font-size: 20px; }
+.clDias .esHoy small { color: var(--ink); font-weight: 700; }
+.clDias .esHoy b { border-radius: 50%; background: var(--tab); color: var(--tab-ink); text-shadow: none; }
+.clCuerpo { position: relative; height: 840px; background-image: repeating-linear-gradient(to bottom, var(--clLinea) 0, var(--clLinea) 1px, transparent 1px, transparent 56px); }
+.clHorasCol { position: relative; font-size: 12px; color: var(--ink-3); }
+.clHorasCol span { position: absolute; right: 6px; line-height: 16px; white-space: nowrap; }
+.clCol { position: relative; border-left: 1px solid var(--clLinea); }
+.clCol.hoyCol { background: var(--clHoy); }
+.clAhora { position: absolute; left: 0; right: 0; height: 2px; background: var(--rojo); z-index: 2; pointer-events: none; }
+.clAhora::before { content: ""; position: absolute; left: -5px; top: -5px; width: 12px; height: 12px; border-radius: 50%; background: var(--rojo); }
+.clB { position: absolute; left: 2px; right: 2px; height: 47px; box-sizing: border-box; display: flex; align-items: center; gap: 5px; padding: 0 4px; overflow: hidden;
+  border: 1px solid var(--vidrio-borde); border-radius: 10px; background: var(--clBloque); color: var(--ink); font: inherit; text-align: left; cursor: pointer; text-shadow: var(--halo); }
+.clB:focus-visible { outline: 2px solid var(--ink); outline-offset: 1px; z-index: 3; }
+.clB img, .clIni { width: 26px; height: 26px; border-radius: 50%; flex: none; object-fit: cover; }
+.clIni { display: grid; place-items: center; background: var(--tab); color: var(--tab-ink); font-size: 14px; font-weight: 700; text-shadow: none; }
+.clT { display: flex; flex-direction: column; min-width: 0; line-height: 1.15; }
+.clN { font-size: 14px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.clH { font-size: 12px; color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.clB.sigue { border: 2px solid var(--c3); background: rgba(255,145,48,0.26); }
+.clB.hecha { background: transparent; border-color: var(--clLinea); }
+.clB.hecha img { filter: grayscale(1); opacity: 0.75; }
+.clB.hecha .clN { color: var(--ink-3); }
+.clB.libre { border: 2px dashed var(--ink-2); background: transparent; }
+.clB.libre .clN { color: var(--ambar); }
+.clClave { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; font-size: 14px; }
+.clClave i { display: inline-block; width: 14px; height: 14px; margin-right: 6px; vertical-align: -2px; border-radius: 4px; border: 1px solid var(--vidrio-borde); background: var(--clBloque); }
+.clClave i.sigue { border: 2px solid var(--c3); background: rgba(255,145,48,0.4); }
+.clClave i.libre { border: 2px dashed var(--ink-2); background: none; }
+.clClave i.hecha { background: none; border-color: var(--ink-3); }
+.clFicha { display: grid; justify-items: center; gap: 4px; text-align: center; }
+.clFicha img, .clIni.grande { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 4px solid var(--ink); font-size: 44px; }
+.clFicha.sigue img { border-color: var(--c3); }
+.clFicha.hecha img { border-color: var(--si); }
+.clFicha.libre img { border-color: var(--ambar); }
+.clFicha h2 { margin: 6px 0 0; font-size: 24px; }
+.clCuando { font-size: 18px; }
+.clEstado { font-weight: 700; color: var(--ink-2); }

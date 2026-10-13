@@ -1,8 +1,9 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=04d2751c1f";
-import * as A from "./almacen.js?v=04d2751c1f";
-import { abrirRecorrido } from "./recorrido.js?v=04d2751c1f";
-import * as V from "./videos.js?v=04d2751c1f";
+import * as N from "./nucleo.js?v=8e449f4678";
+import * as A from "./almacen.js?v=8e449f4678";
+import { abrirRecorrido } from "./recorrido.js?v=8e449f4678";
+import * as V from "./videos.js?v=8e449f4678";
+import * as CL from "./clases.js?v=8e449f4678";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -41,7 +42,7 @@ const QUIZ = "/gramatica/quiz";       // dónde vive el quiz de gramática
 // Cada sección trae dos entradas, que van como dos botones arriba de sus páginas.
 // Regla del acomodo: cada materia trae cómo se estudia y cómo se ve; lo que es de todo va en el Tablero.
 const SECCIONES = {
-  tablero: ["Tablero", [["hoy", "#/", "Hoy"], ["bitacora", "#/bitacora", "Bitácora"]]],
+  tablero: ["Tablero", [["hoy", "#/", "Hoy"], ["clases", "#/clases", "Clases"], ["bitacora", "#/bitacora", "Bitácora"]]],
   gramatica: ["Gramática", [["quiz", "#" + QUIZ, "Quiz"], ["lecciones", "#/gramatica", "Lecciones"], ["atlas", "#/gramatica/atlas", "Atlas"]]],
   vocabulario: ["Vocabulario", [["quiz", "#/vocabulario", "Quiz"], ["lista", "#/vocabulario/acervo", "Acervo"], ["agregar", "#/vocabulario/agregar", "Agregar"]]],
 };
@@ -316,6 +317,7 @@ const RUTAS = [
   [/^\/gramatica\/nodos$/, () => ir("/gramatica/atlas", true)],     // los Nodos ahora se llaman Atlas
   [/^\/gramatica\/([a-z0-9]+)(\/bajo|\/mision)?$/, verNivel],
   [/^\/bitacora$/, verCalor],
+  [/^\/clases$/, verClases],
   [/^\/leccion\/([a-z0-9-]+)$/, verLeccion],
   [/^\/tutoras$/, verTutoras],
   [/^\/tutoras\/(\d+)$/, verTutora],
@@ -701,7 +703,7 @@ function verInicio(o) {
     if (tarjetas.size && /anki/i.test(m.nombre)) continue;        // con tarjetas propias, las de fuera ya no se enseñan
     const hecho = m.de === 0 ? m.valor === 0 : m.valor >= m.de;
     const falta = Math.round((m.de - m.valor) * 10) / 10;
-    cuadros.push(cuadro(m.nombre, m.valor, m.de, m.unidad, hecho ? "Cumplido" : m.de === 0 ? "Meta: cero" : `Faltan ${falta}`, hecho, "", sello("medida:" + m.nombre)));
+    cuadros.push(cuadro(m.nombre, m.valor, m.de, m.unidad, hecho ? "Cumplido" : m.de === 0 ? "Meta: cero" : `Faltan ${falta}`, hecho, /^clase/i.test(m.nombre) ? "#/clases" : "", sello("medida:" + m.nombre)));
   }
   // Solo se dice de cuándo son los números de fuera si no son de hoy.
   const medidas = `
@@ -1257,6 +1259,18 @@ function fotoDeLaTarjeta(id, hoy, antes) {
   }
   const juego = juegoDeFotos();
   return juego.length ? juego[Math.floor(N.azarDe(id + "#" + hoy + "#" + antes.n)() * juego.length)] : null;
+}
+
+/** Tus clases de Worldsacross, tres días a la vez (ver web/clases.js). Al fondo, una chica Reef distinta cada día. */
+function verClases(o) {
+  if (!o.conserva) CL.aHoy();
+  // De las fotos Reef de vocabulario (cientos), una por día; sin ellas, las portadas Reef.
+  const vocab = fotosVocab.size > 0, lista = ambiente() === "limpio" ? [] : vocab ? [...fotosVocab.keys()] : (P.fotos || []).map((f) => f.nombre), hoy = new Date();
+  const foto = lista.length ? lista[(Math.floor(Date.UTC(hoy.getFullYear(), hoy.getMonth(), hoy.getDate()) / 86400000) * 37 + 3) % lista.length] : null;
+  const fondo = foto ? `<div class="fondo"><img data-foto="${esc(foto)}"${vocab ? ' data-vocab="1"' : ""} alt="">${LOGO}</div>` : "";
+  poner(`<div class="hoy clases${foto ? " confoto" : ""}">${fondo}<div class="sobre">${entradas("tablero", "clases")}${CL.htmlClases(A.clases())}</div></div>`,
+    { titulo: "Clases · Pelagos", nav: "inicio", conserva: o.conserva });
+  CL.montar(vista, () => pintar({ conserva: true }));
 }
 
 /** La portada del día: cambia cada día. */

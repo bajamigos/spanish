@@ -5,14 +5,17 @@
 //       sucesos/<aparato>/<año-mes>.jsonl
 //   Cada aparato escribe en su propio archivo, así dos aparatos nunca se pisan.
 // - El tablero del día (tablero/hoy.json, en la misma rama) solo se lee: la página nunca lo escribe.
+//   Lo mismo tus clases (tablero/clases.json) y las fotos de tus tutores (tablero/tutores/).
 // - Lo que contestas entra primero a una fila en este aparato y de ahí sube.
 //   Sin internet, la fila espera y sube sola cuando vuelve.
 // - La llave vive solo en este navegador y solo viaja a la dirección de CONFIG.api.
-import { CONFIG } from "./config.js?v=04d2751c1f";
+import { CONFIG } from "./config.js?v=8e449f4678";
 
 const CLAVES = { llave: "pelagos.llave", aparato: "pelagos.aparato", fila: "pelagos.fila." };      // la fila: una clave por suceso
 const RUTA_SUCESOS = /^sucesos\/([A-Za-z0-9_-]+)\/(\d{4}-\d{2})\.jsonl$/;
 const RUTA_TABLERO = "tablero/hoy.json";
+// Tus clases de Worldsacross (tablero/clases.json) y las fotos de tus tutores (tablero/tutores/), en la misma rama. Solo se leen.
+const RUTA_CLASES = "tablero/clases.json";
 // Un loop de tutora: un GIF o video en escenas/tutora-<lección>/ de la rama de avance.
 const RUTA_LOOP = /^escenas\/tutora-(\d+)\/[a-z0-9-]+\.(gif|mp4|webm)$/;
 let conLoop = new Set();        // lecciones cuya tutora ya tiene loop; se renueva en cada sincronización
@@ -215,6 +218,7 @@ export async function salir() {
   archivos.clear();
   leidos.clear();
   tableroActual = null;
+  clasesActual = null;
   for (const u of fotosVivas.values()) u.then((x) => x && URL.revokeObjectURL(x)).catch(() => {});
   fotosVivas.clear();
   await kvVaciar();
@@ -245,6 +249,9 @@ let tableroActual = null;       // { sha, datos }: el tablero del día, tal como
 /** El tablero del día tal como está en el repositorio, o null. La forma la revisa quien lo usa. */
 export function tablero() { return tableroActual ? tableroActual.datos : null; }
 export function huellaTablero() { return tableroActual ? tableroActual.sha : ""; }
+let clasesActual = null;        // { sha, datos }: tus clases de Worldsacross, tal como llegaron
+/** Tus clases tal como están en el repositorio, o null. La forma la revisa quien las usa. */
+export function clases() { return clasesActual ? clasesActual.datos : null; }
 const leidos = new Map();       // ruta -> { sha, lista }   (los sucesos ya separados, para no repetir el trabajo)
 
 function separar(texto) {
@@ -294,6 +301,8 @@ export async function cargarLocal() {
   if (Array.isArray(loops)) conLoop = new Set(loops.filter(Number.isInteger));
   const t = await kvLeer("tablero");
   tableroActual = t && typeof t.sha === "string" && t.datos && typeof t.datos === "object" ? t : null;
+  const c = await kvLeer("clases");
+  clasesActual = c && typeof c.sha === "string" && c.datos && typeof c.datos === "object" ? c : null;
   if (!guardado || !guardado.datos) return null;
   try { revisarPaquete(guardado.datos); } catch { return null; }
   return guardado.datos;
@@ -324,11 +333,12 @@ export function sincronizar() {
       else throw new Fallo("github", "GitHub contestó algo raro (" + r.status + ").", r.status);
 
       const t = await api(REPO + "/git/trees/" + encodeURIComponent(CONFIG.ramaAvance) + "?recursive=1");
-      let arbol = [], hojaTablero = null;
+      let arbol = [], hojaTablero = null, hojaClases = null;
       if (t.ok) {
         const blobs = ((await t.json()).tree || []).filter((x) => x.type === "blob");
         arbol = blobs.filter((x) => RUTA_SUCESOS.test(x.path));
         hojaTablero = blobs.find((x) => x.path === RUTA_TABLERO) || null;
+        hojaClases = blobs.find((x) => x.path === RUTA_CLASES) || null;
         conLoop = new Set(blobs.map((x) => RUTA_LOOP.exec(x.path)).filter(Boolean).map((m) => Number(m[1])));
         await kvPoner("loops", [...conLoop]);
       }
@@ -364,6 +374,20 @@ export function sincronizar() {
           if (b.ok) {
             const datos = JSON.parse(await b.text());
             if (datos && typeof datos === "object") { tableroActual = { sha: hojaTablero.sha, datos }; await kvPoner("tablero", tableroActual); }
+          }
+        } catch (e) {
+          if (e instanceof Fallo && e.tipo === "llave") throw e;
+        }
+      }
+      // Las clases son otro adorno, igual que el tablero.
+      if (!hojaClases) {
+        if (t.ok && clasesActual) { clasesActual = null; await kvQuitar("clases"); }
+      } else if (!clasesActual || clasesActual.sha !== hojaClases.sha) {
+        try {
+          const b = await api(REPO + "/git/blobs/" + encodeURIComponent(hojaClases.sha), { crudo: true });
+          if (b.ok) {
+            const datos = JSON.parse(await b.text());
+            if (datos && typeof datos === "object") { clasesActual = { sha: hojaClases.sha, datos }; await kvPoner("clases", clasesActual); }
           }
         } catch (e) {
           if (e instanceof Fallo && e.tipo === "llave") throw e;
@@ -570,6 +594,27 @@ export function foto(info, carpeta = "reef") {
     })());
   }
   return fotosVivas.get(nombre);
+}
+
+const tutoresVivos = new Map();   // archivo -> promesa de una dirección blob:
+/** La foto de un tutor (tablero/tutores/<archivo>, rama de avance) como dirección que la página puede mostrar, o null. */
+export function fotoTutor(archivo) {
+  if (!/^[a-z0-9-]+\.(jpg|png|webp)$/.test(String(archivo || ""))) return Promise.resolve(null);
+  if (!tutoresVivos.has(archivo)) {
+    tutoresVivos.set(archivo, (async () => {
+      const clave = "tutor:" + archivo;
+      let bytes = null;
+      try {
+        const r = await api(REPO + "/contents/" + ruta("tablero/tutores/" + archivo) + "?ref=" + encodeURIComponent(CONFIG.ramaAvance), { crudo: true });
+        if (r.ok) { bytes = await r.arrayBuffer(); await kvPoner(clave, { bytes }); }
+      } catch { /* sin internet: sirve la copia de antes */ }
+      if (!bytes) { const g = await kvLeer(clave); bytes = g ? g.bytes : null; }
+      if (!bytes) { tutoresVivos.delete(archivo); return null; }
+      const tipo = archivo.endsWith(".png") ? "image/png" : archivo.endsWith(".webp") ? "image/webp" : "image/jpeg";
+      return URL.createObjectURL(new Blob([bytes], { type: tipo }));
+    })());
+  }
+  return tutoresVivos.get(archivo);
 }
 
 // ---------------------------------------------------------------- Escenas que sube él (GIF, imágenes, video)
