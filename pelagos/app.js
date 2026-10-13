@@ -1,8 +1,8 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=00aa00cccf";
-import * as A from "./almacen.js?v=00aa00cccf";
-import { abrirRecorrido } from "./recorrido.js?v=00aa00cccf";
-import * as V from "./videos.js?v=00aa00cccf";
+import * as N from "./nucleo.js?v=d2c361c1fa";
+import * as A from "./almacen.js?v=d2c361c1fa";
+import { abrirRecorrido } from "./recorrido.js?v=d2c361c1fa";
+import * as V from "./videos.js?v=d2c361c1fa";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1815,7 +1815,6 @@ function verKwiz(o) {
   const banco = P.preguntas.filter((q) => q.estado === "revisada" && !E.retiradas.has(q.id));
   const temasBanco = new Set(banco.map((q) => q.tema));
   const cuadernos = (P.cuadernos || []).map((c) => ({ ...c, con: c.temas.filter((t) => temasBanco.has(t)).length })).filter((c) => c.con);
-  const hechos = N.kwizzesHechos(E).slice(0, 10);
   const lista = N.listaDeEstudio(P, E);
   const deLista = lista.temas.map((id) => porId.get(id)).filter(Boolean);
   const porNivel = N.nivelesConPreguntas(P, E);
@@ -1855,13 +1854,6 @@ function verKwiz(o) {
         <span class="nm ancho">${esc(c.nombre)}</span><span class="pc">${N.TOTAL}</span><span class="sm ancho">Solo sus temas: ${c.con} con preguntas</span></button>`).join("")}
     </div>
     <p class="small">Hay ${plural(banco.length, "pregunta revisada", "preguntas revisadas")} de ${plural(temasBanco.size, "tema", "temas")}.</p>
-  </section>` : ""}
-  ${hechos.length ? `
-  <section class="card">
-    <h2>Tus últimos quizzes</h2>
-    <div class="links">${hechos.map((h) => `<a class="tb" href="#${QUIZ}/${esc(h.id)}/resultado">
-      <span class="nm ancho">${cuando(h.terminado)}</span><span class="pc">${h.bien} de ${h.total}</span>
-      <span class="sm ancho">${TIPOS_KWIZ[h.tipo] || "Quiz"}</span>${barra(h.total ? 100 * h.bien / h.total : 0)}</a>`).join("")}</div>
   </section>` : ""}`), { titulo: "Quiz de gramática · Pelagos", nav: "gramatica", conserva: o.conserva });
   for (const b of vista.querySelectorAll("[data-enfoque]")) {
     b.addEventListener("click", () => {
