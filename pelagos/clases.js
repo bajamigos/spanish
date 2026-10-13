@@ -4,13 +4,17 @@
 //   revisa tu día cada media hora, desde tu Chrome. Forma:
 //       { "version": 1, "leido": "2026-10-13T15:30:00Z",
 //         "clases": [ { "inicio": "2026-10-16T12:00:00-07:00", "min": 50, "tutor": "Rodolfo García",
-//                       "foto": "rodolfo-garcia.jpg", "estado": "agendada" } ],
+//                       "foto": "rodolfo-garcia.jpg", "estado": "agendada",
+//                       "tema": "Podcast y debate: Precariedad laboral",
+//                       "leccion": { "titulo": "Must have done con deber", "url": "https://spanish.kwiziq.com/…" } } ],
 //         "libres": [ { "inicio": "…", "min": 50, "tutor": "…", "foto": "…" } ] }
 //   `estado`: agendada, hecha o cancelada (las canceladas no se pintan). `libres` es opcional: huecos de tus favoritos.
+//   `tema` y `leccion` son opcionales: los pone Claude cuando reserva. `tema` es la actividad de Worldsacross (debate,
+//   conversación…) y sale en el bloque; `leccion` es la lección pública de Kwiziq y sale en la ficha como enlace.
 // - Las fotos de los tutores viven en tablero/tutores/ (misma rama) y se bajan con la llave, como todo lo privado.
 // - De 6 am a 9 pm, horas de 12. Se desliza a los lados (o con las flechas) para cambiar de días.
 // - Todo lo que trae el archivo se escribe como texto, nunca como HTML.
-import * as A from "./almacen.js?v=2c335eb465";
+import * as A from "./almacen.js?v=59605b9117";
 
 export const HORA0 = 6, HORA1 = 21, PX = 56;      // la cuadrícula: de 6 am a 9 pm, 56 px por hora
 const ATRAS = 7, ADELANTE = 13;                    // hasta dónde se puede deslizar, en días desde hoy
@@ -35,7 +39,11 @@ export function leerClases(datos) {
     const tutor = typeof x.tutor === "string" && x.tutor.trim() ? x.tutor.trim().slice(0, 60) : "Tu tutor";
     const foto = typeof x.foto === "string" && /^[a-z0-9-]+\.(jpg|png|webp)$/.test(x.foto) ? x.foto : "";
     const estado = libre ? "libre" : ["agendada", "hecha", "cancelada"].includes(x.estado) ? x.estado : "agendada";
-    return { ini, min, tutor, foto, estado };
+    const tema = !libre && typeof x.tema === "string" ? x.tema.trim().slice(0, 120) : "";
+    const lx = !libre && x.leccion && typeof x.leccion === "object" ? x.leccion : null;
+    const leccion = lx && typeof lx.url === "string" && /^https:\/\/spanish\.kwiziq\.com\/[^\s"'<>]*$/.test(lx.url)
+      ? { url: lx.url, titulo: typeof lx.titulo === "string" && lx.titulo.trim() ? lx.titulo.trim().slice(0, 120) : "Lección de Kwiziq" } : null;
+    return { ini, min, tutor, foto, estado, tema, leccion };
   };
   const clases = datos.clases.map((x) => limpia(x, false)).filter(Boolean).filter((x) => x.estado !== "cancelada").sort((a, b) => a.ini - b.ini);
   const libres = (Array.isArray(datos.libres) ? datos.libres : []).map((x) => limpia(x, true)).filter(Boolean);
@@ -135,10 +143,10 @@ export function htmlClases(datos, ahora = new Date()) {
     const n = i++;
     const nombre = e.tutor.split(" ")[0];
     const linea = e.clase === "libre" ? "libre" : hora12(e.ini);
-    const dicho = `${e.tutor}, ${hora12(e.ini)}${e.hecha ? ", hecha" : e.clase === "libre" ? ", hueco libre" : e.sigue ? ", la que sigue" : ""}`;
+    const dicho = `${e.tutor}, ${hora12(e.ini)}${e.tema ? ", " + e.tema : ""}${e.hecha ? ", hecha" : e.clase === "libre" ? ", hueco libre" : e.sigue ? ", la que sigue" : ""}`;
     return `<button type="button" class="clB${e.clase ? " " + e.clase : ""}" data-top="${arriba(e.ini)}" data-cl="${n}" aria-label="${esc(dicho)}">
       ${e.foto ? `<img data-tutor="${esc(e.foto)}" alt="">` : `<span class="clIni" aria-hidden="true">${esc(nombre.slice(0, 1))}</span>`}
-      <span class="clT"><span class="clN">${esc(nombre)}${e.hecha ? " ✓" : ""}</span><span class="clH">${esc(linea)}</span></span></button>`;
+      <span class="clT"><span class="clN">${esc(nombre)}${e.hecha ? " ✓" : ""}</span><span class="clH">${esc(linea)}</span>${e.tema ? `<span class="clTema">${esc(e.tema)}</span>` : ""}</span></button>`;
   };
   const eventos = [];
   const columnas = C.dias.map((d) => {
@@ -160,7 +168,7 @@ export function htmlClases(datos, ahora = new Date()) {
       </div>
       <p class="clHoras"><b>${esc(duracion(s.total))}</b> de conversación esta semana</p>
       <p class="small">${s.clases === 1 ? "1 clase" : s.clases + " clases"} · ${s.hechas === 1 ? "1 hecha" : s.hechas + " hechas"}${s.hablado ? ` · ${esc(duracion(s.hablado))} ya habladas` : ""}</p>
-      ${C.siguiente ? `<p class="clSigue">La que sigue: <b>${esc(C.siguiente.tutor)}</b>, ${esc(cuandoLargo(C.siguiente, ahora))}</p>` : ""}
+      ${C.siguiente ? `<p class="clSigue">La que sigue: <b>${esc(C.siguiente.tutor)}</b>, ${esc(cuandoLargo(C.siguiente, ahora))}${C.siguiente.tema ? ` · ${esc(C.siguiente.tema)}` : ""}</p>` : ""}
       ${viejo}
     </section>
     <section class="card clCal" id="clCal" aria-label="Calendario de ${esc(C.rango)}">
@@ -223,6 +231,8 @@ function abrir(e) {
       <h2 id="hvT" tabindex="-1">${esc(e.tutor)}</h2>
       <p class="clCuando">${esc(dia)}, ${esc(hora12(e.ini))} – ${esc(hora12(fin(e)))}</p>
       <p class="clEstado">${esc(estado)}</p>
+      ${e.tema ? `<p class="clFTema">${esc(e.tema)}</p>` : ""}
+      ${e.leccion ? `<p class="clLeccion">Lección: <a href="${esc(e.leccion.url)}" target="_blank" rel="noopener noreferrer">${esc(e.leccion.titulo)}</a></p>` : ""}
     </div>
     <div class="acts">
       ${e.hecha ? "" : `<a class="ub grande" href="${WA}" target="_blank" rel="noopener noreferrer">${e.clase === "libre" ? "Ver en Worldsacross" : "Entrar a la clase"}</a>`}
