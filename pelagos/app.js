@@ -1,8 +1,8 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=e5f70b0a77";
-import * as A from "./almacen.js?v=e5f70b0a77";
-import { abrirRecorrido } from "./recorrido.js?v=e5f70b0a77";
-import * as V from "./videos.js?v=e5f70b0a77";
+import * as N from "./nucleo.js?v=efe090177c";
+import * as A from "./almacen.js?v=efe090177c";
+import { abrirRecorrido } from "./recorrido.js?v=efe090177c";
+import * as V from "./videos.js?v=efe090177c";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -782,7 +782,8 @@ function buscarTemas(texto) {
   const palabras = q.split(/\s+/).filter(Boolean);
   const encaja = (t) => {
     if (/^\d+$/.test(q)) return String(t.id) === q || String(t.id).startsWith(q);
-    const pajar = paraBuscar([t.titulo, t.titulo_kwiziq, t.slug, t.slug_kwiziq, t.regla].filter(Boolean).join(" "));
+    const tu = tutoraDe(t.id);      // también por la tutora: su nombre y su oficio («Esperanza», «aeromoza»)
+    const pajar = paraBuscar([t.titulo, t.titulo_kwiziq, t.slug, t.slug_kwiziq, t.regla, tu && tu.tutora].filter(Boolean).join(" "));
     return palabras.every((w) => pajar.includes(w));
   };
   return P.temas.filter(encaja).sort((a, b) => niveles.indexOf(a.nivel) - niveles.indexOf(b.nivel) || a.orden - b.orden).slice(0, 40);
@@ -806,7 +807,7 @@ function verBiblioteca(o) {
     <h1 class="h">Lecciones de gramática</h1>
     <form id="bzForma" class="forma" role="search" autocomplete="off">
       <label class="small" for="bzBusca">Buscar una lección</label>
-      <input id="bzBusca" class="campo" type="search" value="${esc(antes)}" placeholder="Palabra del título, o número de lección" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="search">
+      <input id="bzBusca" class="campo" type="search" value="${esc(antes)}" placeholder="Palabra del título, número de lección o tutora" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="search">
     </form>
     <p class="small" id="bzNota" aria-live="polite"></p>
     <div class="links" id="bzRes"></div>
