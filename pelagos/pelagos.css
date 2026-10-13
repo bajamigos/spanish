@@ -200,6 +200,7 @@ details.q .a span { font-size: 14.5px; color: var(--ink-3); }
 .marcas .marca.si { color: var(--ink); font-weight: 600; }
 .marcas .marca svg { width: 14px; height: 14px; flex: none; }
 .marcas .marca.si svg { color: var(--verde); }
+.tb .sm .donde { display: block; margin-bottom: 4px; }
 .tb .resp { margin-left: 10px; }
 .tb .motivo { display: block; margin-top: 4px; }
 .tb .sm.listos { grid-column: 1 / -1; }
