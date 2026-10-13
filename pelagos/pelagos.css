@@ -201,6 +201,7 @@ details.q .a span { font-size: 14.5px; color: var(--ink-3); }
 .marcas .marca svg { width: 14px; height: 14px; flex: none; }
 .marcas .marca.si svg { color: var(--verde); }
 .tb .resp { margin-left: 10px; }
+.tb .motivo { display: block; margin-top: 4px; }
 .tb .sm.listos { grid-column: 1 / -1; }
 .bar { display: block; height: 8px; border-radius: 4px; background: var(--bar-bg); border: 1px solid var(--line); overflow: hidden; }
 .bar i { display: block; height: 100%; background: var(--bar); }

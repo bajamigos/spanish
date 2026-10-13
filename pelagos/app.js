@@ -1,8 +1,8 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=d2c361c1fa";
-import * as A from "./almacen.js?v=d2c361c1fa";
-import { abrirRecorrido } from "./recorrido.js?v=d2c361c1fa";
-import * as V from "./videos.js?v=d2c361c1fa";
+import * as N from "./nucleo.js?v=66d75f084b";
+import * as A from "./almacen.js?v=66d75f084b";
+import { abrirRecorrido } from "./recorrido.js?v=66d75f084b";
+import * as V from "./videos.js?v=66d75f084b";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1807,16 +1807,25 @@ function motivoEnLista(t, lista) {
   if (lista.quedan.includes(t.id)) return "Se queda: no la contestaste";
   const i = info(t.id);
   if (i.toca) return "Toca repasarlo";
-  return i.n === 0 ? "Nuevo aquí · de Kwiziq" : "Vuelve al plan";
+  return "";
+}
+
+/** La línea de un tema del plan: las mismas marcas que en Lecciones y, si se queda o toca repasarlo, el motivo. */
+function lineaDelPlan(t, lista, banco) {
+  const i = info(t.id), motivo = motivoEnLista(t, lista);
+  return marcas(t, banco) + (i.n ? ` <span class="resp">${plural(i.n, "respuesta", "respuestas")}</span>` : "") +
+    (motivo ? `<span class="motivo">${esc(motivo)}</span>` : "");
 }
 
 function verKwiz(o) {
+  revisarVideos();
   const abierto = N.kwizAbierto(E);
   const banco = P.preguntas.filter((q) => q.estado === "revisada" && !E.retiradas.has(q.id));
   const temasBanco = new Set(banco.map((q) => q.tema));
   const cuadernos = (P.cuadernos || []).map((c) => ({ ...c, con: c.temas.filter((t) => temasBanco.has(t)).length })).filter((c) => c.con);
   const lista = N.listaDeEstudio(P, E);
   const deLista = lista.temas.map((id) => porId.get(id)).filter(Boolean);
+  const bancoPlan = bancoPorTema();
   const porNivel = N.nivelesConPreguntas(P, E);
   const hoy = N.fechaLocal(new Date());
   const hechosHoy = N.kwizzesHechos(E).filter((k) => N.fechaLocal(k.terminado) === hoy).length;
@@ -1839,7 +1848,7 @@ function verKwiz(o) {
     <p class="small">${E.enfoque ? `Tu plan solo trae temas de ${esc(E.enfoque)}.` : "Tu plan toma temas de todos los niveles."} El número es cuántos temas tienen preguntas.${lista.abierto ? " El cambio se ve al terminar el quiz que está a medias." : ""}</p>
     ${deLista.length ? `
     <h3>${plural(deLista.length, "tema", "temas")} en tu plan</h3>
-    <div class="links">${deLista.map((t) => botonTema(t, { sub: motivoEnLista(t, lista) })).join("")}</div>
+    <div class="links">${deLista.map((t) => botonTema(t, { sub: lineaDelPlan(t, lista, bancoPlan) })).join("")}</div>
     ${lista.abierto ? "" : `<div class="go"><button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Pelagos Quiz</button></div>`}
     <p class="small">Una pregunta de cada tema. El que aciertas sale del plan y entra otro. El que fallas se queda hasta que lo aciertes dos veces seguidas.</p>
     ${deLista.length < N.LISTA ? `<p class="small">${E.enfoque ? `En ${esc(E.enfoque)} solo hay` : "Solo hay"} ${plural(deLista.length, "tema", "temas")} con preguntas. El plan se llena cuando se escriban más.</p>` : ""}
@@ -1955,7 +1964,7 @@ function verPregunta(o, kid) {
   </section>`,
   {
     titulo: `Pregunta ${sig.orden} de ${sig.total} · Pelagos`, nav: "gramatica",
-    pie: (escribir ? "" : "<p>Para seguir, toca otra vez la respuesta correcta.</p>") +
+    pie: "<p>Si aciertas, pasa sola a la siguiente." + (escribir ? "" : " Si fallas, toca la respuesta correcta para seguir.") + "</p>" +
       "<p>Lo que contestas se guarda al momento; puedes cerrar y seguir después, en este aparato o en otro.</p>",
   });
   enPregunta = true;
@@ -2003,7 +2012,10 @@ function verPregunta(o, kid) {
     teclas = { enter: avanzar };
   }
 
+  // Si aciertas, pasa sola a la siguiente después de un respiro para ver «Bien». Si fallas, se queda para que leas.
+  let solo = 0;
   function avanzar() {
+    clearTimeout(solo);
     enPreguntaDe = null;
     if (N.siguiente(E, kid)) pintar(); else ir(QUIZ + "/" + kid + "/resultado");
   }
@@ -2018,6 +2030,10 @@ function verPregunta(o, kid) {
     });
     recalcular();
     veredicto({ bien, casi: !!extra.casi, elegido: extra.elegido, antes, despues: info(q.tema).pct, ultima: !N.siguiente(E, kid) });
+    if (bien && !extra.casi) {
+      const aqui = window.location.hash;
+      solo = setTimeout(() => { if (enPreguntaDe === kid && window.location.hash === aqui) { saltoPorOpcion = Date.now(); avanzar(); } }, PAUSA_ACIERTO);
+    }
   }
   const juzgar = (bien) => apuntarRespuesta(bien);
 
@@ -2061,7 +2077,7 @@ function verPregunta(o, kid) {
     $("jMal").addEventListener("click", () => juzgar(false));
   } else {
     // Tocas una opción y ahí mismo ves Bien o Mal. La respuesta correcta se vuelve el botón para seguir:
-    // la tocas otra vez y pasa la siguiente pregunta, sin buscar otro botón.
+    // si acertaste pasa sola; si fallaste, la tocas y pasa la siguiente pregunta, sin buscar otro botón.
     let contestadaEn = 0;
     const nota = (boton, texto) => { boton.querySelector(".nota").textContent = texto; };      // el renglón ya tiene su lugar: nada se mueve
     for (const b of vista.querySelectorAll(".op")) {
@@ -2079,7 +2095,7 @@ function verPregunta(o, kid) {
           if (otra.dataset.op === q.respuesta) {
             correcta = otra;
             otra.classList.add("es");
-            nota(otra, bien ? "Bien. Tócala otra vez." : "Era esta. Tócala.");
+            nota(otra, bien ? "Bien." : "Era esta. Tócala para seguir.");
           } else {
             otra.disabled = true;
             if (otra === b) { otra.classList.add("no"); nota(otra, "Mal. Tocaste esta."); }
@@ -2111,6 +2127,8 @@ function verPregunta(o, kid) {
 }
 let enPreguntaDe = null;
 let saltoPorOpcion = 0;
+/** Cuánto se queda a la vista el «Bien» antes de pasar sola a la siguiente pregunta. */
+const PAUSA_ACIERTO = 900;
 
 function verResultado(o, kid) {
   const k = E.kwizzes.get(kid);
