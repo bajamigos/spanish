@@ -1,7 +1,7 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=2aac6121f1";
-import * as A from "./almacen.js?v=2aac6121f1";
-import { abrirRecorrido } from "./recorrido.js?v=2aac6121f1";
+import * as N from "./nucleo.js?v=c26bda0805";
+import * as A from "./almacen.js?v=c26bda0805";
+import { abrirRecorrido } from "./recorrido.js?v=c26bda0805";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1521,7 +1521,31 @@ function verLeccion(o, slug) {
   });
 }
 
+/**
+ * El clip de la tutora de un tema (su mnemónico): el último GIF o video de escenas/tutora-<tema>/ en la rama de avance.
+ * Pregunta una vez; si llega después de pintar la lección, lo pone arriba sin mover la página.
+ */
+function clipDeTutora(tema) {
+  const sala = "tutora-" + tema.id;
+  if (!escenasPorSala.has(sala)) {
+    escenasPorSala.set(sala, []);
+    A.escenasDe(sala).then((l) => {
+      escenasPorSala.set(sala, l);
+      const v = l.filter(esMovimiento).slice(-1)[0];
+      const hero = vista.dataset.leccion === tema.slug && vista.querySelector(".hero");
+      if (!v || !hero) return;
+      for (const x of hero.querySelectorAll(":scope > img, :scope > video")) x.remove();
+      hero.querySelector(".ratio").insertAdjacentHTML("afterend", etiquetaEscena(sala, v));
+      hero.classList.add("contutora");
+      vestir(hero);
+    }).catch(() => {});
+  }
+  const v = escenasPorSala.get(sala).filter(esMovimiento).slice(-1)[0];
+  return v ? etiquetaEscena(sala, v) : "";
+}
+
 function pintarLeccion(tema, lec) {
+  const tutora = clipDeTutora(tema);
   const i = info(tema.id);
   const kwiziq = tema.slug_kwiziq ? KWIZIQ + tema.slug_kwiziq : null;
   const grupos = GRUPOS.map(([clave, nombre]) => ({ nombre, temas: ((lec.enlaces || {})[clave] || []).map((id) => porId.get(id)).filter(Boolean) })).filter((g) => g.temas.length);
@@ -1533,9 +1557,9 @@ function pintarLeccion(tema, lec) {
     .filter(([id]) => id === "enlaces" || secciones.some((s) => s.id === id));
   poner(`
   <p class="crumb"><a href="#/gramatica">Gramática</a> · <a href="#/gramatica/${esc(tema.nivel.toLowerCase())}">${esc(tema.nivel)}</a> · ${esc(CATEGORIAS[tema.categoria] || tema.categoria)}</p>
-  <header class="hero">
+  <header class="hero${tutora ? " contutora" : ""}">
     <div class="ratio"></div>
-    ${imagenDeArriba(lec.foto && fotoDeLeccion(lec.foto))}
+    ${tutora || imagenDeArriba(lec.foto && fotoDeLeccion(lec.foto))}
     <div class="over">
       <p class="lead"><span>${esc(tema.nivel)} · ${esc(NIVELES[tema.nivel] || "")}</span><span>${i.n === 0 ? "de Kwiziq" : plural(i.n, "respuesta", "respuestas")}</span></p>
       <h1>${esc(lec.titulo)}</h1>
