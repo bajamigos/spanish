@@ -667,3 +667,10 @@ textarea.campo { resize: vertical; min-height: 5em; line-height: 1.4; }
 /* La escena completa de una tutora (web/videos.js) */
 dialog.sheet.escena { width: min(100%, 720px); max-height: 92%; }
 .sheet.escena video { width: 100%; max-height: 72vh; background: #000; border-radius: 8px; }
+
+/* La lección con clip de tutora: el clip queda fijo al fondo, como el del Tablero, y la portada se vuelve tarjeta. */
+.hoy.contutora .hero { background: rgba(14,14,14,0.62); border: 1px solid rgba(255,255,255,0.35); border-radius: 16px; -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); }
+.hoy.contutora .hero .ratio { display: none; }
+.hoy.contutora .over { background: none; padding-bottom: 14px; }
+.hoy.contutora .rule, .hoy.contutora .back { position: static; margin: 0 14px 14px; }
+.hoy.contutora .crumb { text-shadow: 0 1px 6px var(--page); }

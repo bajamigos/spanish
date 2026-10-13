@@ -1,8 +1,8 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=ebcb171c0d";
-import * as A from "./almacen.js?v=ebcb171c0d";
-import { abrirRecorrido } from "./recorrido.js?v=ebcb171c0d";
-import * as V from "./videos.js?v=ebcb171c0d";
+import * as N from "./nucleo.js?v=e5f70b0a77";
+import * as A from "./almacen.js?v=e5f70b0a77";
+import { abrirRecorrido } from "./recorrido.js?v=e5f70b0a77";
+import * as V from "./videos.js?v=e5f70b0a77";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1577,19 +1577,20 @@ function clipDeTutora(tema) {
     A.escenasDe(sala).then((l) => {
       escenasPorSala.set(sala, l);
       const v = l.filter(esMovimiento).slice(-1)[0];
-      const hero = vista.dataset.leccion === tema.slug && vista.querySelector(".hero");
-      if (!v || !hero || !movimientoEnTodo()) return;
-      for (const x of hero.querySelectorAll(":scope > img, :scope > video")) x.remove();
-      hero.querySelector(".ratio").insertAdjacentHTML("afterend", etiquetaEscena(sala, v));
-      hero.classList.add("contutora");
-      vestir(hero);
+      // Llegó después de pintar: se vuelve a pintar la lección, ahora con el clip de fondo.
+      if (v && movimientoEnTodo() && vista.dataset.leccion === tema.slug && leccionPintada && leccionPintada.tema === tema) pintarLeccion(tema, leccionPintada.lec, true);
     }).catch(() => {});
   }
   const v = escenasPorSala.get(sala).filter(esMovimiento).slice(-1)[0];
   return v ? etiquetaEscena(sala, v) : "";
 }
 
-function pintarLeccion(tema, lec) {
+let leccionPintada = null;
+// Con clip de tutora, la lección va como el Tablero: el clip fijo al fondo y todo lo demás pasa por encima.
+const conClipDeFondo = (clip, html) => clip ? `<div class="hoy confoto contutora"><div class="fondo">${clip}</div><div class="sobre">${html}</div></div>` : html;
+
+function pintarLeccion(tema, lec, conserva = false) {
+  leccionPintada = { tema, lec };
   const tutora = clipDeTutora(tema);
   const i = info(tema.id);
   const kwiziq = tema.slug_kwiziq ? KWIZIQ + tema.slug_kwiziq : null;
@@ -1600,11 +1601,11 @@ function pintarLeccion(tema, lec) {
   const secciones = lec.secciones || [];
   const saltos = [["regla", "Regla"], ["ejemplos", "Ejemplos"], ["kwiz", "Quiz"], ["enlaces", "Enlaces"]]
     .filter(([id]) => id === "enlaces" || secciones.some((s) => s.id === id));
-  poner(`
+  poner(conClipDeFondo(tutora, `
   <p class="crumb"><a href="#/gramatica">Gramática</a> · <a href="#/gramatica/${esc(tema.nivel.toLowerCase())}">${esc(tema.nivel)}</a> · ${esc(CATEGORIAS[tema.categoria] || tema.categoria)}</p>
   <header class="hero${tutora ? " contutora" : ""}">
     <div class="ratio"></div>
-    ${tutora || imagenDeArriba(lec.foto && fotoDeLeccion(lec.foto))}
+    ${tutora ? "" : imagenDeArriba(lec.foto && fotoDeLeccion(lec.foto))}
     <div class="over">
       <p class="lead"><span>${esc(tema.nivel)} · ${esc(NIVELES[tema.nivel] || "")}</span><span>${i.n === 0 ? "de Kwiziq" : plural(i.n, "respuesta", "respuestas")}</span></p>
       <h1>${esc(lec.titulo)}</h1>
@@ -1647,9 +1648,9 @@ function pintarLeccion(tema, lec) {
       x.kwiziq && kwiziq ? `<a href="${esc(kwiziq)}" rel="noopener noreferrer" target="_blank">${esc(x.texto)}</a>`
         : x.url && /^https:\/\//.test(x.url) ? `<a href="${esc(x.url)}" rel="noopener noreferrer" target="_blank">${esc(x.texto)}</a>`
           : `<span>${esc(x.texto)}</span>`}${x.donde ? `<span class="where">${esc(x.donde)}</span>` : ""}</li>`).join("")}</ul>` : ""}
-  </section>`,
+  </section>`),
   {
-    titulo: lec.titulo + " · Pelagos", nav: "gramatica",
+    titulo: lec.titulo + " · Pelagos", nav: "gramatica", conserva,
     pie: (tema.leccion.comparada_kwiziq ? `<p>Comparada punto por punto con la lección de Kwiziq el ${fecha(tema.leccion.comparada_kwiziq)}.</p>` : "") +
       (i.n === 0 && tema.arranque_fuente ? `<p>Tu porcentaje es el arranque: viene del ${esc(tema.arranque_fuente)}, leído el ${fecha(tema.arranque_leido)}.</p>` : ""),
   });
