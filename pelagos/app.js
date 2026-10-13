@@ -1,9 +1,9 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=014b611685";
-import * as A from "./almacen.js?v=014b611685";
-import { abrirRecorrido } from "./recorrido.js?v=014b611685";
-import * as V from "./videos.js?v=014b611685";
-import * as CL from "./clases.js?v=014b611685";
+import * as N from "./nucleo.js?v=e70578da6a";
+import * as A from "./almacen.js?v=e70578da6a";
+import { abrirRecorrido } from "./recorrido.js?v=e70578da6a";
+import * as V from "./videos.js?v=e70578da6a";
+import * as CL from "./clases.js?v=e70578da6a";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -158,12 +158,21 @@ function botonTema(t, { nivel = true, sub = "", anchoNombre = false, ingles = fa
   const i = info(t.id);
   const abre = t.slug && t.leccion ? `<a class="tb" href="#/leccion/${esc(t.slug)}">` : `<button type="button" class="tb" data-l="${t.id}">`;
   const cierra = t.slug && t.leccion ? "</a>" : "</button>";
-  return abre +
+  const html = abre +
     (nivel ? `<span class="lv">${esc(t.nivel)}</span>` : "") +
     `<span class="nm${anchoNombre ? " ancho" : ""}"${ingles && !t.titulo ? ' lang="en"' : ""}>${esc(titulo(t))}</span>` +
     `<span class="pc${esBajo(i.pct) ? " bajo" : ""}">${pct(i.pct)}</span>` +
     (sub ? `<span class="sm${anchoNombre ? " ancho" : ""}">${sub}</span>` : "") +
     barra(i.pct) + cierra;
+  return conBocina(t, html);
+}
+/** Si la tutora del tema ya tiene voz grabada, el botón del tema lleva junto una bocina que toca su MP3 (nunca la voz del aparato). */
+function conBocina(t, html) {
+  const tu = tutoraDe(t.id);
+  if (!tu || !tieneVoz(t)) return html;
+  const suena = !!repaso && repaso.sonando === t.id && !repaso.audio.paused;
+  return `<div class="tb-voz">${html}<button type="button" class="bocinaVoz" data-repasar="${t.id}" aria-pressed="${suena}" ` +
+    `aria-label="${suena ? "Pausa" : "Escuchar a " + esc(nombreCorto(tu))}" title="${suena ? "Pausa" : "Escuchar a " + esc(nombreCorto(tu))}">${ICONO_BOCINA}</button></div>`;
 }
 
 // Video completo y loop de la tutora: se revisan solos y las marcas se llenan conforme llegan.
@@ -599,6 +608,9 @@ function cuadro(nombre, valor, de, unidad, estado, hecho, enlace = "", sello = n
 const LOGO = `<img class="logoFondo" src="logo.png" alt="Pelagos" width="760" height="519">`;
 function fondoDelDia(respaldo = true) {
   if (ambiente() === "limpio") return { hay: false, html: "" };
+  // Mientras suena el repaso en audio, arriba va el loop de la tutora que está hablando.
+  const lt = repaso && repaso.sonando != null && !sinMovimiento() ? loopDeTutora(repaso.sonando) : null;
+  if (lt) return { hay: true, html: `<div class="fondo">${etiquetaEscena("tutora-" + repaso.sonando, lt)}${LOGO}</div>` };
   // Si subiste un GIF o video de fondo (Ajustes), va en todas las páginas de arriba, en lugar de la foto.
   cargarVideosFondo();
   const cosa = etiquetaMovimiento();
@@ -1757,6 +1769,7 @@ async function escuchar(b, id, v) {
   const caja = vista.querySelector(`[data-voz="${id}"]`), t = tutoraDe(id);
   const aviso = vista.querySelector(`[data-escenaaviso="${id}"]`);
   if (!caja) return;
+  if (repaso) pararRepaso("");
   let audio = caja.querySelector("audio");
   if (!audio) {
     b.disabled = true;
@@ -1786,6 +1799,109 @@ async function escuchar(b, id, v) {
   if (audio.paused) audio.play().catch(() => {}); else audio.pause();
 }
 function callar() { for (const a of document.querySelectorAll(".voz audio")) a.pause(); }
+
+// ---------------------------------------------------------------- Repaso en audio
+// Toca, una tras otra, las voces grabadas de las tutoras (escenas/voz-<lección>/). Mientras habla cada una,
+// arriba va su loop (escenas/tutora-<lección>/); cuando entra la siguiente, cambia el loop.
+let repaso = null;      // { origen, cola: [{ id, v }], i, audio, faltan: [ids], sonando, aviso }
+/** El loop (GIF o video) de la tutora de un tema, si ya se sabe; si no, null. */
+function loopDeTutora(id) { const l = escenasPorSala.get("tutora-" + id); return l ? l.filter(esMovimiento).slice(-1)[0] || null : null; }
+const nombreDe = (id) => { const t = tutoraDe(id); return t ? nombreCorto(t) : "la tutora"; };
+function botonesRepaso() {
+  const del = repaso && repaso.origen === "plan";
+  return `<button type="button" class="ub grande" id="repasoAudio" aria-pressed="${del && !repaso.audio.paused}">${!del ? "Repaso en audio" : repaso.audio.paused ? "Seguir el repaso" : "Pausa"}</button>` +
+    (del ? `<button type="button" class="ub" id="repasoSig">Siguiente</button><button type="button" class="ub" id="repasoFin">Terminar</button>` : "");
+}
+function avisoRepaso() {
+  if (!repaso) return ultimoAvisoRepaso;
+  const n = repaso.cola.length, ahora = repaso.sonando != null ? `Ahora: ${nombreDe(repaso.sonando)} (${repaso.i + 1} de ${n}).` : "Bajando las voces…";
+  const f = repaso.faltan.length ? ` Sin voz todavía: ${repaso.faltan.map(nombreDe).join(", ")}.` : "";
+  return ahora + f;
+}
+let ultimoAvisoRepaso = "";
+/** Pone al día los botones, el aviso y las bocinas. Si cambia qué botones van, vuelve a pintar. */
+function refrescarRepaso() {
+  const b = $("repasoAudio"), del = !!repaso && repaso.origen === "plan";
+  if (b && !!$("repasoSig") !== del) { pintar({ conserva: true }); return; }
+  if (b) { b.textContent = !del ? "Repaso en audio" : repaso.audio.paused ? "Seguir el repaso" : "Pausa"; b.setAttribute("aria-pressed", String(del && !repaso.audio.paused)); }
+  const a = $("repasoAviso"); if (a) a.textContent = avisoRepaso();
+  for (const x of vista.querySelectorAll("[data-repasar]")) {
+    const suena = !!repaso && repaso.sonando === Number(x.dataset.repasar) && !repaso.audio.paused;
+    const dice = suena ? "Pausa" : "Escuchar a " + nombreDe(Number(x.dataset.repasar));
+    x.setAttribute("aria-pressed", String(suena)); x.setAttribute("aria-label", dice); x.title = dice;
+  }
+}
+/** Los temas del plan, en orden. */
+function planActual() { return N.listaDeEstudio(P, E).temas.filter((id) => porId.has(id)); }
+async function empezarRepaso(ids, origen) {
+  pararRepaso("");
+  callar();
+  const avisa = (t) => { ultimoAvisoRepaso = t; const a = $("repasoAviso"); if (a && origen === "plan") a.textContent = t; };
+  avisa("Buscando las voces…");
+  const items = await Promise.all(ids.map(async (id) => {
+    try { const v = (await A.escenasDe(salaVoz(id))).filter((x) => /^audio\//.test(x.tipo || "")).slice(-1)[0]; return v ? { id, v } : null; }
+    catch { return null; }
+  }));
+  const cola = items.filter(Boolean), faltan = ids.filter((id) => !cola.some((c) => c.id === id));
+  if (!cola.length) { avisa(ids.length > 1 ? "Todavía ninguna tutora de tu plan tiene voz." : "Esta tutora todavía no tiene voz."); return; }
+  // Los loops de cada una, para cambiar el fondo cuando empiece a hablar.
+  await Promise.all(cola.map(async (c) => {
+    const sala = "tutora-" + c.id;
+    if (!(escenasPorSala.get(sala) || []).length) { try { escenasPorSala.set(sala, await A.escenasDe(sala)); } catch { escenasPorSala.set(sala, []); } }
+  }));
+  const audio = new Audio();
+  audio.preload = "auto";
+  repaso = { origen, cola, i: -1, audio, faltan, sonando: null };
+  audio.addEventListener("ended", () => { if (repaso && repaso.audio === audio) tocarRepaso(repaso.i + 1); });
+  audio.addEventListener("play", refrescarRepaso);
+  audio.addEventListener("pause", refrescarRepaso);
+  if ("mediaSession" in navigator) {
+    const ms = navigator.mediaSession, h = (a, f) => { try { ms.setActionHandler(a, f); } catch { /* no todos los aparatos */ } };
+    h("play", () => repaso && repaso.audio.play().catch(() => {}));
+    h("pause", () => repaso && repaso.audio.pause());
+    h("nexttrack", () => repaso && tocarRepaso(repaso.i + 1));
+    h("previoustrack", () => repaso && tocarRepaso(Math.max(0, repaso.i - 1)));
+    h("stop", () => pararRepaso("Repaso terminado."));
+  }
+  tocarRepaso(0);
+}
+async function tocarRepaso(i) {
+  if (!repaso) return;
+  if (i >= repaso.cola.length) { pararRepaso(repaso.cola.length > 1 ? "Repaso terminado. Ya pasaron todas." : ""); return; }
+  const r = repaso, { id, v } = r.cola[i];
+  r.i = i;
+  r.audio.pause();
+  try {
+    const u = await A.escenaUrl(salaVoz(id), v);
+    if (repaso !== r || r.i !== i) return;
+    r.audio.src = u;
+  } catch { if (repaso === r) tocarRepaso(i + 1); return; }
+  r.sonando = id;
+  const t = tutoraDe(id), tema = porId.get(id);
+  if ("mediaSession" in navigator && window.MediaMetadata) {
+    try { navigator.mediaSession.metadata = new MediaMetadata({ title: t ? t.tutora : "Tutora", artist: tema ? titulo(tema) : "Repaso en audio", album: "Repaso en audio · Pelagos" }); } catch { /* sin pantalla bloqueada */ }
+  }
+  pintar({ conserva: true });          // cambia el loop de arriba
+  r.audio.play().catch(() => refrescarRepaso());
+}
+/** Para el repaso y regresa el fondo de siempre. */
+function pararRepaso(aviso) {
+  if (!repaso) return;
+  const r = repaso;
+  repaso = null;
+  r.audio.pause();
+  r.audio.removeAttribute("src");
+  ultimoAvisoRepaso = aviso || "";
+  pintar({ conserva: true });
+}
+vista.addEventListener("click", (ev) => {
+  const b = ev.target instanceof Element ? ev.target.closest("[data-repasar]") : null;
+  if (!b) return;
+  ev.preventDefault();
+  const id = Number(b.dataset.repasar);
+  if (repaso && repaso.sonando === id) { if (repaso.audio.paused) repaso.audio.play().catch(() => {}); else repaso.audio.pause(); return; }
+  empezarRepaso([id], "tema");
+});
 async function verEscena(id) {
   const aviso = vista.querySelector(`[data-escenaaviso="${id}"]`);
   const decir = (t) => { if (aviso) aviso.textContent = t; };
@@ -1942,7 +2058,8 @@ function verKwiz(o) {
     ${deLista.length ? `
     <h3>${plural(deLista.length, "tema", "temas")} en tu plan</h3>
     <div class="links">${deLista.map((t) => botonTema(t, { sub: lineaDelPlan(t, lista, bancoPlan) })).join("")}</div>
-    ${lista.abierto ? "" : `<div class="go"><button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Pelagos Quiz</button></div>`}
+    <div class="go">${lista.abierto ? "" : `<button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Pelagos Quiz</button>`}${botonesRepaso()}</div>
+    <p class="small" id="repasoAviso" role="status">${esc(avisoRepaso())}</p>
     <p class="small">Una pregunta de cada tema. El que aciertas sale del plan y entra otro. El que fallas se queda hasta que lo aciertes dos veces seguidas.</p>
     ${deLista.length < N.LISTA ? `<p class="small">${E.enfoque ? `En ${esc(E.enfoque)} solo hay` : "Solo hay"} ${plural(deLista.length, "tema", "temas")} con preguntas. El plan se llena cuando se escriban más.</p>` : ""}
     <p class="small">Hoy llevas ${plural(hechosHoy, "quiz", "quizzes")}.</p>`
@@ -1957,6 +2074,13 @@ function verKwiz(o) {
     </div>
     <p class="small">Hay ${plural(banco.length, "pregunta revisada", "preguntas revisadas")} de ${plural(temasBanco.size, "tema", "temas")}.</p>
   </section>` : ""}`), { titulo: "Quiz de gramática · Pelagos", nav: "gramatica", conserva: o.conserva });
+  const rb = $("repasoAudio");
+  if (rb) rb.addEventListener("click", () => {
+    if (repaso && repaso.origen === "plan") { if (repaso.audio.paused) repaso.audio.play().catch(() => {}); else repaso.audio.pause(); }
+    else empezarRepaso(deLista.map((t) => t.id), "plan");
+  });
+  const rs = $("repasoSig"); if (rs) rs.addEventListener("click", () => repaso && tocarRepaso(repaso.i + 1));
+  const rf = $("repasoFin"); if (rf) rf.addEventListener("click", () => pararRepaso("Repaso terminado."));
   for (const b of vista.querySelectorAll("[data-enfoque]")) {
     b.addEventListener("click", () => {
       const nivel = b.dataset.enfoque || null;

@@ -764,3 +764,12 @@ dialog.sheet.conFoto:not([open]) { display: none; }
 .sheet.conFoto .ex .es, .sheet.conFoto .ex .en { text-shadow: 0 1px 6px var(--page); }
 
 .voz audio { display: block; width: 100%; margin-top: 10px; }
+
+/* ---------- Voz de la tutora: la bocina junto a un tema (toca su MP3, nunca la voz del aparato) ---------- */
+.tb-voz { display: flex; gap: 6px; align-items: stretch; min-width: 0; }
+.tb-voz > .tb, .tb-voz > .tb-mision { flex: 1; min-width: 0; }
+.bocinaVoz { flex: none; width: 48px; min-height: 48px; display: grid; place-items: center; padding: 0; border: 1px solid var(--outline); border-radius: 12px; background: var(--page); color: var(--ink); cursor: pointer; }
+.bocinaVoz svg { width: 24px; height: 24px; fill: currentColor; }
+.bocinaVoz[aria-pressed="true"] { border-color: #5fbf6a; color: #2f9a3d; box-shadow: 0 0 10px 2px rgba(111, 220, 123, .55); }
+.bocinaVoz:focus-visible { outline: 3px solid var(--tab); outline-offset: 2px; }
+.hoy.confoto .bocinaVoz { background: var(--vidrio-2); border-color: var(--vidrio-borde); }
