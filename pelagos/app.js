@@ -1,9 +1,9 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=3163e73b84";
-import * as A from "./almacen.js?v=3163e73b84";
-import { abrirRecorrido } from "./recorrido.js?v=3163e73b84";
-import * as V from "./videos.js?v=3163e73b84";
-import * as CL from "./clases.js?v=3163e73b84";
+import * as N from "./nucleo.js?v=07a712a532";
+import * as A from "./almacen.js?v=07a712a532";
+import { abrirRecorrido } from "./recorrido.js?v=07a712a532";
+import * as V from "./videos.js?v=07a712a532";
+import * as CL from "./clases.js?v=07a712a532";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1255,7 +1255,7 @@ function verClases(o) {
   const vocab = fotosVocab.size > 0, lista = ambiente() === "limpio" ? [] : vocab ? [...fotosVocab.keys()] : (P.fotos || []).map((f) => f.nombre), hoy = new Date();
   const foto = lista.length ? lista[(Math.floor(Date.UTC(hoy.getFullYear(), hoy.getMonth(), hoy.getDate()) / 86400000) * 37 + 3) % lista.length] : null;
   const fondo = foto ? `<div class="fondo"><img data-foto="${esc(foto)}"${vocab ? ' data-vocab="1"' : ""} alt="">${LOGO}</div>` : "";
-  poner(`<div class="hoy clases${foto ? " confoto" : ""}">${fondo}<div class="sobre">${entradas("tablero", "clases")}${CL.htmlClases(A.clases())}</div></div>`,
+  poner(`<div class="hoy clases${foto ? " confoto" : ""}">${fondo}<div class="sobre">${entradas("tablero", "clases")}${CL.htmlClases(A.clases(), new Date(), CL.pedidosDe(A.sucesos()))}</div></div>`,
     { titulo: "Clases · Pelagos", nav: "inicio", conserva: o.conserva });
   CL.montar(vista, () => pintar({ conserva: true }));
 }

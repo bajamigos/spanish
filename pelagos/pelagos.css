@@ -741,6 +741,11 @@ dialog.sheet.escena { width: min(100%, 720px); max-height: 92%; }
 .clFicha h2 { margin: 6px 0 0; font-size: 24px; }
 .clCuando { font-size: 18px; }
 .clEstado { font-weight: 700; color: var(--ink-2); }
+.clB.pedida { border: 2px solid var(--ambar); background: rgba(255,210,74,0.18); }
+.clB.pedida .clH { color: var(--ambar); font-weight: 700; }
+.clPedidos { font-weight: 700; color: var(--ambar); }
+.clNoSePudo { font-weight: 600; color: var(--rojo); }
+.clPregunta { font-size: 18px; text-align: center; text-wrap: balance; margin: 0 0 4px; }
 .clOtros { font-size: 17px; font-weight: 600; color: var(--ambar); }
 .clFTema { font-size: 18px; font-weight: 700; text-wrap: balance; }
 .clLeccion { font-size: 17px; }

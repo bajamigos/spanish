@@ -14,7 +14,11 @@
 // - Las fotos de los tutores viven en tablero/tutores/ (misma rama) y se bajan con la llave, como todo lo privado.
 // - De 6 am a 9 pm, horas de 12. Se desliza a los lados (o con las flechas) para cambiar de días.
 // - Todo lo que trae el archivo se escribe como texto, nunca como HTML.
-import * as A from "./almacen.js?v=3163e73b84";
+// - Pedir una clase: en la ficha de un hueco libre hay un botón por tutor. Al confirmar se apunta un suceso
+//       { "t": "pedirClase", "id": "pc-…", "inicio": "…", "min": 50, "tutor": "…" }
+//   (y { "t": "cancelarPedido", "id": "pc-…" } para quitarlo). La tarea de cada media hora lo reserva en Worldsacross
+//   y lo contesta en clases.json: "pedidos": [ { "id": "pc-…", "estado": "reservada" | "no se pudo", "nota": "…" } ].
+import * as A from "./almacen.js?v=07a712a532";
 
 export const HORA0 = 6, HORA1 = 21, PX = 56;      // la cuadrícula: de 6 am a 9 pm, 56 px por hora
 const ATRAS = 7, ADELANTE = 13;                    // hasta dónde se puede deslizar, en días desde hoy
@@ -48,7 +52,26 @@ export function leerClases(datos) {
   const clases = datos.clases.map((x) => limpia(x, false)).filter(Boolean).filter((x) => x.estado !== "cancelada").sort((a, b) => a.ini - b.ini);
   const libres = (Array.isArray(datos.libres) ? datos.libres : []).map((x) => limpia(x, true)).filter(Boolean);
   const leido = typeof datos.leido === "string" && !Number.isNaN(new Date(datos.leido).getTime()) ? new Date(datos.leido) : null;
-  return { leido, clases, libres };
+  const respuestas = new Map();
+  for (const x of Array.isArray(datos.pedidos) ? datos.pedidos : []) {
+    if (x && typeof x.id === "string" && ["reservada", "no se pudo"].includes(x.estado)) {
+      respuestas.set(x.id, { estado: x.estado, nota: typeof x.nota === "string" ? x.nota.slice(0, 200) : "" });
+    }
+  }
+  return { leido, clases, libres, respuestas };
+}
+
+/** Tus pedidos de clase, sacados de tus sucesos: [{ id, ini, min, tutor, cuando }], sin los cancelados. */
+export function pedidosDe(sucesos) {
+  const quitados = new Set(), lista = [];
+  for (const e of sucesos || []) if (e && e.t === "cancelarPedido" && typeof e.id === "string") quitados.add(e.id);
+  for (const e of sucesos || []) {
+    if (!e || e.t !== "pedirClase" || typeof e.id !== "string" || quitados.has(e.id) || typeof e.tutor !== "string") continue;
+    const ini = new Date(e.inicio);
+    if (Number.isNaN(ini.getTime()) || lista.some((x) => x.id === e.id)) continue;
+    lista.push({ id: e.id, ini, min: Number.isFinite(e.min) ? e.min : 50, tutor: e.tutor.slice(0, 60), cuando: e.cuando || "" });
+  }
+  return lista;
 }
 
 /** «8:00 am», «12:30 pm». */
@@ -87,7 +110,7 @@ function cuandoLargo(c, ahora) {
 }
 
 /** Todo lo que la página necesita para pintar tres días, empezando `corr` días después de hoy. */
-export function armarClases(L, ahora = new Date(), corr = 0) {
+export function armarClases(L, ahora = new Date(), corr = 0, pedidos = []) {
   const hoy = medianoche(ahora);
   const hecha = (c) => c.estado === "hecha" || fin(c) <= ahora;
   const siguiente = L.clases.find((c) => !hecha(c)) || null;
@@ -117,6 +140,16 @@ export function armarClases(L, ahora = new Date(), corr = 0) {
       if (mismo) { if (mismo.tutor !== x.tutor && !mismo.otros.includes(x.tutor)) mismo.otros.push(x.tutor); continue; }
       eventos.push({ ...x, clase: "libre", hecha: false, sigue: false, cuando: "", otros: [] });
     }
+    // Un hueco que ya pediste lo dice: «pedida» mientras Andrea no contesta; si no se pudo, sale la nota.
+    for (const e of eventos) {
+      if (e.clase !== "libre") continue;
+      const p = pedidos.filter((x) => x.ini.getTime() === e.ini.getTime()).pop();
+      if (!p) continue;
+      const resp = L.respuestas.get(p.id);
+      if (resp && resp.estado === "reservada") continue;       // ya es clase: llega en «clases» con la próxima lectura
+      e.pedido = { ...p, respuesta: resp || null };
+      if (!resp) e.clase = "libre pedida";
+    }
     eventos.sort((a, b) => a.ini - b.ini);
     return { fecha: d, esHoy, nombre, corto: DIAS[d.getDay()], num: d.getDate(), eventos };
   });
@@ -125,18 +158,22 @@ export function armarClases(L, ahora = new Date(), corr = 0) {
     ? `${DIAS[a.getDay()]} ${a.getDate()} – ${DIAS[b.getDay()]} ${b.getDate()} de ${MESES[b.getMonth()]}`
     : `${DIAS[a.getDay()]} ${a.getDate()} de ${MESES[a.getMonth()]} – ${DIAS[b.getDay()]} ${b.getDate()} de ${MESES[b.getMonth()]}`;
   const conAhora = dias.some((x) => x.esHoy) && ahora.getHours() >= HORA0 && ahora.getHours() < HORA1;
-  return { dias, rango, semana, siguiente, ahoraTop: conAhora ? arriba(ahora) : null, alInicio: corr <= -ATRAS, alFinal: corr >= ADELANTE };
+  // Los pedidos que Andrea no pudo reservar (de hoy en adelante), para avisarte arriba.
+  const fallidos = pedidos.filter((p) => p.ini >= ahora && L.respuestas.get(p.id)?.estado === "no se pudo")
+    .map((p) => ({ ...p, nota: L.respuestas.get(p.id).nota }));
+  const pendientes = pedidos.filter((p) => p.ini >= ahora && !L.respuestas.has(p.id));
+  return { dias, rango, semana, siguiente, fallidos, pendientes, ahoraTop: conAhora ? arriba(ahora) : null, alInicio: corr <= -ATRAS, alFinal: corr >= ADELANTE };
 }
 
 /** El calendario (sin el fondo ni las entradas de arriba: esos los pone la página). */
-export function htmlClases(datos, ahora = new Date()) {
+export function htmlClases(datos, ahora = new Date(), pedidos = []) {
   const L = leerClases(datos);
   if (!L) {
     return `<section class="card"><h1 class="h">Clases</h1>
       <p>Todavía no llegan tus clases de Worldsacross. La tarea de cada media hora las trae desde tu Chrome; si tu computadora está prendida, aparecen solas.</p>
       <p><a class="ub" href="${WA}" target="_blank" rel="noopener noreferrer">Abrir Worldsacross</a></p></section>`;
   }
-  const C = armarClases(L, ahora, corrimiento);
+  const C = armarClases(L, ahora, corrimiento, pedidos);
   const s = C.semana;
   const horas = [];
   for (let h = HORA0; h <= HORA1; h++) horas.push(`<span data-top="${(h - HORA0) * PX - 8}">${h % 12 || 12} ${h < 12 ? "AM" : "PM"}</span>`);
@@ -145,8 +182,8 @@ export function htmlClases(datos, ahora = new Date()) {
   const bloque = (e) => {
     const n = i++;
     const nombre = e.tutor.split(" ")[0];
-    const linea = e.clase === "libre" ? hora12(e.ini) + (e.otros.length ? ` · +${e.otros.length}` : "") : hora12(e.ini);
-    const dicho = `${e.tutor}, ${hora12(e.ini)}${e.tema ? ", " + e.tema : ""}${e.hecha ? ", hecha" : e.clase === "libre" ? `, hueco libre${e.otros?.length ? "; también " + e.otros.join(", ") : ""}` : e.sigue ? ", la que sigue" : ""}`;
+    const linea = e.clase.startsWith("libre") ? (e.clase === "libre pedida" ? "pedida ⏳" : hora12(e.ini) + (e.otros.length ? ` · +${e.otros.length}` : "")) : hora12(e.ini);
+    const dicho = `${e.tutor}, ${hora12(e.ini)}${e.tema ? ", " + e.tema : ""}${e.hecha ? ", hecha" : e.clase === "libre pedida" ? ", ya la pediste" : e.clase === "libre" ? `, hueco libre${e.otros?.length ? "; también " + e.otros.join(", ") : ""}` : e.sigue ? ", la que sigue" : ""}`;
     return `<button type="button" class="clB${e.clase ? " " + e.clase : ""}" data-top="${arriba(e.ini)}" data-cl="${n}" aria-label="${esc(dicho)}">
       ${e.foto ? `<img data-tutor="${esc(e.foto)}" alt="">` : `<span class="clIni" aria-hidden="true">${esc(nombre.slice(0, 1))}</span>`}
       <span class="clT"><span class="clN">${esc(nombre)}${e.hecha ? " ✓" : ""}</span><span class="clH">${esc(linea)}</span>${e.tema ? `<span class="clTema">${esc(e.tema)}</span>` : ""}</span></button>`;
@@ -154,7 +191,7 @@ export function htmlClases(datos, ahora = new Date()) {
   const eventos = [];
   const columnas = C.dias.map((d) => {
     for (const e of d.eventos) eventos.push({ ...e, dia: d });
-    return `<div class="clCol${d.esHoy ? " hoyCol" : ""}" role="group" aria-label="${esc(d.nombre)}: ${d.eventos.filter((e) => e.clase !== "libre").length === 1 ? "1 clase" : d.eventos.filter((e) => e.clase !== "libre").length + " clases"}">
+    return `<div class="clCol${d.esHoy ? " hoyCol" : ""}" role="group" aria-label="${esc(d.nombre)}: ${d.eventos.filter((e) => !e.clase.startsWith("libre")).length === 1 ? "1 clase" : d.eventos.filter((e) => !e.clase.startsWith("libre")).length + " clases"}">
       ${d.esHoy && C.ahoraTop !== null ? `<i class="clAhora" data-top="${C.ahoraTop}" aria-hidden="true"></i>` : ""}
       ${d.eventos.map(bloque).join("")}</div>`;
   }).join("");
@@ -172,6 +209,8 @@ export function htmlClases(datos, ahora = new Date()) {
       <p class="clHoras"><b>${esc(duracion(s.total))}</b> de conversación esta semana</p>
       <p class="small">${s.clases === 1 ? "1 clase" : s.clases + " clases"} · ${s.hechas === 1 ? "1 hecha" : s.hechas + " hechas"}${s.hablado ? ` · ${esc(duracion(s.hablado))} ya habladas` : ""}</p>
       ${C.siguiente ? `<p class="clSigue">La que sigue: <b>${esc(C.siguiente.tutor)}</b>, ${esc(cuandoLargo(C.siguiente, ahora))}${C.siguiente.tema ? ` · ${esc(C.siguiente.tema)}` : ""}</p>` : ""}
+      ${C.pendientes.length ? `<p class="clPedidos">${C.pendientes.length === 1 ? "1 clase pedida" : C.pendientes.length + " clases pedidas"}: Andrea la${C.pendientes.length === 1 ? "" : "s"} reserva en la próxima media hora.</p>` : ""}
+      ${C.fallidos.map((p) => `<p class="clNoSePudo">No se pudo reservar a <b>${esc(p.tutor)}</b>, ${esc(cuandoLargo(p, ahora))}${p.nota ? `: ${esc(p.nota)}` : "."}</p>`).join("")}
       ${viejo}
     </section>
     <section class="card clCal" id="clCal" aria-label="Calendario de ${esc(C.rango)}">
@@ -184,9 +223,11 @@ export function htmlClases(datos, ahora = new Date()) {
     </section>`;
 }
 let ultimos = [];      // los bloques que están en pantalla, en orden (data-cl)
+let repintarAhora = () => {};
 
 /** Lo que el HTML no puede traer escrito (lugares y fotos) y lo que se toca. `repintar` vuelve a pintar la página. */
 export function montar(raiz, repintar) {
+  repintarAhora = repintar;
   for (const e of raiz.querySelectorAll(".clCuerpo [data-top]")) e.style.top = e.dataset.top + "px";
   for (const img of raiz.querySelectorAll("img[data-tutor]")) fotoEn(img, img.dataset.tutor);
   const ir = (n) => {
@@ -227,7 +268,10 @@ function abrir(e) {
   const hoja = document.getElementById("hojaV"), dentro = document.getElementById("hvIn");
   if (!e || !hoja || !dentro) return;
   const dia = e.dia.nombre === "Hoy" || e.dia.nombre === "Mañana" || e.dia.nombre === "Ayer" ? e.dia.nombre : e.dia.nombre.replace(/ \d+$/, "") + " " + e.dia.num + " de " + MESES[e.dia.fecha.getMonth()];
-  const estado = e.clase === "libre" ? "Tu favorito tiene este hueco libre" : e.hecha ? "Hecha ✓" : e.sigue ? (e.cuando ? "La que sigue: empieza " + e.cuando : "La que sigue") : "Agendada";
+  const libre = e.clase.startsWith("libre"), pendiente = e.clase === "libre pedida";
+  const estado = pendiente ? `Ya se la pediste a Andrea: ${e.pedido.tutor}. La reserva en la próxima media hora.`
+    : e.pedido?.respuesta?.estado === "no se pudo" ? `No se pudo reservar a ${e.pedido.tutor}${e.pedido.respuesta.nota ? ": " + e.pedido.respuesta.nota : "."}`
+    : libre ? "Tu favorito tiene este hueco libre" : e.hecha ? "Hecha ✓" : e.sigue ? (e.cuando ? "La que sigue: empieza " + e.cuando : "La que sigue") : "Agendada";
   dentro.innerHTML = `
     <div class="clFicha${e.clase ? " " + e.clase : ""}">
       ${e.foto ? `<img data-tutor="${esc(e.foto)}" alt="">` : `<span class="clIni grande" aria-hidden="true">${esc(e.tutor.slice(0, 1))}</span>`}
@@ -238,10 +282,34 @@ function abrir(e) {
       ${e.tema ? `<p class="clFTema">${esc(e.tema)}</p>` : ""}
       ${e.leccion ? `<p class="clLeccion">Lección: <a href="${esc(e.leccion.url)}" target="_blank" rel="noopener noreferrer">${esc(e.leccion.titulo)}</a></p>` : ""}
     </div>
-    <div class="acts">
-      ${e.hecha ? "" : `<a class="ub grande" href="${WA}" target="_blank" rel="noopener noreferrer">${e.clase === "libre" ? "Ver en Worldsacross" : "Entrar a la clase"}</a>`}
+    <div class="acts" id="clActs">
+      ${pendiente ? `<button type="button" class="ub" data-cancelar>Cancelar el pedido</button>`
+        : libre ? [e.tutor, ...(e.otros || [])].map((t) => `<button type="button" class="ub grande" data-pedir="${esc(t)}">Reservar con ${esc(t.split(" ")[0])}</button>`).join("") : ""}
+      ${e.hecha || libre ? "" : `<a class="ub grande" href="${WA}" target="_blank" rel="noopener noreferrer">Entrar a la clase</a>`}
       <button type="button" class="ub" data-cerrar>Cerrar</button>
     </div>`;
+  // Se cierra como con «Cerrar», para que la página haga lo mismo de siempre (regresar el foco, etc.).
+  const cerrar = () => { const x = dentro.querySelector("[data-cerrar]"); if (x) x.click(); else if (hoja.close) hoja.close(); };
+  // Reservar pide un segundo sí: nada se apunta hasta que confirmas.
+  for (const b of dentro.querySelectorAll("[data-pedir]")) b.addEventListener("click", () => {
+    const tutor = b.dataset.pedir, acts = document.getElementById("clActs");
+    acts.innerHTML = `<p class="clPregunta" id="clPreg" tabindex="-1">¿Le pido a Andrea que te reserve a <b>${esc(tutor)}</b>, ${esc(dia.toLowerCase() === "hoy" || dia.toLowerCase() === "mañana" ? dia.toLowerCase() : "el " + dia)}, de ${esc(hora12(e.ini))} a ${esc(hora12(fin(e)))}?</p>
+      <button type="button" class="ub grande" data-si>Sí, resérvala</button>
+      <button type="button" class="ub" data-cerrar>No</button>`;
+    document.getElementById("clPreg").focus();
+    acts.querySelector("[data-si]").addEventListener("click", () => {
+      A.apuntar({ t: "pedirClase", id: "pc-" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
+        cuando: new Date().toISOString(), inicio: e.ini.toISOString(), min: e.min, tutor });
+      cerrar();
+      repintarAhora();
+    });
+  });
+  const cancelar = dentro.querySelector("[data-cancelar]");
+  if (cancelar) cancelar.addEventListener("click", () => {
+    A.apuntar({ t: "cancelarPedido", id: e.pedido.id, cuando: new Date().toISOString() });
+    cerrar();
+    repintarAhora();
+  });
   for (const img of dentro.querySelectorAll("img[data-tutor]")) fotoEn(img, img.dataset.tutor);
   if (!hoja.hasAttribute("open")) { if (hoja.showModal) hoja.showModal(); else hoja.setAttribute("open", ""); }
   document.getElementById("hvT").focus({ preventScroll: true });

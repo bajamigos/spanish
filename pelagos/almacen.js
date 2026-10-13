@@ -9,7 +9,7 @@
 // - Lo que contestas entra primero a una fila en este aparato y de ahí sube.
 //   Sin internet, la fila espera y sube sola cuando vuelve.
 // - La llave vive solo en este navegador y solo viaja a la dirección de CONFIG.api.
-import { CONFIG } from "./config.js?v=3163e73b84";
+import { CONFIG } from "./config.js?v=07a712a532";
 
 const CLAVES = { llave: "pelagos.llave", aparato: "pelagos.aparato", fila: "pelagos.fila." };      // la fila: una clave por suceso
 const RUTA_SUCESOS = /^sucesos\/([A-Za-z0-9_-]+)\/(\d{4}-\d{2})\.jsonl$/;
@@ -248,7 +248,8 @@ let tableroActual = null;       // { sha, datos }: el tablero del día, tal como
 
 /** El tablero del día tal como está en el repositorio, o null. La forma la revisa quien lo usa. */
 export function tablero() { return tableroActual ? tableroActual.datos : null; }
-export function huellaTablero() { return tableroActual ? tableroActual.sha : ""; }
+/** Cambia cuando llega un tablero nuevo o unas clases nuevas: con eso la página sabe que tiene que volver a pintarse. */
+export function huellaTablero() { return (tableroActual ? tableroActual.sha : "") + "|" + (clasesActual ? clasesActual.sha : ""); }
 let clasesActual = null;        // { sha, datos }: tus clases de Worldsacross, tal como llegaron
 /** Tus clases tal como están en el repositorio, o null. La forma la revisa quien las usa. */
 export function clases() { return clasesActual ? clasesActual.datos : null; }
