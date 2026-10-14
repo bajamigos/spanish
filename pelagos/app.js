@@ -1,9 +1,9 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=2732b3d463";
-import * as A from "./almacen.js?v=2732b3d463";
-import { abrirRecorrido } from "./recorrido.js?v=2732b3d463";
-import * as V from "./videos.js?v=2732b3d463";
-import * as CL from "./clases.js?v=2732b3d463";
+import * as N from "./nucleo.js?v=11bdc77fe7";
+import * as A from "./almacen.js?v=11bdc77fe7";
+import { abrirRecorrido } from "./recorrido.js?v=11bdc77fe7";
+import * as V from "./videos.js?v=11bdc77fe7";
+import * as CL from "./clases.js?v=11bdc77fe7";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1311,13 +1311,13 @@ function verLectura(o) {
   const ahora = libros.find((b) => b.estado === "leyendo") || null;
   const resto = libros.filter((b) => b !== ahora);
   const portada = (b, clase) => b.portada
-    ? `<img class="${clase}" src="${esc(b.portada)}" alt="Portada de ${esc(b.titulo)}" loading="lazy" referrerpolicy="no-referrer">`
+    ? `<img class="${clase}" src="${esc(b.portada)}" alt="Portada de ${esc(b.titulo)}" referrerpolicy="no-referrer">`
     : `<span class="${clase} sinPortada" aria-hidden="true">${esc(b.titulo)}</span>`;
   const abre = (b) => `href="${esc(b.url)}" target="_blank" rel="noopener"`;
 
   // Hoy y los últimos siete días, en palabras (las gráficas llegan cuando haya una semana de datos).
   const minHoy = dias.get(hoy) || 0;
-  const lineaHoy = minHoy >= meta ? `Hoy: ${horasMin(minHoy)}. Meta cumplida.` : `Hoy: ${minHoy} de ${meta} min. Te faltan ${meta - minHoy}.`;
+  const lineaHoy = minHoy >= meta ? `Hoy: ${minHoy} de ${meta} min. Meta cumplida.` : `Hoy: ${minHoy} de ${meta} min. Te faltan ${meta - minHoy}.`;
   let cumplidos = 0, total = 0;
   const d0 = new Date();
   for (let i = 0; i < 7; i++) {
