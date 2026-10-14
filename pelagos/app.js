@@ -1,9 +1,9 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=f11f942bc1";
-import * as A from "./almacen.js?v=f11f942bc1";
-import { abrirRecorrido } from "./recorrido.js?v=f11f942bc1";
-import * as V from "./videos.js?v=f11f942bc1";
-import * as CL from "./clases.js?v=f11f942bc1";
+import * as N from "./nucleo.js?v=74e3c94cfd";
+import * as A from "./almacen.js?v=74e3c94cfd";
+import { abrirRecorrido } from "./recorrido.js?v=74e3c94cfd";
+import * as V from "./videos.js?v=74e3c94cfd";
+import * as CL from "./clases.js?v=74e3c94cfd";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1309,7 +1309,8 @@ function verLectura(o, ejemplo = false) {
   const er = T && T.dia === hoy ? T.medidas.find((m) => /elevenreader/i.test(m.nombre)) : null;
   if (er) dias.set(hoy, Math.max(dias.get(hoy) || 0, Math.round(er.valor)));
   const libros = L ? L.libros : [];
-  const ahora = libros.find((b) => b.estado === "leyendo") || null;
+  // «Leyendo ahora» es el de ElevenReader (se abre con un toque); los demás van a sus estantes.
+  const ahora = libros.find((b) => b.estado === "leyendo" && b.url) || libros.find((b) => b.estado === "leyendo") || null;
   const resto = libros.filter((b) => b !== ahora);
   const portada = (b, clase) => b.portada
     ? `<img class="${clase}" src="${esc(b.portada)}" alt="Portada de ${esc(b.titulo)}" referrerpolicy="no-referrer">`
@@ -1337,13 +1338,34 @@ function verLectura(o, ejemplo = false) {
         </span>
       </a>
     </section>` : "";
-  const estado = (b) => b.estado === "terminado" ? "Terminado" + (b.terminado ? " el " + diaLargo(b.terminado) : "")
-    : b.estado === "leyendo" ? "Leyendo" + (b.falta ? ": faltan " + b.falta : "") : "En tu estante";
-  const estante = resto.length ? `
-    <section class="card" id="estante">
-      <h2>Tu estante</h2>
-      <ul class="estante">${resto.map((b) => `<li><a class="libro" ${abre(b)}>${portada(b, "portadaChica")}<span class="libroTitulo">${esc(b.titulo)}</span><span class="small">${esc(estado(b))}</span></a></li>`).join("")}</ul>
+  // Los estantes (su pedido del 14-Oct: sus libros de antes, de su hoja de Excel, también con portada).
+  const estrellas = (n) => (n ? `<span class="estrellas" aria-label="${n} de 5 estrellas">${"★".repeat(n)}</span>` : "");
+  const pie = (b) => {
+    const partes = [];
+    if (b.estado === "terminado") partes.push("Terminado" + (b.terminado ? " el " + diaLargo(b.terminado) : "") + (b.veces > 1 ? ` (${b.veces} veces)` : ""));
+    else if (b.estado === "leyendo") partes.push(b.avance !== null ? `Vas en ${Math.round(b.avance * 100)} %` : b.falta ? "Faltan " + b.falta : "Leyendo");
+    else if (b.estado === "abandonado") partes.push("Lo dejaste" + (b.avance ? ` en ${Math.round(b.avance * 100)} %` : ""));
+    if (b.medio) partes.push(b.medio);
+    return esc(partes.join(" · "));
+  };
+  const ficha = (b) => {
+    const [ab, ci] = b.url ? [`<a class="libro" ${abre(b)}>`, "</a>"] : ['<div class="libro">', "</div>"];
+    return `<li>${ab}${portada(b, "portadaChica")}<span class="libroTitulo">${esc(b.titulo)}</span>${b.autor ? `<span class="small">${esc(b.autor)}</span>` : ""}${estrellas(b.nota)}<span class="small">${pie(b)}</span>${ci}</li>`;
+  };
+  const leidos = resto.filter((b) => b.estado === "terminado")
+    .map((b, i) => [b, i]).sort((x, y) => (y[0].terminado || "").localeCompare(x[0].terminado || "") || x[1] - y[1]).map((x) => x[0]);
+  const paginas = leidos.reduce((t, b) => t + (b.paginas || 0) * b.veces, 0);
+  const estanteDe = (id, titulo, lista, resumen = "") => lista.length ? `
+    <section class="card estanteCard" id="${id}">
+      <h2>${titulo}</h2>
+      ${resumen ? `<p class="small">${esc(resumen)}</p>` : ""}
+      <ul class="estante">${lista.map(ficha).join("")}</ul>
     </section>` : "";
+  const estante =
+    estanteDe("estLeyendo", "También leyendo", resto.filter((b) => b.estado === "leyendo")) +
+    estanteDe("estante", "Leídos", leidos, `${plural(leidos.length, "libro terminado", "libros terminados")}${paginas ? ", " + paginas.toLocaleString("es-MX") + " páginas" : ""}.`) +
+    estanteDe("estPendientes", "Por leer", resto.filter((b) => b.estado === "pendiente")) +
+    estanteDe("estDejados", "Los que dejaste", resto.filter((b) => b.estado === "abandonado"));
 
   // ---- Las gráficas (su idea del 13-Oct): minutos por día, a qué hora escuchas y cuánto va de cada libro.
   // Cada una trae una frase que la resume y, al tocar una barra, el detalle en palabras.

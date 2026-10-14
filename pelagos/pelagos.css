@@ -836,3 +836,6 @@ dialog.sheet.conFoto:not([open]) { display: none; }
 .lectura .lecturaEjemplo { font-weight: 600; border-left: 3px solid var(--ambar); padding-left: .6rem; }
 .lectura .lecturaEjemplo a, .lectura .lecturaVerEjemplo a { color: inherit; text-decoration: underline; }
 .lectura .lecturaVerEjemplo { text-align: center; margin: 1rem 0; }
+.lectura .libro .estrellas { color: #9a6c00; letter-spacing: 1px; font-size: .9rem; }
+:root[data-tema="oscuro"] .lectura .libro .estrellas { color: var(--ambar); }
+.lectura .libro .small { line-height: 1.3; }

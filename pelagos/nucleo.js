@@ -639,13 +639,22 @@ export function leerLectura(crudo) {
   const url = (u) => (typeof u === "string" && /^https:\/\/elevenreader\.io\/reader\/library\/u:[A-Za-z0-9]{6,40}$/.test(u) ? u : null);
   // Las portadas son las miniaturas públicas de ElevenReader (su CDN en Google); nada más se acepta.
   const portada = (u) => (typeof u === "string" && /^https:\/\/storage\.googleapis\.com\/eleven-public-cdn\/database\/reader_customers\/[A-Za-z0-9]{6,40}\/read\/u%3A[A-Za-z0-9]{6,40}\/thumbnail\.(webp|jpg|jpeg|png)(\?v=\d{1,14})?$/.test(u) ? u : null);
+  // También van libros de fuera de ElevenReader (Kindle, papel…): sin «url», con su portada de Open Library si la hay.
+  const ol = (u) => (typeof u === "string" && /^https:\/\/covers\.openlibrary\.org\/b\/id\/\d{1,10}-[SML]\.jpg$/.test(u) ? u : null);
+  const clave = (t) => t.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60);
   const libros = [], vistos = new Set();
-  for (const b of Array.isArray(crudo.libros) ? crudo.libros.slice(0, 200) : []) {
+  for (const b of Array.isArray(crudo.libros) ? crudo.libros.slice(0, 300) : []) {
     const titulo = texto(b && b.titulo, 160), u = url(b && b.url);
-    if (!titulo || !u || vistos.has(u)) continue;
-    vistos.add(u);
-    libros.push({ id: u.slice(u.lastIndexOf("/") + 1), titulo, autor: texto(b.autor, 80), url: u, portada: portada(b.portada),
-      falta: texto(b.falta, 40), estado: ["leyendo", "terminado", "pendiente"].includes(b.estado) ? b.estado : "pendiente", terminado: dia(b.terminado) });
+    if (!titulo) continue;
+    const id = u ? u.slice(u.lastIndexOf("/") + 1) : "x:" + clave(titulo);
+    if (vistos.has(id)) continue;
+    vistos.add(id);
+    const num = (v, max) => (typeof v === "number" && Number.isFinite(v) && v >= 0 && v <= max ? v : null);
+    libros.push({ id, titulo, autor: texto(b.autor, 80), url: u, portada: portada(b.portada) || ol(b.portada),
+      falta: texto(b.falta, 40), estado: ["leyendo", "terminado", "pendiente", "abandonado"].includes(b.estado) ? b.estado : "pendiente",
+      terminado: dia(b.terminado), nota: Number.isInteger(b.nota) ? num(b.nota, 5) : null, avance: num(b.avance, 1),
+      paginas: Number.isInteger(b.paginas) ? num(b.paginas, 5000) : null, veces: Number.isInteger(b.veces) && b.veces > 1 && b.veces < 20 ? b.veces : 1,
+      medio: texto(b.medio, 20) });
   }
   const dias = new Map();
   if (crudo.dias && typeof crudo.dias === "object" && !Array.isArray(crudo.dias)) {
