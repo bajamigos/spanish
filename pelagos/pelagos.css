@@ -742,6 +742,10 @@ dialog.sheet.escena { width: min(100%, 720px); max-height: 92%; }
 .clFicha h2 { margin: 6px 0 0; font-size: 24px; }
 .clCuando { font-size: 18px; }
 .clEstado { font-weight: 700; color: var(--ink-2); }
+.clB.fallida { border: 2px solid var(--rojo); background: color-mix(in srgb, var(--rojo) 18%, transparent); }
+.clB.fallida .clH { color: var(--rojo); font-weight: 700; }
+.clFicha.fallida .clEstado { color: var(--rojo); }
+.clFicha.fallida img, .clFicha.fallida .clIni.grande { border-color: var(--rojo); }
 .clB.pedida { border: 2px solid var(--ambar); background: rgba(255,210,74,0.18); }
 .clB.pedida .clH { color: var(--ambar); font-weight: 700; }
 .clPedidos { font-weight: 700; color: var(--ambar); }

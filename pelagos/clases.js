@@ -21,7 +21,7 @@
 //   gramática (la sugerida es tu tema B2 más bajo; la pone la página con ponerSugerencia).
 //   (y { "t": "cancelarPedido", "id": "pc-…" } para quitarlo). La tarea de cada media hora lo reserva en Worldsacross
 //   y lo contesta en clases.json: "pedidos": [ { "id": "pc-…", "estado": "reservada" | "no se pudo", "nota": "…" } ].
-import * as A from "./almacen.js?v=2a0e5d69cf";
+import * as A from "./almacen.js?v=7b722799c9";
 
 export const HORA0 = 6, HORA1 = 21, PX = 56;      // la cuadrícula: de 6 am a 9 pm, 56 px por hora
 const ATRAS = 7, ADELANTE = 13;                    // hasta dónde se puede deslizar, en días desde hoy
@@ -58,7 +58,8 @@ export function leerClases(datos) {
   const respuestas = new Map();
   for (const x of Array.isArray(datos.pedidos) ? datos.pedidos : []) {
     if (x && typeof x.id === "string" && ["reservada", "no se pudo"].includes(x.estado)) {
-      respuestas.set(x.id, { estado: x.estado, nota: typeof x.nota === "string" ? x.nota.slice(0, 200) : "" });
+      const cuando = typeof x.contestado === "string" && !Number.isNaN(new Date(x.contestado).getTime()) ? new Date(x.contestado) : null;
+      respuestas.set(x.id, { estado: x.estado, nota: typeof x.nota === "string" ? x.nota.slice(0, 200) : "", contestado: cuando });
     }
   }
   return { leido, clases, libres, respuestas };
@@ -107,6 +108,11 @@ function falta(c, ahora) {
   return "";
 }
 
+/** «hoy», «ayer» o «el 12»: para decir cuándo se confirmó algo. */
+function diaCorto(f, ahora = new Date()) {
+  return mismoDia(f, ahora) ? "hoy" : mismoDia(f, masDias(medianoche(ahora), -1)) ? "ayer" : "el " + f.getDate();
+}
+
 /** «hoy a las 8:00 am (en 20 min)», «mañana a las 12:00 pm», «el viernes 16 a las 12:00 pm». */
 function cuandoLargo(c, ahora) {
   const hoy = medianoche(ahora), f = falta(c, ahora);
@@ -153,7 +159,20 @@ export function armarClases(L, ahora = new Date(), corr = 0, pedidos = []) {
       const resp = L.respuestas.get(p.id);
       if (resp && resp.estado === "reservada") continue;       // ya es clase: llega en «clases» con la próxima lectura
       e.pedido = { ...p, respuesta: resp || null };
-      if (!resp) e.clase = "libre pedida";
+      e.clase = resp ? "libre fallida" : "libre pedida";
+    }
+    // Un pedido que no se pudo sale en rojo aunque el hueco ya no esté en «libres»: así sabes que hay que buscar otro.
+    for (const p of pedidos) {
+      const resp = L.respuestas.get(p.id);
+      if (!resp || resp.estado !== "no se pudo" || !mismoDia(p.ini, d) || fin(p) <= ahora) continue;
+      if (eventos.some((c) => c.ini < fin(p) && p.ini < fin(c))) continue;
+      eventos.push({ ini: p.ini, min: p.min, tutor: p.tutor, foto: "", estado: "libre", clase: "libre fallida", hecha: false, sigue: false, cuando: "", otros: [], pedido: { ...p, respuesta: resp } });
+    }
+    // Las clases que pediste desde aquí y Andrea reservó: «Confirmada».
+    for (const e of eventos) {
+      if (e.clase.startsWith("libre")) continue;
+      const p = pedidos.find((x) => x.ini.getTime() === e.ini.getTime() && x.tutor === e.tutor && L.respuestas.get(x.id)?.estado === "reservada");
+      if (p) e.confirmada = L.respuestas.get(p.id).contestado || true;
     }
     eventos.sort((a, b) => a.ini - b.ini);
     return { fecha: d, esHoy, nombre, corto: DIAS[d.getDay()], num: d.getDate(), eventos };
@@ -187,8 +206,8 @@ export function htmlClases(datos, ahora = new Date(), pedidos = []) {
   const bloque = (e) => {
     const n = i++;
     const nombre = e.tutor.split(" ")[0];
-    const linea = e.clase.startsWith("libre") ? (e.clase === "libre pedida" ? "pedida ⏳" : hora12(e.ini) + (e.otros.length ? ` · +${e.otros.length}` : "")) : hora12(e.ini);
-    const dicho = `${e.tutor}, ${hora12(e.ini)}${e.tema ? ", " + e.tema : ""}${e.hecha ? ", hecha" : e.clase === "libre pedida" ? ", ya la pediste" : e.clase === "libre" ? `, hueco libre${e.otros?.length ? "; también " + e.otros.join(", ") : ""}` : e.sigue ? ", la que sigue" : ""}`;
+    const linea = e.clase.startsWith("libre") ? (e.clase === "libre pedida" ? "pedida ⏳" : e.clase === "libre fallida" ? "no se pudo ✕" : hora12(e.ini) + (e.otros.length ? ` · +${e.otros.length}` : "")) : hora12(e.ini);
+    const dicho = `${e.tutor}, ${hora12(e.ini)}${e.tema ? ", " + e.tema : ""}${e.hecha ? ", hecha" : e.clase === "libre pedida" ? ", ya la pediste" : e.clase === "libre fallida" ? ", no se pudo reservar" : e.clase === "libre" ? `, hueco libre${e.otros?.length ? "; también " + e.otros.join(", ") : ""}` : e.sigue ? ", la que sigue" : ""}`;
     return `<button type="button" class="clB${e.clase ? " " + e.clase : ""}" data-top="${arriba(e.ini)}" data-cl="${n}" aria-label="${esc(dicho)}">
       ${e.foto ? `<img data-tutor="${esc(e.foto)}" alt="">` : `<span class="clIni" aria-hidden="true">${esc(nombre.slice(0, 1))}</span>`}
       <span class="clT"><span class="clN">${esc(nombre)}${e.hecha ? " ✓" : ""}</span><span class="clH">${esc(linea)}</span>${e.tema ? `<span class="clTema">${esc(e.tema)}</span>` : ""}</span></button>`;
@@ -281,8 +300,10 @@ function abrir(e) {
   const dia = e.dia.nombre === "Hoy" || e.dia.nombre === "Mañana" || e.dia.nombre === "Ayer" ? e.dia.nombre : e.dia.nombre.replace(/ \d+$/, "") + " " + e.dia.num + " de " + MESES[e.dia.fecha.getMonth()];
   const libre = e.clase.startsWith("libre"), pendiente = e.clase === "libre pedida";
   const estado = pendiente ? `Ya se la pediste a Andrea: ${e.pedido.tutor}, ${ACTIVIDADES[e.pedido.actividad].split(" (")[0].toLowerCase()}${e.pedido.leccion ? " y gramática: " + e.pedido.leccion : ""}. La reserva en la próxima media hora.`
-    : e.pedido?.respuesta?.estado === "no se pudo" ? `No se pudo reservar a ${e.pedido.tutor}${e.pedido.respuesta.nota ? ": " + e.pedido.respuesta.nota : "."}`
-    : libre ? "Tu favorito tiene este hueco libre" : e.hecha ? "Hecha ✓" : e.sigue ? (e.cuando ? "La que sigue: empieza " + e.cuando : "La que sigue") : "Agendada";
+    : e.clase === "libre fallida" ? `No se pudo reservar a ${e.pedido.tutor}${e.pedido.respuesta.nota ? ": " + e.pedido.respuesta.nota.replace(/\.?$/, ".") : "."} Escoge otro tutor u otra hora.`
+    : libre ? "Tu favorito tiene este hueco libre" : e.hecha ? "Hecha ✓"
+    : e.confirmada ? (e.sigue ? "La que sigue · " : "") + "Confirmada ✓" + (e.confirmada instanceof Date ? ` (Worldsacross, ${diaCorto(e.confirmada)} a las ${hora12(e.confirmada)})` : "")
+    : e.sigue ? (e.cuando ? "La que sigue: empieza " + e.cuando : "La que sigue") : "Agendada";
   dentro.innerHTML = `
     <div class="clFicha${e.clase ? " " + e.clase : ""}">
       ${e.foto ? `<img data-tutor="${esc(e.foto)}" alt="">` : `<span class="clIni grande" aria-hidden="true">${esc(e.tutor.slice(0, 1))}</span>`}
@@ -295,7 +316,7 @@ function abrir(e) {
     </div>
     <div class="acts" id="clActs">
       ${pendiente ? `<button type="button" class="ub" data-cancelar>Cancelar el pedido</button>`
-        : libre ? [e.tutor, ...(e.otros || [])].map((t) => `<button type="button" class="ub grande" data-pedir="${esc(t)}">Reservar con ${esc(t.split(" ")[0])}</button>`).join("") : ""}
+        : libre ? [e.tutor, ...(e.otros || [])].filter((t) => e.clase !== "libre fallida" || t !== e.pedido.tutor).map((t) => `<button type="button" class="ub grande" data-pedir="${esc(t)}">Reservar con ${esc(t.split(" ")[0])}</button>`).join("") : ""}
       ${e.hecha || libre ? "" : `<a class="ub grande" href="${WA}" target="_blank" rel="noopener noreferrer">Entrar a la clase</a>`}
       <button type="button" class="ub" data-cerrar>Cerrar</button>
     </div>`;
