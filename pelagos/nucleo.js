@@ -628,7 +628,8 @@ export function leerTablero(crudo) {
 /**
  * Tu registro de lectura (tablero/lectura.json): los libros de tu biblioteca de ElevenReader y tus minutos por día.
  * Lo escribe la tarea del Tablero; aquí solo se revisa su forma y lo que venga mal hecho se tira.
- * Devuelve { libros: [{ id, titulo, autor, url, portada, falta, estado, terminado }], dias: Map(día -> minutos), meta } o null.
+ * Devuelve { libros: [{ id, titulo, autor, url, portada, falta, estado, terminado }], dias: Map(día -> minutos),
+ * horas: Map(día -> Map(hora -> minutos)), libroDia: Map(día -> id del libro), meta } o null.
  * «estado»: «leyendo» (el que estás escuchando; el primero así es «Leyendo ahora»), «terminado» o «pendiente».
  */
 export function leerLectura(crudo) {
@@ -650,8 +651,23 @@ export function leerLectura(crudo) {
   if (crudo.dias && typeof crudo.dias === "object" && !Array.isArray(crudo.dias)) {
     for (const [d, m] of Object.entries(crudo.dias)) if (dia(d) && typeof m === "number" && Number.isFinite(m) && m >= 0 && m < 1440) dias.set(d, Math.round(m));
   }
+  // «horas»: los minutos de cada día repartidos por hora (0 a 23), para la gráfica de a qué hora escuchas.
+  const horas = new Map();
+  if (crudo.horas && typeof crudo.horas === "object" && !Array.isArray(crudo.horas)) {
+    for (const [d, hs] of Object.entries(crudo.horas)) {
+      if (!dia(d) || !hs || typeof hs !== "object" || Array.isArray(hs)) continue;
+      const m = new Map();
+      for (const [h, v] of Object.entries(hs)) if (/^([01]?\d|2[0-3])$/.test(h) && typeof v === "number" && v > 0 && v <= 60) m.set(Number(h), Math.round(v));
+      if (m.size) horas.set(d, m);
+    }
+  }
+  // «libroDia»: qué libro escuchaste cada día (su id «u:…»), para sumar los minutos por libro.
+  const libroDia = new Map();
+  if (crudo.libroDia && typeof crudo.libroDia === "object" && !Array.isArray(crudo.libroDia)) {
+    for (const [d, id] of Object.entries(crudo.libroDia)) if (dia(d) && typeof id === "string" && /^u:[A-Za-z0-9]{6,40}$/.test(id)) libroDia.set(d, id);
+  }
   const meta = typeof crudo.meta === "number" && crudo.meta > 0 && crudo.meta < 1440 ? crudo.meta : 60;
-  return { libros, dias, meta };
+  return { libros, dias, horas, libroDia, meta };
 }
 
 /** Desde qué día se dibuja la historia de cada nivel en el Atlas (su pedido del 10 de octubre: «starting today»). */

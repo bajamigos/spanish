@@ -1,9 +1,9 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=11bdc77fe7";
-import * as A from "./almacen.js?v=11bdc77fe7";
-import { abrirRecorrido } from "./recorrido.js?v=11bdc77fe7";
-import * as V from "./videos.js?v=11bdc77fe7";
-import * as CL from "./clases.js?v=11bdc77fe7";
+import * as N from "./nucleo.js?v=f11f942bc1";
+import * as A from "./almacen.js?v=f11f942bc1";
+import { abrirRecorrido } from "./recorrido.js?v=f11f942bc1";
+import * as V from "./videos.js?v=f11f942bc1";
+import * as CL from "./clases.js?v=f11f942bc1";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -306,7 +306,8 @@ const RUTAS = [
   [/^\/gramatica\/([a-z0-9]+)(\/bajo|\/mision)?$/, verNivel],
   [/^\/bitacora$/, verCalor],
   [/^\/clases$/, verClases],
-  [/^\/lectura$/, verLectura],
+  [/^\/lectura$/, (o) => verLectura(o)],
+  [/^\/lectura\/ejemplo$/, (o) => verLectura(o, true)],
   [/^\/leccion\/([a-z0-9-]+)$/, verLeccion],
   [/^\/tutoras$/, verTutoras],
   [/^\/tutoras\/(\d+)$/, verTutora],
@@ -1300,9 +1301,9 @@ const horasMin = (m) => (m >= 60 ? `${Math.floor(m / 60)} h${m % 60 ? " " + (m %
  * (en el iPhone, la app). Los datos llegan en tablero/lectura.json, que escribe la tarea del Tablero; los minutos de hoy
  * los trae también el tablero del día, que se lee más seguido, y gana el número más alto.
  */
-function verLectura(o) {
-  const L = N.leerLectura(A.lectura()), T = N.leerTablero(A.tablero());
+function verLectura(o, ejemplo = false) {
   const hoy = N.fechaLocal(new Date());
+  const L = N.leerLectura(ejemplo ? lecturaDeEjemplo(hoy) : A.lectura()), T = ejemplo ? null : N.leerTablero(A.tablero());
   const meta = L ? L.meta : 60;
   const dias = new Map(L ? L.dias : []);
   const er = T && T.dia === hoy ? T.medidas.find((m) => /elevenreader/i.test(m.nombre)) : null;
@@ -1315,17 +1316,13 @@ function verLectura(o) {
     : `<span class="${clase} sinPortada" aria-hidden="true">${esc(b.titulo)}</span>`;
   const abre = (b) => `href="${esc(b.url)}" target="_blank" rel="noopener"`;
 
-  // Hoy y los últimos siete días, en palabras (las gráficas llegan cuando haya una semana de datos).
+  // Los últimos 14 días, del más viejo al de hoy.
+  const d0 = new Date(), ultimos = [];
+  for (let i = 13; i >= 0; i--) ultimos.push(N.fechaLocal(new Date(d0.getFullYear(), d0.getMonth(), d0.getDate() - i)));
   const minHoy = dias.get(hoy) || 0;
   const lineaHoy = minHoy >= meta ? `Hoy: ${minHoy} de ${meta} min. Meta cumplida.` : `Hoy: ${minHoy} de ${meta} min. Te faltan ${meta - minHoy}.`;
-  let cumplidos = 0, total = 0;
-  const d0 = new Date();
-  for (let i = 0; i < 7; i++) {
-    const d = N.fechaLocal(new Date(d0.getFullYear(), d0.getMonth(), d0.getDate() - i));
-    const m = dias.get(d) || 0;
-    total += m; if (m >= meta) cumplidos++;
-  }
-  const lineaSemana = `Últimos 7 días: ${cumplidos} de 7 con la hora cumplida, ${horasMin(total)} en total.`;
+  const semana = ultimos.slice(-7).map((d) => dias.get(d) || 0);
+  const lineaSemana = `Últimos 7 días: ${semana.filter((m) => m >= meta).length} de 7 con la hora cumplida, ${horasMin(semana.reduce((a, b) => a + b, 0))} en total.`;
 
   const tarjetaAhora = ahora ? `
     <section class="card" id="leyendoAhora">
@@ -1347,6 +1344,44 @@ function verLectura(o) {
       <h2>Tu estante</h2>
       <ul class="estante">${resto.map((b) => `<li><a class="libro" ${abre(b)}>${portada(b, "portadaChica")}<span class="libroTitulo">${esc(b.titulo)}</span><span class="small">${esc(estado(b))}</span></a></li>`).join("")}</ul>
     </section>` : "";
+
+  // ---- Las gráficas (su idea del 13-Oct): minutos por día, a qué hora escuchas y cuánto va de cada libro.
+  // Cada una trae una frase que la resume y, al tocar una barra, el detalle en palabras.
+  const tituloDe = new Map(libros.map((b) => [b.id, b.titulo]));
+  const INI = ["D", "L", "M", "M", "J", "V", "S"];
+  const porDia = ultimos.map((d) => {
+    const [a, m, dd] = d.split("-").map(Number), v = dias.get(d) || 0, lib = L && L.libroDia.get(d);
+    return { dia: d, corto: INI[new Date(a, m - 1, dd).getDay()], sub: String(dd), valor: v, hoy: d === hoy,
+      detalle: `${mayuscula(diaLargo(d))}: ${v ? horasMin(v) : "nada"}${v && lib && tituloDe.has(lib) ? " (" + tituloDe.get(lib) + ")" : ""}${v >= meta ? ". Hora cumplida." : "."}` };
+  });
+  const total14 = porDia.reduce((a, b) => a + b.valor, 0);
+  const mejor = porDia.reduce((a, b) => (b.valor > a.valor ? b : a), porDia[0]);
+  const grafDias = graficaBarras({ id: "grafDias", titulo: "Minutos por día", barras: porDia, meta,
+    resumen: total14 ? `En 14 días: ${horasMin(total14)}, ${plural(porDia.filter((b) => b.valor >= meta).length, "día", "días")} con la hora cumplida. Tu mejor día: ${diaLargo(mejor.dia)}, con ${horasMin(mejor.valor)}.` : "En 14 días todavía no hay minutos." });
+
+  const porHora = new Map();
+  for (const d of ultimos) for (const [h, v] of (L && L.horas.get(d)) || []) porHora.set(h, (porHora.get(h) || 0) + v);
+  let grafHoras = "";
+  if (porHora.size) {
+    const hs = [...porHora.keys()], desde = Math.min(7, ...hs), hasta = Math.max(22, ...hs);
+    const hora = (h) => (h % 12 || 12) + (h < 12 ? " am" : " pm");
+    const barras = [];
+    for (let h = desde; h <= hasta; h++) barras.push({ corto: h % 2 === 0 ? String(h % 12 || 12) : "", sub: h % 6 === 0 || h === desde ? (h < 12 ? "am" : "pm") : "",
+      valor: porHora.get(h) || 0, detalle: `De ${hora(h)} a ${hora(h + 1)}: ${horasMin(porHora.get(h) || 0)} en 14 días.` });
+    const fuerte = [...porHora].sort((a, b) => b[1] - a[1])[0];
+    grafHoras = graficaBarras({ id: "grafHoras", titulo: "A qué hora escuchas", barras,
+      resumen: `Tu hora fuerte: de ${hora(fuerte[0])} a ${hora(fuerte[0] + 1)}, con ${horasMin(fuerte[1])} en 14 días.` });
+  }
+
+  const porLibro = new Map();
+  for (const [d, id] of L ? L.libroDia : []) if (tituloDe.has(id)) porLibro.set(id, (porLibro.get(id) || 0) + (dias.get(d) || 0));
+  const maxLibro = Math.max(1, ...porLibro.values());
+  const grafLibros = porLibro.size ? `
+    <section class="card" id="grafLibros">
+      <h2>Por libro</h2>
+      <ul class="porLibro">${[...porLibro].sort((a, b) => b[1] - a[1]).map(([id, m]) => `<li><span class="plNombre">${esc(tituloDe.get(id))}</span><span class="plValor">${horasMin(m)}</span><span class="bar gorda lecBarra"><i data-w="${(100 * m) / maxLibro}"></i></span></li>`).join("")}</ul>
+    </section>` : "";
+
   const fondo = fondoDelDia();
   poner(`
   <div class="hoy lectura${fondo.hay ? " confoto" : ""}">
@@ -1355,12 +1390,90 @@ function verLectura(o) {
       ${entradas("tablero", "")}
       <section class="card" id="lecturaCabeza">
         <h1 class="h">Lectura</h1>
+        ${ejemplo ? `<p class="lecturaEjemplo">Datos inventados, solo para ver cómo se ve. <a href="#/lectura">Volver a tus datos</a></p>` : ""}
         <p class="lecturaHoy">${esc(lineaHoy)}</p>
         <p class="small">${esc(lineaSemana)}</p>
       </section>
-      ${L ? tarjetaAhora + estante : `<section class="card"><p class="small">Todavía no llega tu registro de lectura. La tarea del Tablero lo trae en su próxima pasada.</p></section>`}
+      ${L ? tarjetaAhora + grafDias + grafHoras + grafLibros + estante : `<section class="card"><p class="small">Todavía no llega tu registro de lectura. La tarea del Tablero lo trae en su próxima pasada.</p></section>`}
+      ${ejemplo ? "" : `<p class="small lecturaVerEjemplo"><a href="#/lectura/ejemplo">Ver con datos de ejemplo</a></p>`}
     </div>
   </div>`, { titulo: "Lectura · Pelagos", nav: "inicio", conserva: o.conserva });
+  // Tocar (o enfocar) una barra dice su detalle en el renglón de abajo de la gráfica.
+  for (const g of vista.querySelectorAll(".grafica")) {
+    const decir = (ev) => {
+      const b = ev.target.closest && ev.target.closest(".hit");
+      if (!b) return;
+      for (const x of g.querySelectorAll(".hit.activa")) x.classList.remove("activa");
+      b.classList.add("activa");
+      g.querySelector(".grafDetalle").textContent = b.getAttribute("aria-label");
+    };
+    g.addEventListener("click", decir);
+    g.addEventListener("focusin", decir);
+  }
+}
+
+const mayuscula = (t) => t.charAt(0).toUpperCase() + t.slice(1);
+
+/**
+ * Una gráfica de barras sencilla en SVG: una sola serie, sin colores que digan nada más que «minutos».
+ * La línea punteada es la meta. Cada barra se puede tocar o enfocar (su detalle se dice abajo) y hay una tabla para lectores de pantalla.
+ */
+function graficaBarras({ id, titulo, resumen, barras, meta = null }) {
+  const W = 340, H = 180, izq = 30, der = 4, arriba = 14, abajo = 30;
+  const n = barras.length, paso = (W - izq - der) / n, ancho = Math.max(3, paso - 2);
+  const maxV = Math.max(meta || 0, ...barras.map((b) => b.valor), 1);
+  const div = maxV > 180 ? 60 : maxV > 60 ? 30 : 10, tope = Math.ceil(maxV / div) * div;
+  const y = (v) => arriba + (H - arriba - abajo) * (1 - v / tope), base = y(0);
+  const r1 = (v) => Math.round(v * 10) / 10;
+  const marcas = barras.map((b, i) => {
+    const x = izq + i * paso + (paso - ancho) / 2, top = y(b.valor), alto = base - top, r = Math.min(4, ancho / 2, alto);
+    const forma = b.valor > 0 ? `<path class="barraG" d="M${r1(x)} ${r1(base)}V${r1(top + r)}Q${r1(x)} ${r1(top)} ${r1(x + r)} ${r1(top)}H${r1(x + ancho - r)}Q${r1(x + ancho)} ${r1(top)} ${r1(x + ancho)} ${r1(top + r)}V${r1(base)}Z"/>` : "";
+    const cx = r1(izq + i * paso + paso / 2);
+    return `${forma}<text class="ejeG${b.hoy ? " hoyG" : ""}" x="${cx}" y="${H - abajo + 13}" text-anchor="middle">${esc(b.corto)}</text>${b.sub ? `<text class="ejeG sub${b.hoy ? " hoyG" : ""}" x="${cx}" y="${H - abajo + 25}" text-anchor="middle">${esc(b.sub)}</text>` : ""}` +
+      `<rect class="hit" x="${r1(izq + i * paso)}" y="${arriba}" width="${r1(paso)}" height="${r1(base - arriba)}" tabindex="0" role="button" aria-label="${esc(b.detalle)}"/>`;
+  }).join("");
+  const lineaMeta = meta ? `<line class="metaG" x1="${izq}" x2="${W - der}" y1="${r1(y(meta))}" y2="${r1(y(meta))}"/><text class="ejeG" x="${izq - 4}" y="${r1(y(meta)) + 4}" text-anchor="end">${meta}</text>` : "";
+  const ejes = `<line class="baseG" x1="${izq}" x2="${W - der}" y1="${r1(base)}" y2="${r1(base)}"/><text class="ejeG" x="${izq - 4}" y="${r1(base) + 4}" text-anchor="end">0</text>` +
+    (tope !== meta ? `<text class="ejeG" x="${izq - 4}" y="${arriba + 4}" text-anchor="end">${tope}</text><line class="guiaG" x1="${izq}" x2="${W - der}" y1="${arriba}" y2="${arriba}"/>` : "");
+  return `
+    <section class="card grafica" id="${id}">
+      <h2>${esc(titulo)}</h2>
+      <p class="small">${esc(resumen)}</p>
+      <svg viewBox="0 0 ${W} ${H}" role="group" aria-label="${esc(titulo)}, en minutos">${ejes}${lineaMeta}${marcas}</svg>
+      <p class="small grafDetalle" role="status">Toca una barra para ver el detalle.</p>
+    </section>`;
+}
+
+/**
+ * Datos inventados para ver la página Lectura llena (su pedido del 14-Oct-2026). Cuentan su semana como él la contó:
+ * la semana pasada, de lunes a viernes, El despertar del Leviatán de 8 a 4, a ratos (y lo terminó el domingo);
+ * esta semana, el lunes empezó La guerra de Calibán. Las fechas se acomodan a la semana de hoy.
+ */
+function lecturaDeEjemplo(hoy) {
+  const [a, m, d] = hoy.split("-").map(Number), h0 = new Date(a, m - 1, d);
+  const lunes = new Date(a, m - 1, d - ((h0.getDay() + 6) % 7));
+  const dia = (k) => N.fechaLocal(new Date(lunes.getFullYear(), lunes.getMonth(), lunes.getDate() + k));
+  const LEV = "u:BiCFwSqEjKjg0tXUxqkr", CAL = "u:a8e4UoY51nZ8QwhXlIt9";
+  const P = (id, v) => `https://storage.googleapis.com/eleven-public-cdn/database/reader_customers/ljEp3KNMeuTpAGEeIxGpXpPOJfs2/read/u%3A${id.slice(2)}/thumbnail.webp?v=${v}`;
+  // A ratos de 8 a 4: minutos por hora, de lunes a viernes de la semana pasada; el fin de semana, de noche.
+  const ratos = [
+    { 8: 25, 9: 40, 10: 15, 11: 35, 12: 10, 13: 30, 14: 20, 15: 35 },
+    { 8: 10, 9: 30, 10: 45, 12: 20, 13: 25, 14: 40, 15: 15 },
+    { 8: 35, 9: 45, 10: 50, 11: 25, 12: 15, 13: 20, 14: 30, 15: 20 },
+    { 8: 20, 9: 15, 10: 40, 11: 30, 13: 35, 15: 25 },
+    { 8: 30, 9: 40, 10: 35, 11: 20, 12: 25, 13: 30, 14: 30, 15: 20 },
+    { 19: 30, 20: 40 },
+    { 18: 15, 19: 35, 20: 25 },
+  ];
+  const horas = {}, dias = {}, libroDia = {};
+  ratos.forEach((hs, k) => { const f = dia(k - 7); horas[f] = hs; dias[f] = Object.values(hs).reduce((x, y) => x + y, 0); libroDia[f] = LEV; });
+  // Esta semana: el lunes empezó Calibán (16 min en la noche); el martes, 46 en la mañana y 14 en la noche.
+  const esta = [{ 21: 16 }, { 9: 46, 20: 14 }];
+  esta.forEach((hs, k) => { const f = dia(k); if (f > hoy) return; horas[f] = hs; dias[f] = Object.values(hs).reduce((x, y) => x + y, 0); libroDia[f] = CAL; });
+  return { version: 1, meta: 60, dias, horas, libroDia, libros: [
+    { titulo: "La guerra de Calibán (Chingón)", autor: "James S. A. Corey", url: "https://elevenreader.io/reader/library/" + CAL, portada: P(CAL, "1791158807"), falta: "19 h 14 min", estado: "leyendo" },
+    { titulo: "Amos Illustrated El despertar del Leviatán", autor: "James S. A. Corey", url: "https://elevenreader.io/reader/library/" + LEV, portada: P(LEV, "1791158815"), estado: "terminado", terminado: dia(-1) },
+  ] };
 }
 
 /** La portada del día: cambia cada día. */

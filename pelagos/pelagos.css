@@ -814,3 +814,25 @@ dialog.sheet.conFoto:not([open]) { display: none; }
 .lectura .portadaChica { width: 100%; aspect-ratio: 2 / 3; object-fit: cover; border-radius: 6px; box-shadow: 0 4px 12px rgba(0, 0, 0, .3); }
 .lectura .sinPortada { display: flex; align-items: center; justify-content: center; padding: .5rem; text-align: center; border: 2px solid var(--ink-3); border-radius: 6px; font-size: .8rem; }
 .lectura .libroAhora:focus-visible, .lectura .libro:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; border-radius: 8px; }
+
+/* Las gráficas de Lectura: una sola serie, barras delgadas con la punta redonda, la meta punteada. */
+.lectura { --lec-barra: var(--verde); }
+.lectura .grafica svg { display: block; width: 100%; height: auto; margin-top: .4rem; overflow: visible; }
+.lectura .barraG { fill: var(--lec-barra); }
+.lectura .ejeG.hoyG { fill: var(--ink); font-weight: 700; }
+.lectura .ejeG { fill: var(--ink-3); font-size: 11px; }
+.lectura .ejeG.sub { font-size: 10px; }
+.lectura .baseG { stroke: var(--ink-3); stroke-width: 1; }
+.lectura .guiaG { stroke: var(--line); stroke-width: 1; }
+.lectura .metaG { stroke: var(--ink-2); stroke-width: 1.5; stroke-dasharray: 4 4; }
+.lectura .hit { fill: transparent; cursor: pointer; outline: none; }
+.lectura .hit.activa, .lectura .hit:focus-visible { fill: currentColor; fill-opacity: .12; }
+.lectura .grafDetalle { min-height: 1.4em; font-weight: 600; }
+.lectura .porLibro { list-style: none; margin: .4rem 0 0; padding: 0; display: grid; gap: .8rem; }
+.lectura .porLibro li { display: grid; grid-template-columns: 1fr auto; gap: .3rem .6rem; align-items: baseline; }
+.lectura .porLibro .bar { grid-column: 1 / -1; }
+.lectura .plValor { font-weight: 700; }
+.lectura .lecBarra i { background: var(--lec-barra); }
+.lectura .lecturaEjemplo { font-weight: 600; border-left: 3px solid var(--ambar); padding-left: .6rem; }
+.lectura .lecturaEjemplo a, .lectura .lecturaVerEjemplo a { color: inherit; text-decoration: underline; }
+.lectura .lecturaVerEjemplo { text-align: center; margin: 1rem 0; }
