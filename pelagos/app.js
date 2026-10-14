@@ -1,9 +1,9 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=23830ab517";
-import * as A from "./almacen.js?v=23830ab517";
-import { abrirRecorrido } from "./recorrido.js?v=23830ab517";
-import * as V from "./videos.js?v=23830ab517";
-import * as CL from "./clases.js?v=23830ab517";
+import * as N from "./nucleo.js?v=7ad76008bf";
+import * as A from "./almacen.js?v=7ad76008bf";
+import { abrirRecorrido } from "./recorrido.js?v=7ad76008bf";
+import * as V from "./videos.js?v=7ad76008bf";
+import * as CL from "./clases.js?v=7ad76008bf";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -699,7 +699,6 @@ function verInicio(o) {
   <section class="card" id="medidas">
     <h2 class="sr">Tus medidas de hoy</h2>
     <div class="cuadros" role="list">${cuadros.join("")}</div>
-    ${T && T.extras.length ? `<div class="extras">${T.extras.map((x) => `<div><b>${esc(x.valor)}</b>${esc(x.nombre)}</div>`).join("")}</div>` : ""}
     ${T && !deHoy ? `<p class="small viejo">No es de hoy: es del ${diaLargo(T.dia)}.</p>` : ""}
   </section>`;
 
@@ -723,7 +722,6 @@ function verInicio(o) {
     <div class="sobre">
       ${entradas("tablero", "hoy")}
       <h1 class="sr">Tablero</h1>
-      ${deHoy && T.frase ? `<section class="card" id="frase"><h2 class="sr">Andrea dice</h2><p class="frase">${esc(T.frase)}</p></section>` : ""}
       ${checkin}
       ${medidas}
       <section class="card" id="niveles">
