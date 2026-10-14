@@ -18,7 +18,7 @@
 //       { "t": "pedirClase", "id": "pc-…", "inicio": "…", "min": 50, "tutor": "…" }
 //   (y { "t": "cancelarPedido", "id": "pc-…" } para quitarlo). La tarea de cada media hora lo reserva en Worldsacross
 //   y lo contesta en clases.json: "pedidos": [ { "id": "pc-…", "estado": "reservada" | "no se pudo", "nota": "…" } ].
-import * as A from "./almacen.js?v=e70578da6a";
+import * as A from "./almacen.js?v=8158e49a88";
 
 export const HORA0 = 6, HORA1 = 21, PX = 56;      // la cuadrícula: de 6 am a 9 pm, 56 px por hora
 const ATRAS = 7, ADELANTE = 13;                    // hasta dónde se puede deslizar, en días desde hoy

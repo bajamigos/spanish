@@ -1,9 +1,9 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=e70578da6a";
-import * as A from "./almacen.js?v=e70578da6a";
-import { abrirRecorrido } from "./recorrido.js?v=e70578da6a";
-import * as V from "./videos.js?v=e70578da6a";
-import * as CL from "./clases.js?v=e70578da6a";
+import * as N from "./nucleo.js?v=8158e49a88";
+import * as A from "./almacen.js?v=8158e49a88";
+import { abrirRecorrido } from "./recorrido.js?v=8158e49a88";
+import * as V from "./videos.js?v=8158e49a88";
+import * as CL from "./clases.js?v=8158e49a88";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1150,6 +1150,7 @@ function verTarjetas(o) {
       <div class="over">
         <p class="lead"><span id="tjFaltan">${faltan}</span><span id="tjAviso">Dilo en español</span></p>
         <div class="score"><div class="track" role="img" aria-label="Llevas ${hechas} de ${total}"><i data-w="${100 * hechas / total}"></i></div></div>
+        ${htmlNivel(nivelDe(antes))}
         <h1 class="cue" id="cue" lang="en">${esc(c.frente)}</h1>
       </div>
       <div class="rule tjResp" id="tjResp" tabindex="-1" aria-live="polite" hidden>
@@ -1188,12 +1189,37 @@ function verTarjetas(o) {
     A.apuntar({ t: "tj", id: N.nuevoId("t"), tarjeta: c.id, cuando: new Date().toISOString(), bien: bien ? 1 : 0, modo: "tocar", ...(enAdelanto ? { adelanto: 1 } : {}) });
     recalcular();
     enTarjetaDe = null;
-    pintar();        // sin paso intermedio: sale la siguiente, o «Vocabulario en cero»
+    // Los puntitos enseñan si la tarjeta subió o se cayó, y luego sale la siguiente (o «Vocabulario en cero»).
+    const de = nivelDe(antes), a = nivelDe(E.tarjetas.get(c.id));
+    moverNivel(de, a);
+    $("tjAviso").textContent = a > de ? `Sube al peldaño ${a}` : a < de ? `Se cae al peldaño ${a}` : `Se queda en el peldaño ${a}`;
+    $("tjBotones").hidden = true;
+    setTimeout(() => pintar(), a === de ? 450 : 900);
   }
   toque = () => destapar();
   teclas = { " ": () => destapar(true), enter: () => destapar(true) };
   $("jBien").addEventListener("click", () => calificar(true));
   $("jMal").addEventListener("click", () => calificar(false));
+}
+
+/** El peldaño de una tarjeta en la escalera (1 a 6, uno por escalón de N.ESCALONES); 0 si nunca la has acertado. */
+function nivelDe(s) { return s && s.toca ? s.escalon + 1 : 0; }
+/** Seis puntitos, uno por peldaño, con los mismos seis colores del Atlas. */
+function htmlNivel(n) {
+  return `<div class="tjNivel" id="tjNivel" role="img" aria-label="${n ? `Peldaño ${n} de ${N.ESCALONES.length}` : "Tarjeta nueva"}">${N.ESCALONES.map((_, i) =>
+    `<i class="k${i}${i < n ? " on" : ""}"></i>`).join("")}</div>`;
+}
+/** Llena o vacía los puntitos, uno tras otro, para que se vea la subida o la caída. */
+function moverNivel(de, a) {
+  const caja = $("tjNivel");
+  if (!caja) return;
+  caja.classList.add(a > de ? "sube" : a < de ? "baja" : "igual");
+  caja.setAttribute("aria-label", `Peldaño ${a} de ${N.ESCALONES.length}`);
+  [...caja.children].forEach((p, i) => {
+    const paso = a < de ? de - 1 - i : i - de;      // al caer se vacían de derecha a izquierda
+    p.style.transitionDelay = Math.max(0, paso) * 70 + "ms";
+    p.classList.toggle("on", i < a);
+  });
 }
 
 // ---------------------------------------------------------------- La lista de vocabulario

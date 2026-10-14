@@ -773,3 +773,16 @@ dialog.sheet.conFoto:not([open]) { display: none; }
 .bocinaVoz[aria-pressed="true"] { border-color: #5fbf6a; color: #2f9a3d; box-shadow: 0 0 10px 2px rgba(111, 220, 123, .55); }
 .bocinaVoz:focus-visible { outline: 3px solid var(--tab); outline-offset: 2px; }
 .hoy.confoto .bocinaVoz { background: var(--vidrio-2); border-color: var(--vidrio-borde); }
+
+/* ---- El peldaño de la tarjeta: seis puntitos que se llenan al subir y se vacían al caer ---- */
+.tjNivel { display: flex; gap: 9px; margin: 8px 0 2px; }
+.tjNivel i { width: 15px; height: 15px; border-radius: 50%; box-sizing: border-box; border: 2px solid currentColor; opacity: 0.75;
+  transition: background-color 0.25s ease, transform 0.25s ease, opacity 0.25s ease; }
+.tjNivel i.on { opacity: 1; border-color: rgba(255,255,255,0.9); }
+.tjNivel i.on.k0 { background: var(--k0); } .tjNivel i.on.k1 { background: var(--k1); } .tjNivel i.on.k2 { background: var(--k2); }
+.tjNivel i.on.k3 { background: var(--k3); } .tjNivel i.on.k4 { background: var(--k4); } .tjNivel i.on.k5 { background: var(--k5); }
+.tjNivel.sube i.on:last-of-type, .tjNivel.sube i.on:has(+ i:not(.on)) { transform: scale(1.35); }
+.tjNivel.baja { animation: tjCae 0.45s ease; }
+@keyframes tjCae { 0%, 100% { transform: none; } 25% { transform: translateX(-5px); } 50% { transform: translateX(5px); } 75% { transform: translateX(-3px); } }
+[data-ambiente="limpio"] .tjNivel i.on { border-color: var(--ink-3); }
+@media (prefers-reduced-motion: reduce) { .tjNivel i { transition: none; } .tjNivel.baja { animation: none; } }
