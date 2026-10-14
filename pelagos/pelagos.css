@@ -846,3 +846,6 @@ dialog.sheet.conFoto:not([open]) { display: none; }
 #lecturaCabeza #bibModo { margin: .6rem 0; }
 #calorClave .granTotal { margin: 0 0 .8rem; }
 #calorClave .granTotal b { display: block; font-size: 1.6rem; line-height: 1.1; }
+.lectura button.libro { background: none; border: 0; padding: 0; margin: 0; width: 100%; text-align: left; color: inherit; font: inherit; cursor: pointer; }
+.lectura button.libro:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; border-radius: 8px; }
+#lecturaCabeza #serModo { margin: .2rem 0 .6rem; }

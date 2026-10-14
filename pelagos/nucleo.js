@@ -294,6 +294,7 @@ export function calcular(paquete, sucesos) {
     });
   }
   const agregadas = [];        // las tarjetas que agregaste a mano: no vienen en el contenido, viven en tus sucesos
+  const porVer = new Map();    // estrenos que tocaste en la Biblioteca para verlos: «tv:123» o «movie:456» -> cuándo; «porver» con quitar los saca
   const notas = new Map();     // tus notas sobre las tutoras (y lo que sea): id -> { id, sobre, texto, cuando }; «notaq» quita una
 
   // Cuánto estudiaste cada día: lo que ya traías contado de antes (tu mazo de Anki) más lo que contestas aquí,
@@ -344,6 +345,10 @@ export function calcular(paquete, sucesos) {
       const sobre = typeof e.sobre === "string" && /^[a-z]+:[A-Za-z0-9_-]{1,40}$/.test(e.sobre) ? e.sobre : null;
       const texto = typeof e.texto === "string" ? e.texto.replace(/\r/g, "").trim().slice(0, NOTA_MAX) : "";
       if (sobre && texto && !notas.has(e.id)) notas.set(e.id, { id: e.id, sobre, texto, cuando: e.cuando });
+    } else if (e.t === "porver") {
+      if (typeof e.obra === "string" && /^(tv|movie):\d{1,10}$/.test(e.obra)) {
+        if (e.quitar) porVer.delete(e.obra); else porVer.set(e.obra, e.cuando || "");
+      }
     } else if (e.t === "notaq") {
       if (typeof e.nota === "string") notas.delete(e.nota);
     } else if (e.t === "ftj") {
@@ -440,7 +445,7 @@ export function calcular(paquete, sucesos) {
     actividadGram.set(dia, (actividadGram.get(dia) || 0) + 1);
   }
 
-  return { temas, kwizzes, retiradas, ultimaVez, respuestas: respuestas.length, porTema, parametros, debe, fallada, enfoque, tarjetas, fotosTarjeta, agregadas, actividad, actividadVoc, actividadGram, notas };
+  return { temas, kwizzes, retiradas, ultimaVez, respuestas: respuestas.length, porTema, parametros, debe, fallada, enfoque, tarjetas, fotosTarjeta, agregadas, actividad, actividadVoc, actividadGram, notas, porVer };
 }
 
 // ---------------------------------------------------------------- El mapa de calor
@@ -693,9 +698,15 @@ export function leerLectura(crudo) {
     const titulo = texto(x && x.titulo, 120);
     if (titulo) podcasts.push({ titulo, nota: estrellas(x.nota), portada: imagen(x.portada) });
   }
+  // «estrenos»: lo nuevo en español de Netflix México (de TMDB), que escribe la tarea del Tablero. «obra» es «tv:<id>» o «movie:<id>».
+  const estrenos = [];
+  for (const x of Array.isArray(crudo.estrenos) ? crudo.estrenos.slice(0, 60) : []) {
+    const titulo = texto(x && x.titulo, 120), obra = typeof x?.obra === "string" && /^(tv|movie):\d{1,10}$/.test(x.obra) ? x.obra : null;
+    if (titulo && obra) estrenos.push({ obra, titulo, tipo: obra.startsWith("movie") ? "Película" : "Serie", fecha: dia(x.fecha), portada: imagen(x.portada) });
+  }
   const g = crudo.granTotal;
   const granTotal = g && typeof g === "object" && horasDe(g.horas) !== null && dia(g.corte) ? { horas: g.horas, corte: g.corte, desde: dia(g.desde) } : null;
-  return { libros, dias, horas, libroDia, meta, series, seriesHoras: horasDe(crudo.seriesHoras), podcasts, podcastsHoras: horasDe(crudo.podcastsHoras), granTotal };
+  return { libros, dias, horas, libroDia, meta, series, seriesHoras: horasDe(crudo.seriesHoras), podcasts, podcastsHoras: horasDe(crudo.podcastsHoras), granTotal, estrenos, estrenosDia: dia(crudo.estrenosDia) };
 }
 
 /** Desde qué día se dibuja la historia de cada nivel en el Atlas (su pedido del 10 de octubre: «starting today»). */

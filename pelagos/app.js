@@ -1,10 +1,10 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=91e21214e9";
-import * as A from "./almacen.js?v=91e21214e9";
-import { abrirRecorrido } from "./recorrido.js?v=91e21214e9";
-import * as V from "./videos.js?v=91e21214e9";
-import * as NB from "./nube.js?v=91e21214e9";
-import * as CL from "./clases.js?v=91e21214e9";
+import * as N from "./nucleo.js?v=32129b9c82";
+import * as A from "./almacen.js?v=32129b9c82";
+import { abrirRecorrido } from "./recorrido.js?v=32129b9c82";
+import * as V from "./videos.js?v=32129b9c82";
+import * as NB from "./nube.js?v=32129b9c82";
+import * as CL from "./clases.js?v=32129b9c82";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1443,14 +1443,35 @@ function verLectura(o, ejemplo = false) {
     </section>` : "";
   let cuerpo = "", cabeza = "";
   if (modo === "series") {
-    const S = L ? L.series : [];
+    // Tres pestañas (su pedido del 14-Oct): Por ver · Estrenos · Vistas. Tocar un estreno lo pasa a Por ver (y en Por ver, tocarlo lo regresa).
+    if (!serModo) serModo = ["porver", "estrenos", "vistas"].includes(guardado("pelagos.series")) ? guardado("pelagos.series") : "estrenos";
+    const S = L ? L.series : [], ES = L ? L.estrenos : [];
     const fichaS = (x) => `<li><div class="libro">${cartel(x, "portadaChica")}<span class="libroTitulo">${esc(x.titulo)}</span>` +
       `<span class="small">${esc(x.tipo)}${x.horas !== null ? " · " + unDecimal(x.horas) + " h" : ""}</span>${estrellas(x.nota)}${x.genero ? `<span class="small">${esc(x.genero)}</span>` : ""}</div></li>`;
+    const fechaCorta = (d) => { const [, m, dd] = d.split("-").map(Number); return `${dd} de ${MESES[m - 1]}`; };
+    const fichaE = (x, enPorVer) => `<li><button type="button" class="libro estreno" data-obra="${esc(x.obra)}" aria-pressed="${enPorVer}" ` +
+      `aria-label="${esc(x.titulo)}, ${esc(x.tipo.toLowerCase())}${x.fecha ? ", estreno del " + fechaCorta(x.fecha) : ""}. ${enPorVer ? "Tócalo para quitarlo de Por ver" : "Tócalo para pasarlo a Por ver"}">` +
+      `${cartel(x, "portadaChica")}<span class="libroTitulo">${esc(x.titulo)}</span><span class="small">${esc(x.tipo)}${x.fecha ? " · " + fechaCorta(x.fecha) : ""}</span>` +
+      `${enPorVer ? '<span class="small">Tócalo para quitarlo</span>' : ""}</button></li>`;
     const vistas = S.filter((x) => x.estado === "terminado").map((x, i) => [x, i]).sort((a, b) => (b[0].nota || 0) - (a[0].nota || 0) || a[1] - b[1]).map((x) => x[0]);
+    const elegidos = ES.filter((x) => E.porVer.has(x.obra)).sort((a, b) => (E.porVer.get(b.obra) || "").localeCompare(E.porVer.get(a.obra) || ""));
+    const nuevos = ES.filter((x) => !E.porVer.has(x.obra));
+    const porVerHoja = S.filter((x) => x.estado === "pendiente");
     const total = L && L.seriesHoras !== null ? L.seriesHoras : vistas.reduce((t, x) => t + (x.horas || 0), 0);
-    cabeza = `<p class="lecturaHoy">${unDecimal(total)} horas de series y películas.</p><p class="small">${plural(vistas.length, "vista", "vistas")}, de la mejor a la peor.</p>`;
-    cuerpo = repisa("serViendo", "Viendo", S.filter((x) => x.estado === "viendo"), fichaS) + repisa("serVistas", "Vistas", vistas, fichaS) +
-      repisa("serPorVer", "Por ver", S.filter((x) => x.estado === "pendiente"), fichaS) + repisa("serDejadas", "Las que dejaste", S.filter((x) => x.estado === "abandonado"), fichaS);
+    const pestanas = `<div class="jump tres" role="group" aria-label="Qué series enseña" id="serModo">${[["porver", "Por ver"], ["estrenos", "Estrenos"], ["vistas", "Vistas"]]
+      .map(([k, n]) => `<button type="button" data-ser="${k}" aria-pressed="${k === serModo}">${n}</button>`).join("")}</div>`;
+    if (serModo === "estrenos") {
+      cabeza = `${pestanas}<p class="small">Lo nuevo en español en Netflix México${L && L.estrenosDia ? ", al " + fechaCorta(L.estrenosDia) : ""}. Toca uno para pasarlo a Por ver.</p>`;
+      cuerpo = nuevos.length ? repisa("serEstrenos", "Estrenos", nuevos, (x) => fichaE(x, false)) : `<section class="card"><p class="small">${ES.length ? "Ya pasaste todos los estrenos a Por ver." : "Todavía no llegan los estrenos. La tarea del Tablero los trae una vez al día."}</p></section>`;
+    } else if (serModo === "porver") {
+      cabeza = `${pestanas}<p class="small">${plural(elegidos.length + porVerHoja.length, "pendiente", "pendientes")}.</p>`;
+      cuerpo = repisa("serElegidos", "De los estrenos", elegidos, (x) => fichaE(x, true)) + repisa("serPorVer", "De tu lista", porVerHoja, fichaS) +
+        (elegidos.length + porVerHoja.length ? "" : `<section class="card"><p class="small">Nada por ver. Toca un estreno para traerlo aquí.</p></section>`);
+    } else {
+      cabeza = `${pestanas}<p class="lecturaHoy">${unDecimal(total)} horas de series y películas.</p><p class="small">${plural(vistas.length, "vista", "vistas")}, de la mejor a la peor.</p>`;
+      cuerpo = repisa("serViendo", "Viendo", S.filter((x) => x.estado === "viendo"), fichaS) + repisa("serVistas", "Vistas", vistas, fichaS) +
+        repisa("serDejadas", "Las que dejaste", S.filter((x) => x.estado === "abandonado"), fichaS);
+    }
   } else if (modo === "podcasts") {
     const Pd = L ? L.podcasts : [];
     const fichaP = (x) => `<li><div class="libro">${cartel(x, "portadaChica")}<span class="libroTitulo">${esc(x.titulo)}</span></div></li>`;
@@ -1479,6 +1500,21 @@ function verLectura(o, ejemplo = false) {
       ${ejemplo || modo !== "libros" ? "" : `<p class="small lecturaVerEjemplo"><a href="#/lectura/ejemplo">Ver con datos de ejemplo</a></p>`}
     </div>
   </div>`, { titulo: "Biblioteca · Pelagos", nav: "inicio", conserva: o.conserva });
+  vista.querySelector("#serModo")?.addEventListener("click", (ev) => {
+    const b = ev.target.closest("[data-ser]");
+    if (!b || b.dataset.ser === serModo) return;
+    serModo = b.dataset.ser; guardar("pelagos.series", serModo);
+    verLectura({ conserva: true });
+    vista.querySelector(`[data-ser="${serModo}"]`)?.focus();
+  });
+  for (const b of vista.querySelectorAll("[data-obra]")) b.addEventListener("click", () => {
+    const quitar = b.getAttribute("aria-pressed") === "true";
+    A.apuntar({ t: "porver", id: N.nuevoId("pv"), obra: b.dataset.obra, ...(quitar ? { quitar: 1 } : {}), cuando: new Date().toISOString() });
+    recalcular();
+    verLectura({ conserva: true });
+    const aviso = vista.querySelector("#lecturaCabeza p.small");
+    if (aviso) { aviso.setAttribute("role", "status"); aviso.textContent = quitar ? "Lo quitaste de Por ver." : "Listo: pasó a Por ver."; }
+  });
   const botones = vista.querySelector("#bibModo");
   if (botones) botones.addEventListener("click", (ev) => {
     const b = ev.target.closest("[data-bib]");
@@ -1502,7 +1538,7 @@ function verLectura(o, ejemplo = false) {
 }
 
 const mayuscula = (t) => t.charAt(0).toUpperCase() + t.slice(1);
-let bibModo = null;      // qué enseña la Biblioteca: libros, series o podcasts (se recuerda en este aparato)
+let bibModo = null, serModo = null;      // qué enseña la Biblioteca: libros, series o podcasts (se recuerda en este aparato)
 
 /**
  * Una gráfica de barras sencilla en SVG: una sola serie, sin colores que digan nada más que «minutos».
