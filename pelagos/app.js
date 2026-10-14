@@ -1,9 +1,9 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=c79ce5f2f1";
-import * as A from "./almacen.js?v=c79ce5f2f1";
-import { abrirRecorrido } from "./recorrido.js?v=c79ce5f2f1";
-import * as V from "./videos.js?v=c79ce5f2f1";
-import * as CL from "./clases.js?v=c79ce5f2f1";
+import * as N from "./nucleo.js?v=021e385078";
+import * as A from "./almacen.js?v=021e385078";
+import { abrirRecorrido } from "./recorrido.js?v=021e385078";
+import * as V from "./videos.js?v=021e385078";
+import * as CL from "./clases.js?v=021e385078";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1036,6 +1036,17 @@ function verCalor(o) {
         <div class="jump tres" role="group" aria-label="Qué enseña la Bitácora" id="calorModo">
           ${[["juntos", "Juntos"], ["vocabulario", "Vocabulario"], ["gramatica", "Gramática"]].map(([clave, nombre]) => `<button type="button" data-modo="${clave}" aria-pressed="${clave === modo}">${nombre}</button>`).join("")}
         </div>
+        <p class="small" id="calorDia" role="status">Toca un cuadro para ver ese día.</p>
+      </section>
+      ${anios.map((a) => {
+        const x = porAnio.get(a) || { dias: 0, total: 0 };
+        return `
+      <section class="card anioCalor" id="calor${a}">
+        <h2>${a} <span class="mpc">${x.dias ? `${dias(x.dias)} · ${miles(x.total)}` : "sin estudio"}</span></h2>
+        <div class="hanio" role="img" aria-label="${a}: ${x.dias ? `${dias(x.dias)} de estudio y ${miles(x.total)} ${unidad[1]}` : "sin estudio"}">${tiraDeCalor(a, 0, hoy, modo)}${tiraDeCalor(a, 6, hoy, modo)}</div>
+      </section>`;
+      }).join("")}
+      <section class="card" id="calorClave">
         <div class="extras">
           <div><b>${dias(R.actual)}</b>racha de ahora</div>
           <div><b>${dias(R.larga)}</b>tu racha más larga</div>
@@ -1047,16 +1058,7 @@ function verCalor(o) {
             ? '<li><i class="hc jv c3"></i>Vocabulario</li><li><i class="hc jg c3"></i>Gramática</li><li><i class="hc ja c3"></i>Los dos</li>'
             : (modo === "gramatica" ? N.CALOR_GRAM : N.CALOR).map((desde, i, esc_) => `<li><i class="hc ${modo === "gramatica" ? "jg" : "jv"} c${i + 1}"></i>${desde}${i === esc_.length - 1 ? " o más" : esc_[i + 1] - 1 === desde ? "" : " a " + (esc_[i + 1] - 1)}</li>`).join("")}
         </ul>
-        <p class="small" id="calorDia" role="status">Toca un cuadro para ver ese día.</p>
       </section>
-      ${anios.map((a) => {
-        const x = porAnio.get(a) || { dias: 0, total: 0 };
-        return `
-      <section class="card anioCalor" id="calor${a}">
-        <h2>${a} <span class="mpc">${x.dias ? `${dias(x.dias)} · ${miles(x.total)}` : "sin estudio"}</span></h2>
-        <div class="hanio" role="img" aria-label="${a}: ${x.dias ? `${dias(x.dias)} de estudio y ${miles(x.total)} ${unidad[1]}` : "sin estudio"}">${tiraDeCalor(a, 0, hoy, modo)}${tiraDeCalor(a, 6, hoy, modo)}</div>
-      </section>`;
-      }).join("")}
     </div>
   </div>`,
   { titulo: "Bitácora · Pelagos", nav: "inicio", conserva: o.conserva });
