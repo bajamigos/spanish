@@ -359,6 +359,14 @@ export function calcular(paquete, sucesos) {
     } else if (e.t === "enfoque") enfoque = typeof e.nivel === "string" && e.nivel ? e.nivel : null;
     else if (e.t === "retirar" && e.p) retiradas.add(e.p);
     else if (e.t === "dejar" && e.kwiz) dejados.add(e.kwiz);
+    else if (e.t === "otra" && e.kwiz && typeof e.slot === "string" && /^[^~]+~\d+$/.test(e.slot)) {
+      // «Otra vez»: la pregunta fallada vuelve más adelante en el mismo kwiz, como «<id>~2», antes de `antes` (o al final).
+      const k = kwizzes.get(e.kwiz);
+      if (k && !k.preguntas.includes(e.slot)) {
+        const i = e.antes ? k.preguntas.indexOf(e.antes) : -1;
+        if (i >= 0) k.preguntas.splice(i, 0, e.slot); else k.preguntas.push(e.slot);
+      }
+    }
     else if (e.t === "kwiz" && Array.isArray(e.preguntas) && !kwizzes.has(e.id)) {
       kwizzes.set(e.id, {
         id: e.id, tipo: e.tipo || "general", cuaderno: e.cuaderno ?? null, tema: e.tema ?? null,
@@ -366,7 +374,8 @@ export function calcular(paquete, sucesos) {
         terminado: null, bien: 0, total: 0, pendientes: [], dejado: false,
       });
     } else if (e.t === "r" && e.p && e.kwiz) {
-      const clave = e.kwiz + "|" + e.p;       // una sola respuesta por pregunta en cada kwiz: vale la primera
+      if (e.s && !String(e.s).startsWith(e.p + "~")) continue;
+      const clave = e.kwiz + "|" + (e.s || e.p);       // una sola respuesta por pregunta (o por su vuelta «~2») en cada kwiz: vale la primera
       if (dadas.has(clave)) continue;
       dadas.add(clave);
       respuestas.push(e);
@@ -380,7 +389,7 @@ export function calcular(paquete, sucesos) {
   const ultimaVez = new Map();
   for (const r of respuestas) {
     const k = kwizzes.get(r.kwiz);
-    if (k) k.resp.set(r.p, r);
+    if (k) k.resp.set(r.s || r.p, r);
     const antes = ultimaVez.get(r.p);
     if (!antes || ms(r) >= antes) ultimaVez.set(r.p, ms(r));
     if (retiradas.has(r.p)) continue;
@@ -413,7 +422,8 @@ export function calcular(paquete, sucesos) {
   const cerrados = [];
   for (const k of kwizzes.values()) {
     k.dejado = dejados.has(k.id);        // un kwiz que dejaste se cierra con lo que alcanzaste a contestar
-    k.pendientes = k.dejado ? [] : k.preguntas.filter((p) => !k.resp.has(p) && preguntas.has(p) && !retiradas.has(p));
+    const base = (p) => String(p).split("~")[0];
+    k.pendientes = k.dejado ? [] : k.preguntas.filter((p) => !k.resp.has(p) && preguntas.has(base(p)) && !retiradas.has(base(p)));
     const cuentan = [...k.resp.values()].filter((r) => !retiradas.has(r.p));
     k.total = cuentan.length;
     k.bien = cuentan.filter((r) => r.bien).length;
@@ -751,6 +761,9 @@ export function historiaTarjeta(suya, hasta = fechaLocal(new Date()), desde = IN
 }
 
 /** La pregunta que sigue en un kwiz: { p, orden, total }, o null si ya no quedan. */
+/** El id de la pregunta de un lugar del kwiz: «6152-01~2» (la vuelta de una fallada) es la 6152-01. */
+export const preguntaDe = (lugar) => String(lugar).split("~")[0];
+
 export function siguiente(estado, kwizId) {
   const k = estado.kwizzes.get(kwizId);
   if (!k || !k.pendientes.length) return null;

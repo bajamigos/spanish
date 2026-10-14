@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=0c5dbbb059";
-import * as A from "./almacen.js?v=0c5dbbb059";
-import { abrirRecorrido } from "./recorrido.js?v=0c5dbbb059";
-import * as V from "./videos.js?v=0c5dbbb059";
-import * as NB from "./nube.js?v=0c5dbbb059";
-import * as CL from "./clases.js?v=0c5dbbb059";
-import { abrirPractica } from "./practica.js?v=0c5dbbb059";
-import * as F from "./fondo.js?v=0c5dbbb059";
+import * as N from "./nucleo.js?v=8c8f206dbf";
+import * as A from "./almacen.js?v=8c8f206dbf";
+import { abrirRecorrido } from "./recorrido.js?v=8c8f206dbf";
+import * as V from "./videos.js?v=8c8f206dbf";
+import * as NB from "./nube.js?v=8c8f206dbf";
+import * as CL from "./clases.js?v=8c8f206dbf";
+import { abrirPractica } from "./practica.js?v=8c8f206dbf";
+import * as F from "./fondo.js?v=8c8f206dbf";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -2630,7 +2630,8 @@ async function fondoDelKwiz(k) {
   const escenas = await escenasDeTutora(k.tema);
   if (!escenas) return;
   const et = F.etapas(escenas, N.ACIERTOS_TUTORA);
-  F.mostrar(k.tema, et[Math.min(k.bien || 0, N.ACIERTOS_TUTORA)], () => videoDeTutora(k.tema), lugar);
+  const e = Math.min(k.bien || 0, N.ACIERTOS_TUTORA);
+  F.mostrar(k.tema, et[e], () => videoDeTutora(k.tema), lugar, e < N.ACIERTOS_TUTORA ? et[e + 1] : null);
 }
 
 function verPregunta(o, kid) {
@@ -2639,10 +2640,10 @@ function verPregunta(o, kid) {
   if (!k) return verNoExiste();
   const sig = N.siguiente(E, kid);
   if (!sig) return k.terminado ? ir(QUIZ + "/" + kid + "/resultado", true) : verNoExiste(k.dejado ? "Ese quiz lo dejaste sin contestar nada." : "Ese quiz se quedó sin preguntas.");
-  const q = preguntas.get(sig.p);
+  const q = preguntas.get(N.preguntaDe(sig.p));
   const tema = porId.get(q.tema);
   const escribir = q.tipo === "escribir";
-  const opciones = escribir ? [] : N.barajar(q.opciones, N.azarDe(kid + "-" + q.id));
+  const opciones = escribir ? [] : N.barajar(q.opciones, N.azarDe(kid + "-" + sig.p));
   const deTutora = k.tipo === "tutora";
   const juego = deTutora ? [] : juegoDeFotos();
   const foto = juego.length ? juego[Math.floor(N.azarDe(kid + "#" + sig.orden)() * juego.length)] : null;
@@ -2759,7 +2760,7 @@ function verPregunta(o, kid) {
     contestada = true;
     const antes = info(q.tema).pct;
     A.apuntar({
-      t: "r", id: N.nuevoId("r"), kwiz: kid, p: q.id, tema: q.tema, cuando: new Date().toISOString(),
+      t: "r", id: N.nuevoId("r"), kwiz: kid, p: q.id, ...(sig.p !== q.id ? { s: sig.p } : {}), tema: q.tema, cuando: new Date().toISOString(),
       bien: bien ? 1 : 0, modo: escribir ? modo : "tocar", escrito: (escribir ? ultimoEscrito : extra.elegido) || null, pista: pista ? 1 : 0,
     });
     recalcular();
@@ -2767,6 +2768,11 @@ function verPregunta(o, kid) {
       const kk = E.kwizzes.get(kid);
       // Con 5 buenas la ronda se cierra sola (las que sobran no cuentan) y el fondo llega al final.
       if (kk && kk.bien >= N.ACIERTOS_TUTORA && N.siguiente(E, kid)) { A.apuntar({ t: "dejar", id: N.nuevoId("d"), kwiz: kid, cuando: new Date().toISOString() }); recalcular(); }
+      // La que fallas vuelve 3 preguntas después (una sola vez por pregunta).
+      else if (kk && !bien && sig.p === q.id) {
+        A.apuntar({ t: "otra", id: N.nuevoId("o"), kwiz: kid, slot: q.id + "~2", antes: kk.pendientes[2] || null, cuando: new Date().toISOString() });
+        recalcular();
+      }
       fondoDelKwiz(E.kwizzes.get(kid));
     }
     veredicto({ bien, casi: !!extra.casi, elegido: extra.elegido, antes, despues: info(q.tema).pct, ultima: !N.siguiente(E, kid) });
@@ -2874,7 +2880,7 @@ function verResultado(o, kid) {
   const k = E.kwizzes.get(kid);
   if (!k) return verNoExiste();
   if (!k.terminado) return k.pendientes.length ? ir(QUIZ + "/" + kid, true) : verNoExiste("Ese quiz se quedó sin preguntas.");
-  const filas = k.preguntas.filter((p) => k.resp.has(p)).map((p) => ({ r: k.resp.get(p), q: preguntas.get(p) }));
+  const filas = k.preguntas.filter((p) => k.resp.has(p)).map((p) => ({ r: k.resp.get(p), q: preguntas.get(N.preguntaDe(p)) }));
   const temas = [...new Set(filas.map((f) => f.r.tema))].map((id) => porId.get(id)).filter(Boolean);
   const fallas = [...new Set(filas.filter((f) => !f.r.bien).map((f) => f.r.tema))].filter((id) => porId.has(id));
   const igual = JSON.stringify({ tipo: k.tipo, cuaderno: k.cuaderno, tema: k.tema });

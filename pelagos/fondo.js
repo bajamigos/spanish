@@ -19,7 +19,18 @@ export function etapas(escenas, n = 5) {
   return salida;
 }
 
-let caja = null, v = null, lista = [], i = 0, vivo = false, deQuien = null, fuenteLista = null;
+// Dos videos con el mismo archivo: uno se ve y el otro espera ya parado en el principio de la etapa siguiente,
+// así el salto de escena al acertar es instantáneo (sobre todo en el iPhone).
+let caja = null, vids = [], act = 0, listas = [[], []], idx = [0, 0], vivo = false, deQuien = null, propio = null;
+const clave = (t) => JSON.stringify(t || []);
+
+function nuevoVideo() {
+  const x = document.createElement("video");
+  x.muted = true; x.defaultMuted = true; x.playsInline = true; x.preload = "auto";
+  x.setAttribute("playsinline", ""); x.setAttribute("muted", "");
+  return x;
+}
+const conDatos = (x) => (x.readyState >= 1 ? Promise.resolve() : new Promise((ok) => { x.addEventListener("loadedmetadata", ok, { once: true }); setTimeout(ok, 20000); }));
 
 function asegurar() {
   if (caja) return;
@@ -27,17 +38,17 @@ function asegurar() {
   caja.id = "fondoTutora";
   caja.setAttribute("aria-hidden", "true");
   caja.hidden = true;
-  v = document.createElement("video");
-  v.muted = true; v.defaultMuted = true; v.playsInline = true; v.preload = "auto";
-  v.setAttribute("playsinline", ""); v.setAttribute("muted", "");
-  caja.append(v);
+  vids = [nuevoVideo(), nuevoVideo()];
+  vids[1].hidden = true;
+  caja.append(...vids);
   document.body.prepend(caja);
   const paso = () => {
+    const v = vids[act], lista = listas[act];
     if (vivo && lista.length && !v.paused) {
-      const [, a] = lista[i];
-      if (v.currentTime >= a - 0.04 || v.currentTime < lista[i][0] - 0.5) {
-        i = (i + 1) % lista.length;
-        v.currentTime = lista[i][0];
+      const k = idx[act];
+      if (v.currentTime >= lista[k][1] - 0.04 || v.currentTime < lista[k][0] - 0.5) {
+        idx[act] = (k + 1) % lista.length;
+        v.currentTime = lista[idx[act]][0];
       }
     }
     requestAnimationFrame(paso);
@@ -45,13 +56,22 @@ function asegurar() {
   requestAnimationFrame(paso);
 }
 
+/** Deja el video escondido parado en el principio de `tramos`, listo para cambiar. */
+async function preparar(tramos) {
+  const o = 1 - act, x = vids[o];
+  if (!tramos || !tramos.length || clave(tramos) === clave(listas[act])) return;
+  listas[o] = tramos; idx[o] = 0;
+  await conDatos(x);
+  if (clave(listas[o]) === clave(tramos)) { x.pause(); x.currentTime = tramos[0][0]; }
+}
+
 /**
- * Muestra el fondo de la tutora `id` en la etapa dada.
- * `fuente()` devuelve un File o una dirección (se pide una sola vez por tutora); `tramos` es la lista de esa etapa.
+ * Muestra el video de la tutora `id` en la etapa dada (`tramos`) y prepara la que sigue (`despues`).
+ * `fuente()` devuelve un File o una dirección (se pide una sola vez por tutora).
+ * Con `lugar`, el video va dentro de la página (arriba de la pregunta); sin él, fijo detrás de todo.
  */
-export async function mostrar(id, tramos, fuente, lugar = null) {
+export async function mostrar(id, tramos, fuente, lugar = null, despues = null) {
   asegurar();
-  // Con `lugar`, el video va dentro de la página (arriba de la pregunta); sin él, fijo detrás de todo.
   if (lugar && caja.parentNode !== lugar) lugar.append(caja);
   caja.classList.toggle("enLinea", !!lugar);
   document.body.classList.add("conTutora");
@@ -59,30 +79,37 @@ export async function mostrar(id, tramos, fuente, lugar = null) {
   vivo = true;
   if (deQuien !== id) {
     deQuien = id;
-    if (v.src && v.src.startsWith("blob:")) URL.revokeObjectURL(v.src);
-    fuenteLista = null;
+    if (propio) { URL.revokeObjectURL(propio); propio = null; }
+    listas = [[], []];
     const f = await fuente();
     if (deQuien !== id) return;
     if (!f) { caja.hidden = true; return; }
-    fuenteLista = typeof f === "string" ? f : URL.createObjectURL(f);
-    v.src = fuenteLista;
+    const src = typeof f === "string" ? f : (propio = URL.createObjectURL(f));
+    for (const x of vids) x.src = src;
   }
   if (!tramos || !tramos.length) return;
-  const nueva = JSON.stringify(tramos) !== JSON.stringify(lista);
-  lista = tramos;
-  if (nueva) {
-    i = 0;
-    if (v.readyState < 1) await new Promise((ok) => { v.addEventListener("loadedmetadata", ok, { once: true }); setTimeout(ok, 20000); });
-    v.currentTime = lista[0][0];
+  const k = clave(tramos);
+  if (k !== clave(listas[act])) {
+    const o = 1 - act;
+    if (k === clave(listas[o]) && vids[o].readyState >= 2) {
+      // Cambio instantáneo: el otro video ya estaba parado ahí.
+      vids[act].pause(); vids[act].hidden = true;
+      act = o; vids[act].hidden = false;
+    } else {
+      listas[act] = tramos; idx[act] = 0;
+      await conDatos(vids[act]);
+      vids[act].currentTime = tramos[0][0];
+    }
   }
-  v.play().catch(() => {});
+  vids[act].play().catch(() => {});
+  preparar(despues);
 }
 
-/** Esconde el fondo (otra página). El video se queda cargado por si vuelves con la misma tutora. */
+/** Esconde el video (otra página). Se queda cargado por si vuelves con la misma tutora. */
 export function ocultar() {
-  if (!caja || caja.hidden) { document.body.classList.remove("conTutora"); return; }
+  document.body.classList.remove("conTutora");
+  if (!caja || caja.hidden) return;
   vivo = false;
   caja.hidden = true;
-  v.pause();
-  document.body.classList.remove("conTutora");
+  for (const x of vids) x.pause();
 }
