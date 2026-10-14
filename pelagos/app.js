@@ -1,9 +1,9 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=5be163ec76";
-import * as A from "./almacen.js?v=5be163ec76";
-import { abrirRecorrido } from "./recorrido.js?v=5be163ec76";
-import * as V from "./videos.js?v=5be163ec76";
-import * as CL from "./clases.js?v=5be163ec76";
+import * as N from "./nucleo.js?v=05254a38f1";
+import * as A from "./almacen.js?v=05254a38f1";
+import { abrirRecorrido } from "./recorrido.js?v=05254a38f1";
+import * as V from "./videos.js?v=05254a38f1";
+import * as CL from "./clases.js?v=05254a38f1";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -249,7 +249,7 @@ function poner(html, { titulo: t = "Pelagos", pie = "", nav = "", conserva = fal
   }
 }
 
-/** Lo que el HTML no puede traer escrito: anchos de barras, portadas privadas y bocinas. */
+/** Lo que el HTML no puede traer escrito: anchos de barras, portadas privadas y videos de fondo. */
 function vestir(raiz) {
   for (const e of raiz.querySelectorAll("[data-w]")) e.style.width = e.dataset.w + "%";
   for (const e of raiz.querySelectorAll("[data-x]")) e.style.left = e.dataset.x + "%";
@@ -292,32 +292,9 @@ function vestir(raiz) {
       if (v.play) v.play().catch(() => {});
     }).catch(sinVideo);
   }
-  bocinas(raiz);
 }
 
 const ICONO_BOCINA = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg>';
-/** Botones de bocina en los ejemplos, solo donde el navegador sabe hablar. */
-function bocinas(raiz) {
-  if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) return;
-  for (const li of raiz.querySelectorAll(".ex[data-di]")) {
-    const texto = li.dataset.di;
-    const b = document.createElement("button");
-    b.type = "button"; b.className = "say"; b.innerHTML = ICONO_BOCINA; b.setAttribute("aria-label", "Escuchar: " + texto);
-    b.addEventListener("click", () => {
-      try {
-        const u = new SpeechSynthesisUtterance(texto);
-        u.lang = "es-MX"; u.rate = 0.8;
-        const voces = window.speechSynthesis.getVoices();
-        const v = voces.find((x) => x.lang === "es-MX") || voces.find((x) => /^es/i.test(x.lang));
-        if (v) u.voice = v;
-        window.speechSynthesis.cancel();
-        window.speechSynthesis.speak(u);
-      } catch { /* sin voz: el botón no hace nada */ }
-    });
-    li.appendChild(b);
-  }
-}
-
 const RUTAS = [
   [/^\/$/, verInicio],
   [/^\/gramatica$/, verBiblioteca],
