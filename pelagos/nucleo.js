@@ -64,6 +64,19 @@ export function franja(v) {
   return v < 60 ? 0 : v < 70 ? 1 : v < 80 ? 2 : v < 90 ? 3 : v < 99.995 ? 4 : 5;
 }
 
+/** Los nombres de los seis colores: cada cuánto vuelve lo que está en ese peldaño (13-Oct-2026: el color es el peldaño). */
+export const PELDANOS = ESCALONES.map((d) => (d === 1 ? "1 día" : d + " días"));
+
+/**
+ * El color (0 a 5) de una tarjeta o un tema: su peldaño en la escalera de repaso. Lo que todavía no tiene fecha en
+ * Pelagos pero sí trae porcentaje (de Anki o de Kwiziq) se pinta por su porcentaje mientras tanto. Sin nada, null.
+ */
+export function colorDe(x) {
+  if (!x) return null;
+  if (x.toca) return Math.max(0, Math.min(ESCALONES.length - 1, x.escalon | 0));
+  return franja(x.pct);
+}
+
 /**
  * Reparte un rectángulo de W por H en cajas lo más cuadradas posible, una por valor y con área proporcional a él.
  * Los valores van del más grande al más chico. Devuelve { x, y, w, h } por cada uno, en el mismo orden.

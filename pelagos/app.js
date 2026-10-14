@@ -1,9 +1,9 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=05254a38f1";
-import * as A from "./almacen.js?v=05254a38f1";
-import { abrirRecorrido } from "./recorrido.js?v=05254a38f1";
-import * as V from "./videos.js?v=05254a38f1";
-import * as CL from "./clases.js?v=05254a38f1";
+import * as N from "./nucleo.js?v=e920d85472";
+import * as A from "./almacen.js?v=e920d85472";
+import { abrirRecorrido } from "./recorrido.js?v=e920d85472";
+import * as V from "./videos.js?v=e920d85472";
+import * as CL from "./clases.js?v=e920d85472";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -898,6 +898,7 @@ function verMapa(o) {
   const W = Math.max(240, vista.clientWidth - 18);       // lo que queda dentro de la tarjeta
   anchoDelMapa = vista.clientWidth;
   const cuenta = [0, 0, 0, 0, 0, 0];
+  let sinVer = 0;
   const tarjetas = Object.keys(NIVELES).reverse().map((nivel) => {
     const suyos = P.temas.filter((t) => t.nivel === nivel).sort((a, b) => a.orden - b.orden);
     if (!suyos.length) return "";
@@ -906,8 +907,9 @@ function verMapa(o) {
     for (const t of suyos) {
       if (!porTipo.has(t.categoria)) porTipo.set(t.categoria, []);
       porTipo.get(t.categoria).push(t);
-      const v = info(t.id).pct;
-      if (v !== null) { suma += v; con++; cuenta[N.franja(v)]++; }
+      const v = info(t.id).pct, k = N.colorDe(info(t.id));
+      if (v !== null) { suma += v; con++; }
+      if (k !== null) cuenta[k]++; else sinVer++;
     }
     const tipos = [...porTipo.entries()].sort((a, b) => b[1].length - a[1].length);
     const area = Math.max(1300, Math.min(5200, W * 720 / suyos.length));      // cada nivel ocupa más o menos una pantalla
@@ -920,7 +922,7 @@ function verMapa(o) {
       const filas = [];
       for (let i = 0; i < temas.length; i += c.columnas) {
         const fila = temas.slice(i, i + c.columnas).map((t) => {
-          const v = info(t.id).pct, f = N.franja(v);
+          const v = info(t.id).pct, f = N.colorDe(info(t.id));
           const numero = v === null ? "–" : String(Math.round(v));
           const dentro = modo === 2 ? `<b>${numero}</b><span class="mt r${renglones}"${t.titulo ? "" : ' lang="en"'}>${esc(titulo(t))}</span>` : modo === 1 ? `<b>${numero}</b>` : "";
           return `<button type="button" class="mc m${modo} ${f === null ? "kx" : "k" + f}${c.cw >= 40 && c.ch >= 22 ? " g" : c.cw < 26 ? " ch" : ""}" data-l="${t.id}" aria-label="${esc(titulo(t))}: ${esc(pct(v))}">${dentro}</button>`;
@@ -951,7 +953,8 @@ function verMapa(o) {
       ${tarjetas}
       <section class="card" id="clave">
         <h2 class="sr">Qué significa cada color</h2>
-        <ul class="clave">${N.FRANJAS.map((nombre, i) => `<li><i class="mc k${i}"></i><span>${nombre}</span><b>${cuenta[i]}</b></li>`).join("")}</ul>
+        <p class="small">El color es el peldaño del tema: cada cuánto te toca repasarlo. El número es tu porcentaje.</p>
+        <ul class="clave">${N.PELDANOS.map((nombre, i) => `<li><i class="mc k${i}"></i><span>${nombre}</span><b>${cuenta[i]}</b></li>`).join("")}${sinVer ? `<li><i class="mc kx"></i><span>Sin ver</span><b>${sinVer}</b></li>` : ""}</ul>
       </section>
     </div>
   </div>`,
@@ -1308,7 +1311,7 @@ function verLista(o) {
   const vivas = todas.filter((x) => !x.s.quitada), quitadas = todas.filter((x) => x.s.quitada).sort(alfabeto);
   const cuenta = [0, 0, 0, 0, 0, 0];
   let sinVer = 0;
-  for (const x of vivas) { if (x.pct === null) sinVer++; else cuenta[N.franja(x.pct)]++; }
+  for (const x of vivas) { const k = N.colorDe({ ...x.s, pct: x.pct }); if (k === null) sinVer++; else cuenta[k]++; }
   const tocan = N.tarjetasDelDia(P, E, hoy).pendientes.length;
   const fondo = fondoDelDia();
   const abiertas = !!vista.querySelector("#lvQuitadas[open]");
@@ -1333,8 +1336,8 @@ function verLista(o) {
       </section>
       <section class="card" id="clave">
         <h2 class="sr">Qué significa cada color</h2>
-        <p class="small">El color es tu porcentaje de aciertos.</p>
-        <ul class="clave">${N.FRANJAS.map((nombre, i) => `<li><i class="mc k${i}"></i><span>${nombre}</span><b>${cuenta[i]}</b></li>`).join("")}<li><i class="mc kx"></i><span>Sin ver</span><b>${sinVer}</b></li></ul>
+        <p class="small">El color es el peldaño de la palabra: cada cuánto te toca repasarla. Son los mismos puntitos del quiz.</p>
+        <ul class="clave">${N.PELDANOS.map((nombre, i) => `<li><i class="mc k${i}"></i><span>${nombre}</span><b>${cuenta[i]}</b></li>`).join("")}<li><i class="mc kx"></i><span>Sin ver</span><b>${sinVer}</b></li></ul>
       </section>
       ${quitadas.length ? `
       <details class="card cat" id="lvQuitadas"${abiertas ? " open" : ""}>
@@ -1351,8 +1354,8 @@ function verLista(o) {
     const q = paraBuscar(lvBusca);
     const salen = (q ? vivas.filter((x) => [x.c.reverso, x.c.frente].some((t) => paraBuscar(t).includes(q))) : vivas.slice()).sort(ORDENAR[lvOrden] || alfabeto);
     $("lvCeldas").innerHTML = salen.slice(0, lvCuantas).map((x) => {
-      const f = N.franja(x.pct);
-      return `<button type="button" class="vc ${f === null ? "kx" : "k" + f}" data-v="${esc(x.id)}" lang="es-MX" aria-label="${esc(x.c.reverso)}: ${x.pct === null ? "sin ver" : pct(x.pct) + " de aciertos"}">${esc(x.c.reverso)}</button>`;
+      const f = N.colorDe({ ...x.s, pct: x.pct });
+      return `<button type="button" class="vc ${f === null ? "kx" : "k" + f}" data-v="${esc(x.id)}" lang="es-MX" aria-label="${esc(x.c.reverso)}: ${f === null ? "sin ver" : `peldaño ${f + 1}, ${x.pct === null ? "sin aciertos todavía" : pct(x.pct) + " de aciertos"}`}">${esc(x.c.reverso)}</button>`;
     }).join("");
     $("lvCuenta").textContent = !vivas.length ? "Todavía no hay palabras en tu vocabulario."
       : q ? (salen.length ? `${salen.length} de ${vivas.length} con «${lvBusca.trim()}».` : `Ninguna palabra con «${lvBusca.trim()}».`)
