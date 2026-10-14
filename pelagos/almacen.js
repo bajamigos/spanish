@@ -9,7 +9,7 @@
 // - Lo que contestas entra primero a una fila en este aparato y de ahí sube.
 //   Sin internet, la fila espera y sube sola cuando vuelve.
 // - La llave vive solo en este navegador y solo viaja a la dirección de CONFIG.api.
-import { CONFIG } from "./config.js?v=19fe2f2a71";
+import { CONFIG } from "./config.js?v=f4d22cc646";
 
 const CLAVES = { llave: "pelagos.llave", aparato: "pelagos.aparato", fila: "pelagos.fila." };      // la fila: una clave por suceso
 const RUTA_SUCESOS = /^sucesos\/([A-Za-z0-9_-]+)\/(\d{4}-\d{2})\.jsonl$/;
@@ -799,3 +799,46 @@ function medirGif(b) {
   return { ms: Math.max(ms, 100), infinito };
 }
 export function escenaGif(sala, item) { return duracionesGif.get(sala + "/" + (item && item.archivo)) || null; }
+
+// ---------------------------------------------------------------- Tu almacén de videos en Cloudflare R2
+// La llave de solo lectura del almacén vive en ajustes/nube.json (rama de avance, privada): se pone una vez
+// en un aparato y los demás la toman de ahí. Copia en este aparato para cuando no hay internet.
+const RUTA_NUBE = "ajustes/nube.json";
+
+/** Los datos del almacén ({ url, id, secreto, cubeta }) o null si todavía no los pones. */
+export async function nubeLeer() {
+  try {
+    const r = await api(REPO + "/contents/" + ruta(RUTA_NUBE) + "?ref=" + encodeURIComponent(CONFIG.ramaAvance), { crudo: true });
+    if (r.status === 404) { await kvPoner("nube", null); return null; }
+    if (!r.ok) throw new Error("github");
+    const d = await r.json();
+    await kvPoner("nube", d);
+    return d;
+  } catch {
+    try { return (await kvLeer("nube")) || null; } catch { return null; }
+  }
+}
+
+/** Guarda los datos del almacén en tu repositorio privado (null los quita). */
+export async function nubeGuardar(datos) {
+  for (let intento = 0; intento < 4; intento++) {
+    const q = await api(REPO + "/contents/" + ruta(RUTA_NUBE) + "?ref=" + encodeURIComponent(CONFIG.ramaAvance));
+    const sha = q.ok ? (await q.json()).sha : null;
+    if (!datos) {
+      if (!sha) { await kvPoner("nube", null); return; }
+      const r = await api(REPO + "/contents/" + ruta(RUTA_NUBE), { metodo: "DELETE", cuerpo: { message: "nube: quitar (" + aparato() + ")", sha, branch: CONFIG.ramaAvance } });
+      if (r.ok) { await kvPoner("nube", null); return; }
+      if (r.status === 409) continue;
+      throw new Fallo("github", "GitHub no quiso quitar los datos (" + r.status + ").", r.status);
+    }
+    const r = await api(REPO + "/contents/" + ruta(RUTA_NUBE), {
+      metodo: "PUT",
+      cuerpo: { message: "nube: datos del almacén (" + aparato() + ")", content: aBase64(JSON.stringify(datos, null, 1)), branch: CONFIG.ramaAvance, ...(sha ? { sha } : {}) },
+    });
+    if (r.status === 200 || r.status === 201) { await kvPoner("nube", datos); return; }
+    if (r.status === 409 || r.status === 422) continue;
+    if (r.status === 404) throw new Fallo("falta", "No se pudo guardar: falta la rama «" + CONFIG.ramaAvance + "» o la llave no deja escribir.", 404);
+    throw new Fallo("github", "GitHub no quiso guardar los datos (" + r.status + ").", r.status);
+  }
+  throw new Fallo("choque", "No se pudo guardar después de varios intentos.");
+}

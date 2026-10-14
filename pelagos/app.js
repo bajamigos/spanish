@@ -1,9 +1,10 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=19fe2f2a71";
-import * as A from "./almacen.js?v=19fe2f2a71";
-import { abrirRecorrido } from "./recorrido.js?v=19fe2f2a71";
-import * as V from "./videos.js?v=19fe2f2a71";
-import * as CL from "./clases.js?v=19fe2f2a71";
+import * as N from "./nucleo.js?v=f4d22cc646";
+import * as A from "./almacen.js?v=f4d22cc646";
+import { abrirRecorrido } from "./recorrido.js?v=f4d22cc646";
+import * as V from "./videos.js?v=f4d22cc646";
+import * as NB from "./nube.js?v=f4d22cc646";
+import * as CL from "./clases.js?v=f4d22cc646";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -2162,19 +2163,43 @@ function verEnElSitio(web, enlace) {
   d.querySelector("a").href = enlace + "&t=65";
   if (d.showModal) d.showModal(); else d.setAttribute("open", "");
 }
+// Tu almacén de Cloudflare R2: los datos se leen una vez del repositorio privado y se recuerdan aquí.
+let nubeDatos;
+async function datosNube(fresco = false) {
+  if (fresco || nubeDatos === undefined) { try { nubeDatos = await A.nubeLeer(); } catch { nubeDatos = null; } }
+  return NB.lista(nubeDatos) ? nubeDatos : null;
+}
+/** El video de la tutora desde tu almacén de Cloudflare: un enlace firmado que caduca, o "" si no hay almacén. */
+async function enlaceNube(id) {
+  const tu = tutoraDe(id), d = tu && tu.archivo ? await datosNube() : null;
+  return d ? NB.enlace(d, tu.archivo) : "";
+}
 async function verEscena(id) {
   const aviso = vista.querySelector(`[data-escenaaviso="${id}"]`);
   const decir = (t) => { if (aviso) aviso.textContent = t; };
   decir("Buscando el video…");
+  // 1. Tu almacén de Cloudflare: se ve en streaming, en cualquier aparato.
+  const nube = await enlaceNube(id);
+  if (nube) {
+    decir("");
+    const d = abrirReproductor(nube, () => verEscenaLocal(id, decir, "No lo encontré en tu almacén de Cloudflare. "));
+    ponerSubtitulos(id, d);
+    return;
+  }
+  return verEscenaLocal(id, decir, "");
+}
+/** El video desde este aparato (tu carpeta o los importados) y, si no está, el botón para verlo desde su sitio. */
+async function verEscenaLocal(id, decir, antes) {
   let f = await V.video(id, true);
   if (!f && V.puedeCarpeta() && !(await V.nombreCarpeta())) {
     try { await V.elegirCarpeta(); f = await V.video(id, true); } catch { /* no eligió */ }
   }
   if (!f) {
-    decir(V.puedeCarpeta()
+    decir(antes + (V.puedeCarpeta()
       ? "No encuentro su video en tu carpeta. Revisa que se llame con el número de la lección al principio, por ejemplo «" + id + " - Nombre.mp4». La carpeta se cambia en Ajustes, «Videos de las tutoras»."
-      : "Este aparato todavía no tiene su video. Pásalo por USB y luego, en Ajustes, «Videos de las tutoras», toca «Importar videos».");
+      : "Este aparato todavía no tiene su video. Pásalo por USB y luego, en Ajustes, «Videos de las tutoras», toca «Importar videos»."));
     // El respaldo nunca se abre solo: es un botón aparte, para que nada pida el sitio sin que tú lo toques.
+    const aviso = vista.querySelector(`[data-escenaaviso="${id}"]`);
     const tu = tutoraDe(id), web = tu && embedDe(tu.enlace);
     if (web && aviso) {
       const b = document.createElement("button");
@@ -2185,12 +2210,17 @@ async function verEscena(id) {
     return;
   }
   decir("");
+  const d = abrirReproductor(URL.createObjectURL(f), null);
+  ponerSubtitulos(id, d);
+}
+/** Abre la hoja del reproductor con `src`. Si el video no carga, la cierra y llama a `siFalla`. */
+function abrirReproductor(src, siFalla) {
   let d = $("escenaHoja");
   if (!d) {
     d = document.createElement("dialog");
     d.id = "escenaHoja"; d.className = "sheet escena";
     d.setAttribute("aria-label", "La escena completa");
-    d.innerHTML = '<div class="in"><video controls autoplay playsinline></video><div class="acts"><button type="button" class="ub grande" id="escenaCC" aria-pressed="false" hidden>CC</button><button type="button" class="ub grande" id="escenaX">Cerrar</button></div></div>';
+    d.innerHTML = '<div class="in"><video controls autoplay playsinline preload="metadata"></video><div class="acts"><button type="button" class="ub grande" id="escenaCC" aria-pressed="false" hidden>CC</button><button type="button" class="ub grande" id="escenaX">Cerrar</button></div></div>';
     document.body.appendChild(d);
     $("escenaCC").addEventListener("click", () => {
       const pista = d.querySelector("video track");
@@ -2199,18 +2229,23 @@ async function verEscena(id) {
       guardar("pelagos.cc", prender ? "1" : "0");
       pintarCC(d, prender);
     });
-    const cerrar = () => {
-      const v = d.querySelector("video"); v.pause(); if (v.src) URL.revokeObjectURL(v.src); v.removeAttribute("src");
+    d.cerrar = () => {
+      const v = d.querySelector("video"); v.onerror = null; v.pause(); if (v.src.startsWith("blob:")) URL.revokeObjectURL(v.src); v.removeAttribute("src");
       for (const t of v.querySelectorAll("track")) { if (t.src) URL.revokeObjectURL(t.src); t.remove(); }
       $("escenaCC").hidden = true; v.load(); if (d.open) d.close();
     };
-    $("escenaX").addEventListener("click", cerrar);
-    d.addEventListener("cancel", (ev) => { ev.preventDefault(); cerrar(); });
+    $("escenaX").addEventListener("click", () => d.cerrar());
+    d.addEventListener("cancel", (ev) => { ev.preventDefault(); d.cerrar(); });
   }
   const v = d.querySelector("video");
-  v.src = URL.createObjectURL(f);
+  v.onerror = siFalla ? () => { d.cerrar(); siFalla(); } : null;
+  v.src = src;
   if (d.showModal) d.showModal(); else d.setAttribute("open", "");
   v.play().catch(() => {});
+  return d;
+}
+function ponerSubtitulos(id, d) {
+  const v = d.querySelector("video");
   // Subtítulos: si la tutora tiene su .vtt, sale el botón CC. Se acuerda de si los dejaste prendidos.
   A.subtitulos(id).then((texto) => {
     if (!texto || !d.open || v.querySelector("track")) return;
@@ -2779,6 +2814,15 @@ function verAjustes(o) {
     <div class="go">${V.puedeCarpeta() ? '<button type="button" class="ub" id="ajEscenasCarpeta">Elegir carpeta</button>' : ""}
       <label class="ub">Importar videos<input type="file" id="ajEscenasArch" accept="video/*,.mp4,.webm,.m4v,.mov" multiple hidden></label></div>
     <p class="small" id="ajEscenasAviso" role="status">El video completo de cada tutora vive solo en tus aparatos, nunca en GitHub. Cada archivo empieza con el número de su lección, por ejemplo «6010 - Esperanza.mp4». En la computadora eliges tu carpeta «Pelagos videos» una vez. En el celular, pásala por USB y toca «Importar videos».</p>
+    <h3>Tu almacén de Cloudflare</h3>
+    <p id="ajNubeHay">Revisando…</p>
+    <div class="campos">
+      <label>Access Key ID<input class="campo" type="text" id="ajNubeId" autocomplete="off" spellcheck="false"></label>
+      <label>Secret Access Key<input class="campo" type="password" id="ajNubeSecreto" autocomplete="off" spellcheck="false"></label>
+      <label>Enlace S3 API<input class="campo" type="url" id="ajNubeUrl" autocomplete="off" spellcheck="false" placeholder="https://….r2.cloudflarestorage.com"></label>
+    </div>
+    <div class="go"><button type="button" class="ub" id="ajNubeGuardar">Guardar</button><button type="button" class="ub" id="ajNubeProbar">Probar</button><button type="button" class="ub" id="ajNubeQuitar" hidden>Quitar</button></div>
+    <p class="small" id="ajNubeAviso" role="status">Con tu almacén, «Ver la escena completa» toma el video de Cloudflare en cualquier aparato, sin pasarlo por USB. Usa una llave de R2 de solo lectura («Object Read only») para la cubeta «pelagos-videos». Se guarda en tu repositorio privado: la pones una vez y tus otros aparatos la toman de ahí.</p>
   </section>
   <section class="card" id="ajPremios">
     <h2>GIFs de los premios</h2>
@@ -2871,6 +2915,45 @@ function verAjustes(o) {
     const c = await V.nombreCarpeta(), n = await V.cuantosImportados();
     if ($("ajEscenasHay")) $("ajEscenasHay").textContent = [c ? "Carpeta: «" + c + "»." : "", n ? plural(n, "video guardado", "videos guardados") + " en este aparato." : ""].filter(Boolean).join(" ") || "Todavía no hay videos en este aparato.";
   };
+  const nubeHay = async (fresco) => {
+    const d = await datosNube(fresco);
+    if ($("ajNubeHay")) $("ajNubeHay").textContent = d ? "Conectado al almacén «" + d.cubeta + "» (llave " + d.id.slice(0, 6) + "…)." : "Todavía no conectas tu almacén.";
+    if ($("ajNubeQuitar")) $("ajNubeQuitar").hidden = !d;
+  };
+  nubeHay(true);
+  const nubeAviso = (t) => { if ($("ajNubeAviso")) $("ajNubeAviso").textContent = t; };
+  $("ajNubeGuardar").addEventListener("click", async () => {
+    const d = NB.limpiar({ id: $("ajNubeId").value, secreto: $("ajNubeSecreto").value, url: $("ajNubeUrl").value });
+    if (!d.url) return nubeAviso("El enlace S3 API tiene que empezar con https:// y terminar en r2.cloudflarestorage.com.");
+    if (!d.id || !d.secreto) return nubeAviso("Faltan el Access Key ID o la Secret Access Key.");
+    nubeAviso("Guardando…");
+    try {
+      await A.nubeGuardar(d);
+      nubeDatos = d;
+      $("ajNubeId").value = $("ajNubeSecreto").value = $("ajNubeUrl").value = "";
+      nubeAviso("Listo. Ahora toca «Probar».");
+    } catch (e) { nubeAviso(e && e.message ? e.message : "No se pudo guardar."); }
+    nubeHay(false);
+  });
+  $("ajNubeProbar").addEventListener("click", async () => {
+    const d = await datosNube();
+    if (!d) return nubeAviso("Primero guarda los datos de tu almacén.");
+    const tu = (P.tutoras || []).find((t) => t.archivo);
+    if (!tu) return nubeAviso("No hay ninguna tutora con video anotado para probar.");
+    nubeAviso("Probando con «" + tu.archivo + "»…");
+    const v = document.createElement("video");
+    v.preload = "metadata"; v.muted = true;
+    const fin = (ok) => { v.onloadedmetadata = v.onerror = null; v.removeAttribute("src"); v.load();
+      nubeAviso(ok ? "¡Funciona! Cloudflare entregó «" + tu.archivo + "»." : "Cloudflare no entregó «" + tu.archivo + "». Puede que todavía no termine de subirse, o que la llave o el enlace estén mal."); };
+    v.onloadedmetadata = () => fin(true);
+    v.onerror = () => fin(false);
+    v.src = await NB.enlace(d, tu.archivo, 300);
+  });
+  $("ajNubeQuitar").addEventListener("click", async () => {
+    nubeAviso("Quitando…");
+    try { await A.nubeGuardar(null); nubeDatos = null; nubeAviso("Listo. Pelagos ya no usa tu almacén."); } catch (e) { nubeAviso(e && e.message ? e.message : "No se pudo quitar."); }
+    nubeHay(false);
+  });
   escenasHay();
   if ($("ajEscenasCarpeta")) $("ajEscenasCarpeta").addEventListener("click", async () => {
     try { await V.elegirCarpeta(); $("ajEscenasAviso").textContent = "Listo. Pelagos ya sabe dónde están tus videos."; } catch { /* no eligió */ }
