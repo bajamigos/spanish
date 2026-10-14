@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=a2a6480b7c";
-import * as A from "./almacen.js?v=a2a6480b7c";
-import { abrirRecorrido } from "./recorrido.js?v=a2a6480b7c";
-import * as V from "./videos.js?v=a2a6480b7c";
-import * as NB from "./nube.js?v=a2a6480b7c";
-import * as CL from "./clases.js?v=a2a6480b7c";
-import { abrirPractica } from "./practica.js?v=a2a6480b7c";
-import * as F from "./fondo.js?v=a2a6480b7c";
+import * as N from "./nucleo.js?v=5f10146311";
+import * as A from "./almacen.js?v=5f10146311";
+import { abrirRecorrido } from "./recorrido.js?v=5f10146311";
+import * as V from "./videos.js?v=5f10146311";
+import * as NB from "./nube.js?v=5f10146311";
+import * as CL from "./clases.js?v=5f10146311";
+import { abrirPractica } from "./practica.js?v=5f10146311";
+import * as F from "./fondo.js?v=5f10146311";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -2626,10 +2626,11 @@ function videoDeTutora(id) {
 /** Pone el fondo de la tutora en la etapa de este kwiz (cuántas buenas lleva, hasta 5). */
 async function fondoDelKwiz(k) {
   if (!k || k.tipo !== "tutora") return;
+  const lugar = $("tutoraVideo");
   const escenas = await escenasDeTutora(k.tema);
   if (!escenas) return;
   const et = F.etapas(escenas, N.ACIERTOS_TUTORA);
-  F.mostrar(k.tema, et[Math.min(k.bien || 0, N.ACIERTOS_TUTORA)], () => videoDeTutora(k.tema));
+  F.mostrar(k.tema, et[Math.min(k.bien || 0, N.ACIERTOS_TUTORA)], () => videoDeTutora(k.tema), lugar);
 }
 
 function verPregunta(o, kid) {
@@ -2650,7 +2651,7 @@ function verPregunta(o, kid) {
   <section class="kw${deTutora ? " kwTutora" : ""}">
     <header class="hero kwh">
       <div class="ratio"></div>
-      ${imagenDeArriba(foto && foto.nombre)}
+      ${deTutora ? '<div class="tutoraVideo" id="tutoraVideo"></div>' : imagenDeArriba(foto && foto.nombre)}
       <div class="over">
         <p class="lead"><span>${deTutora ? `Aciertos: ${k.bien || 0} de ${N.ACIERTOS_TUTORA}` : `Pregunta ${sig.orden} de ${sig.total}`}</span><span>${escribir ? "Dilo en español" : "Toca la respuesta"}</span></p>
         <div class="score"><div class="track" role="img" aria-label="${deTutora ? `Llevas ${k.bien || 0} de ${N.ACIERTOS_TUTORA} aciertos` : `Vas en la ${sig.orden} de ${sig.total}`}"><i data-w="${deTutora ? 100 * (k.bien || 0) / N.ACIERTOS_TUTORA : 100 * (sig.orden - 1) / sig.total}"></i></div></div>
@@ -2890,7 +2891,7 @@ function verResultado(o, kid) {
     return ` <span class="delta ${d > 0 ? "sube" : "baja"}">${d > 0 ? "+" : "−"}${Math.abs(d)}</span>`;
   };
   const renglon = (rotulo, ids, vacio) => `<h3>${rotulo}</h3>${ids.length ? `<ul class="rota">${nombres(ids)}</ul>` : `<p class="small">${vacio}</p>`}`;
-  poner(conFondo(`
+  poner(conFondo(`${k.tipo === "tutora" ? '<div class="kwTutora"><div class="hero"><div class="tutoraVideo" id="tutoraVideo"></div></div></div>' : ""}
   <section class="card">
     <h1 class="h">${k.tipo === "tutora" ? (k.bien >= N.ACIERTOS_TUTORA ? `¡${N.ACIERTOS_TUTORA} de ${N.ACIERTOS_TUTORA}! Llegaste al final` : `${k.bien} buenas: te faltaron ${N.ACIERTOS_TUTORA - k.bien}`) : `${k.bien} de ${k.total}`}</h1>
     <p>${TIPOS_KWIZ[k.tipo] || "Quiz"} · ${cuando(k.terminado)}</p>

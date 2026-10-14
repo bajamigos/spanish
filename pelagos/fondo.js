@@ -49,8 +49,11 @@ function asegurar() {
  * Muestra el fondo de la tutora `id` en la etapa dada.
  * `fuente()` devuelve un File o una dirección (se pide una sola vez por tutora); `tramos` es la lista de esa etapa.
  */
-export async function mostrar(id, tramos, fuente) {
+export async function mostrar(id, tramos, fuente, lugar = null) {
   asegurar();
+  // Con `lugar`, el video va dentro de la página (arriba de la pregunta); sin él, fijo detrás de todo.
+  if (lugar && caja.parentNode !== lugar) lugar.append(caja);
+  caja.classList.toggle("enLinea", !!lugar);
   document.body.classList.add("conTutora");
   caja.hidden = false;
   vivo = true;

@@ -864,15 +864,14 @@ dialog.sheet.escena.practica { inset: 0; width: 100%; max-width: 720px; height: 
 .practica .pr-menu { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .practica .pr-menu .k { width: 100%; margin: 6px 0 0; }
 
-/* Kwiz con la tutora (web/fondo.js): su escena de fondo, fija detrás de todo, y la pregunta encima en tarjeta oscura */
+/* Kwiz con la tutora (web/fondo.js): su escena arriba de la pregunta, con degradado que se funde con el texto */
 #fondoTutora { position: fixed; inset: 0; z-index: -1; background: #000; }
 #fondoTutora[hidden] { display: none; }
-#fondoTutora video { width: 100%; height: 100%; object-fit: cover; }
-body.conTutora { background: #000; }
-body.conTutora .app, body.conTutora .vista { background: transparent; }
-.kwTutora .hero { background: rgba(0, 0, 0, 0.72); }
+#fondoTutora video { width: 100%; height: 100%; object-fit: cover; display: block; }
+#fondoTutora.enLinea { position: relative; inset: auto; z-index: 0; aspect-ratio: 4 / 3; max-height: 48vh; width: 100%; }
+#fondoTutora.enLinea video { position: static; }
+#fondoTutora.enLinea::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 45%; background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000); pointer-events: none; }
+.kwTutora .hero { display: block; background: #000; }
 .kwTutora .hero .ratio { display: none; }
-body.conTutora .hoy .fondo, body.conTutora .hoy img.fondo { display: none; }
-.kwTutora .cue { font-size: 28px; }
-body.conTutora .card { background: rgba(10, 10, 10, 0.78); color: #fff; border-color: rgba(255, 255, 255, 0.15); }
-body.conTutora .foot { color: rgba(255, 255, 255, 0.8); }
+.kwTutora .tutoraVideo { position: relative; }
+.kwTutora .hero .over { position: relative; z-index: 2; margin-top: -56px; padding-top: 0; padding-bottom: 18px; }
