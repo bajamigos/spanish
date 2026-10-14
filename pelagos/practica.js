@@ -82,13 +82,13 @@ export async function abrirPractica(id, fuente, A, NB) {
   const v = d.querySelector("video"), sub = d.querySelector(".pr-sub"), form = d.querySelector(".pr-turno");
   const caja = $("prLinea"), aviso = d.querySelector(".pr-aviso"), menu = d.querySelector(".pr-menu");
   const local = typeof fuente !== "string";
-  let url = local ? URL.createObjectURL(fuente) : fuente, bajado = false;
+  let url = local ? URL.createObjectURL(fuente) : fuente, bajado = false, fallaBajar = "";
   v.muted = true; v.defaultMuted = true;
   // Desde Cloudflare el video se baja entero primero (es chico, 240p): el iPhone no reproduce el enlace firmado directo.
   if (!local && NB && NB.bajarVideo) {
     sub.textContent = "Bajando el video…";
     try { url = await NB.bajarVideo(fuente, (p) => { sub.textContent = "Bajando el video… " + Math.round(p * 100) + "%"; }); bajado = true; }
-    catch (e) { sub.textContent = e.message + " Intento verlo directo…"; }
+    catch (e) { fallaBajar = e.message; sub.textContent = e.message + " Intento verlo directo…"; }
   }
   v.src = url;
   const voz = new Audio();
@@ -233,7 +233,7 @@ export async function abrirPractica(id, fuente, A, NB) {
   }
   v.addEventListener("error", () => {
     const c = v.error ? v.error.code : 0;   // 1 cancelado, 2 red, 3 no se pudo decodificar, 4 dirección o formato no aceptado
-    decir("El video no cargó (código " + c + ", " + (local ? "de este aparato" : "de Cloudflare") + "). " +
+    decir((fallaBajar ? "Al bajarlo: " + fallaBajar + " " : "") + "El video no cargó (código " + c + ", " + (local ? "de este aparato" : bajado ? "bajado de Cloudflare" : "de Cloudflare") + "). " +
       (c === 2 ? "Falló la red." : c === 3 ? "El aparato no pudo leer el video." : c === 4 ? "Cloudflare no lo entregó o el formato no se acepta." : ""));
   });
   decir("Preparando a " + guion.tutora + "…");
