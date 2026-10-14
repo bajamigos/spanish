@@ -88,7 +88,15 @@ export async function abrirPractica(id, fuente, A, NB) {
   if (!local && NB && NB.bajarVideo) {
     sub.textContent = "Bajando el video…";
     try { url = await NB.bajarVideo(fuente, (p) => { sub.textContent = "Bajando el video… " + Math.round(p * 100) + "%"; }); bajado = true; }
-    catch (e) { fallaBajar = e.message; sub.textContent = e.message + " Intento verlo directo…"; }
+    catch (e) {
+      fallaBajar = e.message + " (hora del aparato: " + new Date().toISOString().slice(11, 19) + " UTC)";
+      sub.textContent = e.message + " Intento verlo directo…";
+      // Para revisar: el enlace que firmó este aparato, para pegárselo a Andrea.
+      const b = document.createElement("button");
+      b.type = "button"; b.className = "ub"; b.textContent = "Copiar enlace de prueba";
+      b.addEventListener("click", () => { navigator.clipboard.writeText(fuente).then(() => { b.textContent = "Copiado"; }, () => { b.textContent = "No se pudo copiar"; }); });
+      d.querySelector(".in").append(b);
+    }
   }
   v.src = url;
   const voz = new Audio();

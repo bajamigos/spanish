@@ -1,11 +1,11 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=a49c295268";
-import * as A from "./almacen.js?v=a49c295268";
-import { abrirRecorrido } from "./recorrido.js?v=a49c295268";
-import * as V from "./videos.js?v=a49c295268";
-import * as NB from "./nube.js?v=a49c295268";
-import * as CL from "./clases.js?v=a49c295268";
-import { abrirPractica } from "./practica.js?v=a49c295268";
+import * as N from "./nucleo.js?v=e836514133";
+import * as A from "./almacen.js?v=e836514133";
+import { abrirRecorrido } from "./recorrido.js?v=e836514133";
+import * as V from "./videos.js?v=e836514133";
+import * as NB from "./nube.js?v=e836514133";
+import * as CL from "./clases.js?v=e836514133";
+import { abrirPractica } from "./practica.js?v=e836514133";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");

@@ -37,7 +37,9 @@ export async function enlace(datos, archivo, segundos = 6 * 3600, ahora = new Da
   const d = limpiar(datos);
   if (!lista(d) || !archivo) return "";
   const camino = "/" + [d.cubeta, ...String(archivo).split("/")].map(codificar).join("/");
-  return firmar({ origen: d.url, camino, id: d.id, secreto: d.secreto, region: "auto", segundos, ahora });
+  // Se firma 10 minutos en el pasado (y dura 10 minutos más): si el reloj del aparato va adelantado, Cloudflare no lo rechaza.
+  const atras = 600;
+  return firmar({ origen: d.url, camino, id: d.id, secreto: d.secreto, region: "auto", segundos: segundos + atras, ahora: new Date(ahora.getTime() - atras * 1000) });
 }
 
 /** La firma en sí (exportada para probarla con el ejemplo oficial de AWS). */
