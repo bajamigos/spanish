@@ -625,6 +625,35 @@ export function leerTablero(crudo) {
   return { dia: crudo.dia, leido: momento(crudo.leido), atuendo: texto(crudo.atuendo, 200), foto, frase: texto(crudo.frase, 240), medidas, extras, checkin };
 }
 
+/**
+ * Tu registro de lectura (tablero/lectura.json): los libros de tu biblioteca de ElevenReader y tus minutos por día.
+ * Lo escribe la tarea del Tablero; aquí solo se revisa su forma y lo que venga mal hecho se tira.
+ * Devuelve { libros: [{ id, titulo, autor, url, portada, falta, estado, terminado }], dias: Map(día -> minutos), meta } o null.
+ * «estado»: «leyendo» (el que estás escuchando; el primero así es «Leyendo ahora»), «terminado» o «pendiente».
+ */
+export function leerLectura(crudo) {
+  if (!crudo || typeof crudo !== "object" || crudo.version !== 1) return null;
+  const texto = (v, tope = 200) => (typeof v === "string" && v.trim() ? v.trim().slice(0, tope) : null);
+  const dia = (v) => (typeof v === "string" && /^\d{4}-\d{2}-\d{2}$/.test(v) ? v : null);
+  const url = (u) => (typeof u === "string" && /^https:\/\/elevenreader\.io\/reader\/library\/u:[A-Za-z0-9]{6,40}$/.test(u) ? u : null);
+  // Las portadas son las miniaturas públicas de ElevenReader (su CDN en Google); nada más se acepta.
+  const portada = (u) => (typeof u === "string" && /^https:\/\/storage\.googleapis\.com\/eleven-public-cdn\/database\/reader_customers\/[A-Za-z0-9]{6,40}\/read\/u%3A[A-Za-z0-9]{6,40}\/thumbnail\.(webp|jpg|jpeg|png)(\?v=\d{1,14})?$/.test(u) ? u : null);
+  const libros = [], vistos = new Set();
+  for (const b of Array.isArray(crudo.libros) ? crudo.libros.slice(0, 200) : []) {
+    const titulo = texto(b && b.titulo, 160), u = url(b && b.url);
+    if (!titulo || !u || vistos.has(u)) continue;
+    vistos.add(u);
+    libros.push({ id: u.slice(u.lastIndexOf("/") + 1), titulo, autor: texto(b.autor, 80), url: u, portada: portada(b.portada),
+      falta: texto(b.falta, 40), estado: ["leyendo", "terminado", "pendiente"].includes(b.estado) ? b.estado : "pendiente", terminado: dia(b.terminado) });
+  }
+  const dias = new Map();
+  if (crudo.dias && typeof crudo.dias === "object" && !Array.isArray(crudo.dias)) {
+    for (const [d, m] of Object.entries(crudo.dias)) if (dia(d) && typeof m === "number" && Number.isFinite(m) && m >= 0 && m < 1440) dias.set(d, Math.round(m));
+  }
+  const meta = typeof crudo.meta === "number" && crudo.meta > 0 && crudo.meta < 1440 ? crudo.meta : 60;
+  return { libros, dias, meta };
+}
+
 /** Desde qué día se dibuja la historia de cada nivel en el Atlas (su pedido del 10 de octubre: «starting today»). */
 export const INICIO_HISTORIA = "2026-10-10";
 

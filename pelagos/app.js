@@ -1,9 +1,9 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=34c9d0f307";
-import * as A from "./almacen.js?v=34c9d0f307";
-import { abrirRecorrido } from "./recorrido.js?v=34c9d0f307";
-import * as V from "./videos.js?v=34c9d0f307";
-import * as CL from "./clases.js?v=34c9d0f307";
+import * as N from "./nucleo.js?v=2732b3d463";
+import * as A from "./almacen.js?v=2732b3d463";
+import { abrirRecorrido } from "./recorrido.js?v=2732b3d463";
+import * as V from "./videos.js?v=2732b3d463";
+import * as CL from "./clases.js?v=2732b3d463";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -306,6 +306,7 @@ const RUTAS = [
   [/^\/gramatica\/([a-z0-9]+)(\/bajo|\/mision)?$/, verNivel],
   [/^\/bitacora$/, verCalor],
   [/^\/clases$/, verClases],
+  [/^\/lectura$/, verLectura],
   [/^\/leccion\/([a-z0-9-]+)$/, verLeccion],
   [/^\/tutoras$/, verTutoras],
   [/^\/tutoras\/(\d+)$/, verTutora],
@@ -692,7 +693,7 @@ function verInicio(o) {
     if (tarjetas.size && /anki/i.test(m.nombre)) continue;        // con tarjetas propias, las de fuera ya no se enseñan
     const hecho = m.de === 0 ? m.valor === 0 : m.valor >= m.de;
     const falta = Math.round((m.de - m.valor) * 10) / 10;
-    cuadros.push(cuadro(m.nombre, m.valor, m.de, m.unidad, hecho ? "Cumplido" : m.de === 0 ? "Meta: cero" : `Faltan ${falta}`, hecho, /^clase/i.test(m.nombre) ? "#/clases" : "", sello("medida:" + m.nombre)));
+    cuadros.push(cuadro(m.nombre, m.valor, m.de, m.unidad, hecho ? "Cumplido" : m.de === 0 ? "Meta: cero" : `Faltan ${falta}`, hecho, /^clase/i.test(m.nombre) ? "#/clases" : /elevenreader/i.test(m.nombre) ? "#/lectura" : "", sello("medida:" + m.nombre)));
   }
   // Solo se dice de cuándo son los números de fuera si no son de hoy.
   const medidas = `
@@ -1288,6 +1289,78 @@ function verClases(o) {
   poner(`<div class="hoy clases${foto ? " confoto" : ""}">${fondo}<div class="sobre">${entradas("tablero", "clases")}${CL.htmlClases(A.clases(), new Date(), CL.pedidosDe(A.sucesos()))}</div></div>`,
     { titulo: "Clases · Pelagos", nav: "inicio", conserva: o.conserva });
   CL.montar(vista, () => pintar({ conserva: true }));
+}
+
+/** Minutos como «48 min» o «5 h 12 min». */
+const horasMin = (m) => (m >= 60 ? `${Math.floor(m / 60)} h${m % 60 ? " " + (m % 60) + " min" : ""}` : m + " min");
+
+/**
+ * Lectura: tu registro de ElevenReader (su idea del 13-Oct-2026). Se llega tocando el cuadro ElevenReader del Tablero.
+ * Arriba el libro que estás escuchando, con su portada; abajo tu estante. Cada libro abre ElevenReader en ese libro
+ * (en el iPhone, la app). Los datos llegan en tablero/lectura.json, que escribe la tarea del Tablero; los minutos de hoy
+ * los trae también el tablero del día, que se lee más seguido, y gana el número más alto.
+ */
+function verLectura(o) {
+  const L = N.leerLectura(A.lectura()), T = N.leerTablero(A.tablero());
+  const hoy = N.fechaLocal(new Date());
+  const meta = L ? L.meta : 60;
+  const dias = new Map(L ? L.dias : []);
+  const er = T && T.dia === hoy ? T.medidas.find((m) => /elevenreader/i.test(m.nombre)) : null;
+  if (er) dias.set(hoy, Math.max(dias.get(hoy) || 0, Math.round(er.valor)));
+  const libros = L ? L.libros : [];
+  const ahora = libros.find((b) => b.estado === "leyendo") || null;
+  const resto = libros.filter((b) => b !== ahora);
+  const portada = (b, clase) => b.portada
+    ? `<img class="${clase}" src="${esc(b.portada)}" alt="Portada de ${esc(b.titulo)}" loading="lazy" referrerpolicy="no-referrer">`
+    : `<span class="${clase} sinPortada" aria-hidden="true">${esc(b.titulo)}</span>`;
+  const abre = (b) => `href="${esc(b.url)}" target="_blank" rel="noopener"`;
+
+  // Hoy y los últimos siete días, en palabras (las gráficas llegan cuando haya una semana de datos).
+  const minHoy = dias.get(hoy) || 0;
+  const lineaHoy = minHoy >= meta ? `Hoy: ${horasMin(minHoy)}. Meta cumplida.` : `Hoy: ${minHoy} de ${meta} min. Te faltan ${meta - minHoy}.`;
+  let cumplidos = 0, total = 0;
+  const d0 = new Date();
+  for (let i = 0; i < 7; i++) {
+    const d = N.fechaLocal(new Date(d0.getFullYear(), d0.getMonth(), d0.getDate() - i));
+    const m = dias.get(d) || 0;
+    total += m; if (m >= meta) cumplidos++;
+  }
+  const lineaSemana = `Últimos 7 días: ${cumplidos} de 7 con la hora cumplida, ${horasMin(total)} en total.`;
+
+  const tarjetaAhora = ahora ? `
+    <section class="card" id="leyendoAhora">
+      <a class="libroAhora" ${abre(ahora)}>
+        ${portada(ahora, "portadaGrande")}
+        <span class="libroDatos">
+          <span class="small">Leyendo ahora</span>
+          <span class="libroTitulo">${esc(ahora.titulo)}</span>
+          ${ahora.autor ? `<span class="small">${esc(ahora.autor)}</span>` : ""}
+          ${ahora.falta ? `<span class="libroFalta">Te faltan ${esc(ahora.falta)}</span>` : ""}
+          <span class="small">Tócalo para abrirlo en ElevenReader.</span>
+        </span>
+      </a>
+    </section>` : "";
+  const estado = (b) => b.estado === "terminado" ? "Terminado" + (b.terminado ? " el " + diaLargo(b.terminado) : "")
+    : b.estado === "leyendo" ? "Leyendo" + (b.falta ? ": faltan " + b.falta : "") : "En tu estante";
+  const estante = resto.length ? `
+    <section class="card" id="estante">
+      <h2>Tu estante</h2>
+      <ul class="estante">${resto.map((b) => `<li><a class="libro" ${abre(b)}>${portada(b, "portadaChica")}<span class="libroTitulo">${esc(b.titulo)}</span><span class="small">${esc(estado(b))}</span></a></li>`).join("")}</ul>
+    </section>` : "";
+  const fondo = fondoDelDia();
+  poner(`
+  <div class="hoy lectura${fondo.hay ? " confoto" : ""}">
+    ${fondo.html}
+    <div class="sobre">
+      ${entradas("tablero", "")}
+      <section class="card" id="lecturaCabeza">
+        <h1 class="h">Lectura</h1>
+        <p class="lecturaHoy">${esc(lineaHoy)}</p>
+        <p class="small">${esc(lineaSemana)}</p>
+      </section>
+      ${L ? tarjetaAhora + estante : `<section class="card"><p class="small">Todavía no llega tu registro de lectura. La tarea del Tablero lo trae en su próxima pasada.</p></section>`}
+    </div>
+  </div>`, { titulo: "Lectura · Pelagos", nav: "inicio", conserva: o.conserva });
 }
 
 /** La portada del día: cambia cada día. */

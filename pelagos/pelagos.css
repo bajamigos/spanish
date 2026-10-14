@@ -800,3 +800,17 @@ dialog.sheet.conFoto:not([open]) { display: none; }
 @keyframes tjCae { 0%, 100% { transform: none; } 25% { transform: translateX(-5px); } 50% { transform: translateX(5px); } 75% { transform: translateX(-3px); } }
 [data-ambiente="limpio"] .tjNivel i.on { border-color: var(--ink-3); }
 @media (prefers-reduced-motion: reduce) { .tjNivel i { transition: none; } .tjNivel.baja { animation: none; } }
+
+/* ---- Lectura: tu registro de ElevenReader. Arriba el libro de ahora con su portada grande; abajo el estante. */
+.lectura .lecturaHoy { font-size: 1.15rem; font-weight: 600; margin: .3rem 0 .2rem; }
+.lectura .libroAhora { display: flex; gap: 1rem; align-items: center; color: inherit; text-decoration: none; }
+.lectura .portadaGrande { width: 42%; max-width: 180px; aspect-ratio: 2 / 3; object-fit: cover; border-radius: 8px; box-shadow: 0 6px 18px rgba(0, 0, 0, .35); flex: none; }
+.lectura .libroDatos { display: flex; flex-direction: column; gap: .3rem; min-width: 0; }
+.lectura .libroTitulo { font-weight: 700; font-size: 1.1rem; line-height: 1.25; }
+.lectura .libroFalta { font-weight: 600; }
+.lectura .estante { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: .9rem; }
+.lectura .libro { display: flex; flex-direction: column; gap: .3rem; color: inherit; text-decoration: none; }
+.lectura .libro .libroTitulo { font-size: .9rem; }
+.lectura .portadaChica { width: 100%; aspect-ratio: 2 / 3; object-fit: cover; border-radius: 6px; box-shadow: 0 4px 12px rgba(0, 0, 0, .3); }
+.lectura .sinPortada { display: flex; align-items: center; justify-content: center; padding: .5rem; text-align: center; border: 2px solid var(--ink-3); border-radius: 6px; font-size: .8rem; }
+.lectura .libroAhora:focus-visible, .lectura .libro:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; border-radius: 8px; }
