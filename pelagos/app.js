@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=c7cc05ce20";
-import * as A from "./almacen.js?v=c7cc05ce20";
-import { abrirRecorrido } from "./recorrido.js?v=c7cc05ce20";
-import * as V from "./videos.js?v=c7cc05ce20";
-import * as NB from "./nube.js?v=c7cc05ce20";
-import * as CL from "./clases.js?v=c7cc05ce20";
-import { abrirPractica } from "./practica.js?v=c7cc05ce20";
-import * as F from "./fondo.js?v=c7cc05ce20";
+import * as N from "./nucleo.js?v=b05a754a83";
+import * as A from "./almacen.js?v=b05a754a83";
+import { abrirRecorrido } from "./recorrido.js?v=b05a754a83";
+import * as V from "./videos.js?v=b05a754a83";
+import * as NB from "./nube.js?v=b05a754a83";
+import * as CL from "./clases.js?v=b05a754a83";
+import { abrirPractica } from "./practica.js?v=b05a754a83";
+import * as F from "./fondo.js?v=b05a754a83";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -592,7 +592,8 @@ const LOGO = `<img class="logoFondo" src="logo.png" alt="Pelagos" width="760" he
 function fondoDelDia(respaldo = true) {
   if (ambiente() === "limpio") return { hay: false, html: "" };
   // Mientras suena el repaso en audio, arriba va el loop de la tutora que está hablando.
-  const lt = repaso && repaso.sonando != null && !sinMovimiento() ? loopDeTutora(repaso.sonando) : null;
+  // Solo en la página donde empezó el repaso: en las demás, el fondo de siempre (la voz sigue sonando).
+  const lt = repaso && repaso.sonando != null && repaso.ruta === window.location.hash && !sinMovimiento() ? loopDeTutora(repaso.sonando) : null;
   if (lt) return { hay: true, html: `<div class="fondo">${etiquetaEscena("tutora-" + repaso.sonando, lt)}${LOGO}</div>` };
   // Si subiste un GIF o video de fondo (Ajustes), va en todas las páginas de arriba, en lugar de la foto.
   cargarVideosFondo();
@@ -2225,7 +2226,8 @@ function SILENCIO_URL() {
   silencio = URL.createObjectURL(new Blob([b.buffer], { type: "audio/wav" }));
   return silencio;
 }
-async function empezarRepaso(ids, origen, etiqueta = "") {
+async function empezarRepaso(ids, origen, etiqueta = "", rutaDada = null) {
+  const ruta = rutaDada || window.location.hash;      // la página donde va su loop
   pararRepaso("");
   callar();
   const audio = new Audio(SILENCIO_URL());        // en el mismo toque: así el navegador no bloquea el audio que llega después
@@ -2244,7 +2246,7 @@ async function empezarRepaso(ids, origen, etiqueta = "") {
     if (!(escenasPorSala.get(sala) || []).length) { try { escenasPorSala.set(sala, await A.escenasDe(sala)); } catch { escenasPorSala.set(sala, []); } }
   }));
   audio.preload = "auto";
-  repaso = { origen, cola, i: -1, audio, faltan, sonando: null, etiqueta };
+  repaso = { origen, cola, i: -1, audio, faltan, sonando: null, etiqueta, ruta };
   audio.addEventListener("ended", () => { if (repaso && repaso.audio === audio) tocarRepaso(repaso.i + 1); });
   audio.addEventListener("play", refrescarRepaso);
   audio.addEventListener("pause", refrescarRepaso);
@@ -2950,7 +2952,7 @@ function verResultado(o, kid) {
   // Estudiar las fallas: vuelve a tu plan y toca solo las voces de las tutoras de los temas que fallaste (se quedan en tu plan).
   const ef = $("estudiarFallas");
   if (ef) ef.addEventListener("click", () => {
-    empezarRepaso(fallas, "plan", fallas.length === 1 ? "Tu falla." : "Tus fallas.");
+    empezarRepaso(fallas, "plan", fallas.length === 1 ? "Tu falla." : "Tus fallas.", "#" + QUIZ);
     ir(QUIZ);
   });
 }
