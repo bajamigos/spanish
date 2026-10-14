@@ -1,10 +1,10 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=32129b9c82";
-import * as A from "./almacen.js?v=32129b9c82";
-import { abrirRecorrido } from "./recorrido.js?v=32129b9c82";
-import * as V from "./videos.js?v=32129b9c82";
-import * as NB from "./nube.js?v=32129b9c82";
-import * as CL from "./clases.js?v=32129b9c82";
+import * as N from "./nucleo.js?v=58be41c72c";
+import * as A from "./almacen.js?v=58be41c72c";
+import { abrirRecorrido } from "./recorrido.js?v=58be41c72c";
+import * as V from "./videos.js?v=58be41c72c";
+import * as NB from "./nube.js?v=58be41c72c";
+import * as CL from "./clases.js?v=58be41c72c";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1449,10 +1449,10 @@ function verLectura(o, ejemplo = false) {
     const fichaS = (x) => `<li><div class="libro">${cartel(x, "portadaChica")}<span class="libroTitulo">${esc(x.titulo)}</span>` +
       `<span class="small">${esc(x.tipo)}${x.horas !== null ? " · " + unDecimal(x.horas) + " h" : ""}</span>${estrellas(x.nota)}${x.genero ? `<span class="small">${esc(x.genero)}</span>` : ""}</div></li>`;
     const fechaCorta = (d) => { const [, m, dd] = d.split("-").map(Number); return `${dd} de ${MESES[m - 1]}`; };
-    const fichaE = (x, enPorVer) => `<li><button type="button" class="libro estreno" data-obra="${esc(x.obra)}" aria-pressed="${enPorVer}" ` +
-      `aria-label="${esc(x.titulo)}, ${esc(x.tipo.toLowerCase())}${x.fecha ? ", estreno del " + fechaCorta(x.fecha) : ""}. ${enPorVer ? "Tócalo para quitarlo de Por ver" : "Tócalo para pasarlo a Por ver"}">` +
-      `${cartel(x, "portadaChica")}<span class="libroTitulo">${esc(x.titulo)}</span><span class="small">${esc(x.tipo)}${x.fecha ? " · " + fechaCorta(x.fecha) : ""}</span>` +
-      `${enPorVer ? '<span class="small">Tócalo para quitarlo</span>' : ""}</button></li>`;
+    // Tocar un cartel abre su ficha (sinopsis y botones); desde ahí se agrega o se quita de Por ver (su cambio del 14-Oct).
+    const fichaE = (x, enPorVer) => `<li><button type="button" class="libro estreno" data-obra="${esc(x.obra)}" aria-haspopup="dialog" ` +
+      `aria-label="${esc(x.titulo)}, ${esc(x.tipo.toLowerCase())}${x.fecha ? ", estreno del " + fechaCorta(x.fecha) : ""}${enPorVer ? ", en Por ver" : ""}. Ver ficha">` +
+      `${cartel(x, "portadaChica")}<span class="libroTitulo">${esc(x.titulo)}</span><span class="small">${esc(x.tipo)}${x.fecha ? " · " + fechaCorta(x.fecha) : ""}</span></button></li>`;
     const vistas = S.filter((x) => x.estado === "terminado").map((x, i) => [x, i]).sort((a, b) => (b[0].nota || 0) - (a[0].nota || 0) || a[1] - b[1]).map((x) => x[0]);
     const elegidos = ES.filter((x) => E.porVer.has(x.obra)).sort((a, b) => (E.porVer.get(b.obra) || "").localeCompare(E.porVer.get(a.obra) || ""));
     const nuevos = ES.filter((x) => !E.porVer.has(x.obra));
@@ -1461,12 +1461,12 @@ function verLectura(o, ejemplo = false) {
     const pestanas = `<div class="jump tres" role="group" aria-label="Qué series enseña" id="serModo">${[["porver", "Por ver"], ["estrenos", "Estrenos"], ["vistas", "Vistas"]]
       .map(([k, n]) => `<button type="button" data-ser="${k}" aria-pressed="${k === serModo}">${n}</button>`).join("")}</div>`;
     if (serModo === "estrenos") {
-      cabeza = `${pestanas}<p class="small">Lo nuevo en español en Netflix México${L && L.estrenosDia ? ", al " + fechaCorta(L.estrenosDia) : ""}. Toca uno para pasarlo a Por ver.</p>`;
+      cabeza = `${pestanas}<p class="small">Lo nuevo en español en Netflix México${L && L.estrenosDia ? ", al " + fechaCorta(L.estrenosDia) : ""}. Toca un cartel para ver de qué trata.</p>`;
       cuerpo = nuevos.length ? repisa("serEstrenos", "Estrenos", nuevos, (x) => fichaE(x, false)) : `<section class="card"><p class="small">${ES.length ? "Ya pasaste todos los estrenos a Por ver." : "Todavía no llegan los estrenos. La tarea del Tablero los trae una vez al día."}</p></section>`;
     } else if (serModo === "porver") {
       cabeza = `${pestanas}<p class="small">${plural(elegidos.length + porVerHoja.length, "pendiente", "pendientes")}.</p>`;
       cuerpo = repisa("serElegidos", "De los estrenos", elegidos, (x) => fichaE(x, true)) + repisa("serPorVer", "De tu lista", porVerHoja, fichaS) +
-        (elegidos.length + porVerHoja.length ? "" : `<section class="card"><p class="small">Nada por ver. Toca un estreno para traerlo aquí.</p></section>`);
+        (elegidos.length + porVerHoja.length ? "" : `<section class="card"><p class="small">Nada por ver. Abre un estreno y agrégalo desde su ficha.</p></section>`);
     } else {
       cabeza = `${pestanas}<p class="lecturaHoy">${unDecimal(total)} horas de series y películas.</p><p class="small">${plural(vistas.length, "vista", "vistas")}, de la mejor a la peor.</p>`;
       cuerpo = repisa("serViendo", "Viendo", S.filter((x) => x.estado === "viendo"), fichaS) + repisa("serVistas", "Vistas", vistas, fichaS) +
@@ -1507,14 +1507,7 @@ function verLectura(o, ejemplo = false) {
     verLectura({ conserva: true });
     vista.querySelector(`[data-ser="${serModo}"]`)?.focus();
   });
-  for (const b of vista.querySelectorAll("[data-obra]")) b.addEventListener("click", () => {
-    const quitar = b.getAttribute("aria-pressed") === "true";
-    A.apuntar({ t: "porver", id: N.nuevoId("pv"), obra: b.dataset.obra, ...(quitar ? { quitar: 1 } : {}), cuando: new Date().toISOString() });
-    recalcular();
-    verLectura({ conserva: true });
-    const aviso = vista.querySelector("#lecturaCabeza p.small");
-    if (aviso) { aviso.setAttribute("role", "status"); aviso.textContent = quitar ? "Lo quitaste de Por ver." : "Listo: pasó a Por ver."; }
-  });
+  for (const b of vista.querySelectorAll("[data-obra]")) b.addEventListener("click", () => abrirObra(b.dataset.obra));
   const botones = vista.querySelector("#bibModo");
   if (botones) botones.addEventListener("click", (ev) => {
     const b = ev.target.closest("[data-bib]");
@@ -1535,6 +1528,38 @@ function verLectura(o, ejemplo = false) {
     g.addEventListener("click", decir);
     g.addEventListener("focusin", decir);
   }
+}
+
+/** La ficha de un estreno: su cartel, de qué trata y los botones para pasarlo a Por ver (o quitarlo) y buscarlo en Netflix. */
+function abrirObra(obra, aviso = "") {
+  const L = N.leerLectura(A.lectura()), x = L && L.estrenos.find((e) => e.obra === obra);
+  if (!x) return;
+  const enPorVer = E.porVer.has(obra);
+  const [, m, d] = (x.fecha || "--").split("-").map(Number);
+  hojaV.querySelectorAll(".hvFondo").forEach((n) => n.remove());
+  hojaV.classList.remove("conFoto");
+  $("hvIn").innerHTML = `
+    <div class="obraFicha">
+      ${x.portada ? `<img class="obraCartel" src="${esc(x.portada)}" alt="Cartel de ${esc(x.titulo)}" referrerpolicy="no-referrer">` : ""}
+      <h2 id="hvT" tabindex="-1">${esc(x.titulo)}</h2>
+      <p class="small">${[x.tipo, x.generos, x.duracion, x.fecha ? "estreno del " + d + " de " + MESES[m - 1] : ""].filter(Boolean).map(esc).join(" · ")}</p>
+      ${x.sinopsis ? `<p class="obraSinopsis">${esc(x.sinopsis)}</p>` : ""}
+      <p class="small" id="obraAviso" role="status">${esc(aviso)}</p>
+    </div>
+    <div class="acts">
+      <button type="button" class="ub grande" data-porver aria-pressed="${enPorVer}">${enPorVer ? "Quitar de Por ver" : "Agregar a Por ver"}</button>
+      <a class="ub" href="https://www.netflix.com/search?q=${encodeURIComponent(x.titulo)}" target="_blank" rel="noopener noreferrer">Buscar en Netflix</a>
+      <button type="button" class="ub" data-cerrar>Cerrar</button>
+    </div>`;
+  hojaV.querySelector("[data-porver]").addEventListener("click", () => {
+    A.apuntar({ t: "porver", id: N.nuevoId("pv"), obra, ...(enPorVer ? { quitar: 1 } : {}), cuando: new Date().toISOString() });
+    recalcular();
+    verLectura({ conserva: true });
+    abrirObra(obra, enPorVer ? "Lo quitaste de Por ver." : "Listo: está en Por ver.");
+    hojaV.querySelector("[data-porver]").focus();
+  });
+  if (!hojaV.hasAttribute("open")) { if (hojaV.showModal) hojaV.showModal(); else hojaV.setAttribute("open", ""); }
+  if (!aviso) $("hvT").focus({ preventScroll: true });
 }
 
 const mayuscula = (t) => t.charAt(0).toUpperCase() + t.slice(1);

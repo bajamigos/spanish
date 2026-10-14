@@ -702,7 +702,8 @@ export function leerLectura(crudo) {
   const estrenos = [];
   for (const x of Array.isArray(crudo.estrenos) ? crudo.estrenos.slice(0, 60) : []) {
     const titulo = texto(x && x.titulo, 120), obra = typeof x?.obra === "string" && /^(tv|movie):\d{1,10}$/.test(x.obra) ? x.obra : null;
-    if (titulo && obra) estrenos.push({ obra, titulo, tipo: obra.startsWith("movie") ? "Película" : "Serie", fecha: dia(x.fecha), portada: imagen(x.portada) });
+    if (titulo && obra) estrenos.push({ obra, titulo, tipo: obra.startsWith("movie") ? "Película" : "Serie", fecha: dia(x.fecha), portada: imagen(x.portada),
+      sinopsis: texto(x.sinopsis, 700), generos: texto(x.generos, 80), duracion: texto(x.duracion, 20) });
   }
   const g = crudo.granTotal;
   const granTotal = g && typeof g === "object" && horasDe(g.horas) !== null && dia(g.corte) ? { horas: g.horas, corte: g.corte, desde: dia(g.desde) } : null;

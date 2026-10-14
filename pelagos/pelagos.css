@@ -849,3 +849,7 @@ dialog.sheet.conFoto:not([open]) { display: none; }
 .lectura button.libro { background: none; border: 0; padding: 0; margin: 0; width: 100%; text-align: left; color: inherit; font: inherit; cursor: pointer; }
 .lectura button.libro:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; border-radius: 8px; }
 #lecturaCabeza #serModo { margin: .2rem 0 .6rem; }
+.obraFicha .obraCartel { display: block; width: 46%; max-width: 200px; aspect-ratio: 2 / 3; object-fit: cover; border-radius: 8px; margin: 0 auto .8rem; box-shadow: 0 6px 18px rgba(0, 0, 0, .35); }
+.obraFicha h2 { text-align: center; margin: 0 0 .3rem; }
+.obraFicha > .small { text-align: center; }
+.obraFicha .obraSinopsis { line-height: 1.5; }
