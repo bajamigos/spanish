@@ -1,9 +1,9 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=2e6e6cfabc";
-import * as A from "./almacen.js?v=2e6e6cfabc";
-import { abrirRecorrido } from "./recorrido.js?v=2e6e6cfabc";
-import * as V from "./videos.js?v=2e6e6cfabc";
-import * as CL from "./clases.js?v=2e6e6cfabc";
+import * as N from "./nucleo.js?v=e73a2fda84";
+import * as A from "./almacen.js?v=e73a2fda84";
+import { abrirRecorrido } from "./recorrido.js?v=e73a2fda84";
+import * as V from "./videos.js?v=e73a2fda84";
+import * as CL from "./clases.js?v=e73a2fda84";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1977,9 +1977,20 @@ async function verEscena(id) {
     d = document.createElement("dialog");
     d.id = "escenaHoja"; d.className = "sheet escena";
     d.setAttribute("aria-label", "La escena completa");
-    d.innerHTML = '<div class="in"><video controls autoplay playsinline></video><div class="acts"><button type="button" class="ub grande" id="escenaX">Cerrar</button></div></div>';
+    d.innerHTML = '<div class="in"><video controls autoplay playsinline></video><div class="acts"><button type="button" class="ub grande" id="escenaCC" aria-pressed="false" hidden>CC</button><button type="button" class="ub grande" id="escenaX">Cerrar</button></div></div>';
     document.body.appendChild(d);
-    const cerrar = () => { const v = d.querySelector("video"); v.pause(); if (v.src) URL.revokeObjectURL(v.src); v.removeAttribute("src"); v.load(); if (d.open) d.close(); };
+    $("escenaCC").addEventListener("click", () => {
+      const pista = d.querySelector("video track");
+      if (!pista) return;
+      const prender = pista.track.mode !== "showing";
+      guardar("pelagos.cc", prender ? "1" : "0");
+      pintarCC(d, prender);
+    });
+    const cerrar = () => {
+      const v = d.querySelector("video"); v.pause(); if (v.src) URL.revokeObjectURL(v.src); v.removeAttribute("src");
+      for (const t of v.querySelectorAll("track")) { if (t.src) URL.revokeObjectURL(t.src); t.remove(); }
+      $("escenaCC").hidden = true; v.load(); if (d.open) d.close();
+    };
     $("escenaX").addEventListener("click", cerrar);
     d.addEventListener("cancel", (ev) => { ev.preventDefault(); cerrar(); });
   }
@@ -1987,6 +1998,22 @@ async function verEscena(id) {
   v.src = URL.createObjectURL(f);
   if (d.showModal) d.showModal(); else d.setAttribute("open", "");
   v.play().catch(() => {});
+  // Subtítulos: si la tutora tiene su .vtt, sale el botón CC. Se acuerda de si los dejaste prendidos.
+  A.subtitulos(id).then((texto) => {
+    if (!texto || !d.open || v.querySelector("track")) return;
+    const t = document.createElement("track");
+    t.kind = "subtitles"; t.srclang = "es"; t.label = "Español";
+    t.src = URL.createObjectURL(new Blob([texto], { type: "text/vtt" }));
+    v.appendChild(t);
+    $("escenaCC").hidden = false;
+    pintarCC(d, guardado("pelagos.cc") === "1");
+  }).catch(() => {});
+}
+/** Prende o apaga los subtítulos de la escena y deja el botón CC como corresponde. */
+function pintarCC(d, prender) {
+  const pista = d.querySelector("video track"), b = $("escenaCC");
+  if (pista) pista.track.mode = prender ? "showing" : "hidden";
+  if (b) { b.setAttribute("aria-pressed", prender ? "true" : "false"); b.textContent = prender ? "CC: sí" : "CC: no"; b.classList.toggle("prendido", prender); }
 }
 
 function verTutoras(o) {

@@ -9,7 +9,7 @@
 // - Lo que contestas entra primero a una fila en este aparato y de ahí sube.
 //   Sin internet, la fila espera y sube sola cuando vuelve.
 // - La llave vive solo en este navegador y solo viaja a la dirección de CONFIG.api.
-import { CONFIG } from "./config.js?v=2e6e6cfabc";
+import { CONFIG } from "./config.js?v=e73a2fda84";
 
 const CLAVES = { llave: "pelagos.llave", aparato: "pelagos.aparato", fila: "pelagos.fila." };      // la fila: una clave por suceso
 const RUTA_SUCESOS = /^sucesos\/([A-Za-z0-9_-]+)\/(\d{4}-\d{2})\.jsonl$/;
@@ -575,6 +575,22 @@ export async function leccion(info) {
   } catch (e) {
     if (guardada && !(e instanceof Fallo && e.tipo === "llave")) return guardada.datos;     // sin internet: sirve la copia vieja
     throw e;
+  }
+}
+
+/** Los subtítulos (WebVTT) del video de una tutora: contenido/tutoras/subtitulos/<lección>.vtt. Texto o null si no tiene. */
+export async function subtitulos(id) {
+  if (!/^\d+$/.test(String(id))) return null;
+  const clave = "vtt:" + id;
+  try {
+    const r = await api(REPO + "/contents/" + ruta("contenido/tutoras/subtitulos/" + id + ".vtt") + "?ref=" + encodeURIComponent(CONFIG.ramaContenido), { crudo: true });
+    if (r.status === 404) return null;
+    if (!r.ok) throw new Error("github");
+    const texto = await r.text();
+    await kvPoner(clave, texto);
+    return texto;
+  } catch {
+    try { return (await kvLeer(clave)) || null; } catch { return null; }   // sin internet: la copia guardada
   }
 }
 
