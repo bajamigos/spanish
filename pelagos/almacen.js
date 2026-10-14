@@ -9,7 +9,7 @@
 // - Lo que contestas entra primero a una fila en este aparato y de ahí sube.
 //   Sin internet, la fila espera y sube sola cuando vuelve.
 // - La llave vive solo en este navegador y solo viaja a la dirección de CONFIG.api.
-import { CONFIG } from "./config.js?v=58be41c72c";
+import { CONFIG } from "./config.js?v=f00be631c5";
 
 const CLAVES = { llave: "pelagos.llave", aparato: "pelagos.aparato", fila: "pelagos.fila." };      // la fila: una clave por suceso
 const RUTA_SUCESOS = /^sucesos\/([A-Za-z0-9_-]+)\/(\d{4}-\d{2})\.jsonl$/;
@@ -612,6 +612,22 @@ export async function subtitulos(id) {
     const texto = await r.text();
     await kvPoner(clave, texto);
     return texto;
+  } catch {
+    try { return (await kvLeer(clave)) || null; } catch { return null; }   // sin internet: la copia guardada
+  }
+}
+
+/** El guion de «Practica con la tutora»: contenido/tutoras/practica/<lección>.json. Objeto o null si no tiene. */
+export async function practica(id) {
+  if (!/^\d+$/.test(String(id))) return null;
+  const clave = "practica:" + id;
+  try {
+    const r = await api(REPO + "/contents/" + ruta("contenido/tutoras/practica/" + id + ".json") + "?ref=" + encodeURIComponent(CONFIG.ramaContenido), { crudo: true });
+    if (r.status === 404) return null;
+    if (!r.ok) throw new Error("github");
+    const datos = await r.json();
+    await kvPoner(clave, datos);
+    return datos;
   } catch {
     try { return (await kvLeer(clave)) || null; } catch { return null; }   // sin internet: la copia guardada
   }

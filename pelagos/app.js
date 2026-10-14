@@ -1,10 +1,11 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=58be41c72c";
-import * as A from "./almacen.js?v=58be41c72c";
-import { abrirRecorrido } from "./recorrido.js?v=58be41c72c";
-import * as V from "./videos.js?v=58be41c72c";
-import * as NB from "./nube.js?v=58be41c72c";
-import * as CL from "./clases.js?v=58be41c72c";
+import * as N from "./nucleo.js?v=f00be631c5";
+import * as A from "./almacen.js?v=f00be631c5";
+import { abrirRecorrido } from "./recorrido.js?v=f00be631c5";
+import * as V from "./videos.js?v=f00be631c5";
+import * as NB from "./nube.js?v=f00be631c5";
+import * as CL from "./clases.js?v=f00be631c5";
+import { abrirPractica } from "./practica.js?v=f00be631c5";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -2103,10 +2104,18 @@ const salaVoz = (id) => "voz-" + id;
 const botonEscena = (id) => {
   const t = tutoraDe(id);
   const oir = t ? `<button type="button" class="ub grande" data-escuchar="${id}" hidden>Escuchar a ${esc(nombreCorto(t))}</button>` : "";
-  return `<div class="go"><button type="button" class="ub grande" data-escena="${id}">Ver la escena completa</button>${oir}</div><div class="voz" data-voz="${id}"></div><p class="small" data-escenaaviso="${id}" role="status"></p>`;
+  const prac = t && t.practica ? `<button type="button" class="ub grande" data-practica="${id}">Practica con ${esc(nombreCorto(t))}</button>` : "";
+  return `<div class="go"><button type="button" class="ub grande" data-escena="${id}">Ver la escena completa</button>${oir}${prac}</div><div class="voz" data-voz="${id}"></div><p class="small" data-escenaaviso="${id}" role="status"></p>`;
 };
 function conectarEscenas(raiz) {
   for (const b of raiz.querySelectorAll("[data-escena]")) b.addEventListener("click", () => verEscena(Number(b.dataset.escena)));
+  for (const b of raiz.querySelectorAll("[data-practica]")) b.addEventListener("click", async () => {
+    const id = Number(b.dataset.practica), aviso = vista.querySelector(`[data-escenaaviso="${id}"]`);
+    if (aviso) aviso.textContent = "Preparando la práctica…";
+    let f = await V.video(id, true);
+    if (!f && V.puedeCarpeta() && !(await V.nombreCarpeta())) { try { await V.elegirCarpeta(); } catch { /* no eligió */ } }
+    try { await abrirPractica(id); if (aviso) aviso.textContent = ""; } catch (e) { if (aviso) aviso.textContent = e.message || "No se pudo abrir la práctica."; }
+  });
   for (const b of raiz.querySelectorAll("[data-escuchar]")) {
     const id = Number(b.dataset.escuchar);
     A.escenasDe(salaVoz(id)).then((l) => {

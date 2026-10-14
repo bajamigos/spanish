@@ -846,6 +846,7 @@ dialog.sheet.conFoto:not([open]) { display: none; }
 #lecturaCabeza #bibModo { margin: .6rem 0; }
 #calorClave .granTotal { margin: 0 0 .8rem; }
 #calorClave .granTotal b { display: block; font-size: 1.6rem; line-height: 1.1; }
+<<<<<<< Updated upstream
 .lectura button.libro { background: none; border: 0; padding: 0; margin: 0; width: 100%; text-align: left; color: inherit; font: inherit; cursor: pointer; }
 .lectura button.libro:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; border-radius: 8px; }
 #lecturaCabeza #serModo { margin: .2rem 0 .6rem; }
@@ -853,3 +854,13 @@ dialog.sheet.conFoto:not([open]) { display: none; }
 .obraFicha h2 { text-align: center; margin: 0 0 .3rem; }
 .obraFicha > .small { text-align: center; }
 .obraFicha .obraSinopsis { line-height: 1.5; }
+=======
+
+/* Practica con la tutora (web/practica.js) */
+.practica .pr-pantalla { position: relative; }
+.practica .pr-sub { position: absolute; left: 6px; right: 6px; bottom: 10px; margin: 0; padding: 6px 10px; text-align: center; font-size: 1.25em; font-weight: 700; line-height: 1.35; color: #fff; background: rgba(0, 0, 0, 0.85); border-radius: 8px; }
+.practica .pr-sub[hidden] { display: none; }
+.practica textarea { width: 100%; box-sizing: border-box; font-size: 20px; padding: 10px; border-radius: 10px; }
+.practica .pr-menu { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.practica .pr-menu .k { width: 100%; margin: 6px 0 0; }
+>>>>>>> Stashed changes
