@@ -63,3 +63,30 @@ export async function firmar({ origen, camino, id, secreto, region, segundos, ah
   const firma = hex(await hmac(k, aFirmar));
   return `${origen}${camino}?${consulta}&X-Amz-Signature=${firma}`;
 }
+
+/**
+ * Baja el video completo desde un enlace firmado y devuelve una dirección blob: para el reproductor.
+ * Sirve en el iPhone, donde el reproductor no acepta el enlace firmado directo (código 4).
+ * Necesita la regla CORS del almacén (origen bajamigos.github.io). Si Cloudflare se niega, el error dice por qué.
+ */
+export async function bajarVideo(url, alAvanzar = () => {}) {
+  let r;
+  try { r = await fetch(url, { cache: "no-store", credentials: "omit", referrerPolicy: "no-referrer" }); }
+  catch { throw new Error("No hubo conexión con Cloudflare (o falta la regla CORS del almacén)."); }
+  if (!r.ok) {
+    let codigo = "";
+    try { codigo = (/<Code>([^<]+)<\/Code>/.exec(await r.text()) || [])[1] || ""; } catch { /* sin detalle */ }
+    throw new Error("Cloudflare respondió " + r.status + (codigo ? " (" + codigo + ")" : "") + ".");
+  }
+  const total = Number(r.headers.get("content-length")) || 0;
+  const partes = []; let llevo = 0;
+  const lector = r.body && r.body.getReader ? r.body.getReader() : null;
+  if (!lector) return URL.createObjectURL(await r.blob());
+  for (;;) {
+    const { done, value } = await lector.read();
+    if (done) break;
+    partes.push(value); llevo += value.length;
+    if (total) alAvanzar(llevo / total);
+  }
+  return URL.createObjectURL(new Blob(partes, { type: r.headers.get("content-type") || "video/mp4" }));
+}

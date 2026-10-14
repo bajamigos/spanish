@@ -50,7 +50,7 @@ function guardarEscena(e) {
 
 /** `fuente`: el archivo del video (de tu carpeta o importado) o un enlace firmado de tu almacén de Cloudflare. */
 // `A` es el módulo almacen.js que ya cargó la página (se pasa aquí para no cargarlo dos veces con otra dirección).
-export async function abrirPractica(id, fuente, A) {
+export async function abrirPractica(id, fuente, A, NB) {
   const guion = await A.practica(id);
   if (!guion) throw new Error("Esta tutora todavía no tiene práctica.");
   if (!fuente) throw new Error("No encuentro su video ni en tu carpeta «Pelagos videos» ni en tu almacén de Cloudflare.");
@@ -82,15 +82,21 @@ export async function abrirPractica(id, fuente, A) {
   const v = d.querySelector("video"), sub = d.querySelector(".pr-sub"), form = d.querySelector(".pr-turno");
   const caja = $("prLinea"), aviso = d.querySelector(".pr-aviso"), menu = d.querySelector(".pr-menu");
   const local = typeof fuente !== "string";
-  const url = local ? URL.createObjectURL(fuente) : fuente;
+  let url = local ? URL.createObjectURL(fuente) : fuente, bajado = false;
   v.muted = true; v.defaultMuted = true;
+  // Desde Cloudflare el video se baja entero primero (es chico, 240p): el iPhone no reproduce el enlace firmado directo.
+  if (!local && NB && NB.bajarVideo) {
+    sub.textContent = "Bajando el video…";
+    try { url = await NB.bajarVideo(fuente, (p) => { sub.textContent = "Bajando el video… " + Math.round(p * 100) + "%"; }); bajado = true; }
+    catch (e) { sub.textContent = e.message + " Intento verlo directo…"; }
+  }
   v.src = url;
   const voz = new Audio();
   const listos = {};   // nombre -> dirección blob: ya bajada (así el audio arranca dentro del toque, como pide el celular)
   let vivo = true, reco = null;
   const cerrar = () => {
     vivo = false; v.pause(); voz.pause(); if (reco) try { reco.abort(); } catch { /* ya paró */ }
-    if (local) URL.revokeObjectURL(url); if (d.open) d.close(); d.remove();
+    if (local || bajado) URL.revokeObjectURL(url); if (d.open) d.close(); d.remove();
   };
   $("prX").addEventListener("click", cerrar);
   d.addEventListener("cancel", (ev) => { ev.preventDefault(); cerrar(); });

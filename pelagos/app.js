@@ -1,11 +1,11 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=52ce925077";
-import * as A from "./almacen.js?v=52ce925077";
-import { abrirRecorrido } from "./recorrido.js?v=52ce925077";
-import * as V from "./videos.js?v=52ce925077";
-import * as NB from "./nube.js?v=52ce925077";
-import * as CL from "./clases.js?v=52ce925077";
-import { abrirPractica } from "./practica.js?v=52ce925077";
+import * as N from "./nucleo.js?v=30237ee538";
+import * as A from "./almacen.js?v=30237ee538";
+import { abrirRecorrido } from "./recorrido.js?v=30237ee538";
+import * as V from "./videos.js?v=30237ee538";
+import * as NB from "./nube.js?v=30237ee538";
+import * as CL from "./clases.js?v=30237ee538";
+import { abrirPractica } from "./practica.js?v=30237ee538";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -2119,7 +2119,7 @@ function conectarEscenas(raiz) {
     let f = await V.video(id, true);
     if (!f && V.puedeCarpeta() && !(await V.nombreCarpeta())) { try { await V.elegirCarpeta(); f = await V.video(id, true); } catch { /* no eligió */ } }
     if (!f) f = (await enlaceNube(id)) || null;
-    try { await abrirPractica(id, f, A); if (aviso) aviso.textContent = ""; } catch (e) { if (aviso) aviso.textContent = e.message || "No se pudo abrir la práctica."; }
+    try { await abrirPractica(id, f, A, NB); if (aviso) aviso.textContent = ""; } catch (e) { if (aviso) aviso.textContent = e.message || "No se pudo abrir la práctica."; }
   });
   for (const [attr, sala, etiqueta] of [["escuchar", salaVoz, "Escuchar a "], ["presenta", salaPresenta, "Conoce a "]]) {
     for (const b of raiz.querySelectorAll(`[data-${attr}]`)) {
@@ -2328,7 +2328,15 @@ async function verEscena(id) {
   const nube = await enlaceNube(id);
   if (nube) {
     decir("");
-    const d = abrirReproductor(nube, () => verEscenaLocal(id, decir, "No lo encontré en tu almacén de Cloudflare. "));
+    // Si el reproductor no acepta el enlace firmado (el iPhone), se baja el video entero y se ve desde el aparato.
+    const d = abrirReproductor(nube, async () => {
+      decir("Bajando el video de Cloudflare…");
+      try {
+        const b = await NB.bajarVideo(nube, (p) => decir("Bajando el video de Cloudflare… " + Math.round(p * 100) + "%"));
+        decir("");
+        ponerSubtitulos(id, abrirReproductor(b, () => verEscenaLocal(id, decir, "No se pudo ver desde Cloudflare. ")));
+      } catch (e) { verEscenaLocal(id, decir, e.message + " "); }
+    });
     ponerSubtitulos(id, d);
     return;
   }
