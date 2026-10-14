@@ -1,9 +1,9 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=d5287c0172";
-import * as A from "./almacen.js?v=d5287c0172";
-import { abrirRecorrido } from "./recorrido.js?v=d5287c0172";
-import * as V from "./videos.js?v=d5287c0172";
-import * as CL from "./clases.js?v=d5287c0172";
+import * as N from "./nucleo.js?v=23830ab517";
+import * as A from "./almacen.js?v=23830ab517";
+import { abrirRecorrido } from "./recorrido.js?v=23830ab517";
+import * as V from "./videos.js?v=23830ab517";
+import * as CL from "./clases.js?v=23830ab517";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -2378,30 +2378,11 @@ function verResultado(o, kid) {
   };
   const renglon = (rotulo, ids, vacio) => `<h3>${rotulo}</h3>${ids.length ? `<ul class="rota">${nombres(ids)}</ul>` : `<p class="small">${vacio}</p>`}`;
   poner(conFondo(`
-  ${cambios ? `
-  <section class="card" id="rota">
-    <h2>Tu plan de estudio Pelagos</h2>
-    ${renglon("Salen", cambios.salen, "Ninguno salió esta vez.")}
-    ${renglon("Entran", cambios.entran, cambios.salen.length ? "Ninguno nuevo." : "Ninguno: no hubo lugar.")}
-    ${renglon("Se quedan", cambios.quedan, "Ninguno.")}
-    <p class="small">Sale el tema que aciertas. El que fallas se queda hasta que lo aciertes dos veces seguidas.</p>
-  </section>` : ""}
   <section class="card">
     <h1 class="h">${k.bien} de ${k.total}</h1>
     <p>${TIPOS_KWIZ[k.tipo] || "Quiz"} · ${cuando(k.terminado)}</p>
     ${barra(k.total ? 100 * k.bien / k.total : 0, " gorda")}
     <div class="go"><button type="button" class="ub grande" data-kwiz='${esc(igual)}'>${k.tipo === "lista" ? "Otro quiz de tu plan" : "Otro quiz igual"}</button><a class="ub" href="#/">Tablero</a></div>
-  </section>
-  <section class="card">
-    <h2>Cómo se movieron tus temas</h2>
-    <div class="links">${temas.map((t) => {
-      const c = N.cambioDeTema(E, kid, t.id), i = info(t.id);
-      const abre = t.slug && t.leccion ? `<a class="tb" href="#/leccion/${esc(t.slug)}">` : `<button type="button" class="tb" data-l="${t.id}">`;
-      return `${abre}<span class="lv">${esc(t.nivel)}</span><span class="nm">${esc(titulo(t))}</span>
-        <span class="pc${esBajo(c.despues) ? " bajo" : ""}">${pct(c.despues)}${movio(c.antes, c.despues)}</span>
-        ${c.de || i.toca ? `<span class="sm">${[c.de ? `${c.bien} de ${c.de} bien` : "", i.toca ? `toca el ${fecha(i.toca)}` : ""].filter(Boolean).join(" · ")}</span>` : ""}
-        ${barra(c.despues)}${t.slug && t.leccion ? "</a>" : "</button>"}`;
-    }).join("")}</div>
   </section>
   <section class="card">
     <h2>Pregunta por pregunta</h2>
@@ -2416,7 +2397,26 @@ function verResultado(o, kid) {
         <p class="why">${enlace}${E.retiradas.has(r.p) ? " · pregunta retirada, ya no cuenta" : ""}</p>
       </div>`;
     }).join("")}</div>
-  </section>`),
+  </section>
+  <section class="card">
+    <h2>Cómo se movieron tus temas</h2>
+    <div class="links">${temas.map((t) => {
+      const c = N.cambioDeTema(E, kid, t.id), i = info(t.id);
+      const abre = t.slug && t.leccion ? `<a class="tb" href="#/leccion/${esc(t.slug)}">` : `<button type="button" class="tb" data-l="${t.id}">`;
+      return `${abre}<span class="lv">${esc(t.nivel)}</span><span class="nm">${esc(titulo(t))}</span>
+        <span class="pc${esBajo(c.despues) ? " bajo" : ""}">${pct(c.despues)}${movio(c.antes, c.despues)}</span>
+        ${c.de || i.toca ? `<span class="sm">${[c.de ? `${c.bien} de ${c.de} bien` : "", i.toca ? `toca el ${fecha(i.toca)}` : ""].filter(Boolean).join(" · ")}</span>` : ""}
+        ${barra(c.despues)}${t.slug && t.leccion ? "</a>" : "</button>"}`;
+    }).join("")}</div>
+  </section>
+  ${cambios ? `
+  <section class="card" id="rota">
+    <h2>Tu plan de estudio Pelagos</h2>
+    ${renglon("Salen", cambios.salen, "Ninguno salió esta vez.")}
+    ${renglon("Entran", cambios.entran, cambios.salen.length ? "Ninguno nuevo." : "Ninguno: no hubo lugar.")}
+    ${renglon("Se quedan", cambios.quedan, "Ninguno.")}
+    <p class="small">Sale el tema que aciertas. El que fallas se queda hasta que lo aciertes dos veces seguidas.</p>
+  </section>` : ""}`),
   { titulo: "Resultado del quiz · Pelagos", nav: "gramatica", conserva: o.conserva, pie: "<p>El número junto al porcentaje es cuánto se movió el tema en este quiz.</p>" });
 }
 
