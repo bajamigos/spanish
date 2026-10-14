@@ -1,9 +1,9 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=021e385078";
-import * as A from "./almacen.js?v=021e385078";
-import { abrirRecorrido } from "./recorrido.js?v=021e385078";
-import * as V from "./videos.js?v=021e385078";
-import * as CL from "./clases.js?v=021e385078";
+import * as N from "./nucleo.js?v=4abdd2c289";
+import * as A from "./almacen.js?v=4abdd2c289";
+import { abrirRecorrido } from "./recorrido.js?v=4abdd2c289";
+import * as V from "./videos.js?v=4abdd2c289";
+import * as CL from "./clases.js?v=4abdd2c289";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1824,7 +1824,7 @@ function botonesRepaso() {
 }
 function avisoRepaso() {
   if (!repaso) return ultimoAvisoRepaso;
-  const n = repaso.cola.length, ahora = repaso.sonando != null ? `Ahora: ${nombreDe(repaso.sonando)} (${repaso.i + 1} de ${n}).` : "Bajando las voces…";
+  const n = repaso.cola.length, ahora = (repaso.etiqueta ? repaso.etiqueta + " " : "") + (repaso.sonando != null ? `Ahora: ${nombreDe(repaso.sonando)} (${repaso.i + 1} de ${n}).` : "Bajando las voces…");
   const f = repaso.faltan.length ? ` Sin voz todavía: ${repaso.faltan.map(nombreDe).join(", ")}.` : "";
   return ahora + f;
 }
@@ -1843,9 +1843,22 @@ function refrescarRepaso() {
 }
 /** Los temas del plan, en orden. */
 function planActual() { return N.listaDeEstudio(P, E).temas.filter((id) => porId.has(id)); }
-async function empezarRepaso(ids, origen) {
+/** Un instante de silencio: se toca en el mismo toque del botón para que el teléfono deje sonar lo que sigue. */
+let silencio = null;
+function SILENCIO_URL() {
+  if (silencio) return silencio;
+  const n = 800, b = new DataView(new ArrayBuffer(44 + n)), txt = (o, t) => { for (let i = 0; i < t.length; i++) b.setUint8(o + i, t.charCodeAt(i)); };
+  txt(0, "RIFF"); b.setUint32(4, 36 + n, true); txt(8, "WAVEfmt "); b.setUint32(16, 16, true); b.setUint16(20, 1, true); b.setUint16(22, 1, true);
+  b.setUint32(24, 8000, true); b.setUint32(28, 8000, true); b.setUint16(32, 1, true); b.setUint16(34, 8, true); txt(36, "data"); b.setUint32(40, n, true);
+  for (let i = 0; i < n; i++) b.setUint8(44 + i, 128);
+  silencio = URL.createObjectURL(new Blob([b.buffer], { type: "audio/wav" }));
+  return silencio;
+}
+async function empezarRepaso(ids, origen, etiqueta = "") {
   pararRepaso("");
   callar();
+  const audio = new Audio(SILENCIO_URL());        // en el mismo toque: así el navegador no bloquea el audio que llega después
+  audio.play().catch(() => {});
   const avisa = (t) => { ultimoAvisoRepaso = t; const a = $("repasoAviso"); if (a && origen === "plan") a.textContent = t; };
   avisa("Buscando las voces…");
   const items = await Promise.all(ids.map(async (id) => {
@@ -1853,15 +1866,14 @@ async function empezarRepaso(ids, origen) {
     catch { return null; }
   }));
   const cola = items.filter(Boolean), faltan = ids.filter((id) => !cola.some((c) => c.id === id));
-  if (!cola.length) { avisa(ids.length > 1 ? "Todavía ninguna tutora de tu plan tiene voz." : "Esta tutora todavía no tiene voz."); return; }
+  if (!cola.length) { audio.pause(); avisa(etiqueta ? "Ninguna de tus fallas tiene voz todavía." : ids.length > 1 ? "Todavía ninguna tutora de tu plan tiene voz." : "Esta tutora todavía no tiene voz."); return; }
   // Los loops de cada una, para cambiar el fondo cuando empiece a hablar.
   await Promise.all(cola.map(async (c) => {
     const sala = "tutora-" + c.id;
     if (!(escenasPorSala.get(sala) || []).length) { try { escenasPorSala.set(sala, await A.escenasDe(sala)); } catch { escenasPorSala.set(sala, []); } }
   }));
-  const audio = new Audio();
   audio.preload = "auto";
-  repaso = { origen, cola, i: -1, audio, faltan, sonando: null };
+  repaso = { origen, cola, i: -1, audio, faltan, sonando: null, etiqueta };
   audio.addEventListener("ended", () => { if (repaso && repaso.audio === audio) tocarRepaso(repaso.i + 1); });
   audio.addEventListener("play", refrescarRepaso);
   audio.addEventListener("pause", refrescarRepaso);
@@ -2363,6 +2375,7 @@ function verResultado(o, kid) {
   if (!k.terminado) return k.pendientes.length ? ir(QUIZ + "/" + kid, true) : verNoExiste("Ese quiz se quedó sin preguntas.");
   const filas = k.preguntas.filter((p) => k.resp.has(p)).map((p) => ({ r: k.resp.get(p), q: preguntas.get(p) }));
   const temas = [...new Set(filas.map((f) => f.r.tema))].map((id) => porId.get(id)).filter(Boolean);
+  const fallas = [...new Set(filas.filter((f) => !f.r.bien).map((f) => f.r.tema))].filter((id) => porId.has(id));
   const igual = JSON.stringify({ tipo: k.tipo, cuaderno: k.cuaderno, tema: k.tema });
   const cambios = N.cambiosDeLista(P, E, kid);
   const nombres = (ids) => ids.map((id) => porId.get(id)).filter(Boolean).map((t) => {
@@ -2382,7 +2395,7 @@ function verResultado(o, kid) {
     <h1 class="h">${k.bien} de ${k.total}</h1>
     <p>${TIPOS_KWIZ[k.tipo] || "Quiz"} · ${cuando(k.terminado)}</p>
     ${barra(k.total ? 100 * k.bien / k.total : 0, " gorda")}
-    <div class="go"><button type="button" class="ub grande" data-kwiz='${esc(igual)}'>${k.tipo === "lista" ? "Otro quiz de tu plan" : "Otro quiz igual"}</button><a class="ub" href="#/">Tablero</a></div>
+    <div class="go"><button type="button" class="ub grande" data-kwiz='${esc(igual)}'>${k.tipo === "lista" ? "Otro quiz de tu plan" : "Otro quiz igual"}</button>${fallas.length ? `<button type="button" class="ub" id="estudiarFallas">Estudiar las fallas</button>` : ""}</div>
   </section>
   <section class="card">
     <h2>Pregunta por pregunta</h2>
@@ -2418,6 +2431,12 @@ function verResultado(o, kid) {
     <p class="small">Sale el tema que aciertas. El que fallas se queda hasta que lo aciertes dos veces seguidas.</p>
   </section>` : ""}`),
   { titulo: "Resultado del quiz · Pelagos", nav: "gramatica", conserva: o.conserva, pie: "<p>El número junto al porcentaje es cuánto se movió el tema en este quiz.</p>" });
+  // Estudiar las fallas: vuelve a tu plan y toca solo las voces de las tutoras de los temas que fallaste (se quedan en tu plan).
+  const ef = $("estudiarFallas");
+  if (ef) ef.addEventListener("click", () => {
+    empezarRepaso(fallas, "plan", fallas.length === 1 ? "Tu falla." : "Tus fallas.");
+    ir(QUIZ);
+  });
 }
 
 // ---------------------------------------------------------------- Ajustes
