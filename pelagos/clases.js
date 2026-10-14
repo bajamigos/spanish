@@ -21,7 +21,7 @@
 //   gramática (la sugerida es tu tema B2 más bajo; la pone la página con ponerSugerencia).
 //   (y { "t": "cancelarPedido", "id": "pc-…" } para quitarlo). La tarea de cada media hora lo reserva en Worldsacross
 //   y lo contesta en clases.json: "pedidos": [ { "id": "pc-…", "estado": "reservada" | "no se pudo", "nota": "…" } ].
-import * as A from "./almacen.js?v=7ad76008bf";
+import * as A from "./almacen.js?v=c79ce5f2f1";
 
 export const HORA0 = 6, HORA1 = 21, PX = 56;      // la cuadrícula: de 6 am a 9 pm, 56 px por hora
 const ATRAS = 7, ADELANTE = 13;                    // hasta dónde se puede deslizar, en días desde hoy
@@ -230,9 +230,6 @@ export function htmlClases(datos, ahora = new Date(), pedidos = []) {
           <button type="button" class="ub" data-ir="1" aria-label="Días siguientes"${C.alFinal ? " disabled" : ""}>›</button>
         </div>
       </div>
-      <p class="clHoras"><b>${esc(duracion(s.total))}</b> de conversación esta semana</p>
-      <p class="small">${s.clases === 1 ? "1 clase" : s.clases + " clases"} · ${s.hechas === 1 ? "1 hecha" : s.hechas + " hechas"}${s.hablado ? ` · ${esc(duracion(s.hablado))} ya habladas` : ""}</p>
-      ${C.siguiente ? `<p class="clSigue">La que sigue: <b>${esc(C.siguiente.tutor)}</b>, ${esc(cuandoLargo(C.siguiente, ahora))}${C.siguiente.tema ? ` · ${esc(C.siguiente.tema)}` : ""}</p>` : ""}
       ${C.pendientes.length ? `<p class="clPedidos">${C.pendientes.length === 1 ? "1 clase pedida" : C.pendientes.length + " clases pedidas"}: Andrea la${C.pendientes.length === 1 ? "" : "s"} reserva en la próxima media hora.</p>` : ""}
       ${C.fallidos.map((p) => `<p class="clNoSePudo">No se pudo reservar a <b>${esc(p.tutor)}</b>, ${esc(cuandoLargo(p, ahora))}${p.nota ? `: ${esc(p.nota)}` : "."}</p>`).join("")}
       ${viejo}
@@ -244,6 +241,11 @@ export function htmlClases(datos, ahora = new Date(), pedidos = []) {
     <section class="card clClave" aria-label="Qué significa cada color">
       <span><i class="sigue"></i>La que sigue</span><span><i></i>Agendada</span>${L.libres.length ? '<span><i class="libre"></i>Tu favorito, libre</span>' : ""}<span><i class="hecha"></i>Hecha ✓</span>
       <span class="small">Desliza a los lados para cambiar de días. Toca una clase para abrirla.</span>
+    </section>
+    <section class="card clResumen" aria-label="Tu semana de clases">
+      <p class="clHoras"><b>${esc(duracion(s.total))}</b> de conversación esta semana</p>
+      <p class="small">${s.clases === 1 ? "1 clase" : s.clases + " clases"} · ${s.hechas === 1 ? "1 hecha" : s.hechas + " hechas"}${s.hablado ? ` · ${esc(duracion(s.hablado))} ya habladas` : ""}</p>
+      ${C.siguiente ? `<p class="clSigue">La que sigue: <b>${esc(C.siguiente.tutor)}</b>, ${esc(cuandoLargo(C.siguiente, ahora))}${C.siguiente.tema ? ` · ${esc(C.siguiente.tema)}` : ""}</p>` : ""}
     </section>`;
 }
 let ultimos = [];      // los bloques que están en pantalla, en orden (data-cl)
