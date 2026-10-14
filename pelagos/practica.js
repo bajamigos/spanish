@@ -49,8 +49,8 @@ function guardarEscena(e) {
 }
 
 /** `fuente`: el archivo del video (de tu carpeta o importado) o un enlace firmado de tu almacén de Cloudflare. */
-export async function abrirPractica(id, fuente) {
-  const A = await import("./almacen.js");
+// `A` es el módulo almacen.js que ya cargó la página (se pasa aquí para no cargarlo dos veces con otra dirección).
+export async function abrirPractica(id, fuente, A) {
   const guion = await A.practica(id);
   if (!guion) throw new Error("Esta tutora todavía no tiene práctica.");
   if (!fuente) throw new Error("No encuentro su video ni en tu carpeta «Pelagos videos» ni en tu almacén de Cloudflare.");

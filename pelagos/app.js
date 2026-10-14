@@ -1,11 +1,11 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=aba8b380c9";
-import * as A from "./almacen.js?v=aba8b380c9";
-import { abrirRecorrido } from "./recorrido.js?v=aba8b380c9";
-import * as V from "./videos.js?v=aba8b380c9";
-import * as NB from "./nube.js?v=aba8b380c9";
-import * as CL from "./clases.js?v=aba8b380c9";
-import { abrirPractica } from "./practica.js?v=aba8b380c9";
+import * as N from "./nucleo.js?v=c8faf23c44";
+import * as A from "./almacen.js?v=c8faf23c44";
+import { abrirRecorrido } from "./recorrido.js?v=c8faf23c44";
+import * as V from "./videos.js?v=c8faf23c44";
+import * as NB from "./nube.js?v=c8faf23c44";
+import * as CL from "./clases.js?v=c8faf23c44";
+import { abrirPractica } from "./practica.js?v=c8faf23c44";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -2116,7 +2116,7 @@ function conectarEscenas(raiz) {
     let f = await V.video(id, true);
     if (!f && V.puedeCarpeta() && !(await V.nombreCarpeta())) { try { await V.elegirCarpeta(); f = await V.video(id, true); } catch { /* no eligió */ } }
     if (!f) f = (await enlaceNube(id)) || null;
-    try { await abrirPractica(id, f); if (aviso) aviso.textContent = ""; } catch (e) { if (aviso) aviso.textContent = e.message || "No se pudo abrir la práctica."; }
+    try { await abrirPractica(id, f, A); if (aviso) aviso.textContent = ""; } catch (e) { if (aviso) aviso.textContent = e.message || "No se pudo abrir la práctica."; }
   });
   for (const b of raiz.querySelectorAll("[data-escuchar]")) {
     const id = Number(b.dataset.escuchar);
