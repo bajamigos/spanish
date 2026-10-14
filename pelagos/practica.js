@@ -83,8 +83,10 @@ export async function abrirPractica(id, fuente, A) {
   const caja = $("prLinea"), aviso = d.querySelector(".pr-aviso"), menu = d.querySelector(".pr-menu");
   const local = typeof fuente !== "string";
   const url = local ? URL.createObjectURL(fuente) : fuente;
+  v.muted = true; v.defaultMuted = true;
   v.src = url;
   const voz = new Audio();
+  const listos = {};   // nombre -> dirección blob: ya bajada (así el audio arranca dentro del toque, como pide el celular)
   let vivo = true, reco = null;
   const cerrar = () => {
     vivo = false; v.pause(); voz.pause(); if (reco) try { reco.abort(); } catch { /* ya paró */ }
@@ -100,12 +102,13 @@ export async function abrirPractica(id, fuente, A) {
   async function hablar(nombre, texto) {
     decir(limpio(texto));
     try {
-      voz.src = await audio(nombre);
+      voz.src = listos[nombre] || (await audio(nombre));
       await voz.play();
       await new Promise((ok) => { voz.onended = ok; voz.onerror = ok; });
     } catch { await esperar(2500); }
   }
   async function irA(t) {
+    if (v.readyState < 1) await new Promise((ok) => { v.addEventListener("loadedmetadata", ok, { once: true }); setTimeout(ok, 20000); });
     const { i, src } = aFuente(tramos, t);
     v.currentTime = src; v.dataset.tramo = i;
     await new Promise((ok) => { v.onseeked = ok; setTimeout(ok, 1500); });
@@ -173,8 +176,9 @@ export async function abrirPractica(id, fuente, A) {
 
   async function practicar() {
     menu.innerHTML = "";
+    const intro = hablar(guion.intro.audio, guion.intro.texto);
     await irA(guion.escena.de);
-    await hablar(guion.intro.audio, guion.intro.texto);
+    await intro;
     const lineas = [];
     for (const reto of guion.retos) {
       if (!vivo) return;
@@ -221,6 +225,11 @@ export async function abrirPractica(id, fuente, A) {
       (k === "nueva" ? practicar() : repetir(mias[Number(k)])).catch(() => decir("Algo falló. Cierra y vuelve a abrir."));
     });
   }
+  v.addEventListener("error", () => decir("El video no cargó. Revisa tu conexión o que esté en tu almacén de Cloudflare."));
+  decir("Preparando a " + guion.tutora + "…");
+  const nombres = [guion.intro, guion.fin, ...guion.retos, ...guion.reacciones.buena, ...guion.reacciones.como, ...guion.reacciones.corta].map((x) => x.audio);
+  await Promise.all(nombres.map(async (n) => { try { listos[n] = await audio(n); } catch { /* se intenta otra vez al hablar */ } }));
+  if (!vivo) return;
   await irA(guion.escena.de);
   decir(guion.tutora + " te espera en el cañón.");
   pintarMenu("");
