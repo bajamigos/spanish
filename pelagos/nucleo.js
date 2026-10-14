@@ -314,6 +314,7 @@ export function calcular(paquete, sucesos) {
       const c = tarjetas.get(e.tarjeta);
       if (!c) continue;
       const dia = fechaLocal(e.cuando);
+      const yaHoy = !!c.ultima && fechaLocal(c.ultima) === dia;     // ya la habías repasado hoy
       c.n++;
       if (!c.primera) c.primera = e.cuando;
       c.ultima = e.cuando;
@@ -324,7 +325,7 @@ export function calcular(paquete, sucesos) {
       else {
         c.bien++;
         if (c.fallada === dia) { c.escalon = 0; c.toca = sumarDias(dia, ESCALONES[0]); c.fallada = null; }      // la rescataste hoy: mañana otra vez
-        else if (!c.toca || c.toca <= dia || e.adelanto) [c.escalon, c.toca] = siguienteToca(c.n === 1 && !c.traia ? -1 : c.escalon, true, dia);    // adelantada a propósito: sí sube
+        else if (!c.toca || c.toca <= dia || (e.adelanto && !yaHoy)) [c.escalon, c.toca] = siguienteToca(c.n === 1 && !c.traia ? -1 : c.escalon, true, dia);    // adelantada a propósito: sí sube
       }
     } else if (e.t === "tjn") {
       // Una tarjeta nueva, hecha a mano. Si ya hay una con ese id (del contenido o de otro suceso), vale la que ya estaba.
@@ -559,8 +560,8 @@ export const ADELANTO = 20;
 
 /**
  * Para adelantar cuando ya estás en cero: las que tocan más pronto (la más cercana primero) y, si no alcanzan,
- * nuevas que ya no cupieron hoy. Las quitadas no salen. Devuelve hasta «cuantas» ids, en el orden en que salen.
- * Al calificarlas con «adelanto», la que aciertas sube su escalón desde hoy; la que fallas vuelve a salir hoy.
+ * nuevas que ya no cupieron hoy. Las que ya viste hoy no entran (13-Oct-2026: salían otra vez y subían de más). Las quitadas no salen. Devuelve hasta «cuantas» ids, en el orden en que salen.
+ * Al calificarlas con «adelanto», la que aciertas sube su escalón desde hoy (una sola vez al día); la que fallas vuelve a salir hoy.
  */
 export function tarjetasAdelante(paquete, estado, hoy = fechaLocal(new Date()), cuantas = ADELANTO) {
   const dia = tarjetasDelDia(paquete, estado, hoy);
@@ -569,6 +570,8 @@ export function tarjetasAdelante(paquete, estado, hoy = fechaLocal(new Date()), 
   for (const c of mazo(paquete, estado)) {
     const s = estado.tarjetas && estado.tarjetas.get(c.id);
     if (!s || s.quitada || yaHoy.has(c.id)) continue;
+    if (s.ultima && fechaLocal(s.ultima) === hoy) continue;       // ya la viste hoy: adelantar es para las que no has visto
+
     if (!s.toca) nuevas.push(c.id);
     else if (s.toca > hoy) proximas.push({ id: c.id, toca: s.toca, ultima: s.ultima ? Date.parse(s.ultima) : 0 });
   }
