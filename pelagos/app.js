@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=5f10146311";
-import * as A from "./almacen.js?v=5f10146311";
-import { abrirRecorrido } from "./recorrido.js?v=5f10146311";
-import * as V from "./videos.js?v=5f10146311";
-import * as NB from "./nube.js?v=5f10146311";
-import * as CL from "./clases.js?v=5f10146311";
-import { abrirPractica } from "./practica.js?v=5f10146311";
-import * as F from "./fondo.js?v=5f10146311";
+import * as N from "./nucleo.js?v=0c5dbbb059";
+import * as A from "./almacen.js?v=0c5dbbb059";
+import { abrirRecorrido } from "./recorrido.js?v=0c5dbbb059";
+import * as V from "./videos.js?v=0c5dbbb059";
+import * as NB from "./nube.js?v=0c5dbbb059";
+import * as CL from "./clases.js?v=0c5dbbb059";
+import { abrirPractica } from "./practica.js?v=0c5dbbb059";
+import * as F from "./fondo.js?v=0c5dbbb059";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -2891,12 +2891,12 @@ function verResultado(o, kid) {
     return ` <span class="delta ${d > 0 ? "sube" : "baja"}">${d > 0 ? "+" : "−"}${Math.abs(d)}</span>`;
   };
   const renglon = (rotulo, ids, vacio) => `<h3>${rotulo}</h3>${ids.length ? `<ul class="rota">${nombres(ids)}</ul>` : `<p class="small">${vacio}</p>`}`;
-  poner(conFondo(`${k.tipo === "tutora" ? '<div class="kwTutora"><div class="hero"><div class="tutoraVideo" id="tutoraVideo"></div></div></div>' : ""}
+  poner((k.tipo === "tutora" ? (h) => `<div class="hoy"><div class="sobre">${h}</div></div>` : conFondo)(`${k.tipo === "tutora" ? '<div class="kwTutora"><div class="hero"><div class="tutoraVideo" id="tutoraVideo"></div></div></div>' : ""}
   <section class="card">
     <h1 class="h">${k.tipo === "tutora" ? (k.bien >= N.ACIERTOS_TUTORA ? `¡${N.ACIERTOS_TUTORA} de ${N.ACIERTOS_TUTORA}! Llegaste al final` : `${k.bien} buenas: te faltaron ${N.ACIERTOS_TUTORA - k.bien}`) : `${k.bien} de ${k.total}`}</h1>
     <p>${TIPOS_KWIZ[k.tipo] || "Quiz"} · ${cuando(k.terminado)}</p>
     ${barra(k.total ? 100 * k.bien / k.total : 0, " gorda")}
-    <div class="go"><button type="button" class="ub grande" data-kwiz='${esc(igual)}'>${k.tipo === "lista" ? "Otro quiz de tu plan" : "Otro quiz igual"}</button>${fallas.length ? `<button type="button" class="ub" id="estudiarFallas">Estudiar las fallas</button>` : ""}</div>
+    <div class="go"><button type="button" class="ub grande" data-kwiz='${esc(igual)}'>${k.tipo === "lista" ? "Otro quiz de tu plan" : "Otro quiz igual"}</button><a class="ub" href="${(() => { const t = k.tipo === "tutora" ? porId.get(k.tema) : null; return t && t.slug && t.leccion ? "#/leccion/" + esc(t.slug) : "#" + QUIZ; })()}">Cerrar</a>${fallas.length ? `<button type="button" class="ub" id="estudiarFallas">Estudiar las fallas</button>` : ""}</div>
   </section>
   <section class="card">
     <h2>Pregunta por pregunta</h2>
