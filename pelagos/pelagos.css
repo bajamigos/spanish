@@ -200,7 +200,6 @@ details.q .a span { font-size: 14.5px; color: var(--ink-3); }
 .marcas .marca.si { color: var(--ink); font-weight: 600; }
 .marcas .marca svg { width: 14px; height: 14px; flex: none; }
 .marcas .marca.si svg { color: var(--verde); }
-.tb .sm .donde { display: block; margin-bottom: 4px; }
 .tb .resp { margin-left: 10px; }
 .tb .motivo { display: block; margin-top: 4px; }
 .tb .sm.listos { grid-column: 1 / -1; }
@@ -746,6 +745,10 @@ dialog.sheet.escena { width: min(100%, 720px); max-height: 92%; }
 .clB.pedida .clH { color: var(--ambar); font-weight: 700; }
 .clPedidos { font-weight: 700; color: var(--ambar); }
 .clNoSePudo { font-weight: 600; color: var(--rojo); }
+.clOpc { border: 1px solid var(--clLinea); border-radius: 12px; padding: 6px 12px 10px; margin: 0; display: grid; gap: 2px; text-align: left; }
+.clOpc legend { font-weight: 700; font-size: 15px; padding: 0 4px; color: var(--ink-2); }
+.clOpc label { display: flex; align-items: center; gap: 10px; min-height: 44px; font-size: 17px; cursor: pointer; }
+.clOpc input { width: 22px; height: 22px; flex: none; accent-color: var(--c3); }
 .clPregunta { font-size: 18px; text-align: center; text-wrap: balance; margin: 0 0 4px; }
 .clOtros { font-size: 17px; font-weight: 600; color: var(--ambar); }
 .clFTema { font-size: 18px; font-weight: 700; text-wrap: balance; }
@@ -764,25 +767,3 @@ dialog.sheet.conFoto:not([open]) { display: none; }
 .sheet.conFoto .ex .es, .sheet.conFoto .ex .en { text-shadow: 0 1px 6px var(--page); }
 
 .voz audio { display: block; width: 100%; margin-top: 10px; }
-
-/* ---------- Voz de la tutora: la bocina junto a un tema (toca su MP3, nunca la voz del aparato) ---------- */
-.tb-voz { display: flex; gap: 6px; align-items: stretch; min-width: 0; }
-.tb-voz > .tb, .tb-voz > .tb-mision { flex: 1; min-width: 0; }
-.bocinaVoz { flex: none; width: 48px; min-height: 48px; display: grid; place-items: center; padding: 0; border: 1px solid var(--outline); border-radius: 12px; background: var(--page); color: var(--ink); cursor: pointer; }
-.bocinaVoz svg { width: 24px; height: 24px; fill: currentColor; }
-.bocinaVoz[aria-pressed="true"] { border-color: #5fbf6a; color: #2f9a3d; box-shadow: 0 0 10px 2px rgba(111, 220, 123, .55); }
-.bocinaVoz:focus-visible { outline: 3px solid var(--tab); outline-offset: 2px; }
-.hoy.confoto .bocinaVoz { background: var(--vidrio-2); border-color: var(--vidrio-borde); }
-
-/* ---- El peldaño de la tarjeta: seis puntitos que se llenan al subir y se vacían al caer ---- */
-.tjNivel { display: flex; gap: 9px; margin: 8px 0 2px; }
-.tjNivel i { width: 15px; height: 15px; border-radius: 50%; box-sizing: border-box; border: 2px solid currentColor; opacity: 0.75;
-  transition: background-color 0.25s ease, transform 0.25s ease, opacity 0.25s ease; }
-.tjNivel i.on { opacity: 1; border-color: rgba(255,255,255,0.9); }
-.tjNivel i.on.k0 { background: var(--k0); } .tjNivel i.on.k1 { background: var(--k1); } .tjNivel i.on.k2 { background: var(--k2); }
-.tjNivel i.on.k3 { background: var(--k3); } .tjNivel i.on.k4 { background: var(--k4); } .tjNivel i.on.k5 { background: var(--k5); }
-.tjNivel.sube i.on:last-of-type, .tjNivel.sube i.on:has(+ i:not(.on)) { transform: scale(1.35); }
-.tjNivel.baja { animation: tjCae 0.45s ease; }
-@keyframes tjCae { 0%, 100% { transform: none; } 25% { transform: translateX(-5px); } 50% { transform: translateX(5px); } 75% { transform: translateX(-3px); } }
-[data-ambiente="limpio"] .tjNivel i.on { border-color: var(--ink-3); }
-@media (prefers-reduced-motion: reduce) { .tjNivel i { transition: none; } .tjNivel.baja { animation: none; } }

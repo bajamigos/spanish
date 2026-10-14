@@ -1,9 +1,9 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=8158e49a88";
-import * as A from "./almacen.js?v=8158e49a88";
-import { abrirRecorrido } from "./recorrido.js?v=8158e49a88";
-import * as V from "./videos.js?v=8158e49a88";
-import * as CL from "./clases.js?v=8158e49a88";
+import * as N from "./nucleo.js?v=304a11924c";
+import * as A from "./almacen.js?v=304a11924c";
+import { abrirRecorrido } from "./recorrido.js?v=304a11924c";
+import * as V from "./videos.js?v=304a11924c";
+import * as CL from "./clases.js?v=304a11924c";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -158,21 +158,12 @@ function botonTema(t, { nivel = true, sub = "", anchoNombre = false, ingles = fa
   const i = info(t.id);
   const abre = t.slug && t.leccion ? `<a class="tb" href="#/leccion/${esc(t.slug)}">` : `<button type="button" class="tb" data-l="${t.id}">`;
   const cierra = t.slug && t.leccion ? "</a>" : "</button>";
-  const html = abre +
+  return abre +
     (nivel ? `<span class="lv">${esc(t.nivel)}</span>` : "") +
     `<span class="nm${anchoNombre ? " ancho" : ""}"${ingles && !t.titulo ? ' lang="en"' : ""}>${esc(titulo(t))}</span>` +
     `<span class="pc${esBajo(i.pct) ? " bajo" : ""}">${pct(i.pct)}</span>` +
     (sub ? `<span class="sm${anchoNombre ? " ancho" : ""}">${sub}</span>` : "") +
     barra(i.pct) + cierra;
-  return conBocina(t, html);
-}
-/** Si la tutora del tema ya tiene voz grabada, el botón del tema lleva junto una bocina que toca su MP3 (nunca la voz del aparato). */
-function conBocina(t, html) {
-  const tu = tutoraDe(t.id);
-  if (!tu || !tieneVoz(t)) return html;
-  const suena = !!repaso && repaso.sonando === t.id && !repaso.audio.paused;
-  return `<div class="tb-voz">${html}<button type="button" class="bocinaVoz" data-repasar="${t.id}" aria-pressed="${suena}" ` +
-    `aria-label="${suena ? "Pausa" : "Escuchar a " + esc(nombreCorto(tu))}" title="${suena ? "Pausa" : "Escuchar a " + esc(nombreCorto(tu))}">${ICONO_BOCINA}</button></div>`;
 }
 
 // Video completo y loop de la tutora: se revisan solos y las marcas se llenan conforme llegan.
@@ -181,8 +172,6 @@ let videosAqui = new Set(), videosRevisados = 0;
 function tieneVideo(t) { const tu = tutoraDe(t.id); return videosAqui.has(t.id) || !!(tu && tu.archivo); }
 /** Si la tutora del tema ya tiene loop subido (escenas/tutora-<tema>/). */
 function tieneLoop(t) { return A.leccionesConLoop().has(t.id); }
-/** Si la tutora del tema ya tiene su voz grabada (escenas/voz-<tema>/). */
-function tieneVoz(t) { return A.leccionesConVoz().has(t.id); }
 /** Busca otra vez qué videos hay en este aparato (cada medio minuto como mucho). Si cambió algo, vuelve a pintar la página. */
 function revisarVideos() {
   if (Date.now() - videosRevisados < 30000) return;
@@ -202,14 +191,14 @@ function bancoPorTema() {
   return m;
 }
 
-/** Las seis marcas de un tema: lección, tutora (con su nombre), video completo, loop, voz y preguntas. Se leen igual con lector de pantalla. */
+/** Las cinco marcas de un tema: lección, tutora (con su nombre), video completo, loop y preguntas. Se leen igual con lector de pantalla. */
 function marcas(t, banco) {
   const n = banco.get(t.id) || 0;
   const tu = tutoraDe(t.id), nombre = tu ? tu.tutora.split(",")[0] : "";
-  const video = tieneVideo(t), loop = tieneLoop(t), voz = tieneVoz(t);
+  const video = tieneVideo(t), loop = tieneLoop(t);
   const una = (si, texto) => `<span class="marca${si ? " si" : ""}">${si ? ICONO_SI : ICONO_NO}${esc(texto)}</span>`;
-  const dicho = `Lección: ${t.leccion ? "sí" : "no"}. Tutora: ${nombre || "todavía no"}. Video completo: ${video ? "sí" : "no"}. Loop: ${loop ? "sí" : "no"}. Voz: ${voz ? "sí" : "no"}. Preguntas: ${n ? n : "ninguna"}.`;
-  return `<span class="marcas" role="img" aria-label="${esc(dicho)}">${una(!!t.leccion, "Lección")}${una(!!tu, nombre || "Tutora")}${una(video, "Video completo")}${una(loop, "Loop")}${una(voz, "Voz")}${una(n > 0, n ? plural(n, "pregunta", "preguntas") : "Preguntas")}</span>`;
+  const dicho = `Lección: ${t.leccion ? "sí" : "no"}. Tutora: ${nombre || "todavía no"}. Video completo: ${video ? "sí" : "no"}. Loop: ${loop ? "sí" : "no"}. Preguntas: ${n ? n : "ninguna"}.`;
+  return `<span class="marcas" role="img" aria-label="${esc(dicho)}">${una(!!t.leccion, "Lección")}${una(!!tu, nombre || "Tutora")}${una(video, "Video completo")}${una(loop, "Loop")}${una(n > 0, n ? plural(n, "pregunta", "preguntas") : "Preguntas")}</span>`;
 }
 
 // ---------------------------------------------------------------- Poner una página
@@ -608,9 +597,6 @@ function cuadro(nombre, valor, de, unidad, estado, hecho, enlace = "", sello = n
 const LOGO = `<img class="logoFondo" src="logo.png" alt="Pelagos" width="760" height="519">`;
 function fondoDelDia(respaldo = true) {
   if (ambiente() === "limpio") return { hay: false, html: "" };
-  // Mientras suena el repaso en audio, arriba va el loop de la tutora que está hablando.
-  const lt = repaso && repaso.sonando != null && !sinMovimiento() ? loopDeTutora(repaso.sonando) : null;
-  if (lt) return { hay: true, html: `<div class="fondo">${etiquetaEscena("tutora-" + repaso.sonando, lt)}${LOGO}</div>` };
   // Si subiste un GIF o video de fondo (Ajustes), va en todas las páginas de arriba, en lugar de la foto.
   cargarVideosFondo();
   const cosa = etiquetaMovimiento();
@@ -823,8 +809,7 @@ function pintarBusqueda(texto) {
   if (!q) { caja.innerHTML = ""; $("bzNota").textContent = ""; return; }
   const temas = buscarTemas(q);
   $("bzNota").textContent = temas.length ? (temas.length === 40 ? "Los primeros 40. Escribe más para afinar." : plural(temas.length, "tema", "temas") + ", en el orden de Kwiziq.") : "Nada con eso. Prueba otra palabra, o el número de la lección.";
-  const banco = bancoPorTema();
-  caja.innerHTML = temas.map((t) => botonTema(t, { ingles: true, sub: `<span class="donde">${esc(t.nivel)} · #${t.orden} · lección ${t.id}</span>` + marcas(t, banco) })).join("");
+  caja.innerHTML = temas.map((t) => botonTema(t, { ingles: true, sub: `${esc(t.nivel)} · #${t.orden} · lección ${t.id}${t.leccion ? "" : " · sin lección aún"}${tutoraDe(t.id) ? " · tutora: " + esc(tutoraDe(t.id).tutora.split(",")[0]) : ""}` })).join("");
 }
 
 function verBiblioteca(o) {
@@ -888,7 +873,7 @@ function verNivel(o, clave, filtro) {
   <header class="card">
     <h1 class="h">${nivel} · ${NIVELES[nivel]}</h1>
     <p>${suyos.length} temas. ${bajo} bajo ${meta()}%.</p>
-    <p class="small">Listos: ${suyos.filter((t) => t.leccion).length} con lección · ${suyos.filter((t) => tutoraDe(t.id)).length} con tutora · ${suyos.filter(tieneVideo).length} con video completo · ${suyos.filter(tieneLoop).length} con loop · ${suyos.filter(tieneVoz).length} con voz · ${suyos.filter((t) => banco.get(t.id)).length} con preguntas.</p>
+    <p class="small">Listos: ${suyos.filter((t) => t.leccion).length} con lección · ${suyos.filter((t) => tutoraDe(t.id)).length} con tutora · ${suyos.filter(tieneVideo).length} con video completo · ${suyos.filter(tieneLoop).length} con loop · ${suyos.filter((t) => banco.get(t.id)).length} con preguntas.</p>
     <nav class="jump ${CON_RECORRIDO ? "tres" : "dos"}" aria-label="Qué temas mostrar">
       <a href="#/gramatica/${clave}"${soloBajo || soloMision ? "" : ' aria-current="page"'}>Todos</a>
       <a href="#/gramatica/${clave}/bajo"${soloBajo ? ' aria-current="page"' : ""}>Bajo ${meta()}%</a>
@@ -908,7 +893,7 @@ function verNivel(o, clave, filtro) {
   </details>`).join("") : `<section class="card"><p>${soloMision ? `Ningún tema de ${nivel} tiene una misión prendida. Prende una con la lucecita que sale junto a sus temas.` : `Ningún tema de ${nivel} está bajo ${meta()}%.`}</p></section>`}`),
   {
     titulo: nivel + " · Lecciones de gramática · Pelagos", nav: "gramatica", conserva: o.conserva,
-    pie: (CON_RECORRIDO ? "<p>La lucecita junto a un tema prende o apaga su misión en el Recorrido de Ganímedes.</p>" : "") + "<p>Toca una categoría para abrirla. Los temas en inglés todavía no tienen lección propia: llevan el nombre que les da Kwiziq.</p><p>Un porcentaje sin número de respuestas es tu arranque de Kwiziq.</p><p>Cada tema lleva seis marcas: lección, tutora (con su nombre), video completo, loop, voz y preguntas. La marca llena es que ya está lista; la punteada, que falta. El video completo cuenta lo que hay en este aparato (tu carpeta «Pelagos videos» o los importados); el loop y la voz, lo que ya está subido. Se llenan solas conforme llegan.</p>",
+    pie: (CON_RECORRIDO ? "<p>La lucecita junto a un tema prende o apaga su misión en el Recorrido de Ganímedes.</p>" : "") + "<p>Toca una categoría para abrirla. Los temas en inglés todavía no tienen lección propia: llevan el nombre que les da Kwiziq.</p><p>Un porcentaje sin número de respuestas es tu arranque de Kwiziq.</p><p>Cada tema lleva cinco marcas: lección, tutora (con su nombre), video completo, loop y preguntas. La marca llena es que ya está lista; la punteada, que falta. El video completo cuenta lo que hay en este aparato (tu carpeta «Pelagos videos» o los importados); el loop, lo que ya está subido. Se llenan solas conforme llegan.</p>",
   });
 }
 
@@ -1150,7 +1135,6 @@ function verTarjetas(o) {
       <div class="over">
         <p class="lead"><span id="tjFaltan">${faltan}</span><span id="tjAviso">Dilo en español</span></p>
         <div class="score"><div class="track" role="img" aria-label="Llevas ${hechas} de ${total}"><i data-w="${100 * hechas / total}"></i></div></div>
-        ${htmlNivel(nivelDe(antes))}
         <h1 class="cue" id="cue" lang="en">${esc(c.frente)}</h1>
       </div>
       <div class="rule tjResp" id="tjResp" tabindex="-1" aria-live="polite" hidden>
@@ -1189,37 +1173,12 @@ function verTarjetas(o) {
     A.apuntar({ t: "tj", id: N.nuevoId("t"), tarjeta: c.id, cuando: new Date().toISOString(), bien: bien ? 1 : 0, modo: "tocar", ...(enAdelanto ? { adelanto: 1 } : {}) });
     recalcular();
     enTarjetaDe = null;
-    // Los puntitos enseñan si la tarjeta subió o se cayó, y luego sale la siguiente (o «Vocabulario en cero»).
-    const de = nivelDe(antes), a = nivelDe(E.tarjetas.get(c.id));
-    moverNivel(de, a);
-    $("tjAviso").textContent = a > de ? `Sube al peldaño ${a}` : a < de ? `Se cae al peldaño ${a}` : `Se queda en el peldaño ${a}`;
-    $("tjBotones").hidden = true;
-    setTimeout(() => pintar(), a === de ? 450 : 900);
+    pintar();        // sin paso intermedio: sale la siguiente, o «Vocabulario en cero»
   }
   toque = () => destapar();
   teclas = { " ": () => destapar(true), enter: () => destapar(true) };
   $("jBien").addEventListener("click", () => calificar(true));
   $("jMal").addEventListener("click", () => calificar(false));
-}
-
-/** El peldaño de una tarjeta en la escalera (1 a 6, uno por escalón de N.ESCALONES); 0 si nunca la has acertado. */
-function nivelDe(s) { return s && s.toca ? s.escalon + 1 : 0; }
-/** Seis puntitos, uno por peldaño, con los mismos seis colores del Atlas. */
-function htmlNivel(n) {
-  return `<div class="tjNivel" id="tjNivel" role="img" aria-label="${n ? `Peldaño ${n} de ${N.ESCALONES.length}` : "Tarjeta nueva"}">${N.ESCALONES.map((_, i) =>
-    `<i class="k${i}${i < n ? " on" : ""}"></i>`).join("")}</div>`;
-}
-/** Llena o vacía los puntitos, uno tras otro, para que se vea la subida o la caída. */
-function moverNivel(de, a) {
-  const caja = $("tjNivel");
-  if (!caja) return;
-  caja.classList.add(a > de ? "sube" : a < de ? "baja" : "igual");
-  caja.setAttribute("aria-label", `Peldaño ${a} de ${N.ESCALONES.length}`);
-  [...caja.children].forEach((p, i) => {
-    const paso = a < de ? de - 1 - i : i - de;      // al caer se vacían de derecha a izquierda
-    p.style.transitionDelay = Math.max(0, paso) * 70 + "ms";
-    p.classList.toggle("on", i < a);
-  });
 }
 
 // ---------------------------------------------------------------- La lista de vocabulario
@@ -1292,6 +1251,10 @@ function fotoDeLaTarjeta(id, hoy, antes) {
 /** Tus clases de Worldsacross, tres días a la vez (ver web/clases.js). Al fondo, una chica Reef distinta cada día. */
 function verClases(o) {
   if (!o.conserva) CL.aHoy();
+  // La lección que se sugiere al pedir una clase: tu tema B2 más bajo (regla del 13-Oct-2026: por ahora, B2).
+  const b2 = (P.temas || []).filter((t) => t.nivel === "B2" && t.slug_kwiziq).map((t) => ({ t, pct: info(t.id).pct }))
+    .filter((x) => x.pct !== null && x.pct !== undefined).sort((a, b) => a.pct - b.pct)[0];
+  CL.ponerSugerencia(b2 ? { tema: b2.t.id, titulo: b2.t.titulo || b2.t.titulo_kwiziq, pct: b2.pct, url: "https://spanish.kwiziq.com/revision/grammar/" + b2.t.slug_kwiziq } : null);
   // De las fotos Reef de vocabulario (cientos), una por día; sin ellas, las portadas Reef.
   const vocab = fotosVocab.size > 0, lista = ambiente() === "limpio" ? [] : vocab ? [...fotosVocab.keys()] : (P.fotos || []).map((f) => f.nombre), hoy = new Date();
   const foto = lista.length ? lista[(Math.floor(Date.UTC(hoy.getFullYear(), hoy.getMonth(), hoy.getDate()) / 86400000) * 37 + 3) % lista.length] : null;
@@ -1795,7 +1758,6 @@ async function escuchar(b, id, v) {
   const caja = vista.querySelector(`[data-voz="${id}"]`), t = tutoraDe(id);
   const aviso = vista.querySelector(`[data-escenaaviso="${id}"]`);
   if (!caja) return;
-  if (repaso) pararRepaso("");
   let audio = caja.querySelector("audio");
   if (!audio) {
     b.disabled = true;
@@ -1825,109 +1787,6 @@ async function escuchar(b, id, v) {
   if (audio.paused) audio.play().catch(() => {}); else audio.pause();
 }
 function callar() { for (const a of document.querySelectorAll(".voz audio")) a.pause(); }
-
-// ---------------------------------------------------------------- Repaso en audio
-// Toca, una tras otra, las voces grabadas de las tutoras (escenas/voz-<lección>/). Mientras habla cada una,
-// arriba va su loop (escenas/tutora-<lección>/); cuando entra la siguiente, cambia el loop.
-let repaso = null;      // { origen, cola: [{ id, v }], i, audio, faltan: [ids], sonando, aviso }
-/** El loop (GIF o video) de la tutora de un tema, si ya se sabe; si no, null. */
-function loopDeTutora(id) { const l = escenasPorSala.get("tutora-" + id); return l ? l.filter(esMovimiento).slice(-1)[0] || null : null; }
-const nombreDe = (id) => { const t = tutoraDe(id); return t ? nombreCorto(t) : "la tutora"; };
-function botonesRepaso() {
-  const del = repaso && repaso.origen === "plan";
-  return `<button type="button" class="ub grande" id="repasoAudio" aria-pressed="${del && !repaso.audio.paused}">${!del ? "Repaso en audio" : repaso.audio.paused ? "Seguir el repaso" : "Pausa"}</button>` +
-    (del ? `<button type="button" class="ub" id="repasoSig">Siguiente</button><button type="button" class="ub" id="repasoFin">Terminar</button>` : "");
-}
-function avisoRepaso() {
-  if (!repaso) return ultimoAvisoRepaso;
-  const n = repaso.cola.length, ahora = repaso.sonando != null ? `Ahora: ${nombreDe(repaso.sonando)} (${repaso.i + 1} de ${n}).` : "Bajando las voces…";
-  const f = repaso.faltan.length ? ` Sin voz todavía: ${repaso.faltan.map(nombreDe).join(", ")}.` : "";
-  return ahora + f;
-}
-let ultimoAvisoRepaso = "";
-/** Pone al día los botones, el aviso y las bocinas. Si cambia qué botones van, vuelve a pintar. */
-function refrescarRepaso() {
-  const b = $("repasoAudio"), del = !!repaso && repaso.origen === "plan";
-  if (b && !!$("repasoSig") !== del) { pintar({ conserva: true }); return; }
-  if (b) { b.textContent = !del ? "Repaso en audio" : repaso.audio.paused ? "Seguir el repaso" : "Pausa"; b.setAttribute("aria-pressed", String(del && !repaso.audio.paused)); }
-  const a = $("repasoAviso"); if (a) a.textContent = avisoRepaso();
-  for (const x of vista.querySelectorAll("[data-repasar]")) {
-    const suena = !!repaso && repaso.sonando === Number(x.dataset.repasar) && !repaso.audio.paused;
-    const dice = suena ? "Pausa" : "Escuchar a " + nombreDe(Number(x.dataset.repasar));
-    x.setAttribute("aria-pressed", String(suena)); x.setAttribute("aria-label", dice); x.title = dice;
-  }
-}
-/** Los temas del plan, en orden. */
-function planActual() { return N.listaDeEstudio(P, E).temas.filter((id) => porId.has(id)); }
-async function empezarRepaso(ids, origen) {
-  pararRepaso("");
-  callar();
-  const avisa = (t) => { ultimoAvisoRepaso = t; const a = $("repasoAviso"); if (a && origen === "plan") a.textContent = t; };
-  avisa("Buscando las voces…");
-  const items = await Promise.all(ids.map(async (id) => {
-    try { const v = (await A.escenasDe(salaVoz(id))).filter((x) => /^audio\//.test(x.tipo || "")).slice(-1)[0]; return v ? { id, v } : null; }
-    catch { return null; }
-  }));
-  const cola = items.filter(Boolean), faltan = ids.filter((id) => !cola.some((c) => c.id === id));
-  if (!cola.length) { avisa(ids.length > 1 ? "Todavía ninguna tutora de tu plan tiene voz." : "Esta tutora todavía no tiene voz."); return; }
-  // Los loops de cada una, para cambiar el fondo cuando empiece a hablar.
-  await Promise.all(cola.map(async (c) => {
-    const sala = "tutora-" + c.id;
-    if (!(escenasPorSala.get(sala) || []).length) { try { escenasPorSala.set(sala, await A.escenasDe(sala)); } catch { escenasPorSala.set(sala, []); } }
-  }));
-  const audio = new Audio();
-  audio.preload = "auto";
-  repaso = { origen, cola, i: -1, audio, faltan, sonando: null };
-  audio.addEventListener("ended", () => { if (repaso && repaso.audio === audio) tocarRepaso(repaso.i + 1); });
-  audio.addEventListener("play", refrescarRepaso);
-  audio.addEventListener("pause", refrescarRepaso);
-  if ("mediaSession" in navigator) {
-    const ms = navigator.mediaSession, h = (a, f) => { try { ms.setActionHandler(a, f); } catch { /* no todos los aparatos */ } };
-    h("play", () => repaso && repaso.audio.play().catch(() => {}));
-    h("pause", () => repaso && repaso.audio.pause());
-    h("nexttrack", () => repaso && tocarRepaso(repaso.i + 1));
-    h("previoustrack", () => repaso && tocarRepaso(Math.max(0, repaso.i - 1)));
-    h("stop", () => pararRepaso("Repaso terminado."));
-  }
-  tocarRepaso(0);
-}
-async function tocarRepaso(i) {
-  if (!repaso) return;
-  if (i >= repaso.cola.length) { pararRepaso(repaso.cola.length > 1 ? "Repaso terminado. Ya pasaron todas." : ""); return; }
-  const r = repaso, { id, v } = r.cola[i];
-  r.i = i;
-  r.audio.pause();
-  try {
-    const u = await A.escenaUrl(salaVoz(id), v);
-    if (repaso !== r || r.i !== i) return;
-    r.audio.src = u;
-  } catch { if (repaso === r) tocarRepaso(i + 1); return; }
-  r.sonando = id;
-  const t = tutoraDe(id), tema = porId.get(id);
-  if ("mediaSession" in navigator && window.MediaMetadata) {
-    try { navigator.mediaSession.metadata = new MediaMetadata({ title: t ? t.tutora : "Tutora", artist: tema ? titulo(tema) : "Repaso en audio", album: "Repaso en audio · Pelagos" }); } catch { /* sin pantalla bloqueada */ }
-  }
-  pintar({ conserva: true });          // cambia el loop de arriba
-  r.audio.play().catch(() => refrescarRepaso());
-}
-/** Para el repaso y regresa el fondo de siempre. */
-function pararRepaso(aviso) {
-  if (!repaso) return;
-  const r = repaso;
-  repaso = null;
-  r.audio.pause();
-  r.audio.removeAttribute("src");
-  ultimoAvisoRepaso = aviso || "";
-  pintar({ conserva: true });
-}
-vista.addEventListener("click", (ev) => {
-  const b = ev.target instanceof Element ? ev.target.closest("[data-repasar]") : null;
-  if (!b) return;
-  ev.preventDefault();
-  const id = Number(b.dataset.repasar);
-  if (repaso && repaso.sonando === id) { if (repaso.audio.paused) repaso.audio.play().catch(() => {}); else repaso.audio.pause(); return; }
-  empezarRepaso([id], "tema");
-});
 async function verEscena(id) {
   const aviso = vista.querySelector(`[data-escenaaviso="${id}"]`);
   const decir = (t) => { if (aviso) aviso.textContent = t; };
@@ -2084,8 +1943,7 @@ function verKwiz(o) {
     ${deLista.length ? `
     <h3>${plural(deLista.length, "tema", "temas")} en tu plan</h3>
     <div class="links">${deLista.map((t) => botonTema(t, { sub: lineaDelPlan(t, lista, bancoPlan) })).join("")}</div>
-    <div class="go">${lista.abierto ? "" : `<button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Pelagos Quiz</button>`}${botonesRepaso()}</div>
-    <p class="small" id="repasoAviso" role="status">${esc(avisoRepaso())}</p>
+    ${lista.abierto ? "" : `<div class="go"><button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Pelagos Quiz</button></div>`}
     <p class="small">Una pregunta de cada tema. El que aciertas sale del plan y entra otro. El que fallas se queda hasta que lo aciertes dos veces seguidas.</p>
     ${deLista.length < N.LISTA ? `<p class="small">${E.enfoque ? `En ${esc(E.enfoque)} solo hay` : "Solo hay"} ${plural(deLista.length, "tema", "temas")} con preguntas. El plan se llena cuando se escriban más.</p>` : ""}
     <p class="small">Hoy llevas ${plural(hechosHoy, "quiz", "quizzes")}.</p>`
@@ -2100,13 +1958,6 @@ function verKwiz(o) {
     </div>
     <p class="small">Hay ${plural(banco.length, "pregunta revisada", "preguntas revisadas")} de ${plural(temasBanco.size, "tema", "temas")}.</p>
   </section>` : ""}`), { titulo: "Quiz de gramática · Pelagos", nav: "gramatica", conserva: o.conserva });
-  const rb = $("repasoAudio");
-  if (rb) rb.addEventListener("click", () => {
-    if (repaso && repaso.origen === "plan") { if (repaso.audio.paused) repaso.audio.play().catch(() => {}); else repaso.audio.pause(); }
-    else empezarRepaso(deLista.map((t) => t.id), "plan");
-  });
-  const rs = $("repasoSig"); if (rs) rs.addEventListener("click", () => repaso && tocarRepaso(repaso.i + 1));
-  const rf = $("repasoFin"); if (rf) rf.addEventListener("click", () => pararRepaso("Repaso terminado."));
   for (const b of vista.querySelectorAll("[data-enfoque]")) {
     b.addEventListener("click", () => {
       const nivel = b.dataset.enfoque || null;

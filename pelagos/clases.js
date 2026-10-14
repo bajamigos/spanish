@@ -15,10 +15,13 @@
 // - De 6 am a 9 pm, horas de 12. Se desliza a los lados (o con las flechas) para cambiar de días.
 // - Todo lo que trae el archivo se escribe como texto, nunca como HTML.
 // - Pedir una clase: en la ficha de un hueco libre hay un botón por tutor. Al confirmar se apunta un suceso
-//       { "t": "pedirClase", "id": "pc-…", "inicio": "…", "min": 50, "tutor": "…" }
+//       { "t": "pedirClase", "id": "pc-…", "inicio": "…", "min": 50, "tutor": "…",
+//         "actividad": "debate" | "conversacion", "gramatica": true | false, "leccion": { "tema", "titulo", "url" } | null }
+//   Al confirmar escoges la actividad (el debate que propone Worldsacross o conversación libre) y si va una lección de
+//   gramática (la sugerida es tu tema B2 más bajo; la pone la página con ponerSugerencia).
 //   (y { "t": "cancelarPedido", "id": "pc-…" } para quitarlo). La tarea de cada media hora lo reserva en Worldsacross
 //   y lo contesta en clases.json: "pedidos": [ { "id": "pc-…", "estado": "reservada" | "no se pudo", "nota": "…" } ].
-import * as A from "./almacen.js?v=8158e49a88";
+import * as A from "./almacen.js?v=304a11924c";
 
 export const HORA0 = 6, HORA1 = 21, PX = 56;      // la cuadrícula: de 6 am a 9 pm, 56 px por hora
 const ATRAS = 7, ADELANTE = 13;                    // hasta dónde se puede deslizar, en días desde hoy
@@ -69,7 +72,9 @@ export function pedidosDe(sucesos) {
     if (!e || e.t !== "pedirClase" || typeof e.id !== "string" || quitados.has(e.id) || typeof e.tutor !== "string") continue;
     const ini = new Date(e.inicio);
     if (Number.isNaN(ini.getTime()) || lista.some((x) => x.id === e.id)) continue;
-    lista.push({ id: e.id, ini, min: Number.isFinite(e.min) ? e.min : 50, tutor: e.tutor.slice(0, 60), cuando: e.cuando || "" });
+    const actividad = e.actividad === "conversacion" ? "conversacion" : "debate";
+    const leccion = e.gramatica !== false && e.leccion && typeof e.leccion.titulo === "string" ? e.leccion.titulo.slice(0, 120) : "";
+    lista.push({ id: e.id, ini, min: Number.isFinite(e.min) ? e.min : 50, tutor: e.tutor.slice(0, 60), cuando: e.cuando || "", actividad, leccion });
   }
   return lista;
 }
@@ -224,6 +229,12 @@ export function htmlClases(datos, ahora = new Date(), pedidos = []) {
 }
 let ultimos = [];      // los bloques que están en pantalla, en orden (data-cl)
 let repintarAhora = () => {};
+let sugerencia = null;      // { tema, titulo, pct, url }: tu tema B2 más bajo, para la nota del tutor
+/** La lección sugerida para los pedidos (la calcula la página con tus porcentajes). */
+export function ponerSugerencia(s) {
+  sugerencia = s && typeof s.url === "string" && /^https:\/\/spanish\.kwiziq\.com\//.test(s.url) ? s : null;
+}
+const ACTIVIDADES = { debate: "Debate (el tema que propone Worldsacross)", conversacion: "Conversación libre" };
 
 /** Lo que el HTML no puede traer escrito (lugares y fotos) y lo que se toca. `repintar` vuelve a pintar la página. */
 export function montar(raiz, repintar) {
@@ -269,7 +280,7 @@ function abrir(e) {
   if (!e || !hoja || !dentro) return;
   const dia = e.dia.nombre === "Hoy" || e.dia.nombre === "Mañana" || e.dia.nombre === "Ayer" ? e.dia.nombre : e.dia.nombre.replace(/ \d+$/, "") + " " + e.dia.num + " de " + MESES[e.dia.fecha.getMonth()];
   const libre = e.clase.startsWith("libre"), pendiente = e.clase === "libre pedida";
-  const estado = pendiente ? `Ya se la pediste a Andrea: ${e.pedido.tutor}. La reserva en la próxima media hora.`
+  const estado = pendiente ? `Ya se la pediste a Andrea: ${e.pedido.tutor}, ${ACTIVIDADES[e.pedido.actividad].split(" (")[0].toLowerCase()}${e.pedido.leccion ? " y gramática: " + e.pedido.leccion : ""}. La reserva en la próxima media hora.`
     : e.pedido?.respuesta?.estado === "no se pudo" ? `No se pudo reservar a ${e.pedido.tutor}${e.pedido.respuesta.nota ? ": " + e.pedido.respuesta.nota : "."}`
     : libre ? "Tu favorito tiene este hueco libre" : e.hecha ? "Hecha ✓" : e.sigue ? (e.cuando ? "La que sigue: empieza " + e.cuando : "La que sigue") : "Agendada";
   dentro.innerHTML = `
@@ -293,13 +304,22 @@ function abrir(e) {
   // Reservar pide un segundo sí: nada se apunta hasta que confirmas.
   for (const b of dentro.querySelectorAll("[data-pedir]")) b.addEventListener("click", () => {
     const tutor = b.dataset.pedir, acts = document.getElementById("clActs");
-    acts.innerHTML = `<p class="clPregunta" id="clPreg" tabindex="-1">¿Le pido a Andrea que te reserve a <b>${esc(tutor)}</b>, ${esc(dia.toLowerCase() === "hoy" || dia.toLowerCase() === "mañana" ? dia.toLowerCase() : "el " + dia)}, de ${esc(hora12(e.ini))} a ${esc(hora12(fin(e)))}?</p>
+    acts.innerHTML = `<p class="clPregunta" id="clPreg" tabindex="-1">¿Le pido a Andrea que te reserve a <b>${esc(tutor)}</b>, ${esc(dia.toLowerCase() === "hoy" || dia.toLowerCase() === "mañana" ? dia.toLowerCase() : "el " + dia.charAt(0).toLowerCase() + dia.slice(1))}, de ${esc(hora12(e.ini))} a ${esc(hora12(fin(e)))}?</p>
+      <fieldset class="clOpc"><legend>¿De qué hablan?</legend>
+        ${Object.entries(ACTIVIDADES).map(([v, t], i) => `<label><input type="radio" name="clAct" value="${v}"${i === 0 ? " checked" : ""}> ${esc(t)}</label>`).join("")}
+      </fieldset>
+      ${sugerencia ? `<fieldset class="clOpc"><legend>Gramática</legend>
+        <label><input type="checkbox" id="clGram" checked> Agregar la lección «${esc(sugerencia.titulo)}»${Number.isFinite(sugerencia.pct) ? ` (tu B2 más bajo, ${esc(Math.round(sugerencia.pct))} %)` : ""}</label>
+      </fieldset>` : ""}
       <button type="button" class="ub grande" data-si>Sí, resérvala</button>
       <button type="button" class="ub" data-cerrar>No</button>`;
     document.getElementById("clPreg").focus();
     acts.querySelector("[data-si]").addEventListener("click", () => {
+      const actividad = acts.querySelector("input[name='clAct']:checked")?.value === "conversacion" ? "conversacion" : "debate";
+      const conGram = !!(sugerencia && acts.querySelector("#clGram")?.checked);
       A.apuntar({ t: "pedirClase", id: "pc-" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
-        cuando: new Date().toISOString(), inicio: e.ini.toISOString(), min: e.min, tutor });
+        cuando: new Date().toISOString(), inicio: e.ini.toISOString(), min: e.min, tutor, actividad, gramatica: conGram,
+        leccion: conGram ? { tema: sugerencia.tema, titulo: sugerencia.titulo, url: sugerencia.url } : null });
       cerrar();
       repintarAhora();
     });
