@@ -1,9 +1,9 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=4abdd2c289";
-import * as A from "./almacen.js?v=4abdd2c289";
-import { abrirRecorrido } from "./recorrido.js?v=4abdd2c289";
-import * as V from "./videos.js?v=4abdd2c289";
-import * as CL from "./clases.js?v=4abdd2c289";
+import * as N from "./nucleo.js?v=2e6e6cfabc";
+import * as A from "./almacen.js?v=2e6e6cfabc";
+import { abrirRecorrido } from "./recorrido.js?v=2e6e6cfabc";
+import * as V from "./videos.js?v=2e6e6cfabc";
+import * as CL from "./clases.js?v=2e6e6cfabc";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1924,6 +1924,31 @@ vista.addEventListener("click", (ev) => {
   if (repaso && repaso.sonando === id) { if (repaso.audio.paused) repaso.audio.play().catch(() => {}); else repaso.audio.pause(); return; }
   empezarRepaso([id], "tema");
 });
+// Respaldo: si este aparato no tiene el video, se ve el original desde su sitio (campo `enlace` de la tutora),
+// dentro de Pelagos con el reproductor «embed» del sitio. Abajo, un enlace por si el sitio no deja verlo aquí.
+// El original arranca en 1:05, igual que los recortes de tu carpeta.
+function embedDe(enlace) {
+  const m = /[?&]viewkey=([a-z0-9]+)/i.exec(String(enlace || ""));
+  return m ? "https://www.pornhub.com/embed/" + m[1] : "";
+}
+function verEnElSitio(web, enlace) {
+  let d = $("escenaWeb");
+  if (!d) {
+    d = document.createElement("dialog");
+    d.id = "escenaWeb"; d.className = "sheet escena";
+    d.setAttribute("aria-label", "La escena completa, desde su sitio");
+    d.innerHTML = '<div class="in"><div class="marco"><iframe title="La escena completa" allow="autoplay; fullscreen" allowfullscreen referrerpolicy="origin"></iframe></div>' +
+      '<p class="small">Este aparato no tiene el video: se ve desde su sitio, con sus anuncios. Empieza en 1:05. <a target="_blank" rel="noopener noreferrer">Abrir en otra pestaña</a></p>' +
+      '<div class="acts"><button type="button" class="ub grande" id="escenaWebX">Cerrar</button></div></div>';
+    document.body.appendChild(d);
+    const cerrar = () => { d.querySelector("iframe").removeAttribute("src"); if (d.open) d.close(); };
+    $("escenaWebX").addEventListener("click", cerrar);
+    d.addEventListener("cancel", (ev) => { ev.preventDefault(); cerrar(); });
+  }
+  d.querySelector("iframe").src = web + "?t=65";
+  d.querySelector("a").href = enlace + "&t=65";
+  if (d.showModal) d.showModal(); else d.setAttribute("open", "");
+}
 async function verEscena(id) {
   const aviso = vista.querySelector(`[data-escenaaviso="${id}"]`);
   const decir = (t) => { if (aviso) aviso.textContent = t; };
@@ -1936,6 +1961,14 @@ async function verEscena(id) {
     decir(V.puedeCarpeta()
       ? "No encuentro su video en tu carpeta. Revisa que se llame con el número de la lección al principio, por ejemplo «" + id + " - Nombre.mp4». La carpeta se cambia en Ajustes, «Videos de las tutoras»."
       : "Este aparato todavía no tiene su video. Pásalo por USB y luego, en Ajustes, «Videos de las tutoras», toca «Importar videos».");
+    // El respaldo nunca se abre solo: es un botón aparte, para que nada pida el sitio sin que tú lo toques.
+    const tu = tutoraDe(id), web = tu && embedDe(tu.enlace);
+    if (web && aviso) {
+      const b = document.createElement("button");
+      b.type = "button"; b.className = "ub"; b.textContent = "Verla desde su sitio";
+      b.addEventListener("click", () => verEnElSitio(web, tu.enlace));
+      aviso.append(" ", b);
+    }
     return;
   }
   decir("");
@@ -2469,6 +2502,14 @@ function verAjustes(o) {
   const archivos = A.archivosDeSucesos();
   const aparatos = [...new Set(archivos.map((a) => a.aparato))];
   poner(`
+  <section class="card" id="pruebaER">
+    <h2>Prueba: abrir en ElevenReader</h2>
+    <p>Dos enlaces a tu Mamada 06. Toca cada uno y dile a Andrea cuál abre la app.</p>
+    <div class="go">
+      <a class="ub grande" href="https://elevenreader.io/reader/library/u:PEL8MqCxFPb33yynRxL6">Prueba 1: aquí mismo</a>
+      <a class="ub grande" href="https://elevenreader.io/reader/library/u:PEL8MqCxFPb33yynRxL6" target="_blank" rel="noopener">Prueba 2: en otra pestaña</a>
+    </div>
+  </section>
   <section class="card">
     <h1 class="h">Ajustes</h1>
     <h3>Este aparato</h3>
