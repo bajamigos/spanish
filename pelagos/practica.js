@@ -225,7 +225,11 @@ export async function abrirPractica(id, fuente, A) {
       (k === "nueva" ? practicar() : repetir(mias[Number(k)])).catch(() => decir("Algo falló. Cierra y vuelve a abrir."));
     });
   }
-  v.addEventListener("error", () => decir("El video no cargó. Revisa tu conexión o que esté en tu almacén de Cloudflare."));
+  v.addEventListener("error", () => {
+    const c = v.error ? v.error.code : 0;   // 1 cancelado, 2 red, 3 no se pudo decodificar, 4 dirección o formato no aceptado
+    decir("El video no cargó (código " + c + ", " + (local ? "de este aparato" : "de Cloudflare") + "). " +
+      (c === 2 ? "Falló la red." : c === 3 ? "El aparato no pudo leer el video." : c === 4 ? "Cloudflare no lo entregó o el formato no se acepta." : ""));
+  });
   decir("Preparando a " + guion.tutora + "…");
   const nombres = [guion.intro, guion.fin, ...guion.retos, ...guion.reacciones.buena, ...guion.reacciones.como, ...guion.reacciones.corta].map((x) => x.audio);
   await Promise.all(nombres.map(async (n) => { try { listos[n] = await audio(n); } catch { /* se intenta otra vez al hablar */ } }));
