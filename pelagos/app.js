@@ -1,11 +1,11 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=f00be631c5";
-import * as A from "./almacen.js?v=f00be631c5";
-import { abrirRecorrido } from "./recorrido.js?v=f00be631c5";
-import * as V from "./videos.js?v=f00be631c5";
-import * as NB from "./nube.js?v=f00be631c5";
-import * as CL from "./clases.js?v=f00be631c5";
-import { abrirPractica } from "./practica.js?v=f00be631c5";
+import * as N from "./nucleo.js?v=aba8b380c9";
+import * as A from "./almacen.js?v=aba8b380c9";
+import { abrirRecorrido } from "./recorrido.js?v=aba8b380c9";
+import * as V from "./videos.js?v=aba8b380c9";
+import * as NB from "./nube.js?v=aba8b380c9";
+import * as CL from "./clases.js?v=aba8b380c9";
+import { abrirPractica } from "./practica.js?v=aba8b380c9";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -2112,9 +2112,11 @@ function conectarEscenas(raiz) {
   for (const b of raiz.querySelectorAll("[data-practica]")) b.addEventListener("click", async () => {
     const id = Number(b.dataset.practica), aviso = vista.querySelector(`[data-escenaaviso="${id}"]`);
     if (aviso) aviso.textContent = "Preparando la práctica…";
+    // Primero tu carpeta o los importados (el permiso se pide aquí, todavía dentro del clic); si no, tu almacén de Cloudflare.
     let f = await V.video(id, true);
-    if (!f && V.puedeCarpeta() && !(await V.nombreCarpeta())) { try { await V.elegirCarpeta(); } catch { /* no eligió */ } }
-    try { await abrirPractica(id); if (aviso) aviso.textContent = ""; } catch (e) { if (aviso) aviso.textContent = e.message || "No se pudo abrir la práctica."; }
+    if (!f && V.puedeCarpeta() && !(await V.nombreCarpeta())) { try { await V.elegirCarpeta(); f = await V.video(id, true); } catch { /* no eligió */ } }
+    if (!f) f = (await enlaceNube(id)) || null;
+    try { await abrirPractica(id, f); if (aviso) aviso.textContent = ""; } catch (e) { if (aviso) aviso.textContent = e.message || "No se pudo abrir la práctica."; }
   });
   for (const b of raiz.querySelectorAll("[data-escuchar]")) {
     const id = Number(b.dataset.escuchar);

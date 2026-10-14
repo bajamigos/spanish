@@ -48,12 +48,12 @@ function guardarEscena(e) {
   try { const l = misEscenas(); l.push(e); localStorage.setItem(CLAVE, JSON.stringify(l.slice(-200))); return true; } catch { return false; }
 }
 
-export async function abrirPractica(id) {
-  const A = await import("./almacen.js"), V = await import("./videos.js");
+/** `fuente`: el archivo del video (de tu carpeta o importado) o un enlace firmado de tu almacén de Cloudflare. */
+export async function abrirPractica(id, fuente) {
+  const A = await import("./almacen.js");
   const guion = await A.practica(id);
   if (!guion) throw new Error("Esta tutora todavía no tiene práctica.");
-  const archivo = await V.video(id, true);
-  if (!archivo) throw new Error("No encuentro su video en tu carpeta «Pelagos videos».");
+  if (!fuente) throw new Error("No encuentro su video ni en tu carpeta «Pelagos videos» ni en tu almacén de Cloudflare.");
   const sala = "practica-" + id;
   const audios = new Map();
   const audio = (nombre) => {
@@ -81,13 +81,14 @@ export async function abrirPractica(id) {
   document.body.appendChild(d);
   const v = d.querySelector("video"), sub = d.querySelector(".pr-sub"), form = d.querySelector(".pr-turno");
   const caja = $("prLinea"), aviso = d.querySelector(".pr-aviso"), menu = d.querySelector(".pr-menu");
-  const url = URL.createObjectURL(archivo);
+  const local = typeof fuente !== "string";
+  const url = local ? URL.createObjectURL(fuente) : fuente;
   v.src = url;
   const voz = new Audio();
   let vivo = true, reco = null;
   const cerrar = () => {
     vivo = false; v.pause(); voz.pause(); if (reco) try { reco.abort(); } catch { /* ya paró */ }
-    URL.revokeObjectURL(url); if (d.open) d.close(); d.remove();
+    if (local) URL.revokeObjectURL(url); if (d.open) d.close(); d.remove();
   };
   $("prX").addEventListener("click", cerrar);
   d.addEventListener("cancel", (ev) => { ev.preventDefault(); cerrar(); });
