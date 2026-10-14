@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=b5c7bd7628";
-import * as A from "./almacen.js?v=b5c7bd7628";
-import { abrirRecorrido } from "./recorrido.js?v=b5c7bd7628";
-import * as V from "./videos.js?v=b5c7bd7628";
-import * as NB from "./nube.js?v=b5c7bd7628";
-import * as CL from "./clases.js?v=b5c7bd7628";
-import { abrirPractica } from "./practica.js?v=b5c7bd7628";
-import * as F from "./fondo.js?v=b5c7bd7628";
+import * as N from "./nucleo.js?v=c7cc05ce20";
+import * as A from "./almacen.js?v=c7cc05ce20";
+import { abrirRecorrido } from "./recorrido.js?v=c7cc05ce20";
+import * as V from "./videos.js?v=c7cc05ce20";
+import * as NB from "./nube.js?v=c7cc05ce20";
+import * as CL from "./clases.js?v=c7cc05ce20";
+import { abrirPractica } from "./practica.js?v=c7cc05ce20";
+import * as F from "./fondo.js?v=c7cc05ce20";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -2174,6 +2174,12 @@ async function escuchar(b, id, v, sala = salaVoz(id), etiqueta = "Escuchar a ") 
   if (audio.paused) audio.play().catch(() => {}); else audio.pause();
 }
 function callar() { for (const a of document.querySelectorAll(".voz audio")) a.pause(); }
+/** Cierra todo lo que reproduce video con sonido (la escena completa, la escena desde su sitio y la práctica). Al cambiar de página. */
+function cerrarVideos() {
+  const h = $("escenaHoja"); if (h && h.open && h.cerrar) h.cerrar();
+  const w = $("escenaWeb"); if (w && w.open) { const f = w.querySelector("iframe"); if (f) f.removeAttribute("src"); w.close(); }
+  const pr = $("prX"); if (pr) pr.click();
+}
 
 // ---------------------------------------------------------------- Repaso en audio
 // Toca, una tras otra, las voces grabadas de las tutoras (escenas/voz-<lección>/). Mientras habla cada una,
@@ -3279,7 +3285,7 @@ document.addEventListener("keydown", (ev) => {
   if (teclas[tecla]) { ev.preventDefault(); teclas[tecla](); }
 });
 
-window.addEventListener("hashchange", () => { callar(); cerrarHoja(); enPreguntaDe = null; enTarjetaDe = null; pintar(); });
+window.addEventListener("hashchange", () => { callar(); cerrarVideos(); cerrarHoja(); enPreguntaDe = null; enTarjetaDe = null; pintar(); });
 
 // ---------------------------------------------------------------- Guardado: el renglón de abajo
 
@@ -3337,6 +3343,16 @@ async function arrancar() {
 }
 
 document.addEventListener("visibilitychange", () => {
+  // Si sales de Pelagos (otra app, otra pestaña, pantalla apagada), los videos se callan solos. El repaso en audio sigue.
+  if (document.visibilityState === "hidden") {
+    callar();
+    const h = $("escenaHoja"); if (h && h.open) { const v = h.querySelector("video"); if (v) v.pause(); }
+    const w = $("escenaWeb"); if (w && w.open) { const f = w.querySelector("iframe"); if (f) f.removeAttribute("src"); w.close(); }
+    for (const v of document.querySelectorAll("video")) v.pause();
+  } else {
+    // Al volver: los fondos en bucle (sin sonido) siguen solos; la escena completa se queda en pausa hasta que la toques.
+    for (const v of document.querySelectorAll("video[autoplay], #fondoTutora:not([hidden]) video:not([hidden])")) v.play().catch(() => {});
+  }
   // Al volver a la página después de un rato, trae lo que hiciste en otro aparato.
   if (document.visibilityState === "visible" && A.hayLlave() && P && Date.now() - ultimaPuesta > 5 * 60 * 1000) ponerAlDia(true);
 });
