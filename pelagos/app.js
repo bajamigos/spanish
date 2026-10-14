@@ -1,9 +1,9 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=24e5edcf88";
-import * as A from "./almacen.js?v=24e5edcf88";
-import { abrirRecorrido } from "./recorrido.js?v=24e5edcf88";
-import * as V from "./videos.js?v=24e5edcf88";
-import * as CL from "./clases.js?v=24e5edcf88";
+import * as N from "./nucleo.js?v=5be163ec76";
+import * as A from "./almacen.js?v=5be163ec76";
+import { abrirRecorrido } from "./recorrido.js?v=5be163ec76";
+import * as V from "./videos.js?v=5be163ec76";
+import * as CL from "./clases.js?v=5be163ec76";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1839,7 +1839,7 @@ function loopDeTutora(id) { const l = escenasPorSala.get("tutora-" + id); return
 const nombreDe = (id) => { const t = tutoraDe(id); return t ? nombreCorto(t) : "la tutora"; };
 function botonesRepaso() {
   const del = repaso && repaso.origen === "plan";
-  return `<button type="button" class="ub grande" id="repasoAudio" aria-pressed="${del && !repaso.audio.paused}">${!del ? "Repaso en audio" : repaso.audio.paused ? "Seguir el repaso" : "Pausa"}</button>` +
+  return `<button type="button" class="ub grande" id="repasoAudio" aria-pressed="${del && !repaso.audio.paused}">${!del ? "Repasar en audio" : repaso.audio.paused ? "Seguir repasando" : "Pausa"}</button>` +
     (del ? `<button type="button" class="ub" id="repasoSig">Siguiente</button><button type="button" class="ub" id="repasoFin">Terminar</button>` : "");
 }
 function avisoRepaso() {
@@ -1853,7 +1853,7 @@ let ultimoAvisoRepaso = "";
 function refrescarRepaso() {
   const b = $("repasoAudio"), del = !!repaso && repaso.origen === "plan";
   if (b && !!$("repasoSig") !== del) { pintar({ conserva: true }); return; }
-  if (b) { b.textContent = !del ? "Repaso en audio" : repaso.audio.paused ? "Seguir el repaso" : "Pausa"; b.setAttribute("aria-pressed", String(del && !repaso.audio.paused)); }
+  if (b) { b.textContent = !del ? "Repasar en audio" : repaso.audio.paused ? "Seguir repasando" : "Pausa"; b.setAttribute("aria-pressed", String(del && !repaso.audio.paused)); }
   const a = $("repasoAviso"); if (a) a.textContent = avisoRepaso();
   for (const x of vista.querySelectorAll("[data-repasar]")) {
     const suena = !!repaso && repaso.sonando === Number(x.dataset.repasar) && !repaso.audio.paused;
@@ -1897,7 +1897,7 @@ async function empezarRepaso(ids, origen) {
 }
 async function tocarRepaso(i) {
   if (!repaso) return;
-  if (i >= repaso.cola.length) { pararRepaso(repaso.cola.length > 1 ? "Repaso terminado. Ya pasaron todas." : ""); return; }
+  if (i >= repaso.cola.length) { pararRepaso(repaso.cola.length > 1 ? "Listo: ya repasaste tu plan completo." : ""); return; }
   const r = repaso, { id, v } = r.cola[i];
   r.i = i;
   r.audio.pause();
@@ -1909,7 +1909,7 @@ async function tocarRepaso(i) {
   r.sonando = id;
   const t = tutoraDe(id), tema = porId.get(id);
   if ("mediaSession" in navigator && window.MediaMetadata) {
-    try { navigator.mediaSession.metadata = new MediaMetadata({ title: t ? t.tutora : "Tutora", artist: tema ? titulo(tema) : "Repaso en audio", album: "Repaso en audio · Pelagos" }); } catch { /* sin pantalla bloqueada */ }
+    try { navigator.mediaSession.metadata = new MediaMetadata({ title: t ? t.tutora : "Tutora", artist: tema ? titulo(tema) : "Repasar en audio", album: "Repasar en audio · Pelagos" }); } catch { /* sin pantalla bloqueada */ }
   }
   pintar({ conserva: true });          // cambia el loop de arriba
   r.audio.play().catch(() => refrescarRepaso());
