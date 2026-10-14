@@ -1,11 +1,11 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=62865ce250";
-import * as A from "./almacen.js?v=62865ce250";
-import { abrirRecorrido } from "./recorrido.js?v=62865ce250";
-import * as V from "./videos.js?v=62865ce250";
-import * as NB from "./nube.js?v=62865ce250";
-import * as CL from "./clases.js?v=62865ce250";
-import { abrirPractica } from "./practica.js?v=62865ce250";
+import * as N from "./nucleo.js?v=52ce925077";
+import * as A from "./almacen.js?v=52ce925077";
+import { abrirRecorrido } from "./recorrido.js?v=52ce925077";
+import * as V from "./videos.js?v=52ce925077";
+import * as NB from "./nube.js?v=52ce925077";
+import * as CL from "./clases.js?v=52ce925077";
+import { abrirPractica } from "./practica.js?v=52ce925077";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -2101,11 +2101,14 @@ const tutoraDe = (id) => (P.tutoras || []).find((t) => t.leccion === id) || null
 // El botón sale solo si ya hay grabación. El audio se baja con la llave y se toca aquí mismo, con el reproductor del aparato.
 const nombreCorto = (t) => t.tutora.split(",")[0];
 const salaVoz = (id) => "voz-" + id;
+// «Conoce a <tutora>»: su presentación corta (su regla, sus trampas y su frase), en escenas/presenta-<lección>/.
+const salaPresenta = (id) => "presenta-" + id;
 const botonEscena = (id) => {
   const t = tutoraDe(id);
+  const conoce = t ? `<button type="button" class="ub grande" data-presenta="${id}" hidden>Conoce a ${esc(nombreCorto(t))}</button>` : "";
   const oir = t ? `<button type="button" class="ub grande" data-escuchar="${id}" hidden>Escuchar a ${esc(nombreCorto(t))}</button>` : "";
   const prac = t && t.practica ? `<button type="button" class="ub grande" data-practica="${id}">Practica con ${esc(nombreCorto(t))}</button>` : "";
-  return `<div class="go"><button type="button" class="ub grande" data-escena="${id}">Ver la escena completa</button>${oir}${prac}</div><div class="voz" data-voz="${id}"></div><p class="small" data-escenaaviso="${id}" role="status"></p>`;
+  return `<div class="go"><button type="button" class="ub grande" data-escena="${id}">Ver la escena completa</button>${conoce}${oir}${prac}</div><div class="voz" data-voz="${id}"></div><p class="small" data-escenaaviso="${id}" role="status"></p>`;
 };
 function conectarEscenas(raiz) {
   for (const b of raiz.querySelectorAll("[data-escena]")) b.addEventListener("click", () => verEscena(Number(b.dataset.escena)));
@@ -2118,32 +2121,36 @@ function conectarEscenas(raiz) {
     if (!f) f = (await enlaceNube(id)) || null;
     try { await abrirPractica(id, f, A); if (aviso) aviso.textContent = ""; } catch (e) { if (aviso) aviso.textContent = e.message || "No se pudo abrir la práctica."; }
   });
-  for (const b of raiz.querySelectorAll("[data-escuchar]")) {
-    const id = Number(b.dataset.escuchar);
-    A.escenasDe(salaVoz(id)).then((l) => {
-      const v = l.filter((x) => /^audio\//.test(x.tipo || "")).slice(-1)[0];
-      if (!v || !b.isConnected) return;
-      b.hidden = false;
-      b.addEventListener("click", () => escuchar(b, id, v));
-    }).catch(() => {});
+  for (const [attr, sala, etiqueta] of [["escuchar", salaVoz, "Escuchar a "], ["presenta", salaPresenta, "Conoce a "]]) {
+    for (const b of raiz.querySelectorAll(`[data-${attr}]`)) {
+      const id = Number(b.dataset[attr]);
+      A.escenasDe(sala(id)).then((l) => {
+        const v = l.filter((x) => /^audio\//.test(x.tipo || "")).slice(-1)[0];
+        if (!v || !b.isConnected) return;
+        b.hidden = false;
+        b.addEventListener("click", () => escuchar(b, id, v, sala(id), etiqueta));
+      }).catch(() => {});
+    }
   }
 }
-async function escuchar(b, id, v) {
+async function escuchar(b, id, v, sala = salaVoz(id), etiqueta = "Escuchar a ") {
   const caja = vista.querySelector(`[data-voz="${id}"]`), t = tutoraDe(id);
   const aviso = vista.querySelector(`[data-escenaaviso="${id}"]`);
   if (!caja) return;
   if (repaso) pararRepaso("");
+  for (const otro of caja.querySelectorAll("audio")) if (otro.dataset.sala !== sala) { otro.pause(); otro.remove(); }
   let audio = caja.querySelector("audio");
   if (!audio) {
     b.disabled = true;
     if (aviso) aviso.textContent = "Bajando su voz…";
     try {
-      const url = await A.escenaUrl(salaVoz(id), v);
+      const url = await A.escenaUrl(sala, v);
       audio = document.createElement("audio");
+      audio.dataset.sala = sala;
       audio.controls = true;
       audio.preload = "auto";
       audio.src = url;
-      audio.setAttribute("aria-label", "Episodio de " + t.tutora);
+      audio.setAttribute("aria-label", (sala === salaVoz(id) ? "Episodio de " : "Presentación de ") + t.tutora);
       caja.append(audio);
       if (aviso) aviso.textContent = "";
     } catch (e) {
@@ -2157,7 +2164,7 @@ async function escuchar(b, id, v) {
       try { navigator.mediaSession.metadata = new MediaMetadata({ title: t.tutora, artist: "Tutoras de Pelagos", album: "Pelagos" }); } catch { /* sin pantalla bloqueada, no pasa nada */ }
     }
     audio.addEventListener("play", () => { b.textContent = "Pausa"; });
-    audio.addEventListener("pause", () => { b.textContent = "Escuchar a " + nombreCorto(t); });
+    audio.addEventListener("pause", () => { b.textContent = etiqueta + nombreCorto(t); });
   }
   if (audio.paused) audio.play().catch(() => {}); else audio.pause();
 }
