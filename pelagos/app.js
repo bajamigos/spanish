@@ -1,9 +1,9 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=e920d85472";
-import * as A from "./almacen.js?v=e920d85472";
-import { abrirRecorrido } from "./recorrido.js?v=e920d85472";
-import * as V from "./videos.js?v=e920d85472";
-import * as CL from "./clases.js?v=e920d85472";
+import * as N from "./nucleo.js?v=2a0e5d69cf";
+import * as A from "./almacen.js?v=2a0e5d69cf";
+import { abrirRecorrido } from "./recorrido.js?v=2a0e5d69cf";
+import * as V from "./videos.js?v=2a0e5d69cf";
+import * as CL from "./clases.js?v=2a0e5d69cf";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1134,7 +1134,7 @@ function verTarjetas(o) {
         <h1 class="cue" id="cue" lang="en">${esc(c.frente)}</h1>
       </div>
       <div class="rule tjResp" id="tjResp" tabindex="-1" aria-live="polite" hidden>
-        <ul class="exs"><li class="ex" data-di="${esc(c.reverso)}"><span class="es" id="vResp">${esc(c.reverso)}</span></li></ul>
+        <ul class="exs"><li class="ex"><span class="es" id="vResp">${esc(c.reverso)}</span></li></ul>
       </div>
     </header>
     <div class="tjZona">
@@ -1488,7 +1488,7 @@ function abrirPalabra(id) {
   ].filter(Boolean);
   $("hvIn").innerHTML = `
     <span class="k">Vocabulario · ${esc(cuandoToca(s, hoy))}</span>
-    <ul class="exs"><li class="ex" data-di="${esc(c.reverso)}"><h2 class="es" id="hvT" lang="es-MX" tabindex="-1">${esc(c.reverso)}</h2><span class="en" lang="en">${esc(c.frente)}</span></li></ul>
+    <ul class="exs"><li class="ex"><h2 class="es" id="hvT" lang="es-MX" tabindex="-1">${esc(c.reverso)}</h2><span class="en" lang="en">${esc(c.frente)}</span></li></ul>
     <div class="sc"><span>Aciertos: ${v === null ? "todavía sin datos" : `${pct(v)} · ${bien} de ${n}`}</span>${v === null ? "" : barra(v)}</div>
     ${grafica}
     <div class="hvLinea">${htmlGrafica(serieV, "gV", c.reverso, false)}</div>
@@ -1630,7 +1630,7 @@ function bloque(b) {
       <tbody>${(b.filas || []).map((f) => `<tr><th scope="row">${esc(f[0])}</th>${f.slice(1).map((c, i) => `<td${i ? "" : ' class="f"'}>${esc(c)}</td>`).join("")}</tr>`).join("")}</tbody>
     </table></div>`;
     case "nota_andrea": return `<p class="pen">${esc(b.texto)}<span>Nota de Andrea, al margen</span></p>`;
-    case "ejemplos": return `<ul class="exs">${(b.lista || []).map((e) => `<li class="ex" data-di="${esc(plano(e.es))}"><span class="es" lang="es-MX">${marca(e.es)}</span><span class="en" lang="en">${esc(e.en)}</span></li>`).join("")}</ul>`;
+    case "ejemplos": return `<ul class="exs">${(b.lista || []).map((e) => `<li class="ex"><span class="es" lang="es-MX">${marca(e.es)}</span><span class="en" lang="en">${esc(e.en)}</span></li>`).join("")}</ul>`;
     case "pares": return `<div class="pairs">${(b.lista || []).map((par) => `<div class="pair">
       ${(par.filas || []).map((f) => `<div class="row ${f.v === "bien" ? "bien" : "mal"}"><span class="tag">${f.v === "bien" ? "Bien" : "Mal"}</span><span class="t">${esc(f.t)}</span></div>`).join("")}
       ${par.nota ? `<p class="why">${esc(par.nota)}</p>` : ""}</div>`).join("")}</div>`;

@@ -616,6 +616,9 @@ button.score .vergraf { text-decoration: underline; text-underline-offset: 2px; 
 [data-ambiente="limpio"] .hole { border-bottom-color: var(--ink); color: var(--ink-3); }
 [data-ambiente="limpio"] .rule { position: static; margin: 0 16px 16px; color: var(--ink); background: var(--page); border-color: var(--line); -webkit-backdrop-filter: none; backdrop-filter: none; }
 [data-ambiente="limpio"] .rule .k { color: var(--ink-3); }
+/* En Limpio el panel de la respuesta de las tarjetas toma el color de la página: las letras siguen la tinta, no el blanco del vidrio. */
+[data-ambiente="limpio"] .tjResp .ex .es { color: var(--ink); }
+[data-ambiente="limpio"] .tjResp .ex .en, [data-ambiente="limpio"] .tjResp .small { color: var(--ink-3); }
 [data-ambiente="limpio"] .rule button { color: var(--page); background: var(--ink); border-color: var(--ink); }
 [data-ambiente="limpio"] .back { position: static; margin: 0 16px 16px; color: var(--ink); background: var(--page); border-color: var(--line); }
 [data-ambiente="limpio"] .hero button:focus-visible { outline-color: var(--ink); }
