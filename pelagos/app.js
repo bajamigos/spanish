@@ -1,9 +1,9 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=dffa836946";
-import * as A from "./almacen.js?v=dffa836946";
-import { abrirRecorrido } from "./recorrido.js?v=dffa836946";
-import * as V from "./videos.js?v=dffa836946";
-import * as CL from "./clases.js?v=dffa836946";
+import * as N from "./nucleo.js?v=19fe2f2a71";
+import * as A from "./almacen.js?v=19fe2f2a71";
+import { abrirRecorrido } from "./recorrido.js?v=19fe2f2a71";
+import * as V from "./videos.js?v=19fe2f2a71";
+import * as CL from "./clases.js?v=19fe2f2a71";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1342,7 +1342,7 @@ function verLectura(o, ejemplo = false) {
   const estrellas = (n) => (n ? `<span class="estrellas" aria-label="${n} de 5 estrellas">${"★".repeat(n)}</span>` : "");
   const pie = (b) => {
     const partes = [];
-    if (b.estado === "terminado") partes.push("Terminado" + (b.terminado ? " el " + diaLargo(b.terminado) : "") + (b.veces > 1 ? ` (${b.veces} veces)` : ""));
+    if (b.estado === "terminado") partes.push("Terminado" + (b.terminado ? " el " + diaLargo(b.terminado) + (b.terminado.slice(0, 4) !== hoy.slice(0, 4) ? " de " + b.terminado.slice(0, 4) : "") : "") + (b.veces > 1 ? ` (${b.veces} veces)` : ""));
     else if (b.estado === "leyendo") partes.push(b.avance !== null ? `Vas en ${Math.round(b.avance * 100)} %` : b.falta ? "Faltan " + b.falta : "Leyendo");
     else if (b.estado === "abandonado") partes.push("Lo dejaste" + (b.avance ? ` en ${Math.round(b.avance * 100)} %` : ""));
     if (b.medio) partes.push(b.medio);
