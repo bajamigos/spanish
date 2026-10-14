@@ -346,6 +346,7 @@ a.cuadro { color: inherit; text-decoration: none; }
 #frase p.frase { font-size: 17px; font-style: italic; font-weight: 600; line-height: 1.4; color: var(--ink); overflow-wrap: anywhere; }
 #frase p.frase::before { content: "Andrea: "; font-style: normal; font-weight: 800; color: var(--b3); }
 .card p.ciLinea { font-size: 17px; font-weight: 700; line-height: 1.3; color: var(--ink); overflow-wrap: anywhere; }
+.card p.ciLinea a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .card p.ciOido { display: flex; align-items: center; gap: 6px; margin-top: -6px; font-size: 14.5px; font-weight: 600; color: var(--ink-3); }
 .card p.ciOido.si { color: var(--si); }
 .card p.ciOido svg { width: 16px; height: 16px; flex: none; }

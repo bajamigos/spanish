@@ -1,9 +1,9 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=e73a2fda84";
-import * as A from "./almacen.js?v=e73a2fda84";
-import { abrirRecorrido } from "./recorrido.js?v=e73a2fda84";
-import * as V from "./videos.js?v=e73a2fda84";
-import * as CL from "./clases.js?v=e73a2fda84";
+import * as N from "./nucleo.js?v=34c9d0f307";
+import * as A from "./almacen.js?v=34c9d0f307";
+import { abrirRecorrido } from "./recorrido.js?v=34c9d0f307";
+import * as V from "./videos.js?v=34c9d0f307";
+import * as CL from "./clases.js?v=34c9d0f307";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -707,11 +707,16 @@ function verInicio(o) {
   const nombreCi = c && c.titulo ? c.titulo.replace(/^check-?in\s*/i, "") : "";
   const rotuloCi = !c ? "" : c.estado === "ninguno" ? "Sin check-in hoy"
     : (!deHoy ? "Check-in anterior" : c.estado === "nuevo" ? "Check-in nuevo" : "Check-in") + (nombreCi ? ": " + nombreCi : "");
+  // Tocar el renglón abre en ElevenReader el episodio de Andrea más nuevo de hoy (check-in o Mamada), si la tarea del Tablero dejó su dirección.
+  const ep = c && c.ultimo;
+  const esMamada = !!ep && /mamada/i.test(ep.titulo || "") && ep.titulo !== c.titulo;
+  const textoCi = esMamada ? "Mamada nueva: " + (ep.titulo || "").replace(/^.*?mamadas? mañaneras?\s*/i, "") : rotuloCi;
+  const enlaceCi = !c ? null : (ep && ep.url) || c.url;
   const checkin = !c ? "" : `
   <section class="card${premio ? " consello" : ""}" id="checkin">
     ${premio ? selloHtml(premio, true) : ""}
     <h2 class="sr">Check-in</h2>
-    <p class="ciLinea">${esc(rotuloCi)}</p>
+    <p class="ciLinea">${enlaceCi ? `<a href="${esc(enlaceCi)}" target="_blank" rel="noopener">${esc(textoCi)}</a>` : esc(textoCi)}</p>
     ${c.estado === "ninguno" ? "" : `<p class="ciOido ${c.estado === "oido" ? "si" : "no"}">${c.estado === "oido" ? ICONO_SI + "Escuchado" : ICONO_NO + "Sin escuchar"}</p>`}
     ${partes.length && !conSellos ? `<ul class="partes" data-n="${partes.length}">${partes.map((x) => `<li class="${x.va ? "va" : "nova"}"><span>${esc(x.nombre)}</span><span class="sr">${x.va ? ": ganado" : ": falta"}</span></li>`).join("")}</ul>` : ""}
   </section>`;
@@ -2529,14 +2534,6 @@ function verAjustes(o) {
   const archivos = A.archivosDeSucesos();
   const aparatos = [...new Set(archivos.map((a) => a.aparato))];
   poner(`
-  <section class="card" id="pruebaER">
-    <h2>Prueba: abrir en ElevenReader</h2>
-    <p>Dos enlaces a tu Mamada 06. Toca cada uno y dile a Andrea cuál abre la app.</p>
-    <div class="go">
-      <a class="ub grande" href="https://elevenreader.io/reader/library/u:PEL8MqCxFPb33yynRxL6">Prueba 1: aquí mismo</a>
-      <a class="ub grande" href="https://elevenreader.io/reader/library/u:PEL8MqCxFPb33yynRxL6" target="_blank" rel="noopener">Prueba 2: en otra pestaña</a>
-    </div>
-  </section>
   <section class="card">
     <h1 class="h">Ajustes</h1>
     <h3>Este aparato</h3>

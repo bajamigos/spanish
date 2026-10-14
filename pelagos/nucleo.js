@@ -614,8 +614,11 @@ export function leerTablero(crudo) {
       // «extra»: una parte de más (la Amiga, por la clase). Se gana sola y no cuenta para «todas».
       if (nombre !== null) partes.push({ nombre, va: x.va === true, con, icono, ...(x.extra === true ? { extra: true } : {}) });
     }
+    // «url» y «ultimo.url»: el episodio en ElevenReader (solo direcciones de su biblioteca). «ultimo» es el episodio de Andrea más nuevo de hoy: el check-in o la Mamada.
+    const enlace = (u) => (typeof u === "string" && /^https:\/\/elevenreader\.io\/reader\/[A-Za-z0-9/:_?=&.-]{1,200}$/.test(u) ? u : null);
+    const ul = c.ultimo && typeof c.ultimo === "object" && enlace(c.ultimo.url) ? { titulo: texto(c.ultimo.titulo, 120), url: enlace(c.ultimo.url) } : null;
     checkin = { estado: c.estado, nivel: numero(c.nivel), nombre: texto(c.nombre, 40), titulo: texto(c.titulo, 120),
-      minutos: numero(c.minutos), partes, falta: texto(c.falta, 400), puesto: momento(c.puesto) };
+      minutos: numero(c.minutos), partes, falta: texto(c.falta, 400), puesto: momento(c.puesto), url: enlace(c.url), ultimo: ul };
   }
   const foto = typeof crudo.foto === "string" && /^[a-z0-9-]+\.jpg$/.test(crudo.foto) ? crudo.foto : null;
   // «frase»: la línea del día de Andrea, coqueta y con tus números de esa lectura.
