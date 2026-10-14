@@ -1,10 +1,10 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=f4d22cc646";
-import * as A from "./almacen.js?v=f4d22cc646";
-import { abrirRecorrido } from "./recorrido.js?v=f4d22cc646";
-import * as V from "./videos.js?v=f4d22cc646";
-import * as NB from "./nube.js?v=f4d22cc646";
-import * as CL from "./clases.js?v=f4d22cc646";
+import * as N from "./nucleo.js?v=91e21214e9";
+import * as A from "./almacen.js?v=91e21214e9";
+import { abrirRecorrido } from "./recorrido.js?v=91e21214e9";
+import * as V from "./videos.js?v=91e21214e9";
+import * as NB from "./nube.js?v=91e21214e9";
+import * as CL from "./clases.js?v=91e21214e9";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1055,6 +1055,7 @@ function verCalor(o) {
       </section>`;
       }).join("")}
       <section class="card" id="calorClave">
+        ${(() => { const g = granTotal(); return g ? `<p class="granTotal"><b>${Math.floor(g.horas).toLocaleString("es-MX")} horas</b>de español desde ${g.desde ? g.desde.slice(0, 4) : "siempre"}.</p>` : ""; })()}
         <div class="extras">
           <div><b>${dias(R.actual)}</b>racha de ahora</div>
           <div><b>${dias(R.larga)}</b>tu racha más larga</div>
@@ -1293,6 +1294,27 @@ function verClases(o) {
   CL.montar(vista, () => pintar({ conserva: true }));
 }
 
+/**
+ * Tu gran total de horas de español (su «sí» del 14-Oct): lo de su hoja de Excel hasta el corte, más lo que Pelagos
+ * cuenta solo desde el día siguiente: minutos de ElevenReader, clases de Worldsacross ya dadas, quizzes (10 min cada uno,
+ * como en su hoja) y repasos de tarjetas (unos 4 segundos cada uno). Devuelve { horas, desde } o null.
+ */
+function granTotal() {
+  const L = N.leerLectura(A.lectura());
+  if (!L || !L.granTotal) return null;
+  const corte = L.granTotal.corte, hoy = N.fechaLocal(new Date());
+  const dias = new Map(L.dias);
+  const T = N.leerTablero(A.tablero()), er = T && T.dia === hoy ? T.medidas.find((m) => /elevenreader/i.test(m.nombre)) : null;
+  if (er) dias.set(hoy, Math.max(dias.get(hoy) || 0, er.valor));
+  let min = 0;
+  for (const [d, m] of dias) if (d > corte) min += m;
+  for (const [d, n] of E.actividadGram) if (d > corte) min += n * 10;
+  for (const [d, n] of E.actividadVoc) if (d > corte) min += n * 0.06;
+  const C = CL.leerClases(A.clases()), ahora = Date.now();
+  if (C) for (const c of C.clases) if (N.fechaLocal(c.ini) > corte && (c.estado === "hecha" || c.ini.getTime() + c.min * 60000 <= ahora)) min += c.min;
+  return { horas: L.granTotal.horas + min / 60, desde: L.granTotal.desde };
+}
+
 /** Minutos como «48 min» o «5 h 12 min». */
 const horasMin = (m) => (m >= 60 ? `${Math.floor(m / 60)} h${m % 60 ? " " + (m % 60) + " min" : ""}` : m + " min");
 
@@ -1405,6 +1427,40 @@ function verLectura(o, ejemplo = false) {
       <ul class="porLibro">${[...porLibro].sort((a, b) => b[1] - a[1]).map(([id, m]) => `<li><span class="plNombre">${esc(tituloDe.get(id))}</span><span class="plValor">${horasMin(m)}</span><span class="bar gorda lecBarra"><i data-w="${(100 * m) / maxLibro}"></i></span></li>`).join("")}</ul>
     </section>` : "";
 
+  // ---- Biblioteca (su «sí» del 14-Oct): tres botones arriba, Libros · Series · Podcasts, como los de la Bitácora.
+  // Los libros son lo de siempre; las series y los podcasts vienen de su hoja de Excel, con sus carteles y portadas.
+  if (!bibModo) bibModo = ["libros", "series", "podcasts"].includes(guardado("pelagos.biblioteca")) ? guardado("pelagos.biblioteca") : "libros";
+  const modo = ejemplo ? "libros" : bibModo;
+  const unDecimal = (h) => (Math.round(h * 10) / 10).toLocaleString("es-MX");
+  const cartel = (x, clase) => x.portada
+    ? `<img class="${clase}" src="${esc(x.portada)}" alt="${esc(x.titulo)}" referrerpolicy="no-referrer">`
+    : `<span class="${clase} sinPortada" aria-hidden="true">${esc(x.titulo)}</span>`;
+  const repisa = (id, titulo, lista, fichaDe, resumen = "") => lista.length ? `
+    <section class="card estanteCard" id="${id}">
+      <h2>${titulo}</h2>
+      ${resumen ? `<p class="small">${esc(resumen)}</p>` : ""}
+      <ul class="estante${id.startsWith("pod") ? " cuadrado" : ""}">${lista.map(fichaDe).join("")}</ul>
+    </section>` : "";
+  let cuerpo = "", cabeza = "";
+  if (modo === "series") {
+    const S = L ? L.series : [];
+    const fichaS = (x) => `<li><div class="libro">${cartel(x, "portadaChica")}<span class="libroTitulo">${esc(x.titulo)}</span>` +
+      `<span class="small">${esc(x.tipo)}${x.horas !== null ? " · " + unDecimal(x.horas) + " h" : ""}</span>${estrellas(x.nota)}${x.genero ? `<span class="small">${esc(x.genero)}</span>` : ""}</div></li>`;
+    const vistas = S.filter((x) => x.estado === "terminado").map((x, i) => [x, i]).sort((a, b) => (b[0].nota || 0) - (a[0].nota || 0) || a[1] - b[1]).map((x) => x[0]);
+    const total = L && L.seriesHoras !== null ? L.seriesHoras : vistas.reduce((t, x) => t + (x.horas || 0), 0);
+    cabeza = `<p class="lecturaHoy">${unDecimal(total)} horas de series y películas.</p><p class="small">${plural(vistas.length, "vista", "vistas")}, de la mejor a la peor.</p>`;
+    cuerpo = repisa("serViendo", "Viendo", S.filter((x) => x.estado === "viendo"), fichaS) + repisa("serVistas", "Vistas", vistas, fichaS) +
+      repisa("serPorVer", "Por ver", S.filter((x) => x.estado === "pendiente"), fichaS) + repisa("serDejadas", "Las que dejaste", S.filter((x) => x.estado === "abandonado"), fichaS);
+  } else if (modo === "podcasts") {
+    const Pd = L ? L.podcasts : [];
+    const fichaP = (x) => `<li><div class="libro">${cartel(x, "portadaChica")}<span class="libroTitulo">${esc(x.titulo)}</span></div></li>`;
+    cabeza = `<p class="lecturaHoy">${L && L.podcastsHoras !== null ? L.podcastsHoras.toLocaleString("es-MX") + " horas de podcasts." : "Tus podcasts."}</p><p class="small">${plural(Pd.length, "podcast", "podcasts")}, por tus estrellas.</p>`;
+    cuerpo = [3, 2, 1].map((n) => repisa("pod" + n, `${"★".repeat(n)} <span class="sr">${plural(n, "estrella", "estrellas")}</span>`, Pd.filter((x) => x.nota === n), fichaP)).join("") +
+      repisa("podSin", "Sin estrellas", Pd.filter((x) => !x.nota), fichaP);
+  } else {
+    cabeza = `<p class="lecturaHoy">${esc(lineaHoy)}</p><p class="small">${esc(lineaSemana)}</p>`;
+    cuerpo = tarjetaAhora + grafDias + grafHoras + grafLibros + estante;
+  }
   const fondo = fondoDelDia();
   poner(`
   <div class="hoy lectura${fondo.hay ? " confoto" : ""}">
@@ -1412,15 +1468,25 @@ function verLectura(o, ejemplo = false) {
     <div class="sobre">
       ${entradas("tablero", "")}
       <section class="card" id="lecturaCabeza">
-        <h1 class="h">Lectura</h1>
+        <h1 class="h">Biblioteca</h1>
+        ${ejemplo ? "" : `<div class="jump tres" role="group" aria-label="Qué enseña la Biblioteca" id="bibModo">
+          ${[["libros", "Libros"], ["series", "Series"], ["podcasts", "Podcasts"]].map(([clave, nombre]) => `<button type="button" data-bib="${clave}" aria-pressed="${clave === modo}">${nombre}</button>`).join("")}
+        </div>`}
         ${ejemplo ? `<p class="lecturaEjemplo">Datos inventados, solo para ver cómo se ve. <a href="#/lectura">Volver a tus datos</a></p>` : ""}
-        <p class="lecturaHoy">${esc(lineaHoy)}</p>
-        <p class="small">${esc(lineaSemana)}</p>
+        ${cabeza}
       </section>
-      ${L ? tarjetaAhora + grafDias + grafHoras + grafLibros + estante : `<section class="card"><p class="small">Todavía no llega tu registro de lectura. La tarea del Tablero lo trae en su próxima pasada.</p></section>`}
-      ${ejemplo ? "" : `<p class="small lecturaVerEjemplo"><a href="#/lectura/ejemplo">Ver con datos de ejemplo</a></p>`}
+      ${L ? cuerpo : `<section class="card"><p class="small">Todavía no llega tu registro de lectura. La tarea del Tablero lo trae en su próxima pasada.</p></section>`}
+      ${ejemplo || modo !== "libros" ? "" : `<p class="small lecturaVerEjemplo"><a href="#/lectura/ejemplo">Ver con datos de ejemplo</a></p>`}
     </div>
-  </div>`, { titulo: "Lectura · Pelagos", nav: "inicio", conserva: o.conserva });
+  </div>`, { titulo: "Biblioteca · Pelagos", nav: "inicio", conserva: o.conserva });
+  const botones = vista.querySelector("#bibModo");
+  if (botones) botones.addEventListener("click", (ev) => {
+    const b = ev.target.closest("[data-bib]");
+    if (!b || b.dataset.bib === bibModo) return;
+    bibModo = b.dataset.bib; guardar("pelagos.biblioteca", bibModo);
+    verLectura({ conserva: true });
+    vista.querySelector(`[data-bib="${bibModo}"]`)?.focus();
+  });
   // Tocar (o enfocar) una barra dice su detalle en el renglón de abajo de la gráfica.
   for (const g of vista.querySelectorAll(".grafica")) {
     const decir = (ev) => {
@@ -1436,6 +1502,7 @@ function verLectura(o, ejemplo = false) {
 }
 
 const mayuscula = (t) => t.charAt(0).toUpperCase() + t.slice(1);
+let bibModo = null;      // qué enseña la Biblioteca: libros, series o podcasts (se recuerda en este aparato)
 
 /**
  * Una gráfica de barras sencilla en SVG: una sola serie, sin colores que digan nada más que «minutos».

@@ -676,7 +676,26 @@ export function leerLectura(crudo) {
     for (const [d, id] of Object.entries(crudo.libroDia)) if (dia(d) && typeof id === "string" && /^u:[A-Za-z0-9]{6,40}$/.test(id)) libroDia.set(d, id);
   }
   const meta = typeof crudo.meta === "number" && crudo.meta > 0 && crudo.meta < 1440 ? crudo.meta : 60;
-  return { libros, dias, horas, libroDia, meta };
+  // Series, películas y podcasts (su hoja de Excel, 14-Oct): carteles de TMDB y portadas de Apple Podcasts.
+  const imagen = (u) => (typeof u === "string" && (/^https:\/\/image\.tmdb\.org\/t\/p\/w\d{2,4}\/[A-Za-z0-9]{10,40}\.(jpg|png)$/.test(u)
+    || /^https:\/\/is\d-ssl\.mzstatic\.com\/image\/thumb\/[A-Za-z0-9/._-]{10,250}\/\d{2,4}x\d{2,4}bb\.(jpg|png)$/.test(u)) ? u : null);
+  const horasDe = (v) => (typeof v === "number" && Number.isFinite(v) && v >= 0 && v < 100000 ? v : null);
+  const estrellas = (v) => (Number.isInteger(v) && v >= 1 && v <= 5 ? v : null);
+  const series = [];
+  for (const x of Array.isArray(crudo.series) ? crudo.series.slice(0, 300) : []) {
+    const titulo = texto(x && x.titulo, 120);
+    if (!titulo) continue;
+    series.push({ titulo, tipo: x.tipo === "Película" ? "Película" : "Serie", horas: horasDe(x.horas), genero: texto(x.genero, 60),
+      nota: estrellas(x.nota), estado: ["terminado", "pendiente", "abandonado", "viendo"].includes(x.estado) ? x.estado : "terminado", portada: imagen(x.portada) });
+  }
+  const podcasts = [];
+  for (const x of Array.isArray(crudo.podcasts) ? crudo.podcasts.slice(0, 300) : []) {
+    const titulo = texto(x && x.titulo, 120);
+    if (titulo) podcasts.push({ titulo, nota: estrellas(x.nota), portada: imagen(x.portada) });
+  }
+  const g = crudo.granTotal;
+  const granTotal = g && typeof g === "object" && horasDe(g.horas) !== null && dia(g.corte) ? { horas: g.horas, corte: g.corte, desde: dia(g.desde) } : null;
+  return { libros, dias, horas, libroDia, meta, series, seriesHoras: horasDe(crudo.seriesHoras), podcasts, podcastsHoras: horasDe(crudo.podcastsHoras), granTotal };
 }
 
 /** Desde qué día se dibuja la historia de cada nivel en el Atlas (su pedido del 10 de octubre: «starting today»). */

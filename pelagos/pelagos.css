@@ -842,3 +842,7 @@ dialog.sheet.conFoto:not([open]) { display: none; }
 /* Ajustes: los datos de tu almacén de Cloudflare */
 .campos label { display: block; margin: .5rem 0; font-weight: 600; }
 .campos .campo { display: block; width: 100%; margin-top: .25rem; }
+.lectura .estante.cuadrado .portadaChica { aspect-ratio: 1 / 1; }
+#lecturaCabeza #bibModo { margin: .6rem 0; }
+#calorClave .granTotal { margin: 0 0 .8rem; }
+#calorClave .granTotal b { display: block; font-size: 1.6rem; line-height: 1.1; }
