@@ -19,6 +19,9 @@ export const META = 80;
 export const ESCALONES = [1, 2, 5, 12, 30, 75];
 export const TOTAL = 5;
 export const TOTAL_TEMA = 5;
+/** El «Kwiz con la tutora»: hasta 10 preguntas de su tema; la ronda se cierra sola al llegar a ACIERTOS_TUTORA buenas. */
+export const TOTAL_TUTORA = 10;
+export const ACIERTOS_TUTORA = 5;
 export const TOPE_POR_TEMA = 3;
 // La lista de estudio: cuántos temas trae y cuántos aciertos seguidos pide un tema que fallaste para poder salir.
 export const LISTA = 5;
@@ -783,7 +786,7 @@ export function cambioDeTema(estado, kwizId, temaId) {
  */
 export function armar(paquete, estado, { tipo = "general", cuaderno = null, tema = null } = {}, hoy = fechaLocal(new Date()), azar = Math.random) {
   let vale = () => true;
-  if (tipo === "tema") vale = (q) => q.tema === tema;
+  if (tipo === "tema" || tipo === "tutora") vale = (q) => q.tema === tema;
   else if (tipo === "cuaderno") {
     const c = (paquete.cuadernos || []).find((x) => x.id === cuaderno);
     const suyos = new Set(c ? c.temas : []);
@@ -801,8 +804,8 @@ export function armar(paquete, estado, { tipo = "general", cuaderno = null, tema
 
   const info = (t) => estado.temas.get(t);
   const bajosPrimero = [...porTema.keys()].sort((a, b) => (info(a).pct ?? 0) - (info(b).pct ?? 0) || a - b);
-  const total = tipo === "tema" ? TOTAL_TEMA : TOTAL;
-  const tope = tipo === "tema" ? TOTAL_TEMA : TOPE_POR_TEMA;
+  const total = tipo === "tutora" ? TOTAL_TUTORA : tipo === "tema" ? TOTAL_TEMA : TOTAL;
+  const tope = tipo === "tutora" ? TOTAL_TUTORA : tipo === "tema" ? TOTAL_TEMA : TOPE_POR_TEMA;
   const elegidas = [];
   const cuenta = new Map();
 

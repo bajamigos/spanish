@@ -9,7 +9,7 @@
 // - Lo que contestas entra primero a una fila en este aparato y de ahí sube.
 //   Sin internet, la fila espera y sube sola cuando vuelve.
 // - La llave vive solo en este navegador y solo viaja a la dirección de CONFIG.api.
-import { CONFIG } from "./config.js?v=5e8461abce";
+import { CONFIG } from "./config.js?v=a2a6480b7c";
 
 const CLAVES = { llave: "pelagos.llave", aparato: "pelagos.aparato", fila: "pelagos.fila." };      // la fila: una clave por suceso
 const RUTA_SUCESOS = /^sucesos\/([A-Za-z0-9_-]+)\/(\d{4}-\d{2})\.jsonl$/;
@@ -614,6 +614,19 @@ export async function subtitulos(id) {
     return texto;
   } catch {
     try { return (await kvLeer(clave)) || null; } catch { return null; }   // sin internet: la copia guardada
+  }
+}
+
+/** Las escenas de cada tutora en orden (contenido/tutoras/escalada.json), para el fondo del Kwiz con la tutora. */
+export async function escalada() {
+  try {
+    const r = await api(REPO + "/contents/" + ruta("contenido/tutoras/escalada.json") + "?ref=" + encodeURIComponent(CONFIG.ramaContenido), { crudo: true });
+    if (!r.ok) throw new Error("github");
+    const d = await r.json();
+    await kvPoner("escalada", d);
+    return d;
+  } catch {
+    try { return (await kvLeer("escalada")) || null; } catch { return null; }
   }
 }
 

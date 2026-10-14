@@ -1,11 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=5e8461abce";
-import * as A from "./almacen.js?v=5e8461abce";
-import { abrirRecorrido } from "./recorrido.js?v=5e8461abce";
-import * as V from "./videos.js?v=5e8461abce";
-import * as NB from "./nube.js?v=5e8461abce";
-import * as CL from "./clases.js?v=5e8461abce";
-import { abrirPractica } from "./practica.js?v=5e8461abce";
+import * as N from "./nucleo.js?v=a2a6480b7c";
+import * as A from "./almacen.js?v=a2a6480b7c";
+import { abrirRecorrido } from "./recorrido.js?v=a2a6480b7c";
+import * as V from "./videos.js?v=a2a6480b7c";
+import * as NB from "./nube.js?v=a2a6480b7c";
+import * as CL from "./clases.js?v=a2a6480b7c";
+import { abrirPractica } from "./practica.js?v=a2a6480b7c";
+import * as F from "./fondo.js?v=a2a6480b7c";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -39,7 +40,7 @@ const CATEGORIAS_CORTAS = {
   "Negative Words & Constructions": "Negación",
 };
 const GRUPOS = [["antes", "Antes de esta"], ["confunde", "Se confunde con"], ["sigue", "Sigue con"]];
-const TIPOS_KWIZ = { lista: "Pelagos Quiz", general: "Quiz general", cuaderno: "Quiz del cuaderno", tema: "Quiz de un tema" };
+const TIPOS_KWIZ = { lista: "Pelagos Quiz", general: "Quiz general", cuaderno: "Quiz del cuaderno", tema: "Quiz de un tema", tutora: "Kwiz con la tutora" };
 const QUIZ = "/gramatica/quiz";       // dónde vive el quiz de gramática
 // Cada sección trae dos entradas, que van como dos botones arriba de sus páginas.
 // Regla del acomodo: cada materia trae cómo se estudia y cómo se ve; lo que es de todo va en el Tablero.
@@ -227,6 +228,7 @@ function poner(html, { titulo: t = "Pelagos", pie = "", nav = "", conserva = fal
   const conFoco = conserva && document.activeElement && vista.contains(document.activeElement) ? document.activeElement.id : "";
   turnoDePintar++;
   armando = false;
+  F.ocultar();       // el fondo del Kwiz con la tutora; la pregunta lo vuelve a prender
   delete vista.dataset.leccion;
   enPregunta = false;
   teclas = null;
@@ -2107,7 +2109,8 @@ const botonEscena = (id) => {
   const t = tutoraDe(id);
   const conoce = t ? `<button type="button" class="ub grande" data-presenta="${id}" hidden>Conoce a ${esc(nombreCorto(t))}</button>` : "";
   const oir = t ? `<button type="button" class="ub grande" data-escuchar="${id}" hidden>Escuchar a ${esc(nombreCorto(t))}</button>` : "";
-  const prac = t && t.practica ? `<button type="button" class="ub grande" data-practica="${id}">Practica con ${esc(nombreCorto(t))}</button>` : "";
+  // «Kwiz con la tutora»: sus preguntas, de 5 en 5 aciertos, con su escena de fondo que avanza con cada acierto.
+  const prac = t && (bancoPorTema().get(id) || 0) >= N.ACIERTOS_TUTORA ? `<button type="button" class="ub grande" data-kwiz='{"tipo":"tutora","tema":${id}}'>Kwiz con ${esc(nombreCorto(t))}</button>` : "";
   return `<div class="go"><button type="button" class="ub grande" data-escena="${id}">Ver la escena completa</button>${conoce}${oir}${prac}</div><div class="voz" data-voz="${id}"></div><p class="small" data-escenaaviso="${id}" role="status"></p>`;
 };
 function conectarEscenas(raiz) {
@@ -2602,6 +2605,33 @@ function empezarKwiz({ tipo = "general", cuaderno = null, tema = null }) {
 const guardado = (clave) => { try { return window.localStorage.getItem(clave); } catch { return null; } };
 const guardar = (clave, valor) => { try { window.localStorage.setItem(clave, valor); } catch { /* sin memoria: no pasa nada */ } };
 
+// ---- El fondo del Kwiz con la tutora
+let escaladaDatos;
+async function escenasDeTutora(id) {
+  if (escaladaDatos === undefined) { try { escaladaDatos = await A.escalada(); } catch { escaladaDatos = null; } }
+  return (escaladaDatos && escaladaDatos.tutoras && escaladaDatos.tutoras[String(id)]) || null;
+}
+const videosTutora = new Map();      // lección -> promesa del video (archivo de tu carpeta o blob bajado de Cloudflare)
+function videoDeTutora(id) {
+  if (!videosTutora.has(id)) {
+    videosTutora.set(id, (async () => {
+      const f = await V.video(id, false);
+      if (f) return f;
+      const nube = await enlaceNube(id);
+      return nube ? NB.bajarVideo(nube) : null;
+    })().catch(() => { videosTutora.delete(id); return null; }));
+  }
+  return videosTutora.get(id);
+}
+/** Pone el fondo de la tutora en la etapa de este kwiz (cuántas buenas lleva, hasta 5). */
+async function fondoDelKwiz(k) {
+  if (!k || k.tipo !== "tutora") return;
+  const escenas = await escenasDeTutora(k.tema);
+  if (!escenas) return;
+  const et = F.etapas(escenas, N.ACIERTOS_TUTORA);
+  F.mostrar(k.tema, et[Math.min(k.bien || 0, N.ACIERTOS_TUTORA)], () => videoDeTutora(k.tema));
+}
+
 function verPregunta(o, kid) {
   if (o.conserva && enPreguntaDe === kid) { enPregunta = true; return; }
   const k = E.kwizzes.get(kid);
@@ -2612,17 +2642,18 @@ function verPregunta(o, kid) {
   const tema = porId.get(q.tema);
   const escribir = q.tipo === "escribir";
   const opciones = escribir ? [] : N.barajar(q.opciones, N.azarDe(kid + "-" + q.id));
-  const juego = juegoDeFotos();
+  const deTutora = k.tipo === "tutora";
+  const juego = deTutora ? [] : juegoDeFotos();
   const foto = juego.length ? juego[Math.floor(N.azarDe(kid + "#" + sig.orden)() * juego.length)] : null;
 
   poner(`
-  <section class="kw">
+  <section class="kw${deTutora ? " kwTutora" : ""}">
     <header class="hero kwh">
       <div class="ratio"></div>
       ${imagenDeArriba(foto && foto.nombre)}
       <div class="over">
-        <p class="lead"><span>Pregunta ${sig.orden} de ${sig.total}</span><span>${escribir ? "Dilo en español" : "Toca la respuesta"}</span></p>
-        <div class="score"><div class="track" role="img" aria-label="Vas en la ${sig.orden} de ${sig.total}"><i data-w="${100 * (sig.orden - 1) / sig.total}"></i></div></div>
+        <p class="lead"><span>${deTutora ? `Aciertos: ${k.bien || 0} de ${N.ACIERTOS_TUTORA}` : `Pregunta ${sig.orden} de ${sig.total}`}</span><span>${escribir ? "Dilo en español" : "Toca la respuesta"}</span></p>
+        <div class="score"><div class="track" role="img" aria-label="${deTutora ? `Llevas ${k.bien || 0} de ${N.ACIERTOS_TUTORA} aciertos` : `Vas en la ${sig.orden} de ${sig.total}`}"><i data-w="${deTutora ? 100 * (k.bien || 0) / N.ACIERTOS_TUTORA : 100 * (sig.orden - 1) / sig.total}"></i></div></div>
         <h1 class="cue" id="cue"${escribir ? ' lang="en"' : ""}>${hueco(q.frase)}</h1>
         ${q.glosa ? `<p class="sub">(${esc(q.glosa)})</p>` : ""}
         ${q.pista ? `<div class="hrow"><button type="button" class="chip" id="pistaBtn">Pista</button><span class="sub" id="pista" hidden>${esc(q.pista)}</span></div>` : ""}
@@ -2670,6 +2701,7 @@ function verPregunta(o, kid) {
   });
   enPregunta = true;
   enPreguntaDe = kid;
+  if (deTutora) fondoDelKwiz(k);
 
   let pista = false, contestada = false, ultimoEscrito = null, modo = "escribir";
   const texto = (id, valor) => { const e = $(id); e.hidden = !valor; e.textContent = valor || ""; };
@@ -2730,6 +2762,12 @@ function verPregunta(o, kid) {
       bien: bien ? 1 : 0, modo: escribir ? modo : "tocar", escrito: (escribir ? ultimoEscrito : extra.elegido) || null, pista: pista ? 1 : 0,
     });
     recalcular();
+    if (deTutora) {
+      const kk = E.kwizzes.get(kid);
+      // Con 5 buenas la ronda se cierra sola (las que sobran no cuentan) y el fondo llega al final.
+      if (kk && kk.bien >= N.ACIERTOS_TUTORA && N.siguiente(E, kid)) { A.apuntar({ t: "dejar", id: N.nuevoId("d"), kwiz: kid, cuando: new Date().toISOString() }); recalcular(); }
+      fondoDelKwiz(E.kwizzes.get(kid));
+    }
     veredicto({ bien, casi: !!extra.casi, elegido: extra.elegido, antes, despues: info(q.tema).pct, ultima: !N.siguiente(E, kid) });
     if (bien && !extra.casi) {
       const aqui = window.location.hash;
@@ -2854,7 +2892,7 @@ function verResultado(o, kid) {
   const renglon = (rotulo, ids, vacio) => `<h3>${rotulo}</h3>${ids.length ? `<ul class="rota">${nombres(ids)}</ul>` : `<p class="small">${vacio}</p>`}`;
   poner(conFondo(`
   <section class="card">
-    <h1 class="h">${k.bien} de ${k.total}</h1>
+    <h1 class="h">${k.tipo === "tutora" ? (k.bien >= N.ACIERTOS_TUTORA ? `¡${N.ACIERTOS_TUTORA} de ${N.ACIERTOS_TUTORA}! Llegaste al final` : `${k.bien} buenas: te faltaron ${N.ACIERTOS_TUTORA - k.bien}`) : `${k.bien} de ${k.total}`}</h1>
     <p>${TIPOS_KWIZ[k.tipo] || "Quiz"} · ${cuando(k.terminado)}</p>
     ${barra(k.total ? 100 * k.bien / k.total : 0, " gorda")}
     <div class="go"><button type="button" class="ub grande" data-kwiz='${esc(igual)}'>${k.tipo === "lista" ? "Otro quiz de tu plan" : "Otro quiz igual"}</button>${fallas.length ? `<button type="button" class="ub" id="estudiarFallas">Estudiar las fallas</button>` : ""}</div>
@@ -2893,6 +2931,7 @@ function verResultado(o, kid) {
     <p class="small">Sale el tema que aciertas. El que fallas se queda hasta que lo aciertes dos veces seguidas.</p>
   </section>` : ""}`),
   { titulo: "Resultado del quiz · Pelagos", nav: "gramatica", conserva: o.conserva, pie: "<p>El número junto al porcentaje es cuánto se movió el tema en este quiz.</p>" });
+  fondoDelKwiz(k);     // en el Kwiz con la tutora, el resultado se queda con la escena donde llegaste
   // Estudiar las fallas: vuelve a tu plan y toca solo las voces de las tutoras de los temas que fallaste (se quedan en tu plan).
   const ef = $("estudiarFallas");
   if (ef) ef.addEventListener("click", () => {

@@ -863,3 +863,16 @@ dialog.sheet.escena.practica { inset: 0; width: 100%; max-width: 720px; height: 
 .practica textarea { width: 100%; box-sizing: border-box; font-size: 20px; padding: 10px; border-radius: 10px; }
 .practica .pr-menu { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .practica .pr-menu .k { width: 100%; margin: 6px 0 0; }
+
+/* Kwiz con la tutora (web/fondo.js): su escena de fondo, fija detrás de todo, y la pregunta encima en tarjeta oscura */
+#fondoTutora { position: fixed; inset: 0; z-index: -1; background: #000; }
+#fondoTutora[hidden] { display: none; }
+#fondoTutora video { width: 100%; height: 100%; object-fit: cover; }
+body.conTutora { background: #000; }
+body.conTutora .app, body.conTutora .vista { background: transparent; }
+.kwTutora .hero { background: rgba(0, 0, 0, 0.72); }
+.kwTutora .hero .ratio { display: none; }
+body.conTutora .hoy .fondo, body.conTutora .hoy img.fondo { display: none; }
+.kwTutora .cue { font-size: 28px; }
+body.conTutora .card { background: rgba(10, 10, 10, 0.78); color: #fff; border-color: rgba(255, 255, 255, 0.15); }
+body.conTutora .foot { color: rgba(255, 255, 255, 0.8); }
