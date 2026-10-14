@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=8c8f206dbf";
-import * as A from "./almacen.js?v=8c8f206dbf";
-import { abrirRecorrido } from "./recorrido.js?v=8c8f206dbf";
-import * as V from "./videos.js?v=8c8f206dbf";
-import * as NB from "./nube.js?v=8c8f206dbf";
-import * as CL from "./clases.js?v=8c8f206dbf";
-import { abrirPractica } from "./practica.js?v=8c8f206dbf";
-import * as F from "./fondo.js?v=8c8f206dbf";
+import * as N from "./nucleo.js?v=b5c7bd7628";
+import * as A from "./almacen.js?v=b5c7bd7628";
+import { abrirRecorrido } from "./recorrido.js?v=b5c7bd7628";
+import * as V from "./videos.js?v=b5c7bd7628";
+import * as NB from "./nube.js?v=b5c7bd7628";
+import * as CL from "./clases.js?v=b5c7bd7628";
+import { abrirPractica } from "./practica.js?v=b5c7bd7628";
+import * as F from "./fondo.js?v=b5c7bd7628";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -665,7 +665,7 @@ function verInicio(o) {
   // Al fondo, el video que subiste; si no hay, el retrato de Andrea del día (en Expanse, la portada Expanse del día; ver fondoDelDia).
   // Si tocaste un premio ganado, su GIF va de fondo hasta que lo vuelvas a tocar (o te vayas del Tablero).
   if (!o.conserva) premioFondo = null;
-  const gifPremio = premioFondo ? ultimaEscena(salaPremio(premioFondo)) : null;
+  const gifPremio = premioFondo && ambiente() !== "limpio" ? ultimaEscena(salaPremio(premioFondo)) : null;      // en Limpio, ni los premios
   const fondo = gifPremio ? { hay: true, html: `<div class="fondo">${etiquetaEscena(salaPremio(premioFondo), gifPremio)}${LOGO}</div>` } : fondoDelDia(false);
   const cuadernos = (P.cuadernos || []).map((c) => `
   <section class="card">
@@ -2111,7 +2111,9 @@ const botonEscena = (id) => {
   const oir = t ? `<button type="button" class="ub grande" data-escuchar="${id}" hidden>Escuchar a ${esc(nombreCorto(t))}</button>` : "";
   // «Kwiz con la tutora»: sus preguntas, de 5 en 5 aciertos, con su escena de fondo que avanza con cada acierto.
   const prac = t && (bancoPorTema().get(id) || 0) >= N.ACIERTOS_TUTORA ? `<button type="button" class="ub grande" data-kwiz='{"tipo":"tutora","tema":${id}}'>Kwiz con ${esc(nombreCorto(t))}</button>` : "";
-  return `<div class="go"><button type="button" class="ub grande" data-escena="${id}">Ver la escena completa</button>${conoce}${oir}${prac}</div><div class="voz" data-voz="${id}"></div><p class="small" data-escenaaviso="${id}" role="status"></p>`;
+  // En Limpio no hay ninguna imagen de la tutora: tampoco el botón de su escena completa.
+  const escena = ambiente() === "limpio" ? "" : `<button type="button" class="ub grande" data-escena="${id}">Ver la escena completa</button>`;
+  return `<div class="go">${escena}${conoce}${oir}${prac}</div><div class="voz" data-voz="${id}"></div><p class="small" data-escenaaviso="${id}" role="status"></p>`;
 };
 function conectarEscenas(raiz) {
   for (const b of raiz.querySelectorAll("[data-escena]")) b.addEventListener("click", () => verEscena(Number(b.dataset.escena)));
@@ -2625,7 +2627,7 @@ function videoDeTutora(id) {
 }
 /** Pone el fondo de la tutora en la etapa de este kwiz (cuántas buenas lleva, hasta 5). */
 async function fondoDelKwiz(k) {
-  if (!k || k.tipo !== "tutora") return;
+  if (!k || k.tipo !== "tutora" || ambiente() === "limpio") return;      // en Limpio no sale ninguna imagen de la tutora
   const lugar = $("tutoraVideo");
   const escenas = await escenasDeTutora(k.tema);
   if (!escenas) return;
@@ -2652,7 +2654,7 @@ function verPregunta(o, kid) {
   <section class="kw${deTutora ? " kwTutora" : ""}">
     <header class="hero kwh">
       <div class="ratio"></div>
-      ${deTutora ? '<div class="tutoraVideo" id="tutoraVideo"></div>' : imagenDeArriba(foto && foto.nombre)}
+      ${deTutora ? (ambiente() === "limpio" ? "" : '<div class="tutoraVideo" id="tutoraVideo"></div>') : imagenDeArriba(foto && foto.nombre)}
       <div class="over">
         <p class="lead"><span>${deTutora ? `Aciertos: ${k.bien || 0} de ${N.ACIERTOS_TUTORA}` : `Pregunta ${sig.orden} de ${sig.total}`}</span><span>${escribir ? "Dilo en español" : "Toca la respuesta"}</span></p>
         <div class="score"><div class="track" role="img" aria-label="${deTutora ? `Llevas ${k.bien || 0} de ${N.ACIERTOS_TUTORA} aciertos` : `Vas en la ${sig.orden} de ${sig.total}`}"><i data-w="${deTutora ? 100 * (k.bien || 0) / N.ACIERTOS_TUTORA : 100 * (sig.orden - 1) / sig.total}"></i></div></div>
@@ -2897,7 +2899,7 @@ function verResultado(o, kid) {
     return ` <span class="delta ${d > 0 ? "sube" : "baja"}">${d > 0 ? "+" : "−"}${Math.abs(d)}</span>`;
   };
   const renglon = (rotulo, ids, vacio) => `<h3>${rotulo}</h3>${ids.length ? `<ul class="rota">${nombres(ids)}</ul>` : `<p class="small">${vacio}</p>`}`;
-  poner((k.tipo === "tutora" ? (h) => `<div class="hoy"><div class="sobre">${h}</div></div>` : conFondo)(`${k.tipo === "tutora" ? '<div class="kwTutora"><div class="hero"><div class="tutoraVideo" id="tutoraVideo"></div></div></div>' : ""}
+  poner((k.tipo === "tutora" ? (h) => `<div class="hoy"><div class="sobre">${h}</div></div>` : conFondo)(`${k.tipo === "tutora" && ambiente() !== "limpio" ? '<div class="kwTutora"><div class="hero"><div class="tutoraVideo" id="tutoraVideo"></div></div></div>' : ""}
   <section class="card">
     <h1 class="h">${k.tipo === "tutora" ? (k.bien >= N.ACIERTOS_TUTORA ? `¡${N.ACIERTOS_TUTORA} de ${N.ACIERTOS_TUTORA}! Llegaste al final` : `${k.bien} buenas: te faltaron ${N.ACIERTOS_TUTORA - k.bien}`) : `${k.bien} de ${k.total}`}</h1>
     <p>${TIPOS_KWIZ[k.tipo] || "Quiz"} · ${cuando(k.terminado)}</p>

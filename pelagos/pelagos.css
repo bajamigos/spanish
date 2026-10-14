@@ -874,4 +874,5 @@ dialog.sheet.escena.practica { inset: 0; width: 100%; max-width: 720px; height: 
 .kwTutora .hero { display: block; background: #000; }
 .kwTutora .hero .ratio { display: none; }
 .kwTutora .tutoraVideo { position: relative; }
-.kwTutora .hero .over { position: relative; z-index: 2; margin-top: -56px; padding-top: 0; padding-bottom: 18px; }
+.kwTutora .hero .over { position: relative; z-index: 2; padding-bottom: 18px; min-height: 0; }
+.kwTutora .tutoraVideo + .over { margin-top: -56px; padding-top: 0; }
