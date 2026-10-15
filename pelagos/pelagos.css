@@ -900,3 +900,23 @@ dialog.sheet.escena.practica { inset: 0; width: 100%; max-width: 720px; height: 
 .premioTutora { position: relative; border-radius: 18px; overflow: hidden; background: #000; }
 .premioTutora #fondoTutora.enLinea { max-height: 52vh; }
 .premioTutora .sinClip { margin: 0; padding: 14px 16px; color: #fff; }
+/* En una lección el dedo de lado es para cambiar de lección (ver app.js); de arriba abajo sigue siendo scroll. */
+[data-leccion] { touch-action: pan-y; }
+
+/* «Línea C» arriba de los quizzes (15-Oct-2026): contador de colores, puntitos y cajas, en un solo renglón. */
+.linea { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 8px 0 4px; flex-wrap: nowrap; }
+.lnCuenta { display: flex; align-items: center; gap: 4px; flex: none; }
+.lnCuenta i { font-style: normal; font-weight: 700; opacity: 0.7; }
+.lnN { font-size: 1.3rem; font-weight: 900; line-height: 1; padding-bottom: 3px; border-bottom: 3px solid transparent; }
+.lnN.g0 { color: var(--verde); } .lnN.g1 { color: var(--ambar); } .lnN.g2 { color: var(--rojo); }
+.lnN.cur { border-bottom-color: currentColor; }
+.linea .tjNivel { margin: 0; gap: 5px; flex: none; }
+.linea .tjNivel i { width: 12px; height: 12px; }
+.lnCajas { display: flex; gap: 5px; flex: none; }
+.lnC { display: flex; flex-direction: column; align-items: center; line-height: 1.1; opacity: 0.85; }
+.lnC b { font-size: 0.78rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.lnC small { font-size: 0.6rem; opacity: 0.8; }
+.lnC.cero { opacity: 0.55; }
+.lnC.cur { opacity: 1; }
+.lnC.cur b { font-weight: 900; text-decoration: underline; text-underline-offset: 2px; }
+@media (max-width: 360px) { .lnC small { display: none; } .lnCajas { gap: 3px; } }

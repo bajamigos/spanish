@@ -571,7 +571,11 @@ export function tarjetasDelDia(paquete, estado, hoy = fechaLocal(new Date())) {
   repasos.sort((a, b) => (a.toca < b.toca ? -1 : a.toca > b.toca ? 1 : 0) || a.ultima - b.ultima || (a.id < b.id ? -1 : 1));
   const caben = nuevas.slice(0, Math.max(0, NUEVAS_AL_DIA - nuevasHoy));
   falladas.sort((a, b) => a.ultima - b.ultima || (a.id < b.id ? -1 : 1));      // las que fallaste hoy van al final, la más vieja primero
-  return { pendientes: [...repasos.map((r) => r.id), ...caben, ...falladas.map((r) => r.id)], repasos: repasos.length + falladas.length, nuevas: caben.length, hechasHoy, total };
+  return {
+    pendientes: [...repasos.map((r) => r.id), ...caben, ...falladas.map((r) => r.id)], repasos: repasos.length + falladas.length, nuevas: caben.length, hechasHoy, total,
+    // Las de hoy por grupo, para el contador de colores del quiz (nuevas · vencidas · falladas).
+    grupos: { nuevas: caben, vencidas: repasos.map((r) => r.id), falladas: falladas.map((r) => r.id) },
+  };
 }
 
 export const ADELANTO = 20;
@@ -788,6 +792,20 @@ export function cambioDeTema(estado, kwizId, temaId) {
   };
 }
 
+// ---------------------------------------------------------------- Escalera de formatos
+
+/**
+ * Qué tan difícil se pregunta un tema, según su caja (pedido el 15-Oct-2026, como la escalera de Kwiziq):
+ *   0  nuevo, fallado o en las cajas de 1 y 2 días: tocar la respuesta (opciones);
+ *   1  cajas de 5 y 12 días: escribir lo que falta (la pregunta de opciones, sin opciones);
+ *   2  cajas de 30 y 75 días: escribir la frase completa, sin pista.
+ */
+export function formatoDelTema(estado, tema) {
+  const i = estado.temas.get(tema);
+  if (!i || !i.toca || (estado.debe && (estado.debe.get(tema) || 0) > 0)) return 0;
+  return i.escalon <= 1 ? 0 : i.escalon <= 3 ? 1 : 2;
+}
+
 // ---------------------------------------------------------------- Armar un kwiz
 
 /**
@@ -813,7 +831,14 @@ export function armar(paquete, estado, { tipo = "general", cuaderno = null, tema
   }
   if (!porTema.size) return [];
   // Primero las que nunca has visto; luego las que viste hace más tiempo.
-  for (const lista of porTema.values()) lista.sort((a, b) => a.ultima - b.ultima || a.suerte - b.suerte);
+  // Escalera de formatos (15-Oct-2026): en las cajas de 30 y 75 días se prefieren las de escribir la frase;
+  // antes, las de opciones (que en las cajas de 5 y 12 días se contestan escribiendo lo que falta). El Kwiz con la tutora no la usa.
+  const tipoQ = new Map((paquete.preguntas || []).map((q) => [q.id, q.tipo]));
+  for (const [t, lista] of porTema) {
+    const quiere = tipo === "tutora" ? null : formatoDelTema(estado, t) === 2 ? "escribir" : "opcion";
+    const pesa = (x) => (quiere && tipoQ.get(x.id) !== quiere ? 1 : 0);
+    lista.sort((a, b) => (a.ultima ? 1 : 0) - (b.ultima ? 1 : 0) || pesa(a) - pesa(b) || a.ultima - b.ultima || a.suerte - b.suerte);
+  }
 
   const info = (t) => estado.temas.get(t);
   const bajosPrimero = [...porTema.keys()].sort((a, b) => (info(a).pct ?? 0) - (info(b).pct ?? 0) || a - b);

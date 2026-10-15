@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=842ec8a562";
-import * as A from "./almacen.js?v=842ec8a562";
-import { abrirRecorrido } from "./recorrido.js?v=842ec8a562";
-import * as V from "./videos.js?v=842ec8a562";
-import * as NB from "./nube.js?v=842ec8a562";
-import * as CL from "./clases.js?v=842ec8a562";
-import { abrirPractica } from "./practica.js?v=842ec8a562";
-import * as F from "./fondo.js?v=842ec8a562";
+import * as N from "./nucleo.js?v=b3cc2e9e36";
+import * as A from "./almacen.js?v=b3cc2e9e36";
+import { abrirRecorrido } from "./recorrido.js?v=b3cc2e9e36";
+import * as V from "./videos.js?v=b3cc2e9e36";
+import * as NB from "./nube.js?v=b3cc2e9e36";
+import * as CL from "./clases.js?v=b3cc2e9e36";
+import { abrirPractica } from "./practica.js?v=b3cc2e9e36";
+import * as F from "./fondo.js?v=b3cc2e9e36";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1239,9 +1239,9 @@ function verTarjetas(o) {
       <div class="ratio"></div>
       ${foto ? `<img data-foto="${esc(foto.nombre)}"${foto.vocab ? ' data-vocab="1"' : ""} alt="">` : ""}
       <div class="over">
-        <p class="lead"><span id="tjFaltan">${faltan}</span><span id="tjAviso">Dilo en español</span></p>
+        <p class="lead"><span id="tjFaltan">${enAdelanto ? faltan : (cola.length === 1 ? "Falta 1" : "Faltan " + cola.length)}</span><span id="tjAviso">Dilo en español</span></p>
         <div class="score"><div class="track" role="img" aria-label="Llevas ${hechas} de ${total}"><i data-w="${100 * hechas / total}"></i></div></div>
-        ${htmlNivel(nivelDe(antes))}
+        ${enAdelanto ? htmlNivel(nivelDe(antes)) : lineaDeVocabulario(dia, c.id, antes)}
         <h1 class="cue" id="cue" lang="en">${esc(c.frente)}</h1>
       </div>
       <div class="rule tjResp" id="tjResp" tabindex="-1" aria-live="polite" hidden>
@@ -1293,12 +1293,42 @@ function verTarjetas(o) {
   $("jMal").addEventListener("click", () => calificar(false));
 }
 
+/** La «Línea C» del quiz de vocabulario: lo que queda HOY por grupo, los puntitos de esta tarjeta y tus cajas. */
+function lineaDeVocabulario(dia, id, antes) {
+  const g = dia.grupos;
+  const cuenta = [g.nuevas.length, g.vencidas.length, g.falladas.length];
+  const actual = g.nuevas.includes(id) ? 0 : g.vencidas.includes(id) ? 1 : g.falladas.includes(id) ? 2 : -1;
+  const cajas = [0, 0, 0, 0, 0, 0];
+  for (const c of mazo()) {
+    const s = E.tarjetas.get(c.id);
+    if (s && s.toca && !s.quitada) cajas[Math.max(0, Math.min(5, s.escalon | 0))]++;
+  }
+  return lineaLeitner({ cuenta, actual, nivel: nivelDe(antes), cajas, que: "palabras" });
+}
 /** El peldaño de una tarjeta en la escalera (1 a 6, uno por escalón de N.ESCALONES); 0 si nunca la has acertado. */
 function nivelDe(s) { return s && s.toca ? s.escalon + 1 : 0; }
 /** Seis puntitos, uno por peldaño, con los mismos seis colores del Atlas. */
 function htmlNivel(n) {
   return `<div class="tjNivel" id="tjNivel" role="img" aria-label="${n ? `Peldaño ${n} de ${N.ESCALONES.length}` : "Tarjeta nueva"}">${N.ESCALONES.map((_, i) =>
     `<i class="k${i}${i < n ? " on" : ""}"></i>`).join("")}</div>`;
+}
+/**
+ * La línea de arriba de los quizzes (15-Oct-2026, «Línea C»): el contador de colores (nuevos - vencidos - fallados,
+ * con una rayita bajo el grupo de la pregunta de ahora), los seis puntitos de esta pregunta y las seis cajas
+ * (cuántos hay en cada una, arriba, y sus días, abajo; la de esta pregunta en blanco).
+ *   cuenta [nuevos, vencidos, fallados] · actual 0, 1, 2 o -1 · nivel 0 a 6 · cajas [6 números] · que "temas" | "palabras"
+ */
+function lineaLeitner({ cuenta, actual, nivel, cajas, que }) {
+  const nombres = [["nuevo", "nuevos"], ["vencido", "vencidos"], ["fallado", "fallados"]];
+  const dice = cuenta.map((n, i) => n + " " + nombres[i][n === 1 ? 0 : 1]).join(", ");
+  const num = (n, i) => `<b class="lnN g${i}${i === actual ? " cur" : ""}">${n}</b>`;
+  const caja = (n, i) => `<span class="lnC${nivel && i === nivel - 1 ? " cur" : ""}${n ? "" : " cero"}"><b>${n}</b><small>${N.ESCALONES[i]}d</small></span>`;
+  const enCajas = cajas.map((n, i) => `${N.PELDANOS[i]}, ${n}`).join("; ");
+  return `<div class="linea">
+    <span class="lnCuenta" role="img" aria-label="Quedan: ${dice}">${cuenta.map(num).join('<i aria-hidden="true">-</i>')}</span>
+    ${htmlNivel(nivel)}
+    <span class="lnCajas" role="img" aria-label="Tus ${que} por caja: ${enCajas}">${cajas.map(caja).join("")}</span>
+  </div>`;
 }
 /** Llena o vacía los puntitos, uno tras otro, para que se vea la subida o la caída. */
 function moverNivel(de, a) {
@@ -2783,6 +2813,30 @@ async function fondoDelKwiz(k) {
   F.mostrar(k.tema, et[e], () => videoDeTutora(k.tema), lugar, e < N.ACIERTOS_TUTORA ? et[e + 1] : null);
 }
 
+/** El peldaño de un tema (1 a 6), como los de las tarjetas; 0 si todavía no tiene caja. */
+function nivelDeTema(t) { const i = info(t); return i && i.toca ? i.escalon + 1 : 0; }
+/** La «Línea C» del quiz de gramática: lo que queda de ESTE quiz por grupo, los puntitos del tema y tus cajas. */
+function lineaDeGramatica(k, temaActual) {
+  const hoy = N.fechaLocal(new Date());
+  const grupo = (t) => {
+    const i = info(t);
+    if ((E.debe.get(t) || 0) > 0) return 2;          // lo fallaste: todavía debe aciertos
+    if (!i || !i.toca) return 0;                     // nuevo
+    if (i.toca <= hoy) return 1;                     // vencido
+    return -1;                                       // práctica extra: no le toca (no entra al contador)
+  };
+  const cuenta = [0, 0, 0];
+  const temas = k.pendientes.map((x) => (preguntas.get(N.preguntaDe(x)) || {}).tema).filter((t) => t !== undefined);
+  for (const t of temas) { const g = grupo(t); if (g >= 0) cuenta[g]++; }
+  const cajas = [0, 0, 0, 0, 0, 0];
+  for (const [t, i] of E.temas) {
+    if (!i.toca) continue;
+    if (E.enfoque && (porId.get(t) || {}).nivel !== E.enfoque) continue;
+    cajas[Math.max(0, Math.min(5, i.escalon | 0))]++;
+  }
+  return lineaLeitner({ cuenta, actual: grupo(temaActual), nivel: nivelDeTema(temaActual), cajas, que: "temas" });
+}
+
 function verPregunta(o, kid) {
   if (o.conserva && enPreguntaDe === kid) { enPregunta = true; return; }
   const k = E.kwizzes.get(kid);
@@ -2791,7 +2845,12 @@ function verPregunta(o, kid) {
   if (!sig) return k.terminado ? ir(QUIZ + "/" + kid + "/resultado", true) : verNoExiste(k.dejado ? "Ese quiz lo dejaste sin contestar nada." : "Ese quiz se quedó sin preguntas.");
   const q = preguntas.get(N.preguntaDe(sig.p));
   const tema = porId.get(q.tema);
-  const escribir = q.tipo === "escribir";
+  // Escalera de formatos: según la caja del tema, la de opciones se contesta escribiendo lo que falta,
+  // y la de escribir sale sin pista en las cajas de 30 y 75 días. El Kwiz con la tutora se queda como está.
+  const nivelF = k.tipo === "tutora" ? 0 : N.formatoDelTema(E, q.tema);
+  const enHueco = q.tipo === "opcion" && nivelF >= 1;
+  const escribir = q.tipo === "escribir" || enHueco;
+  const conPista = !!q.pista && !(q.tipo === "escribir" && nivelF === 2);
   const opciones = escribir ? [] : N.barajar(q.opciones, N.azarDe(kid + "-" + sig.p));
   const deTutora = k.tipo === "tutora";
   const juego = deTutora ? [] : juegoDeFotos();
@@ -2803,11 +2862,12 @@ function verPregunta(o, kid) {
       <div class="ratio"></div>
       ${deTutora ? (ambiente() === "limpio" ? "" : '<div class="tutoraVideo" id="tutoraVideo"></div>') : (loopDePregunta(q.tema) || imagenDeArriba(foto && foto.nombre))}
       <div class="over">
-        <p class="lead"><span>${deTutora ? `Aciertos: ${k.bien || 0} de ${N.ACIERTOS_TUTORA}` : `Pregunta ${sig.orden} de ${sig.total}`}</span><span>${escribir ? "Dilo en español" : "Toca la respuesta"}</span></p>
+        <p class="lead"><span>${deTutora ? `Aciertos: ${k.bien || 0} de ${N.ACIERTOS_TUTORA}` : `Pregunta ${sig.orden} de ${sig.total}`}</span><span>${enHueco ? "Escribe lo que falta" : escribir ? "Dilo en español" : "Toca la respuesta"}</span></p>
         <div class="score"><div class="track" role="img" aria-label="${deTutora ? `Llevas ${k.bien || 0} de ${N.ACIERTOS_TUTORA} aciertos` : `Vas en la ${sig.orden} de ${sig.total}`}"><i data-w="${deTutora ? 100 * (k.bien || 0) / N.ACIERTOS_TUTORA : 100 * (sig.orden - 1) / sig.total}"></i></div></div>
-        <h1 class="cue" id="cue"${escribir ? ' lang="en"' : ""}>${hueco(q.frase)}</h1>
+        ${deTutora ? "" : lineaDeGramatica(k, q.tema)}
+        <h1 class="cue" id="cue"${q.tipo === "escribir" ? ' lang="en"' : ""}>${hueco(q.frase)}</h1>
         ${q.glosa ? `<p class="sub">(${esc(q.glosa)})</p>` : ""}
-        ${q.pista ? `<div class="hrow"><button type="button" class="chip" id="pistaBtn">Pista</button><span class="sub" id="pista" hidden>${esc(q.pista)}</span></div>` : ""}
+        ${conPista ? `<div class="hrow"><button type="button" class="chip" id="pistaBtn">Pista</button><span class="sub" id="pista" hidden>${esc(q.pista)}</span></div>` : ""}
       </div>
     </header>
     <div class="card" id="controles">
@@ -2908,12 +2968,13 @@ function verPregunta(o, kid) {
   function apuntarRespuesta(bien, extra = {}) {
     if (contestada) return;
     contestada = true;
-    const antes = info(q.tema).pct;
+    const antes = info(q.tema).pct, nivelAntes = nivelDeTema(q.tema);
     A.apuntar({
       t: "r", id: N.nuevoId("r"), kwiz: kid, p: q.id, ...(sig.p !== q.id ? { s: sig.p } : {}), tema: q.tema, cuando: new Date().toISOString(),
       bien: bien ? 1 : 0, modo: escribir ? modo : "tocar", escrito: (escribir ? ultimoEscrito : extra.elegido) || null, pista: pista ? 1 : 0,
     });
     recalcular();
+    if (!deTutora) moverNivel(nivelAntes, nivelDeTema(q.tema));
     if (deTutora) {
       const kk = E.kwizzes.get(kid);
       // Con 5 buenas la ronda se cierra sola (las que sobran no cuentan) y el fondo llega al final.
@@ -3469,6 +3530,39 @@ document.addEventListener("keydown", (ev) => {
   if (tecla === "enter" && ev.target instanceof Element && ev.target.closest("button, a, summary")) return;    // ese Enter ya es del botón
   if (teclas[tecla]) { ev.preventDefault(); teclas[tecla](); }
 });
+
+/** La lección que sigue en la misma serie (categoría) y nivel, por su orden; null si es la última. */
+function siguienteEnSerie(tema) {
+  const misma = P.temas.filter((t) => t.slug && t.leccion && t.nivel === tema.nivel && t.categoria === tema.categoria)
+    .sort((a, b) => a.orden - b.orden || a.id - b.id);
+  const i = misma.indexOf(tema);
+  return i >= 0 && i < misma.length - 1 ? misma[i + 1] : null;
+}
+
+// Deslizar en una lección (con el dedo): a la derecha, la siguiente lección de la serie; a la izquierda, atrás.
+// No cuenta si empieza pegado a la orilla (ahí vive el gesto de atrás del teléfono) ni sobre algo que se arrastra.
+(() => {
+  let x0 = null, y0 = null;
+  document.addEventListener("pointerdown", (ev) => {
+    x0 = null;
+    if (ev.pointerType === "mouse" || !leccionPintada || !window.location.hash.startsWith("#/leccion/")) return;
+    if (ev.clientX < 28 || ev.clientX > window.innerWidth - 28) return;
+    const t = ev.target instanceof Element ? ev.target : null;
+    if (t && t.closest("input, textarea, select, svg, canvas, .track, [data-noswipe]")) return;
+    for (let e = t; e && e !== document.body; e = e.parentElement) if (e.scrollWidth > e.clientWidth + 2 && getComputedStyle(e).overflowX !== "visible") return;   // una tabla que se corre de lado
+    x0 = ev.clientX; y0 = ev.clientY;
+  }, { passive: true });
+  document.addEventListener("pointercancel", () => { x0 = null; });
+  document.addEventListener("pointerup", (ev) => {
+    if (x0 === null) return;
+    const dx = ev.clientX - x0, dy = ev.clientY - y0;
+    x0 = null;
+    if (Math.abs(dx) < 70 || Math.abs(dx) < Math.abs(dy) * 1.5 || !leccionPintada) return;
+    if (dx < 0) { history.back(); return; }
+    const sig = siguienteEnSerie(leccionPintada.tema);
+    if (sig) ir("/leccion/" + sig.slug);
+  });
+})();
 
 window.addEventListener("hashchange", () => { callar(); cerrarVideos(); cerrarHoja(); enPreguntaDe = null; enTarjetaDe = null; pintar(); });
 
