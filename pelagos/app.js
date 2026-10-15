@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=cc417921d7";
-import * as A from "./almacen.js?v=cc417921d7";
-import { abrirRecorrido } from "./recorrido.js?v=cc417921d7";
-import * as V from "./videos.js?v=cc417921d7";
-import * as NB from "./nube.js?v=cc417921d7";
-import * as CL from "./clases.js?v=cc417921d7";
-import { abrirPractica } from "./practica.js?v=cc417921d7";
-import * as F from "./fondo.js?v=cc417921d7";
+import * as N from "./nucleo.js?v=d5d9b31f81";
+import * as A from "./almacen.js?v=d5d9b31f81";
+import { abrirRecorrido } from "./recorrido.js?v=d5d9b31f81";
+import * as V from "./videos.js?v=d5d9b31f81";
+import * as NB from "./nube.js?v=d5d9b31f81";
+import * as CL from "./clases.js?v=d5d9b31f81";
+import { abrirPractica } from "./practica.js?v=d5d9b31f81";
+import * as F from "./fondo.js?v=d5d9b31f81";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -3195,8 +3195,11 @@ const PIEZAS = [
   ["leccion", "Lección"], ["guion", "Guion"], ["video", "Video completo"],
   ["voz", "Voz"], ["loop", "Loop HD"],
 ];
+// Las compilaciones de Andrea no llevan loop: no cuentan en el total de esa fila.
+const esCompilacion = (tu) => !!(tu && /^Andrea\b/.test(tu.tutora || ""));
+const totalDe = (f, k) => (k === "loop" ? f.temas - f.compilaciones : f.temas);
 function estadoPiezas() {
-  const filas = new Map(Object.keys(NIVELES).map((n) => [n, { nivel: n, temas: 0, leccion: 0, guion: 0, video: 0, voz: 0, loop: 0 }]));
+  const filas = new Map(Object.keys(NIVELES).map((n) => [n, { nivel: n, temas: 0, leccion: 0, guion: 0, video: 0, voz: 0, loop: 0, compilaciones: 0 }]));
   const voz = A.leccionesConPresenta(), loop = A.leccionesConLoop();
   for (const t of P.temas) {
     const f = filas.get(t.nivel);
@@ -3208,6 +3211,7 @@ function estadoPiezas() {
     if (tu && tu.archivo) f.video++;
     if (voz.has(t.id)) f.voz++;
     if (loop.has(t.id)) f.loop++;
+    if (esCompilacion(tu)) f.compilaciones++;
   }
   return [...filas.values()].filter((f) => f.temas);
 }
@@ -3217,11 +3221,12 @@ function graficaPiezas() {
   const nivel = (f) => `<div class="pzNivel">
     <h3><span class="lv">${f.nivel}</span> ${NIVELES[f.nivel]} <span class="small">· ${plural(f.temas, "tema", "temas")}</span></h3>
     ${PIEZAS.map(([k, nombre]) => {
-      const v = f[k], p = f.temas ? Math.round((100 * v) / f.temas) : 0;
-      return `<div class="pzFila${v === f.temas ? " lleno" : v ? "" : " cero"}"><span class="pzNom">${nombre}</span>
-        <span class="pzBarra" role="img" aria-label="${nombre}: ${v} de ${f.temas}"><i data-w="${p}"></i></span>
-        <span class="pzNum">${v}/${f.temas}${v === f.temas ? " ✓" : ""}</span></div>`;
+      const n = totalDe(f, k), v = f[k], p = n ? Math.round((100 * v) / n) : 0;
+      return `<div class="pzFila${n && v >= n ? " lleno" : v ? "" : " cero"}"><span class="pzNom">${nombre}</span>
+        <span class="pzBarra" role="img" aria-label="${nombre}: ${v} de ${n}"><i data-w="${p}"></i></span>
+        <span class="pzNum">${v}/${n}${n && v >= n ? " ✓" : ""}</span></div>`;
     }).join("")}
+    ${f.compilaciones ? `<p class="small">${plural(f.compilaciones, "compilación de Andrea no lleva", "compilaciones de Andrea no llevan")} loop.</p>` : ""}
   </div>`;
   return `<p class="small">Total: ${tot.temas} temas · ${PIEZAS.map(([k, n]) => `${tot[k]} con ${n.toLowerCase().replace("hd", "HD")}`).join(" · ")}.</p>
     <div class="pzGrafica">${filas.map(nivel).join("")}</div>
