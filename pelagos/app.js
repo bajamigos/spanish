@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=75b4c6d7f5";
-import * as A from "./almacen.js?v=75b4c6d7f5";
-import { abrirRecorrido } from "./recorrido.js?v=75b4c6d7f5";
-import * as V from "./videos.js?v=75b4c6d7f5";
-import * as NB from "./nube.js?v=75b4c6d7f5";
-import * as CL from "./clases.js?v=75b4c6d7f5";
-import { abrirPractica } from "./practica.js?v=75b4c6d7f5";
-import * as F from "./fondo.js?v=75b4c6d7f5";
+import * as N from "./nucleo.js?v=f6067c3b06";
+import * as A from "./almacen.js?v=f6067c3b06";
+import { abrirRecorrido } from "./recorrido.js?v=f6067c3b06";
+import * as V from "./videos.js?v=f6067c3b06";
+import * as NB from "./nube.js?v=f6067c3b06";
+import * as CL from "./clases.js?v=f6067c3b06";
+import { abrirPractica } from "./practica.js?v=f6067c3b06";
+import * as F from "./fondo.js?v=f6067c3b06";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1697,6 +1697,12 @@ function portadaDelDia() {
 }
 
 /** Cuándo toca una palabra, en pocas palabras. */
+/** En qué escalón va un tema de gramática (el repaso tipo Leitner) y cuándo vuelve a tocar. */
+function escalonDeTema(i) {
+  if (!i || !i.toca) return "Escalón: todavía ninguno. Entra al contestarlo en un quiz.";
+  const e = Math.max(0, Math.min(N.ESCALONES.length - 1, i.escalon | 0)), dias = N.ESCALONES[e];
+  return `Escalón ${e + 1} de ${N.ESCALONES.length} (cada ${plural(dias, "día", "días")}) · ${cuandoToca(i, N.fechaLocal(new Date()))}`;
+}
 function cuandoToca(s, hoy) {
   if (s.quitada) return "Quitada";
   if (!s.toca) return "Sin ver";
@@ -2109,6 +2115,7 @@ function pintarLeccion(tema, lec, conserva = false) {
         <span>Tu porcentaje: ${pct(i.pct)} · meta ${meta()}% <span class="vergraf" aria-hidden="true">· ver gráfica</span></span>
         <div class="track" role="img" aria-label="${pct(i.pct)} de 100, meta en ${meta()}"><i data-w="${ancho(i.pct)}"></i><b data-x="${meta()}"></b></div>
       </button>
+      <p class="sub escalonTema">${escalonDeTema(i)}</p>
     </div>
     ${lec.regla ? `
     <div class="rule" id="rule"><span class="k">La regla en una línea</span><p>${esc(lec.regla)}</p><button type="button" id="ruleOff">Ya me la sé</button></div>

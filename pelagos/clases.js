@@ -21,7 +21,7 @@
 //   gramática (la sugerida es tu tema B2 más bajo; la pone la página con ponerSugerencia).
 //   (y { "t": "cancelarPedido", "id": "pc-…" } para quitarlo). La tarea de cada media hora lo reserva en Worldsacross
 //   y lo contesta en clases.json: "pedidos": [ { "id": "pc-…", "estado": "reservada" | "no se pudo", "nota": "…" } ].
-import * as A from "./almacen.js?v=75b4c6d7f5";
+import * as A from "./almacen.js?v=f6067c3b06";
 
 export const HORA0 = 6, HORA1 = 21, PX = 56;      // la cuadrícula: de 6 am a 9 pm, 56 px por hora
 const ATRAS = 7, ADELANTE = 13;                    // hasta dónde se puede deslizar, en días desde hoy

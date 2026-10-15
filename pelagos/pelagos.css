@@ -355,6 +355,7 @@ a.cuadro { color: inherit; text-decoration: none; }
 .card p.ciLinea a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .card p.ciOido { display: flex; align-items: center; gap: 6px; margin-top: -6px; font-size: 14.5px; font-weight: 600; color: var(--ink-3); }
 .card p.ciOido.si { color: var(--si); }
+.card p.ciOido.no { color: var(--pen); }          /* «Sin escuchar» se prende: hay un check-in esperándote */
 .card p.ciOido svg { width: 16px; height: 16px; flex: none; }
 /* Las partes del check-in: todas en un solo renglón. La que viene va rellena; la que no, punteada y apagada. */
 ul.partes { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: nowrap; gap: 4px; }
