@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=d5d9b31f81";
-import * as A from "./almacen.js?v=d5d9b31f81";
-import { abrirRecorrido } from "./recorrido.js?v=d5d9b31f81";
-import * as V from "./videos.js?v=d5d9b31f81";
-import * as NB from "./nube.js?v=d5d9b31f81";
-import * as CL from "./clases.js?v=d5d9b31f81";
-import { abrirPractica } from "./practica.js?v=d5d9b31f81";
-import * as F from "./fondo.js?v=d5d9b31f81";
+import * as N from "./nucleo.js?v=39ad73bace";
+import * as A from "./almacen.js?v=39ad73bace";
+import { abrirRecorrido } from "./recorrido.js?v=39ad73bace";
+import * as V from "./videos.js?v=39ad73bace";
+import * as NB from "./nube.js?v=39ad73bace";
+import * as CL from "./clases.js?v=39ad73bace";
+import { abrirPractica } from "./practica.js?v=39ad73bace";
+import * as F from "./fondo.js?v=39ad73bace";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -171,7 +171,7 @@ function botonTema(t, { nivel = true, sub = "", anchoNombre = false, ingles = fa
 /** Si la tutora del tema ya tiene voz grabada, el botón del tema lleva junto una bocina que toca su MP3 (nunca la voz del aparato). */
 function conBocina(t, html) {
   const tu = tutoraDe(t.id);
-  if (!tu || !tieneVoz(t)) return html;
+  if (!tu || !tieneVoz(t) || mudo()) return html;
   const suena = !!repaso && repaso.sonando === t.id && !repaso.audio.paused;
   return `<div class="tb-voz">${html}<button type="button" class="bocinaVoz" data-repasar="${t.id}" aria-pressed="${suena}" ` +
     `aria-label="${suena ? "Pausa" : "Escuchar a " + esc(nombreCorto(tu))}" title="${suena ? "Pausa" : "Escuchar a " + esc(nombreCorto(tu))}">${ICONO_BOCINA}</button></div>`;
@@ -311,8 +311,8 @@ const RUTAS = [
   [/^\/lectura$/, (o) => verLectura(o)],
   [/^\/lectura\/ejemplo$/, (o) => verLectura(o, true)],
   [/^\/leccion\/([a-z0-9-]+)$/, verLeccion],
-  [/^\/tutoras$/, verTutoras],
-  [/^\/tutoras\/(\d+)$/, verTutora],
+  [/^\/tutoras$/, (o) => (mudo() ? ir("/gramatica", true) : verTutoras(o))],      // en Limpio no hay tutoras
+  [/^\/tutoras\/(\d+)$/, (o, id) => (mudo() ? ir("/gramatica", true) : verTutora(o, id))],
   [/^\/vocabulario$/, verTarjetas],
   [/^\/vocabulario\/acervo$/, verLista],
   [/^\/vocabulario\/agregar$/, verAgregar],
@@ -812,7 +812,7 @@ function verInicio(o) {
   const esMamada = !!ep && /mamada/i.test(ep.titulo || "") && ep.titulo !== c.titulo;
   const textoCi = esMamada ? "Mamada nueva: " + (ep.titulo || "").replace(/^.*?mamadas? mañaneras?\s*/i, "") : rotuloCi;
   const enlaceCi = !c ? null : (ep && ep.url) || c.url;
-  const checkin = !c ? "" : `
+  const checkin = !c || mudo() ? "" : `
   <section class="card${premio ? " consello" : ""}" id="checkin">
     ${premio ? selloHtml(premio, true) : ""}
     <h2 class="sr">Check-in</h2>
@@ -934,7 +934,7 @@ function verBiblioteca(o) {
     <p>Todos los temas, por nivel. Elige uno.</p>
     <div class="links">${resumenNiveles().map((n) => botonNivel(n, true)).join("")}</div>
   </section>
-  ${(P.tutoras || []).length ? `<section class="card">
+  ${(P.tutoras || []).length && !mudo() ? `<section class="card">
     <h2>Tutoras</h2>
     <p>Una tutora por regla: su episodio y tus notas para cambiarlo. ${plural(P.tutoras.length, "tutora escrita", "tutoras escritas")}.</p>
     <div class="go"><a class="ub grande" href="#/tutoras">Ver las tutoras</a></div>
@@ -1390,6 +1390,23 @@ function palabras() {
  *  (pedido del 13-Oct-2026): quien lo tenía guardado ve Reef. */
 function ambiente() {
   return guardado("pelagos.ambiente") === "limpio" ? "limpio" : "reef";
+}
+/** En Limpio, Pelagos no suena: ni tutoras, ni repasos, ni check-ins. Lo único con sonido es tu libro, que se abre en ElevenReader. */
+const mudo = () => ambiente() === "limpio";
+// El candado del silencio: en Limpio, ningún audio ni video de la página puede sonar, venga de donde venga.
+{
+  const tocar = HTMLMediaElement.prototype.play;
+  HTMLMediaElement.prototype.play = function () {
+    if (!mudo()) return tocar.call(this);
+    this.muted = true;
+    if (this instanceof HTMLAudioElement) { this.pause(); return Promise.reject(new DOMException("Pelagos está en Limpio: sin sonido.", "NotAllowedError")); }
+    return tocar.call(this);
+  };
+}
+/** Calla todo lo que esté sonando (al pasar a Limpio). */
+function callarTodo() {
+  if (repaso) pararRepaso("");
+  for (const m of document.querySelectorAll("audio, video")) { m.muted = true; if (m instanceof HTMLAudioElement) m.pause(); }
 }
 /** Las portadas del ambiente de este aparato. */
 function juegoDeFotos() { const a = ambiente(); return a === "limpio" ? [] : a === "expanse" ? (P.fotosExpanse || []) : (P.fotos || []); }
@@ -2233,7 +2250,7 @@ function pintarLeccion(tema, lec, conserva = false) {
     <div class="go"><button type="button" class="ub grande" data-kwiz='{"tipo":"tema","tema":${tema.id}}'>Empezar</button></div>
     <p class="small">Hay ${plural(banco, "pregunta revisada", "preguntas revisadas")} de este tema.</p>
   </section>` : ""}
-  ${tutoraDe(tema.id) ? `
+  ${tutoraDe(tema.id) && !mudo() ? `
   <section class="card" id="tutora">
     <h2>Tu tutora</h2>
     <p>${esc(tutoraDe(tema.id).tutora)} te enseña esta regla a su manera.</p>
@@ -2360,6 +2377,7 @@ let repaso = null;      // { origen, cola: [{ id, v }], i, audio, faltan: [ids],
 function loopDeTutora(id) { const l = escenasPorSala.get("tutora-" + id); return l ? l.filter(esMovimiento).slice(-1)[0] || null : null; }
 const nombreDe = (id) => { const t = tutoraDe(id); return t ? nombreCorto(t) : "la tutora"; };
 function botonesRepaso() {
+  if (mudo()) return "";
   const del = repaso && repaso.origen === "plan";
   return `<button type="button" class="ub grande" id="repasoAudio" aria-pressed="${del && !repaso.audio.paused}">${!del ? "Repasar en audio" : repaso.audio.paused ? "Seguir repasando" : "Pausa"}</button>` +
     (del ? `<button type="button" class="ub" id="repasoSig">Siguiente</button><button type="button" class="ub" id="repasoFin">Terminar</button>` : "");
@@ -2722,7 +2740,7 @@ function verKwiz(o) {
     <h3>${plural(deLista.length, "tema", "temas")} en tu plan</h3>
     <div class="links">${deLista.map((t) => botonTema(t, { sub: lineaDelPlan(t, lista, bancoPlan) })).join("")}</div>
     <div class="go">${lista.abierto ? "" : `<button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Pelagos Quiz</button>`}${botonesRepaso()}</div>
-    <p class="small" id="repasoAviso" role="status">${esc(avisoRepaso())}</p>
+    ${mudo() ? "" : `<p class="small" id="repasoAviso" role="status">${esc(avisoRepaso())}</p>`}
     <p class="small">Una pregunta de cada tema. El que aciertas sale del plan y entra otro. El que fallas se queda hasta que lo aciertes dos veces seguidas.</p>
     ${deLista.length < N.LISTA ? `<p class="small">${E.enfoque ? `En ${esc(E.enfoque)} solo hay` : "Solo hay"} ${plural(deLista.length, "tema", "temas")} con preguntas. El plan se llena cuando se escriban más.</p>` : ""}
     <p class="small">Hoy llevas ${plural(hechosHoy, "quiz", "quizzes")}.</p>`
@@ -3278,7 +3296,7 @@ function verAjustes(o) {
     <nav class="jump dos" aria-label="Ambiente de las fotos">
       <button type="button" data-ambiente-ir="reef">Reef</button><button type="button" data-ambiente-ir="limpio">Limpio</button>
     </nav>
-    <p class="small">Reef, con sus fotos, o Limpio, sin fotos. En este aparato.</p>
+    <p class="small">Reef, con sus fotos, o Limpio, sin fotos ni sonido: sin tutoras, repasos en audio ni check-ins. Solo suena tu libro en ElevenReader. En este aparato.</p>
   </section>
   <section class="card" id="ajTutoraDia">
     <h2>Tutora del día</h2>
@@ -3320,7 +3338,7 @@ function verAjustes(o) {
   for (const b of vista.querySelectorAll("[data-ambiente-ir]")) {
     b.addEventListener("click", () => {
       guardar("pelagos.ambiente", b.dataset.ambienteIr);
-      if (b.dataset.ambienteIr === "limpio") document.documentElement.dataset.ambiente = "limpio"; else delete document.documentElement.dataset.ambiente;
+      if (b.dataset.ambienteIr === "limpio") { document.documentElement.dataset.ambiente = "limpio"; callarTodo(); } else delete document.documentElement.dataset.ambiente;
       marcarAmbiente();
     });
   }
