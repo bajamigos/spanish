@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=bc3cbe7fae";
-import * as A from "./almacen.js?v=bc3cbe7fae";
-import { abrirRecorrido } from "./recorrido.js?v=bc3cbe7fae";
-import * as V from "./videos.js?v=bc3cbe7fae";
-import * as NB from "./nube.js?v=bc3cbe7fae";
-import * as CL from "./clases.js?v=bc3cbe7fae";
-import { abrirPractica } from "./practica.js?v=bc3cbe7fae";
-import * as F from "./fondo.js?v=bc3cbe7fae";
+import * as N from "./nucleo.js?v=246b37032f";
+import * as A from "./almacen.js?v=246b37032f";
+import { abrirRecorrido } from "./recorrido.js?v=246b37032f";
+import * as V from "./videos.js?v=246b37032f";
+import * as NB from "./nube.js?v=246b37032f";
+import * as CL from "./clases.js?v=246b37032f";
+import { abrirPractica } from "./practica.js?v=246b37032f";
+import * as F from "./fondo.js?v=246b37032f";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -597,6 +597,13 @@ function fondoDelDia(respaldo = true) {
   if (lt) return { hay: true, html: `<div class="fondo">${etiquetaEscena("tutora-" + repaso.sonando, lt)}${LOGO}</div>` };
   // Si subiste un GIF o video de fondo (Ajustes), va en todas las páginas de arriba, en lugar de la foto.
   cargarVideosFondo();
+  // El loop de la tutora de tu tema más bajo lleva, discreto arriba, el nombre de la lección.
+  const bajo = ambiente() !== "limpio" && !sinMovimiento() ? loopDelMasBajo() : null;
+  if (bajo) {
+    const tema = porId.get(Number(bajo.sala.slice("tutora-".length)));
+    const rotulo = tema ? `<p class="fondoTema">${esc(titulo(tema))}</p>` : "";
+    return { hay: true, html: `<div class="fondo">${etiquetaEscena(bajo.sala, bajo.v)}${rotulo}${LOGO}</div>` };
+  }
   const cosa = etiquetaMovimiento();
   if (cosa) return { hay: true, html: `<div class="fondo">${cosa}${LOGO}</div>` };
   if (fondoEnCamino()) return { hay: true, html: FONDO_CARGANDO };
