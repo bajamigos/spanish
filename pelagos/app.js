@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=b05a754a83";
-import * as A from "./almacen.js?v=b05a754a83";
-import { abrirRecorrido } from "./recorrido.js?v=b05a754a83";
-import * as V from "./videos.js?v=b05a754a83";
-import * as NB from "./nube.js?v=b05a754a83";
-import * as CL from "./clases.js?v=b05a754a83";
-import { abrirPractica } from "./practica.js?v=b05a754a83";
-import * as F from "./fondo.js?v=b05a754a83";
+import * as N from "./nucleo.js?v=944f4a84b1";
+import * as A from "./almacen.js?v=944f4a84b1";
+import { abrirRecorrido } from "./recorrido.js?v=944f4a84b1";
+import * as V from "./videos.js?v=944f4a84b1";
+import * as NB from "./nube.js?v=944f4a84b1";
+import * as CL from "./clases.js?v=944f4a84b1";
+import { abrirPractica } from "./practica.js?v=944f4a84b1";
+import * as F from "./fondo.js?v=944f4a84b1";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -599,10 +599,7 @@ function fondoDelDia(respaldo = true) {
   cargarVideosFondo();
   const cosa = etiquetaMovimiento();
   if (cosa) return { hay: true, html: `<div class="fondo">${cosa}${LOGO}</div>` };
-  const T = N.leerTablero(A.tablero());
-  if (ambiente() !== "expanse" && T && T.foto && retratos.has(T.foto)) {
-    return { hay: true, html: `<div class="fondo"><img data-retrato="${esc(T.foto)}" alt="${esc(T.atuendo ? "Andrea hoy: " + T.atuendo : "Andrea hoy")}">${LOGO}</div>` };
-  }
+  // Ya no va el retrato de Andrea de fondo (pedido del 14-Oct): mientras llega el loop, no se ve una foto vieja.
   const foto = ambiente() === "expanse" || respaldo ? portadaDelDia() : null;      // el Tablero sin retrato se queda sin foto
   return foto ? { hay: true, html: `<div class="fondo"><img data-foto="${esc(foto)}" alt="">${LOGO}</div>` } : { hay: false, html: "" };
 }
@@ -620,9 +617,51 @@ const sinMovimiento = () => window.matchMedia && window.matchMedia("(prefers-red
 /** Pregunta una sola vez qué video de fondo hay; cuando llega la respuesta, vuelve a pintar el Tablero si está a la vista. */
 /** El GIF o video de fondo como etiqueta (o "" si no hay, o si el aparato pide menos movimiento). */
 function etiquetaMovimiento() {
+  if (ambiente() === "limpio" || sinMovimiento()) return "";
+  // Primero: el loop de la tutora de tu tema de gramática más bajo. Si todavía no llega, el GIF o video que subiste.
+  const bajo = loopDelMasBajo();
+  if (bajo) return etiquetaEscena(bajo.sala, bajo.v);
   const v = videoFondo();
-  if (!v || ambiente() === "limpio" || sinMovimiento()) return "";
+  if (!v) return "";
   return v.tipo === "image/gif" ? `<img data-videofondo="${esc(v.archivo)}" alt="">` : `<video data-videofondo="${esc(v.archivo)}" muted loop autoplay playsinline preload="auto" aria-hidden="true"></video>`;
+}
+/**
+ * El tema de gramática más bajo del nivel que estudias en el Pelagos Quiz (tu enfoque) cuya tutora ya tiene loop.
+ * Si estás en «Guiado: todos los niveles», se busca entre los temas de tu plan; si ninguno tiene loop, en todos.
+ * Los que nunca contestaste van al final.
+ */
+function temaMasBajo() {
+  const con = A.leccionesConLoop();
+  if (!con || !con.size || !E || !P) return null;
+  const nivel = E.enfoque || null;
+  let dentro = [...con].filter((id) => porId.has(id) && tutoraDe(id));
+  if (nivel) dentro = dentro.filter((id) => porId.get(id).nivel === nivel);
+  else {
+    const plan = new Set(N.listaDeEstudio(P, E).temas);
+    if (dentro.some((id) => plan.has(id))) dentro = dentro.filter((id) => plan.has(id));
+  }
+  let mejor = null, pctMejor = Infinity;
+  for (const id of dentro) {
+    const p = info(id).pct;
+    const v = p === null || p === undefined ? 1000 : p;
+    if (v < pctMejor || (v === pctMejor && id < mejor)) { mejor = id; pctMejor = v; }
+  }
+  return mejor;
+}
+/** { sala, v } del loop de la tutora del tema más bajo; si no ha llegado, lo pide y vuelve a pintar cuando llega. */
+function loopDelMasBajo() {
+  const id = temaMasBajo();
+  if (id === null) return null;
+  const sala = "tutora-" + id;
+  if (!escenasPorSala.has(sala)) {
+    escenasPorSala.set(sala, []);
+    A.escenasDe(sala).then((l) => {
+      escenasPorSala.set(sala, l);
+      if (l.some(esMovimiento) && temaMasBajo() === id && (vista.querySelector(".hoy") || (movimientoEnTodo() && vista.querySelector(".hero")))) pintar({ conserva: true });
+    }).catch(() => {});
+  }
+  const v = (escenasPorSala.get(sala) || []).filter(esMovimiento).slice(-1)[0];
+  return v ? { sala, v } : null;
 }
 /** Si él lo prendió en Ajustes: en lecciones, quizzes y tarjetas va el GIF de fondo en lugar de la foto. */
 const movimientoEnTodo = () => guardado("pelagos.movimientoEnTodo") === "si";
