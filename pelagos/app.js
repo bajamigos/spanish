@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=944f4a84b1";
-import * as A from "./almacen.js?v=944f4a84b1";
-import { abrirRecorrido } from "./recorrido.js?v=944f4a84b1";
-import * as V from "./videos.js?v=944f4a84b1";
-import * as NB from "./nube.js?v=944f4a84b1";
-import * as CL from "./clases.js?v=944f4a84b1";
-import { abrirPractica } from "./practica.js?v=944f4a84b1";
-import * as F from "./fondo.js?v=944f4a84b1";
+import * as N from "./nucleo.js?v=bc3cbe7fae";
+import * as A from "./almacen.js?v=bc3cbe7fae";
+import { abrirRecorrido } from "./recorrido.js?v=bc3cbe7fae";
+import * as V from "./videos.js?v=bc3cbe7fae";
+import * as NB from "./nube.js?v=bc3cbe7fae";
+import * as CL from "./clases.js?v=bc3cbe7fae";
+import { abrirPractica } from "./practica.js?v=bc3cbe7fae";
+import * as F from "./fondo.js?v=bc3cbe7fae";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -64,7 +64,7 @@ let fotosExpanse = new Map(); // portada por nombre (ambiente Expanse; ya no se 
 let fotosVocab = new Map();   // fotos de las tarjetas de vocabulario (contenido/img/vocab), prestadas una por tarjeta
 let retratos = new Map();     // retrato de Andrea por nombre
 // El video de fondo del Tablero (Andrea bailando, por ejemplo): vive en escenas/inicio/ de la rama de avance. null = todavía no se sabe.
-let videosFondo = null;
+let videosFondo = null, videosFondoListos = false;
 let fotosGan = new Map();     // panorama del Recorrido de Ganímedes (modo Expanse)
 let fotosTour = new Map();    // panorama del Recorrido por nombre
 let recorridoVivo = null;     // el visor 360 abierto, si lo hay
@@ -599,6 +599,7 @@ function fondoDelDia(respaldo = true) {
   cargarVideosFondo();
   const cosa = etiquetaMovimiento();
   if (cosa) return { hay: true, html: `<div class="fondo">${cosa}${LOGO}</div>` };
+  if (fondoEnCamino()) return { hay: true, html: FONDO_CARGANDO };
   // Ya no va el retrato de Andrea de fondo (pedido del 14-Oct): mientras llega el loop, no se ve una foto vieja.
   const foto = ambiente() === "expanse" || respaldo ? portadaDelDia() : null;      // el Tablero sin retrato se queda sin foto
   return foto ? { hay: true, html: `<div class="fondo"><img data-foto="${esc(foto)}" alt="">${LOGO}</div>` } : { hay: false, html: "" };
@@ -657,12 +658,23 @@ function loopDelMasBajo() {
     escenasPorSala.set(sala, []);
     A.escenasDe(sala).then((l) => {
       escenasPorSala.set(sala, l);
-      if (l.some(esMovimiento) && temaMasBajo() === id && (vista.querySelector(".hoy") || (movimientoEnTodo() && vista.querySelector(".hero")))) pintar({ conserva: true });
-    }).catch(() => {});
+      salasListas.add(sala);
+      if (temaMasBajo() === id && (vista.querySelector(".hoy") || (movimientoEnTodo() && vista.querySelector(".hero")))) pintar({ conserva: true });
+    }).catch(() => { salasListas.add(sala); });
   }
   const v = (escenasPorSala.get(sala) || []).filter(esMovimiento).slice(-1)[0];
   return v ? { sala, v } : null;
 }
+const salasListas = new Set();     // salas cuya lista de escenas ya llegó (aunque venga vacía)
+/** Si el fondo en movimiento todavía está por llegar (la lista del loop o la de tus videos de fondo). */
+function fondoEnCamino() {
+  if (ambiente() === "limpio" || sinMovimiento()) return false;
+  const id = temaMasBajo();
+  if (id !== null && !salasListas.has("tutora-" + id)) return true;
+  return videosFondo !== null && !videosFondoListos;
+}
+// Mientras llega el fondo, el logo de Pelagos ocupa su lugar (nunca una foto vieja).
+const FONDO_CARGANDO = `<div class="fondo cargando"><img class="logoCarga" src="logo.png" alt="Pelagos"></div>`;
 /** Si él lo prendió en Ajustes: en lecciones, quizzes y tarjetas va el GIF de fondo en lugar de la foto. */
 const movimientoEnTodo = () => guardado("pelagos.movimientoEnTodo") === "si";
 /** La imagen de arriba de una lección, pregunta o tarjeta: el GIF de fondo si está prendido, si no, la foto. */
@@ -694,8 +706,9 @@ function cargarVideosFondo() {
   videosFondo = [];
   A.escenasDe("inicio").then((l) => {
     videosFondo = l;
-    if (videoFondo() && (vista.querySelector(".hoy") || (movimientoEnTodo() && vista.querySelector(".hero")))) pintar({ conserva: true });
-  }).catch(() => {});
+    videosFondoListos = true;
+    if ((videoFondo() && (vista.querySelector(".hoy") || (movimientoEnTodo() && vista.querySelector(".hero")))) || vista.querySelector(".fondo.cargando")) pintar({ conserva: true });
+  }).catch(() => { videosFondoListos = true; if (vista.querySelector(".fondo.cargando")) pintar({ conserva: true }); });
 }
 function verInicio(o) {
   const niveles = resumenNiveles();
