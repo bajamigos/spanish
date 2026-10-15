@@ -319,7 +319,9 @@ body.conandrea { --ink-2: #1c1c1c; --ink-3: #333333; --bar-bg: rgba(0,0,0,0.16);
 .hoy.confoto .fondo img.logoFondo { position: absolute; z-index: 1; right: 0; bottom: 0; width: 28%; height: auto; aspect-ratio: auto; object-fit: contain; box-sizing: border-box; padding: 1.2% 1.5%; background: #0b0b0b; border-radius: 14px 0 0 0; pointer-events: none;
   filter: drop-shadow(0 2px 6px rgba(0,0,0,.65)) drop-shadow(0 0 18px rgba(0,0,0,.35)); }
 /* El nombre de la lección del loop (tu tema más bajo): discreto, arriba a la izquierda, bajo los botones. */
-.hoy.confoto .fondo .fondoTema { position: absolute; z-index: 1; top: 8px; left: 16px; max-width: 70%; margin: 0; padding: 3px 9px; font-size: 13px; line-height: 1.3; color: rgba(255, 255, 255, 0.85); background: rgba(0, 0, 0, 0.45); border-radius: 6px; pointer-events: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.hoy.confoto .fondo .fondoTema { position: absolute; z-index: 1; top: 8px; left: 16px; max-width: 70%; margin: 0; padding: 3px 9px; font-size: 13px; line-height: 1.3; color: rgba(255, 255, 255, 0.85); background: rgba(0, 0, 0, 0.45); border: 0; border-radius: 6px; pointer-events: auto; cursor: pointer; text-decoration: none; font-family: inherit; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.hoy.confoto .fondo .fondoTema .lv { font-weight: 800; margin-right: 4px; color: #ffffff; }
+.hoy.confoto .fondo .fondoTema:hover, .hoy.confoto .fondo .fondoTema:focus-visible { color: #ffffff; background: rgba(0, 0, 0, 0.65); }
 /* Mientras llega el fondo (o mientras carga su video), el logo de Pelagos ocupa el lugar. */
 .hoy.confoto .fondo.cargando { aspect-ratio: 1 / 1; display: grid; place-items: center; background: #0b0b0b; }
 .hoy.confoto .fondo img.logoCarga { width: 72%; aspect-ratio: auto; object-fit: contain; background: none; }

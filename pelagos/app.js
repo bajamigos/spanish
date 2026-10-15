@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=c9795bc415";
-import * as A from "./almacen.js?v=c9795bc415";
-import { abrirRecorrido } from "./recorrido.js?v=c9795bc415";
-import * as V from "./videos.js?v=c9795bc415";
-import * as NB from "./nube.js?v=c9795bc415";
-import * as CL from "./clases.js?v=c9795bc415";
-import { abrirPractica } from "./practica.js?v=c9795bc415";
-import * as F from "./fondo.js?v=c9795bc415";
+import * as N from "./nucleo.js?v=a6687910ce";
+import * as A from "./almacen.js?v=a6687910ce";
+import { abrirRecorrido } from "./recorrido.js?v=a6687910ce";
+import * as V from "./videos.js?v=a6687910ce";
+import * as NB from "./nube.js?v=a6687910ce";
+import * as CL from "./clases.js?v=a6687910ce";
+import { abrirPractica } from "./practica.js?v=a6687910ce";
+import * as F from "./fondo.js?v=a6687910ce";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -622,7 +622,11 @@ function fondoDelDia(respaldo = true) {
   const bajo = ambiente() !== "limpio" && !sinMovimiento() ? loopDelDia() : null;
   if (bajo) {
     const tema = porId.get(Number(bajo.sala.slice("tutora-".length)));
-    const rotulo = tema ? `<p class="fondoTema">${esc(titulo(tema))}</p>` : "";
+    // El rótulo lleva a su lección (o a su ficha, si todavía no tiene lección escrita) y dice su nivel.
+    const dentroRotulo = tema ? `<b class="lv">${esc(tema.nivel)}</b> ${esc(titulo(tema))}` : "";
+    const rotulo = !tema ? "" : tema.slug && tema.leccion
+      ? `<a class="fondoTema" href="#/leccion/${esc(tema.slug)}" aria-label="Lección de la tutora del día: ${esc(tema.nivel)}, ${esc(titulo(tema))}">${dentroRotulo}</a>`
+      : `<button type="button" class="fondoTema" data-l="${tema.id}">${dentroRotulo}</button>`;
     return { hay: true, html: `<div class="fondo">${etiquetaEscena(bajo.sala, bajo.v)}${rotulo}${LOGO}</div>` };
   }
   const cosa = etiquetaMovimiento();
