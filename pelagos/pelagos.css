@@ -937,3 +937,5 @@ dialog.sheet.escena.practica { inset: 0; width: 100%; max-width: 720px; height: 
 .lapizBotones .ub { min-width: 48px; }
 .lapizBotones svg { width: 20px; height: 20px; }
 .lapizForma .err { flex-basis: 100%; margin: 0; }
+/* La regla en una línea, en la página de la tutora: fija en su tarjeta, sin flotar sobre el episodio. */
+.rule.fija { position: static; margin: 12px 0; }

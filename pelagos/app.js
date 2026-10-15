@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=1d9e0d5577";
-import * as A from "./almacen.js?v=1d9e0d5577";
-import { abrirRecorrido } from "./recorrido.js?v=1d9e0d5577";
-import * as V from "./videos.js?v=1d9e0d5577";
-import * as NB from "./nube.js?v=1d9e0d5577";
-import * as CL from "./clases.js?v=1d9e0d5577";
-import { abrirPractica } from "./practica.js?v=1d9e0d5577";
-import * as F from "./fondo.js?v=1d9e0d5577";
+import * as N from "./nucleo.js?v=12c872fcf1";
+import * as A from "./almacen.js?v=12c872fcf1";
+import { abrirRecorrido } from "./recorrido.js?v=12c872fcf1";
+import * as V from "./videos.js?v=12c872fcf1";
+import * as NB from "./nube.js?v=12c872fcf1";
+import * as CL from "./clases.js?v=12c872fcf1";
+import { abrirPractica } from "./practica.js?v=12c872fcf1";
+import * as F from "./fondo.js?v=12c872fcf1";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -306,7 +306,6 @@ const RUTAS = [
   [/^\/gramatica\/quiz\/([A-Za-z0-9_-]+)$/, verPregunta],
   [/^\/gramatica\/quiz\/([A-Za-z0-9_-]+)\/resultado$/, verResultado],
   [/^\/gramatica\/atlas$/, verMapa],
-  [/^\/gramatica\/nodos$/, () => ir("/gramatica/atlas", true)],     // los Nodos ahora se llaman Atlas
   [/^\/gramatica\/([a-z0-9]+)(\/bajo|\/mision)?$/, verNivel],
   [/^\/bitacora$/, verCalor],
   [/^\/clases$/, verClases],
@@ -323,7 +322,6 @@ const RUTAS = [
   // Las direcciones de antes siguen llevando a su página.
   [/^\/kwiz((?:\/[A-Za-z0-9_-]+){0,2})$/, (o, resto) => ir(QUIZ + (resto || ""), true)],
   [/^\/tarjetas$/, () => ir("/vocabulario", true)],
-  [/^\/(mapa|red)$/, () => ir("/gramatica/atlas", true)],          // el Atlas vive en Gramática
   [/^\/(mapa\/calor|red\/bitacora)$/, () => ir("/bitacora", true)],    // la Bitácora vive en el Tablero
   [/^\/vocabulario\/lista$/, () => ir("/vocabulario/acervo", true)],      // la Lista de vocabulario ahora es el Acervo
 ];
@@ -522,7 +520,6 @@ function botonNivel(n, conLecciones, corto = false) {
   return `<a class="tb" href="#/gramatica/${n.nivel.toLowerCase()}">
     <span class="lv">${n.nivel}</span><span class="nm">${NIVELES[n.nivel]}</span><span class="pc">${pct(n.promedio)}</span>
     ${corto ? "" : `<span class="sm">${plural(n.temas, "tema", "temas")} · ${n.bajo} bajo ${meta()}%</span>`}
-    ${corto || !conLecciones ? "" : `<span class="sm listos">Listos: ${n.lecciones} con lección · ${n.tutoras} con tutora · ${n.videos} con video completo · ${n.loops} con loop · ${n.preguntas} con preguntas</span>`}
     ${barra(n.promedio)}</a>`;
 }
 
@@ -672,7 +669,17 @@ function tutoraDelDiaId() {
   const todas = escaladaYa();
   if (!todas) return null;
   const listas = [...con].filter((id) => porId.has(id) && tutoraDe(id) && N.tieneClips(todas[String(id)]));
-  return N.tutoraDelDia(listas, N.fechaLocal(new Date()));
+  const hoy = N.fechaLocal(new Date());
+  return N.tutoraDelDia(listas, hoy, saltosDeHoy(hoy));
+}
+/** Cuántas veces tocaste hoy «Siguiente tutora» en Ajustes (en cualquier aparato). */
+function saltosDeHoy(hoy) {
+  try { return A.sucesos().filter((e) => e && e.t === "saltotutora" && e.dia === hoy).length; } catch { return 0; }
+}
+/** El nombre de la tutora del día, para Ajustes. */
+function nombreTutoraDelDia() {
+  const id = tutoraDelDiaId(), t = id && tutoraDe(id);
+  return t ? "Hoy: " + t.tutora + "." : "Todavía no hay tutora del día.";
 }
 /** Las escenas de todas las tutoras, si ya llegaron. Si no, las pide una vez y vuelve a pintar cuando llegan. */
 let escaladaPedida = false;
@@ -714,7 +721,7 @@ function fondoEnCamino() {
 // Mientras llega el fondo, el logo de Pelagos ocupa su lugar (nunca una foto vieja).
 const FONDO_CARGANDO = `<div class="fondo cargando"><img class="logoCarga" src="logo.png" alt="Pelagos"></div>`;
 /** Si él lo prendió en Ajustes: en lecciones, quizzes y tarjetas va el GIF de fondo en lugar de la foto. */
-const movimientoEnTodo = () => guardado("pelagos.movimientoEnTodo") === "si";
+const movimientoEnTodo = () => guardado("pelagos.movimientoEnTodo") !== "no";      // prendido siempre, salvo que este aparato lo haya apagado antes
 /** La imagen de arriba de una lección, pregunta o tarjeta: el GIF de fondo si está prendido, si no, la foto. */
 function imagenDeArriba(foto) {
   const m = movimientoEnTodo() ? (cargarVideosFondo(), etiquetaMovimiento()) : "";
@@ -979,7 +986,6 @@ function verNivel(o, clave, filtro) {
   <header class="card">
     <h1 class="h">${nivel} · ${NIVELES[nivel]}</h1>
     <p>${suyos.length} temas. ${bajo} bajo ${meta()}%.</p>
-    <p class="small">Listos: ${suyos.filter((t) => t.leccion).length} con lección · ${suyos.filter((t) => tutoraDe(t.id)).length} con tutora · ${suyos.filter(tieneVideo).length} con video completo · ${suyos.filter(tieneLoop).length} con loop · ${suyos.filter(tieneVoz).length} con voz · ${suyos.filter((t) => banco.get(t.id)).length} con preguntas.</p>
     <nav class="jump ${CON_RECORRIDO ? "tres" : "dos"}" aria-label="Qué temas mostrar">
       <a href="#/gramatica/${clave}"${soloBajo || soloMision ? "" : ' aria-current="page"'}>Todos</a>
       <a href="#/gramatica/${clave}/bajo"${soloBajo ? ' aria-current="page"' : ""}>Bajo ${meta()}%</a>
@@ -1639,7 +1645,6 @@ function verLectura(o, ejemplo = false) {
         ${cabeza}
       </section>
       ${L ? cuerpo : `<section class="card"><p class="small">Todavía no llega tu registro de lectura. La tarea del Tablero lo trae en su próxima pasada.</p></section>`}
-      ${ejemplo || modo !== "libros" ? "" : `<p class="small lecturaVerEjemplo"><a href="#/lectura/ejemplo">Ver con datos de ejemplo</a></p>`}
     </div>
   </div>`, { titulo: "Biblioteca · Pelagos", nav: "inicio", conserva: o.conserva });
   vista.querySelector("#serModo")?.addEventListener("click", (ev) => {
@@ -1778,7 +1783,7 @@ function portadaDelDia() {
 /** Cuándo toca una palabra, en pocas palabras. */
 /** En qué escalón va un tema de gramática (el repaso tipo Leitner) y cuándo vuelve a tocar. */
 function escalonDeTema(i) {
-  if (!i || !i.toca) return "Escalón: todavía ninguno. Entra al contestarlo en un quiz.";
+  if (!i || !i.toca) return "";
   const e = Math.max(0, Math.min(N.ESCALONES.length - 1, i.escalon | 0)), dias = N.ESCALONES[e];
   return `Escalón ${e + 1} de ${N.ESCALONES.length} (cada ${plural(dias, "día", "días")}) · ${cuandoToca(i, N.fechaLocal(new Date()))}`;
 }
@@ -2214,14 +2219,14 @@ function pintarLeccion(tema, lec, conserva = false) {
     <div class="ratio"></div>
     ${tutora ? "" : imagenDeArriba(lec.foto && fotoDeLeccion(lec.foto))}
     <div class="over">
-      <p class="lead"><span>${esc(tema.nivel)} · ${esc(NIVELES[tema.nivel] || "")}</span><span>${i.n === 0 ? "de Kwiziq" : plural(i.n, "respuesta", "respuestas")}</span></p>
+      <p class="lead"><span>${esc(tema.nivel)} · ${esc(NIVELES[tema.nivel] || "")}</span><span>${i.n === 0 ? "" : plural(i.n, "respuesta", "respuestas")}</span></p>
       <h1>${esc(lec.titulo)}</h1>
       ${lec.subtitulo ? `<p class="sub">${esc(lec.subtitulo)}</p>` : ""}
       <button type="button" class="score" data-graftema="${tema.id}" aria-label="Tu porcentaje: ${pct(i.pct)}, meta ${meta()}%. Ver tu porcentaje día por día">
         <span>Tu porcentaje: ${pct(i.pct)} · meta ${meta()}% <span class="vergraf" aria-hidden="true">· ver gráfica</span></span>
         <div class="track" role="img" aria-label="${pct(i.pct)} de 100, meta en ${meta()}"><i data-w="${ancho(i.pct)}"></i><b data-x="${meta()}"></b></div>
       </button>
-      <p class="sub escalonTema">${escalonDeTema(i)}</p>
+      ${escalonDeTema(i) ? `<p class="sub escalonTema">${escalonDeTema(i)}</p>` : ""}
     </div>
     ${lec.regla ? `
     <div class="rule" id="rule"><span class="k">La regla en una línea</span><p>${esc(lec.regla)}</p><button type="button" id="ruleOff">Ya me la sé</button></div>
@@ -2508,8 +2513,8 @@ async function enlaceNube(id) {
   return d ? NB.enlace(d, tu.archivo) : "";
 }
 async function verEscena(id) {
-  const aviso = vista.querySelector(`[data-escenaaviso="${id}"]`);
-  const decir = (t) => { if (aviso) aviso.textContent = t; };
+  // Se busca el aviso cada vez: si la página se vuelve a pintar mientras baja el video, el mensaje no se pierde.
+  const decir = (t) => { const aviso = vista.querySelector(`[data-escenaaviso="${id}"]`); if (aviso) aviso.textContent = t; };
   decir("Buscando el video…");
   // 1. Tu almacén de Cloudflare: se ve en streaming, en cualquier aparato.
   const nube = await enlaceNube(id);
@@ -2631,8 +2636,8 @@ function verTutora(o, idTexto) {
   <p class="crumb"><a href="#/gramatica">Gramática</a> · <a href="#/tutoras">Tutoras</a>${tema && tema.slug && tema.leccion ? ` · <a href="#/leccion/${esc(tema.slug)}">${esc(titulo(tema))}</a>` : ""}</p>
   <section class="card">
     <h1 class="h">${esc(t.tutora)}</h1>
-    <p class="small">${esc(tema ? tema.nivel + " · " + titulo(tema) : "Lección " + id)} · lección ${id}${t.estado ? " · " + esc(t.estado) : ""}</p>
-    <div class="rule"><span class="k">La regla en una línea</span><p>${esc(t.regla)}</p></div>
+    <p class="small">${esc(tema ? tema.nivel + " · " + titulo(tema) : "Lección " + id)} · lección ${id}</p>
+    <div class="rule fija"><span class="k">La regla en una línea</span><p>${esc(t.regla)}</p></div>
     ${botonEscena(id)}
   </section>
   <section class="card" id="episodio">
@@ -2689,8 +2694,9 @@ function motivoEnLista(t, lista) {
 /** La línea de un tema del plan: las mismas marcas que en Lecciones y, si se queda o toca repasarlo, el motivo. */
 function lineaDelPlan(t, lista, banco) {
   const i = info(t.id), motivo = motivoEnLista(t, lista);
-  return marcas(t, banco) + (i.n ? ` <span class="resp">${plural(i.n, "respuesta", "respuestas")}</span>` : "") +
-    (motivo ? `<span class="motivo">${esc(motivo)}</span>` : "");
+  const tu = tutoraDe(t.id), n = banco.get(t.id) || 0;
+  const corto = [tu ? tu.tutora.split(",")[0] : "", n ? plural(n, "pregunta", "preguntas") : ""].filter(Boolean).join(" · ");
+  return (corto ? `<span class="resp">${esc(corto)}</span>` : "") + (motivo ? `<span class="motivo">${esc(motivo)}</span>` : "");
 }
 
 function verKwiz(o) {
@@ -3279,29 +3285,11 @@ function verAjustes(o) {
     </nav>
     <p class="small">Reef, con sus fotos, o Limpio, sin fotos. En este aparato.</p>
   </section>
-  <section class="card" id="ajVideo">
-    <h2>Fondo con movimiento</h2>
-    <p id="ajVideoHay"${videoFondo() ? "" : " hidden"}>Tienes un GIF de fondo propio.</p>
-    <div class="go"><button type="button" class="ub" id="ajVideoTodo" aria-pressed="${movimientoEnTodo()}">${movimientoEnTodo() ? "También en lecciones y tarjetas: Sí" : "También en lecciones y tarjetas: No"}</button>
-      <button type="button" class="ub" id="ajVideoQuitar"${videoFondo() ? "" : " hidden"}>Quitar el GIF o video</button></div>
-    <p class="small" id="ajVideoAviso" role="status">Con «Sí», cada lección con tutora lleva su loop arriba.</p>
-  </section>
-  <section class="card" id="ajEscenas">
-    <h2>Videos de las tutoras</h2>
-    <p id="ajNubeHay">Revisando…</p>
-    <div class="campos" id="ajNubeCampos">
-      <label>Access Key ID<input class="campo" type="text" id="ajNubeId" autocomplete="off" spellcheck="false"></label>
-      <label>Secret Access Key<input class="campo" type="password" id="ajNubeSecreto" autocomplete="off" spellcheck="false"></label>
-      <label>Enlace S3 API<input class="campo" type="url" id="ajNubeUrl" autocomplete="off" spellcheck="false" placeholder="https://….r2.cloudflarestorage.com"></label>
-    </div>
-    <div class="go"><button type="button" class="ub" id="ajNubeGuardar">Guardar</button><button type="button" class="ub" id="ajNubeProbar" hidden>Probar</button><button type="button" class="ub" id="ajNubeQuitar" hidden>Quitar</button></div>
-    <p class="small" id="ajNubeAviso" role="status">Los videos completos salen de tu almacén de Cloudflare, en todos tus aparatos.</p>
-  </section>
-  <section class="card" id="ajPremios">
-    <h2>GIFs de los premios</h2>
-    <p class="small">Toca un premio ganado en el Tablero y su GIF pasa al fondo.</p>
-    <div class="premiosGif">${PREMIOS.map(([k, nombre, ic]) => `<label class="ub premioSube"><span class="sello ${ic} ok">${SELLOS[ic]}</span><span>${nombre}</span><span class="small" data-premiohay="${k}">${ultimaEscena(salaPremio(k)) ? "✓ Tiene GIF" : "Sin GIF"}</span><input type="file" data-premiosube="${k}" accept=".gif,.mp4,.webm,image/gif,video/mp4,video/webm" hidden></label>`).join("")}</div>
-    <p class="small" id="ajPremiosAviso" role="status"></p>
+  <section class="card" id="ajTutoraDia">
+    <h2>Tutora del día</h2>
+    <p id="ajTutoraHoy">${esc(nombreTutoraDelDia())}</p>
+    <div class="go"><button type="button" class="ub" id="ajTutoraSigue">Siguiente tutora</button></div>
+    <p class="small" id="ajTutoraAviso" role="status">Cambia el fondo y los premios de hoy a la que sigue en la fila.</p>
   </section>
   ${yaEsApp() ? "" : `<section class="card" id="ajApp">
     <h2>Pelagos como app</h2>
@@ -3342,90 +3330,12 @@ function verAjustes(o) {
     });
   }
   marcarAmbiente();
-  // El video de fondo: subirlo o quitarlo.
-  cargarVideosFondo();
-  const avisoVideo = (t) => { $("ajVideoAviso").textContent = t; };
-  const listoVideo = (l) => {
-    videosFondo = l;
-    $("ajVideoHay").hidden = !videoFondo();
-    $("ajVideoQuitar").hidden = !videoFondo();
-  };
-
-  // Los GIFs de los premios: uno por premio; el nuevo reemplaza al anterior.
-  for (const inp of vista.querySelectorAll("[data-premiosube]")) {
-    inp.addEventListener("change", async () => {
-      const f = inp.files && inp.files[0], k = inp.dataset.premiosube, nombre = PREMIOS.find((x) => x[0] === k)[1];
-      inp.value = "";
-      if (!f) return;
-      const aviso = $("ajPremiosAviso");
-      aviso.textContent = "Subiendo el GIF de " + nombre + "…";
-      try {
-        let l = await A.escenaSubir(salaPremio(k), f, "Premio: " + nombre);
-        const nuevo = l.filter(esMovimiento).slice(-1)[0];
-        for (const x of l.filter((y) => esMovimiento(y) && y !== nuevo)) l = await A.escenaQuitar(salaPremio(k), x.archivo);
-        escenasPorSala.set(salaPremio(k), l);
-        vista.querySelector(`[data-premiohay="${k}"]`).textContent = "✓ Tiene GIF";
-        aviso.textContent = "¡Listo! Ya está el GIF de " + nombre + ".";
-      } catch (e) { aviso.textContent = e && e.message ? e.message : "No se pudo subir el GIF."; }
-    });
-  }
-
-  const nubeHay = async (fresco) => {
-    const d = await datosNube(fresco);
-    if ($("ajNubeHay")) $("ajNubeHay").textContent = d ? "Conectado al almacén «" + d.cubeta + "» (llave " + d.id.slice(0, 6) + "…)." : "Todavía no conectas tu almacén.";
-    if ($("ajNubeQuitar")) $("ajNubeQuitar").hidden = !d;
-    if ($("ajNubeProbar")) $("ajNubeProbar").hidden = !d;
-    if ($("ajNubeCampos")) $("ajNubeCampos").hidden = !!d;
-    if ($("ajNubeGuardar")) $("ajNubeGuardar").hidden = !!d;
-  };
-  nubeHay(true);
-  const nubeAviso = (t) => { if ($("ajNubeAviso")) $("ajNubeAviso").textContent = t; };
-  $("ajNubeGuardar").addEventListener("click", async () => {
-    const d = NB.limpiar({ id: $("ajNubeId").value, secreto: $("ajNubeSecreto").value, url: $("ajNubeUrl").value });
-    if (!d.url) return nubeAviso("El enlace S3 API tiene que empezar con https:// y terminar en r2.cloudflarestorage.com.");
-    if (!d.id || !d.secreto) return nubeAviso("Faltan el Access Key ID o la Secret Access Key.");
-    nubeAviso("Guardando…");
-    try {
-      await A.nubeGuardar(d);
-      nubeDatos = d;
-      $("ajNubeId").value = $("ajNubeSecreto").value = $("ajNubeUrl").value = "";
-      nubeAviso("Listo. Ahora toca «Probar».");
-    } catch (e) { nubeAviso(e && e.message ? e.message : "No se pudo guardar."); }
-    nubeHay(false);
-  });
-  $("ajNubeProbar").addEventListener("click", async () => {
-    const d = await datosNube();
-    if (!d) return nubeAviso("Primero guarda los datos de tu almacén.");
-    const tu = (P.tutoras || []).find((t) => t.archivo);
-    if (!tu) return nubeAviso("No hay ninguna tutora con video anotado para probar.");
-    nubeAviso("Probando con «" + tu.archivo + "»…");
-    const v = document.createElement("video");
-    v.preload = "metadata"; v.muted = true;
-    const fin = (ok) => { v.onloadedmetadata = v.onerror = null; v.removeAttribute("src"); v.load();
-      nubeAviso(ok ? "¡Funciona! Cloudflare entregó «" + tu.archivo + "»." : "Cloudflare no entregó «" + tu.archivo + "». Puede que todavía no termine de subirse, o que la llave o el enlace estén mal."); };
-    v.onloadedmetadata = () => fin(true);
-    v.onerror = () => fin(false);
-    v.src = await NB.enlace(d, tu.archivo, 300);
-  });
-  $("ajNubeQuitar").addEventListener("click", async () => {
-    nubeAviso("Quitando…");
-    try { await A.nubeGuardar(null); nubeDatos = null; nubeAviso("Listo. Pelagos ya no usa tu almacén."); } catch (e) { nubeAviso(e && e.message ? e.message : "No se pudo quitar."); }
-    nubeHay(false);
-  });
-  $("ajVideoTodo").addEventListener("click", () => {
-    const si = !movimientoEnTodo();
-    guardar("pelagos.movimientoEnTodo", si ? "si" : "no");
-    $("ajVideoTodo").setAttribute("aria-pressed", String(si));
-    $("ajVideoTodo").textContent = "También en lecciones y tarjetas: " + (si ? "Sí" : "No");
-    avisoVideo(si ? "Listo: las lecciones, los quizzes y las tarjetas llevan tu GIF en lugar de la foto." : "Listo: las lecciones, los quizzes y las tarjetas vuelven a sus fotos.");
-  });
-  $("ajVideoQuitar").addEventListener("click", async () => {
-    avisoVideo("Quitando el video…");
-    try {
-      let l = videosFondo || [];
-      for (const x of l.filter(esMovimiento)) l = await A.escenaQuitar("inicio", x.archivo);
-      listoVideo(l); avisoVideo("Listo: vuelve la foto del día.");
-    } catch (e) { avisoVideo(e && e.message ? e.message : "No se pudo quitar el video."); }
+  // La tutora del día: «Siguiente» la cambia por la que sigue en la fila, hoy y en todos tus aparatos.
+  $("ajTutoraSigue").addEventListener("click", () => {
+    if (!tutoraDelDiaId()) { $("ajTutoraAviso").textContent = "Todavía no hay tutoras listas para el fondo."; return; }
+    A.apuntar({ t: "saltotutora", id: N.nuevoId("st"), dia: N.fechaLocal(new Date()), cuando: new Date().toISOString() });
+    $("ajTutoraHoy").textContent = nombreTutoraDelDia();
+    $("ajTutoraAviso").textContent = "Listo. Ve al Tablero para verla.";
   });
   if ($("ajInstalar")) $("ajInstalar").addEventListener("click", async () => {
     if (!ofertaDeInstalar) return;
@@ -3454,7 +3364,7 @@ function abrirHoja(id) {
   $("shK").textContent = "Vista previa · " + t.nivel + " · " + (CATEGORIAS[t.categoria] || t.categoria);
   $("shT").textContent = titulo(t);
   $("shR").textContent = t.regla || "Este tema todavía no tiene lección ni resumen propio.";
-  $("shP").textContent = "Tu porcentaje: " + pct(i.pct) + (i.n === 0 ? " · de Kwiziq" : " · " + plural(i.n, "respuesta", "respuestas"));
+  $("shP").textContent = "Tu porcentaje: " + pct(i.pct) + (i.n === 0 ? "" : " · " + plural(i.n, "respuesta", "respuestas"));
   $("shB").style.width = ancho(i.pct) + "%";
   $("shB").parentElement.className = "bar" + tono(i.pct);
   const serieT = N.historiaTemas(P, A.sucesos(), [t.id], N.fechaLocal(new Date()));

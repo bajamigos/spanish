@@ -1058,10 +1058,11 @@ export function tramosDe(escenas, tipo) {
  * El turno se cuenta en días desde 1970, así que el mismo día da la misma en todos tus aparatos.
  * `fecha` es «2026-10-14» (hora de este aparato). Devuelve el número de la lección, o null si no hay ninguna.
  */
-export function tutoraDelDia(candidatas, fecha) {
+export function tutoraDelDia(candidatas, fecha, salto = 0) {
   const lista = [...new Set(candidatas || [])].map(Number).filter(Number.isFinite).sort((a, b) => a - b);
   if (!lista.length) return null;
   const [a, m, d] = String(fecha).split("-").map(Number);
   const dia = Math.floor(Date.UTC(a, m - 1, d) / 86400000);
-  return lista[((dia % lista.length) + lista.length) % lista.length];
+  const i = dia + (Number(salto) || 0);
+  return lista[((i % lista.length) + lista.length) % lista.length];
 }
