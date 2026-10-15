@@ -895,3 +895,8 @@ dialog.sheet.escena.practica { inset: 0; width: 100%; max-width: 720px; height: 
 .pzFila.lleno .pzBarra i { background: var(--verde); }
 .pzFila.cero .pzNum { color: var(--ink-3); }
 .pzNum { white-space: nowrap; text-align: right; font-variant-numeric: tabular-nums; }
+
+/* El clip del premio en el Tablero: la parte de la escena de la tutora del día, arriba, sin sonido, con degradado (como el Kwiz con la tutora) */
+.premioTutora { position: relative; border-radius: 18px; overflow: hidden; background: #000; }
+.premioTutora #fondoTutora.enLinea { max-height: 52vh; }
+.premioTutora .sinClip { margin: 0; padding: 14px 16px; color: #fff; }

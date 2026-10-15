@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=c466a960ad";
-import * as A from "./almacen.js?v=c466a960ad";
-import { abrirRecorrido } from "./recorrido.js?v=c466a960ad";
-import * as V from "./videos.js?v=c466a960ad";
-import * as NB from "./nube.js?v=c466a960ad";
-import * as CL from "./clases.js?v=c466a960ad";
-import { abrirPractica } from "./practica.js?v=c466a960ad";
-import * as F from "./fondo.js?v=c466a960ad";
+import * as N from "./nucleo.js?v=842ec8a562";
+import * as A from "./almacen.js?v=842ec8a562";
+import { abrirRecorrido } from "./recorrido.js?v=842ec8a562";
+import * as V from "./videos.js?v=842ec8a562";
+import * as NB from "./nube.js?v=842ec8a562";
+import * as CL from "./clases.js?v=842ec8a562";
+import { abrirPractica } from "./practica.js?v=842ec8a562";
+import * as F from "./fondo.js?v=842ec8a562";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -551,11 +551,30 @@ const PREMIOS = [["animo", "Ánimo", "manzana"], ["boca", "Boca", "labios"], ["m
 const PREMIO_DE = Object.fromEntries(PREMIOS.map(([k, , ic]) => [ic, k]));
 const salaPremio = (k) => "premio-" + k;
 let premioFondo = null;      // el premio cuyo GIF está ahorita de fondo en el Tablero
-/** Un dibujito de premio. Ganado y con GIF: se puede tocar para poner su GIF de fondo (y otra vez para quitarlo). */
+/**
+ * El clip de un premio: la parte de la escena de la tutora del día que le toca (mano, boca, papaya, durazno; la manzana, su final).
+ * { id, tramos } o null si hoy no hay tutora con clips (o estás en Limpio).
+ */
+function clipDelDia(k) {
+  if (!k || ambiente() === "limpio") return null;
+  const id = tutoraDelDiaId();
+  if (id === null) return null;
+  const tramos = N.tramosDe(escaladaDatos.tutoras[String(id)], N.ESCENA_DE_PREMIO[k]);
+  return tramos.length ? { id, tramos } : null;
+}
+/**
+ * Un dibujito de premio. Ganado, con la tutora del día: se toca para ver su clip arriba del Tablero (y otra vez para quitarlo).
+ * Sin tutora del día pero con GIF: el GIF va de fondo, como antes.
+ */
 function selloHtml(x, grande = false) {
   const ic = iconoDe(x), k = PREMIO_DE[ic];
-  const gif = x.va && k ? ultimaEscena(salaPremio(k)) : null;
+  const clip = x.va && k ? clipDelDia(k) : null;
+  const gif = x.va && k && !clip ? ultimaEscena(salaPremio(k)) : null;
   const clase = `sello${grande ? " grande" : ""} ${esc(ic)} ${x.va ? "ok" : "no"}`;
+  if (clip) {
+    const on = premioFondo === k, quien = nombreTutora(clip.id);
+    return `<span class="${clase} toca${on ? " activo" : ""}" role="button" tabindex="0" data-premio="${k}" aria-pressed="${on}" aria-label="${esc(x.nombre)}: ganado. ${on ? "Quitar su clip" : "Ver el clip de " + esc(quien)}">${SELLOS[ic]}</span>`;
+  }
   if (!gif) return `<span class="${clase}">${SELLOS[ic]}</span><span class="sr">${esc(x.nombre)}: ${x.va ? "ganado" : "falta"}. </span>`;
   const on = premioFondo === k;
   return `<span class="${clase} toca${on ? " activo" : ""}" role="button" tabindex="0" data-premio="${k}" aria-pressed="${on}" aria-label="${esc(x.nombre)}: ganado. ${on ? "Quitar su GIF del fondo" : "Poner su GIF de fondo"}">${SELLOS[ic]}</span>`;
@@ -597,8 +616,8 @@ function fondoDelDia(respaldo = true) {
   if (lt) return { hay: true, html: `<div class="fondo">${etiquetaEscena("tutora-" + repaso.sonando, lt)}${LOGO}</div>` };
   // Si subiste un GIF o video de fondo (Ajustes), va en todas las páginas de arriba, en lugar de la foto.
   cargarVideosFondo();
-  // El loop de la tutora de tu tema más bajo lleva, discreto arriba, el nombre de la lección.
-  const bajo = ambiente() !== "limpio" && !sinMovimiento() ? loopDelMasBajo() : null;
+  // El loop de la tutora del día lleva, discreto arriba, el nombre de su lección.
+  const bajo = ambiente() !== "limpio" && !sinMovimiento() ? loopDelDia() : null;
   if (bajo) {
     const tema = porId.get(Number(bajo.sala.slice("tutora-".length)));
     const rotulo = tema ? `<p class="fondoTema">${esc(titulo(tema))}</p>` : "";
@@ -607,7 +626,9 @@ function fondoDelDia(respaldo = true) {
   const cosa = etiquetaMovimiento();
   if (cosa) return { hay: true, html: `<div class="fondo">${cosa}${LOGO}</div>` };
   if (fondoEnCamino()) return { hay: true, html: FONDO_CARGANDO };
-  // Ya no va el retrato de Andrea de fondo (pedido del 14-Oct): mientras llega el loop, no se ve una foto vieja.
+  // Si ninguna tutora tiene todavía sus clips cortados, el retrato de Andrea del día (el que dice el tablero).
+  const T = N.leerTablero(A.tablero());
+  if (T && T.foto && retratos.has(T.foto)) return { hay: true, html: `<div class="fondo"><img data-retrato="${esc(T.foto)}" alt="">${LOGO}</div>` };
   const foto = ambiente() === "expanse" || respaldo ? portadaDelDia() : null;      // el Tablero sin retrato se queda sin foto
   return foto ? { hay: true, html: `<div class="fondo"><img data-foto="${esc(foto)}" alt="">${LOGO}</div>` } : { hay: false, html: "" };
 }
@@ -626,39 +647,42 @@ const sinMovimiento = () => window.matchMedia && window.matchMedia("(prefers-red
 /** El GIF o video de fondo como etiqueta (o "" si no hay, o si el aparato pide menos movimiento). */
 function etiquetaMovimiento() {
   if (ambiente() === "limpio" || sinMovimiento()) return "";
-  // Primero: el loop de la tutora de tu tema de gramática más bajo. Si todavía no llega, el GIF o video que subiste.
-  const bajo = loopDelMasBajo();
+  // Primero: el loop de la tutora del día. Si todavía no llega, el GIF o video que subiste.
+  const bajo = loopDelDia();
   if (bajo) return etiquetaEscena(bajo.sala, bajo.v);
   const v = videoFondo();
   if (!v) return "";
   return v.tipo === "image/gif" ? `<img data-videofondo="${esc(v.archivo)}" alt="">` : `<video data-videofondo="${esc(v.archivo)}" muted loop autoplay playsinline preload="auto" aria-hidden="true"></video>`;
 }
 /**
- * El tema de gramática más bajo del nivel que estudias en el Pelagos Quiz (tu enfoque) cuya tutora ya tiene loop.
- * Si estás en «Guiado: todos los niveles», se busca entre los temas de tu plan; si ninguno tiene loop, en todos.
- * Los que nunca contestaste van al final.
+ * La tutora del día: una distinta cada día, por turno (N.tutoraDelDia), entre las que ya tienen su loop subido
+ * y su escena cortada en partes (mano, boca, papaya, durazno y final, en contenido/tutoras/escalada.json).
+ * Va de fondo en todas las páginas fuera de las lecciones y los quizzes, que llevan la tutora de su propio tema.
+ * Sus partes son los clips de los premios del Tablero. Mientras llega escalada.json, null.
  */
-function temaMasBajo() {
+function tutoraDelDiaId() {
   const con = A.leccionesConLoop();
-  if (!con || !con.size || !E || !P) return null;
-  const nivel = E.enfoque || null;
-  let dentro = [...con].filter((id) => porId.has(id) && tutoraDe(id));
-  if (nivel) dentro = dentro.filter((id) => porId.get(id).nivel === nivel);
-  else {
-    const plan = new Set(N.listaDeEstudio(P, E).temas);
-    if (dentro.some((id) => plan.has(id))) dentro = dentro.filter((id) => plan.has(id));
-  }
-  let mejor = null, pctMejor = Infinity;
-  for (const id of dentro) {
-    const p = info(id).pct;
-    const v = p === null || p === undefined ? 1000 : p;
-    if (v < pctMejor || (v === pctMejor && id < mejor)) { mejor = id; pctMejor = v; }
-  }
-  return mejor;
+  if (!con || !con.size || !P) return null;
+  const todas = escaladaYa();
+  if (!todas) return null;
+  const listas = [...con].filter((id) => porId.has(id) && tutoraDe(id) && N.tieneClips(todas[String(id)]));
+  return N.tutoraDelDia(listas, N.fechaLocal(new Date()));
 }
-/** { sala, v } del loop de la tutora del tema más bajo; si no ha llegado, lo pide y vuelve a pintar cuando llega. */
-function loopDelMasBajo() {
-  const id = temaMasBajo();
+/** Las escenas de todas las tutoras, si ya llegaron. Si no, las pide una vez y vuelve a pintar cuando llegan. */
+let escaladaPedida = false;
+function escaladaYa() {
+  if (escaladaDatos === undefined) {
+    if (!escaladaPedida) {
+      escaladaPedida = true;
+      escenasDeTutora(0).then(() => { if (vista.querySelector(".hoy, .fondo.cargando")) pintar({ conserva: true }); });
+    }
+    return null;
+  }
+  return (escaladaDatos && escaladaDatos.tutoras) || null;
+}
+/** { sala, v } del loop de la tutora del día; si no ha llegado, lo pide y vuelve a pintar cuando llega. */
+function loopDelDia() {
+  const id = tutoraDelDiaId();
   if (id === null) return null;
   const sala = "tutora-" + id;
   if (!escenasPorSala.has(sala)) {
@@ -666,7 +690,7 @@ function loopDelMasBajo() {
     A.escenasDe(sala).then((l) => {
       escenasPorSala.set(sala, l);
       salasListas.add(sala);
-      if (temaMasBajo() === id && (vista.querySelector(".hoy") || (movimientoEnTodo() && vista.querySelector(".hero")))) pintar({ conserva: true });
+      if (tutoraDelDiaId() === id && (vista.querySelector(".hoy") || (movimientoEnTodo() && vista.querySelector(".hero")))) pintar({ conserva: true });
     }).catch(() => { salasListas.add(sala); });
   }
   const v = (escenasPorSala.get(sala) || []).filter(esMovimiento).slice(-1)[0];
@@ -676,7 +700,8 @@ const salasListas = new Set();     // salas cuya lista de escenas ya llegó (aun
 /** Si el fondo en movimiento todavía está por llegar (la lista del loop o la de tus videos de fondo). */
 function fondoEnCamino() {
   if (ambiente() === "limpio" || sinMovimiento()) return false;
-  const id = temaMasBajo();
+  if (escaladaDatos === undefined && A.leccionesConLoop().size) return true;      // todavía no se sabe quién es la tutora del día
+  const id = tutoraDelDiaId();
   if (id !== null && !salasListas.has("tutora-" + id)) return true;
   return videosFondo !== null && !videosFondoListos;
 }
@@ -725,7 +750,9 @@ function verInicio(o) {
   // Al fondo, el video que subiste; si no hay, el retrato de Andrea del día (en Expanse, la portada Expanse del día; ver fondoDelDia).
   // Si tocaste un premio ganado, su GIF va de fondo hasta que lo vuelvas a tocar (o te vayas del Tablero).
   if (!o.conserva) premioFondo = null;
-  const gifPremio = premioFondo && ambiente() !== "limpio" ? ultimaEscena(salaPremio(premioFondo)) : null;      // en Limpio, ni los premios
+  // Con la tutora del día, el premio tocado se ve como su clip, arriba del Tablero, sin sonido; si no, su GIF de fondo.
+  const clip = premioFondo ? clipDelDia(premioFondo) : null;
+  const gifPremio = !clip && premioFondo && ambiente() !== "limpio" ? ultimaEscena(salaPremio(premioFondo)) : null;      // en Limpio, ni los premios
   const fondo = gifPremio ? { hay: true, html: `<div class="fondo">${etiquetaEscena(salaPremio(premioFondo), gifPremio)}${LOGO}</div>` } : fondoDelDia(false);
   const cuadernos = (P.cuadernos || []).map((c) => `
   <section class="card">
@@ -793,6 +820,7 @@ function verInicio(o) {
     <div class="sobre">
       ${entradas("tablero", "hoy")}
       <h1 class="sr">Tablero</h1>
+      ${clip ? '<div class="premioTutora" id="tutoraPremio"></div>' : ""}
       ${checkin}
       ${medidas}
       <section class="card" id="niveles">
@@ -802,6 +830,17 @@ function verInicio(o) {
     </div>
   </div>`,
   { titulo: "Tablero · Pelagos", nav: "inicio", conserva: o.conserva });
+  if (clip) mostrarClipPremio(clip);
+}
+/** Pone el clip del premio en su lugar, arriba del Tablero. Si su video no está en este aparato ni en tu almacén, lo dice. */
+function mostrarClipPremio(c) {
+  const lugar = $("tutoraPremio");
+  if (!lugar) return;
+  F.mostrar(c.id, c.tramos, () => videoDeTutora(c.id), lugar);
+  videoDeTutora(c.id).then((f) => {
+    if (f || !lugar.isConnected || lugar.querySelector(".sinClip")) return;
+    lugar.insertAdjacentHTML("beforeend", `<p class="small sinClip">No encuentro el video de ${esc(nombreTutora(c.id))} en este aparato ni en tu almacén de Cloudflare.</p>`);
+  });
 }
 
 // ---------------------------------------------------------------- Misiones del Recorrido de Ganímedes
@@ -2164,6 +2203,8 @@ function pintarLeccion(tema, lec, conserva = false) {
 
 /** La tutora de un tema, si ya está escrita. */
 const tutoraDe = (id) => (P.tutoras || []).find((t) => t.leccion === id) || null;
+/** El nombre corto de la tutora de una lección («Udela»), o «la tutora». */
+const nombreTutora = (id) => { const t = tutoraDe(id); return t && t.tutora ? t.tutora.split(",")[0].trim() : "la tutora"; };
 
 // La escena completa de una tutora: el video vive solo en el aparato (ver web/videos.js).
 // «Escuchar a <tutora>»: su episodio grabado (MP3) en la rama avance, en escenas/voz-<lección>/ (como los loops).

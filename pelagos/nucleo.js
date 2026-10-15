@@ -1010,3 +1010,33 @@ export function fotoDeTarjeta(estado, idTarjeta, nombres, hoy = fechaLocal(new D
   pool.sort((a, b) => ((ultimoUso.get(a) || "") < (ultimoUso.get(b) || "") ? -1 : (ultimoUso.get(a) || "") > (ultimoUso.get(b) || "") ? 1 : a < b ? -1 : 1));
   return { foto: pool[0], nueva: true };
 }
+
+// ---- La tutora del día (el fondo de todas las páginas fuera de lecciones y quizzes) y sus clips de premio.
+// Cada cumplido del tablero se ve con un tramo de la escena de la tutora del día; la manzana, con su final.
+/** Qué tipo de escena (contenido/tutoras/escalada.json) va con cada premio del tablero. */
+export const ESCENA_DE_PREMIO = Object.freeze({ mano: "mano", boca: "mamada", papaya: "papaya", durazno: "doggy", animo: "final" });
+
+/** Si las escenas de una tutora traen un tramo para cada premio (mano, boca, papaya, durazno y el final). */
+export function tieneClips(escenas) {
+  if (!Array.isArray(escenas)) return false;
+  const hay = new Set(escenas.filter((e) => e && e.tramos && e.tramos.length).map((e) => e.tipo));
+  return Object.values(ESCENA_DE_PREMIO).every((t) => hay.has(t));
+}
+
+/** Todos los tramos [de, a] de un tipo de escena, en orden, juntando sus apariciones. [] si no hay. */
+export function tramosDe(escenas, tipo) {
+  return (escenas || []).filter((e) => e && e.tipo === tipo).flatMap((e) => e.tramos || []);
+}
+
+/**
+ * La tutora del día: entre las lecciones que pueden serlo, una distinta cada día, por turno y en orden de número.
+ * El turno se cuenta en días desde 1970, así que el mismo día da la misma en todos tus aparatos.
+ * `fecha` es «2026-10-14» (hora de este aparato). Devuelve el número de la lección, o null si no hay ninguna.
+ */
+export function tutoraDelDia(candidatas, fecha) {
+  const lista = [...new Set(candidatas || [])].map(Number).filter(Number.isFinite).sort((a, b) => a - b);
+  if (!lista.length) return null;
+  const [a, m, d] = String(fecha).split("-").map(Number);
+  const dia = Math.floor(Date.UTC(a, m - 1, d) / 86400000);
+  return lista[((dia % lista.length) + lista.length) % lista.length];
+}
