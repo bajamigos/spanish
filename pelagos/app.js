@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=12c872fcf1";
-import * as A from "./almacen.js?v=12c872fcf1";
-import { abrirRecorrido } from "./recorrido.js?v=12c872fcf1";
-import * as V from "./videos.js?v=12c872fcf1";
-import * as NB from "./nube.js?v=12c872fcf1";
-import * as CL from "./clases.js?v=12c872fcf1";
-import { abrirPractica } from "./practica.js?v=12c872fcf1";
-import * as F from "./fondo.js?v=12c872fcf1";
+import * as N from "./nucleo.js?v=bdb3285bea";
+import * as A from "./almacen.js?v=bdb3285bea";
+import { abrirRecorrido } from "./recorrido.js?v=bdb3285bea";
+import * as V from "./videos.js?v=bdb3285bea";
+import * as NB from "./nube.js?v=bdb3285bea";
+import * as CL from "./clases.js?v=bdb3285bea";
+import { abrirPractica } from "./practica.js?v=bdb3285bea";
+import * as F from "./fondo.js?v=bdb3285bea";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -562,7 +562,7 @@ function clipDelDia(k) {
   return tramos.length ? { id, tramos } : null;
 }
 /**
- * Un dibujito de premio. Ganado, con la tutora del día: se toca para ver su clip arriba del Tablero (y otra vez para quitarlo).
+ * Un dibujito de premio. Ganado, con la tutora del día: se toca y su clip pasa al fondo del Tablero (y otra vez para quitarlo).
  * Sin tutora del día pero con GIF: el GIF va de fondo, como antes.
  */
 function selloHtml(x, grande = false) {
@@ -572,7 +572,7 @@ function selloHtml(x, grande = false) {
   const clase = `sello${grande ? " grande" : ""} ${esc(ic)} ${x.va ? "ok" : "no"}`;
   if (clip) {
     const on = premioFondo === k, quien = nombreTutora(clip.id);
-    return `<span class="${clase} toca${on ? " activo" : ""}" role="button" tabindex="0" data-premio="${k}" aria-pressed="${on}" aria-label="${esc(x.nombre)}: ganado. ${on ? "Quitar su clip" : "Ver el clip de " + esc(quien)}">${SELLOS[ic]}</span>`;
+    return `<span class="${clase} toca${on ? " activo" : ""}" role="button" tabindex="0" data-premio="${k}" aria-pressed="${on}" aria-label="${esc(x.nombre)}: ganado. ${on ? "Quitar su clip del fondo" : "Ver el clip de " + esc(quien) + " de fondo"}">${SELLOS[ic]}</span>`;
   }
   if (!gif) return `<span class="${clase}">${SELLOS[ic]}</span><span class="sr">${esc(x.nombre)}: ${x.va ? "ganado" : "falta"}. </span>`;
   const on = premioFondo === k;
@@ -766,7 +766,9 @@ function verInicio(o) {
   // Con la tutora del día, el premio tocado se ve como su clip, arriba del Tablero, sin sonido; si no, su GIF de fondo.
   const clip = premioFondo ? clipDelDia(premioFondo) : null;
   const gifPremio = !clip && premioFondo && ambiente() !== "limpio" ? ultimaEscena(salaPremio(premioFondo)) : null;      // en Limpio, ni los premios
-  const fondo = gifPremio ? { hay: true, html: `<div class="fondo">${etiquetaEscena(salaPremio(premioFondo), gifPremio)}${LOGO}</div>` } : fondoDelDia(false);
+  // El premio tocado reemplaza al fondo mientras esté prendido: su clip de la tutora del día o, si no hay, su GIF.
+  const fondo = clip ? { hay: true, html: `<div class="fondo conPremio"><div class="premioTutora" id="tutoraPremio"></div>${LOGO}</div>` }
+    : gifPremio ? { hay: true, html: `<div class="fondo">${etiquetaEscena(salaPremio(premioFondo), gifPremio)}${LOGO}</div>` } : fondoDelDia(false);
   const cuadernos = (P.cuadernos || []).map((c) => `
   <section class="card">
     <h2>${esc(c.nombre)}</h2>
@@ -833,7 +835,6 @@ function verInicio(o) {
     <div class="sobre">
       ${entradas("tablero", "hoy")}
       <h1 class="sr">Tablero</h1>
-      ${clip ? '<div class="premioTutora" id="tutoraPremio"></div>' : ""}
       ${checkin}
       ${medidas}
       <section class="card" id="niveles">
@@ -845,7 +846,7 @@ function verInicio(o) {
   { titulo: "Tablero · Pelagos", nav: "inicio", conserva: o.conserva });
   if (clip) mostrarClipPremio(clip);
 }
-/** Pone el clip del premio en su lugar, arriba del Tablero. Si su video no está en este aparato ni en tu almacén, lo dice. */
+/** Pone el clip del premio en el fondo del Tablero. Si su video no está en este aparato ni en tu almacén, lo dice. */
 function mostrarClipPremio(c) {
   const lugar = $("tutoraPremio");
   if (!lugar) return;

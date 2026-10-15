@@ -939,3 +939,8 @@ dialog.sheet.escena.practica { inset: 0; width: 100%; max-width: 720px; height: 
 .lapizForma .err { flex-basis: 100%; margin: 0; }
 /* La regla en una línea, en la página de la tutora: fija en su tarjeta, sin flotar sobre el episodio. */
 .rule.fija { position: static; margin: 12px 0; }
+/* El clip de un premio tocado ocupa el lugar del fondo del Tablero, del mismo tamaño, hasta que lo vuelves a tocar. */
+.hoy.confoto .fondo.conPremio .premioTutora { border-radius: 0; aspect-ratio: 1 / 1; }
+.hoy.confoto .fondo.conPremio #fondoTutora.enLinea { aspect-ratio: 1 / 1; max-height: none; height: 100%; }
+.hoy.confoto .fondo.conPremio #fondoTutora.enLinea::after { display: none; }
+.hoy.confoto .fondo.conPremio .sinClip { position: absolute; inset: auto 0 30% 0; z-index: 2; text-align: center; }
