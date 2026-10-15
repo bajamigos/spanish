@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=246b37032f";
-import * as A from "./almacen.js?v=246b37032f";
-import { abrirRecorrido } from "./recorrido.js?v=246b37032f";
-import * as V from "./videos.js?v=246b37032f";
-import * as NB from "./nube.js?v=246b37032f";
-import * as CL from "./clases.js?v=246b37032f";
-import { abrirPractica } from "./practica.js?v=246b37032f";
-import * as F from "./fondo.js?v=246b37032f";
+import * as N from "./nucleo.js?v=75b4c6d7f5";
+import * as A from "./almacen.js?v=75b4c6d7f5";
+import { abrirRecorrido } from "./recorrido.js?v=75b4c6d7f5";
+import * as V from "./videos.js?v=75b4c6d7f5";
+import * as NB from "./nube.js?v=75b4c6d7f5";
+import * as CL from "./clases.js?v=75b4c6d7f5";
+import { abrirPractica } from "./practica.js?v=75b4c6d7f5";
+import * as F from "./fondo.js?v=75b4c6d7f5";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -2674,6 +2674,38 @@ function empezarKwiz({ tipo = "general", cuaderno = null, tema = null }) {
 const guardado = (clave) => { try { return window.localStorage.getItem(clave); } catch { return null; } };
 const guardar = (clave, valor) => { try { window.localStorage.setItem(clave, valor); } catch { /* sin memoria: no pasa nada */ } };
 
+// ---- En el quiz de gramática, arriba de cada pregunta va el loop de la tutora de esa lección (como recordatorio).
+/** La etiqueta del loop de la tutora del tema, si ya llegó; "" si no hay o si estás en Limpio. */
+function loopDePregunta(tema) {
+  if (ambiente() === "limpio" || sinMovimiento() || !A.leccionesConLoop().has(tema)) return "";
+  const v = (escenasPorSala.get("tutora-" + tema) || []).filter(esMovimiento).slice(-1)[0];
+  return v ? etiquetaEscena("tutora-" + tema, v) : "";
+}
+/** Pide la lista del loop (y la de las preguntas que siguen); si llega mientras sigues en esa pregunta, lo pone arriba. */
+function esperarLoopDePregunta(kid, lugar, tema, k) {
+  if (ambiente() === "limpio" || sinMovimiento()) return;
+  const pedir = (t) => {
+    const sala = "tutora-" + t;
+    if (!A.leccionesConLoop().has(t) || escenasPorSala.has(sala)) return null;
+    escenasPorSala.set(sala, []);
+    return A.escenasDe(sala).then((l) => escenasPorSala.set(sala, l)).catch(() => {});
+  };
+  const p = pedir(tema);
+  // Las que siguen en este quiz: así su loop ya está cuando llegues.
+  for (const otra of (k.pendientes || []).slice(1, 4)) { const q2 = preguntas.get(N.preguntaDe(otra)); if (q2) pedir(q2.tema); }
+  if (!p) return;
+  p.then(() => {
+    const sig = N.siguiente(E, kid);
+    const hero = vista.querySelector(".kwh");
+    if (!hero || enPreguntaDe !== kid || !sig || sig.p !== lugar) return;
+    const etiqueta = loopDePregunta(tema);
+    if (!etiqueta) return;
+    for (const x of hero.querySelectorAll(":scope > img, :scope > video")) x.remove();
+    hero.querySelector(".ratio").insertAdjacentHTML("afterend", etiqueta);
+    vestir(hero);
+  });
+}
+
 // ---- El fondo del Kwiz con la tutora
 let escaladaDatos;
 async function escenasDeTutora(id) {
@@ -2721,7 +2753,7 @@ function verPregunta(o, kid) {
   <section class="kw${deTutora ? " kwTutora" : ""}">
     <header class="hero kwh">
       <div class="ratio"></div>
-      ${deTutora ? (ambiente() === "limpio" ? "" : '<div class="tutoraVideo" id="tutoraVideo"></div>') : imagenDeArriba(foto && foto.nombre)}
+      ${deTutora ? (ambiente() === "limpio" ? "" : '<div class="tutoraVideo" id="tutoraVideo"></div>') : (loopDePregunta(q.tema) || imagenDeArriba(foto && foto.nombre))}
       <div class="over">
         <p class="lead"><span>${deTutora ? `Aciertos: ${k.bien || 0} de ${N.ACIERTOS_TUTORA}` : `Pregunta ${sig.orden} de ${sig.total}`}</span><span>${escribir ? "Dilo en español" : "Toca la respuesta"}</span></p>
         <div class="score"><div class="track" role="img" aria-label="${deTutora ? `Llevas ${k.bien || 0} de ${N.ACIERTOS_TUTORA} aciertos` : `Vas en la ${sig.orden} de ${sig.total}`}"><i data-w="${deTutora ? 100 * (k.bien || 0) / N.ACIERTOS_TUTORA : 100 * (sig.orden - 1) / sig.total}"></i></div></div>
@@ -2773,6 +2805,7 @@ function verPregunta(o, kid) {
   enPregunta = true;
   enPreguntaDe = kid;
   if (deTutora) fondoDelKwiz(k);
+  else esperarLoopDePregunta(kid, sig.p, q.tema, k);
 
   let pista = false, contestada = false, ultimoEscrito = null, modo = "escribir";
   const texto = (id, valor) => { const e = $(id); e.hidden = !valor; e.textContent = valor || ""; };
