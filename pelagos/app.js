@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=b3cc2e9e36";
-import * as A from "./almacen.js?v=b3cc2e9e36";
-import { abrirRecorrido } from "./recorrido.js?v=b3cc2e9e36";
-import * as V from "./videos.js?v=b3cc2e9e36";
-import * as NB from "./nube.js?v=b3cc2e9e36";
-import * as CL from "./clases.js?v=b3cc2e9e36";
-import { abrirPractica } from "./practica.js?v=b3cc2e9e36";
-import * as F from "./fondo.js?v=b3cc2e9e36";
+import * as N from "./nucleo.js?v=c9795bc415";
+import * as A from "./almacen.js?v=c9795bc415";
+import { abrirRecorrido } from "./recorrido.js?v=c9795bc415";
+import * as V from "./videos.js?v=c9795bc415";
+import * as NB from "./nube.js?v=c9795bc415";
+import * as CL from "./clases.js?v=c9795bc415";
+import { abrirPractica } from "./practica.js?v=c9795bc415";
+import * as F from "./fondo.js?v=c9795bc415";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -528,6 +528,8 @@ function botonNivel(n, conLecciones, corto = false) {
 
 const DIAS = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"];
 const ICONO_SI = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="currentColor"/><path d="M7 12.5l3.4 3.4L17 9" class="tic" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+// El del check-in: el mismo círculo punteado siempre; se rellena de verde mientras falta escucharlo (ver .ciOido en el CSS).
+const ICONO_OIDO = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" class="relleno" stroke="currentColor" stroke-width="1.6" stroke-dasharray="3 3"/></svg>';
 const ICONO_NO = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="3 3"/></svg>';
 
 /** «viernes 9 de octubre», del día de este aparato. */
@@ -810,7 +812,7 @@ function verInicio(o) {
     ${premio ? selloHtml(premio, true) : ""}
     <h2 class="sr">Check-in</h2>
     <p class="ciLinea">${enlaceCi ? `<a href="${esc(enlaceCi)}" target="_blank" rel="noopener">${esc(textoCi)}</a>` : esc(textoCi)}</p>
-    ${c.estado === "ninguno" ? "" : `<p class="ciOido ${c.estado === "oido" ? "si" : "no"}">${c.estado === "oido" ? ICONO_SI + "Escuchado" : ICONO_NO + "Sin escuchar"}</p>`}
+    ${c.estado === "ninguno" ? "" : `<p class="ciOido ${c.estado === "oido" ? "si" : "no"}">${c.estado === "oido" ? ICONO_OIDO + "Escuchado" : ICONO_OIDO + "Sin escuchar"}</p>`}
     ${partes.length && !conSellos ? `<ul class="partes" data-n="${partes.length}">${partes.map((x) => `<li class="${x.va ? "va" : "nova"}"><span>${esc(x.nombre)}</span><span class="sr">${x.va ? ": ganado" : ": falta"}</span></li>`).join("")}</ul>` : ""}
   </section>`;
 
