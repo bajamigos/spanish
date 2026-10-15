@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=bdb3285bea";
-import * as A from "./almacen.js?v=bdb3285bea";
-import { abrirRecorrido } from "./recorrido.js?v=bdb3285bea";
-import * as V from "./videos.js?v=bdb3285bea";
-import * as NB from "./nube.js?v=bdb3285bea";
-import * as CL from "./clases.js?v=bdb3285bea";
-import { abrirPractica } from "./practica.js?v=bdb3285bea";
-import * as F from "./fondo.js?v=bdb3285bea";
+import * as N from "./nucleo.js?v=cc417921d7";
+import * as A from "./almacen.js?v=cc417921d7";
+import { abrirRecorrido } from "./recorrido.js?v=cc417921d7";
+import * as V from "./videos.js?v=cc417921d7";
+import * as NB from "./nube.js?v=cc417921d7";
+import * as CL from "./clases.js?v=cc417921d7";
+import { abrirPractica } from "./practica.js?v=cc417921d7";
+import * as F from "./fondo.js?v=cc417921d7";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -123,7 +123,6 @@ function marca(texto) {
   s = s.replace(/(^|[^\p{L}\p{N}_])_(.+?)_(?![\p{L}\p{N}_])/gu, '$1<span lang="en">$2</span>');
   return s;
 }
-const plano = (texto) => String(texto ?? "").replace(/==(.+?)==/g, "$1");
 
 /** La frase de una pregunta, con el ___ convertido en un hueco visible. */
 function hueco(frase) {
@@ -534,13 +533,6 @@ function diaLargo(iso) {
   const [a, m, d] = iso.split("-").map(Number);
   return `${DIAS[new Date(a, m - 1, d).getDay()]} ${d} de ${MESES[m - 1]}`;
 }
-/** Una hora -> «1:27 pm», en la hora de este aparato. */
-function horaCorta(iso) {
-  const d = new Date(iso);
-  const h = d.getHours();
-  return `${h % 12 || 12}:${String(d.getMinutes()).padStart(2, "0")} ${h < 12 ? "am" : "pm"}`;
-}
-
 // Los dibujitos que van en la esquina de un cuadro: lo que se gana con esa medida. El tablero dice cuál va en cuál.
 // Ganado se ve a color e iluminado; por ganar, solo el contorno punteado. Los colores los pone la hoja de estilo.
 // El durazno es de la Amiga (antes eran dos besos); el Ánimo es la manzana, diga lo que diga el tablero.
@@ -1091,7 +1083,6 @@ window.addEventListener("resize", () => {
 
 const MESES_CORTOS = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
 const miles = (n) => Number(n).toLocaleString("es-MX");
-const SEMANAS = 28;           // columnas de cada medio año: alcanzan para 184 días más el arranque de la primera semana
 
 /**
  * Medio año como tira de calor: cada columna es una semana (de lunes a domingo, de arriba abajo) y cada cuadro un día.
@@ -2301,9 +2292,8 @@ function conectarEscenas(raiz) {
   for (const b of raiz.querySelectorAll("[data-practica]")) b.addEventListener("click", async () => {
     const id = Number(b.dataset.practica), aviso = vista.querySelector(`[data-escenaaviso="${id}"]`);
     if (aviso) aviso.textContent = "Preparando la práctica…";
-    // Primero tu carpeta o los importados (el permiso se pide aquí, todavía dentro del clic); si no, tu almacén de Cloudflare.
-    let f = await V.video(id, true);
-    if (!f && V.puedeCarpeta() && !(await V.nombreCarpeta())) { try { await V.elegirCarpeta(); f = await V.video(id, true); } catch { /* no eligió */ } }
+    // Primero un video que este aparato ya tenga (sin pedir permiso ni carpeta); si no, tu almacén de Cloudflare.
+    let f = await V.video(id, false);
     if (!f) f = (await enlaceNube(id)) || null;
     try { await abrirPractica(id, f, A, NB); if (aviso) aviso.textContent = ""; } catch (e) { if (aviso) aviso.textContent = e.message || "No se pudo abrir la práctica."; }
   });
@@ -2394,7 +2384,6 @@ function refrescarRepaso() {
   }
 }
 /** Los temas del plan, en orden. */
-function planActual() { return N.listaDeEstudio(P, E).temas.filter((id) => porId.has(id)); }
 /** Un instante de silencio: se toca en el mismo toque del botón para que el teléfono deje sonar lo que sigue. */
 let silencio = null;
 function SILENCIO_URL() {

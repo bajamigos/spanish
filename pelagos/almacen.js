@@ -9,7 +9,7 @@
 // - Lo que contestas entra primero a una fila en este aparato y de ahí sube.
 //   Sin internet, la fila espera y sube sola cuando vuelve.
 // - La llave vive solo en este navegador y solo viaja a la dirección de CONFIG.api.
-import { CONFIG } from "./config.js?v=bdb3285bea";
+import { CONFIG } from "./config.js?v=cc417921d7";
 
 const CLAVES = { llave: "pelagos.llave", aparato: "pelagos.aparato", fila: "pelagos.fila." };      // la fila: una clave por suceso
 const RUTA_SUCESOS = /^sucesos\/([A-Za-z0-9_-]+)\/(\d{4}-\d{2})\.jsonl$/;
@@ -295,15 +295,6 @@ export function sucesos() {
   return todos;
 }
 
-/** Los archivos de sucesos que hay en el repositorio: [{ aparato, mes, renglones }]. */
-export function archivosDeSucesos() {
-  const lista = [];
-  for (const [camino, a] of archivos) {
-    const m = RUTA_SUCESOS.exec(camino);
-    if (m) lista.push({ aparato: m[1], mes: m[2], renglones: separar(a.texto).length });
-  }
-  return lista.sort((x, y) => (x.aparato + x.mes < y.aparato + y.mes ? -1 : 1));
-}
 
 /** Lo que este aparato guardó la última vez. Sirve para pintar al instante, antes de que GitHub conteste. */
 export async function cargarLocal() {
@@ -857,26 +848,3 @@ export async function nubeLeer() {
   }
 }
 
-/** Guarda los datos del almacén en tu repositorio privado (null los quita). */
-export async function nubeGuardar(datos) {
-  for (let intento = 0; intento < 4; intento++) {
-    const q = await api(REPO + "/contents/" + ruta(RUTA_NUBE) + "?ref=" + encodeURIComponent(CONFIG.ramaAvance));
-    const sha = q.ok ? (await q.json()).sha : null;
-    if (!datos) {
-      if (!sha) { await kvPoner("nube", null); return; }
-      const r = await api(REPO + "/contents/" + ruta(RUTA_NUBE), { metodo: "DELETE", cuerpo: { message: "nube: quitar (" + aparato() + ")", sha, branch: CONFIG.ramaAvance } });
-      if (r.ok) { await kvPoner("nube", null); return; }
-      if (r.status === 409) continue;
-      throw new Fallo("github", "GitHub no quiso quitar los datos (" + r.status + ").", r.status);
-    }
-    const r = await api(REPO + "/contents/" + ruta(RUTA_NUBE), {
-      metodo: "PUT",
-      cuerpo: { message: "nube: datos del almacén (" + aparato() + ")", content: aBase64(JSON.stringify(datos, null, 1)), branch: CONFIG.ramaAvance, ...(sha ? { sha } : {}) },
-    });
-    if (r.status === 200 || r.status === 201) { await kvPoner("nube", datos); return; }
-    if (r.status === 409 || r.status === 422) continue;
-    if (r.status === 404) throw new Fallo("falta", "No se pudo guardar: falta la rama «" + CONFIG.ramaAvance + "» o la llave no deja escribir.", 404);
-    throw new Fallo("github", "GitHub no quiso guardar los datos (" + r.status + ").", r.status);
-  }
-  throw new Fallo("choque", "No se pudo guardar después de varios intentos.");
-}
