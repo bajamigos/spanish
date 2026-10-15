@@ -883,3 +883,15 @@ dialog.sheet.escena.practica { inset: 0; width: 100%; max-width: 720px; height: 
 .kwTutora .tutoraVideo { position: relative; }
 .kwTutora .hero .over { position: relative; z-index: 2; padding-bottom: 18px; min-height: 0; }
 .kwTutora .tutoraVideo + .over { margin-top: -56px; padding-top: 0; }
+
+/* Ajustes: estado de las lecciones (cuántos temas de cada nivel tienen cada pieza) */
+.pzGrafica { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); margin-top: 8px; }
+.pzNivel h3 { margin: 0 0 6px; font-size: 1rem; }
+.pzNivel .lv { font-weight: 800; }
+.pzFila { display: grid; grid-template-columns: 7.5em 1fr 6.2em; align-items: center; gap: 8px; font-size: 0.86rem; margin: 3px 0; }
+.pzNom { color: var(--ink-2); }
+.pzBarra { height: 10px; border-radius: 5px; background: var(--bar-bg); overflow: hidden; display: block; }
+.pzBarra i { display: block; height: 100%; background: var(--ambar); border-radius: 5px; }
+.pzFila.lleno .pzBarra i { background: var(--verde); }
+.pzFila.cero .pzNum { color: var(--ink-3); }
+.pzNum { white-space: nowrap; text-align: right; font-variant-numeric: tabular-nums; }

@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=f6067c3b06";
-import * as A from "./almacen.js?v=f6067c3b06";
-import { abrirRecorrido } from "./recorrido.js?v=f6067c3b06";
-import * as V from "./videos.js?v=f6067c3b06";
-import * as NB from "./nube.js?v=f6067c3b06";
-import * as CL from "./clases.js?v=f6067c3b06";
-import { abrirPractica } from "./practica.js?v=f6067c3b06";
-import * as F from "./fondo.js?v=f6067c3b06";
+import * as N from "./nucleo.js?v=c466a960ad";
+import * as A from "./almacen.js?v=c466a960ad";
+import { abrirRecorrido } from "./recorrido.js?v=c466a960ad";
+import * as V from "./videos.js?v=c466a960ad";
+import * as NB from "./nube.js?v=c466a960ad";
+import * as CL from "./clases.js?v=c466a960ad";
+import { abrirPractica } from "./practica.js?v=c466a960ad";
+import * as F from "./fondo.js?v=c466a960ad";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -3058,6 +3058,45 @@ function verResultado(o, kid) {
 
 // ---------------------------------------------------------------- Ajustes
 
+// Estado de las lecciones: cuántos temas de cada nivel tienen cada pieza. Se cuenta cada vez que abres Ajustes,
+// con el contenido y la última sincronización, así que siempre está al día.
+const PIEZAS = [
+  ["leccion", "Lección"], ["guion", "Guion"], ["video", "Video completo"],
+  ["voz", "Voz"], ["loop", "Loop HD"],
+];
+function estadoPiezas() {
+  const filas = new Map(Object.keys(NIVELES).map((n) => [n, { nivel: n, temas: 0, leccion: 0, guion: 0, video: 0, voz: 0, loop: 0 }]));
+  const voz = A.leccionesConPresenta(), loop = A.leccionesConLoop();
+  for (const t of P.temas) {
+    const f = filas.get(t.nivel);
+    if (!f) continue;
+    const tu = tutoraDe(t.id);
+    f.temas++;
+    if (t.leccion) f.leccion++;
+    if (tu) f.guion++;
+    if (tu && tu.archivo) f.video++;
+    if (voz.has(t.id)) f.voz++;
+    if (loop.has(t.id)) f.loop++;
+  }
+  return [...filas.values()].filter((f) => f.temas);
+}
+function graficaPiezas() {
+  const filas = estadoPiezas();
+  const tot = Object.fromEntries(["temas", ...PIEZAS.map(([k]) => k)].map((k) => [k, filas.reduce((a, f) => a + f[k], 0)]));
+  const nivel = (f) => `<div class="pzNivel">
+    <h3><span class="lv">${f.nivel}</span> ${NIVELES[f.nivel]} <span class="small">· ${plural(f.temas, "tema", "temas")}</span></h3>
+    ${PIEZAS.map(([k, nombre]) => {
+      const v = f[k], p = f.temas ? Math.round((100 * v) / f.temas) : 0;
+      return `<div class="pzFila${v === f.temas ? " lleno" : v ? "" : " cero"}"><span class="pzNom">${nombre}</span>
+        <span class="pzBarra" role="img" aria-label="${nombre}: ${v} de ${f.temas}"><i data-w="${p}"></i></span>
+        <span class="pzNum">${v}/${f.temas}${v === f.temas ? " ✓" : ""}</span></div>`;
+    }).join("")}
+  </div>`;
+  return `<p class="small">Total: ${tot.temas} temas · ${PIEZAS.map(([k, n]) => `${tot[k]} con ${n.toLowerCase().replace("hd", "HD")}`).join(" · ")}.</p>
+    <div class="pzGrafica">${filas.map(nivel).join("")}</div>
+    <p class="small">Se cuenta al abrir esta página, con tu contenido y la última vez que Pelagos se puso al día con GitHub.</p>`;
+}
+
 function textoSinc(s) {
   if (s.guardando || (s.pendientes && !s.error)) return "Guardando…";
   if (s.pendientes) {
@@ -3149,6 +3188,10 @@ function verAjustes(o) {
            ? "En iPhone: abre esta página en Safari, toca Compartir y luego «Agregar a inicio». Ahí dentro vas a poner tu llave otra vez, una sola vez."
            : "Si no ves el botón: en el menú de tu navegador busca «Instalar Pelagos» o «Agregar a la pantalla principal»."}</p>`}
     <div class="go"><button type="button" class="ub" id="ajRecargar">Recargar Pelagos</button></div>
+  </section>
+  <section class="card" id="ajPiezas">
+    <h2>Estado de las lecciones</h2>
+    ${graficaPiezas()}
   </section>
   <section class="card">
     <h2>Lo que hay</h2>

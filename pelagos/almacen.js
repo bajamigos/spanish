@@ -9,7 +9,7 @@
 // - Lo que contestas entra primero a una fila en este aparato y de ahí sube.
 //   Sin internet, la fila espera y sube sola cuando vuelve.
 // - La llave vive solo en este navegador y solo viaja a la dirección de CONFIG.api.
-import { CONFIG } from "./config.js?v=f6067c3b06";
+import { CONFIG } from "./config.js?v=c466a960ad";
 
 const CLAVES = { llave: "pelagos.llave", aparato: "pelagos.aparato", fila: "pelagos.fila." };      // la fila: una clave por suceso
 const RUTA_SUCESOS = /^sucesos\/([A-Za-z0-9_-]+)\/(\d{4}-\d{2})\.jsonl$/;
@@ -24,11 +24,16 @@ let conLoop = new Set();        // lecciones cuya tutora ya tiene loop; se renue
 // La voz de una tutora: un MP3 o M4A en escenas/voz-<lección>/ (lo deja ahí la acción «Voces de las tutoras»).
 const RUTA_VOZ = /^escenas\/voz-(\d+)\/[A-Za-z0-9_-]+\.(mp3|m4a)$/;
 let conVoz = new Set();         // lecciones cuya tutora ya tiene voz grabada; se renueva en cada sincronización
+// Su presentación con voz («Conoce a…»): un MP3 en escenas/presenta-<lección>/.
+const RUTA_PRESENTA = /^escenas\/presenta-(\d+)\/[A-Za-z0-9_-]+\.(mp3|m4a)$/;
+let conPresenta = new Set();    // lecciones con presentación grabada; se renueva en cada sincronización
 
 /** Las lecciones cuya tutora ya tiene loop (lo que vio la última sincronización, más lo que subiste desde aquí). */
 export const leccionesConLoop = () => conLoop;
 /** Las lecciones cuya tutora ya tiene voz grabada (lo que vio la última sincronización). */
 export const leccionesConVoz = () => conVoz;
+/** Las lecciones con presentación con voz (lo que vio la última sincronización). */
+export const leccionesConPresenta = () => conPresenta;
 
 export class Fallo extends Error {
   /** tipo: «llave», «permiso», «falta», «red», «github», «choque», «paquete» */
@@ -313,6 +318,8 @@ export async function cargarLocal() {
   if (Array.isArray(loops)) conLoop = new Set(loops.filter(Number.isInteger));
   const voces = await kvLeer("voces");
   if (Array.isArray(voces)) conVoz = new Set(voces.filter(Number.isInteger));
+  const presentas = await kvLeer("presentas");
+  if (Array.isArray(presentas)) conPresenta = new Set(presentas.filter(Number.isInteger));
   const t = await kvLeer("tablero");
   tableroActual = t && typeof t.sha === "string" && t.datos && typeof t.datos === "object" ? t : null;
   const c = await kvLeer("clases");
@@ -360,6 +367,8 @@ export function sincronizar() {
         await kvPoner("loops", [...conLoop]);
         conVoz = new Set(blobs.map((x) => RUTA_VOZ.exec(x.path)).filter(Boolean).map((m) => Number(m[1])));
         await kvPoner("voces", [...conVoz]);
+        conPresenta = new Set(blobs.map((x) => RUTA_PRESENTA.exec(x.path)).filter(Boolean).map((m) => Number(m[1])));
+        await kvPoner("presentas", [...conPresenta]);
       }
       else if (t.status !== 404 && t.status !== 409) throw new Fallo("github", "GitHub contestó algo raro (" + t.status + ").", t.status);
 
