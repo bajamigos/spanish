@@ -922,3 +922,18 @@ dialog.sheet.escena.practica { inset: 0; width: 100%; max-width: 720px; height: 
 .lnC.cur { opacity: 1; }
 .lnC.cur b { font-weight: 900; text-decoration: underline; text-underline-offset: 2px; }
 @media (max-width: 360px) { .lnC small { display: none; } .lnCajas { gap: 3px; } }
+/* Editar una tarjeta: un lápiz junto a cada renglón (español e inglés), en el Acervo y en el repaso. */
+.conLapiz { display: flex; align-items: center; gap: 10px; }
+.conLapiz > :first-child { flex: 1 1 auto; min-width: 0; overflow-wrap: anywhere; }
+.lapiz { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; margin: -6px 0;
+  border: 0; border-radius: 50%; background: transparent; color: inherit; opacity: 0.85; cursor: pointer; }
+.rule .lapiz, [data-ambiente="limpio"] .rule .lapiz { padding: 0; border: 0; background: transparent; color: inherit; font-size: inherit; }
+.lapiz:hover, .lapiz:focus-visible { opacity: 1; background: rgba(127,127,127,0.18); }
+.lapiz svg { width: 24px; height: 24px; }
+.lapiz[hidden] { display: none; }
+.lapizForma { flex: 1 1 auto; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; min-width: 0; }
+.lapizForma .campo { flex: 1 1 220px; min-width: 0; font-size: 20px; }
+.lapizBotones { display: flex; gap: 8px; }
+.lapizBotones .ub { min-width: 48px; }
+.lapizBotones svg { width: 20px; height: 20px; }
+.lapizForma .err { flex-basis: 100%; margin: 0; }

@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=a6687910ce";
-import * as A from "./almacen.js?v=a6687910ce";
-import { abrirRecorrido } from "./recorrido.js?v=a6687910ce";
-import * as V from "./videos.js?v=a6687910ce";
-import * as NB from "./nube.js?v=a6687910ce";
-import * as CL from "./clases.js?v=a6687910ce";
-import { abrirPractica } from "./practica.js?v=a6687910ce";
-import * as F from "./fondo.js?v=a6687910ce";
+import * as N from "./nucleo.js?v=1d9e0d5577";
+import * as A from "./almacen.js?v=1d9e0d5577";
+import { abrirRecorrido } from "./recorrido.js?v=1d9e0d5577";
+import * as V from "./videos.js?v=1d9e0d5577";
+import * as NB from "./nube.js?v=1d9e0d5577";
+import * as CL from "./clases.js?v=1d9e0d5577";
+import { abrirPractica } from "./practica.js?v=1d9e0d5577";
+import * as F from "./fondo.js?v=1d9e0d5577";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1248,10 +1248,10 @@ function verTarjetas(o) {
         <p class="lead"><span id="tjFaltan">${enAdelanto ? faltan : (cola.length === 1 ? "Falta 1" : "Faltan " + cola.length)}</span><span id="tjAviso">Dilo en español</span></p>
         <div class="score"><div class="track" role="img" aria-label="Llevas ${hechas} de ${total}"><i data-w="${100 * hechas / total}"></i></div></div>
         ${enAdelanto ? htmlNivel(nivelDe(antes)) : lineaDeVocabulario(dia, c.id, antes)}
-        <h1 class="cue" id="cue" lang="en">${esc(c.frente)}</h1>
+        ${renglonConLapiz("frente", c.frente, "h1", "cue", ' id="cue"')}
       </div>
       <div class="rule tjResp" id="tjResp" tabindex="-1" aria-live="polite" hidden>
-        <ul class="exs"><li class="ex"><span class="es" id="vResp">${esc(c.reverso)}</span></li></ul>
+        <ul class="exs"><li class="ex">${renglonConLapiz("reverso", c.reverso, "span", "es", ' id="vResp"')}</li></ul>
       </div>
     </header>
     <div class="tjZona">
@@ -1277,6 +1277,7 @@ function verTarjetas(o) {
     $("tjToca").hidden = true;
     $("tjBotones").hidden = false;
     $("tjAviso").textContent = "¿La supiste?";
+    vista.querySelector('.tjh [data-lapiz="frente"]').hidden = false;
     $("tjResp").focus({ preventScroll: true });
     teclas = { b: () => calificar(true, true), m: () => calificar(false, true) };
   }
@@ -1295,6 +1296,9 @@ function verTarjetas(o) {
   }
   toque = () => destapar();
   teclas = { " ": () => destapar(true), enter: () => destapar(true) };
+  // Los lápices: el del inglés sale hasta que destapas, para no tocarlo sin querer antes de pensar la respuesta.
+  vista.querySelector('.tjh [data-lapiz="frente"]').hidden = true;
+  activarLapices(vista.querySelector(".tjh"), c.id, () => {});
   $("jBien").addEventListener("click", () => calificar(true));
   $("jMal").addEventListener("click", () => calificar(false));
 }
@@ -1876,6 +1880,53 @@ function quitarPalabra(id, quitar) {
 }
 
 /** Los dos renglones de una palabra (español e inglés), para corregirla o para agregar una nueva. */
+// Editar una tarjeta (opción 3, 15-Oct-2026): un lápiz junto a cada renglón. Tocas el lápiz del español o del inglés,
+// ese renglón se vuelve una caja, y «Listo» guarda solo ese renglón (un suceso «tje»). El porcentaje y el peldaño no cambian.
+const ICONO_LAPIZ = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16v4zM14 6l4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+const ICONO_X = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>';
+const NOMBRE_CAMPO = { reverso: "el español", frente: "el inglés" };
+/** Un renglón de la tarjeta con su lápiz. «etiqueta» es el elemento del texto (h1, h2, span); «otros», sus atributos. */
+function renglonConLapiz(campo, texto, etiqueta, clase, otros = "") {
+  const lang = campo === "reverso" ? "es-MX" : "en";
+  return `<div class="conLapiz" data-campo="${campo}"><${etiqueta} class="${clase}" lang="${lang}"${otros}>${esc(texto)}</${etiqueta}><button type="button" class="lapiz" data-lapiz="${campo}" aria-label="Editar ${NOMBRE_CAMPO[campo]}">${ICONO_LAPIZ}</button></div>`;
+}
+/** Conecta los lápices de «raiz». Al guardar llama a «listo(campo, texto)» después de apuntar el cambio. */
+function activarLapices(raiz, id, listo) {
+  for (const b of raiz.querySelectorAll("[data-lapiz]")) b.addEventListener("click", (ev) => {
+    ev.stopPropagation();
+    const fila = b.closest(".conLapiz"), campo = b.dataset.lapiz, texto = fila.firstElementChild;
+    if (fila.querySelector("form")) return;
+    const antes = texto.textContent;
+    const forma = document.createElement("form");
+    forma.className = "lapizForma"; forma.autocomplete = "off";
+    forma.innerHTML = `<label class="sr" for="lz-${campo}">Corrige ${NOMBRE_CAMPO[campo]}</label>
+      <input id="lz-${campo}" class="campo" type="text" lang="${campo === "reverso" ? "es" : "en"}" autocapitalize="off" autocorrect="off" spellcheck="false">
+      <div class="lapizBotones"><button type="submit" class="ub">Listo</button><button type="button" class="ub" data-x aria-label="Cancelar">${ICONO_X}</button></div>
+      <p class="err" role="alert" hidden></p>`;
+    const caja = forma.querySelector("input");
+    caja.value = antes;
+    texto.hidden = true; b.hidden = true;
+    fila.append(forma);
+    caja.focus(); caja.select();
+    const cerrar = () => { forma.remove(); texto.hidden = false; b.hidden = false; b.focus({ preventScroll: true }); };
+    forma.querySelector("[data-x]").addEventListener("click", (e) => { e.stopPropagation(); cerrar(); });
+    caja.addEventListener("keydown", (e) => { if (e.key === "Escape") { e.preventDefault(); e.stopPropagation(); cerrar(); } });
+    forma.addEventListener("click", (e) => e.stopPropagation());
+    forma.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const nuevo = caja.value.replace(/\s+/g, " ").trim();
+      if (!nuevo) { const err = forma.querySelector(".err"); err.hidden = false; err.textContent = "Escribe algo o toca la equis."; return; }
+      if (nuevo !== antes) {
+        A.apuntar({ t: "tje", id: N.nuevoId("e"), tarjeta: id, cuando: new Date().toISOString(), [campo]: nuevo });
+        recalcular();
+        texto.textContent = nuevo;
+      }
+      cerrar();
+      listo(campo, nuevo);
+    });
+  });
+}
+
 function formaPalabra(c, escondida) {
   return `
     <form id="hvForma" class="forma" autocomplete="off"${escondida ? " hidden" : ""}>
@@ -1974,44 +2025,24 @@ function abrirPalabra(id) {
   ].filter(Boolean);
   $("hvIn").innerHTML = `
     <span class="k">Vocabulario · ${esc(cuandoToca(s, hoy))}</span>
-    <ul class="exs"><li class="ex"><h2 class="es" id="hvT" lang="es-MX" tabindex="-1">${esc(c.reverso)}</h2><span class="en" lang="en">${esc(c.frente)}</span></li></ul>
+    <ul class="exs"><li class="ex">${renglonConLapiz("reverso", c.reverso, "h2", "es", ' id="hvT" tabindex="-1"')}${renglonConLapiz("frente", c.frente, "span", "en")}</li></ul>
     <div class="sc"><span>Aciertos: ${v === null ? "todavía sin datos" : `${pct(v)} · ${bien} de ${n}`}</span>${v === null ? "" : barra(v)}</div>
     ${grafica}
     <div class="hvLinea">${htmlGrafica(serieV, "gV", c.reverso, false)}</div>
     <dl class="hvDatos">${datos.map(([k, t]) => `<div><dt>${k}</dt><dd>${esc(t)}</dd></div>`).join("")}</dl>
     <div class="acts" id="hvActos">
-      <button type="button" class="ub" id="hvEditar">Editar</button>
       ${s.quitada ? '<button type="button" class="ub" id="hvDevolver">Devolver</button>' : '<button type="button" class="ub" id="hvQuitar">Quitar</button>'}
       <button type="button" class="ub" data-cerrar>Cerrar</button>
     </div>
-    <p id="hvSeguro" hidden>¿La quito de tu vocabulario? Ya no sale en tu quiz. <button type="button" class="lk" id="hvSi">Sí, quítala</button> · <button type="button" class="lk" id="hvNo">No</button></p>
-    ${formaPalabra(c, true)}`;
+    <p id="hvSeguro" hidden>¿La quito de tu vocabulario? Ya no sale en tu quiz. <button type="button" class="lk" id="hvSi">Sí, quítala</button> · <button type="button" class="lk" id="hvNo">No</button></p>`;
   ponerFondoPalabra(id, s, hoy);
   vestir(hojaV);
   activarGrafica(serieV, "gV");
-  const editar = (si) => { $("hvForma").hidden = !si; $("hvActos").hidden = si; $("hvSeguro").hidden = true; if (si) $("hvEs").focus(); };
-  $("hvEditar").addEventListener("click", () => editar(true));
-  $("hvCancelar").addEventListener("click", () => editar(false));
+  activarLapices($("hvIn"), id, () => pintar({ conserva: true }));
   if ($("hvQuitar")) $("hvQuitar").addEventListener("click", () => { $("hvSeguro").hidden = false; $("hvNo").focus(); });
   if ($("hvDevolver")) $("hvDevolver").addEventListener("click", () => quitarPalabra(id, false));
   $("hvNo").addEventListener("click", () => { $("hvSeguro").hidden = true; });
   $("hvSi").addEventListener("click", () => quitarPalabra(id, true));
-  $("hvForma").addEventListener("submit", (ev) => {
-    ev.preventDefault();
-    const f = leerForma();
-    if (!f) return;
-    const { reverso, frente } = f;
-    // Solo se apunta lo que cambió.
-    const cambio = {};
-    if (reverso !== c.reverso) cambio.reverso = reverso;
-    if (frente !== c.frente) cambio.frente = frente;
-    if (Object.keys(cambio).length) {
-      A.apuntar({ t: "tje", id: N.nuevoId("e"), tarjeta: id, cuando: new Date().toISOString(), ...cambio });
-      recalcular();
-      pintar({ conserva: true });
-    }
-    abrirPalabra(id);
-  });
   if (!hojaV.hasAttribute("open")) { if (hojaV.showModal) hojaV.showModal(); else hojaV.setAttribute("open", ""); }
   $("hvT").focus({ preventScroll: true });
 }
@@ -2496,18 +2527,14 @@ async function verEscena(id) {
     ponerSubtitulos(id, d);
     return;
   }
-  return verEscenaLocal(id, decir, "");
+  return verEscenaLocal(id, decir, false);
 }
 /** El video desde este aparato (tu carpeta o los importados) y, si no está, el botón para verlo desde su sitio. */
 async function verEscenaLocal(id, decir, antes) {
-  let f = await V.video(id, true);
-  if (!f && V.puedeCarpeta() && !(await V.nombreCarpeta())) {
-    try { await V.elegirCarpeta(); f = await V.video(id, true); } catch { /* no eligió */ }
-  }
+  // Sin preguntar nada: solo si este aparato ya tenía permiso de tu carpeta o videos importados de antes.
+  const f = await V.video(id, false);
   if (!f) {
-    decir(antes + (V.puedeCarpeta()
-      ? "No encuentro su video en tu carpeta. Revisa que se llame con el número de la lección al principio, por ejemplo «" + id + " - Nombre.mp4». La carpeta se cambia en Ajustes, «Videos de las tutoras»."
-      : "Este aparato todavía no tiene su video. Pásalo por USB y luego, en Ajustes, «Videos de las tutoras», toca «Importar videos»."));
+    decir(antes ? "No pude traer su video de Cloudflare." : "Todavía no conectas tu almacén de Cloudflare. Se pone en Ajustes, «Videos de las tutoras».");
     // El respaldo nunca se abre solo: es un botón aparte, para que nada pida el sitio sin que tú lo toques.
     const aviso = vista.querySelector(`[data-escenaaviso="${id}"]`);
     const tu = tutoraDe(id), web = tu && embedDe(tu.enlace);
@@ -3230,16 +3257,12 @@ window.addEventListener("appinstalled", () => { ofertaDeInstalar = null; if ($("
 function verAjustes(o) {
   const s = A.estadoSinc();
   const esIphone = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-  const archivos = A.archivosDeSucesos();
-  const aparatos = [...new Set(archivos.map((a) => a.aparato))];
   poner(`
   <section class="card">
     <h1 class="h">Ajustes</h1>
-    <h3>Este aparato</h3>
-    <p>Se llama <b>${esc(A.aparato())}</b>. Con ese nombre guarda tus respuestas en tu repositorio.</p>
     <h3>Guardado</h3>
     <p id="ajSinc">${esc(textoSinc(s) || "Todo guardado.")}</p>
-    <div class="go"><button type="button" class="ub" id="ajAlDia">Poner al día ahora</button></div>
+    <div class="go"><button type="button" class="ub" id="ajAlDia">Poner al día ahora</button><button type="button" class="ub" id="ajRecargar">Recargar Pelagos</button></div>
     <p class="small" id="ajAviso" role="status" hidden></p>
   </section>
   <section class="card" id="ajTema">
@@ -3247,69 +3270,51 @@ function verAjustes(o) {
     <nav class="jump dos" aria-label="Modo de color">
       <button type="button" data-tema-ir="claro">Claro</button><button type="button" data-tema-ir="oscuro">Oscuro</button>
     </nav>
-    <p class="small">Cambia todas las páginas de una vez. Se guarda en este aparato.</p>
+    <p class="small">Para todas las páginas, en este aparato.</p>
   </section>
   <section class="card" id="ajAmbiente">
     <h2>Ambiente</h2>
     <nav class="jump dos" aria-label="Ambiente de las fotos">
       <button type="button" data-ambiente-ir="reef">Reef</button><button type="button" data-ambiente-ir="limpio">Limpio</button>
     </nav>
-    <p class="small">Cambia las fotos de todas las páginas: las portadas Reef, el mundo de The Expanse, o Limpio, sin fotos ni dibujos, solo negro o blanco según tu modo de color. Se guarda en este aparato.</p>
+    <p class="small">Reef, con sus fotos, o Limpio, sin fotos. En este aparato.</p>
   </section>
   <section class="card" id="ajVideo">
     <h2>Fondo con movimiento</h2>
-    <p id="ajVideoHay">${videoFondo() ? "Ya tienes un fondo con movimiento." : "Ahora se usa la foto del día."}</p>
-    <div class="go"><label class="ub">Subir un GIF o video<input type="file" id="ajVideoArch" accept=".gif,.mp4,.webm,image/gif,video/mp4,video/webm" hidden></label>
-      <button type="button" class="ub" id="ajVideoTodo" aria-pressed="${movimientoEnTodo()}">${movimientoEnTodo() ? "También en lecciones y tarjetas: Sí" : "También en lecciones y tarjetas: No"}</button>
+    <p id="ajVideoHay"${videoFondo() ? "" : " hidden"}>Tienes un GIF de fondo propio.</p>
+    <div class="go"><button type="button" class="ub" id="ajVideoTodo" aria-pressed="${movimientoEnTodo()}">${movimientoEnTodo() ? "También en lecciones y tarjetas: Sí" : "También en lecciones y tarjetas: No"}</button>
       <button type="button" class="ub" id="ajVideoQuitar"${videoFondo() ? "" : " hidden"}>Quitar el GIF o video</button></div>
-    <p class="small" id="ajVideoAviso" role="status">Un GIF o un video (MP4 o WebM) que se repite sin sonido detrás del Tablero, Gramática y Vocabulario, en lugar de la foto. Mejor de menos de 10 MB. Con «También en lecciones y tarjetas» sale también arriba de cada lección, pregunta y tarjeta de vocabulario, y en las lecciones con tutora sale su clip. Sale en todos tus aparatos. En Limpio, o si tu aparato pide reducir el movimiento, se queda la foto.</p>
+    <p class="small" id="ajVideoAviso" role="status">Con «Sí», cada lección con tutora lleva su loop arriba.</p>
   </section>
   <section class="card" id="ajEscenas">
     <h2>Videos de las tutoras</h2>
-    <p id="ajEscenasHay">Revisando…</p>
-    <div class="go">${V.puedeCarpeta() ? '<button type="button" class="ub" id="ajEscenasCarpeta">Elegir carpeta</button>' : ""}
-      <label class="ub">Importar videos<input type="file" id="ajEscenasArch" accept="video/*,.mp4,.webm,.m4v,.mov" multiple hidden></label></div>
-    <p class="small" id="ajEscenasAviso" role="status">El video completo de cada tutora vive solo en tus aparatos, nunca en GitHub. Cada archivo empieza con el número de su lección, por ejemplo «6010 - Esperanza.mp4». En la computadora eliges tu carpeta «Pelagos videos» una vez. En el celular, pásala por USB y toca «Importar videos».</p>
-    <h3>Tu almacén de Cloudflare</h3>
     <p id="ajNubeHay">Revisando…</p>
-    <div class="campos">
+    <div class="campos" id="ajNubeCampos">
       <label>Access Key ID<input class="campo" type="text" id="ajNubeId" autocomplete="off" spellcheck="false"></label>
       <label>Secret Access Key<input class="campo" type="password" id="ajNubeSecreto" autocomplete="off" spellcheck="false"></label>
       <label>Enlace S3 API<input class="campo" type="url" id="ajNubeUrl" autocomplete="off" spellcheck="false" placeholder="https://….r2.cloudflarestorage.com"></label>
     </div>
-    <div class="go"><button type="button" class="ub" id="ajNubeGuardar">Guardar</button><button type="button" class="ub" id="ajNubeProbar">Probar</button><button type="button" class="ub" id="ajNubeQuitar" hidden>Quitar</button></div>
-    <p class="small" id="ajNubeAviso" role="status">Con tu almacén, «Ver la escena completa» toma el video de Cloudflare en cualquier aparato, sin pasarlo por USB. Usa una llave de R2 de solo lectura («Object Read only») para la cubeta «pelagos-videos». Se guarda en tu repositorio privado: la pones una vez y tus otros aparatos la toman de ahí.</p>
+    <div class="go"><button type="button" class="ub" id="ajNubeGuardar">Guardar</button><button type="button" class="ub" id="ajNubeProbar" hidden>Probar</button><button type="button" class="ub" id="ajNubeQuitar" hidden>Quitar</button></div>
+    <p class="small" id="ajNubeAviso" role="status">Los videos completos salen de tu almacén de Cloudflare, en todos tus aparatos.</p>
   </section>
   <section class="card" id="ajPremios">
     <h2>GIFs de los premios</h2>
-    <p class="small">Cuando ganas un premio, tocas su dibujito en el Tablero y su GIF pasa al fondo. Lo vuelves a tocar y regresa el fondo de siempre.</p>
+    <p class="small">Toca un premio ganado en el Tablero y su GIF pasa al fondo.</p>
     <div class="premiosGif">${PREMIOS.map(([k, nombre, ic]) => `<label class="ub premioSube"><span class="sello ${ic} ok">${SELLOS[ic]}</span><span>${nombre}</span><span class="small" data-premiohay="${k}">${ultimaEscena(salaPremio(k)) ? "✓ Tiene GIF" : "Sin GIF"}</span><input type="file" data-premiosube="${k}" accept=".gif,.mp4,.webm,image/gif,video/mp4,video/webm" hidden></label>`).join("")}</div>
     <p class="small" id="ajPremiosAviso" role="status"></p>
   </section>
-  <section class="card" id="ajApp">
+  ${yaEsApp() ? "" : `<section class="card" id="ajApp">
     <h2>Pelagos como app</h2>
-    ${yaEsApp()
-      ? "<p>Ya la estás usando como app, en su propia ventana.</p>"
-      : `<p>Con su propio ícono y su propia ventana, sin las barras del navegador.</p>
-         <div class="go"><button type="button" class="ub grande" id="ajInstalar"${ofertaDeInstalar ? "" : " hidden"}>Instalar Pelagos</button></div>
-         <p class="small">${esIphone
-           ? "En iPhone: abre esta página en Safari, toca Compartir y luego «Agregar a inicio». Ahí dentro vas a poner tu llave otra vez, una sola vez."
-           : "Si no ves el botón: en el menú de tu navegador busca «Instalar Pelagos» o «Agregar a la pantalla principal»."}</p>`}
-    <div class="go"><button type="button" class="ub" id="ajRecargar">Recargar Pelagos</button></div>
-  </section>
+    <div class="go"><button type="button" class="ub grande" id="ajInstalar"${ofertaDeInstalar ? "" : " hidden"}>Instalar Pelagos</button></div>
+    <p class="small">${esIphone ? "En Safari: Compartir, «Agregar a inicio»." : "Si no ves el botón: menú del navegador, «Instalar Pelagos»."}</p>
+  </section>`}
   <section class="card" id="ajPiezas">
     <h2>Estado de las lecciones</h2>
     ${graficaPiezas()}
   </section>
   <section class="card">
-    <h2>Lo que hay</h2>
-    <p>${P.temas.length} temas, ${P.temas.filter((t) => t.leccion).length} con lección, ${plural(P.preguntas.length, "pregunta", "preguntas")}, ${plural(tarjetas.size, "palabra de vocabulario", "palabras de vocabulario")}.</p>
-    <p>${plural(E.respuestas, "respuesta tuya", "respuestas tuyas")} en ${plural(E.kwizzes.size, "quiz", "quizzes")}${aparatos.length ? `, desde ${plural(aparatos.length, "aparato", "aparatos")}: ${aparatos.map(esc).join(", ")}` : ""}.</p>
-    <p class="small">Contenido: versión ${esc(P.huella || "sin número")}.</p>
-  </section>
-  <section class="card">
     <h2>La llave</h2>
-    <p>Quitarla cierra Pelagos en este aparato y borra de aquí las copias de tus lecciones. Tu avance sigue en tu repositorio.</p>
+    <p class="small">Cierra Pelagos en este aparato. Tu avance sigue en tu repositorio.</p>
     <div class="go"><button type="button" class="ub" id="ajQuitar">Quitar la llave de este aparato</button></div>
     <p id="ajSeguro" hidden>${s.pendientes ? `Ojo: falta subir tu avance (${s.pendientes}). Se queda guardado aquí y sube cuando pongas la llave otra vez. ` : ""}¿La quito? <button type="button" class="lk" id="ajSi">Sí, quítala</button> · <button type="button" class="lk" id="ajNo">No</button></p>
   </section>`, { titulo: "Ajustes · Pelagos", conserva: o.conserva });
@@ -3342,17 +3347,10 @@ function verAjustes(o) {
   const avisoVideo = (t) => { $("ajVideoAviso").textContent = t; };
   const listoVideo = (l) => {
     videosFondo = l;
-    $("ajVideoHay").textContent = videoFondo() ? "Ya tienes un fondo con movimiento." : "Ahora se usa la foto del día.";
+    $("ajVideoHay").hidden = !videoFondo();
     $("ajVideoQuitar").hidden = !videoFondo();
   };
-  $("ajVideoArch").addEventListener("change", async (ev) => {
-    const f = ev.target.files && ev.target.files[0];
-    ev.target.value = "";
-    if (!f) return;
-    avisoVideo("Subiendo el video…");
-    try { listoVideo(await A.escenaSubir("inicio", f, "Fondo del Tablero")); avisoVideo("¡Listo! Ve al Tablero para verlo."); }
-    catch (e) { avisoVideo(e && e.message ? e.message : "No se pudo subir el video."); }
-  });
+
   // Los GIFs de los premios: uno por premio; el nuevo reemplaza al anterior.
   for (const inp of vista.querySelectorAll("[data-premiosube]")) {
     inp.addEventListener("change", async () => {
@@ -3371,14 +3369,14 @@ function verAjustes(o) {
       } catch (e) { aviso.textContent = e && e.message ? e.message : "No se pudo subir el GIF."; }
     });
   }
-  const escenasHay = async () => {
-    const c = await V.nombreCarpeta(), n = await V.cuantosImportados();
-    if ($("ajEscenasHay")) $("ajEscenasHay").textContent = [c ? "Carpeta: «" + c + "»." : "", n ? plural(n, "video guardado", "videos guardados") + " en este aparato." : ""].filter(Boolean).join(" ") || "Todavía no hay videos en este aparato.";
-  };
+
   const nubeHay = async (fresco) => {
     const d = await datosNube(fresco);
     if ($("ajNubeHay")) $("ajNubeHay").textContent = d ? "Conectado al almacén «" + d.cubeta + "» (llave " + d.id.slice(0, 6) + "…)." : "Todavía no conectas tu almacén.";
     if ($("ajNubeQuitar")) $("ajNubeQuitar").hidden = !d;
+    if ($("ajNubeProbar")) $("ajNubeProbar").hidden = !d;
+    if ($("ajNubeCampos")) $("ajNubeCampos").hidden = !!d;
+    if ($("ajNubeGuardar")) $("ajNubeGuardar").hidden = !!d;
   };
   nubeHay(true);
   const nubeAviso = (t) => { if ($("ajNubeAviso")) $("ajNubeAviso").textContent = t; };
@@ -3413,22 +3411,6 @@ function verAjustes(o) {
     nubeAviso("Quitando…");
     try { await A.nubeGuardar(null); nubeDatos = null; nubeAviso("Listo. Pelagos ya no usa tu almacén."); } catch (e) { nubeAviso(e && e.message ? e.message : "No se pudo quitar."); }
     nubeHay(false);
-  });
-  escenasHay();
-  if ($("ajEscenasCarpeta")) $("ajEscenasCarpeta").addEventListener("click", async () => {
-    try { await V.elegirCarpeta(); $("ajEscenasAviso").textContent = "Listo. Pelagos ya sabe dónde están tus videos."; } catch { /* no eligió */ }
-    escenasHay();
-  });
-  $("ajEscenasArch").addEventListener("change", async (ev) => {
-    const archivos = [...(ev.target.files || [])];
-    if (!archivos.length) return;
-    $("ajEscenasAviso").textContent = "Guardando " + plural(archivos.length, "video", "videos") + "…";
-    try {
-      const n = await V.importar(archivos);
-      $("ajEscenasAviso").textContent = n ? "Listo: " + plural(n, "video guardado", "videos guardados") + "." : "Ninguno empezaba con el número de su lección. Ejemplo: «6010 - Esperanza.mp4».";
-    } catch { $("ajEscenasAviso").textContent = "Este aparato no dejó guardar los videos. Puede que no tenga espacio."; }
-    ev.target.value = "";
-    escenasHay();
   });
   $("ajVideoTodo").addEventListener("click", () => {
     const si = !movimientoEnTodo();
