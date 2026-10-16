@@ -30,7 +30,7 @@ export const ACIERTOS_PARA_SALIR = 2;
 export const NUEVAS_AL_DIA = 20;                 // cuántas tarjetas nuevas entran al día, como mucho
 // Tarjeta atascada (16-Oct-2026, como las «leech» de Anki): la que ya sabías y has vuelto a fallar tantas veces.
 // Cada fallo de una tarjeta ya aprendida es un lapso; varios fallos el mismo día cuentan uno. Al editarla, vuelve a cero.
-export const LAPSOS_ATASCADA = 8;
+export const LAPSOS_ATASCADA = 6;
 
 // ---------------------------------------------------------------- El porcentaje
 
