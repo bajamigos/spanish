@@ -28,9 +28,6 @@ export const LISTA = 5;
 export const KWIZZES_AL_DIA = 5;                 // la medida diaria de kwizzes
 export const ACIERTOS_PARA_SALIR = 2;
 export const NUEVAS_AL_DIA = 20;                 // cuántas tarjetas nuevas entran al día, como mucho
-// Tarjeta atascada (16-Oct-2026, como las «leech» de Anki): la que ya sabías y has vuelto a fallar tantas veces.
-// Cada fallo de una tarjeta ya aprendida es un lapso; varios fallos el mismo día cuentan uno. Al editarla, vuelve a cero.
-export const LAPSOS_ATASCADA = 6;
 
 // ---------------------------------------------------------------- El porcentaje
 
@@ -60,9 +57,6 @@ export function textoPct(valor) {
 }
 
 // ---------------------------------------------------------------- El mapa de árbol
-
-/** ¿Está atascada esta tarjeta? (LAPSOS_ATASCADA lapsos o más, y no la quitaste.) */
-export const atascada = (s) => !!s && !s.quitada && (s.lapsos | 0) >= LAPSOS_ATASCADA;
 
 /** Los seis colores del mapa, del más bajo al más alto. */
 export const FRANJAS = ["Menos de 60", "60 a 69", "70 a 79", "80 a 89", "90 a 99", "100"];
@@ -286,7 +280,8 @@ export function calcular(paquete, sucesos) {
   const dadas = new Set();
   const dejados = new Set();
   const absueltas = new Map();  // pregunta -> cuándo dijiste «la fallé yo» (ver sospechosasDe)
-  const destrabes = new Map();  // tema -> [{ ms, como }]: cuándo lo destrabaste a mano (ver atorados)
+  const destrabes = new Map();  // tema -> [{ ms, como }]: cuándo lo destrabaste a mano (ver atascados)
+  const destrabesTj = new Map(); // tarjeta -> [{ ms, como }]: la editaste o tocaste «Seguir así»
   let enfoque = null;          // el nivel en el que te enfocas («A2»), o null si van todos los niveles
 
   // Las tarjetas. Cada una sube por la misma escalera de días que los temas. Una tarjeta que viene de otro
@@ -301,7 +296,7 @@ export function calcular(paquete, sucesos) {
     const baseBien = Number.isInteger(c.aciertos) && c.aciertos > 0 ? Math.min(c.aciertos, baseN) : 0;
     tarjetas.set(c.id, {
       escalon: toca ? Math.max(0, Math.min(ESCALONES.length - 1, c.escalon | 0)) : 0, toca, traia: !!toca, n: 0, bien: 0, primera: null, ultima: null, fallada: null,
-      historia: [], baseN, baseBien, quitada: false, cambio: null, lapsos: 0,
+      historia: [], baseN, baseBien, quitada: false, cambio: null,
     });
   }
   const agregadas = [];        // las tarjetas que agregaste a mano: no vienen en el contenido, viven en tus sucesos
@@ -333,10 +328,7 @@ export function calcular(paquete, sucesos) {
       c.historia.push({ cuando: e.cuando, bien: !!e.bien });
       cuenta(e.cuando);
       actividadVoc.set(dia, (actividadVoc.get(dia) || 0) + 1);
-      if (!e.bien) {
-        if ((c.traia || c.bien > 0) && c.fallada !== dia) c.lapsos++;                    // ya la sabías: es un lapso (uno por día)
-        c.escalon = 0; c.toca = dia; c.fallada = dia;
-      }                     // fallada: vuelve a salir hoy mismo
+      if (!e.bien) { c.escalon = 0; c.toca = dia; c.fallada = dia; }                     // fallada: vuelve a salir hoy mismo                     // fallada: vuelve a salir hoy mismo
       else {
         c.bien++;
         if (c.fallada === dia) { c.escalon = 0; c.toca = sumarDias(dia, ESCALONES[0]); c.fallada = null; }      // la rescataste hoy: mañana otra vez
@@ -347,14 +339,14 @@ export function calcular(paquete, sucesos) {
       const texto = limpiarCambio(e);
       if (typeof e.tarjeta !== "string" || !/^[A-Za-z0-9_-]{1,40}$/.test(e.tarjeta) || tarjetas.has(e.tarjeta) || !texto || !texto.frente || !texto.reverso) continue;
       agregadas.push({ id: e.tarjeta, mazo: "A mano", frente: texto.frente, reverso: texto.reverso, agregada: fechaLocal(e.cuando) });
-      tarjetas.set(e.tarjeta, { escalon: 0, toca: null, traia: false, n: 0, bien: 0, primera: null, ultima: null, fallada: null, historia: [], baseN: 0, baseBien: 0, quitada: false, cambio: null, lapsos: 0 });
+      tarjetas.set(e.tarjeta, { escalon: 0, toca: null, traia: false, n: 0, bien: 0, primera: null, ultima: null, fallada: null, historia: [], baseN: 0, baseBien: 0, quitada: false, cambio: null });
     } else if (e.t === "tjq") {
       const c = tarjetas.get(e.tarjeta);
       if (c) c.quitada = !(e.quitar === 0 || e.quitar === false);        // quitar: 0 la devuelve
     } else if (e.t === "tje") {
       const c = tarjetas.get(e.tarjeta);
       const cambio = c && limpiarCambio(e);
-      if (cambio) { c.cambio = { ...(c.cambio || {}), ...cambio }; c.lapsos = 0; }     // vale lo último que corregiste; editada, ya no está atascada
+      if (cambio) { c.cambio = { ...(c.cambio || {}), ...cambio }; marcarDestrabe(destrabesTj, e.tarjeta, e, "editar"); }     // vale lo último que corregiste; editada, se destraba
     } else if (e.t === "nota") {
       const sobre = typeof e.sobre === "string" && /^[a-z]+:[A-Za-z0-9_-]{1,40}$/.test(e.sobre) ? e.sobre : null;
       const texto = typeof e.texto === "string" ? e.texto.replace(/\r/g, "").trim().slice(0, NOTA_MAX) : "";
@@ -370,11 +362,8 @@ export function calcular(paquete, sucesos) {
     } else if (e.t === "enfoque") enfoque = typeof e.nivel === "string" && e.nivel ? e.nivel : null;
     else if (e.t === "retirar" && e.p) retiradas.add(e.p);
     else if (e.t === "absolver" && e.p) absueltas.set(e.p, ms(e));       // «Está bien, la fallé yo»: la sospecha empieza de cero
-    else if (e.t === "destrabar" && e.tema != null) {                    // leíste la lección de un tema atorado, o «Seguir así»
-      const t = Number(e.tema);
-      if (!destrabes.has(t)) destrabes.set(t, []);
-      destrabes.get(t).push({ ms: ms(e), como: e.como || "" });
-    }
+    else if (e.t === "destrabar" && e.tema != null) marcarDestrabe(destrabes, Number(e.tema), e, e.como);      // leíste la lección de un tema atascado, o «Seguir así»
+    else if (e.t === "destrabar" && typeof e.tarjeta === "string") marcarDestrabe(destrabesTj, e.tarjeta, e, e.como);   // «Seguir así» con una tarjeta
     else if (e.t === "dejar" && e.kwiz) dejados.add(e.kwiz);
     else if (e.t === "otra" && e.kwiz && typeof e.slot === "string" && /^[^~]+~\d+$/.test(e.slot)) {
       // «Otra vez»: la pregunta fallada vuelve más adelante en el mismo kwiz, como «<id>~2», antes de `antes` (o al final).
@@ -477,7 +466,7 @@ export function calcular(paquete, sucesos) {
 
   const sospechosas = sospechosasDe(respuestas, retiradas, absueltas);
 
-  return { sospechosas, absueltas, destrabes, todas: respuestas, temas, kwizzes, retiradas, ultimaVez, respuestas: respuestas.length, porTema, parametros, debe, fallada, enfoque, tarjetas, fotosTarjeta, agregadas, actividad, actividadVoc, actividadGram, notas, porVer };
+  return { sospechosas, absueltas, destrabes, destrabesTj, todas: respuestas, temas, kwizzes, retiradas, ultimaVez, respuestas: respuestas.length, porTema, parametros, debe, fallada, enfoque, tarjetas, fotosTarjeta, agregadas, actividad, actividadVoc, actividadGram, notas, porVer };
 }
 
 // ---------------------------------------------------------------- Preguntas sospechosas y temas atorados (16-Oct-2026)
@@ -509,41 +498,72 @@ function sospechosasDe(respuestas, retiradas, absueltas) {
   return lista.sort((a, b) => (a.ultima < b.ultima ? 1 : -1));
 }
 
-/** Un tema se atora si lo fallaste en ATORADO_KWIZZES kwizzes distintos en los últimos ATORADO_DIAS días.
- *  Se destraba (la cuenta empieza de cero) al leer su lección, al terminar su kwiz con la tutora,
- *  al acertarlo ACIERTOS_PARA_SALIR veces seguidas, o con «Seguir así».
- *  Devuelve Map tema -> { kwizzes: n, desde: "AAAA-MM-DD" }. */
-export const ATORADO_KWIZZES = 3, ATORADO_DIAS = 7;
-export function atorados(estado, hoy = fechaLocal(new Date())) {
-  const limite = Date.parse(hoy + "T00:00:00") - (ATORADO_DIAS - 1) * 864e5;
-  const desde = new Map();          // tema -> ms desde el que cuenta
-  for (const [t, l] of estado.destrabes || []) for (const d of l) desde.set(t, Math.max(desde.get(t) || 0, d.ms));
+/**
+ * Atascados (16-Oct-2026): la misma regla para tarjetas y temas, como las «leech» de Anki.
+ * Algo se atasca si lo fallas en ATASCADO_FALLOS quizzes distintos en los últimos ATASCADO_DIAS días.
+ * En vocabulario el quiz es el del día (los reintentos del mismo día cuentan uno); en gramática, cada quiz cuenta aparte.
+ * Cuenta aunque nunca lo hayas acertado en Pelagos (tus temas traen Kwiziq y tus tarjetas, Anki).
+ * Se destraba (la cuenta empieza de cero) al arreglarlo (editar la tarjeta; leer la lección o terminar el kwiz con la
+ * tutora del tema), al acertarlo ACIERTOS_PARA_SALIR veces seguidas en días distintos, o con «Seguir así».
+ */
+export const ATASCADO_FALLOS = 3, ATASCADO_DIAS = 7;
+
+function marcarDestrabe(mapa, clave, e, como) {
+  if (!mapa.has(clave)) mapa.set(clave, []);
+  mapa.get(clave).push({ ms: ms(e), como: como || "" });
+}
+
+/** intentos: [{ clave, ms, dia, bien, sesion }] en orden; desde: Map clave -> ms del último destrabe. Devuelve Map clave -> { fallos, dias }. */
+function atascadosDe(intentos, desde, hoy) {
+  const limite = Date.parse(hoy + "T00:00:00") - (ATASCADO_DIAS - 1) * 864e5;
+  const racha = new Map(), fallos = new Map();          // racha: clave -> { n, dia } de aciertos seguidos en días distintos
+  for (const x of intentos) {
+    if (x.bien) {
+      const r = racha.get(x.clave) || { n: 0, dia: null };
+      if (r.dia !== x.dia) { r.n++; r.dia = x.dia; }
+      racha.set(x.clave, r);
+      if (r.n >= ACIERTOS_PARA_SALIR) desde.set(x.clave, Math.max(desde.get(x.clave) || 0, x.ms));
+    } else {
+      racha.set(x.clave, { n: 0, dia: null });
+      if (!fallos.has(x.clave)) fallos.set(x.clave, []);
+      fallos.get(x.clave).push(x);
+    }
+  }
+  const salida = new Map();
+  for (const [clave, l] of fallos) {
+    const corte = Math.max(limite, desde.get(clave) || 0);
+    const n = new Set(l.filter((x) => x.ms > corte).map((x) => x.sesion)).size;
+    if (n >= ATASCADO_FALLOS) salida.set(clave, { fallos: n, dias: ATASCADO_DIAS });
+  }
+  return salida;
+}
+
+const ultimoDestrabe = (mapa) => new Map([...(mapa || [])].map(([k, l]) => [k, Math.max(0, ...l.map((d) => d.ms))]));
+
+/** Los temas atascados: Map tema -> { fallos, dias }. */
+export function temasAtascados(estado, hoy = fechaLocal(new Date())) {
+  const desde = ultimoDestrabe(estado.destrabes);
   for (const k of estado.kwizzes.values()) {
     if (k.tipo === "tutora" && k.terminado && k.tema != null) {
       const t = Number(k.tema), m = Date.parse(k.terminado);
       desde.set(t, Math.max(desde.get(t) || 0, m));
     }
   }
-  const seguidas = new Map(), fallos = new Map();
-  for (const r of estado.todas || []) {
-    if (estado.retiradas.has(r.p)) continue;
-    if (r.bien) {
-      const n = (seguidas.get(r.tema) || 0) + 1;
-      seguidas.set(r.tema, n);
-      if (n >= ACIERTOS_PARA_SALIR) desde.set(r.tema, Math.max(desde.get(r.tema) || 0, ms(r)));
-    } else {
-      seguidas.set(r.tema, 0);
-      if (!fallos.has(r.tema)) fallos.set(r.tema, []);
-      fallos.get(r.tema).push(r);
-    }
+  const intentos = (estado.todas || []).filter((r) => !estado.retiradas.has(r.p))
+    .map((r) => ({ clave: r.tema, ms: ms(r), dia: fechaLocal(new Date(ms(r))), bien: !!r.bien, sesion: r.kwiz }));
+  return atascadosDe(intentos, desde, hoy);
+}
+
+/** Las tarjetas atascadas: Map tarjeta -> { fallos, dias }. Las quitadas no cuentan. */
+export function tarjetasAtascadas(estado, hoy = fechaLocal(new Date())) {
+  const desde = ultimoDestrabe(estado.destrabesTj);
+  const intentos = [];
+  for (const [id, c] of estado.tarjetas || []) {
+    if (c.quitada) continue;
+    for (const h of c.historia) { const dia = fechaLocal(h.cuando); intentos.push({ clave: id, ms: Date.parse(h.cuando), dia, bien: h.bien, sesion: dia }); }
   }
-  const salida = new Map();
-  for (const [t, l] of fallos) {
-    const corte = Math.max(limite, desde.get(t) || 0);
-    const kw = new Set(l.filter((r) => ms(r) > corte).map((r) => r.kwiz));
-    if (kw.size >= ATORADO_KWIZZES) salida.set(t, { kwizzes: kw.size, dias: ATORADO_DIAS });
-  }
-  return salida;
+  intentos.sort((a, b) => a.ms - b.ms);
+  return atascadosDe(intentos, desde, hoy);
 }
 
 // ---------------------------------------------------------------- El mapa de calor

@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=beaecd17d8";
-import * as A from "./almacen.js?v=beaecd17d8";
-import { abrirRecorrido } from "./recorrido.js?v=beaecd17d8";
-import * as V from "./videos.js?v=beaecd17d8";
-import * as NB from "./nube.js?v=beaecd17d8";
-import * as CL from "./clases.js?v=beaecd17d8";
-import { abrirPractica } from "./practica.js?v=beaecd17d8";
-import * as F from "./fondo.js?v=beaecd17d8";
+import * as N from "./nucleo.js?v=4c80ae3692";
+import * as A from "./almacen.js?v=4c80ae3692";
+import { abrirRecorrido } from "./recorrido.js?v=4c80ae3692";
+import * as V from "./videos.js?v=4c80ae3692";
+import * as NB from "./nube.js?v=4c80ae3692";
+import * as CL from "./clases.js?v=4c80ae3692";
+import { abrirPractica } from "./practica.js?v=4c80ae3692";
+import * as F from "./fondo.js?v=4c80ae3692";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -159,9 +159,17 @@ function entradas(seccion, actual) {
 const contrastesDe = (id) => (P.contrastes || []).filter((c) => c.temas.includes(id));
 
 /** Un tema como botón de dos líneas. Con lección, lleva a ella; sin lección, sube la vista previa. */
+/** Los temas atascados de ahora, una vez por cálculo (botonTema los pide muchas veces). */
+const memoAtascados = new WeakMap();
+function temasAtascadosAhora() {
+  if (!E) return new Map();
+  if (!memoAtascados.has(E)) memoAtascados.set(E, N.temasAtascados(E));
+  return memoAtascados.get(E);
+}
 function botonTema(t, { nivel = true, sub = "", anchoNombre = false, ingles = false } = {}) {
   const i = info(t.id);
-  const abre = t.slug && t.leccion ? `<a class="tb" href="#/leccion/${esc(t.slug)}">` : `<button type="button" class="tb" data-l="${t.id}">`;
+  const tb = temasAtascadosAhora().has(t.id) ? "tb atas" : "tb";
+  const abre = t.slug && t.leccion ? `<a class="${tb}" href="#/leccion/${esc(t.slug)}">` : `<button type="button" class="${tb}" data-l="${t.id}">`;
   const cierra = t.slug && t.leccion ? "</a>" : "</button>";
   const html = abre +
     (nivel ? `<span class="lv">${esc(t.nivel)}</span>` : "") +
@@ -309,7 +317,7 @@ const RUTAS = [
   [/^\/gramatica\/quiz\/([A-Za-z0-9_-]+)$/, verPregunta],
   [/^\/gramatica\/quiz\/([A-Za-z0-9_-]+)\/resultado$/, verResultado],
   [/^\/gramatica\/atlas$/, verMapa],
-  [/^\/gramatica\/([a-z0-9]+)(\/bajo|\/mision)?$/, verNivel],
+  [/^\/gramatica\/([a-z0-9]+)(\/bajo|\/mision|\/atascados)?$/, verNivel],
   [/^\/bitacora$/, verCalor],
   [/^\/clases$/, verClases],
   [/^\/lectura$/, (o) => verLectura(o)],
@@ -958,7 +966,8 @@ function verBiblioteca(o) {
 function verNivel(o, clave, filtro) {
   const nivel = clave.toUpperCase();
   if (!NIVELES[nivel]) return verNoExiste();
-  const soloBajo = filtro === "/bajo", soloMision = CON_RECORRIDO && filtro === "/mision";
+  const soloBajo = filtro === "/bajo", soloMision = CON_RECORRIDO && filtro === "/mision", soloAtas = filtro === "/atascados";
+  const atasT = temasAtascadosAhora();
   const cola = filtro || "";
   const st = estadoMisiones();
   const conMision = (t) => misionesDeTema(t.id).some((m) => st.get(m.id).activa);
@@ -971,6 +980,7 @@ function verNivel(o, clave, filtro) {
     const i = info(t.id);
     if (soloBajo && !esBajo(i.pct)) continue;
     if (soloMision && !conMision(t)) continue;
+    if (soloAtas && !atasT.has(t.id)) continue;
     const nombre = CATEGORIAS[t.categoria] || t.categoria;
     if (!categorias.length || categorias[categorias.length - 1].nombre !== nombre) categorias.push({ nombre, temas: [], bajo: 0 });
     categorias[categorias.length - 1].temas.push(t);
@@ -985,9 +995,10 @@ function verNivel(o, clave, filtro) {
   <header class="card">
     <h1 class="h">${nivel} · ${NIVELES[nivel]}</h1>
     <p>${suyos.length} temas. ${bajo} bajo ${meta()}%.</p>
-    <nav class="jump ${CON_RECORRIDO ? "tres" : "dos"}" aria-label="Qué temas mostrar">
-      <a href="#/gramatica/${clave}"${soloBajo || soloMision ? "" : ' aria-current="page"'}>Todos</a>
+    <nav class="jump tres" aria-label="Qué temas mostrar">
+      <a href="#/gramatica/${clave}"${soloBajo || soloMision || soloAtas ? "" : ' aria-current="page"'}>Todos</a>
       <a href="#/gramatica/${clave}/bajo"${soloBajo ? ' aria-current="page"' : ""}>Bajo ${meta()}%</a>
+      <a href="#/gramatica/${clave}/atascados"${soloAtas ? ' aria-current="page"' : ""}>Atascados${(() => { const n = suyos.filter((t) => atasT.has(t.id)).length; return n ? " " + n : ""; })()}</a>
       ${CON_RECORRIDO ? `<a href="#/gramatica/${clave}/mision"${soloMision ? ' aria-current="page"' : ""}>Misión activa</a>` : ""}
     </nav>
   </header>
@@ -1001,7 +1012,7 @@ function verNivel(o, clave, filtro) {
       const boton = botonTema(t, { nivel: false, anchoNombre: true, ingles: true, sub });
       return luz ? `<div class="tb-mision">${boton}${luz}</div>` : boton;
     }).join("")}</div>
-  </details>`).join("") : `<section class="card"><p>${soloMision ? `Ningún tema de ${nivel} tiene una misión prendida. Prende una con la lucecita que sale junto a sus temas.` : `Ningún tema de ${nivel} está bajo ${meta()}%.`}</p></section>`}`),
+  </details>`).join("") : `<section class="card"><p>${soloMision ? `Ningún tema de ${nivel} tiene una misión prendida. Prende una con la lucecita que sale junto a sus temas.` : soloAtas ? `Ningún tema de ${nivel} está atascado. Bien.` : `Ningún tema de ${nivel} está bajo ${meta()}%.`}</p></section>`}`),
   {
     titulo: nivel + " · Lecciones de gramática · Pelagos", nav: "gramatica", conserva: o.conserva,
     pie: (CON_RECORRIDO ? "<p>La lucecita junto a un tema prende o apaga su misión en el Recorrido de Ganímedes.</p>" : "") + "<p>Toca una categoría para abrirla. Los temas en inglés todavía no tienen lección propia: llevan el nombre que les da Kwiziq.</p><p>Un porcentaje sin número de respuestas es tu arranque de Kwiziq.</p><p>Cada tema lleva seis marcas: lección, tutora (con su nombre), video completo, loop, voz y preguntas. La marca llena es que ya está lista; la punteada, que falta. El video completo cuenta lo que hay en este aparato (tu carpeta «Pelagos videos» o los importados); el loop y la voz, lo que ya está subido. Se llenan solas conforme llegan.</p>",
@@ -1253,7 +1264,7 @@ function verTarjetas(o) {
         <div class="score"><div class="track" role="img" aria-label="Llevas ${hechas} de ${total}"><i data-w="${100 * hechas / total}"></i></div></div>
         ${enAdelanto ? htmlNivel(nivelDe(antes)) : lineaDeVocabulario(dia, c.id, antes)}
         ${renglonConLapiz("frente", c.frente, "h1", "cue", ' id="cue"')}
-        ${N.atascada(antes) ? `<p class="tjAtas">Atascada · ${antes.lapsos} lapsos · <button type="button" class="lk" data-v="${esc(c.id)}">Ver su ficha</button></p>` : ""}
+        ${(() => { const at = N.tarjetasAtascadas(E).get(c.id); return at ? `<p class="tjAtas">Atascada · fallada en ${at.fallos} quizzes esta semana · <button type="button" class="lk" data-v="${esc(c.id)}">Ver su ficha</button></p>` : ""; })()}
       </div>
       <div class="rule tjResp" id="tjResp" tabindex="-1" aria-live="polite" hidden>
         <ul class="exs"><li class="ex">${renglonConLapiz("reverso", c.reverso, "span", "es", ' id="vResp"')}</li></ul>
@@ -1825,7 +1836,8 @@ function verLista(o) {
   let sinVer = 0;
   for (const x of vivas) { const k = N.colorDe({ ...x.s, pct: x.pct }); if (k === null) sinVer++; else cuenta[k]++; }
   const tocan = N.tarjetasDelDia(P, E, hoy).pendientes.length;
-  const nAtas = vivas.filter((x) => N.atascada(x.s)).length;
+  const atasTj = N.tarjetasAtascadas(E, hoy);
+  const nAtas = vivas.filter((x) => atasTj.has(x.id)).length;
   if (!nAtas) lvAtascadas = false;
   const fondo = fondoDelDia();
   const abiertas = !!vista.querySelector("#lvQuitadas[open]");
@@ -1867,16 +1879,16 @@ function verLista(o) {
   campo.value = lvBusca;
   function celdas() {
     const q = paraBuscar(lvBusca);
-    const base = lvAtascadas ? vivas.filter((x) => N.atascada(x.s)) : vivas;
+    const base = lvAtascadas ? vivas.filter((x) => atasTj.has(x.id)) : vivas;
     const salen = (q ? base.filter((x) => [x.c.reverso, x.c.frente].some((t) => paraBuscar(t).includes(q))) : base.slice()).sort(ORDENAR[lvOrden] || alfabeto);
     $("lvCeldas").innerHTML = salen.slice(0, lvCuantas).map((x) => {
       const f = N.colorDe({ ...x.s, pct: x.pct });
-      const atas = N.atascada(x.s);
+      const atas = atasTj.has(x.id);
       return `<button type="button" class="vc ${f === null ? "kx" : "k" + f}${atas ? " atas" : ""}" data-v="${esc(x.id)}" lang="es-MX" aria-label="${esc(x.c.reverso)}: ${f === null ? "sin ver" : `peldaño ${f + 1}, ${x.pct === null ? "sin aciertos todavía" : pct(x.pct) + " de aciertos"}`}${atas ? ", atascada" : ""}">${esc(x.c.reverso)}</button>`;
     }).join("");
     $("lvCuenta").textContent = !vivas.length ? "Todavía no hay palabras en tu vocabulario."
       : q ? (salen.length ? `${salen.length} de ${vivas.length} con «${lvBusca.trim()}».` : `Ninguna palabra con «${lvBusca.trim()}».`)
-        : lvAtascadas ? `${plural(salen.length, "palabra atascada", "palabras atascadas")}: las fallaste ${N.LAPSOS_ATASCADA} veces o más después de saberlas. Toca una para editarla o quitarla.`
+        : lvAtascadas ? `${plural(salen.length, "palabra atascada", "palabras atascadas")}: las fallaste en ${N.ATASCADO_FALLOS} quizzes distintos en ${N.ATASCADO_DIAS} días. Toca una para editarla, seguir así o quitarla.`
         : "Toca una palabra para ver su traducción y cómo te ha ido con ella.";
     $("lvMas").hidden = salen.length <= lvCuantas;
     $("lvMas").textContent = `Ver más (faltan ${salen.length - lvCuantas})`;
@@ -2032,6 +2044,7 @@ function abrirPalabra(id) {
   const cruda = tarjetas.get(id), s = E && E.tarjetas.get(id);
   if (!cruda || !s) return;
   const c = N.tarjetaVista(cruda, s), v = N.aciertoDeTarjeta(s), hoy = N.fechaLocal(new Date());
+  const atasF = N.tarjetasAtascadas(E, hoy).get(id);
   const n = s.baseN + s.n, bien = s.baseBien + s.bien;
   const ultimos = s.historia.slice(-REPASOS_A_LA_VISTA);
   const buenos = ultimos.filter((h) => h.bien).length;
@@ -2051,11 +2064,10 @@ function abrirPalabra(id) {
     c.agregada ? ["Agregada", "El " + fechaCorta(c.agregada)] : null,
     s.n ? ["En Pelagos", `${plural(s.n, "repaso", "repasos")}, ${s.bien} bien`] : null,
     s.baseN ? ["Antes de Pelagos", `${plural(s.baseN, "repaso", "repasos")}, ${s.baseBien} bien`] : null,
-    s.lapsos ? ["Lapsos", `${s.lapsos} de ${N.LAPSOS_ATASCADA}${N.atascada(s) ? ": atascada" : ""}`] : null,
   ].filter(Boolean);
   $("hvIn").innerHTML = `
     <span class="k">Vocabulario · ${esc(cuandoToca(s, hoy))}</span>
-    ${N.atascada(s) ? `<p class="atasAviso" role="note">Atascada: la fallaste ${s.lapsos} veces después de saberla. Corrígela con el lápiz, pártela en dos o quítala. Al editarla, la cuenta vuelve a cero.</p>` : ""}
+    ${atasF ? `<div class="atasAviso" role="note"><p>Atascada: la fallaste en ${atasF.fallos} quizzes distintos en los últimos ${atasF.dias} días. Corrígela con el lápiz, pártela en dos o quítala. Se destraba al editarla, al acertarla ${N.ACIERTOS_PARA_SALIR} veces seguidas en días distintos o con «Seguir así».</p><div class="go"><button type="button" class="ub" id="hvSeguir">Seguir así</button></div></div>` : ""}
     <ul class="exs"><li class="ex">${renglonConLapiz("reverso", c.reverso, "h2", "es", ' id="hvT" tabindex="-1"')}${renglonConLapiz("frente", c.frente, "span", "en")}</li></ul>
     <div class="sc"><span>Aciertos: ${v === null ? "todavía sin datos" : `${pct(v)} · ${bien} de ${n}`}</span>${v === null ? "" : barra(v)}</div>
     ${grafica}
@@ -2073,6 +2085,12 @@ function abrirPalabra(id) {
   if ($("hvQuitar")) $("hvQuitar").addEventListener("click", () => { $("hvSeguro").hidden = false; $("hvNo").focus(); });
   if ($("hvDevolver")) $("hvDevolver").addEventListener("click", () => quitarPalabra(id, false));
   $("hvNo").addEventListener("click", () => { $("hvSeguro").hidden = true; });
+  if ($("hvSeguir")) $("hvSeguir").addEventListener("click", () => {
+    A.apuntar({ t: "destrabar", id: N.nuevoId("b"), tarjeta: id, como: "seguir", cuando: new Date().toISOString() });
+    recalcular();
+    pintar({ conserva: true });
+    abrirPalabra(id);
+  });
   $("hvSi").addEventListener("click", () => quitarPalabra(id, true));
   if (!hojaV.hasAttribute("open")) { if (hojaV.showModal) hojaV.showModal(); else hojaV.setAttribute("open", ""); }
   $("hvT").focus({ preventScroll: true });
@@ -2192,8 +2210,8 @@ function verLeccion(o, slug) {
   const tema = porSlug.get(slug);
   if (!tema) return verNoExiste();
   if (o.conserva && vista.dataset.leccion === slug) return;      // ya está en pantalla: no se mueve mientras lees
-  // Abrir la lección de un tema atorado lo destraba: la cuenta de fallas empieza de cero.
-  if (N.atorados(E).has(tema.id)) { A.apuntar({ t: "destrabar", id: N.nuevoId("b"), tema: tema.id, como: "leccion", cuando: new Date().toISOString() }); recalcular(); }
+  // Abrir la lección de un tema atascado lo destraba: la cuenta de fallas empieza de cero.
+  if (N.temasAtascados(E).has(tema.id)) { A.apuntar({ t: "destrabar", id: N.nuevoId("b"), tema: tema.id, como: "leccion", cuando: new Date().toISOString() }); recalcular(); }
   poner(`<section class="card"><h1 class="h">${esc(tema.titulo)}</h1><p>Abriendo la lección…</p></section>`,
     { titulo: tema.titulo + " · Pelagos", nav: "gramatica" });
   const turno = turnoDePintar;
@@ -2729,25 +2747,25 @@ function lineaDelPlan(t, lista, banco) {
   const i = info(t.id), motivo = motivoEnLista(t, lista);
   const tu = tutoraDe(t.id), n = banco.get(t.id) || 0;
   const corto = [tu ? tu.tutora.split(",")[0] : "", n ? plural(n, "pregunta", "preguntas") : ""].filter(Boolean).join(" · ");
-  const at = N.atorados(E).get(t.id);
-  return (at ? `<span class="motivo atorado">Atorado: fallado en ${at.kwizzes} quizzes esta semana</span>` : "") +
+  const at = N.temasAtascados(E).get(t.id);
+  return (at ? `<span class="motivo atorado">Atascado: fallado en ${at.fallos} quizzes esta semana</span>` : "") +
     (corto ? `<span class="resp">${esc(corto)}</span>` : "") + (motivo ? `<span class="motivo">${esc(motivo)}</span>` : "");
 }
 
-/** Los temas atorados, arriba del plan: por qué, y tres salidas. No bloquea nada; es una sugerencia. */
+/** Los temas atascados, arriba del plan: por qué, y tres salidas. No bloquea nada; es una sugerencia. */
 function tarjetaAtorados() {
-  const at = [...N.atorados(E)].map(([id, x]) => ({ t: porId.get(id), x })).filter((a) => a.t);
+  const at = [...N.temasAtascados(E)].map(([id, x]) => ({ t: porId.get(id), x })).filter((a) => a.t);
   if (!at.length) return "";
   return `<section class="card atorados" id="atorados" aria-labelledby="atoradosT">
-    <h2 id="atoradosT">${at.length === 1 ? "Se te atoró un tema" : `Se te atoraron ${at.length} temas`}</h2>
+    <h2 id="atoradosT">${at.length === 1 ? "Se te atascó un tema" : `Se te atascaron ${at.length} temas`}</h2>
     ${at.map(({ t, x }) => {
       const tu = tutoraDe(t.id), kw = !mudo() && tu && (bancoPorTema().get(t.id) || 0) >= N.ACIERTOS_TUTORA;
       return `<div class="atorado">
-        <p><b>${esc(titulo(t))}</b> (${esc(t.nivel)}): lo fallaste en ${x.kwizzes} quizzes distintos en los últimos ${x.dias} días. Antes de seguir, repasa la regla.</p>
+        <p><b>${esc(titulo(t))}</b> (${esc(t.nivel)}): lo fallaste en ${x.fallos} quizzes distintos en los últimos ${x.dias} días. Antes de seguir, repasa la regla.</p>
         <div class="go">${t.slug && t.leccion ? `<a class="ub grande" href="#/leccion/${esc(t.slug)}">Leer la lección</a>` : ""}${kw ? `<button type="button" class="ub" data-kwiz='{"tipo":"tutora","tema":${t.id}}'>Kwiz con ${esc(nombreCorto(tu))}</button>` : ""}<button type="button" class="ub" data-seguir="${t.id}" aria-label="Seguir así con ${esc(titulo(t))}">Seguir así</button></div>
       </div>`;
     }).join("")}
-    <p class="small">Un tema se atora si lo fallas en ${N.ATORADO_KWIZZES} quizzes distintos en ${N.ATORADO_DIAS} días. No se bloquea: sigue saliendo. Se destraba al abrir su lección, al terminar su kwiz con la tutora, al acertarlo ${N.ACIERTOS_PARA_SALIR} veces seguidas o con «Seguir así»; vuelve si lo fallas ${N.ATORADO_KWIZZES} veces más.</p>
+    <p class="small">Un tema se atasca si lo fallas en ${N.ATASCADO_FALLOS} quizzes distintos en ${N.ATASCADO_DIAS} días, igual que una tarjeta. No se bloquea: sigue saliendo. Se destraba al abrir su lección, al terminar su kwiz con la tutora, al acertarlo ${N.ACIERTOS_PARA_SALIR} veces seguidas en días distintos o con «Seguir así». <a href="#/ayuda/atascadas">Cómo funciona</a></p>
   </section>`;
 }
 
@@ -2987,6 +3005,7 @@ function verPregunta(o, kid) {
         <div class="score"><div class="track" role="img" aria-label="${deTutora ? `Llevas ${k.bien || 0} de ${N.ACIERTOS_TUTORA} aciertos` : `Vas en la ${sig.orden} de ${sig.total}`}"><i data-w="${deTutora ? 100 * (k.bien || 0) / N.ACIERTOS_TUTORA : 100 * (sig.orden - 1) / sig.total}"></i></div></div>
         ${deTutora ? "" : lineaDeGramatica(k, q.tema)}
         <h1 class="cue" id="cue"${q.tipo === "escribir" ? ' lang="en"' : ""}>${hueco(q.frase)}</h1>
+        ${(() => { const at = deTutora ? null : N.temasAtascados(E).get(q.tema); return at && tema ? `<p class="tjAtas">Atascado · fallado en ${at.fallos} quizzes esta semana${tema.slug && tema.leccion ? ` · <a class="lk" href="#/leccion/${esc(tema.slug)}">Ver la lección</a>` : ""}</p>` : ""; })()}
         ${q.glosa ? `<p class="sub">(${esc(q.glosa)})</p>` : ""}
         ${conPista ? `<div class="hrow"><button type="button" class="chip" id="pistaBtn">Pista</button><span class="sub" id="pista" hidden>${esc(q.pista)}</span></div>` : ""}
       </div>
@@ -3221,7 +3240,7 @@ function verResultado(o, kid) {
   const fallas = [...new Set(filas.filter((f) => !f.r.bien).map((f) => f.r.tema))].filter((id) => porId.has(id));
   const igual = JSON.stringify({ tipo: k.tipo, cuaderno: k.cuaderno, tema: k.tema });
   const cambios = N.cambiosDeLista(P, E, kid);
-  const atr = N.atorados(E);
+  const atr = N.temasAtascados(E);
   // Parejas de contraste con dos o más temas en este quiz: esos temas se ponen juntos, primero.
   const enQuiz = new Set(temas.map((t) => t.id));
   const parejasDelQuiz = (P.contrastes || []).filter((c) => c.temas.filter((x) => enQuiz.has(x)).length >= 2);
@@ -3268,7 +3287,7 @@ function verResultado(o, kid) {
       const abre = t.slug && t.leccion ? `<a class="tb" href="#/leccion/${esc(t.slug)}">` : `<button type="button" class="tb" data-l="${t.id}">`;
       return `${abre}<span class="lv">${esc(t.nivel)}</span><span class="nm">${esc(titulo(t))}</span>
         <span class="pc${esBajo(c.despues) ? " bajo" : ""}">${pct(c.despues)}${movio(c.antes, c.despues)}</span>
-        ${c.de || i.toca ? `<span class="sm">${[atr.has(t.id) ? "Atorado" : "", (() => { const pj = parejasDelQuiz.find((x) => x.temas.includes(t.id)); return pj ? "Pareja: " + esc(pj.nombre) : ""; })(), c.de ? `${c.bien} de ${c.de} bien` : "", i.toca ? `toca el ${fecha(i.toca)}` : ""].filter(Boolean).join(" · ")}</span>` : ""}
+        ${c.de || i.toca ? `<span class="sm">${[atr.has(t.id) ? "Atascado" : "", (() => { const pj = parejasDelQuiz.find((x) => x.temas.includes(t.id)); return pj ? "Pareja: " + esc(pj.nombre) : ""; })(), c.de ? `${c.bien} de ${c.de} bien` : "", i.toca ? `toca el ${fecha(i.toca)}` : ""].filter(Boolean).join(" · ")}</span>` : ""}
         ${barra(c.despues)}${t.slug && t.leccion ? "</a>" : "</button>"}`;
     }).join("")}</div>
   </section>
@@ -3500,6 +3519,7 @@ const AYUDA_DE = [
   [/^\/gramatica\/quiz/, "quiz"],
   [/^\/kwiz/, "quiz"],
   [/^\/gramatica\/atlas$/, "porcentaje"],
+  [/^\/gramatica\/[a-z0-9]+\/atascados$/, "atascadas"],
   [/^\/gramatica(\/[a-z0-9]+)?(\/bajo|\/mision)?$/, "porcentaje"],
   [/^\/(leccion|tutoras)(\/|$)/, "tutoras"],
   [/^\/vocabulario/, "tarjetas"],
@@ -3531,9 +3551,9 @@ function numerosAyuda() {
     ESCALONES: e.slice(0, -1).join(", ") + " y " + e[e.length - 1] + " días", N_ESCALONES: e.length,
     NUEVAS_AL_DIA: N.NUEVAS_AL_DIA, KWIZZES_AL_DIA: N.KWIZZES_AL_DIA, LISTA: N.LISTA, ACIERTOS_PARA_SALIR: N.ACIERTOS_PARA_SALIR,
     META: meta(), DECAIMIENTO: E ? E.parametros.decaimiento : N.DECAIMIENTO, PESO_ARRANQUE: E ? E.parametros.pesoArranque : N.PESO_ARRANQUE,
-    TOTAL_TEMA: N.TOTAL_TEMA, TOTAL_TUTORA: N.TOTAL_TUTORA, ACIERTOS_TUTORA: N.ACIERTOS_TUTORA, LAPSOS_ATASCADA: N.LAPSOS_ATASCADA,
+    TOTAL_TEMA: N.TOTAL_TEMA, TOTAL_TUTORA: N.TOTAL_TUTORA, ACIERTOS_TUTORA: N.ACIERTOS_TUTORA,
     SOSPECHA_FALLAS: N.SOSPECHA_FALLAS, SOSPECHA_PCT: N.SOSPECHA_PCT, SOSPECHA_MIN: N.SOSPECHA_MIN,
-    ATORADO_KWIZZES: N.ATORADO_KWIZZES, ATORADO_DIAS: N.ATORADO_DIAS,
+    ATASCADO_FALLOS: N.ATASCADO_FALLOS, ATASCADO_DIAS: N.ATASCADO_DIAS,
   };
   e.forEach((d, i) => { n["E" + i] = dias(d); });
   return n;

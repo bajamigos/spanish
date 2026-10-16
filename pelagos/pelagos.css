@@ -954,7 +954,7 @@ dialog.sheet.escena.practica { inset: 0; width: 100%; max-width: 720px; height: 
 .hoy.kwFondo .kwh.contutora .over { padding-top: 12px; }
 .hoy.kwFondo .kw { gap: 14px; }
 
-/* Tarjetas atascadas (16-Oct-2026, como las «leech» de Anki) */
+/* Atascados: tarjetas y temas (16-Oct-2026, como las «leech» de Anki) */
 .jump.uno { grid-template-columns: minmax(0, 1fr); }
 .jump.uno button { background: var(--page); color: var(--ink); border-color: var(--outline); font-size: 13px; padding: 9px 0; }
 .jump.uno button[aria-pressed="true"] { background: var(--no); color: var(--page); border-color: var(--no); }
@@ -969,3 +969,7 @@ dialog.sheet.escena.practica { inset: 0; width: 100%; max-width: 720px; height: 
 .atorados .atorado + .atorado { margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(127,127,127,.3); }
 .tb .motivo.atorado { font-weight: 600; }
 .pareja { margin: 4px 0; }
+.tb.atas { box-shadow: inset 4px 0 0 var(--no); }
+.tjAtas a.lk { color: inherit; text-decoration: underline; }
+.atasAviso p { margin: 0; color: var(--ink); }
+.atasAviso .go { margin-top: 8px; }
