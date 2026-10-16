@@ -949,3 +949,7 @@ dialog.sheet.escena.practica { inset: 0; width: 100%; max-width: 720px; height: 
 .hoy.confoto .fondo.conPremio .sinClip { position: absolute; inset: auto 0 30% 0; z-index: 2; text-align: center; }
 
 .lectura .lecturaEjemplo a { color: inherit; text-decoration: underline; }
+
+/* El quiz de gramática como el Tablero: el loop de la tutora fijo arriba y la pregunta en tarjetas de vidrio encima. */
+.hoy.kwFondo .kwh.contutora .over { padding-top: 12px; }
+.hoy.kwFondo .kw { gap: 14px; }

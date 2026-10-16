@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=3b6db5a630";
-import * as A from "./almacen.js?v=3b6db5a630";
-import { abrirRecorrido } from "./recorrido.js?v=3b6db5a630";
-import * as V from "./videos.js?v=3b6db5a630";
-import * as NB from "./nube.js?v=3b6db5a630";
-import * as CL from "./clases.js?v=3b6db5a630";
-import { abrirPractica } from "./practica.js?v=3b6db5a630";
-import * as F from "./fondo.js?v=3b6db5a630";
+import * as N from "./nucleo.js?v=4fa6cc84c7";
+import * as A from "./almacen.js?v=4fa6cc84c7";
+import { abrirRecorrido } from "./recorrido.js?v=4fa6cc84c7";
+import * as V from "./videos.js?v=4fa6cc84c7";
+import * as NB from "./nube.js?v=4fa6cc84c7";
+import * as CL from "./clases.js?v=4fa6cc84c7";
+import { abrirPractica } from "./practica.js?v=4fa6cc84c7";
+import * as F from "./fondo.js?v=4fa6cc84c7";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -2810,14 +2810,19 @@ function loopDePregunta(tema) {
   const v = (escenasPorSala.get("tutora-" + tema) || []).filter(esMovimiento).slice(-1)[0];
   return v ? etiquetaEscena("tutora-" + tema, v) : "";
 }
+const loopsPedidos = new Map();     // sala -> promesa de su lista, para esperar la que ya va en camino
 /** Pide la lista del loop (y la de las preguntas que siguen); si llega mientras sigues en esa pregunta, lo pone arriba. */
 function esperarLoopDePregunta(kid, lugar, tema, k) {
   if (ambiente() === "limpio" || sinMovimiento()) return;
   const pedir = (t) => {
     const sala = "tutora-" + t;
-    if (!A.leccionesConLoop().has(t) || escenasPorSala.has(sala)) return null;
+    if (!A.leccionesConLoop().has(t)) return null;
+    if (loopsPedidos.has(sala)) return loopsPedidos.get(sala);      // ya va en camino (lo pidió la pregunta anterior)
+    if (escenasPorSala.has(sala)) return null;
     escenasPorSala.set(sala, []);
-    return A.escenasDe(sala).then((l) => escenasPorSala.set(sala, l)).catch(() => {});
+    const pr = A.escenasDe(sala).then((l) => { escenasPorSala.set(sala, l); }).catch(() => {});
+    loopsPedidos.set(sala, pr);
+    return pr;
   };
   const p = pedir(tema);
   // Las que siguen en este quiz: así su loop ya está cuando llegues.
@@ -2825,13 +2830,14 @@ function esperarLoopDePregunta(kid, lugar, tema, k) {
   if (!p) return;
   p.then(() => {
     const sig = N.siguiente(E, kid);
-    const hero = vista.querySelector(".kwh");
-    if (!hero || enPreguntaDe !== kid || !sig || sig.p !== lugar) return;
-    const etiqueta = loopDePregunta(tema);
+    const fondo = vista.querySelector(".kwFondo > .fondo");
+    if (!fondo || enPreguntaDe !== kid || !sig || sig.p !== lugar) return;
+    // Si no trae loop, el de la tutora del día (o el logo, si tampoco hay).
+    const etiqueta = loopDePregunta(tema) || (cargarVideosFondo(), etiquetaMovimiento());
     if (!etiqueta) return;
-    for (const x of hero.querySelectorAll(":scope > img, :scope > video")) x.remove();
-    hero.querySelector(".ratio").insertAdjacentHTML("afterend", etiqueta);
-    vestir(hero);
+    fondo.classList.remove("cargando");
+    fondo.innerHTML = etiqueta + LOGO;
+    vestir(fondo);
   });
 }
 
@@ -2907,11 +2913,23 @@ function verPregunta(o, kid) {
   const juego = deTutora ? [] : juegoDeFotos();
   const foto = juego.length ? juego[Math.floor(N.azarDe(kid + "#" + sig.orden)() * juego.length)] : null;
 
-  poner(`
+  // Como el Tablero: el loop fijo arriba y la pregunta en tarjetas de vidrio encima. De pregunta en pregunta solo cambia
+  // el loop (la tutora de cada tema); si el tema no tiene loop, el de la tutora del día. Al terminar, el resultado
+  // vuelve al fondo del día.
+  const conLoop = !deTutora && ambiente() !== "limpio" && !sinMovimiento();
+  const propio = conLoop ? loopDePregunta(q.tema) : "";
+  const viene = conLoop && !propio && A.leccionesConLoop().has(q.tema);      // su loop está por llegar: el logo mientras tanto
+  const delDia = conLoop && !propio && !viene ? (cargarVideosFondo(), etiquetaMovimiento()) : "";
+  const clip = propio || delDia;
+  const arriba = conLoop && (clip || viene);
+  const envolver = (h) => arriba
+    ? `<div class="hoy confoto contutora kwFondo"><div class="fondo${clip ? "" : " cargando"}">${clip ? clip + LOGO : '<img class="logoCarga" src="logo.png" alt="Pelagos">'}</div><div class="sobre">${h}</div></div>`
+    : h;
+  poner(envolver(`
   <section class="kw${deTutora ? " kwTutora" : ""}">
-    <header class="hero kwh">
+    <header class="hero kwh${arriba ? " contutora" : ""}">
       <div class="ratio"></div>
-      ${deTutora ? (ambiente() === "limpio" ? "" : '<div class="tutoraVideo" id="tutoraVideo"></div>') : (loopDePregunta(q.tema) || imagenDeArriba(foto && foto.nombre))}
+      ${deTutora ? (ambiente() === "limpio" ? "" : '<div class="tutoraVideo" id="tutoraVideo"></div>') : arriba ? "" : imagenDeArriba(foto && foto.nombre)}
       <div class="over">
         <p class="lead"><span>${deTutora ? `Aciertos: ${k.bien || 0} de ${N.ACIERTOS_TUTORA}` : `Pregunta ${sig.orden} de ${sig.total}`}</span><span>${enHueco ? "Escribe lo que falta" : escribir ? "Dilo en español" : "Toca la respuesta"}</span></p>
         <div class="score"><div class="track" role="img" aria-label="${deTutora ? `Llevas ${k.bien || 0} de ${N.ACIERTOS_TUTORA} aciertos` : `Vas en la ${sig.orden} de ${sig.total}`}"><i data-w="${deTutora ? 100 * (k.bien || 0) / N.ACIERTOS_TUTORA : 100 * (sig.orden - 1) / sig.total}"></i></div></div>
@@ -2955,7 +2973,7 @@ function verPregunta(o, kid) {
         <span id="malaHecho" hidden></span>
       </div>
     </div>
-  </section>`,
+  </section>`),
   {
     titulo: `Pregunta ${sig.orden} de ${sig.total} · Pelagos`, nav: "gramatica",
     pie: "<p>Si aciertas, pasa sola a la siguiente." + (escribir ? "" : " Si fallas, toca la respuesta correcta para seguir.") + "</p>" +
