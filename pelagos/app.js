@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=4fa6cc84c7";
-import * as A from "./almacen.js?v=4fa6cc84c7";
-import { abrirRecorrido } from "./recorrido.js?v=4fa6cc84c7";
-import * as V from "./videos.js?v=4fa6cc84c7";
-import * as NB from "./nube.js?v=4fa6cc84c7";
-import * as CL from "./clases.js?v=4fa6cc84c7";
-import { abrirPractica } from "./practica.js?v=4fa6cc84c7";
-import * as F from "./fondo.js?v=4fa6cc84c7";
+import * as N from "./nucleo.js?v=7b9f98bb0b";
+import * as A from "./almacen.js?v=7b9f98bb0b";
+import { abrirRecorrido } from "./recorrido.js?v=7b9f98bb0b";
+import * as V from "./videos.js?v=7b9f98bb0b";
+import * as NB from "./nube.js?v=7b9f98bb0b";
+import * as CL from "./clases.js?v=7b9f98bb0b";
+import { abrirPractica } from "./practica.js?v=7b9f98bb0b";
+import * as F from "./fondo.js?v=7b9f98bb0b";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -240,7 +240,6 @@ function poner(html, { titulo: t = "Pelagos", pie = "", nav = "", conserva = fal
   for (const a of document.querySelectorAll("[data-nav]")) {
     if (a.dataset.nav === nav) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
   }
-  callarAyuda();
   ponerSignoAyuda();
   vestir(vista);
   document.body.classList.toggle("conandrea", !!vista.querySelector(".hoy.confoto"));      // con el retrato al fondo, la página entera se oscurece
@@ -1251,6 +1250,7 @@ function verTarjetas(o) {
         <div class="score"><div class="track" role="img" aria-label="Llevas ${hechas} de ${total}"><i data-w="${100 * hechas / total}"></i></div></div>
         ${enAdelanto ? htmlNivel(nivelDe(antes)) : lineaDeVocabulario(dia, c.id, antes)}
         ${renglonConLapiz("frente", c.frente, "h1", "cue", ' id="cue"')}
+        ${N.atascada(antes) ? `<p class="tjAtas">Atascada · ${antes.lapsos} lapsos · <button type="button" class="lk" data-v="${esc(c.id)}">Ver su ficha</button></p>` : ""}
       </div>
       <div class="rule tjResp" id="tjResp" tabindex="-1" aria-live="polite" hidden>
         <ul class="exs"><li class="ex">${renglonConLapiz("reverso", c.reverso, "span", "es", ' id="vResp"')}</li></ul>
@@ -1371,6 +1371,7 @@ const TANDA = 300;            // cuántas palabras se pintan de un jalón
 const ORDENES = [["fallo", "Falladas"], ["az", "A–Z"], ["toca", "Próximas"], ["nueva", "Nuevas"]];
 let lvBusca = "";             // lo que escribiste en el buscador
 let lvOrden = "fallo";
+let lvAtascadas = false;      // el filtro «Atascadas» del Acervo
 let lvCuantas = TANDA;
 let lvAviso = null;           // la palabra que acabas de quitar, para poder deshacerlo
 
@@ -1821,6 +1822,8 @@ function verLista(o) {
   let sinVer = 0;
   for (const x of vivas) { const k = N.colorDe({ ...x.s, pct: x.pct }); if (k === null) sinVer++; else cuenta[k]++; }
   const tocan = N.tarjetasDelDia(P, E, hoy).pendientes.length;
+  const nAtas = vivas.filter((x) => N.atascada(x.s)).length;
+  if (!nAtas) lvAtascadas = false;
   const fondo = fondoDelDia();
   const abiertas = !!vista.querySelector("#lvQuitadas[open]");
   poner(`
@@ -1834,6 +1837,7 @@ function verLista(o) {
         <label class="sr" for="lvBusca">Buscar una palabra</label>
         <input id="lvBusca" class="campo" type="search" placeholder="Buscar una palabra" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="search">
         <div class="jump cuatro" role="group" aria-label="En qué orden salen">${ORDENES.map(([clave, nombre]) => `<button type="button" data-orden="${clave}" aria-pressed="${clave === lvOrden}">${nombre}</button>`).join("")}</div>
+        <div class="jump uno"><button type="button" id="lvAtas" aria-pressed="${lvAtascadas}"${nAtas ? "" : " disabled"}>Atascadas (${nAtas})</button></div>
         ${!lvAviso || lvAviso.nueva ? "" : `<p class="small" id="lvAviso" role="status">Quitaste «${esc(lvAviso.texto)}». <button type="button" class="lk" id="lvDeshacer">Deshacer</button></p>`}
       </section>
       <section class="card" id="lvLista">
@@ -1860,13 +1864,16 @@ function verLista(o) {
   campo.value = lvBusca;
   function celdas() {
     const q = paraBuscar(lvBusca);
-    const salen = (q ? vivas.filter((x) => [x.c.reverso, x.c.frente].some((t) => paraBuscar(t).includes(q))) : vivas.slice()).sort(ORDENAR[lvOrden] || alfabeto);
+    const base = lvAtascadas ? vivas.filter((x) => N.atascada(x.s)) : vivas;
+    const salen = (q ? base.filter((x) => [x.c.reverso, x.c.frente].some((t) => paraBuscar(t).includes(q))) : base.slice()).sort(ORDENAR[lvOrden] || alfabeto);
     $("lvCeldas").innerHTML = salen.slice(0, lvCuantas).map((x) => {
       const f = N.colorDe({ ...x.s, pct: x.pct });
-      return `<button type="button" class="vc ${f === null ? "kx" : "k" + f}" data-v="${esc(x.id)}" lang="es-MX" aria-label="${esc(x.c.reverso)}: ${f === null ? "sin ver" : `peldaño ${f + 1}, ${x.pct === null ? "sin aciertos todavía" : pct(x.pct) + " de aciertos"}`}">${esc(x.c.reverso)}</button>`;
+      const atas = N.atascada(x.s);
+      return `<button type="button" class="vc ${f === null ? "kx" : "k" + f}${atas ? " atas" : ""}" data-v="${esc(x.id)}" lang="es-MX" aria-label="${esc(x.c.reverso)}: ${f === null ? "sin ver" : `peldaño ${f + 1}, ${x.pct === null ? "sin aciertos todavía" : pct(x.pct) + " de aciertos"}`}${atas ? ", atascada" : ""}">${esc(x.c.reverso)}</button>`;
     }).join("");
     $("lvCuenta").textContent = !vivas.length ? "Todavía no hay palabras en tu vocabulario."
       : q ? (salen.length ? `${salen.length} de ${vivas.length} con «${lvBusca.trim()}».` : `Ninguna palabra con «${lvBusca.trim()}».`)
+        : lvAtascadas ? `${plural(salen.length, "palabra atascada", "palabras atascadas")}: las fallaste ${N.LAPSOS_ATASCADA} veces o más después de saberlas. Toca una para editarla o quitarla.`
         : "Toca una palabra para ver su traducción y cómo te ha ido con ella.";
     $("lvMas").hidden = salen.length <= lvCuantas;
     $("lvMas").textContent = `Ver más (faltan ${salen.length - lvCuantas})`;
@@ -1882,6 +1889,7 @@ function verLista(o) {
       celdas();
     });
   }
+  $("lvAtas").addEventListener("click", () => { lvAtascadas = !lvAtascadas; lvCuantas = TANDA; $("lvAtas").setAttribute("aria-pressed", String(lvAtascadas)); celdas(); });
   for (const b of vista.querySelectorAll("[data-devolver]")) b.addEventListener("click", () => quitarPalabra(b.dataset.devolver, false));
   if ($("lvDeshacer")) $("lvDeshacer").addEventListener("click", () => quitarPalabra(lvAviso.id, false));
 }
@@ -2040,9 +2048,11 @@ function abrirPalabra(id) {
     c.agregada ? ["Agregada", "El " + fechaCorta(c.agregada)] : null,
     s.n ? ["En Pelagos", `${plural(s.n, "repaso", "repasos")}, ${s.bien} bien`] : null,
     s.baseN ? ["Antes de Pelagos", `${plural(s.baseN, "repaso", "repasos")}, ${s.baseBien} bien`] : null,
+    s.lapsos ? ["Lapsos", `${s.lapsos} de ${N.LAPSOS_ATASCADA}${N.atascada(s) ? ": atascada" : ""}`] : null,
   ].filter(Boolean);
   $("hvIn").innerHTML = `
     <span class="k">Vocabulario · ${esc(cuandoToca(s, hoy))}</span>
+    ${N.atascada(s) ? `<p class="atasAviso" role="note">Atascada: la fallaste ${s.lapsos} veces después de saberla. Corrígela con el lápiz, pártela en dos o quítala. Al editarla, la cuenta vuelve a cero.</p>` : ""}
     <ul class="exs"><li class="ex">${renglonConLapiz("reverso", c.reverso, "h2", "es", ' id="hvT" tabindex="-1"')}${renglonConLapiz("frente", c.frente, "span", "en")}</li></ul>
     <div class="sc"><span>Aciertos: ${v === null ? "todavía sin datos" : `${pct(v)} · ${bien} de ${n}`}</span>${v === null ? "" : barra(v)}</div>
     ${grafica}
@@ -3435,7 +3445,7 @@ function numerosAyuda() {
     ESCALONES: e.slice(0, -1).join(", ") + " y " + e[e.length - 1] + " días", N_ESCALONES: e.length,
     NUEVAS_AL_DIA: N.NUEVAS_AL_DIA, KWIZZES_AL_DIA: N.KWIZZES_AL_DIA, LISTA: N.LISTA, ACIERTOS_PARA_SALIR: N.ACIERTOS_PARA_SALIR,
     META: meta(), DECAIMIENTO: E ? E.parametros.decaimiento : N.DECAIMIENTO, PESO_ARRANQUE: E ? E.parametros.pesoArranque : N.PESO_ARRANQUE,
-    TOTAL_TEMA: N.TOTAL_TEMA, TOTAL_TUTORA: N.TOTAL_TUTORA, ACIERTOS_TUTORA: N.ACIERTOS_TUTORA,
+    TOTAL_TEMA: N.TOTAL_TEMA, TOTAL_TUTORA: N.TOTAL_TUTORA, ACIERTOS_TUTORA: N.ACIERTOS_TUTORA, LAPSOS_ATASCADA: N.LAPSOS_ATASCADA,
   };
   e.forEach((d, i) => { n["E" + i] = dias(d); });
   return n;
@@ -3450,10 +3460,6 @@ function marcaAyuda(texto, n) {
   s = s.replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
   return s;
 }
-/** El mismo texto, plano, para leerlo en voz alta. */
-const planoAyuda = (texto, n) => conNumeros(texto, n).replace(/\[\[(?:ayuda|g):[a-z0-9-]+\|([^\]]+)\]\]/g, "$1").replace(/\*\*/g, "")
-  .replace(/\bL\^i\b/g, "L a la i").replace(/\bL\^n\b/g, "L a la n").replace(/×/g, " por ");
-
 function verAyuda(o) {
   const lista = ayudaLista();
   if (!lista.length) return verNoExiste("Todavía no hay páginas de ayuda en tu contenido.");
@@ -3483,42 +3489,11 @@ function verPaginaAyuda(o, slug) {
     <p class="small"><a href="#/ayuda">Cómo funciona</a></p>
     <h1 class="h">${esc(p.titulo)}</h1>
     ${p.resumen ? `<p>${esc(p.resumen)}</p>` : ""}
-    <div class="go"><button type="button" class="ub" id="ayudaOir" aria-pressed="false">Escuchar</button></div>
   </section>
   ${secciones}${glosa}
   <section class="card">
     <p>${sigue ? `Sigue: <a href="#/ayuda/${sigue.slug}">${esc(sigue.titulo)}</a> · ` : ""}<a href="#/ayuda">Todas las páginas</a></p>
   </section>`, { titulo: p.titulo + " · Pelagos", nav: "ayuda", conserva: o.conserva });
-  // Escuchar: la voz del aparato lee la página. Se calla al salir de la página o con otro toque.
-  const oir = $("ayudaOir");
-  if (!("speechSynthesis" in window)) { oir.hidden = true; return; }
-  oir.addEventListener("click", () => {
-    if (speechSynthesis.speaking) { callarAyuda(); return; }
-    const partes = [p.titulo, p.resumen, ...p.secciones.flatMap((s) => [s.h, ...(s.p || []), ...(s.lista || [])]),
-      ...(p.glosario ? terminos.flatMap(([, g]) => [g.termino, g.def]) : [])].filter(Boolean).map((x) => planoAyuda(x, n));
-    const voces = speechSynthesis.getVoices();
-    const voz = voces.find((v) => /^es-MX/i.test(v.lang)) || voces.find((v) => /^es-(US|419)/i.test(v.lang)) || voces.find((v) => /^es/i.test(v.lang));
-    for (const t of partes) {
-      const u = new SpeechSynthesisUtterance(t);
-      u.lang = voz ? voz.lang : "es-MX";
-      if (voz) u.voice = voz;
-      u.rate = 0.95;
-      speechSynthesis.speak(u);
-    }
-    oir.textContent = "Callar"; oir.setAttribute("aria-pressed", "true");
-    // Al acabar, el botón vuelve a decir «Escuchar».
-    const revisar = setInterval(() => {
-      if (oir.isConnected && (speechSynthesis.speaking || speechSynthesis.pending)) return;
-      clearInterval(revisar);
-      if (oir.isConnected) { oir.textContent = "Escuchar"; oir.setAttribute("aria-pressed", "false"); }
-    }, 500);
-  });
-}
-
-function callarAyuda() {
-  try { if ("speechSynthesis" in window && (speechSynthesis.speaking || speechSynthesis.pending)) speechSynthesis.cancel(); } catch { /* sin voz */ }
-  const oir = $("ayudaOir");
-  if (oir) { oir.textContent = "Escuchar"; oir.setAttribute("aria-pressed", "false"); }
 }
 
 /** La definición de una palabra del glosario, en la hoja de abajo, sin salir de la página. */

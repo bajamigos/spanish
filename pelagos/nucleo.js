@@ -28,6 +28,9 @@ export const LISTA = 5;
 export const KWIZZES_AL_DIA = 5;                 // la medida diaria de kwizzes
 export const ACIERTOS_PARA_SALIR = 2;
 export const NUEVAS_AL_DIA = 20;                 // cuántas tarjetas nuevas entran al día, como mucho
+// Tarjeta atascada (16-Oct-2026, como las «leech» de Anki): la que ya sabías y has vuelto a fallar tantas veces.
+// Cada fallo de una tarjeta ya aprendida es un lapso; varios fallos el mismo día cuentan uno. Al editarla, vuelve a cero.
+export const LAPSOS_ATASCADA = 8;
 
 // ---------------------------------------------------------------- El porcentaje
 
@@ -57,6 +60,9 @@ export function textoPct(valor) {
 }
 
 // ---------------------------------------------------------------- El mapa de árbol
+
+/** ¿Está atascada esta tarjeta? (LAPSOS_ATASCADA lapsos o más, y no la quitaste.) */
+export const atascada = (s) => !!s && !s.quitada && (s.lapsos | 0) >= LAPSOS_ATASCADA;
 
 /** Los seis colores del mapa, del más bajo al más alto. */
 export const FRANJAS = ["Menos de 60", "60 a 69", "70 a 79", "80 a 89", "90 a 99", "100"];
@@ -293,7 +299,7 @@ export function calcular(paquete, sucesos) {
     const baseBien = Number.isInteger(c.aciertos) && c.aciertos > 0 ? Math.min(c.aciertos, baseN) : 0;
     tarjetas.set(c.id, {
       escalon: toca ? Math.max(0, Math.min(ESCALONES.length - 1, c.escalon | 0)) : 0, toca, traia: !!toca, n: 0, bien: 0, primera: null, ultima: null, fallada: null,
-      historia: [], baseN, baseBien, quitada: false, cambio: null,
+      historia: [], baseN, baseBien, quitada: false, cambio: null, lapsos: 0,
     });
   }
   const agregadas = [];        // las tarjetas que agregaste a mano: no vienen en el contenido, viven en tus sucesos
@@ -325,7 +331,10 @@ export function calcular(paquete, sucesos) {
       c.historia.push({ cuando: e.cuando, bien: !!e.bien });
       cuenta(e.cuando);
       actividadVoc.set(dia, (actividadVoc.get(dia) || 0) + 1);
-      if (!e.bien) { c.escalon = 0; c.toca = dia; c.fallada = dia; }                     // fallada: vuelve a salir hoy mismo
+      if (!e.bien) {
+        if ((c.traia || c.bien > 0) && c.fallada !== dia) c.lapsos++;                    // ya la sabías: es un lapso (uno por día)
+        c.escalon = 0; c.toca = dia; c.fallada = dia;
+      }                     // fallada: vuelve a salir hoy mismo
       else {
         c.bien++;
         if (c.fallada === dia) { c.escalon = 0; c.toca = sumarDias(dia, ESCALONES[0]); c.fallada = null; }      // la rescataste hoy: mañana otra vez
@@ -336,14 +345,14 @@ export function calcular(paquete, sucesos) {
       const texto = limpiarCambio(e);
       if (typeof e.tarjeta !== "string" || !/^[A-Za-z0-9_-]{1,40}$/.test(e.tarjeta) || tarjetas.has(e.tarjeta) || !texto || !texto.frente || !texto.reverso) continue;
       agregadas.push({ id: e.tarjeta, mazo: "A mano", frente: texto.frente, reverso: texto.reverso, agregada: fechaLocal(e.cuando) });
-      tarjetas.set(e.tarjeta, { escalon: 0, toca: null, traia: false, n: 0, bien: 0, primera: null, ultima: null, fallada: null, historia: [], baseN: 0, baseBien: 0, quitada: false, cambio: null });
+      tarjetas.set(e.tarjeta, { escalon: 0, toca: null, traia: false, n: 0, bien: 0, primera: null, ultima: null, fallada: null, historia: [], baseN: 0, baseBien: 0, quitada: false, cambio: null, lapsos: 0 });
     } else if (e.t === "tjq") {
       const c = tarjetas.get(e.tarjeta);
       if (c) c.quitada = !(e.quitar === 0 || e.quitar === false);        // quitar: 0 la devuelve
     } else if (e.t === "tje") {
       const c = tarjetas.get(e.tarjeta);
       const cambio = c && limpiarCambio(e);
-      if (cambio) c.cambio = { ...(c.cambio || {}), ...cambio };          // vale lo último que corregiste de cada renglón
+      if (cambio) { c.cambio = { ...(c.cambio || {}), ...cambio }; c.lapsos = 0; }     // vale lo último que corregiste; editada, ya no está atascada
     } else if (e.t === "nota") {
       const sobre = typeof e.sobre === "string" && /^[a-z]+:[A-Za-z0-9_-]{1,40}$/.test(e.sobre) ? e.sobre : null;
       const texto = typeof e.texto === "string" ? e.texto.replace(/\r/g, "").trim().slice(0, NOTA_MAX) : "";
