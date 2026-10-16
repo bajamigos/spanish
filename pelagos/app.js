@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=2fc21edb09";
-import * as A from "./almacen.js?v=2fc21edb09";
-import { abrirRecorrido } from "./recorrido.js?v=2fc21edb09";
-import * as V from "./videos.js?v=2fc21edb09";
-import * as NB from "./nube.js?v=2fc21edb09";
-import * as CL from "./clases.js?v=2fc21edb09";
-import { abrirPractica } from "./practica.js?v=2fc21edb09";
-import * as F from "./fondo.js?v=2fc21edb09";
+import * as N from "./nucleo.js?v=98c9c2bb3b";
+import * as A from "./almacen.js?v=98c9c2bb3b";
+import { abrirRecorrido } from "./recorrido.js?v=98c9c2bb3b";
+import * as V from "./videos.js?v=98c9c2bb3b";
+import * as NB from "./nube.js?v=98c9c2bb3b";
+import * as CL from "./clases.js?v=98c9c2bb3b";
+import { abrirPractica } from "./practica.js?v=98c9c2bb3b";
+import * as F from "./fondo.js?v=98c9c2bb3b";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -154,6 +154,9 @@ function entradas(seccion, actual) {
   return `<nav class="jump ${lista.length === 3 ? "tres" : "dos"} sec" aria-label="${nombre}">${lista.map(([clave, href, texto]) =>
     `<a href="${href}"${clave === actual ? ' aria-current="page"' : ""}>${texto}</a>`).join("")}</nav>`;
 }
+
+/** Los grupos de contraste (temas que se confunden) en los que está un tema. */
+const contrastesDe = (id) => (P.contrastes || []).filter((c) => c.temas.includes(id));
 
 /** Un tema como botón de dos líneas. Con lección, lleva a ella; sin lección, sube la vista previa. */
 function botonTema(t, { nivel = true, sub = "", anchoNombre = false, ingles = false } = {}) {
@@ -2189,6 +2192,8 @@ function verLeccion(o, slug) {
   const tema = porSlug.get(slug);
   if (!tema) return verNoExiste();
   if (o.conserva && vista.dataset.leccion === slug) return;      // ya está en pantalla: no se mueve mientras lees
+  // Abrir la lección de un tema atorado lo destraba: la cuenta de fallas empieza de cero.
+  if (N.atorados(E).has(tema.id)) { A.apuntar({ t: "destrabar", id: N.nuevoId("b"), tema: tema.id, como: "leccion", cuando: new Date().toISOString() }); recalcular(); }
   poner(`<section class="card"><h1 class="h">${esc(tema.titulo)}</h1><p>Abriendo la lección…</p></section>`,
     { titulo: tema.titulo + " · Pelagos", nav: "gramatica" });
   const turno = turnoDePintar;
@@ -2229,7 +2234,13 @@ function pintarLeccion(tema, lec, conserva = false) {
   const tutora = clipDeTutora(tema);
   const i = info(tema.id);
   const kwiziq = tema.slug_kwiziq ? KWIZIQ + tema.slug_kwiziq : null;
-  const grupos = GRUPOS.map(([clave, nombre]) => ({ nombre, temas: ((lec.enlaces || {})[clave] || []).map((id) => porId.get(id)).filter(Boolean) })).filter((g) => g.temas.length);
+  // «Se confunde con»: lo que diga la lección más sus parejas de contrastes.json (16-Oct-2026).
+  const susPares = contrastesDe(tema.id);
+  const grupos = GRUPOS.map(([clave, nombre]) => {
+    let ids = (lec.enlaces || {})[clave] || [];
+    if (clave === "confunde") ids = [...new Set([...ids, ...susPares.flatMap((c) => c.temas.filter((x) => x !== tema.id))])];
+    return { clave, nombre, temas: ids.map((id) => porId.get(id)).filter(Boolean) };
+  }).filter((g) => g.temas.length);
   const traen = [...new Set(P.enlaces.filter((x) => x[1] === tema.id).map((x) => x[0]))].map((id) => porId.get(id)).filter(Boolean)
     .sort((a, b) => (a.nivel < b.nivel ? -1 : a.nivel > b.nivel ? 1 : a.orden - b.orden));
   const banco = P.preguntas.filter((q) => q.tema === tema.id && q.estado === "revisada" && !E.retiradas.has(q.id)).length;
@@ -2274,7 +2285,7 @@ function pintarLeccion(tema, lec, conserva = false) {
   <section class="card" id="enlaces">
     <h2>Esta lección en la red</h2>
     <p>Cada lección apunta a otras. Toca una y ves su regla sin salir de aquí.</p>
-    ${grupos.map((g) => `<h3>${g.nombre}</h3><div class="links">${g.temas.map((t) => `
+    ${grupos.map((g) => `<h3>${g.nombre}</h3>${g.clave === "confunde" && susPares.length ? susPares.map((c) => `<p class="small"><b>${esc(c.nombre)}</b>: ${esc(c.porque)}</p>`).join("") : ""}<div class="links">${g.temas.map((t) => `
       <button type="button" class="tb" data-l="${t.id}"><span class="lv">${esc(t.nivel)}</span><span class="nm">${esc(titulo(t))}</span><span class="pc">${pct(info(t.id).pct)}</span>${barra(info(t.id).pct)}</button>`).join("")}</div>`).join("")}
     <h3>Te traen aquí</h3>
     ${traen.length
@@ -2718,7 +2729,26 @@ function lineaDelPlan(t, lista, banco) {
   const i = info(t.id), motivo = motivoEnLista(t, lista);
   const tu = tutoraDe(t.id), n = banco.get(t.id) || 0;
   const corto = [tu ? tu.tutora.split(",")[0] : "", n ? plural(n, "pregunta", "preguntas") : ""].filter(Boolean).join(" · ");
-  return (corto ? `<span class="resp">${esc(corto)}</span>` : "") + (motivo ? `<span class="motivo">${esc(motivo)}</span>` : "");
+  const at = N.atorados(E).get(t.id);
+  return (at ? `<span class="motivo atorado">Atorado: fallado en ${at.kwizzes} quizzes esta semana</span>` : "") +
+    (corto ? `<span class="resp">${esc(corto)}</span>` : "") + (motivo ? `<span class="motivo">${esc(motivo)}</span>` : "");
+}
+
+/** Los temas atorados, arriba del plan: por qué, y tres salidas. No bloquea nada; es una sugerencia. */
+function tarjetaAtorados() {
+  const at = [...N.atorados(E)].map(([id, x]) => ({ t: porId.get(id), x })).filter((a) => a.t);
+  if (!at.length) return "";
+  return `<section class="card atorados" id="atorados" aria-labelledby="atoradosT">
+    <h2 id="atoradosT">${at.length === 1 ? "Se te atoró un tema" : `Se te atoraron ${at.length} temas`}</h2>
+    ${at.map(({ t, x }) => {
+      const tu = tutoraDe(t.id), kw = !mudo() && tu && (bancoPorTema().get(t.id) || 0) >= N.ACIERTOS_TUTORA;
+      return `<div class="atorado">
+        <p><b>${esc(titulo(t))}</b> (${esc(t.nivel)}): lo fallaste en ${x.kwizzes} quizzes distintos en los últimos ${x.dias} días. Antes de seguir, repasa la regla.</p>
+        <div class="go">${t.slug && t.leccion ? `<a class="ub grande" href="#/leccion/${esc(t.slug)}">Leer la lección</a>` : ""}${kw ? `<button type="button" class="ub" data-kwiz='{"tipo":"tutora","tema":${t.id}}'>Kwiz con ${esc(nombreCorto(tu))}</button>` : ""}<button type="button" class="ub" data-seguir="${t.id}" aria-label="Seguir así con ${esc(titulo(t))}">Seguir así</button></div>
+      </div>`;
+    }).join("")}
+    <p class="small">Un tema se atora si lo fallas en ${N.ATORADO_KWIZZES} quizzes distintos en ${N.ATORADO_DIAS} días. No se bloquea: sigue saliendo. Se destraba al abrir su lección, al terminar su kwiz con la tutora, al acertarlo ${N.ACIERTOS_PARA_SALIR} veces seguidas o con «Seguir así»; vuelve si lo fallas ${N.ATORADO_KWIZZES} veces más.</p>
+  </section>`;
 }
 
 function verKwiz(o) {
@@ -2742,6 +2772,7 @@ function verKwiz(o) {
     <div class="go"><a class="ub grande" href="#${QUIZ}/${esc(abierto.id)}">Seguir el quiz</a><button type="button" class="ub" id="dejarKwiz">Dejarlo así</button></div>
     <p class="small">Si lo dejas, se cierra con lo que ya contestaste. Tus respuestas siguen contando.</p>
   </section>` : ""}
+  ${tarjetaAtorados()}
   <section class="card" id="lista">
     ${abierto ? "<h2>Tu plan de estudio Pelagos</h2>" : '<h1 class="h">Tu plan de estudio Pelagos</h1>'}
     <h3 id="enfoqueT">Enfoque</h3>
@@ -2769,6 +2800,16 @@ function verKwiz(o) {
     </div>
     <p class="small">Hay ${plural(banco.length, "pregunta revisada", "preguntas revisadas")} de ${plural(temasBanco.size, "tema", "temas")}.</p>
   </section>` : ""}`), { titulo: "Quiz de gramática · Pelagos", nav: "gramatica", conserva: o.conserva });
+  const ats = $("atorados");
+  if (ats) ats.addEventListener("click", (ev) => {
+    const b = ev.target.closest("[data-seguir]");
+    if (!b) return;
+    A.apuntar({ t: "destrabar", id: N.nuevoId("b"), tema: Number(b.dataset.seguir), como: "seguir", cuando: new Date().toISOString() });
+    recalcular();
+    verKwiz({ conserva: true });
+    const h = vista.querySelector("#atorados h2, #lista .h, #lista h2");
+    if (h) { h.tabIndex = -1; h.focus(); }
+  });
   const rb = $("repasoAudio");
   if (rb) rb.addEventListener("click", () => {
     if (repaso && repaso.origen === "plan") { if (repaso.audio.paused) repaso.audio.play().catch(() => {}); else repaso.audio.pause(); }
@@ -2977,6 +3018,7 @@ function verPregunta(o, kid) {
       <p class="small" id="vNota" hidden></p>
       <p class="small" id="vTema" hidden></p>
       <p class="small" id="vPct" hidden></p>
+      <p class="small sosp" id="vSosp" role="status" hidden></p>
       <div class="mala" id="vMala" hidden>
         <button type="button" class="lk" id="malaBtn">Pregunta mala</button>
         <span id="malaSeguro" hidden>¿La retiro? Ya no sale y esta respuesta deja de contar. <button type="button" class="lk" id="malaSi">Sí, retírala</button> · <button type="button" class="lk" id="malaNo">No</button></span>
@@ -3021,6 +3063,9 @@ function verPregunta(o, kid) {
       vt.append(enlace);
     }
     texto("vPct", !d.juicio ? "Tu porcentaje en este tema: " + pct(d.antes) + " → " + pct(d.despues) : "");
+    // Sospechosa: la fallaste otra vez, pero el resto del tema lo llevas bien. Quizá la mala es la pregunta.
+    const sx = !d.juicio && !d.bien ? (E.sospechosas || []).find((x) => x.p === q.id) : null;
+    texto("vSosp", sx ? `Esta pregunta ya te salió mal ${sx.fallas} veces, pero el resto del tema lo llevas ${sx.restoBien} de ${sx.restoDe}. Quedó en tus preguntas sospechosas (en Ajustes). Si crees que está mal, retírala aquí abajo.` : "");
     $("vJuicio").hidden = !d.juicio;
     $("vSeguir").hidden = !!d.juicio;
     $("vMala").hidden = !!d.juicio;
@@ -3175,6 +3220,12 @@ function verResultado(o, kid) {
   const fallas = [...new Set(filas.filter((f) => !f.r.bien).map((f) => f.r.tema))].filter((id) => porId.has(id));
   const igual = JSON.stringify({ tipo: k.tipo, cuaderno: k.cuaderno, tema: k.tema });
   const cambios = N.cambiosDeLista(P, E, kid);
+  const atr = N.atorados(E);
+  // Parejas de contraste con dos o más temas en este quiz: esos temas se ponen juntos, primero.
+  const enQuiz = new Set(temas.map((t) => t.id));
+  const parejasDelQuiz = (P.contrastes || []).filter((c) => c.temas.filter((x) => enQuiz.has(x)).length >= 2);
+  const orden = [...new Set([...parejasDelQuiz.flatMap((c) => c.temas.filter((x) => enQuiz.has(x))), ...temas.map((t) => t.id)])];
+  temas.sort((a, b) => orden.indexOf(a.id) - orden.indexOf(b.id));
   const nombres = (ids) => ids.map((id) => porId.get(id)).filter(Boolean).map((t) => {
     const tu = tutoraDe(t.id);
     return `<li>${esc(titulo(t))}${tu ? ` <span class="tutoraDe">· ${esc(tu.tutora.split(",")[0])}</span>` : ""}</li>`;
@@ -3210,12 +3261,13 @@ function verResultado(o, kid) {
   </section>
   <section class="card">
     <h2>Cómo se movieron tus temas</h2>
+    ${parejasDelQuiz.map((c) => `<p class="small pareja">Se confunden: <b>${esc(c.nombre)}</b>. Aquí salen juntos para que compares.</p>`).join("")}
     <div class="links">${temas.map((t) => {
       const c = N.cambioDeTema(E, kid, t.id), i = info(t.id);
       const abre = t.slug && t.leccion ? `<a class="tb" href="#/leccion/${esc(t.slug)}">` : `<button type="button" class="tb" data-l="${t.id}">`;
       return `${abre}<span class="lv">${esc(t.nivel)}</span><span class="nm">${esc(titulo(t))}</span>
         <span class="pc${esBajo(c.despues) ? " bajo" : ""}">${pct(c.despues)}${movio(c.antes, c.despues)}</span>
-        ${c.de || i.toca ? `<span class="sm">${[c.de ? `${c.bien} de ${c.de} bien` : "", i.toca ? `toca el ${fecha(i.toca)}` : ""].filter(Boolean).join(" · ")}</span>` : ""}
+        ${c.de || i.toca ? `<span class="sm">${[atr.has(t.id) ? "Atorado" : "", (() => { const pj = parejasDelQuiz.find((x) => x.temas.includes(t.id)); return pj ? "Pareja: " + esc(pj.nombre) : ""; })(), c.de ? `${c.bien} de ${c.de} bien` : "", i.toca ? `toca el ${fecha(i.toca)}` : ""].filter(Boolean).join(" · ")}</span>` : ""}
         ${barra(c.despues)}${t.slug && t.leccion ? "</a>" : "</button>"}`;
     }).join("")}</div>
   </section>
@@ -3305,6 +3357,26 @@ window.addEventListener("beforeinstallprompt", (ev) => {
 });
 window.addEventListener("appinstalled", () => { ofertaDeInstalar = null; if ($("ajInstalar")) $("ajInstalar").hidden = true; });
 
+/** La tarjeta de Ajustes con las preguntas sospechosas: cada una con su motivo, en números. */
+function tarjetaSospechosas(aviso = "") {
+  const lista = (E.sospechosas || []).filter((x) => preguntas.has(x.p));
+  const una = (x) => {
+    const q = preguntas.get(x.p), t = porId.get(x.tema);
+    const tuyas = [...new Set(x.escritos)].slice(-3);
+    return `<div class="pair rq">
+      <p class="fq"${q.tipo === "escribir" ? ' lang="en"' : ""}>${hueco(q.frase)}</p>
+      ${tuyas.length ? `<p class="why">Contestaste: <span class="tach">${tuyas.map(esc).join(" · ")}</span></p>` : ""}
+      <p class="why">Respuesta: <b>${esc(q.respuesta)}</b></p>
+      <p class="why">Por qué es sospechosa: la fallaste ${x.fallas} de ${x.fallas} veces, y el resto de ${t ? esc(titulo(t)) : "su tema"} lo llevas ${x.restoBien} de ${x.restoDe} (${Math.round(100 * x.restoBien / x.restoDe)}%).</p>
+      <div class="go"><button type="button" class="ub" data-sosp="retirar|${esc(x.p)}" aria-label="Retirar la pregunta ${esc(x.p)}">Retirarla</button><button type="button" class="ub" data-sosp="absolver|${esc(x.p)}" aria-label="La pregunta ${esc(x.p)} está bien: la fallé yo">Está bien, la fallé yo</button></div>
+    </div>`;
+  };
+  return `<h2>Preguntas sospechosas${lista.length ? ` (${lista.length})` : ""}</h2>
+    <p class="small" id="ajSospAviso" tabindex="-1" role="status">${esc(aviso)}</p>
+    ${lista.length ? `<div class="pairs">${lista.map(una).join("")}</div>` : `<p>Ninguna por ahora.</p>`}
+    <p class="small">Una pregunta queda aquí si la fallaste ${N.SOSPECHA_FALLAS} veces o más, nunca la has acertado, y el resto de su tema lo llevas en ${N.SOSPECHA_PCT}% o más (con ${N.SOSPECHA_MIN} respuestas o más). Mientras decides, sigue contando. Si me dices «revisa las sospechosas», Andrea las corrige en el contenido.</p>`;
+}
+
 function verAjustes(o) {
   const s = A.estadoSinc();
   const esIphone = /iPhone|iPad|iPod/i.test(navigator.userAgent);
@@ -3321,6 +3393,7 @@ function verAjustes(o) {
     <p class="small">El método y las reglas de Pelagos: la escalera, el plan de cinco temas, el porcentaje, las tutoras y los premios.</p>
     <div class="go"><a class="ub" href="#/ayuda">Abrir «Cómo funciona»</a></div>
   </section>` : ""}
+  <section class="card" id="ajSosp">${tarjetaSospechosas()}</section>
   <section class="card" id="ajTema">
     <h2>Colores</h2>
     <nav class="jump dos" aria-label="Modo de color">
@@ -3364,6 +3437,18 @@ function verAjustes(o) {
     if ($("ajAviso")) { $("ajAviso").hidden = false; $("ajAviso").textContent = bien ? "Listo, al día." : "No se pudo. Revisa la conexión."; }
   });
   $("ajRecargar").addEventListener("click", () => { ir("/", true); window.location.reload(); });
+  // Sospechosas: «Retirarla» o «Está bien, la fallé yo». La tarjeta se vuelve a pintar y el foco se queda en ella.
+  $("ajSosp").addEventListener("click", (ev) => {
+    const b = ev.target.closest("[data-sosp]");
+    if (!b) return;
+    const [que, id] = b.dataset.sosp.split("|");
+    A.apuntar(que === "retirar"
+      ? { t: "retirar", id: N.nuevoId("x"), p: id, cuando: new Date().toISOString() }
+      : { t: "absolver", id: N.nuevoId("a"), p: id, cuando: new Date().toISOString() });
+    recalcular();
+    $("ajSosp").innerHTML = tarjetaSospechosas(que === "retirar" ? `Retirada: ${id}. Ya no sale y sus respuestas dejan de contar.` : `Listo: ${id} ya no es sospechosa. Vuelve a marcarse solo si la fallas ${N.SOSPECHA_FALLAS} veces más.`);
+    $("ajSospAviso").focus();
+  });
   // Claro u oscuro: cambia todas las páginas de una vez. Solo cambian los colores.
   const marcarTema = () => { for (const b of vista.querySelectorAll("[data-tema-ir]")) b.setAttribute("aria-current", b.dataset.temaIr === document.documentElement.dataset.tema ? "page" : "false"); };
   for (const b of vista.querySelectorAll("[data-tema-ir]")) {
@@ -3446,6 +3531,8 @@ function numerosAyuda() {
     NUEVAS_AL_DIA: N.NUEVAS_AL_DIA, KWIZZES_AL_DIA: N.KWIZZES_AL_DIA, LISTA: N.LISTA, ACIERTOS_PARA_SALIR: N.ACIERTOS_PARA_SALIR,
     META: meta(), DECAIMIENTO: E ? E.parametros.decaimiento : N.DECAIMIENTO, PESO_ARRANQUE: E ? E.parametros.pesoArranque : N.PESO_ARRANQUE,
     TOTAL_TEMA: N.TOTAL_TEMA, TOTAL_TUTORA: N.TOTAL_TUTORA, ACIERTOS_TUTORA: N.ACIERTOS_TUTORA, LAPSOS_ATASCADA: N.LAPSOS_ATASCADA,
+    SOSPECHA_FALLAS: N.SOSPECHA_FALLAS, SOSPECHA_PCT: N.SOSPECHA_PCT, SOSPECHA_MIN: N.SOSPECHA_MIN,
+    ATORADO_KWIZZES: N.ATORADO_KWIZZES, ATORADO_DIAS: N.ATORADO_DIAS,
   };
   e.forEach((d, i) => { n["E" + i] = dias(d); });
   return n;

@@ -964,3 +964,8 @@ dialog.sheet.escena.practica { inset: 0; width: 100%; max-width: 720px; height: 
 .atasAviso { margin: 4px 0 0; padding: 8px 10px; border-left: 4px solid var(--no); color: var(--ink); font-size: 14.5px; }
 .tjAtas { margin: 6px 0 0; font-size: 14px; font-weight: 700; color: var(--no); }
 .tjAtas .lk { color: inherit; text-decoration: underline; }
+/* Sospechosas, atorados y parejas (16-Oct-2026) */
+.sosp { border-left: 3px solid currentColor; padding-left: 8px; }
+.atorados .atorado + .atorado { margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(127,127,127,.3); }
+.tb .motivo.atorado { font-weight: 600; }
+.pareja { margin: 4px 0; }

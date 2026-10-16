@@ -285,6 +285,8 @@ export function calcular(paquete, sucesos) {
   const respuestas = [];
   const dadas = new Set();
   const dejados = new Set();
+  const absueltas = new Map();  // pregunta -> cuándo dijiste «la fallé yo» (ver sospechosasDe)
+  const destrabes = new Map();  // tema -> [{ ms, como }]: cuándo lo destrabaste a mano (ver atorados)
   let enfoque = null;          // el nivel en el que te enfocas («A2»), o null si van todos los niveles
 
   // Las tarjetas. Cada una sube por la misma escalera de días que los temas. Una tarjeta que viene de otro
@@ -367,6 +369,12 @@ export function calcular(paquete, sucesos) {
       if (typeof e.tarjeta === "string" && typeof e.foto === "string" && /^[a-z0-9-]+\.jpg$/.test(e.foto)) fotosTarjeta.set(e.tarjeta, { foto: e.foto, cuando: e.cuando || "" });
     } else if (e.t === "enfoque") enfoque = typeof e.nivel === "string" && e.nivel ? e.nivel : null;
     else if (e.t === "retirar" && e.p) retiradas.add(e.p);
+    else if (e.t === "absolver" && e.p) absueltas.set(e.p, ms(e));       // «Está bien, la fallé yo»: la sospecha empieza de cero
+    else if (e.t === "destrabar" && e.tema != null) {                    // leíste la lección de un tema atorado, o «Seguir así»
+      const t = Number(e.tema);
+      if (!destrabes.has(t)) destrabes.set(t, []);
+      destrabes.get(t).push({ ms: ms(e), como: e.como || "" });
+    }
     else if (e.t === "dejar" && e.kwiz) dejados.add(e.kwiz);
     else if (e.t === "otra" && e.kwiz && typeof e.slot === "string" && /^[^~]+~\d+$/.test(e.slot)) {
       // «Otra vez»: la pregunta fallada vuelve más adelante en el mismo kwiz, como «<id>~2», antes de `antes` (o al final).
@@ -467,7 +475,75 @@ export function calcular(paquete, sucesos) {
     actividadGram.set(dia, (actividadGram.get(dia) || 0) + 1);
   }
 
-  return { temas, kwizzes, retiradas, ultimaVez, respuestas: respuestas.length, porTema, parametros, debe, fallada, enfoque, tarjetas, fotosTarjeta, agregadas, actividad, actividadVoc, actividadGram, notas, porVer };
+  const sospechosas = sospechosasDe(respuestas, retiradas, absueltas);
+
+  return { sospechosas, absueltas, destrabes, todas: respuestas, temas, kwizzes, retiradas, ultimaVez, respuestas: respuestas.length, porTema, parametros, debe, fallada, enfoque, tarjetas, fotosTarjeta, agregadas, actividad, actividadVoc, actividadGram, notas, porVer };
+}
+
+// ---------------------------------------------------------------- Preguntas sospechosas y temas atorados (16-Oct-2026)
+
+/** Una pregunta es sospechosa si la fallaste SOSPECHA_FALLAS veces o más, nunca la has acertado,
+ *  y en el resto de su tema vas en SOSPECHA_PCT % o más, con SOSPECHA_MIN respuestas o más.
+ *  Después de «Está bien, la fallé yo» solo cuentan las respuestas posteriores. */
+export const SOSPECHA_FALLAS = 2, SOSPECHA_PCT = 80, SOSPECHA_MIN = 5;
+function sospechosasDe(respuestas, retiradas, absueltas) {
+  const porPregunta = new Map(), porTema = new Map();
+  for (const r of respuestas) {
+    if (retiradas.has(r.p)) continue;
+    if (!porTema.has(r.tema)) porTema.set(r.tema, []);
+    porTema.get(r.tema).push(r);
+    if (absueltas.has(r.p) && ms(r) <= absueltas.get(r.p)) continue;
+    if (!porPregunta.has(r.p)) porPregunta.set(r.p, { p: r.p, tema: r.tema, fallas: 0, bien: 0, escritos: [], ultima: null });
+    const x = porPregunta.get(r.p);
+    if (r.bien) x.bien++; else { x.fallas++; if (r.escrito) x.escritos.push(r.escrito); }
+    x.ultima = r.cuando;
+  }
+  const lista = [];
+  for (const x of porPregunta.values()) {
+    if (x.fallas < SOSPECHA_FALLAS || x.bien) continue;
+    const resto = (porTema.get(x.tema) || []).filter((r) => r.p !== x.p);
+    const bien = resto.filter((r) => r.bien).length;
+    if (resto.length < SOSPECHA_MIN || 100 * bien / resto.length < SOSPECHA_PCT) continue;
+    lista.push({ ...x, restoBien: bien, restoDe: resto.length });
+  }
+  return lista.sort((a, b) => (a.ultima < b.ultima ? 1 : -1));
+}
+
+/** Un tema se atora si lo fallaste en ATORADO_KWIZZES kwizzes distintos en los últimos ATORADO_DIAS días.
+ *  Se destraba (la cuenta empieza de cero) al leer su lección, al terminar su kwiz con la tutora,
+ *  al acertarlo ACIERTOS_PARA_SALIR veces seguidas, o con «Seguir así».
+ *  Devuelve Map tema -> { kwizzes: n, desde: "AAAA-MM-DD" }. */
+export const ATORADO_KWIZZES = 3, ATORADO_DIAS = 7;
+export function atorados(estado, hoy = fechaLocal(new Date())) {
+  const limite = Date.parse(hoy + "T00:00:00") - (ATORADO_DIAS - 1) * 864e5;
+  const desde = new Map();          // tema -> ms desde el que cuenta
+  for (const [t, l] of estado.destrabes || []) for (const d of l) desde.set(t, Math.max(desde.get(t) || 0, d.ms));
+  for (const k of estado.kwizzes.values()) {
+    if (k.tipo === "tutora" && k.terminado && k.tema != null) {
+      const t = Number(k.tema), m = Date.parse(k.terminado);
+      desde.set(t, Math.max(desde.get(t) || 0, m));
+    }
+  }
+  const seguidas = new Map(), fallos = new Map();
+  for (const r of estado.todas || []) {
+    if (estado.retiradas.has(r.p)) continue;
+    if (r.bien) {
+      const n = (seguidas.get(r.tema) || 0) + 1;
+      seguidas.set(r.tema, n);
+      if (n >= ACIERTOS_PARA_SALIR) desde.set(r.tema, Math.max(desde.get(r.tema) || 0, ms(r)));
+    } else {
+      seguidas.set(r.tema, 0);
+      if (!fallos.has(r.tema)) fallos.set(r.tema, []);
+      fallos.get(r.tema).push(r);
+    }
+  }
+  const salida = new Map();
+  for (const [t, l] of fallos) {
+    const corte = Math.max(limite, desde.get(t) || 0);
+    const kw = new Set(l.filter((r) => ms(r) > corte).map((r) => r.kwiz));
+    if (kw.size >= ATORADO_KWIZZES) salida.set(t, { kwizzes: kw.size, dias: ATORADO_DIAS });
+  }
+  return salida;
 }
 
 // ---------------------------------------------------------------- El mapa de calor
