@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=7622efb21e";
-import * as A from "./almacen.js?v=7622efb21e";
-import { abrirRecorrido } from "./recorrido.js?v=7622efb21e";
-import * as V from "./videos.js?v=7622efb21e";
-import * as NB from "./nube.js?v=7622efb21e";
-import * as CL from "./clases.js?v=7622efb21e";
-import { abrirPractica } from "./practica.js?v=7622efb21e";
-import * as F from "./fondo.js?v=7622efb21e";
+import * as N from "./nucleo.js?v=beaecd17d8";
+import * as A from "./almacen.js?v=beaecd17d8";
+import { abrirRecorrido } from "./recorrido.js?v=beaecd17d8";
+import * as V from "./videos.js?v=beaecd17d8";
+import * as NB from "./nube.js?v=beaecd17d8";
+import * as CL from "./clases.js?v=beaecd17d8";
+import { abrirPractica } from "./practica.js?v=beaecd17d8";
+import * as F from "./fondo.js?v=beaecd17d8";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -368,7 +368,7 @@ function hojaMision(lugar) {
   const partes = acciones.map((a) => {
     const id = `data-accion="${esc(a.id)}"`;
     if (a.tipo === "quiz") {
-      return `<section class="rec-sec" ${id}><h3>${esc(a.texto)}</h3><div class="go"><button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Pelagos Quiz</button></div></section>`;
+      return `<section class="rec-sec" ${id}><h3>${esc(a.texto)}</h3><div class="go"><button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Empezar quiz</button></div></section>`;
     }
     if (a.tipo === "enlace") {
       return `<section class="rec-sec" ${id}><h3>${esc(a.texto)}</h3><div class="go"><a class="ub grande" href="${esc(a.href)}">Abrir</a></div></section>`;
@@ -2775,6 +2775,7 @@ function verKwiz(o) {
   ${tarjetaAtorados()}
   <section class="card" id="lista">
     ${abierto ? "<h2>Tu plan de estudio Pelagos</h2>" : '<h1 class="h">Tu plan de estudio Pelagos</h1>'}
+    ${deLista.length && !lista.abierto ? `<div class="go"><button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Empezar quiz</button></div>` : ""}
     <h3 id="enfoqueT">Enfoque</h3>
     <div class="enfoque" role="group" aria-labelledby="enfoqueT">
       <button type="button" class="nv ancho" data-enfoque="" aria-pressed="${E.enfoque ? "false" : "true"}">Guiado: todos los niveles</button>
@@ -2784,7 +2785,7 @@ function verKwiz(o) {
     ${deLista.length ? `
     <h3>${plural(deLista.length, "tema", "temas")} en tu plan</h3>
     <div class="links">${deLista.map((t) => botonTema(t, { sub: lineaDelPlan(t, lista, bancoPlan) })).join("")}</div>
-    <div class="go">${lista.abierto ? "" : `<button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Pelagos Quiz</button>`}${botonesRepaso()}</div>
+    ${mudo() ? "" : `<div class="go">${botonesRepaso()}</div>`}
     ${mudo() ? "" : `<p class="small" id="repasoAviso" role="status">${esc(avisoRepaso())}</p>`}
     <p class="small">Una pregunta de cada tema. El que aciertas sale del plan y entra otro. El que fallas se queda hasta que lo aciertes dos veces seguidas.</p>
     ${deLista.length < N.LISTA ? `<p class="small">${E.enfoque ? `En ${esc(E.enfoque)} solo hay` : "Solo hay"} ${plural(deLista.length, "tema", "temas")} con preguntas. El plan se llena cuando se escriban más.</p>` : ""}
