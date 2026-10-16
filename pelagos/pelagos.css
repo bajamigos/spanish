@@ -950,11 +950,10 @@ dialog.sheet.escena.practica { inset: 0; width: 100%; max-width: 720px; height: 
 
 .lectura .lecturaEjemplo a { color: inherit; text-decoration: underline; }
 
-<<<<<<< HEAD
 /* El quiz de gramática como el Tablero: el loop de la tutora fijo arriba y la pregunta en tarjetas de vidrio encima. */
 .hoy.kwFondo .kwh.contutora .over { padding-top: 12px; }
 .hoy.kwFondo .kw { gap: 14px; }
-=======
+
 /* Tarjetas atascadas (16-Oct-2026, como las «leech» de Anki) */
 .jump.uno { grid-template-columns: minmax(0, 1fr); }
 .jump.uno button { background: var(--page); color: var(--ink); border-color: var(--outline); font-size: 13px; padding: 9px 0; }
@@ -965,4 +964,3 @@ dialog.sheet.escena.practica { inset: 0; width: 100%; max-width: 720px; height: 
 .atasAviso { margin: 4px 0 0; padding: 8px 10px; border-left: 4px solid var(--no); color: var(--ink); font-size: 14.5px; }
 .tjAtas { margin: 6px 0 0; font-size: 14px; font-weight: 700; color: var(--no); }
 .tjAtas .lk { color: inherit; text-decoration: underline; }
->>>>>>> 9cd18ae (Tarjetas atascadas (como las leech de Anki) y sin «Escuchar» en la ayuda)
