@@ -71,6 +71,19 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 /* Cuatro botones en un renglón: cada uno del ancho de su palabra, y lo que sobra se reparte. */
 .top { display: flex; gap: 5px; }
 .top .ub { flex: 1 1 auto; min-width: 0; white-space: nowrap; font-size: 15px; padding-inline: 4px; }
+.top .ub.ayudaQ { flex: 0 0 44px; font-size: 18px; font-weight: 700; border-radius: 50%; padding: 0; }
+
+/* «Cómo funciona» (16-Oct-2026) */
+.ayudaIdx { display: grid; gap: 8px; list-style: none; padding: 0; margin: 0; }
+.ayudaIdx a { display: grid; gap: 2px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 8px; text-decoration: none; color: var(--ink); }
+.ayudaIdx a b { font-size: 17px; }
+.ayudaIdx a span { font-size: 14.5px; color: var(--ink-3); }
+.ayudaPag ul { display: grid; gap: 6px; padding-left: 20px; margin: 0; color: var(--ink-2); }
+.ayudaPag .formula { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 14px; overflow-wrap: anywhere; color: var(--ink); }
+.ayudaPag a, .ayudaIdx a b { overflow-wrap: anywhere; }
+.ayudaPag .lk { text-decoration: underline dotted; text-underline-offset: 3px; }
+.glosa dt { font-weight: 700; color: var(--ink); margin-top: 10px; scroll-margin-top: 12px; }
+.glosa dd { margin: 2px 0 0; color: var(--ink-2); }
 .ub { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box;
   min-height: 44px; padding: 6px 14px; font: inherit; font-size: 14px; font-weight: 600; line-height: 1.25; text-decoration: none; text-align: center;
   color: var(--btn-ink); background: linear-gradient(to bottom, var(--btn-top), var(--btn-bot));

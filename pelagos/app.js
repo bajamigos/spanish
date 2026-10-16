@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=39ad73bace";
-import * as A from "./almacen.js?v=39ad73bace";
-import { abrirRecorrido } from "./recorrido.js?v=39ad73bace";
-import * as V from "./videos.js?v=39ad73bace";
-import * as NB from "./nube.js?v=39ad73bace";
-import * as CL from "./clases.js?v=39ad73bace";
-import { abrirPractica } from "./practica.js?v=39ad73bace";
-import * as F from "./fondo.js?v=39ad73bace";
+import * as N from "./nucleo.js?v=3b6db5a630";
+import * as A from "./almacen.js?v=3b6db5a630";
+import { abrirRecorrido } from "./recorrido.js?v=3b6db5a630";
+import * as V from "./videos.js?v=3b6db5a630";
+import * as NB from "./nube.js?v=3b6db5a630";
+import * as CL from "./clases.js?v=3b6db5a630";
+import { abrirPractica } from "./practica.js?v=3b6db5a630";
+import * as F from "./fondo.js?v=3b6db5a630";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -240,6 +240,8 @@ function poner(html, { titulo: t = "Pelagos", pie = "", nav = "", conserva = fal
   for (const a of document.querySelectorAll("[data-nav]")) {
     if (a.dataset.nav === nav) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
   }
+  callarAyuda();
+  ponerSignoAyuda();
   vestir(vista);
   document.body.classList.toggle("conandrea", !!vista.querySelector(".hoy.confoto"));      // con el retrato al fondo, la página entera se oscurece
   if (conserva) {
@@ -317,6 +319,8 @@ const RUTAS = [
   [/^\/vocabulario\/acervo$/, verLista],
   [/^\/vocabulario\/agregar$/, verAgregar],
   [/^\/ajustes$/, verAjustes],
+  [/^\/ayuda$/, verAyuda],
+  [/^\/ayuda\/([a-z0-9-]+)$/, verPaginaAyuda],
   [/^\/recorrido(?:\/([a-z0-9-]+))?$/, (o, id) => (CON_RECORRIDO ? verRecorrido(o, id) : ir("/", true))],
   // Las direcciones de antes siguen llevando a su página.
   [/^\/kwiz((?:\/[A-Za-z0-9_-]+){0,2})$/, (o, resto) => ir(QUIZ + (resto || ""), true)],
@@ -3284,6 +3288,11 @@ function verAjustes(o) {
     <div class="go"><button type="button" class="ub" id="ajAlDia">Poner al día ahora</button><button type="button" class="ub" id="ajRecargar">Recargar Pelagos</button></div>
     <p class="small" id="ajAviso" role="status" hidden></p>
   </section>
+  ${ayudaLista().length ? `<section class="card" id="ajAyuda">
+    <h2>Cómo funciona</h2>
+    <p class="small">El método y las reglas de Pelagos: la escalera, el plan de cinco temas, el porcentaje, las tutoras y los premios.</p>
+    <div class="go"><a class="ub" href="#/ayuda">Abrir «Cómo funciona»</a></div>
+  </section>` : ""}
   <section class="card" id="ajTema">
     <h2>Colores</h2>
     <nav class="jump dos" aria-label="Modo de color">
@@ -3367,6 +3376,152 @@ function verAjustes(o) {
   });
 }
 
+// ---------------------------------------------------------------- Cómo funciona (la ayuda, 16-Oct-2026)
+//
+// Las páginas viven en el contenido (contenido/ayuda.json), no aquí: la página pública no dice nada del método.
+// Sus números van entre llaves y se toman del motor al pintar, así que nunca se quedan viejos.
+
+/** Qué página de ayuda abre el «?» de arriba, según dónde estás. */
+const AYUDA_DE = [
+  [/^\/gramatica\/quiz/, "quiz"],
+  [/^\/kwiz/, "quiz"],
+  [/^\/gramatica\/atlas$/, "porcentaje"],
+  [/^\/gramatica(\/[a-z0-9]+)?(\/bajo|\/mision)?$/, "porcentaje"],
+  [/^\/(leccion|tutoras)(\/|$)/, "tutoras"],
+  [/^\/vocabulario/, "tarjetas"],
+  [/^\/(clases|bitacora|lectura)?$/, "tablero"],
+];
+
+function ayudaLista() { return (P && P.ayuda && P.ayuda.paginas) || []; }
+function ayudaPagina(slug) { return ayudaLista().find((p) => p.slug === slug) || null; }
+
+/** El «?» de la barra de arriba: lleva a la página que explica donde estás (o al índice). */
+function ponerSignoAyuda() {
+  const q = $("ayudaQ");
+  if (!q) return;
+  const camino = window.location.hash.replace(/^#/, "") || "/";
+  q.hidden = !ayudaLista().length;
+  if (camino.startsWith("/ayuda")) { q.href = "#/ayuda"; q.setAttribute("aria-current", "page"); q.setAttribute("aria-label", "Cómo funciona"); return; }
+  const fila = AYUDA_DE.find(([re]) => re.test(camino));
+  const pag = fila && ayudaPagina(fila[1]);
+  q.href = pag ? "#/ayuda/" + pag.slug : "#/ayuda";
+  q.setAttribute("aria-label", pag ? "Cómo funciona: " + pag.titulo : "Cómo funciona");
+  q.title = q.getAttribute("aria-label");
+}
+
+/** Los números del motor que la ayuda nombra entre llaves. */
+function numerosAyuda() {
+  const dias = (d) => (d === 1 ? "1 día" : d + " días");
+  const e = N.ESCALONES;
+  const n = {
+    ESCALONES: e.slice(0, -1).join(", ") + " y " + e[e.length - 1] + " días", N_ESCALONES: e.length,
+    NUEVAS_AL_DIA: N.NUEVAS_AL_DIA, KWIZZES_AL_DIA: N.KWIZZES_AL_DIA, LISTA: N.LISTA, ACIERTOS_PARA_SALIR: N.ACIERTOS_PARA_SALIR,
+    META: meta(), DECAIMIENTO: E ? E.parametros.decaimiento : N.DECAIMIENTO, PESO_ARRANQUE: E ? E.parametros.pesoArranque : N.PESO_ARRANQUE,
+    TOTAL_TEMA: N.TOTAL_TEMA, TOTAL_TUTORA: N.TOTAL_TUTORA, ACIERTOS_TUTORA: N.ACIERTOS_TUTORA,
+  };
+  e.forEach((d, i) => { n["E" + i] = dias(d); });
+  return n;
+}
+const conNumeros = (texto, n = numerosAyuda()) => String(texto ?? "").replace(/\{([A-Z0-9_]+)\}/g, (todo, k) => (k in n ? String(n[k]) : todo));
+
+/** Texto de la ayuda -> HTML: los números del motor, **negrita** y los enlaces [[ayuda:slug|…]] y [[g:clave|…]]. */
+function marcaAyuda(texto, n) {
+  let s = esc(conNumeros(texto, n));
+  s = s.replace(/\[\[ayuda:([a-z0-9-]+)\|([^\]]+)\]\]/g, (_, slug, dentro) => `<a href="#/ayuda/${slug}">${dentro}</a>`);
+  s = s.replace(/\[\[g:([a-z0-9-]+)\|([^\]]+)\]\]/g, (_, clave, dentro) => `<button type="button" class="lk" data-glosa="${clave}">${dentro}</button>`);
+  s = s.replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
+  return s;
+}
+/** El mismo texto, plano, para leerlo en voz alta. */
+const planoAyuda = (texto, n) => conNumeros(texto, n).replace(/\[\[(?:ayuda|g):[a-z0-9-]+\|([^\]]+)\]\]/g, "$1").replace(/\*\*/g, "")
+  .replace(/\bL\^i\b/g, "L a la i").replace(/\bL\^n\b/g, "L a la n").replace(/×/g, " por ");
+
+function verAyuda(o) {
+  const lista = ayudaLista();
+  if (!lista.length) return verNoExiste("Todavía no hay páginas de ayuda en tu contenido.");
+  poner(`
+  <section class="card">
+    <h1 class="h">Cómo funciona</h1>
+    <p>El método y las reglas de Pelagos, una página por tema.</p>
+    <ul class="ayudaIdx">${lista.map((p) => `<li><a href="#/ayuda/${p.slug}"><b>${esc(p.titulo)}</b><span>${esc(p.resumen)}</span></a></li>`).join("")}</ul>
+  </section>`, { titulo: "Cómo funciona · Pelagos", nav: "ayuda", conserva: o.conserva });
+}
+
+function verPaginaAyuda(o, slug) {
+  const p = ayudaPagina(slug);
+  if (!p) return verNoExiste("Esa página de ayuda no existe.");
+  const n = numerosAyuda(), G = (P.ayuda && P.ayuda.glosario) || {};
+  const lista = ayudaLista(), i = lista.indexOf(p), sigue = lista[i + 1];
+  const secciones = p.secciones.map((s) => `
+    <section class="card ayudaPag">
+      ${s.h ? `<h2>${esc(conNumeros(s.h, n))}</h2>` : ""}
+      ${(s.p || []).map((x) => `<p${/^P = /.test(x) ? ' class="formula"' : ""}>${marcaAyuda(x, n)}</p>`).join("")}
+      ${s.lista ? `<ul>${s.lista.map((x) => `<li>${marcaAyuda(x, n)}</li>`).join("")}</ul>` : ""}
+    </section>`).join("");
+  const terminos = Object.entries(G).sort((a, b) => a[1].termino.localeCompare(b[1].termino, "es"));
+  const glosa = p.glosario ? `<section class="card ayudaPag"><dl class="glosa">${terminos.map(([k, g]) => `<dt id="g-${k}">${esc(g.termino)}</dt><dd>${marcaAyuda(g.def, n)}</dd>`).join("")}</dl></section>` : "";
+  poner(`
+  <section class="card">
+    <p class="small"><a href="#/ayuda">Cómo funciona</a></p>
+    <h1 class="h">${esc(p.titulo)}</h1>
+    ${p.resumen ? `<p>${esc(p.resumen)}</p>` : ""}
+    <div class="go"><button type="button" class="ub" id="ayudaOir" aria-pressed="false">Escuchar</button></div>
+  </section>
+  ${secciones}${glosa}
+  <section class="card">
+    <p>${sigue ? `Sigue: <a href="#/ayuda/${sigue.slug}">${esc(sigue.titulo)}</a> · ` : ""}<a href="#/ayuda">Todas las páginas</a></p>
+  </section>`, { titulo: p.titulo + " · Pelagos", nav: "ayuda", conserva: o.conserva });
+  // Escuchar: la voz del aparato lee la página. Se calla al salir de la página o con otro toque.
+  const oir = $("ayudaOir");
+  if (!("speechSynthesis" in window)) { oir.hidden = true; return; }
+  oir.addEventListener("click", () => {
+    if (speechSynthesis.speaking) { callarAyuda(); return; }
+    const partes = [p.titulo, p.resumen, ...p.secciones.flatMap((s) => [s.h, ...(s.p || []), ...(s.lista || [])]),
+      ...(p.glosario ? terminos.flatMap(([, g]) => [g.termino, g.def]) : [])].filter(Boolean).map((x) => planoAyuda(x, n));
+    const voces = speechSynthesis.getVoices();
+    const voz = voces.find((v) => /^es-MX/i.test(v.lang)) || voces.find((v) => /^es-(US|419)/i.test(v.lang)) || voces.find((v) => /^es/i.test(v.lang));
+    for (const t of partes) {
+      const u = new SpeechSynthesisUtterance(t);
+      u.lang = voz ? voz.lang : "es-MX";
+      if (voz) u.voice = voz;
+      u.rate = 0.95;
+      speechSynthesis.speak(u);
+    }
+    oir.textContent = "Callar"; oir.setAttribute("aria-pressed", "true");
+    // Al acabar, el botón vuelve a decir «Escuchar».
+    const revisar = setInterval(() => {
+      if (oir.isConnected && (speechSynthesis.speaking || speechSynthesis.pending)) return;
+      clearInterval(revisar);
+      if (oir.isConnected) { oir.textContent = "Escuchar"; oir.setAttribute("aria-pressed", "false"); }
+    }, 500);
+  });
+}
+
+function callarAyuda() {
+  try { if ("speechSynthesis" in window && (speechSynthesis.speaking || speechSynthesis.pending)) speechSynthesis.cancel(); } catch { /* sin voz */ }
+  const oir = $("ayudaOir");
+  if (oir) { oir.textContent = "Escuchar"; oir.setAttribute("aria-pressed", "false"); }
+}
+
+/** La definición de una palabra del glosario, en la hoja de abajo, sin salir de la página. */
+function abrirGlosa(clave) {
+  const g = P && P.ayuda && P.ayuda.glosario && P.ayuda.glosario[clave];
+  if (!g) return;
+  const n = numerosAyuda();
+  hojaV.querySelectorAll(".hvFondo").forEach((x) => x.remove());
+  hojaV.classList.remove("conFoto");
+  $("hvIn").innerHTML = `
+    <span class="k">Glosario</span>
+    <h2 id="hvT" tabindex="-1">${esc(g.termino)}</h2>
+    <p class="r">${marcaAyuda(g.def, n)}</p>
+    <div class="acts">
+      <a class="ub" href="#/ayuda/glosario" data-cerrar>Ver el glosario</a>
+      <button type="button" class="ub" data-cerrar>Cerrar</button>
+    </div>`;
+  if (!hojaV.hasAttribute("open")) { if (hojaV.showModal) hojaV.showModal(); else hojaV.setAttribute("open", ""); }
+  $("hvT").focus({ preventScroll: true });
+}
+
 // ---------------------------------------------------------------- Vista previa de un tema enlazado
 
 const hoja = $("sheet");
@@ -3403,6 +3558,8 @@ document.addEventListener("click", (ev) => {
   const objetivo = ev.target instanceof Element ? ev.target : null;
   if (!objetivo) return;
   if (objetivo === hoja || objetivo === hojaV || objetivo.closest("#shX") || objetivo.closest("#shL") || objetivo.closest("[data-cerrar]")) { cerrarHoja(); return; }
+  const glosa = objetivo.closest("[data-glosa]");
+  if (glosa) { abrirGlosa(glosa.dataset.glosa); return; }
   const palabra = objetivo.closest("[data-v]");
   if (palabra && P && E) { abrirPalabra(palabra.dataset.v); return; }
   if (toque && !hoja.hasAttribute("open") && !objetivo.closest("a, button, summary, input, label, dialog")) { toque(); return; }
