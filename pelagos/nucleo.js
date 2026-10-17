@@ -929,6 +929,44 @@ export function tendencias(paquete, sucesos, hoy = fechaLocal(new Date()), dias 
   };
 }
 
+/**
+ * Tu avance por nivel, como la gráfica de Kwiziq (17-Oct-2026): para cada día, desde tu primera respuesta de gramática
+ * hasta hoy, qué parte de los temas de cada nivel ya contestaste aquí («cubiertos») y tu puntaje del nivel: la suma de
+ * los porcentajes de sus temas entre todos sus temas (los que no has visto cuentan 0, así que nunca pasa de cubiertos).
+ * Si hay más de «puntos» días, se toman días repartidos (siempre con el primero y hoy).
+ * Devuelve { dias: [...], niveles: { B2: { total, cubiertos: [%], puntaje: [%], n: [temas cubiertos] } } }.
+ */
+export function progresoNiveles(paquete, sucesos, hoy = fechaLocal(new Date()), puntos = 60) {
+  const lista = (sucesos || []).filter((e) => e && typeof e === "object").map((e) => ({ e, dia: fechaLocal(new Date(ms(e))) }));
+  const resp = lista.filter((x) => x.e.t === "r").map((x) => x.dia).sort();
+  // Si hoy los porcentajes de Kwiziq ya no cuentan, tampoco cuentan hacia atrás: la gráfica entera es solo lo de aquí.
+  const sa = lista.filter((x) => x.e.t === "sinarranque").sort((a, b) => ms(a.e) - ms(b.e)).pop();
+  if (sa && !(sa.e.deshacer === 1 || sa.e.deshacer === true)) lista.unshift({ e: { t: "sinarranque", id: "sa-retro", cuando: "2000-01-01T00:00:00Z" }, dia: "2000-01-01" });
+  const desde = resp.length ? sumarDias(resp[0], -1) : hoy;
+  let todos = [];
+  for (let d = desde, v = 0; d <= hoy && v < 2000; d = sumarDias(d, 1), v++) todos.push(d);
+  if (todos.length > puntos) {
+    const paso = (todos.length - 1) / (puntos - 1);
+    todos = [...new Set(Array.from({ length: puntos }, (_, i) => todos[Math.round(i * paso)]))];
+  }
+  const porNivel = new Map();
+  for (const t of paquete.temas || []) { if (!porNivel.has(t.nivel)) porNivel.set(t.nivel, []); porNivel.get(t.nivel).push(t.id); }
+  const niveles = {};
+  for (const [n, ids] of porNivel) niveles[n] = { total: ids.length, cubiertos: [], puntaje: [], n: [] };
+  for (const dia of todos) {
+    const E = calcular(paquete, lista.filter((x) => x.dia <= dia).map((x) => x.e));
+    for (const [n, ids] of porNivel) {
+      let c = 0, suma = 0;
+      for (const id of ids) { const t = E.temas.get(id); if (!t) continue; if (t.n > 0) c++; suma += t.pct ?? 0; }
+      const N = niveles[n];
+      N.n.push(c);
+      N.cubiertos.push(Math.round((1000 * c) / ids.length) / 10);
+      N.puntaje.push(Math.round((10 * suma) / ids.length) / 10);
+    }
+  }
+  return { dias: todos, niveles };
+}
+
 /** Los aciertos de una tarjeta al cierre de cada día: lo que traía de antes más sus repasos hasta ese día. */
 export function historiaTarjeta(suya, hasta = fechaLocal(new Date()), desde = INICIO_HISTORIA) {
   const repasos = (suya?.historia || []).map((h) => ({ dia: fechaLocal(new Date(Date.parse(h.cuando) || 0)), bien: !!h.bien }));

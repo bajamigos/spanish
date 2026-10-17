@@ -1014,3 +1014,19 @@ dialog.sheet.escena.practica { inset: 0; width: 100%; max-width: 720px; height: 
 .tdDet summary::after { content: ""; width: 9px; height: 9px; margin-left: auto; border-right: 2px solid var(--ink); border-bottom: 2px solid var(--ink); transform: rotate(45deg); transition: transform .15s; }
 .tdDet[open] summary::after { transform: rotate(-135deg); }
 .tdDet summary .tdSub { margin: 0; }
+
+/* Tu avance por nivel (17-Oct-2026), como la gráfica de Kwiziq: línea de temas cubiertos y área de tu puntaje */
+.pg { margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.pg svg { display: block; }
+.pgRej { stroke: var(--line); stroke-width: 1; }
+.pgEje { font-size: 11px; fill: var(--ink-2); }
+.pgArea { fill: var(--si); fill-opacity: .35; stroke: var(--si); stroke-width: 2; }
+.pgLinea { fill: none; stroke: var(--ink-2); stroke-width: 3; stroke-linejoin: round; }
+.pgPunto { fill: var(--ink-2); }
+.pgLey { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 14px; color: var(--ink-2); }
+.pgLey span { display: inline-flex; align-items: center; gap: 6px; }
+.pgLLinea { display: inline-block; width: 18px; height: 3px; background: var(--ink-2); }
+.pgLArea { display: inline-block; width: 16px; height: 12px; border-radius: 3px; background: var(--si); opacity: .6; }
+.pgNums { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.pgNums p { margin: 0; display: flex; flex-direction: column; gap: 2px; }
+.tdNiveles { margin: 0; }
