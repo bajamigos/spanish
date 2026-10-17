@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=ff5dc1c879";
-import * as A from "./almacen.js?v=ff5dc1c879";
-import { abrirRecorrido } from "./recorrido.js?v=ff5dc1c879";
-import * as V from "./videos.js?v=ff5dc1c879";
-import * as NB from "./nube.js?v=ff5dc1c879";
-import * as CL from "./clases.js?v=ff5dc1c879";
-import { abrirPractica } from "./practica.js?v=ff5dc1c879";
-import * as F from "./fondo.js?v=ff5dc1c879";
+import * as N from "./nucleo.js?v=d76d98a0ea";
+import * as A from "./almacen.js?v=d76d98a0ea";
+import { abrirRecorrido } from "./recorrido.js?v=d76d98a0ea";
+import * as V from "./videos.js?v=d76d98a0ea";
+import * as NB from "./nube.js?v=d76d98a0ea";
+import * as CL from "./clases.js?v=d76d98a0ea";
+import { abrirPractica } from "./practica.js?v=d76d98a0ea";
+import * as F from "./fondo.js?v=d76d98a0ea";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -998,17 +998,21 @@ function seccionTendencias() {
   return `<section class="card tend" id="tendencias" aria-labelledby="tendT">
     <h2 id="tendT">Tu avance</h2>
     <h3 class="tdSub">Gramática por nivel</h3>
-    <div class="jump niveles tdNiveles" role="group" aria-label="Nivel">${nivs.map((n) => `<button type="button" data-tnivel="${n}" aria-pressed="${n === tendNivel}">${n}</button>`).join("")}</div>
+    <div class="tdSeg" role="group" aria-label="Nivel">${nivs.map((n) => `<button type="button" data-tnivel="${n}" aria-pressed="${n === tendNivel}">${n}</button>`).join("")}</div>
     <div id="tdGrafNivel">${graficaNivel(tendNivel)}</div>
     <p class="small">La línea es qué parte de los temas del nivel ya contestaste aquí; lo verde, lo que sabes de todo el nivel (los que no has visto cuentan 0).</p>
     <h3 class="tdSub">Vocabulario</h3>
     ${graficaVocab()}
     <p class="small">La línea es qué parte de tu mazo ya viste${E.reinicioTj ? " desde el reinicio" : ""}; lo verde, qué tan arriba van tus tarjetas en la escalera (la caja de 75 días es 100%; las que no has visto cuentan 0).</p>
-    <h3 class="tdSub">Los que más subieron <span class="tdGris">· 7 días</span></h3>
-    <p class="small">Aro: hace 7 días. Punto: hoy. Raya: tu meta, ${T.metaPct}%.</p>
-    ${temas(T.subieron, "Ninguno subió esta semana.")}
-    <h3 class="tdSub">Los que más bajaron <span class="tdGris">· 7 días</span></h3>
-    ${temas(T.bajaron, "Ninguno bajó esta semana.")}
+    <details class="tdDet" data-tdet="subieron"${tendAbiertas.has("subieron") ? " open" : ""}>
+      <summary><h3 class="tdSub">Los que más subieron <span class="tdGris">· ${T.subieron.length} en 7 días</span></h3></summary>
+      <p class="small">Aro: hace 7 días. Punto: hoy. Raya: tu meta, ${T.metaPct}%.</p>
+      ${temas(T.subieron, "Ninguno subió esta semana.")}
+    </details>
+    <details class="tdDet" data-tdet="bajaron"${tendAbiertas.has("bajaron") ? " open" : ""}>
+      <summary><h3 class="tdSub">Los que más bajaron <span class="tdGris">· ${T.bajaron.length} en 7 días</span></h3></summary>
+      ${temas(T.bajaron, "Ninguno bajó esta semana.")}
+    </details>
     <h3 class="tdSub">Vocabulario: tus cajas grandes</h3>
     ${caja(5, "75 días")}${caja(4, "30 días")}
     <p class="small">Las que suben a la de 75 vienen de la de 30: si la de 30 baja mientras la de 75 sube, vas bien.</p>

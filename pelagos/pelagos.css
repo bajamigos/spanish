@@ -1031,3 +1031,10 @@ dialog.sheet.escena.practica { inset: 0; width: 100%; max-width: 720px; height: 
 .pgNums p { margin: 0; display: flex; flex-direction: column; gap: 2px; }
 .tdNiveles { margin: 0; }
 #tdGrafNivel { display: block; }
+/* El selector de nivel del Tablero (17-Oct-2026): una barra segmentada, a lo ancho y bajita */
+.tdSeg { display: flex; width: 100%; margin: 0; border: 1.5px solid var(--outline); border-radius: 999px; overflow: hidden; background: var(--page); }
+.tdSeg button { flex: 1 1 0; min-width: 0; min-height: 36px; padding: 0; border: 0; border-left: 1px solid var(--line); background: transparent; color: var(--ink); font: inherit; font-size: 14px; font-weight: 600; letter-spacing: .02em; cursor: pointer; }
+.tdSeg button:first-child { border-left: 0; }
+.tdSeg button[aria-pressed="true"] { background: var(--tab); color: var(--tab-ink); }
+.tdSeg button:focus-visible { outline: 3px solid var(--mark); outline-offset: -3px; }
+.hoy.confoto .tdSeg { background: var(--vidrio); }
