@@ -967,6 +967,40 @@ export function progresoNiveles(paquete, sucesos, hoy = fechaLocal(new Date()), 
   return { dias: todos, niveles };
 }
 
+/**
+ * Tu avance en vocabulario, con la misma idea (17-Oct-2026): para cada día, qué parte de tu mazo ya viste («vistas»;
+ * después de un reinicio, solo cuentan las que volviste a ver) y tu puntaje: qué tan arriba van tus tarjetas en la
+ * escalera, en promedio sobre todo el mazo (la caja más alta = 100%; las que no has visto cuentan 0).
+ * Empieza el día de tu último reinicio, o el día antes de tu primer repaso. Devuelve { dias, total, vistas, puntaje, n }.
+ */
+export function progresoVocab(paquete, sucesos, hoy = fechaLocal(new Date()), puntos = 60) {
+  const lista = (sucesos || []).filter((e) => e && typeof e === "object").map((e) => ({ e, dia: fechaLocal(new Date(ms(e))) }));
+  const reinicios = lista.filter((x) => x.e.t === "tjreinicio").map((x) => x.dia).sort();
+  const repasos = lista.filter((x) => x.e.t === "tj").map((x) => x.dia).sort();
+  const desde = reinicios.length ? reinicios[reinicios.length - 1] : repasos.length ? sumarDias(repasos[0], -1) : hoy;
+  let dias = [];
+  for (let d = desde, v = 0; d <= hoy && v < 2000; d = sumarDias(d, 1), v++) dias.push(d);
+  if (dias.length > puntos) { const paso = (dias.length - 1) / (puntos - 1); dias = [...new Set(Array.from({ length: puntos }, (_, i) => dias[Math.round(i * paso)]))]; }
+  const salida = { dias, total: 0, vistas: [], puntaje: [], n: [] };
+  const tope = ESCALONES.length;
+  for (const dia of dias) {
+    const E = calcular(paquete, lista.filter((x) => x.dia <= dia).map((x) => x.e));
+    let total = 0, vistas = 0, suma = 0;
+    for (const t of E.tarjetas.values()) {
+      if (t.quitada) continue;
+      total++;
+      const vista = E.reinicioTj ? t.nr > 0 : t.n > 0 || t.traia;
+      if (vista) vistas++;
+      if (t.toca) suma += (t.escalon + 1) / tope;
+    }
+    salida.total = total;
+    salida.n.push(vistas);
+    salida.vistas.push(total ? Math.round((1000 * vistas) / total) / 10 : 0);
+    salida.puntaje.push(total ? Math.round((1000 * suma) / total) / 10 : 0);
+  }
+  return salida;
+}
+
 /** Los aciertos de una tarjeta al cierre de cada día: lo que traía de antes más sus repasos hasta ese día. */
 export function historiaTarjeta(suya, hasta = fechaLocal(new Date()), desde = INICIO_HISTORIA) {
   const repasos = (suya?.historia || []).map((h) => ({ dia: fechaLocal(new Date(Date.parse(h.cuando) || 0)), bien: !!h.bien }));

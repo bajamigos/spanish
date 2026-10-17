@@ -1030,3 +1030,4 @@ dialog.sheet.escena.practica { inset: 0; width: 100%; max-width: 720px; height: 
 .pgNums { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 .pgNums p { margin: 0; display: flex; flex-direction: column; gap: 2px; }
 .tdNiveles { margin: 0; }
+#tdGrafNivel { display: block; }

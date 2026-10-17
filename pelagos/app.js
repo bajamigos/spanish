@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=07c3254bc2";
-import * as A from "./almacen.js?v=07c3254bc2";
-import { abrirRecorrido } from "./recorrido.js?v=07c3254bc2";
-import * as V from "./videos.js?v=07c3254bc2";
-import * as NB from "./nube.js?v=07c3254bc2";
-import * as CL from "./clases.js?v=07c3254bc2";
-import { abrirPractica } from "./practica.js?v=07c3254bc2";
-import * as F from "./fondo.js?v=07c3254bc2";
+import * as N from "./nucleo.js?v=ff5dc1c879";
+import * as A from "./almacen.js?v=ff5dc1c879";
+import { abrirRecorrido } from "./recorrido.js?v=ff5dc1c879";
+import * as V from "./videos.js?v=ff5dc1c879";
+import * as NB from "./nube.js?v=ff5dc1c879";
+import * as CL from "./clases.js?v=ff5dc1c879";
+import { abrirPractica } from "./practica.js?v=ff5dc1c879";
+import * as F from "./fondo.js?v=ff5dc1c879";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -855,26 +855,15 @@ const colorTarjeta = (x) => (E.reinicioTj && x.s && !x.s.nr ? null : N.colorDe({
 // ---------------------------------------------------------------- Tus tendencias (Tablero, 16-Oct-2026)
 // En lugar del promedio por nivel, que casi no se mueve: lo que subió y bajó en los últimos 7 días,
 // contando solo los temas que has practicado aquí, y tus cajas grandes de tarjetas.
-// Deslizar la sección (o tocar «Hoy» / «7 días») cambia entre los últimos 7 días y solo hoy (contra ayer).
-let tendCache = null, tendDias = 7;
+// 17-Oct-2026: arriba, tu avance (gramática por nivel y vocabulario, como la gráfica de Kwiziq); abajo, los últimos 7 días.
+let tendCache = null;
+const tendDias = 7;
 const tendAbiertas = new Set();      // «Se te quedaron» y «Se te olvidaron»: cerradas hasta que las abras (con la flecha)
 function tendenciasHoy() {
   const hoy = N.fechaLocal(new Date()), suc = A.sucesos();
-  const clave = hoy + "|" + suc.length + "|" + tendDias;
+  const clave = hoy + "|" + suc.length;
   if (!tendCache || tendCache.clave !== clave) tendCache = { clave, t: N.tendencias(P, suc, hoy, tendDias) };
   return tendCache.t;
-}
-function cambiarTendencias(dias) {
-  if (dias === tendDias) return;
-  tendDias = dias;
-  const viejo = $("tendencias");
-  if (!viejo) return;
-  viejo.outerHTML = seccionTendencias();
-  const nuevo = $("tendencias");
-  vestir(nuevo);
-  prepararTendencias();
-  const b = nuevo.querySelector(`[data-tdias="${dias}"]`);
-  if (b) b.focus({ preventScroll: true });
 }
 function prepararTendencias() {
   const sec = $("tendencias");
@@ -884,22 +873,13 @@ function prepararTendencias() {
     const d = ev.target;
     if (d instanceof HTMLDetailsElement && d.dataset.tdet) { if (d.open) tendAbiertas.add(d.dataset.tdet); else tendAbiertas.delete(d.dataset.tdet); }
   }, true);
+  // El selector de nivel solo cambia la gráfica de gramática.
   sec.addEventListener("click", (ev) => {
-    const b = ev.target instanceof Element ? ev.target.closest("[data-tdias]") : null;
-    if (b) cambiarTendencias(Number(b.dataset.tdias));
     const nv = ev.target instanceof Element ? ev.target.closest("[data-tnivel]") : null;
-    if (nv && nv.dataset.tnivel !== tendNivel) { tendNivel = nv.dataset.tnivel; tendDias = -1; cambiarTendencias(0); const f = $("tendencias")?.querySelector(`[data-tnivel="${tendNivel}"]`); if (f) f.focus({ preventScroll: true }); }
-  });
-  let x0 = null, y0 = null;
-  sec.addEventListener("pointerdown", (ev) => { x0 = ev.pointerType === "mouse" ? null : ev.clientX; y0 = ev.clientY; }, { passive: true });
-  sec.addEventListener("pointercancel", () => { x0 = null; });
-  sec.addEventListener("pointerup", (ev) => {
-    if (x0 === null) return;
-    const dx = ev.clientX - x0, dy = ev.clientY - y0;
-    x0 = null;
-    if (Math.abs(dx) < 60 || Math.abs(dx) < Math.abs(dy) * 1.5) return;
-    const orden = [1, 7, 0], i = orden.indexOf(tendDias);
-    cambiarTendencias(orden[(i + (dx < 0 ? 1 : orden.length - 1)) % orden.length]);
+    if (!nv || nv.dataset.tnivel === tendNivel) return;
+    tendNivel = nv.dataset.tnivel;
+    for (const b of sec.querySelectorAll("[data-tnivel]")) b.setAttribute("aria-pressed", String(b.dataset.tnivel === tendNivel));
+    $("tdGrafNivel").innerHTML = graficaNivel(tendNivel);
   });
 }
 const DIAS_CORTOS = ["D", "L", "M", "M", "J", "V", "S"];
@@ -934,12 +914,6 @@ function pistaTema(x, meta) {
     </span>${cierra}`;
 }
 const CAJA_DIAS = ["1 día", "2 días", "5 días", "12 días", "30 días", "75 días"];
-/** Las pestañas de la sección: Hoy · 7 días · Niveles. */
-function pestanasTend() {
-  const b = (d, txt) => `<button type="button" data-tdias="${d}" aria-pressed="${tendDias === d}">${txt}</button>`;
-  return `<div class="jump tres tdPeriodo" role="group" aria-label="Qué ver">${b(1, "Hoy")}${b(7, "7 días")}${b(0, "Niveles")}</div>
-    <p class="small">Desliza de lado para cambiar.${tendDias === 1 ? " Hoy contra cómo cerraste ayer." : ""}</p>`;
-}
 // ---- Tu avance por nivel, como la gráfica de Kwiziq: temas cubiertos (línea) y tu puntaje (área).
 let progCache = null, tendNivel = null;
 function progresoHoy() {
@@ -950,49 +924,64 @@ function progresoHoy() {
 }
 const MESES_CHICOS = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
 const fechaChica = (d) => `${Number(d.slice(8, 10))} ${MESES_CHICOS[Number(d.slice(5, 7)) - 1]}`;
-/** La gráfica de un nivel: rejilla de 0 a 100%, el área verde de tu puntaje y la línea de temas cubiertos. */
+/** La gráfica de avance (como la de Kwiziq): rejilla de 0 a 100%, el área verde de tu puntaje y la línea de lo cubierto.
+ *  d: { dias, linea: [%], area: [%] }, rotulos: { linea, area }, etiqueta: lo que dice el lector de pantalla, nums: el pie. */
+function graficaAvance(d, rotulos, etiqueta, nums) {
+  const n = d.dias.length, W = 340, H = 200, iz = 34, de = 330, ar = 12, ab = 170;
+  if (!n) return "";
+  const x = (i) => Math.round((n < 2 ? de : iz + (i * (de - iz)) / (n - 1)) * 10) / 10;
+  const y = (v) => Math.round((ab - (Math.min(100, v) / 100) * (ab - ar)) * 10) / 10;
+  const ult = n - 1;
+  const area = `${x(0)},${ab} ${d.area.map((v, i) => x(i) + "," + y(v)).join(" ")} ${x(ult)},${ab}`;
+  const rejilla = [0, 25, 50, 75, 100].map((v) => `<line class="pgRej" x1="${iz}" y1="${y(v)}" x2="${de}" y2="${y(v)}"/><text class="pgEje" x="${iz - 4}" y="${y(v) + 4}" text-anchor="end">${v}%</text>`).join("");
+  return `<figure class="pg">
+    <div class="pgLey"><span><i class="pgLLinea" aria-hidden="true"></i>${rotulos.linea}</span><span><i class="pgLArea" aria-hidden="true"></i>${rotulos.area}</span></div>
+    <svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="${esc(etiqueta)}">
+      ${rejilla}
+      <polygon class="pgArea" points="${area}"/>
+      <polyline class="pgLinea" points="${d.linea.map((v, i) => x(i) + "," + y(v)).join(" ")}"/>
+      ${d.linea.map((v, i) => `<circle class="pgPunto" cx="${x(i)}" cy="${y(v)}" r="${i === ult ? 5 : 3}"/>`).join("")}
+      ${n > 1 ? `<text class="pgEje" x="${x(0)}" y="${H - 8}" text-anchor="start">${fechaChica(d.dias[0])}</text>` : ""}
+      <text class="pgEje" x="${x(ult)}" y="${H - 8}" text-anchor="end">Hoy</text>
+    </svg>
+    <figcaption class="pgNums">${nums}</figcaption>
+  </figure>`;
+}
+/** La gráfica de un nivel de gramática: temas cubiertos y tu puntaje del nivel. */
 function graficaNivel(nivel) {
   const R = progresoHoy(), X = R.niveles[nivel];
   if (!X) return "";
-  const n = R.dias.length, W = 340, H = 200, iz = 34, de = 330, ar = 12, ab = 170;
-  const x = (i) => Math.round((n < 2 ? de : iz + (i * (de - iz)) / (n - 1)) * 10) / 10;
-  const y = (v) => Math.round((ab - (Math.min(100, v) / 100) * (ab - ar)) * 10) / 10;
-  const ult = n - 1, c = X.cubiertos[ult], p = X.puntaje[ult];
-  const area = `${x(0)},${ab} ${X.puntaje.map((v, i) => x(i) + "," + y(v)).join(" ")} ${x(ult)},${ab}`;
-  const rejilla = [0, 25, 50, 75, 100].map((v) => `<line class="pgRej" x1="${iz}" y1="${y(v)}" x2="${de}" y2="${y(v)}"/><text class="pgEje" x="${iz - 4}" y="${y(v) + 4}" text-anchor="end">${v}%</text>`).join("");
-  return `<figure class="pg">
-    <div class="pgLey"><span><i class="pgLLinea" aria-hidden="true"></i>Temas cubiertos</span><span><i class="pgLArea" aria-hidden="true"></i>Tu puntaje</span></div>
-    <svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="${esc(`${nivel}: has cubierto ${X.n[ult]} de ${X.total} temas (${c}%). Tu puntaje del nivel: ${p}%. Desde el ${fechaChica(R.dias[0])}: cubiertos de ${X.cubiertos[0]}% a ${c}%, puntaje de ${X.puntaje[0]}% a ${p}%.`)}">
-      ${rejilla}
-      <polygon class="pgArea" points="${area}"/>
-      <polyline class="pgLinea" points="${X.cubiertos.map((v, i) => x(i) + "," + y(v)).join(" ")}"/>
-      ${X.cubiertos.map((v, i) => `<circle class="pgPunto" cx="${x(i)}" cy="${y(v)}" r="${i === ult ? 5 : 3}"/>`).join("")}
-      <text class="pgEje" x="${x(0)}" y="${H - 8}" text-anchor="start">${fechaChica(R.dias[0])}</text>
-      <text class="pgEje" x="${x(ult)}" y="${H - 8}" text-anchor="end">Hoy</text>
-    </svg>
-    <figcaption class="pgNums"><p><span class="tdGrande">${c}%</span><span class="small">cubiertos · ${X.n[ult]} de ${X.total} temas</span></p><p><span class="tdGrande si">${p}%</span><span class="small">tu puntaje del nivel</span></p></figcaption>
-  </figure>`;
+  const u = R.dias.length - 1, c = X.cubiertos[u], p = X.puntaje[u];
+  return graficaAvance({ dias: R.dias, linea: X.cubiertos, area: X.puntaje }, { linea: "Temas cubiertos", area: "Tu puntaje" },
+    `${nivel}: has cubierto ${X.n[u]} de ${X.total} temas (${c}%). Tu puntaje del nivel: ${p}%. Desde el ${fechaChica(R.dias[0])}: cubiertos de ${X.cubiertos[0]}% a ${c}%, puntaje de ${X.puntaje[0]}% a ${p}%.`,
+    `<p><span class="tdGrande">${c}%</span><span class="small">cubiertos · ${X.n[u]} de ${X.total} temas</span></p><p><span class="tdGrande si">${p}%</span><span class="small">tu puntaje del nivel</span></p>`);
+}
+let vocCache = null;
+function progresoVocabHoy() {
+  const hoy = N.fechaLocal(new Date()), suc = A.sucesos();
+  const clave = hoy + "|" + suc.length;
+  if (!vocCache || vocCache.clave !== clave) vocCache = { clave, r: N.progresoVocab(P, suc, hoy) };
+  return vocCache.r;
+}
+/** La gráfica del vocabulario: qué parte del mazo ya viste y qué tan arriba van tus tarjetas. */
+function graficaVocab() {
+  const V = progresoVocabHoy();
+  if (!V.dias.length) return "";
+  const u = V.dias.length - 1, c = V.vistas[u], p = V.puntaje[u];
+  return graficaAvance({ dias: V.dias, linea: V.vistas, area: V.puntaje }, { linea: "Tarjetas vistas", area: "Tu puntaje" },
+    `Vocabulario: has visto ${V.n[u]} de tus ${V.total} tarjetas (${c}%). Tu puntaje: ${p}%. Desde el ${fechaChica(V.dias[0])}: vistas de ${V.vistas[0]}% a ${c}%, puntaje de ${V.puntaje[0]}% a ${p}%.`,
+    `<p><span class="tdGrande">${c}%</span><span class="small">vistas · ${V.n[u]} de ${V.total} tarjetas</span></p><p><span class="tdGrande si">${p}%</span><span class="small">tu puntaje</span></p>`);
 }
 function seccionTendencias() {
   if (!P || !E) return "";
-  if (tendDias === 0) {
-    const R = progresoHoy(), conPreg = N.nivelesConPreguntas(P, E);
-    const nivs = Object.keys(NIVELES).filter((n) => R.niveles[n] && conPreg[n]);
-    if (!tendNivel || !nivs.includes(tendNivel)) tendNivel = E.enfoque && nivs.includes(E.enfoque) ? E.enfoque
-      : nivs.slice().sort((a, b) => R.niveles[b].n[R.niveles[b].n.length - 1] - R.niveles[a].n[R.niveles[a].n.length - 1])[0];
-    return `<section class="card tend" id="tendencias" aria-labelledby="tendT">
-      <h2 id="tendT">Tu avance por nivel</h2>
-      ${pestanasTend()}
-      <div class="jump niveles tdNiveles" role="group" aria-label="Nivel">${nivs.map((n) => `<button type="button" data-tnivel="${n}" aria-pressed="${n === tendNivel}">${n}</button>`).join("")}</div>
-      ${graficaNivel(tendNivel)}
-      <p class="small">La línea es qué parte de los temas de ${esc(tendNivel)} ya contestaste aquí. Lo verde es tu puntaje: lo que sabes de todo el nivel (los temas que no has visto cuentan 0). Lo que hay entre los dos es lo que te falta dominar de lo que ya viste.</p>
-    </section>`;
-  }
-  const T = tendenciasHoy(), hoy = T.dias[T.dias.length - 1];
-  const prom = (v) => (v === null ? "–" : Math.round(v) + "%");
+  // ---- Gramática: la gráfica del nivel, con su selector.
+  const R = progresoHoy(), conPreg = N.nivelesConPreguntas(P, E);
+  const nivs = Object.keys(NIVELES).filter((n) => R.niveles[n] && conPreg[n]);
+  if (!tendNivel || !nivs.includes(tendNivel)) tendNivel = E.enfoque && nivs.includes(E.enfoque) ? E.enfoque
+    : nivs.slice().sort((a, b) => R.niveles[b].n[R.niveles[b].n.length - 1] - R.niveles[a].n[R.niveles[a].n.length - 1])[0];
+  // ---- Los últimos 7 días.
+  const T = tendenciasHoy();
   const dif = (a, b) => { const d = b - a; return d > 0 ? "+" + d : d < 0 ? "−" + Math.abs(d) : "±0"; };
-  const metaIni = T.metaBase, metaFin = T.meta[T.meta.length - 1];
-  const pa = T.promedio.antes === null ? null : Math.round(T.promedio.antes), pb = T.promedio.ahora === null ? null : Math.round(T.promedio.ahora);
   const temas = (l, vacio) => (l.length ? `<div class="tdTemas">${l.map((x) => pistaTema(x, T.metaPct)).join("")}</div>` : `<p class="small">${vacio}</p>`);
   const caja = (k, nombre) => {
     const s = T.cajas[k], a = T.cajasBase[k], b = s[s.length - 1];
@@ -1006,28 +995,26 @@ function seccionTendencias() {
     return `<button type="button" class="tdPalabra" data-v="${esc(x.id)}"><span lang="es-MX">${esc(v.reverso)}</span><span class="tdGris">${texto(x)}</span></button>`;
   };
   const cajaDe = (e) => (e < 0 ? "nueva" : CAJA_DIAS[e]);
-  const unDia = tendDias === 1, antes = unDia ? "ayer" : "hace 7 días";
   return `<section class="card tend" id="tendencias" aria-labelledby="tendT">
-    <h2 id="tendT">${unDia ? "Hoy" : "Tus últimos 7 días"}</h2>
-    ${pestanasTend()}
-    <h3 class="tdSub">Gramática</h3>
-    <div class="tdNums">
-      <p><span class="tdGrande si">${metaFin}</span><span class="small">temas en tu meta · ${dif(metaIni, metaFin)}</span></p>
-      <p><span class="tdGrande">${prom(T.promedio.ahora)}</span><span class="small">promedio de tus temas${pa !== null && pb !== null ? " · " + dif(pa, pb) : ""}</span></p>
-    </div>
-    ${lineaTend(T.meta, T.dias, "si", `Temas en tu meta al cierre de cada día: ${T.meta.join(", ")}.`, 70)}
-    <p class="small">De los ${T.practicados} temas que has practicado aquí, ${metaFin} ya están en ${T.metaPct}% o más.</p>
-    <h3 class="tdSub">Los que más subieron</h3>
-    <p class="small">Aro: ${antes}. Punto: hoy. Raya: tu meta, ${T.metaPct}%.</p>
-    ${temas(T.subieron, unDia ? "Ninguno subió hoy." : "Ninguno subió esta semana.")}
-    <h3 class="tdSub">Los que más bajaron</h3>
-    ${temas(T.bajaron, unDia ? "Ninguno bajó hoy." : "Ninguno bajó esta semana.")}
+    <h2 id="tendT">Tu avance</h2>
+    <h3 class="tdSub">Gramática por nivel</h3>
+    <div class="jump niveles tdNiveles" role="group" aria-label="Nivel">${nivs.map((n) => `<button type="button" data-tnivel="${n}" aria-pressed="${n === tendNivel}">${n}</button>`).join("")}</div>
+    <div id="tdGrafNivel">${graficaNivel(tendNivel)}</div>
+    <p class="small">La línea es qué parte de los temas del nivel ya contestaste aquí; lo verde, lo que sabes de todo el nivel (los que no has visto cuentan 0).</p>
+    <h3 class="tdSub">Vocabulario</h3>
+    ${graficaVocab()}
+    <p class="small">La línea es qué parte de tu mazo ya viste${E.reinicioTj ? " desde el reinicio" : ""}; lo verde, qué tan arriba van tus tarjetas en la escalera (la caja de 75 días es 100%; las que no has visto cuentan 0).</p>
+    <h3 class="tdSub">Los que más subieron <span class="tdGris">· 7 días</span></h3>
+    <p class="small">Aro: hace 7 días. Punto: hoy. Raya: tu meta, ${T.metaPct}%.</p>
+    ${temas(T.subieron, "Ninguno subió esta semana.")}
+    <h3 class="tdSub">Los que más bajaron <span class="tdGris">· 7 días</span></h3>
+    ${temas(T.bajaron, "Ninguno bajó esta semana.")}
     <h3 class="tdSub">Vocabulario: tus cajas grandes</h3>
     ${caja(5, "75 días")}${caja(4, "30 días")}
     <p class="small">Las que suben a la de 75 vienen de la de 30: si la de 30 baja mientras la de 75 sube, vas bien.</p>
     <details class="tdDet" data-tdet="quedaron"${tendAbiertas.has("quedaron") ? " open" : ""}>
       <summary><h3 class="tdSub">Se te quedaron <span class="tdGris">· ${T.subieronCaja} subieron de caja</span></h3></summary>
-      ${T.quedaron.length ? `<div class="tdPalabras">${T.quedaron.map((x) => palabra(x, (y) => "ya va a " + cajaDe(y.ahora))).join("")}</div>` : `<p class="small">${unDia ? "Ninguna hoy." : "Ninguna esta semana."}</p>`}
+      ${T.quedaron.length ? `<div class="tdPalabras">${T.quedaron.map((x) => palabra(x, (y) => "ya va a " + cajaDe(y.ahora))).join("")}</div>` : `<p class="small">Ninguna esta semana.</p>`}
     </details>
     <details class="tdDet" data-tdet="olvidadas"${tendAbiertas.has("olvidadas") ? " open" : ""}>
       <summary><h3 class="tdSub">Se te olvidaron <span class="tdGris">· ${T.olvidadasN}</span></h3></summary>
