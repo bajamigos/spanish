@@ -686,8 +686,9 @@ export function tarjetasDelDia(paquete, estado, hoy = fechaLocal(new Date())) {
 export const ADELANTO = 20;
 
 /**
- * Para adelantar cuando ya estás en cero: las que tocan más pronto (la más cercana primero) y, si no alcanzan,
- * nuevas que ya no cupieron hoy. Las que ya viste hoy no entran (13-Oct-2026: salían otra vez y subían de más). Las quitadas no salen. Devuelve hasta «cuantas» ids, en el orden en que salen.
+ * Para adelantar cuando ya estás en cero (17-Oct-2026): primero las que nunca has repasado en Pelagos (la que toca
+ * más pronto primero), luego las nuevas que ya no cupieron hoy, luego las demás, y al final las que viste ayer.
+ * Antes salían las que tocan más pronto, que muchas veces eran las mismas de ayer. Las que ya viste hoy no entran (13-Oct-2026: salían otra vez y subían de más). Las quitadas no salen. Devuelve hasta «cuantas» ids, en el orden en que salen.
  * Al calificarlas con «adelanto», la que aciertas sube su escalón desde hoy (una sola vez al día); la que fallas vuelve a salir hoy.
  */
 export function tarjetasAdelante(paquete, estado, hoy = fechaLocal(new Date()), cuantas = ADELANTO) {
@@ -703,7 +704,11 @@ export function tarjetasAdelante(paquete, estado, hoy = fechaLocal(new Date()), 
     else if (s.toca > hoy) proximas.push({ id: c.id, toca: s.toca, ultima: s.ultima ? Date.parse(s.ultima) : 0 });
   }
   proximas.sort((a, b) => (a.toca < b.toca ? -1 : a.toca > b.toca ? 1 : 0) || a.ultima - b.ultima || (a.id < b.id ? -1 : 1));
-  return [...proximas.map((x) => x.id), ...nuevas].slice(0, cuantas);
+  const ayer = sumarDias(hoy, -1);
+  const nunca = proximas.filter((x) => !x.ultima);
+  const deAyer = proximas.filter((x) => x.ultima && fechaLocal(new Date(x.ultima)) === ayer);
+  const otras = proximas.filter((x) => x.ultima && fechaLocal(new Date(x.ultima)) !== ayer);
+  return [...nunca.map((x) => x.id), ...nuevas, ...otras.map((x) => x.id), ...deAyer.map((x) => x.id)].slice(0, cuantas);
 }
 
 /**
