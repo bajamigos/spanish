@@ -300,7 +300,8 @@ export function calcular(paquete, sucesos) {
     });
   }
   const agregadas = [];
-  let reinicioTj = 0;          // cuándo reiniciaste tu vocabulario, o 0        // las tarjetas que agregaste a mano: no vienen en el contenido, viven en tus sucesos
+  let reinicioTj = 0;
+  let sinArranque = false;     // true: ningún tema trae su porcentaje de Kwiziq; solo cuenta lo que contestas aquí          // cuándo reiniciaste tu vocabulario, o 0        // las tarjetas que agregaste a mano: no vienen en el contenido, viven en tus sucesos
   const porVer = new Map();    // estrenos que tocaste en la Biblioteca para verlos: «tv:123» o «movie:456» -> cuándo; «porver» con quitar los saca
   const notas = new Map();     // tus notas sobre las tutoras (y lo que sea): id -> { id, sobre, texto, cuando }; «notaq» quita una
 
@@ -366,7 +367,8 @@ export function calcular(paquete, sucesos) {
       if (typeof e.nota === "string") notas.delete(e.nota);
     } else if (e.t === "ftj") {
       if (typeof e.tarjeta === "string" && typeof e.foto === "string" && /^[a-z0-9-]+\.jpg$/.test(e.foto)) fotosTarjeta.set(e.tarjeta, { foto: e.foto, cuando: e.cuando || "" });
-    } else if (e.t === "enfoque") enfoque = typeof e.nivel === "string" && e.nivel ? e.nivel : null;
+    } else if (e.t === "sinarranque") sinArranque = !(e.deshacer === 1 || e.deshacer === true);   // 17-Oct-2026: tus porcentajes de Kwiziq dejan de contar
+    else if (e.t === "enfoque") enfoque = typeof e.nivel === "string" && e.nivel ? e.nivel : null;
     else if (e.t === "retirar" && e.p) retiradas.add(e.p);
     else if (e.t === "absolver" && e.p) absueltas.set(e.p, ms(e));       // «Está bien, la fallé yo»: la sospecha empieza de cero
     else if (e.t === "destrabar" && e.tema != null) marcarDestrabe(destrabes, Number(e.tema), e, e.como);      // leíste la lección de un tema atascado, o «Seguir así»
@@ -422,7 +424,7 @@ export function calcular(paquete, sucesos) {
   const temas = new Map();
   for (const t of paquete.temas || []) {
     const suyas = porTema.get(t.id) || [];
-    const arranque = t.arranque === null || t.arranque === undefined ? null : Math.min(100, Math.max(0, t.arranque));
+    const arranque = sinArranque || t.arranque === null || t.arranque === undefined ? null : Math.min(100, Math.max(0, t.arranque));
     const recientes = suyas.slice().reverse();
     temas.set(t.id, {
       pct: porcentaje(arranque, recientes.map((r) => (r.bien ? 1 : 0)), parametros.decaimiento, parametros.pesoArranque),
@@ -473,7 +475,7 @@ export function calcular(paquete, sucesos) {
 
   const sospechosas = sospechosasDe(respuestas, retiradas, absueltas);
 
-  return { reinicioTj, sospechosas, absueltas, destrabes, destrabesTj, todas: respuestas, temas, kwizzes, retiradas, ultimaVez, respuestas: respuestas.length, porTema, parametros, debe, fallada, enfoque, tarjetas, fotosTarjeta, agregadas, actividad, actividadVoc, actividadGram, notas, porVer };
+  return { sinArranque, reinicioTj, sospechosas, absueltas, destrabes, destrabesTj, todas: respuestas, temas, kwizzes, retiradas, ultimaVez, respuestas: respuestas.length, porTema, parametros, debe, fallada, enfoque, tarjetas, fotosTarjeta, agregadas, actividad, actividadVoc, actividadGram, notas, porVer };
 }
 
 // ---------------------------------------------------------------- Preguntas sospechosas y temas atorados (16-Oct-2026)
