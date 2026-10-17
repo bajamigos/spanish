@@ -857,6 +857,60 @@ export function historiaNivel(paquete, sucesos, nivel, hasta = fechaLocal(new Da
   return historiaTemas(paquete, sucesos, (paquete.temas || []).filter((t) => t.nivel === nivel).map((t) => t.id), hasta, desde);
 }
 
+/**
+ * Tus tendencias de los últimos `dias` días (16-Oct-2026), para el Tablero. Solo cuentan los temas que has
+ * practicado aquí: el promedio de todos los temas casi no se mueve, porque la mayoría trae su porcentaje de Kwiziq.
+ * Devuelve {
+ *   dias: ["AAAA-MM-DD", …] (el último es hoy), base: el día antes del primero,
+ *   meta: [n por día] — temas practicados con porcentaje en tu meta o más, al cierre de cada día,
+ *   practicados: n hoy, promedio: { antes, ahora } — promedio de tus temas practicados,
+ *   subieron, bajaron: [{ tema, antes, ahora }] (hasta TOP_TENDENCIAS, los que más se movieron),
+ *   cajas: { 4: [n por día], 5: [n por día] } — tarjetas en la caja de 30 y en la de 75 días,
+ *   quedaron, olvidadas: [{ id, antes, ahora }] — escalones de las tarjetas que subieron o bajaron,
+ * }.
+ */
+export const TOP_TENDENCIAS = 5;
+export function tendencias(paquete, sucesos, hoy = fechaLocal(new Date()), dias = 7) {
+  const lista = (sucesos || []).filter((e) => e && typeof e === "object").map((e) => ({ e, dia: fechaLocal(new Date(ms(e))) }));
+  const meta = paquete.meta?.meta ?? META;
+  const base = sumarDias(hoy, -dias);
+  const fechas = [];
+  for (let i = dias - 1; i >= 0; i--) fechas.push(sumarDias(hoy, -i));
+  const al = (dia) => calcular(paquete, lista.filter((x) => x.dia <= dia).map((x) => x.e));
+  const practicados = (E) => [...E.temas].filter(([, t]) => t.n > 0 && t.pct !== null);
+  const E0 = al(base);
+  const serie = [], cajas = { 4: [], 5: [] };
+  let E = E0;
+  for (const dia of fechas) {
+    E = al(dia);
+    serie.push(practicados(E).filter(([, t]) => t.pct >= meta).length);
+    for (const k of [4, 5]) cajas[k].push([...E.tarjetas.values()].filter((t) => !t.quitada && t.toca && t.escalon === k).length);
+  }
+  const prom = (E) => { const l = practicados(E); return l.length ? l.reduce((a, [, t]) => a + t.pct, 0) / l.length : null; };
+  // Los temas que contestaste en estos días: cuánto se movieron desde el día base.
+  const enVentana = new Set(lista.filter((x) => x.e.t === "r" && x.dia > base && x.dia <= hoy).map((x) => x.e.tema));
+  const mov = [...enVentana].map((id) => ({ tema: id, antes: E0.temas.get(id)?.pct ?? null, ahora: E.temas.get(id)?.pct ?? null }))
+    .filter((x) => x.antes !== null && x.ahora !== null);
+  const subieron = mov.filter((x) => x.ahora > x.antes).sort((a, b) => (b.ahora - b.antes) - (a.ahora - a.antes)).slice(0, TOP_TENDENCIAS);
+  const bajaron = mov.filter((x) => x.ahora < x.antes).sort((a, b) => (a.ahora - a.antes) - (b.ahora - b.antes)).slice(0, TOP_TENDENCIAS);
+  // Las tarjetas que cambiaron de caja. «Se te quedó»: subió (las más altas primero). «Se te olvidó»: bajó.
+  const quedaron = [], olvidadas = [];
+  for (const [id, t] of E.tarjetas) {
+    if (t.quitada) continue;
+    const a = E0.tarjetas.get(id), antes = a && a.toca ? a.escalon : -1, ahora = t.toca ? t.escalon : -1;
+    if (ahora > antes) quedaron.push({ id, antes, ahora });
+    else if (ahora < antes && antes >= 0) olvidadas.push({ id, antes, ahora });
+  }
+  quedaron.sort((a, b) => b.ahora - a.ahora || (b.ahora - b.antes) - (a.ahora - a.antes));
+  olvidadas.sort((a, b) => (a.ahora - a.antes) - (b.ahora - b.antes) || b.antes - a.antes);
+  return {
+    dias: fechas, base, meta: serie, metaPct: meta, practicados: practicados(E).length,
+    promedio: { antes: prom(E0), ahora: prom(E) }, subieron, bajaron, cajas,
+    subieronCaja: quedaron.length, olvidadasN: olvidadas.length,
+    quedaron: quedaron.slice(0, TOP_TENDENCIAS), olvidadas: olvidadas.slice(0, TOP_TENDENCIAS),
+  };
+}
+
 /** Los aciertos de una tarjeta al cierre de cada día: lo que traía de antes más sus repasos hasta ese día. */
 export function historiaTarjeta(suya, hasta = fechaLocal(new Date()), desde = INICIO_HISTORIA) {
   const repasos = (suya?.historia || []).map((h) => ({ dia: fechaLocal(new Date(Date.parse(h.cuando) || 0)), bien: !!h.bien }));

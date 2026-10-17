@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=4c80ae3692";
-import * as A from "./almacen.js?v=4c80ae3692";
-import { abrirRecorrido } from "./recorrido.js?v=4c80ae3692";
-import * as V from "./videos.js?v=4c80ae3692";
-import * as NB from "./nube.js?v=4c80ae3692";
-import * as CL from "./clases.js?v=4c80ae3692";
-import { abrirPractica } from "./practica.js?v=4c80ae3692";
-import * as F from "./fondo.js?v=4c80ae3692";
+import * as N from "./nucleo.js?v=6e77fe620c";
+import * as A from "./almacen.js?v=6e77fe620c";
+import { abrirRecorrido } from "./recorrido.js?v=6e77fe620c";
+import * as V from "./videos.js?v=6e77fe620c";
+import * as NB from "./nube.js?v=6e77fe620c";
+import * as CL from "./clases.js?v=6e77fe620c";
+import { abrirPractica } from "./practica.js?v=6e77fe620c";
+import * as F from "./fondo.js?v=6e77fe620c";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -762,7 +762,6 @@ function cargarVideosFondo() {
   }).catch(() => { videosFondoListos = true; if (vista.querySelector(".fondo.cargando")) pintar({ conserva: true }); });
 }
 function verInicio(o) {
-  const niveles = resumenNiveles();
   const hoy = N.fechaLocal(new Date());
   const T = N.leerTablero(A.tablero());
   const deHoy = !!T && T.dia === hoy;
@@ -843,15 +842,97 @@ function verInicio(o) {
       <h1 class="sr">Tablero</h1>
       ${checkin}
       ${medidas}
-      <section class="card" id="niveles">
-        <h2>Promedio por nivel</h2>
-        <div class="links">${niveles.map((n) => botonNivel(n, false, true)).join("")}</div>
-      </section>${cuadernos}
+      ${seccionTendencias()}${cuadernos}
     </div>
   </div>`,
   { titulo: "Tablero · Pelagos", nav: "inicio", conserva: o.conserva });
   if (clip) mostrarClipPremio(clip);
 }
+// ---------------------------------------------------------------- Tus tendencias (Tablero, 16-Oct-2026)
+// En lugar del promedio por nivel, que casi no se mueve: lo que subió y bajó en los últimos 7 días,
+// contando solo los temas que has practicado aquí, y tus cajas grandes de tarjetas.
+let tendCache = null;
+function tendenciasHoy() {
+  const hoy = N.fechaLocal(new Date()), suc = A.sucesos();
+  const clave = hoy + "|" + suc.length;
+  if (!tendCache || tendCache.clave !== clave) tendCache = { clave, t: N.tendencias(P, suc, hoy) };
+  return tendCache.t;
+}
+const DIAS_CORTOS = ["D", "L", "M", "M", "J", "V", "S"];
+const diaTend = (d, hoy) => (d === hoy ? "Hoy" : DIAS_CORTOS[new Date(d + "T12:00:00").getDay()]);
+/** Una línea chiquita de 7 puntos. serie: números; etiqueta: lo que dice el lector de pantalla. */
+function lineaTend(serie, dias, clase, etiqueta, alto = 80) {
+  const hoy = dias[dias.length - 1];
+  const lo = Math.min(...serie), hi = Math.max(...serie), rango = hi - lo || 1;
+  const x = (i) => 20 + i * (300 / Math.max(1, serie.length - 1));
+  const y = (v) => Math.round((alto - 14 - ((v - lo) / rango) * (alto - 36)) * 10) / 10;
+  const ult = serie.length - 1;
+  return `<svg class="tdLinea ${clase}" viewBox="0 0 340 ${alto}" width="100%" role="img" aria-label="${esc(etiqueta)}">
+    <polyline points="${serie.map((v, i) => x(i) + "," + y(v)).join(" ")}" fill="none" stroke-width="3" stroke-linejoin="round"/>
+    ${serie.map((v, i) => `<circle cx="${x(i)}" cy="${y(v)}" r="${i === ult ? 6 : 3.5}"/>`).join("")}
+    <text class="tdIni" x="${x(0)}" y="${y(serie[0]) - 10}" text-anchor="middle">${serie[0]}</text>
+    <text class="tdFin" x="${x(ult)}" y="${y(serie[ult]) - 12}" text-anchor="middle">${serie[ult]}</text>
+    ${dias.map((d, i) => `<text class="tdDia" x="${x(i)}" y="${alto - 1}" text-anchor="middle">${diaTend(d, hoy)}</text>`).join("")}
+  </svg>`;
+}
+/** Un tema que se movió: su nombre y una pista de 0 a 100 con el aro (antes), el punto (ahora) y la raya de tu meta. */
+function pistaTema(x, meta) {
+  const t = porId.get(x.tema);
+  if (!t) return "";
+  const a = Math.round(x.antes), b = Math.round(x.ahora), lo = Math.min(a, b), hi = Math.max(a, b), sube = b > a;
+  const abre = t.slug && t.leccion ? `<a class="tdTema" href="#/leccion/${esc(t.slug)}">` : `<button type="button" class="tdTema" data-l="${t.id}">`;
+  const cierra = t.slug && t.leccion ? "</a>" : "</button>";
+  return `${abre}<span class="tdFila"><span>${esc(titulo(t))} <span class="tdNv">(${esc(t.nivel)})</span></span><b>${a} → ${b}%</b></span>
+    <span class="tdPista ${sube ? "sube" : "baja"}" role="img" aria-label="De ${a} a ${b} por ciento. Tu meta: ${meta}.">
+      <i class="tdRiel"></i><i class="tdTramo" data-x="${lo}" data-w="${hi - lo}"></i>
+      <i class="tdAro" data-x="${a}"></i><i class="tdPunto" data-x="${b}"></i><i class="tdMeta" data-x="${meta}"></i>
+    </span>${cierra}`;
+}
+const CAJA_DIAS = ["1 día", "2 días", "5 días", "12 días", "30 días", "75 días"];
+function seccionTendencias() {
+  if (!P || !E) return "";
+  const T = tendenciasHoy(), hoy = T.dias[T.dias.length - 1];
+  const prom = (v) => (v === null ? "–" : Math.round(v) + "%");
+  const dif = (a, b) => { const d = b - a; return d > 0 ? "+" + d : d < 0 ? "−" + Math.abs(d) : "±0"; };
+  const metaIni = T.meta[0], metaFin = T.meta[T.meta.length - 1];
+  const pa = T.promedio.antes === null ? null : Math.round(T.promedio.antes), pb = T.promedio.ahora === null ? null : Math.round(T.promedio.ahora);
+  const temas = (l, vacio) => (l.length ? `<div class="tdTemas">${l.map((x) => pistaTema(x, T.metaPct)).join("")}</div>` : `<p class="small">${vacio}</p>`);
+  const caja = (k, nombre) => {
+    const s = T.cajas[k], a = s[0], b = s[s.length - 1];
+    return `<div class="tdCaja"><p class="tdFila"><b>Caja de ${nombre}</b><b>${a} → ${b} <span class="tdGris">(${dif(a, b)})</span></b></p>
+      ${lineaTend(s, T.dias, "c" + k, `Tarjetas en la caja de ${nombre} cada día: ${s.join(", ")}.`)}</div>`;
+  };
+  const palabra = (x, texto) => {
+    const c = tarjetas.get(x.id), sv = E.tarjetas.get(x.id);
+    if (!c) return "";
+    const v = N.tarjetaVista(c, sv);
+    return `<button type="button" class="tdPalabra" data-v="${esc(x.id)}"><span lang="es-MX">${esc(v.reverso)}</span><span class="tdGris">${texto(x)}</span></button>`;
+  };
+  const cajaDe = (e) => (e < 0 ? "nueva" : CAJA_DIAS[e]);
+  return `<section class="card tend" id="tendencias" aria-labelledby="tendT">
+    <h2 id="tendT">Tus últimos 7 días</h2>
+    <h3 class="tdSub">Gramática</h3>
+    <div class="tdNums">
+      <p><span class="tdGrande si">${metaFin}</span><span class="small">temas en tu meta · ${dif(metaIni, metaFin)}</span></p>
+      <p><span class="tdGrande">${prom(T.promedio.ahora)}</span><span class="small">promedio de tus temas${pa !== null && pb !== null ? " · " + dif(pa, pb) : ""}</span></p>
+    </div>
+    ${lineaTend(T.meta, T.dias, "si", `Temas en tu meta al cierre de cada día: ${T.meta.join(", ")}.`, 70)}
+    <p class="small">De los ${T.practicados} temas que has practicado aquí, ${metaFin} ya están en ${T.metaPct}% o más.</p>
+    <h3 class="tdSub">Los que más subieron</h3>
+    <p class="small">Aro: hace 7 días. Punto: hoy. Raya: tu meta, ${T.metaPct}%.</p>
+    ${temas(T.subieron, "Ninguno subió esta semana.")}
+    <h3 class="tdSub">Los que más bajaron</h3>
+    ${temas(T.bajaron, "Ninguno bajó esta semana.")}
+    <h3 class="tdSub">Vocabulario: tus cajas grandes</h3>
+    ${caja(5, "75 días")}${caja(4, "30 días")}
+    <p class="small">Las que suben a la de 75 vienen de la de 30: si la de 30 baja mientras la de 75 sube, vas bien.</p>
+    <h3 class="tdSub">Se te quedaron <span class="tdGris">· ${T.subieronCaja} subieron de caja</span></h3>
+    ${T.quedaron.length ? `<div class="tdPalabras">${T.quedaron.map((x) => palabra(x, (y) => "ya va a " + cajaDe(y.ahora))).join("")}</div>` : `<p class="small">Ninguna esta semana.</p>`}
+    <h3 class="tdSub">Se te olvidaron <span class="tdGris">· ${T.olvidadasN}</span></h3>
+    ${T.olvidadas.length ? `<div class="tdPalabras">${T.olvidadas.map((x) => palabra(x, (y) => `de ${cajaDe(y.antes)} a ${cajaDe(y.ahora)}`)).join("")}</div>` : `<p class="small">Ninguna. ¡Así se hace!</p>`}
+  </section>`;
+}
+
 /** Pone el clip del premio en el fondo del Tablero. Si su video no está en este aparato ni en tu almacén, lo dice. */
 function mostrarClipPremio(c) {
   const lugar = $("tutoraPremio");

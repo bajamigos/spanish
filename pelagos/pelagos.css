@@ -973,3 +973,38 @@ dialog.sheet.escena.practica { inset: 0; width: 100%; max-width: 720px; height: 
 .tjAtas a.lk { color: inherit; text-decoration: underline; }
 .atasAviso p { margin: 0; color: var(--ink); }
 .atasAviso .go { margin-top: 8px; }
+
+/* Tus tendencias en el Tablero (16-Oct-2026): claro y oscuro con las mismas variables */
+.tend { display: flex; flex-direction: column; gap: 10px; }
+.tend h2 { margin: 0; }
+.tend .tdSub { margin: 10px 0 0; font-size: 17px; }
+.tdNums { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.tdNums p { margin: 0; display: flex; flex-direction: column; gap: 2px; }
+.tdGrande { font-size: 30px; font-weight: 700; line-height: 1.1; color: var(--ink); }
+.tdGrande.si { color: var(--si); }
+.tdGris { color: var(--ink-2); font-weight: 400; }
+.tdFila { display: flex; justify-content: space-between; gap: 10px; margin: 0; font-size: 15px; }
+.tdFila b { white-space: nowrap; }
+.tdNv { color: var(--ink-2); }
+.tdLinea polyline { stroke: var(--ink); }
+.tdLinea circle { fill: var(--ink); }
+.tdLinea.si polyline { stroke: var(--si); } .tdLinea.si circle, .tdLinea.si .tdFin { fill: var(--si); }
+.tdLinea.c5 polyline { stroke: var(--b4); } .tdLinea.c5 circle, .tdLinea.c5 .tdFin { fill: var(--b4); }
+.tdLinea.c4 polyline { stroke: var(--b3); } .tdLinea.c4 circle, .tdLinea.c4 .tdFin { fill: var(--b3); }
+.tdLinea text { font-size: 12px; fill: var(--ink-2); }
+.tdLinea .tdFin { font-size: 13px; font-weight: 700; }
+.tdTemas { display: flex; flex-direction: column; gap: 6px; }
+.tdTema { display: flex; flex-direction: column; gap: 6px; padding: 8px 0; min-height: 44px; color: var(--ink); text-decoration: none; background: none; border: 0; font: inherit; text-align: left; width: 100%; cursor: pointer; }
+.tdPista { position: relative; display: block; height: 18px; }
+.tdPista i { position: absolute; display: block; }
+.tdRiel { left: 0; right: 0; top: 7px; height: 4px; border-radius: 2px; background: var(--bar-bg); }
+.tdTramo { top: 6px; height: 6px; border-radius: 3px; }
+.tdAro { top: 3px; width: 12px; height: 12px; margin-left: -6px; border-radius: 50%; border: 2px solid; box-sizing: border-box; background: var(--card); }
+.tdPunto { top: 1px; width: 16px; height: 16px; margin-left: -8px; border-radius: 50%; }
+.tdMeta { top: 0; bottom: 0; width: 2px; margin-left: -1px; background: var(--ink); }
+.tdPista.sube .tdTramo, .tdPista.sube .tdPunto { background: var(--si); } .tdPista.sube .tdAro { border-color: var(--si); }
+.tdPista.baja .tdTramo, .tdPista.baja .tdPunto { background: var(--no); } .tdPista.baja .tdAro { border-color: var(--no); }
+.tdCaja { display: flex; flex-direction: column; gap: 2px; }
+.tdPalabras { display: flex; flex-direction: column; }
+.tdPalabra { display: flex; justify-content: space-between; gap: 12px; min-height: 44px; align-items: center; padding: 0; background: none; border: 0; border-bottom: 1px solid var(--line); font: inherit; font-size: 15px; color: var(--ink); text-align: left; cursor: pointer; }
+.tdPalabra:last-child { border-bottom: 0; }
