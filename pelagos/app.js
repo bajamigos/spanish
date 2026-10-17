@@ -1,12 +1,11 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=fc5ee0004a";
-import * as A from "./almacen.js?v=fc5ee0004a";
-import { abrirRecorrido } from "./recorrido.js?v=fc5ee0004a";
-import * as V from "./videos.js?v=fc5ee0004a";
-import * as NB from "./nube.js?v=fc5ee0004a";
-import * as CL from "./clases.js?v=fc5ee0004a";
-import { abrirPractica } from "./practica.js?v=fc5ee0004a";
-import * as F from "./fondo.js?v=fc5ee0004a";
+import * as N from "./nucleo.js?v=5da19dab7b";
+import * as A from "./almacen.js?v=5da19dab7b";
+import * as V from "./videos.js?v=5da19dab7b";
+import * as NB from "./nube.js?v=5da19dab7b";
+import * as CL from "./clases.js?v=5da19dab7b";
+import { abrirPractica } from "./practica.js?v=5da19dab7b";
+import * as F from "./fondo.js?v=5da19dab7b";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -65,12 +64,6 @@ let fotosVocab = new Map();   // fotos de las tarjetas de vocabulario (contenido
 let retratos = new Map();     // retrato de Andrea por nombre
 // El video de fondo del Tablero (Andrea bailando, por ejemplo): vive en escenas/inicio/ de la rama de avance. null = todavía no se sabe.
 let videosFondo = null, videosFondoListos = false;
-let fotosGan = new Map();     // panorama del Recorrido de Ganímedes (modo Expanse)
-let fotosTour = new Map();    // panorama del Recorrido por nombre
-let recorridoVivo = null;     // el visor 360 abierto, si lo hay
-// El Recorrido está escondido por ahora (lo pidió el 13-Oct-2026): sin pestaña, sin lucecitas de misión, y #/recorrido lleva al Tablero.
-// El código sigue aquí; para que vuelva, pon true y regresa su botón a index.html.
-const CON_RECORRIDO = false;
 let tarjetas = new Map();     // tarjeta por id
 let enPregunta = false;       // hay una pregunta en pantalla: no se repinta debajo de ti
 let turnoDePintar = 0;        // para que una lección que llega tarde no pise otra página
@@ -86,8 +79,6 @@ function ponerPaquete(paquete) {
   fotosExpanse = new Map((P.fotosExpanse || []).map((f) => [f.nombre, f]));
   fotosVocab = new Map((P.fotosVocab || []).map((f) => [f.nombre, f]));
   retratos = new Map((P.retratos || []).map((f) => [f.nombre, f]));
-  fotosTour = new Map((P.fotosTour || []).map((f) => [f.nombre, f]));
-  fotosGan = new Map((P.fotosGanimedes || []).map((f) => [f.nombre, f]));
   tarjetas = new Map(P.tarjetas.map((c) => [c.id, c]));
 }
 function recalcular() {
@@ -233,7 +224,6 @@ function ir(camino, reemplazar = false) {
 }
 
 function poner(html, { titulo: t = "Pelagos", pie = "", nav = "", conserva = false } = {}) {
-  if (recorridoVivo) { recorridoVivo.cerrar(); recorridoVivo = null; }       // otra página: el visor 360 se cierra
   const arriba = window.scrollY;
   const conFoco = conserva && document.activeElement && vista.contains(document.activeElement) ? document.activeElement.id : "";
   turnoDePintar++;
@@ -317,7 +307,8 @@ const RUTAS = [
   [/^\/gramatica\/quiz\/([A-Za-z0-9_-]+)$/, verPregunta],
   [/^\/gramatica\/quiz\/([A-Za-z0-9_-]+)\/resultado$/, verResultado],
   [/^\/gramatica\/atlas$/, verMapa],
-  [/^\/gramatica\/([a-z0-9]+)(\/bajo|\/mision|\/atascados)?$/, verNivel],
+  [/^\/gramatica\/([a-z0-9]+)(\/bajo|\/atascados)?$/, verNivel],
+  [/^\/gramatica\/([a-z0-9]+)\/mision$/, (o, clave) => ir("/gramatica/" + clave, true)],   // el filtro «Misión activa» se quitó con el Recorrido
   [/^\/bitacora$/, verCalor],
   [/^\/clases$/, verClases],
   [/^\/lectura$/, (o) => verLectura(o)],
@@ -331,7 +322,7 @@ const RUTAS = [
   [/^\/ajustes$/, verAjustes],
   [/^\/ayuda$/, verAyuda],
   [/^\/ayuda\/([a-z0-9-]+)$/, verPaginaAyuda],
-  [/^\/recorrido(?:\/([a-z0-9-]+))?$/, (o, id) => (CON_RECORRIDO ? verRecorrido(o, id) : ir("/", true))],
+  [/^\/recorrido(?:\/[a-z0-9-]+)?$/, () => ir("/", true)],          // el Recorrido se quitó el 17-Oct-2026; su dirección vieja lleva al Tablero
   // Las direcciones de antes siguen llevando a su página.
   [/^\/kwiz((?:\/[A-Za-z0-9_-]+){0,2})$/, (o, resto) => ir(QUIZ + (resto || ""), true)],
   [/^\/tarjetas$/, () => ir("/vocabulario", true)],
@@ -355,87 +346,6 @@ function verNoExiste(mensaje) {
     ? `<section class="card"><h1 class="h">No se pudo</h1><p>${esc(mensaje)} Vuelve al <a href="#/">tablero</a>.</p></section>`
     : `<section class="card"><h1 class="h">Esa página no existe</h1><p>Puede que la lección todavía no esté escrita. Vuelve a las <a href="#/gramatica">lecciones de gramática</a>.</p></section>`,
   { titulo: "No existe · Pelagos" });
-}
-
-// ---------------------------------------------------------------- El Recorrido (Tour of Cyberpunk TJ)
-
-const CLAVE_RECORRIDO = "pelagos.recorrido";       // el último lugar donde estuviste, en este aparato
-
-/** Las palabras de tu vocabulario, las que más fallas primero (o las más nuevas), para los carteles de las escenas. */
-function palabrasParaTour(n, orden) {
-  const vivas = palabras().filter((x) => !x.s.quitada);
-  if (orden === "nuevas") vivas.sort(ORDENAR.nueva);
-  else vivas.sort(ORDENAR.fallo);
-  return vivas.slice(0, n);
-}
-
-/** La hoja de misión de un lugar: lo que Andrea te pone a hacer, sacado de tus datos de verdad. */
-function hojaMision(lugar) {
-  const acciones = lugar.acciones || [];
-  if (!acciones.length) return "";
-  const partes = acciones.map((a) => {
-    const id = `data-accion="${esc(a.id)}"`;
-    if (a.tipo === "quiz") {
-      return `<section class="rec-sec" ${id}><h3>${esc(a.texto)}</h3><div class="go"><button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Empezar quiz</button></div></section>`;
-    }
-    if (a.tipo === "enlace") {
-      return `<section class="rec-sec" ${id}><h3>${esc(a.texto)}</h3><div class="go"><a class="ub grande" href="${esc(a.href)}">Abrir</a></div></section>`;
-    }
-    if (a.tipo === "temas") {
-      let patron;
-      try { patron = new RegExp(a.buscar, "i"); } catch { return ""; }
-      const temas = P.temas.filter((t) => patron.test(t.titulo_kwiziq || "") || patron.test(t.titulo || ""))
-        .sort((x, y) => (info(x.id).pct ?? 50) - (info(y.id).pct ?? 50) || x.id - y.id)
-        .slice(0, a.n || 6);
-      if (!temas.length) return "";
-      return `<section class="rec-sec" ${id}><h3>${esc(a.texto)}</h3>
-        <p class="small">Tus temas de esto, del que menos dominas al que más.</p>
-        <div class="links">${temas.map((t) => botonTema(t)).join("")}</div>
-        <div class="go"><button type="button" class="ub grande" data-kwiz='${esc(JSON.stringify({ tipo: "tema", tema: temas[0].id }))}'>Quiz del primero</button></div></section>`;
-    }
-    if (a.tipo === "palabras") {
-      const lista = palabrasParaTour(a.n || 6, a.orden);
-      if (!lista.length) return "";
-      return `<section class="rec-sec" ${id}><h3>${esc(a.texto)}</h3>
-        <p class="small">${a.orden === "nuevas" ? "Las que agregaste más recién." : "Las que más fallas."} Toca una para ver su ficha.</p>
-        <div class="links">${lista.map((x) => `<button type="button" class="tb" data-v="${esc(x.id)}"><span class="nm">${esc(x.c.reverso)}</span><span class="pc${esBajo(x.pct) ? " bajo" : ""}">${pct(x.pct)}</span>${barra(x.pct)}</button>`).join("")}</div>
-        <div class="go"><a class="ub grande" href="#/vocabulario">Quiz de vocabulario</a></div></section>`;
-    }
-    return "";
-  }).filter(Boolean);
-  return `<h2>${esc(lugar.titulo)}</h2>${lugar.andrea ? `<p class="rec-voz"><b>Andrea:</b> «${esc(lugar.andrea)}»</p>` : ""}${partes.join("")}`;
-}
-
-function verRecorrido(o, id) {
-  // Modo Expanse → Ganímedes; modo Reef → Tijuana cyberpunk. Si no hay Ganímedes en el contenido, se queda en Tijuana.
-  const gan = ambiente() === "expanse" && P.tourGanimedes && P.tourGanimedes.lugares && P.tourGanimedes.lugares.length;
-  const TOUR = gan ? P.tourGanimedes : P.tour, FOTOS = gan ? fotosGan : fotosTour, CARPETA = gan ? "ganimedes" : "tour";
-  const CLAVE = gan ? CLAVE_RECORRIDO + ".gan" : CLAVE_RECORRIDO;
-  if (!TOUR || !TOUR.lugares || !TOUR.lugares.length) { verNoExiste("El recorrido todavía no está en tu contenido."); return; }
-  if (o.conserva && recorridoVivo) { enPregunta = true; return; }        // un aviso de guardado no reinicia el visor
-  const lugares = TOUR.lugares;
-  const nivel = new Map(resumenNiveles().map((n) => [n.nivel, n.promedio]));
-  const tinte = (l) => (l.nivel && nivel.has(l.nivel) ? N.franja(nivel.get(l.nivel)) : null);
-  const ultimo = guardado(CLAVE);
-  const desde = id && lugares.some((l) => l.id === id) ? id : lugares.some((l) => l.id === ultimo) ? ultimo : TOUR.inicio;
-  poner('<div id="recRaiz"></div>', { titulo: "Recorrido · Pelagos", nav: "recorrido" });
-  enPregunta = true;
-  recorridoVivo = abrirRecorrido($("recRaiz"), {
-    tour: TOUR,
-    desde,
-    bajarFoto: (nombre) => A.foto(FOTOS.get(nombre), CARPETA),
-    hojaMision,
-    tinte,
-    misiones: { lista: P.misiones || [], estado: estadoMisiones, hecha: (mision, lugar, aciertos) => apuntarMision(mision, "hecha", { lugar, aciertos }) },
-    escenas: { listar: (sala) => A.escenasDe(sala), subir: (sala, f, d) => A.escenaSubir(sala, f, d), quitar: (sala, a) => A.escenaQuitar(sala, a), ordenar: (sala, l) => A.escenaOrdenar(sala, l), url: (sala, x) => A.escenaUrl(sala, x), gif: (sala, x) => A.escenaGif(sala, x) },
-    esDeNoche: () => { const h = new Date().getHours(); return h >= 19 || h < 6; },
-    escenaVista: (id) => (guardado("pelagos.escenas") || "").split(",").includes(id),
-    escenaMarcar: (id) => { const v = (guardado("pelagos.escenas") || "").split(",").filter(Boolean); if (!v.includes(id)) guardar("pelagos.escenas", [...v, id].join(",")); },
-    alMover: (l) => {
-      guardar(CLAVE, l.id);
-      try { window.history.replaceState(null, "", "#/recorrido/" + l.id); } catch { /* sin historia: no pasa nada */ }
-    },
-  });
 }
 
 // ---------------------------------------------------------------- La llave
@@ -1048,49 +958,6 @@ function mostrarClipPremio(c) {
   });
 }
 
-// ---------------------------------------------------------------- Misiones del Recorrido de Ganímedes
-// Cada misión va ligada a sus temas de gramática. Se prende o se apaga con la lucecita de la lista de temas;
-// cuando está prendida, sus personajes salen en el Recorrido. Todo es un suceso «mision», así sale en todos tus aparatos.
-
-/** id de misión -> { activa, hechas: { lugar: true }, aciertos } */
-function estadoMisiones() {
-  const st = new Map((P.misiones || []).map((m) => [m.id, { activa: false, hechas: {}, aciertos: 0 }]));
-  const vistos = new Set();
-  const ev = A.sucesos().filter((e) => e.t === "mision" && st.has(e.mision) && !vistos.has(e.id) && vistos.add(e.id))
-    .sort((a, b) => String(a.cuando).localeCompare(String(b.cuando)));
-  for (const e of ev) {
-    const s = st.get(e.mision);
-    if (e.accion === "prender") s.activa = true;
-    else if (e.accion === "apagar") s.activa = false;
-    else if (e.accion === "hecha" && e.lugar) { if (!s.hechas[e.lugar]) s.aciertos += Number(e.aciertos) || 0; s.hechas[e.lugar] = true; }
-    else if (e.accion === "reiniciar") { s.hechas = {}; s.aciertos = 0; }
-  }
-  return st;
-}
-const misionesDeTema = (id) => (P.misiones || []).filter((m) => (m.temas || []).includes(id));
-function apuntarMision(mision, accion, extra = {}) {
-  A.apuntar({ t: "mision", id: N.nuevoId("m"), mision, accion, cuando: new Date().toISOString(), ...extra });
-}
-/** La lucecita junto a un tema: prendida si alguna de sus misiones corre en el juego. Tocarla la prende o la apaga. */
-function luzMision(t, st) {
-  const ms = misionesDeTema(t.id);
-  if (!ms.length) return "";
-  const m = ms[0], on = st.get(m.id).activa;
-  return `<button type="button" class="luz-mision" data-mision="${esc(m.id)}" aria-pressed="${on}" ` +
-    `aria-label="Misión «${esc(m.titulo)}»: ${on ? "prendida" : "apagada"}. Toca para ${on ? "apagarla" : "prenderla"}." ` +
-    `title="Misión «${esc(m.titulo)}» · ${on ? "prendida" : "apagada"}"><span aria-hidden="true"></span></button>`;
-}
-vista.addEventListener("click", (ev) => {
-  const b = ev.target instanceof Element ? ev.target.closest(".luz-mision") : null;
-  if (!b) return;
-  const id = b.dataset.mision, on = b.getAttribute("aria-pressed") === "true";
-  // Prender una misión que ya terminaste la empieza de nuevo
-  const m = (P.misiones || []).find((x) => x.id === id), s0 = estadoMisiones().get(id);
-  if (!on && m && s0 && (m.paradas || []).length && m.paradas.every((p) => s0.hechas[p.lugar])) apuntarMision(id, "reiniciar");
-  apuntarMision(id, on ? "apagar" : "prender");
-  pintar({ conserva: true });
-});
-
 /** Busca un tema por lo que escribas: palabras del título (en inglés o en español), el número de la lección o su slug. En el orden de Kwiziq. */
 function buscarTemas(texto) {
   const q = paraBuscar(texto).trim();
@@ -1151,11 +1018,9 @@ function verBiblioteca(o) {
 function verNivel(o, clave, filtro) {
   const nivel = clave.toUpperCase();
   if (!NIVELES[nivel]) return verNoExiste();
-  const soloBajo = filtro === "/bajo", soloMision = CON_RECORRIDO && filtro === "/mision", soloAtas = filtro === "/atascados";
+  const soloBajo = filtro === "/bajo", soloAtas = filtro === "/atascados";
   const atasT = temasAtascadosAhora();
   const cola = filtro || "";
-  const st = estadoMisiones();
-  const conMision = (t) => misionesDeTema(t.id).some((m) => st.get(m.id).activa);
   const suyos = P.temas.filter((t) => t.nivel === nivel).sort((a, b) => a.orden - b.orden);
   const bajo = suyos.filter((t) => esBajo(info(t.id).pct)).length;
   const categorias = [];
@@ -1164,7 +1029,6 @@ function verNivel(o, clave, filtro) {
   for (const t of suyos) {
     const i = info(t.id);
     if (soloBajo && !esBajo(i.pct)) continue;
-    if (soloMision && !conMision(t)) continue;
     if (soloAtas && !atasT.has(t.id)) continue;
     const nombre = CATEGORIAS[t.categoria] || t.categoria;
     if (!categorias.length || categorias[categorias.length - 1].nombre !== nombre) categorias.push({ nombre, temas: [], bajo: 0 });
@@ -1182,10 +1046,9 @@ function verNivel(o, clave, filtro) {
     <p>${suyos.length} temas. ${bajo} bajo ${meta()}%.</p>
     ${graficaNivel(nivel)}
     <nav class="jump tres" aria-label="Qué temas mostrar">
-      <a href="#/gramatica/${clave}"${soloBajo || soloMision || soloAtas ? "" : ' aria-current="page"'}>Todos</a>
+      <a href="#/gramatica/${clave}"${soloBajo || soloAtas ? "" : ' aria-current="page"'}>Todos</a>
       <a href="#/gramatica/${clave}/bajo"${soloBajo ? ' aria-current="page"' : ""}>Bajo ${meta()}%</a>
       <a href="#/gramatica/${clave}/atascados"${soloAtas ? ' aria-current="page"' : ""}>Atascados${(() => { const n = suyos.filter((t) => atasT.has(t.id)).length; return n ? " " + n : ""; })()}</a>
-      ${CON_RECORRIDO ? `<a href="#/gramatica/${clave}/mision"${soloMision ? ' aria-current="page"' : ""}>Misión activa</a>` : ""}
     </nav>
   </header>
   ${categorias.length ? categorias.map((c) => `
@@ -1194,14 +1057,12 @@ function verNivel(o, clave, filtro) {
     <div class="links">${c.temas.map((t) => {
       const i = info(t.id);
       const sub = marcas(t, banco) + (i.n ? ` <span class="resp">${plural(i.n, "respuesta", "respuestas")}</span>` : "");
-      const luz = CON_RECORRIDO ? luzMision(t, st) : "";
-      const boton = botonTema(t, { nivel: false, anchoNombre: true, ingles: true, sub });
-      return luz ? `<div class="tb-mision">${boton}${luz}</div>` : boton;
+      return botonTema(t, { nivel: false, anchoNombre: true, ingles: true, sub });
     }).join("")}</div>
-  </details>`).join("") : `<section class="card"><p>${soloMision ? `Ningún tema de ${nivel} tiene una misión prendida. Prende una con la lucecita que sale junto a sus temas.` : soloAtas ? `Ningún tema de ${nivel} está atascado. Bien.` : `Ningún tema de ${nivel} está bajo ${meta()}%.`}</p></section>`}`),
+  </details>`).join("") : `<section class="card"><p>${soloAtas ? `Ningún tema de ${nivel} está atascado. Bien.` : `Ningún tema de ${nivel} está bajo ${meta()}%.`}</p></section>`}`),
   {
     titulo: nivel + " · Lecciones de gramática · Pelagos", nav: "gramatica", conserva: o.conserva,
-    pie: (CON_RECORRIDO ? "<p>La lucecita junto a un tema prende o apaga su misión en el Recorrido de Ganímedes.</p>" : "") + "<p>Toca una categoría para abrirla. Los temas en inglés todavía no tienen lección propia: llevan el nombre que les da Kwiziq.</p>" + (E.sinArranque ? "<p>Un tema sin porcentaje (–) todavía no lo contestas aquí.</p>" : "<p>Un porcentaje sin número de respuestas es tu arranque de Kwiziq.</p>") + "<p>Cada tema lleva seis marcas: lección, tutora (con su nombre), video completo, loop, voz y preguntas. La marca llena es que ya está lista; la punteada, que falta. El video completo cuenta lo que hay en este aparato (tu carpeta «Pelagos videos» o los importados); el loop y la voz, lo que ya está subido. Se llenan solas conforme llegan.</p>",
+    pie: "<p>Toca una categoría para abrirla. Los temas en inglés todavía no tienen lección propia: llevan el nombre que les da Kwiziq.</p>" + (E.sinArranque ? "<p>Un tema sin porcentaje (–) todavía no lo contestas aquí.</p>" : "<p>Un porcentaje sin número de respuestas es tu arranque de Kwiziq.</p>") + "<p>Cada tema lleva seis marcas: lección, tutora (con su nombre), video completo, loop, voz y preguntas. La marca llena es que ya está lista; la punteada, que falta. El video completo cuenta lo que hay en este aparato (tu carpeta «Pelagos videos» o los importados); el loop y la voz, lo que ya está subido. Se llenan solas conforme llegan.</p>",
   });
 }
 
@@ -3707,7 +3568,7 @@ const AYUDA_DE = [
   [/^\/kwiz/, "quiz"],
   [/^\/gramatica\/atlas$/, "porcentaje"],
   [/^\/gramatica\/[a-z0-9]+\/atascados$/, "atascadas"],
-  [/^\/gramatica(\/[a-z0-9]+)?(\/bajo|\/mision)?$/, "porcentaje"],
+  [/^\/gramatica(\/[a-z0-9]+)?(\/bajo)?$/, "porcentaje"],
   [/^\/(leccion|tutoras)(\/|$)/, "tutoras"],
   [/^\/vocabulario/, "tarjetas"],
   [/^\/(clases|bitacora|lectura)?$/, "tablero"],
