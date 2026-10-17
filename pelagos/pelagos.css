@@ -1056,3 +1056,16 @@ dialog.sheet.escena.practica { inset: 0; width: 100%; max-width: 720px; height: 
 .enfoque .enfSeg .nv:first-child { border-left: 0; }
 .enfoque .enfSeg .nv[aria-pressed="true"] { background: var(--tab); color: var(--tab-ink); }
 .confoto .enfSeg, .hoy.confoto .enfoque .nv.ancho:not([aria-pressed="true"]) { background: var(--vidrio); }
+
+/* Sellos de premio como candado (17-Oct-2026): discretos, en la esquina de arriba del cuadro */
+.sello { top: 8px; right: 8px; width: 18px; height: 18px; transform: none; filter: none; }
+.sello.grande { top: 50%; right: 10px; width: 22px; height: 22px; margin-top: -11px; transform: none; }
+.sello .cdCuerpo, .sello .cdArco { fill: none; stroke: var(--ink-3); stroke-width: 1.6; }
+.sello.ok .cdCuerpo { fill: #f5c542; stroke: #f5c542; }
+.sello.ok .cdArco { stroke: #f5c542; stroke-width: 2; }
+.sello.ok { filter: drop-shadow(0 0 3px rgba(245,197,66,.55)); }
+.sello.no { opacity: 1; }
+.sello.toca { padding: 12px; margin: -12px; box-sizing: content-box; border-radius: 8px; }
+.sello.toca.activo { filter: drop-shadow(0 0 6px rgba(245,197,66,1)); scale: 1.15; }
+.cuadro.consello .cn { padding-right: 22px; }
+@media (max-width: 359px) { .sello { width: 16px; height: 16px; top: 8px; right: 8px; } .sello.grande { width: 20px; height: 20px; } }

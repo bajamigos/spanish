@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=8dc18f988a";
-import * as A from "./almacen.js?v=8dc18f988a";
-import { abrirRecorrido } from "./recorrido.js?v=8dc18f988a";
-import * as V from "./videos.js?v=8dc18f988a";
-import * as NB from "./nube.js?v=8dc18f988a";
-import * as CL from "./clases.js?v=8dc18f988a";
-import { abrirPractica } from "./practica.js?v=8dc18f988a";
-import * as F from "./fondo.js?v=8dc18f988a";
+import * as N from "./nucleo.js?v=12a5f6bc08";
+import * as A from "./almacen.js?v=12a5f6bc08";
+import { abrirRecorrido } from "./recorrido.js?v=12a5f6bc08";
+import * as V from "./videos.js?v=12a5f6bc08";
+import * as NB from "./nube.js?v=12a5f6bc08";
+import * as CL from "./clases.js?v=12a5f6bc08";
+import { abrirPractica } from "./practica.js?v=12a5f6bc08";
+import * as F from "./fondo.js?v=12a5f6bc08";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -578,12 +578,17 @@ function selloHtml(x, grande = false) {
   const clase = `sello${grande ? " grande" : ""} ${esc(ic)} ${x.va ? "ok" : "no"}`;
   if (clip) {
     const on = premioFondo === k, quien = nombreTutora(clip.id);
-    return `<span class="${clase} toca${on ? " activo" : ""}" role="button" tabindex="0" data-premio="${k}" aria-pressed="${on}" aria-label="${esc(x.nombre)}: ganado. ${on ? "Quitar su clip del fondo" : "Ver el clip de " + esc(quien) + " de fondo"}">${SELLOS[ic]}</span>`;
+    return `<span class="${clase} toca${on ? " activo" : ""}" role="button" tabindex="0" data-premio="${k}" aria-pressed="${on}" aria-label="${esc(x.nombre)}: ganado. ${on ? "Quitar su clip del fondo" : "Ver el clip de " + esc(quien) + " de fondo"}">${candado(x.va)}</span>`;
   }
-  if (!gif) return `<span class="${clase}">${SELLOS[ic]}</span><span class="sr">${esc(x.nombre)}: ${x.va ? "ganado" : "falta"}. </span>`;
+  if (!gif) return `<span class="${clase}">${candado(x.va)}</span><span class="sr">${esc(x.nombre)}: ${x.va ? "ganado" : "falta"}. </span>`;
   const on = premioFondo === k;
-  return `<span class="${clase} toca${on ? " activo" : ""}" role="button" tabindex="0" data-premio="${k}" aria-pressed="${on}" aria-label="${esc(x.nombre)}: ganado. ${on ? "Quitar su GIF del fondo" : "Poner su GIF de fondo"}">${SELLOS[ic]}</span>`;
+  return `<span class="${clase} toca${on ? " activo" : ""}" role="button" tabindex="0" data-premio="${k}" aria-pressed="${on}" aria-label="${esc(x.nombre)}: ganado. ${on ? "Quitar su GIF del fondo" : "Poner su GIF de fondo"}">${candado(x.va)}</span>`;
 }
+/** El sello del premio (17-Oct-2026): un candadito. Cerrado y gris si falta; abierto y dorado si ya lo ganaste. */
+const candado = (abierto) => abierto
+  ? '<svg viewBox="0 0 24 24" aria-hidden="true"><rect class="cdCuerpo" x="5" y="11" width="14" height="10" rx="2"/><path class="cdArco" d="M8 11V7a4 4 0 0 1 7.6-1.7"/></svg>'
+  : '<svg viewBox="0 0 24 24" aria-hidden="true"><rect class="cdCuerpo" x="5" y="11" width="14" height="10" rx="2"/><path class="cdArco" d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>';
+// Los dibujos de antes (puño, labios, papaya, durazno, manzana) ya no se pintan; sus nombres siguen diciendo qué premio es cuál.
 const SELLOS = {
   puno: '<svg viewBox="0 0 32 32" aria-hidden="true"><rect class="s1" x="10" y="22.5" width="12" height="7" rx="1.6"/><rect class="s1" x="6.5" y="5.4" width="4.7" height="11" rx="2.35"/><rect class="s1" x="11.3" y="4" width="4.7" height="12" rx="2.35"/><rect class="s1" x="16.1" y="4" width="4.7" height="12" rx="2.35"/><rect class="s1" x="20.9" y="5.4" width="4.7" height="11" rx="2.35"/><rect class="s1" x="6.5" y="11.5" width="19.1" height="12.6" rx="4.6"/><path class="s2" d="M5.6 15.2c2.4-1.5 8-1.9 11-.8 1.9.7 2.1 3.3.3 4.2-2.9 1.4-7.9 1.5-10.9.5-1.9-.7-2.100-2.800-.4-3.900z"/></svg>',
   labios: '<svg viewBox="0 0 32 32" aria-hidden="true"><path class="s1" d="M2.5 15.200C6.500 8.800 11.800 7.300 16 10.800c4.200-3.500 9.500-2 13.500 4.400-4.600-1-9-.2-13.500-.200s-8.900-.8-13.500.2z"/><path class="s1" d="M3.200 16.700c4.300.9 8.500.3 12.800.3s8.500.6 12.800-.3C25.600 23.200 20.900 26 16 26s-9.600-2.800-12.800-9.300z"/><path class="s3" d="M9.500 19.600c2 1.700 4.200 2.500 6.500 2.500s4.500-.8 6.500-2.500"/></svg>',
@@ -602,7 +607,6 @@ function cuadro(nombre, valor, de, unidad, estado, hecho, enlace = "", sello = n
     <span class="cn">${esc(nombre)}</span>
     <span class="cv">${esc(valor)}${aCero ? "" : `<small> de ${esc(de)}${unidad ? " " + esc(unidad) : ""}</small>`}</span>
     ${aCero ? '<span class="bar vacia"></span>' : barra(de ? (valor / de) * 100 : 0)}
-    ${hecho ? `<span class="ce">${ICONO_SI}${esc(estado)}</span>` : ""}
   </${cierra}>`;
 }
 
