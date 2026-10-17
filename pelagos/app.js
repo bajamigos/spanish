@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=d76d98a0ea";
-import * as A from "./almacen.js?v=d76d98a0ea";
-import { abrirRecorrido } from "./recorrido.js?v=d76d98a0ea";
-import * as V from "./videos.js?v=d76d98a0ea";
-import * as NB from "./nube.js?v=d76d98a0ea";
-import * as CL from "./clases.js?v=d76d98a0ea";
-import { abrirPractica } from "./practica.js?v=d76d98a0ea";
-import * as F from "./fondo.js?v=d76d98a0ea";
+import * as N from "./nucleo.js?v=ffe7d92bce";
+import * as A from "./almacen.js?v=ffe7d92bce";
+import { abrirRecorrido } from "./recorrido.js?v=ffe7d92bce";
+import * as V from "./videos.js?v=ffe7d92bce";
+import * as NB from "./nube.js?v=ffe7d92bce";
+import * as CL from "./clases.js?v=ffe7d92bce";
+import { abrirPractica } from "./practica.js?v=ffe7d92bce";
+import * as F from "./fondo.js?v=ffe7d92bce";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -2973,7 +2973,7 @@ function verKwiz(o) {
     <h3 id="enfoqueT">Enfoque</h3>
     <div class="enfoque" role="group" aria-labelledby="enfoqueT">
       <button type="button" class="nv ancho" data-enfoque="" aria-pressed="${E.enfoque ? "false" : "true"}">Guiado: todos los niveles</button>
-      ${Object.keys(NIVELES).map((n) => `<button type="button" class="nv" data-enfoque="${n}" aria-pressed="${E.enfoque === n ? "true" : "false"}"${porNivel[n] ? "" : " disabled"} aria-label="${n}, ${porNivel[n] ? plural(porNivel[n], "tema con preguntas", "temas con preguntas") : "todavía sin preguntas"}">${n}<span>${porNivel[n] || 0}</span></button>`).join("")}
+      <div class="tdSeg enfSeg">${Object.keys(NIVELES).map((n) => `<button type="button" class="nv" data-enfoque="${n}" aria-pressed="${E.enfoque === n ? "true" : "false"}"${porNivel[n] ? "" : " disabled"} aria-label="${n}, ${porNivel[n] ? plural(porNivel[n], "tema con preguntas", "temas con preguntas") : "todavía sin preguntas"}">${n}<span>${porNivel[n] || 0}</span></button>`).join("")}</div>
     </div>
     <p class="small">${E.enfoque ? `Tu plan solo trae temas de ${esc(E.enfoque)}.` : "Tu plan toma temas de todos los niveles."} El número es cuántos temas tienen preguntas.${lista.abierto ? " El cambio se ve al terminar el quiz que está a medias." : ""}</p>
     ${deLista.length ? `

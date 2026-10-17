@@ -1038,3 +1038,21 @@ dialog.sheet.escena.practica { inset: 0; width: 100%; max-width: 720px; height: 
 .tdSeg button[aria-pressed="true"] { background: var(--tab); color: var(--tab-ink); }
 .tdSeg button:focus-visible { outline: 3px solid var(--mark); outline-offset: -3px; }
 .hoy.confoto .tdSeg { background: var(--vidrio); }
+/* El enfoque del quiz y los niveles de cada página de nivel (17-Oct-2026): la misma barra segmentada del Tablero */
+.enfoque { display: flex; flex-direction: column; gap: 8px; }
+.enfoque .nv.ancho { min-height: 36px; padding: 0 12px; border: 1.5px solid var(--outline); border-radius: 999px; background: var(--page); color: var(--ink); font-size: 14px; font-weight: 600; }
+.enfoque .nv.ancho[aria-pressed="true"] { background: var(--tab); color: var(--tab-ink); border-color: var(--tab); }
+.enfSeg .nv { display: flex; align-items: baseline; justify-content: center; gap: 4px; padding: 0 2px; border-radius: 0; line-height: 1; }
+.enfSeg .nv span { font-size: 11.5px; font-weight: 400; color: var(--ink-3); }
+.enfSeg .nv[aria-pressed="true"] span { color: var(--tab-ink); opacity: .8; }
+.enfSeg .nv:disabled { opacity: .4; cursor: default; }
+.jump.niveles { display: flex; gap: 0; border: 1.5px solid var(--outline); border-radius: 999px; overflow: hidden; background: var(--page); }
+.jump.niveles a { flex: 1 1 0; min-width: 0; display: grid; place-items: center; min-height: 36px; padding: 0; border: 0; border-left: 1px solid var(--line); border-radius: 0; background: transparent; color: var(--ink); font-size: 14px; font-weight: 600; line-height: 1; box-shadow: none; }
+.jump.niveles a:first-child { border-left: 0; }
+.jump.niveles a[aria-current="page"] { background: var(--tab); color: var(--tab-ink); }
+.hoy.confoto .jump.niveles, .confoto .jump.niveles { background: var(--vidrio); }
+.enfoque .nv.ancho { display: flex; align-items: center; justify-content: center; }
+.enfoque .enfSeg .nv { min-height: 36px; border: 0; border-left: 1px solid var(--line); border-radius: 0; background: transparent; color: var(--ink); font-size: 14px; font-weight: 600; align-items: center; }
+.enfoque .enfSeg .nv:first-child { border-left: 0; }
+.enfoque .enfSeg .nv[aria-pressed="true"] { background: var(--tab); color: var(--tab-ink); }
+.confoto .enfSeg, .hoy.confoto .enfoque .nv.ancho:not([aria-pressed="true"]) { background: var(--vidrio); }
