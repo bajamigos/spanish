@@ -295,11 +295,12 @@ export function calcular(paquete, sucesos) {
     const baseN = Number.isInteger(c.repasos) && c.repasos > 0 ? c.repasos : 0;
     const baseBien = Number.isInteger(c.aciertos) && c.aciertos > 0 ? Math.min(c.aciertos, baseN) : 0;
     tarjetas.set(c.id, {
-      escalon: toca ? Math.max(0, Math.min(ESCALONES.length - 1, c.escalon | 0)) : 0, toca, traia: !!toca, n: 0, bien: 0, primera: null, ultima: null, fallada: null,
+      escalon: toca ? Math.max(0, Math.min(ESCALONES.length - 1, c.escalon | 0)) : 0, toca, traia: !!toca, n: 0, nr: 0, bien: 0, primera: null, ultima: null, fallada: null,
       historia: [], baseN, baseBien, quitada: false, cambio: null,
     });
   }
-  const agregadas = [];        // las tarjetas que agregaste a mano: no vienen en el contenido, viven en tus sucesos
+  const agregadas = [];
+  let reinicioTj = 0;          // cuándo reiniciaste tu vocabulario, o 0        // las tarjetas que agregaste a mano: no vienen en el contenido, viven en tus sucesos
   const porVer = new Map();    // estrenos que tocaste en la Biblioteca para verlos: «tv:123» o «movie:456» -> cuándo; «porver» con quitar los saca
   const notas = new Map();     // tus notas sobre las tutoras (y lo que sea): id -> { id, sobre, texto, cuando }; «notaq» quita una
 
@@ -323,6 +324,7 @@ export function calcular(paquete, sucesos) {
       const dia = fechaLocal(e.cuando);
       const yaHoy = !!c.ultima && fechaLocal(c.ultima) === dia;     // ya la habías repasado hoy
       c.n++;
+      c.nr++;                                    // repasos desde el último reinicio (o desde siempre)
       if (!c.primera) c.primera = e.cuando;
       c.ultima = e.cuando;
       c.historia.push({ cuando: e.cuando, bien: !!e.bien });
@@ -332,14 +334,19 @@ export function calcular(paquete, sucesos) {
       else {
         c.bien++;
         if (c.fallada === dia) { c.escalon = 0; c.toca = sumarDias(dia, ESCALONES[0]); c.fallada = null; }      // la rescataste hoy: mañana otra vez
-        else if (!c.toca || c.toca <= dia || (e.adelanto && !yaHoy)) [c.escalon, c.toca] = siguienteToca(c.n === 1 && !c.traia ? -1 : c.escalon, true, dia);    // adelantada a propósito: sí sube
+        else if (!c.toca || c.toca <= dia || (e.adelanto && !yaHoy)) [c.escalon, c.toca] = siguienteToca(c.nr === 1 && !c.traia ? -1 : c.escalon, true, dia);    // adelantada a propósito: sí sube
       }
+    } else if (e.t === "tjreinicio") {
+      // Reinicio del vocabulario (17-Oct-2026): todas las tarjetas vuelven a ser nuevas y entran de NUEVAS_AL_DIA en
+      // NUEVAS_AL_DIA. Su historia y sus aciertos se quedan; solo cambia la escalera. Para deshacerlo se quita ese renglón de tus sucesos.
+      reinicioTj = ms(e);
+      for (const c of tarjetas.values()) { c.escalon = 0; c.toca = null; c.traia = false; c.primera = null; c.fallada = null; c.nr = 0; }
     } else if (e.t === "tjn") {
       // Una tarjeta nueva, hecha a mano. Si ya hay una con ese id (del contenido o de otro suceso), vale la que ya estaba.
       const texto = limpiarCambio(e);
       if (typeof e.tarjeta !== "string" || !/^[A-Za-z0-9_-]{1,40}$/.test(e.tarjeta) || tarjetas.has(e.tarjeta) || !texto || !texto.frente || !texto.reverso) continue;
       agregadas.push({ id: e.tarjeta, mazo: "A mano", frente: texto.frente, reverso: texto.reverso, agregada: fechaLocal(e.cuando) });
-      tarjetas.set(e.tarjeta, { escalon: 0, toca: null, traia: false, n: 0, bien: 0, primera: null, ultima: null, fallada: null, historia: [], baseN: 0, baseBien: 0, quitada: false, cambio: null });
+      tarjetas.set(e.tarjeta, { escalon: 0, toca: null, traia: false, n: 0, nr: 0, bien: 0, primera: null, ultima: null, fallada: null, historia: [], baseN: 0, baseBien: 0, quitada: false, cambio: null });
     } else if (e.t === "tjq") {
       const c = tarjetas.get(e.tarjeta);
       if (c) c.quitada = !(e.quitar === 0 || e.quitar === false);        // quitar: 0 la devuelve
@@ -466,7 +473,7 @@ export function calcular(paquete, sucesos) {
 
   const sospechosas = sospechosasDe(respuestas, retiradas, absueltas);
 
-  return { sospechosas, absueltas, destrabes, destrabesTj, todas: respuestas, temas, kwizzes, retiradas, ultimaVez, respuestas: respuestas.length, porTema, parametros, debe, fallada, enfoque, tarjetas, fotosTarjeta, agregadas, actividad, actividadVoc, actividadGram, notas, porVer };
+  return { reinicioTj, sospechosas, absueltas, destrabes, destrabesTj, todas: respuestas, temas, kwizzes, retiradas, ultimaVez, respuestas: respuestas.length, porTema, parametros, debe, fallada, enfoque, tarjetas, fotosTarjeta, agregadas, actividad, actividadVoc, actividadGram, notas, porVer };
 }
 
 // ---------------------------------------------------------------- Preguntas sospechosas y temas atorados (16-Oct-2026)
@@ -902,7 +909,9 @@ export function tendencias(paquete, sucesos, hoy = fechaLocal(new Date()), dias 
   const quedaron = [], olvidadas = [];
   for (const [id, t] of E.tarjetas) {
     if (t.quitada) continue;
-    const a = E0.tarjetas.get(id), antes = a && a.toca ? a.escalon : -1, ahora = t.toca ? t.escalon : -1;
+    // Si reiniciaste el vocabulario en estos días, se compara contra el reinicio (todas nuevas), no contra antes.
+    const reinicio = E.reinicioTj && E.reinicioTj > (E0.reinicioTj || 0);
+    const a = E0.tarjetas.get(id), antes = reinicio ? -1 : a && a.toca ? a.escalon : -1, ahora = t.toca ? t.escalon : -1;
     if (ahora > antes) quedaron.push({ id, antes, ahora });
     else if (ahora < antes && antes >= 0) olvidadas.push({ id, antes, ahora });
   }
