@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=214b51b9c6";
-import * as A from "./almacen.js?v=214b51b9c6";
-import { abrirRecorrido } from "./recorrido.js?v=214b51b9c6";
-import * as V from "./videos.js?v=214b51b9c6";
-import * as NB from "./nube.js?v=214b51b9c6";
-import * as CL from "./clases.js?v=214b51b9c6";
-import { abrirPractica } from "./practica.js?v=214b51b9c6";
-import * as F from "./fondo.js?v=214b51b9c6";
+import * as N from "./nucleo.js?v=8dc18f988a";
+import * as A from "./almacen.js?v=8dc18f988a";
+import { abrirRecorrido } from "./recorrido.js?v=8dc18f988a";
+import * as V from "./videos.js?v=8dc18f988a";
+import * as NB from "./nube.js?v=8dc18f988a";
+import * as CL from "./clases.js?v=8dc18f988a";
+import { abrirPractica } from "./practica.js?v=8dc18f988a";
+import * as F from "./fondo.js?v=8dc18f988a";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -893,7 +893,6 @@ function avanceNivel(id = "") {
   return `<div class="avNivel">
     <div class="tdSeg" role="group" aria-label="Nivel">${nivs.map((n) => `<button type="button" data-tnivel="${n}" aria-pressed="${n === tendNivel}">${n}</button>`).join("")}</div>
     <div class="grafNivel"${id ? ` id="${id}"` : ""}>${graficaNivel(tendNivel)}</div>
-    <p class="small">La línea es qué parte de los temas del nivel ya contestaste aquí; lo verde, lo que sabes de todo el nivel (los que no has visto cuentan 0).</p>
   </div>`;
 }
 const DIAS_CORTOS = ["D", "L", "M", "M", "J", "V", "S"];
@@ -2983,6 +2982,7 @@ function verKwiz(o) {
       <div class="tdSeg enfSeg">${Object.keys(NIVELES).map((n) => `<button type="button" class="nv" data-enfoque="${n}" aria-pressed="${E.enfoque === n ? "true" : "false"}"${porNivel[n] ? "" : " disabled"} aria-label="${n}, ${porNivel[n] ? plural(porNivel[n], "tema con preguntas", "temas con preguntas") : "todavía sin preguntas"}">${n}<span>${porNivel[n] || 0}</span></button>`).join("")}</div>
     </div>
     <p class="small">${E.enfoque ? `Tu plan solo trae temas de ${esc(E.enfoque)}.` : "Tu plan toma temas de todos los niveles."} El número es cuántos temas tienen preguntas.${lista.abierto ? " El cambio se ve al terminar el quiz que está a medias." : ""}</p>
+    ${(() => { if (E.enfoque) tendNivel = E.enfoque; const h = avanceNivel(); return h ? `<div id="avanceQuiz"><h3>Tu avance por nivel</h3>${h}</div>` : ""; })()}
     ${deLista.length ? `
     <h3>${plural(deLista.length, "tema", "temas")} en tu plan</h3>
     <div class="links">${deLista.map((t) => botonTema(t, { sub: lineaDelPlan(t, lista, bancoPlan) })).join("")}</div>
@@ -2993,7 +2993,6 @@ function verKwiz(o) {
     <p class="small">Hoy llevas ${plural(hechosHoy, "quiz", "quizzes")}.</p>`
     : `<p>${E.enfoque ? `Todavía no hay preguntas de ${esc(E.enfoque)}. Elige otro enfoque.` : "Todavía no hay preguntas revisadas."}</p>`}
   </section>
-  ${(() => { if (E.enfoque) tendNivel = E.enfoque; const h = avanceNivel(); return h ? `<section class="card" id="avanceQuiz" aria-labelledby="avanceQuizT"><h2 id="avanceQuizT">Tu avance por nivel</h2>${h}</section>` : ""; })()}
   ${cuadernos.length ? `
   <section class="card">
     <h2>Otros quizzes</h2>
