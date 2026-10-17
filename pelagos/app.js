@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=ffe7d92bce";
-import * as A from "./almacen.js?v=ffe7d92bce";
-import { abrirRecorrido } from "./recorrido.js?v=ffe7d92bce";
-import * as V from "./videos.js?v=ffe7d92bce";
-import * as NB from "./nube.js?v=ffe7d92bce";
-import * as CL from "./clases.js?v=ffe7d92bce";
-import { abrirPractica } from "./practica.js?v=ffe7d92bce";
-import * as F from "./fondo.js?v=ffe7d92bce";
+import * as N from "./nucleo.js?v=214b51b9c6";
+import * as A from "./almacen.js?v=214b51b9c6";
+import { abrirRecorrido } from "./recorrido.js?v=214b51b9c6";
+import * as V from "./videos.js?v=214b51b9c6";
+import * as NB from "./nube.js?v=214b51b9c6";
+import * as CL from "./clases.js?v=214b51b9c6";
+import { abrirPractica } from "./practica.js?v=214b51b9c6";
+import * as F from "./fondo.js?v=214b51b9c6";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -873,14 +873,28 @@ function prepararTendencias() {
     const d = ev.target;
     if (d instanceof HTMLDetailsElement && d.dataset.tdet) { if (d.open) tendAbiertas.add(d.dataset.tdet); else tendAbiertas.delete(d.dataset.tdet); }
   }, true);
-  // El selector de nivel solo cambia la gráfica de gramática.
-  sec.addEventListener("click", (ev) => {
-    const nv = ev.target instanceof Element ? ev.target.closest("[data-tnivel]") : null;
-    if (!nv || nv.dataset.tnivel === tendNivel) return;
-    tendNivel = nv.dataset.tnivel;
-    for (const b of sec.querySelectorAll("[data-tnivel]")) b.setAttribute("aria-pressed", String(b.dataset.tnivel === tendNivel));
-    $("tdGrafNivel").innerHTML = graficaNivel(tendNivel);
-  });
+}
+// El selector de nivel (en el Tablero y en el Quiz de gramática) solo cambia su gráfica.
+vista.addEventListener("click", (ev) => {
+  const nv = ev.target instanceof Element ? ev.target.closest("[data-tnivel]") : null;
+  const caja = nv && nv.closest(".avNivel");
+  if (!caja || nv.dataset.tnivel === tendNivel) return;
+  tendNivel = nv.dataset.tnivel;
+  for (const b of caja.querySelectorAll("[data-tnivel]")) b.setAttribute("aria-pressed", String(b.dataset.tnivel === tendNivel));
+  caja.querySelector(".grafNivel").innerHTML = graficaNivel(tendNivel);
+});
+/** El selector de nivel con su gráfica de avance. id: el de la caja de la gráfica (opcional). */
+function avanceNivel(id = "") {
+  const R = progresoHoy(), conPreg = N.nivelesConPreguntas(P, E);
+  const nivs = Object.keys(NIVELES).filter((n) => R.niveles[n] && conPreg[n]);
+  if (!nivs.length) return "";
+  if (!tendNivel || !nivs.includes(tendNivel)) tendNivel = E.enfoque && nivs.includes(E.enfoque) ? E.enfoque
+    : nivs.slice().sort((a, b) => R.niveles[b].n[R.niveles[b].n.length - 1] - R.niveles[a].n[R.niveles[a].n.length - 1])[0];
+  return `<div class="avNivel">
+    <div class="tdSeg" role="group" aria-label="Nivel">${nivs.map((n) => `<button type="button" data-tnivel="${n}" aria-pressed="${n === tendNivel}">${n}</button>`).join("")}</div>
+    <div class="grafNivel"${id ? ` id="${id}"` : ""}>${graficaNivel(tendNivel)}</div>
+    <p class="small">La línea es qué parte de los temas del nivel ya contestaste aquí; lo verde, lo que sabes de todo el nivel (los que no has visto cuentan 0).</p>
+  </div>`;
 }
 const DIAS_CORTOS = ["D", "L", "M", "M", "J", "V", "S"];
 const diaTend = (d, hoy) => (d === hoy ? "Hoy" : DIAS_CORTOS[new Date(d + "T12:00:00").getDay()]);
@@ -974,11 +988,6 @@ function graficaVocab() {
 }
 function seccionTendencias() {
   if (!P || !E) return "";
-  // ---- Gramática: la gráfica del nivel, con su selector.
-  const R = progresoHoy(), conPreg = N.nivelesConPreguntas(P, E);
-  const nivs = Object.keys(NIVELES).filter((n) => R.niveles[n] && conPreg[n]);
-  if (!tendNivel || !nivs.includes(tendNivel)) tendNivel = E.enfoque && nivs.includes(E.enfoque) ? E.enfoque
-    : nivs.slice().sort((a, b) => R.niveles[b].n[R.niveles[b].n.length - 1] - R.niveles[a].n[R.niveles[a].n.length - 1])[0];
   // ---- Los últimos 7 días.
   const T = tendenciasHoy();
   const dif = (a, b) => { const d = b - a; return d > 0 ? "+" + d : d < 0 ? "−" + Math.abs(d) : "±0"; };
@@ -998,9 +1007,7 @@ function seccionTendencias() {
   return `<section class="card tend" id="tendencias" aria-labelledby="tendT">
     <h2 id="tendT">Tu avance</h2>
     <h3 class="tdSub">Gramática por nivel</h3>
-    <div class="tdSeg" role="group" aria-label="Nivel">${nivs.map((n) => `<button type="button" data-tnivel="${n}" aria-pressed="${n === tendNivel}">${n}</button>`).join("")}</div>
-    <div id="tdGrafNivel">${graficaNivel(tendNivel)}</div>
-    <p class="small">La línea es qué parte de los temas del nivel ya contestaste aquí; lo verde, lo que sabes de todo el nivel (los que no has visto cuentan 0).</p>
+    ${avanceNivel("tdGrafNivel")}
     <h3 class="tdSub">Vocabulario</h3>
     ${graficaVocab()}
     <p class="small">La línea es qué parte de tu mazo ya viste${E.reinicioTj ? " desde el reinicio" : ""}; lo verde, qué tan arriba van tus tarjetas en la escalera (la caja de 75 días es 100%; las que no has visto cuentan 0).</p>
@@ -2986,6 +2993,7 @@ function verKwiz(o) {
     <p class="small">Hoy llevas ${plural(hechosHoy, "quiz", "quizzes")}.</p>`
     : `<p>${E.enfoque ? `Todavía no hay preguntas de ${esc(E.enfoque)}. Elige otro enfoque.` : "Todavía no hay preguntas revisadas."}</p>`}
   </section>
+  ${(() => { if (E.enfoque) tendNivel = E.enfoque; const h = avanceNivel(); return h ? `<section class="card" id="avanceQuiz" aria-labelledby="avanceQuizT"><h2 id="avanceQuizT">Tu avance por nivel</h2>${h}</section>` : ""; })()}
   ${cuadernos.length ? `
   <section class="card">
     <h2>Otros quizzes</h2>
