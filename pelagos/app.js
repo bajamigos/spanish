@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=6e77fe620c";
-import * as A from "./almacen.js?v=6e77fe620c";
-import { abrirRecorrido } from "./recorrido.js?v=6e77fe620c";
-import * as V from "./videos.js?v=6e77fe620c";
-import * as NB from "./nube.js?v=6e77fe620c";
-import * as CL from "./clases.js?v=6e77fe620c";
-import { abrirPractica } from "./practica.js?v=6e77fe620c";
-import * as F from "./fondo.js?v=6e77fe620c";
+import * as N from "./nucleo.js?v=5b399ec429";
+import * as A from "./almacen.js?v=5b399ec429";
+import { abrirRecorrido } from "./recorrido.js?v=5b399ec429";
+import * as V from "./videos.js?v=5b399ec429";
+import * as NB from "./nube.js?v=5b399ec429";
+import * as CL from "./clases.js?v=5b399ec429";
+import { abrirPractica } from "./practica.js?v=5b399ec429";
+import * as F from "./fondo.js?v=5b399ec429";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -846,22 +846,61 @@ function verInicio(o) {
     </div>
   </div>`,
   { titulo: "Tablero · Pelagos", nav: "inicio", conserva: o.conserva });
+  prepararTendencias();
   if (clip) mostrarClipPremio(clip);
 }
 // ---------------------------------------------------------------- Tus tendencias (Tablero, 16-Oct-2026)
 // En lugar del promedio por nivel, que casi no se mueve: lo que subió y bajó en los últimos 7 días,
 // contando solo los temas que has practicado aquí, y tus cajas grandes de tarjetas.
-let tendCache = null;
+// Deslizar la sección (o tocar «Hoy» / «7 días») cambia entre los últimos 7 días y solo hoy (contra ayer).
+let tendCache = null, tendDias = 7;
+const tendAbiertas = new Set();      // «Se te quedaron» y «Se te olvidaron»: cerradas hasta que las abras (con la flecha)
 function tendenciasHoy() {
   const hoy = N.fechaLocal(new Date()), suc = A.sucesos();
-  const clave = hoy + "|" + suc.length;
-  if (!tendCache || tendCache.clave !== clave) tendCache = { clave, t: N.tendencias(P, suc, hoy) };
+  const clave = hoy + "|" + suc.length + "|" + tendDias;
+  if (!tendCache || tendCache.clave !== clave) tendCache = { clave, t: N.tendencias(P, suc, hoy, tendDias) };
   return tendCache.t;
+}
+function cambiarTendencias(dias) {
+  if (dias === tendDias) return;
+  tendDias = dias;
+  const viejo = $("tendencias");
+  if (!viejo) return;
+  viejo.outerHTML = seccionTendencias();
+  const nuevo = $("tendencias");
+  vestir(nuevo);
+  prepararTendencias();
+  const b = nuevo.querySelector(`[data-tdias="${dias}"]`);
+  if (b) b.focus({ preventScroll: true });
+}
+function prepararTendencias() {
+  const sec = $("tendencias");
+  if (!sec || sec.dataset.listo) return;
+  sec.dataset.listo = "1";
+  sec.addEventListener("toggle", (ev) => {
+    const d = ev.target;
+    if (d instanceof HTMLDetailsElement && d.dataset.tdet) { if (d.open) tendAbiertas.add(d.dataset.tdet); else tendAbiertas.delete(d.dataset.tdet); }
+  }, true);
+  sec.addEventListener("click", (ev) => {
+    const b = ev.target instanceof Element ? ev.target.closest("[data-tdias]") : null;
+    if (b) cambiarTendencias(Number(b.dataset.tdias));
+  });
+  let x0 = null, y0 = null;
+  sec.addEventListener("pointerdown", (ev) => { x0 = ev.pointerType === "mouse" ? null : ev.clientX; y0 = ev.clientY; }, { passive: true });
+  sec.addEventListener("pointercancel", () => { x0 = null; });
+  sec.addEventListener("pointerup", (ev) => {
+    if (x0 === null) return;
+    const dx = ev.clientX - x0, dy = ev.clientY - y0;
+    x0 = null;
+    if (Math.abs(dx) < 60 || Math.abs(dx) < Math.abs(dy) * 1.5) return;
+    cambiarTendencias(tendDias === 7 ? 1 : 7);
+  });
 }
 const DIAS_CORTOS = ["D", "L", "M", "M", "J", "V", "S"];
 const diaTend = (d, hoy) => (d === hoy ? "Hoy" : DIAS_CORTOS[new Date(d + "T12:00:00").getDay()]);
 /** Una línea chiquita de 7 puntos. serie: números; etiqueta: lo que dice el lector de pantalla. */
 function lineaTend(serie, dias, clase, etiqueta, alto = 80) {
+  if (serie.length < 2) return "";
   const hoy = dias[dias.length - 1];
   const lo = Math.min(...serie), hi = Math.max(...serie), rango = hi - lo || 1;
   const x = (i) => 20 + i * (300 / Math.max(1, serie.length - 1));
@@ -894,11 +933,11 @@ function seccionTendencias() {
   const T = tendenciasHoy(), hoy = T.dias[T.dias.length - 1];
   const prom = (v) => (v === null ? "–" : Math.round(v) + "%");
   const dif = (a, b) => { const d = b - a; return d > 0 ? "+" + d : d < 0 ? "−" + Math.abs(d) : "±0"; };
-  const metaIni = T.meta[0], metaFin = T.meta[T.meta.length - 1];
+  const metaIni = T.metaBase, metaFin = T.meta[T.meta.length - 1];
   const pa = T.promedio.antes === null ? null : Math.round(T.promedio.antes), pb = T.promedio.ahora === null ? null : Math.round(T.promedio.ahora);
   const temas = (l, vacio) => (l.length ? `<div class="tdTemas">${l.map((x) => pistaTema(x, T.metaPct)).join("")}</div>` : `<p class="small">${vacio}</p>`);
   const caja = (k, nombre) => {
-    const s = T.cajas[k], a = s[0], b = s[s.length - 1];
+    const s = T.cajas[k], a = T.cajasBase[k], b = s[s.length - 1];
     return `<div class="tdCaja"><p class="tdFila"><b>Caja de ${nombre}</b><b>${a} → ${b} <span class="tdGris">(${dif(a, b)})</span></b></p>
       ${lineaTend(s, T.dias, "c" + k, `Tarjetas en la caja de ${nombre} cada día: ${s.join(", ")}.`)}</div>`;
   };
@@ -909,8 +948,13 @@ function seccionTendencias() {
     return `<button type="button" class="tdPalabra" data-v="${esc(x.id)}"><span lang="es-MX">${esc(v.reverso)}</span><span class="tdGris">${texto(x)}</span></button>`;
   };
   const cajaDe = (e) => (e < 0 ? "nueva" : CAJA_DIAS[e]);
+  const unDia = tendDias === 1, antes = unDia ? "ayer" : "hace 7 días";
   return `<section class="card tend" id="tendencias" aria-labelledby="tendT">
-    <h2 id="tendT">Tus últimos 7 días</h2>
+    <h2 id="tendT">${unDia ? "Hoy" : "Tus últimos 7 días"}</h2>
+    <div class="jump dos tdPeriodo" role="group" aria-label="Periodo">
+      <button type="button" data-tdias="7" aria-pressed="${!unDia}">7 días</button><button type="button" data-tdias="1" aria-pressed="${unDia}">Hoy</button>
+    </div>
+    <p class="small">Desliza de lado para cambiar. ${unDia ? "Hoy contra cómo cerraste ayer." : ""}</p>
     <h3 class="tdSub">Gramática</h3>
     <div class="tdNums">
       <p><span class="tdGrande si">${metaFin}</span><span class="small">temas en tu meta · ${dif(metaIni, metaFin)}</span></p>
@@ -919,17 +963,21 @@ function seccionTendencias() {
     ${lineaTend(T.meta, T.dias, "si", `Temas en tu meta al cierre de cada día: ${T.meta.join(", ")}.`, 70)}
     <p class="small">De los ${T.practicados} temas que has practicado aquí, ${metaFin} ya están en ${T.metaPct}% o más.</p>
     <h3 class="tdSub">Los que más subieron</h3>
-    <p class="small">Aro: hace 7 días. Punto: hoy. Raya: tu meta, ${T.metaPct}%.</p>
-    ${temas(T.subieron, "Ninguno subió esta semana.")}
+    <p class="small">Aro: ${antes}. Punto: hoy. Raya: tu meta, ${T.metaPct}%.</p>
+    ${temas(T.subieron, unDia ? "Ninguno subió hoy." : "Ninguno subió esta semana.")}
     <h3 class="tdSub">Los que más bajaron</h3>
-    ${temas(T.bajaron, "Ninguno bajó esta semana.")}
+    ${temas(T.bajaron, unDia ? "Ninguno bajó hoy." : "Ninguno bajó esta semana.")}
     <h3 class="tdSub">Vocabulario: tus cajas grandes</h3>
     ${caja(5, "75 días")}${caja(4, "30 días")}
     <p class="small">Las que suben a la de 75 vienen de la de 30: si la de 30 baja mientras la de 75 sube, vas bien.</p>
-    <h3 class="tdSub">Se te quedaron <span class="tdGris">· ${T.subieronCaja} subieron de caja</span></h3>
-    ${T.quedaron.length ? `<div class="tdPalabras">${T.quedaron.map((x) => palabra(x, (y) => "ya va a " + cajaDe(y.ahora))).join("")}</div>` : `<p class="small">Ninguna esta semana.</p>`}
-    <h3 class="tdSub">Se te olvidaron <span class="tdGris">· ${T.olvidadasN}</span></h3>
-    ${T.olvidadas.length ? `<div class="tdPalabras">${T.olvidadas.map((x) => palabra(x, (y) => `de ${cajaDe(y.antes)} a ${cajaDe(y.ahora)}`)).join("")}</div>` : `<p class="small">Ninguna. ¡Así se hace!</p>`}
+    <details class="tdDet" data-tdet="quedaron"${tendAbiertas.has("quedaron") ? " open" : ""}>
+      <summary><h3 class="tdSub">Se te quedaron <span class="tdGris">· ${T.subieronCaja} subieron de caja</span></h3></summary>
+      ${T.quedaron.length ? `<div class="tdPalabras">${T.quedaron.map((x) => palabra(x, (y) => "ya va a " + cajaDe(y.ahora))).join("")}</div>` : `<p class="small">${unDia ? "Ninguna hoy." : "Ninguna esta semana."}</p>`}
+    </details>
+    <details class="tdDet" data-tdet="olvidadas"${tendAbiertas.has("olvidadas") ? " open" : ""}>
+      <summary><h3 class="tdSub">Se te olvidaron <span class="tdGris">· ${T.olvidadasN}</span></h3></summary>
+      ${T.olvidadas.length ? `<div class="tdPalabras">${T.olvidadas.map((x) => palabra(x, (y) => `de ${cajaDe(y.antes)} a ${cajaDe(y.ahora)}`)).join("")}</div>` : `<p class="small">Ninguna. ¡Así se hace!</p>`}
+    </details>
   </section>`;
 }
 

@@ -1008,3 +1008,9 @@ dialog.sheet.escena.practica { inset: 0; width: 100%; max-width: 720px; height: 
 .tdPalabras { display: flex; flex-direction: column; }
 .tdPalabra { display: flex; justify-content: space-between; gap: 12px; min-height: 44px; align-items: center; padding: 0; background: none; border: 0; border-bottom: 1px solid var(--line); font: inherit; font-size: 15px; color: var(--ink); text-align: left; cursor: pointer; }
 .tdPalabra:last-child { border-bottom: 0; }
+.tdPeriodo { margin: 0; }
+.tdDet summary { list-style: none; display: flex; align-items: center; gap: 8px; min-height: 44px; cursor: pointer; }
+.tdDet summary::-webkit-details-marker { display: none; }
+.tdDet summary::after { content: ""; width: 9px; height: 9px; margin-left: auto; border-right: 2px solid var(--ink); border-bottom: 2px solid var(--ink); transform: rotate(45deg); transition: transform .15s; }
+.tdDet[open] summary::after { transform: rotate(-135deg); }
+.tdDet summary .tdSub { margin: 0; }

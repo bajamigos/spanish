@@ -903,8 +903,10 @@ export function tendencias(paquete, sucesos, hoy = fechaLocal(new Date()), dias 
   }
   quedaron.sort((a, b) => b.ahora - a.ahora || (b.ahora - b.antes) - (a.ahora - a.antes));
   olvidadas.sort((a, b) => (a.ahora - a.antes) - (b.ahora - b.antes) || b.antes - a.antes);
+  const cuantasEn = (Ex, k) => [...Ex.tarjetas.values()].filter((t) => !t.quitada && t.toca && t.escalon === k).length;
   return {
     dias: fechas, base, meta: serie, metaPct: meta, practicados: practicados(E).length,
+    metaBase: practicados(E0).filter(([, t]) => t.pct >= meta).length, cajasBase: { 4: cuantasEn(E0, 4), 5: cuantasEn(E0, 5) },
     promedio: { antes: prom(E0), ahora: prom(E) }, subieron, bajaron, cajas,
     subieronCaja: quedaron.length, olvidadasN: olvidadas.length,
     quedaron: quedaron.slice(0, TOP_TENDENCIAS), olvidadas: olvidadas.slice(0, TOP_TENDENCIAS),
