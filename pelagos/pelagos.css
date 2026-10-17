@@ -71,7 +71,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 /* Cuatro botones en un renglón: cada uno del ancho de su palabra, y lo que sobra se reparte. */
 .top { display: flex; gap: 5px; }
 .top .ub { flex: 1 1 auto; min-width: 0; white-space: nowrap; font-size: 15px; padding-inline: 4px; }
-.top .ub.ayudaQ { flex: 0 0 44px; font-size: 18px; font-weight: 700; border-radius: 50%; padding: 0; }
 
 /* «Cómo funciona» (16-Oct-2026) */
 .ayudaIdx { display: grid; gap: 8px; list-style: none; padding: 0; margin: 0; }

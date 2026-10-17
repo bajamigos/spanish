@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=12a5f6bc08";
-import * as A from "./almacen.js?v=12a5f6bc08";
-import { abrirRecorrido } from "./recorrido.js?v=12a5f6bc08";
-import * as V from "./videos.js?v=12a5f6bc08";
-import * as NB from "./nube.js?v=12a5f6bc08";
-import * as CL from "./clases.js?v=12a5f6bc08";
-import { abrirPractica } from "./practica.js?v=12a5f6bc08";
-import * as F from "./fondo.js?v=12a5f6bc08";
+import * as N from "./nucleo.js?v=fc5ee0004a";
+import * as A from "./almacen.js?v=fc5ee0004a";
+import { abrirRecorrido } from "./recorrido.js?v=fc5ee0004a";
+import * as V from "./videos.js?v=fc5ee0004a";
+import * as NB from "./nube.js?v=fc5ee0004a";
+import * as CL from "./clases.js?v=fc5ee0004a";
+import { abrirPractica } from "./practica.js?v=fc5ee0004a";
+import * as F from "./fondo.js?v=fc5ee0004a";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -3716,18 +3716,19 @@ const AYUDA_DE = [
 function ayudaLista() { return (P && P.ayuda && P.ayuda.paginas) || []; }
 function ayudaPagina(slug) { return ayudaLista().find((p) => p.slug === slug) || null; }
 
-/** El «?» de la barra de arriba: lleva a la página que explica donde estás (o al índice). */
+/** «Cómo funciona», abajo de Ajustes (17-Oct-2026; antes era un «?» arriba): lleva a la página que explica donde estás (o al índice). */
 function ponerSignoAyuda() {
-  const q = $("ayudaQ");
+  const q = $("ayudaLink");
   if (!q) return;
   const camino = window.location.hash.replace(/^#/, "") || "/";
-  q.hidden = !ayudaLista().length;
-  if (camino.startsWith("/ayuda")) { q.href = "#/ayuda"; q.setAttribute("aria-current", "page"); q.setAttribute("aria-label", "Cómo funciona"); return; }
+  q.hidden = !ayudaLista().length || !A.hayLlave() || !P;
+  q.removeAttribute("aria-current");
+  if (camino.startsWith("/ayuda")) { q.href = "#/ayuda"; q.setAttribute("aria-current", "page"); q.textContent = "Cómo funciona"; return; }
   const fila = AYUDA_DE.find(([re]) => re.test(camino));
   const pag = fila && ayudaPagina(fila[1]);
   q.href = pag ? "#/ayuda/" + pag.slug : "#/ayuda";
+  q.textContent = "Cómo funciona";
   q.setAttribute("aria-label", pag ? "Cómo funciona: " + pag.titulo : "Cómo funciona");
-  q.title = q.getAttribute("aria-label");
 }
 
 /** Los números del motor que la ayuda nombra entre llaves. */
