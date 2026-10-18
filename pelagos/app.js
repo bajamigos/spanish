@@ -1,11 +1,11 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=5da19dab7b";
-import * as A from "./almacen.js?v=5da19dab7b";
-import * as V from "./videos.js?v=5da19dab7b";
-import * as NB from "./nube.js?v=5da19dab7b";
-import * as CL from "./clases.js?v=5da19dab7b";
-import { abrirPractica } from "./practica.js?v=5da19dab7b";
-import * as F from "./fondo.js?v=5da19dab7b";
+import * as N from "./nucleo.js?v=10b5468b47";
+import * as A from "./almacen.js?v=10b5468b47";
+import * as V from "./videos.js?v=10b5468b47";
+import * as NB from "./nube.js?v=10b5468b47";
+import * as CL from "./clases.js?v=10b5468b47";
+import { abrirPractica } from "./practica.js?v=10b5468b47";
+import * as F from "./fondo.js?v=10b5468b47";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -3365,7 +3365,8 @@ const PIEZAS = [
   ["leccion", "Lección"], ["guion", "Guion"], ["video", "Video completo"],
   ["voz", "Voz"], ["loop", "Loop HD"],
 ];
-// Las compilaciones de Andrea no llevan loop: no cuentan en el total de esa fila.
+// Las compilaciones de Andrea sin toma limpia (todo es acto después del anuncio) no llevan loop: no cuentan en el total de esa fila.
+// Las que sí tienen loop (47 desde el 17-Oct-2026) cuentan como cualquier tema.
 const esCompilacion = (tu) => !!(tu && /^Andrea\b/.test(tu.tutora || ""));
 const totalDe = (f, k) => (k === "loop" ? f.temas - f.compilaciones : f.temas);
 function estadoPiezas() {
@@ -3381,7 +3382,7 @@ function estadoPiezas() {
     if (tu && tu.archivo) f.video++;
     if (voz.has(t.id)) f.voz++;
     if (loop.has(t.id)) f.loop++;
-    if (esCompilacion(tu)) f.compilaciones++;
+    if (esCompilacion(tu) && !loop.has(t.id)) f.compilaciones++;
   }
   return [...filas.values()].filter((f) => f.temas);
 }
@@ -3396,7 +3397,7 @@ function graficaPiezas() {
         <span class="pzBarra" role="img" aria-label="${nombre}: ${v} de ${n}"><i data-w="${p}"></i></span>
         <span class="pzNum">${v}/${n}${n && v >= n ? " ✓" : ""}</span></div>`;
     }).join("")}
-    ${f.compilaciones ? `<p class="small">${plural(f.compilaciones, "compilación de Andrea no lleva", "compilaciones de Andrea no llevan")} loop.</p>` : ""}
+    ${f.compilaciones ? `<p class="small">${plural(f.compilaciones, "compilación de Andrea no tiene", "compilaciones de Andrea no tienen")} toma limpia para loop.</p>` : ""}
   </div>`;
   return `<p class="small">Total: ${tot.temas} temas · ${PIEZAS.map(([k, n]) => `${tot[k]} con ${n.toLowerCase().replace("hd", "HD")}`).join(" · ")}.</p>
     <div class="pzGrafica">${filas.map(nivel).join("")}</div>
