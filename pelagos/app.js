@@ -1,11 +1,11 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=e3e8e23464";
-import * as A from "./almacen.js?v=e3e8e23464";
-import * as V from "./videos.js?v=e3e8e23464";
-import * as NB from "./nube.js?v=e3e8e23464";
-import * as CL from "./clases.js?v=e3e8e23464";
-import { abrirPractica } from "./practica.js?v=e3e8e23464";
-import * as F from "./fondo.js?v=e3e8e23464";
+import * as N from "./nucleo.js?v=5dbe82a8de";
+import * as A from "./almacen.js?v=5dbe82a8de";
+import * as V from "./videos.js?v=5dbe82a8de";
+import * as NB from "./nube.js?v=5dbe82a8de";
+import * as CL from "./clases.js?v=5dbe82a8de";
+import { abrirPractica } from "./practica.js?v=5dbe82a8de";
+import * as F from "./fondo.js?v=5dbe82a8de";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -3055,15 +3055,14 @@ function verPregunta(o, kid) {
   const delDia = conLoop && !propio && !viene ? (cargarVideosFondo(), etiquetaMovimiento()) : "";
   const clip = propio || delDia;
   const arriba = conLoop && (clip || viene);
-  const logoLimpio = !deTutora && ambiente() === "limpio";      // en Limpio, el logo de Pelagos va de fondo, como la tutora en Reef
   const envolver = (h) => arriba
     ? `<div class="hoy confoto contutora kwFondo"><div class="fondo${clip ? "" : " cargando"}">${clip ? clip + LOGO : '<img class="logoCarga" src="logo.png" alt="Pelagos">'}</div><div class="sobre">${h}</div></div>`
-    : logoLimpio ? `<div class="hoy confoto contutora kwFondo">${FONDO_LIMPIO}<div class="sobre">${h}</div></div>` : h;
+    : h;      // en Limpio la pregunta va sin logo, como la tarjeta de vocabulario: más pantalla para la pregunta (18-Oct)
   poner(envolver(`
   <section class="kw${deTutora ? " kwTutora" : ""}">
-    <header class="hero kwh${arriba || logoLimpio ? " contutora" : ""}">
+    <header class="hero kwh${arriba ? " contutora" : ""}">
       <div class="ratio"></div>
-      ${deTutora ? (ambiente() === "limpio" ? "" : '<div class="tutoraVideo" id="tutoraVideo"></div>') : arriba || logoLimpio ? "" : imagenDeArriba(foto && foto.nombre)}
+      ${deTutora ? (ambiente() === "limpio" ? "" : '<div class="tutoraVideo" id="tutoraVideo"></div>') : arriba ? "" : imagenDeArriba(foto && foto.nombre)}
       <div class="over">
         <p class="lead"><span>${deTutora ? `Aciertos: ${k.bien || 0} de ${N.ACIERTOS_TUTORA}` : `Pregunta ${sig.orden} de ${sig.total}`}</span><span>${enHueco ? "Escribe lo que falta" : escribir ? "Dilo en español" : "Toca la respuesta"}</span></p>
         <div class="score"><div class="track" role="img" aria-label="${deTutora ? `Llevas ${k.bien || 0} de ${N.ACIERTOS_TUTORA} aciertos` : `Vas en la ${sig.orden} de ${sig.total}`}"><i data-w="${deTutora ? 100 * (k.bien || 0) / N.ACIERTOS_TUTORA : 100 * (sig.orden - 1) / sig.total}"></i></div></div>

@@ -19,7 +19,8 @@
   --vidrio-borde: rgba(0,0,0,0.28); --vidrio-luz: rgba(255,255,255,0.6); --vidrio-sombra: rgba(0,0,0,0.28);
   --halo: 0 1px 5px rgba(255,255,255,0.9);
   /* Los seis colores del mapa, del más bajo al más alto, y el color de su letra. */
-  --k0: rgba(168,58,18,0.9); --k1: rgba(226,89,31,0.9); --k2: rgba(245,166,124,0.9); --k3: rgba(169,205,245,0.9); --k4: rgba(91,157,230,0.9); --k5: rgba(31,95,181,0.9);
+  /* De rojo a amarillo a verde, como el mapa de Kwiziq (su pedido del 18-Oct-2026). */
+  --k0: rgba(198,40,40,0.92); --k1: rgba(239,108,0,0.92); --k2: rgba(249,200,14,0.92); --k3: rgba(192,216,74,0.92); --k4: rgba(106,191,75,0.92); --k5: rgba(46,125,50,0.92);
   --t0: #ffffff; --t1: #000000; --t2: #000000; --t3: #000000; --t4: #000000; --t5: #ffffff;
   /* El mapa de calor: de nada (--c0) al día más caliente (--c4). */
   --c0: rgba(0,0,0,0.09); --c1: #f8cf9a; --c2: #f39a3d; --c3: #d9531a; --c4: #86190a;
@@ -41,8 +42,8 @@
   --vidrio: rgba(10,10,10,0.5); --vidrio-2: rgba(0,0,0,0.28); --vidrio-mapa: rgba(10,10,10,0.3);
   --vidrio-borde: rgba(255,255,255,0.28); --vidrio-luz: rgba(255,255,255,0.12); --vidrio-sombra: rgba(0,0,0,0.45);
   --halo: 0 1px 6px rgba(0,0,0,0.7);
-  --k0: rgba(255,138,82,0.88); --k1: rgba(217,89,38,0.88); --k2: rgba(168,86,47,0.88); --k3: rgba(28,63,112,0.88); --k4: rgba(47,111,196,0.88); --k5: rgba(127,182,255,0.88);
-  --t0: #000000; --t1: #000000; --t2: #ffffff; --t3: #ffffff; --t4: #ffffff; --t5: #000000;
+  --k0: rgba(229,57,53,0.9); --k1: rgba(245,124,0,0.9); --k2: rgba(251,200,30,0.9); --k3: rgba(190,215,80,0.9); --k4: rgba(102,187,106,0.9); --k5: rgba(67,196,99,0.9);
+  --t0: #ffffff; --t1: #000000; --t2: #000000; --t3: #000000; --t4: #000000; --t5: #000000;
   --c0: rgba(255,255,255,0.09); --c1: #743813; --c2: #c9581c; --c3: #ff9130; --c4: #ffe36e;
   --y1: #5a4a12; --y2: #9c7c12; --y3: #e0b52a; --y4: #ffe680;
   --b1: #17335f; --b2: #2059a8; --b3: #4d93f0; --b4: #b2d3ff;
