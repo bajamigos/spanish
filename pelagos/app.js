@@ -1,11 +1,11 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=029ae1e514";
-import * as A from "./almacen.js?v=029ae1e514";
-import * as V from "./videos.js?v=029ae1e514";
-import * as NB from "./nube.js?v=029ae1e514";
-import * as CL from "./clases.js?v=029ae1e514";
-import { abrirPractica } from "./practica.js?v=029ae1e514";
-import * as F from "./fondo.js?v=029ae1e514";
+import * as N from "./nucleo.js?v=a4af4f3a9d";
+import * as A from "./almacen.js?v=a4af4f3a9d";
+import * as V from "./videos.js?v=a4af4f3a9d";
+import * as NB from "./nube.js?v=a4af4f3a9d";
+import * as CL from "./clases.js?v=a4af4f3a9d";
+import { abrirPractica } from "./practica.js?v=a4af4f3a9d";
+import * as F from "./fondo.js?v=a4af4f3a9d";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1285,7 +1285,7 @@ function verTarjetas(o) {
     <section class="card" id="tjCero">
       <h1 class="h">${dia.total ? "Vocabulario en cero" : "Todavía no hay vocabulario"}</h1>
       ${dia.total ? `<p>Hoy repasaste ${dia.hechasHoy} de tus ${plural(dia.total, "palabra", "palabras")}.${fechas.length ? ` Las siguientes tocan el ${fecha(fechas[0])}.` : ""}</p>` : "<p>Cuando haya palabras en el contenido, aquí salen las de cada día.</p>"}
-      <div class="go">${masTarde.length ? `<button type="button" class="ub grande" id="tjAdelantar">Adelantar ${masTarde.length}</button>` : ""}<a class="ub${masTarde.length ? "" : " grande"}" href="#/">Tablero</a></div>
+      <div class="conCuadro">${masTarde.length ? `<button type="button" class="ub grande" id="tjAdelantar">Adelantar ${masTarde.length}</button>` : "<span></span>"}<div class="unCuadro" role="list" aria-label="Tu vocabulario de hoy">${cuadroVocabulario(hoy)}</div></div>
       ${masTarde.length ? `<p class="small">Estudia ahora ${plural(masTarde.length, "palabra que toca", "palabras que tocan")} más adelante. La que aciertes sube su escalón desde hoy; la que falles vuelve a salir hoy.</p>` : ""}
     </section>`), { titulo: "Quiz de vocabulario · Pelagos", nav: "vocabulario", conserva: o.conserva });
     return;
@@ -2828,6 +2828,13 @@ function cuadroGramatica(hoy = N.fechaLocal(new Date())) {
   return cuadro("Gramática", kw, meta, "quizzes", hecho ? "Cumplido" : `Faltan ${meta - kw}`, hecho, "", sello);
 }
 
+/** El cuadro «Vocabulario» del Tablero (palabras que te faltan hoy; la meta es cero), igual que allá, con el sello quieto. */
+function cuadroVocabulario(hoy = N.fechaLocal(new Date())) {
+  const tj = N.tarjetasDelDia(P, E, hoy).pendientes.length, hecho = tj === 0;
+  const T = N.leerTablero(A.tablero());
+  const parte = T && T.checkin ? T.checkin.partes.find((x) => x.con === "tarjetas" && SELLOS[iconoDe(x)]) : null;
+  return cuadro("Vocabulario", tj, 0, "", hecho ? "Cumplido" : "Por repasar", hecho, "", parte ? { ...parte, va: hecho, estatico: true } : null);
+}
 /** El cuadro de los quizzes de hoy, para ir junto a un botón (en un renglón «conCuadro»). */
 const conCuadro = (hoy) => `<div class="unCuadro" role="list" aria-label="Tus quizzes de hoy">${cuadroGramatica(hoy)}</div>`;
 
