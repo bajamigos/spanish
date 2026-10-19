@@ -1,11 +1,11 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=10b5468b47";
-import * as A from "./almacen.js?v=10b5468b47";
-import * as V from "./videos.js?v=10b5468b47";
-import * as NB from "./nube.js?v=10b5468b47";
-import * as CL from "./clases.js?v=10b5468b47";
-import { abrirPractica } from "./practica.js?v=10b5468b47";
-import * as F from "./fondo.js?v=10b5468b47";
+import * as N from "./nucleo.js?v=c8576536e5";
+import * as A from "./almacen.js?v=c8576536e5";
+import * as V from "./videos.js?v=c8576536e5";
+import * as NB from "./nube.js?v=c8576536e5";
+import * as CL from "./clases.js?v=c8576536e5";
+import { abrirPractica } from "./practica.js?v=c8576536e5";
+import * as F from "./fondo.js?v=c8576536e5";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -483,8 +483,8 @@ function clipDelDia(k) {
  */
 function selloHtml(x, grande = false) {
   const ic = iconoDe(x), k = PREMIO_DE[ic];
-  const clip = x.va && k ? clipDelDia(k) : null;
-  const gif = x.va && k && !clip ? ultimaEscena(salaPremio(k)) : null;
+  const clip = x.va && k && !x.estatico ? clipDelDia(k) : null;
+  const gif = x.va && k && !clip && !x.estatico ? ultimaEscena(salaPremio(k)) : null;
   const clase = `sello${grande ? " grande" : ""} ${esc(ic)} ${x.va ? "ok" : "no"}`;
   if (clip) {
     const on = premioFondo === k, quien = nombreTutora(clip.id);
@@ -2816,6 +2816,18 @@ function tarjetaAtorados() {
   </section>`;
 }
 
+/**
+ * El cuadro «Gramática» del Tablero (quizzes de hoy, de 5), igual que allá: el mismo número, la misma barra y el mismo sello.
+ * En el quiz va sin enlace y con el sello quieto (solo se toca en el Tablero).
+ */
+function cuadroGramatica(hoy = N.fechaLocal(new Date())) {
+  const kw = N.kwizzesDelDia(E, hoy), meta = N.KWIZZES_AL_DIA, hecho = kw >= meta;
+  const T = N.leerTablero(A.tablero());
+  const parte = T && T.checkin ? T.checkin.partes.find((x) => x.con === "kwizzes" && SELLOS[iconoDe(x)]) : null;
+  const sello = parte ? { ...parte, va: hecho, estatico: true } : null;
+  return cuadro("Gramática", kw, meta, "quizzes", hecho ? "Cumplido" : `Faltan ${meta - kw}`, hecho, "", sello);
+}
+
 function verKwiz(o) {
   revisarVideos();
   const abierto = N.kwizAbierto(E);
@@ -2827,9 +2839,12 @@ function verKwiz(o) {
   const bancoPlan = bancoPorTema();
   const porNivel = N.nivelesConPreguntas(P, E);
   const hoy = N.fechaLocal(new Date());
-  const hechosHoy = N.kwizzesHechos(E).filter((k) => N.fechaLocal(k.terminado) === hoy).length;
   poner(conFondo(`
   ${entradas("gramatica", "quiz")}
+  <section class="card" id="medidas">
+    <h2 class="sr">Tus quizzes de hoy</h2>
+    <div class="cuadros" role="list">${cuadroGramatica(hoy)}</div>
+  </section>
   ${abierto ? `
   <section class="card">
     <h1 class="h">Tienes un quiz a medias</h1>
@@ -2854,8 +2869,7 @@ function verKwiz(o) {
     ${mudo() ? "" : `<div class="go">${botonesRepaso()}</div>`}
     ${mudo() ? "" : `<p class="small" id="repasoAviso" role="status">${esc(avisoRepaso())}</p>`}
     <p class="small">Una pregunta de cada tema. El que aciertas sale del plan y entra otro. El que fallas se queda hasta que lo aciertes dos veces seguidas.</p>
-    ${deLista.length < N.LISTA ? `<p class="small">${E.enfoque ? `En ${esc(E.enfoque)} solo hay` : "Solo hay"} ${plural(deLista.length, "tema", "temas")} con preguntas. El plan se llena cuando se escriban más.</p>` : ""}
-    <p class="small">Hoy llevas ${plural(hechosHoy, "quiz", "quizzes")}.</p>`
+    ${deLista.length < N.LISTA ? `<p class="small">${E.enfoque ? `En ${esc(E.enfoque)} solo hay` : "Solo hay"} ${plural(deLista.length, "tema", "temas")} con preguntas. El plan se llena cuando se escriban más.</p>` : ""}`
     : `<p>${E.enfoque ? `Todavía no hay preguntas de ${esc(E.enfoque)}. Elige otro enfoque.` : "Todavía no hay preguntas revisadas."}</p>`}
   </section>
   ${cuadernos.length ? `
@@ -3312,6 +3326,10 @@ function verResultado(o, kid) {
     <p>${TIPOS_KWIZ[k.tipo] || "Quiz"} · ${cuando(k.terminado)}</p>
     ${barra(k.total ? 100 * k.bien / k.total : 0, " gorda")}
     <div class="go"><button type="button" class="ub grande" data-kwiz='${esc(igual)}'>${k.tipo === "lista" ? "Otro quiz de tu plan" : "Otro quiz igual"}</button><a class="ub" href="${(() => { const t = k.tipo === "tutora" ? porId.get(k.tema) : null; return t && t.slug && t.leccion ? "#/leccion/" + esc(t.slug) : "#" + QUIZ; })()}">Cerrar</a>${fallas.length ? `<button type="button" class="ub" id="estudiarFallas">Estudiar las fallas</button>` : ""}</div>
+  </section>
+  <section class="card" id="medidas">
+    <h2 class="sr">Tus quizzes de hoy</h2>
+    <div class="cuadros" role="list">${cuadroGramatica()}</div>
   </section>
   <section class="card">
     <h2>Pregunta por pregunta</h2>
