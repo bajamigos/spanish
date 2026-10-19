@@ -1,11 +1,11 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=a4af4f3a9d";
-import * as A from "./almacen.js?v=a4af4f3a9d";
-import * as V from "./videos.js?v=a4af4f3a9d";
-import * as NB from "./nube.js?v=a4af4f3a9d";
-import * as CL from "./clases.js?v=a4af4f3a9d";
-import { abrirPractica } from "./practica.js?v=a4af4f3a9d";
-import * as F from "./fondo.js?v=a4af4f3a9d";
+import * as N from "./nucleo.js?v=9109a036c4";
+import * as A from "./almacen.js?v=9109a036c4";
+import * as V from "./videos.js?v=9109a036c4";
+import * as NB from "./nube.js?v=9109a036c4";
+import * as CL from "./clases.js?v=9109a036c4";
+import { abrirPractica } from "./practica.js?v=9109a036c4";
+import * as F from "./fondo.js?v=9109a036c4";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1627,28 +1627,7 @@ function verLectura(o, ejemplo = false) {
   const grafDias = graficaBarras({ id: "grafDias", titulo: "Minutos por día", barras: porDia, meta,
     resumen: total14 ? `En 14 días: ${horasMin(total14)}, ${plural(porDia.filter((b) => b.valor >= meta).length, "día", "días")} con la hora cumplida. Tu mejor día: ${diaLargo(mejor.dia)}, con ${horasMin(mejor.valor)}.` : "En 14 días todavía no hay minutos." });
 
-  const porHora = new Map();
-  for (const d of ultimos) for (const [h, v] of (L && L.horas.get(d)) || []) porHora.set(h, (porHora.get(h) || 0) + v);
-  let grafHoras = "";
-  if (porHora.size) {
-    const hs = [...porHora.keys()], desde = Math.min(7, ...hs), hasta = Math.max(22, ...hs);
-    const hora = (h) => (h % 12 || 12) + (h < 12 ? " am" : " pm");
-    const barras = [];
-    for (let h = desde; h <= hasta; h++) barras.push({ corto: h % 2 === 0 ? String(h % 12 || 12) : "", sub: h % 6 === 0 || h === desde ? (h < 12 ? "am" : "pm") : "",
-      valor: porHora.get(h) || 0, detalle: `De ${hora(h)} a ${hora(h + 1)}: ${horasMin(porHora.get(h) || 0)} en 14 días.` });
-    const fuerte = [...porHora].sort((a, b) => b[1] - a[1])[0];
-    grafHoras = graficaBarras({ id: "grafHoras", titulo: "A qué hora escuchas", barras,
-      resumen: `Tu hora fuerte: de ${hora(fuerte[0])} a ${hora(fuerte[0] + 1)}, con ${horasMin(fuerte[1])} en 14 días.` });
-  }
-
-  const porLibro = new Map();
-  for (const [d, id] of L ? L.libroDia : []) if (tituloDe.has(id)) porLibro.set(id, (porLibro.get(id) || 0) + (dias.get(d) || 0));
-  const maxLibro = Math.max(1, ...porLibro.values());
-  const grafLibros = porLibro.size ? `
-    <section class="card" id="grafLibros">
-      <h2>Por libro</h2>
-      <ul class="porLibro">${[...porLibro].sort((a, b) => b[1] - a[1]).map(([id, m]) => `<li><span class="plNombre">${esc(tituloDe.get(id))}</span><span class="plValor">${horasMin(m)}</span><span class="bar gorda lecBarra"><i data-w="${(100 * m) / maxLibro}"></i></span></li>`).join("")}</ul>
-    </section>` : "";
+  // «A qué hora escuchas» y «Por libro» se quitaron el 18-Oct-2026, a pedido suyo: queda solo «Minutos por día».
 
   // ---- Biblioteca (su «sí» del 14-Oct): tres botones arriba, Libros · Series · Podcasts, como los de la Bitácora.
   // Los libros son lo de siempre; las series y los podcasts vienen de su hoja de Excel, con sus carteles y portadas.
@@ -1703,7 +1682,7 @@ function verLectura(o, ejemplo = false) {
       repisa("podSin", "Sin estrellas", Pd.filter((x) => !x.nota), fichaP);
   } else {
     cabeza = `<p class="lecturaHoy">${esc(lineaHoy)}</p><p class="small">${esc(lineaSemana)}</p>`;
-    cuerpo = tarjetaAhora + grafDias + grafHoras + grafLibros + estante;
+    cuerpo = tarjetaAhora + grafDias + estante;
   }
   const fondo = fondoDelDia();
   poner(`
