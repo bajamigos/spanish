@@ -339,7 +339,7 @@ body.conandrea { --ink-2: #1c1c1c; --ink-3: #333333; --bar-bg: rgba(0,0,0,0.16);
 .hoy.confoto .fondo .fondoTema:hover, .hoy.confoto .fondo .fondoTema:focus-visible { color: #ffffff; background: rgba(0, 0, 0, 0.65); }
 /* Limpio: el logo de Pelagos de fondo, en el lugar de la foto. Blanco en claro, negro en oscuro. */
 .hoy.confoto .fondo.fondoLogo { background: var(--page); }
-.hoy.confoto .fondo.fondoLogo img { background: var(--page); object-fit: contain; object-position: center; }
+.hoy.confoto .fondo.fondoLogo img { aspect-ratio: 720 / 615; background: var(--page); object-fit: contain; object-position: center; }
 .fondo.fondoLogo .logoOscuro { display: none !important; }
 :root[data-tema="oscuro"] .fondo.fondoLogo .logoOscuro { display: block !important; }
 :root[data-tema="oscuro"] .fondo.fondoLogo .logoClaro { display: none !important; }

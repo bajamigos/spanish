@@ -1,11 +1,11 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=1a867e7d41";
-import * as A from "./almacen.js?v=1a867e7d41";
-import * as V from "./videos.js?v=1a867e7d41";
-import * as NB from "./nube.js?v=1a867e7d41";
-import * as CL from "./clases.js?v=1a867e7d41";
-import { abrirPractica } from "./practica.js?v=1a867e7d41";
-import * as F from "./fondo.js?v=1a867e7d41";
+import * as N from "./nucleo.js?v=e3e8e23464";
+import * as A from "./almacen.js?v=e3e8e23464";
+import * as V from "./videos.js?v=e3e8e23464";
+import * as NB from "./nube.js?v=e3e8e23464";
+import * as CL from "./clases.js?v=e3e8e23464";
+import { abrirPractica } from "./practica.js?v=e3e8e23464";
+import * as F from "./fondo.js?v=e3e8e23464";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -701,7 +701,9 @@ function verInicio(o) {
 
   // ---- Lo que cuenta Pelagos solo: los quizzes de gramática de hoy y las palabras que tocan hoy y siguen pendientes (la meta es cero).
   const kw = N.kwizzesDelDia(E, hoy), metaKw = N.KWIZZES_AL_DIA;
-  const tj = tarjetas.size ? N.tarjetasDelDia(P, E, hoy).pendientes.length : null;
+  const diaTj = tarjetas.size ? N.tarjetasDelDia(P, E, hoy) : null;
+  const tj = diaTj ? diaTj.pendientes.length : null;
+  const tjHechas = diaTj ? diaTj.hechasHoy : 0;
 
   // ---- Las partes: lo que llevas ganado hoy. Las que dicen con qué se ganan se prenden aquí mismo, al momento;
   // las demás valen lo que diga el tablero.
@@ -719,7 +721,8 @@ function verInicio(o) {
 
   // ---- Las medidas del día. Los kwizzes y las tarjetas los cuenta Pelagos; lo demás viene del tablero.
   const cuadros = [cuadro("Gramática", kw, metaKw, "quizzes", kw >= metaKw ? "Cumplido" : `Faltan ${metaKw - kw}`, kw >= metaKw, "#" + QUIZ, sello("kwizzes"))];
-  if (tj !== null) cuadros.push(cuadro("Vocabulario", tj, 0, "", tj === 0 ? "Cumplido" : "Por repasar", tj === 0, "#/vocabulario", sello("tarjetas")));
+  // Vocabulario como los demás (su pedido del 18-Oct): las que ya repasaste hoy de las que te tocan hoy.
+  if (tj !== null) cuadros.push(cuadro("Vocabulario", tjHechas, tjHechas + tj, "palabras", tj === 0 ? "Cumplido" : "Por repasar", tj === 0, "#/vocabulario", sello("tarjetas")));
   for (const m of T ? T.medidas : []) {
     if (tarjetas.size && /anki/i.test(m.nombre)) continue;        // con tarjetas propias, las de fuera ya no se enseñan
     const hecho = m.de === 0 ? m.valor === 0 : m.valor >= m.de;
@@ -2820,12 +2823,12 @@ function cuadroGramatica(hoy = N.fechaLocal(new Date())) {
   return cuadro("Gramática", kw, meta, "quizzes", hecho ? "Cumplido" : `Faltan ${meta - kw}`, hecho, "", sello);
 }
 
-/** El cuadro «Vocabulario» del Tablero (palabras que te faltan hoy; la meta es cero), igual que allá, con el sello quieto. */
+/** El cuadro «Vocabulario» del Tablero (las palabras de hoy que ya repasaste, de las que te tocan), igual que allá, con el sello quieto. */
 function cuadroVocabulario(hoy = N.fechaLocal(new Date())) {
-  const tj = N.tarjetasDelDia(P, E, hoy).pendientes.length, hecho = tj === 0;
+  const dia = N.tarjetasDelDia(P, E, hoy), tj = dia.pendientes.length, hecho = tj === 0;
   const T = N.leerTablero(A.tablero());
   const parte = T && T.checkin ? T.checkin.partes.find((x) => x.con === "tarjetas" && SELLOS[iconoDe(x)]) : null;
-  return cuadro("Vocabulario", tj, 0, "", hecho ? "Cumplido" : "Por repasar", hecho, "", parte ? { ...parte, va: hecho, estatico: true } : null);
+  return cuadro("Vocabulario", dia.hechasHoy, dia.hechasHoy + tj, "palabras", hecho ? "Cumplido" : "Por repasar", hecho, "", parte ? { ...parte, va: hecho, estatico: true } : null);
 }
 /** El cuadro de los quizzes de hoy, para ir junto a un botón (en un renglón «conCuadro»). */
 const conCuadro = (hoy) => `<div class="unCuadro" role="list" aria-label="Tus quizzes de hoy">${cuadroGramatica(hoy)}</div>`;
