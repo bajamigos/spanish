@@ -1,11 +1,11 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=5dbe82a8de";
-import * as A from "./almacen.js?v=5dbe82a8de";
-import * as V from "./videos.js?v=5dbe82a8de";
-import * as NB from "./nube.js?v=5dbe82a8de";
-import * as CL from "./clases.js?v=5dbe82a8de";
-import { abrirPractica } from "./practica.js?v=5dbe82a8de";
-import * as F from "./fondo.js?v=5dbe82a8de";
+import * as N from "./nucleo.js?v=2bcd840a44";
+import * as A from "./almacen.js?v=2bcd840a44";
+import * as V from "./videos.js?v=2bcd840a44";
+import * as NB from "./nube.js?v=2bcd840a44";
+import * as CL from "./clases.js?v=2bcd840a44";
+import { abrirPractica } from "./practica.js?v=2bcd840a44";
+import * as F from "./fondo.js?v=2bcd840a44";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -2846,17 +2846,12 @@ function verKwiz(o) {
   const hoy = N.fechaLocal(new Date());
   poner(conFondo(`
   ${entradas("gramatica", "quiz")}
-  ${abierto ? `
-  <section class="card">
-    <h1 class="h">Tienes un quiz a medias</h1>
-    <p>Lo que ya contestaste está guardado.</p>
-    <div class="go"><a class="ub grande" href="#${QUIZ}/${esc(abierto.id)}">Seguir el quiz</a><button type="button" class="ub" id="dejarKwiz">Dejarlo así</button></div>
-    <p class="small">Si lo dejas, se cierra con lo que ya contestaste. Tus respuestas siguen contando.</p>
-  </section>` : ""}
   ${tarjetaAtorados()}
   <section class="card" id="lista">
-    ${abierto ? "<h2>Tu plan de estudio Pelagos</h2>" : '<h1 class="h">Tu plan de estudio Pelagos</h1>'}
-    <div class="conCuadro">${deLista.length && !lista.abierto ? `<button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Empezar quiz</button>` : "<span></span>"}${conCuadro(hoy)}</div>
+    <h1 class="h">Tu plan de estudio Pelagos</h1>
+    <div class="conCuadro">${deLista.length && !lista.abierto ? `<button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Empezar quiz</button>`
+      : abierto ? `<a class="ub grande" href="#${QUIZ}/${esc(abierto.id)}">Seguir el quiz</a>` : "<span></span>"}${conCuadro(hoy)}</div>
+    ${abierto ? `<p class="small">Tienes un quiz a medias. Lo que ya contestaste está guardado.${deLista.length && !lista.abierto ? ` <a href="#${QUIZ}/${esc(abierto.id)}">Seguirlo</a>` : ""}</p>` : ""}
     <h3 id="enfoqueT">Enfoque</h3>
     <div class="enfoque" role="group" aria-labelledby="enfoqueT">
       <button type="button" class="nv ancho" data-enfoque="" aria-pressed="${E.enfoque ? "false" : "true"}">Guiado: todos los niveles</button>
@@ -2906,13 +2901,6 @@ function verKwiz(o) {
       A.apuntar({ t: "enfoque", id: N.nuevoId("f"), nivel, cuando: new Date().toISOString() });
       recalcular();
       pintar({ conserva: true });
-    });
-  }
-  if (abierto) {
-    $("dejarKwiz").addEventListener("click", () => {
-      A.apuntar({ t: "dejar", id: N.nuevoId("d"), kwiz: abierto.id, cuando: new Date().toISOString() });
-      recalcular();
-      pintar();
     });
   }
 }
