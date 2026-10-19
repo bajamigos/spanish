@@ -234,6 +234,10 @@ details.cat .tb .nm { font-size: 15px; }
 
 /* ---- El kwiz ---- */
 .go { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+/* Un botón grande y, a su lado, el cuadro de los quizzes de hoy (quiz de gramática y su resultado). */
+.conCuadro { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; align-items: stretch; margin: 8px 0; }
+.conCuadro > .ub.grande { height: auto; }
+.conCuadro + .go { margin-top: 0; }
 .go form { display: contents; }
 .ub.grande { min-height: 52px; padding: 8px 22px; font-size: 16.5px; }
 .links form { display: contents; }

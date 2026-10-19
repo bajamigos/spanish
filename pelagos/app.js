@@ -1,11 +1,11 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=c8576536e5";
-import * as A from "./almacen.js?v=c8576536e5";
-import * as V from "./videos.js?v=c8576536e5";
-import * as NB from "./nube.js?v=c8576536e5";
-import * as CL from "./clases.js?v=c8576536e5";
-import { abrirPractica } from "./practica.js?v=c8576536e5";
-import * as F from "./fondo.js?v=c8576536e5";
+import * as N from "./nucleo.js?v=029ae1e514";
+import * as A from "./almacen.js?v=029ae1e514";
+import * as V from "./videos.js?v=029ae1e514";
+import * as NB from "./nube.js?v=029ae1e514";
+import * as CL from "./clases.js?v=029ae1e514";
+import { abrirPractica } from "./practica.js?v=029ae1e514";
+import * as F from "./fondo.js?v=029ae1e514";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -2828,6 +2828,9 @@ function cuadroGramatica(hoy = N.fechaLocal(new Date())) {
   return cuadro("Gramática", kw, meta, "quizzes", hecho ? "Cumplido" : `Faltan ${meta - kw}`, hecho, "", sello);
 }
 
+/** El cuadro de los quizzes de hoy, para ir junto a un botón (en un renglón «conCuadro»). */
+const conCuadro = (hoy) => `<div class="unCuadro" role="list" aria-label="Tus quizzes de hoy">${cuadroGramatica(hoy)}</div>`;
+
 function verKwiz(o) {
   revisarVideos();
   const abierto = N.kwizAbierto(E);
@@ -2841,10 +2844,6 @@ function verKwiz(o) {
   const hoy = N.fechaLocal(new Date());
   poner(conFondo(`
   ${entradas("gramatica", "quiz")}
-  <section class="card" id="medidas">
-    <h2 class="sr">Tus quizzes de hoy</h2>
-    <div class="cuadros" role="list">${cuadroGramatica(hoy)}</div>
-  </section>
   ${abierto ? `
   <section class="card">
     <h1 class="h">Tienes un quiz a medias</h1>
@@ -2855,7 +2854,7 @@ function verKwiz(o) {
   ${tarjetaAtorados()}
   <section class="card" id="lista">
     ${abierto ? "<h2>Tu plan de estudio Pelagos</h2>" : '<h1 class="h">Tu plan de estudio Pelagos</h1>'}
-    ${deLista.length && !lista.abierto ? `<div class="go"><button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Empezar quiz</button></div>` : ""}
+    <div class="conCuadro">${deLista.length && !lista.abierto ? `<button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Empezar quiz</button>` : "<span></span>"}${conCuadro(hoy)}</div>
     <h3 id="enfoqueT">Enfoque</h3>
     <div class="enfoque" role="group" aria-labelledby="enfoqueT">
       <button type="button" class="nv ancho" data-enfoque="" aria-pressed="${E.enfoque ? "false" : "true"}">Guiado: todos los niveles</button>
@@ -3325,11 +3324,8 @@ function verResultado(o, kid) {
     <h1 class="h">${k.tipo === "tutora" ? (k.bien >= N.ACIERTOS_TUTORA ? `¡${N.ACIERTOS_TUTORA} de ${N.ACIERTOS_TUTORA}! Llegaste al final` : `${k.bien} buenas: te faltaron ${N.ACIERTOS_TUTORA - k.bien}`) : `${k.bien} de ${k.total}`}</h1>
     <p>${TIPOS_KWIZ[k.tipo] || "Quiz"} · ${cuando(k.terminado)}</p>
     ${barra(k.total ? 100 * k.bien / k.total : 0, " gorda")}
-    <div class="go"><button type="button" class="ub grande" data-kwiz='${esc(igual)}'>${k.tipo === "lista" ? "Otro quiz de tu plan" : "Otro quiz igual"}</button><a class="ub" href="${(() => { const t = k.tipo === "tutora" ? porId.get(k.tema) : null; return t && t.slug && t.leccion ? "#/leccion/" + esc(t.slug) : "#" + QUIZ; })()}">Cerrar</a>${fallas.length ? `<button type="button" class="ub" id="estudiarFallas">Estudiar las fallas</button>` : ""}</div>
-  </section>
-  <section class="card" id="medidas">
-    <h2 class="sr">Tus quizzes de hoy</h2>
-    <div class="cuadros" role="list">${cuadroGramatica()}</div>
+    <div class="conCuadro"><button type="button" class="ub grande" data-kwiz='${esc(igual)}'>${k.tipo === "lista" ? "Otro quiz de tu plan" : "Otro quiz igual"}</button>${conCuadro()}</div>
+    <div class="go"><a class="ub" href="${(() => { const t = k.tipo === "tutora" ? porId.get(k.tema) : null; return t && t.slug && t.leccion ? "#/leccion/" + esc(t.slug) : "#" + QUIZ; })()}">Cerrar</a>${fallas.length ? `<button type="button" class="ub" id="estudiarFallas">Estudiar las fallas</button>` : ""}</div>
   </section>
   <section class="card">
     <h2>Pregunta por pregunta</h2>
