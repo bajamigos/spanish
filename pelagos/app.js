@@ -1,11 +1,11 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=2bcd840a44";
-import * as A from "./almacen.js?v=2bcd840a44";
-import * as V from "./videos.js?v=2bcd840a44";
-import * as NB from "./nube.js?v=2bcd840a44";
-import * as CL from "./clases.js?v=2bcd840a44";
-import { abrirPractica } from "./practica.js?v=2bcd840a44";
-import * as F from "./fondo.js?v=2bcd840a44";
+import * as N from "./nucleo.js?v=908469a516";
+import * as A from "./almacen.js?v=908469a516";
+import * as V from "./videos.js?v=908469a516";
+import * as NB from "./nube.js?v=908469a516";
+import * as CL from "./clases.js?v=908469a516";
+import { abrirPractica } from "./practica.js?v=908469a516";
+import * as F from "./fondo.js?v=908469a516";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -257,6 +257,7 @@ function poner(html, { titulo: t = "Pelagos", pie = "", nav = "", conserva = fal
 /** Lo que el HTML no puede traer escrito: anchos de barras, portadas privadas y videos de fondo. */
 function vestir(raiz) {
   for (const e of raiz.querySelectorAll("[data-w]")) e.style.width = e.dataset.w + "%";
+  for (const e of raiz.querySelectorAll("[data-letra]")) e.style.fontSize = e.dataset.letra + "px";      // la letra de cada cuadro del Atlas
   for (const e of raiz.querySelectorAll("[data-x]")) e.style.left = e.dataset.x + "%";
   for (const img of raiz.querySelectorAll("img[data-foto]")) {
     const n = img.dataset.foto;
@@ -1079,6 +1080,18 @@ function verNivel(o, clave, filtro) {
 let anchoDelMapa = 0;         // el ancho con el que se dibujó, para volver a dibujarlo si la pantalla cambia
 
 /** Todos los temas en un mapa: una tarjeta por nivel, de C1 a A0; dentro, una caja por tipo de palabra y un cuadro de color por tema. */
+/** El nombre de una regla, abreviado para que quepa en su cuadro del Atlas: «Ver in the preterite» → «Ver · pret.». */
+const ABREVIAS = [[/^the /i, ""], [/ in the /gi, " · "], [/ with the /gi, " + "], [/\bpreterite\b/gi, "pret."], [/\bimperfect\b/gi, "imperf."],
+  [/\bpresent\b/gi, "pres."], [/\bsubjunctive\b/gi, "subj."], [/\bconditional\b/gi, "cond."], [/\bfuture\b/gi, "fut."], [/\bperfect\b/gi, "perf."],
+  [/\bindicative\b/gi, "ind."], [/\bimperative\b/gi, "imper."], [/\bverbs\b/gi, "vbs"], [/\bverb\b/gi, "vb"], [/\bpronouns?\b/gi, "pron."],
+  [/\bexpressions?\b/gi, "expr."], [/\birregular\b/gi, "irreg."], [/\bregular\b/gi, "reg."], [/\badjectives?\b/gi, "adj."], [/\bstem-changing\b/gi, "stem-ch."],
+  [/\s+and\s+/gi, " & "], [/\s{2,}/g, " "]];
+function abreviarRegla(nom) {
+  let x = String(nom || "");
+  for (const [re, por] of ABREVIAS) x = x.replace(re, por);
+  return x.trim();
+}
+
 function verMapa(o) {
   const W = Math.max(240, vista.clientWidth - 18);       // lo que queda dentro de la tarjeta
   anchoDelMapa = vista.clientWidth;
@@ -1101,16 +1114,17 @@ function verMapa(o) {
     const lugar = N.acomodarMapa(tipos.map(([, temas]) => temas.length), W, area);
     const cajas = tipos.map(([categoria, temas], k) => {
       const c = lugar.cajas[k];
-      const modo = c.cw >= 78 && c.ch >= 38 ? 2 : c.cw >= 15 && c.ch >= 12 ? 1 : 0;      // 2: número y título; 1: solo el número; 0: solo el color
-      const renglones = Math.max(1, Math.min(4, Math.floor((c.ch - 24) / 13)));
       const nombre = CATEGORIAS[categoria] || categoria;
       const filas = [];
       for (let i = 0; i < temas.length; i += c.columnas) {
         const fila = temas.slice(i, i + c.columnas).map((t) => {
           const v = info(t.id).pct, f = N.colorDe(info(t.id));
-          const numero = v === null ? "–" : String(Math.round(v));
-          const dentro = modo === 2 ? `<b>${numero}</b><span class="mt r${renglones}"${t.titulo ? "" : ' lang="en"'}>${esc(titulo(t))}</span>` : modo === 1 ? `<b>${numero}</b>` : "";
-          return `<button type="button" class="mc m${modo} ${f === null ? "kx" : "k" + f}${c.cw >= 40 && c.ch >= 22 ? " g" : c.cw < 26 ? " ch" : ""}" data-l="${t.id}" aria-label="${esc(titulo(t))}: ${esc(pct(v))}">${dentro}</button>`;
+          // Su pedido del 18-Oct: en cada cuadro, el nombre de la regla (aunque sea letra diminuta: en el teléfono se agranda
+          // con dos dedos). El porcentaje ya no va en el cuadro: sale al tocarlo. La letra es la más grande que quepa.
+          const nom = titulo(t), corto = abreviarRegla(nom);
+          const largaPalabra = Math.max(4, ...corto.split(/\s+/).map((w) => w.length));
+          const letra = Math.max(1.5, Math.min(9, 0.8 * Math.sqrt((c.cw - 4) * (c.ch - 3) / (0.6 * 1.25 * Math.max(6, corto.length + 4))), (c.cw - 4) / (0.62 * largaPalabra)));
+          return `<button type="button" class="mc mn ${f === null ? "kx" : "k" + f}" data-l="${t.id}" aria-label="${esc(nom)}: ${esc(pct(v))}"><span class="mt"${t.titulo ? "" : ' lang="en"'} data-letra="${letra.toFixed(1)}">${esc(corto)}</span></button>`;
         });
         while (fila.length < c.columnas) fila.push('<span class="mc vacio"></span>');
         filas.push(`<div class="mfila">${fila.join("")}</div>`);

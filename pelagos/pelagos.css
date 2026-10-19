@@ -417,6 +417,9 @@ ul.partes li.nova { color: var(--ink-3); border-style: dashed; font-weight: 600;
 .mc.m2 b { font-size: 17px; line-height: 1.1; }
 .mc .mt { display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; font-size: 11.5px; line-height: 13px; font-style: normal; overflow-wrap: anywhere; -webkit-line-clamp: 1; line-clamp: 1; }
 .mc .mt.r2 { -webkit-line-clamp: 2; line-clamp: 2; } .mc .mt.r3 { -webkit-line-clamp: 3; line-clamp: 3; } .mc .mt.r4 { -webkit-line-clamp: 4; line-clamp: 4; }
+/* Desde el 18-Oct: cada cuadro trae el nombre de su regla en letra chiquita (la que quepa; en el teléfono se agranda con dos dedos). */
+.mc.mn { padding: 1px 2px; align-items: center; justify-content: center; }
+.mc.mn .mt { display: block; overflow: visible; line-height: 1.2; font-weight: 600; text-align: center; overflow-wrap: anywhere; hyphens: auto; -webkit-line-clamp: none; line-clamp: none; }
 .mc:focus-visible { outline: 3px solid var(--ink); outline-offset: -3px; }
 ul.clave { list-style: none; margin: 0; padding: 2px 4px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 14px; font-size: 15px; }
 ul.clave li { display: grid; grid-template-columns: 22px minmax(0, 1fr) auto; gap: 8px; align-items: center; }
@@ -489,11 +492,12 @@ ul.clave b { font-variant-numeric: tabular-nums; }
 .hoy.lista.confoto .campo, .hoy.lista.confoto .jump.cuatro button:not([aria-pressed="true"]) { background: var(--vidrio); text-shadow: none; }
 .hoy.lista .card h1.h { font-size: 22px; }
 .hoy.lista details.cat { padding: 0; }
-.lvCeldas { display: flex; flex-wrap: wrap; gap: 4px; }
+.lvCeldas { display: flex; flex-wrap: wrap; gap: 2px; }
 /* El relleno invisible del final se queda con lo que sobra, para que el último renglón no se estire. */
 .lvCeldas::after { content: ""; flex: 1000 1 0; }
-.vc { flex: 1 1 auto; max-width: 100%; min-height: 44px; margin: 0; padding: 6px 12px; border: 1px dashed var(--vidrio-borde); border-radius: 6px; cursor: pointer;
-  font: inherit; font-size: 16.5px; font-weight: 600; line-height: 1.2; text-align: center; text-shadow: none; overflow-wrap: anywhere; background: var(--vidrio-2); color: var(--ink); }
+/* Como el Atlas (su pedido del 18-Oct): cuadros apretados con letra chiquita; en el teléfono se agranda con dos dedos. */
+.vc { flex: 1 1 auto; max-width: 100%; min-height: 0; margin: 0; padding: 2px 4px; border: 1px dashed var(--vidrio-borde); border-radius: 4px; cursor: pointer;
+  font: inherit; font-size: 9px; font-weight: 600; line-height: 1.1; text-align: center; text-shadow: none; overflow-wrap: anywhere; background: var(--vidrio-2); color: var(--ink); }
 .vc.k0 { background: var(--k0); color: var(--t0); } .vc.k1 { background: var(--k1); color: var(--t1); } .vc.k2 { background: var(--k2); color: var(--t2); }
 .vc.k3 { background: var(--k3); color: var(--t3); } .vc.k4 { background: var(--k4); color: var(--t4); } .vc.k5 { background: var(--k5); color: var(--t5); }
 .vc.k0, .vc.k1, .vc.k2, .vc.k3, .vc.k4, .vc.k5 { border: 1px solid transparent; }
@@ -860,7 +864,7 @@ dialog.sheet.escena.practica { inset: 0; width: 100%; max-width: 720px; height: 
 .jump.uno button[aria-pressed="true"] { background: var(--no); color: var(--page); border-color: var(--no); }
 .jump.uno button:disabled { opacity: 0.55; cursor: default; }
 .hoy.lista.confoto .jump.uno button:not([aria-pressed="true"]) { background: var(--vidrio); text-shadow: none; }
-.vc.atas { box-shadow: inset 0 0 0 3px var(--no); }
+.vc.atas { box-shadow: inset 0 0 0 2px var(--no); }
 .atasAviso { margin: 4px 0 0; padding: 8px 10px; border-left: 4px solid var(--no); color: var(--ink); font-size: 14.5px; }
 .tjAtas { margin: 6px 0 0; font-size: 14px; font-weight: 700; color: var(--no); }
 .tjAtas .lk { color: inherit; text-decoration: underline; }
