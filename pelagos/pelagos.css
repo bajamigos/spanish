@@ -337,6 +337,12 @@ body.conandrea { --ink-2: #1c1c1c; --ink-3: #333333; --bar-bg: rgba(0,0,0,0.16);
 .hoy.confoto .fondo .fondoTema { position: absolute; z-index: 1; top: 8px; left: 16px; max-width: 70%; margin: 0; padding: 3px 9px; font-size: 13px; line-height: 1.3; color: rgba(255, 255, 255, 0.85); background: rgba(0, 0, 0, 0.45); border: 0; border-radius: 6px; pointer-events: auto; cursor: pointer; text-decoration: none; font-family: inherit; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .hoy.confoto .fondo .fondoTema .lv { font-weight: 800; margin-right: 4px; color: #ffffff; }
 .hoy.confoto .fondo .fondoTema:hover, .hoy.confoto .fondo .fondoTema:focus-visible { color: #ffffff; background: rgba(0, 0, 0, 0.65); }
+/* Limpio: el logo de Pelagos de fondo, en el lugar de la foto. Blanco en claro, negro en oscuro. */
+.hoy.confoto .fondo.fondoLogo { background: var(--page); }
+.hoy.confoto .fondo.fondoLogo img { background: var(--page); object-fit: contain; object-position: center; }
+.fondo.fondoLogo .logoOscuro { display: none !important; }
+:root[data-tema="oscuro"] .fondo.fondoLogo .logoOscuro { display: block !important; }
+:root[data-tema="oscuro"] .fondo.fondoLogo .logoClaro { display: none !important; }
 /* Mientras llega el fondo (o mientras carga su video), el logo de Pelagos ocupa el lugar. */
 .hoy.confoto .fondo.cargando { aspect-ratio: 1 / 1; display: grid; place-items: center; background: #0b0b0b; }
 .hoy.confoto .fondo img.logoCarga { width: 72%; aspect-ratio: auto; object-fit: contain; background: none; }

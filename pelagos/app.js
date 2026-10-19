@@ -1,11 +1,11 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=9109a036c4";
-import * as A from "./almacen.js?v=9109a036c4";
-import * as V from "./videos.js?v=9109a036c4";
-import * as NB from "./nube.js?v=9109a036c4";
-import * as CL from "./clases.js?v=9109a036c4";
-import { abrirPractica } from "./practica.js?v=9109a036c4";
-import * as F from "./fondo.js?v=9109a036c4";
+import * as N from "./nucleo.js?v=1a867e7d41";
+import * as A from "./almacen.js?v=1a867e7d41";
+import * as V from "./videos.js?v=1a867e7d41";
+import * as NB from "./nube.js?v=1a867e7d41";
+import * as CL from "./clases.js?v=1a867e7d41";
+import { abrirPractica } from "./practica.js?v=1a867e7d41";
+import * as F from "./fondo.js?v=1a867e7d41";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -527,8 +527,13 @@ function cuadro(nombre, valor, de, unidad, estado, hecho, enlace = "", sello = n
  */
 // El logo de Pelagos (la medusa cerebro) va encima del fondo, en la esquina de abajo a la derecha: tapa la marca que traen algunos loops.
 const LOGO = `<img class="logoFondo" src="logo.png" alt="Pelagos" width="760" height="519">`;
+/**
+ * En Limpio el fondo es el logo de Pelagos, siempre el mismo (no cambia por pestaña ni por tema): ocupa el lugar de la foto
+ * de la tutora para que la página se acomode igual que en Reef. Blanco en modo claro y negro en modo oscuro.
+ */
+const FONDO_LIMPIO = `<div class="fondo fondoLogo"><img class="logoClaro" src="logo-claro.png" alt=""><img class="logoOscuro" src="logo-oscuro.png" alt=""></div>`;
 function fondoDelDia(respaldo = true) {
-  if (ambiente() === "limpio") return { hay: false, html: "" };
+  if (ambiente() === "limpio") return { hay: true, html: FONDO_LIMPIO };
   // Mientras suena el repaso en audio, arriba va el loop de la tutora que está hablando.
   // Solo en la página donde empezó el repaso: en las demás, el fondo de siempre (la voz sigue sonando).
   const lt = repaso && repaso.sonando != null && repaso.ruta === window.location.hash && !sinMovimiento() ? loopDeTutora(repaso.sonando) : null;
@@ -1634,7 +1639,10 @@ function verLectura(o, ejemplo = false) {
   if (!bibModo) bibModo = ["libros", "series", "podcasts"].includes(guardado("pelagos.biblioteca")) ? guardado("pelagos.biblioteca") : "libros";
   const modo = ejemplo ? "libros" : bibModo;
   const unDecimal = (h) => (Math.round(h * 10) / 10).toLocaleString("es-MX");
-  const cartel = (x, clase) => x.portada
+  // Una portada que no está en internet vive en la rama de avance (tablero/portadas/…) y se pone al terminar de pintar.
+  const cartel = (x, clase) => /^portadas\/[a-z0-9-]+\.(jpg|png|webp)$/.test(x.portada || "")
+    ? `<img class="${clase}" data-portadapriv="${esc(x.portada.slice(9))}" data-titulo="${esc(x.titulo)}" alt="${esc(x.titulo)}">`
+    : x.portada
     ? `<img class="${clase}" src="${esc(x.portada)}" alt="${esc(x.titulo)}" referrerpolicy="no-referrer">`
     : `<span class="${clase} sinPortada" aria-hidden="true">${esc(x.titulo)}</span>`;
   const repisa = (id, titulo, lista, fichaDe, resumen = "") => lista.length ? `
@@ -1709,6 +1717,11 @@ function verLectura(o, ejemplo = false) {
     vista.querySelector(`[data-ser="${serModo}"]`)?.focus();
   });
   for (const b of vista.querySelectorAll("[data-obra]")) b.addEventListener("click", () => abrirObra(b.dataset.obra));
+  for (const img of vista.querySelectorAll("img[data-portadapriv]")) A.fotoPortada(img.dataset.portadapriv).then((u) => {
+    if (!img.isConnected) return;
+    if (u) img.src = u;
+    else img.replaceWith(Object.assign(document.createElement("span"), { className: img.className + " sinPortada", textContent: img.dataset.titulo || "" }));
+  });
   const botones = vista.querySelector("#bibModo");
   if (botones) botones.addEventListener("click", (ev) => {
     const b = ev.target.closest("[data-bib]");
@@ -3039,14 +3052,15 @@ function verPregunta(o, kid) {
   const delDia = conLoop && !propio && !viene ? (cargarVideosFondo(), etiquetaMovimiento()) : "";
   const clip = propio || delDia;
   const arriba = conLoop && (clip || viene);
+  const logoLimpio = !deTutora && ambiente() === "limpio";      // en Limpio, el logo de Pelagos va de fondo, como la tutora en Reef
   const envolver = (h) => arriba
     ? `<div class="hoy confoto contutora kwFondo"><div class="fondo${clip ? "" : " cargando"}">${clip ? clip + LOGO : '<img class="logoCarga" src="logo.png" alt="Pelagos">'}</div><div class="sobre">${h}</div></div>`
-    : h;
+    : logoLimpio ? `<div class="hoy confoto contutora kwFondo">${FONDO_LIMPIO}<div class="sobre">${h}</div></div>` : h;
   poner(envolver(`
   <section class="kw${deTutora ? " kwTutora" : ""}">
-    <header class="hero kwh${arriba ? " contutora" : ""}">
+    <header class="hero kwh${arriba || logoLimpio ? " contutora" : ""}">
       <div class="ratio"></div>
-      ${deTutora ? (ambiente() === "limpio" ? "" : '<div class="tutoraVideo" id="tutoraVideo"></div>') : arriba ? "" : imagenDeArriba(foto && foto.nombre)}
+      ${deTutora ? (ambiente() === "limpio" ? "" : '<div class="tutoraVideo" id="tutoraVideo"></div>') : arriba || logoLimpio ? "" : imagenDeArriba(foto && foto.nombre)}
       <div class="over">
         <p class="lead"><span>${deTutora ? `Aciertos: ${k.bien || 0} de ${N.ACIERTOS_TUTORA}` : `Pregunta ${sig.orden} de ${sig.total}`}</span><span>${enHueco ? "Escribe lo que falta" : escribir ? "Dilo en español" : "Toca la respuesta"}</span></p>
         <div class="score"><div class="track" role="img" aria-label="${deTutora ? `Llevas ${k.bien || 0} de ${N.ACIERTOS_TUTORA} aciertos` : `Vas en la ${sig.orden} de ${sig.total}`}"><i data-w="${deTutora ? 100 * (k.bien || 0) / N.ACIERTOS_TUTORA : 100 * (sig.orden - 1) / sig.total}"></i></div></div>

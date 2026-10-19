@@ -9,7 +9,7 @@
 // - Lo que contestas entra primero a una fila en este aparato y de ahí sube.
 //   Sin internet, la fila espera y sube sola cuando vuelve.
 // - La llave vive solo en este navegador y solo viaja a la dirección de CONFIG.api.
-import { CONFIG } from "./config.js?v=9109a036c4";
+import { CONFIG } from "./config.js?v=1a867e7d41";
 
 const CLAVES = { llave: "pelagos.llave", aparato: "pelagos.aparato", fila: "pelagos.fila." };      // la fila: una clave por suceso
 const RUTA_SUCESOS = /^sucesos\/([A-Za-z0-9_-]+)\/(\d{4}-\d{2})\.jsonl$/;
@@ -674,25 +674,29 @@ export function foto(info, carpeta = "reef") {
   return fotosVivas.get(nombre);
 }
 
-const tutoresVivos = new Map();   // archivo -> promesa de una dirección blob:
+const tutoresVivos = new Map();   // carpeta/archivo -> promesa de una dirección blob:
 /** La foto de un tutor (tablero/tutores/<archivo>, rama de avance) como dirección que la página puede mostrar, o null. */
-export function fotoTutor(archivo) {
+export const fotoTutor = (archivo) => fotoDeTablero("tutores", archivo);
+/** Una portada de la Biblioteca que no está en internet (tablero/portadas/<archivo>, rama de avance; 18-Oct-2026). */
+export const fotoPortada = (archivo) => fotoDeTablero("portadas", archivo);
+function fotoDeTablero(carpeta, archivo) {
   if (!/^[a-z0-9-]+\.(jpg|png|webp)$/.test(String(archivo || ""))) return Promise.resolve(null);
-  if (!tutoresVivos.has(archivo)) {
-    tutoresVivos.set(archivo, (async () => {
-      const clave = "tutor:" + archivo;
+  const id = carpeta + "/" + archivo;
+  if (!tutoresVivos.has(id)) {
+    tutoresVivos.set(id, (async () => {
+      const clave = carpeta === "tutores" ? "tutor:" + archivo : carpeta + ":" + archivo;
       let bytes = null;
       try {
-        const r = await api(REPO + "/contents/" + ruta("tablero/tutores/" + archivo) + "?ref=" + encodeURIComponent(CONFIG.ramaAvance), { crudo: true });
+        const r = await api(REPO + "/contents/" + ruta("tablero/" + carpeta + "/" + archivo) + "?ref=" + encodeURIComponent(CONFIG.ramaAvance), { crudo: true });
         if (r.ok) { bytes = await r.arrayBuffer(); await kvPoner(clave, { bytes }); }
       } catch { /* sin internet: sirve la copia de antes */ }
       if (!bytes) { const g = await kvLeer(clave); bytes = g ? g.bytes : null; }
-      if (!bytes) { tutoresVivos.delete(archivo); return null; }
+      if (!bytes) { tutoresVivos.delete(id); return null; }
       const tipo = archivo.endsWith(".png") ? "image/png" : archivo.endsWith(".webp") ? "image/webp" : "image/jpeg";
       return URL.createObjectURL(new Blob([bytes], { type: tipo }));
     })());
   }
-  return tutoresVivos.get(archivo);
+  return tutoresVivos.get(id);
 }
 
 // ---------------------------------------------------------------- Escenas que sube él (GIF, imágenes, video)

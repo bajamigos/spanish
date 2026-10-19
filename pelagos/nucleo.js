@@ -819,7 +819,8 @@ export function leerLectura(crudo) {
   const meta = typeof crudo.meta === "number" && crudo.meta > 0 && crudo.meta < 1440 ? crudo.meta : 60;
   // Series, películas y podcasts (su hoja de Excel, 14-Oct): carteles de TMDB y portadas de Apple Podcasts.
   const imagen = (u) => (typeof u === "string" && (/^https:\/\/image\.tmdb\.org\/t\/p\/w\d{2,4}\/[A-Za-z0-9]{10,40}\.(jpg|png)$/.test(u)
-    || /^https:\/\/is\d-ssl\.mzstatic\.com\/image\/thumb\/[A-Za-z0-9/._-]{10,250}\/\d{2,4}x\d{2,4}bb\.(jpg|png)$/.test(u)) ? u : null);
+    || /^https:\/\/is\d-ssl\.mzstatic\.com\/image\/thumb\/[A-Za-z0-9/._-]{10,250}\/\d{2,4}x\d{2,4}bb\.(jpg|png)$/.test(u)
+    || /^portadas\/[a-z0-9-]{1,60}\.(jpg|png|webp)$/.test(u)) ? u : null);      // portadas/…: las que no están en internet, en la rama de avance (18-Oct)
   const horasDe = (v) => (typeof v === "number" && Number.isFinite(v) && v >= 0 && v < 100000 ? v : null);
   const estrellas = (v) => (Number.isInteger(v) && v >= 1 && v <= 5 ? v : null);
   const series = [];
