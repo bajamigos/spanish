@@ -1,11 +1,11 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=908469a516";
-import * as A from "./almacen.js?v=908469a516";
-import * as V from "./videos.js?v=908469a516";
-import * as NB from "./nube.js?v=908469a516";
-import * as CL from "./clases.js?v=908469a516";
-import { abrirPractica } from "./practica.js?v=908469a516";
-import * as F from "./fondo.js?v=908469a516";
+import * as N from "./nucleo.js?v=76a03a40b4";
+import * as A from "./almacen.js?v=76a03a40b4";
+import * as V from "./videos.js?v=76a03a40b4";
+import * as NB from "./nube.js?v=76a03a40b4";
+import * as CL from "./clases.js?v=76a03a40b4";
+import { abrirPractica } from "./practica.js?v=76a03a40b4";
+import * as F from "./fondo.js?v=76a03a40b4";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -39,7 +39,7 @@ const CATEGORIAS_CORTAS = {
   "Negative Words & Constructions": "Negación",
 };
 const GRUPOS = [["antes", "Antes de esta"], ["confunde", "Se confunde con"], ["sigue", "Sigue con"]];
-const TIPOS_KWIZ = { lista: "Pelagos Quiz", general: "Quiz general", cuaderno: "Quiz del cuaderno", tema: "Quiz de un tema", tutora: "Kwiz con la tutora" };
+const TIPOS_KWIZ = { lista: "Pelagos Quiz", general: "Quiz general", cuaderno: "Quiz del cuaderno", tema: "Quiz de un tema", tutora: "Práctica con la tutora" };
 const QUIZ = "/gramatica/quiz";       // dónde vive el quiz de gramática
 // Cada sección trae dos entradas, que van como dos botones arriba de sus páginas.
 // Regla del acomodo: cada materia trae cómo se estudia y cómo se ve; lo que es de todo va en el Tablero.
@@ -2353,7 +2353,6 @@ function pintarLeccion(tema, lec, conserva = false) {
   <section class="card" id="tutora">
     <h2>Tu tutora</h2>
     <p>${esc(tutoraDe(tema.id).tutora)} te enseña esta regla a su manera.</p>
-    <div class="go"><a class="ub grande" href="#/tutoras/${tema.id}">Ir con ella</a></div>
     ${botonEscena(tema.id)}
   </section>` : ""}
   <section class="card" id="enlaces">
@@ -2395,10 +2394,10 @@ const salaVoz = (id) => "voz-" + id;
 const salaPresenta = (id) => "presenta-" + id;
 const botonEscena = (id) => {
   const t = tutoraDe(id);
-  const conoce = t ? `<button type="button" class="ub grande" data-presenta="${id}" hidden>Conoce a ${esc(nombreCorto(t))}</button>` : "";
+  const conoce = t ? `<button type="button" class="ub grande" data-presenta="${id}" hidden>Estudiar con ${esc(nombreCorto(t))}</button>` : "";
   const oir = t ? `<button type="button" class="ub grande" data-escuchar="${id}" hidden>Escuchar a ${esc(nombreCorto(t))}</button>` : "";
   // «Kwiz con la tutora»: sus preguntas, de 5 en 5 aciertos, con su escena de fondo que avanza con cada acierto.
-  const prac = t && (bancoPorTema().get(id) || 0) >= N.ACIERTOS_TUTORA ? `<button type="button" class="ub grande" data-kwiz='{"tipo":"tutora","tema":${id}}'>Kwiz con ${esc(nombreCorto(t))}</button>` : "";
+  const prac = t && (bancoPorTema().get(id) || 0) >= N.ACIERTOS_TUTORA ? `<button type="button" class="ub grande" data-kwiz='{"tipo":"tutora","tema":${id}}'>Practicar con ${esc(nombreCorto(t))}</button>` : "";
   // En Limpio no hay ninguna imagen de la tutora: tampoco el botón de su escena completa.
   const escena = ambiente() === "limpio" ? "" : `<button type="button" class="ub grande" data-escena="${id}">Ver la escena completa</button>`;
   return `<div class="go">${escena}${conoce}${oir}${prac}</div><div class="voz" data-voz="${id}"></div><p class="small" data-escenaaviso="${id}" role="status"></p>`;
@@ -2413,7 +2412,7 @@ function conectarEscenas(raiz) {
     if (!f) f = (await enlaceNube(id)) || null;
     try { await abrirPractica(id, f, A, NB); if (aviso) aviso.textContent = ""; } catch (e) { if (aviso) aviso.textContent = e.message || "No se pudo abrir la práctica."; }
   });
-  for (const [attr, sala, etiqueta] of [["escuchar", salaVoz, "Escuchar a "], ["presenta", salaPresenta, "Conoce a "]]) {
+  for (const [attr, sala, etiqueta] of [["escuchar", salaVoz, "Escuchar a "], ["presenta", salaPresenta, "Estudiar con "]]) {
     for (const b of raiz.querySelectorAll(`[data-${attr}]`)) {
       const id = Number(b.dataset[attr]);
       A.escenasDe(sala(id)).then((l) => {
@@ -2818,10 +2817,10 @@ function tarjetaAtorados() {
       const tu = tutoraDe(t.id), kw = !mudo() && tu && (bancoPorTema().get(t.id) || 0) >= N.ACIERTOS_TUTORA;
       return `<div class="atorado">
         <p><b>${esc(titulo(t))}</b> (${esc(t.nivel)}): lo fallaste en ${x.fallos} quizzes distintos en los últimos ${x.dias} días. Antes de seguir, repasa la regla.</p>
-        <div class="go">${t.slug && t.leccion ? `<a class="ub grande" href="#/leccion/${esc(t.slug)}">Leer la lección</a>` : ""}${kw ? `<button type="button" class="ub" data-kwiz='{"tipo":"tutora","tema":${t.id}}'>Kwiz con ${esc(nombreCorto(tu))}</button>` : ""}<button type="button" class="ub" data-seguir="${t.id}" aria-label="Seguir así con ${esc(titulo(t))}">Seguir así</button></div>
+        <div class="go">${t.slug && t.leccion ? `<a class="ub grande" href="#/leccion/${esc(t.slug)}">Leer la lección</a>` : ""}${kw ? `<button type="button" class="ub" data-kwiz='{"tipo":"tutora","tema":${t.id}}'>Practicar con ${esc(nombreCorto(tu))}</button>` : ""}<button type="button" class="ub" data-seguir="${t.id}" aria-label="Seguir así con ${esc(titulo(t))}">Seguir así</button></div>
       </div>`;
     }).join("")}
-    <p class="small">Un tema se atasca si lo fallas en ${N.ATASCADO_FALLOS} quizzes distintos en ${N.ATASCADO_DIAS} días, igual que una tarjeta. No se bloquea: sigue saliendo. Se destraba al abrir su lección, al terminar su kwiz con la tutora, al acertarlo ${N.ACIERTOS_PARA_SALIR} veces seguidas en días distintos o con «Seguir así». <a href="#/ayuda/atascadas">Cómo funciona</a></p>
+    <p class="small">Un tema se atasca si lo fallas en ${N.ATASCADO_FALLOS} quizzes distintos en ${N.ATASCADO_DIAS} días, igual que una tarjeta. No se bloquea: sigue saliendo. Se destraba al abrir su lección, al terminar su práctica con la tutora, al acertarlo ${N.ACIERTOS_PARA_SALIR} veces seguidas en días distintos o con «Seguir así». <a href="#/ayuda/atascadas">Cómo funciona</a></p>
   </section>`;
 }
 
