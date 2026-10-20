@@ -9,7 +9,7 @@
 // - Lo que contestas entra primero a una fila en este aparato y de ahí sube.
 //   Sin internet, la fila espera y sube sola cuando vuelve.
 // - La llave vive solo en este navegador y solo viaja a la dirección de CONFIG.api.
-import { CONFIG } from "./config.js?v=76a03a40b4";
+import { CONFIG } from "./config.js?v=dd70cb3b1d";
 
 const CLAVES = { llave: "pelagos.llave", aparato: "pelagos.aparato", fila: "pelagos.fila." };      // la fila: una clave por suceso
 const RUTA_SUCESOS = /^sucesos\/([A-Za-z0-9_-]+)\/(\d{4}-\d{2})\.jsonl$/;
@@ -627,6 +627,20 @@ export async function escalada() {
     return d;
   } catch {
     try { return (await kvLeer("escalada")) || null; } catch { return null; }
+  }
+}
+
+/** Los loops vestidos que ya están en tu almacén (contenido/tutoras/vestidas.json): { videos: { lección: segundos } } o null. */
+export async function vestidas() {
+  try {
+    const r = await api(REPO + "/contents/" + ruta("contenido/tutoras/vestidas.json") + "?ref=" + encodeURIComponent(CONFIG.ramaContenido), { crudo: true });
+    if (r.status === 404) return null;
+    if (!r.ok) throw new Error("github");
+    const d = await r.json();
+    await kvPoner("vestidas", d);
+    return d;
+  } catch {
+    try { return (await kvLeer("vestidas")) || null; } catch { return null; }
   }
 }
 

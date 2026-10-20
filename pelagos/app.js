@@ -1,11 +1,11 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=76a03a40b4";
-import * as A from "./almacen.js?v=76a03a40b4";
-import * as V from "./videos.js?v=76a03a40b4";
-import * as NB from "./nube.js?v=76a03a40b4";
-import * as CL from "./clases.js?v=76a03a40b4";
-import { abrirPractica } from "./practica.js?v=76a03a40b4";
-import * as F from "./fondo.js?v=76a03a40b4";
+import * as N from "./nucleo.js?v=dd70cb3b1d";
+import * as A from "./almacen.js?v=dd70cb3b1d";
+import * as V from "./videos.js?v=dd70cb3b1d";
+import * as NB from "./nube.js?v=dd70cb3b1d";
+import * as CL from "./clases.js?v=dd70cb3b1d";
+import { abrirPractica } from "./practica.js?v=dd70cb3b1d";
+import * as F from "./fondo.js?v=dd70cb3b1d";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -281,6 +281,10 @@ function vestir(raiz) {
       if (u) img.src = u; else { const h = img.closest(".hoy"); if (h) h.classList.remove("confoto"); document.body.classList.remove("conandrea"); }
     });
   }
+  for (const v of raiz.querySelectorAll("video[data-vestida]")) {
+    v.src = v.dataset.vestida;
+    if (v.play) v.play().catch(() => {});
+  }
   for (const v of raiz.querySelectorAll("[data-videofondo]")) {
     const sala = v.dataset.sala || "inicio";
     const lista = () => (sala === "inicio" ? videosFondo : escenasPorSala.get(sala)) || [];
@@ -542,6 +546,8 @@ function fondoDelDia(respaldo = true) {
   // Si subiste un GIF o video de fondo (Ajustes), va en todas las páginas de arriba, en lugar de la foto.
   cargarVideosFondo();
   // El loop de la tutora del día lleva, discreto arriba, el nombre de su lección.
+  const vest = vestidaDelDia();
+  if (vest && vest.cargando) return { hay: true, html: FONDO_CARGANDO };      // nunca se asoma la de siempre antes que la vestida
   const bajo = ambiente() !== "limpio" && !sinMovimiento() ? loopDelDia() : null;
   if (bajo) {
     const tema = porId.get(Number(bajo.sala.slice("tutora-".length)));
@@ -550,7 +556,7 @@ function fondoDelDia(respaldo = true) {
     const rotulo = !tema ? "" : tema.slug && tema.leccion
       ? `<a class="fondoTema" href="#/leccion/${esc(tema.slug)}" aria-label="Lección de la tutora del día: ${esc(tema.nivel)}, ${esc(titulo(tema))}">${dentroRotulo}</a>`
       : `<button type="button" class="fondoTema" data-l="${tema.id}">${dentroRotulo}</button>`;
-    return { hay: true, html: `<div class="fondo">${etiquetaEscena(bajo.sala, bajo.v)}${rotulo}${LOGO}</div>` };
+    return { hay: true, html: `<div class="fondo">${vest ? etiquetaVestida(vest.url) : etiquetaEscena(bajo.sala, bajo.v)}${rotulo}${LOGO}</div>` };
   }
   const cosa = etiquetaMovimiento();
   if (cosa) return { hay: true, html: `<div class="fondo">${cosa}${LOGO}</div>` };
@@ -577,7 +583,9 @@ const sinMovimiento = () => window.matchMedia && window.matchMedia("(prefers-red
 function etiquetaMovimiento() {
   if (ambiente() === "limpio" || sinMovimiento()) return "";
   // Primero: el loop de la tutora del día. Si todavía no llega, el GIF o video que subiste.
-  const bajo = loopDelDia();
+  const vest = vestidaDelDia();
+  if (vest && vest.url) return etiquetaVestida(vest.url);
+  const bajo = vest && vest.cargando ? null : loopDelDia();
   if (bajo) return etiquetaEscena(bajo.sala, bajo.v);
   const v = videoFondo();
   if (!v) return "";
@@ -635,6 +643,48 @@ function loopDelDia() {
   const v = (escenasPorSala.get(sala) || []).filter(esMovimiento).slice(-1)[0];
   return v ? { sala, v } : null;
 }
+// ---- La tutora del día vestida (su pedido del 20-Oct-2026): mientras no ganes ningún premio del día, de fondo va
+// su loop vestido (el tramo vestido más largo de su video, en tu almacén de Cloudflare: vestidas/<video>.mp4).
+// En cuanto ganas el primero (Boca, Mano, Papaya, Durazno o el Ánimo), cambia a su loop de siempre.
+let vestidasDatos;                    // { videos: { "<lección del video>": segundos } } o null
+let vestidasPedidas = false;
+const vestidasUrl = new Map();        // lección del video -> { url } (blob) | { falla: true } | { cargando: true }
+/** La lección del video de una tutora (las que reusan video comparten loop vestido). */
+const videoDe = (id) => { const t = tutoraDe(id); return t && t.archivo ? String(t.archivo).split(" ")[0] : null; };
+/**
+ * El loop vestido de la tutora del día: { url } si ya llegó, { cargando: true } mientras baja, o null si no toca
+ * (ya ganaste un premio hoy, no tiene versión vestida, no hay almacén, o falló).
+ */
+function vestidaDelDia() {
+  if (ambiente() === "limpio" || sinMovimiento()) return null;
+  const id = tutoraDelDiaId();
+  if (id === null || algunPremioHoy()) return null;
+  if (vestidasDatos === undefined) {
+    if (!vestidasPedidas) {
+      vestidasPedidas = true;
+      A.vestidas().then((d) => { vestidasDatos = d || null; repintarFondo(); }).catch(() => { vestidasDatos = null; repintarFondo(); });
+    }
+    return { cargando: true };
+  }
+  const v = videoDe(id);
+  if (!vestidasDatos || !vestidasDatos.videos || !v || !(v in vestidasDatos.videos)) return null;
+  const ya = vestidasUrl.get(v);
+  if (ya) return ya.falla ? null : ya;
+  vestidasUrl.set(v, { cargando: true });
+  (async () => {
+    const d = await datosNube();
+    if (!d) throw new Error("sin almacén");
+    return NB.bajarVideo(await NB.enlace(d, "vestidas/" + v + ".mp4"));
+  })().then((url) => { vestidasUrl.set(v, { url }); repintarFondo(); })
+    .catch(() => { vestidasUrl.set(v, { falla: true }); repintarFondo(); });
+  return { cargando: true };
+}
+/** Vuelve a pintar si en la página hay un fondo de tutora del día (o el logo de carga). */
+function repintarFondo() {
+  if (vista.querySelector(".hoy, .fondo.cargando") || (movimientoEnTodo() && vista.querySelector(".hero"))) pintar({ conserva: true });
+}
+/** La etiqueta del loop vestido (ya bajado, como blob). */
+const etiquetaVestida = (url) => `<video data-vestida="${esc(url)}" muted loop autoplay playsinline preload="auto" aria-hidden="true"></video>`;
 const salasListas = new Set();     // salas cuya lista de escenas ya llegó (aunque venga vacía)
 /** Si el fondo en movimiento todavía está por llegar (la lista del loop o la de tus videos de fondo). */
 function fondoEnCamino() {
@@ -681,6 +731,36 @@ function cargarVideosFondo() {
     if ((videoFondo() && (vista.querySelector(".hoy") || (movimientoEnTodo() && vista.querySelector(".hero")))) || vista.querySelector(".fondo.cargando")) pintar({ conserva: true });
   }).catch(() => { videosFondoListos = true; if (vista.querySelector(".fondo.cargando")) pintar({ conserva: true }); });
 }
+/**
+ * Lo que llevas ganado hoy: las partes del check-in (los premios), con «va» prendido si ya se ganó.
+ * La usan el Tablero (los candaditos) y el fondo de la tutora del día (vestida hasta que ganas el primero).
+ */
+function partesDelDia(hoy = N.fechaLocal(new Date()), T = N.leerTablero(A.tablero()), deHoy = !!T && T.dia === hoy) {
+  // ---- Lo que cuenta Pelagos solo: los quizzes de gramática de hoy y las palabras que tocan hoy y siguen pendientes (la meta es cero).
+  const kw = N.kwizzesDelDia(E, hoy), metaKw = N.KWIZZES_AL_DIA;
+  const diaTj = tarjetas.size ? N.tarjetasDelDia(P, E, hoy) : null;
+  const tj = diaTj ? diaTj.pendientes.length : null;
+  const tjHechas = diaTj ? diaTj.hechasHoy : 0;
+
+  // ---- Las partes: lo que llevas ganado hoy. Las que dicen con qué se ganan se prenden aquí mismo, al momento;
+  // las demás valen lo que diga el tablero.
+  const c = T && T.checkin;
+  const cumplida = (nombre) => { const m = T.medidas.find((x) => x.nombre === nombre); return m ? (m.de === 0 ? m.valor === 0 : m.valor >= m.de) : null; };
+  const sola = (x) => (x.con === "siempre" ? true : x.con === "tarjetas" ? tj === 0 : x.con === "kwizzes" ? kw >= metaKw
+    : x.con && x.con.startsWith("medida:") ? (deHoy ? cumplida(x.con.slice(7)) ?? x.va : false) : x.va);
+  const partes = !c ? [] : c.partes.map((x) => ({ ...x, va: x.con === "todas" ? null : sola(x) }));
+  const ganables = partes.filter((x) => x.con && x.con !== "siempre" && x.con !== "todas" && !x.extra);      // las partes de más no cuentan para el Ánimo
+  for (const x of partes) if (x.va === null) x.va = ganables.length > 0 && ganables.every((y) => y.va);
+  return { kw, metaKw, diaTj, tj, tjHechas, c, partes, deHoy };
+}
+/** Si hoy ya ganaste algún premio de verdad (Boca, Mano, Papaya, Durazno o el Ánimo; no cuenta lo que se da «siempre»). */
+function algunPremioHoy() {
+  try {
+    const { partes, deHoy } = partesDelDia();
+    // Con un tablero de otro día solo valen las que cuenta Pelagos al momento (quizzes y tarjetas).
+    return partes.some((x) => x.va && x.con !== "siempre" && SELLOS[iconoDe(x)] && (deHoy || x.con === "kwizzes" || x.con === "tarjetas"));
+  } catch { return false; }
+}
 function verInicio(o) {
   const hoy = N.fechaLocal(new Date());
   const T = N.leerTablero(A.tablero());
@@ -700,21 +780,7 @@ function verInicio(o) {
     <div class="links">${c.temas.map((id) => porId.get(id)).filter(Boolean).map((t) => botonTema(t)).join("")}</div>
   </section>`).join("");
 
-  // ---- Lo que cuenta Pelagos solo: los quizzes de gramática de hoy y las palabras que tocan hoy y siguen pendientes (la meta es cero).
-  const kw = N.kwizzesDelDia(E, hoy), metaKw = N.KWIZZES_AL_DIA;
-  const diaTj = tarjetas.size ? N.tarjetasDelDia(P, E, hoy) : null;
-  const tj = diaTj ? diaTj.pendientes.length : null;
-  const tjHechas = diaTj ? diaTj.hechasHoy : 0;
-
-  // ---- Las partes: lo que llevas ganado hoy. Las que dicen con qué se ganan se prenden aquí mismo, al momento;
-  // las demás valen lo que diga el tablero.
-  const c = T && T.checkin;
-  const cumplida = (nombre) => { const m = T.medidas.find((x) => x.nombre === nombre); return m ? (m.de === 0 ? m.valor === 0 : m.valor >= m.de) : null; };
-  const sola = (x) => (x.con === "siempre" ? true : x.con === "tarjetas" ? tj === 0 : x.con === "kwizzes" ? kw >= metaKw
-    : x.con && x.con.startsWith("medida:") ? (deHoy ? cumplida(x.con.slice(7)) ?? x.va : false) : x.va);
-  const partes = !c ? [] : c.partes.map((x) => ({ ...x, va: x.con === "todas" ? null : sola(x) }));
-  const ganables = partes.filter((x) => x.con && x.con !== "siempre" && x.con !== "todas" && !x.extra);      // las partes de más no cuentan para el Ánimo
-  for (const x of partes) if (x.va === null) x.va = ganables.length > 0 && ganables.every((y) => y.va);
+  const { kw, metaKw, diaTj, tj, tjHechas, c, partes } = partesDelDia(hoy, T, deHoy);
   // Una parte con dibujito va en la esquina del cuadro de su medida, en lugar de ocupar un renglón aparte.
   const sello = (con) => partes.find((x) => x.con === con && SELLOS[iconoDe(x)]) || null;
   const premio = sello("todas");        // lo que se gana con todas juntas no tiene cuadro propio: va en la esquina de la tarjeta del check-in
@@ -2398,10 +2464,51 @@ const botonEscena = (id) => {
   const oir = t ? `<button type="button" class="ub grande" data-escuchar="${id}" hidden>Escuchar a ${esc(nombreCorto(t))}</button>` : "";
   // «Kwiz con la tutora»: sus preguntas, de 5 en 5 aciertos, con su escena de fondo que avanza con cada acierto.
   const prac = t && (bancoPorTema().get(id) || 0) >= N.ACIERTOS_TUTORA ? `<button type="button" class="ub grande" data-kwiz='{"tipo":"tutora","tema":${id}}'>Practicar con ${esc(nombreCorto(t))}</button>` : "";
+  // «Llamar a <tutora>»: abre un chat nuevo de Claude con la llamada ya escrita; ahí se toca el botón de voz.
+  const llama = t ? `<a class="ub grande" href="${esc(enlaceLlamada(t))}" target="_blank" rel="noopener">Llamar a ${esc(nombreCorto(t))}</a>` : "";
   // En Limpio no hay ninguna imagen de la tutora: tampoco el botón de su escena completa.
   const escena = ambiente() === "limpio" ? "" : `<button type="button" class="ub grande" data-escena="${id}">Ver la escena completa</button>`;
-  return `<div class="go">${escena}${conoce}${oir}${prac}</div><div class="voz" data-voz="${id}"></div><p class="small" data-escenaaviso="${id}" role="status"></p>`;
+  return `<div class="go">${escena}${conoce}${oir}${prac}${llama}</div><div class="voz" data-voz="${id}"></div><p class="small" data-escenaaviso="${id}" role="status"></p>`;
 };
+
+/**
+ * La llamada de voz con una tutora: las instrucciones para Claude, armadas con su regla y su personaje.
+ * Ella enseña la regla al principio y luego le pone una misión de su mundo. Sin nada explícito: el modo de voz no lo hace.
+ * Si su personaje trae «escenas_llamada», se escoge una al azar; si no, ella inventa una con su escenario.
+ */
+function textoLlamada(t, azar = Math.random) {
+  const p = t.personaje || {};
+  const nombre = nombreCorto(t);
+  // Del «set» solo se toman los lugares y objetos (lo que va antes de cada «=»).
+  const escenario = String(t.set || "").split(";").map((s) => s.split("=")[0].trim()).filter(Boolean).join(", ");
+  const rasgos = [
+    p.edad && `${p.edad} años`, p.generacion, p.acento && `acento: ${p.acento}`, p.registro && `estilo: ${p.registro}`,
+    p.energia && `energía: ${p.energia}`, p.rasgo,
+    p.muletillas && p.muletillas.length && `muletillas: ${p.muletillas.join(", ")}`,
+  ].filter(Boolean).map((x) => String(x).trim().replace(/[.\s]+$/, "")).join("; ");
+  const escenas = Array.isArray(p.escenas_llamada) ? p.escenas_llamada : [];
+  const mision = escenas.length
+    ? `La misión de hoy: ${escenas[Math.floor(azar() * escenas.length) % escenas.length]}`
+    : `Inventa una misión de tu mundo${escenario ? ` (${escenario})` : ""}: un problema que solo se resuelve si uso la regla.`;
+  return [
+    `Vamos a hacer una llamada de práctica de español por voz. Tú eres ${t.tutora}, una de las tutoras de Pelagos, mi app de estudio. Yo soy Grifo, tu estudiante. Quédate en personaje toda la llamada.`,
+    `Quién eres: ${t.tutora}.${rasgos ? " " + rasgos + "." : ""}${escenario ? ` Tu mundo: ${escenario}.` : ""}`,
+    `Tu regla, la única que practicamos hoy: ${t.regla}`,
+    `Cómo va la llamada:`,
+    `1. Abres tú, en personaje y con tu energía, ya dentro de tu mundo. Nunca me preguntes de qué quiero hablar.`,
+    `2. Clase relámpago, menos de un minuto: me explicas la regla a tu manera, con un truco para acordarme y dos o tres ejemplos. Luego me pides que repita una forma.`,
+    `3. ${mision} Hazme preguntas que me obliguen a usar la regla. Si me trabo, dame una pista con tus palabras.`,
+    `4. Turnos cortos: una o dos frases y me pasas la palabra. Yo hablo más que tú.`,
+    `5. Una vez en la llamada, equivócate a propósito con la regla, como si nada. Si te cacho, lo celebras y gano un punto.`,
+    `6. No me corrijas a media plática: si me equivoco, repite la forma correcta de pasada y sigue.`,
+    `7. Después de unos ocho intercambios, unos tres minutos, cierras tú: mi marcador (cuántas veces usé bien la regla), mis dos o tres errores con la forma correcta, uno por línea, y un pendiente para la próxima llamada. Luego te despides.`,
+    `8. Si digo «paso» o «ahorita no», te despides en una frase.`,
+    `Estilo: español mexicano natural y sencillo, con tus muletillas. Coqueta, juguetona y con humor, sin lenguaje explícito; el coqueteo nunca depende de que conteste bien. Es para el modo de voz: frases cortas, sin listas, sin emojis, sin asteriscos ni acotaciones.`,
+    `Empieza ya, en personaje.`,
+  ].join("\n");
+}
+/** El enlace que abre la llamada en Claude (chat nuevo con el texto ya puesto). */
+const enlaceLlamada = (t, azar) => "https://claude.ai/new?q=" + encodeURIComponent(textoLlamada(t, azar));
 function conectarEscenas(raiz) {
   for (const b of raiz.querySelectorAll("[data-escena]")) b.addEventListener("click", () => verEscena(Number(b.dataset.escena)));
   for (const b of raiz.querySelectorAll("[data-practica]")) b.addEventListener("click", async () => {
