@@ -26,7 +26,7 @@
 //   siguiente corrida (a los 10 o a los 40), revisa en Worldsacross las horas que le quedan a ese día (de 8 am a 4 pm,
 //   unos diez minutos) y lo contesta en clases.json: "huecosPedidos": [ { "id": "ph-…", "estado": "hecho" | "no se pudo",
 //   "nota": "…", "contestado": "…" } ], con los «libres» de ese día ya al día. Mientras tanto el día dice «Revisando…».
-import * as A from "./almacen.js?v=4c13fc1a96";
+import * as A from "./almacen.js?v=7eb340284d";
 
 export const HORA0 = 6, HORA1 = 21, PX = 56;      // la cuadrícula: de 6 am a 9 pm, 56 px por hora
 const ATRAS = 7, ADELANTE = 13;                    // hasta dónde se puede deslizar, en días desde hoy
@@ -74,7 +74,11 @@ export function leerClases(datos) {
       huecos.set(x.id, { estado: x.estado, nota: typeof x.nota === "string" ? x.nota.slice(0, 200) : "", contestado: cuando });
     }
   }
-  return { leido, clases, libres, respuestas, huecos };
+  // Cuándo se puso al día por última vez la disponibilidad: la lectura de la noche («libresLeido») o el «Revisar» más nuevo ya hecho.
+  const fecha = (v) => (typeof v === "string" && !Number.isNaN(new Date(v).getTime()) ? new Date(v) : null);
+  let dispo = fecha(datos.libresLeido);
+  for (const h of huecos.values()) if (h.estado === "hecho" && h.contestado && (!dispo || h.contestado > dispo)) dispo = h.contestado;
+  return { leido, clases, libres, respuestas, huecos, dispo };
 }
 
 /** «2026-10-22» en tu hora. */
@@ -246,6 +250,9 @@ export function htmlClases(datos, ahora = new Date(), pedidos = [], huecos = [])
   const horas = [];
   for (let h = HORA0; h <= HORA1; h++) horas.push(`<span data-top="${(h - HORA0) * PX - 8}">${h % 12 || 12} ${h < 12 ? "AM" : "PM"}</span>`);
   const viejo = L.leido && ahora - L.leido > 3 * 3600000 ? `<p class="small viejo">Leído ${mismoDia(L.leido, ahora) ? "hoy" : "el " + L.leido.getDate() + " de " + MESES[L.leido.getMonth()]} a las ${hora12(L.leido)}: puede que falte algo nuevo.</p>` : "";
+  const dispo = L.dispo
+    ? `<p class="small clDispo">Disponibilidad al día: ${DIAS_LARGOS[L.dispo.getDay()]} ${L.dispo.getDate()} de ${MESES[L.dispo.getMonth()]}${mismoDia(L.dispo, ahora) ? " (hoy)" : ""}, ${hora12(L.dispo)}</p>`
+    : `<p class="small clDispo">Disponibilidad: todavía sin revisar.</p>`;
   let i = 0;
   const bloque = (e) => {
     const n = i++;
@@ -277,6 +284,7 @@ export function htmlClases(datos, ahora = new Date(), pedidos = [], huecos = [])
       ${C.pendientes.length ? `<p class="clPedidos">${C.pendientes.length === 1 ? "1 clase pedida" : C.pendientes.length + " clases pedidas"}: Andrea la${C.pendientes.length === 1 ? "" : "s"} reserva en la próxima media hora.</p>` : ""}
       ${C.revisando.map((x) => `<p class="clPedidos">Revisando quién está libre ${esc(diaDicho(x.dia, ahora))}${x.cuando ? ` (lo pediste a las ${esc(hora12(x.cuando))})` : ""}: Andrea lo hace en su próxima vuelta, a los 10 o a los 40, y tarda unos diez minutos.</p>`).join("")}
       ${C.fallidos.map((p) => `<p class="clNoSePudo">No se pudo reservar a <b>${esc(p.tutor)}</b>, ${esc(cuandoLargo(p, ahora))}${p.nota ? `: ${esc(p.nota)}` : "."}</p>`).join("")}
+      ${dispo}
       ${viejo}
     </section>
     <section class="card clCal" id="clCal" aria-label="Calendario de ${esc(C.rango)}">
