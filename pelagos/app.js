@@ -1,11 +1,11 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=dd70cb3b1d";
-import * as A from "./almacen.js?v=dd70cb3b1d";
-import * as V from "./videos.js?v=dd70cb3b1d";
-import * as NB from "./nube.js?v=dd70cb3b1d";
-import * as CL from "./clases.js?v=dd70cb3b1d";
-import { abrirPractica } from "./practica.js?v=dd70cb3b1d";
-import * as F from "./fondo.js?v=dd70cb3b1d";
+import * as N from "./nucleo.js?v=4c13fc1a96";
+import * as A from "./almacen.js?v=4c13fc1a96";
+import * as V from "./videos.js?v=4c13fc1a96";
+import * as NB from "./nube.js?v=4c13fc1a96";
+import * as CL from "./clases.js?v=4c13fc1a96";
+import { abrirPractica } from "./practica.js?v=4c13fc1a96";
+import * as F from "./fondo.js?v=4c13fc1a96";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -965,6 +965,37 @@ function progresoVocabHoy() {
   if (!vocCache || vocCache.clave !== clave) vocCache = { clave, r: N.progresoVocab(P, suc, hoy) };
   return vocCache.r;
 }
+const semanaMemo = {};
+const LETRAS_DIA = ["D", "L", "M", "M", "J", "V", "S"];
+/**
+ * La curva del quiz de vocabulario (su elección del 22-Oct-2026, boceto 3 con un punto por día): tu puntaje de hoy
+ * en grande, cuánto subió desde ayer y los últimos 7 días, uno por punto. Se vuelve a pintar con cada palabra.
+ */
+function curvaVocab() {
+  if (!P || !E) return "";
+  const hoy = N.fechaLocal(new Date());
+  const S = N.semanaVocab(P, A.sucesos(), hoy, E, semanaMemo);
+  const v = S.puntaje, hoyV = v[6], dif = Math.round((hoyV - v[5]) * 10) / 10;
+  const W = 280, H = 52, X0 = 10, X1 = W - 12, Y0 = 8, Y1 = 34;
+  let lo = Math.min(...v), hi = Math.max(...v);
+  if (hi - lo < 2) { const m = (hi + lo) / 2; lo = m - 1; hi = m + 1; }
+  const xs = v.map((_, i) => X0 + (i * (X1 - X0)) / 6), ys = v.map((y) => Y1 - ((y - lo) / (hi - lo)) * (Y1 - Y0));
+  const pts = xs.map((x, i) => `${x.toFixed(1)},${ys[i].toFixed(1)}`);
+  const num = (x) => String(x);
+  const letras = S.dias.map((d, i) => (i === 6 ? "Hoy" : LETRAS_DIA[new Date(d + "T12:00:00").getDay()]));
+  const nombres = S.dias.map((d, i) => (i === 6 ? "hoy" : DIAS_LARGOS_V[new Date(d + "T12:00:00").getDay()]));
+  const dicho = `Tu dominio del vocabulario: ${num(hoyV)} por ciento, ${dif >= 0 ? "subió " + num(dif) : "bajó " + num(-dif)} desde ayer. Los últimos siete días: ${v.map((y, i) => nombres[i] + " " + num(y)).join(", ")}.`;
+  return `<aside class="tjCurva" aria-label="Tu curva de dominio">
+    <p class="tjCurvaNum"><b>${esc(num(hoyV))}%</b><span>dominio</span><span class="${dif > 0 ? "si" : dif < 0 ? "no" : ""}">${dif > 0 ? "+" : dif < 0 ? "−" : "±"}${esc(num(Math.abs(dif)))} hoy</span></p>
+    <svg class="tjCurvaSvg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="${esc(dicho)}">
+      <path class="tjCurvaArea" d="M${pts.join(" L")} L${X1},${Y1 + 4} L${X0},${Y1 + 4} Z"></path>
+      <path class="tjCurvaLinea" d="M${pts.join(" L")}"></path>
+      ${xs.map((x, i) => `<circle class="${i === 6 ? "tjCurvaHoy" : "tjCurvaDia"}" cx="${x.toFixed(1)}" cy="${ys[i].toFixed(1)}" r="${i === 6 ? 6.5 : 4}"></circle>`).join("")}
+      ${xs.map((x, i) => `<text class="${i === 6 ? "tjCurvaLetraHoy" : "tjCurvaLetra"}" x="${x.toFixed(1)}" y="${H - 2}" text-anchor="middle">${letras[i]}</text>`).join("")}
+    </svg>
+  </aside>`;
+}
+const DIAS_LARGOS_V = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"];
 /** La gráfica del vocabulario: qué parte del mazo ya viste y qué tan arriba van tus tarjetas. */
 function graficaVocab() {
   const V = progresoVocabHoy();
@@ -1374,6 +1405,7 @@ function verTarjetas(o) {
       <h1 class="h">${dia.total ? "Vocabulario en cero" : "Todavía no hay vocabulario"}</h1>
       ${dia.total ? `<p>Hoy repasaste ${dia.hechasHoy} de tus ${plural(dia.total, "palabra", "palabras")}.${fechas.length ? ` Las siguientes tocan el ${fecha(fechas[0])}.` : ""}</p>` : "<p>Cuando haya palabras en el contenido, aquí salen las de cada día.</p>"}
       <div class="conCuadro">${masTarde.length ? `<button type="button" class="ub grande" id="tjAdelantar">Adelantar ${masTarde.length}</button>` : "<span></span>"}<div class="unCuadro" role="list" aria-label="Tu vocabulario de hoy">${cuadroVocabulario(hoy)}</div></div>
+      ${curvaVocab().replace('class="tjCurva"', 'class="tjCurva enCero"')}
       ${masTarde.length ? `<p class="small">Estudia ahora ${plural(masTarde.length, "palabra que toca", "palabras que tocan")} más adelante. La que aciertes sube su escalón desde hoy; la que falles vuelve a salir hoy.</p>` : ""}
     </section>`), { titulo: "Quiz de vocabulario · Pelagos", nav: "vocabulario", conserva: o.conserva });
     return;
@@ -1409,6 +1441,7 @@ function verTarjetas(o) {
       <p class="tjToca" id="tjToca">Toca para ver la respuesta</p>
       <div class="tjBotones" id="tjBotones" role="group" aria-label="¿La supiste?" hidden><button type="button" class="ub" id="jMal">Mal</button><button type="button" class="ub" id="jBien">Bien</button></div>
     </div>
+    ${curvaVocab()}
   </section>`,
   { titulo: "Quiz de vocabulario · Pelagos", nav: "vocabulario" });
   enPregunta = true;
@@ -1600,7 +1633,7 @@ function verClases(o) {
   const vocab = fotosVocab.size > 0, lista = ambiente() === "limpio" ? [] : vocab ? [...fotosVocab.keys()] : (P.fotos || []).map((f) => f.nombre), hoy = new Date();
   const foto = lista.length ? lista[(Math.floor(Date.UTC(hoy.getFullYear(), hoy.getMonth(), hoy.getDate()) / 86400000) * 37 + 3) % lista.length] : null;
   const fondo = foto ? `<div class="fondo"><img data-foto="${esc(foto)}"${vocab ? ' data-vocab="1"' : ""} alt="">${LOGO}</div>` : "";
-  poner(`<div class="hoy clases${foto ? " confoto" : ""}">${fondo}<div class="sobre">${entradas("tablero", "clases")}${CL.htmlClases(A.clases(), new Date(), CL.pedidosDe(A.sucesos()))}</div></div>`,
+  poner(`<div class="hoy clases${foto ? " confoto" : ""}">${fondo}<div class="sobre">${entradas("tablero", "clases")}${CL.htmlClases(A.clases(), new Date(), CL.pedidosDe(A.sucesos()), CL.pedidosHuecosDe(A.sucesos()))}</div></div>`,
     { titulo: "Clases · Pelagos", nav: "inicio", conserva: o.conserva });
   CL.montar(vista, () => pintar({ conserva: true }));
 }

@@ -21,7 +21,12 @@
 //   gramática (la sugerida es tu tema B2 más bajo; la pone la página con ponerSugerencia).
 //   (y { "t": "cancelarPedido", "id": "pc-…" } para quitarlo). La tarea de cada media hora lo reserva en Worldsacross
 //   y lo contesta en clases.json: "pedidos": [ { "id": "pc-…", "estado": "reservada" | "no se pudo", "nota": "…" } ].
-import * as A from "./almacen.js?v=dd70cb3b1d";
+// - Revisar quién está libre un día (22-Oct-2026): debajo de cada fecha, de hoy a 7 días, hay un botón «Revisar».
+//   Apunta { "t": "pedirHuecos", "id": "ph-…", "dia": "2026-10-22", "cuando": "…" }. Una tarea lo atiende en su
+//   siguiente corrida (a los 10 o a los 40), revisa en Worldsacross las horas que le quedan a ese día (de 8 am a 4 pm,
+//   unos diez minutos) y lo contesta en clases.json: "huecosPedidos": [ { "id": "ph-…", "estado": "hecho" | "no se pudo",
+//   "nota": "…", "contestado": "…" } ], con los «libres» de ese día ya al día. Mientras tanto el día dice «Revisando…».
+import * as A from "./almacen.js?v=4c13fc1a96";
 
 export const HORA0 = 6, HORA1 = 21, PX = 56;      // la cuadrícula: de 6 am a 9 pm, 56 px por hora
 const ATRAS = 7, ADELANTE = 13;                    // hasta dónde se puede deslizar, en días desde hoy
@@ -62,7 +67,39 @@ export function leerClases(datos) {
       respuestas.set(x.id, { estado: x.estado, nota: typeof x.nota === "string" ? x.nota.slice(0, 200) : "", contestado: cuando });
     }
   }
-  return { leido, clases, libres, respuestas };
+  const huecos = new Map();
+  for (const x of Array.isArray(datos.huecosPedidos) ? datos.huecosPedidos : []) {
+    if (x && typeof x.id === "string" && ["hecho", "no se pudo"].includes(x.estado)) {
+      const cuando = typeof x.contestado === "string" && !Number.isNaN(new Date(x.contestado).getTime()) ? new Date(x.contestado) : null;
+      huecos.set(x.id, { estado: x.estado, nota: typeof x.nota === "string" ? x.nota.slice(0, 200) : "", contestado: cuando });
+    }
+  }
+  return { leido, clases, libres, respuestas, huecos };
+}
+
+/** «2026-10-22» en tu hora. */
+export function diaClave(d) {
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+export const HUECO0 = 8, HUECO1 = 16, HUECOS_ADELANTE = 7;   // se revisan las horas en punto de 8 am a 4 pm, hasta 7 días
+/** Tus pedidos de «Revisar» un día, sacados de tus sucesos: [{ id, dia, cuando }], el más nuevo al final. */
+export function pedidosHuecosDe(sucesos) {
+  const lista = [];
+  for (const e of sucesos || []) {
+    if (!e || e.t !== "pedirHuecos" || typeof e.id !== "string" || typeof e.dia !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(e.dia)) continue;
+    if (lista.some((x) => x.id === e.id)) continue;
+    const cuando = typeof e.cuando === "string" && !Number.isNaN(new Date(e.cuando).getTime()) ? new Date(e.cuando) : null;
+    lista.push({ id: e.id, dia: e.dia, cuando });
+  }
+  return lista;
+}
+/** ¿A ese día todavía le quedan horas por revisar? (hoy: una hora en punto de 8 a 4 que empiece en más de 30 minutos). */
+export function quedanHoras(d, ahora = new Date()) {
+  const hoy = medianoche(ahora), dia = medianoche(d);
+  if (dia < hoy || dia > masDias(hoy, HUECOS_ADELANTE)) return false;
+  if (dia > hoy) return true;
+  const ultima = new Date(dia.getFullYear(), dia.getMonth(), dia.getDate(), HUECO1);
+  return ultima - ahora > 30 * 60000;
 }
 
 /** Tus pedidos de clase, sacados de tus sucesos: [{ id, ini, min, tutor, cuando }], sin los cancelados. */
@@ -121,7 +158,7 @@ function cuandoLargo(c, ahora) {
 }
 
 /** Todo lo que la página necesita para pintar tres días, empezando `corr` días después de hoy. */
-export function armarClases(L, ahora = new Date(), corr = 0, pedidos = []) {
+export function armarClases(L, ahora = new Date(), corr = 0, pedidos = [], huecos = []) {
   const hoy = medianoche(ahora);
   const hecha = (c) => c.estado === "hecha" || fin(c) <= ahora;
   const siguiente = L.clases.find((c) => !hecha(c)) || null;
@@ -175,7 +212,11 @@ export function armarClases(L, ahora = new Date(), corr = 0, pedidos = []) {
       if (p) e.confirmada = L.respuestas.get(p.id).contestado || true;
     }
     eventos.sort((a, b) => a.ini - b.ini);
-    return { fecha: d, esHoy, nombre, corto: DIAS[d.getDay()], num: d.getDate(), eventos };
+    // «Revisar»: el último pedido de ese día y si ya te contestaron.
+    const clave = diaClave(d), ultimo = huecos.filter((x) => x.dia === clave).pop() || null;
+    const resp = ultimo ? (L.huecos || new Map()).get(ultimo.id) || null : null;
+    const revisar = { puede: quedanHoras(d, ahora), clave, pendiente: !!(ultimo && !resp), respuesta: resp, pedido: ultimo };
+    return { fecha: d, esHoy, nombre, corto: DIAS[d.getDay()], num: d.getDate(), eventos, revisar };
   });
   const a = dias[0].fecha, b = dias[2].fecha;
   const rango = a.getMonth() === b.getMonth()
@@ -186,18 +227,21 @@ export function armarClases(L, ahora = new Date(), corr = 0, pedidos = []) {
   const fallidos = pedidos.filter((p) => p.ini >= ahora && L.respuestas.get(p.id)?.estado === "no se pudo")
     .map((p) => ({ ...p, nota: L.respuestas.get(p.id).nota }));
   const pendientes = pedidos.filter((p) => p.ini >= ahora && !L.respuestas.has(p.id));
-  return { dias, rango, semana, siguiente, fallidos, pendientes, ahoraTop: conAhora ? arriba(ahora) : null, alInicio: corr <= -ATRAS, alFinal: corr >= ADELANTE };
+  // Los días que pediste revisar y que todavía no te contestan (de hoy en adelante).
+  const hoyClave = diaClave(hoy);
+  const revisando = [...new Map(huecos.filter((x) => x.dia >= hoyClave && !(L.huecos || new Map()).has(x.id)).map((x) => [x.dia, x])).values()];
+  return { dias, rango, revisando, semana, siguiente, fallidos, pendientes, ahoraTop: conAhora ? arriba(ahora) : null, alInicio: corr <= -ATRAS, alFinal: corr >= ADELANTE };
 }
 
 /** El calendario (sin el fondo ni las entradas de arriba: esos los pone la página). */
-export function htmlClases(datos, ahora = new Date(), pedidos = []) {
+export function htmlClases(datos, ahora = new Date(), pedidos = [], huecos = []) {
   const L = leerClases(datos);
   if (!L) {
     return `<section class="card"><h1 class="h">Clases</h1>
       <p>Todavía no llegan tus clases de Worldsacross. La tarea de cada media hora las trae desde tu Chrome; si tu computadora está prendida, aparecen solas.</p>
       <p><a class="ub" href="${WA}" target="_blank" rel="noopener noreferrer">Abrir Worldsacross</a></p></section>`;
   }
-  const C = armarClases(L, ahora, corrimiento, pedidos);
+  const C = armarClases(L, ahora, corrimiento, pedidos, huecos);
   const s = C.semana;
   const horas = [];
   for (let h = HORA0; h <= HORA1; h++) horas.push(`<span data-top="${(h - HORA0) * PX - 8}">${h % 12 || 12} ${h < 12 ? "AM" : "PM"}</span>`);
@@ -231,11 +275,12 @@ export function htmlClases(datos, ahora = new Date(), pedidos = []) {
         </div>
       </div>
       ${C.pendientes.length ? `<p class="clPedidos">${C.pendientes.length === 1 ? "1 clase pedida" : C.pendientes.length + " clases pedidas"}: Andrea la${C.pendientes.length === 1 ? "" : "s"} reserva en la próxima media hora.</p>` : ""}
+      ${C.revisando.map((x) => `<p class="clPedidos">Revisando quién está libre ${esc(diaDicho(x.dia, ahora))}${x.cuando ? ` (lo pediste a las ${esc(hora12(x.cuando))})` : ""}: Andrea lo hace en su próxima vuelta, a los 10 o a los 40, y tarda unos diez minutos.</p>`).join("")}
       ${C.fallidos.map((p) => `<p class="clNoSePudo">No se pudo reservar a <b>${esc(p.tutor)}</b>, ${esc(cuandoLargo(p, ahora))}${p.nota ? `: ${esc(p.nota)}` : "."}</p>`).join("")}
       ${viejo}
     </section>
     <section class="card clCal" id="clCal" aria-label="Calendario de ${esc(C.rango)}">
-      <div class="clDias"><span></span>${C.dias.map((d) => `<span class="${d.esHoy ? "esHoy" : ""}"><small>${esc(d.corto)}${d.esHoy ? " · Hoy" : ""}</small><b>${d.num}</b></span>`).join("")}</div>
+      <div class="clDias"><span></span>${C.dias.map((d) => `<span class="${d.esHoy ? "esHoy" : ""}"><small>${esc(d.corto)}${d.esHoy ? " · Hoy" : ""}</small><b>${d.num}</b>${botonRevisar(d, ahora)}</span>`).join("")}</div>
       <div class="clCuerpo"><div class="clHorasCol" aria-hidden="true">${horas.join("")}</div>${columnas}</div>
     </section>
     <section class="card clClave" aria-label="Qué significa cada color">
@@ -247,6 +292,20 @@ export function htmlClases(datos, ahora = new Date(), pedidos = []) {
       <p class="small">${s.clases === 1 ? "1 clase" : s.clases + " clases"} · ${s.hechas === 1 ? "1 hecha" : s.hechas + " hechas"}${s.hablado ? ` · ${esc(duracion(s.hablado))} ya habladas` : ""}</p>
       ${C.siguiente ? `<p class="clSigue">La que sigue: <b>${esc(C.siguiente.tutor)}</b>, ${esc(cuandoLargo(C.siguiente, ahora))}${C.siguiente.tema ? ` · ${esc(C.siguiente.tema)}` : ""}</p>` : ""}
     </section>`;
+}
+/** «hoy», «mañana» o «el viernes 23», para un día «2026-10-23». */
+function diaDicho(clave, ahora) {
+  const [y, m, dd] = clave.split("-").map(Number), d = new Date(y, m - 1, dd), hoy = medianoche(ahora);
+  return mismoDia(d, hoy) ? "hoy" : mismoDia(d, masDias(hoy, 1)) ? "mañana" : `el ${DIAS_LARGOS[d.getDay()]} ${d.getDate()}`;
+}
+/** Debajo de la fecha: «Revisar», «Revisando…» o la hora de la última revisión (y se puede volver a pedir). */
+function botonRevisar(d, ahora) {
+  const r = d.revisar;
+  if (!r || (!r.puede && !r.pendiente)) return "";
+  const cual = `${DIAS_LARGOS[d.fecha.getDay()]} ${d.fecha.getDate()}`;
+  if (r.pendiente) return `<span class="clRevisar enCurso" role="status">Revisando…</span>`;
+  const hecho = r.respuesta && r.respuesta.estado === "hecho" && r.respuesta.contestado ? `Al día ${hora12(r.respuesta.contestado)}` : r.respuesta && r.respuesta.estado === "no se pudo" ? "No se pudo" : "";
+  return `<button type="button" class="clRevisar" data-huecos="${esc(r.clave)}" aria-label="Revisar quién de tus favoritos está libre el ${esc(cual)}${hecho ? ". " + esc(hecho) : ""}">${hecho ? `<small>${esc(hecho)}</small>` : ""}↻ Revisar</button>`;
 }
 let ultimos = [];      // los bloques que están en pantalla, en orden (data-cl)
 let repintarAhora = () => {};
@@ -269,6 +328,12 @@ export function montar(raiz, repintar) {
     repintar();
   };
   for (const b of raiz.querySelectorAll("[data-ir]")) b.addEventListener("click", () => ir(Number(b.dataset.ir)));
+  // «Revisar»: apunta el pedido y la página dice «Revisando…» hasta que la tarea lo conteste.
+  for (const b of raiz.querySelectorAll("[data-huecos]")) b.addEventListener("click", (ev) => {
+    ev.stopPropagation();
+    A.apuntar({ t: "pedirHuecos", id: "ph-" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6), dia: b.dataset.huecos, cuando: new Date().toISOString() });
+    repintar();
+  });
   const cal = raiz.querySelector("#clCal");
   if (!cal) return;
   // Deslizar: con el dedo o arrastrando el mouse, a la izquierda avanza un día y a la derecha regresa.

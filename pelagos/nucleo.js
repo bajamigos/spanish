@@ -1002,6 +1002,36 @@ export function progresoVocab(paquete, sucesos, hoy = fechaLocal(new Date()), pu
   return salida;
 }
 
+/** Tu puntaje de vocabulario con un estado ya calculado (la misma cuenta que progresoVocab), con un decimal. */
+export function puntajeVocabDe(E) {
+  const tope = ESCALONES.length;
+  let total = 0, suma = 0;
+  for (const t of E.tarjetas.values()) {
+    if (t.quitada) continue;
+    total++;
+    if (t.toca) suma += (t.escalon + 1) / tope;
+  }
+  return total ? Math.round((1000 * suma) / total) / 10 : 0;
+}
+
+/**
+ * Tu puntaje de vocabulario de los últimos 7 días, uno por día, para la curva del quiz (pedido el 22-Oct-2026):
+ * { dias: [7 fechas, la última es hoy], puntaje: [7 números] }. Los seis días de antes salen de los sucesos de antes de
+ * hoy y se guardan en `memo` (un objeto que el que llama conserva) mientras esos sucesos no cambien; el de hoy sale de
+ * `Ehoy`, el estado que ya calculó la página, así que se mueve con cada palabra que calificas.
+ */
+export function semanaVocab(paquete, sucesos, hoy, Ehoy, memo = {}) {
+  const dias = [];
+  for (let k = 6; k >= 0; k--) dias.push(sumarDias(hoy, -k));
+  const antes = (sucesos || []).filter((e) => e && typeof e === "object" && fechaLocal(new Date(ms(e))) < hoy);
+  const clave = hoy + "|" + antes.length;
+  if (memo.clave !== clave) {
+    memo.clave = clave;
+    memo.pasados = dias.slice(0, 6).map((d) => puntajeVocabDe(calcular(paquete, antes.filter((e) => fechaLocal(new Date(ms(e))) <= d))));
+  }
+  return { dias, puntaje: [...memo.pasados, puntajeVocabDe(Ehoy)] };
+}
+
 /** Los aciertos de una tarjeta al cierre de cada día: lo que traía de antes más sus repasos hasta ese día. */
 export function historiaTarjeta(suya, hasta = fechaLocal(new Date()), desde = INICIO_HISTORIA) {
   const repasos = (suya?.historia || []).map((h) => ({ dia: fechaLocal(new Date(Date.parse(h.cuando) || 0)), bien: !!h.bien }));
