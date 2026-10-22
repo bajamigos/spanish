@@ -1,11 +1,11 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=7eb340284d";
-import * as A from "./almacen.js?v=7eb340284d";
-import * as V from "./videos.js?v=7eb340284d";
-import * as NB from "./nube.js?v=7eb340284d";
-import * as CL from "./clases.js?v=7eb340284d";
-import { abrirPractica } from "./practica.js?v=7eb340284d";
-import * as F from "./fondo.js?v=7eb340284d";
+import * as N from "./nucleo.js?v=228f26d7ef";
+import * as A from "./almacen.js?v=228f26d7ef";
+import * as V from "./videos.js?v=228f26d7ef";
+import * as NB from "./nube.js?v=228f26d7ef";
+import * as CL from "./clases.js?v=228f26d7ef";
+import { abrirPractica } from "./practica.js?v=228f26d7ef";
+import * as F from "./fondo.js?v=228f26d7ef";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -513,13 +513,15 @@ const SELLOS = {
   durazno: '<svg viewBox="0 0 32 32" aria-hidden="true"><path class="s1" d="M16 8.200C9.200 5.800 3.600 10.800 4 18c.4 7 5.800 11.600 12 11.600S27.600 25 28 18c.4-7.200-5.200-12.200-12-9.800z"/><path class="s3" d="M16.400 8.600c-3.600 4.800-4 12.800-1.200 19.800"/><path class="s2" d="M16 8.200c.8-4 4.400-6 8.600-4.800-.8 3.800-4.200 5.600-8.600 4.800z"/></svg>',
 };
 
+/** La medida de escuchar (antes «ElevenReader»; desde el 22-Oct-2026 «Escucha»: audiolibros y podcasts en español). */
+const ESCUCHA = /^(elevenreader|escucha)$/i;
 /** Una medida del día como cuadro: nombre, número grande, barra y si ya se cumplió. «sello» es lo que se gana con ella. */
-function cuadro(nombre, valor, de, unidad, estado, hecho, enlace = "", sello = null) {
+function cuadro(nombre, valor, de, unidad, estado, hecho, enlace = "", sello = null, sub = "") {
   const aCero = de === 0;       // medidas que se cumplen al llegar a cero, como las tarjetas pendientes
   const [abre, cierra] = enlace ? [`a href="${enlace}"`, "a"] : ["div", "div"];
   return `<${abre} class="cuadro${hecho ? " hecho" : ""}${sello ? " consello" : ""}" role="listitem">
     ${sello ? selloHtml(sello) : ""}
-    <span class="cn">${esc(nombre)}</span>
+    <span class="cn">${esc(nombre)}${sub ? `<small class="csub">${esc(sub)}</small>` : ""}</span>
     <span class="cv">${esc(valor)}${aCero ? "" : `<small> de ${esc(de)}${unidad ? " " + esc(unidad) : ""}</small>`}</span>
     ${aCero ? '<span class="bar vacia"></span>' : barra(de ? (valor / de) * 100 : 0)}
   </${cierra}>`;
@@ -794,7 +796,9 @@ function verInicio(o) {
     if (tarjetas.size && /anki/i.test(m.nombre)) continue;        // con tarjetas propias, las de fuera ya no se enseñan
     const hecho = m.de === 0 ? m.valor === 0 : m.valor >= m.de;
     const falta = Math.round((m.de - m.valor) * 10) / 10;
-    cuadros.push(cuadro(m.nombre, m.valor, m.de, m.unidad, hecho ? "Cumplido" : m.de === 0 ? "Meta: cero" : `Faltan ${falta}`, hecho, /^clase/i.test(m.nombre) ? "#/clases" : /elevenreader/i.test(m.nombre) ? "#/lectura" : "", sello("medida:" + m.nombre)));
+    const escucha = ESCUCHA.test(m.nombre);      // se enseña como «Escucha», venga como venga del tablero
+    cuadros.push(cuadro(escucha ? "Escucha" : m.nombre, m.valor, m.de, m.unidad, hecho ? "Cumplido" : m.de === 0 ? "Meta: cero" : `Faltan ${falta}`, hecho,
+      /^clase/i.test(m.nombre) ? "#/clases" : escucha ? "#/lectura" : "", sello("medida:" + m.nombre), escucha ? "audiolibros y podcasts" : ""));
   }
   // Solo se dice de cuándo son los números de fuera si no son de hoy.
   const medidas = `
@@ -1648,7 +1652,7 @@ function granTotal() {
   if (!L || !L.granTotal) return null;
   const corte = L.granTotal.corte, hoy = N.fechaLocal(new Date());
   const dias = new Map(L.dias);
-  const T = N.leerTablero(A.tablero()), er = T && T.dia === hoy ? T.medidas.find((m) => /elevenreader/i.test(m.nombre)) : null;
+  const T = N.leerTablero(A.tablero()), er = T && T.dia === hoy ? T.medidas.find((m) => ESCUCHA.test(m.nombre)) : null;
   if (er) dias.set(hoy, Math.max(dias.get(hoy) || 0, er.valor));
   let min = 0;
   for (const [d, m] of dias) if (d > corte) min += m;
@@ -1673,7 +1677,7 @@ function verLectura(o, ejemplo = false) {
   const L = N.leerLectura(ejemplo ? lecturaDeEjemplo(hoy) : A.lectura()), T = ejemplo ? null : N.leerTablero(A.tablero());
   const meta = L ? L.meta : 60;
   const dias = new Map(L ? L.dias : []);
-  const er = T && T.dia === hoy ? T.medidas.find((m) => /elevenreader/i.test(m.nombre)) : null;
+  const er = T && T.dia === hoy ? T.medidas.find((m) => ESCUCHA.test(m.nombre)) : null;
   if (er) dias.set(hoy, Math.max(dias.get(hoy) || 0, Math.round(er.valor)));
   const libros = L ? L.libros : [];
   // «Leyendo ahora» es el de ElevenReader (se abre con un toque); los demás van a sus estantes.
@@ -1688,6 +1692,10 @@ function verLectura(o, ejemplo = false) {
   const d0 = new Date(), ultimos = [];
   for (let i = 13; i >= 0; i--) ultimos.push(N.fechaLocal(new Date(d0.getFullYear(), d0.getMonth(), d0.getDate() - i)));
   const minHoy = dias.get(hoy) || 0;
+  // Los podcasts en español de hoy (Pocket Casts), que ya vienen sumados en la Escucha.
+  const pods = T && T.dia === hoy ? T.podcasts : [];
+  const podMin = pods.reduce((a, x) => a + x.min, 0);
+  const podHoy = pods.length ? `<p class="lecturaHoy">Hoy escuchaste</p><ul class="podHoy">${pods.map((x) => `<li>${esc(x.programa)}: ${esc(horasMin(x.min))}</li>`).join("")}</ul>` : "";
   const lineaHoy = minHoy >= meta ? `Hoy: ${minHoy} de ${meta} min. Meta cumplida.` : `Hoy: ${minHoy} de ${meta} min. Te faltan ${meta - minHoy}.`;
   const semana = ultimos.slice(-7).map((d) => dias.get(d) || 0);
   const lineaSemana = `Últimos 7 días: ${semana.filter((m) => m >= meta).length} de 7 con la hora cumplida, ${horasMin(semana.reduce((a, b) => a + b, 0))} en total.`;
@@ -1801,11 +1809,11 @@ function verLectura(o, ejemplo = false) {
   } else if (modo === "podcasts") {
     const Pd = L ? L.podcasts : [];
     const fichaP = (x) => `<li><div class="libro">${cartel(x, "portadaChica")}<span class="libroTitulo">${esc(x.titulo)}</span></div></li>`;
-    cabeza = `<p class="lecturaHoy">${L && L.podcastsHoras !== null ? L.podcastsHoras.toLocaleString("es-MX") + " horas de podcasts." : "Tus podcasts."}</p><p class="small">${plural(Pd.length, "podcast", "podcasts")}, por tus estrellas.</p>`;
+    cabeza = `${podHoy}<p class="lecturaHoy">${L && L.podcastsHoras !== null ? L.podcastsHoras.toLocaleString("es-MX") + " horas de podcasts." : "Tus podcasts."}</p><p class="small">${plural(Pd.length, "podcast", "podcasts")}, por tus estrellas.</p>`;
     cuerpo = [3, 2, 1].map((n) => repisa("pod" + n, `${"★".repeat(n)} <span class="sr">${plural(n, "estrella", "estrellas")}</span>`, Pd.filter((x) => x.nota === n), fichaP)).join("") +
       repisa("podSin", "Sin estrellas", Pd.filter((x) => !x.nota), fichaP);
   } else {
-    cabeza = `<p class="lecturaHoy">${esc(lineaHoy)}</p><p class="small">${esc(lineaSemana)}</p>`;
+    cabeza = `<p class="lecturaHoy">${esc(lineaHoy)}</p>${podMin ? `<p class="small">De eso, ${esc(horasMin(podMin))} de podcasts en español.</p>` : ""}<p class="small">${esc(lineaSemana)}</p>`;
     cuerpo = tarjetaAhora + grafDias + estante;
   }
   const fondo = fondoDelDia();

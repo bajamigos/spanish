@@ -723,7 +723,7 @@ export function tarjetasAdelante(paquete, estado, hoy = fechaLocal(new Date()), 
 /**
  * El tablero del día: lo que Pelagos no puede contar solo (lo que escuchaste, tu clase, tus tarjetas, el check-in).
  * Lo escribe alguien más en tablero/hoy.json. Aquí solo se revisa su forma; lo que venga mal hecho se tira.
- * Devuelve { dia, leido, atuendo, foto, medidas, extras, checkin } o null.
+ * Devuelve { dia, leido, atuendo, foto, medidas, extras, checkin, podcasts } o null.
  */
 export function leerTablero(crudo) {
   if (!crudo || typeof crudo !== "object" || crudo.version !== 1 || !/^\d{4}-\d{2}-\d{2}$/.test(crudo.dia || "")) return null;
@@ -761,9 +761,15 @@ export function leerTablero(crudo) {
     checkin = { estado: c.estado, nivel: numero(c.nivel), nombre: texto(c.nombre, 40), titulo: texto(c.titulo, 120),
       minutos: numero(c.minutos), partes, falta: texto(c.falta, 400), puesto: momento(c.puesto), url: enlace(c.url), ultimo: ul };
   }
+  // «podcasts»: los programas en español que escuchaste hoy en Pocket Casts, con sus minutos (para la Escucha, 22-Oct-2026).
+  const podcasts = [];
+  for (const x of Array.isArray(crudo.podcasts) ? crudo.podcasts.slice(0, 12) : []) {
+    const programa = texto(x && x.programa, 80), min = numero(x && x.min);
+    if (programa !== null && min !== null) podcasts.push({ programa, min: Math.round(min) });
+  }
   const foto = typeof crudo.foto === "string" && /^[a-z0-9-]+\.jpg$/.test(crudo.foto) ? crudo.foto : null;
   // «frase»: la línea del día de Andrea, coqueta y con tus números de esa lectura.
-  return { dia: crudo.dia, leido: momento(crudo.leido), atuendo: texto(crudo.atuendo, 200), foto, frase: texto(crudo.frase, 240), medidas, extras, checkin };
+  return { dia: crudo.dia, leido: momento(crudo.leido), atuendo: texto(crudo.atuendo, 200), foto, frase: texto(crudo.frase, 240), medidas, extras, checkin, podcasts };
 }
 
 /**
