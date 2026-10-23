@@ -1,11 +1,11 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=57e545a02f";
-import * as A from "./almacen.js?v=57e545a02f";
-import * as V from "./videos.js?v=57e545a02f";
-import * as NB from "./nube.js?v=57e545a02f";
-import * as CL from "./clases.js?v=57e545a02f";
-import { abrirPractica } from "./practica.js?v=57e545a02f";
-import * as F from "./fondo.js?v=57e545a02f";
+import * as N from "./nucleo.js?v=ef1382e339";
+import * as A from "./almacen.js?v=ef1382e339";
+import * as V from "./videos.js?v=ef1382e339";
+import * as NB from "./nube.js?v=ef1382e339";
+import * as CL from "./clases.js?v=ef1382e339";
+import { abrirPractica } from "./practica.js?v=ef1382e339";
+import * as F from "./fondo.js?v=ef1382e339";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -2248,6 +2248,17 @@ function leerForma() {
 }
 
 let agAviso = null;            // la palabra que acabas de agregar, para decirlo en la página
+
+// El acordeón de una clase (clases.js) agrega sus palabras clave a tu acervo con «+», igual que Agregar.
+CL.conAcervo({
+  tiene: (es) => palabras().some((x) => !x.s.quitada && paraBuscar(x.c.reverso) === paraBuscar(es)),
+  agregar: (es, en) => {
+    if (palabras().some((x) => !x.s.quitada && paraBuscar(x.c.reverso) === paraBuscar(es))) return false;
+    A.apuntar({ t: "tjn", id: N.nuevoId("n"), tarjeta: N.nuevoId("tm"), cuando: new Date().toISOString(), frente: String(en).slice(0, 160), reverso: String(es).slice(0, 160) });
+    recalcular();
+    return true;
+  },
+});
 
 /** Agregar (Vocabulario): una palabra a mano. Es un renglón más de tu avance, y entra a tu quiz como palabra nueva. */
 function verAgregar(o) {

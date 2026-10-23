@@ -28,7 +28,7 @@
 //   siguiente corrida (a los 10, 25, 40 o 55), revisa en Worldsacross las horas que le quedan a ese día (de 8 am a 4 pm,
 //   unos diez minutos) y lo contesta en clases.json: "huecosPedidos": [ { "id": "ph-…", "estado": "hecho" | "no se pudo",
 //   "nota": "…", "contestado": "…" } ], con los «libres» de ese día ya al día. Mientras tanto el día dice «Revisando…».
-import * as A from "./almacen.js?v=57e545a02f";
+import * as A from "./almacen.js?v=ef1382e339";
 
 export const HORA0 = 6, HORA1 = 21, PX = 56;      // la cuadrícula: de 6 am a 9 pm, 56 px por hora
 const ATRAS = 7, ADELANTE = 13;                    // hasta dónde se puede deslizar, en días desde hoy
@@ -48,11 +48,16 @@ export function leerAcordeon(a) {
   if (!a || typeof a !== "object") return null;
   const txt = (v, n = 300) => typeof v === "string" && v.trim() ? v.trim().slice(0, n) : "";
   const lista = (v, n = 8) => Array.isArray(v) ? v.map((y) => txt(y)).filter(Boolean).slice(0, n) : [];
-  const palabras = Array.isArray(a.palabras) ? a.palabras.filter((y) => Array.isArray(y) && txt(y[0], 60)).map((y) => [txt(y[0], 60), txt(y[1], 160)]).slice(0, 16) : [];
+  const palabras = Array.isArray(a.palabras) ? a.palabras.filter((y) => Array.isArray(y) && txt(y[0], 60)).map((y) => [txt(y[0], 60), txt(y[1], 160), txt(y[2], 80)]).slice(0, 16) : [];
   const r = { tema: txt(a.tema), postura: txt(a.postura), argumentos: lista(a.argumentos), salida: txt(a.salida),
     ejemplos: lista(a.ejemplos), palabras, muletillas: lista(a.muletillas) };
   return r.tema || r.postura || r.argumentos.length || r.palabras.length ? r : null;
 }
+
+// El acervo de vocabulario vive en app.js: ella nos dice si una palabra ya está y la agrega como tarjeta nueva.
+let acervo = null;
+/** app.js registra { tiene(es) → bool, agregar(es, en) → bool }. */
+export function conAcervo(x) { acervo = x; }
 
 /** Revisa el archivo y lo vuelve una lista limpia: { leido, clases, libres }, o null si no sirve. */
 export function leerClases(datos, enlaces = A.enlacesDeClases ? A.enlacesDeClases() : null) {
@@ -461,7 +466,11 @@ function abrir(e) {
         ${sec("Tus argumentos", "acArg", a.argumentos.length ? `<ol>${a.argumentos.map((y) => `<li>${eti(y)}</li>`).join("")}</ol>` : "")}
         ${sec("Si te lleva la contraria", "acSal", a.salida ? `<p>${esc(a.salida)}</p>` : "")}
         ${sec("Ejemplos con la gramática", "acEj", ul(a.ejemplos))}
-        ${sec("Palabras clave", "acPal", a.palabras.length ? `<dl>${a.palabras.map(([w, d]) => `<dt>${esc(w)}</dt><dd>${esc(d)}</dd>`).join("")}</dl>` : "")}
+        ${sec("Palabras clave", "acPal", a.palabras.length ? `<dl>${a.palabras.map(([w, d, en], i) => {
+          const ya = !!(acervo && acervo.tiene(w));
+          const boton = acervo ? `<button type="button" class="acMas${ya ? " ya" : ""}" data-acmas="${i}"${ya ? " disabled" : ""} aria-label="${ya ? `«${esc(w)}» ya está en tu acervo` : `Agregar «${esc(w)}» a tu acervo`}">${ya ? "✓" : "+"}</button>` : "";
+          return `<dt>${boton}<span>${esc(w)}</span></dt><dd>${esc(d)}${en ? ` <i lang="en">(${esc(en)})</i>` : ""}</dd>`;
+        }).join("")}</dl>` : "")}
         ${sec("Para ganar tiempo", "acMul", ul(a.muletillas))}
       </div>
       <div class="acts">
@@ -469,6 +478,14 @@ function abrir(e) {
         <button type="button" class="ub" data-cerrar>Cerrar</button>
       </div>`;
     dentro.querySelector("[data-volver]").addEventListener("click", () => abrir(e));
+    // «+»: la palabra entra a tu acervo como tarjeta nueva (el frente es el inglés; si no viene, el significado).
+    for (const b of dentro.querySelectorAll("[data-acmas]")) b.addEventListener("click", () => {
+      const [w, d, en] = a.palabras[Number(b.dataset.acmas)] || [];
+      if (!w || !acervo || b.disabled) return;
+      acervo.agregar(w, en || d);
+      b.textContent = "✓"; b.disabled = true; b.classList.add("ya");
+      b.setAttribute("aria-label", `«${w}» ya está en tu acervo`);
+    });
     document.getElementById("hvT").focus();
   });
   const cancelar = dentro.querySelector("[data-cancelar]");

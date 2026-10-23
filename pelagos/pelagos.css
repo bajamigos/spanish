@@ -711,7 +711,10 @@ dialog.sheet.escena { width: min(100%, 720px); max-height: 92%; }
 .acordeon ul, .acordeon ol { margin: 6px 0 0; padding-left: 22px; }
 .acordeon li { margin: 0 0 6px; }
 .acordeon dl { margin: 6px 0 0; }
-.acordeon dt { font-weight: 700; margin-top: 6px; }
+.acordeon dt { font-weight: 700; margin-top: 8px; display: flex; align-items: center; gap: 10px; }
+.acordeon .acMas { flex: none; width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--ac); background: transparent; color: var(--ac); font: 700 24px/1 var(--font); cursor: pointer; }
+.acordeon .acMas.ya { background: var(--ac); color: var(--page); cursor: default; }
+.acordeon dd i { opacity: .8; }
 .acordeon dd { margin: 0 0 0 12px; }
 .clFicha { display: grid; justify-items: center; gap: 4px; text-align: center; }
 .clFicha img, .clIni.grande { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 4px solid var(--ink); font-size: 44px; }
