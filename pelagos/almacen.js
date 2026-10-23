@@ -9,7 +9,7 @@
 // - Lo que contestas entra primero a una fila en este aparato y de ahí sube.
 //   Sin internet, la fila espera y sube sola cuando vuelve.
 // - La llave vive solo en este navegador y solo viaja a la dirección de CONFIG.api.
-import { CONFIG } from "./config.js?v=c1bd704d72";
+import { CONFIG } from "./config.js?v=b323b91153";
 
 const CLAVES = { llave: "pelagos.llave", aparato: "pelagos.aparato", fila: "pelagos.fila." };      // la fila: una clave por suceso
 const RUTA_SUCESOS = /^sucesos\/([A-Za-z0-9_-]+)\/(\d{4}-\d{2})\.jsonl$/;
@@ -18,6 +18,9 @@ const RUTA_TABLERO = "tablero/hoy.json";
 const RUTA_CLASES = "tablero/clases.json";
 // Tu registro de lectura (tablero/lectura.json, misma rama): libros, portadas y minutos por día. Solo se lee.
 const RUTA_LECTURA = "tablero/lectura.json";
+// Los enlaces de ElevenReader al repaso y a la práctica de cada clase (23-Oct-2026). Archivo aparte: la tarea del Tablero
+// reescribe clases.json y este no lo toca. Forma: { "enlaces": [ { "inicio", "tutor", "repaso", "practica" } ] }. Solo se lee.
+const RUTA_ENLACES = "tablero/enlaces.json";
 // Un loop de tutora: un GIF o video en escenas/tutora-<lección>/ de la rama de avance.
 const RUTA_LOOP = /^escenas\/tutora-(\d+)\/[a-z0-9-]+\.(gif|mp4|webm)$/;
 let conLoop = new Set();        // lecciones cuya tutora ya tiene loop; se renueva en cada sincronización
@@ -232,6 +235,7 @@ export async function salir() {
   tableroActual = null;
   clasesActual = null;
   lecturaActual = null;
+  enlacesActual = null;
   for (const u of fotosVivas.values()) u.then((x) => x && URL.revokeObjectURL(x)).catch(() => {});
   fotosVivas.clear();
   await kvVaciar();
@@ -262,10 +266,12 @@ let tableroActual = null;       // { sha, datos }: el tablero del día, tal como
 /** El tablero del día tal como está en el repositorio, o null. La forma la revisa quien lo usa. */
 export function tablero() { return tableroActual ? tableroActual.datos : null; }
 /** Cambia cuando llega un tablero nuevo o unas clases nuevas: con eso la página sabe que tiene que volver a pintarse. */
-export function huellaTablero() { return (tableroActual ? tableroActual.sha : "") + "|" + (clasesActual ? clasesActual.sha : "") + "|" + (lecturaActual ? lecturaActual.sha : ""); }
+export function huellaTablero() { return (tableroActual ? tableroActual.sha : "") + "|" + (clasesActual ? clasesActual.sha : "") + "|" + (lecturaActual ? lecturaActual.sha : "") + "|" + (enlacesActual ? enlacesActual.sha : ""); }
 let lecturaActual = null;       // { sha, datos }: tu registro de lectura, tal como llegó
 /** Tu registro de lectura tal como está en el repositorio, o null. La forma la revisa quien lo usa. */
 export function lectura() { return lecturaActual ? lecturaActual.datos : null; }
+let enlacesActual = null;       // { sha, datos }: los enlaces del repaso y la práctica de tus clases
+export function enlacesDeClases() { return enlacesActual ? enlacesActual.datos : null; }
 let clasesActual = null;        // { sha, datos }: tus clases de Worldsacross, tal como llegaron
 /** Tus clases tal como están en el repositorio, o null. La forma la revisa quien las usa. */
 export function clases() { return clasesActual ? clasesActual.datos : null; }
@@ -317,6 +323,8 @@ export async function cargarLocal() {
   clasesActual = c && typeof c.sha === "string" && c.datos && typeof c.datos === "object" ? c : null;
   const l = await kvLeer("lectura");
   lecturaActual = l && typeof l.sha === "string" && l.datos && typeof l.datos === "object" ? l : null;
+  const en = await kvLeer("enlaces");
+  enlacesActual = en && typeof en.sha === "string" && en.datos && typeof en.datos === "object" ? en : null;
   if (!guardado || !guardado.datos) return null;
   try { revisarPaquete(guardado.datos); } catch { return null; }
   return guardado.datos;
@@ -347,13 +355,14 @@ export function sincronizar() {
       else throw new Fallo("github", "GitHub contestó algo raro (" + r.status + ").", r.status);
 
       const t = await api(REPO + "/git/trees/" + encodeURIComponent(CONFIG.ramaAvance) + "?recursive=1");
-      let arbol = [], hojaTablero = null, hojaClases = null, hojaLectura = null;
+      let arbol = [], hojaTablero = null, hojaClases = null, hojaLectura = null, hojaEnlaces = null;
       if (t.ok) {
         const blobs = ((await t.json()).tree || []).filter((x) => x.type === "blob");
         arbol = blobs.filter((x) => RUTA_SUCESOS.test(x.path));
         hojaTablero = blobs.find((x) => x.path === RUTA_TABLERO) || null;
         hojaClases = blobs.find((x) => x.path === RUTA_CLASES) || null;
         hojaLectura = blobs.find((x) => x.path === RUTA_LECTURA) || null;
+        hojaEnlaces = blobs.find((x) => x.path === RUTA_ENLACES) || null;
         conLoop = new Set(blobs.map((x) => RUTA_LOOP.exec(x.path)).filter(Boolean).map((m) => Number(m[1])));
         await kvPoner("loops", [...conLoop]);
         conVoz = new Set(blobs.map((x) => RUTA_VOZ.exec(x.path)).filter(Boolean).map((m) => Number(m[1])));
@@ -407,6 +416,20 @@ export function sincronizar() {
           if (b.ok) {
             const datos = JSON.parse(await b.text());
             if (datos && typeof datos === "object") { clasesActual = { sha: hojaClases.sha, datos }; await kvPoner("clases", clasesActual); }
+          }
+        } catch (e) {
+          if (e instanceof Fallo && e.tipo === "llave") throw e;
+        }
+      }
+      // Los enlaces de las clases, igual.
+      if (!hojaEnlaces) {
+        if (t.ok && enlacesActual) { enlacesActual = null; await kvQuitar("enlaces"); }
+      } else if (!enlacesActual || enlacesActual.sha !== hojaEnlaces.sha) {
+        try {
+          const b = await api(REPO + "/git/blobs/" + encodeURIComponent(hojaEnlaces.sha), { crudo: true });
+          if (b.ok) {
+            const datos = JSON.parse(await b.text());
+            if (datos && typeof datos === "object") { enlacesActual = { sha: hojaEnlaces.sha, datos }; await kvPoner("enlaces", enlacesActual); }
           }
         } catch (e) {
           if (e instanceof Fallo && e.tipo === "llave") throw e;

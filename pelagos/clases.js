@@ -28,7 +28,7 @@
 //   siguiente corrida (a los 10, 25, 40 o 55), revisa en Worldsacross las horas que le quedan a ese día (de 8 am a 4 pm,
 //   unos diez minutos) y lo contesta en clases.json: "huecosPedidos": [ { "id": "ph-…", "estado": "hecho" | "no se pudo",
 //   "nota": "…", "contestado": "…" } ], con los «libres» de ese día ya al día. Mientras tanto el día dice «Revisando…».
-import * as A from "./almacen.js?v=c1bd704d72";
+import * as A from "./almacen.js?v=b323b91153";
 
 export const HORA0 = 6, HORA1 = 21, PX = 56;      // la cuadrícula: de 6 am a 9 pm, 56 px por hora
 const ATRAS = 7, ADELANTE = 13;                    // hasta dónde se puede deslizar, en días desde hoy
@@ -43,8 +43,14 @@ let corrimiento = 0;      // cuántos días te has movido desde hoy
 export function aHoy() { corrimiento = 0; }
 
 /** Revisa el archivo y lo vuelve una lista limpia: { leido, clases, libres }, o null si no sirve. */
-export function leerClases(datos) {
+export function leerClases(datos, enlaces = A.enlacesDeClases ? A.enlacesDeClases() : null) {
   if (!datos || typeof datos !== "object" || !Array.isArray(datos.clases)) return null;
+  // Los enlaces de tablero/enlaces.json (mismo tutor y misma hora) se suman a la clase si ella no trae los suyos.
+  const extra = new Map();
+  for (const x of enlaces && Array.isArray(enlaces.enlaces) ? enlaces.enlaces : []) {
+    const t = x && typeof x.inicio === "string" ? new Date(x.inicio).getTime() : NaN;
+    if (!Number.isNaN(t) && typeof x.tutor === "string") extra.set(t + "|" + x.tutor.trim(), x);
+  }
   const limpia = (x, libre) => {
     if (!x || typeof x !== "object" || typeof x.inicio !== "string") return null;
     const ini = new Date(x.inicio);
@@ -58,7 +64,8 @@ export function leerClases(datos) {
     const leccion = lx && typeof lx.url === "string" && /^https:\/\/spanish\.kwiziq\.com\/[^\s"'<>]*$/.test(lx.url)
       ? { url: lx.url, titulo: typeof lx.titulo === "string" && lx.titulo.trim() ? lx.titulo.trim().slice(0, 120) : "Lección de Kwiziq" } : null;
     const er = (u) => !libre && typeof u === "string" && /^https:\/\/elevenreader\.io\/[^\s"'<>]*$/.test(u) ? u : "";
-    return { ini, min, tutor, foto, estado, tema, leccion, repaso: er(x.repaso), practica: er(x.practica) };
+    const ex = libre ? null : extra.get(ini.getTime() + "|" + tutor);
+    return { ini, min, tutor, foto, estado, tema, leccion, repaso: er(x.repaso) || er(ex && ex.repaso), practica: er(x.practica) || er(ex && ex.practica) };
   };
   const clases = datos.clases.map((x) => limpia(x, false)).filter(Boolean).filter((x) => x.estado !== "cancelada").sort((a, b) => a.ini - b.ini);
   const libres = (Array.isArray(datos.libres) ? datos.libres : []).map((x) => limpia(x, true)).filter(Boolean);
