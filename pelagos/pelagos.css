@@ -698,8 +698,15 @@ dialog.sheet.escena { width: min(100%, 720px); max-height: 92%; }
 .acordeon { text-align: left; font-size: 20px; line-height: 1.4; }
 .acordeon h2 { margin: 0 0 6px; font-size: 24px; text-align: center; }
 .acordeon .acTema { margin: 0 0 10px; opacity: .85; text-align: center; }
-.acordeon .acSec { margin: 0 0 10px; padding: 8px 12px; border: 2px solid var(--ink); border-radius: 12px; }
-.acordeon summary { font-weight: 700; font-size: 18px; cursor: pointer; }
+.acordeon .acSec { --ac: var(--ink); margin: 0 0 10px; padding: 8px 12px; border: 2px solid var(--ac); border-left-width: 8px; border-radius: 12px; }
+.acordeon summary { font-weight: 700; font-size: 18px; cursor: pointer; color: var(--ac); }
+.acordeon .acPos { --ac: var(--c3); }
+.acordeon .acArg { --ac: var(--b3); }
+.acordeon .acSal { --ac: var(--rojo); }
+.acordeon .acEj { --ac: var(--y3); }
+.acordeon .acPal { --ac: var(--g3); }
+.acordeon .acMul { --ac: var(--ink-3); }
+.acordeon .acArg li b, .acordeon .acPal dt { color: var(--ac); }
 .acordeon .acPostura { font-weight: 700; font-size: 22px; }
 .acordeon ul, .acordeon ol { margin: 6px 0 0; padding-left: 22px; }
 .acordeon li { margin: 0 0 6px; }

@@ -28,7 +28,7 @@
 //   siguiente corrida (a los 10, 25, 40 o 55), revisa en Worldsacross las horas que le quedan a ese día (de 8 am a 4 pm,
 //   unos diez minutos) y lo contesta en clases.json: "huecosPedidos": [ { "id": "ph-…", "estado": "hecho" | "no se pudo",
 //   "nota": "…", "contestado": "…" } ], con los «libres» de ese día ya al día. Mientras tanto el día dice «Revisando…».
-import * as A from "./almacen.js?v=e07d09427b";
+import * as A from "./almacen.js?v=57e545a02f";
 
 export const HORA0 = 6, HORA1 = 21, PX = 56;      // la cuadrícula: de 6 am a 9 pm, 56 px por hora
 const ATRAS = 7, ADELANTE = 13;                    // hasta dónde se puede deslizar, en días desde hoy
@@ -449,18 +449,20 @@ function abrir(e) {
   // El acordeón sale en la misma hoja; «‹ La clase» regresa a la ficha.
   const acor = dentro.querySelector("[data-acordeon]");
   if (acor) acor.addEventListener("click", () => {
-    const a = e.acordeon, sec = (t, h) => h ? `<details class="acSec" open><summary>${esc(t)}</summary>${h}</details>` : "";
+    const a = e.acordeon, sec = (t, k, h) => h ? `<details class="acSec ${k}" open><summary>${esc(t)}</summary>${h}</details>` : "";
+    // «El botón: …» → la etiqueta corta sale en negritas, para encontrar el argumento de un vistazo.
+    const eti = (y) => { const m = /^([^:]{1,24}):\s+(.+)$/.exec(y); return m ? `<b>${esc(m[1])}:</b> ${esc(m[2])}` : esc(y); };
     const ul = (l) => l.length ? `<ul>${l.map((y) => `<li>${esc(y)}</li>`).join("")}</ul>` : "";
     dentro.innerHTML = `
       <div class="acordeon">
         <h2 id="hvT" tabindex="-1">Acordeón · ${esc(e.tutor.split(" ")[0])}</h2>
         ${a.tema ? `<p class="acTema">${esc(a.tema)}</p>` : ""}
-        ${sec("Tu postura", a.postura ? `<p class="acPostura">${esc(a.postura)}</p>` : "")}
-        ${sec("Tus argumentos", a.argumentos.length ? `<ol>${a.argumentos.map((y) => `<li>${esc(y)}</li>`).join("")}</ol>` : "")}
-        ${sec("Si te lleva la contraria", a.salida ? `<p>${esc(a.salida)}</p>` : "")}
-        ${sec("Ejemplos con la gramática", ul(a.ejemplos))}
-        ${sec("Palabras clave", a.palabras.length ? `<dl>${a.palabras.map(([w, d]) => `<dt>${esc(w)}</dt><dd>${esc(d)}</dd>`).join("")}</dl>` : "")}
-        ${sec("Para ganar tiempo", ul(a.muletillas))}
+        ${sec("Tu postura", "acPos", a.postura ? `<p class="acPostura">${esc(a.postura)}</p>` : "")}
+        ${sec("Tus argumentos", "acArg", a.argumentos.length ? `<ol>${a.argumentos.map((y) => `<li>${eti(y)}</li>`).join("")}</ol>` : "")}
+        ${sec("Si te lleva la contraria", "acSal", a.salida ? `<p>${esc(a.salida)}</p>` : "")}
+        ${sec("Ejemplos con la gramática", "acEj", ul(a.ejemplos))}
+        ${sec("Palabras clave", "acPal", a.palabras.length ? `<dl>${a.palabras.map(([w, d]) => `<dt>${esc(w)}</dt><dd>${esc(d)}</dd>`).join("")}</dl>` : "")}
+        ${sec("Para ganar tiempo", "acMul", ul(a.muletillas))}
       </div>
       <div class="acts">
         <button type="button" class="ub grande" data-volver>‹ La clase</button>
