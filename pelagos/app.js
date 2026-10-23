@@ -1,11 +1,11 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=9a74ad527c";
-import * as A from "./almacen.js?v=9a74ad527c";
-import * as V from "./videos.js?v=9a74ad527c";
-import * as NB from "./nube.js?v=9a74ad527c";
-import * as CL from "./clases.js?v=9a74ad527c";
-import { abrirPractica } from "./practica.js?v=9a74ad527c";
-import * as F from "./fondo.js?v=9a74ad527c";
+import * as N from "./nucleo.js?v=376eca4246";
+import * as A from "./almacen.js?v=376eca4246";
+import * as V from "./videos.js?v=376eca4246";
+import * as NB from "./nube.js?v=376eca4246";
+import * as CL from "./clases.js?v=376eca4246";
+import { abrirPractica } from "./practica.js?v=376eca4246";
+import * as F from "./fondo.js?v=376eca4246";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -795,7 +795,10 @@ function verInicio(o) {
   // ---- Las medidas del día. Los kwizzes y las tarjetas los cuenta Pelagos; lo demás viene del tablero.
   const cuadros = [cuadro("Gramática", kw, metaKw, "quizzes", kw >= metaKw ? "Cumplido" : `Faltan ${metaKw - kw}`, kw >= metaKw, "#" + QUIZ, sello("kwizzes"), "", circulosDeHoy("chico"))];
   // Vocabulario como los demás (su pedido del 18-Oct): las que ya repasaste hoy de las que te tocan hoy.
-  if (tj !== null) cuadros.push(cuadro("Vocabulario", tjHechas, tjHechas + tj, "palabras", tj === 0 ? "Cumplido" : "Por repasar", tj === 0, "#/vocabulario", sello("tarjetas")));
+  // Con sus tres círculos de hoy, igual que Gramática (su pedido del 23-Oct-2026): nuevas, vencidas y falladas que te faltan.
+  const gv = tj !== null ? N.tarjetasDelDia(P, E, hoy).grupos : null;
+  if (tj !== null) cuadros.push(cuadro("Vocabulario", tjHechas, tjHechas + tj, "palabras", tj === 0 ? "Cumplido" : "Por repasar", tj === 0, "#/vocabulario", sello("tarjetas"), "",
+    circulosDeHoy("chico", [gv.nuevas.length, gv.vencidas.length, gv.falladas.length], "vhoy")));
   for (const m of T ? T.medidas : []) {
     if (tarjetas.size && /anki/i.test(m.nombre)) continue;        // con tarjetas propias, las de fuera ya no se enseñan
     const hecho = m.de === 0 ? m.valor === 0 : m.valor >= m.de;
@@ -1467,9 +1470,8 @@ function verTarjetas(o) {
       <div class="ratio"></div>
       ${foto ? `<img data-foto="${esc(foto.nombre)}"${foto.vocab ? ' data-vocab="1"' : ""} alt="">` : ""}
       <div class="over">
-        <p class="lead"><span id="tjFaltan">${enAdelanto ? faltan : (cola.length === 1 ? "Falta 1" : "Faltan " + cola.length)}</span><span id="tjAviso">Dilo en español</span></p>
-        <div class="score"><div class="track" role="img" aria-label="Llevas ${hechas} de ${total}"><i data-w="${100 * hechas / total}"></i></div></div>
-        ${enAdelanto ? htmlNivel(nivelDe(antes)) : lineaDeVocabulario(dia, c.id, antes)}
+        <p class="lead sr"><span id="tjFaltan">${enAdelanto ? faltan : (cola.length === 1 ? "Falta 1" : "Faltan " + cola.length)}</span><span id="tjAviso">Dilo en español</span></p>
+        <div data-explicas>${lineaDeVocabulario(dia, c.id, antes)}${panelExplica()}</div>
         ${renglonConLapiz("frente", c.frente, "h1", "cue", ' id="cue"')}
         ${(() => { const at = N.tarjetasAtascadas(E).get(c.id); return at ? `<p class="tjAtas">Atascada · fallada en ${at.fallos} quizzes esta semana · <button type="button" class="lk" data-v="${esc(c.id)}">Ver su ficha</button></p>` : ""; })()}
       </div>
@@ -1560,6 +1562,10 @@ function lineaLeitner({ cuenta, actual, nivel, cajas, que }) {
     : `<b class="lnN g${i}${i === actual ? " cur" : ""}">${n}</b>`;
   const caja = (n, i) => `<span class="lnC${nivel && i === nivel - 1 ? " cur" : ""}${n ? "" : " cero"}"><b>${n}</b><small>${N.ESCALONES[i]}d</small></span>`;
   const enCajas = cajas.map((n, i) => `${N.PELDANOS[i]}, ${n}`).join("; ");
+  if (que === "temas" || que === "palabras") return `<div class="lineaG">
+    <div class="gFila">${que === "temas" ? `<span class="lnCuenta" role="img" aria-label="Este quiz: ${dice}">${cuenta.map(num).join('<i aria-hidden="true">-</i>')}</span>` : "<span></span>"}<span class="hoyFila"><span>Hoy</span>${que === "temas" ? circulosDeHoy("medio") : circulosDeHoy("medio", cuenta, "vhoy")}</span></div>
+    <span class="lnCajas grandes" role="img" aria-label="Tus ${que} por caja: ${enCajas}${nivel ? `. Este tema va en la de ${N.PELDANOS[nivel - 1]}` : ". Este tema todavía no tiene caja"}">${cajas.map(caja).join("")}</span>
+  </div>`;
   return `<div class="linea">
     <span class="lnCuenta" role="img" aria-label="Quedan: ${dice}">${cuenta.map(num).join('<i aria-hidden="true">-</i>')}</span>
     ${htmlNivel(nivel)}
@@ -1570,17 +1576,23 @@ function lineaLeitner({ cuenta, actual, nivel, cajas, que }) {
 // Su regla: rayitas para «este quiz» (la línea de arriba del quiz) y círculos para «hoy».
 const GRUPOS_HOY = [["nuevo", "nuevos"], ["vencido", "vencidos"], ["fallado", "fallados"]];
 /** Los tres círculos de hoy. tam: "chico" (Tablero), "medio" (durante el quiz) o "grande" (página del Quiz, con su palabra). */
-function circulosDeHoy(tam) {
-  const c = N.cuentaDelDia(P, E, N.fechaLocal(new Date()));
-  const ns = [c.nuevos, c.vencidos, c.fallados];
-  const dice = ns.map((n, i) => n + " " + GRUPOS_HOY[i][n === 1 ? 0 : 1]).join(", ");
+function circulosDeHoy(tam, cuentas = null, donde = "hoy") {
+  const c = cuentas ? null : N.cuentaDelDia(P, E, N.fechaLocal(new Date()));
+  const ns = cuentas || [c.nuevos, c.vencidos, c.fallados];
+  const G = donde === "vhoy" ? GRUPOS_VOC : GRUPOS_HOY;
+  const dice = ns.map((n, i) => n + " " + G[i][n === 1 ? 0 : 1]).join(", ");
   return `<span class="hoyC ${tam}" role="group" aria-label="Hoy: ${dice}">${ns.map((n, i) =>
-    `<button type="button" class="circ g${i}" data-explica="hoy:${i}:${n}" aria-pressed="false" aria-label="${n} ${GRUPOS_HOY[i][n === 1 ? 0 : 1]} hoy"><b>${n}</b>${tam === "grande" ? `<span>${GRUPOS_HOY[i][n === 1 ? 0 : 1]}</span>` : ""}</button>`).join("")}</span>`;
+    `<button type="button" class="circ g${i}" data-explica="${donde}:${i}:${n}" aria-pressed="false" aria-label="${n} ${G[i][n === 1 ? 0 : 1]} hoy"><b>${n}</b>${tam === "grande" ? `<span>${G[i][n === 1 ? 0 : 1]}</span>` : ""}</button>`).join("")}</span>`;
 }
+const GRUPOS_VOC = [["nueva", "nuevas"], ["vencida", "vencidas"], ["fallada", "falladas"]];
 const panelExplica = () => `<div class="explica" role="status" hidden></div>`;
 function textoExplica(donde, i, n) {
-  const g = GRUPOS_HOY[i][n === 1 ? 0 : 1], titulo = `${donde === "hoy" ? "Hoy" : "Este quiz"} · ${n} ${g}:`;
-  const T = donde === "hoy" ? [
+  const g = (donde === "vhoy" ? GRUPOS_VOC : GRUPOS_HOY)[i][n === 1 ? 0 : 1], titulo = `${donde === "quiz" ? "Este quiz" : "Hoy"} · ${n} ${g}:`;
+  const T = donde === "vhoy" ? [
+    "palabras que todavía no has aprendido y que entran hoy.",
+    "palabras que ya aprendiste y que hoy te toca repasar.",
+    "palabras que fallaste hoy; vuelven a salir hasta que las aciertes.",
+  ] : donde === "hoy" ? [
     "lo que te queda de tus cinco temas nuevos de hoy. Si ya no te queda ningún repaso, entran más.",
     "temas que ya aprendiste y que hoy te toca repasar, contando los que todavía no entran a tu quiz. Entran primero, el más atrasado antes.",
     "temas que todavía te deben aciertos, de cualquier día. Necesitan dos aciertos seguidos para salir de tu plan.",
@@ -1611,7 +1623,13 @@ document.addEventListener("click", (ev) => {
 /** Llena o vacía los puntitos, uno tras otro, para que se vea la subida o la caída. */
 function moverNivel(de, a) {
   const caja = $("tjNivel");
-  if (!caja) return;
+  if (!caja) {
+    // Sin puntitos (23-Oct-2026): se resalta la caja a la que llegó la tarjeta o el tema.
+    const cs = [...document.querySelectorAll(".lnCajas.grandes .lnC")];
+    cs.forEach((c, i) => { c.classList.toggle("cur", i === a - 1); c.classList.remove("salta", "cae"); });
+    if (a > 0 && cs[a - 1]) { void cs[a - 1].offsetWidth; cs[a - 1].classList.add(a > de ? "salta" : a < de ? "cae" : "salta"); }
+    return;
+  }
   caja.classList.add(a > de ? "sube" : a < de ? "baja" : "igual");
   caja.setAttribute("aria-label", `Peldaño ${a} de ${N.ESCALONES.length}`);
   [...caja.children].forEach((p, i) => {
@@ -3090,7 +3108,7 @@ function verKwiz(o) {
   ${tarjetaAtorados()}
   <section class="card" id="lista">
     <h1 class="h">Tu plan de estudio Pelagos</h1>
-    <div class="hoyGrande" data-explicas><p class="small">Te queda hoy · toca un número</p>${circulosDeHoy("grande")}${panelExplica()}</div>
+    <div class="hoyGrande" data-explicas><p class="small">Te queda hoy</p>${circulosDeHoy("grande")}${panelExplica()}</div>
     <div class="conCuadro">${deLista.length && !lista.abierto ? `<button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Empezar quiz</button>`
       : abierto ? `<a class="ub grande" href="#${QUIZ}/${esc(abierto.id)}">Seguir el quiz</a>` : "<span></span>"}${conCuadro(hoy)}</div>
     ${abierto ? `<p class="small">Tienes un quiz a medias. Lo que ya contestaste está guardado.${deLista.length && !lista.abierto ? ` <a href="#${QUIZ}/${esc(abierto.id)}">Seguirlo</a>` : ""}</p>` : ""}
@@ -3294,9 +3312,9 @@ function verPregunta(o, kid) {
       <div class="ratio"></div>
       ${deTutora ? (ambiente() === "limpio" ? "" : '<div class="tutoraVideo" id="tutoraVideo"></div>') : arriba ? "" : imagenDeArriba(foto && foto.nombre)}
       <div class="over">
-        <p class="lead"><span>${deTutora ? `Aciertos: ${k.bien || 0} de ${N.ACIERTOS_TUTORA}` : `Pregunta ${sig.orden} de ${sig.total}`}</span><span>${enHueco ? "Escribe lo que falta" : escribir ? "Dilo en español" : "Toca la respuesta"}</span></p>
-        <div class="score"><div class="track" role="img" aria-label="${deTutora ? `Llevas ${k.bien || 0} de ${N.ACIERTOS_TUTORA} aciertos` : `Vas en la ${sig.orden} de ${sig.total}`}"><i data-w="${deTutora ? 100 * (k.bien || 0) / N.ACIERTOS_TUTORA : 100 * (sig.orden - 1) / sig.total}"></i></div></div>
-        ${deTutora ? "" : `<div data-explicas><div class="hoyFila"><span>Hoy</span>${circulosDeHoy("medio")}</div>${lineaDeGramatica(k, q.tema)}${panelExplica()}</div>`}
+        <p class="lead${deTutora ? "" : " sr"}"><span>${deTutora ? `Aciertos: ${k.bien || 0} de ${N.ACIERTOS_TUTORA}` : `Pregunta ${sig.orden} de ${sig.total}`}</span><span>${enHueco ? "Escribe lo que falta" : escribir ? "Dilo en español" : "Toca la respuesta"}</span></p>
+        ${deTutora ? `<div class="score"><div class="track" role="img" aria-label="Llevas ${k.bien || 0} de ${N.ACIERTOS_TUTORA} aciertos"><i data-w="${100 * (k.bien || 0) / N.ACIERTOS_TUTORA}"></i></div></div>` : ""}
+        ${deTutora ? "" : `<div data-explicas>${lineaDeGramatica(k, q.tema)}${panelExplica()}</div>`}
         <h1 class="cue" id="cue"${q.tipo === "escribir" ? ' lang="en"' : ""}>${hueco(q.frase)}</h1>
         ${(() => { const at = deTutora ? null : N.temasAtascados(E).get(q.tema); return at && tema ? `<p class="tjAtas">Atascado · fallado en ${at.fallos} quizzes esta semana${tema.slug && tema.leccion ? ` · <a class="lk" href="#/leccion/${esc(tema.slug)}">Ver la lección</a>` : ""}</p>` : ""; })()}
         ${q.glosa ? `<p class="sub">(${esc(q.glosa)})</p>` : ""}
@@ -3556,6 +3574,7 @@ function verResultado(o, kid) {
     <h1 class="h">${k.tipo === "tutora" ? (k.bien >= N.ACIERTOS_TUTORA ? `¡${N.ACIERTOS_TUTORA} de ${N.ACIERTOS_TUTORA}! Llegaste al final` : `${k.bien} buenas: te faltaron ${N.ACIERTOS_TUTORA - k.bien}`) : `${k.bien} de ${k.total}`}</h1>
     <p>${TIPOS_KWIZ[k.tipo] || "Quiz"} · ${cuando(k.terminado)}</p>
     ${barra(k.total ? 100 * k.bien / k.total : 0, " gorda")}
+    ${k.tipo === "tutora" ? "" : `<div class="hoyGrande" data-explicas><p class="small">Te queda hoy</p>${circulosDeHoy("grande")}${panelExplica()}</div>`}
     <div class="conCuadro"><button type="button" class="ub grande" data-kwiz='${esc(igual)}'>${k.tipo === "lista" ? "Otro quiz de tu plan" : "Otro quiz igual"}</button>${conCuadro()}</div>
     <div class="go"><a class="ub" href="${(() => { const t = k.tipo === "tutora" ? porId.get(k.tema) : null; return t && t.slug && t.leccion ? "#/leccion/" + esc(t.slug) : "#" + QUIZ; })()}">Cerrar</a>${fallas.length ? `<button type="button" class="ub" id="estudiarFallas">Estudiar las fallas</button>` : ""}</div>
   </section>

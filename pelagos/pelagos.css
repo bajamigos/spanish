@@ -869,6 +869,19 @@ button.lnN[aria-pressed="true"] { outline: 3px solid currentColor; outline-offse
 .hoyC.chico .circ b { min-width: 1.3em; padding: 1px 6px; font-size: 13px; }
 .hoyC.medio .circ b { min-width: 1.7em; padding: 2px 10px; font-size: 17px; }
 .hoyFila { display: flex; justify-content: flex-end; align-items: center; gap: 6px; margin: 0 0 8px; font-size: 15px; }
+/* La línea del quiz de gramática (23-Oct-2026): un renglón con este quiz y hoy; abajo tus cajas, grandes y parejas. */
+.lineaG { display: grid; gap: 10px; margin: 0 0 12px; }
+.gFila { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.gFila .hoyFila { margin: 0; }
+.lnCajas.grandes { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 4px; }
+.lnCajas.grandes .lnC { padding: 6px 0; border: 1px solid var(--line); border-radius: 8px; opacity: 1; }
+.lnCajas.grandes .lnC b { font-size: 20px; }
+.lnCajas.grandes .lnC small { display: block; font-size: 13px; }
+.lnCajas.grandes .lnC.cero { opacity: 0.6; }
+.lnCajas.grandes .lnC.cur { background: var(--ink); color: var(--page); border-color: var(--ink); }
+.lnCajas.grandes .lnC.salta { animation: cajaSalta 0.45s ease; } .lnCajas.grandes .lnC.cae { animation: tjCae 0.45s ease; }
+@keyframes cajaSalta { 40% { transform: scale(1.18); } }
+@media (prefers-reduced-motion: reduce) { .lnCajas.grandes .lnC.salta, .lnCajas.grandes .lnC.cae { animation: none; } }
 .hoyGrande { border: 1px solid var(--line); border-radius: 14px; padding: 12px; margin: 12px 0; background: var(--card); }
 .hoyGrande .small { margin: 0 0 6px; }
 .hoyC.grande { justify-content: space-between; text-align: center; }
