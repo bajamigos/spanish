@@ -76,8 +76,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .top .ub.atras { flex: 0 0 auto; width: 52px; min-height: 44px; font-size: 30px; line-height: 1; font-weight: 700; padding: 0 0 4px; }
 /* El nombre de la materia, abajo del logo y arriba de sus tres botones. */
 .secTitulo { font-size: 28px; font-weight: 800; line-height: 1.15; margin: 0 0 10px; text-shadow: var(--halo); }
-/* Con foto, el nombre va sobre la orilla de abajo de la foto, junto al logo: no empuja la página hacia abajo. */
-.confoto .sobre > .secTitulo { margin-top: -46px; position: relative; }
+/* Con foto o con el logo de fondo, el nombre va debajo, centrado, arriba de los tres botones (su pedido del 22-Oct-2026). */
+.sobre > .secTitulo { text-align: center; margin: 0; }
 /* Sin foto (las tarjetas de vocabulario), el nombre sube al renglón del ‹, a su derecha: no empuja la tarjeta. */
 .vista > .secTitulo { min-height: 44px; display: flex; align-items: center; margin: -58px 0 0 64px; font-size: 24px; }
 /* La Bitácora del Tablero: una sola tira de 26 semanas. */
