@@ -28,7 +28,7 @@
 //   siguiente corrida (a los 10, 25, 40 o 55), revisa en Worldsacross las horas que le quedan a ese día (de 8 am a 4 pm,
 //   unos diez minutos) y lo contesta en clases.json: "huecosPedidos": [ { "id": "ph-…", "estado": "hecho" | "no se pudo",
 //   "nota": "…", "contestado": "…" } ], con los «libres» de ese día ya al día. Mientras tanto el día dice «Revisando…».
-import * as A from "./almacen.js?v=b323b91153";
+import * as A from "./almacen.js?v=e07d09427b";
 
 export const HORA0 = 6, HORA1 = 21, PX = 56;      // la cuadrícula: de 6 am a 9 pm, 56 px por hora
 const ATRAS = 7, ADELANTE = 13;                    // hasta dónde se puede deslizar, en días desde hoy
@@ -41,6 +41,18 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "
 let corrimiento = 0;      // cuántos días te has movido desde hoy
 /** Al entrar a la página, se empieza en hoy. */
 export function aHoy() { corrimiento = 0; }
+
+/** El acordeón de una clase (lo corto para tenerlo a la vista durante la plática), o null si no sirve.
+ *  { tema, postura, argumentos: [..], salida, ejemplos: [..], palabras: [[palabra, significado], ..], muletillas: [..] } */
+export function leerAcordeon(a) {
+  if (!a || typeof a !== "object") return null;
+  const txt = (v, n = 300) => typeof v === "string" && v.trim() ? v.trim().slice(0, n) : "";
+  const lista = (v, n = 8) => Array.isArray(v) ? v.map((y) => txt(y)).filter(Boolean).slice(0, n) : [];
+  const palabras = Array.isArray(a.palabras) ? a.palabras.filter((y) => Array.isArray(y) && txt(y[0], 60)).map((y) => [txt(y[0], 60), txt(y[1], 160)]).slice(0, 16) : [];
+  const r = { tema: txt(a.tema), postura: txt(a.postura), argumentos: lista(a.argumentos), salida: txt(a.salida),
+    ejemplos: lista(a.ejemplos), palabras, muletillas: lista(a.muletillas) };
+  return r.tema || r.postura || r.argumentos.length || r.palabras.length ? r : null;
+}
 
 /** Revisa el archivo y lo vuelve una lista limpia: { leido, clases, libres }, o null si no sirve. */
 export function leerClases(datos, enlaces = A.enlacesDeClases ? A.enlacesDeClases() : null) {
@@ -65,7 +77,8 @@ export function leerClases(datos, enlaces = A.enlacesDeClases ? A.enlacesDeClase
       ? { url: lx.url, titulo: typeof lx.titulo === "string" && lx.titulo.trim() ? lx.titulo.trim().slice(0, 120) : "Lección de Kwiziq" } : null;
     const er = (u) => !libre && typeof u === "string" && /^https:\/\/elevenreader\.io\/[^\s"'<>]*$/.test(u) ? u : "";
     const ex = libre ? null : extra.get(ini.getTime() + "|" + tutor);
-    return { ini, min, tutor, foto, estado, tema, leccion, repaso: er(x.repaso) || er(ex && ex.repaso), practica: er(x.practica) || er(ex && ex.practica) };
+    return { ini, min, tutor, foto, estado, tema, leccion, repaso: er(x.repaso) || er(ex && ex.repaso), practica: er(x.practica) || er(ex && ex.practica),
+      acordeon: libre ? null : leerAcordeon(x.acordeon) || leerAcordeon(ex && ex.acordeon) };
   };
   const clases = datos.clases.map((x) => limpia(x, false)).filter(Boolean).filter((x) => x.estado !== "cancelada").sort((a, b) => a.ini - b.ini);
   const libres = (Array.isArray(datos.libres) ? datos.libres : []).map((x) => limpia(x, true)).filter(Boolean);
@@ -405,6 +418,7 @@ function abrir(e) {
       ${e.hecha || libre ? "" : `<a class="ub grande" href="${WA}" target="_blank" rel="noopener noreferrer">Entrar a la clase</a>`}
       ${!libre && e.practica ? `<a class="ub grande" data-practica href="${esc(e.practica)}" target="_blank" rel="noopener noreferrer">Practicar</a>` : ""}
       ${!libre && e.repaso ? `<a class="ub" data-repaso href="${esc(e.repaso)}" target="_blank" rel="noopener noreferrer">Escuchar el repaso</a>` : ""}
+      ${!libre && e.acordeon ? `<button type="button" class="ub" data-acordeon>Acordeón</button>` : ""}
       <button type="button" class="ub" data-cerrar>Cerrar</button>
     </div>`;
   // Se cierra como con «Cerrar», para que la página haga lo mismo de siempre (regresar el foco, etc.).
@@ -431,6 +445,29 @@ function abrir(e) {
       cerrar();
       repintarAhora();
     });
+  });
+  // El acordeón sale en la misma hoja; «‹ La clase» regresa a la ficha.
+  const acor = dentro.querySelector("[data-acordeon]");
+  if (acor) acor.addEventListener("click", () => {
+    const a = e.acordeon, sec = (t, h) => h ? `<details class="acSec" open><summary>${esc(t)}</summary>${h}</details>` : "";
+    const ul = (l) => l.length ? `<ul>${l.map((y) => `<li>${esc(y)}</li>`).join("")}</ul>` : "";
+    dentro.innerHTML = `
+      <div class="acordeon">
+        <h2 id="hvT" tabindex="-1">Acordeón · ${esc(e.tutor.split(" ")[0])}</h2>
+        ${a.tema ? `<p class="acTema">${esc(a.tema)}</p>` : ""}
+        ${sec("Tu postura", a.postura ? `<p class="acPostura">${esc(a.postura)}</p>` : "")}
+        ${sec("Tus argumentos", a.argumentos.length ? `<ol>${a.argumentos.map((y) => `<li>${esc(y)}</li>`).join("")}</ol>` : "")}
+        ${sec("Si te lleva la contraria", a.salida ? `<p>${esc(a.salida)}</p>` : "")}
+        ${sec("Ejemplos con la gramática", ul(a.ejemplos))}
+        ${sec("Palabras clave", a.palabras.length ? `<dl>${a.palabras.map(([w, d]) => `<dt>${esc(w)}</dt><dd>${esc(d)}</dd>`).join("")}</dl>` : "")}
+        ${sec("Para ganar tiempo", ul(a.muletillas))}
+      </div>
+      <div class="acts">
+        <button type="button" class="ub grande" data-volver>‹ La clase</button>
+        <button type="button" class="ub" data-cerrar>Cerrar</button>
+      </div>`;
+    dentro.querySelector("[data-volver]").addEventListener("click", () => abrir(e));
+    document.getElementById("hvT").focus();
   });
   const cancelar = dentro.querySelector("[data-cancelar]");
   if (cancelar) cancelar.addEventListener("click", () => {
