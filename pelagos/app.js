@@ -1,11 +1,11 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=85955b1fa8";
-import * as A from "./almacen.js?v=85955b1fa8";
-import * as V from "./videos.js?v=85955b1fa8";
-import * as NB from "./nube.js?v=85955b1fa8";
-import * as CL from "./clases.js?v=85955b1fa8";
-import { abrirPractica } from "./practica.js?v=85955b1fa8";
-import * as F from "./fondo.js?v=85955b1fa8";
+import * as N from "./nucleo.js?v=81a5e2a09a";
+import * as A from "./almacen.js?v=81a5e2a09a";
+import * as V from "./videos.js?v=81a5e2a09a";
+import * as NB from "./nube.js?v=81a5e2a09a";
+import * as CL from "./clases.js?v=81a5e2a09a";
+import { abrirPractica } from "./practica.js?v=81a5e2a09a";
+import * as F from "./fondo.js?v=81a5e2a09a";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -804,7 +804,8 @@ function verInicio(o) {
     const hecho = m.de === 0 ? m.valor === 0 : m.valor >= m.de;
     const falta = Math.round((m.de - m.valor) * 10) / 10;
     const escucha = ESCUCHA.test(m.nombre);      // se enseña como «Escucha», venga como venga del tablero
-    cuadros.push(cuadro(escucha ? "Escucha" : m.nombre, m.valor, m.de, m.unidad, hecho ? "Cumplido" : m.de === 0 ? "Meta: cero" : `Faltan ${falta}`, hecho,
+    const habla = /^clase/i.test(m.nombre);      // las clases se enseñan como «Habla», en «clases» (pedido del 23-Oct-2026)
+    cuadros.push(cuadro(escucha ? "Escucha" : habla ? "Habla" : m.nombre, m.valor, m.de, habla ? m.unidad || (m.de === 1 ? "clase" : "clases") : m.unidad, hecho ? "Cumplido" : m.de === 0 ? "Meta: cero" : `Faltan ${falta}`, hecho,
       /^clase/i.test(m.nombre) ? "#/clases" : escucha ? "#/lectura" : "", sello("medida:" + m.nombre)));
   }
   // Solo se dice de cuándo son los números de fuera si no son de hoy.
