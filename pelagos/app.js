@@ -1,11 +1,11 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=376eca4246";
-import * as A from "./almacen.js?v=376eca4246";
-import * as V from "./videos.js?v=376eca4246";
-import * as NB from "./nube.js?v=376eca4246";
-import * as CL from "./clases.js?v=376eca4246";
-import { abrirPractica } from "./practica.js?v=376eca4246";
-import * as F from "./fondo.js?v=376eca4246";
+import * as N from "./nucleo.js?v=c1bd704d72";
+import * as A from "./almacen.js?v=c1bd704d72";
+import * as V from "./videos.js?v=c1bd704d72";
+import * as NB from "./nube.js?v=c1bd704d72";
+import * as CL from "./clases.js?v=c1bd704d72";
+import { abrirPractica } from "./practica.js?v=c1bd704d72";
+import * as F from "./fondo.js?v=c1bd704d72";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -525,9 +525,8 @@ function cuadro(nombre, valor, de, unidad, estado, hecho, enlace = "", sello = n
   return `<${abre} class="cuadro${hecho ? " hecho" : ""}${sello ? " consello" : ""}" role="listitem">
     ${sello ? selloHtml(sello) : ""}
     <span class="cn">${esc(nombre)}${sub ? `<small class="csub">${esc(sub)}</small>` : ""}</span>
-    <span class="cv">${esc(valor)}${aCero ? "" : `<small> de ${esc(de)}${unidad ? " " + esc(unidad) : ""}</small>`}</span>
+    <span class="cv">${esc(valor)}${aCero ? "" : `<small>/${esc(de)}${unidad ? " " + esc(unidad) : ""}</small>`}</span>
     ${extra}
-    ${aCero ? '<span class="bar vacia"></span>' : barra(de ? (valor / de) * 100 : 0)}
   </${cierra}>`;
 }
 
@@ -797,7 +796,7 @@ function verInicio(o) {
   // Vocabulario como los demás (su pedido del 18-Oct): las que ya repasaste hoy de las que te tocan hoy.
   // Con sus tres círculos de hoy, igual que Gramática (su pedido del 23-Oct-2026): nuevas, vencidas y falladas que te faltan.
   const gv = tj !== null ? N.tarjetasDelDia(P, E, hoy).grupos : null;
-  if (tj !== null) cuadros.push(cuadro("Vocabulario", tjHechas, tjHechas + tj, "palabras", tj === 0 ? "Cumplido" : "Por repasar", tj === 0, "#/vocabulario", sello("tarjetas"), "",
+  if (tj !== null) cuadros.push(cuadro("Vocabulario", tjHechas, tjHechas + tj, "cards", tj === 0 ? "Cumplido" : "Por repasar", tj === 0, "#/vocabulario", sello("tarjetas"), "",
     circulosDeHoy("chico", [gv.nuevas.length, gv.vencidas.length, gv.falladas.length], "vhoy")));
   for (const m of T ? T.medidas : []) {
     if (tarjetas.size && /anki/i.test(m.nombre)) continue;        // con tarjetas propias, las de fuera ya no se enseñan
@@ -3087,7 +3086,7 @@ function cuadroVocabulario(hoy = N.fechaLocal(new Date())) {
   const dia = N.tarjetasDelDia(P, E, hoy), tj = dia.pendientes.length, hecho = tj === 0;
   const T = N.leerTablero(A.tablero());
   const parte = T && T.checkin ? T.checkin.partes.find((x) => x.con === "tarjetas" && SELLOS[iconoDe(x)]) : null;
-  return cuadro("Vocabulario", dia.hechasHoy, dia.hechasHoy + tj, "palabras", hecho ? "Cumplido" : "Por repasar", hecho, "", parte ? { ...parte, va: hecho, estatico: true } : null);
+  return cuadro("Vocabulario", dia.hechasHoy, dia.hechasHoy + tj, "cards", hecho ? "Cumplido" : "Por repasar", hecho, "", parte ? { ...parte, va: hecho, estatico: true } : null);
 }
 /** El cuadro de los quizzes de hoy, para ir junto a un botón (en un renglón «conCuadro»). */
 const conCuadro = (hoy) => `<div class="unCuadro" role="list" aria-label="Tus quizzes de hoy">${cuadroGramatica(hoy)}</div>`;
