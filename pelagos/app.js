@@ -1,11 +1,11 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=5a69800507";
-import * as A from "./almacen.js?v=5a69800507";
-import * as V from "./videos.js?v=5a69800507";
-import * as NB from "./nube.js?v=5a69800507";
-import * as CL from "./clases.js?v=5a69800507";
-import { abrirPractica } from "./practica.js?v=5a69800507";
-import * as F from "./fondo.js?v=5a69800507";
+import * as N from "./nucleo.js?v=9a74ad527c";
+import * as A from "./almacen.js?v=9a74ad527c";
+import * as V from "./videos.js?v=9a74ad527c";
+import * as NB from "./nube.js?v=9a74ad527c";
+import * as CL from "./clases.js?v=9a74ad527c";
+import { abrirPractica } from "./practica.js?v=9a74ad527c";
+import * as F from "./fondo.js?v=9a74ad527c";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1439,13 +1439,11 @@ function verTarjetas(o) {
   if (adelanto && !restan.length) adelanto = null;
   if (!dia.pendientes.length && !restan.length) {
     const masTarde = N.tarjetasAdelante(P, E, hoy);
-    // Cuándo vuelve a tocar algo, para que «en cero» no parezca que se acabaron para siempre.
-    const fechas = mazo().map((c) => E.tarjetas.get(c.id)).filter((x) => x && !x.quitada && x.toca && x.toca > hoy).map((x) => x.toca).sort();
+    // El letrero «Vocabulario en cero · Hoy repasaste…» se quitó el 22-Oct-2026 (su pedido): el cuadro ya lo dice.
     return poner(conFondo(`
     ${entradas("vocabulario", "quiz")}
     <section class="card" id="tjCero">
-      <h1 class="h">${dia.total ? "Vocabulario en cero" : "Todavía no hay vocabulario"}</h1>
-      ${dia.total ? `<p>Hoy repasaste ${dia.hechasHoy} de tus ${plural(dia.total, "palabra", "palabras")}.${fechas.length ? ` Las siguientes tocan el ${fecha(fechas[0])}.` : ""}</p>` : "<p>Cuando haya palabras en el contenido, aquí salen las de cada día.</p>"}
+      ${dia.total ? `<h1 class="sr">Vocabulario en cero</h1>` : `<h1 class="h">Todavía no hay vocabulario</h1><p>Cuando haya palabras en el contenido, aquí salen las de cada día.</p>`}
       <div class="conCuadro">${masTarde.length ? `<button type="button" class="ub grande" id="tjAdelantar">Adelantar ${masTarde.length}</button>` : "<span></span>"}<div class="unCuadro" role="list" aria-label="Tu vocabulario de hoy">${cuadroVocabulario(hoy)}</div></div>
       ${curvaVocab().replace('class="tjCurva"', 'class="tjCurva enCero"')}
       ${masTarde.length ? `<p class="small">Estudia ahora ${plural(masTarde.length, "palabra que toca", "palabras que tocan")} más adelante. La que aciertes sube su escalón desde hoy; la que falles vuelve a salir hoy.</p>` : ""}
