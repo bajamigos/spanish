@@ -1374,3 +1374,30 @@ export function tutoraDelDia(candidatas, fecha, salto = 0) {
   const i = dia + (Number(salto) || 0);
   return lista[((i % lista.length) + lista.length) % lista.length];
 }
+
+/**
+ * Lo que te toca repasar cada día que viene (pedido del 23-Oct-2026 para la Bitácora, como el mapa de Anki):
+ * Map día → { v: tarjetas, g: temas }. Solo repasos con fecha (lo del círculo amarillo): nada de nuevas ni de
+ * temas nuevos, porque esos dependen de cómo te vaya. Una tarjeta y un tema pesan lo mismo.
+ * Hoy junta también todo lo atrasado (y los temas que debes por fallarlos).
+ */
+export function cargaFutura(paquete, estado, hoy = fechaLocal(new Date()), dias = 60) {
+  const fin = new Date(hoy + "T12:00:00"); fin.setDate(fin.getDate() + dias);
+  const ultimo = fechaLocal(fin);
+  const carga = new Map();
+  const sumar = (dia, k) => { const x = carga.get(dia) || { v: 0, g: 0 }; x[k]++; carga.set(dia, x); };
+  for (const c of mazo(paquete, estado)) {
+    const s = estado.tarjetas && estado.tarjetas.get(c.id);
+    if (!s || s.quitada || !s.toca) continue;
+    const dia = s.toca < hoy ? hoy : s.toca;
+    if (dia <= ultimo) sumar(dia, "v");
+  }
+  for (const t of temasCon(paquete, estado, estado.enfoque).keys()) {
+    const i = estado.temas.get(t);
+    if ((estado.debe.get(t) || 0) > 0) { sumar(hoy, "g"); continue; }
+    if (!i.toca) continue;
+    const dia = i.toca < hoy ? hoy : i.toca;
+    if (dia <= ultimo) sumar(dia, "g");
+  }
+  return carga;
+}

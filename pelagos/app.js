@@ -1,11 +1,11 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=ef1382e339";
-import * as A from "./almacen.js?v=ef1382e339";
-import * as V from "./videos.js?v=ef1382e339";
-import * as NB from "./nube.js?v=ef1382e339";
-import * as CL from "./clases.js?v=ef1382e339";
-import { abrirPractica } from "./practica.js?v=ef1382e339";
-import * as F from "./fondo.js?v=ef1382e339";
+import * as N from "./nucleo.js?v=85955b1fa8";
+import * as A from "./almacen.js?v=85955b1fa8";
+import * as V from "./videos.js?v=85955b1fa8";
+import * as NB from "./nube.js?v=85955b1fa8";
+import * as CL from "./clases.js?v=85955b1fa8";
+import { abrirPractica } from "./practica.js?v=85955b1fa8";
+import * as F from "./fondo.js?v=85955b1fa8";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -277,6 +277,7 @@ function vestir(raiz) {
   }
   for (const e of raiz.querySelectorAll("[data-alto]")) e.style.height = e.dataset.alto + "px";
   for (const e of raiz.querySelectorAll("[data-col]")) e.style.gridColumnStart = e.dataset.col;        // los meses del mapa de calor
+  acomodarBitacora(raiz.querySelector(".bitT"));
   for (const img of raiz.querySelectorAll("img[data-retrato]")) {
     // Sin retrato (no llegó, o no hay conexión) la página de Hoy se acomoda como si no hubiera foto.
     A.foto(retratos.get(img.dataset.retrato), "andrea").then((u) => {
@@ -1326,6 +1327,74 @@ function tiraReciente(hoy, modo, semanas = 26) {
   }
   return `<div class="hmeses" aria-hidden="true">${meses.join("")}</div><div class="htira">${cuadros.join("")}</div>`;
 }
+/** Los escalones del futuro: cuántos repasos (tarjetas + temas, pesan igual) te tocan ese día. */
+const CALOR_FUT = [1, 15, 30, 50];
+const SEMANAS_FUT = 8;          // las semanas que se ven por delante
+/** Lo que te toca en un día que viene, según el modo: { n, v, g }. */
+function cargaDe(fut, dia, modo) {
+  const x = fut.get(dia) || { v: 0, g: 0 };
+  const v = modo === "gramatica" ? 0 : x.v, g = modo === "vocabulario" ? 0 : x.g;
+  return { n: v + g, v, g };
+}
+/**
+ * La tira de la Bitácora como la de Anki (pedido del 23-Oct-2026): todo tu pasado hacia la izquierda (se desliza),
+ * hoy a tres cuartos y 8 semanas de futuro en gris: lo que te toca repasar (tarjetas y temas pesan lo mismo).
+ * Hoy va partido: arriba lo que ya hiciste, abajo lo que te falta.
+ */
+function tiraBitacora(hoy, modo) {
+  const dos = (n) => String(n).padStart(2, "0");
+  const fut = N.cargaFutura(P, E, hoy, SEMANAS_FUT * 7);
+  const primero = [...E.actividad.keys()].sort()[0] || hoy;
+  const ini = new Date(primero + "T12:00:00"); ini.setDate(ini.getDate() - ((ini.getDay() + 6) % 7));
+  const minimo = new Date(hoy + "T12:00:00"); minimo.setDate(minimo.getDate() - ((minimo.getDay() + 6) % 7) - 7 * 25);
+  if (ini > minimo) ini.setTime(minimo.getTime());                   // al menos 26 semanas hacia atrás
+  const fin = new Date(hoy + "T12:00:00"); fin.setDate(fin.getDate() - ((fin.getDay() + 6) % 7) + 7 * (SEMANAS_FUT + 1) - 1);
+  const cuadros = [], meses = [];
+  let colHoy = 0;
+  for (const d = new Date(ini); d <= fin; d.setDate(d.getDate() + 1)) {
+    const dia = `${d.getFullYear()}-${dos(d.getMonth() + 1)}-${dos(d.getDate())}`;
+    const col = Math.floor(cuadros.length / 7) + 1;
+    if (d.getDate() === 1) meses.push(`<span data-col="${col}">${MESES_CORTOS[d.getMonth()]}</span>`);
+    if (dia < hoy) { cuadros.push(`<i class="hc ${colorDelDia(dia, modo)}" data-dia="${dia}"></i>`); continue; }
+    const c = cargaDe(fut, dia, modo), nf = N.nivelDeCalor(c.n, CALOR_FUT);
+    // Con Juntos, cuánto pone cada uno: el % de vocabulario va en data-pv (lo pinta acomodarBitacora).
+    const pv = modo === "juntos" && c.n ? ` fp" data-pv="${Math.round(100 * c.v / c.n)}` : "";
+    if (dia === hoy) { colHoy = col; cuadros.push(`<i class="hc ${colorDelDia(dia, modo)} hoy${nf ? ` fq f${nf}${pv}` : ""}" data-dia="${dia}"></i>`); }
+    else cuadros.push(`<i class="hc fut${nf ? ` f${nf}${pv}` : ""}" data-dia="${dia}" data-n="${c.n}"></i>`);
+  }
+  const semanas = Math.ceil(cuadros.length / 7);
+  return `<div class="bitScroll" data-colhoy="${colHoy}" data-semanas="${semanas}"><div class="bitAncho">
+    <div class="hmeses" aria-hidden="true">${meses.join("")}</div><div class="htira">${cuadros.join("")}</div></div></div>
+    <p class="bitInfo" id="bitInfo" aria-live="polite"></p>`;
+}
+/** La tira mide lo que sus semanas, y hoy queda a tres cuartos del ancho. */
+function acomodarBitacora(caja) {
+  const sc = caja && caja.querySelector(".bitScroll");
+  if (!sc) return;
+  const sem = Number(sc.dataset.semanas), col = Number(sc.dataset.colhoy), ancho = 14;     // 12 px el cuadro + 2 de espacio
+  const dentro = sc.querySelector(".bitAncho");
+  dentro.style.width = sem * ancho + "px";
+  for (const x of dentro.querySelectorAll(".htira, .hmeses")) x.style.gridTemplateColumns = `repeat(${sem}, 12px)`;
+  for (const e of dentro.querySelectorAll("[data-col]")) e.style.gridColumnStart = e.dataset.col;
+  for (const e of dentro.querySelectorAll("[data-pv]")) e.style.setProperty("--pv", e.dataset.pv + "%");
+  sc.scrollLeft = Math.max(0, (col - 0.5) * ancho - sc.clientWidth * 0.75);
+}
+/** Lo que dice un cuadro al tocarlo, en una línea discreta abajo de la tira. */
+function infoDelDia(dia, hoy, modo) {
+  const f = new Date(dia + "T12:00:00");
+  const nombre = dia === hoy ? "Hoy" : `${["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"][f.getDay()]} ${f.getDate()} ${MESES_CORTOS[f.getMonth()]}`;
+  const pl = (n, a, b) => `${n} ${n === 1 ? a : b}`;
+  const hecho = () => {
+    const v = modo === "gramatica" ? 0 : E.actividadVoc.get(dia) || 0, g = modo === "vocabulario" ? 0 : E.actividadGram.get(dia) || 0;
+    const p = [v ? pl(v, "card", "cards") : "", g ? pl(g, "quiz", "quizzes") : ""].filter(Boolean);
+    return p.length ? p.join(" · ") : "nada";
+  };
+  if (dia < hoy) return `${nombre}: ${hecho()}`;
+  const c = cargaDe(N.cargaFutura(P, E, hoy, SEMANAS_FUT * 7), dia, modo);
+  const toca = c.n ? `${dia === hoy ? "te faltan" : "te tocan"} ${c.n}${c.v && c.g ? ` (${pl(c.v, "card", "cards")}, ${pl(c.g, "tema", "temas")})` : c.v ? " cards" : " temas"}` : dia === hoy ? "no te falta nada" : "nada por repasar";
+  return dia === hoy ? `Hoy: hiciste ${hecho()}; ${toca}` : `${nombre}: ${toca}`;
+}
+
 /** La tarjeta de la Bitácora en el Tablero (22-Oct-2026): solo el mapa de calor, con Juntos · Vocabulario · Gramática. */
 function tarjetaBitacora() {
   if (!calorModo) calorModo = ["juntos", "vocabulario", "gramatica"].includes(guardado("pelagos.bitacora")) ? guardado("pelagos.bitacora") : "juntos";
@@ -1333,7 +1402,7 @@ function tarjetaBitacora() {
   return `<section class="card bitT" id="bitacora" aria-labelledby="bitTT">
     <h2 id="bitTT">Bitácora</h2>
     <div class="tdSeg" role="group" aria-label="Qué enseña la Bitácora">${[["juntos", "Juntos"], ["vocabulario", "Vocabulario"], ["gramatica", "Gramática"]].map(([clave, nombre]) => `<button type="button" data-bmodo="${clave}" aria-pressed="${clave === calorModo}">${nombre}</button>`).join("")}</div>
-    <div class="hanio" id="bitTira" role="img" aria-label="Tus últimas 26 semanas de estudio">${tiraReciente(hoy, calorModo)}</div>
+    <div class="hanio" id="bitTira" aria-label="Tu estudio día por día y lo que te toca repasar en las próximas semanas">${tiraBitacora(hoy, calorModo)}</div>
   </section>`;
 }
 vista.addEventListener("click", (ev) => {
@@ -1342,8 +1411,17 @@ vista.addEventListener("click", (ev) => {
   calorModo = b.dataset.bmodo; guardar("pelagos.bitacora", calorModo);
   const caja = b.closest(".bitT");
   for (const x of caja.querySelectorAll("[data-bmodo]")) x.setAttribute("aria-pressed", String(x.dataset.bmodo === calorModo));
-  caja.querySelector("#bitTira").innerHTML = tiraReciente(N.fechaLocal(new Date()), calorModo);
-  for (const e of caja.querySelectorAll("[data-col]")) e.style.gridColumnStart = e.dataset.col;      // los meses, otra vez en su lugar
+  caja.querySelector("#bitTira").innerHTML = tiraBitacora(N.fechaLocal(new Date()), calorModo);
+  acomodarBitacora(caja);
+});
+// Tocar un cuadro de la Bitácora del Tablero: lo que hiciste o lo que te toca, discretito abajo.
+vista.addEventListener("click", (ev) => {
+  const c = ev.target instanceof Element ? ev.target.closest(".bitT .hc[data-dia]") : null;
+  if (!c) return;
+  const caja = c.closest(".bitT"), info = caja.querySelector("#bitInfo");
+  for (const x of caja.querySelectorAll(".hc.sel")) x.classList.remove("sel");
+  c.classList.add("sel");
+  if (info) info.textContent = infoDelDia(c.dataset.dia, N.fechaLocal(new Date()), calorModo);
 });
 
 /** Tu historia de estudio, día por día: entre más repasos, más caliente el color. Un año por tarjeta, el más nuevo arriba. */

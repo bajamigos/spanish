@@ -82,7 +82,25 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .vista > .secTitulo { min-height: 44px; display: flex; align-items: center; margin: -58px 0 0 64px; font-size: 24px; }
 /* La Bitácora del Tablero: una sola tira de 26 semanas. */
 .bitT { display: grid; gap: 12px; }
-.bitT .htira, .bitT .hmeses { grid-template-columns: repeat(26, minmax(0, 1fr)); }
+/* 23-Oct-2026: se desliza como la de Anki; hoy a tres cuartos y 8 semanas de futuro en gris (lo que te toca repasar). */
+.bitScroll { overflow-x: auto; overflow-y: hidden; scrollbar-width: none; -webkit-overflow-scrolling: touch; touch-action: pan-x pan-y; }
+.bitScroll::-webkit-scrollbar { display: none; }
+.bitT .htira { grid-template-rows: repeat(7, 12px); }
+.bitT .hc { width: 12px; height: 12px; aspect-ratio: auto; position: relative; }
+.bitInfo { margin: 0; min-height: 1.3em; font-size: 14px; color: var(--ink-3); }
+:root { --f1: #d6d6d6; --f2: #aeaeae; --f3: #828282; --f4: #4e4e4e; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --f1: #4c4c47; --f2: #74746d; --f3: #9e9e96; --f4: #d2d2ca; } }
+:root[data-theme="dark"] { --f1: #4c4c47; --f2: #74746d; --f3: #9e9e96; --f4: #d2d2ca; }
+.hc.fut { background: transparent; box-shadow: inset 0 0 0 1px var(--c0); }
+.hc.f1 { --fut: var(--f1); } .hc.f2 { --fut: var(--f2); } .hc.f3 { --fut: var(--f3); } .hc.f4 { --fut: var(--f4); }
+.hc.fut.f1, .hc.fut.f2, .hc.fut.f3, .hc.fut.f4 { background: var(--fut); box-shadow: none; }
+/* Hoy partido: arriba lo hecho (su color), abajo lo que falta (gris). */
+.hc.hoy.fq::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 50%; background: var(--fut); border-radius: 0 0 2px 2px; }
+/* En Juntos, cada cuadro del futuro se parte: arriba lo de vocabulario, abajo lo de gramática, en su proporción
+   (--pv = % de vocabulario; lo escogió Grifo el 23-Oct-2026, la opción 11). El brillo sigue diciendo cuánto en total. */
+.bitT .hc.fp { --tv: color-mix(in srgb, var(--y3) 45%, var(--fut)); --tg: color-mix(in srgb, var(--b3) 45%, var(--fut)); }
+.bitT .hc.fut.fp, .bitT .hc.hoy.fp::after { background: linear-gradient(var(--tv) 0 var(--pv), var(--tg) var(--pv)); }
+
 
 /* «Cómo funciona» (16-Oct-2026) */
 .ayudaIdx { display: grid; gap: 8px; list-style: none; padding: 0; margin: 0; }
