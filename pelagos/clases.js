@@ -23,10 +23,10 @@
 //   y lo contesta en clases.json: "pedidos": [ { "id": "pc-…", "estado": "reservada" | "no se pudo", "nota": "…" } ].
 // - Revisar quién está libre un día (22-Oct-2026): debajo de cada fecha, de hoy a 7 días, hay un botón «Revisar».
 //   Apunta { "t": "pedirHuecos", "id": "ph-…", "dia": "2026-10-22", "cuando": "…" }. Una tarea lo atiende en su
-//   siguiente corrida (a los 10 o a los 40), revisa en Worldsacross las horas que le quedan a ese día (de 8 am a 4 pm,
+//   siguiente corrida (a los 10, 25, 40 o 55), revisa en Worldsacross las horas que le quedan a ese día (de 8 am a 4 pm,
 //   unos diez minutos) y lo contesta en clases.json: "huecosPedidos": [ { "id": "ph-…", "estado": "hecho" | "no se pudo",
 //   "nota": "…", "contestado": "…" } ], con los «libres» de ese día ya al día. Mientras tanto el día dice «Revisando…».
-import * as A from "./almacen.js?v=0c6af1e2b8";
+import * as A from "./almacen.js?v=9aac1d29f7";
 
 export const HORA0 = 6, HORA1 = 21, PX = 56;      // la cuadrícula: de 6 am a 9 pm, 56 px por hora
 const ATRAS = 7, ADELANTE = 13;                    // hasta dónde se puede deslizar, en días desde hoy
@@ -282,7 +282,7 @@ export function htmlClases(datos, ahora = new Date(), pedidos = [], huecos = [])
         </div>
       </div>
       ${C.pendientes.length ? `<p class="clPedidos">${C.pendientes.length === 1 ? "1 clase pedida" : C.pendientes.length + " clases pedidas"}: Andrea la${C.pendientes.length === 1 ? "" : "s"} reserva en la próxima media hora.</p>` : ""}
-      ${C.revisando.map((x) => `<p class="clPedidos">Revisando quién está libre ${esc(diaDicho(x.dia, ahora))}${x.cuando ? ` (lo pediste a las ${esc(hora12(x.cuando))})` : ""}: Andrea lo hace en su próxima vuelta, a los 10 o a los 40, y tarda unos diez minutos.</p>`).join("")}
+      ${C.revisando.map((x) => `<p class="clPedidos">Revisando quién está libre ${esc(diaDicho(x.dia, ahora))}${x.cuando ? ` (lo pediste a las ${esc(hora12(x.cuando))})` : ""}: Andrea lo empieza en unos quince minutos y tarda como diez.</p>`).join("")}
       ${C.fallidos.map((p) => `<p class="clNoSePudo">No se pudo reservar a <b>${esc(p.tutor)}</b>, ${esc(cuandoLargo(p, ahora))}${p.nota ? `: ${esc(p.nota)}` : "."}</p>`).join("")}
       ${dispo}
       ${viejo}
