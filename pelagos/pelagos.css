@@ -72,6 +72,17 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 /* Cuatro botones en un renglón: cada uno del ancho de su palabra, y lo que sobra se reparte. */
 .top { display: flex; gap: 5px; }
 .top .ub { flex: 1 1 auto; min-width: 0; white-space: nowrap; font-size: 15px; padding-inline: 4px; }
+/* 22-Oct-2026: arriba solo el ‹ que regresa al Tablero. */
+.top .ub.atras { flex: 0 0 auto; width: 52px; min-height: 44px; font-size: 30px; line-height: 1; font-weight: 700; padding: 0 0 4px; }
+/* El nombre de la materia, abajo del logo y arriba de sus tres botones. */
+.secTitulo { font-size: 28px; font-weight: 800; line-height: 1.15; margin: 0 0 10px; text-shadow: var(--halo); }
+/* Con foto, el nombre va sobre la orilla de abajo de la foto, junto al logo: no empuja la página hacia abajo. */
+.confoto .sobre > .secTitulo { margin-top: -46px; position: relative; }
+/* Sin foto (las tarjetas de vocabulario), el nombre sube al renglón del ‹, a su derecha: no empuja la tarjeta. */
+.vista > .secTitulo { min-height: 44px; display: flex; align-items: center; margin: -58px 0 0 64px; font-size: 24px; }
+/* La Bitácora del Tablero: una sola tira de 26 semanas. */
+.bitT { display: grid; gap: 12px; }
+.bitT .htira, .bitT .hmeses { grid-template-columns: repeat(26, minmax(0, 1fr)); }
 
 /* «Cómo funciona» (16-Oct-2026) */
 .ayudaIdx { display: grid; gap: 8px; list-style: none; padding: 0; margin: 0; }
@@ -842,6 +853,31 @@ dialog.sheet.escena.practica { inset: 0; width: 100%; max-width: 720px; height: 
 .lnN { font-size: 1.3rem; font-weight: 900; line-height: 1; padding-bottom: 3px; border-bottom: 3px solid transparent; }
 .lnN.g0 { color: var(--verde); } .lnN.g1 { color: var(--ambar); } .lnN.g2 { color: var(--rojo); }
 .lnN.cur { border-bottom-color: currentColor; }
+/* Lo que te queda hoy (22-Oct-2026): rayitas para este quiz, círculos para hoy. */
+button.lnN { background: none; border: 0; border-bottom: 3px solid transparent; padding: 0 2px 3px; font: inherit; font-size: 1.3rem; font-weight: 900; cursor: pointer; }
+button.lnN.cur { border-bottom-color: currentColor; }
+button.lnN[aria-pressed="true"] { outline: 3px solid currentColor; outline-offset: 2px; border-radius: 6px; }
+.hoyC { display: flex; gap: 6px; }
+.hoyC .circ { background: none; color: inherit; font: inherit; cursor: pointer; padding: 0; border: 0; }
+.hoyC .circ b { display: inline-flex; align-items: center; justify-content: center; border: 2px solid currentColor; border-radius: 999px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.hoyC .circ[aria-pressed="true"] b { color: var(--page); }
+.hoyC .circ.g0[aria-pressed="true"] b { background: var(--verde); border-color: var(--verde); }
+.hoyC .circ.g1[aria-pressed="true"] b { background: var(--ambar); border-color: var(--ambar); }
+.hoyC .circ.g2[aria-pressed="true"] b { background: var(--rojo); border-color: var(--rojo); }
+.hoyC .g0, .explica .g0 { color: var(--verde); } .hoyC .g1, .explica .g1 { color: var(--ambar); } .hoyC .g2, .explica .g2 { color: var(--rojo); }
+.hoyC.chico { flex-wrap: wrap; gap: 4px; }
+.hoyC.chico .circ b { min-width: 1.3em; padding: 1px 6px; font-size: 13px; }
+.hoyC.medio .circ b { min-width: 1.7em; padding: 2px 10px; font-size: 17px; }
+.hoyFila { display: flex; justify-content: flex-end; align-items: center; gap: 6px; margin: 0 0 8px; font-size: 15px; }
+.hoyGrande { border: 1px solid var(--line); border-radius: 14px; padding: 12px; margin: 12px 0; background: var(--card); }
+.hoyGrande .small { margin: 0 0 6px; }
+.hoyC.grande { justify-content: space-between; text-align: center; }
+.hoyC.grande .circ { flex: 1; }
+.hoyC.grande .circ b { width: 1.9em; height: 1.9em; border-width: 4px; border-radius: 50%; font-size: 40px; font-weight: 900; }
+.hoyC.grande .circ span { display: block; margin-top: 6px; font-size: 16px; color: var(--ink); }
+.explica { margin-top: 10px; border: 2px solid currentColor; border-radius: 12px; padding: 12px; font-size: 17px; line-height: 1.45; background: var(--card); }
+.explica.g0 { border-color: var(--verde); } .explica.g1 { border-color: var(--ambar); } .explica.g2 { border-color: var(--rojo); }
+.explica { color: var(--ink); }
 .linea .tjNivel { margin: 0; gap: 5px; flex: none; }
 .linea .tjNivel i { width: 12px; height: 12px; }
 .lnCajas { display: flex; gap: 5px; flex: none; }

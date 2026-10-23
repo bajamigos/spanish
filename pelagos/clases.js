@@ -11,6 +11,8 @@
 //   `estado`: agendada, hecha o cancelada (las canceladas no se pintan). `libres` es opcional: huecos de tus favoritos.
 //   `tema` y `leccion` son opcionales: los pone Claude cuando reserva. `tema` es la actividad de Worldsacross (debate,
 //   conversación…) y sale en el bloque; `leccion` es la lección pública de Kwiziq y sale en la ficha como enlace.
+//   `repaso` y `practica` son opcionales (22-Oct-2026): direcciones de ElevenReader (https://elevenreader.io/…) del
+//   repaso de clase y de la práctica tipo Pimsleur de esa clase. Salen en la ficha como «Escuchar el repaso» y «Practicar».
 // - Las fotos de los tutores viven en tablero/tutores/ (misma rama) y se bajan con la llave, como todo lo privado.
 // - De 6 am a 9 pm, horas de 12. Se desliza a los lados (o con las flechas) para cambiar de días.
 // - Todo lo que trae el archivo se escribe como texto, nunca como HTML.
@@ -26,7 +28,7 @@
 //   siguiente corrida (a los 10, 25, 40 o 55), revisa en Worldsacross las horas que le quedan a ese día (de 8 am a 4 pm,
 //   unos diez minutos) y lo contesta en clases.json: "huecosPedidos": [ { "id": "ph-…", "estado": "hecho" | "no se pudo",
 //   "nota": "…", "contestado": "…" } ], con los «libres» de ese día ya al día. Mientras tanto el día dice «Revisando…».
-import * as A from "./almacen.js?v=9aac1d29f7";
+import * as A from "./almacen.js?v=20c756ba31";
 
 export const HORA0 = 6, HORA1 = 21, PX = 56;      // la cuadrícula: de 6 am a 9 pm, 56 px por hora
 const ATRAS = 7, ADELANTE = 13;                    // hasta dónde se puede deslizar, en días desde hoy
@@ -55,7 +57,8 @@ export function leerClases(datos) {
     const lx = !libre && x.leccion && typeof x.leccion === "object" ? x.leccion : null;
     const leccion = lx && typeof lx.url === "string" && /^https:\/\/spanish\.kwiziq\.com\/[^\s"'<>]*$/.test(lx.url)
       ? { url: lx.url, titulo: typeof lx.titulo === "string" && lx.titulo.trim() ? lx.titulo.trim().slice(0, 120) : "Lección de Kwiziq" } : null;
-    return { ini, min, tutor, foto, estado, tema, leccion };
+    const er = (u) => !libre && typeof u === "string" && /^https:\/\/elevenreader\.io\/[^\s"'<>]*$/.test(u) ? u : "";
+    return { ini, min, tutor, foto, estado, tema, leccion, repaso: er(x.repaso), practica: er(x.practica) };
   };
   const clases = datos.clases.map((x) => limpia(x, false)).filter(Boolean).filter((x) => x.estado !== "cancelada").sort((a, b) => a.ini - b.ini);
   const libres = (Array.isArray(datos.libres) ? datos.libres : []).map((x) => limpia(x, true)).filter(Boolean);
@@ -393,6 +396,8 @@ function abrir(e) {
       ${pendiente ? `<button type="button" class="ub" data-cancelar>Cancelar el pedido</button>`
         : libre ? [e.tutor, ...(e.otros || [])].filter((t) => e.clase !== "libre fallida" || t !== e.pedido.tutor).map((t) => `<button type="button" class="ub grande" data-pedir="${esc(t)}">Reservar con ${esc(t.split(" ")[0])}</button>`).join("") : ""}
       ${e.hecha || libre ? "" : `<a class="ub grande" href="${WA}" target="_blank" rel="noopener noreferrer">Entrar a la clase</a>`}
+      ${!libre && e.practica ? `<a class="ub grande" data-practica href="${esc(e.practica)}" target="_blank" rel="noopener noreferrer">Practicar</a>` : ""}
+      ${!libre && e.repaso ? `<a class="ub" data-repaso href="${esc(e.repaso)}" target="_blank" rel="noopener noreferrer">Escuchar el repaso</a>` : ""}
       <button type="button" class="ub" data-cerrar>Cerrar</button>
     </div>`;
   // Se cierra como con «Cerrar», para que la página haga lo mismo de siempre (regresar el foco, etc.).

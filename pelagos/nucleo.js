@@ -25,6 +25,7 @@ export const ACIERTOS_TUTORA = 5;
 export const TOPE_POR_TEMA = 3;
 // La lista de estudio: cuántos temas trae y cuántos aciertos seguidos pide un tema que fallaste para poder salir.
 export const LISTA = 5;
+export const NUEVOS_TEMAS_AL_DIA = 5;           // la cuota de temas nuevos de gramática por día (su regla del 22-Oct-2026)
 export const KWIZZES_AL_DIA = 5;                 // la medida diaria de kwizzes
 export const ACIERTOS_PARA_SALIR = 2;
 export const NUEVAS_AL_DIA = 20;                 // cuántas tarjetas nuevas entran al día, como mucho
@@ -428,7 +429,7 @@ export function calcular(paquete, sucesos) {
     const recientes = suyas.slice().reverse();
     temas.set(t.id, {
       pct: porcentaje(arranque, recientes.map((r) => (r.bien ? 1 : 0)), parametros.decaimiento, parametros.pesoArranque),
-      n: suyas.length, arranque, ultima: suyas.length ? suyas[suyas.length - 1].cuando : null,
+      n: suyas.length, arranque, ultima: suyas.length ? suyas[suyas.length - 1].cuando : null, primera: suyas.length ? suyas[0].cuando : null,
       escalon: 0, toca: null,
     });
   }
@@ -1212,25 +1213,46 @@ export function listaDeEstudio(paquete, estado, hoy = fechaLocal(new Date())) {
   }
   const salen = anteriores.filter((t) => !quedan.includes(t));
 
-  // Quién entra: se alternan los que ya toca repasar y los más bajos que todavía no tienen fecha.
+  // Quién entra (cuota diaria, su regla del 22-Oct-2026): primero todos los que ya toca repasar, el más vencido primero;
+  // luego temas nuevos, los más bajos, hasta NUEVOS_TEMAS_AL_DIA al día (cuentan los que viste por primera vez hoy).
   const info = (t) => estado.temas.get(t);
   const libres = [...con.keys()].filter((t) => !quedan.includes(t) && !salen.includes(t));
   const porBajo = (a, b) => (info(a).pct ?? 0) - (info(b).pct ?? 0) || a - b;
-  const tocan = libres.filter((t) => info(t).toca && info(t).toca <= hoy).sort((a, b) => (info(a).toca < info(b).toca ? -1 : info(a).toca > info(b).toca ? 1 : porBajo(a, b)));
+  const porFecha = (a, b) => (info(a).toca < info(b).toca ? -1 : info(a).toca > info(b).toca ? 1 : porBajo(a, b));
+  const tocan = libres.filter((t) => info(t).toca && info(t).toca <= hoy).sort(porFecha);
   const nuevos = libres.filter((t) => !info(t).toca).sort(porBajo);
-  const despues = libres.filter((t) => info(t).toca && info(t).toca > hoy).sort((a, b) => (info(a).toca < info(b).toca ? -1 : info(a).toca > info(b).toca ? 1 : porBajo(a, b)));
+  const despues = libres.filter((t) => info(t).toca && info(t).toca > hoy).sort(porFecha);
+  const nuevosHoy = [...con.keys()].filter((t) => info(t).primera && fechaLocal(info(t).primera) === hoy).length;
+  let cupo = Math.max(0, NUEVOS_TEMAS_AL_DIA - nuevosHoy);
   const temas = quedan.slice();
-  let turno = 0;
-  while (temas.length < LISTA && (tocan.length || nuevos.length)) {
-    const fila = (turno++ % 2 === 0 ? (tocan.length ? tocan : nuevos) : (nuevos.length ? nuevos : tocan));
-    temas.push(fila.shift());
-  }
-  // Si no alcanza, vuelven los que acaban de salir y luego los que todavía no toca: mejor repetir que quedarse sin kwiz.
-  for (const t of [...salen.filter((x) => con.has(x)).sort(porBajo), ...despues]) {
+  while (temas.length < LISTA && tocan.length) temas.push(tocan.shift());
+  while (temas.length < LISTA && cupo > 0 && nuevos.length) { temas.push(nuevos.shift()); cupo--; }
+  // Si ya no hay repasos ni cupo, entran nuevos de más, como «Adelantar» del vocabulario (su regla del 22-Oct-2026):
+  // la cuota solo frena los nuevos cuando hay repasos esperando. Si ya no hay nuevos, vuelven antes de tiempo los que
+  // tocan más pronto y luego los que acaban de salir: mejor repetir que quedarse sin kwiz.
+  for (const t of [...nuevos, ...despues, ...salen.filter((x) => con.has(x)).sort(porBajo)]) {
     if (temas.length >= LISTA) break;
     temas.push(t);
   }
   return { temas, quedan, salen: salen.filter((t) => !temas.includes(t)), entran: temas.filter((t) => !anteriores.includes(t)), abierto: null, ultimo };
+}
+
+/**
+ * Lo que te queda HOY de gramática, por grupo (su idea del 22-Oct-2026): { nuevos, vencidos, fallados }.
+ * Cada tema cae en un solo grupo: fallado si todavía debe aciertos (de cualquier día); vencido si no debe nada y ya le
+ * tocaba; nuevo si no tiene fecha, hasta lo que queda de la cuota de NUEVOS_TEMAS_AL_DIA. Respeta el enfoque.
+ */
+export function cuentaDelDia(paquete, estado, hoy = fechaLocal(new Date())) {
+  const con = temasCon(paquete, estado, estado.enfoque);
+  let nuevos = 0, vencidos = 0, fallados = 0, nuevosHoy = 0;
+  for (const t of con.keys()) {
+    const i = estado.temas.get(t);
+    if (i.primera && fechaLocal(i.primera) === hoy) nuevosHoy++;
+    if ((estado.debe.get(t) || 0) > 0) fallados++;
+    else if (i.toca && i.toca <= hoy) vencidos++;
+    else if (!i.toca) nuevos++;
+  }
+  return { nuevos: Math.min(nuevos, Math.max(0, NUEVOS_TEMAS_AL_DIA - nuevosHoy)), vencidos, fallados };
 }
 
 /** Qué pasó con la lista después de un kwiz ya terminado: { quedan, salen, entran }, o null si no es de la lista. */

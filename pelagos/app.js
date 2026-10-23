@@ -1,11 +1,11 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=9aac1d29f7";
-import * as A from "./almacen.js?v=9aac1d29f7";
-import * as V from "./videos.js?v=9aac1d29f7";
-import * as NB from "./nube.js?v=9aac1d29f7";
-import * as CL from "./clases.js?v=9aac1d29f7";
-import { abrirPractica } from "./practica.js?v=9aac1d29f7";
-import * as F from "./fondo.js?v=9aac1d29f7";
+import * as N from "./nucleo.js?v=20c756ba31";
+import * as A from "./almacen.js?v=20c756ba31";
+import * as V from "./videos.js?v=20c756ba31";
+import * as NB from "./nube.js?v=20c756ba31";
+import * as CL from "./clases.js?v=20c756ba31";
+import { abrirPractica } from "./practica.js?v=20c756ba31";
+import * as F from "./fondo.js?v=20c756ba31";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -141,8 +141,10 @@ function cuando(iso) {
 
 /** Las dos entradas de una sección, con la de ahora marcada. */
 function entradas(seccion, actual) {
+  if (seccion === "tablero") return "";      // 22-Oct-2026: sin Hoy · Clases · Bitácora; se llega tocando los cuadros
   const [nombre, lista] = SECCIONES[seccion];
-  return `<nav class="jump ${lista.length === 3 ? "tres" : "dos"} sec" aria-label="${nombre}">${lista.map(([clave, href, texto]) =>
+  // Arriba de los botones va el nombre de la materia (su pedido del 22-Oct-2026): Gramática o Vocabulario.
+  return `<p class="secTitulo" role="heading" aria-level="2">${esc(nombre)}</p><nav class="jump ${lista.length === 3 ? "tres" : "dos"} sec" aria-label="${nombre}">${lista.map(([clave, href, texto]) =>
     `<a href="${href}"${clave === actual ? ' aria-current="page"' : ""}>${texto}</a>`).join("")}</nav>`;
 }
 
@@ -236,7 +238,8 @@ function poner(html, { titulo: t = "Pelagos", pie = "", nav = "", conserva = fal
   vista.innerHTML = html;
   $("pie").innerHTML = pie;
   document.title = t;
-  $("nav").hidden = !A.hayLlave() || !P;
+  const enTablero = /^#?\/?$/.test(window.location.hash);
+  $("nav").hidden = !A.hayLlave() || !P || enTablero;      // ‹ regresa al Tablero; en el Tablero no hace falta
   $("ajustesLink").hidden = !A.hayLlave() || !P;
   for (const a of document.querySelectorAll("[data-nav]")) {
     if (a.dataset.nav === nav) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
@@ -516,13 +519,14 @@ const SELLOS = {
 /** La medida de escuchar (antes «ElevenReader»; desde el 22-Oct-2026 «Escucha»: audiolibros y podcasts en español). */
 const ESCUCHA = /^(elevenreader|escucha)$/i;
 /** Una medida del día como cuadro: nombre, número grande, barra y si ya se cumplió. «sello» es lo que se gana con ella. */
-function cuadro(nombre, valor, de, unidad, estado, hecho, enlace = "", sello = null, sub = "") {
+function cuadro(nombre, valor, de, unidad, estado, hecho, enlace = "", sello = null, sub = "", extra = "") {
   const aCero = de === 0;       // medidas que se cumplen al llegar a cero, como las tarjetas pendientes
   const [abre, cierra] = enlace ? [`a href="${enlace}"`, "a"] : ["div", "div"];
   return `<${abre} class="cuadro${hecho ? " hecho" : ""}${sello ? " consello" : ""}" role="listitem">
     ${sello ? selloHtml(sello) : ""}
     <span class="cn">${esc(nombre)}${sub ? `<small class="csub">${esc(sub)}</small>` : ""}</span>
     <span class="cv">${esc(valor)}${aCero ? "" : `<small> de ${esc(de)}${unidad ? " " + esc(unidad) : ""}</small>`}</span>
+    ${extra}
     ${aCero ? '<span class="bar vacia"></span>' : barra(de ? (valor / de) * 100 : 0)}
   </${cierra}>`;
 }
@@ -789,7 +793,7 @@ function verInicio(o) {
   const conSellos = partes.some((x) => SELLOS[iconoDe(x)]);
 
   // ---- Las medidas del día. Los kwizzes y las tarjetas los cuenta Pelagos; lo demás viene del tablero.
-  const cuadros = [cuadro("Gramática", kw, metaKw, "quizzes", kw >= metaKw ? "Cumplido" : `Faltan ${metaKw - kw}`, kw >= metaKw, "#" + QUIZ, sello("kwizzes"))];
+  const cuadros = [cuadro("Gramática", kw, metaKw, "quizzes", kw >= metaKw ? "Cumplido" : `Faltan ${metaKw - kw}`, kw >= metaKw, "#" + QUIZ, sello("kwizzes"), "", circulosDeHoy("chico"))];
   // Vocabulario como los demás (su pedido del 18-Oct): las que ya repasaste hoy de las que te tocan hoy.
   if (tj !== null) cuadros.push(cuadro("Vocabulario", tjHechas, tjHechas + tj, "palabras", tj === 0 ? "Cumplido" : "Por repasar", tj === 0, "#/vocabulario", sello("tarjetas")));
   for (const m of T ? T.medidas : []) {
@@ -804,7 +808,7 @@ function verInicio(o) {
   const medidas = `
   <section class="card" id="medidas">
     <h2 class="sr">Tus medidas de hoy</h2>
-    <div class="cuadros" role="list">${cuadros.join("")}</div>
+    <div data-explicas><div class="cuadros" role="list">${cuadros.join("")}</div>${panelExplica()}</div>
     ${T && !deHoy ? `<p class="small viejo">No es de hoy: es del ${diaLargo(T.dia)}.</p>` : ""}
   </section>`;
 
@@ -835,6 +839,7 @@ function verInicio(o) {
       <h1 class="sr">Tablero</h1>
       ${checkin}
       ${medidas}
+      ${tarjetaBitacora()}
       ${seccionTendencias()}${cuadernos}
     </div>
   </div>`,
@@ -1306,6 +1311,38 @@ function tiraDeCalor(anio, mesInicial, hoy, modo = "juntos") {
   return `<div class="hmeses" aria-hidden="true">${meses.join("")}</div><div class="htira">${cuadros.join("")}</div>`;
 }
 
+/** Las últimas semanas, de lunes a domingo, en una sola tira (la Bitácora del Tablero). */
+function tiraReciente(hoy, modo, semanas = 26) {
+  const dos = (n) => String(n).padStart(2, "0");
+  const fin = new Date(hoy + "T12:00:00");
+  const ini = new Date(fin); ini.setDate(ini.getDate() - ((fin.getDay() + 6) % 7) - 7 * (semanas - 1));
+  const cuadros = [], meses = [];
+  for (const d = new Date(ini); d <= fin; d.setDate(d.getDate() + 1)) {
+    const dia = `${d.getFullYear()}-${dos(d.getMonth() + 1)}-${dos(d.getDate())}`;
+    if (d.getDate() === 1) meses.push(`<span data-col="${Math.floor(cuadros.length / 7) + 1}">${MESES_CORTOS[d.getMonth()]}</span>`);
+    cuadros.push(`<i class="hc ${colorDelDia(dia, modo)}${dia === hoy ? " hoy" : ""}" data-dia="${dia}"></i>`);
+  }
+  return `<div class="hmeses" aria-hidden="true">${meses.join("")}</div><div class="htira">${cuadros.join("")}</div>`;
+}
+/** La tarjeta de la Bitácora en el Tablero (22-Oct-2026): solo el mapa de calor, con Juntos · Vocabulario · Gramática. */
+function tarjetaBitacora() {
+  if (!calorModo) calorModo = ["juntos", "vocabulario", "gramatica"].includes(guardado("pelagos.bitacora")) ? guardado("pelagos.bitacora") : "juntos";
+  const hoy = N.fechaLocal(new Date());
+  return `<section class="card bitT" id="bitacora" aria-labelledby="bitTT">
+    <h2 id="bitTT">Bitácora</h2>
+    <div class="tdSeg" role="group" aria-label="Qué enseña la Bitácora">${[["juntos", "Juntos"], ["vocabulario", "Vocabulario"], ["gramatica", "Gramática"]].map(([clave, nombre]) => `<button type="button" data-bmodo="${clave}" aria-pressed="${clave === calorModo}">${nombre}</button>`).join("")}</div>
+    <div class="hanio" id="bitTira" role="img" aria-label="Tus últimas 26 semanas de estudio">${tiraReciente(hoy, calorModo)}</div>
+  </section>`;
+}
+vista.addEventListener("click", (ev) => {
+  const b = ev.target instanceof Element ? ev.target.closest("[data-bmodo]") : null;
+  if (!b) return;
+  calorModo = b.dataset.bmodo; guardar("pelagos.bitacora", calorModo);
+  const caja = b.closest(".bitT");
+  for (const x of caja.querySelectorAll("[data-bmodo]")) x.setAttribute("aria-pressed", String(x.dataset.bmodo === calorModo));
+  caja.querySelector("#bitTira").innerHTML = tiraReciente(N.fechaLocal(new Date()), calorModo);
+});
+
 /** Tu historia de estudio, día por día: entre más repasos, más caliente el color. Un año por tarjeta, el más nuevo arriba. */
 function verCalor(o) {
   const hoy = N.fechaLocal(new Date());
@@ -1519,7 +1556,9 @@ function htmlNivel(n) {
 function lineaLeitner({ cuenta, actual, nivel, cajas, que }) {
   const nombres = [["nuevo", "nuevos"], ["vencido", "vencidos"], ["fallado", "fallados"]];
   const dice = cuenta.map((n, i) => n + " " + nombres[i][n === 1 ? 0 : 1]).join(", ");
-  const num = (n, i) => `<b class="lnN g${i}${i === actual ? " cur" : ""}">${n}</b>`;
+  // Cada número es un botón: al tocarlo se explica abajo (su idea del 22-Oct-2026). Solo en gramática por ahora.
+  const num = (n, i) => que === "temas" ? `<button type="button" class="lnN g${i}${i === actual ? " cur" : ""}" data-explica="quiz:${i}:${n}" aria-pressed="false">${n}</button>`
+    : `<b class="lnN g${i}${i === actual ? " cur" : ""}">${n}</b>`;
   const caja = (n, i) => `<span class="lnC${nivel && i === nivel - 1 ? " cur" : ""}${n ? "" : " cero"}"><b>${n}</b><small>${N.ESCALONES[i]}d</small></span>`;
   const enCajas = cajas.map((n, i) => `${N.PELDANOS[i]}, ${n}`).join("; ");
   return `<div class="linea">
@@ -1528,6 +1567,48 @@ function lineaLeitner({ cuenta, actual, nivel, cajas, que }) {
     <span class="lnCajas" role="img" aria-label="Tus ${que} por caja: ${enCajas}">${cajas.map(caja).join("")}</span>
   </div>`;
 }
+// ---------------------------------------------------------------- Lo que te queda hoy (su idea del 22-Oct-2026)
+// Su regla: rayitas para «este quiz» (la línea de arriba del quiz) y círculos para «hoy».
+const GRUPOS_HOY = [["nuevo", "nuevos"], ["vencido", "vencidos"], ["fallado", "fallados"]];
+/** Los tres círculos de hoy. tam: "chico" (Tablero), "medio" (durante el quiz) o "grande" (página del Quiz, con su palabra). */
+function circulosDeHoy(tam) {
+  const c = N.cuentaDelDia(P, E, N.fechaLocal(new Date()));
+  const ns = [c.nuevos, c.vencidos, c.fallados];
+  const dice = ns.map((n, i) => n + " " + GRUPOS_HOY[i][n === 1 ? 0 : 1]).join(", ");
+  return `<span class="hoyC ${tam}" role="group" aria-label="Hoy: ${dice}">${ns.map((n, i) =>
+    `<button type="button" class="circ g${i}" data-explica="hoy:${i}:${n}" aria-pressed="false" aria-label="${n} ${GRUPOS_HOY[i][n === 1 ? 0 : 1]} hoy"><b>${n}</b>${tam === "grande" ? `<span>${GRUPOS_HOY[i][n === 1 ? 0 : 1]}</span>` : ""}</button>`).join("")}</span>`;
+}
+const panelExplica = () => `<div class="explica" role="status" hidden></div>`;
+function textoExplica(donde, i, n) {
+  const g = GRUPOS_HOY[i][n === 1 ? 0 : 1], titulo = `${donde === "hoy" ? "Hoy" : "Este quiz"} · ${n} ${g}:`;
+  const T = donde === "hoy" ? [
+    "lo que te queda de tus cinco temas nuevos de hoy. Si ya no te queda ningún repaso, entran más.",
+    "temas que ya aprendiste y que hoy te toca repasar, contando los que todavía no entran a tu quiz. Entran primero, el más atrasado antes.",
+    "temas que todavía te deben aciertos, de cualquier día. Necesitan dos aciertos seguidos para salir de tu plan.",
+  ] : [
+    "de las preguntas que te quedan en este quiz, estas son de temas que nunca has acertado.",
+    "de las preguntas que te quedan en este quiz, estas son de temas que ya te tocaba repasar.",
+    "de las preguntas que te quedan en este quiz, estas son de temas que todavía te deben aciertos.",
+  ];
+  return `<b class="g${i}">${esc(titulo)}</b> ${esc(T[i])}`;
+}
+// Tocar un número lo explica abajo; tocarlo otra vez, o tocar otro, cambia o cierra. Dentro del cuadro del Tablero no abre el quiz.
+document.addEventListener("click", (ev) => {
+  const b = ev.target.closest && ev.target.closest("[data-explica]");
+  if (!b) return;
+  ev.preventDefault(); ev.stopPropagation();
+  const caja = b.closest("[data-explicas]"), panel = caja && caja.querySelector(".explica");
+  if (!panel) return;
+  const abierto = b.getAttribute("aria-pressed") === "true";
+  caja.querySelectorAll("[data-explica]").forEach((x) => x.setAttribute("aria-pressed", "false"));
+  if (abierto) { panel.hidden = true; return; }
+  const [donde, i, n] = b.dataset.explica.split(":");
+  b.setAttribute("aria-pressed", "true");
+  panel.className = "explica g" + i;
+  panel.innerHTML = textoExplica(donde, Number(i), Number(n));
+  panel.hidden = false;
+}, true);
+
 /** Llena o vacía los puntitos, uno tras otro, para que se vea la subida o la caída. */
 function moverNivel(de, a) {
   const caja = $("tjNivel");
@@ -3010,6 +3091,7 @@ function verKwiz(o) {
   ${tarjetaAtorados()}
   <section class="card" id="lista">
     <h1 class="h">Tu plan de estudio Pelagos</h1>
+    <div class="hoyGrande" data-explicas><p class="small">Te queda hoy · toca un número</p>${circulosDeHoy("grande")}${panelExplica()}</div>
     <div class="conCuadro">${deLista.length && !lista.abierto ? `<button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Empezar quiz</button>`
       : abierto ? `<a class="ub grande" href="#${QUIZ}/${esc(abierto.id)}">Seguir el quiz</a>` : "<span></span>"}${conCuadro(hoy)}</div>
     ${abierto ? `<p class="small">Tienes un quiz a medias. Lo que ya contestaste está guardado.${deLista.length && !lista.abierto ? ` <a href="#${QUIZ}/${esc(abierto.id)}">Seguirlo</a>` : ""}</p>` : ""}
@@ -3025,7 +3107,7 @@ function verKwiz(o) {
     <div class="links">${deLista.map((t) => botonTema(t, { sub: lineaDelPlan(t, lista, bancoPlan) })).join("")}</div>
     ${mudo() ? "" : `<div class="go">${botonesRepaso()}</div>`}
     ${mudo() ? "" : `<p class="small" id="repasoAviso" role="status">${esc(avisoRepaso())}</p>`}
-    <p class="small">Una pregunta de cada tema. El que aciertas sale del plan y entra otro. El que fallas se queda hasta que lo aciertes dos veces seguidas.</p>
+    <p class="small">Una pregunta de cada tema. El que aciertas sale del plan y vuelve en unos días. El que fallas se queda hasta que lo aciertes dos veces seguidas. Primero entran tus repasos del día y luego cinco temas nuevos; si ya no te queda ningún repaso, entran más nuevos.</p>
     ${deLista.length < N.LISTA ? `<p class="small">${E.enfoque ? `En ${esc(E.enfoque)} solo hay` : "Solo hay"} ${plural(deLista.length, "tema", "temas")} con preguntas. El plan se llena cuando se escriban más.</p>` : ""}`
     : `<p>${E.enfoque ? `Todavía no hay preguntas de ${esc(E.enfoque)}. Elige otro enfoque.` : "Todavía no hay preguntas revisadas."}</p>`}
   </section>
@@ -3215,7 +3297,7 @@ function verPregunta(o, kid) {
       <div class="over">
         <p class="lead"><span>${deTutora ? `Aciertos: ${k.bien || 0} de ${N.ACIERTOS_TUTORA}` : `Pregunta ${sig.orden} de ${sig.total}`}</span><span>${enHueco ? "Escribe lo que falta" : escribir ? "Dilo en español" : "Toca la respuesta"}</span></p>
         <div class="score"><div class="track" role="img" aria-label="${deTutora ? `Llevas ${k.bien || 0} de ${N.ACIERTOS_TUTORA} aciertos` : `Vas en la ${sig.orden} de ${sig.total}`}"><i data-w="${deTutora ? 100 * (k.bien || 0) / N.ACIERTOS_TUTORA : 100 * (sig.orden - 1) / sig.total}"></i></div></div>
-        ${deTutora ? "" : lineaDeGramatica(k, q.tema)}
+        ${deTutora ? "" : `<div data-explicas><div class="hoyFila"><span>Hoy</span>${circulosDeHoy("medio")}</div>${lineaDeGramatica(k, q.tema)}${panelExplica()}</div>`}
         <h1 class="cue" id="cue"${q.tipo === "escribir" ? ' lang="en"' : ""}>${hueco(q.frase)}</h1>
         ${(() => { const at = deTutora ? null : N.temasAtascados(E).get(q.tema); return at && tema ? `<p class="tjAtas">Atascado · fallado en ${at.fallos} quizzes esta semana${tema.slug && tema.leccion ? ` · <a class="lk" href="#/leccion/${esc(tema.slug)}">Ver la lección</a>` : ""}</p>` : ""; })()}
         ${q.glosa ? `<p class="sub">(${esc(q.glosa)})</p>` : ""}
@@ -3764,7 +3846,7 @@ function numerosAyuda() {
   const e = N.ESCALONES;
   const n = {
     ESCALONES: e.slice(0, -1).join(", ") + " y " + e[e.length - 1] + " días", N_ESCALONES: e.length,
-    NUEVAS_AL_DIA: N.NUEVAS_AL_DIA, KWIZZES_AL_DIA: N.KWIZZES_AL_DIA, LISTA: N.LISTA, ACIERTOS_PARA_SALIR: N.ACIERTOS_PARA_SALIR,
+    NUEVAS_AL_DIA: N.NUEVAS_AL_DIA, KWIZZES_AL_DIA: N.KWIZZES_AL_DIA, LISTA: N.LISTA, NUEVOS_TEMAS_AL_DIA: N.NUEVOS_TEMAS_AL_DIA, ACIERTOS_PARA_SALIR: N.ACIERTOS_PARA_SALIR,
     META: meta(), DECAIMIENTO: E ? E.parametros.decaimiento : N.DECAIMIENTO, PESO_ARRANQUE: E ? E.parametros.pesoArranque : N.PESO_ARRANQUE,
     TOTAL_TEMA: N.TOTAL_TEMA, TOTAL_TUTORA: N.TOTAL_TUTORA, ACIERTOS_TUTORA: N.ACIERTOS_TUTORA,
     SOSPECHA_FALLAS: N.SOSPECHA_FALLAS, SOSPECHA_PCT: N.SOSPECHA_PCT, SOSPECHA_MIN: N.SOSPECHA_MIN,
@@ -3945,6 +4027,29 @@ function siguienteEnSerie(tema) {
     if (dx < 0) { history.back(); return; }
     const sig = siguienteEnSerie(leccionPintada.tema);
     if (sig) ir("/leccion/" + sig.slug);
+  });
+})();
+
+// Deslizar a la derecha (de izquierda a derecha) en cualquier página regresa al Tablero (su pedido del 22-Oct-2026).
+// No en el Tablero, ni en las lecciones (ahí el deslizar ya cambia de lección), ni sobre el calendario de Clases.
+(() => {
+  let x0 = null, y0 = null;
+  document.addEventListener("pointerdown", (ev) => {
+    x0 = null;
+    const h = window.location.hash;
+    if (ev.pointerType === "mouse" || /^#?\/?$/.test(h) || h.startsWith("#/leccion/")) return;
+    if (ev.clientX < 28) return;      // la orilla es del gesto de atrás del teléfono
+    const t = ev.target instanceof Element ? ev.target : null;
+    if (t && t.closest("input, textarea, select, svg, canvas, .track, #clCal, [data-noswipe]")) return;
+    for (let e = t; e && e !== document.body; e = e.parentElement) if (e.scrollWidth > e.clientWidth + 2 && getComputedStyle(e).overflowX !== "visible") return;
+    x0 = ev.clientX; y0 = ev.clientY;
+  }, { passive: true });
+  document.addEventListener("pointercancel", () => { x0 = null; });
+  document.addEventListener("pointerup", (ev) => {
+    if (x0 === null) return;
+    const dx = ev.clientX - x0, dy = ev.clientY - y0;
+    x0 = null;
+    if (dx > 90 && dx > Math.abs(dy) * 1.8) ir("/");
   });
 })();
 
