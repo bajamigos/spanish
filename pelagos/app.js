@@ -1,11 +1,11 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=ecacd368f3";
-import * as A from "./almacen.js?v=ecacd368f3";
-import * as V from "./videos.js?v=ecacd368f3";
-import * as NB from "./nube.js?v=ecacd368f3";
-import * as CL from "./clases.js?v=ecacd368f3";
-import { abrirPractica } from "./practica.js?v=ecacd368f3";
-import * as F from "./fondo.js?v=ecacd368f3";
+import * as N from "./nucleo.js?v=eb596ab9c6";
+import * as A from "./almacen.js?v=eb596ab9c6";
+import * as V from "./videos.js?v=eb596ab9c6";
+import * as NB from "./nube.js?v=eb596ab9c6";
+import * as CL from "./clases.js?v=eb596ab9c6";
+import { abrirPractica } from "./practica.js?v=eb596ab9c6";
+import * as F from "./fondo.js?v=eb596ab9c6";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1415,7 +1415,7 @@ function tiraBitacora(hoy, modo) {
     const conf = K.confirmadas.has(dia);
     if (modo === "habla") cuadros.push(`<i class="hc fut${conf ? " kf" : ""}" data-dia="${dia}"></i>`);
     else if (modo === "juntos" && conf && !nf) cuadros.push(`<i class="hc fut kf" data-dia="${dia}" data-n="0"></i>`);
-    else cuadros.push(`<i class="hc fut${nf ? ` f${nf}${pv}` : ""}${modo === "juntos" && nf && !conf ? " sin" : ""}" data-dia="${dia}" data-n="${c.n}"></i>`);
+    else cuadros.push(`<i class="hc fut${modo === "juntos" && nf && !conf ? " sin" : ""}${nf ? ` f${nf}${pv}` : ""}" data-dia="${dia}" data-n="${c.n}"></i>`);   // pv cierra el class: va al final
   }
   const semanas = Math.ceil(cuadros.length / 7);
   return `<div class="bitScroll" data-colhoy="${colHoy}" data-semanas="${semanas}"><div class="bitAncho">
