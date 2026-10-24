@@ -9,7 +9,7 @@
 // - Lo que contestas entra primero a una fila en este aparato y de ahí sube.
 //   Sin internet, la fila espera y sube sola cuando vuelve.
 // - La llave vive solo en este navegador y solo viaja a la dirección de CONFIG.api.
-import { CONFIG } from "./config.js?v=2b8e000cee";
+import { CONFIG } from "./config.js?v=ecacd368f3";
 
 const CLAVES = { llave: "pelagos.llave", aparato: "pelagos.aparato", fila: "pelagos.fila." };      // la fila: una clave por suceso
 const RUTA_SUCESOS = /^sucesos\/([A-Za-z0-9_-]+)\/(\d{4}-\d{2})\.jsonl$/;
@@ -21,6 +21,9 @@ const RUTA_LECTURA = "tablero/lectura.json";
 // Los enlaces de ElevenReader al repaso y a la práctica de cada clase (23-Oct-2026). Archivo aparte: la tarea del Tablero
 // reescribe clases.json y este no lo toca. Forma: { "enlaces": [ { "inicio", "tutor", "repaso", "practica" } ] }. Solo se lee.
 const RUTA_ENLACES = "tablero/enlaces.json";
+// El historial de tus clases (24-Oct-2026): clases.json solo trae la última semana; este archivo guarda todas las
+// terminadas para la Bitácora. Forma: { "version": 1, "clases": [ { "inicio", "tutor", "min" } ] }. Solo se lee.
+const RUTA_HISTORIAL = "tablero/clases-historial.json";
 // Un loop de tutora: un GIF o video en escenas/tutora-<lección>/ de la rama de avance.
 const RUTA_LOOP = /^escenas\/tutora-(\d+)\/[a-z0-9-]+\.(gif|mp4|webm)$/;
 let conLoop = new Set();        // lecciones cuya tutora ya tiene loop; se renueva en cada sincronización
@@ -236,6 +239,7 @@ export async function salir() {
   clasesActual = null;
   lecturaActual = null;
   enlacesActual = null;
+  historialActual = null;
   for (const u of fotosVivas.values()) u.then((x) => x && URL.revokeObjectURL(x)).catch(() => {});
   fotosVivas.clear();
   await kvVaciar();
@@ -266,12 +270,14 @@ let tableroActual = null;       // { sha, datos }: el tablero del día, tal como
 /** El tablero del día tal como está en el repositorio, o null. La forma la revisa quien lo usa. */
 export function tablero() { return tableroActual ? tableroActual.datos : null; }
 /** Cambia cuando llega un tablero nuevo o unas clases nuevas: con eso la página sabe que tiene que volver a pintarse. */
-export function huellaTablero() { return (tableroActual ? tableroActual.sha : "") + "|" + (clasesActual ? clasesActual.sha : "") + "|" + (lecturaActual ? lecturaActual.sha : "") + "|" + (enlacesActual ? enlacesActual.sha : ""); }
+export function huellaTablero() { return (tableroActual ? tableroActual.sha : "") + "|" + (clasesActual ? clasesActual.sha : "") + "|" + (lecturaActual ? lecturaActual.sha : "") + "|" + (enlacesActual ? enlacesActual.sha : "") + "|" + (historialActual ? historialActual.sha : ""); }
 let lecturaActual = null;       // { sha, datos }: tu registro de lectura, tal como llegó
 /** Tu registro de lectura tal como está en el repositorio, o null. La forma la revisa quien lo usa. */
 export function lectura() { return lecturaActual ? lecturaActual.datos : null; }
 let enlacesActual = null;       // { sha, datos }: los enlaces del repaso y la práctica de tus clases
 export function enlacesDeClases() { return enlacesActual ? enlacesActual.datos : null; }
+let historialActual = null;     // { sha, datos }: todas tus clases terminadas (para la Bitácora)
+export function historialDeClases() { return historialActual ? historialActual.datos : null; }
 let clasesActual = null;        // { sha, datos }: tus clases de Worldsacross, tal como llegaron
 /** Tus clases tal como están en el repositorio, o null. La forma la revisa quien las usa. */
 export function clases() { return clasesActual ? clasesActual.datos : null; }
@@ -325,6 +331,8 @@ export async function cargarLocal() {
   lecturaActual = l && typeof l.sha === "string" && l.datos && typeof l.datos === "object" ? l : null;
   const en = await kvLeer("enlaces");
   enlacesActual = en && typeof en.sha === "string" && en.datos && typeof en.datos === "object" ? en : null;
+  const hi = await kvLeer("historial");
+  historialActual = hi && typeof hi.sha === "string" && hi.datos && typeof hi.datos === "object" ? hi : null;
   if (!guardado || !guardado.datos) return null;
   try { revisarPaquete(guardado.datos); } catch { return null; }
   return guardado.datos;
@@ -355,7 +363,7 @@ export function sincronizar() {
       else throw new Fallo("github", "GitHub contestó algo raro (" + r.status + ").", r.status);
 
       const t = await api(REPO + "/git/trees/" + encodeURIComponent(CONFIG.ramaAvance) + "?recursive=1");
-      let arbol = [], hojaTablero = null, hojaClases = null, hojaLectura = null, hojaEnlaces = null;
+      let arbol = [], hojaTablero = null, hojaClases = null, hojaLectura = null, hojaEnlaces = null, hojaHistorial = null;
       if (t.ok) {
         const blobs = ((await t.json()).tree || []).filter((x) => x.type === "blob");
         arbol = blobs.filter((x) => RUTA_SUCESOS.test(x.path));
@@ -363,6 +371,7 @@ export function sincronizar() {
         hojaClases = blobs.find((x) => x.path === RUTA_CLASES) || null;
         hojaLectura = blobs.find((x) => x.path === RUTA_LECTURA) || null;
         hojaEnlaces = blobs.find((x) => x.path === RUTA_ENLACES) || null;
+        hojaHistorial = blobs.find((x) => x.path === RUTA_HISTORIAL) || null;
         conLoop = new Set(blobs.map((x) => RUTA_LOOP.exec(x.path)).filter(Boolean).map((m) => Number(m[1])));
         await kvPoner("loops", [...conLoop]);
         conVoz = new Set(blobs.map((x) => RUTA_VOZ.exec(x.path)).filter(Boolean).map((m) => Number(m[1])));
@@ -430,6 +439,20 @@ export function sincronizar() {
           if (b.ok) {
             const datos = JSON.parse(await b.text());
             if (datos && typeof datos === "object") { enlacesActual = { sha: hojaEnlaces.sha, datos }; await kvPoner("enlaces", enlacesActual); }
+          }
+        } catch (e) {
+          if (e instanceof Fallo && e.tipo === "llave") throw e;
+        }
+      }
+      // El historial de clases, igual.
+      if (!hojaHistorial) {
+        if (t.ok && historialActual) { historialActual = null; await kvQuitar("historial"); }
+      } else if (!historialActual || historialActual.sha !== hojaHistorial.sha) {
+        try {
+          const b = await api(REPO + "/git/blobs/" + encodeURIComponent(hojaHistorial.sha), { crudo: true });
+          if (b.ok) {
+            const datos = JSON.parse(await b.text());
+            if (datos && typeof datos === "object") { historialActual = { sha: hojaHistorial.sha, datos }; await kvPoner("historial", historialActual); }
           }
         } catch (e) {
           if (e instanceof Fallo && e.tipo === "llave") throw e;

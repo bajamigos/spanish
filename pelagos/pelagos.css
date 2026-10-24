@@ -586,6 +586,17 @@ ul.clave .mc.kx { box-sizing: border-box; border: 1px dashed var(--vidrio-borde)
 .hc.jv.c1 { background: var(--y1); } .hc.jv.c2 { background: var(--y2); } .hc.jv.c3 { background: var(--y3); } .hc.jv.c4 { background: var(--y4); }
 .hc.jg.c1 { background: var(--b1); } .hc.jg.c2 { background: var(--b2); } .hc.jg.c3 { background: var(--b3); } .hc.jg.c4 { background: var(--b4); }
 .hc.ja.c1 { background: var(--g1); } .hc.ja.c2 { background: var(--g2); } .hc.ja.c3 { background: var(--g3); } .hc.ja.c4 { background: var(--g4); }
+/* Las clases (24-Oct-2026): el día completo es vocabulario + gramática + clase. Sin clase, el cuadro sale rayado
+   (rayitas del color de la tarjeta encima de su color). En Habla: con clase, verde lleno; con estudio sin clase,
+   rayado gris; y en el futuro, las clases confirmadas en gris lleno. */
+.hc.sin { position: relative; }
+.hc.sin::before { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  background: repeating-linear-gradient(135deg, transparent 0 2px, color-mix(in srgb, var(--card) 72%, transparent) 2px 4px); }
+.hc.jk { background: var(--g3); }
+.hc.hraya { background: repeating-linear-gradient(135deg, var(--f2) 0 2px, transparent 2px 4px), var(--c0); }
+.hc.fut.kf { background: var(--f3); box-shadow: none; }
+.jump.tres.cuatro { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.tdSeg.cuatro button { font-size: 13px; }
 #calorModo { margin-block: 2px 4px; }
 .htira .hc[data-dia] { cursor: pointer; }
 .hc.hoy { outline: 1.5px solid var(--ink); outline-offset: 0; }

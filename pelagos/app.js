@@ -1,11 +1,11 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=2b8e000cee";
-import * as A from "./almacen.js?v=2b8e000cee";
-import * as V from "./videos.js?v=2b8e000cee";
-import * as NB from "./nube.js?v=2b8e000cee";
-import * as CL from "./clases.js?v=2b8e000cee";
-import { abrirPractica } from "./practica.js?v=2b8e000cee";
-import * as F from "./fondo.js?v=2b8e000cee";
+import * as N from "./nucleo.js?v=ecacd368f3";
+import * as A from "./almacen.js?v=ecacd368f3";
+import * as V from "./videos.js?v=ecacd368f3";
+import * as NB from "./nube.js?v=ecacd368f3";
+import * as CL from "./clases.js?v=ecacd368f3";
+import { abrirPractica } from "./practica.js?v=ecacd368f3";
+import * as F from "./fondo.js?v=ecacd368f3";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1286,19 +1286,65 @@ const miles = (n) => Number(n).toLocaleString("es-MX");
  * Medio año como tira de calor: cada columna es una semana (de lunes a domingo, de arriba abajo) y cada cuadro un día.
  * Los días que todavía no llegan no se dibujan.
  */
-/** El color de un día en la Bitácora: «jv» vocabulario (amarillo), «jg» gramática (azul), «ja» los dos (verde), más su escalón. */
+/**
+ * Tus clases por día (24-Oct-2026): «hechas» = las terminadas (tablero/clases-historial.json más las «hecha» de
+ * clases.json) y «confirmadas» = las agendadas que todavía no empiezan. Cada día trae la lista [{ tutor, ini }].
+ */
+let clasesCache = null;
+function clasesPorDia() {
+  const huella = A.huellaTablero();
+  if (clasesCache && clasesCache.huella === huella) return clasesCache;
+  const hechas = new Map(), confirmadas = new Map(), vistas = new Set(), ahora = Date.now();
+  const meter = (x, mapa) => {
+    if (!x || typeof x !== "object" || typeof x.inicio !== "string") return;
+    const ini = new Date(x.inicio);
+    if (Number.isNaN(ini.getTime())) return;
+    const tutor = typeof x.tutor === "string" && x.tutor.trim() ? x.tutor.trim().slice(0, 60) : "tu tutor";
+    const clave = ini.getTime() + "|" + tutor;
+    if (vistas.has(clave)) return;
+    vistas.add(clave);
+    const dia = N.fechaLocal(ini);
+    if (!mapa.has(dia)) mapa.set(dia, []);
+    mapa.get(dia).push({ tutor, ini });
+  };
+  const h = A.historialDeClases ? A.historialDeClases() : null;
+  for (const x of h && Array.isArray(h.clases) ? h.clases : []) meter(x, hechas);
+  const c = A.clases();
+  const lista = c && Array.isArray(c.clases) ? c.clases : [];
+  for (const x of lista) if (x && x.estado === "hecha") meter(x, hechas);
+  for (const x of lista) if (x && (x.estado === "agendada" || !x.estado) && new Date(x.inicio).getTime() > ahora) meter(x, confirmadas);
+  const cuantas = new Map([...hechas].map(([d, l]) => [d, l.length]));
+  clasesCache = { huella, hechas, confirmadas, cuantas };
+  return clasesCache;
+}
+/** «2 clases, con Luis y Ayline» (o «1 clase, con Luis a las 11:00» si es una que viene). */
+function textoClases(lista, conHora) {
+  const nombres = [...new Set(lista.map((k) => k.tutor.split(/\s+/)[0] + (conHora ? " a las " + k.ini.toLocaleTimeString("es-MX", { hour: "numeric", minute: "2-digit" }) : "")))];
+  const y = nombres.length > 1 ? nombres.slice(0, -1).join(", ") + " y " + nombres[nombres.length - 1] : nombres[0];
+  return plural(lista.length, "clase", "clases") + ", con " + y;
+}
+
+/**
+ * El color de un día en la Bitácora: «jv» vocabulario (amarillo), «jg» gramática (azul), «ja» los dos (verde), más su escalón.
+ * Desde el 24-Oct-2026 el día completo es vocabulario + gramática + clase: en Juntos, un día con estudio pero sin clase
+ * sale rayado («sin»). En Habla: con clase, verde lleno («jk»); con estudio pero sin clase, rayado gris («hraya»); sin nada, vacío.
+ */
 function colorDelDia(dia, modo) {
   const v = E.actividadVoc.get(dia) || 0, g = E.actividadGram.get(dia) || 0;
   const nv = N.nivelDeCalor(v), ng = N.nivelDeCalor(g, N.CALOR_GRAM);
   if (modo === "vocabulario") return nv ? `jv c${nv}` : "c0";
   if (modo === "gramatica") return ng ? `jg c${ng}` : "c0";
   const n = E.actividad.get(dia) || 0;
-  if (v && g) return `ja c${Math.max(nv, ng)}`;
-  if (g) return `jg c${ng}`;
-  if (n) return `jv c${N.nivelDeCalor(n)}`;           // repasos de vocabulario (o respuestas sueltas de gramática sin quiz terminado)
-  return "c0";
+  const conClase = clasesPorDia().hechas.has(dia);
+  if (modo === "habla") return conClase ? "jk" : (n || g) ? "c0 hraya" : "c0";
+  const sin = conClase ? "" : " sin";
+  if (v && g) return `ja c${Math.max(nv, ng)}${sin}`;
+  if (g) return `jg c${ng}${sin}`;
+  if (n) return `jv c${N.nivelDeCalor(n)}${sin}`;     // repasos de vocabulario (o respuestas sueltas de gramática sin quiz terminado)
+  return conClase ? "jk" : "c0";                       // una clase en un día sin estudio: verde igual
 }
-let calorModo = null;         // «juntos», «vocabulario» o «gramatica»: lo que enseña la Bitácora (se guarda en el aparato)
+const MODOS_BITACORA = [["juntos", "Juntos"], ["vocabulario", "Vocabulario"], ["gramatica", "Gramática"], ["habla", "Habla"]];
+let calorModo = null;         // «juntos», «vocabulario», «gramatica» o «habla»: lo que enseña la Bitácora (se guarda en el aparato)
 
 function tiraDeCalor(anio, mesInicial, hoy, modo = "juntos") {
   const dos = (n) => String(n).padStart(2, "0");
@@ -1336,6 +1382,7 @@ const SEMANAS_FUT = 8;          // las semanas que se ven por delante
 /** Lo que te toca en un día que viene, según el modo: { n, v, g }. */
 function cargaDe(fut, dia, modo) {
   const x = fut.get(dia) || { v: 0, g: 0 };
+  if (modo === "habla") return { n: 0, v: 0, g: 0 };
   const v = modo === "gramatica" ? 0 : x.v, g = modo === "vocabulario" ? 0 : x.g;
   return { n: v + g, v, g };
 }
@@ -1347,6 +1394,7 @@ function cargaDe(fut, dia, modo) {
 function tiraBitacora(hoy, modo) {
   const dos = (n) => String(n).padStart(2, "0");
   const fut = N.cargaFutura(P, E, hoy, SEMANAS_FUT * 7);
+  const K = clasesPorDia();
   const primero = [...E.actividad.keys()].sort()[0] || hoy;
   const ini = new Date(primero + "T12:00:00"); ini.setDate(ini.getDate() - ((ini.getDay() + 6) % 7));
   const minimo = new Date(hoy + "T12:00:00"); minimo.setDate(minimo.getDate() - ((minimo.getDay() + 6) % 7) - 7 * 25);
@@ -1362,8 +1410,12 @@ function tiraBitacora(hoy, modo) {
     const c = cargaDe(fut, dia, modo), nf = N.nivelDeCalor(c.n, CALOR_FUT);
     // Con Juntos, cuánto pone cada uno: el % de vocabulario va en data-pv (lo pinta acomodarBitacora).
     const pv = modo === "juntos" && c.n ? ` fp" data-pv="${Math.round(100 * c.v / c.n)}` : "";
-    if (dia === hoy) { colHoy = col; cuadros.push(`<i class="hc ${colorDelDia(dia, modo)} hoy${nf ? ` fq f${nf}${pv}` : ""}" data-dia="${dia}"></i>`); }
-    else cuadros.push(`<i class="hc fut${nf ? ` f${nf}${pv}` : ""}" data-dia="${dia}" data-n="${c.n}"></i>`);
+    if (dia === hoy) { colHoy = col; cuadros.push(`<i class="hc ${colorDelDia(dia, modo)} hoy${nf ? ` fq f${nf}${pv}` : ""}" data-dia="${dia}"></i>`); continue; }
+    // El futuro (24-Oct-2026): con clase confirmada se ve completo; sin clase, rayado (en Juntos) o vacío (en Habla).
+    const conf = K.confirmadas.has(dia);
+    if (modo === "habla") cuadros.push(`<i class="hc fut${conf ? " kf" : ""}" data-dia="${dia}"></i>`);
+    else if (modo === "juntos" && conf && !nf) cuadros.push(`<i class="hc fut kf" data-dia="${dia}" data-n="0"></i>`);
+    else cuadros.push(`<i class="hc fut${nf ? ` f${nf}${pv}` : ""}${modo === "juntos" && nf && !conf ? " sin" : ""}" data-dia="${dia}" data-n="${c.n}"></i>`);
   }
   const semanas = Math.ceil(cuadros.length / 7);
   return `<div class="bitScroll" data-colhoy="${colHoy}" data-semanas="${semanas}"><div class="bitAncho">
@@ -1392,19 +1444,23 @@ function infoDelDia(dia, hoy, modo) {
     const p = [v ? pl(v, "card", "cards") : "", g ? pl(g, "quiz", "quizzes") : ""].filter(Boolean);
     return p.length ? p.join(" · ") : "nada";
   };
-  if (dia < hoy) return `${nombre}: ${hecho()}`;
+  const K = clasesPorDia(), hechas = K.hechas.get(dia), conf = K.confirmadas.get(dia);
+  const clase = hechas ? textoClases(hechas) : conf ? textoClases(conf, true) : "";
+  if (modo === "habla") return `${nombre}: ${clase || (dia < hoy ? "sin clase" : dia === hoy ? "todavía sin clase" : "sin clase reservada")}`;
+  const mas = modo === "juntos" && clase ? ` · ${clase}` : "";
+  if (dia < hoy) return `${nombre}: ${hecho()}${mas}`;
   const c = cargaDe(N.cargaFutura(P, E, hoy, SEMANAS_FUT * 7), dia, modo);
   const toca = c.n ? `${dia === hoy ? "te faltan" : "te tocan"} ${c.n}${c.v && c.g ? ` (${pl(c.v, "card", "cards")}, ${pl(c.g, "tema", "temas")})` : c.v ? " cards" : " temas"}` : dia === hoy ? "no te falta nada" : "nada por repasar";
-  return dia === hoy ? `Hoy: hiciste ${hecho()}; ${toca}` : `${nombre}: ${toca}`;
+  return dia === hoy ? `Hoy: hiciste ${hecho()}; ${toca}${mas}` : `${nombre}: ${toca}${mas}`;
 }
 
 /** La tarjeta de la Bitácora en el Tablero (22-Oct-2026): solo el mapa de calor, con Juntos · Vocabulario · Gramática. */
 function tarjetaBitacora() {
-  if (!calorModo) calorModo = ["juntos", "vocabulario", "gramatica"].includes(guardado("pelagos.bitacora")) ? guardado("pelagos.bitacora") : "juntos";
+  if (!calorModo) calorModo = MODOS_BITACORA.some(([m]) => m === guardado("pelagos.bitacora")) ? guardado("pelagos.bitacora") : "juntos";
   const hoy = N.fechaLocal(new Date());
   return `<section class="card bitT" id="bitacora" aria-labelledby="bitTT">
     <h2 id="bitTT">Bitácora</h2>
-    <div class="tdSeg" role="group" aria-label="Qué enseña la Bitácora">${[["juntos", "Juntos"], ["vocabulario", "Vocabulario"], ["gramatica", "Gramática"]].map(([clave, nombre]) => `<button type="button" data-bmodo="${clave}" aria-pressed="${clave === calorModo}">${nombre}</button>`).join("")}</div>
+    <div class="tdSeg cuatro" role="group" aria-label="Qué enseña la Bitácora">${MODOS_BITACORA.map(([clave, nombre]) => `<button type="button" data-bmodo="${clave}" aria-pressed="${clave === calorModo}">${nombre}</button>`).join("")}</div>
     <div class="hanio" id="bitTira" aria-label="Tu estudio día por día y lo que te toca repasar en las próximas semanas">${tiraBitacora(hoy, calorModo)}</div>
   </section>`;
 }
@@ -1430,10 +1486,10 @@ vista.addEventListener("click", (ev) => {
 /** Tu historia de estudio, día por día: entre más repasos, más caliente el color. Un año por tarjeta, el más nuevo arriba. */
 function verCalor(o) {
   const hoy = N.fechaLocal(new Date());
-  if (!calorModo) calorModo = ["juntos", "vocabulario", "gramatica"].includes(guardado("pelagos.bitacora")) ? guardado("pelagos.bitacora") : "juntos";
+  if (!calorModo) calorModo = MODOS_BITACORA.some(([m]) => m === guardado("pelagos.bitacora")) ? guardado("pelagos.bitacora") : "juntos";
   const modo = calorModo;
-  const mapa = modo === "vocabulario" ? E.actividadVoc : modo === "gramatica" ? E.actividadGram : E.actividad;
-  const unidad = modo === "gramatica" ? ["quiz", "quizzes"] : ["repaso", "repasos"];
+  const mapa = modo === "vocabulario" ? E.actividadVoc : modo === "gramatica" ? E.actividadGram : modo === "habla" ? clasesPorDia().cuantas : E.actividad;
+  const unidad = modo === "gramatica" ? ["quiz", "quizzes"] : modo === "habla" ? ["clase", "clases"] : ["repaso", "repasos"];
   const R = N.rachas(mapa, hoy);
   const ambos = [...E.actividadGram.keys()].filter((d) => E.actividadVoc.get(d) > 0).length;
   const porAnio = new Map();
@@ -1455,8 +1511,8 @@ function verCalor(o) {
       ${entradas("tablero", "bitacora")}
       <section class="card" id="calorCabeza">
         <h1 class="h">Bitácora</h1>
-        <div class="jump tres" role="group" aria-label="Qué enseña la Bitácora" id="calorModo">
-          ${[["juntos", "Juntos"], ["vocabulario", "Vocabulario"], ["gramatica", "Gramática"]].map(([clave, nombre]) => `<button type="button" data-modo="${clave}" aria-pressed="${clave === modo}">${nombre}</button>`).join("")}
+        <div class="jump tres cuatro" role="group" aria-label="Qué enseña la Bitácora" id="calorModo">
+          ${MODOS_BITACORA.map(([clave, nombre]) => `<button type="button" data-modo="${clave}" aria-pressed="${clave === modo}">${nombre}</button>`).join("")}
         </div>
         <p class="small" id="calorDia" role="status">Toca un cuadro para ver ese día.</p>
       </section>
@@ -1475,11 +1531,11 @@ function verCalor(o) {
           <div><b>${dias(R.larga)}</b>tu racha más larga</div>
           <div><b>${miles(R.dias)}</b>días estudiados</div>
         </div>
-        ${R.mejor.dia ? `<p class="small">${miles(R.total)} ${unidad[1]} en total. Tu mejor día fue el ${fecha(R.mejor.dia)}, con ${miles(R.mejor.n)}.${R.largaFin ? ` Tu racha más larga terminó el ${fecha(R.largaFin)}.` : ""}${modo === "juntos" ? ` ${ambos === 1 ? "1 día" : miles(ambos) + " días"} con los dos.` : ""}</p>` : `<p>Todavía no hay días${modo === "gramatica" ? " con quizzes" : " de estudio"}. Aquí se van a ir prendiendo.</p>`}
+        ${R.mejor.dia ? `<p class="small">${miles(R.total)} ${unidad[1]} en total. Tu mejor día fue el ${fecha(R.mejor.dia)}, con ${miles(R.mejor.n)}.${R.largaFin ? ` Tu racha más larga terminó el ${fecha(R.largaFin)}.` : ""}${modo === "juntos" ? ` ${ambos === 1 ? "1 día" : miles(ambos) + " días"} con los dos.` : ""}</p>` : `<p>Todavía no hay días${modo === "gramatica" ? " con quizzes" : modo === "habla" ? " con clase" : " de estudio"}. Aquí se van a ir prendiendo.</p>`}
         <ul class="hclave" aria-label="Qué significa cada color">
           <li><i class="hc c0"></i>Nada</li>${modo === "juntos"
-            ? '<li><i class="hc jv c3"></i>Vocabulario</li><li><i class="hc jg c3"></i>Gramática</li><li><i class="hc ja c3"></i>Los dos</li>'
-            : (modo === "gramatica" ? N.CALOR_GRAM : N.CALOR).map((desde, i, esc_) => `<li><i class="hc ${modo === "gramatica" ? "jg" : "jv"} c${i + 1}"></i>${desde}${i === esc_.length - 1 ? " o más" : esc_[i + 1] - 1 === desde ? "" : " a " + (esc_[i + 1] - 1)}</li>`).join("")}
+            ? '<li><i class="hc jv c3"></i>Vocabulario</li><li><i class="hc jg c3"></i>Gramática</li><li><i class="hc ja c3 sin"></i>Los dos, sin clase</li><li><i class="hc ja c3"></i>Las tres, con clase</li>'
+            : modo === "habla" ? '<li><i class="hc c0 hraya"></i>Estudiaste, sin clase</li><li><i class="hc jk"></i>Con clase</li>' : (modo === "gramatica" ? N.CALOR_GRAM : N.CALOR).map((desde, i, esc_) => `<li><i class="hc ${modo === "gramatica" ? "jg" : "jv"} c${i + 1}"></i>${desde}${i === esc_.length - 1 ? " o más" : esc_[i + 1] - 1 === desde ? "" : " a " + (esc_[i + 1] - 1)}</li>`).join("")}
         </ul>
       </section>
     </div>
@@ -1495,9 +1551,10 @@ function verCalor(o) {
     if (marcado) marcado.classList.remove("sel");
     marcado = c; c.classList.add("sel");
     const n = Number(c.dataset.n), v = Number(c.dataset.v), g = Number(c.dataset.g);
-    const que = modo === "vocabulario" ? (v ? plural(v, "repaso de vocabulario", "repasos de vocabulario") : "sin vocabulario")
+    const kh = clasesPorDia().hechas.get(c.dataset.dia);
+    const que = modo === "habla" ? (kh ? textoClases(kh) : "sin clase") : modo === "vocabulario" ? (v ? plural(v, "repaso de vocabulario", "repasos de vocabulario") : "sin vocabulario")
       : modo === "gramatica" ? (g ? plural(g, "quiz de gramática", "quizzes de gramática") : "sin quizzes")
-        : n ? plural(n, "repaso", "repasos") + (g ? ` y ${plural(g, "quiz de gramática", "quizzes de gramática")}` : "") : "sin estudio";
+        : (n ? plural(n, "repaso", "repasos") + (g ? ` y ${plural(g, "quiz de gramática", "quizzes de gramática")}` : "") : "sin estudio") + (kh ? "; " + textoClases(kh) : "");
     $("calorDia").textContent = `${diaLargo(c.dataset.dia)} de ${c.dataset.dia.slice(0, 4)}: ${que}.`;
   });
 }
