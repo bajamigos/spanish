@@ -1,11 +1,11 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=905d44e9e1";
-import * as A from "./almacen.js?v=905d44e9e1";
-import * as V from "./videos.js?v=905d44e9e1";
-import * as NB from "./nube.js?v=905d44e9e1";
-import * as CL from "./clases.js?v=905d44e9e1";
-import { abrirPractica } from "./practica.js?v=905d44e9e1";
-import * as F from "./fondo.js?v=905d44e9e1";
+import * as N from "./nucleo.js?v=2b8e000cee";
+import * as A from "./almacen.js?v=2b8e000cee";
+import * as V from "./videos.js?v=2b8e000cee";
+import * as NB from "./nube.js?v=2b8e000cee";
+import * as CL from "./clases.js?v=2b8e000cee";
+import { abrirPractica } from "./practica.js?v=2b8e000cee";
+import * as F from "./fondo.js?v=2b8e000cee";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -239,7 +239,9 @@ function poner(html, { titulo: t = "Pelagos", pie = "", nav = "", conserva = fal
   $("pie").innerHTML = pie;
   document.title = t;
   const enTablero = /^#?\/?$/.test(window.location.hash);
-  $("nav").hidden = !A.hayLlave() || !P || enTablero;      // ‹ regresa al Tablero; en el Tablero no hace falta
+  $("nav").hidden = !A.hayLlave() || !P;
+  // En el Tablero el ‹ no hace falta, pero su renglón se queda (invisible) para que la página no brinque al entrar a otra.
+  $("nav").classList.toggle("vacio", enTablero);
   $("ajustesLink").hidden = !A.hayLlave() || !P;
   for (const a of document.querySelectorAll("[data-nav]")) {
     if (a.dataset.nav === nav) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
@@ -1802,18 +1804,16 @@ function fotoDeLaTarjeta(id, hoy, antes) {
   return juego.length ? juego[Math.floor(N.azarDe(id + "#" + hoy + "#" + antes.n)() * juego.length)] : null;
 }
 
-/** Tus clases de Worldsacross, tres días a la vez (ver web/clases.js). Al fondo, una chica Reef distinta cada día. */
+/** Tus clases de Worldsacross, tres días a la vez (ver web/clases.js), con la misma cabeza que las otras materias. */
 function verClases(o) {
   if (!o.conserva) CL.aHoy();
   // La lección que se sugiere al pedir una clase: tu tema B2 más bajo (regla del 13-Oct-2026: por ahora, B2).
   const b2 = (P.temas || []).filter((t) => t.nivel === "B2" && t.slug_kwiziq).map((t) => ({ t, pct: info(t.id).pct }))
     .filter((x) => x.pct !== null && x.pct !== undefined).sort((a, b) => a.pct - b.pct)[0];
   CL.ponerSugerencia(b2 ? { tema: b2.t.id, titulo: b2.t.titulo || b2.t.titulo_kwiziq, pct: b2.pct, url: "https://spanish.kwiziq.com/revision/grammar/" + b2.t.slug_kwiziq } : null);
-  // De las fotos Reef de vocabulario (cientos), una por día; sin ellas, las portadas Reef.
-  const vocab = fotosVocab.size > 0, lista = ambiente() === "limpio" ? [] : vocab ? [...fotosVocab.keys()] : (P.fotos || []).map((f) => f.nombre), hoy = new Date();
-  const foto = lista.length ? lista[(Math.floor(Date.UTC(hoy.getFullYear(), hoy.getMonth(), hoy.getDate()) / 86400000) * 37 + 3) % lista.length] : null;
-  const fondo = foto ? `<div class="fondo"><img data-foto="${esc(foto)}"${vocab ? ' data-vocab="1"' : ""} alt="">${LOGO}</div>` : "";
-  poner(`<div class="hoy clases${foto ? " confoto" : ""}">${fondo}<div class="sobre">${entradas("tablero", "clases")}${CL.htmlClases(A.clases(), new Date(), CL.pedidosDe(A.sucesos()), CL.pedidosHuecosDe(A.sucesos()))}</div></div>`,
+  // 23-Oct-2026: la misma cabeza que Gramática, Vocabulario y Escucha: la foto del día arriba y el título «Habla».
+  const fondo = fondoDelDia();
+  poner(`<div class="hoy clases${fondo.hay ? " confoto" : ""}">${fondo.html}<div class="sobre"><p class="secTitulo" role="heading" aria-level="2">Habla</p>${CL.htmlClases(A.clases(), new Date(), CL.pedidosDe(A.sucesos()), CL.pedidosHuecosDe(A.sucesos()))}</div></div>`,
     { titulo: "Clases · Pelagos", nav: "inicio", conserva: o.conserva });
   CL.montar(vista, () => pintar({ conserva: true }));
 }
@@ -1997,12 +1997,12 @@ function verLectura(o, ejemplo = false) {
   <div class="hoy lectura${fondo.hay ? " confoto" : ""}">
     ${fondo.html}
     <div class="sobre">
-      ${entradas("tablero", "")}
+      <p class="secTitulo" role="heading" aria-level="2">Escucha</p>
+      ${ejemplo ? "" : `<div class="jump tres sec" role="group" aria-label="Qué enseña la Biblioteca" id="bibModo">
+        ${[["libros", "Libros"], ["series", "Series"], ["podcasts", "Podcasts"]].map(([clave, nombre]) => `<button type="button" data-bib="${clave}" aria-pressed="${clave === modo}">${nombre}</button>`).join("")}
+      </div>`}
       <section class="card" id="lecturaCabeza">
         <h1 class="h">Biblioteca</h1>
-        ${ejemplo ? "" : `<div class="jump tres" role="group" aria-label="Qué enseña la Biblioteca" id="bibModo">
-          ${[["libros", "Libros"], ["series", "Series"], ["podcasts", "Podcasts"]].map(([clave, nombre]) => `<button type="button" data-bib="${clave}" aria-pressed="${clave === modo}">${nombre}</button>`).join("")}
-        </div>`}
         ${ejemplo ? `<p class="lecturaEjemplo">Datos inventados, solo para ver cómo se ve. <a href="#/lectura">Volver a tus datos</a></p>` : ""}
         ${cabeza}
       </section>
@@ -2693,7 +2693,7 @@ const botonEscena = (id) => {
   // «Kwiz con la tutora»: sus preguntas, de 5 en 5 aciertos, con su escena de fondo que avanza con cada acierto.
   const prac = t && (bancoPorTema().get(id) || 0) >= N.ACIERTOS_TUTORA ? `<button type="button" class="ub grande" data-kwiz='{"tipo":"tutora","tema":${id}}'>Practicar con ${esc(nombreCorto(t))}</button>` : "";
   // «Llamar a <tutora>»: abre un chat nuevo de Claude con la llamada ya escrita; ahí se toca el botón de voz.
-  const llama = t ? `<a class="ub grande" href="${esc(enlaceLlamada(t))}" target="_blank" rel="noopener">Llamar a ${esc(nombreCorto(t))}</a>` : "";
+  const llama = t ? `<a class="ub grande" data-llamar href="${esc(enlaceLlamada(t))}" target="_blank" rel="noopener">Llamar a ${esc(nombreCorto(t))}</a>` : "";
   // En Limpio no hay ninguna imagen de la tutora: tampoco el botón de su escena completa.
   const escena = ambiente() === "limpio" ? "" : `<button type="button" class="ub grande" data-escena="${id}">Ver la escena completa</button>`;
   return `<div class="go">${escena}${conoce}${oir}${prac}${llama}</div><div class="voz" data-voz="${id}"></div><p class="small" data-escenaaviso="${id}" role="status"></p>`;

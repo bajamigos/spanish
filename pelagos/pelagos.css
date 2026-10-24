@@ -132,7 +132,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 .jump.niveles a, .jump.dos a, .jump.dos button, .jump.tres a, .jump.tres button { background: var(--page); color: var(--ink); border-color: var(--outline); }
 .jump.niveles a[aria-current="page"], .jump.dos a[aria-current="page"], .jump.dos button[aria-current="page"], .jump.tres a[aria-current="page"], .jump.tres button[aria-pressed="true"], .jump.tres button[aria-current="page"] { background: var(--tab); color: var(--tab-ink); border-color: var(--tab); }
 /* Las dos entradas de una sección (lecciones y quiz; quiz y lista). El nombre puede partirse en dos renglones sin descuadrar. */
-.jump.sec a { display: grid; place-items: center; min-height: 44px; padding: 6px 4px; line-height: 1.2; text-wrap: balance; }
+.jump.sec a, .jump.sec button { display: grid; place-items: center; min-height: 44px; padding: 6px 4px; line-height: 1.2; text-wrap: balance; }
 .jump.cuatro button { background: var(--page); color: var(--ink); border-color: var(--outline); font-size: 13px; padding: 9px 0; }
 .jump.cuatro button[aria-pressed="true"] { background: var(--tab); color: var(--tab-ink); border-color: var(--tab); }
 
@@ -662,11 +662,6 @@ dialog.sheet.escena { width: min(100%, 720px); max-height: 92%; }
    Al fondo, una chica Reef distinta cada día, fija a toda la ventana y centrada en la cadera. */
 :root { --clBloque: rgba(255,255,255,0.72); --clLinea: rgba(0,0,0,0.12); --clHoy: rgba(0,0,0,0.04); }
 :root[data-tema="oscuro"] { --clBloque: rgba(255,255,255,0.16); --clLinea: rgba(255,255,255,0.12); --clHoy: rgba(255,255,255,0.06); }
-.hoy.clases.confoto .fondo { position: fixed; inset: 0; margin: 0; z-index: 0; }
-.hoy.clases.confoto .fondo img:not(.logoFondo) { width: 100%; height: 100%; aspect-ratio: auto; object-fit: cover; object-position: 50% 78%; }
-.hoy.clases.confoto .fondo::after { inset: 0; height: auto; background: rgba(0,0,0,0.22); }
-:root:not([data-tema="oscuro"]) .hoy.clases.confoto .fondo::after { background: rgba(255,255,255,0.12); }
-.hoy.clases.confoto .sobre { margin-top: 0; }
 .clFila { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 10px; }
 .clRango { font-size: 17px; font-weight: 600; color: var(--ink); }
 .clNav { display: flex; gap: 6px; }
@@ -1089,3 +1084,24 @@ button.lnN[aria-pressed="true"] { outline: 3px solid currentColor; outline-offse
 .sello.toca.activo { filter: drop-shadow(0 0 6px rgba(245,197,66,1)); scale: 1.15; }
 .cuadro.consello .cn { padding-right: 22px; }
 @media (max-width: 359px) { .sello { width: 16px; height: 16px; top: 8px; right: 8px; } .sello.grande { width: 20px; height: 20px; } }
+
+/* Modo oscuro sin botones blancos (pedido del 23-Oct-2026): lo seleccionado (pestañas, modos, niveles, la caja actual)
+   ya no va en blanco: gris oscuro con letra blanca en negritas y borde gris claro. Lo más claro de la página es
+   la acción que de verdad vas a tocar (Revisar, Empezar quiz, Guardar…), en gris claro suave (Grifo escogió gris, sin naranja). */
+:root[data-tema="oscuro"] { --tab: #3a3a37; --tab-ink: #ffffff; --prim: #b9b8b1; --prim-ink: #121212; }
+:root[data-tema="oscuro"] [aria-pressed="true"]:not(.circ):not(.lnN):not(.bocinaVoz),
+:root[data-tema="oscuro"] .jump a[aria-current="page"], :root[data-tema="oscuro"] .jump button[aria-current="page"] {
+  border-color: var(--ink-3); font-weight: 700; }
+:root[data-tema="oscuro"] .lnCajas.grandes .lnC.cur { background: #3a3a37; color: #fff; border-color: var(--ink-3); box-shadow: inset 0 0 0 1px var(--ink-3); }
+:root[data-tema="oscuro"] .ub.grande, :root[data-tema="oscuro"] .hoy.confoto .ub.grande {
+  background: var(--prim); color: var(--prim-ink); border-color: var(--prim); text-shadow: none; }
+:root[data-tema="oscuro"] .ub.grande:active { background: color-mix(in srgb, var(--prim) 80%, black); }
+/* Una sola acción en gris claro por pantalla: los grandes que no son la acción principal se quedan neutros. */
+:root[data-tema="oscuro"] .ub.grande:is(#escenaX, #escenaWebX, #prX, #escenaCC, #repasoAudio, [data-porver], [data-volver],
+  [data-presenta], [data-escuchar], [data-escena], [data-practica], [data-llamar], #ver, #jMal, #jBien) {
+  background: linear-gradient(to bottom, var(--btn-top), var(--btn-bot)); color: var(--btn-ink); border-color: var(--outline); }
+:root[data-tema="oscuro"] .ub.grande#jMal { border-color: var(--no); color: var(--no); }
+:root[data-tema="oscuro"] .ub.grande#jBien { border-color: var(--si); color: var(--si); }
+
+/* 23-Oct-2026: en el Tablero el renglón del ‹ se queda invisible, así el logo y la foto no brincan al cambiar de página. */
+.top.vacio { visibility: hidden; }
