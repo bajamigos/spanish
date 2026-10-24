@@ -1116,3 +1116,9 @@ button.lnN[aria-pressed="true"] { outline: 3px solid currentColor; outline-offse
 
 /* 23-Oct-2026: en el Tablero el renglón del ‹ se queda invisible, así el logo y la foto no brincan al cambiar de página. */
 .top.vacio { visibility: hidden; }
+
+/* 24-Oct-2026: la burbuja de los puntos de las gráficas de línea. */
+.ptTip { fill: transparent !important; stroke: none !important; cursor: pointer; pointer-events: all; }
+.ptTip.on { fill: color-mix(in srgb, var(--ink) 18%, transparent) !important; }
+.ptBurbuja { position: absolute; z-index: 50; max-width: min(360px, calc(100vw - 16px)); padding: 8px 12px; border-radius: 10px; background: var(--ink); color: var(--page); font-size: 16px; line-height: 1.3; font-weight: 600; pointer-events: none; box-shadow: 0 4px 14px rgba(0,0,0,.35); }
+.ptBurbuja[hidden] { display: none; }

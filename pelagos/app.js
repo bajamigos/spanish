@@ -1,11 +1,11 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=eb596ab9c6";
-import * as A from "./almacen.js?v=eb596ab9c6";
-import * as V from "./videos.js?v=eb596ab9c6";
-import * as NB from "./nube.js?v=eb596ab9c6";
-import * as CL from "./clases.js?v=eb596ab9c6";
-import { abrirPractica } from "./practica.js?v=eb596ab9c6";
-import * as F from "./fondo.js?v=eb596ab9c6";
+import * as N from "./nucleo.js?v=a4a662a77f";
+import * as A from "./almacen.js?v=a4a662a77f";
+import * as V from "./videos.js?v=a4a662a77f";
+import * as NB from "./nube.js?v=a4a662a77f";
+import * as CL from "./clases.js?v=a4a662a77f";
+import { abrirPractica } from "./practica.js?v=a4a662a77f";
+import * as F from "./fondo.js?v=a4a662a77f";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -901,8 +901,52 @@ function avanceNivel(id = "") {
 }
 const DIAS_CORTOS = ["D", "L", "M", "M", "J", "V", "S"];
 const diaTend = (d, hoy) => (d === hoy ? "Hoy" : DIAS_CORTOS[new Date(d + "T12:00:00").getDay()]);
+// 24-Oct-2026: en las gráficas de línea, al pasar el ratón (o tocar) un punto sale su valor y su fecha.
+const DIAS_TIP = ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"];
+function fechaTip(d, hoy) {
+  const f = `${DIAS_TIP[new Date(d + "T12:00:00").getDay()]} ${fechaChica(d)}`;
+  return d === hoy ? "Hoy, " + f : f;
+}
+/** Un círculo invisible y grande encima de cada punto, fácil de atinar, con el texto de su burbuja. */
+const puntoTip = (cx, cy, texto, r = 13) => `<circle class="ptTip" cx="${cx}" cy="${cy}" r="${r}" data-tip="${esc(texto)}"><title>${esc(texto)}</title></circle>`;
+let burbuja = null, burbujaFija = false;
+function mostrarBurbuja(pt) {
+  if (!burbuja) {
+    burbuja = document.createElement("div");
+    burbuja.className = "ptBurbuja";
+    burbuja.setAttribute("role", "status");
+    document.body.appendChild(burbuja);
+  }
+  for (const v of document.querySelectorAll(".ptTip.on")) v.classList.remove("on");
+  pt.classList.add("on");
+  burbuja.textContent = pt.dataset.tip;
+  burbuja.hidden = false;
+  const r = pt.getBoundingClientRect(), b = burbuja.getBoundingClientRect();
+  const left = Math.max(8, Math.min(window.innerWidth - b.width - 8, r.left + r.width / 2 - b.width / 2));
+  const top = r.top - b.height - 6 < 8 ? r.bottom + 6 : r.top - b.height - 6;
+  burbuja.style.left = Math.round(left + window.scrollX) + "px";
+  burbuja.style.top = Math.round(top + window.scrollY) + "px";
+}
+function esconderBurbuja() {
+  if (burbuja) burbuja.hidden = true;
+  for (const v of document.querySelectorAll(".ptTip.on")) v.classList.remove("on");
+  burbujaFija = false;
+}
+document.addEventListener("pointerover", (ev) => {
+  const pt = ev.target instanceof Element ? ev.target.closest(".ptTip") : null;
+  if (pt && ev.pointerType === "mouse") mostrarBurbuja(pt);
+});
+document.addEventListener("pointerout", (ev) => {
+  const pt = ev.target instanceof Element ? ev.target.closest(".ptTip") : null;
+  if (pt && ev.pointerType === "mouse" && !burbujaFija) esconderBurbuja();
+});
+document.addEventListener("click", (ev) => {
+  const pt = ev.target instanceof Element ? ev.target.closest(".ptTip") : null;
+  if (pt) { mostrarBurbuja(pt); burbujaFija = true; } else if (burbujaFija) esconderBurbuja();
+});
+window.addEventListener("hashchange", esconderBurbuja);
 /** Una línea chiquita de 7 puntos. serie: números; etiqueta: lo que dice el lector de pantalla. */
-function lineaTend(serie, dias, clase, etiqueta, alto = 80) {
+function lineaTend(serie, dias, clase, etiqueta, alto = 80, unidad = "tarjetas") {
   if (serie.length < 2) return "";
   const hoy = dias[dias.length - 1];
   const lo = Math.min(...serie), hi = Math.max(...serie), rango = hi - lo || 1;
@@ -912,6 +956,7 @@ function lineaTend(serie, dias, clase, etiqueta, alto = 80) {
   return `<svg class="tdLinea ${clase}" viewBox="0 0 340 ${alto}" width="100%" role="img" aria-label="${esc(etiqueta)}">
     <polyline points="${serie.map((v, i) => x(i) + "," + y(v)).join(" ")}" fill="none" stroke-width="3" stroke-linejoin="round"/>
     ${serie.map((v, i) => `<circle cx="${x(i)}" cy="${y(v)}" r="${i === ult ? 6 : 3.5}"/>`).join("")}
+    ${serie.map((v, i) => puntoTip(x(i), y(v), `${fechaTip(dias[i], hoy)} · ${v} ${unidad}`)).join("")}
     <text class="tdIni" x="${x(0)}" y="${y(serie[0]) - 10}" text-anchor="middle">${serie[0]}</text>
     <text class="tdFin" x="${x(ult)}" y="${y(serie[ult]) - 12}" text-anchor="middle">${serie[ult]}</text>
     ${dias.map((d, i) => `<text class="tdDia" x="${x(i)}" y="${alto - 1}" text-anchor="middle">${diaTend(d, hoy)}</text>`).join("")}
@@ -958,6 +1003,7 @@ function graficaAvance(d, rotulos, etiqueta, nums) {
       <polygon class="pgArea" points="${area}"/>
       <polyline class="pgLinea" points="${d.linea.map((v, i) => x(i) + "," + y(v)).join(" ")}"/>
       ${d.linea.map((v, i) => `<circle class="pgPunto" cx="${x(i)}" cy="${y(v)}" r="${i === ult ? 5 : 3}"/>`).join("")}
+      ${d.linea.map((v, i) => puntoTip(x(i), y(v), `${fechaTip(d.dias[i], d.dias[ult])} · ${rotulos.linea}: ${v}% · ${rotulos.area}: ${d.area[i]}%`)).join("")}
       ${n > 1 ? `<text class="pgEje" x="${x(0)}" y="${H - 8}" text-anchor="start">${fechaChica(d.dias[0])}</text>` : ""}
       <text class="pgEje" x="${x(ult)}" y="${H - 8}" text-anchor="end">Hoy</text>
     </svg>
@@ -1006,6 +1052,7 @@ function curvaVocab() {
       <path class="tjCurvaArea" d="M${pts.join(" L")} L${X1},${Y1 + 4} L${X0},${Y1 + 4} Z"></path>
       <path class="tjCurvaLinea" d="M${pts.join(" L")}"></path>
       ${xs.map((x, i) => `<circle class="${i === 6 ? "tjCurvaHoy" : "tjCurvaDia"}" cx="${x.toFixed(1)}" cy="${ys[i].toFixed(1)}" r="${i === 6 ? 6.5 : 4}"></circle>`).join("")}
+      ${xs.map((x, i) => puntoTip(x.toFixed(1), ys[i].toFixed(1), `${fechaTip(S.dias[i], S.dias[6])} · ${num(v[i])}% de dominio`, 10)).join("")}
       ${xs.map((x, i) => `<text class="${i === 6 ? "tjCurvaLetraHoy" : "tjCurvaLetra"}" x="${x.toFixed(1)}" y="${H - 2}" text-anchor="middle">${letras[i]}</text>`).join("")}
     </svg>
   </aside>`;
