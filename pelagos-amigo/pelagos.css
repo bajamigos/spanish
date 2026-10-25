@@ -1217,7 +1217,9 @@ body.conHoja { overflow: hidden; }
 .tjDeshacer .lk { font-weight: 800; }
 
 /* ---- El Atlas en el quiz de gramática, en Limpio (25-Oct-2026) ---- */
-.gFila.conNivel { gap: 8px; }
+.gFila.conNivel { gap: 6px; }
+.gFila.conNivel .hoyC { gap: 4px; }
+.gFila.conNivel .hoyC.medio .circ b { padding: 2px 7px; font-size: 16px; }
 .gFila.conNivel .lnCuenta { margin-right: auto; }
 .gFila.conNivel .hoyFila > span:first-child { display: none; }
 .qaNivel { background: var(--ink); color: var(--page); font-weight: 900; border-radius: 6px; padding: 1px 7px; font-size: 15px; flex: none; }
@@ -1254,3 +1256,35 @@ body.conHoja { overflow: hidden; }
 .qaDeshacer[hidden] { display: none; }
 .qaDesBtn { background: none; border: 1px solid var(--line); color: inherit; border-radius: 999px; padding: 5px 13px; font: 700 14px system-ui, sans-serif; opacity: .9; cursor: pointer; }
 @media (prefers-reduced-motion: reduce) { .qaC.qaActual, .qaC.qaSubio, .qaC.qaIgual, .qaC.qaBajo { animation: none; } .qaRotulo { animation: none; } }
+
+/* ---- Quiz con Atlas, más compacto (25-Oct-2026) ---- */
+body.qaQuiz #nav { display: none; }
+.qaAtras.ub.atras { flex: 0 0 auto; width: 40px; min-height: 34px; font-size: 26px; line-height: 1; font-weight: 700; padding: 0 0 3px; display: grid; place-items: center; text-decoration: none; }
+.kw.conAtlas .cue { font-size: 19px; margin-top: 8px; }
+.kw.conAtlas .sub { margin: 4px 0 0; }
+.kw.conAtlas .lineaG { margin-bottom: 8px; gap: 8px; }
+.kw.conAtlas .hero.kwh { min-height: 0; }
+[data-ambiente="limpio"] .kw.conAtlas .kwh .over { min-height: 0; padding-bottom: 14px; }
+.kw.conAtlas .hero .ratio { display: none; }
+/* Los tres botones en un renglón. Oscuro: sin elegir negro, elegido gris oscuro con borde grueso, Revisar gris claro.
+   Claro: al revés — sin elegir blanco, elegido gris con borde grueso, Revisar negro. */
+.kw.conAtlas .qaModos { grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr) minmax(0, 1fr); }
+.kw.conAtlas .qaModos button { border-width: 1.5px; font-size: 13px; padding: 10px 2px; white-space: nowrap; letter-spacing: -0.2px; }
+.kw.conAtlas .qaModos button:not(.qaRevisar) { background: #fff; color: #000; border-color: #9a9a9a; }
+.kw.conAtlas .qaModos button[aria-current="page"]:not(.qaRevisar) { background: #c9c9c9; color: #000; border: 3px solid #000; }
+.kw.conAtlas .qaModos .qaRevisar { background: #000; color: #fff; border-color: #000; }
+:root[data-tema="oscuro"] .kw.conAtlas .qaModos button:not(.qaRevisar) { background: #000; color: #fff; border-color: #6b6b6b; }
+:root[data-tema="oscuro"] .kw.conAtlas .qaModos button[aria-current="page"]:not(.qaRevisar) { background: #3a3a3a; color: #fff; border: 3px solid #e8e8e8; }
+:root[data-tema="oscuro"] .kw.conAtlas .qaModos .qaRevisar { background: #d6d6d6; color: #000; border-color: #d6d6d6; }
+.kw.conAtlas #zonaEscribir .campo { margin-top: 8px; }
+.kw.conAtlas #zonaDecir p { margin: 8px 0 0; }
+/* El grupo que manda qué se marca en el Atlas: el 0-3-0 (este quiz) o los círculos (hoy). */
+.gFila.conNivel .lnCuenta, .gFila.conNivel .hoyC { border-radius: 10px; padding: 2px 4px; outline: 2px solid transparent; }
+.gFila.conNivel .qaSel { outline-color: var(--ink); }
+/* También vale: una respuesta por renglón (25-Oct-2026). */
+.vTambien .vTit { margin: 0 0 2px; }
+.vTambien ul { margin: 0; padding: 0; list-style: none; }
+.vTambien li { padding: 3px 0; border-bottom: 1px solid var(--line); }
+.vTambien li:last-child { border-bottom: 0; }
+.vTambien details { margin-top: 4px; }
+.vTambien summary { cursor: pointer; font-weight: 700; padding: 4px 0; }

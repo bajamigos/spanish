@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=a5032f4745";
-import * as A from "./almacen.js?v=a5032f4745";
-import * as V from "./videos.js?v=a5032f4745";
-import * as NB from "./nube.js?v=a5032f4745";
-import * as CL from "./clases.js?v=a5032f4745";
-import { abrirPractica } from "./practica.js?v=a5032f4745";
-import * as F from "./fondo.js?v=a5032f4745";
-import * as PD from "./podcasts.js?v=a5032f4745";
+import * as N from "./nucleo.js?v=dc96254722";
+import * as A from "./almacen.js?v=dc96254722";
+import * as V from "./videos.js?v=dc96254722";
+import * as NB from "./nube.js?v=dc96254722";
+import * as CL from "./clases.js?v=dc96254722";
+import { abrirPractica } from "./practica.js?v=dc96254722";
+import * as F from "./fondo.js?v=dc96254722";
+import * as PD from "./podcasts.js?v=dc96254722";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -250,7 +250,8 @@ function poner(html, { titulo: t = "Pelagos", pie = "", nav = "", conserva = fal
   }
   ponerSignoAyuda();
   vestir(vista);
-  document.body.classList.toggle("conandrea", !!vista.querySelector(".hoy.confoto"));      // con el retrato al fondo, la página entera se oscurece
+  document.body.classList.toggle("conandrea", !!vista.querySelector(".hoy.confoto"));
+  document.body.classList.toggle("qaQuiz", !!vista.querySelector(".kw.conAtlas"));      // quiz con Atlas: el ‹ va junto al nivel      // con el retrato al fondo, la página entera se oscurece
   if (conserva) {
     window.scrollTo(0, arriba);
     if (conFoco && $(conFoco)) $(conFoco).focus({ preventScroll: true });
@@ -3832,8 +3833,9 @@ function lineaDeGramatica(k, temaActual) {
   if (!atlasEnQuiz(k)) return h;
   // Modo Limpio (25-Oct-2026): el nivel adelante, las cajas con el color del Atlas y, debajo, el Atlas del nivel.
   const nv = (porId.get(temaActual) || {}).nivel || "";
-  return h.replace('<div class="gFila">', `<div class="gFila conNivel"><span class="qaNivel">${esc(nv)}</span>`)
-    .replace('<span class="lnCajas grandes"', '<span class="lnCajas grandes qaClave"')
+  // 25-Oct-2026 (más compacto): el ‹ junto al nivel y sin las cajas de días (el Atlas ya enseña cómo se reparten).
+  return h.replace('<div class="gFila">', `<div class="gFila conNivel"><a class="ub atras qaAtras" href="#/" aria-label="Volver al Tablero">‹</a><span class="qaNivel">${esc(nv)}</span>`)
+    .replace(/<span class="lnCajas grandes"[^>]*>.*?<\/span><\/span>\s*/s, "")
     .replace(/<\/div>\s*$/, `<div class="qaMapa" id="qaMapa" data-nivel="${esc(nv)}" data-tema="${temaActual}" data-kid="${esc(k.id)}"></div></div>`);
 }
 
@@ -3855,6 +3857,16 @@ function estadoProyectado(kid) {
 }
 const infoProy = (kid, t) => estadoProyectado(kid).temas.get(t) || { pct: null, n: 0, toca: null };
 const nivelProy = (kid, t) => { const i = infoProy(kid, t); return i && i.toca ? i.escalon + 1 : 0; };
+// Qué temas llevan borde en el Atlas (su pedido del 25-Oct-2026): tocar el 0-3-0 marca los de este quiz; tocar los
+// círculos de hoy, los de hoy. Se queda así de pregunta en pregunta.
+let qaMarcar = "quiz";
+document.addEventListener("click", (ev) => {
+  if (!(ev.target instanceof Element) || !$("qaMapa")) return;
+  const g = ev.target.closest(".gFila.conNivel .lnCuenta, .gFila.conNivel .hoyC");
+  if (!g) return;
+  const nuevo = g.classList.contains("hoyC") ? "hoy" : "quiz";
+  if (nuevo !== qaMarcar) { qaMarcar = nuevo; efectoR = null; pintarAtlasQuiz(); }
+}, true);      // en captura: el que explica los números corta el clic, y este tiene que oírlo antes
 let efectoR = null;          // la última respuesta: { kid, tema, f0, f1, p0, p1, bien, t0 }, para su animación
 const EFECTO_MS = 3200;
 function pintarAtlasQuiz() {
@@ -3862,7 +3874,11 @@ function pintarAtlasQuiz() {
   if (!caja) return;
   const nivel = caja.dataset.nivel, actual = Number(caja.dataset.tema), kid = caja.dataset.kid;
   const k = E.kwizzes.get(kid);
-  const delQuiz = new Set(k ? k.preguntas.map((x) => (preguntas.get(N.preguntaDe(x)) || {}).tema) : []);
+  // Marcados: los temas de este quiz, o (si tocaste los círculos de hoy) los de hoy. Ver qaMarcar.
+  let delQuiz;
+  if (qaMarcar === "hoy") { const d = N.temasDelDia(P, E); delQuiz = new Set([...d.nuevos, ...d.vencidos, ...d.fallados]); }
+  else delQuiz = new Set(k ? k.preguntas.map((x) => (preguntas.get(N.preguntaDe(x)) || {}).tema) : []);
+  for (const g of document.querySelectorAll(".gFila.conNivel .lnCuenta, .gFila.conNivel .hoyC")) g.classList.toggle("qaSel", g.classList.contains(qaMarcar === "hoy" ? "hoyC" : "lnCuenta"));
   const suyos = P.temas.filter((t) => t.nivel === nivel).sort((a, b) => a.orden - b.orden);
   const porTipo = new Map();
   for (const t of suyos) { if (!porTipo.has(t.categoria)) porTipo.set(t.categoria, []); porTipo.get(t.categoria).push(t); }
@@ -4003,7 +4019,7 @@ function verPregunta(o, kid) {
     ? `<div class="hoy confoto contutora kwFondo"><div class="fondo${clip ? "" : " cargando"}">${clip ? clip + LOGO : '<img class="logoCarga" src="logo.png" alt="Pelagos">'}</div><div class="sobre">${h}</div></div>`
     : h;      // en Limpio la pregunta va sin logo, como la tarjeta de vocabulario: más pantalla para la pregunta (18-Oct)
   poner(envolver(`
-  <section class="kw${deTutora ? " kwTutora" : ""}">
+  <section class="kw${deTutora ? " kwTutora" : ""}${atlasEnQuiz(k) ? " conAtlas" : ""}">
     <header class="hero kwh${arriba ? " contutora" : ""}">
       <div class="ratio"></div>
       ${deTutora ? (ambiente() === "limpio" ? "" : '<div class="tutoraVideo" id="tutoraVideo"></div>') : arriba ? "" : imagenDeArriba(foto && foto.nombre)}
@@ -4018,7 +4034,16 @@ function verPregunta(o, kid) {
       </div>
     </header>
     <div class="card" id="controles">
-      ${escribir ? `
+      ${escribir && atlasEnQuiz(k) ? `
+      <nav class="jump tres qaModos" aria-label="Cómo contestas">
+        <button type="button" id="modoEscribir">Escribir</button><button type="button" id="modoDecir">Decir en voz alta</button><button type="button" class="qaRevisar" id="revisar">Revisar</button>
+      </nav>
+      <div id="zonaEscribir">
+        <label class="sr" for="campo">Tu respuesta</label>
+        <input id="campo" class="campo" type="text" lang="es" aria-describedby="cue" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="send">
+        <div class="teclas" role="group" aria-label="Letras con acento">${["á", "é", "í", "ó", "ú", "ñ", "ü", "¿", "¡"].map((c) => `<button type="button" class="tecla" data-c="${c}">${c}</button>`).join("")}</div>
+      </div>
+      <div id="zonaDecir" hidden><p class="small">Dilo en voz alta y toca Revisar para ver la respuesta y calificarte.</p></div>` : escribir ? `
       <nav class="jump dos" aria-label="Cómo contestas">
         <button type="button" id="modoEscribir">Escribir</button><button type="button" id="modoDecir">Decir en voz alta</button>
       </nav>
@@ -4040,7 +4065,7 @@ function verPregunta(o, kid) {
       <div class="go arriba" id="vSeguir" hidden><button type="button" class="ub grande" id="siguiente">Siguiente</button></div>
       <p class="vtuya" id="vTuya" hidden></p>
       <p class="vresp" id="vResp"></p>
-      <p class="small" id="vTambien" hidden></p>
+      <div class="small vTambien" id="vTambien" hidden></div>
       <p id="vExp" hidden></p>
       <p class="small" id="vNota" hidden></p>
       <p class="small" id="vTema" hidden></p>
@@ -4074,11 +4099,26 @@ function verPregunta(o, kid) {
     const pill = $("vPill");
     pill.className = "pill " + (d.juicio ? "duda" : d.bien ? "bien" : "mal");
     pill.textContent = d.juicio ? "Tú decides" : d.bien ? (d.casi ? "Bien, pero revisa los acentos" : "Bien") : "Mal";
+    pill.parentElement.hidden = !!d.juicio && atlasEnQuiz(k);         // en Limpio, sin «Tú decides» (25-Oct-2026): Mal y Bien ya lo dicen
     const tuya = escribir ? ultimoEscrito : (d.bien ? null : d.elegido);
     texto("vTuya", tuya && !(d.bien && !d.casi) ? "Tu respuesta: " + tuya : "");
     $("vTuya").classList.toggle("mal", !d.juicio && !d.bien);
     $("vResp").textContent = "Respuesta: " + q.respuesta;
-    texto("vTambien", q.tambien_vale && q.tambien_vale.length ? "También vale: " + q.tambien_vale.join(" · ") : "");
+    // También vale: una por renglón (25-Oct-2026). Si son muchas, las primeras y las demás detrás de «Ver las otras».
+    const tv = $("vTambien"), otras = q.tambien_vale || [];
+    tv.textContent = ""; tv.hidden = !otras.length;
+    if (otras.length) {
+      const VISTAS = 6;
+      const lista = (xs) => { const ul = document.createElement("ul"); for (const x of xs) { const li = document.createElement("li"); li.textContent = x; ul.append(li); } return ul; };
+      const t = document.createElement("p"); t.className = "vTit"; t.textContent = "También vale:";
+      tv.append(t, lista(otras.slice(0, VISTAS)));
+      if (otras.length > VISTAS) {
+        const d = document.createElement("details"), sm = document.createElement("summary");
+        sm.textContent = "Ver las otras " + (otras.length - VISTAS);
+        d.append(sm, lista(otras.slice(VISTAS)));
+        tv.append(d);
+      }
+    }
     texto("vExp", q.explicacion);
     texto("vNota", d.juicio || !d.bien ? q.nota_juicio : "");
     const vt = $("vTema");
@@ -4165,14 +4205,17 @@ function verPregunta(o, kid) {
       $("zonaDecir").hidden = m !== "decir";
       $("modoEscribir").setAttribute("aria-current", m === "escribir" ? "page" : "false");
       $("modoDecir").setAttribute("aria-current", m === "decir" ? "page" : "false");
-      if (m === "escribir") campo.focus({ preventScroll: true }); else $("ver").focus({ preventScroll: true });
+      if (m === "escribir") campo.focus({ preventScroll: true }); else ($("ver") || $("revisar")).focus({ preventScroll: true });
     };
     $("modoEscribir").addEventListener("click", () => ponerModo("escribir"));
     $("modoDecir").addEventListener("click", () => ponerModo("decir"));
     ponerModo(guardado("pelagos.modo") === "decir" ? "decir" : "escribir");
 
+    const compacto = !$("noSe1");      // Limpio con Atlas: un solo botón, «Revisar», para todo
     const revisar = () => {
+      if (compacto && modo === "decir") { ultimoEscrito = null; veredicto({ juicio: true }); return; }
       ultimoEscrito = campo.value.trim();
+      if (!ultimoEscrito && compacto) { ultimoEscrito = null; apuntarRespuesta(false); return; }      // vacío: como «No sé»
       if (!ultimoEscrito) { campo.focus(); return; }
       const nota = N.calificarEscrito(ultimoEscrito, q.respuesta, q.tambien_vale);
       if (nota === null) veredicto({ juicio: true });
@@ -4188,10 +4231,12 @@ function verPregunta(o, kid) {
         campo.setSelectionRange(a + 1, a + 1);
       });
     }
-    $("ver").addEventListener("click", () => { ultimoEscrito = null; veredicto({ juicio: true }); });
     const noSe = () => { ultimoEscrito = null; apuntarRespuesta(false); };
-    $("noSe1").addEventListener("click", noSe);
-    $("noSe2").addEventListener("click", noSe);
+    if (!compacto) {
+      $("ver").addEventListener("click", () => { ultimoEscrito = null; veredicto({ juicio: true }); });
+      $("noSe1").addEventListener("click", noSe);
+      $("noSe2").addEventListener("click", noSe);
+    }
     $("jBien").addEventListener("click", () => juzgar(true));
     $("jMal").addEventListener("click", () => juzgar(false));
   } else {

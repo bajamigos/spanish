@@ -1255,16 +1255,28 @@ export function listaDeEstudio(paquete, estado, hoy = fechaLocal(new Date())) {
  * tocaba; nuevo si no tiene fecha, hasta lo que queda de la cuota de NUEVOS_TEMAS_AL_DIA. Respeta el enfoque.
  */
 export function cuentaDelDia(paquete, estado, hoy = fechaLocal(new Date())) {
+  const d = temasDelDia(paquete, estado, hoy);
+  return { nuevos: d.nuevos.length, vencidos: d.vencidos.length, fallados: d.fallados.length };
+}
+
+/**
+ * Los temas de hoy, uno por uno (25-Oct-2026, para marcarlos en el Atlas del quiz): { nuevos, vencidos, fallados }.
+ * Los mismos que cuenta cuentaDelDia. Los nuevos son los que quedan de la cuota del día, los más bajos primero
+ * (como entran a tu plan).
+ */
+export function temasDelDia(paquete, estado, hoy = fechaLocal(new Date())) {
   const con = temasCon(paquete, estado, estado.enfoque);
-  let nuevos = 0, vencidos = 0, fallados = 0, nuevosHoy = 0;
+  const nuevos = [], vencidos = [], fallados = [];
+  let nuevosHoy = 0;
   for (const t of con.keys()) {
     const i = estado.temas.get(t);
     if (i.primera && fechaLocal(i.primera) === hoy) nuevosHoy++;
-    if ((estado.debe.get(t) || 0) > 0) fallados++;
-    else if (i.toca && i.toca <= hoy) vencidos++;
-    else if (!i.toca) nuevos++;
+    if ((estado.debe.get(t) || 0) > 0) fallados.push(t);
+    else if (i.toca && i.toca <= hoy) vencidos.push(t);
+    else if (!i.toca) nuevos.push(t);
   }
-  return { nuevos: Math.min(nuevos, Math.max(0, NUEVOS_TEMAS_AL_DIA - nuevosHoy)), vencidos, fallados };
+  nuevos.sort((a, b) => (estado.temas.get(a).pct ?? 0) - (estado.temas.get(b).pct ?? 0) || a - b);
+  return { nuevos: nuevos.slice(0, Math.max(0, NUEVOS_TEMAS_AL_DIA - nuevosHoy)), vencidos, fallados };
 }
 
 /** Qué pasó con la lista después de un kwiz ya terminado: { quedan, salen, entran }, o null si no es de la lista. */
