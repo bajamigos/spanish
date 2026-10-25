@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=f519d0b854";
-import * as A from "./almacen.js?v=f519d0b854";
-import * as V from "./videos.js?v=f519d0b854";
-import * as NB from "./nube.js?v=f519d0b854";
-import * as CL from "./clases.js?v=f519d0b854";
-import { abrirPractica } from "./practica.js?v=f519d0b854";
-import * as F from "./fondo.js?v=f519d0b854";
-import * as PD from "./podcasts.js?v=f519d0b854";
+import * as N from "./nucleo.js?v=c9dcdf0882";
+import * as A from "./almacen.js?v=c9dcdf0882";
+import * as V from "./videos.js?v=c9dcdf0882";
+import * as NB from "./nube.js?v=c9dcdf0882";
+import * as CL from "./clases.js?v=c9dcdf0882";
+import { abrirPractica } from "./practica.js?v=c9dcdf0882";
+import * as F from "./fondo.js?v=c9dcdf0882";
+import * as PD from "./podcasts.js?v=c9dcdf0882";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1613,6 +1613,25 @@ function verCalor(o) {
 
 let enTarjetaDe = null;       // la tarjeta que está en pantalla: no se repinta debajo de ti
 
+// ---- «Deshacer» la última palabra calificada (24-Oct-2026): por unos segundos, arriba del quiz. Apunta un suceso
+// «tjdeshacer» que anula esa calificación (no se borra nada) y la palabra vuelve a salir primero.
+const DESHACER_MS = 10000;
+let tjUltima = null, tjVolver = null;
+function barraDeshacer() {
+  if (!tjUltima || Date.now() > tjUltima.hasta) { tjUltima = null; return ""; }
+  setTimeout(() => { const b = $("tjDeshacer"); if (b && (!tjUltima || Date.now() > tjUltima.hasta)) b.remove(); }, tjUltima.hasta - Date.now() + 50);
+  return `<p class="tjDeshacer" id="tjDeshacer" role="status"><span>${esc(tjUltima.como)}: «${esc(tjUltima.palabra)}»</span><button type="button" class="lk" id="tjDeshacerBtn">Deshacer</button></p>`;
+}
+vista.addEventListener("click", (ev) => {
+  if (!(ev.target instanceof Element) || !ev.target.closest("#tjDeshacerBtn") || !tjUltima) return;
+  ev.stopPropagation();
+  A.apuntar({ t: "tjdeshacer", id: N.nuevoId("td"), ref: tjUltima.ref, cuando: new Date().toISOString() });
+  tjVolver = tjUltima.tarjeta;
+  tjUltima = null;
+  recalcular();
+  pintar();
+}, true);
+
 /**
  * Tu vocabulario. Las tarjetas son sencillas a propósito: inglés al frente, español atrás, y nada más. Te la sabes o no.
  * Sale una tarjeta a la vez: el frente en inglés. Lo dices en español, tocas en cualquier parte para ver
@@ -1633,6 +1652,7 @@ function verTarjetas(o) {
     return poner(conFondo(`
     ${entradas("vocabulario", "quiz")}
     <section class="card" id="tjCero">
+      ${barraDeshacer()}
       ${dia.total ? `<h1 class="sr">Vocabulario en cero</h1>` : `<h1 class="h">Todavía no hay vocabulario</h1><p>Cuando haya palabras en el contenido, aquí salen las de cada día.</p>`}
       <div class="conCuadro">${masTarde.length ? `<button type="button" class="ub grande" id="tjAdelantar">Adelantar ${masTarde.length}</button>` : "<span></span>"}<div class="unCuadro" role="list" aria-label="Tu vocabulario de hoy">${cuadroVocabulario(hoy)}</div></div>
       <div class="tjAvance"><h2 class="tdSub">Tu avance</h2>${graficaVocab()}</div>
@@ -1642,7 +1662,10 @@ function verTarjetas(o) {
   }
   // Primero se termina la tanda; las que falles en ella quedan para hoy y salen después, como cualquier fallada.
   const enAdelanto = restan.length > 0;
-  const cola = enAdelanto ? restan : dia.pendientes;
+  const cola = (enAdelanto ? restan : dia.pendientes).slice();
+  // Después de «Deshacer», la palabra deshecha sale otra vez primero.
+  if (tjVolver && cola.includes(tjVolver)) { cola.splice(cola.indexOf(tjVolver), 1); cola.unshift(tjVolver); }
+  tjVolver = null;
   const antes = E.tarjetas.get(cola[0]);
   const c = N.tarjetaVista(tarjetas.get(cola[0]), antes);
   const foto = fotoDeLaTarjeta(c.id, hoy, antes);
@@ -1658,6 +1681,7 @@ function verTarjetas(o) {
       ${foto ? `<img data-foto="${esc(foto.nombre)}"${foto.vocab ? ' data-vocab="1"' : ""} alt="">` : ""}
       <div class="over">
         <p class="lead sr"><span id="tjFaltan">${enAdelanto ? faltan : (cola.length === 1 ? "Falta 1" : "Faltan " + cola.length)}</span><span id="tjAviso">Dilo en español</span></p>
+        ${barraDeshacer()}
         <div data-explicas>${lineaDeVocabulario(dia, c.id, antes)}${panelExplica()}</div>
         ${renglonConLapiz("frente", c.frente, "h1", "cue", ' id="cue"')}
         ${(() => { const at = N.tarjetasAtascadas(E).get(c.id); return at ? `<p class="tjAtas">Atascada · fallada en ${at.fallos} quizzes esta semana · <button type="button" class="lk" data-v="${esc(c.id)}">Ver su ficha</button></p>` : ""; })()}
@@ -1668,7 +1692,7 @@ function verTarjetas(o) {
     </header>
     <div class="tjZona">
       <p class="tjToca" id="tjToca">Toca para ver la respuesta</p>
-      <div class="tjBotones" id="tjBotones" role="group" aria-label="¿La supiste?" hidden><button type="button" class="ub" id="jMal">Mal</button><button type="button" class="ub" id="jBien">Bien</button></div>
+      <div class="tjBotones" id="tjBotones" role="group" aria-label="¿La supiste?" hidden><button type="button" class="ub" id="jMal">Mal</button><button type="button" class="ub" id="jBien">Bien</button><button type="button" class="ub" id="jFacil" aria-label="Fácil: a 30 días">Fácil<small>30 días</small></button></div>
     </div>
     ${curvaVocab()}
   </section>`,
@@ -1692,12 +1716,14 @@ function verTarjetas(o) {
     $("tjAviso").textContent = "¿La supiste?";
     vista.querySelector('.tjh [data-lapiz="frente"]').hidden = false;
     $("tjResp").focus({ preventScroll: true });
-    teclas = { b: () => calificar(true, true), m: () => calificar(false, true) };
+    teclas = { b: () => calificar(true, true), m: () => calificar(false, true), f: () => calificar(true, true, true) };
   }
-  function calificar(bien, conTecla = false) {
+  function calificar(bien, conTecla = false, facil = false) {
     if (calificada || !destapadaEn || (!conTecla && Date.now() - destapadaEn < ESPERA)) return;
     calificada = true;
-    A.apuntar({ t: "tj", id: N.nuevoId("t"), tarjeta: c.id, cuando: new Date().toISOString(), bien: bien ? 1 : 0, modo: "tocar", ...(enAdelanto ? { adelanto: 1 } : {}) });
+    const ev = { t: "tj", id: N.nuevoId("t"), tarjeta: c.id, cuando: new Date().toISOString(), bien: bien ? 1 : 0, modo: "tocar", ...(enAdelanto ? { adelanto: 1 } : {}), ...(facil ? { facil: 1 } : {}) };
+    A.apuntar(ev);
+    tjUltima = { ref: ev.id, tarjeta: c.id, palabra: c.reverso, como: facil ? "Fácil" : bien ? "Bien" : "Mal", hasta: Date.now() + DESHACER_MS };
     recalcular();
     enTarjetaDe = null;
     // Los puntitos enseñan si la tarjeta subió o se cayó, y luego sale la siguiente (o «Vocabulario en cero»).
@@ -1714,6 +1740,7 @@ function verTarjetas(o) {
   activarLapices(vista.querySelector(".tjh"), c.id, () => {});
   $("jBien").addEventListener("click", () => calificar(true));
   $("jMal").addEventListener("click", () => calificar(false));
+  $("jFacil").addEventListener("click", () => calificar(true, false, true));
 }
 
 /** La «Línea C» del quiz de vocabulario: lo que queda HOY por grupo, los puntitos de esta tarjeta y tus cajas. */

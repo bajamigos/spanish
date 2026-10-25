@@ -1208,3 +1208,10 @@ body.conHoja { overflow: hidden; }
 /* 24-Oct-2026 (su pedido): «Te queda hoy» se ve igual que los cuadros de al lado (Gramática, Vocabulario): va dentro
    de una tarjeta que ya es de vidrio, así que lleva la capa clarita de los cuadros, no otra capa de vidrio entera. */
 .confoto .hoyGrande { background: var(--vidrio-2); border-color: var(--vidrio-borde); }
+/* 24-Oct-2026 (su elección, la «A»): tres botones en fila: Mal, Bien y Fácil (a la caja de 30 días). Y «Deshacer». */
+.tjBotones { grid-template-columns: 1fr 1fr 1fr; }
+.tjBotones #jFacil { border-color: var(--b3); color: var(--b3); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; line-height: 1; }
+.tjBotones #jFacil small { font-size: 14px; font-weight: 600; opacity: .85; }
+.tjDeshacer { margin: 0 0 8px; padding: 6px 12px; border-radius: 10px; background: color-mix(in srgb, var(--ink) 12%, transparent); font-weight: 600; font-size: 15px; display: flex; gap: 10px; align-items: center; }
+.tjDeshacer span { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tjDeshacer .lk { font-weight: 800; }

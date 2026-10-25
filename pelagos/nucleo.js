@@ -28,6 +28,8 @@ export const LISTA = 5;
 export const NUEVOS_TEMAS_AL_DIA = 5;           // la cuota de temas nuevos de gramática por día (su regla del 22-Oct-2026)
 export const KWIZZES_AL_DIA = 5;                 // la medida diaria de kwizzes
 export const ACIERTOS_PARA_SALIR = 2;
+export const ESCALON_FACIL = 4;                   // «Ya me la sé» la manda a la caja de 30 días (ESCALONES[4])
+export const PESO_FACIL = 3;                      // y cuenta como 3 aciertos en su porcentaje (su pedido del 24-Oct-2026)
 export const NUEVAS_AL_DIA = 20;                 // cuántas tarjetas nuevas entran al día, como mucho
 
 // ---------------------------------------------------------------- El porcentaje
@@ -319,23 +321,30 @@ export function calcular(paquete, sucesos) {
     actividad.set(dia, (actividad.get(dia) || 0) + 1);
   };
 
+  // «Deshacer» (24-Oct-2026): un suceso «tjdeshacer» anula la calificación «tj» que nombra en «ref». Nada se borra.
+  const deshechos = new Set();
+  for (const e of lista) if (e.t === "tjdeshacer" && typeof e.ref === "string") deshechos.add(e.ref);
   for (const e of lista) {
     if (e.t === "tj") {
       const c = tarjetas.get(e.tarjeta);
-      if (!c) continue;
+      if (!c || deshechos.has(e.id)) continue;
+      // «Ya me la sé» (24-Oct-2026): un acierto que pesa PESO_FACIL en su porcentaje y la sube directo a la caja de 30 días.
+      const facil = !!e.facil && !!e.bien;
       const dia = fechaLocal(e.cuando);
       const yaHoy = !!c.ultima && fechaLocal(c.ultima) === dia;     // ya la habías repasado hoy
-      c.n++;
+      const peso = facil ? PESO_FACIL : 1;
+      c.n += peso;
       c.nr++;                                    // repasos desde el último reinicio (o desde siempre)
       if (!c.primera) c.primera = e.cuando;
       c.ultima = e.cuando;
-      c.historia.push({ cuando: e.cuando, bien: !!e.bien });
+      c.historia.push({ cuando: e.cuando, bien: !!e.bien, ...(facil ? { peso } : {}) });
       cuenta(e.cuando);
       actividadVoc.set(dia, (actividadVoc.get(dia) || 0) + 1);
       if (!e.bien) { c.escalon = 0; c.toca = dia; c.fallada = dia; }                     // fallada: vuelve a salir hoy mismo                     // fallada: vuelve a salir hoy mismo
       else {
-        c.bien++;
-        if (c.fallada === dia) { c.escalon = 0; c.toca = sumarDias(dia, ESCALONES[0]); c.fallada = null; }      // la rescataste hoy: mañana otra vez
+        c.bien += peso;
+        if (facil && c.fallada !== dia && c.escalon < ESCALON_FACIL) { c.escalon = ESCALON_FACIL; c.toca = sumarDias(dia, ESCALONES[ESCALON_FACIL]); }
+        else if (c.fallada === dia) { c.escalon = 0; c.toca = sumarDias(dia, ESCALONES[0]); c.fallada = null; }      // la rescataste hoy: mañana otra vez
         else if (!c.toca || c.toca <= dia || (e.adelanto && !yaHoy)) [c.escalon, c.toca] = siguienteToca(c.nr === 1 && !c.traia ? -1 : c.escalon, true, dia);    // adelantada a propósito: sí sube
       }
     } else if (e.t === "tjreinicio") {
@@ -1041,11 +1050,11 @@ export function semanaVocab(paquete, sucesos, hoy, Ehoy, memo = {}) {
 
 /** Los aciertos de una tarjeta al cierre de cada día: lo que traía de antes más sus repasos hasta ese día. */
 export function historiaTarjeta(suya, hasta = fechaLocal(new Date()), desde = INICIO_HISTORIA) {
-  const repasos = (suya?.historia || []).map((h) => ({ dia: fechaLocal(new Date(Date.parse(h.cuando) || 0)), bien: !!h.bien }));
+  const repasos = (suya?.historia || []).map((h) => ({ dia: fechaLocal(new Date(Date.parse(h.cuando) || 0)), bien: !!h.bien, peso: h.peso || 1 }));
   const salida = [];
   for (let dia = desde, vueltas = 0; dia <= hasta && vueltas < 800; dia = sumarDias(dia, 1), vueltas++) {
     let n = suya?.baseN || 0, bien = suya?.baseBien || 0;
-    for (const r of repasos) if (r.dia <= dia) { n++; if (r.bien) bien++; }
+    for (const r of repasos) if (r.dia <= dia) { n += r.peso; if (r.bien) bien += r.peso; }
     salida.push({ dia, pct: n ? (100 * bien) / n : null });
   }
   return salida;
