@@ -4,8 +4,8 @@
 // apagada, y con Media Session sale en la pantalla bloqueada con sus botones.
 // Lo que escuchas se apunta como suceso «pod» (cada 2 minutos de escucha, al pausar y al terminar): de ahí salen
 // «dónde te quedaste» (en cualquier aparato) y los minutos que suman a tu Escucha, también si lo escuchas a medias.
-import * as N from "./nucleo.js?v=c15c0ca197";
-import * as A from "./almacen.js?v=c15c0ca197";
+import * as N from "./nucleo.js?v=ec839b40f1";
+import * as A from "./almacen.js?v=ec839b40f1";
 
 const PC = "https://static.pocketcasts.com/discover/images/400/";
 export const PROGRAMAS = [
@@ -138,8 +138,39 @@ export function escuchado(sucesos = A.sucesos()) {
     const programas = new Map([...m].map(([k, s]) => [k, Math.round(s / 60)]));
     dias.set(dia, { min: Math.round([...m.values()].reduce((a, b) => a + b, 0) / 60), programas });
   }
-  escuchaCache = { clave, r: { pos, dias } };
+  // Tu lista (24-Oct-2026): lo que quitaste (deslizando o con la ✕) y desde cuándo empieza.
+  const quitados = new Map();
+  let corte = null;
+  for (const e of sucesos) {
+    if (e.t === "podquita" && typeof e.ep === "string") {
+      const ms = Date.parse(e.cuando || "") || 0, prev = quitados.get(e.ep);
+      if (!prev || ms >= prev.ms) quitados.set(e.ep, { ms, fuera: !e.deshacer });
+    } else if (e.t === "podinicio" && Number.isFinite(e.desde)) corte = corte === null ? e.desde : Math.min(corte, e.desde);
+  }
+  const fuera = new Set([...quitados].filter(([, x]) => x.fuera).map(([k]) => k));
+  escuchaCache = { clave, r: { pos, dias, fuera, corte } };
   return escuchaCache.r;
+}
+
+const LISTA_INICIAL = 30;
+/**
+ * Tu lista: los episodios desde el corte (los 30 más nuevos del día que empezó, y de ahí en adelante solo los que se
+ * publiquen), menos los que quitaste. Lo quitado no se rellena con episodios viejos. La primera vez, apunta el corte.
+ */
+export function miLista(eps) {
+  const r = escuchado();
+  let corte = r.corte;
+  if (corte === null) {
+    if (!eps.length) return [];
+    corte = eps[Math.min(LISTA_INICIAL, eps.length) - 1].fecha;
+    A.apuntar({ t: "podinicio", id: N.nuevoId("pi"), cuando: new Date().toISOString(), desde: corte });
+  }
+  return eps.filter((e) => e.fecha >= corte && !r.fuera.has(e.id));
+}
+export const quitado = (id) => escuchado().fuera.has(id);
+/** Quita un episodio de tu lista (o lo devuelve, con deshacer). */
+export function quitar(id, deshacer = false) {
+  A.apuntar({ t: "podquita", id: N.nuevoId("pq"), cuando: new Date().toISOString(), ep: id, deshacer: deshacer || undefined });
 }
 /** Dónde te quedaste en un episodio: lo más nuevo entre este aparato y tus sucesos. */
 export function posicion(id) {

@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=c15c0ca197";
-import * as A from "./almacen.js?v=c15c0ca197";
-import * as V from "./videos.js?v=c15c0ca197";
-import * as NB from "./nube.js?v=c15c0ca197";
-import * as CL from "./clases.js?v=c15c0ca197";
-import { abrirPractica } from "./practica.js?v=c15c0ca197";
-import * as F from "./fondo.js?v=c15c0ca197";
-import * as PD from "./podcasts.js?v=c15c0ca197";
+import * as N from "./nucleo.js?v=ec839b40f1";
+import * as A from "./almacen.js?v=ec839b40f1";
+import * as V from "./videos.js?v=ec839b40f1";
+import * as NB from "./nube.js?v=ec839b40f1";
+import * as CL from "./clases.js?v=ec839b40f1";
+import { abrirPractica } from "./practica.js?v=ec839b40f1";
+import * as F from "./fondo.js?v=ec839b40f1";
+import * as PD from "./podcasts.js?v=ec839b40f1";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -211,6 +211,7 @@ function bancoPorTema() {
 
 /** Las seis marcas de un tema: lección, tutora (con su nombre), video completo, loop, voz y preguntas. Se leen igual con lector de pantalla. */
 function marcas(t, banco) {
+  if (A.esAmigo()) return "";      // en el modo amigo no se enseña qué le falta a cada lección (tutora, video, loop, voz)
   const n = banco.get(t.id) || 0;
   const tu = tutoraDe(t.id), nombre = tu ? tu.tutora.split(",")[0] : "";
   const video = tieneVideo(t), loop = tieneLoop(t), voz = tieneVoz(t);
@@ -2118,7 +2119,7 @@ function verLectura(o, ejemplo = false) {
     const Pd = L ? L.podcasts : [];
     const fichaP = (x) => `<li><div class="libro">${cartel(x, "portadaChica")}<span class="libroTitulo">${esc(x.titulo)}</span></div></li>`;
     cabeza = `${podHoy}<p class="lecturaHoy">${L && L.podcastsHoras !== null ? L.podcastsHoras.toLocaleString("es-MX") + " horas de podcasts." : "Tus podcasts."}</p><p class="small">${plural(Pd.length, "podcast", "podcasts")}, por tus estrellas.</p>`;
-    cuerpo = seccionPodcasts() + [3, 2, 1].map((n) => repisa("pod" + n, `${"★".repeat(n)} <span class="sr">${plural(n, "estrella", "estrellas")}</span>`, Pd.filter((x) => x.nota === n), fichaP)).join("") +
+    cuerpo = [3, 2, 1].map((n) => repisa("pod" + n, `${"★".repeat(n)} <span class="sr">${plural(n, "estrella", "estrellas")}</span>`, Pd.filter((x) => x.nota === n), fichaP)).join("") +
       repisa("podSin", "Sin estrellas", Pd.filter((x) => !x.nota), fichaP);
   } else {
     cabeza = `<p class="lecturaHoy">${esc(lineaHoy)}</p>${podMin ? `<p class="small">De eso, ${esc(horasMin(podMin))} de podcasts en español.</p>` : ""}<p class="small">${esc(lineaSemana)}</p>`;
@@ -2133,6 +2134,7 @@ function verLectura(o, ejemplo = false) {
       ${ejemplo ? "" : `<div class="jump tres sec" role="group" aria-label="Qué enseña la Biblioteca" id="bibModo">
         ${[["libros", "Libros"], ["series", "Series"], ["podcasts", "Podcasts"]].map(([clave, nombre]) => `<button type="button" data-bib="${clave}" aria-pressed="${clave === modo}">${nombre}</button>`).join("")}
       </div>`}
+      ${modo === "podcasts" && !ejemplo ? seccionPodcasts() : ""}
       <section class="card" id="lecturaCabeza">
         <h1 class="h">Biblioteca</h1>
         ${ejemplo ? `<p class="lecturaEjemplo">Datos inventados, solo para ver cómo se ve. <a href="#/lectura">Volver a tus datos</a></p>` : ""}
@@ -2218,7 +2220,18 @@ const mmss = (s) => {
   return h ? `${h}:${String(m).padStart(2, "0")}:${x}` : `${m}:${x}`;
 };
 const minutosDichos = (s) => { const m = Math.round((s || 0) / 60); return m >= 60 ? horasMin(m) : m + " min"; };
-let podProg = null;
+let podProg = null, podDeshacer = null;
+/** Quita un episodio de tu lista: se va con su animación y queda «Deshacer» un rato. */
+function quitarEp(id) {
+  const c = PD.episodios(), ep = c && c.eps.find((e) => e.id === id);
+  if (!ep) return;
+  PD.quitar(id);
+  podDeshacer = { id, titulo: ep.titulo, cuando: Date.now() };
+  const l = $("podLista");
+  if (l) l.innerHTML = listaPodcasts();
+  $("podDeshacer")?.focus();
+  setTimeout(() => { if (podDeshacer && Date.now() - podDeshacer.cuando >= 9500) { podDeshacer = null; const x = $("podDeshacer"); if (x) x.closest(".podDeshacer").remove(); } }, 10000);
+}
 function fechaEp(ms) {
   if (!ms) return "";
   const d = N.fechaLocal(new Date(ms)), hoy = N.fechaLocal(new Date());
@@ -2237,19 +2250,22 @@ function estadoEp(ep) {
 function filaEp(ep) {
   const pr = PD.programa(ep.prog), est = estadoEp(ep), cur = PD.cargado(), es = cur && cur.id === ep.id, suena = es && PD.sonando();
   const datos = [pr ? pr.nombre : "", fechaEp(ep.fecha), ep.dur ? minutosDichos(ep.dur) : ""].filter(Boolean).join(" · ");
-  return `<li><button type="button" class="podEp${es ? " actual" : ""}" data-podep="${esc(ep.id)}" aria-pressed="${suena}"
+  return `<li class="podFila" data-podfila="${esc(ep.id)}"><button type="button" class="podEp${es ? " actual" : ""}" data-podep="${esc(ep.id)}" aria-pressed="${suena}"
       aria-label="${esc((suena ? "Pausar: " : es ? "Seguir: " : "Escuchar: ") + ep.titulo + ". " + datos + ". " + est.texto + ".")}">
     ${pr ? `<img class="podPortada" src="${esc(pr.portada)}" alt="" referrerpolicy="no-referrer" loading="lazy">` : ""}
     <span class="podDatos"><span class="podTit">${esc(ep.titulo)}</span><span class="small">${esc(datos)}</span>
       <span class="podEstado ${est.clase}">${suena ? "Sonando" : es ? "En pausa · " + esc(est.texto) : esc(est.texto)}</span></span>
-  </button></li>`;
+  </button><button type="button" class="podQuita" data-podquita="${esc(ep.id)}" aria-label="${esc("Quitar de tu lista: " + ep.titulo)}">✕</button></li>`;
 }
 function listaPodcasts() {
   const c = PD.episodios();
   if (!c) return `<p class="small">Leyendo tus podcasts…</p>`;
   if (!podProg) podProg = guardado("pelagos.podprog") || "todos";
-  const eps = podProg === "todos" ? c.eps.slice(0, 30) : c.eps.filter((e) => e.prog === podProg);
-  return eps.length ? `<ul class="podLista">${eps.map(filaEp).join("")}</ul>` : `<p class="small">No llegaron episodios de este programa.</p>`;
+  // «Tu lista»: solo lo nuevo, menos lo que quitaste (no se rellena con viejos). Por programa: sus episodios recientes, menos los quitados.
+  const eps = podProg === "todos" ? PD.miLista(c.eps) : c.eps.filter((e) => e.prog === podProg && !PD.quitado(e.id));
+  const deshacer = podDeshacer ? `<p class="podDeshacer" role="status">Quitaste «${esc(podDeshacer.titulo)}». <button type="button" class="lk" id="podDeshacer">Deshacer</button></p>` : "";
+  return deshacer + (eps.length ? `<ul class="podLista" data-noswipe>${eps.map(filaEp).join("")}</ul>`
+    : `<p class="small">${podProg === "todos" ? "Tu lista está vacía. Los episodios nuevos aparecen aquí en cuanto se publiquen." : "No hay episodios de este programa en tu lista."}</p>`);
 }
 function estadoPodcasts() {
   const c = PD.episodios();
@@ -2263,7 +2279,7 @@ function seccionPodcasts() {
   PD.actualizar().then(() => { const l = $("podLista"); if (l) { l.innerHTML = listaPodcasts(); const e = $("podAct"); if (e) e.textContent = estadoPodcasts(); } }).catch(() => {});
   return `<section class="card" id="podNuevos" aria-labelledby="podT">
     <h2 id="podT">Escucha aquí</h2>
-    <p class="small">Los episodios nuevos de tus podcasts. Tócalo para escucharlo; sigue donde te quedaste, también en el otro aparato. Lo que escuches, entero o a medias, suma a tu Escucha.</p>
+    <p class="small">Tu lista de episodios nuevos. Tócalo para escucharlo; sigue donde te quedaste, también en el otro aparato. Desliza uno de lado (o toca su ✕) para quitarlo: no se rellena con viejos, solo llegan los que se publiquen. Lo que escuches, entero o a medias, suma a tu Escucha.</p>
     <label class="small" for="podProg">Programa</label>
     <select id="podProg" class="campo podSel">
       <option value="todos"${podProg === "todos" ? " selected" : ""}>Todos, lo más nuevo</option>
@@ -2282,6 +2298,14 @@ vista.addEventListener("click", (ev) => {
     if (ep) PD.tocar(ep);
     return;
   }
+  const q = t && t.closest("[data-podquita]");
+  if (q) { quitarEp(q.dataset.podquita); return; }
+  if (t && t.closest("#podDeshacer") && podDeshacer) {
+    PD.quitar(podDeshacer.id, true);
+    const id = podDeshacer.id; podDeshacer = null;
+    const l = $("podLista"); if (l) { l.innerHTML = listaPodcasts(); l.querySelector(`[data-podep="${CSS.escape(id)}"]`)?.focus(); }
+    return;
+  }
   if (t && t.closest("#podLeer")) {
     const e = $("podAct"); if (e) e.textContent = "Buscando…";
     PD.actualizar(true).then(() => { const l = $("podLista"); if (l) l.innerHTML = listaPodcasts(); const e2 = $("podAct"); if (e2) e2.textContent = estadoPodcasts(); });
@@ -2292,6 +2316,47 @@ vista.addEventListener("change", (ev) => {
   podProg = ev.target.value; guardar("pelagos.podprog", podProg);
   const l = $("podLista"); if (l) l.innerHTML = listaPodcasts();
 });
+
+// Deslizar un episodio a la izquierda (o a la derecha) lo quita de tu lista, como en Pocket Casts.
+{
+  let fila = null, x0 = 0, y0 = 0, dx = 0, moviendo = false;
+  vista.addEventListener("pointerdown", (ev) => {
+    const f = ev.target instanceof Element ? ev.target.closest(".podFila") : null;
+    if (!f || ev.pointerType === "mouse" || ev.target.closest(".podQuita")) return;
+    fila = f; x0 = ev.clientX; y0 = ev.clientY; dx = 0; moviendo = false;
+  });
+  vista.addEventListener("pointermove", (ev) => {
+    if (!fila) return;
+    const ddx = ev.clientX - x0, ddy = ev.clientY - y0;
+    if (!moviendo) {
+      if (Math.abs(ddy) > 12 && Math.abs(ddy) > Math.abs(ddx)) { fila = null; return; }      // va para arriba o abajo: es scroll
+      if (Math.abs(ddx) < 14) return;
+      moviendo = true; fila.classList.add("deslizando");
+    }
+    dx = ddx;
+    const b = fila.querySelector(".podEp");
+    b.style.transform = `translateX(${dx}px)`;
+    b.style.opacity = String(Math.max(0.25, 1 - Math.abs(dx) / 300));
+    fila.classList.toggle("listo", Math.abs(dx) > fila.offsetWidth * 0.35);
+  });
+  const soltar = () => {
+    if (!fila) return;
+    const f = fila; fila = null;
+    if (!moviendo) return;
+    const b = f.querySelector(".podEp");
+    if (Math.abs(dx) > f.offsetWidth * 0.35) {
+      b.style.transform = `translateX(${dx < 0 ? -f.offsetWidth : f.offsetWidth}px)`;
+      b.style.opacity = "0";
+      setTimeout(() => quitarEp(f.dataset.podfila), 180);
+    } else { b.style.transform = ""; b.style.opacity = ""; f.classList.remove("deslizando", "listo"); }
+    // El toque que suelta el deslizado no cuenta como «escuchar».
+    const tragar = (e) => { e.stopPropagation(); e.preventDefault(); };
+    f.addEventListener("click", tragar, { capture: true, once: true });
+    setTimeout(() => f.removeEventListener("click", tragar, { capture: true }), 400);
+  };
+  vista.addEventListener("pointerup", soltar);
+  vista.addEventListener("pointercancel", () => { if (fila) { const b = fila.querySelector(".podEp"); b.style.transform = ""; b.style.opacity = ""; fila.classList.remove("deslizando", "listo"); fila = null; } });
+}
 
 // La barra del reproductor: abajo, en todas las páginas, mientras haya un episodio cargado.
 let podBarra = null, podClaveLista = "";
