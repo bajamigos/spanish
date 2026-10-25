@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=c1f1bfad2d";
-import * as A from "./almacen.js?v=c1f1bfad2d";
-import * as V from "./videos.js?v=c1f1bfad2d";
-import * as NB from "./nube.js?v=c1f1bfad2d";
-import * as CL from "./clases.js?v=c1f1bfad2d";
-import { abrirPractica } from "./practica.js?v=c1f1bfad2d";
-import * as F from "./fondo.js?v=c1f1bfad2d";
-import * as PD from "./podcasts.js?v=c1f1bfad2d";
+import * as N from "./nucleo.js?v=cf8d7c08c0";
+import * as A from "./almacen.js?v=cf8d7c08c0";
+import * as V from "./videos.js?v=cf8d7c08c0";
+import * as NB from "./nube.js?v=cf8d7c08c0";
+import * as CL from "./clases.js?v=cf8d7c08c0";
+import { abrirPractica } from "./practica.js?v=cf8d7c08c0";
+import * as F from "./fondo.js?v=cf8d7c08c0";
+import * as PD from "./podcasts.js?v=cf8d7c08c0";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -227,7 +227,80 @@ function ir(camino, reemplazar = false) {
   else window.location.hash = camino;
 }
 
+// ---------------------------------------------------------------- El menú ☰ (su elección del 25-Oct-2026)
+// Una hoja que sale de la izquierda, solo con texto: ‹ Volver, Hoy, Gramática y Vocabulario (con sus círculos de hoy y sus
+// pestañas), Escucha (Libros, Series, Podcasts), Clases, Bitácora, y abajo Ajustes y Cómo funciona. La sección donde estás va marcada.
+let menuHoja = null, menuAbre = null;
+function armarMenu() {
+  const hoy = N.fechaLocal(new Date());
+  const g = P && E ? N.cuentaDelDia(P, E, hoy) : null;
+  const v = P && E ? N.tarjetasDelDia(P, E, hoy).grupos : null;
+  const cs = (n) => n ? `<span class="menuCs" aria-label="Te queda hoy: ${n[0]}, ${n[1]}, ${n[2]}">${n.map((x, i) => `<b class="g${i}">${x}</b>`).join("")}</span>` : "";
+  const camino = window.location.hash || "#/";
+  const sub = (href, texto, extra = "") => `<a href="${href}"${extra}${camino === href ? ' aria-current="page"' : ""}>${texto}</a>`;
+  const bib = guardado("pelagos.biblioteca") || "libros";
+  const enLectura = /^#\/(lectura|podcasts)/.test(camino);
+  const grupo = (clave, nombre, href, circ, subs) => `<div class="menuGrupo${navActual === clave || (clave === "escucha" && enLectura) || (clave === "inicio" && camino === "#/") ? " aqui" : ""}">
+      <a class="menuSec" href="${href}"><span>${nombre}</span>${circ}</a>${subs ? `<div class="menuSubs">${subs}</div>` : ""}</div>`;
+  return `<div class="menuCab"><b>Pelagos</b><button type="button" class="ub menuCerrar" aria-label="Cerrar el menú">✕</button></div>
+    <button type="button" class="menuVolver" id="menuVolver">‹ Volver</button>
+    ${grupo("inicio", "Hoy", "#/", "", "")}
+    ${grupo("gramatica", "Gramática", "#" + QUIZ, cs(g && [g.nuevos, g.vencidos, g.fallados]), sub("#" + QUIZ, "Quiz") + sub("#/gramatica", "Lecciones") + sub("#/gramatica/atlas", "Atlas"))}
+    ${grupo("vocabulario", "Vocabulario", "#/vocabulario", cs(v && [v.nuevas.length, v.vencidas.length, v.falladas.length]), sub("#/vocabulario", "Quiz") + sub("#/vocabulario/agregar", "Agregar") + sub("#/vocabulario/acervo", "Acervo"))}
+    ${grupo("escucha", "Escucha", "#/lectura", "", ["libros", "series", "podcasts"].map((m) => `<a href="#/lectura" data-bibir="${m}"${enLectura && bib === m ? ' aria-current="page"' : ""}>${{ libros: "Libros", series: "Series", podcasts: "Podcasts" }[m]}</a>`).join(""))}
+    ${grupo("clases", "Clases", "#/clases", "", "")}
+    ${grupo("bitacora", "Bitácora", "#/bitacora", "", "")}
+    <div class="menuPie"><a href="#/ajustes">Ajustes</a><a href="${esc(($("ayudaLink") || {}).getAttribute ? $("ayudaLink").getAttribute("href") || "#/ayuda" : "#/ayuda")}">Cómo funciona</a></div>`;
+}
+function abrirMenu(boton) {
+  if (!menuHoja) {
+    menuHoja = document.createElement("div");
+    menuHoja.className = "menuVelo";
+    menuHoja.hidden = true;
+    menuHoja.innerHTML = `<nav class="menuHoja" role="dialog" aria-modal="true" aria-label="Menú de Pelagos"></nav>`;
+    document.body.append(menuHoja);
+    menuHoja.addEventListener("click", (ev) => {
+      const t = ev.target instanceof Element ? ev.target : null;
+      if (!t) return;
+      if (t === menuHoja || t.closest(".menuCerrar")) { cerrarMenu(); return; }
+      if (t.closest("#menuVolver")) { cerrarMenu(false); if (window.history.length > 1) window.history.back(); else ir("/"); return; }
+      const b = t.closest("[data-bibir]");
+      if (b) { bibModo = b.dataset.bibir; guardar("pelagos.biblioteca", bibModo); }
+      if (t.closest("a")) { cerrarMenu(false); if (b && /^#\/lectura/.test(window.location.hash)) { ev.preventDefault(); pintar(); } }
+    });
+    menuHoja.addEventListener("keydown", (ev) => {
+      if (ev.key === "Escape") { ev.preventDefault(); cerrarMenu(); }
+      if (ev.key === "Tab") {      // el foco se queda dentro del menú
+        const f = [...menuHoja.querySelectorAll("a, button")];
+        if (ev.shiftKey && document.activeElement === f[0]) { ev.preventDefault(); f[f.length - 1].focus(); }
+        else if (!ev.shiftKey && document.activeElement === f[f.length - 1]) { ev.preventDefault(); f[0].focus(); }
+      }
+    });
+  }
+  menuAbre = boton || null;
+  menuHoja.querySelector(".menuHoja").innerHTML = armarMenu();
+  menuHoja.hidden = false;
+  document.body.classList.add("menuAbierto");
+  for (const x of document.querySelectorAll(".menuBtn")) x.setAttribute("aria-expanded", "true");
+  (menuHoja.querySelector(".menuGrupo.aqui a") || menuHoja.querySelector(".menuCerrar")).focus({ preventScroll: true });
+}
+function cerrarMenu(devolverFoco = true) {
+  if (!menuHoja || menuHoja.hidden) return;
+  menuHoja.hidden = true;
+  document.body.classList.remove("menuAbierto");
+  for (const x of document.querySelectorAll(".menuBtn")) x.setAttribute("aria-expanded", "false");
+  if (devolverFoco && menuAbre && menuAbre.isConnected) menuAbre.focus({ preventScroll: true });
+}
+document.addEventListener("click", (ev) => {
+  const b = ev.target instanceof Element && ev.target.closest(".menuBtn");
+  if (b) { ev.preventDefault(); ev.stopPropagation(); abrirMenu(b); }
+}, true);
+window.addEventListener("hashchange", () => cerrarMenu(false));
+
+let navActual = "";
 function poner(html, { titulo: t = "Pelagos", pie = "", nav = "", conserva = false } = {}) {
+  navActual = nav;
+  cerrarMenu(false);
   const arriba = window.scrollY;
   const conFoco = conserva && document.activeElement && vista.contains(document.activeElement) ? document.activeElement.id : "";
   turnoDePintar++;
@@ -243,7 +316,7 @@ function poner(html, { titulo: t = "Pelagos", pie = "", nav = "", conserva = fal
   const enTablero = /^#?\/?$/.test(window.location.hash);
   $("nav").hidden = !A.hayLlave() || !P;
   // En el Tablero el ‹ no hace falta, pero su renglón se queda (invisible) para que la página no brinque al entrar a otra.
-  $("nav").classList.toggle("vacio", enTablero);
+  $("nav").classList.toggle("vacio", false);      // 25-Oct-2026: el ☰ va en todas las páginas, también en el Tablero
   $("ajustesLink").hidden = !A.hayLlave() || !P;
   for (const a of document.querySelectorAll("[data-nav]")) {
     if (a.dataset.nav === nav) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
@@ -1700,7 +1773,7 @@ function verTarjetas(o) {
   // círculo del grupo de esta tarjeta, el ↶ Deshacer en la esquina de la tarjeta y tus palabras escondibles.
   const g = dia.grupos, grupoDe = g.nuevas.includes(c.id) ? 0 : g.vencidas.includes(c.id) ? 1 : g.falladas.includes(c.id) ? 2 : -1;
   const cabeza = limpio
-    ? `<div class="lineaG"><div class="gFila conNivel"><a class="ub atras qaAtras" href="#/vocabulario" aria-label="Volver al inicio de Vocabulario">‹</a><span class="qaNivel">Voc</span><span class="qaEspacio"></span><span class="hoyFila"><span>Hoy</span>${circulosDeHoy("medio", [g.nuevas.length, g.vencidas.length, g.falladas.length], "vhoy").replace(new RegExp(`class="circ g${grupoDe}"`), `class="circ g${grupoDe} cur"`)}</span></div></div>`
+    ? `<div class="lineaG"><div class="gFila conNivel"><button type="button" class="ub menuBtn qaAtras" aria-label="Menú" aria-haspopup="dialog" aria-expanded="false">☰</button><span class="qaNivel">Voc</span><span class="qaEspacio"></span><span class="hoyFila"><span>Hoy</span>${circulosDeHoy("medio", [g.nuevas.length, g.vencidas.length, g.falladas.length], "vhoy").replace(new RegExp(`class="circ g${grupoDe}"`), `class="circ g${grupoDe} cur"`)}</span></div></div>`
     : lineaDeVocabulario(dia, c.id, antes).replace('<div class="gFila"><span></span>', `<div class="gFila">${botonDeshacerTj()}`);
   const desTj = limpio ? botonDeshacerTj() : "";
   poner(`
@@ -4043,7 +4116,7 @@ function lineaDeGramatica(k, temaActual) {
   // Modo Limpio (25-Oct-2026): el nivel adelante, las cajas con el color del Atlas y, debajo, el Atlas del nivel.
   const nv = (porId.get(temaActual) || {}).nivel || "";
   // 25-Oct-2026 (más compacto): el ‹ junto al nivel y sin las cajas de días (el Atlas ya enseña cómo se reparten).
-  return h.replace('<div class="gFila">', `<div class="gFila conNivel"><a class="ub atras qaAtras" href="#/" aria-label="Volver al Tablero">‹</a><span class="qaNivel">${esc(nv)}</span>`)
+  return h.replace('<div class="gFila">', `<div class="gFila conNivel"><button type="button" class="ub menuBtn qaAtras" aria-label="Menú" aria-haspopup="dialog" aria-expanded="false">☰</button><span class="qaNivel">${esc(nv)}</span>`)
     .replace(/<span class="lnCajas grandes"[^>]*>.*?<\/span><\/span>\s*/s, "")
     .replace(/<\/div>\s*$/, `${botonMapa("gram", conAtlasVisible(), "Ver el Atlas")}<div class="qaMapa" id="qaMapa" data-nivel="${esc(nv)}" data-tema="${temaActual}" data-kid="${esc(k.id)}"${conAtlasVisible() ? "" : " hidden"}></div></div>`);
 }

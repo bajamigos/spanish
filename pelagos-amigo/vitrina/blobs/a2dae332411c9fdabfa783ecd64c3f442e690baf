@@ -955,3 +955,6 @@
 {"t":"tj","id":"tmvocuppzgzp77i","tarjeta":"ak-1777316647615","cuando":"2026-10-25T21:43:59.159Z","bien":1,"modo":"tocar","adelanto":1,"aparato":"telefono-jr4ti"}
 {"t":"tj","id":"tmvocuy5ouzgh2l","tarjeta":"ak-1777316828352","cuando":"2026-10-25T21:44:10.092Z","bien":1,"modo":"tocar","adelanto":1,"aparato":"telefono-jr4ti"}
 {"t":"tj","id":"tmvocvc9mbclcc9","tarjeta":"ak-1777317532317","cuando":"2026-10-25T21:44:28.378Z","bien":1,"modo":"tocar","adelanto":1,"aparato":"telefono-jr4ti"}
+{"t":"kwiz","id":"kmvoebrhekkid17","tipo":"lista","cuaderno":null,"tema":null,"cuando":"2026-10-25T22:25:14.213Z","preguntas":["6964-04","6979-06","6977-08","6961-02","6752-05"],"aparato":"telefono-jr4ti"}
+{"t":"r","id":"rmvoec28vqnn1sz","kwiz":"kmvoebrhekkid17","p":"6964-04","tema":6964,"cuando":"2026-10-25T22:25:28.159Z","bien":1,"modo":"tocar","escrito":"dónde","pista":0,"aparato":"telefono-jr4ti"}
+{"t":"r","id":"rmvoecnwz4nlajl","kwiz":"kmvoebrhekkid17","p":"6979-06","tema":6979,"cuando":"2026-10-25T22:25:56.243Z","bien":0,"modo":"tocar","escrito":"salada","pista":0,"aparato":"telefono-jr4ti"}

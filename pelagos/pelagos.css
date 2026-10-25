@@ -81,7 +81,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 /* Con foto o con el logo de fondo, el nombre va debajo, centrado, arriba de los tres botones (su pedido del 22-Oct-2026). */
 .sobre > .secTitulo { text-align: center; margin: 0; }
 /* Sin foto (las tarjetas de vocabulario), el nombre sube al renglón del ‹, a su derecha: no empuja la tarjeta. */
-.vista > .secTitulo { min-height: 44px; display: flex; align-items: center; margin: -58px 0 0 64px; font-size: 24px; }
+.vista > .secTitulo { min-height: 44px; display: flex; align-items: center; margin: 0 0 0 58px; font-size: 24px; }
 /* La Bitácora del Tablero: una sola tira de 26 semanas. */
 .bitT { display: grid; gap: 12px; }
 /* 23-Oct-2026: se desliza como la de Anki; hoy a tres cuartos y 8 semanas de futuro en gris (lo que te toca repasar). */
@@ -1350,3 +1350,27 @@ body.qaQuiz #nav { display: none; }
 body.conCurva .vista { padding-bottom: 86px; }
 #tjInicio .go, #tjCero .go { margin-top: 10px; }
 .vCostaron { margin: 8px 0 0; } .vCostaron summary { cursor: pointer; font-weight: 800; font-size: 17px; padding: 6px 0; }
+
+/* ---- El menú ☰ (25-Oct-2026): flota en la esquina, sin ocupar renglón; la hoja sale de la izquierda ---- */
+.app { position: relative; }
+#nav.top { position: absolute; top: 12px; left: 16px; z-index: 30; }
+.ub.menuBtn { width: 46px; min-height: 42px; font-size: 24px; line-height: 1; font-weight: 700; padding: 0 0 2px; display: grid; place-items: center; }
+.gFila .ub.menuBtn.qaAtras { width: 40px; min-height: 34px; font-size: 21px; }
+.menuVelo { position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,.55); }
+.menuHoja { position: absolute; left: 0; top: 0; bottom: 0; width: min(82%, 340px); background: var(--card); color: var(--ink); border-right: 1px solid var(--line); padding: 14px 14px calc(14px + env(safe-area-inset-bottom)); display: flex; flex-direction: column; gap: 4px; overflow-y: auto; box-sizing: border-box; }
+.menuCab { display: flex; justify-content: space-between; align-items: center; font-size: 21px; margin-bottom: 4px; }
+.menuCerrar.ub { width: 40px; min-height: 38px; padding: 0; font-size: 17px; }
+.menuVolver { all: unset; cursor: pointer; font-weight: 700; font-size: 17px; padding: 8px; border-radius: 10px; opacity: .9; }
+.menuGrupo { border-radius: 12px; padding: 6px 8px; }
+.menuGrupo.aqui { background: color-mix(in srgb, var(--ink) 9%, transparent); }
+.menuSec { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-weight: 800; font-size: 18px; text-decoration: none; padding: 4px 0; }
+.menuCs { display: inline-flex; gap: 3px; } .menuCs b { border: 1.5px solid; border-radius: 999px; padding: 0 6px; font-size: 12.5px; }
+.menuCs .g0 { color: var(--verde); } .menuCs .g1 { color: var(--ambar); } .menuCs .g2 { color: var(--rojo); }
+.menuSubs { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 2px; }
+.menuSubs a { border: 1.5px solid var(--line); border-radius: 9px; padding: 5px 10px; font-size: 14px; font-weight: 700; text-decoration: none; }
+.menuSubs a[aria-current="page"] { border: 2.5px solid var(--ink); }
+.menuPie { margin-top: auto; display: flex; justify-content: space-between; padding: 10px 4px 0; border-top: 1px solid var(--line); font-weight: 700; font-size: 15px; }
+body.menuAbierto { overflow: hidden; }
+/* Sin logo arriba (Ajustes, Cómo funciona, lecciones…): el primer renglón se corre a la derecha del ☰, sin agregar altura. */
+body:not(.qaQuiz) .vista > .card:first-child > :first-child:not(.sr) { margin-left: 40px; }
+body:not(.qaQuiz) .vista > p:first-child, body:not(.qaQuiz) .vista > nav:first-child { padding-left: 56px; }
