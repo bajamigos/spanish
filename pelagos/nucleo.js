@@ -342,11 +342,14 @@ export function calcular(paquete, sucesos) {
       c.historia.push({ cuando: e.cuando, bien: !!e.bien, ...(facil ? { peso } : {}) });
       cuenta(e.cuando);
       actividadVoc.set(dia, (actividadVoc.get(dia) || 0) + 1);
-      if (!e.bien) { c.escalon = 0; c.toca = dia; c.fallada = dia; }                     // fallada: vuelve a salir hoy mismo                     // fallada: vuelve a salir hoy mismo
+      // Fallada: vuelve a salir hoy mismo, y (25-Oct-2026, como los temas de gramática) debe ACIERTOS_PARA_SALIR aciertos
+      // seguidos ese día para dejar de salir. La deuda es solo de ese día: mañana sale como cualquier vencida.
+      if (!e.bien) { c.escalon = 0; c.toca = dia; c.fallada = dia; c.debe = ACIERTOS_PARA_SALIR; }
       else {
         c.bien += peso;
         if (facil && c.fallada !== dia && c.escalon < ESCALON_FACIL) { c.escalon = ESCALON_FACIL; c.toca = sumarDias(dia, ESCALONES[ESCALON_FACIL]); }
-        else if (c.fallada === dia) { c.escalon = 0; c.toca = sumarDias(dia, ESCALONES[0]); c.fallada = null; }      // la rescataste hoy: mañana otra vez
+        else if (c.fallada === dia && (c.debe || 0) > 1) { c.debe--; c.escalon = 0; c.toca = dia; }                     // un acierto: le falta otro hoy
+        else if (c.fallada === dia) { c.escalon = 0; c.toca = sumarDias(dia, ESCALONES[0]); c.fallada = null; c.debe = 0; }      // la rescataste hoy: mañana otra vez
         else if (!c.toca || c.toca <= dia || (e.adelanto && !yaHoy)) [c.escalon, c.toca] = siguienteToca(c.nr === 1 && !c.traia ? -1 : c.escalon, true, dia);    // adelantada a propósito: sí sube
       }
     } else if (e.t === "tjreinicio") {
@@ -1497,4 +1500,9 @@ export function semanaNivel(paquete, sucesos, hoy, nivel, memo = new Map()) {
     return v;
   });
   return { dias, puntaje };
+}
+
+/** Cuántos aciertos le faltan hoy a una tarjeta que fallaste hoy (2, 1 o 0). Mañana la deuda ya no cuenta (25-Oct-2026). */
+export function debeTarjeta(s, hoy = fechaLocal(new Date())) {
+  return s && s.fallada === hoy ? Math.max(0, s.debe || 0) : 0;
 }

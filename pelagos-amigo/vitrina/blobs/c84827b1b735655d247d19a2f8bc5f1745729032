@@ -605,3 +605,10 @@
 {"t":"tj","id":"tmvo8cep0un3nxf","tarjeta":"ak-1777179398420","cuando":"2026-10-25T19:37:46.596Z","bien":0,"modo":"tocar","adelanto":1,"aparato":"compu-mjpcv"}
 {"t":"kwiz","id":"kmvo8d31ql0fxzq","tipo":"lista","cuaderno":null,"tema":null,"cuando":"2026-10-25T19:38:18.158Z","preguntas":["6960-02","6752-07","6874-10","6872-11","6597-07"],"aparato":"compu-mjpcv"}
 {"t":"pod","id":"pdmvo9izv2a0onqq","cuando":"2026-10-25T20:10:53.583Z","ep":"dollop-bn7ukw","prog":"dollop","titulo":"Los Disturbios del Casco de Seguridad (Smollop) - E393","pos":22,"dur":1439,"seg":8,"aparato":"compu-mjpcv"}
+{"t":"r","id":"rmvo9zgdmf6xva0","kwiz":"kmvo8d31ql0fxzq","p":"6960-02","tema":6960,"cuando":"2026-10-25T20:23:41.482Z","bien":1,"modo":"tocar","escrito":"empecé","pista":0,"aparato":"compu-mjpcv"}
+{"t":"r","id":"rmvo9zw46s9gfcs","kwiz":"kmvo8d31ql0fxzq","p":"6752-07","tema":6752,"cuando":"2026-10-25T20:24:01.878Z","bien":1,"modo":"tocar","escrito":"Cuál","pista":0,"aparato":"compu-mjpcv"}
+{"t":"r","id":"rmvoa0f775isj1c","kwiz":"kmvo8d31ql0fxzq","p":"6874-10","tema":6874,"cuando":"2026-10-25T20:24:26.611Z","bien":1,"modo":"decir","escrito":null,"pista":1,"aparato":"compu-mjpcv"}
+{"t":"r","id":"rmvoa0t3dcdulhl","kwiz":"kmvo8d31ql0fxzq","p":"6872-11","tema":6872,"cuando":"2026-10-25T20:24:44.617Z","bien":1,"modo":"decir","escrito":null,"pista":1,"aparato":"compu-mjpcv"}
+{"t":"r","id":"rmvoa14mmgeedfi","kwiz":"kmvo8d31ql0fxzq","p":"6597-07","tema":6597,"cuando":"2026-10-25T20:24:59.567Z","bien":1,"modo":"tocar","escrito":"peleándome","pista":0,"aparato":"compu-mjpcv"}
+{"t":"tj","id":"tmvoa31r6qqdliz","tarjeta":"ak-1777161565191","cuando":"2026-10-25T20:26:29.154Z","bien":1,"modo":"tocar","aparato":"compu-mjpcv"}
+{"t":"tj","id":"tmvoa38a64opymn","tarjeta":"ak-1777179398420","cuando":"2026-10-25T20:26:37.614Z","bien":1,"modo":"tocar","aparato":"compu-mjpcv"}

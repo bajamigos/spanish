@@ -1324,10 +1324,14 @@ body.qaQuiz #nav { display: none; }
 .vMallaCab { display: flex; justify-content: flex-end; margin: -4px 0 4px; }
 .vMallaBtn { font-size: 13px; font-weight: 700; opacity: .85; }
 .vMalla { position: relative; display: flex; flex-wrap: wrap; gap: 2px; margin: 0 0 8px; }
-.vMalla i { width: 9px; height: 9px; border-radius: 1.5px; display: block; cursor: pointer; background: color-mix(in srgb, var(--ink) 10%, transparent); }
+.vMalla i { width: 10px; height: 10px; border-radius: 1.5px; display: block; cursor: pointer; background: color-mix(in srgb, var(--ink) 10%, transparent); }
 .vMalla .vk0 { background: var(--k0); } .vMalla .vk1 { background: var(--k1); } .vMalla .vk2 { background: var(--k2); }
 .vMalla .vk3 { background: var(--k3); } .vMalla .vk4 { background: var(--k4); } .vMalla .vk5 { background: var(--k5); }
-.vMalla .vb { background: var(--verdeMalla); } .vMalla .vm { background: var(--rojoMalla); }
+.vMalla .vd2 { background: var(--kd2); } .vMalla .vd1 { background: var(--kd1); }
+/* El marco (25-Oct-2026): verde continuo si hoy la acertaste, rojo de rayitas si la fallaste. Delgado, para no pesar. */
+/* Por dentro del cuadro (box-shadow inset): con cuadritos tan pegados, un marco por fuera se junta con el de al lado. */
+.vMalla .vbien { box-shadow: inset 0 0 0 2px var(--verdeMalla); }
+.vMalla .vmal { box-shadow: inset 0 0 0 2px var(--rojoMalla); }
 .vMalla .tenue { opacity: .22; }
 .vMalla .late { position: relative; z-index: 3; animation: qaLate 1.1s ease-in-out infinite; }
 .vMalla .vParpadea { position: relative; z-index: 4; animation: qaParpadeo 3.2s both; }

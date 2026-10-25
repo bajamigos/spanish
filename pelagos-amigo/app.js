@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=93ac5312d0";
-import * as A from "./almacen.js?v=93ac5312d0";
-import * as V from "./videos.js?v=93ac5312d0";
-import * as NB from "./nube.js?v=93ac5312d0";
-import * as CL from "./clases.js?v=93ac5312d0";
-import { abrirPractica } from "./practica.js?v=93ac5312d0";
-import * as F from "./fondo.js?v=93ac5312d0";
-import * as PD from "./podcasts.js?v=93ac5312d0";
+import * as N from "./nucleo.js?v=c78bc987f2";
+import * as A from "./almacen.js?v=c78bc987f2";
+import * as V from "./videos.js?v=c78bc987f2";
+import * as NB from "./nube.js?v=c78bc987f2";
+import * as CL from "./clases.js?v=c78bc987f2";
+import { abrirPractica } from "./practica.js?v=c78bc987f2";
+import * as F from "./fondo.js?v=c78bc987f2";
+import * as PD from "./podcasts.js?v=c78bc987f2";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1756,7 +1756,7 @@ function verTarjetas(o) {
     const ev = { t: "tj", id: N.nuevoId("t"), tarjeta: c.id, cuando: new Date().toISOString(), bien: bien ? 1 : 0, modo: "tocar", ...(enAdelanto ? { adelanto: 1 } : {}), ...(facil ? { facil: 1 } : {}) };
     A.apuntar(ev);
     tjUltima = { ref: ev.id, tarjeta: c.id, palabra: c.reverso, como: facil ? "Fácil" : bien ? "Bien" : "Mal", hasta: Date.now() + DESHACER_MS };
-    vEfecto = { id: c.id, f0: N.colorDe(antes), bien: !!bien, t0: Date.now() };
+    vEfecto = { id: c.id, f0: tonoTj(antes), bien: !!bien, t0: Date.now() };
     recalcular();
     enTarjetaDe = null;
     pintarMalla(N.tarjetasDelDia(P, E, hoy), cola.slice(1));
@@ -1786,14 +1786,21 @@ const botonMapa = (cual, visible, nombre) => `<div class="mapaCab"><button type=
 const mallaHtml = (actual = "") => botonMapa("voc", conMalla(), "Ver tus palabras") + `<div class="vMalla" id="vMalla" data-actual="${esc(actual)}"${conMalla() ? "" : " hidden"}></div>`;
 let mallaArgs = null;
 let vEfecto = null;          // la última que calificaste: { id, f0, bien, t0 }, para su parpadeo
+/** El tono de una tarjeta: el color de su caja, o «d2»/«d1» si la fallaste hoy y todavía debe aciertos (como gramática). */
+function tonoTj(st, hoy = N.fechaLocal(new Date())) {
+  const debe = N.debeTarjeta(st, hoy);
+  return debe >= 2 ? "d2" : debe === 1 ? "d1" : N.colorDe(st);
+}
 function pintarMalla(dia, cola) {
   mallaArgs = [dia, cola];
   const caja = $("vMalla");
   if (!caja || caja.hidden) return;
   const hoy = N.fechaLocal(new Date());
   const pend = new Set([...dia.pendientes, ...cola]);
+  // El relleno dice su caja; el marco, cómo te fue hoy (25-Oct-2026, igual que gramática): verde si la última de hoy
+  // fue bien, rojo de rayitas si fue mal. Las que te faltan van a todo color y sin marco; las demás, tenues.
   const como = new Map();
-  for (const [id, s] of E.tarjetas) if (s.ultima && N.fechaLocal(new Date(s.ultima)) === hoy && !pend.has(id)) {
+  for (const [id, s] of E.tarjetas) if (s.ultima && N.fechaLocal(new Date(s.ultima)) === hoy) {
     const h = s.historia && s.historia[s.historia.length - 1];
     como.set(id, h ? !!h.bien : true);
   }
@@ -1802,14 +1809,16 @@ function pintarMalla(dia, cola) {
   const actual = caja.dataset.actual;
   const fx = vEfecto && Date.now() - vEfecto.t0 < EFECTO_MS ? vEfecto : null;
   caja.textContent = "";
+  let bien = 0, mal = 0;
   for (const c of todas) {
     const el = document.createElement("i");
-    const f = N.colorDe(E.tarjetas.get(c.id));
-    el.className = como.has(c.id) ? (como.get(c.id) ? "vb" : "vm") : (f === null ? "vx" : "vk" + f) + (pend.has(c.id) ? "" : " tenue");
+    const t = tonoTj(E.tarjetas.get(c.id), hoy);
+    el.className = "v" + (t === null || t === undefined ? "x" : typeof t === "string" ? t : "k" + t) + (pend.has(c.id) || c.id === actual || como.has(c.id) ? "" : " tenue");      // lo de hoy (lo que falta y lo hecho) a todo color
+    if (como.has(c.id)) { if (como.get(c.id)) { el.classList.add("vbien"); bien++; } else { el.classList.add("vmal"); mal++; } }
     if (c.id === actual && !(fx && fx.id === actual)) el.classList.add("late");
     if (fx && fx.id === c.id) {
       el.style.setProperty("--viejo", colorCss(fx.f0));
-      el.style.setProperty("--nuevo", fx.bien ? "var(--verdeMalla)" : "var(--rojoMalla)");
+      el.style.setProperty("--nuevo", colorCss(t));
       el.style.setProperty("--brillo", fx.bien ? "var(--verde)" : "var(--rojo)");
       el.classList.add("vParpadea");
       el.style.animationDelay = -(Date.now() - fx.t0) + "ms";
@@ -1817,9 +1826,8 @@ function pintarMalla(dia, cola) {
     el.dataset.mv = c.id;
     caja.append(el);
   }
-  const hechas = [...como.values()];
   caja.setAttribute("role", "img");
-  caja.setAttribute("aria-label", `Tus ${todas.length} palabras. Hoy: ${plural(hechas.filter(Boolean).length, "acertada", "acertadas")}, ${plural(hechas.filter((x) => !x).length, "fallada", "falladas")}, ${plural(pend.size, "te queda", "te quedan")}. Toca un cuadro para ver su palabra.`);
+  caja.setAttribute("aria-label", `Tus ${todas.length} palabras. Hoy: ${plural(bien, "acertada", "acertadas")}, ${plural(mal, "fallada", "falladas")}, ${plural(pend.size, "te queda", "te quedan")}. Toca un cuadro para ver su palabra.`);
 }
 // Tocar un cuadrito dice su palabra (no destapa la tarjeta). Ocultar / Ver tus palabras.
 document.addEventListener("click", (ev) => {
@@ -1848,7 +1856,8 @@ document.addEventListener("click", (ev) => {
   if (!b) { b = document.createElement("div"); b.className = "vBurb"; b.setAttribute("role", "status"); caja.append(b); }
   b.textContent = "";
   const n = document.createElement("b"); n.textContent = t.reverso;
-  b.append(n, document.createElement("br"), f === null ? "sin ver" : "toca cada " + N.PELDANOS[f]);
+  const debe = N.debeTarjeta(s);
+  b.append(n, document.createElement("br"), (f === null ? "sin ver" : "toca cada " + N.PELDANOS[f]) + (debe ? ` · debe ${debe === 1 ? "1 acierto" : debe + " aciertos"} hoy` : ""));
   el.classList.add("tocado");
   b.style.top = (el.offsetTop > 50 ? el.offsetTop - 46 : el.offsetTop + el.offsetHeight + 6) + "px";
 });
