@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=f2a81db27c";
-import * as A from "./almacen.js?v=f2a81db27c";
-import * as V from "./videos.js?v=f2a81db27c";
-import * as NB from "./nube.js?v=f2a81db27c";
-import * as CL from "./clases.js?v=f2a81db27c";
-import { abrirPractica } from "./practica.js?v=f2a81db27c";
-import * as F from "./fondo.js?v=f2a81db27c";
-import * as PD from "./podcasts.js?v=f2a81db27c";
+import * as N from "./nucleo.js?v=8160ca6f60";
+import * as A from "./almacen.js?v=8160ca6f60";
+import * as V from "./videos.js?v=8160ca6f60";
+import * as NB from "./nube.js?v=8160ca6f60";
+import * as CL from "./clases.js?v=8160ca6f60";
+import { abrirPractica } from "./practica.js?v=8160ca6f60";
+import * as F from "./fondo.js?v=8160ca6f60";
+import * as PD from "./podcasts.js?v=8160ca6f60";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -906,8 +906,6 @@ function avanceNivel(id = "") {
     <div class="grafNivel"${id ? ` id="${id}"` : ""}>${graficaNivel(tendNivel)}</div>
   </div>`;
 }
-const DIAS_CORTOS = ["D", "L", "M", "M", "J", "V", "S"];
-const diaTend = (d, hoy) => (d === hoy ? "Hoy" : DIAS_CORTOS[new Date(d + "T12:00:00").getDay()]);
 // 24-Oct-2026: en las gráficas de línea, al pasar el ratón (o tocar) un punto sale su valor y su fecha.
 const DIAS_TIP = ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"];
 function fechaTip(d, hoy) {
@@ -952,23 +950,6 @@ document.addEventListener("click", (ev) => {
   if (pt) { mostrarBurbuja(pt); burbujaFija = true; } else if (burbujaFija) esconderBurbuja();
 });
 window.addEventListener("hashchange", esconderBurbuja);
-/** Una línea chiquita de 7 puntos. serie: números; etiqueta: lo que dice el lector de pantalla. */
-function lineaTend(serie, dias, clase, etiqueta, alto = 80, unidad = "tarjetas") {
-  if (serie.length < 2) return "";
-  const hoy = dias[dias.length - 1];
-  const lo = Math.min(...serie), hi = Math.max(...serie), rango = hi - lo || 1;
-  const x = (i) => 20 + i * (300 / Math.max(1, serie.length - 1));
-  const y = (v) => Math.round((alto - 14 - ((v - lo) / rango) * (alto - 36)) * 10) / 10;
-  const ult = serie.length - 1;
-  return `<svg class="tdLinea ${clase}" viewBox="0 0 340 ${alto}" width="100%" role="img" aria-label="${esc(etiqueta)}">
-    <polyline points="${serie.map((v, i) => x(i) + "," + y(v)).join(" ")}" fill="none" stroke-width="3" stroke-linejoin="round"/>
-    ${serie.map((v, i) => `<circle cx="${x(i)}" cy="${y(v)}" r="${i === ult ? 6 : 3.5}"/>`).join("")}
-    ${serie.map((v, i) => puntoTip(x(i), y(v), `${fechaTip(dias[i], hoy)} · ${v} ${unidad}`)).join("")}
-    <text class="tdIni" x="${x(0)}" y="${y(serie[0]) - 10}" text-anchor="middle">${serie[0]}</text>
-    <text class="tdFin" x="${x(ult)}" y="${y(serie[ult]) - 12}" text-anchor="middle">${serie[ult]}</text>
-    ${dias.map((d, i) => `<text class="tdDia" x="${x(i)}" y="${alto - 1}" text-anchor="middle">${diaTend(d, hoy)}</text>`).join("")}
-  </svg>`;
-}
 /** Un tema que se movió: su nombre y una pista de 0 a 100 con el aro (antes), el punto (ahora) y la raya de tu meta. */
 function pistaTema(x, meta) {
   const t = porId.get(x.tema);
@@ -982,7 +963,6 @@ function pistaTema(x, meta) {
       <i class="tdAro" data-x="${a}"></i><i class="tdPunto" data-x="${b}"></i><i class="tdMeta" data-x="${meta}"></i>
     </span>${cierra}`;
 }
-const CAJA_DIAS = ["1 día", "2 días", "5 días", "12 días", "30 días", "75 días"];
 // ---- Tu avance por nivel, como la gráfica de Kwiziq: temas cubiertos (línea) y tu puntaje (área).
 let progCache = null, tendNivel = null;
 function progresoHoy() {
@@ -994,37 +974,75 @@ function progresoHoy() {
 const MESES_CHICOS = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
 const fechaChica = (d) => `${Number(d.slice(8, 10))} ${MESES_CHICOS[Number(d.slice(5, 7)) - 1]}`;
 /** La gráfica de avance (como la de Kwiziq): rejilla de 0 a 100%, el área verde de tu puntaje y la línea de lo cubierto.
- *  d: { dias, linea: [%], area: [%] }, rotulos: { linea, area }, etiqueta: lo que dice el lector de pantalla, nums: el pie. */
-function graficaAvance(d, rotulos, etiqueta, nums) {
+ *  d: { dias, linea: [%], area: [%] }, rotulos: { linea, area }, etiqueta: lo que dice el lector de pantalla, nums: el pie.
+ *  24-Oct-2026 (su elección, la «B»): hoy va a ¾ del ancho y el último cuarto son los días que vienen. Con «rt» (el ritmo
+ *  del plan, de N.ritmoVocab o N.ritmoNivel) sale la línea punteada, la raya del 100% y dos renglones: cuándo terminas
+ *  a ese ritmo y cuánto vas adelante o atrás. rt: { r, real, denom, unidad, todo } (denom: el 100% de la gráfica). */
+function graficaAvance(d, rotulos, etiqueta, nums, rt = null) {
   const n = d.dias.length, W = 340, H = 200, iz = 34, de = 330, ar = 12, ab = 170;
   if (!n) return "";
-  const x = (i) => Math.round((n < 2 ? de : iz + (i * (de - iz)) / (n - 1)) * 10) / 10;
+  const ult = n - 1, d0 = d.dias[0], hoyD = d.dias[ult];
+  const pasados = N.diasEntre(d0, hoyD), futuros = Math.max(1, Math.round(Math.max(1, pasados) / 3)), dN = N.sumarDias(hoyD, futuros);
+  const xHoy = Math.round((iz + (de - iz) * 0.75) * 10) / 10;
+  const x = (dia) => Math.round((pasados > 0 ? iz + ((xHoy - iz) * N.diasEntre(d0, dia)) / pasados : xHoy) * 10) / 10;
+  const xf = (dia) => Math.round((xHoy + ((de - xHoy) * N.diasEntre(hoyD, dia)) / futuros) * 10) / 10;     // los días que vienen
+  const xx = (dia) => (dia <= hoyD ? x(dia) : xf(dia));
   const y = (v) => Math.round((ab - (Math.min(100, v) / 100) * (ab - ar)) * 10) / 10;
-  const ult = n - 1;
-  const area = `${x(0)},${ab} ${d.area.map((v, i) => x(i) + "," + y(v)).join(" ")} ${x(ult)},${ab}`;
+  const area = `${x(d0)},${ab} ${d.area.map((v, i) => x(d.dias[i]) + "," + y(v)).join(" ")} ${x(hoyD)},${ab}`;
   const rejilla = [0, 25, 50, 75, 100].map((v) => `<line class="pgRej" x1="${iz}" y1="${y(v)}" x2="${de}" y2="${y(v)}"/><text class="pgEje" x="${iz - 4}" y="${y(v) + 4}" text-anchor="end">${v}%</text>`).join("");
+  let ritmo = "", meta = "", texto = "";
+  if (rt && rt.r) {
+    const pts = [];
+    for (let dia = d0 < N.sumarDias(rt.r.desde, -1) ? N.sumarDias(rt.r.desde, -1) : d0; dia <= dN; dia = N.sumarDias(dia, 1)) {
+      const c = rt.r.enDia(dia);
+      if (c !== null) pts.push(xx(dia) + "," + y((100 * c) / rt.denom));
+    }
+    if (pts.length > 1) ritmo = `<polyline class="pgRitmo" points="${pts.join(" ")}"/>`;
+    meta = `<line class="pgMeta" x1="${iz}" y1="${y((100 * (rt.r.meta || rt.r.total)) / rt.denom)}" x2="${de}" y2="${y((100 * (rt.r.meta || rt.r.total)) / rt.denom)}"/>`;
+    const tope = rt.r.meta || rt.r.total, aHoy = rt.r.enDia(hoyD), dif = rt.real - aHoy;
+    const linea1 = rt.real >= tope ? `Ya cubriste ${rt.todo}.`
+      : `Ritmo del plan (${rt.r.porDia} al día desde el ${fechaChica(rt.r.desde)}): ${rt.todo} el <b>${fechaChica(rt.r.fin)}</b>.`;
+    const linea2 = rt.real >= tope ? "" : dif === 0 ? `<br>Hoy vas justo al ritmo (${rt.real} de ${aHoy}).`
+      : `<br>Hoy vas <b class="${dif > 0 ? "rtSi" : "rtNo"}">${Math.abs(dif)} ${rt.unidad} ${dif > 0 ? "adelante" : "atrás"}</b> (${rt.real} de ${aHoy}).`;
+    texto = `<p class="pgRitmoTxt">${linea1}${linea2}</p>`;
+  }
   return `<figure class="pg">
-    <div class="pgLey"><span><i class="pgLLinea" aria-hidden="true"></i>${rotulos.linea}</span><span><i class="pgLArea" aria-hidden="true"></i>${rotulos.area}</span></div>
+    <div class="pgLey"><span><i class="pgLLinea" aria-hidden="true"></i>${rotulos.linea}</span><span><i class="pgLArea" aria-hidden="true"></i>${rotulos.area}</span>${ritmo ? `<span><i class="pgLRitmo" aria-hidden="true"></i>Ritmo</span>` : ""}</div>
     <svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="${esc(etiqueta)}">
       ${rejilla}
+      <rect class="pgFuturo" x="${xHoy}" y="${ar}" width="${de - xHoy}" height="${ab - ar}"/>
+      ${meta}
       <polygon class="pgArea" points="${area}"/>
-      <polyline class="pgLinea" points="${d.linea.map((v, i) => x(i) + "," + y(v)).join(" ")}"/>
-      ${d.linea.map((v, i) => `<circle class="pgPunto" cx="${x(i)}" cy="${y(v)}" r="${i === ult ? 5 : 3}"/>`).join("")}
-      ${d.linea.map((v, i) => puntoTip(x(i), y(v), `${fechaTip(d.dias[i], d.dias[ult])} · ${rotulos.linea}: ${v}% · ${rotulos.area}: ${d.area[i]}%`)).join("")}
-      ${n > 1 ? `<text class="pgEje" x="${x(0)}" y="${H - 8}" text-anchor="start">${fechaChica(d.dias[0])}</text>` : ""}
-      <text class="pgEje" x="${x(ult)}" y="${H - 8}" text-anchor="end">Hoy</text>
+      ${ritmo}
+      <polyline class="pgLinea" points="${d.linea.map((v, i) => x(d.dias[i]) + "," + y(v)).join(" ")}"/>
+      ${d.linea.map((v, i) => `<circle class="pgPunto" cx="${x(d.dias[i])}" cy="${y(v)}" r="${i === ult ? 5 : 3}"/>`).join("")}
+      ${d.linea.map((v, i) => puntoTip(x(d.dias[i]), y(v), `${fechaTip(d.dias[i], hoyD)} · ${rotulos.linea}: ${v}% · ${rotulos.area}: ${d.area[i]}%`)).join("")}
+      <line class="pgHoy" x1="${xHoy}" y1="${ar - 4}" x2="${xHoy}" y2="${ab}"/>
+      ${n > 1 ? `<text class="pgEje" x="${x(d0)}" y="${H - 14}" text-anchor="start">${fechaChica(d0)}</text>` : ""}
+      <text class="pgEje pgEjeHoy" x="${xHoy}" y="${H - 14}" text-anchor="middle">Hoy</text>
+      <text class="pgEje" x="${de}" y="${H - 14}" text-anchor="end">${fechaChica(dN)}</text>
     </svg>
+    ${texto}
     <figcaption class="pgNums">${nums}</figcaption>
   </figure>`;
+}
+let ritmoCache = new Map();
+/** El ritmo del plan, guardado mientras no cambien tus sucesos (calcularlo cuesta: recorre tus sucesos dos veces). */
+function ritmoDe(clave, fn) {
+  const k = N.fechaLocal(new Date()) + "|" + A.sucesos().length + "|" + clave;
+  if (!ritmoCache.has(k)) { if (ritmoCache.size > 20) ritmoCache = new Map(); ritmoCache.set(k, fn()); }
+  return ritmoCache.get(k);
 }
 /** La gráfica de un nivel de gramática: temas cubiertos y tu puntaje del nivel. */
 function graficaNivel(nivel) {
   const R = progresoHoy(), X = R.niveles[nivel];
   if (!X) return "";
   const u = R.dias.length - 1, c = X.cubiertos[u], p = X.puntaje[u];
+  const r = ritmoDe("nivel:" + nivel, () => N.ritmoNivel(P, A.sucesos(), nivel));
+  const rt = r ? { r, real: X.n[u], denom: X.total, unidad: "temas", todo: r.meta === r.total ? "todo " + nivel : `los ${r.meta} temas con preguntas` } : null;
   return graficaAvance({ dias: R.dias, linea: X.cubiertos, area: X.puntaje }, { linea: "Temas cubiertos", area: "Tu puntaje" },
     `${nivel}: has cubierto ${X.n[u]} de ${X.total} temas (${c}%). Tu puntaje del nivel: ${p}%. Desde el ${fechaChica(R.dias[0])}: cubiertos de ${X.cubiertos[0]}% a ${c}%, puntaje de ${X.puntaje[0]}% a ${p}%.`,
-    `<p><span class="tdGrande">${c}%</span><span class="small">cubiertos · ${X.n[u]} de ${X.total} temas</span></p><p><span class="tdGrande si">${p}%</span><span class="small">tu puntaje del nivel</span></p>`);
+    `<p><span class="tdGrande">${c}%</span><span class="small">cubiertos · ${X.n[u]} de ${X.total} temas</span></p><p><span class="tdGrande si">${p}%</span><span class="small">tu puntaje del nivel</span></p>`, rt);
 }
 let vocCache = null;
 function progresoVocabHoy() {
@@ -1070,35 +1088,24 @@ function graficaVocab() {
   const V = progresoVocabHoy();
   if (!V.dias.length) return "";
   const u = V.dias.length - 1, c = V.vistas[u], p = V.puntaje[u];
-  return graficaAvance({ dias: V.dias, linea: V.vistas, area: V.puntaje }, { linea: "Tarjetas vistas", area: "Tu puntaje" },
+  const r = ritmoDe("vocab", () => N.ritmoVocab(A.sucesos(), V.total));
+  const rt = r ? { r, real: V.n[u], denom: V.total, unidad: "palabras", todo: "todas" } : null;
+  return graficaAvance({ dias: V.dias, linea: V.vistas, area: V.puntaje }, { linea: "Palabras vistas", area: "Tu dominio" },
     `Vocabulario: has visto ${V.n[u]} de tus ${V.total} tarjetas (${c}%). Tu puntaje: ${p}%. Desde el ${fechaChica(V.dias[0])}: vistas de ${V.vistas[0]}% a ${c}%, puntaje de ${V.puntaje[0]}% a ${p}%.`,
-    `<p><span class="tdGrande">${c}%</span><span class="small">vistas · ${V.n[u]} de ${V.total} tarjetas</span></p><p><span class="tdGrande si">${p}%</span><span class="small">tu puntaje</span></p>`);
+    `<p><span class="tdGrande">${c}%</span><span class="small">vistas · ${V.n[u]} de ${V.total} palabras</span></p><p><span class="tdGrande si">${p}%</span><span class="small">tu dominio</span></p>`, rt);
 }
 function seccionTendencias() {
   if (!P || !E) return "";
   // ---- Los últimos 7 días.
   const T = tendenciasHoy();
-  const dif = (a, b) => { const d = b - a; return d > 0 ? "+" + d : d < 0 ? "−" + Math.abs(d) : "±0"; };
   const temas = (l, vacio) => (l.length ? `<div class="tdTemas">${l.map((x) => pistaTema(x, T.metaPct)).join("")}</div>` : `<p class="small">${vacio}</p>`);
-  const caja = (k, nombre) => {
-    const s = T.cajas[k], a = T.cajasBase[k], b = s[s.length - 1];
-    return `<div class="tdCaja"><p class="tdFila"><b>Caja de ${nombre}</b><b>${a} → ${b} <span class="tdGris">(${dif(a, b)})</span></b></p>
-      ${lineaTend(s, T.dias, "c" + k, `Tarjetas en la caja de ${nombre} cada día: ${s.join(", ")}.`)}</div>`;
-  };
-  const palabra = (x, texto) => {
-    const c = tarjetas.get(x.id), sv = E.tarjetas.get(x.id);
-    if (!c) return "";
-    const v = N.tarjetaVista(c, sv);
-    return `<button type="button" class="tdPalabra" data-v="${esc(x.id)}"><span lang="es-MX">${esc(v.reverso)}</span><span class="tdGris">${texto(x)}</span></button>`;
-  };
-  const cajaDe = (e) => (e < 0 ? "nueva" : CAJA_DIAS[e]);
   return `<section class="card tend" id="tendencias" aria-labelledby="tendT">
     <h2 id="tendT">Tu avance</h2>
     <h3 class="tdSub">Gramática por nivel</h3>
     ${avanceNivel("tdGrafNivel")}
     <h3 class="tdSub">Vocabulario</h3>
     ${graficaVocab()}
-    <p class="small">La línea es qué parte de tu mazo ya viste${E.reinicioTj ? " desde el reinicio" : ""}; lo verde, qué tan arriba van tus tarjetas en la escalera (la caja de 75 días es 100%; las que no has visto cuentan 0).</p>
+    <p class="small">La línea es qué parte de tus palabras ya viste${E.reinicioTj ? " desde el reinicio" : ""}; lo verde, qué tan arriba van tus palabras en la escalera (la caja de 75 días es 100%; las que no has visto cuentan 0).</p>
     <details class="tdDet" data-tdet="subieron"${tendAbiertas.has("subieron") ? " open" : ""}>
       <summary><h3 class="tdSub">Los que más subieron <span class="tdGris">· ${T.subieron.length} en 7 días</span></h3></summary>
       <p class="small">Aro: hace 7 días. Punto: hoy. Raya: tu meta, ${T.metaPct}%.</p>
@@ -1107,17 +1114,6 @@ function seccionTendencias() {
     <details class="tdDet" data-tdet="bajaron"${tendAbiertas.has("bajaron") ? " open" : ""}>
       <summary><h3 class="tdSub">Los que más bajaron <span class="tdGris">· ${T.bajaron.length} en 7 días</span></h3></summary>
       ${temas(T.bajaron, "Ninguno bajó esta semana.")}
-    </details>
-    <h3 class="tdSub">Vocabulario: tus cajas grandes</h3>
-    ${caja(5, "75 días")}${caja(4, "30 días")}
-    <p class="small">Las que suben a la de 75 vienen de la de 30: si la de 30 baja mientras la de 75 sube, vas bien.</p>
-    <details class="tdDet" data-tdet="quedaron"${tendAbiertas.has("quedaron") ? " open" : ""}>
-      <summary><h3 class="tdSub">Se te quedaron <span class="tdGris">· ${T.subieronCaja} subieron de caja</span></h3></summary>
-      ${T.quedaron.length ? `<div class="tdPalabras">${T.quedaron.map((x) => palabra(x, (y) => "ya va a " + cajaDe(y.ahora))).join("")}</div>` : `<p class="small">Ninguna esta semana.</p>`}
-    </details>
-    <details class="tdDet" data-tdet="olvidadas"${tendAbiertas.has("olvidadas") ? " open" : ""}>
-      <summary><h3 class="tdSub">Se te olvidaron <span class="tdGris">· ${T.olvidadasN}</span></h3></summary>
-      ${T.olvidadas.length ? `<div class="tdPalabras">${T.olvidadas.map((x) => palabra(x, (y) => `de ${cajaDe(y.antes)} a ${cajaDe(y.ahora)}`)).join("")}</div>` : `<p class="small">Ninguna. ¡Así se hace!</p>`}
     </details>
   </section>`;
 }
@@ -1639,7 +1635,7 @@ function verTarjetas(o) {
     <section class="card" id="tjCero">
       ${dia.total ? `<h1 class="sr">Vocabulario en cero</h1>` : `<h1 class="h">Todavía no hay vocabulario</h1><p>Cuando haya palabras en el contenido, aquí salen las de cada día.</p>`}
       <div class="conCuadro">${masTarde.length ? `<button type="button" class="ub grande" id="tjAdelantar">Adelantar ${masTarde.length}</button>` : "<span></span>"}<div class="unCuadro" role="list" aria-label="Tu vocabulario de hoy">${cuadroVocabulario(hoy)}</div></div>
-      ${curvaVocab().replace('class="tjCurva"', 'class="tjCurva enCero"')}
+      <div class="tjAvance"><h2 class="tdSub">Tu avance</h2>${graficaVocab()}</div>
       ${masTarde.length ? `<p class="small">Estudia ahora ${plural(masTarde.length, "palabra que toca", "palabras que tocan")} más adelante. La que aciertes sube su escalón desde hoy; la que falles vuelve a salir hoy.</p>` : ""}
     </section>`), { titulo: "Quiz de vocabulario · Pelagos", nav: "vocabulario", conserva: o.conserva });
     return;
@@ -2340,45 +2336,143 @@ vista.addEventListener("change", (ev) => {
   vista.addEventListener("pointercancel", () => { if (fila) { const b = fila.querySelector(".podEp"); b.style.transform = ""; b.style.opacity = ""; fila.classList.remove("deslizando", "listo"); fila = null; } });
 }
 
-// La barra del reproductor: abajo, en todas las páginas, mientras haya un episodio cargado.
-let podBarra = null, podClaveLista = "";
+// El reproductor (su elección del 24-Oct-2026): el «gordito» de rueda, negro en modo oscuro y plata en claro.
+// Abajo de cada página va una barra delgada (portada, título, play); al tocarla sube el aparato como hoja, encima
+// de la página. La rueda: −15 a la izquierda, +30 a la derecha, la velocidad arriba, ☰ abajo (tu lista en la misma
+// pantallita) y en medio play/pausa. Se baja deslizando hacia abajo, tocando afuera o con Escape.
+let podBarra = null, podHoja = null, podClaveLista = "", podVistaLista = false, podSel = 0;
+const velTexto = (v) => (Number.isInteger(v * 10) ? v.toFixed(1) : String(v)) + "×";
 function armarBarra() {
   const d = document.createElement("div");
-  d.className = "podBarra"; d.id = "podBarra"; d.hidden = true;
+  d.className = "podMini"; d.id = "podBarra"; d.hidden = true;
   d.setAttribute("role", "region"); d.setAttribute("aria-label", "Reproductor de podcasts");
   d.innerHTML = `
-    <div class="podBarraArriba">
-      <img class="podBarraPortada" alt="" referrerpolicy="no-referrer">
-      <a class="podBarraTxt" href="#/podcasts"><span class="podBarraTit"></span><span class="podBarraProg small"></span></a>
-      <button type="button" class="podX" aria-label="Cerrar el reproductor">✕</button>
-    </div>
-    <input type="range" class="podRango" min="0" max="1" step="1" value="0" aria-label="Dónde vas">
-    <div class="podTiempos small"><span class="podPos">0:00</span><span class="podFalta"></span></div>
-    <div class="podBotones">
-      <button type="button" class="podAtras" aria-label="Atrás 15 segundos">−15</button>
-      <button type="button" class="podPlay" aria-label="Pausa"></button>
-      <button type="button" class="podAdelante" aria-label="Adelante 30 segundos">+30</button>
-      <button type="button" class="podVel" aria-label="Velocidad"></button>
-    </div>
-    <p class="podError small" role="alert" hidden>No se pudo cargar este episodio. Prueba otra vez en un rato.</p>`;
+    <button type="button" class="podAbrir"><img class="podMiniCov" alt="" referrerpolicy="no-referrer">
+      <span class="podMiniTxt"><span class="podBarraTit"></span><span class="podBarraProg"></span></span></button>
+    <button type="button" class="podPlay" aria-label="Pausa"></button>
+    <button type="button" class="podX" aria-label="Cerrar el reproductor">✕</button>`;
   document.body.appendChild(d);
-  d.querySelector(".podAtras").addEventListener("click", () => PD.saltar(-15));
-  d.querySelector(".podAdelante").addEventListener("click", () => PD.saltar(30));
+  d.querySelector(".podAbrir").addEventListener("click", abrirPodHoja);
   d.querySelector(".podPlay").addEventListener("click", () => (PD.sonando() ? PD.pausa() : PD.seguir()));
-  d.querySelector(".podVel").addEventListener("click", () => PD.cambiarVelocidad());
-  d.querySelector(".podX").addEventListener("click", () => PD.cerrar());
-  const r = d.querySelector(".podRango");
-  r.addEventListener("input", () => { r.dataset.moviendo = "1"; d.querySelector(".podPos").textContent = mmss(Number(r.value)); });
+  d.querySelector(".podX").addEventListener("click", () => { cerrarHojaPod(); PD.cerrar(); });
+
+  const h = document.createElement("div");
+  h.className = "podHoja"; h.id = "podHoja"; h.hidden = true;
+  h.setAttribute("role", "dialog"); h.setAttribute("aria-modal", "true"); h.setAttribute("aria-label", "Reproductor");
+  h.innerHTML = `
+    <div class="podVelo"></div>
+    <div class="podPanel">
+      <button type="button" class="podAgarra" aria-label="Bajar el reproductor"></button>
+      <div class="podAp">
+        <div class="podPant">
+          <div class="podPantBarra"><span class="podEstadoTxt"></span><span class="podVelTxt"></span><span class="podPila" aria-hidden="true"></span></div>
+          <div class="podVSonando">
+            <div class="podPantFila"><img class="podPantCov" alt="" referrerpolicy="no-referrer">
+              <div class="podPantTxt"><b class="podPantTit"></b><span class="podPantProg"></span></div></div>
+            <input type="range" class="podRango" min="0" max="1" step="1" value="0" aria-label="Dónde vas">
+            <div class="podPantT"><span class="podPos">0:00</span><span class="podFalta"></span></div>
+            <p class="podError" role="alert" hidden>No se pudo cargar este episodio.</p>
+          </div>
+          <div class="podVLista" hidden><div class="podPantLista" role="listbox" aria-label="Tu lista"></div></div>
+        </div>
+        <div class="podRueda">
+          <button type="button" class="podVel" aria-label="Velocidad"></button>
+          <button type="button" class="podAtras" aria-label="Atrás 15 segundos">−15</button>
+          <button type="button" class="podAdelante" aria-label="Adelante 30 segundos">+30</button>
+          <button type="button" class="podMenu" aria-label="Tu lista">☰</button>
+          <button type="button" class="podCentro" aria-label="Pausa"></button>
+        </div>
+      </div>
+    </div>`;
+  document.body.appendChild(h);
+  podHoja = h;
+  h.querySelector(".podVelo").addEventListener("click", cerrarHojaPod);
+  h.querySelector(".podAgarra").addEventListener("click", cerrarHojaPod);
+  h.querySelector(".podAtras").addEventListener("click", () => PD.saltar(-15));
+  h.querySelector(".podAdelante").addEventListener("click", () => PD.saltar(30));
+  h.querySelector(".podVel").addEventListener("click", () => PD.cambiarVelocidad());
+  h.querySelector(".podMenu").addEventListener("click", () => { podVistaLista = !podVistaLista; podSel = 0; pintarBarra(); if (podVistaLista) h.querySelector(".podFilaL.sel")?.focus(); });
+  h.querySelector(".podCentro").addEventListener("click", () => {
+    if (podVistaLista) { const ep = listaDeLaHoja()[podSel]; if (ep) { PD.tocar(ep); podVistaLista = false; pintarBarra(); } return; }
+    if (PD.sonando()) PD.pausa(); else PD.seguir();
+  });
+  h.querySelector(".podPantLista").addEventListener("click", (ev) => {
+    const f = ev.target instanceof Element ? ev.target.closest("[data-podi]") : null;
+    if (!f) return;
+    const ep = listaDeLaHoja()[Number(f.dataset.podi)];
+    if (ep) { PD.tocar(ep); podVistaLista = false; pintarBarra(); }
+  });
+  const r = h.querySelector(".podRango");
+  r.addEventListener("input", () => { r.dataset.moviendo = "1"; h.querySelector(".podPos").textContent = mmss(Number(r.value)); });
   r.addEventListener("change", () => { delete r.dataset.moviendo; PD.ir(Number(r.value)); });
+  h.addEventListener("keydown", (ev) => {
+    if (ev.key === "Escape") { ev.preventDefault(); cerrarHojaPod(); }
+    else if (podVistaLista && (ev.key === "ArrowDown" || ev.key === "ArrowUp")) { ev.preventDefault(); moverSel(ev.key === "ArrowDown" ? 1 : -1); }
+  });
+  // Girar la rueda (con el dedo o el ratón) sube y baja por tu lista, como en el aparato de verdad.
+  const rueda = h.querySelector(".podRueda");
+  let ang0 = null, acum = 0;
+  const angulo = (ev) => { const b = rueda.getBoundingClientRect(); return Math.atan2(ev.clientY - (b.top + b.height / 2), ev.clientX - (b.left + b.width / 2)) * 180 / Math.PI; };
+  rueda.addEventListener("pointerdown", (ev) => { if (!podVistaLista || (ev.target instanceof Element && ev.target.closest(".podCentro"))) return; ang0 = angulo(ev); acum = 0; });
+  rueda.addEventListener("pointermove", (ev) => {
+    if (ang0 === null) return;
+    let d = angulo(ev) - ang0; if (d > 180) d -= 360; if (d < -180) d += 360;
+    ang0 = angulo(ev); acum += d;
+    while (Math.abs(acum) >= 28) { moverSel(acum > 0 ? 1 : -1); acum -= Math.sign(acum) * 28; rueda.dataset.giro = "1"; }
+  });
+  const soltar = () => { ang0 = null; setTimeout(() => { delete rueda.dataset.giro; }, 0); };
+  rueda.addEventListener("pointerup", soltar); rueda.addEventListener("pointercancel", soltar);
+  rueda.addEventListener("click", (ev) => { if (rueda.dataset.giro) { ev.stopPropagation(); ev.preventDefault(); } }, true);
+  // Deslizar el panel hacia abajo lo baja.
+  const panel = h.querySelector(".podPanel");
+  let y0 = null, dy = 0;
+  panel.addEventListener("pointerdown", (ev) => { if (ev.target instanceof Element && ev.target.closest(".podRueda, .podRango, .podPantLista")) return; y0 = ev.clientY; dy = 0; });
+  panel.addEventListener("pointermove", (ev) => { if (y0 === null) return; dy = Math.max(0, ev.clientY - y0); panel.style.transform = dy ? `translateY(${dy}px)` : ""; });
+  const fin = () => { if (y0 === null) return; y0 = null; panel.style.transform = ""; if (dy > 90) cerrarHojaPod(); };
+  panel.addEventListener("pointerup", fin); panel.addEventListener("pointercancel", fin);
   return d;
 }
-const velTexto = (v) => String(v) + "×";
+function listaDeLaHoja() { const c = PD.episodios(); return c ? PD.miLista(c.eps).slice(0, 40) : []; }
+function moverSel(paso) {
+  const n = listaDeLaHoja().length;
+  if (!n) return;
+  podSel = Math.max(0, Math.min(n - 1, podSel + paso));
+  pintarListaHoja();
+  const f = podHoja.querySelector(".podFilaL.sel");
+  if (f) { f.scrollIntoView({ block: "nearest" }); f.focus(); }
+}
+function pintarListaHoja() {
+  const l = podHoja.querySelector(".podPantLista"), cur = PD.cargado();
+  const eps = listaDeLaHoja();
+  const corto = (s) => (s >= 3600 ? Math.round(s / 3600) + "h" : Math.round(s / 60) + "'");
+  l.innerHTML = eps.length ? eps.map((e, i) => {
+    const pr = PD.programa(e.prog);
+    return `<button type="button" role="option" aria-selected="${i === podSel}" class="podFilaL${i === podSel ? " sel" : ""}" data-podi="${i}"><span>${cur && cur.id === e.id ? "▶ " : ""}${esc(pr ? pr.nombre : "")} · ${esc(e.titulo)}</span><span>${e.dur ? corto(e.dur) : ""}</span></button>`;
+  }).join("") : `<p class="podVacia">Tu lista está vacía.</p>`;
+}
+function abrirPodHoja() {
+  if (!podHoja || !PD.cargado()) return;
+  podVistaLista = false;
+  podHoja.hidden = false;
+  document.body.classList.add("conHoja");
+  requestAnimationFrame(() => podHoja.classList.add("abierta"));
+  pintarBarra();
+  podHoja.querySelector(".podCentro").focus();
+}
+function cerrarHojaPod() {
+  if (!podHoja || podHoja.hidden) return;
+  podHoja.classList.remove("abierta");
+  document.body.classList.remove("conHoja");
+  setTimeout(() => { if (!podHoja.classList.contains("abierta")) podHoja.hidden = true; }, 220);
+  podBarra?.querySelector(".podAbrir")?.focus();
+}
+window.addEventListener("hashchange", cerrarHojaPod);
 function pintarBarra() {
   const ep = PD.cargado();
   if (!podBarra) { if (!ep) return; podBarra = armarBarra(); }
   podBarra.hidden = !ep;
   document.body.classList.toggle("conPod", !!ep);
-  // La lista de episodios se vuelve a pintar solo cuando cambia qué suena (no a cada segundo: no le quita el foco al lector).
+  // La lista de episodios de la página se vuelve a pintar solo cuando cambia qué suena (no a cada segundo).
   const clave = ep ? ep.id + "|" + PD.sonando() : "";
   if (clave !== podClaveLista) {
     podClaveLista = clave;
@@ -2388,27 +2482,36 @@ function pintarBarra() {
       l.innerHTML = listaPodcasts();
       if (foco) l.querySelector(`[data-podep="${CSS.escape(foco)}"]`)?.focus();
     }
+    if (podVistaLista) pintarListaHoja();
   }
-  if (!ep) return;
+  if (!ep) { cerrarHojaPod(); return; }
   const pr = PD.programa(ep.prog), { pos, dur } = PD.tiempo(), suena = PD.sonando();
-  const img = podBarra.querySelector(".podBarraPortada");
-  if (pr && img.getAttribute("src") !== pr.portada) img.src = pr.portada;
+  for (const img of [podBarra.querySelector(".podMiniCov"), podHoja.querySelector(".podPantCov")]) if (pr && img.getAttribute("src") !== pr.portada) img.src = pr.portada;
   podBarra.querySelector(".podBarraTit").textContent = ep.titulo;
-  podBarra.querySelector(".podBarraProg").textContent = pr ? pr.nombre : "";
-  const play = podBarra.querySelector(".podPlay");
-  play.textContent = suena ? "❚❚" : "▶";
-  play.setAttribute("aria-label", suena ? "Pausa" : "Seguir");
-  const r = podBarra.querySelector(".podRango");
+  podBarra.querySelector(".podBarraProg").textContent = (pr ? pr.nombre : "") + (dur ? " · faltan " + minutosDichos(dur - pos) : "");
+  podBarra.querySelector(".podAbrir").setAttribute("aria-label", "Abrir el reproductor: " + ep.titulo);
+  const icono = suena ? "❚❚" : "▶";
+  for (const b of [podBarra.querySelector(".podPlay"), podHoja.querySelector(".podCentro")]) { b.textContent = icono; b.setAttribute("aria-label", suena ? "Pausa" : "Seguir"); }
+  // La pantallita.
+  podHoja.querySelector(".podEstadoTxt").textContent = podVistaLista ? "☰ TU LISTA" : (suena ? "❚❚ SONANDO" : "▶ EN PAUSA");
+  podHoja.querySelector(".podVelTxt").textContent = podVistaLista ? `${Math.min(podSel + 1, listaDeLaHoja().length)} de ${listaDeLaHoja().length}` : velTexto(PD.vel());
+  podHoja.querySelector(".podVSonando").hidden = podVistaLista;
+  podHoja.querySelector(".podVLista").hidden = !podVistaLista;
+  if (podVistaLista && !podHoja.querySelector(".podFilaL")) pintarListaHoja();
+  podHoja.querySelector(".podPantTit").textContent = ep.titulo;
+  podHoja.querySelector(".podPantProg").textContent = pr ? pr.nombre : "";
+  const r = podHoja.querySelector(".podRango");
   if (!r.dataset.moviendo) {
     r.max = String(Math.max(1, Math.round(dur)));
     r.value = String(Math.round(pos));
+    r.style.setProperty("--lleno", (dur ? Math.min(100, (pos / dur) * 100) : 0).toFixed(1) + "%");
     r.setAttribute("aria-valuetext", `${minutosDichos(pos)} de ${minutosDichos(dur)}`);
-    podBarra.querySelector(".podPos").textContent = mmss(pos);
+    podHoja.querySelector(".podPos").textContent = mmss(pos);
   }
-  podBarra.querySelector(".podFalta").textContent = dur ? "−" + mmss(dur - pos) : "";
-  podBarra.querySelector(".podVel").textContent = velTexto(PD.vel());
-  podBarra.querySelector(".podVel").setAttribute("aria-label", "Velocidad: " + velTexto(PD.vel()) + ". Toca para cambiarla.");
-  podBarra.querySelector(".podError").hidden = !PD.fallo();
+  podHoja.querySelector(".podFalta").textContent = dur ? "−" + mmss(dur - pos) : "";
+  podHoja.querySelector(".podVel").textContent = velTexto(PD.vel());
+  podHoja.querySelector(".podVel").setAttribute("aria-label", "Velocidad: " + velTexto(PD.vel()) + ". Toca para cambiarla.");
+  podHoja.querySelector(".podError").hidden = !PD.fallo();
 }
 PD.alCambiar(pintarBarra);
 
@@ -4226,6 +4329,15 @@ function verAjustes(o) {
   }
   marcarAmbiente();
   // La tutora del día: «Siguiente» la cambia por la que sigue en la fila, hoy y en todos tus aparatos.
+  // Si sus escenas todavía no llegan al abrir Ajustes, el renglón se pone al día solo cuando llegan.
+  if (!tutoraDelDiaId()) {
+    let vueltas = 0;
+    const reloj = setInterval(() => {
+      const r = $("ajTutoraHoy");
+      if (!r || ++vueltas > 60) { clearInterval(reloj); return; }
+      if (tutoraDelDiaId()) { r.textContent = nombreTutoraDelDia(); clearInterval(reloj); }
+    }, 500);
+  }
   $("ajTutoraSigue").addEventListener("click", () => {
     if (!tutoraDelDiaId()) { $("ajTutoraAviso").textContent = "Todavía no hay tutoras listas para el fondo."; return; }
     A.apuntar({ t: "saltotutora", id: N.nuevoId("st"), dia: N.fechaLocal(new Date()), cuando: new Date().toISOString() });
@@ -4329,6 +4441,7 @@ const AYUDA_DE = [
   [/^\/gramatica(\/[a-z0-9]+)?(\/bajo)?$/, "porcentaje"],
   [/^\/(leccion|tutoras)(\/|$)/, "tutoras"],
   [/^\/vocabulario/, "tarjetas"],
+  [/^\/podcasts$/, "podcasts"],
   [/^\/(clases|bitacora|lectura)?$/, "tablero"],
 ];
 

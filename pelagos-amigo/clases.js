@@ -28,7 +28,7 @@
 //   siguiente corrida (a los 10, 25, 40 o 55), revisa en Worldsacross las horas que le quedan a ese día (de 8 am a 4 pm,
 //   unos diez minutos) y lo contesta en clases.json: "huecosPedidos": [ { "id": "ph-…", "estado": "hecho" | "no se pudo",
 //   "nota": "…", "contestado": "…" } ], con los «libres» de ese día ya al día. Mientras tanto el día dice «Revisando…».
-import * as A from "./almacen.js?v=f2a81db27c";
+import * as A from "./almacen.js?v=8160ca6f60";
 
 export const HORA0 = 6, HORA1 = 21, PX = 56;      // la cuadrícula: de 6 am a 9 pm, 56 px por hora
 const ATRAS = 7, ADELANTE = 13;                    // hasta dónde se puede deslizar, en días desde hoy
@@ -203,6 +203,11 @@ export function armarClases(L, ahora = new Date(), corr = 0, pedidos = [], hueco
     total: deLaSemana.reduce((s, c) => s + c.min, 0),
     hablado: deLaSemana.filter(hecha).reduce((s, c) => s + c.min, 0),
   };
+  // «Esta hora ya se ocupó» (su sí del 24-Oct-2026): un pedido sin contestar cuyo hueco ya no sale en la lectura de
+  // disponibilidad más nueva, si esa lectura es de después de que lo pediste. Andrea lo va a intentar y no va a poder.
+  const leidoDespues = (p) => !!(L.dispo && p.cuando && L.dispo.getTime() > Date.parse(p.cuando));
+  const ocupado = (p) => !L.respuestas.has(p.id) && fin(p) > ahora && leidoDespues(p)
+    && !L.libres.some((x) => x.ini.getTime() === p.ini.getTime() && x.tutor === p.tutor);
   const dias = [0, 1, 2].map((k) => {
     const d = masDias(hoy, corr + k), esHoy = mismoDia(d, ahora);
     const nombre = esHoy ? "Hoy" : mismoDia(d, masDias(hoy, 1)) ? "Mañana" : mismoDia(d, masDias(hoy, -1)) ? "Ayer"
@@ -237,6 +242,12 @@ export function armarClases(L, ahora = new Date(), corr = 0, pedidos = [], hueco
       if (eventos.some((c) => c.ini < fin(p) && p.ini < fin(c))) continue;
       eventos.push({ ini: p.ini, min: p.min, tutor: p.tutor, foto: "", estado: "libre", clase: "libre fallida", hecha: false, sigue: false, cuando: "", otros: [], pedido: { ...p, respuesta: resp } });
     }
+    // Un pedido cuya hora ya se ocupó sale en rojo, con su aviso, para que pidas otra.
+    for (const p of pedidos) {
+      if (!mismoDia(p.ini, d) || !ocupado(p)) continue;
+      if (eventos.some((c) => c.ini < fin(p) && p.ini < fin(c))) continue;
+      eventos.push({ ini: p.ini, min: p.min, tutor: p.tutor, foto: "", estado: "libre", clase: "libre fallida", hecha: false, sigue: false, cuando: "", otros: [], pedido: { ...p, respuesta: null, ocupada: true } });
+    }
     // Las clases que pediste desde aquí y Andrea reservó: «Confirmada».
     for (const e of eventos) {
       if (e.clase.startsWith("libre")) continue;
@@ -258,11 +269,12 @@ export function armarClases(L, ahora = new Date(), corr = 0, pedidos = [], hueco
   // Los pedidos que Andrea no pudo reservar (de hoy en adelante), para avisarte arriba.
   const fallidos = pedidos.filter((p) => p.ini >= ahora && L.respuestas.get(p.id)?.estado === "no se pudo")
     .map((p) => ({ ...p, nota: L.respuestas.get(p.id).nota }));
-  const pendientes = pedidos.filter((p) => p.ini >= ahora && !L.respuestas.has(p.id));
+  const ocupados = pedidos.filter((p) => p.ini >= ahora && ocupado(p));
+  const pendientes = pedidos.filter((p) => p.ini >= ahora && !L.respuestas.has(p.id) && !ocupados.includes(p));
   // Los días que pediste revisar y que todavía no te contestan (de hoy en adelante).
   const hoyClave = diaClave(hoy);
   const revisando = [...new Map(huecos.filter((x) => x.dia >= hoyClave && !(L.huecos || new Map()).has(x.id)).map((x) => [x.dia, x])).values()];
-  return { dias, rango, revisando, semana, siguiente, fallidos, pendientes, ahoraTop: conAhora ? arriba(ahora) : null, alInicio: corr <= -ATRAS, alFinal: corr >= ADELANTE };
+  return { dias, rango, revisando, semana, siguiente, fallidos, ocupados, pendientes, ahoraTop: conAhora ? arriba(ahora) : null, alInicio: corr <= -ATRAS, alFinal: corr >= ADELANTE };
 }
 
 /** El calendario (sin el fondo ni las entradas de arriba: esos los pone la página). */
@@ -285,10 +297,10 @@ export function htmlClases(datos, ahora = new Date(), pedidos = [], huecos = [])
   const bloque = (e) => {
     const n = i++;
     const nombre = e.tutor.split(" ")[0];
-    const linea = e.clase.startsWith("libre") ? (e.clase === "libre pedida" ? "pedida ⏳" : e.clase === "libre fallida" ? "no se pudo ✕" : hora12(e.ini) + (e.otros.length ? ` · +${e.otros.length}` : "")) : hora12(e.ini);
+    const linea = e.clase.startsWith("libre") ? (e.clase === "libre pedida" ? "pedida ⏳" : e.clase === "libre fallida" ? (e.pedido?.ocupada ? "ya se ocupó ✕" : "no se pudo ✕") : hora12(e.ini) + (e.otros.length ? ` · +${e.otros.length}` : "")) : hora12(e.ini);
     // Toda clase agendada que todavía no pasa ya está confirmada en Worldsacross (sale en Upcoming): palomita verde en la foto.
     const ok = !e.hecha && !e.clase.startsWith("libre");
-    const dicho = `${e.tutor}, ${hora12(e.ini)}${e.tema ? ", " + e.tema : ""}${e.hecha ? ", hecha" : e.clase === "libre pedida" ? ", ya la pediste" : e.clase === "libre fallida" ? ", no se pudo reservar" : e.clase === "libre" ? `, hueco libre${e.otros?.length ? "; también " + e.otros.join(", ") : ""}` : (e.sigue ? ", la que sigue" : "") + ", confirmada"}`;
+    const dicho = `${e.tutor}, ${hora12(e.ini)}${e.tema ? ", " + e.tema : ""}${e.hecha ? ", hecha" : e.clase === "libre pedida" ? ", ya la pediste" : e.clase === "libre fallida" ? (e.pedido?.ocupada ? ", esta hora ya se ocupó" : ", no se pudo reservar") : e.clase === "libre" ? `, hueco libre${e.otros?.length ? "; también " + e.otros.join(", ") : ""}` : (e.sigue ? ", la que sigue" : "") + ", confirmada"}`;
     return `<button type="button" class="clB${e.clase ? " " + e.clase : ""}${ok ? " ok" : ""}" data-top="${arriba(e.ini)}" data-cl="${n}" aria-label="${esc(dicho)}">
       <span class="clFoto">${e.foto ? `<img data-tutor="${esc(e.foto)}" alt="">` : `<span class="clIni" aria-hidden="true">${esc(nombre.slice(0, 1))}</span>`}${ok ? `<i class="clOk" aria-hidden="true">✓</i>` : ""}</span>
       <span class="clT"><span class="clN">${esc(nombre)}${e.hecha ? " ✓" : ""}</span><span class="clH">${esc(linea)}</span>${e.tema ? `<span class="clTema">${esc(e.tema)}</span>` : ""}</span></button>`;
@@ -313,6 +325,7 @@ export function htmlClases(datos, ahora = new Date(), pedidos = [], huecos = [])
       </div>
       ${C.pendientes.length ? `<p class="clPedidos">${C.pendientes.length === 1 ? "1 clase pedida" : C.pendientes.length + " clases pedidas"}: Andrea la${C.pendientes.length === 1 ? "" : "s"} reserva en la próxima media hora.</p>` : ""}
       ${C.revisando.map((x) => `<p class="clPedidos">Revisando quién está libre ${esc(diaDicho(x.dia, ahora))}${x.cuando ? ` (lo pediste a las ${esc(hora12(x.cuando))})` : ""}: Andrea lo empieza en unos quince minutos y tarda como diez.</p>`).join("")}
+      ${C.ocupados.map((p) => `<p class="clNoSePudo">Esta hora ya se ocupó: <b>${esc(p.tutor)}</b>, ${esc(cuandoLargo(p, ahora))}. Pide otra hora u otro tutor.</p>`).join("")}
       ${C.fallidos.map((p) => `<p class="clNoSePudo">No se pudo reservar a <b>${esc(p.tutor)}</b>, ${esc(cuandoLargo(p, ahora))}${p.nota ? `: ${esc(p.nota)}` : "."}</p>`).join("")}
       ${dispo}
       ${viejo}
@@ -405,6 +418,7 @@ function abrir(e) {
   const dia = e.dia.nombre === "Hoy" || e.dia.nombre === "Mañana" || e.dia.nombre === "Ayer" ? e.dia.nombre : e.dia.nombre.replace(/ \d+$/, "") + " " + e.dia.num + " de " + MESES[e.dia.fecha.getMonth()];
   const libre = e.clase.startsWith("libre"), pendiente = e.clase === "libre pedida";
   const estado = pendiente ? `Ya se la pediste a Andrea: ${e.pedido.tutor}, ${ACTIVIDADES[e.pedido.actividad].split(" (")[0].toLowerCase()}${e.pedido.leccion ? " y gramática: " + e.pedido.leccion : ""}. La reserva en la próxima media hora.`
+    : e.pedido?.ocupada ? `Esta hora ya se ocupó: ${e.pedido.tutor} ya no sale libre a esta hora. Cancela el pedido y escoge otro tutor u otra hora.`
     : e.clase === "libre fallida" ? `No se pudo reservar a ${e.pedido.tutor}${e.pedido.respuesta.nota ? ": " + e.pedido.respuesta.nota.replace(/\.?$/, ".") : "."} Escoge otro tutor u otra hora.`
     : libre ? "Tu favorito tiene este hueco libre" : e.hecha ? "Hecha ✓"
     : e.confirmada ? (e.sigue ? "La que sigue · " : "") + "Confirmada ✓" + (e.confirmada instanceof Date ? ` (Worldsacross, ${diaCorto(e.confirmada)} a las ${hora12(e.confirmada)})` : "")
@@ -420,7 +434,7 @@ function abrir(e) {
       ${e.leccion ? `<p class="clLeccion">Lección: <a href="${esc(e.leccion.url)}" target="_blank" rel="noopener noreferrer">${esc(e.leccion.titulo)}</a></p>` : ""}
     </div>
     <div class="acts" id="clActs">
-      ${pendiente ? `<button type="button" class="ub" data-cancelar>Cancelar el pedido</button>`
+      ${pendiente || e.pedido?.ocupada ? `<button type="button" class="ub" data-cancelar>Cancelar el pedido</button>`
         : libre ? [e.tutor, ...(e.otros || [])].filter((t) => e.clase !== "libre fallida" || t !== e.pedido.tutor).map((t) => `<button type="button" class="ub grande" data-pedir="${esc(t)}">Reservar con ${esc(t.split(" ")[0])}</button>`).join("") : ""}
       ${e.hecha || libre ? "" : `<a class="ub grande" href="${WA}" target="_blank" rel="noopener noreferrer">Entrar a la clase</a>`}
       ${!libre && e.practica ? `<a class="ub grande" data-practica href="${esc(e.practica)}" target="_blank" rel="noopener noreferrer">Practicar</a>` : ""}

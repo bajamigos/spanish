@@ -1401,3 +1401,48 @@ export function cargaFutura(paquete, estado, hoy = fechaLocal(new Date()), dias 
   }
   return carga;
 }
+
+// ---------------------------------------------------------------- El ritmo del plan (24-Oct-2026)
+// La línea punteada de las gráficas de avance: dónde irías si cumplieras la cuota de cada día, y cuándo terminarías.
+// Las cuentas salen de las mismas reglas que deciden qué entra cada día; no se inventa ninguna meta.
+
+/** Días entre dos fechas «AAAA-MM-DD» (b menos a). */
+export function diasEntre(a, b) { return Math.round((Date.parse(b + "T12:00:00Z") - Date.parse(a + "T12:00:00Z")) / 864e5); }
+export const INICIO_CUOTA_GRAMATICA = "2026-10-22";       // el día que empezó la cuota de NUEVOS_TEMAS_AL_DIA
+
+/**
+ * Vocabulario: desde tu último reinicio entran NUEVAS_AL_DIA palabras nuevas al día (el día del reinicio es el día 1).
+ * Devuelve { desde, total, porDia, fin, enDia(d) -> palabras vistas al ritmo ese día } o null si nunca reiniciaste.
+ * «total» son tus palabras de hoy (sin las quitadas): si agregas palabras, la fecha de fin se recorre sola.
+ */
+export function ritmoVocab(sucesos, total) {
+  const reinicios = (sucesos || []).filter((e) => e && e.t === "tjreinicio").map((e) => fechaLocal(new Date(ms(e)))).sort();
+  if (!reinicios.length || !total) return null;
+  const desde = reinicios[reinicios.length - 1], porDia = NUEVAS_AL_DIA;
+  const fin = sumarDias(desde, Math.ceil(total / porDia) - 1);
+  return { desde, total, porDia, fin, enDia: (d) => (d < desde ? null : Math.min(total, porDia * (diasEntre(desde, d) + 1))) };
+}
+
+/**
+ * Gramática de un nivel: solo cuando es tu enfoque (los temas nuevos solo entran de ahí). Desde el día que empezó la
+ * cuota, o el día que escogiste ese enfoque si fue después, entran NUEVOS_TEMAS_AL_DIA al día, partiendo de los temas
+ * que ya habías cubierto el día anterior. La meta son los temas del nivel que tienen preguntas (los demás no se pueden
+ * cubrir). Devuelve { desde, base, meta, total, porDia, fin, enDia(d) } o null.
+ */
+export function ritmoNivel(paquete, sucesos, nivel) {
+  const lista = (sucesos || []).filter((e) => e && typeof e === "object");
+  const E = calcular(paquete, lista);
+  if (E.enfoque !== nivel) return null;
+  const elegido = lista.filter((e) => e.t === "enfoque" && e.nivel === nivel).map((e) => fechaLocal(new Date(ms(e)))).sort().pop();
+  const desde = elegido && elegido > INICIO_CUOTA_GRAMATICA ? elegido : INICIO_CUOTA_GRAMATICA;
+  const ids = (paquete.temas || []).filter((t) => t.nivel === nivel).map((t) => t.id);
+  const meta = temasCon(paquete, E, nivel).size;
+  if (!meta) return null;
+  const ayer = sumarDias(desde, -1);
+  const Eb = calcular(paquete, lista.filter((e) => fechaLocal(new Date(ms(e))) <= ayer));
+  let base = 0;
+  for (const id of ids) { const t = Eb.temas.get(id); if (t && t.n > 0) base++; }
+  const porDia = NUEVOS_TEMAS_AL_DIA;
+  const fin = base >= meta ? desde : sumarDias(desde, Math.ceil((meta - base) / porDia) - 1);
+  return { desde, base, meta, total: ids.length, porDia, fin, enDia: (d) => (d < ayer ? null : Math.min(meta, base + porDia * diasEntre(ayer, d))) };
+}
