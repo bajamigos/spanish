@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=2b7890fb19";
-import * as A from "./almacen.js?v=2b7890fb19";
-import * as V from "./videos.js?v=2b7890fb19";
-import * as NB from "./nube.js?v=2b7890fb19";
-import * as CL from "./clases.js?v=2b7890fb19";
-import { abrirPractica } from "./practica.js?v=2b7890fb19";
-import * as F from "./fondo.js?v=2b7890fb19";
-import * as PD from "./podcasts.js?v=2b7890fb19";
+import * as N from "./nucleo.js?v=f4611c105b";
+import * as A from "./almacen.js?v=f4611c105b";
+import * as V from "./videos.js?v=f4611c105b";
+import * as NB from "./nube.js?v=f4611c105b";
+import * as CL from "./clases.js?v=f4611c105b";
+import { abrirPractica } from "./practica.js?v=f4611c105b";
+import * as F from "./fondo.js?v=f4611c105b";
+import * as PD from "./podcasts.js?v=f4611c105b";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1621,9 +1621,14 @@ let enTarjetaDe = null;       // la tarjeta que está en pantalla: no se repinta
 const DESHACER_MS = 10000;
 let tjUltima = null, tjVolver = null;
 function barraDeshacer() {
-  if (!tjUltima || Date.now() > tjUltima.hasta) { tjUltima = null; return ""; }
-  setTimeout(() => { const b = $("tjDeshacer"); if (b && (!tjUltima || Date.now() > tjUltima.hasta)) b.remove(); }, tjUltima.hasta - Date.now() + 50);
-  return `<p class="tjDeshacer" id="tjDeshacer" role="status"><span>${esc(tjUltima.como)}: «${esc(tjUltima.palabra)}»</span><button type="button" class="lk" id="tjDeshacerBtn">Deshacer</button></p>`;
+  const b = botonDeshacerTj();
+  return b === "<span></span>" ? "" : `<div class="qaDeshacer">${b}</div>`;
+}
+/** El ↶ Deshacer de las tarjetas, chiquito, en el renglón de «Hoy» (25-Oct-2026): no ocupa renglón propio. */
+function botonDeshacerTj() {
+  if (!tjUltima || Date.now() > tjUltima.hasta) { tjUltima = null; return "<span></span>"; }
+  setTimeout(() => { const b = $("tjDeshacerBtn"); if (b && (!tjUltima || Date.now() > tjUltima.hasta)) b.replaceWith(document.createElement("span")); }, tjUltima.hasta - Date.now() + 50);
+  return `<button type="button" class="qaDesBtn" id="tjDeshacerBtn" aria-label="Deshacer: ${esc(tjUltima.como)}, ${esc(tjUltima.palabra)}">↶ Deshacer</button>`;
 }
 vista.addEventListener("click", (ev) => {
   if (!(ev.target instanceof Element) || !ev.target.closest("#tjDeshacerBtn") || !tjUltima) return;
@@ -1685,8 +1690,7 @@ function verTarjetas(o) {
       ${foto ? `<img data-foto="${esc(foto.nombre)}"${foto.vocab ? ' data-vocab="1"' : ""} alt="">` : ""}
       <div class="over">
         <p class="lead sr"><span id="tjFaltan">${enAdelanto ? faltan : (cola.length === 1 ? "Falta 1" : "Faltan " + cola.length)}</span><span id="tjAviso">Dilo en español</span></p>
-        ${barraDeshacer()}
-        <div data-explicas>${(() => { const h = lineaDeVocabulario(dia, c.id, antes); return conMalla() ? h.replace(/<span class="lnCajas grandes"[^>]*>.*?<\/span><\/span>\s*/s, "") : h; })()}${panelExplica()}</div>
+        <div data-explicas>${(() => { const h = lineaDeVocabulario(dia, c.id, antes).replace('<div class="gFila"><span></span>', `<div class="gFila">${botonDeshacerTj()}`); return conMalla() ? h.replace(/<span class="lnCajas grandes"[^>]*>.*?<\/span><\/span>\s*/s, "") : h; })()}${panelExplica()}</div>
         ${ambiente() === "limpio" ? `<div class="vMallaCab"><button type="button" class="lk vMallaBtn" id="vMallaBtn" aria-expanded="${conMalla()}">${conMalla() ? "Ocultar tus palabras" : "Ver tus palabras"}</button></div>${conMalla() ? `<div class="vMalla" id="vMalla" data-actual="${esc(c.id)}"></div>` : ""}` : ""}
         ${renglonConLapiz("frente", c.frente, "h1", "cue", ' id="cue"')}
         ${(() => { const at = N.tarjetasAtascadas(E).get(c.id); return at ? `<p class="tjAtas">Atascada · fallada en ${at.fallos} quizzes esta semana · <button type="button" class="lk" data-v="${esc(c.id)}">Ver su ficha</button></p>` : ""; })()}
