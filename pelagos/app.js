@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=49377ccf37";
-import * as A from "./almacen.js?v=49377ccf37";
-import * as V from "./videos.js?v=49377ccf37";
-import * as NB from "./nube.js?v=49377ccf37";
-import * as CL from "./clases.js?v=49377ccf37";
-import { abrirPractica } from "./practica.js?v=49377ccf37";
-import * as F from "./fondo.js?v=49377ccf37";
-import * as PD from "./podcasts.js?v=49377ccf37";
+import * as N from "./nucleo.js?v=b1d882a0e6";
+import * as A from "./almacen.js?v=b1d882a0e6";
+import * as V from "./videos.js?v=b1d882a0e6";
+import * as NB from "./nube.js?v=b1d882a0e6";
+import * as CL from "./clases.js?v=b1d882a0e6";
+import { abrirPractica } from "./practica.js?v=b1d882a0e6";
+import * as F from "./fondo.js?v=b1d882a0e6";
+import * as PD from "./podcasts.js?v=b1d882a0e6";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -896,10 +896,12 @@ vista.addEventListener("click", (ev) => {
   caja.querySelector(".grafNivel").innerHTML = graficaNivel(tendNivel);
 });
 /** El selector de nivel con su gráfica de avance. id: el de la caja de la gráfica (opcional). */
-function avanceNivel(id = "") {
+function avanceNivel(id = "", { soloNivel = null } = {}) {
   const R = progresoHoy(), conPreg = N.nivelesConPreguntas(P, E);
   const nivs = Object.keys(NIVELES).filter((n) => R.niveles[n] && conPreg[n]);
   if (!nivs.length) return "";
+  // Con «soloNivel» (la página del quiz, 25-Oct-2026): sin botones; la gráfica es del nivel de tu plan.
+  if (soloNivel) return nivs.includes(soloNivel) ? `<div class="avNivel"><div class="grafNivel"${id ? ` id="${id}"` : ""}>${graficaNivel(soloNivel)}</div></div>` : "";
   if (!tendNivel || !nivs.includes(tendNivel)) tendNivel = E.enfoque && nivs.includes(E.enfoque) ? E.enfoque
     : nivs.slice().sort((a, b) => R.niveles[b].n[R.niveles[b].n.length - 1] - R.niveles[a].n[R.niveles[a].n.length - 1])[0];
   return `<div class="avNivel">
@@ -3664,7 +3666,7 @@ function verKwiz(o) {
   <section class="card" id="lista">
     <h1 class="h">Tu plan de estudio Pelagos</h1>
     <div class="hoyGrande" data-explicas><p class="small">Te queda hoy</p>${circulosDeHoy("grande")}${panelExplica()}</div>
-    ${ambiente() === "limpio" ? `<div class="qaMapa kwAtlas" id="kwAtlas" data-nivel="${esc(E.enfoque || (deLista[0] || {}).nivel || "A1")}"></div><p class="small" id="kwAtlasDice"></p>` : ""}
+    ${ambiente() === "limpio" ? `<div class="qaMapa kwAtlas" id="kwAtlas" data-nivel="${esc(nivelDelPlan(deLista))}"></div><p class="small" id="kwAtlasDice"></p>` : ""}
     <div class="conCuadro">${deLista.length && !lista.abierto ? `<button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Empezar quiz</button>`
       : abierto ? `<a class="ub grande" href="#${QUIZ}/${esc(abierto.id)}">Seguir el quiz</a>` : "<span></span>"}${conCuadro(hoy)}</div>
     ${abierto ? `<p class="small">Tienes un quiz a medias. Lo que ya contestaste está guardado.${deLista.length && !lista.abierto ? ` <a href="#${QUIZ}/${esc(abierto.id)}">Seguirlo</a>` : ""}</p>` : ""}
@@ -3674,7 +3676,7 @@ function verKwiz(o) {
       <div class="tdSeg enfSeg">${Object.keys(NIVELES).map((n) => `<button type="button" class="nv" data-enfoque="${n}" aria-pressed="${E.enfoque === n ? "true" : "false"}"${porNivel[n] ? "" : " disabled"} aria-label="${n}, ${porNivel[n] ? plural(porNivel[n], "tema con preguntas", "temas con preguntas") : "todavía sin preguntas"}">${n}<span>${porNivel[n] || 0}</span></button>`).join("")}</div>
     </div>
     <p class="small">${E.enfoque ? `Tu plan solo trae temas de ${esc(E.enfoque)}.` : "Tu plan toma temas de todos los niveles."} El número es cuántos temas tienen preguntas.${lista.abierto ? " El cambio se ve al terminar el quiz que está a medias." : ""}</p>
-    ${(() => { if (E.enfoque) tendNivel = E.enfoque; const h = avanceNivel(); return h ? `<div id="avanceQuiz"><h3>Tu avance por nivel</h3>${h}</div>` : ""; })()}
+    ${(() => { const nv = nivelDelPlan(deLista); const h = avanceNivel("", { soloNivel: nv }); return h ? `<div id="avanceQuiz"><h3>Tu avance en ${esc(nv)}</h3>${h}</div>` : ""; })()}
     ${deLista.length ? `
     <h3>${plural(deLista.length, "tema", "temas")} en tu plan</h3>
     <div class="links">${deLista.map((t) => botonTema(t, { sub: lineaDelPlan(t, lista, bancoPlan) })).join("")}</div>
@@ -3947,6 +3949,13 @@ function marcarGrupo(raiz, que) {
 // ---- El Atlas en la página del quiz (su pedido del 25-Oct-2026): tu nivel con los temas de tu plan; tocar un círculo
 // de «Te queda hoy» marca los que te quedan de ese grupo, y tocarlo otra vez regresa a tu plan.
 let kwMarcar = "plan";
+/** El nivel de tu plan: el del Enfoque; en Guiado, el que más se repite entre los temas de tu plan. */
+function nivelDelPlan(deLista) {
+  if (E.enfoque) return E.enfoque;
+  const c = {};
+  for (const t of deLista) c[t.nivel] = (c[t.nivel] || 0) + 1;
+  return Object.keys(c).sort((a, b) => c[b] - c[a])[0] || "A1";
+}
 function pintarAtlasInicio() {
   const caja = $("kwAtlas");
   if (!caja) return;
