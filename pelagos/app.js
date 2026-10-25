@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=c99fbaae07";
-import * as A from "./almacen.js?v=c99fbaae07";
-import * as V from "./videos.js?v=c99fbaae07";
-import * as NB from "./nube.js?v=c99fbaae07";
-import * as CL from "./clases.js?v=c99fbaae07";
-import { abrirPractica } from "./practica.js?v=c99fbaae07";
-import * as F from "./fondo.js?v=c99fbaae07";
-import * as PD from "./podcasts.js?v=c99fbaae07";
+import * as N from "./nucleo.js?v=950937eab9";
+import * as A from "./almacen.js?v=950937eab9";
+import * as V from "./videos.js?v=950937eab9";
+import * as NB from "./nube.js?v=950937eab9";
+import * as CL from "./clases.js?v=950937eab9";
+import { abrirPractica } from "./practica.js?v=950937eab9";
+import * as F from "./fondo.js?v=950937eab9";
+import * as PD from "./podcasts.js?v=950937eab9";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -2337,45 +2337,143 @@ vista.addEventListener("change", (ev) => {
   vista.addEventListener("pointercancel", () => { if (fila) { const b = fila.querySelector(".podEp"); b.style.transform = ""; b.style.opacity = ""; fila.classList.remove("deslizando", "listo"); fila = null; } });
 }
 
-// La barra del reproductor: abajo, en todas las páginas, mientras haya un episodio cargado.
-let podBarra = null, podClaveLista = "";
+// El reproductor (su elección del 24-Oct-2026): el «gordito» de rueda, negro en modo oscuro y plata en claro.
+// Abajo de cada página va una barra delgada (portada, título, play); al tocarla sube el aparato como hoja, encima
+// de la página. La rueda: −15 a la izquierda, +30 a la derecha, la velocidad arriba, ☰ abajo (tu lista en la misma
+// pantallita) y en medio play/pausa. Se baja deslizando hacia abajo, tocando afuera o con Escape.
+let podBarra = null, podHoja = null, podClaveLista = "", podVistaLista = false, podSel = 0;
+const velTexto = (v) => (Number.isInteger(v * 10) ? v.toFixed(1) : String(v)) + "×";
 function armarBarra() {
   const d = document.createElement("div");
-  d.className = "podBarra"; d.id = "podBarra"; d.hidden = true;
+  d.className = "podMini"; d.id = "podBarra"; d.hidden = true;
   d.setAttribute("role", "region"); d.setAttribute("aria-label", "Reproductor de podcasts");
   d.innerHTML = `
-    <div class="podBarraArriba">
-      <img class="podBarraPortada" alt="" referrerpolicy="no-referrer">
-      <a class="podBarraTxt" href="#/podcasts"><span class="podBarraTit"></span><span class="podBarraProg small"></span></a>
-      <button type="button" class="podX" aria-label="Cerrar el reproductor">✕</button>
-    </div>
-    <input type="range" class="podRango" min="0" max="1" step="1" value="0" aria-label="Dónde vas">
-    <div class="podTiempos small"><span class="podPos">0:00</span><span class="podFalta"></span></div>
-    <div class="podBotones">
-      <button type="button" class="podAtras" aria-label="Atrás 15 segundos">−15</button>
-      <button type="button" class="podPlay" aria-label="Pausa"></button>
-      <button type="button" class="podAdelante" aria-label="Adelante 30 segundos">+30</button>
-      <button type="button" class="podVel" aria-label="Velocidad"></button>
-    </div>
-    <p class="podError small" role="alert" hidden>No se pudo cargar este episodio. Prueba otra vez en un rato.</p>`;
+    <button type="button" class="podAbrir"><img class="podMiniCov" alt="" referrerpolicy="no-referrer">
+      <span class="podMiniTxt"><span class="podBarraTit"></span><span class="podBarraProg"></span></span></button>
+    <button type="button" class="podPlay" aria-label="Pausa"></button>
+    <button type="button" class="podX" aria-label="Cerrar el reproductor">✕</button>`;
   document.body.appendChild(d);
-  d.querySelector(".podAtras").addEventListener("click", () => PD.saltar(-15));
-  d.querySelector(".podAdelante").addEventListener("click", () => PD.saltar(30));
+  d.querySelector(".podAbrir").addEventListener("click", abrirPodHoja);
   d.querySelector(".podPlay").addEventListener("click", () => (PD.sonando() ? PD.pausa() : PD.seguir()));
-  d.querySelector(".podVel").addEventListener("click", () => PD.cambiarVelocidad());
-  d.querySelector(".podX").addEventListener("click", () => PD.cerrar());
-  const r = d.querySelector(".podRango");
-  r.addEventListener("input", () => { r.dataset.moviendo = "1"; d.querySelector(".podPos").textContent = mmss(Number(r.value)); });
+  d.querySelector(".podX").addEventListener("click", () => { cerrarHojaPod(); PD.cerrar(); });
+
+  const h = document.createElement("div");
+  h.className = "podHoja"; h.id = "podHoja"; h.hidden = true;
+  h.setAttribute("role", "dialog"); h.setAttribute("aria-modal", "true"); h.setAttribute("aria-label", "Reproductor");
+  h.innerHTML = `
+    <div class="podVelo"></div>
+    <div class="podPanel">
+      <button type="button" class="podAgarra" aria-label="Bajar el reproductor"></button>
+      <div class="podAp">
+        <div class="podPant">
+          <div class="podPantBarra"><span class="podEstadoTxt"></span><span class="podVelTxt"></span><span class="podPila" aria-hidden="true"></span></div>
+          <div class="podVSonando">
+            <div class="podPantFila"><img class="podPantCov" alt="" referrerpolicy="no-referrer">
+              <div class="podPantTxt"><b class="podPantTit"></b><span class="podPantProg"></span></div></div>
+            <input type="range" class="podRango" min="0" max="1" step="1" value="0" aria-label="Dónde vas">
+            <div class="podPantT"><span class="podPos">0:00</span><span class="podFalta"></span></div>
+            <p class="podError" role="alert" hidden>No se pudo cargar este episodio.</p>
+          </div>
+          <div class="podVLista" hidden><div class="podPantLista" role="listbox" aria-label="Tu lista"></div></div>
+        </div>
+        <div class="podRueda">
+          <button type="button" class="podVel" aria-label="Velocidad"></button>
+          <button type="button" class="podAtras" aria-label="Atrás 15 segundos">−15</button>
+          <button type="button" class="podAdelante" aria-label="Adelante 30 segundos">+30</button>
+          <button type="button" class="podMenu" aria-label="Tu lista">☰</button>
+          <button type="button" class="podCentro" aria-label="Pausa"></button>
+        </div>
+      </div>
+    </div>`;
+  document.body.appendChild(h);
+  podHoja = h;
+  h.querySelector(".podVelo").addEventListener("click", cerrarHojaPod);
+  h.querySelector(".podAgarra").addEventListener("click", cerrarHojaPod);
+  h.querySelector(".podAtras").addEventListener("click", () => PD.saltar(-15));
+  h.querySelector(".podAdelante").addEventListener("click", () => PD.saltar(30));
+  h.querySelector(".podVel").addEventListener("click", () => PD.cambiarVelocidad());
+  h.querySelector(".podMenu").addEventListener("click", () => { podVistaLista = !podVistaLista; podSel = 0; pintarBarra(); if (podVistaLista) h.querySelector(".podFilaL.sel")?.focus(); });
+  h.querySelector(".podCentro").addEventListener("click", () => {
+    if (podVistaLista) { const ep = listaDeLaHoja()[podSel]; if (ep) { PD.tocar(ep); podVistaLista = false; pintarBarra(); } return; }
+    if (PD.sonando()) PD.pausa(); else PD.seguir();
+  });
+  h.querySelector(".podPantLista").addEventListener("click", (ev) => {
+    const f = ev.target instanceof Element ? ev.target.closest("[data-podi]") : null;
+    if (!f) return;
+    const ep = listaDeLaHoja()[Number(f.dataset.podi)];
+    if (ep) { PD.tocar(ep); podVistaLista = false; pintarBarra(); }
+  });
+  const r = h.querySelector(".podRango");
+  r.addEventListener("input", () => { r.dataset.moviendo = "1"; h.querySelector(".podPos").textContent = mmss(Number(r.value)); });
   r.addEventListener("change", () => { delete r.dataset.moviendo; PD.ir(Number(r.value)); });
+  h.addEventListener("keydown", (ev) => {
+    if (ev.key === "Escape") { ev.preventDefault(); cerrarHojaPod(); }
+    else if (podVistaLista && (ev.key === "ArrowDown" || ev.key === "ArrowUp")) { ev.preventDefault(); moverSel(ev.key === "ArrowDown" ? 1 : -1); }
+  });
+  // Girar la rueda (con el dedo o el ratón) sube y baja por tu lista, como en el aparato de verdad.
+  const rueda = h.querySelector(".podRueda");
+  let ang0 = null, acum = 0;
+  const angulo = (ev) => { const b = rueda.getBoundingClientRect(); return Math.atan2(ev.clientY - (b.top + b.height / 2), ev.clientX - (b.left + b.width / 2)) * 180 / Math.PI; };
+  rueda.addEventListener("pointerdown", (ev) => { if (!podVistaLista || (ev.target instanceof Element && ev.target.closest(".podCentro"))) return; ang0 = angulo(ev); acum = 0; });
+  rueda.addEventListener("pointermove", (ev) => {
+    if (ang0 === null) return;
+    let d = angulo(ev) - ang0; if (d > 180) d -= 360; if (d < -180) d += 360;
+    ang0 = angulo(ev); acum += d;
+    while (Math.abs(acum) >= 28) { moverSel(acum > 0 ? 1 : -1); acum -= Math.sign(acum) * 28; rueda.dataset.giro = "1"; }
+  });
+  const soltar = () => { ang0 = null; setTimeout(() => { delete rueda.dataset.giro; }, 0); };
+  rueda.addEventListener("pointerup", soltar); rueda.addEventListener("pointercancel", soltar);
+  rueda.addEventListener("click", (ev) => { if (rueda.dataset.giro) { ev.stopPropagation(); ev.preventDefault(); } }, true);
+  // Deslizar el panel hacia abajo lo baja.
+  const panel = h.querySelector(".podPanel");
+  let y0 = null, dy = 0;
+  panel.addEventListener("pointerdown", (ev) => { if (ev.target instanceof Element && ev.target.closest(".podRueda, .podRango, .podPantLista")) return; y0 = ev.clientY; dy = 0; });
+  panel.addEventListener("pointermove", (ev) => { if (y0 === null) return; dy = Math.max(0, ev.clientY - y0); panel.style.transform = dy ? `translateY(${dy}px)` : ""; });
+  const fin = () => { if (y0 === null) return; y0 = null; panel.style.transform = ""; if (dy > 90) cerrarHojaPod(); };
+  panel.addEventListener("pointerup", fin); panel.addEventListener("pointercancel", fin);
   return d;
 }
-const velTexto = (v) => String(v) + "×";
+function listaDeLaHoja() { const c = PD.episodios(); return c ? PD.miLista(c.eps).slice(0, 40) : []; }
+function moverSel(paso) {
+  const n = listaDeLaHoja().length;
+  if (!n) return;
+  podSel = Math.max(0, Math.min(n - 1, podSel + paso));
+  pintarListaHoja();
+  const f = podHoja.querySelector(".podFilaL.sel");
+  if (f) { f.scrollIntoView({ block: "nearest" }); f.focus(); }
+}
+function pintarListaHoja() {
+  const l = podHoja.querySelector(".podPantLista"), cur = PD.cargado();
+  const eps = listaDeLaHoja();
+  const corto = (s) => (s >= 3600 ? Math.round(s / 3600) + "h" : Math.round(s / 60) + "'");
+  l.innerHTML = eps.length ? eps.map((e, i) => {
+    const pr = PD.programa(e.prog);
+    return `<button type="button" role="option" aria-selected="${i === podSel}" class="podFilaL${i === podSel ? " sel" : ""}" data-podi="${i}"><span>${cur && cur.id === e.id ? "▶ " : ""}${esc(pr ? pr.nombre : "")} · ${esc(e.titulo)}</span><span>${e.dur ? corto(e.dur) : ""}</span></button>`;
+  }).join("") : `<p class="podVacia">Tu lista está vacía.</p>`;
+}
+function abrirPodHoja() {
+  if (!podHoja || !PD.cargado()) return;
+  podVistaLista = false;
+  podHoja.hidden = false;
+  document.body.classList.add("conHoja");
+  requestAnimationFrame(() => podHoja.classList.add("abierta"));
+  pintarBarra();
+  podHoja.querySelector(".podCentro").focus();
+}
+function cerrarHojaPod() {
+  if (!podHoja || podHoja.hidden) return;
+  podHoja.classList.remove("abierta");
+  document.body.classList.remove("conHoja");
+  setTimeout(() => { if (!podHoja.classList.contains("abierta")) podHoja.hidden = true; }, 220);
+  podBarra?.querySelector(".podAbrir")?.focus();
+}
+window.addEventListener("hashchange", cerrarHojaPod);
 function pintarBarra() {
   const ep = PD.cargado();
   if (!podBarra) { if (!ep) return; podBarra = armarBarra(); }
   podBarra.hidden = !ep;
   document.body.classList.toggle("conPod", !!ep);
-  // La lista de episodios se vuelve a pintar solo cuando cambia qué suena (no a cada segundo: no le quita el foco al lector).
+  // La lista de episodios de la página se vuelve a pintar solo cuando cambia qué suena (no a cada segundo).
   const clave = ep ? ep.id + "|" + PD.sonando() : "";
   if (clave !== podClaveLista) {
     podClaveLista = clave;
@@ -2385,27 +2483,36 @@ function pintarBarra() {
       l.innerHTML = listaPodcasts();
       if (foco) l.querySelector(`[data-podep="${CSS.escape(foco)}"]`)?.focus();
     }
+    if (podVistaLista) pintarListaHoja();
   }
-  if (!ep) return;
+  if (!ep) { cerrarHojaPod(); return; }
   const pr = PD.programa(ep.prog), { pos, dur } = PD.tiempo(), suena = PD.sonando();
-  const img = podBarra.querySelector(".podBarraPortada");
-  if (pr && img.getAttribute("src") !== pr.portada) img.src = pr.portada;
+  for (const img of [podBarra.querySelector(".podMiniCov"), podHoja.querySelector(".podPantCov")]) if (pr && img.getAttribute("src") !== pr.portada) img.src = pr.portada;
   podBarra.querySelector(".podBarraTit").textContent = ep.titulo;
-  podBarra.querySelector(".podBarraProg").textContent = pr ? pr.nombre : "";
-  const play = podBarra.querySelector(".podPlay");
-  play.textContent = suena ? "❚❚" : "▶";
-  play.setAttribute("aria-label", suena ? "Pausa" : "Seguir");
-  const r = podBarra.querySelector(".podRango");
+  podBarra.querySelector(".podBarraProg").textContent = (pr ? pr.nombre : "") + (dur ? " · faltan " + minutosDichos(dur - pos) : "");
+  podBarra.querySelector(".podAbrir").setAttribute("aria-label", "Abrir el reproductor: " + ep.titulo);
+  const icono = suena ? "❚❚" : "▶";
+  for (const b of [podBarra.querySelector(".podPlay"), podHoja.querySelector(".podCentro")]) { b.textContent = icono; b.setAttribute("aria-label", suena ? "Pausa" : "Seguir"); }
+  // La pantallita.
+  podHoja.querySelector(".podEstadoTxt").textContent = podVistaLista ? "☰ TU LISTA" : (suena ? "❚❚ SONANDO" : "▶ EN PAUSA");
+  podHoja.querySelector(".podVelTxt").textContent = podVistaLista ? `${Math.min(podSel + 1, listaDeLaHoja().length)} de ${listaDeLaHoja().length}` : velTexto(PD.vel());
+  podHoja.querySelector(".podVSonando").hidden = podVistaLista;
+  podHoja.querySelector(".podVLista").hidden = !podVistaLista;
+  if (podVistaLista && !podHoja.querySelector(".podFilaL")) pintarListaHoja();
+  podHoja.querySelector(".podPantTit").textContent = ep.titulo;
+  podHoja.querySelector(".podPantProg").textContent = pr ? pr.nombre : "";
+  const r = podHoja.querySelector(".podRango");
   if (!r.dataset.moviendo) {
     r.max = String(Math.max(1, Math.round(dur)));
     r.value = String(Math.round(pos));
+    r.style.setProperty("--lleno", (dur ? Math.min(100, (pos / dur) * 100) : 0).toFixed(1) + "%");
     r.setAttribute("aria-valuetext", `${minutosDichos(pos)} de ${minutosDichos(dur)}`);
-    podBarra.querySelector(".podPos").textContent = mmss(pos);
+    podHoja.querySelector(".podPos").textContent = mmss(pos);
   }
-  podBarra.querySelector(".podFalta").textContent = dur ? "−" + mmss(dur - pos) : "";
-  podBarra.querySelector(".podVel").textContent = velTexto(PD.vel());
-  podBarra.querySelector(".podVel").setAttribute("aria-label", "Velocidad: " + velTexto(PD.vel()) + ". Toca para cambiarla.");
-  podBarra.querySelector(".podError").hidden = !PD.fallo();
+  podHoja.querySelector(".podFalta").textContent = dur ? "−" + mmss(dur - pos) : "";
+  podHoja.querySelector(".podVel").textContent = velTexto(PD.vel());
+  podHoja.querySelector(".podVel").setAttribute("aria-label", "Velocidad: " + velTexto(PD.vel()) + ". Toca para cambiarla.");
+  podHoja.querySelector(".podError").hidden = !PD.fallo();
 }
 PD.alCambiar(pintarBarra);
 
