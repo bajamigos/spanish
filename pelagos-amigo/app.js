@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=ec839b40f1";
-import * as A from "./almacen.js?v=ec839b40f1";
-import * as V from "./videos.js?v=ec839b40f1";
-import * as NB from "./nube.js?v=ec839b40f1";
-import * as CL from "./clases.js?v=ec839b40f1";
-import { abrirPractica } from "./practica.js?v=ec839b40f1";
-import * as F from "./fondo.js?v=ec839b40f1";
-import * as PD from "./podcasts.js?v=ec839b40f1";
+import * as N from "./nucleo.js?v=7045fb7ec9";
+import * as A from "./almacen.js?v=7045fb7ec9";
+import * as V from "./videos.js?v=7045fb7ec9";
+import * as NB from "./nube.js?v=7045fb7ec9";
+import * as CL from "./clases.js?v=7045fb7ec9";
+import { abrirPractica } from "./practica.js?v=7045fb7ec9";
+import * as F from "./fondo.js?v=7045fb7ec9";
+import * as PD from "./podcasts.js?v=7045fb7ec9";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -849,7 +849,7 @@ function verInicio(o) {
     <div class="sobre">
       ${entradas("tablero", "hoy")}
       <h1 class="sr">Tablero</h1>
-      ${A.esAmigo() ? tarjetaAmigo() : checkin}
+      ${A.esAmigo() ? "" : checkin}
       ${medidas}
       ${tarjetaBitacora()}
       ${seccionTendencias()}${cuadernos}
@@ -859,25 +859,6 @@ function verInicio(o) {
   prepararTendencias();
   if (clip) mostrarClipPremio(clip);
 }
-/**
- * Modo amigo: la tarjeta de bienvenida del Tablero. Dice qué es esto y que lo suyo se queda en su aparato.
- * Se puede cerrar; se vuelve a ver en Ajustes.
- */
-function tarjetaAmigo() {
-  if (guardado("pelagos.amigo.bienvenida") === "vista") return "";
-  return `<section class="card" id="amigoHola">
-    <h2>Bienvenido a Pelagos</h2>
-    <p>Es una app para estudiar español: lecciones y quiz de gramática, vocabulario con repetición espaciada, y la historia de cada día.</p>
-    <p class="small">Los números que ves son el avance real de quien la hizo. Puedes probar los quizzes y las tarjetas: lo que hagas se queda solo en este aparato y no cambia nada de lo suyo. Clases y Escucha son de muestra.</p>
-    <div class="go"><button type="button" class="ub" id="amigoVale">Entendido</button></div>
-  </section>`;
-}
-vista.addEventListener("click", (ev) => {
-  if (!(ev.target instanceof Element) || !ev.target.closest("#amigoVale")) return;
-  guardar("pelagos.amigo.bienvenida", "vista");
-  const t = $("amigoHola");
-  if (t) t.remove();
-});
 /** El color de una tarjeta en el Acervo: su caja. Después del reinicio, una que no has vuelto a ver es «sin ver», aunque traiga aciertos viejos. */
 const colorTarjeta = (x) => (E.reinicioTj && x.s && !x.s.nr ? null : N.colorDe({ ...x.s, pct: x.pct }));
 
@@ -4277,7 +4258,7 @@ function verAjustesAmigo(o) {
     <h3>Modo amigo</h3>
     <p>Estás viendo una vitrina de Pelagos: los números son el avance real de quien la hizo, y se actualizan de vez en cuando.</p>
     <p class="small" id="ajAmigoN">${n ? `Lo tuyo: ${plural(n, "cosa guardada", "cosas guardadas")} solo en este aparato.` : "Todavía no has contestado nada aquí."}</p>
-    <div class="go"><button type="button" class="ub" id="ajAmigoBorrar"${n ? "" : " hidden"}>Borrar lo mío</button><button type="button" class="ub" id="ajAmigoHola">Ver la bienvenida otra vez</button></div>
+    <div class="go"><button type="button" class="ub" id="ajAmigoBorrar"${n ? "" : " hidden"}>Borrar lo mío</button></div>
     <p class="small" id="ajAviso" role="status" hidden></p>
   </section>
   ${ayudaLista().length ? `<section class="card" id="ajAyuda">
@@ -4310,7 +4291,6 @@ function verAjustesAmigo(o) {
     $("ajAmigoBorrar").hidden = true;
     $("ajAmigoN").textContent = "Listo: lo tuyo se borró de este aparato.";
   });
-  $("ajAmigoHola").addEventListener("click", () => { guardar("pelagos.amigo.bienvenida", ""); ir("/"); });
   const marcarTema = () => { for (const b of vista.querySelectorAll("[data-tema-ir]")) b.setAttribute("aria-current", b.dataset.temaIr === document.documentElement.dataset.tema ? "page" : "false"); };
   for (const b of vista.querySelectorAll("[data-tema-ir]")) {
     b.addEventListener("click", () => { document.documentElement.dataset.tema = b.dataset.temaIr; guardar("pelagos.tema", b.dataset.temaIr); marcarTema(); });
