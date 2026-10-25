@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=e5d938ddb3";
-import * as A from "./almacen.js?v=e5d938ddb3";
-import * as V from "./videos.js?v=e5d938ddb3";
-import * as NB from "./nube.js?v=e5d938ddb3";
-import * as CL from "./clases.js?v=e5d938ddb3";
-import { abrirPractica } from "./practica.js?v=e5d938ddb3";
-import * as F from "./fondo.js?v=e5d938ddb3";
-import * as PD from "./podcasts.js?v=e5d938ddb3";
+import * as N from "./nucleo.js?v=93e90954c4";
+import * as A from "./almacen.js?v=93e90954c4";
+import * as V from "./videos.js?v=93e90954c4";
+import * as NB from "./nube.js?v=93e90954c4";
+import * as CL from "./clases.js?v=93e90954c4";
+import { abrirPractica } from "./practica.js?v=93e90954c4";
+import * as F from "./fondo.js?v=93e90954c4";
+import * as PD from "./podcasts.js?v=93e90954c4";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -3875,7 +3875,7 @@ const colorCss = (f) => (f === null || f === undefined ? "color-mix(in srgb, var
  * Dibuja el Atlas de un nivel dentro de «caja»: un cuadro por tema, acomodados por tipo y en el orden de las lecciones.
  * colorDe(id) da el color (0 a 5, o null); marcar es un Set de temas con borde. Devuelve { celdas: Map(id → { el, y, h }), cuenta, sinVer, total }.
  */
-function armarAtlas(caja, nivel, colorDe, marcar = new Set()) {
+function armarAtlas(caja, nivel, colorDe, marcar = new Set(), como = new Map()) {
   const suyos = P.temas.filter((t) => t.nivel === nivel).sort((a, b) => a.orden - b.orden);
   const porTipo = new Map();
   for (const t of suyos) { if (!porTipo.has(t.categoria)) porTipo.set(t.categoria, []); porTipo.get(t.categoria).push(t); }
@@ -3898,7 +3898,8 @@ function armarAtlas(caja, nivel, colorDe, marcar = new Set()) {
       const f = colorDe(t.id);
       if (f === null) sinVer++; else cuenta[f]++;
       const el = document.createElement("i");
-      el.className = "qaC " + (f === null ? "qx" : "qk" + f) + (marcar.has(t.id) ? " qaMarca" : "");
+      // El borde (25-Oct-2026): blanco sin contestar, verde continuo si lo acertaste, rojo de rayitas si lo fallaste.
+      el.className = "qaC " + (f === null ? "qx" : "qk" + f) + (marcar.has(t.id) ? (como.has(t.id) ? (como.get(t.id) ? " qaMarca qaBien" : " qaMarca qaMal") : " qaMarca") : "");
       el.dataset.t = t.id;
       const x = 2 + (i % c.columnas) * (c.cw + 2), y = arriba + Math.floor(i / c.columnas) * (c.ch + 2);
       pon(el, x, y, c.cw, c.ch);
@@ -3926,11 +3927,21 @@ function pintarAtlasQuiz() {
   const nivel = caja.dataset.nivel, actual = Number(caja.dataset.tema), kid = caja.dataset.kid;
   const k = E.kwizzes.get(kid);
   // Marcados: los temas de este quiz, o (si tocaste los círculos de hoy) los de hoy. Ver qaMarcar.
+  // Y cómo te fue: en este quiz, o hoy en cualquier quiz. Si un tema salió dos veces, vale tu última respuesta.
   let marcar;
-  if (qaMarcar === "hoy") { const d = N.temasDelDia(P, E); marcar = new Set([...d.nuevos, ...d.vencidos, ...d.fallados]); }
-  else marcar = new Set(k ? k.preguntas.map((x) => (preguntas.get(N.preguntaDe(x)) || {}).tema) : []);
+  const como = new Map();
+  const porTiempo = (rs) => rs.slice().sort((a, b) => Date.parse(a.cuando) - Date.parse(b.cuando));
+  if (qaMarcar === "hoy") {
+    const hoy = N.fechaLocal(new Date());
+    for (const r of porTiempo((E.todas || []).filter((r) => N.fechaLocal(new Date(r.cuando)) === hoy))) como.set(r.tema, !!r.bien);
+    const d = N.temasDelDia(P, E);
+    marcar = new Set([...d.nuevos, ...d.vencidos, ...d.fallados, ...como.keys()]);
+  } else {
+    marcar = new Set(k ? k.preguntas.map((x) => (preguntas.get(N.preguntaDe(x)) || {}).tema) : []);
+    if (k) for (const r of porTiempo([...k.resp.values()])) como.set(r.tema, !!r.bien);
+  }
   for (const g of document.querySelectorAll(".gFila.conNivel .lnCuenta, .gFila.conNivel .hoyC")) g.classList.toggle("qaSel", g.classList.contains(qaMarcar === "hoy" ? "hoyC" : "lnCuenta"));
-  const { celdas } = armarAtlas(caja, nivel, (id) => N.colorDe(infoProy(kid, id)), marcar);
+  const { celdas } = armarAtlas(caja, nivel, (id) => N.colorDe(infoProy(kid, id)), marcar, como);
   const fx = efectoR && efectoR.kid === kid && Date.now() - efectoR.t0 < EFECTO_MS ? efectoR : null;
   const cel = fx && celdas.get(fx.tema);
   const yaVa = fx ? -(Date.now() - fx.t0) : 0;
@@ -3964,7 +3975,7 @@ function pintarAtlasResultado(k) {
     const caja = document.createElement("div"); caja.className = "qaMapa resMapa"; caja.dataset.nivel = nv;
     cuerpo.append(caja);
     const deAqui = temas.filter((t) => porId.get(t).nivel === nv);
-    const { celdas } = armarAtlas(caja, nv, (id) => (deAqui.includes(id) ? N.colorDe(antes.temas.get(id)) : N.colorDe(info(id))), new Set(deAqui));
+    const { celdas } = armarAtlas(caja, nv, (id) => (deAqui.includes(id) ? N.colorDe(antes.temas.get(id)) : N.colorDe(info(id))), new Set(deAqui), bienDe);
     for (const t of deAqui) pasos.push({ t, cel: celdas.get(t) });
   }
   const ul = document.createElement("ul"); ul.className = "resCambios";

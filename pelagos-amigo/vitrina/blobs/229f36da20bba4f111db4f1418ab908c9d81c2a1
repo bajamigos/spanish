@@ -560,3 +560,12 @@
 {"t":"kwiz","id":"kmvo1mnc1lx49dd","tipo":"lista","cuaderno":null,"tema":null,"cuando":"2026-10-25T16:29:47.041Z","preguntas":["6237-01","6081-m01","6205-09","6236-01","6228-04"],"aparato":"compu-mjpcv"}
 {"t":"r","id":"rmvo1muly43ediq","kwiz":"kmvo1mnc1lx49dd","p":"6237-01","tema":6237,"cuando":"2026-10-25T16:29:56.470Z","bien":1,"modo":"tocar","escrito":"La","pista":0,"aparato":"compu-mjpcv"}
 {"t":"r","id":"rmvo1nh9klcw77d","kwiz":"kmvo1mnc1lx49dd","p":"6081-m01","tema":6081,"cuando":"2026-10-25T16:30:25.832Z","bien":1,"modo":"tocar","escrito":"riquísimos","pista":0,"aparato":"compu-mjpcv"}
+{"t":"r","id":"rmvo2f6r5vcathv","kwiz":"kmvo1mnc1lx49dd","p":"6205-09","tema":6205,"cuando":"2026-10-25T16:51:58.577Z","bien":1,"modo":"decir","escrito":null,"pista":1,"aparato":"compu-mjpcv"}
+{"t":"r","id":"rmvo2fgv7ecaa9k","kwiz":"kmvo1mnc1lx49dd","p":"6236-01","tema":6236,"cuando":"2026-10-25T16:52:11.683Z","bien":0,"modo":"tocar","escrito":"cierras","pista":0,"aparato":"compu-mjpcv"}
+{"t":"r","id":"rmvo2g8w3q35tyi","kwiz":"kmvo1mnc1lx49dd","p":"6228-04","tema":6228,"cuando":"2026-10-25T16:52:48.004Z","bien":1,"modo":"tocar","escrito":"ir","pista":0,"aparato":"compu-mjpcv"}
+{"t":"kwiz","id":"kmvo2gx57tpdxdx","tipo":"lista","cuaderno":null,"tema":null,"cuando":"2026-10-25T16:53:19.436Z","preguntas":["6238-08","6205-10","6236-11","6239-07","6081-m06"],"aparato":"compu-mjpcv"}
+{"t":"r","id":"rmvo2h7251wd1xx","kwiz":"kmvo2gx57tpdxdx","p":"6238-08","tema":6238,"cuando":"2026-10-25T16:53:32.285Z","bien":1,"modo":"decir","escrito":null,"pista":1,"aparato":"compu-mjpcv"}
+{"t":"r","id":"rmvo2hhce81utji","kwiz":"kmvo2gx57tpdxdx","p":"6205-10","tema":6205,"cuando":"2026-10-25T16:53:45.614Z","bien":1,"modo":"decir","escrito":null,"pista":1,"aparato":"compu-mjpcv"}
+{"t":"r","id":"rmvo2hw63k9d8w1","kwiz":"kmvo2gx57tpdxdx","p":"6236-11","tema":6236,"cuando":"2026-10-25T16:54:04.828Z","bien":1,"modo":"decir","escrito":null,"pista":1,"aparato":"compu-mjpcv"}
+{"t":"r","id":"rmvo2jgahtxh9xx","kwiz":"kmvo2gx57tpdxdx","p":"6239-07","tema":6239,"cuando":"2026-10-25T16:55:17.561Z","bien":0,"modo":"tocar","escrito":"quieramos","pista":0,"aparato":"compu-mjpcv"}
+{"t":"r","id":"rmvo2jwtp0c0uh9","kwiz":"kmvo2gx57tpdxdx","p":"6081-m06","tema":6081,"cuando":"2026-10-25T16:55:38.989Z","bien":1,"modo":"tocar","escrito":"trabajadorcísima","pista":0,"aparato":"compu-mjpcv"}
