@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=c78bc987f2";
-import * as A from "./almacen.js?v=c78bc987f2";
-import * as V from "./videos.js?v=c78bc987f2";
-import * as NB from "./nube.js?v=c78bc987f2";
-import * as CL from "./clases.js?v=c78bc987f2";
-import { abrirPractica } from "./practica.js?v=c78bc987f2";
-import * as F from "./fondo.js?v=c78bc987f2";
-import * as PD from "./podcasts.js?v=c78bc987f2";
+import * as N from "./nucleo.js?v=9f82f6e4e3";
+import * as A from "./almacen.js?v=9f82f6e4e3";
+import * as V from "./videos.js?v=9f82f6e4e3";
+import * as NB from "./nube.js?v=9f82f6e4e3";
+import * as CL from "./clases.js?v=9f82f6e4e3";
+import { abrirPractica } from "./practica.js?v=9f82f6e4e3";
+import * as F from "./fondo.js?v=9f82f6e4e3";
+import * as PD from "./podcasts.js?v=9f82f6e4e3";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1791,8 +1791,10 @@ function tonoTj(st, hoy = N.fechaLocal(new Date())) {
   const debe = N.debeTarjeta(st, hoy);
   return debe >= 2 ? "d2" : debe === 1 ? "d1" : N.colorDe(st);
 }
-function pintarMalla(dia, cola) {
-  mallaArgs = [dia, cola];
+// modo (25-Oct-2026): «quiz» con marcos verdes y rojos; «inicio» sin marcos (lo de hoy brilla, lo demás tenue);
+// «final» sin marcos y todo a todo color, como el Atlas de la página de gramática.
+function pintarMalla(dia, cola, modo = "quiz") {
+  mallaArgs = [dia, cola, modo];
   const caja = $("vMalla");
   if (!caja || caja.hidden) return;
   const hoy = N.fechaLocal(new Date());
@@ -1813,8 +1815,8 @@ function pintarMalla(dia, cola) {
   for (const c of todas) {
     const el = document.createElement("i");
     const t = tonoTj(E.tarjetas.get(c.id), hoy);
-    el.className = "v" + (t === null || t === undefined ? "x" : typeof t === "string" ? t : "k" + t) + (pend.has(c.id) || c.id === actual || como.has(c.id) ? "" : " tenue");      // lo de hoy (lo que falta y lo hecho) a todo color
-    if (como.has(c.id)) { if (como.get(c.id)) { el.classList.add("vbien"); bien++; } else { el.classList.add("vmal"); mal++; } }
+    el.className = "v" + (t === null || t === undefined ? "x" : typeof t === "string" ? t : "k" + t) + (modo === "final" || pend.has(c.id) || c.id === actual || (modo === "quiz" && como.has(c.id)) ? "" : " tenue");
+    if (como.has(c.id)) { if (como.get(c.id)) bien++; else mal++; if (modo === "quiz") el.classList.add(como.get(c.id) ? "vbien" : "vmal"); }
     if (c.id === actual && !(fx && fx.id === actual)) el.classList.add("late");
     if (fx && fx.id === c.id) {
       el.style.setProperty("--viejo", colorCss(fx.f0));
@@ -1875,7 +1877,7 @@ function verInicioVocab(o, dia, restan) {
     <div class="go"><a class="ub grande" href="#/vocabulario/tanda" id="tjEmpezar">${restan.length ? "Seguir el adelanto" : dia.hechasHoy ? "Seguir tus tarjetas" : "Empezar tarjetas"}</a></div>
   </section>
   ${curvaVocab()}`), { titulo: "Vocabulario · Pelagos", nav: "vocabulario", conserva: o.conserva });
-  pintarMalla(dia, restan);
+  pintarMalla(dia, restan, "inicio");
 }
 /** Las de hoy, a la primera: { total, bien, malas: [ids] } — la primera calificación de hoy de cada tarjeta. */
 function hoyALaPrimera(hoy) {
@@ -1898,13 +1900,14 @@ function verFinalVocab(o, dia, masTarde) {
     ${barraDeshacer()}
     ${dia.total ? (r.total ? `<h1 class="h">¡Tanda terminada! ${r.bien} de ${r.total}</h1><p class="small">A la primera: ${r.bien} de ${plural(r.total, "tarjeta", "tarjetas")} de hoy.</p>` : `<h1 class="h">Hoy no te toca nada</h1>`)
       : `<h1 class="h">Todavía no hay vocabulario</h1><p>Cuando haya palabras en el contenido, aquí salen las de cada día.</p>`}
+    <div class="hoyGrande" data-explicas><p class="small">Te queda hoy</p>${circulosDeHoy("grande", [dia.grupos.nuevas.length, dia.grupos.vencidas.length, dia.grupos.falladas.length], "vhoy")}${panelExplica()}</div>
     ${mallaHtml()}
-    ${r.malas.length ? `<h2 class="tdSub">Te costaron hoy</h2><ul class="resCambios">${r.malas.map((id) => { const t = tarjetas.get(id); return t ? `<li class="resabajo"><span class="resNom">▼ ${esc(t.reverso)}</span><span class="resDe">${esc(t.frente)}</span></li>` : ""; }).join("")}</ul>` : ""}
+    ${r.malas.length ? `<details class="vCostaron"><summary>Te costaron ${r.malas.length}</summary><ul class="resCambios">${r.malas.map((id) => { const t = tarjetas.get(id); return t ? `<li class="resabajo"><span class="resNom">▼ ${esc(t.reverso)}</span><span class="resDe">${esc(t.frente)}</span></li>` : ""; }).join("")}</ul></details>` : ""}
     ${masTarde.length ? `<div class="go"><button type="button" class="ub grande" id="tjAdelantar">Adelantar ${masTarde.length}</button></div><p class="small">Estudia ahora ${plural(masTarde.length, "palabra que toca", "palabras que tocan")} más adelante. La que aciertes sube su escalón desde hoy; la que falles vuelve a salir hoy.</p>` : ""}
     <div class="tjAvance"><h2 class="tdSub">Tu avance</h2>${graficaVocab()}</div>
   </section>
   ${curvaVocab()}`), { titulo: "Vocabulario · Pelagos", nav: "vocabulario", conserva: o.conserva });
-  pintarMalla(dia, []);
+  pintarMalla(dia, [], "final");
 }
 
 /** La «Línea C» del quiz de vocabulario: lo que queda HOY por grupo, los puntitos de esta tarjeta y tus cajas. */

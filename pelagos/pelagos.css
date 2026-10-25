@@ -1347,3 +1347,4 @@ body.qaQuiz #nav { display: none; }
 .qaMapa[hidden], .vMalla[hidden], #kwAtlasDice[hidden] { display: none; }
 body.conCurva .vista { padding-bottom: 86px; }
 #tjInicio .go, #tjCero .go { margin-top: 10px; }
+.vCostaron { margin: 8px 0 0; } .vCostaron summary { cursor: pointer; font-weight: 800; font-size: 17px; padding: 6px 0; }
