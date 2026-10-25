@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=9ea6bf3c2b";
-import * as A from "./almacen.js?v=9ea6bf3c2b";
-import * as V from "./videos.js?v=9ea6bf3c2b";
-import * as NB from "./nube.js?v=9ea6bf3c2b";
-import * as CL from "./clases.js?v=9ea6bf3c2b";
-import { abrirPractica } from "./practica.js?v=9ea6bf3c2b";
-import * as F from "./fondo.js?v=9ea6bf3c2b";
-import * as PD from "./podcasts.js?v=9ea6bf3c2b";
+import * as N from "./nucleo.js?v=e8f9e327c9";
+import * as A from "./almacen.js?v=e8f9e327c9";
+import * as V from "./videos.js?v=e8f9e327c9";
+import * as NB from "./nube.js?v=e8f9e327c9";
+import * as CL from "./clases.js?v=e8f9e327c9";
+import { abrirPractica } from "./practica.js?v=e8f9e327c9";
+import * as F from "./fondo.js?v=e8f9e327c9";
+import * as PD from "./podcasts.js?v=e8f9e327c9";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -244,7 +244,7 @@ function armarMenu() {
       <a class="menuSec" href="${href}"><span>${nombre}</span>${circ}</a>${subs ? `<div class="menuSubs">${subs}</div>` : ""}</div>`;
   return `<div class="menuCab"><b>Pelagos</b><button type="button" class="ub menuCerrar" aria-label="Cerrar el menú">✕</button></div>
     <button type="button" class="menuVolver" id="menuVolver">‹ Volver</button>
-    ${grupo("inicio", "Hoy", "#/", "", "")}
+    ${grupo("inicio", "Tablero", "#/", "", "")}
     ${grupo("gramatica", "Gramática", "#" + QUIZ, cs(g && [g.nuevos, g.vencidos, g.fallados]), sub("#" + QUIZ, "Quiz") + sub("#/gramatica", "Lecciones") + sub("#/gramatica/atlas", "Atlas"))}
     ${grupo("vocabulario", "Vocabulario", "#/vocabulario", cs(v && [v.nuevas.length, v.vencidas.length, v.falladas.length]), sub("#/vocabulario", "Quiz") + sub("#/vocabulario/agregar", "Agregar") + sub("#/vocabulario/acervo", "Acervo"))}
     ${grupo("escucha", "Escucha", "#/lectura", "", ["libros", "series", "podcasts"].map((m) => `<a href="#/lectura" data-bibir="${m}"${enLectura && bib === m ? ' aria-current="page"' : ""}>${{ libros: "Libros", series: "Series", podcasts: "Podcasts" }[m]}</a>`).join(""))}
