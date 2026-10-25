@@ -1,0 +1,176 @@
+{
+  "tema": 9895,
+  "slug": "ante",
+  "titulo": "Ante = before, in front of, faced with",
+  "subtitulo": "Declaró ante el juez. Ante la duda, pregunta.",
+  "foto": "t06.jpg",
+  "regla": "Ante is a formal preposition for place, not time: before, in the presence of (ante un juez, ante notario). It also means faced with, in the face of (ante la crisis, ante la duda). Ante todo = above all. For time, use antes de.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "ante = before, in the presence of",
+              "texto": "**ante el juez, ante notario, ante el público**. More formal than **enfrente de / delante de**."
+            },
+            {
+              "forma": "ante = faced with, in the face of",
+              "texto": "**ante la crisis, ante la falta de pruebas, ante tanta presión**."
+            },
+            {
+              "forma": "ante todo",
+              "texto": "_above all, first and foremost_: **ante todo, calma**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Never for time**: _before 5_ = **antes de las cinco**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **ante** = standing face to face with someone or something."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Rodrigo tuvo que presentarse ==ante un juez== para declarar.",
+              "en": "Rodrigo had to appear before a judge to give a statement."
+            },
+            {
+              "es": "Tienes que firmar los papeles ==ante notario== para que sean válidos.",
+              "en": "You have to sign the papers before a notary for them to be valid."
+            },
+            {
+              "es": "Los manifestantes se plantaron ==ante el Palacio Nacional==.",
+              "en": "The protesters stood in front of the National Palace."
+            },
+            {
+              "es": "==Ante la imposibilidad== de reclamar, buscó un abogado.",
+              "en": "Faced with no way to file a claim, he got a lawyer."
+            },
+            {
+              "es": "==Ante la duda==, mejor pregunta.",
+              "en": "When in doubt, ask."
+            },
+            {
+              "es": "==Ante todo==, gracias por venir.",
+              "en": "First of all, thank you for coming."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Llega ante las ocho."
+                },
+                {
+                  "v": "bien",
+                  "t": "Llega antes de las ocho."
+                }
+              ],
+              "nota": "Time = **antes de**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "formal",
+                  "t": "Habló ante el público."
+                },
+                {
+                  "v": "cotidiano",
+                  "t": "Habló enfrente de todos."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "antes de",
+              "texto": "[[10102|antes de / después de]]."
+            },
+            {
+              "forma": "passive by",
+              "texto": "[[7273|por = by]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish (formal): _He swore before the judge._",
+              "r": "Juró ante el juez.",
+              "nota": "ante."
+            },
+            {
+              "p": "In Spanish: _In the face of the emergency, they evacuated._",
+              "r": "Ante la emergencia, evacuaron.",
+              "nota": "faced with."
+            },
+            {
+              "p": "In Spanish: _Before dinner, wash your hands._",
+              "r": "Antes de cenar, lávate las manos.",
+              "nota": "Time: antes de."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      10102
+    ],
+    "confunde": [],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9895",
+      "kwiziq": true
+    }
+  ]
+}

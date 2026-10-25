@@ -1,0 +1,262 @@
+{
+  "tema": 5844,
+  "slug": "empece",
+  "titulo": "-zar verbs in the preterite",
+  "subtitulo": "Empecé a las seis; la clase empezó tarde.",
+  "foto": "t09.jpg",
+  "regla": "In the preterite, -ar verbs ending in -zar change z to c in the yo form only (empecé, almorcé, crucé), because Spanish writes ce, not ze. All other forms keep the z: empezaste, empezó.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Verbs ending in **-zar** are regular -ar verbs in the preterite, with **one spelling change**: in **yo**, the **z** becomes **c**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Why? Spanish almost never writes **ze**. Before **e** it writes **ce**, which sounds the same: **empecé**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "empezar",
+            "almorzar",
+            "cruzar"
+          ],
+          "filas": [
+            [
+              "yo",
+              "empecé",
+              "almorcé",
+              "crucé"
+            ],
+            [
+              "tú",
+              "empezaste",
+              "almorzaste",
+              "cruzaste"
+            ],
+            [
+              "él / ella / usted",
+              "empezó",
+              "almorzó",
+              "cruzó"
+            ],
+            [
+              "nosotros / nosotras",
+              "empezamos",
+              "almorzamos",
+              "cruzamos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "empezaron",
+              "almorzaron",
+              "cruzaron"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Common ones: **empezar**, **comenzar**, **almorzar**, **cruzar**, **organizar**, **lanzar**, **abrazar**, **alcanzar**, **realizar**, **utilizar**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Empezar** and **almorzar** change their stem in the present (**empiezo**, **almuerzo**), but **not** in the preterite: **empecé**, **almorcé**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **z** and **e** don't get along in Spanish spelling, so **c** steps in whenever an **e** shows up."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ayer ==empecé== a estudiar a las siete.",
+              "en": "Yesterday I started studying at seven."
+            },
+            {
+              "es": "==Crucé== la frontera con mi tabla en el techo del carro.",
+              "en": "I crossed the border with my board on the car roof."
+            },
+            {
+              "es": "==Almorcé== unos tacos de pescado en Ensenada.",
+              "en": "I had fish tacos for lunch in Ensenada."
+            },
+            {
+              "es": "La clase ==empezó== a las seis en punto.",
+              "en": "Class started at six on the dot."
+            },
+            {
+              "es": "Cuando vi a mi hermano, lo ==abracé== muy fuerte.",
+              "en": "When I saw my brother, I hugged him really tight."
+            },
+            {
+              "es": "Amos ==lanzó== la herramienta y Alex la atrapó.",
+              "en": "Amos threw the tool and Alex caught it."
+            },
+            {
+              "es": "Nosotros ==organizamos== el intercambio de semillas.",
+              "en": "We organized the seed swap."
+            },
+            {
+              "es": "¿Ustedes ==cruzaron== por la garita de San Ysidro?",
+              "en": "Did you all cross at the San Ysidro port of entry?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer empezé a correr."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer empecé a correr."
+                }
+              ],
+              "nota": "z → **c** before é."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo empiecé el curso."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo empecé el curso."
+                }
+              ],
+              "nota": "No ie in the preterite."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer almuercé temprano."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer almorcé temprano."
+                }
+              ],
+              "nota": "No ue either."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella empecó a llorar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella empezó a llorar."
+                }
+              ],
+              "nota": "Only **yo** changes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hablé, habló",
+              "texto": "The base pattern: [[5109|regular -ar verbs in the preterite]]."
+            },
+            {
+              "forma": "busqué, pagué",
+              "texto": "The sister rules: [[5256|-car]] and [[5845|-gar]] verbs in the preterite."
+            },
+            {
+              "forma": "empiezo, almuerzo",
+              "texto": "The stem changes that stay in the present: [[5811|-ar verbs with e > ie]] and [[5872|-ar verbs with o > ue]] in the present."
+            },
+            {
+              "forma": "que empiece",
+              "texto": "Same z → c in every person: [[5726|-zar verbs in the present subjunctive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I started the book yesterday._",
+              "r": "Empecé el libro ayer.",
+              "nota": "z → c."
+            },
+            {
+              "p": "In Spanish: _He crossed the street._",
+              "r": "Cruzó la calle.",
+              "nota": "z stays."
+            },
+            {
+              "p": "Fix it: _Yo organizé la fiesta._",
+              "r": "Yo organicé la fiesta.",
+              "nota": "organi**c**é."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5109
+    ],
+    "confunde": [
+      5256,
+      5845,
+      5811,
+      5872
+    ],
+    "sigue": [
+      5726
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5844",
+      "kwiziq": true
+    }
+  ]
+}

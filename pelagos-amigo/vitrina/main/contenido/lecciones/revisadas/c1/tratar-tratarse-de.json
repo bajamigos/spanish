@@ -1,0 +1,187 @@
+{
+  "tema": 7760,
+  "slug": "tratar-tratarse-de",
+  "titulo": "Tratar / tratar de / tratarse de",
+  "subtitulo": "La película trata de un robo. Se trata de tu salud. Trato de entender.",
+  "foto": "t01.jpg",
+  "regla": "Tratar algo = to deal with, address; to treat (an illness). Tratar a alguien = to treat someone (bien / mal). X trata de / sobre algo = X is about something (with a subject). Se trata de = it's about, it's a matter of (impersonal, no subject). Tratar de + infinitive = to try to.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tratar algo",
+              "texto": "_to address, deal with; to treat (medically)_: **el programa trata temas de actualidad**, **tratar una enfermedad**."
+            },
+            {
+              "forma": "tratar a alguien",
+              "texto": "_to treat someone_: **me trató muy bien**."
+            },
+            {
+              "forma": "[subject] trata de / sobre",
+              "texto": "_is about_: **la novela trata de una familia**."
+            },
+            {
+              "forma": "se trata de",
+              "texto": "_it's about, it's a matter of_. Impersonal: **no** subject: **se trata de tu futuro**."
+            },
+            {
+              "forma": "tratar de + infinitive",
+              "texto": "_to try to_: **trato de entender**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Never ~~la película se trata de...~~ in careful Spanish: with a subject, use **trata de**. (In casual speech you'll hear it anyway.)"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **trata de** has a subject; **se trata de** stands alone."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "En el programa van a ==tratar== temas de actualidad.",
+              "en": "On the show they'll cover current issues."
+            },
+            {
+              "es": "La obra de Rulfo ==trata== la pobreza del campo.",
+              "en": "Rulfo's work deals with rural poverty."
+            },
+            {
+              "es": "Ojalá encuentren la medicina para ==tratar== su enfermedad.",
+              "en": "I hope they find the right medicine to treat her illness."
+            },
+            {
+              "es": "La película ==trata de== un robo en un casino.",
+              "en": "The movie is about a casino robbery."
+            },
+            {
+              "es": "No es un juego; ==se trata de== tu salud.",
+              "en": "It's not a game; this is about your health."
+            },
+            {
+              "es": "==Trato de== entender, pero no puedo.",
+              "en": "I'm trying to understand, but I can't."
+            },
+            {
+              "es": "En ese hotel ==nos trataron== muy bien.",
+              "en": "They treated us very well at that hotel."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "informal",
+                  "t": "La película se trata de un robo."
+                },
+                {
+                  "v": "cuidado",
+                  "t": "La película trata de un robo."
+                }
+              ],
+              "nota": "With a subject, **trata de** is the careful form."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Trato entender."
+                },
+                {
+                  "v": "bien",
+                  "t": "Trato de entender."
+                }
+              ],
+              "nota": "_Try to_: **tratar de**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "intentar",
+              "texto": "**Intentar** + infinitive also means _to try to_."
+            },
+            {
+              "forma": "dar por",
+              "texto": "[[8250|dar por]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _The book is about a surfer._",
+              "r": "El libro trata de un surfista.",
+              "nota": "Subject + trata de."
+            },
+            {
+              "p": "In Spanish: _This is about your future._",
+              "r": "Se trata de tu futuro.",
+              "nota": "Impersonal."
+            },
+            {
+              "p": "In Spanish: _I'll try to come._",
+              "r": "Voy a tratar de venir.",
+              "nota": "tratar de + infinitive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7760",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "tema": 6076,
+  "slug": "esperar-que-subjuntivo",
+  "titulo": "Using esperar que + present subjunctive to express hope",
+  "subtitulo": "Espero que vengas: hope about someone else takes the subjunctive.",
+  "foto": "t09.jpg",
+  "regla": "Esperar que + present subjunctive expresses hope about something that happens or will happen. Same subject: esperar + infinitive.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say you **hope** something happens or will happen, use **esperar que** + the **present subjunctive**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**esperar**",
+            "**que**",
+            "present subjunctive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "English often uses the future here (_I hope you'll come_), but Spanish uses the present subjunctive: **espero que vengas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Using the ordinary present after **esperar que** is wrong: **espero que sales** ✗ → **espero que salgas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The subjunctive is used only when the two subjects are **different**. When it's the **same** subject, drop **que** and use the **infinitive**: **espero viajar**, not **espero que yo viaje**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: same pattern as [[5059|querer que]]: two people, **que** and subjunctive; one person, infinitive."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Espero que ==vengas== hoy en la noche.",
+              "en": "I hope you'll come tonight."
+            },
+            {
+              "es": "Mi hermano y yo esperamos que ==tengas== mucha suerte con la chamba.",
+              "en": "My brother and I hope you have lots of luck with the job."
+            },
+            {
+              "es": "Espero que ==sean== muy felices.",
+              "en": "I hope they'll be very happy."
+            },
+            {
+              "es": "Los jefes esperan que ==entiendan== la situación.",
+              "en": "The bosses hope you all understand the situation."
+            },
+            {
+              "es": "Espero que ==salgas== conmigo al cine.",
+              "en": "I hope you'll come to the movies with me."
+            },
+            {
+              "es": "Espero ==viajar== a Japón algún día.",
+              "en": "I hope to travel to Japan someday. (same subject)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Espero que sales conmigo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Espero que salgas conmigo."
+                }
+              ],
+              "nota": "Never the ordinary present."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Espero que vendrás."
+                },
+                {
+                  "v": "bien",
+                  "t": "Espero que vengas."
+                }
+              ],
+              "nota": "Not the future either."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Espero que yo viaje a Japón."
+                },
+                {
+                  "v": "bien",
+                  "t": "Espero viajar a Japón."
+                }
+              ],
+              "nota": "Same subject: infinitive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "ojalá que vengas",
+              "texto": "A stronger hope: [[5061|ojalá]]."
+            },
+            {
+              "forma": "quiero que vengas",
+              "texto": "The same structure: [[5059|querer que]]."
+            },
+            {
+              "forma": "espero que hayas comido",
+              "texto": "Hope about something already done: [[6010|esperar que + present perfect subjunctive]]."
+            },
+            {
+              "forma": "tenga, sea, vaya",
+              "texto": "Irregular forms: [[6000|yo-go]], [[5152|ser]], [[5231|ir]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I hope you rest._ (tú)",
+              "r": "Espero que descanses.",
+              "nota": "Different subjects: subjunctive."
+            },
+            {
+              "p": "In Spanish: _I hope to see you soon._",
+              "r": "Espero verte pronto.",
+              "nota": "Same subject: infinitive."
+            },
+            {
+              "p": "Fix it: **Espero que tienes un buen día.**",
+              "r": "Espero que tengas un buen día.",
+              "nota": "tener → tengas."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5059,
+      5063,
+      5151
+    ],
+    "confunde": [
+      5061
+    ],
+    "sigue": [
+      6010,
+      5061
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6076",
+      "kwiziq": true
+    }
+  ]
+}

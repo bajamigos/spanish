@@ -1,0 +1,224 @@
+{
+  "tema": 5930,
+  "slug": "subjuntivo-presente-uir",
+  "titulo": "Conjugate -uir verbs in the present subjunctive",
+  "subtitulo": "Construir → construya: a y slips in before the ending.",
+  "foto": "t06.jpg",
+  "regla": "Verbs ending in -uir add a y between the stem and the ending in every form of the present subjunctive: huya, construya, construyamos.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Verbs ending in **-uir** add a **y** between the stem and the ending in **every form** of the present subjunctive. The endings are the regular **-ir** subjunctive ones."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "stem",
+            "**-y-**",
+            "**-a, -as, -a, -amos, -an**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "huir",
+            "construir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "huya",
+              "construya"
+            ],
+            [
+              "tú",
+              "huyas",
+              "construyas"
+            ],
+            [
+              "él, ella, usted",
+              "huya",
+              "construya"
+            ],
+            [
+              "nosotros",
+              "huyamos",
+              "construyamos"
+            ],
+            [
+              "ustedes, ellos",
+              "huyan",
+              "construyan"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Other verbs like this: **incluir**, **destruir**, **distribuir**, **contribuir**, **sustituir**, **concluir**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the **y** is a little ladder between **u** and the ending. Every form climbs it."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi hija quiere que le ==construya== una casa del árbol.",
+              "en": "My daughter wants me to build her a treehouse."
+            },
+            {
+              "es": "¡No ==huyas==, cobarde!",
+              "en": "Don't run away, coward!"
+            },
+            {
+              "es": "Tal vez ==huya== de los problemas.",
+              "en": "Maybe he runs away from his problems."
+            },
+            {
+              "es": "¡==Huyamos== juntos!",
+              "en": "Let's run away together!"
+            },
+            {
+              "es": "La ciudad no permite que ==construyan== en la playa.",
+              "en": "The city doesn't allow them to build on the beach."
+            },
+            {
+              "es": "¡==Huyan== y no regresen!",
+              "en": "Run away and don't come back!"
+            },
+            {
+              "es": "Espero que ==incluyas== a Beto en el plan.",
+              "en": "I hope you include Beto in the plan."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero que construas un huerto."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero que construyas un huerto."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es mejor que incluamos a todos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es mejor que incluyamos a todos."
+                }
+              ],
+              "nota": "The **y** is in **nosotros** too."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "construyo, huyes",
+              "texto": "The present, where the **y** appears in most forms: [[5599|huir and construir]]."
+            },
+            {
+              "forma": "construyó",
+              "texto": "The preterite: [[5219|-uir verbs in the preterite]]."
+            },
+            {
+              "forma": "coma, viva",
+              "texto": "The base pattern: [[5151|-er and -ir in the subjunctive]]."
+            },
+            {
+              "forma": "Tal vez huya.",
+              "texto": "Doubt with [[5084|tal vez and quizás]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "**Construir** with **nosotros**: Ojalá que ___ el huerto este año.",
+              "r": "Ojalá que construyamos el huerto este año.",
+              "nota": "construy- + amos."
+            },
+            {
+              "p": "In Spanish: _Don't run away._ (tú)",
+              "r": "No huyas.",
+              "nota": "hu-y-as."
+            },
+            {
+              "p": "**Incluir** with **ellos**: Quiero que me ___ en el viaje.",
+              "r": "Quiero que me incluyan en el viaje.",
+              "nota": "incluy- + an."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5599,
+      5151
+    ],
+    "confunde": [
+      5219
+    ],
+    "sigue": [
+      5084,
+      5059
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5930",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,230 @@
+{
+  "tema": 6464,
+  "slug": "ninguno-pronombre",
+  "titulo": "Ninguno, ninguna as pronouns (none, not one)",
+  "subtitulo": "No tengo ninguno. Ninguna me queda.",
+  "foto": "t06.jpg",
+  "regla": "Without a noun, ninguno / ninguna means none, not one, not any (from a known group). It agrees with the noun it replaces, is almost always singular, and is never shortened to ningún. After the verb you need no before it; before the verb you don't.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Use **ninguno, ninguna** without a noun to say _none, not one_ of something already mentioned."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It agrees with the noun it replaces and is **almost always singular**: **Ninguno de mis primos vino.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Ningunos, ningunas** exist only for nouns that are always plural (**lentes, pantalones**): **No traje ningunos.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "As a pronoun it's always **ninguno**, never **ningún**. **Ningún** only goes right before a masculine noun."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Position",
+            "Pattern",
+            "Example"
+          ],
+          "filas": [
+            [
+              "After the verb",
+              "no + verb + ninguno",
+              "No me gusta ninguna."
+            ],
+            [
+              "Before the verb",
+              "ninguno + verb",
+              "Ninguna me gusta."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Ninguno de** + group: **ninguno de nosotros**. For _nobody_ in general, use **nadie**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿Tienes cerillos? —No, no tengo ==ninguno==.",
+              "en": "Do you have matches? —No, I don't have any."
+            },
+            {
+              "es": "Probé tres tablas y ==ninguna== me gustó.",
+              "en": "I tried three boards and I didn't like any of them."
+            },
+            {
+              "es": "De mis primos, ==ninguno== habla inglés.",
+              "en": "None of my cousins speaks English."
+            },
+            {
+              "es": "¿Qué película quieres ver? —==Ninguna==; estoy muy cansado.",
+              "en": "Which movie do you want to watch? —None; I'm really tired."
+            },
+            {
+              "es": "Busqué semillas de chile, pero no encontré ==ninguna==.",
+              "en": "I looked for chili seeds, but I didn't find a single one."
+            },
+            {
+              "es": "==Ninguno de== nosotros sabía la respuesta.",
+              "en": "None of us knew the answer."
+            },
+            {
+              "es": "¿Tienes lentes de sol? —No traje ==ningunos==.",
+              "en": "Do you have sunglasses? —I didn't bring any."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tengo ninguno."
+                },
+                {
+                  "v": "bien",
+                  "t": "No tengo ninguno."
+                }
+              ],
+              "nota": "After the verb, add **no**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No ninguno funciona."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ninguno funciona."
+                }
+              ],
+              "nota": "Before the verb, no **no**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Hay toallas? —No hay ningún."
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Hay toallas? —No hay ninguna."
+                }
+              ],
+              "nota": "Never **ningún** alone; agree."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ningunos de mis amigos vinieron."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ninguno de mis amigos vino."
+                }
+              ],
+              "nota": "Singular."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "ningún problema",
+              "texto": "Before a noun: [[6129|ningún, ninguna + noun]] and [[6134|ningún + noun + verb]]."
+            },
+            {
+              "forma": "alguno",
+              "texto": "The positive: [[6462|alguno, alguna]]."
+            },
+            {
+              "forma": "nadie",
+              "texto": "Nobody, no group: [[6075|nadie]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Do you have tickets? —No, I don't have any._",
+              "r": "¿Tienes boletos? —No, no tengo ninguno.",
+              "nota": "no + verb + ninguno."
+            },
+            {
+              "p": "In Spanish: _None of the shirts fits me._",
+              "r": "Ninguna de las camisas me queda.",
+              "nota": "Before the verb: no no."
+            },
+            {
+              "p": "Fix it: _¿Cuál quieres? —Ningún._",
+              "r": "¿Cuál quieres? —Ninguno.",
+              "nota": "No noun: ninguno."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6129,
+      6134,
+      6462
+    ],
+    "confunde": [
+      6075
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6464",
+      "kwiziq": true
+    }
+  ]
+}

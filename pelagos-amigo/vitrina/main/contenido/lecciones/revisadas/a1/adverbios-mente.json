@@ -1,0 +1,214 @@
+{
+  "tema": 5089,
+  "slug": "adverbios-mente",
+  "titulo": "Adverbs ending in -mente",
+  "subtitulo": "Rápida → rápidamente.",
+  "foto": "t07.jpg",
+  "regla": "To make an adverb, add -mente to the feminine singular form of the adjective: rápida → rápidamente. Adjectives with one form just add -mente: fácil → fácilmente. A written accent on the adjective stays.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**-mente** works like English _-ly_."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "feminine adjective",
+            "+",
+            "-mente"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Adjective",
+            "Feminine",
+            "Adverb"
+          ],
+          "filas": [
+            [
+              "lento",
+              "lenta",
+              "**lentamente**"
+            ],
+            [
+              "rápido",
+              "rápida",
+              "**rápidamente**"
+            ],
+            [
+              "fácil",
+              "fácil",
+              "**fácilmente**"
+            ],
+            [
+              "frecuente",
+              "frecuente",
+              "**frecuentemente**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Adjectives with only one form (ending in **-e** or a consonant) just add **-mente**. If the adjective has a written accent, **keep it**: **fácilmente**, **rápidamente**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Manejo ==lentamente== cuando llueve.",
+              "en": "I drive slowly when it rains."
+            },
+            {
+              "es": "==Normalmente== surfeo temprano.",
+              "en": "I normally surf early."
+            },
+            {
+              "es": "Respondí ==rápidamente== al mensaje.",
+              "en": "I answered the message quickly."
+            },
+            {
+              "es": "La maestra habla ==claramente==.",
+              "en": "The teacher speaks clearly."
+            },
+            {
+              "es": "Mi hermana aprende idiomas ==fácilmente==.",
+              "en": "My sister learns languages easily."
+            },
+            {
+              "es": "Los domingos comemos ==tranquilamente== en casa.",
+              "en": "On Sundays we eat calmly at home."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Habla rápidomente."
+                },
+                {
+                  "v": "bien",
+                  "t": "Habla rápidamente."
+                }
+              ],
+              "nota": "Start from the feminine: **rápida**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Habla rapidamente."
+                },
+                {
+                  "v": "bien",
+                  "t": "Habla rápidamente."
+                }
+              ],
+              "nota": "Keep the accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Lo hago facilmente."
+                },
+                {
+                  "v": "bien",
+                  "t": "Lo hago fácilmente."
+                }
+              ],
+              "nota": "**Fácil** keeps its accent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "lenta, fácil",
+              "texto": "Feminine of adjectives: [[6013|regular adjectives]], [[6015|adjectives in -e and -a]]."
+            },
+            {
+              "forma": "muy rápidamente",
+              "texto": "Making adverbs stronger: [[5082|muy vs mucho]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Make an adverb from _lento_.",
+              "r": "lentamente",
+              "nota": "lenta + mente."
+            },
+            {
+              "p": "Make an adverb from _fácil_.",
+              "r": "fácilmente",
+              "nota": "Accent stays."
+            },
+            {
+              "p": "Fix it: _Habla tranquilomente._",
+              "r": "Habla tranquilamente.",
+              "nota": "tranquila + mente."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6013,
+      6015
+    ],
+    "confunde": [],
+    "sigue": [
+      5082
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5089",
+      "kwiziq": true
+    }
+  ]
+}

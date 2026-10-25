@@ -1,0 +1,204 @@
+{
+  "tema": 6001,
+  "slug": "me-gusta-me-gustan",
+  "titulo": "Gustar: to like something",
+  "subtitulo": "«Me gusta el mar. Me gustan los tacos.»",
+  "foto": "t05.jpg",
+  "regla": "To say you like something, use me gusta + one thing and me gustan + several things. The thing you like is the subject, so gustar agrees with it, not with you.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Gustar** works backwards: the thing you like is the subject. It _pleases_ you."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "What you like",
+            "Form",
+            "Example"
+          ],
+          "filas": [
+            [
+              "one thing",
+              "me gusta",
+              "Me gusta el mar."
+            ],
+            [
+              "several things",
+              "me gustan",
+              "Me gustan los tacos."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Me** = _to me_, **te** = _to you_. **No** goes first: **no me gusta**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Keep the article: **me gusta el café**, **me gustan las playas**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Me gusta== el mar.",
+              "en": "I like the sea."
+            },
+            {
+              "es": "==Me gustan== los tacos de pescado.",
+              "en": "I like fish tacos."
+            },
+            {
+              "es": "¿==Te gusta== el jiu-jitsu?",
+              "en": "Do you like jiu-jitsu?"
+            },
+            {
+              "es": "¿==Te gustan== las películas de ciencia ficción?",
+              "en": "Do you like sci-fi movies?"
+            },
+            {
+              "es": "No ==me gusta== el frío.",
+              "en": "I don't like the cold."
+            },
+            {
+              "es": "==Me gustan== mucho los jitomates de mi huerto.",
+              "en": "I really like the tomatoes from my garden."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo gusto el café."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me gusta el café."
+                }
+              ],
+              "nota": "The thing is the subject."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me gusta los tacos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me gustan los tacos."
+                }
+              ],
+              "nota": "Several things: **gustan**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me no gusta el frío."
+                },
+                {
+                  "v": "bien",
+                  "t": "No me gusta el frío."
+                }
+              ],
+              "nota": "**No** goes first."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el, la, los, las",
+              "texto": "The article you need: [[5101|los / las]]."
+            },
+            {
+              "forma": "me gusta surfear",
+              "texto": "Liking activities: [[5083|gustar + infinitive]]."
+            },
+            {
+              "forma": "le gusta, les gusta",
+              "texto": "Other people: [[7248|gustar with he, she, we, they]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I like the beach._",
+              "r": "Me gusta la playa.",
+              "nota": "One thing: gusta."
+            },
+            {
+              "p": "In Spanish (tú): _Do you like dogs?_",
+              "r": "¿Te gustan los perros?",
+              "nota": "Several: gustan."
+            },
+            {
+              "p": "Fix it: _Me gusta las verduras._",
+              "r": "Me gustan las verduras.",
+              "nota": "Plural: gustan."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5101
+    ],
+    "confunde": [],
+    "sigue": [
+      5083,
+      7248
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6001",
+      "kwiziq": true
+    }
+  ]
+}

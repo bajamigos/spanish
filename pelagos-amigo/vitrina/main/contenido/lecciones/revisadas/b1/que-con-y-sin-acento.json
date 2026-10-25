@@ -1,0 +1,218 @@
+{
+  "tema": 6675,
+  "slug": "que-con-y-sin-acento",
+  "titulo": "Qué vs que: with and without an accent",
+  "subtitulo": "¿Qué quieres? vs creo que sí.",
+  "foto": "t06.jpg",
+  "regla": "Que without accent = that, which, who (connects). Qué with accent = what, how, in direct and indirect questions and exclamations.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Que** and **qué** change meaning with the accent."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Form",
+            "Job",
+            "Translation",
+            "Example"
+          ],
+          "filas": [
+            [
+              "que",
+              "conjunction or relative pronoun: connects",
+              "_that, which, who_",
+              "Dice que su hermana está enferma."
+            ],
+            [
+              "qué",
+              "questions (direct and indirect)",
+              "_what_",
+              "¿Qué cenamos? / Pregunta qué cenamos."
+            ],
+            [
+              "",
+              "exclamations",
+              "_what, how_",
+              "¡Qué frío hace!"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Indirect questions keep the accent even without question marks: **el niño pregunta qué vamos a cenar**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if you could replace it with _what_ or _how_, it gets the accent."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Marta dice ==que== su hermana tiene problemas.",
+              "en": "Marta says that her sister is having problems."
+            },
+            {
+              "es": "Mis vecinos, ==que== tienen tres hijos, son muy pesados.",
+              "en": "My neighbors, who have three kids, are really annoying."
+            },
+            {
+              "es": "Mamá, ¿==qué== cenamos hoy?",
+              "en": "Mom, what are we having for dinner today?"
+            },
+            {
+              "es": "El niño le pregunta a su mamá ==qué== van a cenar.",
+              "en": "The boy asks his mom what they're having for dinner."
+            },
+            {
+              "es": "¡==Qué== frío hace hoy!",
+              "en": "It's so cold today!"
+            },
+            {
+              "es": "No sé ==qué== hacer.",
+              "en": "I don't know what to do."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Creo qué sí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Creo que sí."
+                }
+              ],
+              "nota": "Connector: no accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No sé que hacer."
+                },
+                {
+                  "v": "bien",
+                  "t": "No sé qué hacer."
+                }
+              ],
+              "nota": "Indirect question: accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Que bonito!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Qué bonito!"
+                }
+              ],
+              "nota": "Exclamation: accent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¡qué ola tan grande!",
+              "texto": "Exclamations: [[7280|qué + noun + más / tan]], [[6137|qué + noun or adjective]]."
+            },
+            {
+              "forma": "pregunta qué quieres",
+              "texto": "Indirect questions: [[7013|qué in indirect questions]]."
+            },
+            {
+              "forma": "¿de qué hablas?",
+              "texto": "Prepositions + qué: [[8890|preposition + qué]]."
+            },
+            {
+              "forma": "lo que",
+              "texto": "_What_ as a relative: [[5087|lo que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Accent or not? **Dime ___ quieres.**",
+              "r": "Dime qué quieres.",
+              "nota": "Indirect question."
+            },
+            {
+              "p": "Accent or not? **Sé ___ tienes razón.**",
+              "r": "Sé que tienes razón.",
+              "nota": "Connector."
+            },
+            {
+              "p": "Accent or not? **¡___ olas!**",
+              "r": "¡Qué olas!",
+              "nota": "Exclamation."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      5087
+    ],
+    "sigue": [
+      7013,
+      8890,
+      7280
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6675",
+      "kwiziq": true
+    }
+  ]
+}

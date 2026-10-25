@@ -1,0 +1,239 @@
+{
+  "tema": 9495,
+  "slug": "llevar-llevarse",
+  "titulo": "Llevar vs llevarse",
+  "subtitulo": "Llevo a los niños, lleva sombrero; nos llevamos bien, me llevé un susto.",
+  "foto": "t10.jpg",
+  "regla": "Llevar = take someone / something somewhere, carry, wear, contain, lead to. Llevarse = take away with you, get along (llevarse bien / mal), get (a fright, a surprise).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Llevar** and **llevarse** have different meanings:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Verb",
+            "Meaning",
+            "Example"
+          ],
+          "filas": [
+            [
+              "llevar",
+              "_to take_ someone or something somewhere",
+              "Llevo a los niños a la escuela."
+            ],
+            [
+              "",
+              "_to lead to_",
+              "Sus problemas lo llevaron a la ruina."
+            ],
+            [
+              "",
+              "_to carry, to have with you_",
+              "Siempre llevo pañuelos."
+            ],
+            [
+              "",
+              "_to wear_",
+              "Lleva un sombrero horrible."
+            ],
+            [
+              "",
+              "_to contain_ (food)",
+              "Esta salsa lleva chile."
+            ],
+            [
+              "llevarse",
+              "_to take away, to keep_",
+              "Me llevo la azul."
+            ],
+            [
+              "",
+              "_to get along_ (bien / mal)",
+              "Nos llevamos muy bien."
+            ],
+            [
+              "",
+              "_to get_ (a fright, a surprise)",
+              "Me llevé un susto."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "With people as the object of **llevar**, add the personal **a**: **llevo a los niños**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Llevar** + time + gerund means _to have been doing_: see [[7176|llevar + gerund]]."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **llevar** moves things around; **llevarse** keeps them, or describes how people get along."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Cuando ==llevo a== los niños a la escuela, siempre veo a Paula.",
+              "en": "When I take the kids to school, I always run into Paula."
+            },
+            {
+              "es": "¿Quieres que te ==lleve== a la central?",
+              "en": "Do you want me to take you to the bus station?"
+            },
+            {
+              "es": "Tienes que ==llevar== tu pasaporte.",
+              "en": "You have to bring your passport."
+            },
+            {
+              "es": "Esa señora ==lleva== un sombrero horrible.",
+              "en": "That lady is wearing a horrible hat."
+            },
+            {
+              "es": "Esta salsa ==lleva== chile de árbol.",
+              "en": "This salsa has chile de árbol in it."
+            },
+            {
+              "es": "==Me llevo== la tabla azul.",
+              "en": "I'll take the blue board."
+            },
+            {
+              "es": "Beto y yo ==nos llevamos== muy bien.",
+              "en": "Beto and I get along really well."
+            },
+            {
+              "es": "==Me llevé== un susto con esa ola.",
+              "en": "That wave gave me a scare."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nos llevamos a la playa bien."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nos llevamos bien."
+                }
+              ],
+              "nota": "_Get along_: **llevarse bien**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Llevo los niños a la escuela."
+                },
+                {
+                  "v": "bien",
+                  "t": "Llevo a los niños a la escuela."
+                }
+              ],
+              "nota": "People: personal **a**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "llevo tres años surfeando",
+              "texto": "Duration: [[7176|llevar + gerund]]."
+            },
+            {
+              "forma": "traer vs llevar",
+              "texto": "_To bring_ vs _to take_: [[8578|traer vs llevar]]."
+            },
+            {
+              "forma": "quedarse con",
+              "texto": "_To keep_: [[7037|quedar, quedarse]]."
+            },
+            {
+              "forma": "a Beto",
+              "texto": "The personal **a**: [[6870|personal a]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I get along badly with my boss._",
+              "r": "Me llevo mal con mi jefe.",
+              "nota": "llevarse mal."
+            },
+            {
+              "p": "In Spanish: _Can you take me to the beach?_ (tú)",
+              "r": "¿Me puedes llevar a la playa?",
+              "nota": "llevar = take somewhere."
+            },
+            {
+              "p": "In Spanish: _I'll take this one._ (in a store)",
+              "r": "Me llevo este.",
+              "nota": "llevarse = take away."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6870
+    ],
+    "confunde": [
+      8578
+    ],
+    "sigue": [
+      7176,
+      7037
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9495",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "tema": 8248,
+  "slug": "ir-por",
+  "titulo": "Ir por = to be up to / at (a stage)",
+  "subtitulo": "Voy por la mitad del libro. ¿Por dónde vas?",
+  "foto": "t05.jpg",
+  "regla": "Ir por + point or stage = to be at, to have reached: Voy por la mitad del libro. Iba por la quinta cerveza. ¿Por dónde vas? = Where are you (up to)? Also for location on the way: Voy por Insurgentes.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "ir por",
+            "+ stage / point / place"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Something with **stages**: a book, a series, a road, a count. It says **how far** you've got."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**¿Por dónde vas?** = _Where are you up to? / Where are you (on the way)?_"
+        },
+        {
+          "tipo": "texto",
+          "texto": "In Mexico **ir por** also means _to go get_: **voy por las tortillas**. Context tells them apart."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **voy por** = my bookmark is here."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Voy por== la mitad del libro, así que no me cuentes el final.",
+              "en": "I'm halfway through the book, so don't tell me the ending."
+            },
+            {
+              "es": "—Te estamos esperando, Carlos. —Llego en cinco minutos, ==voy por== Insurgentes.",
+              "en": "—We're waiting for you, Carlos. —I'll be there in five, I'm on Insurgentes."
+            },
+            {
+              "es": "Marta se pasó ayer. ==Iba por== la quinta cerveza y se puso a bailar en las mesas.",
+              "en": "Marta overdid it yesterday. She was on her fifth beer and started dancing on the tables."
+            },
+            {
+              "es": "==Vamos por== los dos millones de pesos en ventas y todavía faltan cinco días.",
+              "en": "We're up to two million pesos in sales and there are still five days left."
+            },
+            {
+              "es": "¿==Por dónde vas== en la serie?",
+              "en": "Where are you up to in the series?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "etapa",
+                  "t": "Voy por el capítulo diez."
+                },
+                {
+                  "v": "ir a traer",
+                  "t": "Voy por pan."
+                }
+              ],
+              "nota": "Same words, different meaning."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estoy por la mitad del libro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Voy por la mitad del libro."
+                }
+              ],
+              "nota": "Progress: **ir por**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "llevar + participle",
+              "texto": "[[7429|so far]]."
+            },
+            {
+              "forma": "ir + gerund",
+              "texto": "[[6769|gradual progress]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I'm on chapter five._",
+              "r": "Voy por el capítulo cinco.",
+              "nota": "ir por."
+            },
+            {
+              "p": "In Spanish: _Where are you up to?_",
+              "r": "¿Por dónde vas?",
+              "nota": "Fixed question."
+            },
+            {
+              "p": "In Spanish: _We were on the third song._",
+              "r": "Íbamos por la tercera canción.",
+              "nota": "Imperfect."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6769
+    ],
+    "confunde": [
+      7429
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8248",
+      "kwiziq": true
+    }
+  ]
+}

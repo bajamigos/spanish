@@ -1,0 +1,214 @@
+{
+  "tema": 5592,
+  "slug": "oigo-oyes-presente-oir",
+  "titulo": "Oír in the present",
+  "subtitulo": "No te oigo, hay mucho ruido.",
+  "foto": "t02.jpg",
+  "regla": "Oír (to hear) has yo in -igo and a y in tú, él and ellos: oigo, oyes, oye, oímos, oyen. Oír and oímos carry an accent.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Oír** (_to hear_) is irregular: **yo → oigo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In **tú, él** and **ellos** a **y** appears: **oyes, oye, oyen**. **Nosotros** keeps the i with an accent: **oímos**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "oír"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**oigo**"
+            ],
+            [
+              "tú",
+              "**oyes**"
+            ],
+            [
+              "él, ella, usted",
+              "**oye**"
+            ],
+            [
+              "nosotros",
+              "oímos"
+            ],
+            [
+              "ellos, ustedes",
+              "**oyen**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**¡Oye!** is also how you say _hey!_ to get someone's attention."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No te ==oigo==, hay mucho ruido.",
+              "en": "I can't hear you, it's really noisy."
+            },
+            {
+              "es": "¿==Oyes== las olas?",
+              "en": "Do you hear the waves?"
+            },
+            {
+              "es": "Mi abuelo no ==oye== bien.",
+              "en": "My grandpa doesn't hear well."
+            },
+            {
+              "es": "==Oímos== música en el carro.",
+              "en": "We listen to music in the car."
+            },
+            {
+              "es": "¿Ustedes ==oyen== eso?",
+              "en": "Do you all hear that?"
+            },
+            {
+              "es": "¡==Oye==, espérame!",
+              "en": "Hey, wait for me!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo oyo la radio."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo oigo la radio."
+                }
+              ],
+              "nota": "yo → **oigo**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros oimos el mar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros oímos el mar."
+                }
+              ],
+              "nota": "Accent on the í."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ellos oien la música."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ellos oyen la música."
+                }
+              ],
+              "nota": "i → y between vowels."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "traigo, caigo",
+              "texto": "The same -igo in yo: [[5591|traer and caer]]."
+            },
+            {
+              "forma": "te oigo",
+              "texto": "Spanish says **oigo**, not _puedo oír_: [[7990|perception verbs]]."
+            },
+            {
+              "forma": "oí, oyó",
+              "texto": "Next, the past: [[5841|oír in the preterite]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I hear a car._",
+              "r": "Oigo un carro.",
+              "nota": "yo → oigo."
+            },
+            {
+              "p": "Fix it: _Ella no oie nada._",
+              "r": "Ella no oye nada.",
+              "nota": "y, not i."
+            },
+            {
+              "p": "In Spanish: _We hear the rain._",
+              "r": "Oímos la lluvia.",
+              "nota": "Accent on oímos."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5591
+    ],
+    "confunde": [
+      7990
+    ],
+    "sigue": [
+      5841
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5592",
+      "kwiziq": true
+    }
+  ]
+}

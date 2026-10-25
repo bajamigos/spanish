@@ -1,0 +1,192 @@
+{
+  "tema": 9104,
+  "slug": "venir-gerundio",
+  "titulo": "Venir + gerund = have been (doing) for a while",
+  "subtitulo": "Vengo pensando que debería disculparme.",
+  "foto": "t09.jpg",
+  "regla": "Venir + gerund describes an action that started before now and has been building up until now (and may go on): Viene quejándose desde el lunes = he's been complaining since Monday. It often comes with desde, desde hace or a time phrase.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "venir (conjugated)",
+            "+ gerund"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The action **comes from the past toward now**: it started earlier and has been going on, gradually, up to this point."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Often with **desde, desde hace, hasta ahora, últimamente**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Works in other tenses too: **venía haciendo**, **ha venido diciendo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Compare **llevar + gerund**, which measures the time: **llevo dos años estudiando**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **venir** = it's been _coming_ this way for a while."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Vengo pensando== que tal vez debería disculparme con Antonio.",
+              "en": "I've been thinking that maybe I should apologize to Antonio."
+            },
+            {
+              "es": "Mi papá ==viene dándole vueltas== a ese asunto desde hace días.",
+              "en": "My dad has been mulling that over for days."
+            },
+            {
+              "es": "En esa época mi hijo ==venía haciendo== cosas raras.",
+              "en": "Back then my son had been acting strangely."
+            },
+            {
+              "es": "Los vecinos ==vienen diciendo== que hay que arreglar el edificio.",
+              "en": "The neighbors have been saying the building needs fixing."
+            },
+            {
+              "es": "Sospecho que desde aquel día me ==viene ocultando== la verdad.",
+              "en": "I suspect he's been hiding the truth from me since that day."
+            },
+            {
+              "es": "==Ha venido quejándose== hasta hoy.",
+              "en": "He's been complaining right up to today."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "duración",
+                  "t": "Llevo un mes buscando trabajo."
+                },
+                {
+                  "v": "proceso",
+                  "t": "Vengo buscando trabajo desde marzo."
+                }
+              ],
+              "nota": "**Llevar** measures; **venir** stresses the build-up from a starting point."
+            },
+            {
+              "filas": [
+                {
+                  "v": "movimiento",
+                  "t": "Vengo corriendo."
+                },
+                {
+                  "v": "perífrasis",
+                  "t": "Vengo notando cambios."
+                }
+              ],
+              "nota": "**Vengo corriendo** can literally mean _I come running_; context decides."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "llevar + gerund",
+              "texto": "[[7176|llevar + gerund]]."
+            },
+            {
+              "forma": "ir + gerund",
+              "texto": "[[6769|ir + gerund]] for gradual progress forward."
+            },
+            {
+              "forma": "andar + gerund",
+              "texto": "[[7182|andar + gerund]]."
+            },
+            {
+              "forma": "seguir + gerund",
+              "texto": "[[6180|seguir + gerund]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I've been noticing that you're tired._",
+              "r": "Vengo notando que estás cansado.",
+              "nota": "venir + gerund."
+            },
+            {
+              "p": "In Spanish: _The company has been losing money since 2020._",
+              "r": "La empresa viene perdiendo dinero desde 2020.",
+              "nota": "desde + starting point."
+            },
+            {
+              "p": "Which fits a measured duration? _Two years studying..._",
+              "r": "Llevo dos años estudiando.",
+              "nota": "llevar measures."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7176,
+      6180
+    ],
+    "confunde": [
+      6769
+    ],
+    "sigue": [
+      7182
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9104",
+      "kwiziq": true
+    }
+  ]
+}

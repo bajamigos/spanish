@@ -1,0 +1,208 @@
+{
+  "tema": 5070,
+  "slug": "soy-eres-es-ser-presente",
+  "titulo": "Ser in the present",
+  "subtitulo": "Soy de Tijuana. ¿Tú eres de aquí?",
+  "foto": "t04.jpg",
+  "regla": "Ser (to be) is irregular in every person: soy, eres, es, somos, son. Usted shares es with él and ella; ustedes shares son with ellos.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Ser** (_to be_) is irregular in **every** form. Learn the five forms by heart."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "ser"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**soy**"
+            ],
+            [
+              "tú",
+              "**eres**"
+            ],
+            [
+              "él, ella, usted",
+              "**es**"
+            ],
+            [
+              "nosotros",
+              "**somos**"
+            ],
+            [
+              "ellos, ustedes",
+              "**son**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Usted** uses the same form as él and ella (**es**); **ustedes** the same as ellos (**son**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Use it for what someone or something **is**: name, origin, job, description."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Soy== de Tijuana.",
+              "en": "I'm from Tijuana."
+            },
+            {
+              "es": "¿==Eres== surfista?",
+              "en": "Are you a surfer?"
+            },
+            {
+              "es": "Mi hermana ==es== doctora.",
+              "en": "My sister is a doctor."
+            },
+            {
+              "es": "==Somos== amigos desde la prepa.",
+              "en": "We've been friends since high school."
+            },
+            {
+              "es": "Ustedes ==son== muy amables.",
+              "en": "You're all very kind."
+            },
+            {
+              "es": "La clase de jiu-jitsu ==es== a las siete.",
+              "en": "Jiu-jitsu class is at seven."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo es de México."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo soy de México."
+                }
+              ],
+              "nota": "Each person has its own form."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros son estudiantes."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros somos estudiantes."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tú es muy alto."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tú eres muy alto."
+                }
+              ],
+              "nota": "**eres** for tú, **es** for usted."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "estoy",
+              "texto": "The other _to be_: [[5166|estar in the present]]."
+            },
+            {
+              "forma": "es alto",
+              "texto": "When to choose ser: [[5972|essential characteristics]], [[6806|origin and nationality]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We are from Mexico._",
+              "r": "Somos de México.",
+              "nota": "somos for nosotros."
+            },
+            {
+              "p": "Fix it: _Ellos es altos._",
+              "r": "Ellos son altos.",
+              "nota": "son for ellos."
+            },
+            {
+              "p": "In Spanish (tú): _Are you a teacher?_",
+              "r": "¿Eres maestro? / ¿Eres maestra?",
+              "nota": "eres for tú."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      5166
+    ],
+    "sigue": [
+      5972,
+      6806
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5070",
+      "kwiziq": true
+    }
+  ]
+}

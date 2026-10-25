@@ -1,0 +1,205 @@
+{
+  "tema": 5043,
+  "slug": "me-llamo",
+  "titulo": "Saying your name with me llamo",
+  "subtitulo": "«Me llamo Ana. ¿Y tú, cómo te llamas?»",
+  "foto": "t01.jpg",
+  "regla": "To say your name, use me llamo + name (literally _I call myself_). Ask ¿Cómo te llamas? to a tú and ¿Cómo se llama usted? to an usted.",
+  "comparada_kwiziq": "2026-10-17",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Me llamo** + name = _My name is…_ It comes from **llamarse**, literally _to call oneself_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Yo** is optional: **Me llamo Ana** = **Yo me llamo Ana**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Who",
+            "Say it",
+            "Ask it"
+          ],
+          "filas": [
+            [
+              "I",
+              "me llamo",
+              "—"
+            ],
+            [
+              "you (tú)",
+              "te llamas",
+              "¿Cómo te llamas?"
+            ],
+            [
+              "you (usted)",
+              "se llama",
+              "¿Cómo se llama usted?"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Mi nombre es…** and **¿Cuál es tu nombre?** are correct, but **me llamo** and **¿cómo te llamas?** are what people actually say."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Hola, ==me llamo== Diego.",
+              "en": "Hi, my name is Diego."
+            },
+            {
+              "es": "Yo ==me llamo== Valeria, ¿y tú?",
+              "en": "My name is Valeria, and you?"
+            },
+            {
+              "es": "¿Cómo ==te llamas==?",
+              "en": "What's your name?"
+            },
+            {
+              "es": "Buenas tardes, señor. ¿Cómo ==se llama== usted?",
+              "en": "Good afternoon, sir. What's your name?"
+            },
+            {
+              "es": "Mucho gusto, ==me llamo== Claudio.",
+              "en": "Nice to meet you, my name is Claudio."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me llamo es Diego."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me llamo Diego."
+                }
+              ],
+              "nota": "No **es**: **me llamo** already means _my name is_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo llamo Diego."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me llamo Diego."
+                }
+              ],
+              "nota": "Don't drop **me**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Cómo te llama usted?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cómo se llama usted?"
+                }
+              ],
+              "nota": "With **usted**: **se llama**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "se llama, nos llamamos",
+              "texto": "All the forms: [[7275|llamarse in the present]]."
+            },
+            {
+              "forma": "te / se",
+              "texto": "Choosing tú or usted: [[7230|tú vs usted]]."
+            },
+            {
+              "forma": "soy de…",
+              "texto": "Next step in your intro: [[5041|soy de]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _My name is Marco._",
+              "r": "Me llamo Marco.",
+              "nota": "me llamo + name."
+            },
+            {
+              "p": "Ask a friend: _What's your name?_",
+              "r": "¿Cómo te llamas?",
+              "nota": "tú: te llamas."
+            },
+            {
+              "p": "Fix it: _¿Cómo te llama usted?_",
+              "r": "¿Cómo se llama usted?",
+              "nota": "usted: se."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      7230
+    ],
+    "sigue": [
+      7275,
+      5041
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5043",
+      "kwiziq": true
+    }
+  ]
+}

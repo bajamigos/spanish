@@ -1,0 +1,232 @@
+{
+  "tema": 9771,
+  "slug": "decadas-los-noventa",
+  "titulo": "Decades: los noventa",
+  "subtitulo": "«La música de los ochenta. Nací en los noventa.»",
+  "foto": "t01.jpg",
+  "regla": "Decades use the plural article los + the number: los ochenta, los (años) noventa, los 2000. The number never takes an -s, and in is en: en los setenta.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say a decade with **los** + the tens number: **los sesenta, los setenta, los ochenta, los noventa**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "(en) los",
+            "+ (años) +",
+            "noventa"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Años** is optional: **los noventa** = **los años noventa**. Formal style: **la década de los noventa** or **la década de 1990**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The article is **masculine plural**, but the number itself **never** goes plural: **los ochenta**, never **los ochentas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In figures: **los 80**, **los años 90**. Never **los 80s** or **los 80's**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "_In the eighties_ = **en los ochenta**. For our century: **los 2000** (**los dos mil**) and **los 2010** (**los dos mil diez**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Narrow it down: **a principios de los noventa** (_early 90s_), **a mediados de** (_mid_), **a finales de** (_late_)."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Me encanta la música de ==los ochenta==.",
+              "en": "I love eighties music."
+            },
+            {
+              "es": "Mis papás se conocieron ==en los setenta==.",
+              "en": "My parents met in the seventies."
+            },
+            {
+              "es": "==Los años noventa== fueron una gran época para el rock en español.",
+              "en": "The nineties were a great time for rock en español."
+            },
+            {
+              "es": "Nací ==a finales de los noventa==.",
+              "en": "I was born in the late nineties."
+            },
+            {
+              "es": "Mi tío empezó a surfear ==en los noventa==.",
+              "en": "My uncle started surfing in the nineties."
+            },
+            {
+              "es": "Esa serie es ==de los 2010==.",
+              "en": "That show is from the 2010s."
+            },
+            {
+              "es": "Tijuana creció muchísimo ==en la década de los ochenta==.",
+              "en": "Tijuana grew enormously in the eighties."
+            },
+            {
+              "es": "Mi abuela se vestía como en ==los sesenta==.",
+              "en": "My grandma dressed like in the sixties."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me gustan los ochentas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me gustan los ochenta."
+                }
+              ],
+              "nota": "The number never takes -s."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "en los 90s"
+                },
+                {
+                  "v": "bien",
+                  "t": "en los 90 / en los años 90"
+                }
+              ],
+              "nota": "No -s or 's in figures."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nací en noventas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nací en los noventa."
+                }
+              ],
+              "nota": "Keep the article los."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "en las noventa"
+                },
+                {
+                  "v": "bien",
+                  "t": "en los noventa"
+                }
+              ],
+              "nota": "Masculine: los (años)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "noventa",
+              "texto": "Number forms: [[6755|numbers are masculine]], [[9143|numbers from 1,000 to 1,000,000]]."
+            },
+            {
+              "forma": "el siglo XX",
+              "texto": "Bigger stretches of time: [[10032|centuries with Roman numerals]]."
+            },
+            {
+              "forma": "los dos",
+              "texto": "Article + number: [[6663|plural article + number + noun]]."
+            },
+            {
+              "forma": "hace treinta años",
+              "texto": "Counting back: [[7063|hace for ago]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _in the sixties_",
+              "r": "en los sesenta / en los años sesenta",
+              "nota": "No -s on sesenta."
+            },
+            {
+              "p": "Fix it: _Es una película de los noventas._",
+              "r": "Es una película de los noventa.",
+              "nota": "Drop the -s."
+            },
+            {
+              "p": "In Spanish: _in the early eighties_",
+              "r": "a principios de los ochenta",
+              "nota": "a principios de."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6755,
+      9143
+    ],
+    "confunde": [
+      6663
+    ],
+    "sigue": [
+      10032,
+      7063
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9771",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "tema": 8526,
+  "slug": "un-tanto-algo",
+  "titulo": "Un tanto / algo + adjective = a bit, somewhat",
+  "subtitulo": "Es un tanto raro. Estamos algo cansados.",
+  "foto": "t08.jpg",
+  "regla": "Un tanto + adjective and algo + adjective = a bit, somewhat, slightly: un lugar un tanto siniestro, algo cansados. Both are invariable; the adjective still agrees. Un poco is the everyday equivalent.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "un tanto / algo",
+            "+ adjective (or adverb)"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Both mean _a bit, somewhat, slightly_. **Un poco** is the everyday version; **un tanto** sounds a bit more refined."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Un tanto** and **algo** never change; the **adjective agrees** with the noun."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Don't confuse with **tanto** = _so much_ (**tanto dinero**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **un tanto** is a pinch, not a handful."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No quiero entrar ahí; se ve ==un tanto== siniestro.",
+              "en": "I don't want to go in there; it looks a bit sinister."
+            },
+            {
+              "es": "Me gusta mi grupo, pero algunos alumnos son ==un tanto== latosos.",
+              "en": "I like my class, but some students are a bit unruly."
+            },
+            {
+              "es": "Marcos maneja ==un tanto== rápido.",
+              "en": "Marcos drives a bit fast."
+            },
+            {
+              "es": "La fiesta se puso ==un tanto== animada después de medianoche.",
+              "en": "The party got rather lively after midnight."
+            },
+            {
+              "es": "Mi hija es ==algo== callada pero muy trabajadora.",
+              "en": "My daughter is a bit quiet but very hardworking."
+            },
+            {
+              "es": "Aunque la película es ==algo== lenta, vale la pena.",
+              "en": "Although the movie is somewhat slow, it's worth it."
+            },
+            {
+              "es": "Estamos ==algo== cansados.",
+              "en": "We're a little tired."
+            },
+            {
+              "es": "Los azulejos están ==un tanto== disparejos.",
+              "en": "The tiles are slightly uneven."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Son unas tantas raras."
+                },
+                {
+                  "v": "bien",
+                  "t": "Son un tanto raras."
+                }
+              ],
+              "nota": "**Un tanto** never changes."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Está un tanto cansado. (talking about María)"
+                },
+                {
+                  "v": "bien",
+                  "t": "Está un tanto cansada."
+                }
+              ],
+              "nota": "The adjective agrees."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "nada",
+              "texto": "[[8704|nada = not at all]]."
+            },
+            {
+              "forma": "demasiado, bastante",
+              "texto": "[[6135|quantity adverbs]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _The soup is a bit salty._",
+              "r": "La sopa está un tanto salada. / La sopa está algo salada.",
+              "nota": "Agrees with sopa."
+            },
+            {
+              "p": "In Spanish: _They're somewhat shy._",
+              "r": "Son algo tímidos.",
+              "nota": "algo."
+            },
+            {
+              "p": "Fix it: _Las calles están unas tantas sucias._",
+              "r": "Las calles están un tanto sucias.",
+              "nota": "Invariable."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6135
+    ],
+    "confunde": [
+      8704
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8526",
+      "kwiziq": true
+    }
+  ]
+}

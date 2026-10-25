@@ -1,0 +1,200 @@
+{
+  "tema": 5957,
+  "slug": "tuviera",
+  "titulo": "Tener in the imperfect subjunctive",
+  "subtitulo": "Tuviera, tuvieras, tuviéramos.",
+  "foto": "t08.jpg",
+  "regla": "Tener in the imperfect subjunctive comes from tuvieron: tuviera, tuvieras, tuviera, tuviéramos, tuvieran (or tuviese...). Si tuviera tiempo, iría.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "From the ellos preterite **tuvieron** → **tuvie-** + endings."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "tener (imperfect subjunctive)"
+          ],
+          "filas": [
+            [
+              "yo",
+              "tuviera"
+            ],
+            [
+              "tú",
+              "tuvieras"
+            ],
+            [
+              "él, ella, usted",
+              "tuviera"
+            ],
+            [
+              "nosotros",
+              "tuviéramos"
+            ],
+            [
+              "ustedes, ellos",
+              "tuvieran"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The **-se** forms: **tuviese, tuvieses, tuviese, tuviésemos, tuviesen**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Verbs built on **tener** follow it: **mantener → mantuviera**, **obtener → obtuviera**, **detener → detuviera**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **tuve** → **tuviera**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Si ==tuviera== más tiempo, aprendería a tocar guitarra.",
+              "en": "If I had more time, I'd learn to play guitar."
+            },
+            {
+              "es": "Ojalá ==tuviéramos== una casa en la playa.",
+              "en": "I wish we had a house at the beach."
+            },
+            {
+              "es": "Me dijo que ==tuviera== cuidado.",
+              "en": "He told me to be careful."
+            },
+            {
+              "es": "Era raro que no ==tuvieran== hambre.",
+              "en": "It was strange that they weren't hungry."
+            },
+            {
+              "es": "Actúa como si ==tuviera== veinte años.",
+              "en": "She acts as if she were twenty."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "tenera"
+                },
+                {
+                  "v": "bien",
+                  "t": "tuviera"
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Si tendría dinero..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Si tuviera dinero..."
+                }
+              ],
+              "nota": "After **si**: imperfect subjunctive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "all verbs",
+              "texto": "[[5068|imperfect subjunctive]]."
+            },
+            {
+              "forma": "estuviera",
+              "texto": "[[5956|estar]]."
+            },
+            {
+              "forma": "si tuviera",
+              "texto": "[[5120|hypothetical si]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Conjugate: _ellos / tener_",
+              "r": "tuvieran",
+              "nota": "tuvie- + ran."
+            },
+            {
+              "p": "Conjugate: _yo / obtener_",
+              "r": "obtuviera",
+              "nota": "Like tener."
+            },
+            {
+              "p": "In Spanish: _If you had a car, we could go._ (tú)",
+              "r": "Si tuvieras carro, podríamos ir.",
+              "nota": "tuvieras."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5068
+    ],
+    "confunde": [
+      5956
+    ],
+    "sigue": [
+      5120
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5957",
+      "kwiziq": true
+    }
+  ]
+}

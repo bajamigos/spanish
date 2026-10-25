@@ -1,0 +1,242 @@
+{
+  "tema": 8700,
+  "slug": "cuanto-con-y-sin-acento",
+  "titulo": "Difference between cuánto and cuanto (with and without accent)",
+  "subtitulo": "¿Cuánto cuesta? vs cuanto antes: the accent asks or exclaims.",
+  "foto": "t07.jpg",
+  "regla": "Cuánto (with accent) asks or exclaims how much / how many, also in indirect questions. Cuanto (no accent) is relative: cuanto antes, en cuanto, cuanto más.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Some words change their meaning just with a written accent. **Cuánto** and **cuanto** are a pair like that."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Form",
+            "Job",
+            "Example"
+          ],
+          "filas": [
+            [
+              "cuánto, cuánta, cuántos, cuántas",
+              "direct questions",
+              "¿Cuántas olas agarraste?"
+            ],
+            [
+              "",
+              "indirect questions",
+              "Dime cuánta sal le pongo."
+            ],
+            [
+              "",
+              "exclamations",
+              "¡Cuánta gente!"
+            ],
+            [
+              "cuanto (no accent)",
+              "relative / connector",
+              "cuanto antes, en cuanto llegues, cuanto más… más"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Cuánto** with an accent always carries the idea of _how much / how many_. As an adjective it agrees with the noun: **cuánto tiempo**, **cuánta sal**, **cuántos libros**, **cuántas películas**. It can also stand alone as a pronoun: **¿Cuántas?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Indirect questions keep the accent even without question marks: **me pregunto cuánta gente habrá**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Without the accent, **cuanto** works as a connector or relative: **cuanto antes** (_as soon as possible_), **en cuanto** (_as soon as_), **cuanto más… más** (_the more… the more_), **todo cuanto** (_all that_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if you could say _how much_ or _how many_, it gets the accent."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿==Cuánto== tiempo van a estar en Ensenada?",
+              "en": "How long are you going to be in Ensenada?"
+            },
+            {
+              "es": "¿==Cuántas== películas vamos a ver este fin?",
+              "en": "How many movies are we going to watch this weekend?"
+            },
+            {
+              "es": "Dime ==cuánta== sal le pongo al guisado.",
+              "en": "Tell me how much salt to put in the stew."
+            },
+            {
+              "es": "Me pregunto ==cuánta== gente habrá en el concierto.",
+              "en": "I wonder how many people there'll be at the concert."
+            },
+            {
+              "es": "¡==Cuánta== energía tiene Beto! Nunca para.",
+              "en": "Beto has so much energy! He never stops."
+            },
+            {
+              "es": "—Vi un montón de películas. —¿Sí? ¿==Cuántas==?",
+              "en": "\"I watched a ton of movies.\" \"Really? How many?\""
+            },
+            {
+              "es": "Llámame ==cuanto== antes.",
+              "en": "Call me as soon as possible."
+            },
+            {
+              "es": "==En cuanto== llegues, me avisas.",
+              "en": "As soon as you arrive, let me know."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No sé cuanto cuesta."
+                },
+                {
+                  "v": "bien",
+                  "t": "No sé cuánto cuesta."
+                }
+              ],
+              "nota": "Indirect question: accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Cuántos gente?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cuánta gente?"
+                }
+              ],
+              "nota": "It agrees: **gente** is feminine singular."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cuánto antes, mejor."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cuanto antes, mejor."
+                }
+              ],
+              "nota": "A connector: no accent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¿cuánto cuesta?",
+              "texto": "Asking about quantity: [[7068|cuánto + noun]], [[9835|cuánto + verb]], [[8703|interrogative and indirect]]."
+            },
+            {
+              "forma": "¡cuánta gente!",
+              "texto": "Exclamations: [[7027|cuánto + noun]]."
+            },
+            {
+              "forma": "en cuanto llegues",
+              "texto": "_As soon as_: [[8294|en cuanto, apenas]]."
+            },
+            {
+              "forma": "cuanto más… más",
+              "texto": "_The more… the more_: [[7154|cuanto más]]."
+            },
+            {
+              "forma": "qué / que, dónde / donde",
+              "texto": "Other accent pairs: [[6675|qué]], [[6964|dónde]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Accent or not? **No sé cuanto tiempo tengo.**",
+              "r": "No sé cuánto tiempo tengo.",
+              "nota": "Indirect question: accent."
+            },
+            {
+              "p": "Accent or not? **Cuanto antes lo hagas, mejor.**",
+              "r": "Cuanto antes lo hagas, mejor.",
+              "nota": "Connector: no accent."
+            },
+            {
+              "p": "In Spanish: _How many waves!_",
+              "r": "¡Cuántas olas!",
+              "nota": "Exclamation, feminine plural."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7068,
+      8703
+    ],
+    "confunde": [
+      8294
+    ],
+    "sigue": [
+      7027,
+      7154,
+      6675
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8700",
+      "kwiziq": true
+    }
+  ]
+}

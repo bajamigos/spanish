@@ -1,0 +1,186 @@
+{
+  "tema": 8860,
+  "slug": "pensar-infinitivo",
+  "titulo": "Pensar + infinitive to express intention",
+  "subtitulo": "No pienso ir. ¿Qué piensas hacer?",
+  "foto": "t08.jpg",
+  "regla": "Pensar + infinitive = to intend to, to plan to: ¿Qué piensas hacer? No pienso ir (I'm not going, I have no intention). Pensaba decírtelo = I was planning to tell you. For thinking about something, use pensar en or estar pensando.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "pensar (conjugated)",
+            "+",
+            "infinitive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Expresses a **plan or intention**: _to intend to, to plan to, to be going to_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**No pienso** + infinitive is strong: _no way am I..._"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Pensaba** + infinitive = _I was planning to_ (and maybe didn't)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Don't confuse with **pensar en** (_to think about_) or **estar pensando que** (_to be thinking that_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **pienso ir** = it's already in my calendar."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi ex me invitó a su cumpleaños, pero yo ==no pienso ir==.",
+              "en": "My ex invited me to his birthday, but I'm not going."
+            },
+            {
+              "es": "Te pasaste. ==Pienso contarle== todo a tus papás.",
+              "en": "You crossed the line. I'm going to tell your parents everything."
+            },
+            {
+              "es": "¿Qué ==piensas hacer==?",
+              "en": "What do you plan to do?"
+            },
+            {
+              "es": "¿==No piensas saludarme==?",
+              "en": "Aren't you going to say hi?"
+            },
+            {
+              "es": "==Pensaba decírtelo==, pero me daba pena.",
+              "en": "I was planning to tell you, but I was embarrassed."
+            },
+            {
+              "es": "==Estoy pensando en== rentar un departamento.",
+              "en": "I'm thinking about renting an apartment. (thinking, not plan)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Pienso de ir."
+                },
+                {
+                  "v": "bien",
+                  "t": "Pienso ir."
+                }
+              ],
+              "nota": "No preposition."
+            },
+            {
+              "filas": [
+                {
+                  "v": "intención",
+                  "t": "Pienso viajar."
+                },
+                {
+                  "v": "pensamiento",
+                  "t": "Pienso en viajar."
+                }
+              ],
+              "nota": "_I plan to_ vs _I think about_."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "ir a",
+              "texto": "[[5086|ir a + infinitive]]."
+            },
+            {
+              "forma": "estar por",
+              "texto": "[[8709|estar por]]."
+            },
+            {
+              "forma": "querer + infinitive",
+              "texto": "[[5065|modal verbs]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I don't intend to apologize._",
+              "r": "No pienso pedir perdón.",
+              "nota": "No pienso + infinitive."
+            },
+            {
+              "p": "In Spanish: _We plan to move in June._",
+              "r": "Pensamos mudarnos en junio.",
+              "nota": "pensar + infinitive."
+            },
+            {
+              "p": "In Spanish: _I was planning to call you._",
+              "r": "Pensaba llamarte.",
+              "nota": "pensaba."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5086
+    ],
+    "confunde": [
+      8709
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8860",
+      "kwiziq": true
+    }
+  ]
+}

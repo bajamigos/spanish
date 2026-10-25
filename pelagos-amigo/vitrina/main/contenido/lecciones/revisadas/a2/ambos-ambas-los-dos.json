@@ -1,0 +1,247 @@
+{
+  "tema": 9341,
+  "slug": "ambos-ambas-los-dos",
+  "titulo": "How to say both: ambos, los dos",
+  "subtitulo": "Ambos hermanos surfean. Los dos viven en Rosarito.",
+  "foto": "t07.jpg",
+  "regla": "Both is ambos / ambas (+ plural noun, no article) or los dos / las dos (with the article). Both agree in gender. Los dos is the everyday choice; ambos sounds a little more formal. Both X and Y is tanto X como Y.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "There are two ways to say **both**:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "Masculine",
+            "Feminine"
+          ],
+          "filas": [
+            [
+              "Formal-ish",
+              "ambos",
+              "ambas"
+            ],
+            [
+              "Everyday",
+              "los dos",
+              "las dos"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Ambos** never takes an article: **ambos hermanos**. **Los dos** always does: **los dos hermanos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Both can stand alone, without a noun: **Ambos son buenos.** **Las dos trabajan.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "With **we** or **you all**, the verb follows the real subject: **Los dos vivimos aquí.** _(Both of us live here.)_"
+        },
+        {
+          "tipo": "texto",
+          "texto": "_Both of them_ is just **los dos** or **ambos**. No **de ellos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "To say _both X and Y_, use **tanto X como Y**: **tanto Ana como Luis**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **ambos** travels alone; **los dos** always brings its article along."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Ambos== equipos jugaron bien.",
+              "en": "Both teams played well."
+            },
+            {
+              "es": "==Las dos== hermanas viven en Rosarito.",
+              "en": "Both sisters live in Rosarito."
+            },
+            {
+              "es": "Me gustan ==los dos==, no sé cuál comprar.",
+              "en": "I like both of them, I don't know which one to buy."
+            },
+            {
+              "es": "==Ambas== opciones son caras.",
+              "en": "Both options are expensive."
+            },
+            {
+              "es": "==Los dos== entrenamos en el mismo gimnasio.",
+              "en": "We both train at the same gym."
+            },
+            {
+              "es": "Tengo dos perros y ==ambos== son muy flojos.",
+              "en": "I have two dogs and both are really lazy."
+            },
+            {
+              "es": "Lávate ==las dos== manos.",
+              "en": "Wash both hands."
+            },
+            {
+              "es": "==Tanto== Holden ==como== Naomi trabajan en la nave.",
+              "en": "Both Holden and Naomi work on the ship."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ambos los hermanos surfean."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ambos hermanos surfean."
+                }
+              ],
+              "nota": "No article after **ambos**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Dos hermanos surfean. (_both_)"
+                },
+                {
+                  "v": "bien",
+                  "t": "Los dos hermanos surfean."
+                }
+              ],
+              "nota": "**Los dos** needs **los**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ambos chicas son de aquí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ambas chicas son de aquí."
+                }
+              ],
+              "nota": "Agree with **chicas**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ambos de ellos llegaron tarde."
+                },
+                {
+                  "v": "bien",
+                  "t": "Los dos llegaron tarde."
+                }
+              ],
+              "nota": "No **de ellos**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "todos los días",
+              "texto": "Another word for the whole group: [[6233|todo, toda, todos, todas]]."
+            },
+            {
+              "forma": "el otro",
+              "texto": "One of the two: [[6496|otro, otra]]."
+            },
+            {
+              "forma": "los tres",
+              "texto": "Numbers without a noun: [[6672|numbers as pronouns]]."
+            },
+            {
+              "forma": "juntos",
+              "texto": "Doing it together: [[6807|junto, juntos = together]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Both girls speak English._",
+              "r": "Las dos chicas hablan inglés. / Ambas chicas hablan inglés.",
+              "nota": "Feminine."
+            },
+            {
+              "p": "In Spanish: _We both like tacos._",
+              "r": "A los dos nos gustan los tacos.",
+              "nota": "nos for us."
+            },
+            {
+              "p": "Fix it: «Ambos los carros son rojos.»",
+              "r": "Ambos carros son rojos.",
+              "nota": "No los."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6672
+    ],
+    "confunde": [
+      6233,
+      6496
+    ],
+    "sigue": [
+      6807
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9341",
+      "kwiziq": true
+    }
+  ]
+}

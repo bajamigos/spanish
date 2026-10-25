@@ -1,0 +1,184 @@
+{
+  "tema": 8709,
+  "slug": "estar-por",
+  "titulo": "Estar por + infinitive = to be about to; to be tempted to",
+  "subtitulo": "Está por llover. Estoy por decirle todo.",
+  "foto": "t04.jpg",
+  "regla": "Estar por + infinitive: (1) about to happen, very common in Mexico: está por llover, estoy por salir; (2) tempted to, inclined to: estoy por decirle la verdad. Pronouns attach to the infinitive.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "about to",
+              "texto": "**Está por llover.** **Estoy por salir, te llamo luego.** Very common in Mexico."
+            },
+            {
+              "forma": "tempted / inclined to",
+              "texto": "**Estoy por decirle toda la verdad.** **Mis papás están por prohibirte la fiesta.**"
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Pronouns attach to the **infinitive**: **estoy por prestarle el dinero**, not ~~le estoy por prestar~~."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Context tells which meaning; often both overlap."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **estar por** = one foot already in the action."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Está por== llover; mejor llévate el paraguas.",
+              "en": "It's about to rain; better take the umbrella."
+            },
+            {
+              "es": "==Estoy por== salir, te marco en un rato.",
+              "en": "I'm about to head out, I'll call you in a bit."
+            },
+            {
+              "es": "==Estoy por== confesarle toda la verdad a mi novio.",
+              "en": "I'm tempted to tell my boyfriend the whole truth."
+            },
+            {
+              "es": "Tus papás ==están por== prohibirte la fiesta, así que pórtate bien.",
+              "en": "Your parents are close to banning you from the party, so behave."
+            },
+            {
+              "es": "María ==está por== dejar la carrera y ponerse a trabajar.",
+              "en": "María is thinking of quitting her degree and getting a job."
+            },
+            {
+              "es": "==Estoy por== prestarle yo el dinero a Carmen.",
+              "en": "I'm tempted to lend Carmen the money myself."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Le estoy por prestar el dinero."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estoy por prestarle el dinero."
+                }
+              ],
+              "nota": "Attach to the infinitive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estoy por le prestar..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estoy por prestarle..."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "estar a punto de",
+              "texto": "[[6509|about to]]."
+            },
+            {
+              "forma": "estar para",
+              "texto": "[[7442|ready / in the mood]]."
+            },
+            {
+              "forma": "pensar + infinitive",
+              "texto": "[[8860|intention]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _The movie is about to start._",
+              "r": "La película está por empezar.",
+              "nota": "about to."
+            },
+            {
+              "p": "In Spanish: _I'm tempted to call her._",
+              "r": "Estoy por llamarla.",
+              "nota": "Attach la."
+            },
+            {
+              "p": "Fix it: _Lo estoy por comprar._",
+              "r": "Estoy por comprarlo.",
+              "nota": "Attach to infinitive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6509
+    ],
+    "confunde": [
+      7442
+    ],
+    "sigue": [
+      8860
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8709",
+      "kwiziq": true
+    }
+  ]
+}

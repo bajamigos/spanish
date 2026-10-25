@@ -1,0 +1,199 @@
+{
+  "tema": 8890,
+  "slug": "preposicion-que",
+  "titulo": "Asking questions with preposition + qué",
+  "subtitulo": "¿Para qué? ¿Con qué? ¿De qué hablas?",
+  "foto": "t05.jpg",
+  "regla": "In Spanish the preposition goes at the start of the question, before qué: ¿De qué hablas? (What are you talking about?). Never leave it at the end like in English.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "In English the preposition often ends the question: _What are you talking **about**?_ In Spanish that's impossible. The preposition goes **first**, right before **qué**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "¿",
+            "preposition + qué",
+            "+ verb...?"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Many verbs come with a preposition (**hablar de**, **pensar en**, **referirse a**, **soñar con**), and it moves to the front with them."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Qué** keeps its accent: it's a question word."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: in Spanish the preposition never gets left at the end of the line."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿==Para qué== me llamaste?",
+              "en": "What did you call me for?"
+            },
+            {
+              "es": "¿==En qué== ciudad estás?",
+              "en": "Which city are you in?"
+            },
+            {
+              "es": "¿==De qué== querías hablar conmigo?",
+              "en": "What did you want to talk to me about?"
+            },
+            {
+              "es": "No te entiendo… ¿==a qué== te refieres?",
+              "en": "I don't understand… what do you mean?"
+            },
+            {
+              "es": "—¿==Con qué== lo hiciste? —Con plastilina.",
+              "en": "—What did you make it with? —With modeling clay."
+            },
+            {
+              "es": "¿==En qué== estás pensando?",
+              "en": "What are you thinking about?"
+            },
+            {
+              "es": "¿==Por qué== lo dices?",
+              "en": "Why do you say that?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Qué estás ahorrando para?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Para qué estás ahorrando?"
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Qué hablas de?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿De qué hablas?"
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Con que lo pagaste?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Con qué lo pagaste?"
+                }
+              ],
+              "nota": "Don't forget the accent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¿con quién?",
+              "texto": "The same pattern for people: [[5058|preposition + quién]]."
+            },
+            {
+              "forma": "¿qué? / ¿cuál?",
+              "texto": "Choosing between them: [[9926|qué vs cuál]]."
+            },
+            {
+              "forma": "no sé qué...",
+              "texto": "**Qué** inside a sentence: [[7013|qué in indirect questions]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _What are you laughing at?_ (reírse de)",
+              "r": "¿De qué te ríes?",
+              "nota": "Preposition first."
+            },
+            {
+              "p": "In Spanish: _What do you use it for?_",
+              "r": "¿Para qué lo usas?",
+              "nota": "para qué."
+            },
+            {
+              "p": "In Spanish: _What are you dreaming about?_ (soñar con)",
+              "r": "¿Con qué sueñas?",
+              "nota": "con qué."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      9828
+    ],
+    "confunde": [
+      5058
+    ],
+    "sigue": [
+      7013
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8890",
+      "kwiziq": true
+    }
+  ]
+}

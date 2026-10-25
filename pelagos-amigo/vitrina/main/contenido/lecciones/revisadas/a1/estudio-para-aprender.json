@@ -1,0 +1,192 @@
+{
+  "tema": 5970,
+  "slug": "estudio-para-aprender",
+  "titulo": "Para for purpose",
+  "subtitulo": "Estudio para aprender.",
+  "foto": "t07.jpg",
+  "regla": "To say what something is for, or why you do something (in order to), use para: para + infinitive or para + noun. Never por for a purpose or goal.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Para** + **infinitive** = _(in order) to_: **Ahorro para comprar una tabla.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Para** + **noun** = _for_ (its use or goal): **Es crema para el sol.**"
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "action",
+            "+ para +",
+            "infinitive / noun"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "To ask about purpose: **¿Para qué?** = _what for?_ Tip: if you can say _in order to_, it's **para**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Estudio español ==para== hablar con mis vecinos.",
+              "en": "I study Spanish to talk with my neighbors."
+            },
+            {
+              "es": "Voy al gimnasio ==para== entrenar jiu-jitsu.",
+              "en": "I go to the gym to train jiu-jitsu."
+            },
+            {
+              "es": "Ahorro dinero ==para== comprar una tabla nueva.",
+              "en": "I'm saving money to buy a new board."
+            },
+            {
+              "es": "Necesito tierra ==para== las plantas.",
+              "en": "I need soil for the plants."
+            },
+            {
+              "es": "¿==Para qué== necesitas el carro?",
+              "en": "What do you need the car for?"
+            },
+            {
+              "es": "Me levanto temprano ==para== surfear.",
+              "en": "I get up early to surf."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estudio por aprender."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estudio para aprender."
+                }
+              ],
+              "nota": "Purpose: always **para**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Voy a la tienda para compro leche."
+                },
+                {
+                  "v": "bien",
+                  "t": "Voy a la tienda para comprar leche."
+                }
+              ],
+              "nota": "After **para**, the infinitive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Trabajo por ganar dinero."
+                },
+                {
+                  "v": "bien",
+                  "t": "Trabajo para ganar dinero."
+                }
+              ],
+              "nota": "_In order to_ = **para**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "por el tráfico",
+              "texto": "Por gives the cause: [[5962|por for cause]]."
+            },
+            {
+              "forma": "Es para cortar",
+              "texto": "With ser: [[5989|ser para for purpose]]."
+            },
+            {
+              "forma": "Es para ti",
+              "texto": "For a person: [[7276|para for the recipient]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I run to get in shape._",
+              "r": "Corro para ponerme en forma.",
+              "nota": "para + infinitive."
+            },
+            {
+              "p": "Fix it: _Voy al gimnasio por entrenar._",
+              "r": "Voy al gimnasio para entrenar.",
+              "nota": "Purpose: para."
+            },
+            {
+              "p": "In Spanish (tú): _What do you need the money for?_",
+              "r": "¿Para qué necesitas el dinero?",
+              "nota": "¿Para qué?"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      5962
+    ],
+    "sigue": [
+      5989,
+      7276
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5970",
+      "kwiziq": true
+    }
+  ]
+}

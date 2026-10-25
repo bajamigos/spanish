@@ -1,0 +1,233 @@
+{
+  "tema": 6205,
+  "slug": "subjuntivo-presente-cer-cir",
+  "titulo": "Conjugate -cer and -cir verbs (c > zc) in the present subjunctive",
+  "subtitulo": "Conozco → conozca: the zc of yo spreads to every form.",
+  "foto": "t01.jpg",
+  "regla": "Verbs in vowel + -cer / -cir that have zc in the yo present keep zc in every form of the present subjunctive: conozca, produzcamos.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Many verbs ending in **-cer** or **-cir** after a vowel change **c** to **zc** in the present, but only in **yo** (**conozco**, **produzco**). In the present subjunctive they keep that **zc** in **every form**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**yo** form in **-zco**",
+            "minus **-o**",
+            "**-a, -as, -a, -amos, -an**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "conocer",
+            "producir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "conozca",
+              "produzca"
+            ],
+            [
+              "tú",
+              "conozcas",
+              "produzcas"
+            ],
+            [
+              "él, ella, usted",
+              "conozca",
+              "produzca"
+            ],
+            [
+              "nosotros",
+              "conozcamos",
+              "produzcamos"
+            ],
+            [
+              "ustedes, ellos",
+              "conozcan",
+              "produzcan"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The endings are the regular **-er** / **-ir** subjunctive ones. In Mexico, to drive a car is **manejar** (**maneje**); **conducir** is used for hosting a show or in formal writing. Other verbs like this: **conducir**, **traducir**, **introducir**, **parecer**, **merecer**, **ofrecer**, **amanecer**, **crecer**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the **z** that slipped into **yo** never leaves the house again."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No creo que ==conozcas== a Beto.",
+              "en": "I don't think you know Beto."
+            },
+            {
+              "es": "Espero que ==produzcamos== muchos jitomates este año.",
+              "en": "I hope we grow lots of tomatoes this year."
+            },
+            {
+              "es": "Dice que ==introduzcan== la tarjeta en la máquina.",
+              "en": "It says to insert the card in the machine."
+            },
+            {
+              "es": "Quieren que ==conduzca== el programa de radio.",
+              "en": "They want me to host the radio show."
+            },
+            {
+              "es": "Me gusta que ahora ==amanezca== más temprano.",
+              "en": "I like that it gets light earlier now."
+            },
+            {
+              "es": "Es increíble que se ==parezcan== tanto.",
+              "en": "It's amazing how much they look alike."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No creo que conoces a Naomi."
+                },
+                {
+                  "v": "bien",
+                  "t": "No creo que conozcas a Naomi."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Espero que conocamos la playa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Espero que conozcamos la playa."
+                }
+              ],
+              "nota": "The **zc** is in **nosotros** too."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No quiero que traduces eso."
+                },
+                {
+                  "v": "bien",
+                  "t": "No quiero que traduzcas eso."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "conozco, conoces",
+              "texto": "The present, where only **yo** changes: [[5928|-cer / -cir: c > zc in yo]], [[5653|traducir and conducir]]."
+            },
+            {
+              "forma": "tenga, haga",
+              "texto": "The same idea with **g**: [[6000|yo-go verbs]]."
+            },
+            {
+              "forma": "coma, viva",
+              "texto": "The base pattern: [[5151|-er and -ir in the subjunctive]]."
+            },
+            {
+              "forma": "conocer vs saber",
+              "texto": "When to use which: [[6865|saber and conocer]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "**Conocer** with **ustedes**: Quiero que ___ a mi familia.",
+              "r": "Quiero que conozcan a mi familia.",
+              "nota": "zc in every form."
+            },
+            {
+              "p": "**Traducir** with **tú**: Quiero que me ___ la carta.",
+              "r": "Quiero que me traduzcas la carta.",
+              "nota": "traducir → traduzcas."
+            },
+            {
+              "p": "**Traducir** with **nosotros**: Es mejor que ___ el texto.",
+              "r": "Es mejor que traduzcamos el texto.",
+              "nota": "zc in nosotros too."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5928,
+      5653,
+      5151
+    ],
+    "confunde": [
+      6000
+    ],
+    "sigue": [
+      6865,
+      5059
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6205",
+      "kwiziq": true
+    }
+  ]
+}

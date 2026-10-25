@@ -1,0 +1,208 @@
+{
+  "tema": 6070,
+  "slug": "necesitar-infinitivo",
+  "titulo": "Necesitar to express a need",
+  "subtitulo": "Necesito dormir más.",
+  "foto": "t07.jpg",
+  "regla": "Necesitar is a regular -ar verb. Use necesitar + a noun for something you need, and necesitar + an infinitive for something you need to do, with nothing in between.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Necesitar** is a regular **-ar** verb."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "necesitar"
+          ],
+          "filas": [
+            [
+              "yo",
+              "necesito"
+            ],
+            [
+              "tú",
+              "necesitas"
+            ],
+            [
+              "él / ella / usted",
+              "necesita"
+            ],
+            [
+              "nosotros",
+              "necesitamos"
+            ],
+            [
+              "ellos / ustedes",
+              "necesitan"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Need **something**: **necesito** + noun. Need **to do** something: **necesito** + infinitive."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "necesito",
+            "+",
+            "dormir / comprar / ir..."
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Nothing goes between them: no **a**, no **que**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Necesito== un café.",
+              "en": "I need a coffee."
+            },
+            {
+              "es": "==Necesito dormir== más.",
+              "en": "I need to sleep more."
+            },
+            {
+              "es": "¿==Necesitas== ayuda?",
+              "en": "Do you need help?"
+            },
+            {
+              "es": "==Necesitamos comprar== tierra para el huerto.",
+              "en": "We need to buy soil for the garden."
+            },
+            {
+              "es": "Mi tabla ==necesita== cera nueva.",
+              "en": "My board needs new wax."
+            },
+            {
+              "es": "Ustedes ==necesitan descansar== antes del torneo.",
+              "en": "You guys need to rest before the tournament."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Necesito a comprar pan."
+                },
+                {
+                  "v": "bien",
+                  "t": "Necesito comprar pan."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Necesito que estudiar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Necesito estudiar."
+                }
+              ],
+              "nota": "**Que** belongs to **tengo que**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "necesito",
+              "texto": "The pattern it follows: [[5492|regular -ar verbs]]."
+            },
+            {
+              "forma": "tengo que",
+              "texto": "A stronger obligation: [[5106|tener que]]."
+            },
+            {
+              "forma": "hay que",
+              "texto": "When it's for everyone: [[6262|hay que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I need to work tomorrow._",
+              "r": "Necesito trabajar mañana.",
+              "nota": "+ infinitive."
+            },
+            {
+              "p": "In Spanish: _We need a new car._",
+              "r": "Necesitamos un carro nuevo.",
+              "nota": "+ noun."
+            },
+            {
+              "p": "Fix it: _Necesitas a descansar._",
+              "r": "Necesitas descansar.",
+              "nota": "No a."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5492
+    ],
+    "confunde": [
+      5106
+    ],
+    "sigue": [
+      6262
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6070",
+      "kwiziq": true
+    }
+  ]
+}

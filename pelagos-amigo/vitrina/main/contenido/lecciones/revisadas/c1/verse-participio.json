@@ -1,0 +1,177 @@
+{
+  "tema": 9147,
+  "slug": "verse-participio",
+  "titulo": "Verse + participle = to find oneself (affected)",
+  "subtitulo": "Se vio rodeado de cámaras. Nos vimos obligados a salir.",
+  "foto": "t05.jpg",
+  "regla": "Verse + participle (agreeing) describes a state someone ends up in, usually positive or negative for them: se vio rodeado, nos vimos obligados, te verás beneficiada. Like a passive, but focused on how it affects the person.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "verse (any tense)",
+            "+ participle (agrees)"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It means _to find oneself, to end up, to be_ + participle, with a **result that affects the person**, for better or worse."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Very common: **verse obligado a** (_to be forced to_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The participle agrees with the person: **se vieron obligadas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **verse** = you look up and suddenly you're there."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Se vio rodeado== de cámaras y le entró el pánico.",
+              "en": "He found himself surrounded by cameras and panicked."
+            },
+            {
+              "es": "==Nos vimos humillados== y decidimos salir de la junta.",
+              "en": "We felt humiliated and decided to leave the meeting."
+            },
+            {
+              "es": "No te preocupes, Raquel, ==te vas a ver beneficiada== con el nuevo contrato.",
+              "en": "Don't worry, Raquel, you'll benefit from the new contract."
+            },
+            {
+              "es": "Los alumnos ==se ven frustrados== por la desorganización de la escuela.",
+              "en": "The students are frustrated by the school's disorganization."
+            },
+            {
+              "es": "==Se está viendo manipulado== por su novia y no sabe qué hacer.",
+              "en": "He's being manipulated by his girlfriend and doesn't know what to do."
+            },
+            {
+              "es": "==Nos vimos obligados== a cancelar el viaje.",
+              "en": "We were forced to cancel the trip."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Se vieron obligado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Se vieron obligados."
+                }
+              ],
+              "nota": "Agreement."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me vi obligado cancelar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me vi obligado a cancelar."
+                }
+              ],
+              "nota": "**Obligado a**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "fue elegido",
+              "texto": "[[6173|passive with ser]]."
+            },
+            {
+              "forma": "quedarse + adjective",
+              "texto": "[[6985|verbs of change]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We were forced to sell the house._",
+              "r": "Nos vimos obligados a vender la casa.",
+              "nota": "verse obligado a."
+            },
+            {
+              "p": "In Spanish: _She found herself trapped._",
+              "r": "Se vio atrapada.",
+              "nota": "Agreement."
+            },
+            {
+              "p": "In Spanish: _They'll be affected by the change._",
+              "r": "Se van a ver afectados por el cambio.",
+              "nota": "verse + participle."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6173
+    ],
+    "confunde": [
+      6985
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9147",
+      "kwiziq": true
+    }
+  ]
+}

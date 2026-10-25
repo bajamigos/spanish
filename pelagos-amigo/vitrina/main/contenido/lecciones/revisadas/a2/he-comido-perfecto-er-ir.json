@@ -1,0 +1,258 @@
+{
+  "tema": 5588,
+  "slug": "he-comido-perfecto-er-ir",
+  "titulo": "Regular -er and -ir verbs in the present perfect",
+  "subtitulo": "¿Has comido? Hemos vivido aquí diez años.",
+  "foto": "t04.jpg",
+  "regla": "The present perfect is haber in the present (he, has, ha, hemos, han) + the participle. For -er and -ir verbs, the participle ends in -ido: comer → he comido, vivir → he vivido.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Same structure as with -ar verbs: **haber** in the present + the **past participle**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "For **-er** and **-ir** verbs, drop the ending and add **-ido**: **comer → comido**, **vivir → vivido**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "he / has / ha / hemos / han",
+            "+ stem +",
+            "-ido"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "comer",
+            "vivir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**he** comido",
+              "**he** vivido"
+            ],
+            [
+              "tú",
+              "**has** comido",
+              "**has** vivido"
+            ],
+            [
+              "él / ella / usted",
+              "**ha** comido",
+              "**ha** vivido"
+            ],
+            [
+              "nosotros",
+              "**hemos** comido",
+              "**hemos** vivido"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "**han** comido",
+              "**han** vivido"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Stem changes of the present **don't** go into the participle: **dormir → dormido**, **pedir → pedido**, **poder → podido**. Even **ser → sido** and **ir → ido** are regular."
+        },
+        {
+          "tipo": "texto",
+          "texto": "When the stem ends in **a**, **e** or **o**, write an accent: **leer → leído**, **creer → creído**, **traer → traído**, **oír → oído**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The participle never changes, and nothing goes between **haber** and it."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==He comido== demasiado.",
+              "en": "I've eaten too much."
+            },
+            {
+              "es": "¿==Has vivido== siempre en Tijuana?",
+              "en": "Have you always lived in Tijuana?"
+            },
+            {
+              "es": "Mi hijo ==ha aprendido== a nadar este verano.",
+              "en": "My son has learned to swim this summer."
+            },
+            {
+              "es": "==Hemos dormido== muy poco esta semana.",
+              "en": "We've slept very little this week."
+            },
+            {
+              "es": "¿Ustedes ya ==han pedido==?",
+              "en": "Have you guys ordered yet?"
+            },
+            {
+              "es": "Nunca ==he leído== los libros de The Expanse.",
+              "en": "I've never read The Expanse books."
+            },
+            {
+              "es": "Las lechugas ==han crecido== mucho con la lluvia.",
+              "en": "The lettuces have grown a lot with the rain."
+            },
+            {
+              "es": "¿==Has salido== a correr hoy?",
+              "en": "Have you gone out running today?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "He comiado."
+                },
+                {
+                  "v": "bien",
+                  "t": "He comido."
+                }
+              ],
+              "nota": "-er verbs take **-ido**, not -ado."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "He durmido poco."
+                },
+                {
+                  "v": "bien",
+                  "t": "He dormido poco."
+                }
+              ],
+              "nota": "No stem change in the participle."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nunca he leido ese libro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nunca he leído ese libro."
+                }
+              ],
+              "nota": "Accent after **a, e, o**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella ha salida."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella ha salido."
+                }
+              ],
+              "nota": "The participle doesn't agree."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "he hablado",
+              "texto": "The -ar verbs: [[5267|-ar verbs in the present perfect]]."
+            },
+            {
+              "forma": "he hecho, he visto",
+              "texto": "The irregular ones: [[7048|irregular participles in -to / -cho]]."
+            },
+            {
+              "forma": "comí vs he comido",
+              "texto": "Which past to use: [[9261|perfect vs preterite]], and the forms of [[5230|-er and -ir verbs in the preterite]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Have you eaten yet?_",
+              "r": "¿Ya has comido?",
+              "nota": "has + -ido."
+            },
+            {
+              "p": "In Spanish: _We've lived here for two years._",
+              "r": "Hemos vivido aquí dos años.",
+              "nota": "hemos + -ido."
+            },
+            {
+              "p": "Fix it: _Han traido tortillas._",
+              "r": "Han traído tortillas.",
+              "nota": "Accent: traído."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5267
+    ],
+    "confunde": [
+      9261,
+      5230
+    ],
+    "sigue": [
+      7048
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5588",
+      "kwiziq": true
+    }
+  ]
+}

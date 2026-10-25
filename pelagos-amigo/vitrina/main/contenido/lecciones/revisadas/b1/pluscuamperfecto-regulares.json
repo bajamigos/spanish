@@ -1,0 +1,268 @@
+{
+  "tema": 5843,
+  "slug": "pluscuamperfecto-regulares",
+  "titulo": "Conjugate regular -ar, -er and -ir verbs in the pluperfect",
+  "subtitulo": "Había hablado, había comido, había vivido: what had already happened.",
+  "foto": "t01.jpg",
+  "regla": "Haber in the imperfect (había, habías, había, habíamos, habían) + past participle: había surfeado.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "The pluperfect (**el pretérito pluscuamperfecto**) says what _had_ happened before another moment in the past. It has two parts: **haber** in the imperfect, plus the **past participle** of the main verb."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**había, habías, había, habíamos, habían**",
+            "past participle"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "haber (imperfect)"
+          ],
+          "filas": [
+            [
+              "yo",
+              "había"
+            ],
+            [
+              "tú",
+              "habías"
+            ],
+            [
+              "él, ella, usted",
+              "había"
+            ],
+            [
+              "nosotros",
+              "habíamos"
+            ],
+            [
+              "ustedes, ellos",
+              "habían"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Every form of **haber** here has a written accent on the **í**: **había**, **habíamos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Regular participles: **-ar** → **-ado**, **-er** and **-ir** → **-ido**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Infinitive",
+            "Participle",
+            "Pluperfect (yo)"
+          ],
+          "filas": [
+            [
+              "hablar",
+              "hablado",
+              "había hablado"
+            ],
+            [
+              "comer",
+              "comido",
+              "había comido"
+            ],
+            [
+              "vivir",
+              "vivido",
+              "había vivido"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The participle never changes: it doesn't agree with the subject. **Ellas habían terminado**, not **terminadas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **había** is the doorway into the past before the past. Walk through it, then add the action."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Yo ==había surfeado== en Rosarito antes.",
+              "en": "I had surfed in Rosarito before."
+            },
+            {
+              "es": "Tú ==habías terminado== la cena a las ocho.",
+              "en": "You had finished dinner by eight."
+            },
+            {
+              "es": "Naomi nunca ==había piloteado== el Rocinante.",
+              "en": "Naomi had never flown the Rocinante."
+            },
+            {
+              "es": "Nosotros ya ==habíamos comido== cuando llegó Beto.",
+              "en": "We had already eaten when Beto arrived."
+            },
+            {
+              "es": "Ellos ==habían tenido== mucha suerte con el huerto.",
+              "en": "They had been very lucky with the garden."
+            },
+            {
+              "es": "Ustedes ==habían hablado== con el cliente.",
+              "en": "You had talked to the customer."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Don't use the present of **haber** (that's the present perfect), and don't make the participle agree."
+        },
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cuando llegué, Beto ha salido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cuando llegué, Beto había salido."
+                }
+              ],
+              "nota": "Before a past moment: **había**, not **ha**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Las chicas habían llegadas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Las chicas habían llegado."
+                }
+              ],
+              "nota": "The participle stays **-o**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo habia comido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo había comido."
+                }
+              ],
+              "nota": "Don't forget the accent on **había**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "he hablado",
+              "texto": "The present perfect, its closest sibling: [[5267|-ar]] and [[5588|-er / -ir]]."
+            },
+            {
+              "forma": "había hecho",
+              "texto": "Irregular participles: [[5049|hacer, escribir, ver, decir, poner]] and [[7048|participles in -to / -cho]]."
+            },
+            {
+              "forma": "ya había comido",
+              "texto": "With **ya**: [[6009|ya with the pluperfect]]. With **todavía no**: [[6007|aún no / todavía no]]."
+            },
+            {
+              "forma": "Cuando llegué, ya se había ido.",
+              "texto": "Two past actions in order: [[6989|the pluperfect before another past action]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I had never trained jiu-jitsu._",
+              "r": "Nunca había entrenado jiu-jitsu.",
+              "nota": "había + entrenado."
+            },
+            {
+              "p": "**Vivir** with **ellos**: Antes de Tijuana, ___ en Ensenada.",
+              "r": "Antes de Tijuana, habían vivido en Ensenada.",
+              "nota": "habían + vivido."
+            },
+            {
+              "p": "Which one? **Las olas habían bajadas** or **Las olas habían bajado**.",
+              "r": "Las olas habían bajado.",
+              "nota": "The participle doesn't agree."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5267,
+      5588,
+      5263
+    ],
+    "confunde": [
+      5267
+    ],
+    "sigue": [
+      5049,
+      6009,
+      6007,
+      6989,
+      7051
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5843",
+      "kwiziq": true
+    }
+  ]
+}

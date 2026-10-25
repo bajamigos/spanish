@@ -1,0 +1,183 @@
+{
+  "tema": 7267,
+  "slug": "como-condicion",
+  "titulo": "Como + subjunctive = if (warnings and threats)",
+  "subtitulo": "Como no vengas, me enojo. Como llueva, se moja la ropa.",
+  "foto": "t04.jpg",
+  "regla": "Como + subjunctive can mean if, usually in a warning, threat or worried prediction: Como no estudies, vas a reprobar. It always takes the subjunctive here. Como + indicative at the start of a sentence means since, because: Como no estudiaste, reprobaste.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "como",
+            "+ subjunctive",
+            ", main clause"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "= **si**, but with a tone of **warning, threat or prediction**: _if you (don't)..., (you'll be sorry)._"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Always **subjunctive**: **como no vengas**, never ~~como no vienes~~ with this meaning."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The clause can go first or second: **te vas a arrepentir como no vengas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With the **indicative**, **como** = _since, because_: **como no viniste, me fui**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **como** + subjunctive = a wagging finger."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Como me ofrezcan== el trabajo, hago una fiesta.",
+              "en": "If they offer me the job, I'm throwing a party."
+            },
+            {
+              "es": "Te vas a arrepentir ==como no vengas== ahorita.",
+              "en": "You'll be sorry if you don't come right now."
+            },
+            {
+              "es": "==Como no pases== el examen, no hay tacos.",
+              "en": "If you don't pass the exam, no tacos."
+            },
+            {
+              "es": "Le hablo a mi hermano mayor ==como no me dejen== en paz.",
+              "en": "I'll call my big brother if you don't leave me alone."
+            },
+            {
+              "es": "==Como llueva== ahorita, se moja toda la ropa del tendedero.",
+              "en": "If it rains now, all the laundry on the line will get wet."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "condición",
+                  "t": "Como no vengas, me voy."
+                },
+                {
+                  "v": "causa",
+                  "t": "Como no viniste, me fui."
+                }
+              ],
+              "nota": "Subjunctive = _if_; indicative = _since_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Como no estudias, vas a reprobar. (= if)"
+                },
+                {
+                  "v": "bien",
+                  "t": "Como no estudies, vas a reprobar."
+                }
+              ],
+              "nota": "_If_ needs the subjunctive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "como for cause",
+              "texto": "[[7034|porque, como, es que]]."
+            },
+            {
+              "forma": "de + infinitive",
+              "texto": "[[7260|de + infinitive = if]]."
+            },
+            {
+              "forma": "si + present",
+              "texto": "[[6147|si + present]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Warning: _If you touch my phone, you'll see._",
+              "r": "Como toques mi celular, vas a ver.",
+              "nota": "como + subjunctive."
+            },
+            {
+              "p": "Cause: _Since you didn't call, I left._",
+              "r": "Como no llamaste, me fui.",
+              "nota": "Indicative."
+            },
+            {
+              "p": "Fix it (meaning _if_): _Como llegas tarde, te quedas afuera._",
+              "r": "Como llegues tarde, te quedas afuera.",
+              "nota": "Subjunctive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7034,
+      6147
+    ],
+    "confunde": [
+      7260
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7267",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es-MX" data-tema="oscuro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' blob: https://storage.googleapis.com https://covers.openlibrary.org https://archive.org https://*.archive.org https://image.tmdb.org https://*.mzstatic.com https://static.pocketcasts.com; media-src blob: https:; manifest-src 'self'; connect-src 'self' https://feeds.simplecast.com https://feeds.megaphone.fm https://media.rss.com https://www.omnycontent.com https://anchor.fm; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="dark light">
+<title>Pelagos</title>
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Pelagos">
+<link rel="manifest" href="pelagos.webmanifest">
+<link rel="icon" href="icono-192.png">
+<link rel="apple-touch-icon" href="icono-180.png">
+<script src="tema.js"></script>
+<link rel="stylesheet" href="pelagos.css?v=c15c0ca197">
+</head>
+<body>
+<div class="app">
+  <p class="brand sr"><a href="#/">Pelagos</a></p>
+  <nav class="top" aria-label="Pelagos" id="nav" hidden>
+    <a class="ub atras" href="#/" data-nav="atras" aria-label="Volver al Tablero">‹</a>
+  </nav>
+  <main class="vista" id="vista">
+    <section class="card"><h1 class="h">Pelagos</h1><p>Abriendo…</p></section>
+  </main>
+  <footer class="foot">
+    <div id="pie"></div>
+    <p id="sinc" role="status" hidden></p>
+    <p><a href="#/ajustes" id="ajustesLink" hidden>Ajustes</a></p>
+    <p><a href="#/ayuda" id="ayudaLink" hidden>Cómo funciona</a></p>
+  </footer>
+</div>
+<noscript><p>Pelagos necesita JavaScript para abrir tu contenido.</p></noscript>
+
+<dialog class="sheet" id="sheet" aria-labelledby="shT">
+  <div class="in">
+    <span class="k" id="shK"></span>
+    <h2 id="shT"></h2>
+    <p class="r" id="shR"></p>
+    <div class="sc"><span id="shP"></span><span class="bar"><i id="shB"></i></span></div>
+    <div id="shG"></div>
+    <div class="acts">
+      <a class="ub" id="shL" href="#/" hidden>Abrir la lección</a>
+      <a class="ub" id="shKw" href="https://spanish.kwiziq.com/" rel="noopener noreferrer" target="_blank" hidden>Ver en Kwiziq</a>
+      <button type="button" class="ub" id="shX">Cerrar</button>
+    </div>
+  </div>
+</dialog>
+<dialog class="sheet" id="hojaV" aria-labelledby="hvT">
+  <div class="in" id="hvIn"></div>
+</dialog>
+<script type="module" src="app.js?v=c15c0ca197"></script>
+</body>
+</html>

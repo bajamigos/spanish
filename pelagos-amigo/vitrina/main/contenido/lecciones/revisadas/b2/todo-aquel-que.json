@@ -1,0 +1,187 @@
+{
+  "tema": 7076,
+  "slug": "todo-aquel-que",
+  "titulo": "Todo aquel que = anyone who, whoever",
+  "subtitulo": "Todo aquel que quiera, puede venir.",
+  "foto": "t01.jpg",
+  "regla": "Todo aquel que (+ subjunctive for an open group) = anyone who, whoever: Todo aquel que tenga boleto puede pasar. Toda aquella, todos aquellos, todas aquellas agree when needed. It's formal; todos los que / quien is more everyday.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "todo aquel que",
+            "+ verb"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "_Anyone who, whoever, all those who_. Neutral, for people in general."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It changes when you need to be specific: **toda aquella que** (women), **todos aquellos que** (people in general or men), **todas aquellas que** (women)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Like other open relatives, it usually takes the **subjunctive** when the group isn't known: **todo aquel que quiera**. With a known group, indicative: **todos aquellos que protestaron**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It sounds formal (signs, announcements). In conversation: **todos los que**, **quien**, **cualquiera que**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **todo aquel que** = the voice on the loudspeaker."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Todo aquel que== lleve más de cinco años aquí podrá pedir la nacionalidad.",
+              "en": "Anyone who's been here over five years can apply for citizenship."
+            },
+            {
+              "es": "==Todo aquel que== haya pagado por adelantado puede pasar a la ventanilla 2.",
+              "en": "Anyone who's prepaid may go to window 2."
+            },
+            {
+              "es": "Voy a contar mi historia a ==todo aquel que== me escuche.",
+              "en": "I'll tell my story to anyone who listens."
+            },
+            {
+              "es": "==Toda aquella que== sea mamá me va a entender.",
+              "en": "Any woman who's a mother will understand me."
+            },
+            {
+              "es": "Voy a invitar a ==todos aquellos que== sean buenos amigos.",
+              "en": "I'll invite everyone who's a good friend."
+            },
+            {
+              "es": "==Todos aquellos que== protestaron recibieron una compensación.",
+              "en": "All those who complained got compensation."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Todo aquel quien venga..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Todo aquel que venga..."
+                }
+              ],
+              "nota": "Always **que**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Todo aquel que quiere, que pase. (anyone at all)"
+                },
+                {
+                  "v": "bien",
+                  "t": "Todo aquel que quiera, que pase."
+                }
+              ],
+              "nota": "Open group: subjunctive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "quien llame",
+              "texto": "[[8193|quien + subjunctive]]."
+            },
+            {
+              "forma": "relative clauses",
+              "texto": "[[7256|indicative or subjunctive]]."
+            },
+            {
+              "forma": "aquel",
+              "texto": "[[6062|aquel, aquella]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Anyone who wants to can participate._",
+              "r": "Todo aquel que quiera puede participar.",
+              "nota": "Subjunctive."
+            },
+            {
+              "p": "Everyday version:",
+              "r": "Todos los que quieran pueden participar.",
+              "nota": "todos los que."
+            },
+            {
+              "p": "In Spanish: _All those (women) who signed up..._",
+              "r": "Todas aquellas que se inscribieron...",
+              "nota": "Feminine plural."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6062
+    ],
+    "confunde": [
+      8193
+    ],
+    "sigue": [
+      7256
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7076",
+      "kwiziq": true
+    }
+  ]
+}

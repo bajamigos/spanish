@@ -1,0 +1,198 @@
+{
+  "tema": 6147,
+  "slug": "si-presente-imperativo",
+  "titulo": "Si + present indicative, then a command, request or advice",
+  "subtitulo": "Si ves a Beto, dile que venga. Si tomas, no manejes.",
+  "foto": "t06.jpg",
+  "regla": "Si + present, then a command: affirmative imperative (dile) or negative with the subjunctive (no manejes). Advice can also use debería / tendrías que.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To give a command, request or piece of advice that depends on a condition, use **si** + the **present**, then the **command**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**si** + present",
+            "command"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Affirmative commands use the imperative: **si ves a Beto, dile que venga**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Negative commands use **no** + the present subjunctive: **si tomas, no manejes**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "For advice, you can also use **deber** or **tener que** in the conditional: **si estás cansado, deberías dormir**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **si** sets the trap, the command springs it."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Si ==ves== a Beto, ==dile== que venga.",
+              "en": "If you see Beto, tell him to come."
+            },
+            {
+              "es": "Si ==cocinas== hoy, ==ponte== el mandil.",
+              "en": "If you cook today, put on the apron."
+            },
+            {
+              "es": "Si ==estudias== español, ==cómprate== un buen diccionario.",
+              "en": "If you study Spanish, buy yourself a good dictionary."
+            },
+            {
+              "es": "Si ==salen==, ==cierren== la puerta.",
+              "en": "If you go out, close the door."
+            },
+            {
+              "es": "Si ==tomas==, no ==manejes==.",
+              "en": "If you drink, don't drive."
+            },
+            {
+              "es": "Si ==vas== a la playa, no ==te asolees== demasiado.",
+              "en": "If you go to the beach, don't sunbathe too long."
+            },
+            {
+              "es": "Si te ==duele== el hombro, ==deberías== descansar.",
+              "en": "If your shoulder hurts, you should rest."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Si vas a la playa, no tomas el sol."
+                },
+                {
+                  "v": "bien",
+                  "t": "Si vas a la playa, no tomes el sol."
+                }
+              ],
+              "nota": "Negative command: subjunctive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Si veas a Beto, dile hola."
+                },
+                {
+                  "v": "bien",
+                  "t": "Si ves a Beto, dile hola."
+                }
+              ],
+              "nota": "After **si**: present indicative."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "si hay olas, iremos",
+              "texto": "**Si** with present or future: [[6146|si + present + present / future]]."
+            },
+            {
+              "forma": "di, pon, ven",
+              "texto": "Affirmative commands: [[6748|regular]] and [[6962|irregular]]."
+            },
+            {
+              "forma": "no manejes",
+              "texto": "Negative commands: [[9255|negative tú]], [[6961|usted, ustedes]]."
+            },
+            {
+              "forma": "deberías",
+              "texto": "Advice: [[5913|deber to say should]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _If you're hungry, eat something._ (tú)",
+              "r": "Si tienes hambre, come algo.",
+              "nota": "si + present + command."
+            },
+            {
+              "p": "In Spanish: _If it's windy, don't go out in the water._ (tú)",
+              "r": "Si hay viento, no te metas al agua.",
+              "nota": "Negative: subjunctive."
+            },
+            {
+              "p": "In Spanish (advice): _If you're tired, you should sleep._",
+              "r": "Si estás cansado, deberías dormir.",
+              "nota": "debería + infinitive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6146,
+      6748,
+      9255
+    ],
+    "confunde": [
+      6146
+    ],
+    "sigue": [
+      5913,
+      6961
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6147",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "tema": 5244,
+  "slug": "futuro-valer",
+  "titulo": "Conjugate valer in the simple future",
+  "subtitulo": "Valer slips in a d: valdré, valdrás, valdremos. Worth, cost, good enough.",
+  "foto": "t01.jpg",
+  "regla": "Valer replaces the e of its infinitive with d to make the stem valdr-, then adds -é, -ás, -á, -emos, -án.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Valer** (_to be worth, to cost_) is irregular in the **simple future** (**futuro imperfecto**). The endings are regular; the stem is **valdr-**: the **e** becomes a **d**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "irregular stem **valdr-**",
+            "**-é, -ás, -á, -emos, -án**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Ending",
+            "valer → valdr-"
+          ],
+          "filas": [
+            [
+              "yo",
+              "-é",
+              "valdré"
+            ],
+            [
+              "tú",
+              "-ás",
+              "valdrás"
+            ],
+            [
+              "él, ella, usted",
+              "-á",
+              "valdrá"
+            ],
+            [
+              "nosotros",
+              "-emos",
+              "valdremos"
+            ],
+            [
+              "ustedes, ellos",
+              "-án",
+              "valdrán"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Valer** has several meanings. With things it means _to cost_ or _to be worth_. With people: **valer para** + something = _to be good enough for, to be cut out for_; **valer como** + something = _to be useful as, to do as_. In Mexico, for people you'll more often hear **servir para**: **no servirás para eso**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Use",
+            "Meaning",
+            "Example"
+          ],
+          "filas": [
+            [
+              "things",
+              "to cost, to be worth",
+              "La tabla valdrá unos tres mil pesos."
+            ],
+            [
+              "valer para",
+              "to be good enough for",
+              "No valdrás para el torneo si no entrenas."
+            ],
+            [
+              "valer como",
+              "to be useful as, to do as",
+              "Tu experiencia valdrá como ejemplo."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **valer** is in the **d** gang with **poner**, **tener**, **venir** and **salir**: **valdré**, **pondré**, **tendré**, **vendré**, **saldré**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Valdré== más en el trabajo si aprendo a programar llaves.",
+              "en": "I'll be worth more at work if I learn to program keys."
+            },
+            {
+              "es": "No ==valdrás== para competir si no entrenas.",
+              "en": "You won't be good enough to compete if you don't train."
+            },
+            {
+              "es": "En unos meses ese Tsuru ==valdrá== la mitad.",
+              "en": "In a few months that Tsuru will be worth half as much."
+            },
+            {
+              "es": "==Valdrá== la pena levantarse temprano: habrá olas.",
+              "en": "It'll be worth getting up early: there'll be waves."
+            },
+            {
+              "es": "Esas tablas usadas ==valdrán== unos dos mil pesos.",
+              "en": "Those used boards will cost about two thousand pesos."
+            },
+            {
+              "es": "Tu historia ==valdrá== como ejemplo para los nuevos.",
+              "en": "Your story will serve as an example for the new guys."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Esa tabla valerá mucho."
+                },
+                {
+                  "v": "bien",
+                  "t": "Esa tabla valdrá mucho."
+                }
+              ],
+              "nota": "The **e** becomes **d**: **valdr-**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Esa tabla valrá mucho."
+                },
+                {
+                  "v": "bien",
+                  "t": "Esa tabla valdrá mucho."
+                }
+              ],
+              "nota": "Don't drop the **d**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Los tacos valdrá cien pesos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Los tacos valdrán cien pesos."
+                }
+              ],
+              "nota": "The things that cost are the subject: plural things, plural verb."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usos",
+      "titulo": "The d gang",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "valdré",
+              "texto": "**valer** → **valdr-**",
+              "aqui": true
+            },
+            {
+              "forma": "pondré",
+              "texto": "**poner** → **pondr-**. See [[5259|poner in the future]]."
+            },
+            {
+              "forma": "tendré",
+              "texto": "**tener** → **tendr-**. See [[5050|tener in the future]]."
+            },
+            {
+              "forma": "vendré",
+              "texto": "**venir** → **vendr-**. See [[5223|venir in the future]]."
+            },
+            {
+              "forma": "saldré",
+              "texto": "**salir** → **saldr-**. See [[5160|salir in the future]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "trabajaré",
+              "texto": "The endings are the same as for every verb in the future: [[5155|regular verbs in the simple future]]."
+            },
+            {
+              "forma": "valdría",
+              "texto": "The conditional uses the very same stem, with **-ía** endings: [[5818|valer in the conditional]]."
+            },
+            {
+              "forma": "¿Cuánto valdrá?",
+              "texto": "The future also guesses about right now (_I wonder how much it costs_): [[5060|the future for probability]]."
+            },
+            {
+              "forma": "habré hecho",
+              "texto": "The future of **haber** + participle: [[5066|irregular verbs in the future perfect]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "**Valer**, **ellos**: Esos aguacates ___ más en invierno.",
+              "r": "Esos aguacates valdrán más en invierno.",
+              "nota": "**valdr-** + **-án**."
+            },
+            {
+              "p": "In Spanish: _You (tú) won't be good enough to be a doctor if you don't study._",
+              "r": "No valdrás para ser doctor si no estudias.",
+              "nota": "**Valer para** = _to be good enough for_."
+            },
+            {
+              "p": "Which one? **La casa valerá el doble** or **La casa valdrá el doble**.",
+              "r": "La casa valdrá el doble.",
+              "nota": "The **e** turns into **d**."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5155
+    ],
+    "confunde": [
+      5818
+    ],
+    "sigue": [
+      5259,
+      5050,
+      5223,
+      5160,
+      5060,
+      5162,
+      5066
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5244",
+      "kwiziq": true
+    }
+  ]
+}

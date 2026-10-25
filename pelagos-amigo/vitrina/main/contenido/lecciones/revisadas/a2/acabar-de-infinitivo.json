@@ -1,0 +1,252 @@
+{
+  "tema": 6508,
+  "slug": "acabar-de-infinitivo",
+  "titulo": "Acabar de + infinitive",
+  "subtitulo": "Acabo de llegar.",
+  "foto": "t08.jpg",
+  "regla": "Acabar de + infinitive means to have just done something. Spanish uses the present (acabo de llegar = I've just arrived) where English uses just + past.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Acabar de** + infinitive = _to have just done_ something."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "acabar (present)",
+            "+ de +",
+            "infinitive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "English says _I just arrived_ or _I've just arrived_; Spanish uses the **present** of acabar: **acabo de llegar**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "acabar de"
+          ],
+          "filas": [
+            [
+              "yo",
+              "acabo de"
+            ],
+            [
+              "tú",
+              "acabas de"
+            ],
+            [
+              "él, ella, usted",
+              "acaba de"
+            ],
+            [
+              "nosotros/as",
+              "acabamos de"
+            ],
+            [
+              "ellos, ellas, ustedes",
+              "acaban de"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Object and reflexive pronouns go before acabar or stuck to the infinitive: **lo acabo de ver** = **acabo de verlo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Careful: in the preterite, **acabé de comer** means _I finished eating_, not _I just ate_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **acabo de** is the wet footprint on the floor. You're not in the shower anymore, but you only just got out."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Acabo de== salir del agua.",
+              "en": "I've just got out of the water."
+            },
+            {
+              "es": "==Acabamos de== comer.",
+              "en": "We've just eaten."
+            },
+            {
+              "es": "Lupita ==acaba de== mandarte un mensaje.",
+              "en": "Lupita just sent you a message."
+            },
+            {
+              "es": "¿Te ==acabas de== despertar?",
+              "en": "Did you just wake up?"
+            },
+            {
+              "es": "Los vecinos ==acaban de== plantar unos jitomates.",
+              "en": "The neighbors have just planted some tomatoes."
+            },
+            {
+              "es": "El partido ==acaba de== terminar.",
+              "en": "The game has just ended."
+            },
+            {
+              "es": "==Lo acabo de== ver en la playa.",
+              "en": "I just saw him at the beach."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Acabé de llegar. (= I just arrived)"
+                },
+                {
+                  "v": "bien",
+                  "t": "Acabo de llegar."
+                }
+              ],
+              "nota": "_Just_: present **acabo**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Acabo llegar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Acabo de llegar."
+                }
+              ],
+              "nota": "Don't drop **de**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Acabo de llegado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Acabo de llegar."
+                }
+              ],
+              "nota": "Infinitive, not participle."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Solo llegué."
+                },
+                {
+                  "v": "bien",
+                  "t": "Acabo de llegar."
+                }
+              ],
+              "nota": "_Just_ here isn't **solo**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "he llegado",
+              "texto": "The other way to talk about the recent past: [[5267|the present perfect]]."
+            },
+            {
+              "forma": "recién llegué",
+              "texto": "Another way to say _just_: [[9554|recién]]."
+            },
+            {
+              "forma": "voy a llegar",
+              "texto": "The other direction in time: [[5086|the near future, ir a]]."
+            },
+            {
+              "forma": "acabé por",
+              "texto": "Ending up doing something: [[6597|acabar por]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I've just arrived._",
+              "r": "Acabo de llegar.",
+              "nota": "Present acabo."
+            },
+            {
+              "p": "In Spanish: _They've just eaten._",
+              "r": "Acaban de comer.",
+              "nota": "acaban de + infinitive."
+            },
+            {
+              "p": "Fix it: _Acabamos de llegado._",
+              "r": "Acabamos de llegar.",
+              "nota": "Infinitive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5267
+    ],
+    "confunde": [
+      9554
+    ],
+    "sigue": [
+      5086,
+      6597
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6508",
+      "kwiziq": true
+    }
+  ]
+}

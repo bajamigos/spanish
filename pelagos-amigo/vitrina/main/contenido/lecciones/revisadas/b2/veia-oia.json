@@ -1,0 +1,186 @@
+{
+  "tema": 8786,
+  "slug": "veia-oia",
+  "titulo": "Ver, oír, oler, sentir in the imperfect = could see, hear, smell, feel",
+  "subtitulo": "No veía nada. No te oía.",
+  "foto": "t04.jpg",
+  "regla": "In the imperfect, perception verbs already mean could see / could hear / could smell / could feel: No veía nada (I couldn't see anything). Poder is possible but less natural. No encontraba = I couldn't find.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "English needs _could_ with senses: _I could see, I couldn't hear_. Spanish uses the perception verb in the **imperfect**, with no **poder**."
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "veía",
+              "texto": "_could see_"
+            },
+            {
+              "forma": "oía / escuchaba",
+              "texto": "_could hear_"
+            },
+            {
+              "forma": "olía",
+              "texto": "_could smell_"
+            },
+            {
+              "forma": "sentía",
+              "texto": "_could feel_"
+            },
+            {
+              "forma": "no encontraba",
+              "texto": "_couldn't find_"
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Podía ver, podía oír** are correct, but sound heavier."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Saber** = _to taste_ works like a description: **la carne sabía salada** (_the meat tasted salty_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: in Spanish, your senses don't need permission."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "—Nos sentamos en la última fila. —¿Y ==veían== bien a los actores?",
+              "en": "—We sat in the last row. —And could you see the actors well?"
+            },
+            {
+              "es": "Tenía el radio prendido pero no ==escuchaba== nada por el ruido de las máquinas.",
+              "en": "I had the radio on, but I couldn't hear anything over the machines."
+            },
+            {
+              "es": "Cuando tenía gripa casi no ==olía== la comida.",
+              "en": "When I had a cold I could barely smell the food."
+            },
+            {
+              "es": "Fue horrible porque no ==sentía== la pierna.",
+              "en": "It was horrible because I couldn't feel my leg."
+            },
+            {
+              "es": "Con el ruido de la calle no te ==oía==.",
+              "en": "With the street noise I couldn't hear you."
+            },
+            {
+              "es": "No ==encontraba== las llaves por ningún lado.",
+              "en": "I couldn't find the keys anywhere."
+            },
+            {
+              "es": "La carne ==sabía== un poco salada.",
+              "en": "The meat tasted a bit salty."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "pesado",
+                  "t": "No podía oír nada."
+                },
+                {
+                  "v": "natural",
+                  "t": "No oía nada."
+                }
+              ],
+              "nota": "Both correct; the second is more natural."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "la vi llegar",
+              "texto": "[[7847|ver, oír + infinitive]]."
+            },
+            {
+              "forma": "podía / pude",
+              "texto": "[[6334|poder]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I couldn't see the stage._",
+              "r": "No veía el escenario.",
+              "nota": "Imperfect, no poder."
+            },
+            {
+              "p": "In Spanish: _We could smell the tacos from the street._",
+              "r": "Olíamos los tacos desde la calle.",
+              "nota": "olíamos."
+            },
+            {
+              "p": "In Spanish: _I couldn't find my phone._",
+              "r": "No encontraba mi celular.",
+              "nota": "no encontraba."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7847
+    ],
+    "confunde": [
+      6334
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8786",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "tema": 7265,
+  "slug": "o-sea-es-decir",
+  "titulo": "Using o sea / es decir to clarify, explain and express a consequence",
+  "subtitulo": "Mañana es lunes, o sea, de vuelta a la rutina.",
+  "foto": "t06.jpg",
+  "regla": "O sea (casual) and es decir (formal) introduce a clarification or a consequence: in other words, that is, so. They never change.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To add an **explanation**, a **clarification** or a **consequence** of what you just said, use **o sea** or **es decir**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Expression",
+            "Register",
+            "Typical meaning"
+          ],
+          "filas": [
+            [
+              "o sea",
+              "casual, very common in speech",
+              "_I mean, so, in other words_"
+            ],
+            [
+              "es decir",
+              "more formal, written",
+              "_that is, i.e._"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Both are fixed: they never change."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**O sea** often brings **que** with it when it introduces a consequence: **o sea, que tengo tiempo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In writing they usually go between commas."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **o sea** is for the taquería, **es decir** for the contract."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mañana es lunes, ==o sea==, de regreso a la rutina.",
+              "en": "Tomorrow is Monday, in other words, back to the routine."
+            },
+            {
+              "es": "Al final salí temprano, ==o sea, que== tengo tiempo para una cerveza.",
+              "en": "In the end I got off early, so I have time for a beer."
+            },
+            {
+              "es": "Vi a Carlos con otra chava, ==o sea, que== le está poniendo el cuerno.",
+              "en": "I saw Carlos with another girl, which means he's cheating on her."
+            },
+            {
+              "es": "Estudiaremos las culturas prehispánicas, ==es decir==, antes de la llegada de Colón.",
+              "en": "We'll study pre-Hispanic cultures, that is, before Columbus arrived."
+            },
+            {
+              "es": "Deben firmar en las dos páginas, ==es decir==, en la página dos y en la cuatro.",
+              "en": "You must sign both pages, that is, pages two and four."
+            },
+            {
+              "es": "El paquete incluye media pensión, ==es decir==, desayuno y cena.",
+              "en": "The package includes half board, that is, breakfast and dinner."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "O sean, tenemos tiempo."
+                },
+                {
+                  "v": "bien",
+                  "t": "O sea, tenemos tiempo."
+                }
+              ],
+              "nota": "**O sea** never changes."
+            },
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "Es decir, firmen aquí."
+                }
+              ],
+              "nota": "In a formal document, **es decir** sounds better than **o sea**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "por un lado… por otro",
+              "texto": "Other connectors: [[8796|on the one hand, on the other]]."
+            },
+            {
+              "forma": "sea",
+              "texto": "**O sea** comes from **ser** in the subjunctive: [[5152|ser in the subjunctive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Casual: _I'm broke, I mean, I can't go._",
+              "r": "Estoy sin dinero, o sea, no puedo ir.",
+              "nota": "o sea."
+            },
+            {
+              "p": "Formal: _Payment is due on the 1st, that is, next Monday._",
+              "r": "El pago vence el día 1, es decir, el próximo lunes.",
+              "nota": "es decir."
+            },
+            {
+              "p": "Which one fits a chat with Beto? **o sea** or **es decir**?",
+              "r": "O sea.",
+              "nota": "Casual."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [],
+    "sigue": [
+      8796
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7265",
+      "kwiziq": true
+    }
+  ]
+}

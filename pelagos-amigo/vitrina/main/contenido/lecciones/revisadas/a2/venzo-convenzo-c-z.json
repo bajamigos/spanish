@@ -1,0 +1,259 @@
+{
+  "tema": 5929,
+  "slug": "venzo-convenzo-c-z",
+  "titulo": "-cer and -cir verbs: c > z in yo",
+  "subtitulo": "Te convenzo. Ejerzo la medicina.",
+  "foto": "t01.jpg",
+  "regla": "In verbs ending in consonant + -cer/-cir (vencer, convencer, ejercer, torcer, esparcir), the c becomes z in the yo form of the present to keep the soft sound: venzo, convenzo, ejerzo. The other forms keep the c.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "In Spanish, **c** sounds soft (like s) before **e** and **i**, but hard (like k) before **o**. In the **yo** form, **-o** would make it sound like k."
+        },
+        {
+          "tipo": "texto",
+          "texto": "So the spelling switches to **z**, which keeps the soft sound: **vencer → venzo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "This happens when a **consonant** comes before **-cer** or **-cir**. **Cocer** is the odd one out: vowel before **-cer**, but still **cuezo**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Infinitive",
+            "yo",
+            "tú"
+          ],
+          "filas": [
+            [
+              "vencer _to beat_",
+              "**venzo**",
+              "vences"
+            ],
+            [
+              "convencer _to convince_",
+              "**convenzo**",
+              "convences"
+            ],
+            [
+              "ejercer _to practice (a profession)_",
+              "**ejerzo**",
+              "ejerces"
+            ],
+            [
+              "torcer _to twist_",
+              "**tuerzo**",
+              "tuerces"
+            ],
+            [
+              "esparcir _to scatter_",
+              "**esparzo**",
+              "esparces"
+            ],
+            [
+              "cocer _to cook, boil_",
+              "**cuezo**",
+              "cueces"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Only **yo** changes. **Tú, él, nosotros, ellos** keep the **c**: **convences, convence, convencemos, convencen**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Torcer** and **cocer** also change **o > ue** like other stem-changers: **tuerzo, tuerces… torcemos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Don't mix it up with **vowel** + **-cer/-cir**, which takes **zc**: **conocer → conozco**, **conducir → conduzco**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Siempre ==venzo== a mi hermano en el jiu-jitsu.",
+              "en": "I always beat my brother at jiu-jitsu."
+            },
+            {
+              "es": "Si no quieres venir, yo te ==convenzo==.",
+              "en": "If you don't want to come, I'll convince you."
+            },
+            {
+              "es": "==Ejerzo== la medicina en Tijuana.",
+              "en": "I practice medicine in Tijuana."
+            },
+            {
+              "es": "Siempre me ==tuerzo== el tobillo en la arena.",
+              "en": "I always twist my ankle in the sand."
+            },
+            {
+              "es": "==Cuezo== los frijoles en la olla de presión.",
+              "en": "I cook the beans in the pressure cooker."
+            },
+            {
+              "es": "==Esparzo== las semillas de cilantro en el huerto.",
+              "en": "I scatter the cilantro seeds in the garden."
+            },
+            {
+              "es": "Tú siempre me ==convences==.",
+              "en": "You always convince me."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo venco el miedo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo venzo el miedo."
+                }
+              ],
+              "nota": "c > z before **o**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Te convenzco."
+                },
+                {
+                  "v": "bien",
+                  "t": "Te convenzo."
+                }
+              ],
+              "nota": "After a consonant: **z**, not **zc**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me torzo el tobillo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me tuerzo el tobillo."
+                }
+              ],
+              "nota": "Also o > ue."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tú me convenzes."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tú me convences."
+                }
+              ],
+              "nota": "Only **yo** changes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "conozco, conduzco",
+              "texto": "Vowel + -cer/-cir: [[5928|c > zc in yo]]."
+            },
+            {
+              "forma": "escojo, dirijo",
+              "texto": "The same idea with g > j: [[7028|-ger and -gir verbs in the present]]."
+            },
+            {
+              "forma": "empecé",
+              "texto": "The reverse spelling change: [[5844|-zar verbs in the preterite]]."
+            },
+            {
+              "forma": "tuerzo, cuezo",
+              "texto": "The stem change: [[5080|-er verbs with o > ue in the present]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I always convince my dad._",
+              "r": "Siempre convenzo a mi papá.",
+              "nota": "convencer → convenzo."
+            },
+            {
+              "p": "In Spanish: _I practice law._",
+              "r": "Ejerzo la abogacía.",
+              "nota": "ejercer → ejerzo."
+            },
+            {
+              "p": "Fix it: _Nosotros venzemos._",
+              "r": "Nosotros vencemos.",
+              "nota": "Only yo has z."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5080
+    ],
+    "confunde": [
+      5928,
+      5844
+    ],
+    "sigue": [
+      7028
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5929",
+      "kwiziq": true
+    }
+  ]
+}

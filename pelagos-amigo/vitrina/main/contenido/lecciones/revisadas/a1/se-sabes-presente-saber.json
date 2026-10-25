@@ -1,0 +1,209 @@
+{
+  "tema": 5590,
+  "slug": "se-sabes-presente-saber",
+  "titulo": "Saber in the present",
+  "subtitulo": "No sé. ¿Tú sabes?",
+  "foto": "t01.jpg",
+  "regla": "Saber (to know facts, to know how to) is regular in the present except yo: sé, sabes, sabe, sabemos, saben. Sé always has an accent.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Saber** (_to know_ a fact, _to know how to_) is irregular only in **yo**: **sé**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Sé** always has an accent, to tell it apart from the pronoun **se**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "saber"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**sé**"
+            ],
+            [
+              "tú",
+              "sabes"
+            ],
+            [
+              "él, ella, usted",
+              "sabe"
+            ],
+            [
+              "nosotros",
+              "sabemos"
+            ],
+            [
+              "ellos, ustedes",
+              "saben"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Saber + infinitive** = _know how to_: **sé nadar**. For people and places use **conocer**: **conozco a Ana**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No ==sé==.",
+              "en": "I don't know."
+            },
+            {
+              "es": "¿==Sabes== nadar?",
+              "en": "Do you know how to swim?"
+            },
+            {
+              "es": "Mi hermana ==sabe== cocinar muy bien.",
+              "en": "My sister knows how to cook really well."
+            },
+            {
+              "es": "==Sabemos== dónde está la playa.",
+              "en": "We know where the beach is."
+            },
+            {
+              "es": "¿Ustedes ==saben== a qué hora abre?",
+              "en": "Do you all know what time it opens?"
+            },
+            {
+              "es": "Ya ==sé== la respuesta.",
+              "en": "I already know the answer."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo sabo la respuesta."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo sé la respuesta."
+                }
+              ],
+              "nota": "yo → **sé**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No se."
+                },
+                {
+                  "v": "bien",
+                  "t": "No sé."
+                }
+              ],
+              "nota": "Without the accent it's the pronoun **se**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Sé a María."
+                },
+                {
+                  "v": "bien",
+                  "t": "Conozco a María."
+                }
+              ],
+              "nota": "People: **conocer**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "conozco",
+              "texto": "Knowing people and places: [[5928|-cer and -cir verbs: c > zc]], [[6865|saber vs conocer]]."
+            },
+            {
+              "forma": "supe",
+              "texto": "Next, the past: [[5253|saber in the preterite]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I know how to surf._",
+              "r": "Sé surfear.",
+              "nota": "saber + infinitive."
+            },
+            {
+              "p": "Fix it: _Yo no se._",
+              "r": "Yo no sé.",
+              "nota": "Accent."
+            },
+            {
+              "p": "In Spanish: _Do they know the address?_",
+              "r": "¿Saben la dirección?",
+              "nota": "ellos → saben."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      5928,
+      6865
+    ],
+    "sigue": [
+      5253
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5590",
+      "kwiziq": true
+    }
+  ]
+}

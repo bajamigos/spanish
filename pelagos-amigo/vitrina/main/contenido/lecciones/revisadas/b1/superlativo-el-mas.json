@@ -1,0 +1,231 @@
+{
+  "tema": 5056,
+  "slug": "superlativo-el-mas",
+  "titulo": "How to say the most / the least + adjective (superlatives)",
+  "subtitulo": "El más alto, la menos cara, los más rápidos de la playa.",
+  "foto": "t01.jpg",
+  "regla": "Superlative: el / la / los / las + más / menos + adjective, agreeing with the noun. In or of = de: el más alto de la clase.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say _the most_ + adjective, or _the -est_ (the tallest, the fastest), use the definite article + **más** + the adjective. For _the least_, use **menos**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**el / la / los / las**",
+            "**más / menos**",
+            "adjective"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "Singular",
+            "Plural"
+          ],
+          "filas": [
+            [
+              "masculine",
+              "el más alto",
+              "los más altos"
+            ],
+            [
+              "feminine",
+              "la más alta",
+              "las más altas"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The article and the adjective **agree** with the noun in gender and number. **Más** and **menos** never change."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The noun can go between the article and **más**: **la playa más bonita**. Or it can be left out when it's clear: **la más bonita**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "_In_ or _of_ after a superlative is **de**: **el más rápido de la playa**, never **en**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: article first, then **más**, then the adjective, and **de** to say where."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Hay muchas playas bonitas, pero para mí ==la más bonita== es Baja Malibú.",
+              "en": "There are lots of pretty beaches, but for me the prettiest is Baja Malibu."
+            },
+            {
+              "es": "En mi familia, yo soy ==el más flojo==.",
+              "en": "In my family, I'm the laziest."
+            },
+            {
+              "es": "==Los más ricos== compran carros carísimos.",
+              "en": "The richest people buy very expensive cars."
+            },
+            {
+              "es": "Beto es ==el más guapo de== la clase.",
+              "en": "Beto is the best-looking guy in the class."
+            },
+            {
+              "es": "Naomi es ==la más lista de== la tripulación.",
+              "en": "Naomi is the smartest on the crew."
+            },
+            {
+              "es": "Estos tacos son ==los menos picosos==.",
+              "en": "These tacos are the least spicy."
+            },
+            {
+              "es": "Las manzanas rojas son ==las más dulces==.",
+              "en": "Red apples are the sweetest."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es el más rápido en el equipo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es el más rápido del equipo."
+                }
+              ],
+              "nota": "_In_ = **de** after a superlative."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Son las más alto."
+                },
+                {
+                  "v": "bien",
+                  "t": "Son las más altas."
+                }
+              ],
+              "nota": "The adjective agrees."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es el más bueno."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es el mejor."
+                }
+              ],
+              "nota": "For _the best_ (quality), use **el mejor**; **el más bueno** only means _the kindest_. See [[7066|irregular superlatives]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el mejor, el peor",
+              "texto": "Irregular forms: [[7066|mejor, peor, mayor, menor]]."
+            },
+            {
+              "forma": "altísimo",
+              "texto": "_Extremely_ tall: [[6077|-ísimo]]."
+            },
+            {
+              "forma": "tan alto como",
+              "texto": "Equal comparisons: [[5116|tan … como]], [[7085|igual de … que]]."
+            },
+            {
+              "forma": "más alto que",
+              "texto": "Comparing two things: **más … que**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _She's the fastest on the team._",
+              "r": "Es la más rápida del equipo.",
+              "nota": "la más + adjective + de."
+            },
+            {
+              "p": "In Spanish: _These are the least expensive boards._",
+              "r": "Estas son las tablas menos caras.",
+              "nota": "menos + adjective, agreeing."
+            },
+            {
+              "p": "Fix it: **Es el más alto en su familia.**",
+              "r": "Es el más alto de su familia.",
+              "nota": "**de**, not **en**."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5116
+    ],
+    "confunde": [
+      7066
+    ],
+    "sigue": [
+      7066,
+      6077,
+      7085
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5056",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "tema": 7899,
+  "slug": "ir-a-para-finalidad",
+  "titulo": "Ir, salir, venir + a + infinitive = to (purpose)",
+  "subtitulo": "Salí a correr. Vengo a hablar con el gerente.",
+  "foto": "t05.jpg",
+  "regla": "With movement verbs (ir, salir, venir, bajar, subir, volver...) purpose can be expressed with a instead of para: Fui a su casa a hablar con él. Static verbs need para: Estoy aquí para verte. A que + subjunctive also works: Fui al doctor a que me revisara.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "ir / salir / venir / ...",
+            "+ a",
+            "+ infinitive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "After a **movement** verb, **a** = _to, in order to_, just like **para**: **fui a la tienda a comprar pan**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**No movement, no a**: **estoy aquí para verte**, not ~~a verte~~."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With another subject: **a que** + subjunctive: **vine a que me firmaras esto**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if you're walking somewhere, **a** can carry the purpose."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Fui a su casa ==a hablar== con él.",
+              "en": "I went to his house to talk to him."
+            },
+            {
+              "es": "Salimos ==a tomar== aire.",
+              "en": "We went out to get some fresh air."
+            },
+            {
+              "es": "Javier no está; ==salió a correr==.",
+              "en": "Javier isn't home; he went out for a run."
+            },
+            {
+              "es": "==Vengo a hablar== con el licenciado Ramírez. Tengo cita.",
+              "en": "I'm here to see Mr. Ramírez. I have an appointment."
+            },
+            {
+              "es": "Tú nada más ==viniste a empeorar== las cosas.",
+              "en": "You only came to make things worse."
+            },
+            {
+              "es": "Fui al doctor ==a que me revisara== la garganta.",
+              "en": "I went to the doctor to have my throat checked."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estoy aquí a verte."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estoy aquí para verte."
+                }
+              ],
+              "nota": "**Estar** isn't movement."
+            },
+            {
+              "filas": [
+                {
+                  "v": "a",
+                  "t": "Vine a verte."
+                },
+                {
+                  "v": "para",
+                  "t": "Vine para verte."
+                }
+              ],
+              "nota": "Both fine with movement."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "para",
+              "texto": "[[5970|para for purpose]]."
+            },
+            {
+              "forma": "ir a + infinitive",
+              "texto": "Careful: **voy a comer** can also be the future; context decides."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _She went out to buy bread._",
+              "r": "Salió a comprar pan.",
+              "nota": "Movement + a."
+            },
+            {
+              "p": "In Spanish: _I'm here to help._",
+              "r": "Estoy aquí para ayudar.",
+              "nota": "No movement: para."
+            },
+            {
+              "p": "In Spanish: _I came to have you sign this._",
+              "r": "Vine a que me firmaras esto.",
+              "nota": "a que + subjunctive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5970
+    ],
+    "confunde": [],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7899",
+      "kwiziq": true
+    }
+  ]
+}

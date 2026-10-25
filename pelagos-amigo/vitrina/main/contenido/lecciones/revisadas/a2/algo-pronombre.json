@@ -1,0 +1,214 @@
+{
+  "tema": 6230,
+  "slug": "algo-pronombre",
+  "titulo": "Algo: something, anything",
+  "subtitulo": "¿Quieres algo?",
+  "foto": "t08.jpg",
+  "regla": "Algo means something, and anything in questions. It never changes form, and an adjective after it is masculine singular: algo rico. In negative sentences use nada instead: no quiero nada.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Algo** = _something_. In questions it also means _anything_: ¿Necesitas **algo**? (_Do you need anything?_)"
+        },
+        {
+          "tipo": "texto",
+          "texto": "It **never changes**: no plural, no feminine. The verb is singular: **Algo** pasó."
+        },
+        {
+          "tipo": "texto",
+          "texto": "An adjective after it is **masculine singular**: **algo rico**, **algo nuevo**, **algo diferente**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "algo",
+            "+ de +",
+            "infinitive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Algo de comer**, **algo de tomar** = _something to eat, to drink_. **Algo más** = _something else, anything else_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In a **negative** sentence, _anything_ is **nada**: _I don't want anything_ = **No quiero nada**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **algo** is a closed box. You know something is inside, not what."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿Quieres ==algo== de tomar?",
+              "en": "Do you want something to drink?"
+            },
+            {
+              "es": "Tengo ==algo== para ti.",
+              "en": "I have something for you."
+            },
+            {
+              "es": "¿Pasó ==algo==? Te ves preocupado.",
+              "en": "Did something happen? You look worried."
+            },
+            {
+              "es": "Vamos a comer ==algo== rico después de surfear.",
+              "en": "Let's eat something tasty after surfing."
+            },
+            {
+              "es": "¿Les traigo ==algo== más?",
+              "en": "Can I bring you anything else?"
+            },
+            {
+              "es": "Quiero aprender ==algo== nuevo este año.",
+              "en": "I want to learn something new this year."
+            },
+            {
+              "es": "Hay ==algo== raro en este cuarto.",
+              "en": "There's something weird in this room."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No quiero algo."
+                },
+                {
+                  "v": "bien",
+                  "t": "No quiero nada."
+                }
+              ],
+              "nota": "Negative → **nada**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero algo rica."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero algo rico."
+                }
+              ],
+              "nota": "Always masculine singular."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Quieres algo otro?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Quieres algo más?"
+                }
+              ],
+              "nota": "_Something else_ = **algo más**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "nada",
+              "texto": "The negative partner: [[6144|nada]]."
+            },
+            {
+              "forma": "alguien",
+              "texto": "For people: [[6311|alguien]]."
+            },
+            {
+              "forma": "algún libro",
+              "texto": "Some / any + noun: [[6136|algún, alguna]]."
+            },
+            {
+              "forma": "no + verb",
+              "texto": "Negation basics: [[5091|negative sentences with no]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Do you want something to drink?_",
+              "r": "¿Quieres algo de tomar?",
+              "nota": "algo de + infinitive."
+            },
+            {
+              "p": "In Spanish: _I want to eat something different._",
+              "r": "Quiero comer algo diferente.",
+              "nota": "Masculine adjective."
+            },
+            {
+              "p": "Fix it: _No necesito algo._",
+              "r": "No necesito nada.",
+              "nota": "Negative → nada."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5091
+    ],
+    "confunde": [
+      6136
+    ],
+    "sigue": [
+      6144,
+      6311
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6230",
+      "kwiziq": true
+    }
+  ]
+}

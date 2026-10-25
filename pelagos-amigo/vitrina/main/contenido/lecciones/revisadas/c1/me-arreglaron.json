@@ -1,0 +1,190 @@
+{
+  "tema": 8149,
+  "slug": "me-arreglaron",
+  "titulo": "Me arreglaron el carro: ellos form + indirect pronoun to have something done (to you)",
+  "subtitulo": "Ayer me sacaron una muela. Me robaron la cartera.",
+  "foto": "t06.jpg",
+  "regla": "Indirect pronoun + verb in the ellos form (no subject) = something was done to you or for you: Me sacaron una muela (I had a tooth pulled). Me robaron el celular (I had my phone stolen). English often uses have something done or the passive.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "me / te / le / nos / les",
+            "+ verb (ellos form)",
+            "+ thing"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**They** is impersonal: whoever did it doesn't matter. The pronoun shows **who it affected**."
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "a service",
+              "texto": "**Me arreglaron el carro.** (_I had my car fixed._)"
+            },
+            {
+              "forma": "something bad",
+              "texto": "**Me robaron la cartera.** (_I had my wallet stolen. / My wallet got stolen._)"
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **me** + **-aron** = it happened to me."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Le arreglaron== todas las imperfecciones de la cara.",
+              "en": "She had all the blemishes on her face fixed."
+            },
+            {
+              "es": "Ayer ==me sacaron== una muela.",
+              "en": "Yesterday I had a tooth pulled."
+            },
+            {
+              "es": "==Le diseñaron== el vestido a su gusto.",
+              "en": "She had the dress designed to her taste."
+            },
+            {
+              "es": "¿==Te van a reparar== la falla pronto?",
+              "en": "Are you getting the problem fixed soon?"
+            },
+            {
+              "es": "==Me robaron== todas las joyas.",
+              "en": "I had all my jewelry stolen."
+            },
+            {
+              "es": "Pobre Pedro, ==le rompieron== el corazón.",
+              "en": "Poor Pedro, he got his heart broken."
+            },
+            {
+              "es": "En el partido solo ==me pasaron== el balón una vez.",
+              "en": "In the game I only got passed the ball once."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tuve mi muela sacada."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me sacaron una muela."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me robó la cartera. (unknown thief)"
+                },
+                {
+                  "v": "bien",
+                  "t": "Me robaron la cartera."
+                }
+              ],
+              "nota": "Unknown doer: **ellos** form."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "dicen que",
+              "texto": "[[6998|impersonal ellos]]."
+            },
+            {
+              "forma": "mandar hacer",
+              "texto": "[[8146|mandar + infinitive]]."
+            },
+            {
+              "forma": "me corté el pelo",
+              "texto": "[[8040|beauty and body]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I had my bike stolen._",
+              "r": "Me robaron la bici.",
+              "nota": "me + ellos form."
+            },
+            {
+              "p": "In Spanish: _She had her hair dyed._ (they did it)",
+              "r": "Le pintaron el pelo.",
+              "nota": "le + ellos form."
+            },
+            {
+              "p": "In Spanish: _We got our flight canceled._",
+              "r": "Nos cancelaron el vuelo.",
+              "nota": "nos + ellos form."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6998
+    ],
+    "confunde": [
+      8146
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8149",
+      "kwiziq": true
+    }
+  ]
+}

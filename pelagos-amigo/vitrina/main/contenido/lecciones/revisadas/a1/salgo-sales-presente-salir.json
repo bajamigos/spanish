@@ -1,0 +1,215 @@
+{
+  "tema": 5484,
+  "slug": "salgo-sales-presente-salir",
+  "titulo": "Salir in the present",
+  "subtitulo": "Salgo a las siete, ¿y tú?",
+  "foto": "t04.jpg",
+  "regla": "Salir (to leave, to go out) is regular in the present except yo: salgo. The rest: sales, sale, salimos, salen.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Salir** means _to leave_ or _to go out_. Only **yo** is irregular: **salgo**, with a **g**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Present"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**salgo**"
+            ],
+            [
+              "tú",
+              "sales"
+            ],
+            [
+              "él / ella / usted",
+              "sale"
+            ],
+            [
+              "nosotros / nosotras",
+              "salimos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "salen"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The other forms follow the regular **-ir** pattern: **salimos**, never _salemos_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Leaving a place takes **de**: **salgo de** la casa. Going out with someone: **salir con**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Salgo== de la casa a las seis para surfear.",
+              "en": "I leave the house at six to go surfing."
+            },
+            {
+              "es": "¿A qué hora ==sales== del trabajo?",
+              "en": "What time do you get off work?"
+            },
+            {
+              "es": "El camión ==sale== de la central a las ocho.",
+              "en": "The bus leaves the station at eight."
+            },
+            {
+              "es": "Los viernes ==salimos== a cenar tacos.",
+              "en": "On Fridays we go out for tacos."
+            },
+            {
+              "es": "Mis amigos ==salen== mucho a los antros.",
+              "en": "My friends go out to clubs a lot."
+            },
+            {
+              "es": "¿==Sales== con alguien?",
+              "en": "Are you seeing someone?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo salo temprano."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo salgo temprano."
+                }
+              ],
+              "nota": "Yo is **salgo**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros salemos el sábado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros salimos el sábado."
+                }
+              ],
+              "nota": "Regular -ir ending: **-imos**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Salgo la oficina a las cinco."
+                },
+                {
+                  "v": "bien",
+                  "t": "Salgo de la oficina a las cinco."
+                }
+              ],
+              "nota": "Leaving a place needs **de**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "pongo, hago",
+              "texto": "Other verbs with a **g** in yo: [[5305|poner]], [[5708|hacer]]."
+            },
+            {
+              "forma": "vivimos",
+              "texto": "The regular pattern: [[5108|regular -ir verbs]]."
+            },
+            {
+              "forma": "saldré",
+              "texto": "Next tenses: [[5160|salir in the future]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I go out on Saturdays._",
+              "r": "Salgo los sábados.",
+              "nota": "yo = salgo."
+            },
+            {
+              "p": "In Spanish: _We leave school at two._",
+              "r": "Salimos de la escuela a las dos.",
+              "nota": "salimos + de."
+            },
+            {
+              "p": "Fix it: _Ellos salgan a las nueve._",
+              "r": "Ellos salen a las nueve.",
+              "nota": "salen."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5108
+    ],
+    "confunde": [
+      5305,
+      5708
+    ],
+    "sigue": [
+      5160
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5484",
+      "kwiziq": true
+    }
+  ]
+}

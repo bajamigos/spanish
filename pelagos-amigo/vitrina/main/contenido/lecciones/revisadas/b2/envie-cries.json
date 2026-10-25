@@ -1,0 +1,230 @@
+{
+  "tema": 8952,
+  "slug": "envie-cries",
+  "titulo": "Present subjunctive: -iar verbs with an accent (enviar, criar, fotografiar)",
+  "subtitulo": "Envíe, críes, fotografíen.",
+  "foto": "t03.jpg",
+  "regla": "Most -iar verbs are regular (cambie, estudie). A group stresses the i and writes it í in the present subjunctive, except nosotros: envíe, envíes, envíe, enviemos, envíen. Also criar, fotografiar, confiar, guiar, vaciar, esquiar.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Two groups of **-iar** verbs:"
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "regular, no accent",
+              "texto": "**cambiar → cambie**, **estudiar → estudie**, **copiar → copie**."
+            },
+            {
+              "forma": "stressed í",
+              "texto": "**enviar → envíe**, **criar → críe**, **fotografiar → fotografíe**, **confiar → confíe**, **vaciar → vacíe**, **esquiar → esquíe**, **guiar → guíe**."
+            }
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "enviar",
+            "criar",
+            "fotografiar"
+          ],
+          "filas": [
+            [
+              "yo",
+              "envíe",
+              "críe",
+              "fotografíe"
+            ],
+            [
+              "tú",
+              "envíes",
+              "críes",
+              "fotografíes"
+            ],
+            [
+              "él, ella, usted",
+              "envíe",
+              "críe",
+              "fotografíe"
+            ],
+            [
+              "nosotros",
+              "enviemos",
+              "criemos",
+              "fotografiemos"
+            ],
+            [
+              "ustedes, ellos",
+              "envíen",
+              "críen",
+              "fotografíen"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "How to know which group: check the present: **envío** (accent) vs **cambio** (no accent)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if the yo present has **í**, the subjunctive keeps it."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Cuando ==envíes== el paquete, guarda el recibo.",
+              "en": "When you send the package, keep the receipt."
+            },
+            {
+              "es": "Mi esposo quiere que ==criemos== conejos en el rancho.",
+              "en": "My husband wants us to raise rabbits on the ranch."
+            },
+            {
+              "es": "Espero que nos ==fotografíe== bien en la boda.",
+              "en": "I hope she photographs us well at the wedding."
+            },
+            {
+              "es": "No ==confíes== en él.",
+              "en": "Don't trust him."
+            },
+            {
+              "es": "Es mejor que ==vacíen== el refri antes de irse.",
+              "en": "It's better if you empty the fridge before you leave."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "envie (yo)"
+                },
+                {
+                  "v": "bien",
+                  "t": "envíe"
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "cambíe"
+                },
+                {
+                  "v": "bien",
+                  "t": "cambie"
+                }
+              ],
+              "nota": "**Cambiar** is regular."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "envíemos"
+                },
+                {
+                  "v": "bien",
+                  "t": "enviemos"
+                }
+              ],
+              "nota": "No accent in nosotros."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "actúe",
+              "texto": "[[8944|-uar verbs]]."
+            },
+            {
+              "forma": "criar",
+              "texto": "[[10757|crear, creer, criar]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Conjugate: _tú / enviar_ (subjunctive)",
+              "r": "envíes",
+              "nota": "í."
+            },
+            {
+              "p": "Conjugate: _yo / estudiar_ (subjunctive)",
+              "r": "estudie",
+              "nota": "Regular."
+            },
+            {
+              "p": "Complete: _No quiero que ellos ___ (esquiar) solos._",
+              "r": "esquíen",
+              "nota": "í."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5063
+    ],
+    "confunde": [
+      8944
+    ],
+    "sigue": [
+      10757
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8952",
+      "kwiziq": true
+    }
+  ]
+}

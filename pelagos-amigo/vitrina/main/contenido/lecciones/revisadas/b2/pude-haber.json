@@ -1,0 +1,213 @@
+{
+  "tema": 6470,
+  "slug": "pude-haber",
+  "titulo": "Poder + haber + participle = could have done",
+  "subtitulo": "Pudiste haberme avisado. Podríamos haber ido.",
+  "foto": "t09.jpg",
+  "regla": "Could have done = pude / podía / podría + haber + participle. All three mean the same: there was a chance, and it didn't happen.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "_Could have [done]_ is a missed chance in the past. Spanish has **three** forms, and they're interchangeable:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Form",
+            "Example"
+          ],
+          "filas": [
+            [
+              "preterite: pude + haber + participle",
+              "Pudo haber ido."
+            ],
+            [
+              "imperfect: podía + haber + participle",
+              "Podía haber ido."
+            ],
+            [
+              "conditional: podría + haber + participle",
+              "Podría haber ido."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Only **poder** is conjugated. **Haber** stays in the infinitive, followed by the participle."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Pronouns go in front of **poder** or attached to **haber**: **me podrías haber avisado** = **podrías haberme avisado**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **poder** + **haber**: you were able to, but you didn't."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Gabriela ==pudo haber ido== a la UNAM, pero no fue.",
+              "en": "Gabriela could have gone to UNAM, but she didn't."
+            },
+            {
+              "es": "Gabriela ==podía haber ido== a la UNAM, pero no fue.",
+              "en": "Gabriela could have gone to UNAM, but she didn't."
+            },
+            {
+              "es": "Gabriela ==podría haber ido== a la UNAM, pero no fue.",
+              "en": "Gabriela could have gone to UNAM, but she didn't."
+            },
+            {
+              "es": "Me ==podrías haber avisado== para ir por ti a la central.",
+              "en": "You could have told me, so I could pick you up at the bus station."
+            },
+            {
+              "es": "==Pudimos haber ido== a la playa en lugar de a la sierra.",
+              "en": "We could have gone to the beach instead of the mountains."
+            },
+            {
+              "es": "==Podrían haber organizado== mejor el viaje; fue un desastre.",
+              "en": "They could have planned the trip better; it was a disaster."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Pude ido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Pude haber ido."
+                }
+              ],
+              "nota": "Don't forget **haber**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Podrías habido avisarme."
+                },
+                {
+                  "v": "bien",
+                  "t": "Podrías haberme avisado."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "pudo",
+                  "t": "Pudo abrir la puerta."
+                },
+                {
+                  "v": "pudo haber",
+                  "t": "Pudo haber abierto la puerta."
+                }
+              ],
+              "nota": "_He managed to open it_ vs _he could have opened it_."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "pude / podía",
+              "texto": "[[6334|poder in the preterite vs imperfect]]."
+            },
+            {
+              "forma": "debería haber",
+              "texto": "_Should have_: [[5054|deber + haber]]."
+            },
+            {
+              "forma": "habría ido",
+              "texto": "_Would have_: [[6992|haber for would have]]."
+            },
+            {
+              "forma": "haber + participle",
+              "texto": "[[7262|perfect infinitive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _You could have called me._ (tú)",
+              "r": "Podrías haberme llamado. / Me podrías haber llamado.",
+              "nota": "Any of the three tenses."
+            },
+            {
+              "p": "In Spanish: _We could have won._",
+              "r": "Pudimos haber ganado. / Podríamos haber ganado.",
+              "nota": "poder + haber + participle."
+            },
+            {
+              "p": "Fix it: _Podía habido ir._",
+              "r": "Podía haber ido.",
+              "nota": "haber + participle."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6334
+    ],
+    "confunde": [
+      5054
+    ],
+    "sigue": [
+      6992
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6470",
+      "kwiziq": true
+    }
+  ]
+}

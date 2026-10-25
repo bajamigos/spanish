@@ -1,0 +1,254 @@
+{
+  "tema": 6004,
+  "slug": "preterito-acciones-terminadas",
+  "titulo": "The preterite for completed actions",
+  "subtitulo": "Ayer surfeé dos horas.",
+  "foto": "t04.jpg",
+  "regla": "Use the preterite for actions that happened and finished in the past: at a specific moment, in a closed period, or as a series of events. Markers like ayer, anoche, el lunes, el año pasado and hace dos días call for it.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "The **preterite** (_pretérito indefinido_) tells **what happened**: an action seen as **finished**, with a beginning and an end."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It goes with time markers that point to a **closed moment** in the past:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Marker",
+            "Example"
+          ],
+          "filas": [
+            [
+              "**ayer**, **anoche**, **anteayer**",
+              "Anoche cené tacos."
+            ],
+            [
+              "**el lunes**, **el fin de semana**",
+              "El lunes fui al doctor."
+            ],
+            [
+              "**la semana pasada**, **el año pasado**",
+              "El año pasado viajé a Oaxaca."
+            ],
+            [
+              "**en 2020**, **en marzo**",
+              "En 2020 empecé a entrenar."
+            ],
+            [
+              "**hace** + time",
+              "Hace dos días llovió."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "A **closed period**, even a long one, also takes the preterite: **Viví en Ensenada cinco años** (and it's over)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "A **series** of events, one after another: **Me levanté, desayuné y salí.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "In Mexico the preterite is also the normal way to talk about things that just happened: **¿Ya comiste?**, **Hoy me levanté temprano.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the preterite is a photo with a date stamp. It happened, it's done."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ayer ==surfeé== dos horas en Playas.",
+              "en": "Yesterday I surfed for two hours at Playas."
+            },
+            {
+              "es": "Anoche ==vimos== una película en casa.",
+              "en": "Last night we watched a movie at home."
+            },
+            {
+              "es": "El año pasado mi hermana ==se mudó== a Mexicali.",
+              "en": "Last year my sister moved to Mexicali."
+            },
+            {
+              "es": "==Viví== en San Diego tres años.",
+              "en": "I lived in San Diego for three years."
+            },
+            {
+              "es": "El lunes ==sembré== jitomates y cilantro en el huerto.",
+              "en": "On Monday I planted tomatoes and cilantro in the garden."
+            },
+            {
+              "es": "==Llegué== a casa, ==me bañé== y ==me dormí==.",
+              "en": "I got home, took a shower and fell asleep."
+            },
+            {
+              "es": "Hace dos semanas ==gané== mi primera pelea de jiu-jitsu.",
+              "en": "Two weeks ago I won my first jiu-jitsu match."
+            },
+            {
+              "es": "¿Ya ==comiste==?",
+              "en": "Have you eaten yet?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer comía tacos de pescado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer comí tacos de pescado."
+                }
+              ],
+              "nota": "One finished event: preterite."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Anoche he dormido mal."
+                },
+                {
+                  "v": "bien",
+                  "t": "Anoche dormí mal."
+                }
+              ],
+              "nota": "With **ayer** or **anoche**, use the preterite."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Vivía en Ensenada cinco años."
+                },
+                {
+                  "v": "bien",
+                  "t": "Viví en Ensenada cinco años."
+                }
+              ],
+              "nota": "A closed period with a length: preterite."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cuando era niño, fui a la playa cada domingo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cuando era niño, iba a la playa cada domingo."
+                }
+              ],
+              "nota": "Repeated habits take the imperfect."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hablé, comí",
+              "texto": "The forms: [[5109|-ar verbs]] and [[5230|-er and -ir verbs]] in the preterite."
+            },
+            {
+              "forma": "iba, era",
+              "texto": "The other past: [[5111|the imperfect for habits]] and [[6002|for descriptions]]."
+            },
+            {
+              "forma": "hace dos años",
+              "texto": "Saying when: [[7063|hace for ago]]."
+            },
+            {
+              "forma": "ya comí",
+              "texto": "Already done: [[9263|ya with the preterite]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Last night I slept eight hours._",
+              "r": "Anoche dormí ocho horas.",
+              "nota": "Finished: preterite."
+            },
+            {
+              "p": "In Spanish: _We lived in Rosarito for two years._",
+              "r": "Vivimos en Rosarito dos años.",
+              "nota": "Closed period."
+            },
+            {
+              "p": "Fix it: _Ayer compraba un libro._",
+              "r": "Ayer compré un libro.",
+              "nota": "One event: compré."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5109,
+      5230
+    ],
+    "confunde": [
+      5111,
+      6002
+    ],
+    "sigue": [
+      7063,
+      9263
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6004",
+      "kwiziq": true
+    }
+  ]
+}

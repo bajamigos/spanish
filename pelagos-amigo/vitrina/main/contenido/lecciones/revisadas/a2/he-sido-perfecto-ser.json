@@ -1,0 +1,265 @@
+{
+  "tema": 7055,
+  "slug": "he-sido-perfecto-ser",
+  "titulo": "Ser in the present perfect",
+  "subtitulo": "Hoy ha sido un día muy largo.",
+  "foto": "t10.jpg",
+  "regla": "Ser in the present perfect is haber in the present + sido: he sido, has sido, ha sido, hemos sido, han sido. Sido never changes. For been somewhere or a temporary state, use estado (from estar).",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Build it with **haber** in the present + **sido**. **Sido** is regular and never changes."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "he / has / ha / hemos / han",
+            "+",
+            "sido"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Ser"
+          ],
+          "filas": [
+            [
+              "yo",
+              "he sido"
+            ],
+            [
+              "tú",
+              "has sido"
+            ],
+            [
+              "él, ella, usted",
+              "ha sido"
+            ],
+            [
+              "nosotros, nosotras",
+              "hemos sido"
+            ],
+            [
+              "ellos, ellas, ustedes",
+              "han sido"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The adjective after it agrees, **sido** doesn't: **la semana ha sido difícil**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "English _been_ is not always **sido**. The usual **ser** / **estar** rules still apply:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Meaning",
+            "Spanish"
+          ],
+          "filas": [
+            [
+              "_been_ + identity, character, relationship",
+              "**he sido** amigo, **ha sido** difícil"
+            ],
+            [
+              "_been_ somewhere",
+              "**he estado** en Ensenada"
+            ],
+            [
+              "_been_ + temporary state",
+              "**he estado** cansado"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Hoy ==ha sido== un día muy largo.",
+              "en": "Today has been a very long day."
+            },
+            {
+              "es": "Siempre ==has sido== muy buena onda conmigo.",
+              "en": "You've always been really nice to me."
+            },
+            {
+              "es": "Nunca ==he sido== bueno para cocinar.",
+              "en": "I've never been good at cooking."
+            },
+            {
+              "es": "==Hemos sido== amigos desde la prepa.",
+              "en": "We've been friends since high school."
+            },
+            {
+              "es": "Las olas de este mes ==han sido== increíbles.",
+              "en": "The waves this month have been amazing."
+            },
+            {
+              "es": "¿Cómo ==ha sido== tu primera semana en el trabajo?",
+              "en": "How has your first week at work been?"
+            },
+            {
+              "es": "Ustedes ==han sido== muy pacientes conmigo.",
+              "en": "You all have been very patient with me."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nunca he sido en Ensenada."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nunca he estado en Ensenada."
+                }
+              ],
+              "nota": "Been somewhere = **estado**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "He sido cansado toda la semana."
+                },
+                {
+                  "v": "bien",
+                  "t": "He estado cansado toda la semana."
+                }
+              ],
+              "nota": "Temporary state: **estado**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Esta semana ha sida difícil."
+                },
+                {
+                  "v": "bien",
+                  "t": "Esta semana ha sido difícil."
+                }
+              ],
+              "nota": "**Sido** never agrees."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hemos estado amigos desde niños."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hemos sido amigos desde niños."
+                }
+              ],
+              "nota": "Relationships take **ser**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "soy",
+              "texto": "The present: [[5070|ser in the present]]."
+            },
+            {
+              "forma": "he trabajado",
+              "texto": "How the tense works: [[5267|regular -ar verbs in the present perfect]]."
+            },
+            {
+              "forma": "fui",
+              "texto": "The simple past: [[5107|ir and ser in the preterite]]."
+            },
+            {
+              "forma": "he sido vs fui",
+              "texto": "Which one to pick: [[9261|perfect vs simple past]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _It has been a good year._",
+              "r": "Ha sido un buen año.",
+              "nota": "ha sido."
+            },
+            {
+              "p": "In Spanish, with estar: _I've never been to Mexico City._",
+              "r": "Nunca he estado en la Ciudad de México.",
+              "nota": "Somewhere: estado."
+            },
+            {
+              "p": "Fix it: _Ellas han sidas muy amables._",
+              "r": "Ellas han sido muy amables.",
+              "nota": "sido never changes."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5070,
+      5267
+    ],
+    "confunde": [
+      5107
+    ],
+    "sigue": [
+      9261
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7055",
+      "kwiziq": true
+    }
+  ]
+}

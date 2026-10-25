@@ -1,0 +1,218 @@
+{
+  "tema": 5067,
+  "slug": "estar-ubicacion-donde-esta",
+  "titulo": "Estar for location",
+  "subtitulo": "«¿Dónde está el baño?»",
+  "foto": "t04.jpg",
+  "regla": "To say where a person, a thing or a place is, use estar, never ser: ¿Dónde está el baño? Tijuana está en Baja California.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say **where** someone or something **is**, use **estar**, not ser."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Estar",
+            "Example"
+          ],
+          "filas": [
+            [
+              "yo",
+              "estoy",
+              "Estoy en la playa."
+            ],
+            [
+              "tú",
+              "estás",
+              "¿Dónde estás?"
+            ],
+            [
+              "él / ella / usted",
+              "está",
+              "Está en la cocina."
+            ],
+            [
+              "nosotros",
+              "estamos",
+              "Estamos en casa."
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "están",
+              "Están en el gimnasio."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Cities and countries too: **Tijuana está en Baja California**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **estar** is for _how_ you are and _where_ you are."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿Dónde ==está== el baño?",
+              "en": "Where's the bathroom?"
+            },
+            {
+              "es": "==Estoy== en la playa con mis amigos.",
+              "en": "I'm at the beach with my friends."
+            },
+            {
+              "es": "Tijuana ==está== en la frontera con Estados Unidos.",
+              "en": "Tijuana is on the border with the United States."
+            },
+            {
+              "es": "Las llaves ==están== en la mesa.",
+              "en": "The keys are on the table."
+            },
+            {
+              "es": "==Estamos== cerca del gimnasio.",
+              "en": "We're near the gym."
+            },
+            {
+              "es": "¿Dónde ==están== ustedes?",
+              "en": "Where are you all?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Soy en la playa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estoy en la playa."
+                }
+              ],
+              "nota": "Where you are: **estar**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Las llaves son en la mesa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Las llaves están en la mesa."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tijuana es en Baja California."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tijuana está en Baja California."
+                }
+              ],
+              "nota": "Places too."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "estoy, estás, está",
+              "texto": "All of estar: [[5166|estar in the present]]."
+            },
+            {
+              "forma": "hay un baño",
+              "texto": "_There is_ vs _it is (there)_: [[7036|hay vs está]]."
+            },
+            {
+              "forma": "la fiesta es en…",
+              "texto": "Events take ser: [[5979|ser for where events take place]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Where is the supermarket?_",
+              "r": "¿Dónde está el supermercado?",
+              "nota": "Location: está."
+            },
+            {
+              "p": "Fix it: _Mis papás son en Ensenada._",
+              "r": "Mis papás están en Ensenada.",
+              "nota": "estar, not ser."
+            },
+            {
+              "p": "In Spanish: _We're at the gym._",
+              "r": "Estamos en el gimnasio.",
+              "nota": "estamos."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5166
+    ],
+    "confunde": [
+      7036,
+      5979
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5067",
+      "kwiziq": true
+    }
+  ]
+}

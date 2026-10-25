@@ -1,0 +1,260 @@
+{
+  "tema": 6870,
+  "slug": "a-personal-ver-conocer",
+  "titulo": "The personal a",
+  "subtitulo": "Veo a Beto, pero veo el mar.",
+  "foto": "t09.jpg",
+  "regla": "When the direct object of a verb like ver, visitar, buscar or conocer is a specific person (or a pet), put a before it: veo a Beto, conozco a Naomi. No a before things or places.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "When a **specific person** receives the action of the verb, Spanish puts **a** before that person. English has nothing there."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "verb",
+            "+ a +",
+            "person"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Verb",
+            "Person: a",
+            "Thing or place: no a"
+          ],
+          "filas": [
+            [
+              "ver",
+              "Veo a Beto.",
+              "Veo el mar."
+            ],
+            [
+              "visitar",
+              "Visito a mi abuela.",
+              "Visito Ensenada."
+            ],
+            [
+              "buscar",
+              "Busco a mi hermana.",
+              "Busco las llaves."
+            ],
+            [
+              "conocer",
+              "Conozco a tu primo.",
+              "Conozco Rosarito."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**A + el = al**: **busco al profesor**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It also goes before **alguien** and **nadie**: **¿Ves a alguien?**, **no conozco a nadie**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Pets you love get it too: **paseo a mi perro**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "After **tener** there's normally no a: **tengo dos hermanos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the **a** is a handshake. You give it to people, not to things."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Veo a== Beto todos los domingos en la playa.",
+              "en": "I see Beto every Sunday at the beach."
+            },
+            {
+              "es": "Este fin de semana ==visitamos a== mi abuela en Tecate.",
+              "en": "This weekend we're visiting my grandma in Tecate."
+            },
+            {
+              "es": "¿==Conoces a== Naomi? Es mi compañera de jiu-jitsu.",
+              "en": "Do you know Naomi? She trains jiu-jitsu with me."
+            },
+            {
+              "es": "==Busco a== mi hermano. ¿Lo has visto?",
+              "en": "I'm looking for my brother. Have you seen him?"
+            },
+            {
+              "es": "==Busco al== profesor de surf.",
+              "en": "I'm looking for the surf instructor."
+            },
+            {
+              "es": "No ==conozco a== nadie en esta fiesta.",
+              "en": "I don't know anybody at this party."
+            },
+            {
+              "es": "¿==Ves a== alguien en el agua?",
+              "en": "Do you see anyone in the water?"
+            },
+            {
+              "es": "Saco ==a== mi perro a caminar en la mañana.",
+              "en": "I take my dog for a walk in the morning."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Veo Beto los domingos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Veo a Beto los domingos."
+                }
+              ],
+              "nota": "A person: add **a**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Conozco a Ensenada."
+                },
+                {
+                  "v": "bien",
+                  "t": "Conozco Ensenada."
+                }
+              ],
+              "nota": "A place: no **a**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Busco a el profesor."
+                },
+                {
+                  "v": "bien",
+                  "t": "Busco al profesor."
+                }
+              ],
+              "nota": "**a + el = al**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tengo a dos hermanos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tengo dos hermanos."
+                }
+              ],
+              "nota": "No **a** after tener."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "a",
+              "texto": "The preposition in general: [[7896|the preposition a]]."
+            },
+            {
+              "forma": "al",
+              "texto": "a + el: [[5090|al and del]]."
+            },
+            {
+              "forma": "lo veo",
+              "texto": "Replacing the person with a pronoun: [[5121|lo, la, los, las]]."
+            },
+            {
+              "forma": "a alguien",
+              "texto": "Someone, anyone: [[6311|alguien]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I know your sister._",
+              "r": "Conozco a tu hermana.",
+              "nota": "Person: a."
+            },
+            {
+              "p": "In Spanish: _We're visiting Ensenada._",
+              "r": "Visitamos Ensenada.",
+              "nota": "Place: no a."
+            },
+            {
+              "p": "Fix it: _Busco el doctor._ (a specific doctor)",
+              "r": "Busco al doctor.",
+              "nota": "a + el = al."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7896,
+      5090
+    ],
+    "confunde": [],
+    "sigue": [
+      5121,
+      6311
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6870",
+      "kwiziq": true
+    }
+  ]
+}

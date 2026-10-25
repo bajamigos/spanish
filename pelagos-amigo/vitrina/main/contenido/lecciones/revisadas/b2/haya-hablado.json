@@ -1,0 +1,265 @@
+{
+  "tema": 5076,
+  "slug": "haya-hablado",
+  "titulo": "Present perfect subjunctive: regular verbs",
+  "subtitulo": "Haya hablado, hayas comido, hayan vivido.",
+  "foto": "t09.jpg",
+  "regla": "Present perfect subjunctive = haber in the present subjunctive (haya, hayas, haya, hayamos, hayan) + participle (-ado / -ido): Espero que hayas llegado bien. Used where the subjunctive is needed for a completed action.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "haya / hayas / haya / hayamos / hayan",
+            "+ participle"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "haber (present subjunctive)"
+          ],
+          "filas": [
+            [
+              "yo",
+              "haya"
+            ],
+            [
+              "tú",
+              "hayas"
+            ],
+            [
+              "él, ella, usted",
+              "haya"
+            ],
+            [
+              "nosotros",
+              "hayamos"
+            ],
+            [
+              "ustedes, ellos",
+              "hayan"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Regular participles: **-ar → -ado**, **-er / -ir → -ido**. The participle never changes."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Use it after triggers of the subjunctive (**espero que, no creo que, es posible que, ojalá, cuando**...) when the action is **completed**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: it's the present perfect (**he hablado**) wearing subjunctive clothes (**haya hablado**)."
+        }
+      ]
+    },
+    {
+      "id": "tabla",
+      "titulo": "Full forms",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "hablar",
+            "comer",
+            "vivir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "haya hablado",
+              "haya comido",
+              "haya vivido"
+            ],
+            [
+              "tú",
+              "hayas hablado",
+              "hayas comido",
+              "hayas vivido"
+            ],
+            [
+              "él, ella, usted",
+              "haya hablado",
+              "haya comido",
+              "haya vivido"
+            ],
+            [
+              "nosotros",
+              "hayamos hablado",
+              "hayamos comido",
+              "hayamos vivido"
+            ],
+            [
+              "ustedes, ellos",
+              "hayan hablado",
+              "hayan comido",
+              "hayan vivido"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Espero que ==hayas llegado== bien.",
+              "en": "I hope you got there safely."
+            },
+            {
+              "es": "No creo que ==hayan terminado== todavía.",
+              "en": "I don't think they've finished yet."
+            },
+            {
+              "es": "Es posible que ==haya llovido== en la noche.",
+              "en": "It may have rained last night."
+            },
+            {
+              "es": "Ojalá ==hayamos aprobado==.",
+              "en": "I hope we passed."
+            },
+            {
+              "es": "Cuando ==hayas comido==, lavas los trastes.",
+              "en": "When you've eaten, wash the dishes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Espero que has llegado bien."
+                },
+                {
+                  "v": "bien",
+                  "t": "Espero que hayas llegado bien."
+                }
+              ],
+              "nota": "Subjunctive trigger."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hayamos comidos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hayamos comido."
+                }
+              ],
+              "nota": "Participle doesn't change."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Haiga terminado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Haya terminado."
+                }
+              ],
+              "nota": "**Haiga** is heard but considered incorrect."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "haya hecho",
+              "texto": "[[5163|irregular participles]]."
+            },
+            {
+              "forma": "espero que hayas",
+              "texto": "[[6010|esperar que]]."
+            },
+            {
+              "forma": "he hablado",
+              "texto": "[[5267|present perfect]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Conjugate: _tú / trabajar_",
+              "r": "hayas trabajado",
+              "nota": "hayas + -ado."
+            },
+            {
+              "p": "Conjugate: _ellos / salir_",
+              "r": "hayan salido",
+              "nota": "hayan + -ido."
+            },
+            {
+              "p": "In Spanish: _I'm glad you've come._ (tú)",
+              "r": "Me alegra que hayas venido.",
+              "nota": "Feeling + subjunctive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5267
+    ],
+    "confunde": [
+      5068
+    ],
+    "sigue": [
+      5163,
+      6010
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5076",
+      "kwiziq": true
+    }
+  ]
+}

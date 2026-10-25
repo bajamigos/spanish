@@ -1,0 +1,174 @@
+{
+  "tema": 7802,
+  "slug": "me-recuerda-a",
+  "titulo": "Recordar = to remind (me recuerda a...)",
+  "subtitulo": "Ese señor me recuerda a mi papá.",
+  "foto": "t09.jpg",
+  "regla": "To remind someone of something: (thing / person) + me / te / le... + recuerda + a + what it reminds of: Esta canción me recuerda a ti. The preposition is a, never de. To remind someone to do something: recordarle a alguien que + subjunctive.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "[subject] + me / te / le... + recuerda",
+            "+ a +",
+            "[person / thing]"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The **subject** is what does the reminding; **recordar** agrees with it: **estas fotos me recuerdan a mi infancia**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The preposition is **a**, not **de**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Recordarle a alguien que** + subjunctive = _to remind someone to_: **recuérdame que compre leche**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: it reminds me **a** you."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ese señor ==me recuerda a== mi papá. Tiene los mismos ojos.",
+              "en": "That man reminds me of my dad. He has the same eyes."
+            },
+            {
+              "es": "La escena de amor ==me recuerda a== nuestra primera cita.",
+              "en": "The love scene reminds me of our first date."
+            },
+            {
+              "es": "Los niños jugando en el parque ==nos recordaban a== nuestra infancia.",
+              "en": "The kids playing in the park reminded us of our childhood."
+            },
+            {
+              "es": "Esta canción ==me recuerda a== ti.",
+              "en": "This song reminds me of you."
+            },
+            {
+              "es": "==Recuérdame que== compre tortillas.",
+              "en": "Remind me to buy tortillas."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me recuerda de mi papá."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me recuerda a mi papá."
+                }
+              ],
+              "nota": "**A**, not **de**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estas fotos me recuerda a ti."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estas fotos me recuerdan a ti."
+                }
+              ],
+              "nota": "Agrees with the subject."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "acordarse de",
+              "texto": "_To remember_: [[7479|acordar vs acordarse]]."
+            },
+            {
+              "forma": "recordar",
+              "texto": "[[5874|recordar, acordarse]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _This beach reminds me of Baja._",
+              "r": "Esta playa me recuerda a Baja.",
+              "nota": "a."
+            },
+            {
+              "p": "In Spanish: _You remind me of my sister._",
+              "r": "Me recuerdas a mi hermana.",
+              "nota": "Subject = tú."
+            },
+            {
+              "p": "In Spanish: _Remind me to call her._",
+              "r": "Recuérdame que la llame.",
+              "nota": "que + subjunctive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5874
+    ],
+    "confunde": [
+      7479
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7802",
+      "kwiziq": true
+    }
+  ]
+}

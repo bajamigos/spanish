@@ -1,0 +1,225 @@
+{
+  "tema": 5841,
+  "slug": "oi-oyo-oyeron",
+  "titulo": "Oír in the preterite",
+  "subtitulo": "¿Oíste eso?",
+  "foto": "t07.jpg",
+  "regla": "Oír has regular endings in the preterite, but the i becomes y in él/ella/usted and ellos/ustedes, and the other forms carry an accent: oí, oíste, oyó, oímos, oyeron.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Oír** (_to hear_) uses the regular -ir endings in the preterite, with two spelling changes."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In **él / ella / usted** and **ellos / ustedes**, the **i** becomes **y**: **oyó**, **oyeron**. An unstressed i between two vowels turns into y."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Oí**, **oíste** and **oímos** keep a **written accent** on the í, so it's pronounced as its own syllable."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "oír"
+          ],
+          "filas": [
+            [
+              "yo",
+              "oí"
+            ],
+            [
+              "tú",
+              "oíste"
+            ],
+            [
+              "él / ella / usted",
+              "oyó"
+            ],
+            [
+              "nosotros",
+              "oímos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "oyeron"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Oímos** is both present and preterite. Context decides: **Ayer oímos un ruido**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the **y** shows up where the endings start with a vowel, the same as **leyó** and **creyó**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿==Oíste== eso? Creo que alguien tocó la puerta.",
+              "en": "Did you hear that? I think someone knocked on the door."
+            },
+            {
+              "es": "Anoche ==oí== a los coyotes cerca de la casa.",
+              "en": "Last night I heard the coyotes near the house."
+            },
+            {
+              "es": "Mi abuela no ==oyó== el teléfono.",
+              "en": "My grandma didn't hear the phone."
+            },
+            {
+              "es": "==Oímos== la noticia en la radio.",
+              "en": "We heard the news on the radio."
+            },
+            {
+              "es": "Los vecinos ==oyeron== la música hasta las tres de la mañana.",
+              "en": "The neighbors heard the music until three in the morning."
+            },
+            {
+              "es": "¿Ustedes ==oyeron== los cohetes anoche?",
+              "en": "Did you guys hear the fireworks last night?"
+            },
+            {
+              "es": "¿Ya ==oíste== la nueva canción de tu banda favorita?",
+              "en": "Have you heard your favorite band's new song yet?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella oió un ruido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella oyó un ruido."
+                }
+              ],
+              "nota": "i → **y** between vowels."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ellos oieron la alarma."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ellos oyeron la alarma."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo oi tu mensaje."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo oí tu mensaje."
+                }
+              ],
+              "nota": "Keep the accent: **oí**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "oigo, oyes",
+              "texto": "The present first: [[5592|oír in the present]]."
+            },
+            {
+              "forma": "leyó, creyó",
+              "texto": "The same y: [[5258|leer, creer and proveer in the preterite]]."
+            },
+            {
+              "forma": "construyó",
+              "texto": "And again: [[5219|-uir verbs in the preterite]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I didn't hear the alarm._",
+              "r": "No oí la alarma.",
+              "nota": "oí, with accent."
+            },
+            {
+              "p": "In Spanish: _They heard a noise._",
+              "r": "Oyeron un ruido.",
+              "nota": "oyeron."
+            },
+            {
+              "p": "Fix it: _Mi papá oió las noticias._",
+              "r": "Mi papá oyó las noticias.",
+              "nota": "oyó."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5592
+    ],
+    "confunde": [
+      5258
+    ],
+    "sigue": [
+      5219
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5841",
+      "kwiziq": true
+    }
+  ]
+}

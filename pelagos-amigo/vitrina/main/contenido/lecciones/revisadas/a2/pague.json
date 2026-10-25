@@ -1,0 +1,260 @@
+{
+  "tema": 5845,
+  "slug": "pague",
+  "titulo": "-gar verbs in the preterite",
+  "subtitulo": "Pagué la cuenta; ella llegó tarde.",
+  "foto": "t08.jpg",
+  "regla": "In the preterite, -ar verbs ending in -gar change g to gu in the yo form only (pagué, llegué, jugué) to keep the hard g sound. All other forms are regular: pagaste, pagó.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Verbs ending in **-gar** are regular -ar verbs in the preterite, with **one spelling change**: in **yo**, the **g** becomes **gu**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Why? **ge** sounds like a harsh _h_. To keep the hard _g_ of _go_ before **é**, Spanish writes **gué**: **pagué**. The **u** is silent."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "pagar",
+            "llegar",
+            "jugar"
+          ],
+          "filas": [
+            [
+              "yo",
+              "pagué",
+              "llegué",
+              "jugué"
+            ],
+            [
+              "tú",
+              "pagaste",
+              "llegaste",
+              "jugaste"
+            ],
+            [
+              "él / ella / usted",
+              "pagó",
+              "llegó",
+              "jugó"
+            ],
+            [
+              "nosotros / nosotras",
+              "pagamos",
+              "llegamos",
+              "jugamos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "pagaron",
+              "llegaron",
+              "jugaron"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Common ones: **pagar**, **llegar**, **jugar**, **entregar**, **apagar**, **cargar**, **pegar**, **navegar**, **colgar**, **negar**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Jugar** and **colgar** change their stem in the present (**juego**, **cuelgo**), but **not** in the preterite: **jugué**, **colgó**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the **u** in **gué** is a bodyguard. It keeps the e from softening the g."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Pagué== la renta ayer.",
+              "en": "I paid the rent yesterday."
+            },
+            {
+              "es": "==Llegué== a la playa antes del amanecer.",
+              "en": "I got to the beach before sunrise."
+            },
+            {
+              "es": "De niño ==jugué== beisbol en la liga de Tijuana.",
+              "en": "As a kid I played baseball in the Tijuana league."
+            },
+            {
+              "es": "¿A qué hora ==llegaste== al gimnasio?",
+              "en": "What time did you get to the gym?"
+            },
+            {
+              "es": "Ya ==entregué== el reporte.",
+              "en": "I already turned in the report."
+            },
+            {
+              "es": "Mi hermano ==pagó== la cena.",
+              "en": "My brother paid for dinner."
+            },
+            {
+              "es": "==Apagué== el riego porque llovió toda la noche.",
+              "en": "I turned off the sprinklers because it rained all night."
+            },
+            {
+              "es": "La Rocinante ==llegó== a Ceres sin problemas.",
+              "en": "The Rocinante reached Ceres without problems."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer llegé tarde."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer llegué tarde."
+                }
+              ],
+              "nota": "g → **gu** before é."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo jugé fútbol."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo jugué fútbol."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer juegué con mis hijos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer jugué con mis hijos."
+                }
+              ],
+              "nota": "No ue in the preterite."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Él pagué la cuenta."
+                },
+                {
+                  "v": "bien",
+                  "t": "Él pagó la cuenta."
+                }
+              ],
+              "nota": "Only **yo** changes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hablé, habló",
+              "texto": "The base pattern: [[5109|regular -ar verbs in the preterite]]."
+            },
+            {
+              "forma": "juego, juegas",
+              "texto": "The stem change that stays in the present: [[5855|jugar in the present]]."
+            },
+            {
+              "forma": "busqué, empecé",
+              "texto": "The sister rules: [[5256|-car]] and [[5844|-zar]] verbs in the preterite."
+            },
+            {
+              "forma": "que pague",
+              "texto": "Later: [[5725|-gar verbs in the present subjunctive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I arrived at eight._",
+              "r": "Llegué a las ocho.",
+              "nota": "g → gu."
+            },
+            {
+              "p": "In Spanish: _You (tú) paid too much._",
+              "r": "Pagaste demasiado.",
+              "nota": "Only yo changes."
+            },
+            {
+              "p": "Fix it: _Ayer juegé ajedrez._",
+              "r": "Ayer jugué ajedrez.",
+              "nota": "jugué."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5109
+    ],
+    "confunde": [
+      5256,
+      5844,
+      5855
+    ],
+    "sigue": [
+      5725
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5845",
+      "kwiziq": true
+    }
+  ]
+}

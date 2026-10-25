@@ -1,0 +1,242 @@
+{
+  "tema": 6055,
+  "slug": "esto-este-esta-pronombre",
+  "titulo": "Esto, este, esta, estos, estas: this one, these",
+  "subtitulo": "¿Cuál quieres? Este.",
+  "foto": "t05.jpg",
+  "regla": "For this one / these (ones), use este, esta, estos, estas, matching the noun you mean, with no noun after it. For an unknown thing or an idea, use esto, which never changes: ¿Qué es esto?",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "A demonstrative **pronoun** replaces the noun: _this one_, _these ones_. Spanish doesn't need _one_: **este** = _this one_."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "Masculine",
+            "Feminine",
+            "Neutral"
+          ],
+          "filas": [
+            [
+              "Singular",
+              "**este**",
+              "**esta**",
+              "**esto**"
+            ],
+            [
+              "Plural",
+              "**estos**",
+              "**estas**",
+              "—"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Match the gender and number of the thing you mean: la camisa → **esta**; los tenis → **estos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Esto** is neutral: use it for something you can't name yet, or for an idea or situation: ¿Qué es **esto**? **Esto** es muy fácil. It has no plural."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Today these pronouns are written **without an accent**: **este**, not _éste_. You may still see the accent in older texts."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **esto** ends in -o but isn't masculine. It's the mystery box: _this thing_."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿Qué tabla te gusta? —==Esta==, la azul.",
+              "en": "Which board do you like? —This one, the blue one."
+            },
+            {
+              "es": "==Este== es mi hermano, Raúl.",
+              "en": "This is my brother, Raúl."
+            },
+            {
+              "es": "No quiero esos tacos; quiero ==estos==.",
+              "en": "I don't want those tacos; I want these."
+            },
+            {
+              "es": "De todas las playas de Baja, ==esta== es mi favorita.",
+              "en": "Of all the beaches in Baja, this one is my favorite."
+            },
+            {
+              "es": "¿Qué es ==esto==? Huele rarísimo.",
+              "en": "What is this? It smells really weird."
+            },
+            {
+              "es": "==Esto== no es justo.",
+              "en": "This isn't fair."
+            },
+            {
+              "es": "Mis plantas favoritas son ==estas==: las de chile.",
+              "en": "My favorite plants are these: the chili ones."
+            },
+            {
+              "es": "Hoy practicamos dos llaves: ==esta== y la de ayer.",
+              "en": "Today we practiced two submissions: this one and yesterday's."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero este uno."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero este."
+                }
+              ],
+              "nota": "No word for _one_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Qué es este?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Qué es esto?"
+                }
+              ],
+              "nota": "Unknown thing → **esto**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Las camisas? Me gustan estos."
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Las camisas? Me gustan estas."
+                }
+              ],
+              "nota": "Camisas are feminine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estos es increíble."
+                },
+                {
+                  "v": "bien",
+                  "t": "Esto es increíble."
+                }
+              ],
+              "nota": "**Esto** has no plural."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "este libro",
+              "texto": "With a noun after it: [[5094|este, esta + noun]]."
+            },
+            {
+              "forma": "ese, eso",
+              "texto": "That one: [[6060|ese, esa, eso]]."
+            },
+            {
+              "forma": "aquel",
+              "texto": "That one over there: [[6176|aquel, aquella]]."
+            },
+            {
+              "forma": "este, ese, aquel",
+              "texto": "Choosing by distance: [[6862|este, ese and aquel]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish (la camisa): _Which one? This one._",
+              "r": "¿Cuál? Esta.",
+              "nota": "camisa → esta."
+            },
+            {
+              "p": "In Spanish: _What is this?_",
+              "r": "¿Qué es esto?",
+              "nota": "Unknown thing."
+            },
+            {
+              "p": "Fix it: _¿Las tortillas? Quiero estos._",
+              "r": "¿Las tortillas? Quiero estas.",
+              "nota": "Feminine plural."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5094
+    ],
+    "confunde": [
+      6060
+    ],
+    "sigue": [
+      6176,
+      6862
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6055",
+      "kwiziq": true
+    }
+  ]
+}

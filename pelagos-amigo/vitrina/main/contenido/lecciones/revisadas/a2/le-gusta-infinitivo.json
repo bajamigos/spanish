@@ -1,0 +1,261 @@
+{
+  "tema": 10727,
+  "slug": "le-gusta-infinitivo",
+  "titulo": "Gustar + infinitive: he likes, we like, they like",
+  "subtitulo": "A Luis le gusta surfear.",
+  "foto": "t08.jpg",
+  "regla": "To say someone likes doing something, use the pronoun (me, te, le, nos, les) + gusta + infinitive: le gusta surfear, nos gusta bailar. Gusta stays singular, even with several infinitives.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "The person who likes it is the **indirect pronoun**; the activity is the **infinitive**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Who likes it",
+            "Pronoun + gusta",
+            "Example"
+          ],
+          "filas": [
+            [
+              "_I_",
+              "me gusta",
+              "Me gusta cocinar."
+            ],
+            [
+              "_you_ (tú)",
+              "te gusta",
+              "¿Te gusta bailar?"
+            ],
+            [
+              "_he, she, you_ (usted)",
+              "le gusta",
+              "Le gusta surfear."
+            ],
+            [
+              "_we_",
+              "nos gusta",
+              "Nos gusta caminar."
+            ],
+            [
+              "_they, you_ (ustedes)",
+              "les gusta",
+              "Les gusta leer."
+            ]
+          ]
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "le / nos / les",
+            "+ gusta +",
+            "infinitive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Always **gusta**, singular: an activity counts as one thing. Even with two or three: **Les gusta** nadar y correr."
+        },
+        {
+          "tipo": "texto",
+          "texto": "To say who: **a** + name or pronoun, and keep the pronoun: **A Luis le** gusta surfear. **A mis papás les** gusta bailar."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Negative: **no** goes before the pronoun: **No nos** gusta madrugar."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the activity is the subject. _Surfing pleases him_ = **le gusta surfear**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "A Luis ==le gusta surfear== en las mañanas.",
+              "en": "Luis likes surfing in the mornings."
+            },
+            {
+              "es": "==Nos gusta comer== tacos de pescado en Ensenada.",
+              "en": "We like eating fish tacos in Ensenada."
+            },
+            {
+              "es": "A mis papás ==les gusta bailar== cumbia.",
+              "en": "My parents like dancing cumbia."
+            },
+            {
+              "es": "¿A usted ==le gusta cocinar==?",
+              "en": "Do you like cooking?"
+            },
+            {
+              "es": "A mi novia ==le gusta leer y escribir==.",
+              "en": "My girlfriend likes reading and writing."
+            },
+            {
+              "es": "==No les gusta madrugar==.",
+              "en": "They don't like getting up early."
+            },
+            {
+              "es": "A Sofía ==le gusta entrenar== jiu-jitsu los sábados.",
+              "en": "Sofía likes training jiu-jitsu on Saturdays."
+            },
+            {
+              "es": "¿A ustedes ==les gusta trabajar== en el huerto?",
+              "en": "Do you all like working in the garden?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Él gusta surfear."
+                },
+                {
+                  "v": "bien",
+                  "t": "A él le gusta surfear."
+                }
+              ],
+              "nota": "The person is **le**, not the subject."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Les gustan nadar y correr."
+                },
+                {
+                  "v": "bien",
+                  "t": "Les gusta nadar y correr."
+                }
+              ],
+              "nota": "Infinitives: always singular **gusta**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nos gusta bailamos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nos gusta bailar."
+                }
+              ],
+              "nota": "Infinitive after **gusta**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "A Ana gusta cocinar."
+                },
+                {
+                  "v": "bien",
+                  "t": "A Ana le gusta cocinar."
+                }
+              ],
+              "nota": "Keep **le**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "me gusta bailar",
+              "texto": "The basics with me and te: [[5083|gustar + verb]]."
+            },
+            {
+              "forma": "le gustan los perros",
+              "texto": "With things: [[7248|gustar with he, she, we, they]]."
+            },
+            {
+              "forma": "me encanta bailar",
+              "texto": "Stronger: [[7058|to love doing something]]."
+            },
+            {
+              "forma": "a mí me gusta",
+              "texto": "Emphasis: [[7032|repeating the indirect pronoun]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We like surfing._",
+              "r": "Nos gusta surfear.",
+              "nota": "Nos gusta + infinitive."
+            },
+            {
+              "p": "In Spanish: _My parents like dancing and singing._",
+              "r": "A mis papás les gusta bailar y cantar.",
+              "nota": "Singular gusta."
+            },
+            {
+              "p": "Fix it: _Ella gusta leer._",
+              "r": "A ella le gusta leer.",
+              "nota": "Le is required."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5083,
+      7248
+    ],
+    "confunde": [],
+    "sigue": [
+      7058,
+      7032
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 10727",
+      "kwiziq": true
+    }
+  ]
+}

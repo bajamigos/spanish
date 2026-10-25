@@ -1,0 +1,243 @@
+{
+  "tema": 6502,
+  "slug": "queria-imperfecto-querer",
+  "titulo": "Querer in the imperfect",
+  "subtitulo": "De niño quería ser astronauta.",
+  "foto": "t08.jpg",
+  "regla": "Querer is regular in the imperfect, with no e > ie: quería, querías, quería, queríamos, querían. It means wanted (an ongoing wish), and quería is also a polite I'd like.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Querer** is regular in the imperfect: stem **quer-** + **-ía** endings. No **ie** (the stress falls on **-ía**)."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Querer"
+          ],
+          "filas": [
+            [
+              "yo",
+              "quería"
+            ],
+            [
+              "tú",
+              "querías"
+            ],
+            [
+              "él, ella, usted",
+              "quería"
+            ],
+            [
+              "nosotros, nosotras",
+              "queríamos"
+            ],
+            [
+              "ellos, ellas, ustedes",
+              "querían"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Quería** = _wanted_: a wish that lasted, or the background of a story (**quería ir, pero llovió**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "+ infinitive with no **a**: **quería ir**. + noun: **quería un perro**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Polite requests: **quería un café, por favor** = _I'd like a coffee_. Softer than **quiero**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Quise** (preterite) is for one moment: _tried to_; **no quise** = _refused_."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "De niño ==quería== ser astronauta.",
+              "en": "As a kid I wanted to be an astronaut."
+            },
+            {
+              "es": "==Quería== un café de olla, por favor.",
+              "en": "I'd like a café de olla, please."
+            },
+            {
+              "es": "¿Qué ==querías== decirme?",
+              "en": "What did you want to tell me?"
+            },
+            {
+              "es": "Mi hermana ==quería== un perro, pero vivíamos en un departamento.",
+              "en": "My sister wanted a dog, but we lived in an apartment."
+            },
+            {
+              "es": "==Queríamos== ir a Ensenada, pero llovió todo el fin de semana.",
+              "en": "We wanted to go to Ensenada, but it rained all weekend."
+            },
+            {
+              "es": "Los niños ==querían== jugar en la playa todo el día.",
+              "en": "The kids wanted to play on the beach all day."
+            },
+            {
+              "es": "¿Ustedes ==querían== mesa en la terraza?",
+              "en": "Did you all want a table on the terrace?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiería ir al concierto."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quería ir al concierto."
+                }
+              ],
+              "nota": "No **ie**: stress on **-ía**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Queríamos a ir al cine."
+                },
+                {
+                  "v": "bien",
+                  "t": "Queríamos ir al cine."
+                }
+              ],
+              "nota": "No **a** before the infinitive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ellos querian salir."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ellos querían salir."
+                }
+              ],
+              "nota": "Accent on the **í**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quise un café, por favor."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quería un café, por favor."
+                }
+              ],
+              "nota": "Polite request: **quería** (or **quisiera**)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "quiero",
+              "texto": "The present: [[5774|querer in the present]]."
+            },
+            {
+              "forma": "comía",
+              "texto": "The endings: [[5264|-er and -ir verbs in the imperfect]]."
+            },
+            {
+              "forma": "quise",
+              "texto": "One moment, tried or refused: [[5246|querer in the preterite]]."
+            },
+            {
+              "forma": "quería, quisiera",
+              "texto": "Polite wishes: [[5227|querría, quería and quisiera]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I wanted to be a doctor._",
+              "r": "Quería ser doctor.",
+              "nota": "quería + infinitive."
+            },
+            {
+              "p": "In Spanish (polite, with the imperfect): _I'd like two tacos, please._",
+              "r": "Quería dos tacos, por favor.",
+              "nota": "quería."
+            },
+            {
+              "p": "Fix it: _Nosotros quieríamos salir._",
+              "r": "Nosotros queríamos salir.",
+              "nota": "No ie."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5774,
+      5264
+    ],
+    "confunde": [
+      5246,
+      5227
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6502",
+      "kwiziq": true
+    }
+  ]
+}

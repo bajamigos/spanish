@@ -1,0 +1,226 @@
+{
+  "tema": 6236,
+  "slug": "subjuntivo-presente-e-ie-ar",
+  "titulo": "Conjugate stem-changing -ar verbs (e > ie) in the present subjunctive",
+  "subtitulo": "Cierre, recomiende, cerremos: ie everywhere except nosotros.",
+  "foto": "t03.jpg",
+  "regla": "-ar verbs with e > ie in the present keep it in the subjunctive except nosotros: cierre, cierres, cerremos, cierren.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**-ar** verbs with an **e > ie** stem change in the present keep it in the present subjunctive. The **e** closest to the end of the stem becomes **ie** in every form **except nosotros**. Endings: the regular **-ar** subjunctive ones."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "cerrar",
+            "recomendar"
+          ],
+          "filas": [
+            [
+              "yo",
+              "cierre",
+              "recomiende"
+            ],
+            [
+              "tú",
+              "cierres",
+              "recomiendes"
+            ],
+            [
+              "él, ella, usted",
+              "cierre",
+              "recomiende"
+            ],
+            [
+              "nosotros",
+              "cerremos",
+              "recomendemos"
+            ],
+            [
+              "ustedes, ellos",
+              "cierren",
+              "recomienden"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Other verbs like this: **pensar**, **acertar**, **despertar**, **empezar** (also z > c), **sentarse**, **calentar**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In **recomendar**, only the **e** nearest the end changes: **recom-ie-nde**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mis amigos quieren que les ==recomiende== una buena taquería.",
+              "en": "My friends want me to recommend a good taquería."
+            },
+            {
+              "es": "No ==cierres== la ventana, por favor; tengo calor.",
+              "en": "Don't close the window, please; I'm hot."
+            },
+            {
+              "es": "Espero que el jefe me ==recomiende== con sus clientes.",
+              "en": "I hope the boss recommends me to his clients."
+            },
+            {
+              "es": "==Recomendemos== a Beto para la chamba.",
+              "en": "Let's recommend Beto for the job."
+            },
+            {
+              "es": "Señores, ==cierren== las carpetas ahora.",
+              "en": "Gentlemen, close your folders now."
+            },
+            {
+              "es": "Ojalá que ==pienses== en mí.",
+              "en": "I hope you think of me."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cierremos la tienda."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cerremos la tienda."
+                }
+              ],
+              "nota": "No change in **nosotros**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No cerres la puerta."
+                },
+                {
+                  "v": "bien",
+                  "t": "No cierres la puerta."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero que me reciomiende."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero que me recomiende."
+                }
+              ],
+              "nota": "Only the last **e** of the stem changes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "cierro, cerramos",
+              "texto": "The present: [[5811|e > ie -ar verbs]]."
+            },
+            {
+              "forma": "entienda, pierda",
+              "texto": "The **-er** version: [[6238|e > ie -er verbs]]."
+            },
+            {
+              "forma": "sienta, sintamos",
+              "texto": "The **-ir** version, different in nosotros: [[6983|e > ie -ir verbs]]."
+            },
+            {
+              "forma": "empiece",
+              "texto": "With a spelling change too: [[5990|empezar and comenzar]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "**Pensar** with **tú**: No quiero que ___ eso.",
+              "r": "No quiero que pienses eso.",
+              "nota": "e > ie."
+            },
+            {
+              "p": "**Cerrar** with **nosotros**: ___ temprano hoy.",
+              "r": "Cerremos temprano hoy.",
+              "nota": "No change."
+            },
+            {
+              "p": "In Spanish: _I hope they recommend us._",
+              "r": "Espero que nos recomienden.",
+              "nota": "recomienden."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5811,
+      5063
+    ],
+    "confunde": [
+      6238,
+      6983
+    ],
+    "sigue": [
+      5990,
+      6239
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6236",
+      "kwiziq": true
+    }
+  ]
+}

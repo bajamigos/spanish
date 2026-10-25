@@ -1,0 +1,238 @@
+{
+  "tema": 5059,
+  "slug": "querer-que-subjuntivo",
+  "titulo": "Querer que + the present subjunctive",
+  "subtitulo": "Quiero que vengas: when you want someone else to do something.",
+  "foto": "t04.jpg",
+  "regla": "Querer que + present subjunctive when the subjects are different; same subject: querer + infinitive.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say _to want someone to do something_, use **querer que** + the **present subjunctive**. This is always true, also in negative sentences and in questions."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**querer**",
+            "**que**",
+            "present subjunctive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "This happens because there are **two different subjects**: one person wants, and another person does. In **mis amigos quieren que sea más sociable**, the subject of **querer** is **mis amigos**, and the subject of **ser** is **yo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "If the subject is **the same** for both verbs, drop **que** and use the **infinitive**: **quiero salir** (I want, I go out)."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Subjects",
+            "Structure",
+            "Example"
+          ],
+          "filas": [
+            [
+              "different",
+              "querer que + subjunctive",
+              "Quiero que salgas."
+            ],
+            [
+              "the same",
+              "querer + infinitive",
+              "Quiero salir."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The same goes for **desear**, a stronger synonym of **querer**: **deseo que seas feliz**, but **deseo enviar un mensaje**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: one person, one verb in infinitive. Two people, **que** builds a bridge and the subjunctive crosses it."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No quiero que me ==llames== tan temprano.",
+              "en": "I don't want you to call me so early."
+            },
+            {
+              "es": "¿Qué quieres que ==haga==?",
+              "en": "What do you want me to do?"
+            },
+            {
+              "es": "Mi mamá quiere que ==estudie== más.",
+              "en": "My mom wants me to study more."
+            },
+            {
+              "es": "Todos queremos que el problema ==se resuelva== pronto.",
+              "en": "We all want the problem to be solved soon."
+            },
+            {
+              "es": "¿Quieren que los ==lleve== a la playa?",
+              "en": "Do you want me to take you to the beach?"
+            },
+            {
+              "es": "Tus amigos quieren que ==seas== más sociable.",
+              "en": "Your friends want you to be more sociable."
+            },
+            {
+              "es": "Quiero ==entrenar== hoy en la noche.",
+              "en": "I want to train tonight. (same subject)"
+            },
+            {
+              "es": "Deseo que ==tengan== unas buenas vacaciones.",
+              "en": "I hope you have a good vacation."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero que tú vienes."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero que tú vengas."
+                }
+              ],
+              "nota": "After **querer que**, never the ordinary present."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero que yo salga temprano."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero salir temprano."
+                }
+              ],
+              "nota": "Same subject: infinitive, no **que**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Beto quiere tú lo ayudes."
+                },
+                {
+                  "v": "bien",
+                  "t": "Beto quiere que lo ayudes."
+                }
+              ],
+              "nota": "The **que** is never dropped when the subjects differ."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "quiero surfear",
+              "texto": "**Querer** + infinitive: [[5065|deber, poder, querer + infinitive]]."
+            },
+            {
+              "forma": "Espero que vengas.",
+              "texto": "The same pattern with hope: [[6076|esperar que]] and [[5061|ojalá]]."
+            },
+            {
+              "forma": "hable, coma, tenga",
+              "texto": "How to form it: [[5063|-ar]], [[5151|-er / -ir]], [[6000|yo-go verbs]]."
+            },
+            {
+              "forma": "Quería que vinieras.",
+              "texto": "In the past: [[7184|querer que + imperfect subjunctive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I want you to open the car._ (tú)",
+              "r": "Quiero que abras el carro.",
+              "nota": "Two subjects: subjunctive."
+            },
+            {
+              "p": "In Spanish: _We want to go to Baja Malibu._",
+              "r": "Queremos ir a Baja Malibú.",
+              "nota": "Same subject: infinitive."
+            },
+            {
+              "p": "Which one? **¿Quieres que te ayudo?** or **¿Quieres que te ayude?**",
+              "r": "¿Quieres que te ayude?",
+              "nota": "Questions too take the subjunctive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5065,
+      5063,
+      5151
+    ],
+    "confunde": [
+      6076
+    ],
+    "sigue": [
+      5061,
+      5062,
+      7184,
+      6000
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5059",
+      "kwiziq": true
+    }
+  ]
+}

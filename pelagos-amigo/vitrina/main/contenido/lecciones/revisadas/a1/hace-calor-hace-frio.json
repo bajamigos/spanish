@@ -1,0 +1,182 @@
+{
+  "tema": 9336,
+  "slug": "hace-calor-hace-frio",
+  "titulo": "Hace for the weather",
+  "subtitulo": "Hace calor, hace mucho viento.",
+  "foto": "t03.jpg",
+  "regla": "Most weather phrases use hace + noun: hace calor, hace frío, hace sol, hace viento, hace buen tiempo. Since calor and frío are nouns, very is mucho, not muy.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "For most weather, use **hace** + **noun**: hace **calor**, **frío**, **sol**, **viento**, **fresco**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Ask: **¿Qué tiempo hace?** Good or bad weather: **hace buen tiempo**, **hace mal tiempo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Calor**, **frío**, **sol** and **viento** are nouns, so _very_ is **mucho**: **hace mucho calor**, never **muy calor**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the weather **makes** heat. **Hace** = _it makes_."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿Qué tiempo ==hace== en Tijuana?",
+              "en": "What's the weather like in Tijuana?"
+            },
+            {
+              "es": "==Hace== mucho calor hoy.",
+              "en": "It's really hot today."
+            },
+            {
+              "es": "En la mañana ==hace== fresco en la playa.",
+              "en": "It's cool at the beach in the morning."
+            },
+            {
+              "es": "==Hace== mucho viento y las olas están feas.",
+              "en": "It's very windy and the waves are bad."
+            },
+            {
+              "es": "==Hace== sol, vamos a regar el huerto.",
+              "en": "It's sunny, let's water the garden."
+            },
+            {
+              "es": "En diciembre ==hace== frío en la noche.",
+              "en": "In December it's cold at night."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es muy frío hoy."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hace mucho frío hoy."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hace muy calor."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hace mucho calor."
+                }
+              ],
+              "nota": "Noun: **mucho**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hace viento mucho."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hace mucho viento."
+                }
+              ],
+              "nota": "**Mucho** goes before the noun."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hago, haces, hace",
+              "texto": "The verb: [[5708|hacer in the present]]."
+            },
+            {
+              "forma": "hay neblina, está nublado, llueve",
+              "texto": "Other weather words: [[9340|hay, está and verbs]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _It's very cold._",
+              "r": "Hace mucho frío.",
+              "nota": "mucho, not muy."
+            },
+            {
+              "p": "In Spanish: _What's the weather like?_",
+              "r": "¿Qué tiempo hace?",
+              "nota": "hace."
+            },
+            {
+              "p": "Fix it: _Hace muy viento._",
+              "r": "Hace mucho viento.",
+              "nota": "Noun: mucho."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5708
+    ],
+    "confunde": [
+      9340
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9336",
+      "kwiziq": true
+    }
+  ]
+}

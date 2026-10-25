@@ -1,0 +1,207 @@
+{
+  "tema": 7176,
+  "slug": "llevar-gerundio",
+  "titulo": "Using llevar + gerund to express how long an action has been going on",
+  "subtitulo": "Llevo tres años surfeando: how long, so far.",
+  "foto": "t04.jpg",
+  "regla": "Llevar (present or imperfect) + time + gerund = have / had been doing for: llevo tres días estudiando. Negative: llevar + time + sin + infinitive.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say how long an action **has been going on**, use **llevar** (conjugated) + the **gerund**, with the length of time."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**llevar**",
+            "time",
+            "gerund"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The time can go between **llevar** and the gerund, or at the end: **llevo tres días estudiando** = **llevo estudiando tres días**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Only the **present** (**llevo**) and the **imperfect** (**llevaba**) are used with this structure, never the perfect tenses. English uses _have been doing / had been doing_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Negative**: **llevar** + time + **sin** + **infinitive** (after a preposition, always an infinitive): **llevo un mes sin fumar** = _I haven't smoked for a month_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **llevo** is like carrying the time on your back: **llevo tres años surfeando**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Beto ==lleva== dos años ==trabajando== en esa escuela.",
+              "en": "Beto has been working at that school for two years."
+            },
+            {
+              "es": "El profe ==llevaba== diez minutos ==hablando== con el alumno cuando entramos.",
+              "en": "The teacher had been talking to the student for ten minutes when we came in."
+            },
+            {
+              "es": "==Llevo== tres días ==estudiando== para el examen.",
+              "en": "I've been studying for the exam for three days."
+            },
+            {
+              "es": "==Llevamos== una hora ==esperando== el camión.",
+              "en": "We've been waiting for the bus for an hour."
+            },
+            {
+              "es": "==Llevo== un mes ==sin fumar==.",
+              "en": "I haven't smoked for a month."
+            },
+            {
+              "es": "==Llevaba== una semana ==sin surfear== y ya extrañaba el mar.",
+              "en": "I hadn't surfed for a week and I already missed the sea."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "He llevado tres años surfeando."
+                },
+                {
+                  "v": "bien",
+                  "t": "Llevo tres años surfeando."
+                }
+              ],
+              "nota": "Present or imperfect only."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Llevo un mes sin fumando."
+                },
+                {
+                  "v": "bien",
+                  "t": "Llevo un mes sin fumar."
+                }
+              ],
+              "nota": "After **sin**, infinitive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Llevo surfear tres años."
+                },
+                {
+                  "v": "bien",
+                  "t": "Llevo tres años surfeando."
+                }
+              ],
+              "nota": "Gerund, not infinitive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hace tres años que surfeo",
+              "texto": "The same idea: [[6187|hace … que + present]]."
+            },
+            {
+              "forma": "surfeo desde hace tres años",
+              "texto": "With **desde hace**: [[5129|desde hace]]."
+            },
+            {
+              "forma": "he estado surfeando",
+              "texto": "Present perfect progressive: [[7050|he estado + gerund]]."
+            },
+            {
+              "forma": "surfeando, leyendo",
+              "texto": "Gerunds: [[6500|regular]], [[6501|irregular]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I've been training for six months._",
+              "r": "Llevo seis meses entrenando.",
+              "nota": "llevar + time + gerund."
+            },
+            {
+              "p": "In Spanish: _We hadn't slept for two days._",
+              "r": "Llevábamos dos días sin dormir.",
+              "nota": "llevar + sin + infinitive."
+            },
+            {
+              "p": "Fix it: **He llevado una hora esperando.**",
+              "r": "Llevo una hora esperando.",
+              "nota": "Present, not perfect."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6187,
+      5129,
+      6500
+    ],
+    "confunde": [
+      7050
+    ],
+    "sigue": [
+      6501
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7176",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "tema": 5962,
+  "slug": "por-causa-razon-gracias-por",
+  "titulo": "Por (not para) for cause or reason",
+  "subtitulo": "«Gracias por todo.»",
+  "foto": "t05.jpg",
+  "regla": "Use por to give the cause or reason behind something: what made it happen (because of, due to, on account of). Para looks forward to a goal; por looks back to a cause.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Por** + noun, pronoun or infinitive gives the **cause**: _because of_, _due to_, _for_."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "result",
+            "+ por +",
+            "cause"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Common uses: **gracias por**, **perdón por**, **por la lluvia**, **por el tráfico**, **por eso** (_that's why_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With people, **por** means _because of_ or _for the sake of_: **lo hice por ti** = _I did it because of you / for you_. (**Lo hice para ti** is a different idea: _I made it for you_, as a gift.)"
+        },
+        {
+          "tipo": "texto",
+          "texto": "With an infinitive, **por** gives the action that caused it: **me multaron por manejar rápido** (_they fined me for speeding_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Para** is different: it points **forward** to a goal or a receiver. Ask yourself: is this the reason (**por**) or the purpose (**para**)?"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **por** looks in the rearview mirror (what caused it); **para** looks through the windshield (where it's going)."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Gracias por== tu ayuda.",
+              "en": "Thanks for your help."
+            },
+            {
+              "es": "Cancelaron el torneo ==por== la lluvia.",
+              "en": "They cancelled the tournament because of the rain."
+            },
+            {
+              "es": "Llegué tarde ==por== el tráfico en la línea.",
+              "en": "I was late because of the traffic at the border."
+            },
+            {
+              "es": "Me multaron ==por== manejar sin licencia.",
+              "en": "They fined me for driving without a license."
+            },
+            {
+              "es": "==Perdón por== la tardanza.",
+              "en": "Sorry for being late."
+            },
+            {
+              "es": "Estoy muerto ==por== el entrenamiento de ayer.",
+              "en": "I'm wiped out from yesterday's training."
+            },
+            {
+              "es": "Lo hice ==por== ti.",
+              "en": "I did it for you (because of you)."
+            },
+            {
+              "es": "Llovió toda la semana; ==por eso== no surfeamos.",
+              "en": "It rained all week; that's why we didn't surf."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Gracias para tu ayuda."
+                },
+                {
+                  "v": "bien",
+                  "t": "Gracias por tu ayuda."
+                }
+              ],
+              "nota": "Thanks are always **por**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cerraron la playa para la contaminación."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cerraron la playa por la contaminación."
+                }
+              ],
+              "nota": "Cause, not goal."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me enfermé para el frío."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me enfermé por el frío."
+                }
+              ],
+              "nota": "The cold caused it: **por**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me multaron por manejando rápido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me multaron por manejar rápido."
+                }
+              ],
+              "nota": "Infinitive after **por**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "para + goal",
+              "texto": "The opposite direction: [[5970|para for purpose]]."
+            },
+            {
+              "forma": "porque llovía",
+              "texto": "With a whole sentence: [[7034|porque, como, es que]]."
+            },
+            {
+              "forma": "¿por qué?",
+              "texto": "Asking for the cause: [[6333|porque vs por qué]]."
+            },
+            {
+              "forma": "gracias a / por culpa de",
+              "texto": "Good and bad causes: [[5147|gracias a / por culpa de]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Thanks for the tacos._",
+              "r": "Gracias por los tacos.",
+              "nota": "gracias por."
+            },
+            {
+              "p": "In Spanish: _They closed the road because of the fire._",
+              "r": "Cerraron la carretera por el incendio.",
+              "nota": "Cause: por."
+            },
+            {
+              "p": "Fix it: _Perdón para el ruido._",
+              "r": "Perdón por el ruido.",
+              "nota": "Apologies take por."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5970
+    ],
+    "confunde": [
+      6333
+    ],
+    "sigue": [
+      7034,
+      5147
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5962",
+      "kwiziq": true
+    }
+  ]
+}

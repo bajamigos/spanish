@@ -1,0 +1,200 @@
+{
+  "tema": 9511,
+  "slug": "dentro-de-tiempo",
+  "titulo": "Using dentro de for in / within / among (time and place)",
+  "subtitulo": "Dentro de tres días; dentro de la música mexicana.",
+  "foto": "t06.jpg",
+  "regla": "Dentro de + length of time = in (time left until something happens): dentro de tres días. En + time = how long it takes: lo hice en media hora. Dentro de can also mean within / among in an abstract sense.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Dentro de** + a length of time means **in**, counting forward from now: how much time is **left** until something happens."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "dentro de",
+            "+ [length of time]"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**En** + a length of time tells you **how long something takes**: **lo terminé en una hora**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In everyday Mexican Spanish you'll also hear **en** for the future (**te veo en diez minutos**), influenced by English. **Dentro de** is the standard, more careful choice, and the one to use in writing."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **dentro de** = the countdown. **En** = the stopwatch."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Time",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Nos vamos a Mazatlán ==dentro de== tres días.",
+              "en": "We're going to Mazatlán in three days."
+            },
+            {
+              "es": "==Dentro de== una semana tendremos los resultados.",
+              "en": "In a week we'll have the results."
+            },
+            {
+              "es": "¡Nos casamos ==dentro de== unas horas!",
+              "en": "We're getting married in a few hours!"
+            },
+            {
+              "es": "Te veo ==dentro de== diez minutos.",
+              "en": "I'll see you in ten minutes."
+            },
+            {
+              "es": "Decoramos el pastel ==en== media hora.",
+              "en": "We decorated the cake in half an hour. (it took 30 minutes)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lugar",
+      "titulo": "Place, the abstract meaning",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Dentro de** literally means _inside_ (**dentro de la caja**). With groups, fields or categories it means **within** or **among**:"
+        },
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Dentro de== la música mexicana, tenemos el son, el mariachi y la banda, entre otros.",
+              "en": "Within Mexican music we have son, mariachi and banda, among others."
+            },
+            {
+              "es": "==Dentro de== la variedad de iglesias de Puebla, muchas son barrocas.",
+              "en": "Among the variety of churches in Puebla, many are Baroque."
+            },
+            {
+              "es": "==Dentro de== la cultura oaxaqueña, la Guelaguetza atrae a muchos turistas.",
+              "en": "Within Oaxacan culture, the Guelaguetza attracts many tourists."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Lo hice dentro de dos horas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Lo hice en dos horas."
+                }
+              ],
+              "nota": "How long it took: **en**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Llego dentro diez minutos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Llego dentro de diez minutos."
+                }
+              ],
+              "nota": "Don't drop **de**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "dentro / dentro de",
+              "texto": "Inside, the physical meaning: [[9510|dentro / dentro de]]."
+            },
+            {
+              "forma": "hace tres días",
+              "texto": "Counting backward: [[7087|duration]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _The movie starts in five minutes._",
+              "r": "La película empieza dentro de cinco minutos.",
+              "nota": "Countdown: dentro de."
+            },
+            {
+              "p": "In Spanish: _I read the book in two days._ (it took two days)",
+              "r": "Leí el libro en dos días.",
+              "nota": "Duration: en."
+            },
+            {
+              "p": "In Spanish: _within the company_",
+              "r": "dentro de la empresa",
+              "nota": "Abstract: within."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      9510
+    ],
+    "confunde": [
+      7087
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9511",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,249 @@
+{
+  "tema": 5268,
+  "slug": "veia-imperfecto-ver",
+  "titulo": "Ver in the imperfect",
+  "subtitulo": "De niño veía caricaturas todos los sábados.",
+  "foto": "t02.jpg",
+  "regla": "Ver is one of only three irregular verbs in the imperfect: it keeps the e of its stem, so it is veía, veías, veía, veíamos, veían (never vía).",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Ver** (_to see, to watch_) is one of only **three irregular verbs** in the imperfect (with **ser** and **ir**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The irregularity is small: regular -er verbs drop -er and add -ía (com**ía**), but **ver keeps its e**: **ve** + **ía**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "ve",
+            "+",
+            "-ía, -ías, -ía, -íamos, -ían"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Imperfect of ver"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**veía**"
+            ],
+            [
+              "tú",
+              "**veías**"
+            ],
+            [
+              "él, ella, usted",
+              "**veía**"
+            ],
+            [
+              "nosotros, nosotras",
+              "**veíamos**"
+            ],
+            [
+              "ellos, ellas, ustedes",
+              "**veían**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Every form has an accent on the **í**. **Yo** and **él** look the same: **veía**; context or the pronoun tells them apart."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Use it for what you **used to see or watch**, and for background: what you **were seeing** at the time."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "De niño ==veía== caricaturas todos los sábados.",
+              "en": "As a kid I used to watch cartoons every Saturday."
+            },
+            {
+              "es": "Desde la azotea ==veíamos== el mar.",
+              "en": "From the rooftop we used to see the sea."
+            },
+            {
+              "es": "¿==Veías== The Expanse cuando vivías en San Diego?",
+              "en": "Did you use to watch The Expanse when you lived in San Diego?"
+            },
+            {
+              "es": "Mi abuela ==veía== la telenovela todas las noches.",
+              "en": "My grandma used to watch the soap opera every night."
+            },
+            {
+              "es": "Antes mis tíos ==veían== el fútbol en nuestra casa.",
+              "en": "My uncles used to watch soccer at our house."
+            },
+            {
+              "es": "Sin lentes no ==veía== nada.",
+              "en": "Without glasses I couldn't see a thing."
+            },
+            {
+              "es": "¿Ustedes ==veían== a Beto en el gimnasio?",
+              "en": "Did you all use to see Beto at the gym?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "De niño vía caricaturas."
+                },
+                {
+                  "v": "bien",
+                  "t": "De niño veía caricaturas."
+                }
+              ],
+              "nota": "Keep the **e**: **ve**ía."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mi hermano y yo veiamos el mar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mi hermano y yo veíamos el mar."
+                }
+              ],
+              "nota": "Accent on the **í**, always."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Todos los sábados vi caricaturas de niño."
+                },
+                {
+                  "v": "bien",
+                  "t": "Todos los sábados veía caricaturas de niño."
+                }
+              ],
+              "nota": "A habit is imperfect, not preterite."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Antes ellos veaban mucha tele."
+                },
+                {
+                  "v": "bien",
+                  "t": "Antes ellos veían mucha tele."
+                }
+              ],
+              "nota": "Ver is -er: no -aba."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "veo, ves, ve",
+              "texto": "The present: [[5306|ver in the present]]."
+            },
+            {
+              "forma": "vi, vio",
+              "texto": "The preterite: [[5217|ver in the preterite]]."
+            },
+            {
+              "forma": "comía, vivía",
+              "texto": "The regular pattern ver breaks: [[5264|-er and -ir verbs in the imperfect]]."
+            },
+            {
+              "forma": "era, iba",
+              "texto": "The other two irregulars: [[5088|ser]] and [[5269|ir in the imperfect]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We used to watch movies on Fridays._",
+              "r": "Veíamos películas los viernes.",
+              "nota": "veíamos, with e."
+            },
+            {
+              "p": "In Spanish: _Did you (tú) use to see the ocean from your house?_",
+              "r": "¿Veías el mar desde tu casa?",
+              "nota": "veías."
+            },
+            {
+              "p": "Fix it: _Antes yo vía mucha tele._",
+              "r": "Antes yo veía mucha tele.",
+              "nota": "Keep the e."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5306,
+      5264
+    ],
+    "confunde": [
+      5217
+    ],
+    "sigue": [
+      5088,
+      5269
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5268",
+      "kwiziq": true
+    }
+  ]
+}

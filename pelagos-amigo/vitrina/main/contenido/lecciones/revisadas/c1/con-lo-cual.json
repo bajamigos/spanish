@@ -1,0 +1,174 @@
+{
+  "tema": 7435,
+  "slug": "con-lo-cual",
+  "titulo": "Con lo cual / por lo cual = therefore, so (formal)",
+  "subtitulo": "Llovía, con lo cual cancelaron el partido.",
+  "foto": "t02.jpg",
+  "regla": "Con lo cual and por lo cual introduce a consequence of what was just said: so, therefore, which is why. Formal. Everyday equivalents: así que, por lo que, por eso, entonces.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "[fact]",
+            ", con lo cual / por lo cual",
+            "+ consequence"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Lo cual** refers back to the whole previous idea; the result follows."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Formal register: writing, announcements, careful speech."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Everyday versions: **así que, por lo que, por eso, entonces**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **con lo cual** = and because of that."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "El clima está medio raro, ==con lo cual== no es mala idea llevar paraguas.",
+              "en": "The weather is a bit unsettled, so it's not a bad idea to take an umbrella."
+            },
+            {
+              "es": "Los adolescentes pasan horas en el celular, ==con lo cual== hacen poco ejercicio.",
+              "en": "Teens spend hours on their phones, so they get little exercise."
+            },
+            {
+              "es": "Señor, aquí no se permite fumar, ==por lo cual== debe apagar ese cigarro.",
+              "en": "Sir, smoking isn't allowed here, so you must put out that cigarette."
+            },
+            {
+              "es": "Los precios de ese hotel eran exagerados, ==por lo cual== reservamos este.",
+              "en": "That hotel's prices were outrageous, which is why we booked this one."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "formal",
+                  "t": "Llovía, con lo cual cancelaron el partido."
+                },
+                {
+                  "v": "cotidiano",
+                  "t": "Llovía, así que cancelaron el partido."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Llovía, con el cual cancelaron..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Llovía, con lo cual cancelaron..."
+                }
+              ],
+              "nota": "Neuter **lo** for an idea."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "así que, por lo tanto",
+              "texto": "[[7250|así que]]."
+            },
+            {
+              "forma": "lo que",
+              "texto": "[[5087|lo que]]."
+            },
+            {
+              "forma": "conque",
+              "texto": "[[7183|conque]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Formal: _The flight was delayed, so we missed the connection._",
+              "r": "El vuelo se retrasó, con lo cual perdimos la conexión.",
+              "nota": "con lo cual."
+            },
+            {
+              "p": "Everyday version:",
+              "r": "El vuelo se retrasó, así que perdimos la conexión.",
+              "nota": "así que."
+            },
+            {
+              "p": "Fix it: _No había luz, por la cual no trabajamos._",
+              "r": "No había luz, por lo cual no trabajamos.",
+              "nota": "lo cual."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7250,
+      5087
+    ],
+    "confunde": [
+      7183
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7435",
+      "kwiziq": true
+    }
+  ]
+}

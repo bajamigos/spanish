@@ -1,0 +1,250 @@
+{
+  "tema": 5219,
+  "slug": "construyeron-preterito-uir",
+  "titulo": "-uir verbs in the preterite",
+  "subtitulo": "Mi abuelo construyó la casa; nosotros construimos el huerto.",
+  "foto": "t10.jpg",
+  "regla": "Verbs ending in -uir (construir, destruir, incluir, contribuir, huir…) take regular -ir preterite endings, but the i becomes y in the third person: construyó, construyeron.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Verbs ending in **-uir** (**construir, destruir, incluir, contribuir, distribuir, concluir, huir**) use the regular -ir preterite endings."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In **él/ella/usted** and **ellos/ellas/ustedes**, the unstressed **i** between two vowels becomes **y**: **construyó**, **construyeron**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Construir",
+            "Incluir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "construí",
+              "incluí"
+            ],
+            [
+              "tú",
+              "construiste",
+              "incluiste"
+            ],
+            [
+              "él, ella, usted",
+              "**construyó**",
+              "**incluyó**"
+            ],
+            [
+              "nosotros, nosotras",
+              "construimos",
+              "incluimos"
+            ],
+            [
+              "ellos, ellas, ustedes",
+              "**construyeron**",
+              "**incluyeron**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Yo** has an accent (**construí**); **tú** and **nosotros** don't (**construiste**, **construimos**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It's the same **y** you see in **leyó** and **creyeron**. Tip: the **y** only shows up where **he** and **they** are."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi abuelo ==construyó== esta casa en los setenta.",
+              "en": "My grandpa built this house in the seventies."
+            },
+            {
+              "es": "==Construimos== unas camas elevadas para el huerto.",
+              "en": "We built some raised beds for the garden."
+            },
+            {
+              "es": "¿Tú ==construiste== esa mesa solo?",
+              "en": "Did you build that table by yourself?"
+            },
+            {
+              "es": "La tormenta ==destruyó== parte del muelle.",
+              "en": "The storm destroyed part of the pier."
+            },
+            {
+              "es": "Los vecinos ==contribuyeron== con dinero para el parque.",
+              "en": "The neighbors contributed money for the park."
+            },
+            {
+              "es": "El precio ==incluyó== la renta de la tabla.",
+              "en": "The price included the board rental."
+            },
+            {
+              "es": "El ladrón ==huyó== en un carro rojo.",
+              "en": "The thief fled in a red car."
+            },
+            {
+              "es": "La maestra ==concluyó== la clase con un repaso.",
+              "en": "The teacher ended the class with a review."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mi abuelo construió la casa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mi abuelo construyó la casa."
+                }
+              ],
+              "nota": "**i → y** in él."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ellos construieron un muro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ellos construyeron un muro."
+                }
+              ],
+              "nota": "**i → y** in ellos."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros construyimos camas para el huerto."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros construimos camas para el huerto."
+                }
+              ],
+              "nota": "Only the third person gets **y**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo construyí una mesa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo construí una mesa."
+                }
+              ],
+              "nota": "**Yo**: construí."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "construyo, huyes",
+              "texto": "The present: [[5599|huir and construir in the present]]."
+            },
+            {
+              "forma": "comí, viví",
+              "texto": "The regular endings: [[5230|-er and -ir verbs in the preterite]]."
+            },
+            {
+              "forma": "leyó, creyeron",
+              "texto": "The same y: [[5258|leer, creer and proveer]]."
+            },
+            {
+              "forma": "oyó, oyeron",
+              "texto": "One more like it: [[5841|oír in the preterite]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _They built a house._",
+              "r": "Construyeron una casa.",
+              "nota": "construyeron."
+            },
+            {
+              "p": "In Spanish: _They fled from the police._",
+              "r": "Huyeron de la policía.",
+              "nota": "huyeron."
+            },
+            {
+              "p": "Fix it: _Nosotros construyimos una mesa._",
+              "r": "Nosotros construimos una mesa.",
+              "nota": "No y in nosotros."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5599,
+      5230
+    ],
+    "confunde": [
+      5258
+    ],
+    "sigue": [
+      5841
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5219",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "tema": 7731,
+  "slug": "yo-si-yo-no",
+  "titulo": "Using yo sí / yo no / a mí sí / a mí no for contrasting answers",
+  "subtitulo": "—No me gusta. —A mí sí. Short answers that say the opposite.",
+  "foto": "t03.jpg",
+  "regla": "To contrast with what someone said: after a negative, yo sí; after an affirmative, yo no. With verbs like gustar: a mí sí / a mí no.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To answer someone briefly and say you do **the opposite**, use **yo sí** (_I do_) or **yo no** (_I don't_)."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "They say…",
+            "You do the opposite",
+            "Short answer"
+          ],
+          "filas": [
+            [
+              "something negative",
+              "you do it",
+              "Yo sí."
+            ],
+            [
+              "something affirmative",
+              "you don't",
+              "Yo no."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "With verbs like **gustar**, **encantar**, **apasionar**, **convencer**, which use an indirect object, the answer is **a mí sí** / **a mí no**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It works for any tense: past, present or future (**yo sí**, _I did / I will_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "To _agree_ instead, use **yo también / yo tampoco** (see [[7681|me too, me neither]])."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **sí** and **no** are a seesaw. Their side goes down, yours goes up."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "—Yo nunca me levanto antes de las siete. —==Yo sí==.",
+              "en": "\"I never get up before seven.\" \"I do.\""
+            },
+            {
+              "es": "—Voy a hacer una maestría el año que viene. —==Yo no==.",
+              "en": "\"I'm going to do a master's next year.\" \"I'm not.\""
+            },
+            {
+              "es": "—No me gusta ese cantante. —==A mí sí==.",
+              "en": "\"I don't like that singer.\" \"I do.\""
+            },
+            {
+              "es": "—Me encanta el arte japonés. —==A mí no==.",
+              "en": "\"I love Japanese art.\" \"I don't.\""
+            },
+            {
+              "es": "—Yo no le hablé a Beto ayer. —==Yo sí==.",
+              "en": "\"I didn't call Beto yesterday.\" \"I did.\""
+            },
+            {
+              "es": "—Creo que mañana voy a surfear. —==Yo no==.",
+              "en": "\"I think I'll surf tomorrow.\" \"I won't.\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "—No me gusta. —Yo sí."
+                },
+                {
+                  "v": "bien",
+                  "t": "—No me gusta. —A mí sí."
+                }
+              ],
+              "nota": "With **gustar**: **a mí**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "—No tengo hambre. —Yo no."
+                },
+                {
+                  "v": "bien",
+                  "t": "—No tengo hambre. —Yo sí."
+                }
+              ],
+              "nota": "To contrast with a negative: **sí**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "—Me gustan los tacos. —A mí tampoco."
+                },
+                {
+                  "v": "bien",
+                  "t": "—Me gustan los tacos. —A mí no."
+                }
+              ],
+              "nota": "**Tampoco** agrees with a negative; it doesn't contrast."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "yo también, yo tampoco",
+              "texto": "To agree: [[7681|me too, me neither]]."
+            },
+            {
+              "forma": "tampoco",
+              "texto": "_Either / neither_ in full sentences: [[9188|tampoco]]."
+            },
+            {
+              "forma": "me gusta, le gusta",
+              "texto": "Verbs like gustar: [[6001|gustar]], [[7032|repeating the pronoun]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "—No me gusta el viento. —(you like it)",
+              "r": "A mí sí.",
+              "nota": "gustar: a mí sí."
+            },
+            {
+              "p": "—Yo voy a la fiesta. —(you're not going)",
+              "r": "Yo no.",
+              "nota": "Contrast with an affirmative."
+            },
+            {
+              "p": "—Nunca como mariscos. —(you do)",
+              "r": "Yo sí.",
+              "nota": "Contrast with a negative."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7681,
+      6001
+    ],
+    "confunde": [
+      7681
+    ],
+    "sigue": [
+      9188,
+      7032
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7731",
+      "kwiziq": true
+    }
+  ]
+}

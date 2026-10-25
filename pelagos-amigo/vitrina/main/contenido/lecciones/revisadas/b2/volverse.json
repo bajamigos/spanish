@@ -1,0 +1,196 @@
+{
+  "tema": 7072,
+  "slug": "volverse",
+  "titulo": "Volverse to express to become / to turn",
+  "subtitulo": "Se volvió muy presumida.",
+  "foto": "t09.jpg",
+  "regla": "Volverse + adjective or noun = to become, to turn, for changes in someone's character or attitude, usually lasting and not on purpose: se volvió muy desconfiado.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Volverse** (o → ue: **se vuelve**) expresses a change in a person's **character, personality or attitude**, or in a situation. It's usually **lasting** and **not intentional**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "volverse",
+            "+ adjective / (un, una) + noun"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Compared with the others:"
+        },
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "ponerse",
+                  "t": "Antonio se puso nervioso."
+                },
+                {
+                  "v": "volverse",
+                  "t": "Antonio se ha vuelto más nervioso con los años."
+                }
+              ],
+              "nota": "Temporary vs a lasting change."
+            },
+            {
+              "filas": [
+                {
+                  "v": "hacerse",
+                  "t": "Megan se hizo mexicana."
+                },
+                {
+                  "v": "volverse",
+                  "t": "Megan se volvió muy mexicana."
+                }
+              ],
+              "nota": "**Hacerse**: on purpose (citizenship). **Volverse**: it just happened, she acts like one."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **volverse** is turning into someone else, little by little."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Se volvió== muy presumida a los quince.",
+              "en": "She got really stuck-up at fifteen."
+            },
+            {
+              "es": "Su actitud ==se volvió== violenta de repente.",
+              "en": "His attitude turned violent all of a sudden."
+            },
+            {
+              "es": "Luis y Marta ==se han vuelto== una pareja aburrida.",
+              "en": "Luis and Marta have become a boring couple."
+            },
+            {
+              "es": "Con la fama ==se volvió== muy desconfiado.",
+              "en": "With fame he became very distrustful."
+            },
+            {
+              "es": "Ese tema ==se volvió== un problema.",
+              "en": "That issue turned into a problem."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Volvió loco."
+                },
+                {
+                  "v": "bien",
+                  "t": "Se volvió loco."
+                }
+              ],
+              "nota": "Always with **se**; without it, **volver** = _to return_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Se volvió doctora."
+                },
+                {
+                  "v": "bien",
+                  "t": "Se hizo doctora."
+                }
+              ],
+              "nota": "A profession by effort: **hacerse**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "ponerse, hacerse, quedarse, convertirse en",
+              "texto": "[[6985|verbs of change]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _He became very selfish._",
+              "r": "Se volvió muy egoísta.",
+              "nota": "Character change."
+            },
+            {
+              "p": "Ponerse or volverse? _Se ___ rojo cuando lo vio._",
+              "r": "puso",
+              "nota": "Temporary."
+            },
+            {
+              "p": "In Spanish: _The city has become dangerous._",
+              "r": "La ciudad se ha vuelto peligrosa.",
+              "nota": "volverse."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6985
+    ],
+    "confunde": [
+      6985
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7072",
+      "kwiziq": true
+    }
+  ]
+}

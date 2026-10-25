@@ -1,0 +1,244 @@
+{
+  "tema": 9777,
+  "slug": "se-con-y-sin-acento",
+  "titulo": "Sé vs se",
+  "subtitulo": "No sé cómo se llama.",
+  "foto": "t10.jpg",
+  "regla": "Sé (accent) is a verb: I know (saber) or be! (the tú command of ser). Se (no accent) is a pronoun: se llama, se levanta, aquí se habla español, se lo di.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Sé** with an accent is always a **verb**:"
+        },
+        {
+          "tipo": "texto",
+          "texto": "1. **yo sé** = _I know_ (saber): **No sé.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "2. **¡sé!** = _be!_ (tú command of ser): **¡Sé paciente!**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Se** without an accent is a **pronoun**:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Use",
+            "Example",
+            "English"
+          ],
+          "filas": [
+            [
+              "reflexive",
+              "Mi vecina se llama Lupita.",
+              "_My neighbor's name is Lupita._"
+            ],
+            [
+              "impersonal / passive",
+              "Aquí se habla español.",
+              "_Spanish is spoken here._"
+            ],
+            [
+              "le / les before lo, la",
+              "Ya se lo di.",
+              "_I already gave it to him._"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if you can put **yo** in front of it, or it means _be!_, write **sé**. Otherwise it's **se**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No ==sé== dónde dejé las llaves.",
+              "en": "I don't know where I left the keys."
+            },
+            {
+              "es": "==Sé== nadar, pero todavía no ==sé== surfear.",
+              "en": "I know how to swim, but I don't know how to surf yet."
+            },
+            {
+              "es": "¡==Sé== paciente con tu hermanito!",
+              "en": "Be patient with your little brother!"
+            },
+            {
+              "es": "Ya lo ==sé==.",
+              "en": "I already know."
+            },
+            {
+              "es": "Mi vecina ==se== llama Lupita.",
+              "en": "My neighbor's name is Lupita."
+            },
+            {
+              "es": "Mi papá ==se== levanta a las cinco.",
+              "en": "My dad gets up at five."
+            },
+            {
+              "es": "Aquí ==se== habla español e inglés.",
+              "en": "Spanish and English are spoken here."
+            },
+            {
+              "es": "¿Las llaves? Ya ==se== las di a Juan.",
+              "en": "The keys? I already gave them to Juan."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No se."
+                },
+                {
+                  "v": "bien",
+                  "t": "No sé."
+                }
+              ],
+              "nota": "_I know_ takes the accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella sé llama Ana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella se llama Ana."
+                }
+              ],
+              "nota": "Pronoun: no accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Se bueno!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Sé bueno!"
+                }
+              ],
+              "nota": "_Be!_ takes the accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo se que es tarde."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo sé que es tarde."
+                }
+              ],
+              "nota": "**Yo** + verb: **sé**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "sé, sabes, sabe",
+              "texto": "The verb: [[5590|saber in the present]]."
+            },
+            {
+              "forma": "me llamo, se llama",
+              "texto": "The pronoun with reflexive verbs: [[5085|reflexive verbs]]."
+            },
+            {
+              "forma": "se habla español",
+              "texto": "Impersonal se: [[5132|se = one]]."
+            },
+            {
+              "forma": "¡sé!, ¡ten!, ¡ven!",
+              "texto": "The command: [[6962|irregular tú commands]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I know what his name is._",
+              "r": "Sé cómo se llama.",
+              "nota": "sé verb; se pronoun."
+            },
+            {
+              "p": "In Spanish: _Be brave!_ (tú)",
+              "r": "¡Sé valiente!",
+              "nota": "Command of ser."
+            },
+            {
+              "p": "Fix it: _No se a qué hora sé levanta._",
+              "r": "No sé a qué hora se levanta.",
+              "nota": "Swap the accents."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5590,
+      5085
+    ],
+    "confunde": [
+      5132
+    ],
+    "sigue": [
+      6962
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9777",
+      "kwiziq": true
+    }
+  ]
+}

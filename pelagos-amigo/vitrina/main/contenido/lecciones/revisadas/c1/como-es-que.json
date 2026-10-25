@@ -1,0 +1,178 @@
+{
+  "tema": 9519,
+  "slug": "como-es-que",
+  "titulo": "¿Cómo es que...? / ¿Cómo que...? = how come...? / what do you mean...?",
+  "subtitulo": "¿Cómo es que no viniste? —¿Cómo que no hay luz?",
+  "foto": "t01.jpg",
+  "regla": "¿Cómo es que + sentence? asks how come something surprising happened: ¿Cómo es que no viniste? ¿Cómo que + repeated words? questions or protests what someone just said: ¿Cómo que no hay luz? Neither works alone: for a bare How come?, say ¿Y eso? or ¿Por qué?",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "¿Cómo es que",
+            "+ sentence?"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "_How come...?_ The speaker finds something odd or hard to understand."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "¿Cómo que",
+            "+ what the other person said?"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "_What do you mean...?_ It echoes someone's words with surprise or protest."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Neither stands alone. For a bare _How come?_, use **¿Y eso?** or **¿Por qué?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **cómo que** throws the other person's words back at them."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==¿Cómo es que== tu esposo no vino contigo?",
+              "en": "How come your husband didn't come with you?"
+            },
+            {
+              "es": "==¿Cómo es que== te queda tan poco dinero? Ayer tenías un montón.",
+              "en": "How come you have so little money left? Yesterday you had a lot."
+            },
+            {
+              "es": "==¿Cómo es que== se vinieron a vivir tan lejos?",
+              "en": "How come you moved so far away?"
+            },
+            {
+              "es": "—Ya no hay boletos. —==¿Cómo que== no hay boletos? Si acaban de abrir.",
+              "en": "—There are no tickets left. —What do you mean, no tickets? They just opened."
+            },
+            {
+              "es": "—Mi carro lleva una semana en el taller. —==¿Y eso?==",
+              "en": "—My car's been in the shop a week. —How come?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "—Llegué tarde. —¿Cómo es que?"
+                },
+                {
+                  "v": "bien",
+                  "t": "—Llegué tarde. —¿Y eso?"
+                }
+              ],
+              "nota": "Not on its own."
+            },
+            {
+              "filas": [
+                {
+                  "v": "pregunta",
+                  "t": "¿Cómo es que no viniste?"
+                },
+                {
+                  "v": "protesta",
+                  "t": "¿Cómo que no vienes?"
+                }
+              ],
+              "nota": "**Cómo es que** asks; **cómo que** objects to what was said."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "por qué",
+              "texto": "[[6333|por qué]]."
+            },
+            {
+              "forma": "cómo",
+              "texto": "[[6313|cómo, dónde, cuándo]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _How come you speak such good Japanese?_",
+              "r": "¿Cómo es que hablas tan bien japonés?",
+              "nota": "cómo es que."
+            },
+            {
+              "p": "React: _—Mañana no hay clase._ What do you mean, there's no class?",
+              "r": "¿Cómo que no hay clase?",
+              "nota": "cómo que + echo."
+            },
+            {
+              "p": "A one-word _How come?_",
+              "r": "¿Y eso?",
+              "nota": "Not ¿Cómo es que?"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6333
+    ],
+    "confunde": [],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9519",
+      "kwiziq": true
+    }
+  ]
+}

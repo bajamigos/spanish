@@ -1,0 +1,188 @@
+{
+  "tema": 6754,
+  "slug": "el-norte-el-sur",
+  "titulo": "Cardinal points are masculine",
+  "subtitulo": "El norte, el sur, el este, el oeste.",
+  "foto": "t04.jpg",
+  "regla": "The cardinal points (norte, sur, este, oeste and their mixes) are masculine nouns, so they take el, and a + el / de + el contract to al / del.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "The cardinal points are **masculine**: **el norte**, **el sur**, **el este**, **el oeste**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The mixes are masculine too: **el noreste**, **el noroeste**, **el sureste**, **el suroeste**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With **a** and **de** they contract: **al norte de**, **del sur**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Write them in lowercase. Capitals only inside a name: **Baja California Sur**, **América del Norte**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Tijuana está ==al norte== de Ensenada.",
+              "en": "Tijuana is north of Ensenada."
+            },
+            {
+              "es": "Vivo en ==el este== de la ciudad.",
+              "en": "I live in the east of the city."
+            },
+            {
+              "es": "En verano las olas llegan ==del sur==.",
+              "en": "In summer the waves come from the south."
+            },
+            {
+              "es": "El viento sopla ==del oeste==.",
+              "en": "The wind blows from the west."
+            },
+            {
+              "es": "Mi familia es ==del sureste== de México.",
+              "en": "My family is from the southeast of Mexico."
+            },
+            {
+              "es": "Monterrey está en ==el noreste== del país.",
+              "en": "Monterrey is in the northeast of the country."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La norte"
+                },
+                {
+                  "v": "bien",
+                  "t": "El norte"
+                }
+              ],
+              "nota": "Masculine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "a el sur de la playa"
+                },
+                {
+                  "v": "bien",
+                  "t": "al sur de la playa"
+                }
+              ],
+              "nota": "a + el = al."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Viene de el oeste."
+                },
+                {
+                  "v": "bien",
+                  "t": "Viene del oeste."
+                }
+              ],
+              "nota": "de + el = del."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "al norte, del sur",
+              "texto": "The contractions: [[5090|al and del]]."
+            },
+            {
+              "forma": "el lunes",
+              "texto": "Days are masculine too: [[6751|days of the week]]."
+            },
+            {
+              "forma": "un enero frío",
+              "texto": "And months: [[6750|months are masculine]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Tijuana is in the north of Mexico._",
+              "r": "Tijuana está en el norte de México.",
+              "nota": "el norte."
+            },
+            {
+              "p": "Fix it: _El viento viene de la oeste._",
+              "r": "El viento viene del oeste.",
+              "nota": "Masculine, and de + el = del."
+            },
+            {
+              "p": "In Spanish: _south of the city_",
+              "r": "al sur de la ciudad",
+              "nota": "a + el = al."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5090
+    ],
+    "confunde": [],
+    "sigue": [
+      6751,
+      6750
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6754",
+      "kwiziq": true
+    }
+  ]
+}

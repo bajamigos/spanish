@@ -1,0 +1,225 @@
+{
+  "tema": 7074,
+  "slug": "ni-ni",
+  "titulo": "Using ni… ni… for neither… nor…",
+  "subtitulo": "Ni Beto ni Lucas vinieron / no vinieron ni Beto ni Lucas.",
+  "foto": "t03.jpg",
+  "regla": "Ni… ni… = neither… nor, before each element. Before the verb: no extra no. After the verb: no before the verb (no vino ni Beto ni Lucas).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say _neither… nor…_, use **ni** twice, once before each negative element."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**ni**",
+            "element 1",
+            "**ni**",
+            "element 2"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Ni** can go before nouns, verbs, adjectives, and more: **ni estudia ni trabaja**, **ni bueno ni malo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "If **ni… ni…** comes **before** the verb, the verb takes no **no**. If it comes **after** the verb, the verb needs **no** before it. Both mean the same."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Position",
+            "Example"
+          ],
+          "filas": [
+            [
+              "before the verb",
+              "Ni Lucas ni Daniel fueron a la fiesta."
+            ],
+            [
+              "after the verb",
+              "No fueron a la fiesta ni Lucas ni Daniel."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The double negative stays negative in Spanish."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: two **ni**s are two closed doors."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Ni== Lucas ==ni== Daniel fueron a la fiesta ayer.",
+              "en": "Neither Lucas nor Daniel went to the party yesterday."
+            },
+            {
+              "es": "Es medio flojo: ==ni== estudia ==ni== trabaja.",
+              "en": "He's kind of lazy: he neither studies nor works."
+            },
+            {
+              "es": "Su español no es ==ni== bueno ==ni== malo.",
+              "en": "His Spanish is neither good nor bad."
+            },
+            {
+              "es": "Ayer ==no== fueron a la fiesta ==ni== Lucas ==ni== Daniel.",
+              "en": "Neither Lucas nor Daniel went to the party yesterday."
+            },
+            {
+              "es": "==No== le interesa ==ni== la historia ==ni== la geografía.",
+              "en": "She's interested in neither history nor geography."
+            },
+            {
+              "es": "==Ni== sentado ==ni== acostado se me quita el dolor de espalda.",
+              "en": "Neither sitting nor lying down does my back pain go away."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ni Beto ni Lucas no vinieron."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ni Beto ni Lucas vinieron."
+                }
+              ],
+              "nota": "Before the verb: no extra **no**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Vinieron ni Beto ni Lucas."
+                },
+                {
+                  "v": "bien",
+                  "t": "No vinieron ni Beto ni Lucas."
+                }
+              ],
+              "nota": "After the verb: **no** before it."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ni estudia o trabaja."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ni estudia ni trabaja."
+                }
+              ],
+              "nota": "**Ni** twice."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "nunca",
+              "texto": "Same pattern: [[5136|nunca in negative sentences]]."
+            },
+            {
+              "forma": "tampoco",
+              "texto": "Either / neither: [[9188|tampoco]]."
+            },
+            {
+              "forma": "ni yo",
+              "texto": "Short answers: [[7681|yo tampoco]]."
+            },
+            {
+              "forma": "menos yo",
+              "texto": "Except: [[7065|menos]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Neither the bus nor the taxi came._",
+              "r": "Ni el camión ni el taxi llegaron.",
+              "nota": "ni… ni before the verb."
+            },
+            {
+              "p": "Same idea with **no** before the verb.",
+              "r": "No llegaron ni el camión ni el taxi.",
+              "nota": "no + verb + ni… ni."
+            },
+            {
+              "p": "In Spanish: _I neither drink nor smoke._",
+              "r": "Ni tomo ni fumo.",
+              "nota": "ni + verb."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5136,
+      9188
+    ],
+    "confunde": [
+      9188
+    ],
+    "sigue": [
+      7681,
+      7065
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7074",
+      "kwiziq": true
+    }
+  ]
+}

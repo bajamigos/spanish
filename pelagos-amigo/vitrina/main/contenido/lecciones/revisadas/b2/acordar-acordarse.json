@@ -1,0 +1,209 @@
+{
+  "tema": 7479,
+  "slug": "acordar-acordarse",
+  "titulo": "Acordar vs acordarse",
+  "subtitulo": "Acordamos vernos a las tres / No me acuerdo.",
+  "foto": "t08.jpg",
+  "regla": "Acordar = to agree on something (formal): acordaron invertir más. Acordarse de = to remember: no me acuerdo de su nombre. In everyday Mexican Spanish, to agree to meet is quedar en: quedamos en vernos a las tres.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Verb",
+            "Meaning",
+            "Example"
+          ],
+          "filas": [
+            [
+              "acordar (+ infinitive / que / con)",
+              "to agree on, decide together (formal)",
+              "Los socios acordaron invertir más."
+            ],
+            [
+              "acordarse de",
+              "to remember",
+              "¿Te acuerdas de mí?"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Acordarse** needs **de** before a noun or infinitive: **me acordé de llamarte**. Before a clause, **de que**: **me acordé de que era tu cumpleaños** (in speech, **de** is sometimes dropped)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Both are o → ue: **acuerdo, me acuerdo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "For agreeing on plans, the everyday phrase is **quedar en**: **quedamos en vernos a las tres**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **acordar** = make a deal; **acordarse** = the memory comes back."
+        }
+      ]
+    },
+    {
+      "id": "acordar",
+      "titulo": "Acordar",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Los socios ==acordaron== invertir más en tecnología.",
+              "en": "The partners agreed to invest more in technology."
+            },
+            {
+              "es": "Ayer ==acordé== con mi jefe que haría unas horas extra.",
+              "en": "Yesterday I agreed with my boss that I'd do some overtime."
+            },
+            {
+              "es": "Verónica y yo ==acordamos== vernos a las tres y media.",
+              "en": "Verónica and I agreed to meet at three thirty. (formal)"
+            },
+            {
+              "es": "Verónica y yo ==quedamos en== vernos a las tres y media.",
+              "en": "Verónica and I agreed to meet at three thirty. (everyday)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "acordarse",
+      "titulo": "Acordarse de",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "—Ayer estuve pensando en cómo nos conocimos. —Pues yo no ==me acuerdo==...",
+              "en": "—Yesterday I was thinking about how we met. —Well, I don't remember..."
+            },
+            {
+              "es": "¿==Te acuerdas de== mi prima Lupita?",
+              "en": "Do you remember my cousin Lupita?"
+            },
+            {
+              "es": "No ==me acordé de== comprar tortillas.",
+              "en": "I didn't remember to buy tortillas."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No acuerdo su nombre."
+                },
+                {
+                  "v": "bien",
+                  "t": "No me acuerdo de su nombre."
+                }
+              ],
+              "nota": "_Remember_: **acordarse de**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me acuerdo tu cara."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me acuerdo de tu cara."
+                }
+              ],
+              "nota": "Don't drop **de** before a noun."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "recordar",
+              "texto": "**Recordar** = _to remember_, without **se** or **de**: **recuerdo tu cara**: [[5874|recordar, acordarse]]."
+            },
+            {
+              "forma": "olvidarse de",
+              "texto": "The opposite: [[7602|olvidar(se)]]."
+            },
+            {
+              "forma": "dormir / dormirse",
+              "texto": "[[7446|other pronominal pairs]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I don't remember his address._",
+              "r": "No me acuerdo de su dirección.",
+              "nota": "acordarse de."
+            },
+            {
+              "p": "Formal: _They agreed to raise salaries._",
+              "r": "Acordaron subir los sueldos.",
+              "nota": "acordar."
+            },
+            {
+              "p": "Everyday: _We agreed to meet on Friday._",
+              "r": "Quedamos en vernos el viernes.",
+              "nota": "quedar en."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5874
+    ],
+    "confunde": [
+      7602
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7479",
+      "kwiziq": true
+    }
+  ]
+}

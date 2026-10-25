@@ -1,0 +1,220 @@
+{
+  "tema": 6175,
+  "slug": "al-infinitivo",
+  "titulo": "Al + infinitive / perfect infinitive = when doing / because of doing",
+  "subtitulo": "Al llegar, me llamas. Al haber estudiado, aprobó.",
+  "foto": "t10.jpg",
+  "regla": "Al + infinitive = when / on / upon doing (time) or because of doing (cause). Al + haber + participle presents the action as already completed: al haber terminado = having finished / because he had finished.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Al** + infinitive packs a whole clause into a few words. It has two meanings:"
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "time",
+              "texto": "_when, while, upon, on doing_: **al calentar la leche** = _while heating the milk_."
+            },
+            {
+              "forma": "cause",
+              "texto": "_because, since, as_: **al portarse tan mal** = _because he behaved so badly_."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The exact timing isn't spelled out; context tells you if it's _during_, _when_ or _right after_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Al** + **haber** + participle (the perfect infinitive) shows the action was **already finished** before the main one."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **al** + infinitive is a clause on a diet: no subject, no conjugation."
+        }
+      ]
+    },
+    {
+      "id": "tiempo",
+      "titulo": "When doing",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Al calentar== la leche, me quemé.",
+              "en": "I burned myself while heating the milk."
+            },
+            {
+              "es": "Se desmayó ==al leer== la noticia.",
+              "en": "She fainted on reading the news."
+            },
+            {
+              "es": "==Al llegar== a la casa, mándame un mensaje.",
+              "en": "When you get home, send me a text."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "causa",
+      "titulo": "Because of doing",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Al terminar== la sesión antes de tiempo, pudimos volver temprano.",
+              "en": "Since the session ended early, we were able to get back early."
+            },
+            {
+              "es": "==Al portarse== tan mal, lo expulsaron de la escuela.",
+              "en": "Because he behaved so badly, he was expelled from school."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "perfecto",
+      "titulo": "Al + haber + participle",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Al haber calentado== la leche, me quemé.",
+              "en": "Having heated the milk, I burned myself."
+            },
+            {
+              "es": "==Al haberse portado== tan mal, lo expulsaron de la escuela.",
+              "en": "Because he had behaved so badly, he was expelled from school."
+            },
+            {
+              "es": "==Al no haber estudiado==, reprobó.",
+              "en": "Not having studied, he failed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Al llegando, me llamas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Al llegar, me llamas."
+                }
+              ],
+              "nota": "Infinitive, never gerund."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "A el salir, cierra."
+                },
+                {
+                  "v": "bien",
+                  "t": "Al salir, cierra."
+                }
+              ],
+              "nota": "**A** + **el** = **al**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "haber terminado",
+              "texto": "[[7262|perfect infinitive]]."
+            },
+            {
+              "forma": "antes de salir",
+              "texto": "[[10101|antes de / después de + haber]]."
+            },
+            {
+              "forma": "leyendo",
+              "texto": "The gerund for _while_: [[7029|gerund for while]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _When I opened the door, I saw the cat._",
+              "r": "Al abrir la puerta, vi al gato.",
+              "nota": "al + infinitive."
+            },
+            {
+              "p": "In Spanish: _Having lost the keys, we couldn't get in._",
+              "r": "Al haber perdido las llaves, no pudimos entrar.",
+              "nota": "Perfect infinitive."
+            },
+            {
+              "p": "Fix it: _Al saliendo de casa, llovía._",
+              "r": "Al salir de casa, llovía.",
+              "nota": "Infinitive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7079
+    ],
+    "confunde": [
+      7029
+    ],
+    "sigue": [
+      7262,
+      10101
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6175",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "tema": 7934,
+  "slug": "la-de",
+  "titulo": "¡La de + noun + que...! = so much / so many",
+  "subtitulo": "¡La de veces que te lo dije!",
+  "foto": "t08.jpg",
+  "regla": "La de + noun + que + verb stresses a large quantity with surprise: ¡La de veces que te lo dije! La de never changes, whatever the noun (it stands for la cantidad de). Mexico often says ¡La cantidad de...! or ¡Cuántas...!",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "¡la de",
+            "+ noun + que +",
+            "verb!"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "_So much, so many_, with surprise or exasperation."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**La de** never changes: **la de vino**, **la de besos**, **la de problemas**. It's short for **la cantidad de**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Works as a statement too: **no te imaginas la de vueltas que di**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In Mexico you'll often hear the full **¡la cantidad de...!** or **¡cuántas veces...!**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **la de** = the amount of."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¡==La de== vino ==que== se tomó Miguel hoy!",
+              "en": "Miguel drank so much wine today!"
+            },
+            {
+              "es": "¡==La de== besos ==que== me da mi abuela!",
+              "en": "My grandma gives me so many kisses!"
+            },
+            {
+              "es": "¡==La de== hambre ==que== hay en el mundo!",
+              "en": "There's so much hunger in the world!"
+            },
+            {
+              "es": "¡==La de== pulseras ==que== vendí ayer!",
+              "en": "I sold so many bracelets yesterday!"
+            },
+            {
+              "es": "No te imaginas ==la de== vueltas ==que== di para encontrar tu casa.",
+              "en": "You can't imagine how many times I went around looking for your house."
+            },
+            {
+              "es": "¡==La cantidad de== gente ==que== vino!",
+              "en": "So many people came!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Los de besos que me da!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡La de besos que me da!"
+                }
+              ],
+              "nota": "Always **la de**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡La de veces te lo dije!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡La de veces que te lo dije!"
+                }
+              ],
+              "nota": "Keep **que**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¡el frío que hace!",
+              "texto": "[[7933|el + noun + que]]."
+            },
+            {
+              "forma": "¡qué de gente!",
+              "texto": "[[6863|qué de]]."
+            },
+            {
+              "forma": "¡cuánta gente!",
+              "texto": "[[7027|cuánto + noun]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Exclaim: _I've told you so many times!_",
+              "r": "¡La de veces que te lo he dicho!",
+              "nota": "la de + noun."
+            },
+            {
+              "p": "Exclaim: _So much food we made!_",
+              "r": "¡La de comida que hicimos!",
+              "nota": "Invariable."
+            },
+            {
+              "p": "Mexican alternative:",
+              "r": "¡La cantidad de comida que hicimos!",
+              "nota": "la cantidad de."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6863
+    ],
+    "confunde": [
+      7933
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7934",
+      "kwiziq": true
+    }
+  ]
+}

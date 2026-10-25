@@ -1,0 +1,220 @@
+{
+  "tema": 6751,
+  "slug": "dias-semana-masculinos",
+  "titulo": "Days of the week are masculine",
+  "subtitulo": "El lunes, los sábados, este domingo.",
+  "foto": "t03.jpg",
+  "regla": "Days of the week are masculine (el lunes, este domingo, todos los martes) and lowercase. Lunes to viernes are the same in the plural (los lunes); sábado and domingo add -s.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Days are **masculine**: **el lunes**, **un viernes**, **este domingo**, **todos los martes**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "They're written in **lowercase**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Plural: **lunes** to **viernes** don't change (**los lunes**); **sábado** and **domingo** add **-s**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Singular",
+            "Plural"
+          ],
+          "filas": [
+            [
+              "el lunes",
+              "los lunes"
+            ],
+            [
+              "el martes",
+              "los martes"
+            ],
+            [
+              "el miércoles",
+              "los miércoles"
+            ],
+            [
+              "el jueves",
+              "los jueves"
+            ],
+            [
+              "el viernes",
+              "los viernes"
+            ],
+            [
+              "el sábado",
+              "los sábados"
+            ],
+            [
+              "el domingo",
+              "los domingos"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==El lunes== empiezo mi clase de jiu-jitsu.",
+              "en": "I start my jiu-jitsu class on Monday."
+            },
+            {
+              "es": "==Los sábados== voy a surfear a Rosarito.",
+              "en": "On Saturdays I go surfing in Rosarito."
+            },
+            {
+              "es": "Fue ==un viernes== muy ==largo==.",
+              "en": "It was a very long Friday."
+            },
+            {
+              "es": "==Este domingo== hay mercado sobre ruedas.",
+              "en": "This Sunday there's a street market."
+            },
+            {
+              "es": "Riego mis plantas ==todos los martes==.",
+              "en": "I water my plants every Tuesday."
+            },
+            {
+              "es": "==El miércoles pasado== llovió.",
+              "en": "It rained last Wednesday."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "esta domingo"
+                },
+                {
+                  "v": "bien",
+                  "t": "este domingo"
+                }
+              ],
+              "nota": "Masculine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "los luneses"
+                },
+                {
+                  "v": "bien",
+                  "t": "los lunes"
+                }
+              ],
+              "nota": "Lunes to viernes don't change."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "el Viernes"
+                },
+                {
+                  "v": "bien",
+                  "t": "el viernes"
+                }
+              ],
+              "nota": "Lowercase."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el lunes = on Monday",
+              "texto": "When to use el or los: [[10481|the article with days of the week]]."
+            },
+            {
+              "forma": "en enero",
+              "texto": "Months are masculine too: [[6750|months are masculine]]."
+            },
+            {
+              "forma": "hoy es lunes",
+              "texto": "Saying what day it is: [[5981|ser for time, days and dates]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Plural of _el jueves_?",
+              "r": "los jueves",
+              "nota": "No change."
+            },
+            {
+              "p": "Plural of _el domingo_?",
+              "r": "los domingos",
+              "nota": "Add -s."
+            },
+            {
+              "p": "Fix it: _Todas las sábados voy a la playa._",
+              "r": "Todos los sábados voy a la playa.",
+              "nota": "Masculine."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [],
+    "sigue": [
+      10481,
+      6750,
+      5981
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6751",
+      "kwiziq": true
+    }
+  ]
+}

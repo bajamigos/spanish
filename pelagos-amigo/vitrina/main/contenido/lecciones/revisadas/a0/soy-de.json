@@ -1,0 +1,194 @@
+{
+  "tema": 5041,
+  "slug": "soy-de",
+  "titulo": "Saying where you're from with soy de",
+  "subtitulo": "«Soy de Tijuana. ¿De dónde eres?»",
+  "foto": "t02.jpg",
+  "regla": "To say where you're from, use soy de + city, country or region (soy is ser, never estar). Ask ¿De dónde eres? to a tú and ¿De dónde es usted? to an usted.",
+  "comparada_kwiziq": "2026-10-17",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "(yo) soy",
+            "+ de +",
+            "city / country / region"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Soy** is the yo form of **ser** (_to be_). **Yo** is optional."
+        },
+        {
+          "tipo": "texto",
+          "texto": "To ask, the **de** jumps to the front: **¿De dónde eres?** (tú), **¿De dónde es usted?** (usted)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **de** is the root of your family tree. You come **de** somewhere, and that never changes, so it's **ser**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Soy de== Tijuana.",
+              "en": "I'm from Tijuana."
+            },
+            {
+              "es": "Yo ==soy de== México, ¿y tú?",
+              "en": "I'm from Mexico, and you?"
+            },
+            {
+              "es": "¿==De dónde eres==?",
+              "en": "Where are you from?"
+            },
+            {
+              "es": "¿==De dónde es== usted, señora?",
+              "en": "Where are you from, ma'am?"
+            },
+            {
+              "es": "==Soy de== Baja California, pero vivo en Guadalajara.",
+              "en": "I'm from Baja California, but I live in Guadalajara."
+            },
+            {
+              "es": "Mi maestro de jiu-jitsu ==es de== Brasil.",
+              "en": "My jiu-jitsu teacher is from Brazil."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estoy de Tijuana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Soy de Tijuana."
+                }
+              ],
+              "nota": "Origin uses **ser**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Soy desde Tijuana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Soy de Tijuana."
+                }
+              ],
+              "nota": "_From_ here is **de**, not **desde**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Dónde eres de?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿De dónde eres?"
+                }
+              ],
+              "nota": "**De** goes first."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "vivo en…",
+              "texto": "Where you live now: [[5042|vivo en]]."
+            },
+            {
+              "forma": "soy mexicano",
+              "texto": "Origin and nationality with ser: [[6806|ser for origin]]."
+            },
+            {
+              "forma": "eres, es, somos",
+              "texto": "All of ser: [[5070|ser in the present]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I'm from Ensenada._",
+              "r": "Soy de Ensenada.",
+              "nota": "soy de + city."
+            },
+            {
+              "p": "Ask an older stranger: _Where are you from?_",
+              "r": "¿De dónde es usted?",
+              "nota": "usted: es."
+            },
+            {
+              "p": "Fix it: _Estoy de Canadá._",
+              "r": "Soy de Canadá.",
+              "nota": "ser, not estar."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5043
+    ],
+    "confunde": [
+      5042
+    ],
+    "sigue": [
+      6806,
+      5070
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5041",
+      "kwiziq": true
+    }
+  ]
+}

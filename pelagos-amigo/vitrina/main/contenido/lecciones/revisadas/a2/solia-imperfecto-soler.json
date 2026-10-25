@@ -1,0 +1,250 @@
+{
+  "tema": 5925,
+  "slug": "solia-imperfecto-soler",
+  "titulo": "Soler in the imperfect",
+  "subtitulo": "Solía surfear todas las mañanas.",
+  "foto": "t04.jpg",
+  "regla": "Solía, solías, solía, solíamos, solían + infinitive = used to (do something). Soler is regular in the imperfect: no o > ue.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Soler** + infinitive talks about habits. In the imperfect it means _used to_: **solía surfear** = _I used to surf_."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "solía",
+            "+",
+            "infinitive"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Soler"
+          ],
+          "filas": [
+            [
+              "yo",
+              "solía"
+            ],
+            [
+              "tú",
+              "solías"
+            ],
+            [
+              "él, ella, usted",
+              "solía"
+            ],
+            [
+              "nosotros, nosotras",
+              "solíamos"
+            ],
+            [
+              "ellos, ellas, ustedes",
+              "solían"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "No **ue** here: the stress falls on **-ía**, so the stem stays **sol-** (compare the present **suelo**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Always followed by an infinitive, with no **a** in between."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Soler** is used only for habits, so it lives in the present and the imperfect. For a one-time past event, use the preterite of the main verb."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Solía surfear** means the same as **surfeaba**: a habit in the past."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "De niño ==solía== pasar los veranos en Rosarito.",
+              "en": "As a kid I used to spend summers in Rosarito."
+            },
+            {
+              "es": "Mi abuela ==solía== hacer tortillas a mano.",
+              "en": "My grandma used to make tortillas by hand."
+            },
+            {
+              "es": "¿==Solías== jugar fútbol en la escuela?",
+              "en": "Did you use to play soccer at school?"
+            },
+            {
+              "es": "==Solíamos== ir a la playa todos los domingos.",
+              "en": "We used to go to the beach every Sunday."
+            },
+            {
+              "es": "Mis papás ==solían== cenar a las nueve.",
+              "en": "My parents used to have dinner at nine."
+            },
+            {
+              "es": "Antes ==solía== entrenar en las mañanas; ahora entreno en las noches.",
+              "en": "I used to train in the mornings; now I train at night."
+            },
+            {
+              "es": "Ustedes ==solían== vivir en Ensenada, ¿no?",
+              "en": "You all used to live in Ensenada, right?"
+            },
+            {
+              "es": "Aquí ==solía== haber un mercado.",
+              "en": "There used to be a market here."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Suelía surfear."
+                },
+                {
+                  "v": "bien",
+                  "t": "Solía surfear."
+                }
+              ],
+              "nota": "No **ue** in the imperfect."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Solía a correr en la playa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Solía correr en la playa."
+                }
+              ],
+              "nota": "Infinitive straight after, no **a**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Usaba vivir en Ensenada."
+                },
+                {
+                  "v": "bien",
+                  "t": "Solía vivir en Ensenada."
+                }
+              ],
+              "nota": "**Usar** is _to use_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Solíamos fuimos al cine."
+                },
+                {
+                  "v": "bien",
+                  "t": "Solíamos ir al cine."
+                }
+              ],
+              "nota": "Always + infinitive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "suelo",
+              "texto": "The present: [[5565|soler in the present]]."
+            },
+            {
+              "forma": "comía",
+              "texto": "The endings: [[5264|-er and -ir verbs in the imperfect]]."
+            },
+            {
+              "forma": "surfeaba",
+              "texto": "Same idea without soler: [[5111|the imperfect for habits]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I used to live in Tijuana._",
+              "r": "Solía vivir en Tijuana.",
+              "nota": "solía + infinitive."
+            },
+            {
+              "p": "In Spanish: _We used to eat tacos on Fridays._",
+              "r": "Solíamos comer tacos los viernes.",
+              "nota": "solíamos."
+            },
+            {
+              "p": "Fix it: _Ellos suelían llegar tarde._",
+              "r": "Ellos solían llegar tarde.",
+              "nota": "No ue: solían."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5565,
+      5264
+    ],
+    "confunde": [],
+    "sigue": [
+      5111
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5925",
+      "kwiziq": true
+    }
+  ]
+}

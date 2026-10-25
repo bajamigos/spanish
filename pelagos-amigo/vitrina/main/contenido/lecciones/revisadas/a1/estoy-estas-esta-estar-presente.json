@@ -1,0 +1,212 @@
+{
+  "tema": 5166,
+  "slug": "estoy-estas-esta-estar-presente",
+  "titulo": "Estar in the present",
+  "subtitulo": "Estoy en la playa. ¿Dónde estás?",
+  "foto": "t05.jpg",
+  "regla": "Estar (to be) goes estoy, estás, está, estamos, están. Yo ends in -oy, and estás, está and están carry a written accent.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Estar** (_to be_) is irregular in **yo** (**estoy**) and stresses the ending, so **estás**, **está** and **están** carry a written accent."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "estar"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**estoy**"
+            ],
+            [
+              "tú",
+              "**estás**"
+            ],
+            [
+              "él, ella, usted",
+              "**está**"
+            ],
+            [
+              "nosotros",
+              "**estamos**"
+            ],
+            [
+              "ellos, ustedes",
+              "**están**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Use it for **where** someone or something is and **how** they are right now."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Watch the accent: **está** = _is_, **esta** = _this_ (esta casa)."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Estoy== en la playa.",
+              "en": "I'm at the beach."
+            },
+            {
+              "es": "¿Cómo ==estás==?",
+              "en": "How are you?"
+            },
+            {
+              "es": "Mi mamá ==está== en Ensenada.",
+              "en": "My mom is in Ensenada."
+            },
+            {
+              "es": "==Estamos== muy cansados después del entrenamiento.",
+              "en": "We're very tired after training."
+            },
+            {
+              "es": "¿Dónde ==están== las llaves?",
+              "en": "Where are the keys?"
+            },
+            {
+              "es": "El agua ==está== fría hoy.",
+              "en": "The water is cold today."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mi papá esta en la casa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mi papá está en la casa."
+                }
+              ],
+              "nota": "Without the accent, **esta** means _this_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo esto cansado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo estoy cansado."
+                }
+              ],
+              "nota": "yo is **estoy**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros están listos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros estamos listos."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "soy",
+              "texto": "The other _to be_: [[5070|ser in the present]]."
+            },
+            {
+              "forma": "está en",
+              "texto": "Estar for places: [[5067|locations]]."
+            },
+            {
+              "forma": "estoy feliz",
+              "texto": "Estar for moods: [[5980|feelings and emotions]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Where are you (tú)?_",
+              "r": "¿Dónde estás?",
+              "nota": "Accent on estás."
+            },
+            {
+              "p": "Fix it: _Ellos esta en la playa._",
+              "r": "Ellos están en la playa.",
+              "nota": "están for ellos."
+            },
+            {
+              "p": "In Spanish: _I'm tired._",
+              "r": "Estoy cansado. / Estoy cansada.",
+              "nota": "estoy for yo."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      5070
+    ],
+    "sigue": [
+      5067,
+      5980
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5166",
+      "kwiziq": true
+    }
+  ]
+}

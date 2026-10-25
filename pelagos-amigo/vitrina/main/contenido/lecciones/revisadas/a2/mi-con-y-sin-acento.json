@@ -1,0 +1,240 @@
+{
+  "tema": 9111,
+  "slug": "mi-con-y-sin-acento",
+  "titulo": "Mi vs mí",
+  "subtitulo": "Mi tabla es para mí.",
+  "foto": "t09.jpg",
+  "regla": "Mi (no accent) = my, always before a noun. Mí (accent) = me, after a preposition: para mí, a mí, de mí, sin mí. With con it becomes conmigo.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Mi** (no accent) = _my_. It's a possessive and always goes **before a noun**: **mi casa, mi hermana**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Mí** (accent) = _me_. It's a pronoun and goes **after a preposition**: **para mí, a mí, de mí, sin mí, por mí**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Form",
+            "Meaning",
+            "Example"
+          ],
+          "filas": [
+            [
+              "mi",
+              "_my_",
+              "Mi tabla está en el carro."
+            ],
+            [
+              "mí",
+              "_me_ (after a preposition)",
+              "Este regalo es para mí."
+            ],
+            [
+              "conmigo",
+              "_with me_",
+              "¿Vienes conmigo?"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Exception: **con** + **mí** becomes **conmigo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if English says _my_, no accent. If English says _me_, accent."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Mi== tabla está en el carro.",
+              "en": "My board is in the car."
+            },
+            {
+              "es": "Este regalo es para ==mí==.",
+              "en": "This gift is for me."
+            },
+            {
+              "es": "A ==mí== me encanta el pozole.",
+              "en": "I love pozole."
+            },
+            {
+              "es": "¿Vas a ir a la playa sin ==mí==?",
+              "en": "Are you going to the beach without me?"
+            },
+            {
+              "es": "==Mi== hermana vive en Rosarito.",
+              "en": "My sister lives in Rosarito."
+            },
+            {
+              "es": "No te preocupes por ==mí==.",
+              "en": "Don't worry about me."
+            },
+            {
+              "es": "¿Qué piensan de ==mí== en el gimnasio?",
+              "en": "What do they think of me at the gym?"
+            },
+            {
+              "es": "¿Quieres entrenar ==conmigo== mañana?",
+              "en": "Do you want to train with me tomorrow?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es para mi."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es para mí."
+                }
+              ],
+              "nota": "After a preposition: accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "A mi me gusta."
+                },
+                {
+                  "v": "bien",
+                  "t": "A mí me gusta."
+                }
+              ],
+              "nota": "**A** is a preposition."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mí casa es tu casa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mi casa es tu casa."
+                }
+              ],
+              "nota": "Before a noun: no accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Vienes con mí?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Vienes conmigo?"
+                }
+              ],
+              "nota": "Always **conmigo**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "mi, tu, su",
+              "texto": "All the possessives: [[6012|possessive adjectives]]."
+            },
+            {
+              "forma": "para ti, sin él",
+              "texto": "Other pronouns after prepositions: [[6466|preposition + pronoun]]."
+            },
+            {
+              "forma": "conmigo, contigo",
+              "texto": "The con forms: [[6141|con + pronoun]]."
+            },
+            {
+              "forma": "tú / tu",
+              "texto": "The same accent game: [[6731|tú vs tu]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _My dog sleeps with me._",
+              "r": "Mi perro duerme conmigo.",
+              "nota": "mi + conmigo."
+            },
+            {
+              "p": "In Spanish: _Is this coffee for me?_",
+              "r": "¿Este café es para mí?",
+              "nota": "After para: mí."
+            },
+            {
+              "p": "Fix it: _A mi no me gusta mí trabajo._",
+              "r": "A mí no me gusta mi trabajo.",
+              "nota": "a mí; mi trabajo."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6012,
+      6466
+    ],
+    "confunde": [
+      6731
+    ],
+    "sigue": [
+      6141
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9111",
+      "kwiziq": true
+    }
+  ]
+}

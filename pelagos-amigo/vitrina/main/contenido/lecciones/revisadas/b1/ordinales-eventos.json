@@ -1,0 +1,232 @@
+{
+  "tema": 10517,
+  "slug": "ordinales-eventos",
+  "titulo": "Using ordinal numbers with events, celebrations and anniversaries",
+  "subtitulo": "El vigésimo aniversario, la décima edición: ordinals beyond tenth.",
+  "foto": "t08.jpg",
+  "regla": "Ordinals for events in a series: décimo, undécimo / decimoprimero, vigésimo, trigésimo… They agree in gender: la vigésima edición. In speech, cardinals are common after 10.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Ordinal numbers show order or rank. They're used a lot for events that happen regularly: anniversaries, editions, festivals, birthdays of an institution."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Number",
+            "Ordinal"
+          ],
+          "filas": [
+            [
+              "11th",
+              "undécimo / decimoprimero"
+            ],
+            [
+              "12th",
+              "duodécimo / decimosegundo"
+            ],
+            [
+              "13th",
+              "decimotercero"
+            ],
+            [
+              "15th",
+              "decimoquinto"
+            ],
+            [
+              "20th",
+              "vigésimo"
+            ],
+            [
+              "21st",
+              "vigésimo primero / vigesimoprimero"
+            ],
+            [
+              "25th",
+              "vigésimo quinto"
+            ],
+            [
+              "30th",
+              "trigésimo"
+            ],
+            [
+              "40th",
+              "cuadragésimo"
+            ],
+            [
+              "50th",
+              "quincuagésimo"
+            ],
+            [
+              "100th",
+              "centésimo"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "They **agree** in gender and number: **el vigésimo aniversario**, **la vigésima edición**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Primero** and **tercero** shorten before a masculine noun: **el vigésimo primer aniversario**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In everyday speech, after **décimo**, many people use cardinal numbers instead: **el aniversario veinte**, **la edición quince**. The ordinals sound more formal."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **-ésimo** is the ending of big birthdays: **vigésimo**, **trigésimo**, **centésimo**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Hoy celebramos el ==vigésimo== aniversario de la escuela.",
+              "en": "Today we celebrate the school's twentieth anniversary."
+            },
+            {
+              "es": "Es la ==décima== edición del torneo de surf.",
+              "en": "It's the tenth edition of the surf contest."
+            },
+            {
+              "es": "Mañana es la ==decimoquinta== feria del libro.",
+              "en": "Tomorrow is the fifteenth book fair."
+            },
+            {
+              "es": "Celebraron su ==quincuagésimo== aniversario de bodas.",
+              "en": "They celebrated their fiftieth wedding anniversary."
+            },
+            {
+              "es": "Es el ==vigésimo primer== festival de cine.",
+              "en": "It's the twenty-first film festival."
+            },
+            {
+              "es": "Fue el ==centésimo== partido del equipo.",
+              "en": "It was the team's hundredth game."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La vigésimo edición."
+                },
+                {
+                  "v": "bien",
+                  "t": "La vigésima edición."
+                }
+              ],
+              "nota": "It agrees in gender."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El vigésimo primero aniversario."
+                },
+                {
+                  "v": "bien",
+                  "t": "El vigésimo primer aniversario."
+                }
+              ],
+              "nota": "**Primer** before a masculine noun."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "primero, segundo, tercero",
+              "texto": "1st to 10th: [[7153|ordinal numbers]]."
+            },
+            {
+              "forma": "primer, tercer",
+              "texto": "Short forms: [[6154|primero and tercero]]."
+            },
+            {
+              "forma": "un tercio",
+              "texto": "Fractions: [[7152|fractions]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _the thirtieth anniversary_",
+              "r": "el trigésimo aniversario",
+              "nota": "trigésimo."
+            },
+            {
+              "p": "In Spanish: _the twelfth edition_ (la edición)",
+              "r": "la duodécima edición / la decimosegunda edición",
+              "nota": "Feminine."
+            },
+            {
+              "p": "In Spanish: _the twentieth festival_",
+              "r": "el vigésimo festival",
+              "nota": "vigésimo."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7153,
+      6154
+    ],
+    "confunde": [
+      7152
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 10517",
+      "kwiziq": true
+    }
+  ]
+}

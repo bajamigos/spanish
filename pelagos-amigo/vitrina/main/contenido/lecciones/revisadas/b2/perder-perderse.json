@@ -1,0 +1,216 @@
+{
+  "tema": 8948,
+  "slug": "perder-perderse",
+  "titulo": "Perder / perderse = to lose, to miss, to get lost",
+  "subtitulo": "Perdí las llaves. Perdimos el camión. Nos perdimos.",
+  "foto": "t05.jpg",
+  "regla": "Perder + thing = to lose (perdí la cartera, perder peso). Perder + transport or chance = to miss (perdí el vuelo). Perderse = to get lost (nos perdimos), also to miss out on something (te perdiste la fiesta). Missing a person = extrañar.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "perder algo",
+              "texto": "_to lose_: **perdí la cartera**, **perder peso**, **perder el control**."
+            },
+            {
+              "forma": "perder + transport / chance",
+              "texto": "_to miss_: **perdimos el camión**, **perdí la oportunidad**."
+            },
+            {
+              "forma": "perderse",
+              "texto": "_to get lost_: **nos perdimos en el centro**. Also **estar perdido**."
+            },
+            {
+              "forma": "perderse algo",
+              "texto": "_to miss out on_: **te perdiste la fiesta**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Perder** changes e → ie: **pierdo, pierdes, pierde, perdemos, pierden**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "To **miss a person**: **extrañar** (in Mexico) or **echar de menos**, never **perder**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: you lose things, you miss the bus, and you get yourself lost."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ayer ==perdí== mi anillo de compromiso.",
+              "en": "Yesterday I lost my engagement ring."
+            },
+            {
+              "es": "¡==Perdí== la cartera!",
+              "en": "I've lost my wallet!"
+            },
+            {
+              "es": "Tengo que ==perder== peso.",
+              "en": "I have to lose weight."
+            },
+            {
+              "es": "Vámonos rápido o vamos a ==perder== el camión.",
+              "en": "Let's hurry or we'll miss the bus."
+            },
+            {
+              "es": "==Perdí== la oportunidad de verla.",
+              "en": "I missed the chance to see her."
+            },
+            {
+              "es": "Hola, mi amor, ¿==te perdiste==?",
+              "en": "Hi, sweetie, did you get lost?"
+            },
+            {
+              "es": "Llévate el mapa para no ==perderte==.",
+              "en": "Take the map so you don't get lost."
+            },
+            {
+              "es": "¿Nos ayuda, por favor? ==Estamos perdidos==.",
+              "en": "Could you help us, please? We're lost."
+            },
+            {
+              "es": "¡==Te perdiste== la mejor parte!",
+              "en": "You missed the best part!"
+            },
+            {
+              "es": "Te ==extraño== mucho.",
+              "en": "I miss you a lot."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Te pierdo mucho."
+                },
+                {
+                  "v": "bien",
+                  "t": "Te extraño mucho."
+                }
+              ],
+              "nota": "Missing a person: **extrañar**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Perdimos en el centro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nos perdimos en el centro."
+                }
+              ],
+              "nota": "_Got lost_: **perderse**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo perdo las llaves."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo pierdo las llaves."
+                }
+              ],
+              "nota": "e → ie."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "se me perdió",
+              "texto": "[[7060|accidental se]]."
+            },
+            {
+              "forma": "olvidar(se)",
+              "texto": "[[7602|olvidar / olvidarse]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We missed the flight._",
+              "r": "Perdimos el vuelo.",
+              "nota": "perder."
+            },
+            {
+              "p": "In Spanish: _They got lost in the market._",
+              "r": "Se perdieron en el mercado.",
+              "nota": "perderse."
+            },
+            {
+              "p": "In Spanish: _I miss my family._",
+              "r": "Extraño a mi familia.",
+              "nota": "extrañar."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      7602
+    ],
+    "sigue": [
+      7060
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8948",
+      "kwiziq": true
+    }
+  ]
+}

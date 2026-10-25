@@ -1,0 +1,260 @@
+{
+  "tema": 6865,
+  "slug": "saber-conocer",
+  "titulo": "Difference between saber and conocer (to know)",
+  "subtitulo": "Sé que es tarde, conozco a Beto: facts vs people and places.",
+  "foto": "t02.jpg",
+  "regla": "Saber: facts, info (saber que, si, dónde…) and skills (saber + infinitive). Conocer: being familiar with people, places and things; with people it takes a.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "English has one verb, _to know_; Spanish has two."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Verb",
+            "Use",
+            "Example"
+          ],
+          "filas": [
+            [
+              "saber",
+              "facts and information",
+              "Sé que es tarde."
+            ],
+            [
+              "",
+              "+ que / si / dónde / cuándo / cuál / quién / cómo",
+              "¿Sabes si la taquería está abierta?"
+            ],
+            [
+              "",
+              "+ infinitive: skills (_to know how to_)",
+              "Sé surfear."
+            ],
+            [
+              "conocer",
+              "people (with **a**)",
+              "Conozco a Beto."
+            ],
+            [
+              "",
+              "places",
+              "Conozco Ensenada."
+            ],
+            [
+              "",
+              "things you're familiar with by experience",
+              "Conozco esa canción."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Conocer** can't introduce a fact with **que** or **si**, and **saber** can't be used for meeting or being familiar with a person."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Saber** + infinitive is about a learned skill: **sé nadar** (_I can swim_, I know how). **Poder** is about being able to right now."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Conocer** in the past often means _to meet_ someone for the first time: **conocí a Naomi en Ceres**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **saber** lives in your head; **conocer** lives in your experience."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Sé== que a veces soy un poco necio.",
+              "en": "I know I'm a bit stubborn sometimes."
+            },
+            {
+              "es": "¿==Sabes== si el súper está abierto?",
+              "en": "Do you know if the supermarket is open?"
+            },
+            {
+              "es": "No ==sabemos== dónde estacionar en el centro.",
+              "en": "We don't know where to park downtown."
+            },
+            {
+              "es": "¿==Sabes== quién vino ayer al taller?",
+              "en": "Do you know who came to the shop yesterday?"
+            },
+            {
+              "es": "==Sé== abrir un Tsuru sin llave.",
+              "en": "I know how to open a Tsuru without a key."
+            },
+            {
+              "es": "¿==Conoces== a Beto?",
+              "en": "Do you know Beto?"
+            },
+            {
+              "es": "No ==conozco== Oaxaca.",
+              "en": "I've never been to Oaxaca."
+            },
+            {
+              "es": "==Conocí== a mi esposa en la playa.",
+              "en": "I met my wife at the beach."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Conozco que soy necio."
+                },
+                {
+                  "v": "bien",
+                  "t": "Sé que soy necio."
+                }
+              ],
+              "nota": "A fact with **que**: **saber**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Conoces si está abierto?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Sabes si está abierto?"
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Sé a Beto."
+                },
+                {
+                  "v": "bien",
+                  "t": "Conozco a Beto."
+                }
+              ],
+              "nota": "People: **conocer a**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Conozco nadar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Sé nadar."
+                }
+              ],
+              "nota": "Skills: **saber** + infinitive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "sé, sabes",
+              "texto": "**Saber** in the present: [[5590|saber]]."
+            },
+            {
+              "forma": "conozco",
+              "texto": "**Conocer** in the present: [[5928|c > zc in yo]]."
+            },
+            {
+              "forma": "conocer a Beto",
+              "texto": "The personal **a**: [[6870|personal a verbs]]."
+            },
+            {
+              "forma": "sepa, conozca",
+              "texto": "In the subjunctive: [[5232|saber]], [[6205|-cer / -cir]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "**Saber** or **conocer**? _Do you know Naomi?_",
+              "r": "¿Conoces a Naomi?",
+              "nota": "A person: conocer a."
+            },
+            {
+              "p": "**Saber** or **conocer**? _I don't know where the key is._",
+              "r": "No sé dónde está la llave.",
+              "nota": "Information: saber."
+            },
+            {
+              "p": "In Spanish: _Do you know how to cook?_ (tú)",
+              "r": "¿Sabes cocinar?",
+              "nota": "Skill: saber + infinitive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5590,
+      5928,
+      6870
+    ],
+    "confunde": [
+      6870
+    ],
+    "sigue": [
+      5232,
+      6205
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6865",
+      "kwiziq": true
+    }
+  ]
+}

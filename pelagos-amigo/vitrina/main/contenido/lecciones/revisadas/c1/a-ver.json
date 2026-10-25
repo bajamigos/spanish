@@ -1,0 +1,191 @@
+{
+  "tema": 9126,
+  "slug": "a-ver",
+  "titulo": "A ver = let's see (and its other uses)",
+  "subtitulo": "¿A ver? A ver si vienes. A ver si no llueve.",
+  "foto": "t06.jpg",
+  "regla": "A ver = let's see. A ver si... = I wonder if / let's hope (a request or a wish): A ver si nos vemos. A ver si no... = let's hope... doesn't (worry). Also: ¡A ver! to get attention, and a ver, a ver = hold on.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "a ver",
+              "texto": "_let's see_: **¿A ver?** (show me)"
+            },
+            {
+              "forma": "a ver si + verb",
+              "texto": "A soft request or wish: **a ver si me ayudas**, **a ver si nos vemos pronto**."
+            },
+            {
+              "forma": "a ver si no...",
+              "texto": "Worry: **a ver si no nos cancelan el vuelo** (_I hope they don't cancel our flight_)."
+            },
+            {
+              "forma": "¡a ver!",
+              "texto": "To get attention or take control: **¡A ver, niños, silencio!**"
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It's **a ver** (two words, from **ver**), never ~~haber~~."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Super common in Mexico."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **a ver** = eyes on it."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==A ver== qué tienes escondido ahí... enséñamelo.",
+              "en": "Let's see what you've got hidden there... show me."
+            },
+            {
+              "es": "No soy experto, pero ==a ver== cómo te puedo ayudar.",
+              "en": "I'm not an expert, but let's see how I can help you."
+            },
+            {
+              "es": "—Me está quedando muy bien el dibujo, ma. —¿Sí? ¿==A ver==?",
+              "en": "—My drawing is turning out really well, Mom. —Yeah? Let's see."
+            },
+            {
+              "es": "==A ver si== le puedes pedir a tu jefa una mañana libre.",
+              "en": "See if you can ask your boss for a morning off."
+            },
+            {
+              "es": "==A ver si== nos puede ayudar. Es que nos perdimos.",
+              "en": "We were wondering if you could help us. We're lost."
+            },
+            {
+              "es": "==A ver si no== nos cancelan el vuelo con esta tormenta.",
+              "en": "Let's hope they don't cancel our flight with this storm."
+            },
+            {
+              "es": "¡==A ver==, niños, todos callados!",
+              "en": "OK, kids, everyone quiet!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Haber si vienes."
+                },
+                {
+                  "v": "bien",
+                  "t": "A ver si vienes."
+                }
+              ],
+              "nota": "From **ver**, not **haber**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "A ver si vengas."
+                },
+                {
+                  "v": "bien",
+                  "t": "A ver si vienes."
+                }
+              ],
+              "nota": "Indicative after **a ver si**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "ojalá",
+              "texto": "Wishes: [[5061|ojalá]]."
+            },
+            {
+              "forma": "sí / si",
+              "texto": "[[6603|accents]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Let's hope it doesn't rain._ (a ver)",
+              "r": "A ver si no llueve.",
+              "nota": "a ver si no."
+            },
+            {
+              "p": "In Spanish: _See if you can come early._",
+              "r": "A ver si puedes venir temprano.",
+              "nota": "Soft request."
+            },
+            {
+              "p": "Fix it: _Haber qué dice._",
+              "r": "A ver qué dice.",
+              "nota": "a ver."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6603
+    ],
+    "confunde": [
+      5061
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9126",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "tema": 9263,
+  "slug": "ya-preterito",
+  "titulo": "Ya with the preterite",
+  "subtitulo": "¿Ya comiste? Sí, ya comí.",
+  "foto": "t06.jpg",
+  "regla": "Ya + preterite says something has already happened: ya comí = I already ate / I've eaten. In questions it means yet: ¿Ya comiste? = Have you eaten yet? This is the everyday Mexican way to say it.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Ya** means _already_. With the preterite it says an action is done: **ya comí** = _I already ate_ / _I've eaten_."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "ya",
+            "+ preterite"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "In questions, **ya** means _yet_: **¿Ya comiste?** = _Have you eaten yet?_"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Ya** usually goes **before the verb**. It can also go at the end: **¿Comiste ya?**, but **ya** first is more common."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Where English uses _have done_ for something that just happened, Mexican Spanish usually says **ya** + preterite: **¿Ya llegaste?**, rather than **¿Has llegado?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "To answer _not yet_, use **todavía no**: **¿Ya comiste? — Todavía no.** (**Ya no** means _not anymore_.)"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Ya comí==, gracias.",
+              "en": "I already ate, thanks."
+            },
+            {
+              "es": "¿==Ya terminaste== la tarea?",
+              "en": "Have you finished your homework yet?"
+            },
+            {
+              "es": "==Ya llegué==, estoy afuera.",
+              "en": "I'm here, I'm outside."
+            },
+            {
+              "es": "==Ya vi== esa película dos veces.",
+              "en": "I've already seen that movie twice."
+            },
+            {
+              "es": "Mis papás ==ya se fueron== a dormir.",
+              "en": "My parents already went to bed."
+            },
+            {
+              "es": "¿==Ya pagaste== la luz?",
+              "en": "Did you pay the electric bill yet?"
+            },
+            {
+              "es": "==Ya regué== las plantas del huerto.",
+              "en": "I already watered the plants in the garden."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ya he comí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ya comí."
+                }
+              ],
+              "nota": "Don't mix **he** with the preterite."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Todavía terminaste?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Ya terminaste?"
+                }
+              ],
+              "nota": "_Yet_ in a question is **ya**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Ya comiste? — No, ya no."
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Ya comiste? — No, todavía no."
+                }
+              ],
+              "nota": "**Ya no** = _not anymore_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ya como. (meaning _I already ate_)"
+                },
+                {
+                  "v": "bien",
+                  "t": "Ya comí."
+                }
+              ],
+              "nota": "**Ya** + present = _now_ or _at last_."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "comí, terminé",
+              "texto": "The forms: [[5109|-ar verbs]] and [[5230|-er and -ir verbs]] in the preterite."
+            },
+            {
+              "forma": "todavía no",
+              "texto": "The negative answer: [[9265|todavía no with the preterite]]."
+            },
+            {
+              "forma": "ya comí vs ya he comido",
+              "texto": "Which past to use: [[9261|perfect vs preterite]]."
+            },
+            {
+              "forma": "ya no",
+              "texto": "Ya's other meanings: [[7263|ya / ya no]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Did you call your mom yet?_",
+              "r": "¿Ya le hablaste a tu mamá?",
+              "nota": "ya + preterite."
+            },
+            {
+              "p": "In Spanish: _I already bought the tortillas._",
+              "r": "Ya compré las tortillas.",
+              "nota": "ya before the verb."
+            },
+            {
+              "p": "Answer _not yet_: _¿Ya llegaron?_",
+              "r": "Todavía no.",
+              "nota": "Not ya no."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5109,
+      5230
+    ],
+    "confunde": [
+      9265,
+      9261
+    ],
+    "sigue": [
+      7263
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9263",
+      "kwiziq": true
+    }
+  ]
+}

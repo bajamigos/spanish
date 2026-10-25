@@ -1,0 +1,228 @@
+{
+  "tema": 7920,
+  "slug": "adjetivos-como-sustantivos",
+  "titulo": "Adjectives used as nouns",
+  "subtitulo": "¿Cuál quieres, la roja o la azul?",
+  "foto": "t03.jpg",
+  "regla": "Put an article (el, la, los, las, un, una…) before an adjective and it works as a noun: el rojo = the red one, los jóvenes = young people. The adjective keeps the gender and number of the noun it replaces. Spanish never adds a word for 'one'.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "In English you say _the red **one**_, _the new **ones**_. In Spanish you just drop the noun and keep **article + adjective**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "article",
+            "+",
+            "adjective"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The adjective still **agrees** with the noun you dropped: _la camisa roja_ → **la roja**; _los zapatos nuevos_ → **los nuevos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It also works with **uno, una, este, ese, otro**: **uno rojo**, **una grande**, **este azul**, **otro barato**. Note **un** becomes **uno** when the noun is dropped."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With people, it names a group: **los jóvenes** _(young people)_, **los ricos** _(the rich)_, **un mexicano** _(a Mexican)_, **la mayor** _(the oldest girl)_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: think of the noun as invisible. It's still there, and the adjective still obeys it."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No quiero la tabla corta, prefiero ==la larga==.",
+              "en": "I don't want the short board, I prefer the long one."
+            },
+            {
+              "es": "¿Te gustan estos tenis? —Me gustan más ==los blancos==.",
+              "en": "Do you like these sneakers? —I like the white ones better."
+            },
+            {
+              "es": "Mi hermana ==la mayor== vive en Ensenada.",
+              "en": "My oldest sister lives in Ensenada."
+            },
+            {
+              "es": "==Los jóvenes== de mi colonia juegan futbol en la calle.",
+              "en": "The young people in my neighborhood play soccer in the street."
+            },
+            {
+              "es": "Este jitomate está verde; dame ==uno rojo==.",
+              "en": "This tomato is green; give me a red one."
+            },
+            {
+              "es": "==Los ricos== no hacen fila en la garita.",
+              "en": "The rich don't wait in line at the border crossing."
+            },
+            {
+              "es": "De las dos cervezas, ==la oscura== es mejor.",
+              "en": "Of the two beers, the dark one is better."
+            },
+            {
+              "es": "Hay ==una nueva== en la clase de jiu-jitsu.",
+              "en": "There's a new girl in the jiu-jitsu class."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero el rojo uno."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero el rojo."
+                }
+              ],
+              "nota": "No word for _one_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Las camisas? Me llevo las blanco."
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Las camisas? Me llevo las blancas."
+                }
+              ],
+              "nota": "Agree with the dropped noun."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Los pobres personas necesitan ayuda."
+                },
+                {
+                  "v": "bien",
+                  "t": "Los pobres necesitan ayuda."
+                }
+              ],
+              "nota": "The adjective already means the people."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Prefiero este uno."
+                },
+                {
+                  "v": "bien",
+                  "t": "Prefiero este."
+                }
+              ],
+              "nota": "No **uno** after **este** either."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "rojo, roja",
+              "texto": "Getting the ending right: [[6013|masculine and feminine adjectives]] and [[6014|plural adjectives]]."
+            },
+            {
+              "forma": "este, ese",
+              "texto": "Demonstratives do the same trick: [[6055|esto, este, esta = this one]]."
+            },
+            {
+              "forma": "los dos",
+              "texto": "Numbers can drop the noun too: [[6672|numbers as pronouns]]."
+            },
+            {
+              "forma": "lo bueno",
+              "texto": "The neuter version, _the good thing_: [[6979|lo + adjective]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I want the big one_ (la casa).",
+              "r": "Quiero la grande.",
+              "nota": "la + grande."
+            },
+            {
+              "p": "In Spanish: _The old ones are better_ (los carros).",
+              "r": "Los viejos son mejores.",
+              "nota": "Plural masculine."
+            },
+            {
+              "p": "Fix it: «Prefiero el negro uno.»",
+              "r": "Prefiero el negro.",
+              "nota": "Drop uno."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6013,
+      6014
+    ],
+    "confunde": [
+      6979
+    ],
+    "sigue": [
+      6055,
+      6672
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7920",
+      "kwiziq": true
+    }
+  ]
+}

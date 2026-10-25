@@ -1,0 +1,237 @@
+{
+  "tema": 6184,
+  "slug": "no-creo-que-subjuntivo",
+  "titulo": "The subjunctive with negative opinion phrases",
+  "subtitulo": "Creo que tiene razón / No creo que tenga razón.",
+  "foto": "t02.jpg",
+  "regla": "Affirmative opinion verbs (creo que, pienso que, me parece que) take the indicative. Make them negative (no creo que, no pienso que) and the verb after que goes in the subjunctive.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Opinion phrases like **creo que**, **pienso que**, **opino que**, **me parece que**, **considero que**, **sospecho que** present something as true, so they take the **indicative**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "When you make them **negative**, the idea after **que** becomes doubtful, so it goes in the **subjunctive**."
+        },
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "indicativo",
+                  "t": "Creo que Marta está celosa."
+                },
+                {
+                  "v": "subjuntivo",
+                  "t": "No creo que Marta esté celosa."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "indicativo",
+                  "t": "Me parece que la fruta está cara."
+                },
+                {
+                  "v": "subjuntivo",
+                  "t": "No me parece que la fruta esté cara."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **no** in front of **creo** puts the rest of the sentence in doubt, and doubt calls for the subjunctive."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Pienso que el presidente municipal debería ganar menos.",
+              "en": "I think the mayor should earn less."
+            },
+            {
+              "es": "Nosotros no opinamos que el jefe ==tenga== razón.",
+              "en": "We don't think the boss is right."
+            },
+            {
+              "es": "Mi mamá no piensa que yo ==vaya== a terminar el curso de fotografía.",
+              "en": "My mom doesn't think I'm going to finish the photography course."
+            },
+            {
+              "es": "Mi esposo no considera que los niños ==estén== consentidos.",
+              "en": "My husband doesn't think the kids are spoiled."
+            },
+            {
+              "es": "No me parece que ==sea== buena idea.",
+              "en": "I don't think it's a good idea."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tiempos",
+      "titulo": "Any time frame",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "With **no creo que** in the present, the subjunctive can point to the present, the future or the past:"
+        },
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No creo que Susana ==venga== hoy.",
+              "en": "I don't think Susana will come today."
+            },
+            {
+              "es": "No creo que Susana ==vaya a venir== hoy.",
+              "en": "I don't think Susana is going to come today."
+            },
+            {
+              "es": "No creo que Susana ==haya venido== hoy.",
+              "en": "I don't think Susana came today."
+            },
+            {
+              "es": "No creo que Susana ==viniera== ayer.",
+              "en": "I don't think Susana came yesterday."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "preguntas",
+      "titulo": "Questions",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "In a question like **¿No crees que...?** the speaker usually expects a _yes_, so the indicative is normal: **¿No crees que es muy tarde?** (_Don't you think it's too late?_)"
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No creo que tiene razón."
+                },
+                {
+                  "v": "bien",
+                  "t": "No creo que tenga razón."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Creo que tenga razón."
+                },
+                {
+                  "v": "bien",
+                  "t": "Creo que tiene razón."
+                }
+              ],
+              "nota": "Affirmative: indicative."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "dudo que",
+              "texto": "Doubt: [[6235|subjunctive for doubt]]."
+            },
+            {
+              "forma": "es posible que",
+              "texto": "[[6226|impersonal expressions]]."
+            },
+            {
+              "forma": "puede que",
+              "texto": "[[7228|puede que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Complete: _No creo que ___ (llover) mañana._",
+              "r": "llueva",
+              "nota": "Negative opinion: subjunctive."
+            },
+            {
+              "p": "Complete: _Pienso que ___ (ser) caro._",
+              "r": "es",
+              "nota": "Affirmative: indicative."
+            },
+            {
+              "p": "In Spanish: _I don't think they've arrived._",
+              "r": "No creo que hayan llegado.",
+              "nota": "Present perfect subjunctive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6076
+    ],
+    "confunde": [
+      6235
+    ],
+    "sigue": [
+      6226
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6184",
+      "kwiziq": true
+    }
+  ]
+}

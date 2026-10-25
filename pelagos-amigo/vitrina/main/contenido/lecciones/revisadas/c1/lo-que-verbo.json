@@ -1,0 +1,177 @@
+{
+  "tema": 7936,
+  "slug": "lo-que-verbo",
+  "titulo": "¡Lo que + verb (+ subject)! = so much",
+  "subtitulo": "¡Lo que habla tu mamá! ¡Lo que me costó!",
+  "foto": "t05.jpg",
+  "regla": "¡Lo que + verb (+ subject)! emphasizes how much something happens, with surprise: ¡Lo que platica tu mamá! (Your mom talks so much!) ¡Lo que me costó esta bolsa! Also in statements: ¿Viste lo que tomó Juan?",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "¡Lo que",
+            "+ verb",
+            "(+ subject)!"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It intensifies the **amount** of an action: _so much, how much_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The subject usually goes after the verb: **¡Lo que habla tu mamá!**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Also inside a sentence: **¿Te fijaste en lo que tomó Juan?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **lo que** + verb = the amount, with a gasp."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¡==Lo que me costó== esta bolsa!",
+              "en": "This bag cost me so much!"
+            },
+            {
+              "es": "¡==Lo que platica== tu mamá!",
+              "en": "Your mom talks so much!"
+            },
+            {
+              "es": "¡==Lo que nos van a cobrar== por esta comida!",
+              "en": "They're going to charge us so much for this meal!"
+            },
+            {
+              "es": "¿Te fijaste en ==lo que tomó== Juan?",
+              "en": "Did you notice how much Juan drank?"
+            },
+            {
+              "es": "No me había fijado en ==lo que pagamos== por el vino.",
+              "en": "I hadn't noticed how much we paid for the wine."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "cantidad",
+                  "t": "¡Lo que come!"
+                },
+                {
+                  "v": "cosa",
+                  "t": "Me gusta lo que come."
+                }
+              ],
+              "nota": "Exclamation vs _what_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Qué mucho habla!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Lo que habla! / ¡Cuánto habla!"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¡cuánto comes!",
+              "texto": "[[5081|cuánto + verb]]."
+            },
+            {
+              "forma": "¡la de vino que...!",
+              "texto": "[[7934|la de]]."
+            },
+            {
+              "forma": "¡lo bien que baila!",
+              "texto": "[[7089|lo + adjective + que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Exclaim: _It rained so much!_",
+              "r": "¡Lo que llovió!",
+              "nota": "lo que + verb."
+            },
+            {
+              "p": "Exclaim: _You sleep so much!_",
+              "r": "¡Lo que duermes!",
+              "nota": "lo que."
+            },
+            {
+              "p": "Same with cuánto:",
+              "r": "¡Cuánto duermes!",
+              "nota": "Equivalent."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5081
+    ],
+    "confunde": [
+      7934
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7936",
+      "kwiziq": true
+    }
+  ]
+}

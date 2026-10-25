@@ -1,0 +1,181 @@
+{
+  "tema": 7442,
+  "slug": "estar-para",
+  "titulo": "Estar para + infinitive = to be ready / about to; no estar para = not in the mood",
+  "subtitulo": "Estoy para dormirme. No estoy para bromas.",
+  "foto": "t01.jpg",
+  "regla": "Estar para + infinitive = to be ready for or about to: los duraznos están para comerse. No estar para + infinitive / noun = not to be in the mood or condition for: No estoy para bromas.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "estar para + infinitive",
+              "texto": "_ready for, about to_: **ya está para casarse**, **está para llover**."
+            },
+            {
+              "forma": "no estar para + infinitive / noun",
+              "texto": "_not in the mood / condition for_: **no estoy para bromas**, **no estoy para caminar mucho**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Está para llover** = **está por llover** (_it's about to rain_); in Mexico **por** is more common for _about to_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **no estoy para...** = don't push it today."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi hija ya ==está para== casarse.",
+              "en": "My daughter is ready to get married."
+            },
+            {
+              "es": "Los duraznos ==están para== comérselos.",
+              "en": "The peaches are ripe and ready to eat."
+            },
+            {
+              "es": "Tuve un día larguísimo. ==Estoy para== acostarme.",
+              "en": "I had a really long day. I'm ready for bed."
+            },
+            {
+              "es": "==No estoy para== caminar mucho; todavía me duele la rodilla.",
+              "en": "I'm in no shape to walk much; my knee still hurts."
+            },
+            {
+              "es": "Miguel ==no está para== bromas. Hoy se peleó con su jefe.",
+              "en": "Miguel isn't in the mood for jokes. He fought with his boss today."
+            },
+            {
+              "es": "==No estoy para== nadie.",
+              "en": "I'm not available to anyone. (don't bother me)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "propósito",
+                  "t": "Ahorro para viajar."
+                },
+                {
+                  "v": "estado",
+                  "t": "Estoy para viajar."
+                }
+              ],
+              "nota": "**Estar para** = ready / in the mood, not purpose."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No soy para bromas hoy."
+                },
+                {
+                  "v": "bien",
+                  "t": "No estoy para bromas hoy."
+                }
+              ],
+              "nota": "**Estar**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "estar por",
+              "texto": "[[8709|estar por + infinitive]]."
+            },
+            {
+              "forma": "estar a punto de",
+              "texto": "[[6509|about to]]."
+            },
+            {
+              "forma": "ser para",
+              "texto": "[[5988|ser para for recipients]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I'm not in the mood for parties._",
+              "r": "No estoy para fiestas.",
+              "nota": "no estar para + noun."
+            },
+            {
+              "p": "In Spanish: _The bread is ready to come out of the oven._",
+              "r": "El pan está para sacarse del horno.",
+              "nota": "estar para."
+            },
+            {
+              "p": "In Spanish: _I'm in no condition to drive._",
+              "r": "No estoy para manejar.",
+              "nota": "no estar para + infinitive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6509
+    ],
+    "confunde": [
+      8709
+    ],
+    "sigue": [
+      8709
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7442",
+      "kwiziq": true
+    }
+  ]
+}

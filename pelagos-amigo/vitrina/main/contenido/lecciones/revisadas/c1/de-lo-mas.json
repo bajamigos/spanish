@@ -1,0 +1,177 @@
+{
+  "tema": 7246,
+  "slug": "de-lo-mas",
+  "titulo": "Ser de lo más + adjective = really, incredibly...",
+  "subtitulo": "La película es de lo más aburrida.",
+  "foto": "t04.jpg",
+  "regla": "Ser de lo más + adjective stresses a quality or defect: Este libro es de lo más interesante = incredibly interesting. Lo never changes. The adjective may stay masculine singular or agree with the noun: son de lo más simpático / simpáticas.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "ser",
+            "+ de lo más",
+            "+ adjective"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Means _incredibly, really, extremely..._ (positive or negative)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Lo** is neuter and **never** changes: no ~~de la más~~, ~~de los más~~."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The adjective can stay masculine singular or agree: **tus gemelos son de lo más adorable / adorables**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It also works after other verbs or with nouns: **se portó de lo más amable**, **un tipo de lo más raro**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **de lo más** = top of the scale."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Este libro es ==de lo más interesante==; ya lo leí tres veces.",
+              "en": "This book is incredibly interesting; I've read it three times."
+            },
+            {
+              "es": "El viaje fue ==de lo más aburrido==. No vuelvo.",
+              "en": "The trip was incredibly boring. I'm not going back."
+            },
+            {
+              "es": "Tus gemelos son ==de lo más adorables==.",
+              "en": "Your twins are absolutely adorable."
+            },
+            {
+              "es": "Las vecinas son ==de lo más amables==.",
+              "en": "The neighbors are really kind."
+            },
+            {
+              "es": "Es un tipo ==de lo más raro==.",
+              "en": "He's a really strange guy."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mi amiga es de la más simpática."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mi amiga es de lo más simpática."
+                }
+              ],
+              "nota": "**Lo** never changes."
+            },
+            {
+              "filas": [
+                {
+                  "v": "superlativo",
+                  "t": "Es la más simpática del grupo."
+                },
+                {
+                  "v": "intensidad",
+                  "t": "Es de lo más simpática."
+                }
+              ],
+              "nota": "**La más** compares; **de lo más** just intensifies."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "-ísimo",
+              "texto": "[[6077|-ísimo]]."
+            },
+            {
+              "forma": "superlatives",
+              "texto": "[[5056|the most / the least]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _The concert was incredibly fun._",
+              "r": "El concierto fue de lo más divertido.",
+              "nota": "de lo más."
+            },
+            {
+              "p": "In Spanish: _Her parents are really nice._",
+              "r": "Sus papás son de lo más amables.",
+              "nota": "Agrees or stays singular."
+            },
+            {
+              "p": "Fix it: _Esa clase es de la más difícil._",
+              "r": "Esa clase es de lo más difícil.",
+              "nota": "Neuter lo."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6077,
+      5056
+    ],
+    "confunde": [],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7246",
+      "kwiziq": true
+    }
+  ]
+}

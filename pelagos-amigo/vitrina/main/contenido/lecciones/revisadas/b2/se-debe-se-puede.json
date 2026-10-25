@@ -1,0 +1,211 @@
+{
+  "tema": 6933,
+  "slug": "se-debe-se-puede",
+  "titulo": "Using se debe / se puede to say you must / you can (impersonal)",
+  "subtitulo": "Aquí se puede nadar. No se debe manejar cansado.",
+  "foto": "t01.jpg",
+  "regla": "Se puede + infinitive = you can / one can; se debe + infinitive = you must / one must, talking about people in general. The verb is always third person singular.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To talk about what **people in general** can or must do, use **se** + **puede / debe** + infinitive. In English you'd say _you can, you must_, or more formally _one can, one must_."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "se puede / se debe",
+            "+ infinitive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Puede** and **debe** stay in the **third person singular**: nobody specific is the subject."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It's used with verbs that have **no direct object** (**descansar, dormir, nadar, pasear**), or with verbs whose object isn't mentioned (**leer, fumar, comer**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **se puede** is the sign on the door: it talks to everybody and nobody."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "En este pueblito tan tranquilo ==se puede== descansar de maravilla.",
+              "en": "In this quiet little town you can rest wonderfully."
+            },
+            {
+              "es": "Para llevarse bien con la pareja ==se debe== platicar mucho.",
+              "en": "To get along with your partner, you have to talk a lot."
+            },
+            {
+              "es": "En mi escuela ==se puede== leer en silencio en la biblioteca.",
+              "en": "At my school you can read quietly in the library."
+            },
+            {
+              "es": "No ==se debe== fumar si quieres estar sano.",
+              "en": "You shouldn't smoke if you want to be healthy."
+            },
+            {
+              "es": "¿==Se puede== nadar en esta playa?",
+              "en": "Can you swim at this beach?"
+            },
+            {
+              "es": "No ==se debe== manejar cansado.",
+              "en": "You shouldn't drive when you're tired."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pasiva",
+      "titulo": "Not the same as passive se",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "This looks like the **passive se** (**se venden casas**), but it's different: here there's no subject that could agree with the verb, so it can't become a **ser** + participle passive."
+        },
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "impersonal",
+                  "t": "No se debe fumar."
+                },
+                {
+                  "v": "pasiva",
+                  "t": "Se deben pagar los impuestos."
+                }
+              ],
+              "nota": "With a plural object, the passive **se** makes the verb plural: [[6803|passive se with deber / poder]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Se pueden descansar aquí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Se puede descansar aquí."
+                }
+              ],
+              "nota": "No plural subject: singular."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Se debe a fumar."
+                },
+                {
+                  "v": "bien",
+                  "t": "No se debe fumar."
+                }
+              ],
+              "nota": "No **a** before the infinitive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "se venden casas",
+              "texto": "Passive **se**: [[6089|the passive se]], [[6803|with deber / poder]]."
+            },
+            {
+              "forma": "dicen que",
+              "texto": "Another impersonal: [[6998|the ellos form]]."
+            },
+            {
+              "forma": "hay que",
+              "texto": "Obligation for everyone: [[6262|hay que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _You can't park here._",
+              "r": "Aquí no se puede estacionar.",
+              "nota": "se puede + infinitive."
+            },
+            {
+              "p": "In Spanish: _One must rest after surgery._",
+              "r": "Se debe descansar después de la operación.",
+              "nota": "se debe."
+            },
+            {
+              "p": "Fix it: _En la alberca no se pueden correr._",
+              "r": "En la alberca no se puede correr.",
+              "nota": "Singular."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6089
+    ],
+    "confunde": [
+      6803
+    ],
+    "sigue": [
+      6998
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6933",
+      "kwiziq": true
+    }
+  ]
+}

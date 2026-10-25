@@ -1,0 +1,176 @@
+{
+  "tema": 7433,
+  "slug": "imperfecto-presente",
+  "titulo": "The imperfect to refer to a present or future action",
+  "subtitulo": "Alberto tenía partido hoy, ¿no? ¿Qué querías?",
+  "foto": "t03.jpg",
+  "regla": "The imperfect can talk about now or later when you pass on information you heard or planned (Alberto tenía partido = he has a game, as far as I know), and to sound polite: ¿Qué quería? / Quería pedirte un favor.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "reported info about now / later",
+              "texto": "**Alberto tenía partido hoy**: _as far as I was told, he has a game_. It softens your responsibility for the info."
+            },
+            {
+              "forma": "plans",
+              "texto": "**Elena llegaba esta noche, ¿no?** (_Elena's arriving tonight, right? that was the plan_)"
+            },
+            {
+              "forma": "politeness",
+              "texto": "**Quería pedirte un favor.** **¿Qué deseaba?** (shop clerk) **Venía a preguntar...**"
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The polite imperfect is everyday in Mexico: **¿Qué quería, güera?** at the market."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the imperfect steps one step back so it sounds less blunt."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "—Qué raro, Alberto no está. —No, Alberto ==tenía== un partido de rugby, ¿no te dijo ayer?",
+              "en": "—Weird, Alberto isn't home. —No, Alberto has a rugby game, didn't he tell you yesterday?"
+            },
+            {
+              "es": "Elena ==llegaba== esta noche, ¿verdad? Su vuelo aterriza a las diez.",
+              "en": "Elena's arriving tonight, right? Her flight lands at ten."
+            },
+            {
+              "es": "==Quería== pedirte un favor.",
+              "en": "I wanted to ask you a favor."
+            },
+            {
+              "es": "Buenas tardes, ¿qué ==deseaba==?",
+              "en": "Good afternoon, what would you like?"
+            },
+            {
+              "es": "==Venía== a preguntar por el departamento en renta.",
+              "en": "I've come to ask about the apartment for rent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "directo",
+                  "t": "Quiero un café."
+                },
+                {
+                  "v": "cortés",
+                  "t": "Quería un café, por favor."
+                }
+              ],
+              "nota": "Both fine; the imperfect is softer."
+            },
+            {
+              "filas": [
+                {
+                  "v": "pasado real",
+                  "t": "Ayer tenía fiebre."
+                },
+                {
+                  "v": "presente, información",
+                  "t": "Hoy tenía junta, ¿no?"
+                }
+              ],
+              "nota": "Context decides."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "quisiera, querría",
+              "texto": "[[5227|polite requests]], [[7172|quisiera]]."
+            },
+            {
+              "forma": "imperfect",
+              "texto": "[[6871|imperfect vs preterite]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Politely: _I wanted to ask you something._",
+              "r": "Quería preguntarte algo.",
+              "nota": "Polite imperfect."
+            },
+            {
+              "p": "Reported plan: _The game was tonight, wasn't it?_ (it's still on)",
+              "r": "El partido era hoy en la noche, ¿no?",
+              "nota": "Imperfect for now."
+            },
+            {
+              "p": "Shop clerk: _What would you like?_",
+              "r": "¿Qué deseaba? / ¿Qué quería?",
+              "nota": "Polite imperfect."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6871,
+      5227
+    ],
+    "confunde": [
+      7172
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7433",
+      "kwiziq": true
+    }
+  ]
+}

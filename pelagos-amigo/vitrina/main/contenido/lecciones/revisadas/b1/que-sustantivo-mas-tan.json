@@ -1,0 +1,206 @@
+{
+  "tema": 7280,
+  "slug": "que-sustantivo-mas-tan",
+  "titulo": "Exclamations: qué + noun + más / tan + adjective",
+  "subtitulo": "¡Qué ola más grande! ¡Qué día tan bonito!",
+  "foto": "t07.jpg",
+  "regla": "What a + adjective + noun = ¡Qué + noun + más / tan + adjective! No article after qué; qué and más / tan never change; the adjective agrees.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say _What a [adjective] [noun]!_, Spanish uses:"
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**¡qué**",
+            "noun",
+            "**más / tan**",
+            "adjective**!**"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Más** or **tan**: same meaning, use either."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Qué**, **más** and **tan** never change. The **adjective agrees** with the noun: **¡qué olas más grandes!**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "No article after **qué**, unlike English _what **a**_: **¡qué día tan bonito!**, never **¡qué un día!**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "This **qué** always carries its accent."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **qué**, the thing, then **más** or **tan**, then how it is."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¡==Qué== casa ==más== bonita!",
+              "en": "What a pretty house!"
+            },
+            {
+              "es": "¡==Qué== casa ==tan== bonita!",
+              "en": "What a pretty house!"
+            },
+            {
+              "es": "¡==Qué== señor ==más== grosero!",
+              "en": "What a rude man!"
+            },
+            {
+              "es": "¡==Qué== verduras ==tan== frescas!",
+              "en": "What fresh vegetables!"
+            },
+            {
+              "es": "¡==Qué== tacos ==más== ricos!",
+              "en": "What delicious tacos!"
+            },
+            {
+              "es": "¡==Qué== ola ==tan== perfecta!",
+              "en": "What a perfect wave!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Qué un día más bonito!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Qué día más bonito!"
+                }
+              ],
+              "nota": "No article."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Qué olas más grande!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Qué olas más grandes!"
+                }
+              ],
+              "nota": "The adjective agrees."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Que día tan bonito!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Qué día tan bonito!"
+                }
+              ],
+              "nota": "Accent on **qué**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¡qué bonito!",
+              "texto": "Simple exclamations: [[6137|qué + noun or adjective]]."
+            },
+            {
+              "forma": "¡cuánta gente!",
+              "texto": "Exclamations about quantity: [[7027|cuánto + noun]]."
+            },
+            {
+              "forma": "qué / que",
+              "texto": "With and without accent: [[6675|qué and que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _What a big wave!_",
+              "r": "¡Qué ola más grande! / ¡Qué ola tan grande!",
+              "nota": "qué + noun + más / tan + adjective."
+            },
+            {
+              "p": "In Spanish: _What spicy tacos!_",
+              "r": "¡Qué tacos más picosos!",
+              "nota": "The adjective agrees."
+            },
+            {
+              "p": "Fix it: **¡Qué una noche tan bonita!**",
+              "r": "¡Qué noche tan bonita!",
+              "nota": "No article."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6137
+    ],
+    "confunde": [
+      7027
+    ],
+    "sigue": [
+      6675
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7280",
+      "kwiziq": true
+    }
+  ]
+}

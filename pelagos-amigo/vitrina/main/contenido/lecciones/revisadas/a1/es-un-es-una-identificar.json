@@ -1,0 +1,191 @@
+{
+  "tema": 9798,
+  "slug": "es-un-es-una-identificar",
+  "titulo": "Ser (not estar) to say what something is",
+  "subtitulo": "¿Qué es esto? Es un nopal.",
+  "foto": "t05.jpg",
+  "regla": "To identify something, to say what or who it is, use ser + noun: es un libro, es mi casa, son tacos. Never estar.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say **what** something is, use **ser** + a noun: **es un**…, **es una**…, **es mi**…, **son**…"
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "esto / eso / (it)",
+            "+ es / son +",
+            "noun"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "To ask, use **¿Qué es…?** or **¿Qué son…?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if a noun comes **right after** the verb, it's **ser**. **Estar** is for where it is (**está en**…) and how it is."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿Qué ==es== esto? ==Es== una tabla de surf.",
+              "en": "What's this? It's a surfboard."
+            },
+            {
+              "es": "==Es== mi kimono de jiu-jitsu.",
+              "en": "It's my jiu-jitsu gi."
+            },
+            {
+              "es": "Eso ==es== un nopal.",
+              "en": "That's a prickly pear cactus."
+            },
+            {
+              "es": "¿Qué ==son== estos? ==Son== chiles serranos de mi huerto.",
+              "en": "What are these? They're serrano peppers from my garden."
+            },
+            {
+              "es": "Ese ==es== el estadio de los Xolos.",
+              "en": "That's the Xolos' stadium."
+            },
+            {
+              "es": "==Es== una buena idea.",
+              "en": "It's a good idea."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Está un libro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es un libro."
+                }
+              ],
+              "nota": "Noun after the verb: **ser**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Qué está eso?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Qué es eso?"
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Esto está mi carro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Esto es mi carro."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "soy, eres, es",
+              "texto": "The forms: [[5070|ser in the present]]."
+            },
+            {
+              "forma": "está en",
+              "texto": "Where it is: [[5067|estar for location]]."
+            },
+            {
+              "forma": "es grande",
+              "texto": "What it's like: [[5972|ser for essential characteristics]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _What is this?_",
+              "r": "¿Qué es esto?",
+              "nota": "qué + es."
+            },
+            {
+              "p": "In Spanish: _It's a book._",
+              "r": "Es un libro.",
+              "nota": "No subject needed."
+            },
+            {
+              "p": "Fix it: _¿Qué está eso?_",
+              "r": "¿Qué es eso?",
+              "nota": "Identifying: ser."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5070
+    ],
+    "confunde": [
+      5067
+    ],
+    "sigue": [
+      5972
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9798",
+      "kwiziq": true
+    }
+  ]
+}

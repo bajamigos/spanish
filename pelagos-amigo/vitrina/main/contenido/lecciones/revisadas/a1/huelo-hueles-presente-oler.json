@@ -1,0 +1,209 @@
+{
+  "tema": 5491,
+  "slug": "huelo-hueles-presente-oler",
+  "titulo": "Oler in the present",
+  "subtitulo": "¡Qué rico huele!",
+  "foto": "t03.jpg",
+  "regla": "Oler (to smell) changes o to ue in every form except nosotros and adds an h at the start: huelo, hueles, huele, olemos, huelen. To say what something smells like, use oler a.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Oler** (_to smell_) is an **o → ue** verb, but Spanish words can't start with **ue**, so it adds an **h**: **huelo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Nosotros** has no change and no h: **olemos**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "oler"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**huelo**"
+            ],
+            [
+              "tú",
+              "**hueles**"
+            ],
+            [
+              "él, ella, usted",
+              "**huele**"
+            ],
+            [
+              "nosotros",
+              "olemos"
+            ],
+            [
+              "ellos, ustedes",
+              "**huelen**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "_It smells like…_ = **huele a** + noun: **huele a café**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¡Qué rico ==huele==!",
+              "en": "It smells so good!"
+            },
+            {
+              "es": "Después de la lluvia ==huele== a tierra mojada.",
+              "en": "After the rain it smells like wet earth."
+            },
+            {
+              "es": "¿==Hueles== eso? ==Huele== a quemado.",
+              "en": "Do you smell that? It smells like something's burning."
+            },
+            {
+              "es": "==Huelo== las flores del jardín.",
+              "en": "I smell the flowers in the garden."
+            },
+            {
+              "es": "Desde la sala ==olemos== el café.",
+              "en": "We can smell the coffee from the living room."
+            },
+            {
+              "es": "Mis tenis ==huelen== horrible.",
+              "en": "My sneakers smell awful."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo olo el café."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo huelo el café."
+                }
+              ],
+              "nota": "o → ue, plus h."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros huelemos la comida."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros olemos la comida."
+                }
+              ],
+              "nota": "No change in nosotros."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La pizza uele rico."
+                },
+                {
+                  "v": "bien",
+                  "t": "La pizza huele rico."
+                }
+              ],
+              "nota": "Always the h."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "puedo, vuelvo",
+              "texto": "The same o → ue pattern: [[5080|-er verbs with o > ue]], [[5564|poder]]."
+            },
+            {
+              "forma": "me duele",
+              "texto": "Another ue verb: [[5878|doler]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _It smells like the sea._",
+              "r": "Huele a mar.",
+              "nota": "huele a + noun."
+            },
+            {
+              "p": "Fix it: _Ellos uelen el pan._",
+              "r": "Ellos huelen el pan.",
+              "nota": "Add the h."
+            },
+            {
+              "p": "In Spanish: _We smell smoke._",
+              "r": "Olemos humo.",
+              "nota": "nosotros → olemos."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5080
+    ],
+    "confunde": [],
+    "sigue": [
+      5564,
+      5878
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5491",
+      "kwiziq": true
+    }
+  ]
+}

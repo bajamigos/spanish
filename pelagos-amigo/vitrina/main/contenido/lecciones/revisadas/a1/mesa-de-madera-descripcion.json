@@ -1,0 +1,193 @@
+{
+  "tema": 7603,
+  "slug": "mesa-de-madera-descripcion",
+  "titulo": "De for description",
+  "subtitulo": "una mesa de madera",
+  "foto": "t09.jpg",
+  "regla": "Noun + de + noun describes what something is made of, what kind it is or what it contains: una mesa de madera, la clase de historia, un vaso de agua. The second noun has no article.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Where English stacks two nouns (_wood table_), Spanish uses **noun + de + noun**, in reverse order: **mesa de madera**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "main noun",
+            "+ de +",
+            "describing noun"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It shows **material** (de madera), **type or topic** (de historia, de surf) or **content** (de agua)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The describing noun takes **no article** and doesn't change: **unas mesas de madera**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Compré una mesa ==de madera==.",
+              "en": "I bought a wooden table."
+            },
+            {
+              "es": "Tengo clase ==de jiu-jitsu== a las siete.",
+              "en": "I have jiu-jitsu class at seven."
+            },
+            {
+              "es": "¿Me das un vaso ==de agua==?",
+              "en": "Can you give me a glass of water?"
+            },
+            {
+              "es": "Mi tabla ==de surf== es azul.",
+              "en": "My surfboard is blue."
+            },
+            {
+              "es": "Los tacos ==de pescado== de Ensenada son los mejores.",
+              "en": "Ensenada's fish tacos are the best."
+            },
+            {
+              "es": "Leo un libro ==de historia==.",
+              "en": "I'm reading a history book."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "una madera mesa"
+                },
+                {
+                  "v": "bien",
+                  "t": "una mesa de madera"
+                }
+              ],
+              "nota": "Main noun first."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "una mesa madera"
+                },
+                {
+                  "v": "bien",
+                  "t": "una mesa de madera"
+                }
+              ],
+              "nota": "Don't drop **de**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero un jugo de la naranja."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero un jugo de naranja."
+                }
+              ],
+              "nota": "No article on the describing noun."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "la tabla de Beto",
+              "texto": "De for whose it is: [[7272|de for possession]]."
+            },
+            {
+              "forma": "Soy de Tijuana",
+              "texto": "De for where you're from: [[5041|soy de]]."
+            },
+            {
+              "forma": "café con leche",
+              "texto": "What comes with it: [[7895|con]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _a chicken taco_",
+              "r": "un taco de pollo",
+              "nota": "noun + de + noun."
+            },
+            {
+              "p": "In Spanish: _the Spanish class_",
+              "r": "la clase de español",
+              "nota": "No article on español."
+            },
+            {
+              "p": "Fix it: _Quiero un jugo de la naranja._",
+              "r": "Quiero un jugo de naranja.",
+              "nota": "Drop la."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5041
+    ],
+    "confunde": [
+      7272
+    ],
+    "sigue": [
+      7895
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7603",
+      "kwiziq": true
+    }
+  ]
+}

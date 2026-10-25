@@ -1,0 +1,265 @@
+{
+  "tema": 5185,
+  "slug": "futuro-perfecto-regular",
+  "titulo": "Future perfect: regular verbs",
+  "subtitulo": "Habré terminado, habrás comido, habrán vivido.",
+  "foto": "t10.jpg",
+  "regla": "Future perfect = haber in the future (habré, habrás, habrá, habremos, habrán) + past participle (-ado / -ido): habré terminado = I will have finished. Nothing goes between habré and the participle.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "habré / habrás / habrá / habremos / habrán",
+            "+ participle"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "haber (future)"
+          ],
+          "filas": [
+            [
+              "yo",
+              "habré"
+            ],
+            [
+              "tú",
+              "habrás"
+            ],
+            [
+              "él, ella, usted",
+              "habrá"
+            ],
+            [
+              "nosotros",
+              "habremos"
+            ],
+            [
+              "ustedes, ellos",
+              "habrán"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Regular participles: **-ar → -ado** (**hablado**), **-er / -ir → -ido** (**comido, vivido**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The participle **never changes** here, and nothing goes between **habré** and it. Pronouns and **no** go in front: **ya lo habré terminado**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Uses: something done before a future point (**para el lunes habré terminado**) and guesses about the past (**habrá salido**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: future of **haber** + **-ado / -ido**."
+        }
+      ]
+    },
+    {
+      "id": "tabla",
+      "titulo": "Full forms",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "terminar",
+            "comer",
+            "vivir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "habré terminado",
+              "habré comido",
+              "habré vivido"
+            ],
+            [
+              "tú",
+              "habrás terminado",
+              "habrás comido",
+              "habrás vivido"
+            ],
+            [
+              "él, ella, usted",
+              "habrá terminado",
+              "habrá comido",
+              "habrá vivido"
+            ],
+            [
+              "nosotros",
+              "habremos terminado",
+              "habremos comido",
+              "habremos vivido"
+            ],
+            [
+              "ustedes, ellos",
+              "habrán terminado",
+              "habrán comido",
+              "habrán vivido"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Para las cinco ==habré terminado==.",
+              "en": "By five I'll have finished."
+            },
+            {
+              "es": "Cuando llegues, ya ==habremos comido==.",
+              "en": "When you arrive, we'll have eaten."
+            },
+            {
+              "es": "En junio ==habrán vivido== diez años en Mérida.",
+              "en": "In June they'll have lived in Mérida for ten years."
+            },
+            {
+              "es": "¿==Habrás leído== el libro para el jueves?",
+              "en": "Will you have read the book by Thursday?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Habré lo terminado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Lo habré terminado."
+                }
+              ],
+              "nota": "Nothing in between."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Habremos terminados."
+                },
+                {
+                  "v": "bien",
+                  "t": "Habremos terminado."
+                }
+              ],
+              "nota": "Participle doesn't change."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Habrè comido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Habré comido."
+                }
+              ],
+              "nota": "Accent: **é** (acute)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "habré hecho",
+              "texto": "[[5066|irregular participles]]."
+            },
+            {
+              "forma": "para el lunes habré...",
+              "texto": "[[7269|completed future actions]]."
+            },
+            {
+              "forma": "habrá salido",
+              "texto": "[[7266|guesses about the past]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Conjugate: _nosotros / cenar_",
+              "r": "habremos cenado",
+              "nota": "habremos + -ado."
+            },
+            {
+              "p": "Conjugate: _ellos / salir_",
+              "r": "habrán salido",
+              "nota": "habrán + -ido."
+            },
+            {
+              "p": "In Spanish: _You'll have learned a lot._ (tú)",
+              "r": "Habrás aprendido mucho.",
+              "nota": "habrás + participle."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5267
+    ],
+    "confunde": [
+      5186
+    ],
+    "sigue": [
+      5066,
+      7269
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5185",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,240 @@
+{
+  "tema": 7052,
+  "slug": "deber-deber-de",
+  "titulo": "Deber vs deber de (obligation and assumption)",
+  "subtitulo": "Debes estudiar / Debe de ser caro.",
+  "foto": "t06.jpg",
+  "regla": "Deber + infinitive = must (obligation); also accepted for assumptions. Deber de + infinitive = must (assumption, probably), never obligation. For the past: debió de / debe de haber + participle.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Form",
+            "Meaning"
+          ],
+          "filas": [
+            [
+              "deber + infinitive",
+              "obligation: _you must, should_ (also used for assumption in everyday speech)"
+            ],
+            [
+              "deber de + infinitive",
+              "assumption only: _must be, probably_"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "So **debe tener 37 años** can be obligation or guess; **debe de tener 37 años** is only a guess."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It works in other tenses: **debió de llegar a las cuatro** (_it must have arrived at four_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "For a guess about the past, also: **debe de haber** + participle (**debe de haber caducado**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Pronouns go in front or attached to **haber**, never after the participle: **lo debo de haber dejado** / **debo de haberlo dejado**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **de** adds doubt: **debe de** = probably."
+        }
+      ]
+    },
+    {
+      "id": "suposicion",
+      "titulo": "Assumption",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Esa bolsa ==debe de costar== una fortuna.",
+              "en": "That bag must cost a fortune."
+            },
+            {
+              "es": "Las chavas ==deben de llegar== pronto.",
+              "en": "The girls should be here soon."
+            },
+            {
+              "es": "Ese cuadro ==debe de ser== de Frida.",
+              "en": "That painting must be a Frida."
+            },
+            {
+              "es": "Margarita ==debe de tener== unos 37 años.",
+              "en": "Margarita must be about 37."
+            },
+            {
+              "es": "El tren ==debió de llegar== como a las cuatro y media.",
+              "en": "The train must have arrived around four thirty."
+            },
+            {
+              "es": "No encuentro mi celular. ==Debo de haberlo dejado== en el carro.",
+              "en": "I can't find my phone. I must have left it in the car."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "obligacion",
+      "titulo": "Obligation",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Debes estudiar== más.",
+              "en": "You should study more."
+            },
+            {
+              "es": "No ==debemos llegar== tarde.",
+              "en": "We mustn't be late."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ambiguo",
+      "titulo": "Deber alone: both",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "obligación o suposición",
+                  "t": "Debe haber un letrero con el horario."
+                },
+                {
+                  "v": "solo suposición",
+                  "t": "Debe de haber un letrero con el horario."
+                }
+              ],
+              "nota": "_There must be a sign_ (a rule, or a guess) vs _there's surely a sign_."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Debes de pagar tus impuestos. (obligation)"
+                },
+                {
+                  "v": "bien",
+                  "t": "Debes pagar tus impuestos."
+                }
+              ],
+              "nota": "Obligation: no **de**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Debo de haber dejádolo en el carro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Debo de haberlo dejado en el carro."
+                }
+              ],
+              "nota": "Attach to **haber**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "debería haber",
+              "texto": "_Should have_: [[5054|deber + haber]]."
+            },
+            {
+              "forma": "serán las tres",
+              "texto": "Another way to guess: [[5060|future of probability]]."
+            },
+            {
+              "forma": "tener que",
+              "texto": "[[5106|tener que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Guess: _He must be tired._",
+              "r": "Debe de estar cansado.",
+              "nota": "deber de = assumption."
+            },
+            {
+              "p": "Obligation: _You must wear a helmet._",
+              "r": "Debes usar casco.",
+              "nota": "No de."
+            },
+            {
+              "p": "Guess about the past: _It must have rained._",
+              "r": "Debió de llover. / Debe de haber llovido.",
+              "nota": "Past assumption."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6467
+    ],
+    "confunde": [
+      5054
+    ],
+    "sigue": [
+      5054
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7052",
+      "kwiziq": true
+    }
+  ]
+}

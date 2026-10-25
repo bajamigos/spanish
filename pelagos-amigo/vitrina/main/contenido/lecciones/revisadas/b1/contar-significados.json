@@ -1,0 +1,222 @@
+{
+  "tema": 8528,
+  "slug": "contar-significados",
+  "titulo": "Different meanings of the verb contar",
+  "subtitulo": "Contar ovejas, contar un chisme, eso no cuenta, cuenta conmigo.",
+  "foto": "t04.jpg",
+  "regla": "Contar = to count (numbers, things), to tell (a story, news), to count / matter (eso no cuenta), and contar con = to count on, to have.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Contar** (o > ue: **cuento**, **cuentas**) has several meanings depending on the context:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Meaning",
+            "Example"
+          ],
+          "filas": [
+            [
+              "_to count_ (numbers, things)",
+              "Voy a contar las monedas."
+            ],
+            [
+              "_to tell, to narrate_",
+              "Mi papá me contó un chisme."
+            ],
+            [
+              "_to count, to matter_",
+              "Ese examen no cuenta."
+            ],
+            [
+              "contar con: _to count on, to rely on_",
+              "Cuenta conmigo."
+            ],
+            [
+              "contar con: _to have, to feature_",
+              "El hotel cuenta con alberca."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "For _to count_ and _to tell_ it's transitive: no preposition before the object (**cuenta las monedas**, **cuenta mentiras**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: you count coins, you tell stories, and you can always count **con** your friends."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿Ya sabes ==contar== del uno al cincuenta?",
+              "en": "Can you count from one to fifty yet?"
+            },
+            {
+              "es": "Para dormirte, ==cuenta== borreguitos.",
+              "en": "To fall asleep, count sheep."
+            },
+            {
+              "es": "Beto siempre ==cuenta== mentiras.",
+              "en": "Beto always tells lies."
+            },
+            {
+              "es": "Ayer mi papá me ==contó== que la vecina tiene novio.",
+              "en": "Yesterday my dad told me the neighbor has a boyfriend."
+            },
+            {
+              "es": "—¿Es cierto que te mudas? —No, ¿quién te ==contó== eso?",
+              "en": "\"Is it true you're moving?\" \"No, who told you that?\""
+            },
+            {
+              "es": "Este examen no ==cuenta== para la calificación final.",
+              "en": "This exam doesn't count toward the final grade."
+            },
+            {
+              "es": "Si necesitas ayuda, ==cuenta conmigo==.",
+              "en": "If you need help, count on me."
+            },
+            {
+              "es": "El hotel ==cuenta con== alberca y gimnasio.",
+              "en": "The hotel has a pool and a gym."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Conto las monedas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cuento las monedas."
+                }
+              ],
+              "nota": "o > ue in the present."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cuenta en mí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cuenta conmigo."
+                }
+              ],
+              "nota": "_Count on_ = **contar con**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me habló una historia increíble."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me contó una historia increíble."
+                }
+              ],
+              "nota": "_To tell a story_ = **contar**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "cuento, contamos",
+              "texto": "o > ue verbs: [[5872|o > ue -ar verbs]]."
+            },
+            {
+              "forma": "cuente",
+              "texto": "In the subjunctive: [[6213|o > ue -ar verbs]]."
+            },
+            {
+              "forma": "pedir vs preguntar",
+              "texto": "Another pair to watch: [[9343|pedir vs preguntar]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Tell me what happened._ (tú)",
+              "r": "Cuéntame qué pasó.",
+              "nota": "contar = tell."
+            },
+            {
+              "p": "In Spanish: _That doesn't count._",
+              "r": "Eso no cuenta.",
+              "nota": "contar = matter."
+            },
+            {
+              "p": "In Spanish: _You can count on us._ (tú)",
+              "r": "Puedes contar con nosotros.",
+              "nota": "contar con."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5872
+    ],
+    "confunde": [
+      9343
+    ],
+    "sigue": [
+      6213
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8528",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "tema": 5965,
+  "slug": "para-destino-salgo-para",
+  "titulo": "Para (not por) for a destination",
+  "subtitulo": "«Salgo para Ensenada mañana.»",
+  "foto": "t02.jpg",
+  "regla": "To say where someone or something is headed, use para after verbs of movement (ir, salir, venir, partir) and with vehicles or things going somewhere. Por with a place means through or around, not to.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "With verbs of movement, **para** marks the **destination**: where you are headed."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "ir / salir / venir / partir",
+            "+ para +",
+            "place"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It also tells where a bus, a flight or a package **is going**: **el camión para Rosarito**, **un vuelo para Cancún**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Para** stresses the direction more than the arrival. With **ir** you can also use **a**: **voy a la playa** and **voy para la playa** both work; **para** sounds like _I'm on my way there_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Por** + place is something else: **through**, **along** or **around** (**salgo por Ensenada** = _I'm leaving via Ensenada_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **para** is the arrow on the map; it points to the end of the trip."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mañana ==salgo para== Ensenada temprano.",
+              "en": "Tomorrow I'm leaving for Ensenada early."
+            },
+            {
+              "es": "¿Este camión ==va para== Rosarito?",
+              "en": "Does this bus go to Rosarito?"
+            },
+            {
+              "es": "==Ya voy para== tu casa.",
+              "en": "I'm on my way to your place now."
+            },
+            {
+              "es": "Mis primos ==vienen para== Tijuana en diciembre.",
+              "en": "My cousins are coming to Tijuana in December."
+            },
+            {
+              "es": "¿A qué hora sale el vuelo ==para== Monterrey?",
+              "en": "What time does the flight to Monterrey leave?"
+            },
+            {
+              "es": "Después del trabajo ==nos vamos para== la playa.",
+              "en": "After work we're heading to the beach."
+            },
+            {
+              "es": "Este paquete ==va para== San Diego.",
+              "en": "This package is going to San Diego."
+            },
+            {
+              "es": "¡==Vente para== acá!",
+              "en": "Come over here!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mañana salgo por Ensenada."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mañana salgo para Ensenada."
+                }
+              ],
+              "nota": "**Por** = via Ensenada; **para** = heading to Ensenada."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Este camión va por Rosarito?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Este camión va para Rosarito?"
+                }
+              ],
+              "nota": "Ask for the destination with **para**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Voy por la playa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Voy para la playa."
+                }
+              ],
+              "nota": "**Ir por** + thing or place usually means _go get_ or _go through_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Salgo Ensenada mañana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Salgo para Ensenada mañana."
+                }
+              ],
+              "nota": "**Salir** needs a preposition before the place."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "para + purpose",
+              "texto": "The other basic **para**: [[5970|para for purpose]]."
+            },
+            {
+              "forma": "por la playa",
+              "texto": "Through or along a place: [[5963|por (not para) for through/along]]."
+            },
+            {
+              "forma": "hacia",
+              "texto": "Just the direction, not the goal: [[9141|hacia (towards)]]."
+            },
+            {
+              "forma": "para el lunes",
+              "texto": "The same arrow in time: [[5966|para for a deadline]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We're leaving for Mexicali tonight._",
+              "r": "Salimos para Mexicali esta noche.",
+              "nota": "salir para."
+            },
+            {
+              "p": "In Spanish, with the destination word: _Is this bus going to the border?_",
+              "r": "¿Este camión va para la línea?",
+              "nota": "va para."
+            },
+            {
+              "p": "Fix it: _El vuelo por Cancún sale a las tres._",
+              "r": "El vuelo para Cancún sale a las tres.",
+              "nota": "Destination: para."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5970
+    ],
+    "confunde": [
+      5963,
+      9141
+    ],
+    "sigue": [
+      5966
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5965",
+      "kwiziq": true
+    }
+  ]
+}

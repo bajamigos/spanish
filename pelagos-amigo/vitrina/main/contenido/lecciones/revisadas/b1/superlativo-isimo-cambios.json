@@ -1,0 +1,224 @@
+{
+  "tema": 6081,
+  "slug": "superlativo-isimo-cambios",
+  "titulo": "Superlatives with -ísimo: adjectives ending in -co, -go, -ble, -z, -or and -n",
+  "subtitulo": "Rico → riquísimo, largo → larguísimo, amable → amabilísimo.",
+  "foto": "t06.jpg",
+  "regla": "-ísimo with spelling changes: -co → -quísimo, -go → -guísimo, -ble → -bilísimo, -z → -císimo, and -or / -n add -císimo.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**-ísimo** (_extremely_) needs a spelling change with some endings, to keep the sound or because of tradition."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Ending",
+            "Change",
+            "Example"
+          ],
+          "filas": [
+            [
+              "-co",
+              "-co → -quísimo",
+              "rico → riquísimo"
+            ],
+            [
+              "-go",
+              "-go → -guísimo",
+              "largo → larguísimo"
+            ],
+            [
+              "-ble",
+              "-ble → -bilísimo",
+              "amable → amabilísimo"
+            ],
+            [
+              "-z",
+              "-z → -císimo",
+              "feliz → felicísimo, capaz → capacísimo"
+            ],
+            [
+              "-or, -n",
+              "add -císimo",
+              "joven → jovencísimo, trabajador → trabajadorcísimo"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "All of them agree in gender and number: **riquísima**, **larguísimos**, **amabilísimas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The **-co** and **-go** changes keep the hard sound: **c** before **i** would sound like _s_, and **g** before **i** like an English _h_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: think of **riquísimo** tacos. If you can say that one, you can say them all."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Estos tacos están ==riquísimos==.",
+              "en": "These tacos are delicious."
+            },
+            {
+              "es": "Mi abuela tenía el pelo ==larguísimo==.",
+              "en": "My grandma had super long hair."
+            },
+            {
+              "es": "Tienen que ser ==amabilísimos== con ella.",
+              "en": "They have to be extremely kind to her."
+            },
+            {
+              "es": "Hoy estoy ==felicísimo==: ¡hubo olas!",
+              "en": "I'm super happy today: there were waves!"
+            },
+            {
+              "es": "Se ve ==jovencísima== para su edad.",
+              "en": "She looks very young for her age."
+            },
+            {
+              "es": "El café está ==fresquísimo==.",
+              "en": "The coffee is super fresh."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Está ricísimo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Está riquísimo."
+                }
+              ],
+              "nota": "**-co** → **-qu-**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Fue un viaje largísimo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Fue un viaje larguísimo."
+                }
+              ],
+              "nota": "**-go** → **-gu-**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es amableísimo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es amabilísimo."
+                }
+              ],
+              "nota": "**-ble** → **-bil-**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "carísimo, facilísimo",
+              "texto": "The basic rule: [[6077|-ísimo with vowels, -io, -l, -ar]]."
+            },
+            {
+              "forma": "busque, pague",
+              "texto": "The same sound-saving changes in verbs: [[5724|-car]], [[5725|-gar]]."
+            },
+            {
+              "forma": "el más rico",
+              "texto": "_The most_: [[5056|superlatives with más]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Say **muy rico** with -ísimo.",
+              "r": "riquísimo",
+              "nota": "-co → -qu-."
+            },
+            {
+              "p": "Say **muy amable** with -ísimo.",
+              "r": "amabilísimo",
+              "nota": "-ble → -bil-."
+            },
+            {
+              "p": "Say **muy feliz** with -ísimo.",
+              "r": "felicísimo",
+              "nota": "-z → -c-."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6077
+    ],
+    "confunde": [
+      6077
+    ],
+    "sigue": [
+      5056
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6081",
+      "kwiziq": true
+    }
+  ]
+}

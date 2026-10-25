@@ -1,0 +1,177 @@
+{
+  "tema": 6449,
+  "slug": "ser-relaciones",
+  "titulo": "Ser for relationships",
+  "subtitulo": "Beto es mi primo, somos amigos.",
+  "foto": "t09.jpg",
+  "regla": "To say how people are related (family, friends, partners, coworkers), use ser: es mi hermana, somos amigos, son novios.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say how people are **related** (family, friends, partners, coworkers), use **ser**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "ser",
+            "+",
+            "mi hermano / amigos / novios..."
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Careful: **casado**, **soltero** and **divorciado** usually go with **estar** (they're a status, not a relationship)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **ser** is the family tree. The branches don't move."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ana ==es== mi hermana.",
+              "en": "Ana is my sister."
+            },
+            {
+              "es": "Beto y yo ==somos== amigos desde la prepa.",
+              "en": "Beto and I have been friends since high school."
+            },
+            {
+              "es": "Ellos ==son== novios.",
+              "en": "They're boyfriend and girlfriend."
+            },
+            {
+              "es": "¿Ella ==es== tu esposa?",
+              "en": "Is she your wife?"
+            },
+            {
+              "es": "Don Ramón ==es== mi jefe.",
+              "en": "Don Ramón is my boss."
+            },
+            {
+              "es": "==Somos== compañeros de entrenamiento.",
+              "en": "We're training partners."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estamos amigos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Somos amigos."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Luis está mi primo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Luis es mi primo."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "este es mi amigo",
+              "texto": "Introducing people: [[5995|ser to introduce people]]."
+            },
+            {
+              "forma": "mi, tu, su",
+              "texto": "Whose relative: [[6012|possessive adjectives]]."
+            },
+            {
+              "forma": "estoy casado",
+              "texto": "Status, not relationship: [[6069|estar for relationship statuses]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Carlos is my brother._",
+              "r": "Carlos es mi hermano.",
+              "nota": "ser."
+            },
+            {
+              "p": "In Spanish: _We're coworkers._",
+              "r": "Somos compañeros de trabajo.",
+              "nota": "ser."
+            },
+            {
+              "p": "Fix it: _Ellos están novios._",
+              "r": "Ellos son novios.",
+              "nota": "ser, not estar."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5995,
+      6012
+    ],
+    "confunde": [
+      6069
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6449",
+      "kwiziq": true
+    }
+  ]
+}

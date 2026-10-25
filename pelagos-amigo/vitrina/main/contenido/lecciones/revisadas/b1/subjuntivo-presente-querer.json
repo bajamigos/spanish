@@ -1,0 +1,201 @@
+{
+  "tema": 6239,
+  "slug": "subjuntivo-presente-querer",
+  "titulo": "Conjugate querer in the present subjunctive",
+  "subtitulo": "Quiera, quieras, queramos: ie everywhere except nosotros.",
+  "foto": "t05.jpg",
+  "regla": "Querer changes e > ie in the present subjunctive except in nosotros: quiera, quieras, quiera, queramos, quieran.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Querer** is a stem-changing verb: its first **e** becomes **ie** in the present, and the same change stays in the present subjunctive, **except in nosotros**. The endings are the regular **-er** ones."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "querer"
+          ],
+          "filas": [
+            [
+              "yo",
+              "quiera"
+            ],
+            [
+              "tú",
+              "quieras"
+            ],
+            [
+              "él, ella, usted",
+              "quiera"
+            ],
+            [
+              "nosotros",
+              "queramos"
+            ],
+            [
+              "ustedes, ellos",
+              "quieran"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **quiera** wants the **ie**; **queramos** is happy as it is."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Qué bueno que ==quieras== estudiar en la universidad.",
+              "en": "It's great that you want to go to college."
+            },
+            {
+              "es": "Es raro que no ==quiera== comer nada hoy.",
+              "en": "It's weird that I don't want to eat anything today."
+            },
+            {
+              "es": "Me extraña que Beto ==quiera== venir al cine.",
+              "en": "I'm surprised Beto wants to come to the movies."
+            },
+            {
+              "es": "Es sorprendente que todos ==queramos== ir a Oaxaca.",
+              "en": "It's surprising that we all want to go to Oaxaca."
+            },
+            {
+              "es": "Cociné para un ejército, así que espero que ==quieran== comer mucho.",
+              "en": "I cooked for an army, so I hope you want to eat a lot."
+            },
+            {
+              "es": "Dudo que ellas ==quieran== inscribirse al curso.",
+              "en": "I doubt they'll want to sign up for the course."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es raro que todos quieramos lo mismo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es raro que todos queramos lo mismo."
+                }
+              ],
+              "nota": "No change in **nosotros**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Dudo que quiere venir."
+                },
+                {
+                  "v": "bien",
+                  "t": "Dudo que quiera venir."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "quiero, queremos",
+              "texto": "The present: [[5774|querer in the present]]."
+            },
+            {
+              "forma": "quiero que vengas",
+              "texto": "Querer as a trigger: [[5059|querer que]]."
+            },
+            {
+              "forma": "entienda, pierda",
+              "texto": "Other e > ie -er verbs: [[6238|e > ie -er verbs]]."
+            },
+            {
+              "forma": "quisiera",
+              "texto": "Polite _I'd like_: [[5227|querría, quería and quisiera]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I'm glad you want to come._ (tú)",
+              "r": "Me alegra que quieras venir.",
+              "nota": "quieras."
+            },
+            {
+              "p": "**Querer** with **nosotros**: Es normal que ___ descansar.",
+              "r": "Es normal que queramos descansar.",
+              "nota": "No change."
+            },
+            {
+              "p": "In Spanish: _I doubt they want to pay._",
+              "r": "Dudo que quieran pagar.",
+              "nota": "quieran."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5774,
+      6238
+    ],
+    "confunde": [
+      5059
+    ],
+    "sigue": [
+      5227
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6239",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "tema": 7904,
+  "slug": "me-recomendo-que",
+  "titulo": "Verbs of advice and orders + imperfect subjunctive",
+  "subtitulo": "Me sugirió que llegara temprano.",
+  "foto": "t06.jpg",
+  "regla": "When the advice or order verb is in the past (sugirió, recomendaba, había ordenado), the verb after que goes in the imperfect subjunctive: Me recomendó que viera a un abogado.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Same verbs as in the present: **sugerir, recomendar, aconsejar, animar a, prohibir, ordenar, obligar a, permitir, necesitar, advertir**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "past advice / order verb",
+            "+ que +",
+            "imperfect subjunctive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Preterite, imperfect or pluperfect in the main clause all lead to the imperfect subjunctive."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: past advice, **-ra** action."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Me sugirió que ==llegara== temprano a la cita.",
+              "en": "He suggested I get to the appointment early."
+            },
+            {
+              "es": "Le prohibieron que ==visitara== a sus hijos.",
+              "en": "They forbade him to visit his children."
+            },
+            {
+              "es": "Nos advirtieron que ==hiciéramos== la reservación con tiempo.",
+              "en": "They warned us to book ahead."
+            },
+            {
+              "es": "Me habían recomendado que lo ==consultara== con un abogado.",
+              "en": "They had recommended that I check it with a lawyer."
+            },
+            {
+              "es": "Paula me animó a que ==fuera== de excursión a la sierra.",
+              "en": "Paula encouraged me to go hiking in the mountains."
+            },
+            {
+              "es": "María me aconsejaba que ==tuviera== un poco de paciencia con Miguel.",
+              "en": "María kept advising me to be a little patient with Miguel."
+            },
+            {
+              "es": "No nos permitieron que ==comiéramos== en la junta.",
+              "en": "They didn't let us eat during the meeting."
+            },
+            {
+              "es": "Necesitaba que ==vinieras== por mí al aeropuerto.",
+              "en": "I needed you to pick me up at the airport."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me sugirió que llego temprano."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me sugirió que llegara temprano."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me recomendó que vea a un abogado. (story in the past)"
+                },
+                {
+                  "v": "bien",
+                  "t": "Me recomendó que viera a un abogado."
+                }
+              ],
+              "nota": "Past: imperfect subjunctive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "te recomiendo que",
+              "texto": "[[7903|present version]]."
+            },
+            {
+              "forma": "me pidió que",
+              "texto": "[[7281|pedir in the past]]."
+            },
+            {
+              "forma": "viera, hiciera",
+              "texto": "[[5068|imperfect subjunctive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _She advised me to save money._",
+              "r": "Me aconsejó que ahorrara dinero.",
+              "nota": "-ra."
+            },
+            {
+              "p": "In Spanish: _They ordered us to leave._",
+              "r": "Nos ordenaron que saliéramos.",
+              "nota": "saliéramos."
+            },
+            {
+              "p": "Complete: _El maestro nos prohibió que ___ (usar) el celular._",
+              "r": "usáramos",
+              "nota": "Imperfect subjunctive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7903,
+      5068
+    ],
+    "confunde": [
+      7281
+    ],
+    "sigue": [
+      8580
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7904",
+      "kwiziq": true
+    }
+  ]
+}

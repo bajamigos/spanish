@@ -1,0 +1,185 @@
+{
+  "tema": 5991,
+  "slug": "presente-hechos-generales",
+  "titulo": "The present for general facts",
+  "subtitulo": "«El agua hierve a cien grados.»",
+  "foto": "t05.jpg",
+  "regla": "Use the simple present (el presente) for general facts and things that are always true, just like in English. When the subject is a general noun, it takes the article: el agua, los gatos.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "For **general facts** and truths that don't change, Spanish uses the **simple present**, like English."
+        },
+        {
+          "tipo": "texto",
+          "texto": "General nouns keep the **article**: **Los gatos** duermen mucho, not _Gatos duermen mucho_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "No **estar + gerund** here: that is for what's happening right now."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "El agua ==hierve== a cien grados.",
+              "en": "Water boils at one hundred degrees."
+            },
+            {
+              "es": "La Tierra ==gira== alrededor del Sol.",
+              "en": "The Earth goes around the Sun."
+            },
+            {
+              "es": "En México ==se habla== español.",
+              "en": "Spanish is spoken in Mexico."
+            },
+            {
+              "es": "Tijuana ==está== en la frontera con Estados Unidos.",
+              "en": "Tijuana is on the border with the United States."
+            },
+            {
+              "es": "Los jitomates ==necesitan== mucho sol.",
+              "en": "Tomatoes need a lot of sun."
+            },
+            {
+              "es": "Los gatos ==duermen== mucho.",
+              "en": "Cats sleep a lot."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Gatos duermen mucho."
+                },
+                {
+                  "v": "bien",
+                  "t": "Los gatos duermen mucho."
+                }
+              ],
+              "nota": "General nouns take the article."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Agua hierve a cien grados."
+                },
+                {
+                  "v": "bien",
+                  "t": "El agua hierve a cien grados."
+                }
+              ],
+              "nota": "El agua: article."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tijuana es en la frontera."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tijuana está en la frontera."
+                }
+              ],
+              "nota": "Location: estar."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "trabajo, como",
+              "texto": "The forms: [[5492|regular -ar verbs]]."
+            },
+            {
+              "forma": "surfeo los sábados",
+              "texto": "Also for habits: [[5992|the present for regular actions]]."
+            },
+            {
+              "forma": "estoy comiendo",
+              "texto": "Not now: [[5994|present vs present progressive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _The sun rises in the east._",
+              "r": "El sol sale por el este.",
+              "nota": "Simple present."
+            },
+            {
+              "p": "Fix it: _Perros son leales._",
+              "r": "Los perros son leales.",
+              "nota": "Add los."
+            },
+            {
+              "p": "In Spanish: _Plants need water._",
+              "r": "Las plantas necesitan agua.",
+              "nota": "las + present."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5492
+    ],
+    "confunde": [
+      5994
+    ],
+    "sigue": [
+      5992
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5991",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "tema": 5854,
+  "slug": "condicional-decir",
+  "titulo": "Conjugate decir in the conditional",
+  "subtitulo": "Diría, dirías, diríamos: the future stem dir- with the conditional endings.",
+  "foto": "t02.jpg",
+  "regla": "Decir has the irregular stem dir- in the conditional, with the regular endings: diría, dirías, diría, diríamos, dirían.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Decir** (_to say, to tell_) is irregular in the conditional (**el condicional simple**). It uses the same irregular stem as the future, **dir-**, and the regular conditional endings."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**dir-**",
+            "**-ía, -ías, -ía, -íamos, -ían**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "decir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "diría"
+            ],
+            [
+              "tú",
+              "dirías"
+            ],
+            [
+              "él, ella, usted",
+              "diría"
+            ],
+            [
+              "nosotros",
+              "diríamos"
+            ],
+            [
+              "ustedes, ellos",
+              "dirían"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Every form has a written accent on the **í** of the ending."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **decir** keeps only **dir-**: say less, mean more."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Yo ==diría== que no hay olas hoy.",
+              "en": "I'd say there are no waves today."
+            },
+            {
+              "es": "Tú nunca ==dirías== una mentira.",
+              "en": "You'd never tell a lie."
+            },
+            {
+              "es": "Ella ==diría== que no.",
+              "en": "She'd say no."
+            },
+            {
+              "es": "Nosotros ==diríamos== que sí.",
+              "en": "We'd say yes."
+            },
+            {
+              "es": "Ellos ==dirían== que está roto.",
+              "en": "They'd say it's broken."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo deciría que sí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo diría que sí."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Dirian la verdad."
+                },
+                {
+                  "v": "bien",
+                  "t": "Dirían la verdad."
+                }
+              ],
+              "nota": "Accent on the **í**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usos",
+      "titulo": "Useful uses",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "Yo diría que…",
+              "texto": "A soft way to give an opinion: _I'd say that…_",
+              "aqui": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "diré",
+              "texto": "The future has the same stem: [[5161|decir in the future]]."
+            },
+            {
+              "forma": "hablaría",
+              "texto": "The regular pattern: [[5731|regular verbs in the conditional]]."
+            },
+            {
+              "forma": "dije, digo, dicho",
+              "texto": "Other forms: [[6240|present perfect]]."
+            },
+            {
+              "forma": "haría",
+              "texto": "Another short stem: [[5064|hacer in the conditional]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I'd say it's too late._",
+              "r": "Yo diría que es demasiado tarde.",
+              "nota": "dir- + ía."
+            },
+            {
+              "p": "**Decir** with **ustedes**: ¿Qué ___?",
+              "r": "¿Qué dirían?",
+              "nota": "dir- + ían."
+            },
+            {
+              "p": "In Spanish: _We'd tell Beto._",
+              "r": "Se lo diríamos a Beto.",
+              "nota": "dir- + íamos."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5161,
+      5731
+    ],
+    "confunde": [
+      5161
+    ],
+    "sigue": [
+      5064,
+      7431
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5854",
+      "kwiziq": true
+    }
+  ]
+}

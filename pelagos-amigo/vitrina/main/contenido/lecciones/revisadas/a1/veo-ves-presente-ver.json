@@ -1,0 +1,214 @@
+{
+  "tema": 5306,
+  "slug": "veo-ves-presente-ver",
+  "titulo": "Ver in the present",
+  "subtitulo": "Veo el mar desde mi casa.",
+  "foto": "t05.jpg",
+  "regla": "Ver (to see, to watch) is regular in the present except yo, which keeps the e: veo, ves, ve, vemos, ven. No written accents.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Ver** (_to see, to watch_) is almost regular. Only **yo** is special: it keeps the **e** → **veo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The other forms are short, with one **e** and no accent: **ves, ve, vemos, ven**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "ver"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**veo**"
+            ],
+            [
+              "tú",
+              "ves"
+            ],
+            [
+              "él, ella, usted",
+              "ve"
+            ],
+            [
+              "nosotros",
+              "vemos"
+            ],
+            [
+              "ellos, ustedes",
+              "ven"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **ve** and **ven** also mean _go!_ (ir) and _come!_ (venir). Context tells you which."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Veo== el mar desde mi casa.",
+              "en": "I can see the ocean from my house."
+            },
+            {
+              "es": "¿==Ves== esa ola?",
+              "en": "Do you see that wave?"
+            },
+            {
+              "es": "Mi hermano ==ve== el futbol los domingos.",
+              "en": "My brother watches soccer on Sundays."
+            },
+            {
+              "es": "En la noche ==vemos== The Expanse.",
+              "en": "At night we watch The Expanse."
+            },
+            {
+              "es": "¿Qué ==ven== ustedes desde ahí?",
+              "en": "What can you all see from there?"
+            },
+            {
+              "es": "Nos ==vemos== mañana en el gimnasio.",
+              "en": "See you tomorrow at the gym."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo vo la tele."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo veo la tele."
+                }
+              ],
+              "nota": "Yo keeps the e: **veo**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros veemos una película."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros vemos una película."
+                }
+              ],
+              "nota": "Only one e."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ellos vén el partido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ellos ven el partido."
+                }
+              ],
+              "nota": "No accent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "veo, como",
+              "texto": "The base pattern: [[5540|regular -er verbs]]."
+            },
+            {
+              "forma": "veo el mar",
+              "texto": "With perception verbs Spanish says **veo**, not _puedo ver_: [[7990|perception verbs]]."
+            },
+            {
+              "forma": "vi, vio",
+              "texto": "Next, the past: [[5217|ver in the preterite]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I can see the island from here._",
+              "r": "Veo la isla desde aquí.",
+              "nota": "Just veo."
+            },
+            {
+              "p": "Fix it: _Yo vo a mi abuela los domingos._",
+              "r": "Yo veo a mi abuela los domingos.",
+              "nota": "yo → veo."
+            },
+            {
+              "p": "In Spanish: _See you tomorrow._",
+              "r": "Nos vemos mañana.",
+              "nota": "nosotros → vemos."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5540
+    ],
+    "confunde": [
+      7990
+    ],
+    "sigue": [
+      5217
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5306",
+      "kwiziq": true
+    }
+  ]
+}

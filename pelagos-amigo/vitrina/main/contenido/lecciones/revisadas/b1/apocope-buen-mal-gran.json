@@ -1,0 +1,246 @@
+{
+  "tema": 5057,
+  "slug": "apocope-buen-mal-gran",
+  "titulo": "Bueno, malo, grande become buen, mal, gran before a noun",
+  "subtitulo": "Un buen día, un mal momento, una gran ciudad.",
+  "foto": "t03.jpg",
+  "regla": "Before a masculine singular noun, bueno → buen and malo → mal. Grande → gran before any singular noun, and it means great. Plurals don't shorten.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Most adjectives go after the noun, but **bueno** and **malo** can go before it. Then, before a **masculine singular** noun, they shorten: **buen**, **mal**. Before a noun, they sound a bit stronger."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "After the noun",
+            "Before the noun"
+          ],
+          "filas": [
+            [
+              "un hombre bueno",
+              "un buen hombre"
+            ],
+            [
+              "un día malo",
+              "un mal día"
+            ],
+            [
+              "una película buena",
+              "una buena película (no change)"
+            ],
+            [
+              "una época mala",
+              "una mala época (no change)"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "With feminine nouns, they keep their full form: **buena**, **mala**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Grande** shortens to **gran** before **any** singular noun, masculine or feminine. And its meaning changes: after the noun it's _big_; before the noun, **gran** means _great, fantastic_."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "After the noun",
+            "Before the noun"
+          ],
+          "filas": [
+            [
+              "una ciudad grande (_big_)",
+              "una gran ciudad (_great_)"
+            ],
+            [
+              "un corazón grande",
+              "un gran corazón (_generous_)"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Plurals never shorten: **buenos amigos**, **malas noticias**, **grandes ideas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "This shortening is called **apócope**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: only the singular loses its tail. **Buen**, **mal** for boys; **gran** for everyone."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi papá es un ==buen== hombre.",
+              "en": "My dad is a good man."
+            },
+            {
+              "es": "Esta es una ==buena== película.",
+              "en": "This is a good movie."
+            },
+            {
+              "es": "Hoy tuve un ==mal== día.",
+              "en": "I had a bad day today."
+            },
+            {
+              "es": "Esa fue una ==mala== época.",
+              "en": "That was a bad time."
+            },
+            {
+              "es": "Tijuana es una ==gran== ciudad.",
+              "en": "Tijuana is a great city."
+            },
+            {
+              "es": "Tijuana es una ciudad ==grande==.",
+              "en": "Tijuana is a big city."
+            },
+            {
+              "es": "Beto tiene un ==gran== corazón.",
+              "en": "Beto has a big heart."
+            },
+            {
+              "es": "Son ==buenos== amigos.",
+              "en": "They're good friends."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es un bueno surfista."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es un buen surfista."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es una buen idea."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es una buena idea."
+                }
+              ],
+              "nota": "Feminine: no shortening."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Son gran amigos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Son grandes amigos."
+                }
+              ],
+              "nota": "The plural doesn't shorten."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "primer, tercer",
+              "texto": "The same shortening with numbers: [[6154|primero and tercero]]."
+            },
+            {
+              "forma": "algún, ningún",
+              "texto": "More short forms: **algún día**, **ningún problema**."
+            },
+            {
+              "forma": "el mejor",
+              "texto": "**Bueno** in the superlative: [[7066|mejor, peor]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _He's a good teacher._ (before the noun)",
+              "r": "Es un buen maestro.",
+              "nota": "buen + masculine singular."
+            },
+            {
+              "p": "In Spanish: _It was a great idea._",
+              "r": "Fue una gran idea.",
+              "nota": "gran before any singular noun."
+            },
+            {
+              "p": "Which one? **un mal momento** or **un malo momento**?",
+              "r": "un mal momento",
+              "nota": "Shortened before a masculine noun."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6015
+    ],
+    "confunde": [
+      7066
+    ],
+    "sigue": [
+      6154
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5057",
+      "kwiziq": true
+    }
+  ]
+}

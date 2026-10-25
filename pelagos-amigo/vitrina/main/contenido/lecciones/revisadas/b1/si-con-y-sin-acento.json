@@ -1,0 +1,219 @@
+{
+  "tema": 6603,
+  "slug": "si-con-y-sin-acento",
+  "titulo": "Sí vs si: with and without an accent",
+  "subtitulo": "Sí = yes; si = if, whether.",
+  "foto": "t05.jpg",
+  "regla": "Sí with an accent = yes (and the emphatic sí, sí mismo). Si without an accent = if (conditions) and whether (indirect questions).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Some Spanish words change meaning with just a written accent. **Sí** and **si** are one pair."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Form",
+            "Meaning",
+            "Example"
+          ],
+          "filas": [
+            [
+              "sí",
+              "_yes_",
+              "—¿Quieres una cerveza? —Sí, gracias."
+            ],
+            [
+              "",
+              "emphasis: _really do_",
+              "Ella sí sabe surfear."
+            ],
+            [
+              "si",
+              "_if_, in conditions",
+              "Si quieres, vamos."
+            ],
+            [
+              "",
+              "_whether_, in indirect questions",
+              "No sé si viene."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Sí** can also be a noun: **dar el sí** = _to say yes, to agree_ (at a wedding, for example)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Si** is also the musical note B."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **sí** says yes with a nod (the accent). **Si** only wonders."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "—¿Quieres una cerveza? —==Sí==, gracias.",
+              "en": "\"Do you want a beer?\" \"Yes, thanks.\""
+            },
+            {
+              "es": "==Si== quieres, nos tomamos unas cervezas.",
+              "en": "If you want, we can have a few beers."
+            },
+            {
+              "es": "No sabe ==si== prefiere surf o jiu-jitsu.",
+              "en": "He doesn't know whether he prefers surfing or jiu-jitsu."
+            },
+            {
+              "es": "Pregúntale a Beto ==si== va a venir.",
+              "en": "Ask Beto whether he's coming."
+            },
+            {
+              "es": "Yo no sé surfear, pero mi hermana ==sí==.",
+              "en": "I can't surf, but my sister can."
+            },
+            {
+              "es": "Le dio el ==sí== en el altar.",
+              "en": "She said yes at the altar."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Si, claro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Sí, claro."
+                }
+              ],
+              "nota": "_Yes_ needs the accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Sí llueve, no vamos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Si llueve, no vamos."
+                }
+              ],
+              "nota": "_If_: no accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No sé sí viene."
+                },
+                {
+                  "v": "bien",
+                  "t": "No sé si viene."
+                }
+              ],
+              "nota": "_Whether_: no accent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "si llueve, no voy",
+              "texto": "Conditions with **si**: [[6146|si + present]], [[6147|si + command]]."
+            },
+            {
+              "forma": "creo que sí",
+              "texto": "Short answers: [[7801|I think so]]."
+            },
+            {
+              "forma": "qué / que, más / mas",
+              "texto": "Other accent pairs: [[6675|qué]], [[7179|más]], [[9777|sé / se]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Accent or not? **___, me encanta.** (yes)",
+              "r": "Sí, me encanta.",
+              "nota": "Yes: sí."
+            },
+            {
+              "p": "Accent or not? **___ tienes hambre, come.**",
+              "r": "Si tienes hambre, come.",
+              "nota": "If: si."
+            },
+            {
+              "p": "Accent or not? **No sé ___ hay olas.**",
+              "r": "No sé si hay olas.",
+              "nota": "Whether: si."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      9777
+    ],
+    "sigue": [
+      6146,
+      6675,
+      7179
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6603",
+      "kwiziq": true
+    }
+  ]
+}

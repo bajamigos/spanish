@@ -1,0 +1,189 @@
+{
+  "tema": 9125,
+  "slug": "entre-el-banco-y-la-farmacia",
+  "titulo": "The preposition entre (between, among)",
+  "subtitulo": "El Oxxo está entre el banco y la farmacia.",
+  "foto": "t05.jpg",
+  "regla": "Entre means between (two things, places or times) and among (a group). With pronouns it takes tú and yo: entre tú y yo.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Entre** + A **y** B = **between** A and B: places, times, people."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Entre** + a group = **among**: **entre amigos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "No **de** after it: **entre el banco y la farmacia**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With pronouns, use **tú** and **yo**, not ti and mí: **entre tú y yo**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "El Oxxo está ==entre== el banco y la farmacia.",
+              "en": "The Oxxo is between the bank and the pharmacy."
+            },
+            {
+              "es": "Tijuana está ==entre== Ensenada y San Diego.",
+              "en": "Tijuana is between Ensenada and San Diego."
+            },
+            {
+              "es": "Llego ==entre== las cinco y las seis.",
+              "en": "I'll get there between five and six."
+            },
+            {
+              "es": "Hay un delfín ==entre== los surfistas.",
+              "en": "There's a dolphin among the surfers."
+            },
+            {
+              "es": "==Entre== semana entreno jiu-jitsu.",
+              "en": "On weekdays I train jiu-jitsu."
+            },
+            {
+              "es": "==Entre== tú y yo, ese restaurante es malo.",
+              "en": "Between you and me, that restaurant is bad."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La farmacia está entre del banco y el Oxxo."
+                },
+                {
+                  "v": "bien",
+                  "t": "La farmacia está entre el banco y el Oxxo."
+                }
+              ],
+              "nota": "No **de** after **entre**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Entre ti y mí, no me gusta."
+                },
+                {
+                  "v": "bien",
+                  "t": "Entre tú y yo, no me gusta."
+                }
+              ],
+              "nota": "**Entre** takes **tú** and **yo**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Entre mí y Ana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Entre Ana y yo."
+                }
+              ],
+              "nota": "**Yo**, not mí."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "entre tú y yo",
+              "texto": "More on pronouns: [[7088|entre and según + pronouns]]."
+            },
+            {
+              "forma": "a las cinco",
+              "texto": "Clock times: [[6665|a la / a las + time]]."
+            },
+            {
+              "forma": "sobre",
+              "texto": "On, above, about: [[8787|the preposition sobre]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _The house is between the beach and the park._",
+              "r": "La casa está entre la playa y el parque.",
+              "nota": "entre… y…"
+            },
+            {
+              "p": "Fix it: _Entre ti y mí, es un secreto._",
+              "r": "Entre tú y yo, es un secreto.",
+              "nota": "tú y yo."
+            },
+            {
+              "p": "In Spanish: _I train between seven and eight._",
+              "r": "Entreno entre las siete y las ocho.",
+              "nota": "entre las… y las…"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      8787
+    ],
+    "confunde": [
+      7088
+    ],
+    "sigue": [
+      6665
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9125",
+      "kwiziq": true
+    }
+  ]
+}

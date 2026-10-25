@@ -1,0 +1,251 @@
+{
+  "tema": 9339,
+  "slug": "imperativo-dos-pronombres",
+  "titulo": "Using double pronouns with the imperative",
+  "subtitulo": "Dámelo, pídeselas, cómprenselos: indirect first, then direct, all in one word.",
+  "foto": "t07.jpg",
+  "regla": "In affirmative commands, the indirect pronoun comes first, then the direct one, both attached to the verb: dámelo. Le / les become se: pídeselo.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "When an affirmative command has two pronouns, they go in a fixed order: first the **indirect** object (**me, te, le, nos, les**), then the **direct** object (**lo, la, los, las**). Both are attached to the end of the verb, making one word."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "verb",
+            "indirect",
+            "direct"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Full sentence",
+            "With pronouns"
+          ],
+          "filas": [
+            [
+              "Prepara la carne para él.",
+              "Prepárasela."
+            ],
+            [
+              "Corten el pasto para mí.",
+              "Córtenmelo."
+            ],
+            [
+              "Pide las cervezas para ellos.",
+              "Pídeselas."
+            ],
+            [
+              "Aparta la mesa para ti.",
+              "Apártatela."
+            ],
+            [
+              "Escriban la carta a nosotros.",
+              "Escríbannosla."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The new long word usually needs a **written accent** to keep the stress where it was: **da** → **dámelo**, **pide** → **pídeselas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Le** and **les** turn into **se** next to **lo, la, los, las**: never **lelo**. See [[5078|le / les become se]]."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In negative commands, the pronouns go **before** the verb, in the same order: **no me lo des**, **no se lo digas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **I before D**: Indirect, then Direct. And **le** hides behind **se**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Dámelo== ahorita mismo.",
+              "en": "Give it to me right now."
+            },
+            {
+              "es": "==Pídeselas== al mesero.",
+              "en": "Order them from the waiter."
+            },
+            {
+              "es": "==Cómprenselos== ustedes.",
+              "en": "Buy them for yourselves."
+            },
+            {
+              "es": "==Póngaselo== en la mesa, por favor.",
+              "en": "Put it on the table for him, please."
+            },
+            {
+              "es": "==Fírmenselo== a la señora.",
+              "en": "Sign it for the lady."
+            },
+            {
+              "es": "No ==se lo digas== a Beto.",
+              "en": "Don't tell Beto."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Dalome."
+                },
+                {
+                  "v": "bien",
+                  "t": "Dámelo."
+                }
+              ],
+              "nota": "Indirect first."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Pídelelas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Pídeselas."
+                }
+              ],
+              "nota": "**Le** becomes **se**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Damelo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Dámelo."
+                }
+              ],
+              "nota": "The long word needs its accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No dámelo."
+                },
+                {
+                  "v": "bien",
+                  "t": "No me lo des."
+                }
+              ],
+              "nota": "Negative: pronouns before, and the subjunctive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "se lo doy",
+              "texto": "le / les → se: [[5078|indirect with direct pronouns]]."
+            },
+            {
+              "forma": "voy a dártelo",
+              "texto": "Pronouns with infinitives and gerunds: [[5140|position of object pronouns]]."
+            },
+            {
+              "forma": "siéntate, vámonos",
+              "texto": "Reflexive commands: [[9262|affirmative with reflexive pronouns]]."
+            },
+            {
+              "forma": "no me lo digas",
+              "texto": "Negative commands: [[9255|negative tú]], [[6961|usted, ustedes, nosotros]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Shorten it: **Da las llaves a mí.**",
+              "r": "Dámelas.",
+              "nota": "me + las."
+            },
+            {
+              "p": "Shorten it: **Explica la técnica a ellos.**",
+              "r": "Explícasela.",
+              "nota": "les → se, + la."
+            },
+            {
+              "p": "Make it negative: **Dígaselo.** (usted)",
+              "r": "No se lo diga.",
+              "nota": "Pronouns before."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5078,
+      5140,
+      6748
+    ],
+    "confunde": [
+      5078
+    ],
+    "sigue": [
+      9262,
+      9255,
+      6961
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9339",
+      "kwiziq": true
+    }
+  ]
+}

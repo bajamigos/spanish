@@ -1,0 +1,193 @@
+{
+  "tema": 9335,
+  "slug": "cual-sustantivo-pregunta",
+  "titulo": "Cuál + noun in questions",
+  "subtitulo": "¿Cuál carro es el tuyo?",
+  "foto": "t04.jpg",
+  "regla": "In Mexico and most of Latin America, cuál (plural cuáles) can go straight before a noun to ask which one(s) from a set: ¿Cuál carro? Qué + noun means the same and is correct everywhere.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To ask **which** + noun, you can use **cuál** + singular noun or **cuáles** + plural noun."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "¿Cuál / Cuáles",
+            "+ noun +",
+            "verb...?"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Cuál** changes for number only, never for gender: **cuál camisa**, **cuál carro**; **cuáles camisas**, **cuáles carros**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Qué** + noun works in exactly the same questions and never changes: **¿Qué carro es el tuyo?** If in doubt, use **qué**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿==Cuál carro== es el tuyo?",
+              "en": "Which car is yours?"
+            },
+            {
+              "es": "¿==Cuál playa== te gusta más, Playas de Tijuana o Rosarito?",
+              "en": "Which beach do you like more, Playas de Tijuana or Rosarito?"
+            },
+            {
+              "es": "¿==Cuáles tacos== quieres, los de asada o los de pescado?",
+              "en": "Which tacos do you want, the asada ones or the fish ones?"
+            },
+            {
+              "es": "¿==Cuál camión== va al centro?",
+              "en": "Which bus goes downtown?"
+            },
+            {
+              "es": "¿==Cuáles libros== vas a leer este mes?",
+              "en": "Which books are you going to read this month?"
+            },
+            {
+              "es": "¿==Qué tabla== vas a usar hoy?",
+              "en": "Which board are you going to use today?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Cuál zapatos te gustan?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cuáles zapatos te gustan?"
+                }
+              ],
+              "nota": "Plural noun, plural **cuáles**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Cual tabla es tuya?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cuál tabla es tuya?"
+                }
+              ],
+              "nota": "Question words always carry the accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Cuál el carro es tuyo?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cuál carro es tuyo?"
+                }
+              ],
+              "nota": "No article between **cuál** and the noun."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¿Qué quieres?",
+              "texto": "General questions with what: [[9828|questions with qué]]."
+            },
+            {
+              "forma": "¿Qué es? / ¿Cuál es?",
+              "texto": "Before a verb: [[9926|qué vs cuál + verb]]."
+            },
+            {
+              "forma": "¿Cuántos carros?",
+              "texto": "Asking how many: [[7068|cuánto + noun]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish, using cuál: _Which bus goes to the beach?_",
+              "r": "¿Cuál camión va a la playa?",
+              "nota": "cuál + singular noun."
+            },
+            {
+              "p": "Fix it: _¿Cuál zapatos te gustan?_",
+              "r": "¿Cuáles zapatos te gustan?",
+              "nota": "Plural: cuáles."
+            },
+            {
+              "p": "Fix it: _¿Cual tabla es tuya?_",
+              "r": "¿Cuál tabla es tuya?",
+              "nota": "Accent on cuál."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      9828
+    ],
+    "confunde": [
+      9926
+    ],
+    "sigue": [
+      7068
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9335",
+      "kwiziq": true
+    }
+  ]
+}

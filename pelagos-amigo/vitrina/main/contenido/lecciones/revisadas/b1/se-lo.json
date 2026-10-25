@@ -1,0 +1,271 @@
+{
+  "tema": 5078,
+  "slug": "se-lo",
+  "titulo": "Le / les become se before lo, la, los, las",
+  "subtitulo": "Se lo dije, dáselo, quiero comprárselos.",
+  "foto": "t09.jpg",
+  "regla": "When le or les (to him/her/them) comes before lo, la, los or las (it/them), it becomes se: se lo di (not le lo di). Indirect pronoun first, direct second.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Indirect object pronouns are **me, te, le, nos, les**. Direct object pronouns for things and people are **lo, la, los, las**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "When both appear together, the **indirect** one goes **first**. But **le** or **les** + **lo / la / los / las** sounds clumsy, so **le / les** turns into **se**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "le / les",
+            "+ lo, la, los, las",
+            "→ se lo, se la, se los, se las"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Se** doesn't show if it's _him, her, you_ or _them_. Add **a él / a ella / a usted / a ellos** if you need to be clear."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: two **l**'s can't sit together, so the first one turns into **se**."
+        }
+      ]
+    },
+    {
+      "id": "posicion",
+      "titulo": "Where it goes",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "With a **conjugated verb**: in front, as separate words: **se la dimos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With an **infinitive**, **gerund** or **affirmative command**: attached at the end (add an accent to keep the stress): **comprárselos**, **comprándoselos**, **cómpraselos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With an infinitive or gerund after another verb, you can also put both pronouns in front of the whole phrase, but **never in the middle**:"
+        },
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "No se lo puedo apretar."
+                },
+                {
+                  "v": "bien",
+                  "t": "No puedo apretárselo."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "Se la estamos decorando."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estamos decorándosela."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Laura ==se lo== compró.",
+              "en": "Laura bought it for her."
+            },
+            {
+              "es": "No ==se lo== dije.",
+              "en": "I didn't tell her."
+            },
+            {
+              "es": "Dá==selo== a ella.",
+              "en": "Give it to her."
+            },
+            {
+              "es": "==Se la== dimos.",
+              "en": "We gave it to them."
+            },
+            {
+              "es": "Quiero comprár==selos==.",
+              "en": "I want to buy them for them."
+            },
+            {
+              "es": "María está comprándo==selos==.",
+              "en": "María is buying them for him."
+            },
+            {
+              "es": "==Se lo== voy a dar cuando la vea.",
+              "en": "I'll give it to her when I see her."
+            },
+            {
+              "es": "Pregúnta==selo== ahorita.",
+              "en": "Ask him about it right now."
+            },
+            {
+              "es": "Las pantuflas, pón==selas== junto a la cama.",
+              "en": "The slippers, put them next to the bed for her."
+            },
+            {
+              "es": "No ==se los== pagues, él tiene dinero.",
+              "en": "Don't pay for them for him, he has money."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mexico",
+      "titulo": "In Mexico: se los",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "In Mexico, when **se** means _them_ (**les**), many people move the plural onto the direct pronoun: **se los dije** for _I told **them**_ (it), even if _it_ is singular. You'll hear it all the time. In writing, the standard form is **se lo dije**."
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Le lo di."
+                },
+                {
+                  "v": "bien",
+                  "t": "Se lo di."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Lo le di."
+                },
+                {
+                  "v": "bien",
+                  "t": "Se lo di."
+                }
+              ],
+              "nota": "Indirect first."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Voy a se lo dar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Se lo voy a dar. / Voy a dárselo."
+                }
+              ],
+              "nota": "Never in the middle."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "lo, la",
+              "texto": "Direct object pronouns: [[5121|lo, la, los, las]]."
+            },
+            {
+              "forma": "le, les",
+              "texto": "Indirect object pronouns: [[5122|le, les]]."
+            },
+            {
+              "forma": "dárselo",
+              "texto": "Attaching pronouns: [[5140|position with infinitive, gerund, commands]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Replace both objects: _Le di el libro a Ana._",
+              "r": "Se lo di.",
+              "nota": "le + lo → se lo."
+            },
+            {
+              "p": "Two ways: _I'm going to send it to him._",
+              "r": "Se lo voy a mandar. / Voy a mandárselo.",
+              "nota": "Front or attached."
+            },
+            {
+              "p": "Command: _Give them (las llaves) to him._",
+              "r": "Dáselas.",
+              "nota": "Attached, with accent."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5121,
+      5122
+    ],
+    "confunde": [
+      7282
+    ],
+    "sigue": [
+      5140,
+      6145
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5078",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "tema": 6238,
+  "slug": "subjuntivo-presente-e-ie-er",
+  "titulo": "Conjugate stem-changing -er verbs (e > ie) in the present subjunctive",
+  "subtitulo": "Entienda, pierda, entendamos: ie everywhere except nosotros.",
+  "foto": "t04.jpg",
+  "regla": "-er verbs with e > ie in the present keep it in the subjunctive except nosotros: entienda, pierdas, entendamos, enciendan.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**-er** verbs with an **e > ie** stem change in the present keep it in the present subjunctive. The **e** closest to the end of the stem becomes **ie** in every form **except nosotros**. Endings: the regular **-er** subjunctive ones."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "entender",
+            "encender",
+            "perder"
+          ],
+          "filas": [
+            [
+              "yo",
+              "entienda",
+              "encienda",
+              "pierda"
+            ],
+            [
+              "tú",
+              "entiendas",
+              "enciendas",
+              "pierdas"
+            ],
+            [
+              "él, ella, usted",
+              "entienda",
+              "encienda",
+              "pierda"
+            ],
+            [
+              "nosotros",
+              "entendamos",
+              "encendamos",
+              "perdamos"
+            ],
+            [
+              "ustedes, ellos",
+              "entiendan",
+              "enciendan",
+              "pierdan"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Other verbs like this: **defender**, **atender**, **tender**, **querer** (see [[6239|querer]])."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: same boot as always. **Nosotros** walks barefoot."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi mamá no quiere que ==pierda== las llaves de la casa.",
+              "en": "My mom doesn't want me to lose the house keys."
+            },
+            {
+              "es": "Espero que ==entiendas== mi situación.",
+              "en": "I hope you understand my situation."
+            },
+            {
+              "es": "Es importante que usted ==entienda== todo el contrato.",
+              "en": "It's important that you understand the whole contract."
+            },
+            {
+              "es": "El profe se esfuerza para que todos le ==entendamos==.",
+              "en": "The coach makes an effort so we all understand him."
+            },
+            {
+              "es": "No ==pierdan== el dinero que les di.",
+              "en": "Don't lose the money I gave you."
+            },
+            {
+              "es": "Que nadie ==encienda== la luz.",
+              "en": "Nobody turn on the light."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Para que lo entiendamos todos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Para que lo entendamos todos."
+                }
+              ],
+              "nota": "No change in **nosotros**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No quiero que perdas el partido."
+                },
+                {
+                  "v": "bien",
+                  "t": "No quiero que pierdas el partido."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "entiendo, entendemos",
+              "texto": "The present: [[5812|e > ie -er verbs]]."
+            },
+            {
+              "forma": "cierre, recomiende",
+              "texto": "The **-ar** version: [[6236|e > ie -ar verbs]]."
+            },
+            {
+              "forma": "quiera",
+              "texto": "The most common one: [[6239|querer in the subjunctive]]."
+            },
+            {
+              "forma": "sienta, sintamos",
+              "texto": "The **-ir** version: [[6983|e > ie -ir verbs]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "**Entender** with **nosotros**: Es importante que ___ la regla.",
+              "r": "Es importante que entendamos la regla.",
+              "nota": "No change."
+            },
+            {
+              "p": "In Spanish: _Don't lose the leash._ (tú)",
+              "r": "No pierdas la correa.",
+              "nota": "e > ie."
+            },
+            {
+              "p": "**Encender** with **ustedes**: Ojalá que ___ el asador.",
+              "r": "Ojalá que enciendan el asador.",
+              "nota": "e > ie."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5812,
+      5151
+    ],
+    "confunde": [
+      6236,
+      6983
+    ],
+    "sigue": [
+      6239
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6238",
+      "kwiziq": true
+    }
+  ]
+}

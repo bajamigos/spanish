@@ -1,0 +1,205 @@
+{
+  "tema": 6007,
+  "slug": "pluscuamperfecto-todavia-no",
+  "titulo": "Using aún no / todavía no with the pluperfect",
+  "subtitulo": "Todavía no había llegado cuando llamaste: not yet, at that moment in the past.",
+  "foto": "t10.jpg",
+  "regla": "Aún no / todavía no + pluperfect says something hadn't happened yet when another past event happened (preterite): todavía no había comido cuando llegaste.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Use **aún no** or **todavía no** with the pluperfect to say that something _had not yet_ happened when another past event happened."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**todavía no / aún no**",
+            "**había** + participle",
+            "**cuando** + preterite"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The **cuando** part usually goes in the **preterite**. This combination is very common."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Aún** and **todavía** can also go after the verb group: **no** + **había** + participle + **todavía / aún**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**no**",
+            "**había** + participle",
+            "**todavía / aún**"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Never put **aún** or **todavía** between **haber** and the participle. English is more flexible with _yet_; Spanish is stricter."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **había** + participle is welded shut. **Todavía** waits outside, before **no** or at the end."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Aún no había llegado== a la casa cuando me llamaste.",
+              "en": "I hadn't gotten home yet when you called me."
+            },
+            {
+              "es": "==Todavía no habíamos comido== cuando empezó la tormenta.",
+              "en": "We hadn't eaten yet when the storm started."
+            },
+            {
+              "es": "==Todavía no habían llegado== las facturas cuando Beto se enojó.",
+              "en": "The bills hadn't arrived yet when Beto got mad."
+            },
+            {
+              "es": "==No habían llegado todavía== las facturas cuando Beto se enojó.",
+              "en": "The bills hadn't arrived yet when Beto got mad."
+            },
+            {
+              "es": "Holden ==aún no había despegado== cuando sonó la alarma.",
+              "en": "Holden hadn't taken off yet when the alarm went off."
+            },
+            {
+              "es": "==No me había puesto aún== el traje cuando entraron las olas.",
+              "en": "I hadn't put on the wetsuit yet when the waves came in."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No había todavía terminado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Todavía no había terminado."
+                },
+                {
+                  "v": "bien",
+                  "t": "No había terminado todavía."
+                }
+              ],
+              "nota": "Never between **había** and the participle."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Había aún no terminado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Aún no había terminado."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "ya había comido",
+              "texto": "The opposite, _already_: [[6009|ya with the pluperfect]]."
+            },
+            {
+              "forma": "todavía no llegó",
+              "texto": "_Not yet_ with the preterite: [[9265|todavía no with the preterite]]."
+            },
+            {
+              "forma": "había hablado, había hecho",
+              "texto": "How the tense is built: [[5843|regular]] and [[5049|irregular]] pluperfect."
+            },
+            {
+              "forma": "Cuando llegué, ya se había ido.",
+              "texto": "Two past actions in order: [[6989|the pluperfect before another past action]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I hadn't eaten yet when Beto arrived._",
+              "r": "Todavía no había comido cuando llegó Beto.",
+              "nota": "todavía no + había + participle."
+            },
+            {
+              "p": "Fix it: **No había aún salido.**",
+              "r": "Aún no había salido. / No había salido aún.",
+              "nota": "Not between **había** and the participle."
+            },
+            {
+              "p": "In Spanish: _We hadn't finished yet when it started to rain._",
+              "r": "Todavía no habíamos terminado cuando empezó a llover.",
+              "nota": "Pluperfect + preterite."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5843,
+      5049
+    ],
+    "confunde": [
+      6009
+    ],
+    "sigue": [
+      9265,
+      6989
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6007",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "tema": 6960,
+  "slug": "empezar-a-infinitivo",
+  "titulo": "Empezar / comenzar a + infinitive: to start doing something",
+  "subtitulo": "Empecé a surfear, comenzaron a construir: always a + infinitive.",
+  "foto": "t07.jpg",
+  "regla": "Empezar / comenzar (conjugated) + a + infinitive = to start doing. Always the a, always an infinitive, never a gerund.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say _to start doing_ something, use **empezar** or **comenzar** (conjugated) + **a** + **infinitive**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**empezar / comenzar**",
+            "**a**",
+            "infinitive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The **a** always follows. After it comes an **infinitive**, never a gerund: English says _start working_, Spanish says **empieza a trabajar**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Both verbs are **e > ie** in the present (**empiezo**, **comienzo**) and change **z > c** before **e** (**empecé**, **empiece**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "A similar structure: **ponerse a** + infinitive, _to set about doing_: **me puse a estudiar**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **a** is the starting line; behind it, the plain infinitive."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Esta semana ==empecé a bailar== salsa.",
+              "en": "This week I started dancing salsa."
+            },
+            {
+              "es": "Beto ==comienza a gritar== cuando no lo escuchas.",
+              "en": "Beto starts shouting when you don't listen to him."
+            },
+            {
+              "es": "==Empezaremos a estudiar== alemán la próxima semana.",
+              "en": "We'll start studying German next week."
+            },
+            {
+              "es": "==Comenzaron a construir== las casas ayer.",
+              "en": "They started building the houses yesterday."
+            },
+            {
+              "es": "Ustedes ==han empezado a resolver== sus problemas solos.",
+              "en": "You've started solving your problems on your own."
+            },
+            {
+              "es": "==Empezó a llover== justo cuando salimos.",
+              "en": "It started raining just as we left."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Empieza a trabajando hoy."
+                },
+                {
+                  "v": "bien",
+                  "t": "Empieza a trabajar hoy."
+                }
+              ],
+              "nota": "Infinitive, not gerund."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Empecé surfear a los veinte."
+                },
+                {
+                  "v": "bien",
+                  "t": "Empecé a surfear a los veinte."
+                }
+              ],
+              "nota": "Keep the **a**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Empezé a entrenar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Empecé a entrenar."
+                }
+              ],
+              "nota": "**z > c** before **e**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "dejar de",
+              "texto": "_To stop doing_: [[6181|dejar de]]."
+            },
+            {
+              "forma": "volver a",
+              "texto": "_To do again_: [[6598|volver a]]."
+            },
+            {
+              "forma": "terminar de",
+              "texto": "_To finish doing_: [[7430|terminar de]]."
+            },
+            {
+              "forma": "empiece, empecemos",
+              "texto": "In the subjunctive: [[5990|empezar and comenzar]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I started training jiu-jitsu last year._",
+              "r": "Empecé a entrenar jiu-jitsu el año pasado.",
+              "nota": "empezar a + infinitive."
+            },
+            {
+              "p": "In Spanish: _It's starting to rain._",
+              "r": "Está empezando a llover. / Empieza a llover.",
+              "nota": "a + infinitive."
+            },
+            {
+              "p": "Fix it: **Comenzamos a cocinando.**",
+              "r": "Comenzamos a cocinar.",
+              "nota": "Infinitive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5811
+    ],
+    "confunde": [
+      6181
+    ],
+    "sigue": [
+      6181,
+      6598,
+      7430,
+      5990
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6960",
+      "kwiziq": true
+    }
+  ]
+}

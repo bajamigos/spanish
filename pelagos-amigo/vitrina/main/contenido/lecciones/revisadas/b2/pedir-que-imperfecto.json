@@ -1,0 +1,194 @@
+{
+  "tema": 7281,
+  "slug": "pedir-que-imperfecto",
+  "titulo": "Pedir que + imperfect subjunctive (in the past)",
+  "subtitulo": "Me pidió que le diera todo mi dinero.",
+  "foto": "t02.jpg",
+  "regla": "When pedir is in a past tense (pedía, pidió, había pedido), what is asked goes in the imperfect subjunctive: Me pidió que lo esperara. Decir que + subjunctive works as a stronger request: Me dijo que me fuera.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Same pattern as in the present, but with **pedir** in the **past**, the verb after **que** goes in the **imperfect subjunctive**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "pedía / pidió / había pedido",
+            "+ que +",
+            "imperfect subjunctive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Keep the **a** + person and the indirect pronoun: **le pidió a Laura que...**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Decir que** + subjunctive is also a request, usually firmer than **pedir**: **me dijo que me callara** (_she told me to be quiet_). With the indicative, **decir** only reports information: **me dijo que se callaba** (_she said she was keeping quiet_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: past **pedir**, past subjunctive: **pidió... -ra**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "De niña, siempre les pedía a mis papás que me ==dejaran== ver la tele hasta tarde.",
+              "en": "As a girl, I always asked my parents to let me watch TV late."
+            },
+            {
+              "es": "El ladrón me pidió que le ==diera== todo mi dinero.",
+              "en": "The thief asked me to give him all my money."
+            },
+            {
+              "es": "Susana nos había pedido que ==cuidáramos== a su hija.",
+              "en": "Susana had asked us to look after her daughter."
+            },
+            {
+              "es": "Le pedí al mesero que nos ==trajera== más tortillas.",
+              "en": "I asked the waiter to bring us more tortillas."
+            },
+            {
+              "es": "Mi mamá me dijo que ==recogiera== mi cuarto.",
+              "en": "My mom told me to tidy my room."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me pidió que le doy el dinero."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me pidió que le diera el dinero."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me pidió que le dé el dinero. (story in the past)"
+                },
+                {
+                  "v": "bien",
+                  "t": "Me pidió que le diera el dinero."
+                }
+              ],
+              "nota": "Past **pedir**: imperfect subjunctive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mi novio me preguntó que fuera paciente."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mi novio me pidió que fuera paciente."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "te pido que vengas",
+              "texto": "[[7279|pedir + present subjunctive]]."
+            },
+            {
+              "forma": "me recomendó que",
+              "texto": "[[7904|advice and orders in the past]]."
+            },
+            {
+              "forma": "quería que",
+              "texto": "[[7184|querer que + imperfect subjunctive]]."
+            },
+            {
+              "forma": "diera",
+              "texto": "Conjugation: [[5068|imperfect subjunctive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _She asked me to wait for her._",
+              "r": "Me pidió que la esperara.",
+              "nota": "pidió + -ra."
+            },
+            {
+              "p": "In Spanish: _They told us to leave._ (order)",
+              "r": "Nos dijeron que nos fuéramos.",
+              "nota": "decir que + subjunctive."
+            },
+            {
+              "p": "Complete: _Le había pedido que no ___ (decir, él) nada._",
+              "r": "dijera",
+              "nota": "Imperfect subjunctive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7279,
+      5068
+    ],
+    "confunde": [
+      7904
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7281",
+      "kwiziq": true
+    }
+  ]
+}

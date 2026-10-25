@@ -1,0 +1,173 @@
+{
+  "tema": 5974,
+  "slug": "por-intercambio",
+  "titulo": "Por (not para) for an exchange",
+  "subtitulo": "Cambio pesos por dólares: por = in exchange for.",
+  "foto": "t09.jpg",
+  "regla": "Use por (not para) for an exchange or trade: cambiar pesos por dólares; te doy mi tabla por la tuya.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To express an **exchange** or **trade**, use **por**, never **para**: _for_ = _in exchange for_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It's very common with **cambiar** (_to swap, to exchange_), **dar** and **pagar**: **te doy mi café por tu té**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: think of a swap meet, a **trueque**: something goes, something comes, and **por** sits in the middle."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Voy a cambiar pesos ==por== dólares.",
+              "en": "I'm going to change pesos for dollars."
+            },
+            {
+              "es": "¿Me das un café ==por== mi té?",
+              "en": "Will you give me a coffee for my tea?"
+            },
+            {
+              "es": "Su papá cambia estampas ==por== chicles.",
+              "en": "His dad swaps stickers for gum."
+            },
+            {
+              "es": "Te cambio mi tabla corta ==por== tu longboard.",
+              "en": "I'll trade you my shortboard for your longboard."
+            },
+            {
+              "es": "Gracias ==por== todo.",
+              "en": "Thanks for everything. (in return for)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cambié pesos para dólares."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cambié pesos por dólares."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Gracias para la ayuda."
+                },
+                {
+                  "v": "bien",
+                  "t": "Gracias por la ayuda."
+                }
+              ],
+              "nota": "Thanks is also an exchange: **por**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "para + infinitive",
+              "texto": "The main use of **para**: [[5970|purpose]]."
+            },
+            {
+              "forma": "por teléfono, por 100 pesos",
+              "texto": "Other uses of **por**: [[5973|medium]], [[5974|exchange]], [[5975|price]], [[5976|per]], [[5977|speed]], [[7273|by whom]]."
+            },
+            {
+              "forma": "para Navidad",
+              "texto": "**Para** for a deadline or occasion: [[5978|precise time]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I'll trade you my bike for your board._",
+              "r": "Te cambio mi bici por tu tabla.",
+              "nota": "por = in exchange for."
+            },
+            {
+              "p": "In Spanish: _Thanks for the tacos._",
+              "r": "Gracias por los tacos.",
+              "nota": "por."
+            },
+            {
+              "p": "**Por** or **para**? _He traded his car ___ a truck._",
+              "r": "Cambió su carro por una camioneta.",
+              "nota": "Exchange: por."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5970
+    ],
+    "confunde": [
+      5970,
+      5973,
+      5975
+    ],
+    "sigue": [
+      5976,
+      5977,
+      5978,
+      7273,
+      7073
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5974",
+      "kwiziq": true
+    }
+  ]
+}

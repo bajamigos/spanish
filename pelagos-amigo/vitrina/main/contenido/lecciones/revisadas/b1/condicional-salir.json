@@ -1,0 +1,225 @@
+{
+  "tema": 5877,
+  "slug": "condicional-salir",
+  "titulo": "Conjugate salir in the conditional",
+  "subtitulo": "Saldría, saldrías, saldríamos: the future stem saldr- with the conditional endings.",
+  "foto": "t03.jpg",
+  "regla": "Salir has the irregular stem saldr- in the conditional, with the regular endings: saldría, saldrías, saldría, saldríamos, saldrían.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Salir** (_to go out, to leave_) is irregular in the conditional (**el condicional simple**). It uses the same irregular stem as the future, **saldr-**, and the regular conditional endings."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**saldr-**",
+            "**-ía, -ías, -ía, -íamos, -ían**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "salir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "saldría"
+            ],
+            [
+              "tú",
+              "saldrías"
+            ],
+            [
+              "él, ella, usted",
+              "saldría"
+            ],
+            [
+              "nosotros",
+              "saldríamos"
+            ],
+            [
+              "ustedes, ellos",
+              "saldrían"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Every form has a written accent on the **í** of the ending."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the **i** of **salir** steps out and a **d** steps in: **sal-d-ría**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Yo no ==saldría== con ese chavo.",
+              "en": "I wouldn't go out with that guy."
+            },
+            {
+              "es": "Tú ==saldrías== así a la fiesta.",
+              "en": "You'd go out to the party like that."
+            },
+            {
+              "es": "Mi examen ==saldría== muy mal.",
+              "en": "My exam would go really badly."
+            },
+            {
+              "es": "Mis primos y yo ==saldríamos== bien vestidos.",
+              "en": "My cousins and I would go out well dressed."
+            },
+            {
+              "es": "Ustedes ==saldrían== del hotel a las doce.",
+              "en": "You'd leave the hotel at twelve."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Saliría temprano."
+                },
+                {
+                  "v": "bien",
+                  "t": "Saldría temprano."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Saldriamos a las seis."
+                },
+                {
+                  "v": "bien",
+                  "t": "Saldríamos a las seis."
+                }
+              ],
+              "nota": "Accent on the **í**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usos",
+      "titulo": "Useful uses",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "Saldría mal.",
+              "texto": "**Salir bien / mal**: _to go well / badly_, for exams, plans and dishes.",
+              "aqui": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "saldré",
+              "texto": "The future has the same stem: [[5160|salir in the future]]."
+            },
+            {
+              "forma": "hablaría",
+              "texto": "The regular pattern: [[5731|regular verbs in the conditional]]."
+            },
+            {
+              "forma": "salgo",
+              "texto": "The present: [[5484|salir in the present]]."
+            },
+            {
+              "forma": "tendría, valdría",
+              "texto": "The same **-dr-** family: [[5772|tener]], [[5818|valer]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Would you go out with me?_ (tú)",
+              "r": "¿Saldrías conmigo?",
+              "nota": "saldr- + ías."
+            },
+            {
+              "p": "**Salir** with **nosotros**: ___ antes del viento.",
+              "r": "Saldríamos antes del viento.",
+              "nota": "saldr- + íamos."
+            },
+            {
+              "p": "Which one? **Saliría** or **Saldría**?",
+              "r": "Saldría.",
+              "nota": "Irregular stem **saldr-**."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5160,
+      5731
+    ],
+    "confunde": [
+      5160
+    ],
+    "sigue": [
+      5772,
+      5818
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5877",
+      "kwiziq": true
+    }
+  ]
+}

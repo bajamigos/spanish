@@ -1,0 +1,189 @@
+{
+  "tema": 6989,
+  "slug": "pluscuamperfecto-pasado-del-pasado",
+  "titulo": "Using the pluperfect for a past action before another past action",
+  "subtitulo": "Ya había llegado cuando me llamaste: the past of the past.",
+  "foto": "t08.jpg",
+  "regla": "Use the pluperfect for the earlier of two past actions (the past of the past): había llegado cuando llamaste.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To talk about a past action that happened **before another past action**, use the **pluperfect** (**había** + participle). Think of it as _the past of the past_."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "earlier action: **había** + participle",
+            "later action: preterite"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "When both actions are in the same sentence, a connector often links them: **cuando**, **antes de**, **ya**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Sometimes the two actions are in **separate sentences**, and the context makes the order clear: **Tuvo una entrevista muy buena. Se había preparado bien.** He prepared first, then had the interview."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: picture a timeline with two flags. The one further back gets **había**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Yo ==había llegado== a la casa cuando me llamaste.",
+              "en": "I had gotten home when you called me."
+            },
+            {
+              "es": "Antes de comer, ==te habías lavado== las manos.",
+              "en": "Before eating, you had washed your hands."
+            },
+            {
+              "es": "==Habíamos oído== unos balazos antes de ver correr al ladrón.",
+              "en": "We had heard gunshots before seeing the thief run."
+            },
+            {
+              "es": "Beto tuvo una entrevista excelente. ==Se había preparado== muy bien.",
+              "en": "Beto had a great interview. He had prepared really well."
+            },
+            {
+              "es": "Cuando llegamos a la playa, las olas ya ==habían bajado==.",
+              "en": "When we got to the beach, the waves had already dropped."
+            },
+            {
+              "es": "Holden no sabía que Naomi ==había cambiado== el plan.",
+              "en": "Holden didn't know Naomi had changed the plan."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cuando llegué, ya se fue."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cuando llegué, ya se había ido."
+                }
+              ],
+              "nota": "The earlier action takes the pluperfect."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me dijo que ha terminado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me dijo que había terminado."
+                }
+              ],
+              "nota": "Reporting in the past: **había**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "había hablado, había hecho",
+              "texto": "How it's built: [[5843|regular]] and [[5049|irregular]] pluperfect."
+            },
+            {
+              "forma": "ya había comido",
+              "texto": "With **ya**: [[6009|ya with the pluperfect]]."
+            },
+            {
+              "forma": "todavía no había llegado",
+              "texto": "With **todavía no**: [[6007|aún no / todavía no]]."
+            },
+            {
+              "forma": "había estado entrenando",
+              "texto": "The progressive version: [[7051|pluperfect progressive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _When I arrived, the party had ended._",
+              "r": "Cuando llegué, la fiesta había terminado.",
+              "nota": "Earlier action: pluperfect."
+            },
+            {
+              "p": "In Spanish: _She told me she had seen the movie._",
+              "r": "Me dijo que había visto la película.",
+              "nota": "había visto."
+            },
+            {
+              "p": "Which happened first? **Ganó el torneo. Había entrenado mucho.**",
+              "r": "Entrenar.",
+              "nota": "The pluperfect marks the earlier action."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5843,
+      5049
+    ],
+    "confunde": [
+      6009
+    ],
+    "sigue": [
+      6007,
+      7051
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6989",
+      "kwiziq": true
+    }
+  ]
+}

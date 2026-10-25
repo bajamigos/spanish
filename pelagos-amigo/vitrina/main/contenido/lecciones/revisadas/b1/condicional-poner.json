@@ -1,0 +1,213 @@
+{
+  "tema": 5892,
+  "slug": "condicional-poner",
+  "titulo": "Conjugate poner in the conditional",
+  "subtitulo": "Pondría, pondrías, pondríamos: the future stem pondr- with the conditional endings.",
+  "foto": "t01.jpg",
+  "regla": "Poner has the irregular stem pondr- in the conditional, with the regular endings: pondría, pondrías, pondría, pondríamos, pondrían.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Poner** (_to put_) is irregular in the conditional (**el condicional simple**). It uses the same irregular stem as the future, **pondr-**, and the regular conditional endings."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**pondr-**",
+            "**-ía, -ías, -ía, -íamos, -ían**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "poner"
+          ],
+          "filas": [
+            [
+              "yo",
+              "pondría"
+            ],
+            [
+              "tú",
+              "pondrías"
+            ],
+            [
+              "él, ella, usted",
+              "pondría"
+            ],
+            [
+              "nosotros",
+              "pondríamos"
+            ],
+            [
+              "ustedes, ellos",
+              "pondrían"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Verbs built on **poner** do the same: **componer** → **compondría**, **proponer** → **propondría**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Every form has a written accent on the **í** of the ending."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **poner** swaps its **e** for a **d**: **pon-d-ría**, like **tendría** and **vendría**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Yo ==pondría== la música a todo volumen.",
+              "en": "I'd put the music on full blast."
+            },
+            {
+              "es": "Tú ==pondrías== toda la carne en el asador.",
+              "en": "You'd put all the meat on the grill."
+            },
+            {
+              "es": "Mi mamá ==pondría== las toallas en el baño.",
+              "en": "My mom would put the towels in the bathroom."
+            },
+            {
+              "es": "Beto y yo ==pondríamos== muchas ganas en el proyecto.",
+              "en": "Beto and I would put a lot of effort into the project."
+            },
+            {
+              "es": "Las hermanas ==pondrían== las llaves en la mesa.",
+              "en": "The sisters would put the keys on the table."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo ponería la tabla aquí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo pondría la tabla aquí."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Pondriamos más plantas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Pondríamos más plantas."
+                }
+              ],
+              "nota": "Accent on the **í**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "pondré",
+              "texto": "The future has the same stem: [[5259|poner in the future]]."
+            },
+            {
+              "forma": "hablaría",
+              "texto": "The regular pattern: [[5731|regular verbs in the conditional]]."
+            },
+            {
+              "forma": "pongo, puse, puesto",
+              "texto": "Other forms: [[5305|present]], [[5251|preterite]], [[6670|present perfect]]."
+            },
+            {
+              "forma": "tendría, vendría",
+              "texto": "The same **-dr-** stem: [[5772|tener]], [[5879|venir]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I'd put more plants in the garden._",
+              "r": "Pondría más plantas en el huerto.",
+              "nota": "pondr- + ía."
+            },
+            {
+              "p": "**Poner** with **ellos**: ___ las tablas en el carro.",
+              "r": "Pondrían las tablas en el carro.",
+              "nota": "pondr- + ían."
+            },
+            {
+              "p": "Which one? **Ponería** or **Pondría**?",
+              "r": "Pondría.",
+              "nota": "Irregular stem **pondr-**."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5259,
+      5731
+    ],
+    "confunde": [
+      5259
+    ],
+    "sigue": [
+      5772,
+      5879
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5892",
+      "kwiziq": true
+    }
+  ]
+}

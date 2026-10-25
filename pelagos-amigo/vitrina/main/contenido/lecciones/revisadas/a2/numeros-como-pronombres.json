@@ -1,0 +1,249 @@
+{
+  "tema": 6672,
+  "slug": "numeros-como-pronombres",
+  "titulo": "Numbers as pronouns",
+  "subtitulo": "¿Cuántos hermanos tienes? —Dos. ¿Quieres un taco? —Dame uno.",
+  "foto": "t08.jpg",
+  "regla": "A number can stand alone, replacing a noun already mentioned: tengo dos. Alone, one is uno or una (never un), 21 is veintiuno or veintiuna, and hundreds agree too: doscientas.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "When the noun is clear, the number can replace it: **¿Cuántos hermanos tienes? —Tengo dos.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Watch **one**: before a masculine noun it's **un**, but alone it's **uno**. Feminine is always **una**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "Before a noun",
+            "Alone"
+          ],
+          "filas": [
+            [
+              "1, masculine",
+              "un taco",
+              "uno"
+            ],
+            [
+              "1, feminine",
+              "una tortilla",
+              "una"
+            ],
+            [
+              "21, masculine",
+              "veintiún años",
+              "veintiuno"
+            ],
+            [
+              "21, feminine",
+              "veintiuna personas",
+              "veintiuna"
+            ],
+            [
+              "200, feminine",
+              "doscientas páginas",
+              "doscientas"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Numbers ending in one (31, 41…) and hundreds (200–900) also agree in gender."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With the article, **los dos, las tres** = _both, all three_: **los dos duermen conmigo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Uno de, dos de** + group = _one of, two of_: **uno de mis amigos**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿Cuántos hermanos tienes? —==Dos==.",
+              "en": "How many siblings do you have? —Two."
+            },
+            {
+              "es": "¿Quieres un taco? —Sí, dame ==uno==.",
+              "en": "Do you want a taco? —Yes, give me one."
+            },
+            {
+              "es": "¿Cuántas cervezas trajiste? —==Una== nada más.",
+              "en": "How many beers did you bring? —Just one."
+            },
+            {
+              "es": "Compré tres tablas, pero ==una== tiene un golpe.",
+              "en": "I bought three boards, but one has a ding."
+            },
+            {
+              "es": "¿Cuántos alumnos hay en tu clase? —==Veintiuno==.",
+              "en": "How many students are in your class? —Twenty-one."
+            },
+            {
+              "es": "Tengo dos perros y ==los dos== duermen conmigo.",
+              "en": "I have two dogs and they both sleep with me."
+            },
+            {
+              "es": "¿Cuántas páginas leíste? —==Doscientas==.",
+              "en": "How many pages did you read? —Two hundred."
+            },
+            {
+              "es": "==Uno de== mis amigos entrena jiu-jitsu.",
+              "en": "One of my friends trains jiu-jitsu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Quieres un taco? —Sí, un."
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Quieres un taco? —Sí, uno."
+                }
+              ],
+              "nota": "Alone: **uno**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Cuántas tortillas? —Uno."
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cuántas tortillas? —Una."
+                }
+              ],
+              "nota": "Agree with **tortillas**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Cuántos invitados vienen? —Veintiún."
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cuántos invitados vienen? —Veintiuno."
+                }
+              ],
+              "nota": "Alone: **veintiuno**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Cuántas personas vinieron? —Doscientos."
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cuántas personas vinieron? —Doscientas."
+                }
+              ],
+              "nota": "Hundreds agree."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tres tacos",
+              "texto": "Numbers before a noun: [[6664|numbers with nouns]]."
+            },
+            {
+              "forma": "los tres libros",
+              "texto": "Article + number + noun: [[6663|los + number + noun]]."
+            },
+            {
+              "forma": "mil, un millón",
+              "texto": "Bigger numbers: [[7177|hundreds, thousands, millions]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Do you want a beer? —Yes, one._",
+              "r": "¿Quieres una cerveza? —Sí, una.",
+              "nota": "Feminine."
+            },
+            {
+              "p": "In Spanish: _How many cars do you have? —One._",
+              "r": "¿Cuántos carros tienes? —Uno.",
+              "nota": "Alone: uno."
+            },
+            {
+              "p": "Fix it: _¿Cuántas sillas hay? —Trescientos._",
+              "r": "¿Cuántas sillas hay? —Trescientas.",
+              "nota": "Hundreds agree."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6664
+    ],
+    "confunde": [
+      6663
+    ],
+    "sigue": [
+      7177
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6672",
+      "kwiziq": true
+    }
+  ]
+}

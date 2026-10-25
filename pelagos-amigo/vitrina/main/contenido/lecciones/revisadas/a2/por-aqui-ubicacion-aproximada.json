@@ -1,0 +1,218 @@
+{
+  "tema": 5964,
+  "slug": "por-aqui-ubicacion-aproximada",
+  "titulo": "Por (not para) for an approximate location",
+  "subtitulo": "«¿Hay un cajero por aquí?»",
+  "foto": "t07.jpg",
+  "regla": "Use por + place to say roughly where something is: around, somewhere near, in the area of (por aquí, por el centro, por ahí). It's vague on purpose; en gives the exact place.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Por** + place = _around_, _somewhere in_, _near_. You don't give the exact spot."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "estar / vivir / trabajar…",
+            "+ por +",
+            "area"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Very common with place adverbs: **por aquí** (_around here_), **por ahí** (_around there_), **por allá** (_over there somewhere_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Compare: **vivo en el centro** (_I live downtown_, exact) and **vivo por el centro** (_I live around downtown_, approximate)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Para** + place gives a direction or destination: **vamos para allá** = _we're heading over there_; **está por allá** = _it's over there somewhere_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **por** draws a circle on the map; **en** puts a pin in it."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿Hay un Oxxo ==por aquí==?",
+              "en": "Is there an Oxxo around here?"
+            },
+            {
+              "es": "Mi tía vive ==por== Playas de Tijuana.",
+              "en": "My aunt lives around Playas de Tijuana."
+            },
+            {
+              "es": "Mis llaves deben estar ==por ahí==.",
+              "en": "My keys must be around there somewhere."
+            },
+            {
+              "es": "El gimnasio está ==por== la avenida Revolución.",
+              "en": "The gym is around Avenida Revolución."
+            },
+            {
+              "es": "Trabajo ==por== el aeropuerto.",
+              "en": "I work over by the airport."
+            },
+            {
+              "es": "¿Vives ==por aquí== cerca?",
+              "en": "Do you live around here?"
+            },
+            {
+              "es": "Los mejores tacos están ==por allá==, cerca del mercado.",
+              "en": "The best tacos are over there, near the market."
+            },
+            {
+              "es": "Se me perdió el celular ==por== la playa.",
+              "en": "I lost my phone somewhere on the beach."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Hay una farmacia para aquí?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Hay una farmacia por aquí?"
+                }
+              ],
+              "nota": "Around here = **por aquí**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mis lentes están para ahí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mis lentes están por ahí."
+                }
+              ],
+              "nota": "**Para ahí** is a direction, not a location."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Vives para aquí cerca?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Vives por aquí cerca?"
+                }
+              ],
+              "nota": "Where you live is a location: **por**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**En** vs **por** is a choice, not an error: **vive en el centro** gives the place; **vive por el centro** means _somewhere around downtown_. For an exact spot (**está en la mesa, a tu izquierda**), skip **por**."
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "aquí, allá",
+              "texto": "The place adverbs: [[9338|aquí, acá, ahí, allí, allá]]."
+            },
+            {
+              "forma": "por la playa",
+              "texto": "Moving through a place: [[5963|por for through/along]]."
+            },
+            {
+              "forma": "para allá",
+              "texto": "Heading somewhere: [[5965|para for a destination]]."
+            },
+            {
+              "forma": "por la tarde",
+              "texto": "Approximate time: [[9344|en / a / por + part of the day]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Is there a bank around here?_",
+              "r": "¿Hay un banco por aquí?",
+              "nota": "por aquí."
+            },
+            {
+              "p": "In Spanish: _My friend lives around Otay._",
+              "r": "Mi amigo vive por Otay.",
+              "nota": "Approximate: por."
+            },
+            {
+              "p": "Fix it: _El control debe estar para ahí._",
+              "r": "El control debe estar por ahí.",
+              "nota": "Location, not direction."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      9338
+    ],
+    "confunde": [
+      5965,
+      5963
+    ],
+    "sigue": [
+      9344
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5964",
+      "kwiziq": true
+    }
+  ]
+}

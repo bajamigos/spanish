@@ -1,0 +1,232 @@
+{
+  "tema": 9261,
+  "slug": "perfecto-vs-indefinido",
+  "titulo": "Present perfect vs preterite",
+  "subtitulo": "Hoy me levanté temprano. Últimamente he dormido mal.",
+  "foto": "t07.jpg",
+  "regla": "In Mexico the preterite is the default for any finished action, even one from today: hoy desayuné chilaquiles. The present perfect is for a past that's still open, still going on up to now: últimamente he dormido mal, nunca he tenido problemas.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Preterite** (**comí, fui**): the default for **finished** actions, with any time word: **ayer**, **el año pasado**, and also **hoy**, **esta mañana**, **esta semana**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Present perfect** (**he comido, he ido**): the action is **not closed**. It has been happening up to now and may continue."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Preterite (finished)",
+            "Present perfect (still open)"
+          ],
+          "filas": [
+            [
+              "Hoy desayuné chilaquiles.",
+              "Últimamente he dormido muy mal."
+            ],
+            [
+              "Ayer llovió mucho.",
+              "Este mes ha llovido mucho."
+            ],
+            [
+              "El sábado fui a la playa.",
+              "Hasta ahora he ido tres veces."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "With finished times (**ayer, anoche, el lunes, en 2020, hace dos días**) only the preterite works."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With open periods (**este año, últimamente, hasta ahora, nunca**) the perfect stresses that it's still going on. The preterite is also common there in Mexico."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Hoy he desayunado a las siete** isn't wrong, but in Mexico a finished action from today sounds more natural in the preterite: **Hoy desayuné a las siete.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: when in doubt in Mexico, use the preterite. Choose the perfect only when the story isn't over."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Hoy ==me levanté== temprano para surfear.",
+              "en": "Today I got up early to go surfing."
+            },
+            {
+              "es": "Anoche ==vimos== dos capítulos de _The Expanse_.",
+              "en": "Last night we watched two episodes of The Expanse."
+            },
+            {
+              "es": "Mi papá ==trabajó== en San Diego en 2015.",
+              "en": "My dad worked in San Diego in 2015."
+            },
+            {
+              "es": "¿Ya ==comiste==?",
+              "en": "Have you eaten yet?"
+            },
+            {
+              "es": "Últimamente ==he entrenado== muy poco.",
+              "en": "Lately I've trained very little."
+            },
+            {
+              "es": "Este mes ==ha hecho== mucho calor.",
+              "en": "It's been very hot this month."
+            },
+            {
+              "es": "Hasta ahora ==hemos cosechado== diez calabazas.",
+              "en": "So far we've harvested ten squash."
+            },
+            {
+              "es": "Nunca ==he tenido== problemas con mis vecinos.",
+              "en": "I've never had problems with my neighbors."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer he ido a la playa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer fui a la playa."
+                }
+              ],
+              "nota": "Finished time: preterite."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hace dos días he comido birria."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hace dos días comí birria."
+                }
+              ],
+              "nota": "**Hace** + time: preterite."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "En 2015 mi papá ha trabajado en San Diego."
+                },
+                {
+                  "v": "bien",
+                  "t": "En 2015 mi papá trabajó en San Diego."
+                }
+              ],
+              "nota": "A finished year: preterite."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "he comido",
+              "texto": "The forms: [[5267|regular -ar verbs in the present perfect]], [[5588|-er and -ir verbs]]."
+            },
+            {
+              "forma": "comí",
+              "texto": "The default past: [[6004|the preterite for completed actions]]."
+            },
+            {
+              "forma": "¿alguna vez fuiste?",
+              "texto": "Experiences: [[9284|the preterite for experiences]]."
+            },
+            {
+              "forma": "he estado comiendo",
+              "texto": "Next step: [[7050|the present perfect progressive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish (Mexico): _This morning I drank coffee._",
+              "r": "Esta mañana tomé café.",
+              "nota": "Finished: preterite."
+            },
+            {
+              "p": "In Spanish, with the perfect (it's still going on): _Lately I've worked a lot._",
+              "r": "Últimamente he trabajado mucho.",
+              "nota": "Still going on: perfect."
+            },
+            {
+              "p": "Fix it: _Ayer he visto a Juan._",
+              "r": "Ayer vi a Juan.",
+              "nota": "Ayer: preterite."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5267,
+      5588,
+      6004
+    ],
+    "confunde": [
+      9284
+    ],
+    "sigue": [
+      7050
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9261",
+      "kwiziq": true
+    }
+  ]
+}

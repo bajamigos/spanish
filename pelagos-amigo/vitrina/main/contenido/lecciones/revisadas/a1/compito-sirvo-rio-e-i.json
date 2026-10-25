@@ -1,0 +1,227 @@
+{
+  "tema": 5554,
+  "slug": "compito-sirvo-rio-e-i",
+  "titulo": "-ir verbs with e > i in the present: competir, servir, reír",
+  "subtitulo": "«Yo sirvo el café y tú te ríes.»",
+  "foto": "t04.jpg",
+  "regla": "Some -ir verbs (competir, servir, reír, repetir, vestir, medir) change the stem e to i in the present, in every person except nosotros: compito, sirves, ríe, servimos, compiten. Reír also carries an accent on the í: río, ríes, ríe, reímos, ríen.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "In some **-ir** verbs, the last **e** of the stem becomes **i** in the present."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It happens in every person **except nosotros**, which keeps the **e**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "competir",
+            "servir",
+            "reír"
+          ],
+          "filas": [
+            [
+              "yo",
+              "comp**i**to",
+              "s**i**rvo",
+              "r**í**o"
+            ],
+            [
+              "tú",
+              "comp**i**tes",
+              "s**i**rves",
+              "r**í**es"
+            ],
+            [
+              "él / ella / usted",
+              "comp**i**te",
+              "s**i**rve",
+              "r**í**e"
+            ],
+            [
+              "nosotros",
+              "competimos",
+              "servimos",
+              "reímos"
+            ],
+            [
+              "ustedes / ellos / ellas",
+              "comp**i**ten",
+              "s**i**rven",
+              "r**í**en"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Reír** (and **sonreír**) always writes the accent: **río, ríes, ríe, reímos, ríen**. Same pattern: **repetir, vestir, medir**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Yo ==compito== en un torneo de surf en Rosarito.",
+              "en": "I'm competing in a surf contest in Rosarito."
+            },
+            {
+              "es": "¿Me ==sirves== más café, por favor?",
+              "en": "Will you pour me more coffee, please?"
+            },
+            {
+              "es": "Este cuchillo ya no ==sirve==.",
+              "en": "This knife is no good anymore."
+            },
+            {
+              "es": "Mi hermano ==compite== en jiu-jitsu cada mes.",
+              "en": "My brother competes in jiu-jitsu every month."
+            },
+            {
+              "es": "¿Por qué te ==ríes==?",
+              "en": "Why are you laughing?"
+            },
+            {
+              "es": "Nosotros ==servimos== la cena a las ocho.",
+              "en": "We serve dinner at eight."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo servo los tacos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo sirvo los tacos."
+                }
+              ],
+              "nota": "e > i in yo."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros sirvemos la cena."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros servimos la cena."
+                }
+              ],
+              "nota": "nosotros keeps the e."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mis hijos se rien mucho."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mis hijos se ríen mucho."
+                }
+              ],
+              "nota": "Accent on the í."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "sirvo, servimos",
+              "texto": "Regular base: [[5108|regular -ir verbs]]."
+            },
+            {
+              "forma": "pido, sigo",
+              "texto": "Same change in [[5851|pedir]] and [[5848|seguir]]."
+            },
+            {
+              "forma": "siento, prefiero",
+              "texto": "Not this: e > ie, as in [[5574|-ir verbs with e > ie]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I serve the coffee._",
+              "r": "Yo sirvo el café.",
+              "nota": "e > i."
+            },
+            {
+              "p": "Fix it: _Nosotros compitimos mañana._",
+              "r": "Nosotros competimos mañana.",
+              "nota": "nosotros keeps e."
+            },
+            {
+              "p": "In Spanish (tú): _Why are you laughing?_",
+              "r": "¿Por qué te ríes?",
+              "nota": "ríes, with accent."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5108
+    ],
+    "confunde": [
+      5574
+    ],
+    "sigue": [
+      5851,
+      5848
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5554",
+      "kwiziq": true
+    }
+  ]
+}

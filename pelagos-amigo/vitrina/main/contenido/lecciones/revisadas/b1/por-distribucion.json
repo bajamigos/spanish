@@ -1,0 +1,169 @@
+{
+  "tema": 5976,
+  "slug": "por-distribucion",
+  "titulo": "Por (not para) for distribution: per, each",
+  "subtitulo": "Dos tacos por persona, cien pesos por pareja.",
+  "foto": "t02.jpg",
+  "regla": "Use por (not para) for distribution or sharing, meaning per / each: dos tacos por persona.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To express how something is **shared or distributed**, _per, each, for each_, use **por**: **dos tacos por persona**, **una tabla por alumno**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **por** cuts the cake: one slice **por** person."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "El viaje a Japón costaría treinta mil pesos ==por== pareja.",
+              "en": "The trip to Japan would cost thirty thousand pesos per couple."
+            },
+            {
+              "es": "Hay una paleta ==por== niño.",
+              "en": "There's one lollipop per child."
+            },
+            {
+              "es": "Había dos diccionarios ==por== salón.",
+              "en": "There used to be two dictionaries per classroom."
+            },
+            {
+              "es": "Son tres tacos ==por== persona.",
+              "en": "It's three tacos per person."
+            },
+            {
+              "es": "Entreno cinco veces ==por== semana.",
+              "en": "I train five times a week."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Dos tacos para persona."
+                },
+                {
+                  "v": "bien",
+                  "t": "Dos tacos por persona."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tres veces para semana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tres veces por semana."
+                }
+              ],
+              "nota": "Also: **tres veces a la semana**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "para + infinitive",
+              "texto": "The main use of **para**: [[5970|purpose]]."
+            },
+            {
+              "forma": "por teléfono, por 100 pesos",
+              "texto": "Other uses of **por**: [[5973|medium]], [[5974|exchange]], [[5975|price]], [[5976|per]], [[5977|speed]], [[7273|by whom]]."
+            },
+            {
+              "forma": "para Navidad",
+              "texto": "**Para** for a deadline or occasion: [[5978|precise time]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _one board per student_",
+              "r": "una tabla por alumno",
+              "nota": "por = per."
+            },
+            {
+              "p": "In Spanish: _It costs 200 pesos per person._",
+              "r": "Cuesta doscientos pesos por persona.",
+              "nota": "por persona."
+            },
+            {
+              "p": "In Spanish: _I surf four times a week._",
+              "r": "Surfeo cuatro veces por semana.",
+              "nota": "por semana."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5970
+    ],
+    "confunde": [
+      5970,
+      5973,
+      5974
+    ],
+    "sigue": [
+      5975,
+      5977,
+      5978,
+      7273,
+      7073
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5976",
+      "kwiziq": true
+    }
+  ]
+}

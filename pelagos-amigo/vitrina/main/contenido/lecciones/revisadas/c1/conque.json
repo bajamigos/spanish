@@ -1,0 +1,181 @@
+{
+  "tema": 7183,
+  "slug": "conque",
+  "titulo": "Conque = so, therefore (colloquial)",
+  "subtitulo": "Ya es tarde, conque apúrate. ¿Conque te vas?",
+  "foto": "t03.jpg",
+  "regla": "Conque (one word) introduces a consequence, often followed by a command: Estás tosiendo, conque tómate el jarabe. At the start of a question or exclamation, it shows surprise: ¿Conque ya no tienes dinero? = So you're out of money? In Mexico, así que is far more common; conque sounds a bit old-fashioned or literary.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "fact",
+            ", conque",
+            "+ consequence (often a command)"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "= **así que, por lo tanto**, but rarer and a bit old-fashioned in Mexico."
+        },
+        {
+          "tipo": "texto",
+          "texto": "At the start, with surprise: **¿Conque esas tenemos?** = _So that's how it is?_"
+        },
+        {
+          "tipo": "texto",
+          "texto": "One word: **conque**. **Con que** (two words) is **con** + **que**: **basta con que me avises**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**In Mexico** you'll mostly hear **así que** and **entonces**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **conque** = _so..._ with a raised finger."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Todavía no haces la tarea, ==conque== ponte a trabajar.",
+              "en": "You still haven't done your homework, so get to work."
+            },
+            {
+              "es": "Este año vendimos muchos carros, ==conque== el jefe nos va a dar un bono.",
+              "en": "We sold lots of cars this year, so the boss is giving us a bonus."
+            },
+            {
+              "es": "Estás tosiendo mucho, ==conque== tómate el jarabe.",
+              "en": "You're coughing a lot, so take your syrup."
+            },
+            {
+              "es": "No tengo dinero, ==conque== no me vuelvas a pedir.",
+              "en": "I don't have any money, so don't ask me again."
+            },
+            {
+              "es": "¿==Conque== ya no te queda dinero?",
+              "en": "So you're out of money?"
+            },
+            {
+              "es": "¡==Conque== te fuiste de pinta hoy!",
+              "en": "So you skipped school today!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "conque",
+                  "t": "Llueve, conque llévate el paraguas."
+                },
+                {
+                  "v": "con que",
+                  "t": "Me basta con que me llames."
+                }
+              ],
+              "nota": "One word = _so_; two words = _with that_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "literario",
+                  "t": "Es tarde, conque vámonos."
+                },
+                {
+                  "v": "cotidiano",
+                  "t": "Es tarde, así que vámonos."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "así que",
+              "texto": "[[7250|así que, por lo tanto]]."
+            },
+            {
+              "forma": "con lo cual",
+              "texto": "[[7435|con lo cual]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish with conque: _It's cold, so put on a jacket._",
+              "r": "Hace frío, conque ponte una chamarra.",
+              "nota": "conque + command."
+            },
+            {
+              "p": "Surprise: _So you knew!_",
+              "r": "¡Conque lo sabías!",
+              "nota": "conque at the start."
+            },
+            {
+              "p": "One word or two? _Basta ___ me digas la verdad._",
+              "r": "con que",
+              "nota": "con + que."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7250
+    ],
+    "confunde": [
+      7435
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7183",
+      "kwiziq": true
+    }
+  ]
+}

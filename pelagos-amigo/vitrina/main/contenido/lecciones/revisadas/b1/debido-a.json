@@ -1,0 +1,218 @@
+{
+  "tema": 7086,
+  "slug": "debido-a",
+  "titulo": "Debido a / debido a que: because of, due to",
+  "subtitulo": "Debido a la lluvia / debido a que llovió.",
+  "foto": "t07.jpg",
+  "regla": "Debido a + noun = because of, due to; debido a que + full sentence (with a verb) = because. Debido a can be replaced by por.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say _because of_ or _due to_, use **debido a**. It's a bit more formal than **por** or **porque**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Structure",
+            "Followed by",
+            "Example"
+          ],
+          "filas": [
+            [
+              "debido a",
+              "a noun (with its articles, possessives, even a clause after it)",
+              "Cancelaron debido a la lluvia."
+            ],
+            [
+              "debido a que",
+              "a full sentence with a verb",
+              "Cancelaron debido a que llovió."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Debido a** can be replaced by **por** without changing the meaning: **por la lluvia**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Debido a que** can never be followed by just a noun."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Remember **a + el = al**: **debido al viento**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: noun → **debido a**; verb → **debido a que**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Muchos jóvenes tienen que emigrar ==debido a== la crisis.",
+              "en": "Many young people have to emigrate because of the crisis."
+            },
+            {
+              "es": "Lola y Miguel terminaron ==debido a== su egoísmo.",
+              "en": "Lola and Miguel broke up because of his selfishness."
+            },
+            {
+              "es": "Le dimos el premio a Carmen ==debido a== la creatividad que siempre muestra.",
+              "en": "We gave Carmen the prize because of the creativity she always shows."
+            },
+            {
+              "es": "No salimos a surfear ==debido al== viento.",
+              "en": "We didn't go surfing because of the wind."
+            },
+            {
+              "es": "Cancelaron el vuelo ==debido a que== había mucha neblina.",
+              "en": "They canceled the flight because there was a lot of fog."
+            },
+            {
+              "es": "No salimos a surfear ==por== el viento.",
+              "en": "We didn't go surfing because of the wind."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Debido a que la lluvia."
+                },
+                {
+                  "v": "bien",
+                  "t": "Debido a la lluvia."
+                }
+              ],
+              "nota": "Noun: no **que**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Debido a llovía mucho."
+                },
+                {
+                  "v": "bien",
+                  "t": "Debido a que llovía mucho."
+                }
+              ],
+              "nota": "Verb: **que**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Debido a el viento."
+                },
+                {
+                  "v": "bien",
+                  "t": "Debido al viento."
+                }
+              ],
+              "nota": "**a + el = al**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "porque, como",
+              "texto": "Other cause words: [[7034|porque, como, es que]]."
+            },
+            {
+              "forma": "así que",
+              "texto": "The consequence: [[7250|así que / por lo tanto]]."
+            },
+            {
+              "forma": "gracias a",
+              "texto": "Positive cause: [[5147|por culpa de / gracias a]]."
+            },
+            {
+              "forma": "por",
+              "texto": "**Por** for cause: [[7845|por for because of]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _because of the traffic_",
+              "r": "debido al tráfico",
+              "nota": "debido a + noun."
+            },
+            {
+              "p": "In Spanish: _because it was late_",
+              "r": "debido a que era tarde",
+              "nota": "debido a que + verb."
+            },
+            {
+              "p": "Replace with **por**: **debido a la crisis**",
+              "r": "por la crisis",
+              "nota": "Same meaning."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7034
+    ],
+    "confunde": [
+      7845
+    ],
+    "sigue": [
+      7250,
+      5147
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7086",
+      "kwiziq": true
+    }
+  ]
+}

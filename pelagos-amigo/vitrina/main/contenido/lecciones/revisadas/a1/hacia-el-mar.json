@@ -1,0 +1,188 @@
+{
+  "tema": 9141,
+  "slug": "hacia-el-mar",
+  "titulo": "The preposition hacia (towards, around)",
+  "subtitulo": "Camina hacia el mar. Llegamos hacia las ocho.",
+  "foto": "t06.jpg",
+  "regla": "Hacia means towards (a direction, without saying you arrive), around (an approximate time: hacia las ocho) and towards a person (feelings).",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Hacia** + place = **towards**: the direction you move or look. It doesn't say you get there; for that, use **a**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Hacia** + time = **around / about**: **hacia las ocho**. In Mexico you'll also hear **como a las ocho**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Hacia** + person = **towards** someone: **respeto hacia mi maestro**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Watch the accent: **hacia** (towards) has none; **hacía** is a verb (_was doing / made_)."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "El perro corre ==hacia== el mar.",
+              "en": "The dog runs towards the sea."
+            },
+            {
+              "es": "El huracán va ==hacia== Baja California.",
+              "en": "The hurricane is heading towards Baja California."
+            },
+            {
+              "es": "Mira ==hacia== arriba.",
+              "en": "Look up."
+            },
+            {
+              "es": "Llegamos ==hacia== las ocho.",
+              "en": "We arrived around eight."
+            },
+            {
+              "es": "La lluvia empieza ==hacia== el mediodía.",
+              "en": "The rain starts around noon."
+            },
+            {
+              "es": "Siento mucho respeto ==hacia== mi maestro de jiu-jitsu.",
+              "en": "I feel a lot of respect towards my jiu-jitsu teacher."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Voy hacia a la playa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Voy hacia la playa."
+                }
+              ],
+              "nota": "One preposition only."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Camina hacía el mar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Camina hacia el mar."
+                }
+              ],
+              "nota": "**Hacía** is the verb hacer."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Llegamos hacia ocho."
+                },
+                {
+                  "v": "bien",
+                  "t": "Llegamos hacia las ocho."
+                }
+              ],
+              "nota": "Times need **las**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "a la playa",
+              "texto": "Arriving somewhere: [[7896|the preposition a]]."
+            },
+            {
+              "forma": "a las ocho",
+              "texto": "Exact times: [[6665|a la / a las + time]]."
+            },
+            {
+              "forma": "contra",
+              "texto": "Against: [[9283|the preposition contra]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish, with hacia: _We walk towards the park._",
+              "r": "Caminamos hacia el parque.",
+              "nota": "hacia + place."
+            },
+            {
+              "p": "In Spanish, with hacia: _I'll get there around nine._",
+              "r": "Llego hacia las nueve.",
+              "nota": "hacia las + hour."
+            },
+            {
+              "p": "Fix it: _Nadé hacía la playa._",
+              "r": "Nadé hacia la playa.",
+              "nota": "No accent."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7896,
+      6665
+    ],
+    "confunde": [],
+    "sigue": [
+      9283
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9141",
+      "kwiziq": true
+    }
+  ]
+}

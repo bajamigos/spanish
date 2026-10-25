@@ -1,0 +1,229 @@
+{
+  "tema": 6172,
+  "slug": "demostrativos-tiempo",
+  "titulo": "Demonstrative adjectives to refer to time",
+  "subtitulo": "Esta semana, ese día, aquellos años.",
+  "foto": "t09.jpg",
+  "regla": "Este = this (present or near future): esta semana. Ese = that (past or future): ese día. Aquel = that, far in the past, often nostalgic: aquellos tiempos. Aquel is never used for the present or future.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Demonstratives point in **space**, but also in **time**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Demonstrative",
+            "Points to",
+            "Example"
+          ],
+          "filas": [
+            [
+              "este, esta, estos, estas",
+              "now, or the near future",
+              "esta semana, estos meses"
+            ],
+            [
+              "ese, esa, esos, esas",
+              "a past or future moment",
+              "ese día"
+            ],
+            [
+              "aquel, aquella, aquellos, aquellas",
+              "the distant past only, often with nostalgia",
+              "aquellos años"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Choosing **ese** or **aquel** for the past is partly subjective: **aquel** feels further away."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **este** is here, **ese** is there, **aquel** is a memory."
+        }
+      ]
+    },
+    {
+      "id": "este",
+      "titulo": "Este: present or near future",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Esta== semana no ha parado de llover.",
+              "en": "It hasn't stopped raining this week."
+            },
+            {
+              "es": "==Estos== meses va a seguir subiendo el desempleo.",
+              "en": "Unemployment will keep rising in the coming months."
+            },
+            {
+              "es": "==Este== mes tengo mucho trabajo.",
+              "en": "I have a lot of work this month. (now or the coming month)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ese",
+      "titulo": "Ese: past or future",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Ese== día estaba muy enferma y no vine a trabajar.",
+              "en": "I was very sick that day and didn't come to work."
+            },
+            {
+              "es": "Recuerdo ==ese== día como algo muy especial.",
+              "en": "I remember that day as something very special."
+            },
+            {
+              "es": "¿Vas a tener más tiempo ==ese== día?",
+              "en": "Will you have more time that day?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aquel",
+      "titulo": "Aquel: the distant past",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¡Qué tiempos ==aquellos==, cuando no había celulares y se platicaba más!",
+              "en": "What times those were, when there were no cell phones and people talked more!"
+            },
+            {
+              "es": "¡Qué semana ==aquella== que pasamos en Holbox!",
+              "en": "What a week we spent on Holbox!"
+            },
+            {
+              "es": "¡Qué buenos recuerdos tengo de ==ese== viaje!",
+              "en": "What great memories I have of that trip! (feels closer)"
+            },
+            {
+              "es": "¡Qué buenos recuerdos tengo de ==aquel== viaje!",
+              "en": "What great memories I have of that trip! (feels far away)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El viernes hay junta. ¿Vas a tener tiempo aquel día?"
+                },
+                {
+                  "v": "bien",
+                  "t": "El viernes hay junta. ¿Vas a tener tiempo ese día?"
+                }
+              ],
+              "nota": "**Aquel** is never future."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Aquel mes estoy ocupada."
+                },
+                {
+                  "v": "bien",
+                  "t": "Este mes estoy ocupada."
+                }
+              ],
+              "nota": "Or present."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "este, ese, aquel",
+              "texto": "In space: [[6862|este, ese, aquel]]."
+            },
+            {
+              "forma": "este mes viajo",
+              "texto": "The present for the future: [[5094|este, esta]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Complete: _En ___ época (far past) vivíamos en Tijuana._",
+              "r": "aquella",
+              "nota": "Distant past."
+            },
+            {
+              "p": "Complete: ____ fin de semana (the coming one) voy a surfear._",
+              "r": "Este",
+              "nota": "Near future."
+            },
+            {
+              "p": "Can you say _aquel día de mañana_?",
+              "r": "No: aquel is only for the past.",
+              "nota": "Use ese."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6862
+    ],
+    "confunde": [
+      6862
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6172",
+      "kwiziq": true
+    }
+  ]
+}

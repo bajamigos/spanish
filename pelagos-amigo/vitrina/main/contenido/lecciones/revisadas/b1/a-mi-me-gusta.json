@@ -1,0 +1,250 @@
+{
+  "tema": 7032,
+  "slug": "a-mi-me-gusta",
+  "titulo": "Repeating the indirect pronoun with verbs like gustar",
+  "subtitulo": "A mí me gusta, a María le encanta.",
+  "foto": "t04.jpg",
+  "regla": "With gustar-type verbs, the short pronoun (me, te, le, nos, les) is required. The a + pronoun or a + person (a mí, a María) is optional and adds emphasis or clarity, but can never replace the short pronoun.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Verbs like **gustar**, **encantar**, **interesar**, **molestar**, **fascinar**, **aburrir**, **apasionar** take an indirect object: the person who feels it."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The **short pronoun** (**me, te, le, nos, les**) is **always required**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**A** + pronoun (**a mí, a ti, a él, a ella, a usted, a nosotros, a ellos, a ustedes**) is **optional**. It emphasizes, contrasts or clarifies, but it can't stand alone."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "(a mí)",
+            "+ me +",
+            "gusta..."
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The same goes when you name the person: **a María le**, **a mi papá le**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **a mí** is the spotlight; **me** is the actor. The show can go on without the spotlight, never without the actor."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==A mí me== gusta mucho el mole.",
+              "en": "I really like mole."
+            },
+            {
+              "es": "¿==A ti te== gustan las carreras de caballos?",
+              "en": "Do you like horse racing?"
+            },
+            {
+              "es": "==A ella== no ==le== gusta el pozole.",
+              "en": "She doesn't like pozole."
+            },
+            {
+              "es": "==A él le== molesta mucho el ruido del tráfico.",
+              "en": "Traffic noise really bothers him."
+            },
+            {
+              "es": "==A ellos les== aburre el tenis.",
+              "en": "Tennis bores them."
+            },
+            {
+              "es": "==A nosotros nos== apasionan los carros de carreras.",
+              "en": "We're passionate about race cars."
+            },
+            {
+              "es": "==A María le== encantan las películas de los cincuenta.",
+              "en": "María loves movies from the fifties."
+            },
+            {
+              "es": "==A mi papá le== fascinan los carros antiguos.",
+              "en": "My dad is crazy about vintage cars."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "opcional",
+      "titulo": "Which part can go?",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "A ti te interesa la literatura."
+                },
+                {
+                  "v": "bien",
+                  "t": "Te interesa la literatura."
+                }
+              ],
+              "nota": "Both fine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "A ti interesa la literatura."
+                },
+                {
+                  "v": "bien",
+                  "t": "A ti te interesa la literatura."
+                }
+              ],
+              "nota": "The short pronoun can't go."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "A mí gusta el café."
+                },
+                {
+                  "v": "bien",
+                  "t": "A mí me gusta el café."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "A María gustan los perros."
+                },
+                {
+                  "v": "bien",
+                  "t": "A María le gustan los perros."
+                }
+              ],
+              "nota": "Even with a name."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo me gusta el café."
+                },
+                {
+                  "v": "bien",
+                  "t": "A mí me gusta el café."
+                }
+              ],
+              "nota": "Not **yo**: **a mí**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "me gusta",
+              "texto": "The basics: [[6001|gustar]], [[7248|he likes, they like]]."
+            },
+            {
+              "forma": "a mí también",
+              "texto": "Agreeing: [[7681|a mí también / tampoco]]."
+            },
+            {
+              "forma": "le di a Juan",
+              "texto": "With other verbs: [[7090|repeating indirect pronouns]]."
+            },
+            {
+              "forma": "me cuesta",
+              "texto": "Another verb like this: [[7440|costar]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish (emphasis): _I love tacos._",
+              "r": "A mí me encantan los tacos.",
+              "nota": "a mí + me."
+            },
+            {
+              "p": "In Spanish: _My mom is interested in history._",
+              "r": "A mi mamá le interesa la historia.",
+              "nota": "le is required."
+            },
+            {
+              "p": "Fix it: _A ellos molesta el ruido._",
+              "r": "A ellos les molesta el ruido.",
+              "nota": "Add les."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6001,
+      7248
+    ],
+    "confunde": [
+      7681
+    ],
+    "sigue": [
+      7090
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7032",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,289 @@
+{
+  "tema": 6501,
+  "slug": "durmiendo-leyendo-gerundios-irregulares",
+  "titulo": "Irregular gerunds",
+  "subtitulo": "Está durmiendo. ¿Qué estás leyendo?",
+  "foto": "t09.jpg",
+  "regla": "Some gerunds are irregular: -ir verbs with a stem change use e > i or o > u (pidiendo, durmiendo), and verbs whose stem ends in a vowel use -yendo instead of -iendo (leyendo, oyendo, yendo).",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Regular gerunds end in **-ando** (-ar) or **-iendo** (-er, -ir). Three groups change."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**1. -ir verbs with e > i**: the **e** of the stem becomes **i**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Infinitive",
+            "Gerund"
+          ],
+          "filas": [
+            [
+              "pedir",
+              "**pidiendo**"
+            ],
+            [
+              "decir",
+              "**diciendo**"
+            ],
+            [
+              "servir",
+              "**sirviendo**"
+            ],
+            [
+              "sentir",
+              "**sintiendo**"
+            ],
+            [
+              "seguir",
+              "**siguiendo**"
+            ],
+            [
+              "venir",
+              "**viniendo**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**2. o > u**: **dormir → durmiendo**, **morir → muriendo**, and also **poder → pudiendo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**3. Stem ending in a vowel**: **-iendo** becomes **-yendo**, because an **i** between two vowels turns into **y**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Infinitive",
+            "Gerund"
+          ],
+          "filas": [
+            [
+              "leer",
+              "**leyendo**"
+            ],
+            [
+              "creer",
+              "**creyendo**"
+            ],
+            [
+              "traer",
+              "**trayendo**"
+            ],
+            [
+              "caer",
+              "**cayendo**"
+            ],
+            [
+              "oír",
+              "**oyendo**"
+            ],
+            [
+              "construir",
+              "**construyendo**"
+            ],
+            [
+              "ir",
+              "**yendo**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Reír** and **freír** lose an **i**: **riendo**, **friendo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: for most of these, the gerund changes the same vowel as the preterite **él** form: **pidió → pidiendo**, **durmió → durmiendo**, **leyó → leyendo**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "El bebé está ==durmiendo==.",
+              "en": "The baby is sleeping."
+            },
+            {
+              "es": "¿Qué estás ==leyendo==?",
+              "en": "What are you reading?"
+            },
+            {
+              "es": "Beto me está ==pidiendo== dinero otra vez.",
+              "en": "Beto is asking me for money again."
+            },
+            {
+              "es": "Están ==construyendo== un edificio enfrente de mi casa.",
+              "en": "They're putting up a building across from my house."
+            },
+            {
+              "es": "¿Me estás ==diciendo== la verdad?",
+              "en": "Are you telling me the truth?"
+            },
+            {
+              "es": "Estoy ==oyendo== un ruido raro en el carro.",
+              "en": "I'm hearing a weird noise in the car."
+            },
+            {
+              "es": "Me estoy ==muriendo== de hambre.",
+              "en": "I'm starving."
+            },
+            {
+              "es": "La gente sigue ==viniendo== a ver las olas.",
+              "en": "People keep coming to see the waves."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estoy dormiendo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estoy durmiendo."
+                }
+              ],
+              "nota": "o > u."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Está leiendo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Está leyendo."
+                }
+              ],
+              "nota": "Vowel + **-yendo**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me está pediendo un favor."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me está pidiendo un favor."
+                }
+              ],
+              "nota": "e > i."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Qué estás deciendo?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Qué estás diciendo?"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hablando, comiendo",
+              "texto": "The regular ones: [[6500|regular gerunds]], used in [[5092|estar + gerund]]."
+            },
+            {
+              "forma": "pidió, durmió",
+              "texto": "The same changes in the past: [[5265|e > i verbs in the preterite]] and [[5266|dormir and morir in the preterite]]."
+            },
+            {
+              "forma": "estaba durmiendo",
+              "texto": "In the past: [[5130|estaba + gerund]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _The kids are sleeping._",
+              "r": "Los niños están durmiendo.",
+              "nota": "dormir → durmiendo."
+            },
+            {
+              "p": "In Spanish: _She's reading The Expanse._",
+              "r": "Está leyendo The Expanse.",
+              "nota": "leer → leyendo."
+            },
+            {
+              "p": "Fix it: _Está sentiendo frío._",
+              "r": "Está sintiendo frío.",
+              "nota": "e > i."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6500,
+      5092
+    ],
+    "confunde": [
+      5265,
+      5266
+    ],
+    "sigue": [
+      5130
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6501",
+      "kwiziq": true
+    }
+  ]
+}

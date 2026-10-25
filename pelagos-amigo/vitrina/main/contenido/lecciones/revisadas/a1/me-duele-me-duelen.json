@@ -1,0 +1,204 @@
+{
+  "tema": 5878,
+  "slug": "me-duele-me-duelen",
+  "titulo": "Doler: to say something hurts",
+  "subtitulo": "«Me duele la cabeza.»",
+  "foto": "t02.jpg",
+  "regla": "Doler works like gustar: me duele + one thing, me duelen + several: me duele la cabeza, me duelen los pies. Body parts take el, la, los, las.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Doler** works like **gustar**: the body part is the subject. One thing: **duele**. Several: **duelen**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "What hurts",
+            "Form",
+            "Example"
+          ],
+          "filas": [
+            [
+              "one thing",
+              "me duele",
+              "Me duele la cabeza."
+            ],
+            [
+              "several things",
+              "me duelen",
+              "Me duelen los pies."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Who it hurts: **me, te, le, nos, les**. To ask: **¿Qué te duele?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Body parts take **el, la, los, las**: **me duele la espalda**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Me duele== la cabeza.",
+              "en": "I have a headache."
+            },
+            {
+              "es": "==Me duelen== las piernas después del entrenamiento.",
+              "en": "My legs hurt after training."
+            },
+            {
+              "es": "¿==Te duele== la rodilla?",
+              "en": "Does your knee hurt?"
+            },
+            {
+              "es": "A mi papá ==le duele== la espalda.",
+              "en": "My dad's back hurts."
+            },
+            {
+              "es": "¿Qué ==te duele==?",
+              "en": "What hurts?"
+            },
+            {
+              "es": "==Me duelen== los hombros de tanto remar.",
+              "en": "My shoulders hurt from paddling so much."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo duelo la cabeza."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me duele la cabeza."
+                }
+              ],
+              "nota": "The body part is the subject."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me duele los pies."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me duelen los pies."
+                }
+              ],
+              "nota": "Several: **duelen**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me dolen las piernas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me duelen las piernas."
+                }
+              ],
+              "nota": "o → ue."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "me gusta, me gustan",
+              "texto": "Same pattern: [[6001|gustar]]."
+            },
+            {
+              "forma": "duele, duelen",
+              "texto": "The stem change: [[5080|-er verbs with o > ue]]."
+            },
+            {
+              "forma": "la cabeza, las manos",
+              "texto": "Article, not mi: [[7053|articles with body parts]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _My stomach hurts._",
+              "r": "Me duele el estómago.",
+              "nota": "One thing: duele."
+            },
+            {
+              "p": "In Spanish (tú): _Do your feet hurt?_",
+              "r": "¿Te duelen los pies?",
+              "nota": "Several: duelen."
+            },
+            {
+              "p": "Fix it: _Me duele las manos._",
+              "r": "Me duelen las manos.",
+              "nota": "Plural: duelen."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6001,
+      5080
+    ],
+    "confunde": [],
+    "sigue": [
+      7053
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5878",
+      "kwiziq": true
+    }
+  ]
+}

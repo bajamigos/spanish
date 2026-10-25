@@ -1,0 +1,241 @@
+{
+  "tema": 5049,
+  "slug": "pluscuamperfecto-irregulares",
+  "titulo": "Conjugate hacer, escribir, ver, decir and poner in the pluperfect",
+  "subtitulo": "Había hecho, había dicho, había visto: irregular participles, same recipe.",
+  "foto": "t02.jpg",
+  "regla": "Haber in the imperfect + an irregular participle: hecho, escrito, visto, dicho, puesto.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "These verbs are easy in the pluperfect: **haber** is the same as always (**había, habías, había, habíamos, habían**), and only the **past participle** is irregular. You use the pluperfect for what _had happened_ in the past."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**había**…",
+            "irregular participle"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Infinitive",
+            "Participle",
+            "Pluperfect (yo)"
+          ],
+          "filas": [
+            [
+              "hacer",
+              "hecho",
+              "había hecho"
+            ],
+            [
+              "escribir",
+              "escrito",
+              "había escrito"
+            ],
+            [
+              "ver",
+              "visto",
+              "había visto"
+            ],
+            [
+              "decir",
+              "dicho",
+              "había dicho"
+            ],
+            [
+              "poner",
+              "puesto",
+              "había puesto"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Every form of **haber** has a written accent on the **í**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: three of them end in **-to** (escrito, visto, puesto) and two in **-cho** (hecho, dicho)."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Yo no ==había hecho== nada todavía.",
+              "en": "I hadn't done anything yet."
+            },
+            {
+              "es": "¿Cuándo ==habías escrito== el mensaje?",
+              "en": "When had you written the message?"
+            },
+            {
+              "es": "Beto ==había puesto== las llaves en el mostrador.",
+              "en": "Beto had put the keys on the counter."
+            },
+            {
+              "es": "Nosotros ==habíamos dicho== la verdad.",
+              "en": "We had told the truth."
+            },
+            {
+              "es": "Holden y Naomi ==habían visto== la nave.",
+              "en": "Holden and Naomi had seen the ship."
+            },
+            {
+              "es": "¿Ustedes no ==habían visto== esa película?",
+              "en": "Hadn't you seen that movie?"
+            },
+            {
+              "es": "Me dijo que ustedes ==habían puesto== los papeles en el cajón.",
+              "en": "He told me you had put the papers in the drawer."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Don't build these participles like regular ones."
+        },
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Había hacido la tarea."
+                },
+                {
+                  "v": "bien",
+                  "t": "Había hecho la tarea."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ya habíamos decido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ya habíamos dicho."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nunca había vido el mar tan grande."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nunca había visto el mar tan grande."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "había hablado",
+              "texto": "The regular version: [[5843|regular verbs in the pluperfect]]."
+            },
+            {
+              "forma": "he hecho, he dicho",
+              "texto": "The same participles in the present perfect: [[6066|hacer]], [[6240|decir]], [[6670|poner]], [[5112|ver]]."
+            },
+            {
+              "forma": "roto, vuelto, abierto",
+              "texto": "More irregular participles: [[7048|participles in -to / -cho]]."
+            },
+            {
+              "forma": "ya había visto",
+              "texto": "With **ya**: [[6009|ya with the pluperfect]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I had already seen the waves._",
+              "r": "Ya había visto las olas.",
+              "nota": "ver → visto."
+            },
+            {
+              "p": "**Poner** with **tú**: ¿Dónde ___ la tabla?",
+              "r": "¿Dónde habías puesto la tabla?",
+              "nota": "poner → puesto."
+            },
+            {
+              "p": "In Spanish: _They had written to the customer._",
+              "r": "Le habían escrito al cliente.",
+              "nota": "escribir → escrito."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5843,
+      7048
+    ],
+    "confunde": [
+      6066,
+      6240
+    ],
+    "sigue": [
+      6009,
+      6007,
+      6670,
+      5112
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5049",
+      "kwiziq": true
+    }
+  ]
+}

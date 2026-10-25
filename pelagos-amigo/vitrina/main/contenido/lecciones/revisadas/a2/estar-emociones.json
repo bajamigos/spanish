@@ -1,0 +1,265 @@
+{
+  "tema": 5980,
+  "slug": "estar-emociones",
+  "titulo": "Estar for feelings and emotions",
+  "subtitulo": "Estoy feliz. ¿Por qué estás enojado?",
+  "foto": "t09.jpg",
+  "regla": "Use estar, not ser, to say how someone feels: estoy contento, está nerviosa, estamos preocupados. The adjective agrees with the person.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Feelings and moods are **states**: they come and go. States take **estar**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Estar",
+            "Example"
+          ],
+          "filas": [
+            [
+              "yo",
+              "estoy",
+              "Estoy contento."
+            ],
+            [
+              "tú",
+              "estás",
+              "Estás triste."
+            ],
+            [
+              "él, ella, usted",
+              "está",
+              "Está nerviosa."
+            ],
+            [
+              "nosotros, nosotras",
+              "estamos",
+              "Estamos preocupados."
+            ],
+            [
+              "ellos, ellas, ustedes",
+              "están",
+              "Están enojados."
+            ]
+          ]
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "estar",
+            "+",
+            "feeling adjective"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Common ones: **contento, feliz, triste, enojado, nervioso, preocupado, emocionado, aburrido, tranquilo, harto**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The adjective agrees: **Ana está enojada**, **ellos están emocionados**. **Feliz** and **triste** only change in the plural: **felices, tristes**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Ser feliz** exists, but it means _to be a happy person_ in life. For your mood right now: **estar feliz**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Careful: **estar aburrido** = _to be bored_; **ser aburrido** = _to be boring_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: feelings move, and so does **estar**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Estoy== muy ==contento== con mi tabla nueva.",
+              "en": "I'm really happy with my new board."
+            },
+            {
+              "es": "¿Por qué ==estás enojada==?",
+              "en": "Why are you angry? (to a woman)"
+            },
+            {
+              "es": "Mi hermano ==está nervioso== por su primer torneo.",
+              "en": "My brother is nervous about his first tournament."
+            },
+            {
+              "es": "==Estamos preocupados== por la renta.",
+              "en": "We're worried about the rent."
+            },
+            {
+              "es": "Los niños ==están emocionados== porque mañana vamos a la playa.",
+              "en": "The kids are excited because we're going to the beach tomorrow."
+            },
+            {
+              "es": "Hoy ==estoy== un poco ==triste==.",
+              "en": "I'm a little sad today."
+            },
+            {
+              "es": "Mis papás ==están felices== con el huerto.",
+              "en": "My parents are happy with the garden."
+            },
+            {
+              "es": "¡Ya ==estoy harto== del tráfico de la garita!",
+              "en": "I'm fed up with the traffic at the border crossing!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Soy nervioso hoy."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estoy nervioso hoy."
+                }
+              ],
+              "nota": "A feeling today: **estar**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Soy aburrido en clase."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estoy aburrido en clase."
+                }
+              ],
+              "nota": "_I'm bored_ = **estoy aburrido**. **Soy aburrido** = _I'm boring_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella está enojado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella está enojada."
+                }
+              ],
+              "nota": "The adjective agrees."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mis amigos están feliz."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mis amigos están felices."
+                }
+              ],
+              "nota": "Plural: **felices**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "está cansado",
+              "texto": "The body, too: [[5983|estar for physical condition]]."
+            },
+            {
+              "forma": "es alegre",
+              "texto": "Personality takes ser: [[5972|ser for essential characteristics]]."
+            },
+            {
+              "forma": "me siento triste",
+              "texto": "Another way to say how you feel: [[7054|sentir vs sentirse]]."
+            },
+            {
+              "forma": "está casado",
+              "texto": "Another estar use: [[6069|estar for relationship status]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish (a man speaking): _I'm nervous today._",
+              "r": "Hoy estoy nervioso.",
+              "nota": "Estar for feelings."
+            },
+            {
+              "p": "In Spanish: _We're excited._ (a mixed group)",
+              "r": "Estamos emocionados.",
+              "nota": "Plural masculine."
+            },
+            {
+              "p": "Fix it: _Mi mamá es preocupada hoy._",
+              "r": "Mi mamá está preocupada hoy.",
+              "nota": "Estar, not ser."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      5972
+    ],
+    "sigue": [
+      5983,
+      7054,
+      6069
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5980",
+      "kwiziq": true
+    }
+  ]
+}

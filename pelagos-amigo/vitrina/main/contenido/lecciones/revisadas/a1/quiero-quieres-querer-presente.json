@@ -1,0 +1,209 @@
+{
+  "tema": 5774,
+  "slug": "quiero-quieres-querer-presente",
+  "titulo": "Querer in the present",
+  "subtitulo": "Quiero un café. ¿Tú qué quieres?",
+  "foto": "t03.jpg",
+  "regla": "Querer (to want, to love) goes quiero, quieres, quiere, queremos, quieren: e changes to ie except in nosotros.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Querer** (_to want_; with people, _to love_) changes **e** to **ie**: qu**ie**ro."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "querer"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**quiero**"
+            ],
+            [
+              "tú",
+              "**quieres**"
+            ],
+            [
+              "él, ella, usted",
+              "**quiere**"
+            ],
+            [
+              "nosotros",
+              "queremos"
+            ],
+            [
+              "ellos, ustedes",
+              "**quieren**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Nosotros** keeps the e: **queremos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Add a noun or an infinitive straight after it: **quiero un taco**, **quiero comer**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Quiero== un café, por favor.",
+              "en": "I'd like a coffee, please."
+            },
+            {
+              "es": "¿==Quieres== ir a la playa?",
+              "en": "Do you want to go to the beach?"
+            },
+            {
+              "es": "Mi hijo ==quiere== aprender a surfear.",
+              "en": "My son wants to learn to surf."
+            },
+            {
+              "es": "==Queremos== un jardín más grande.",
+              "en": "We want a bigger garden."
+            },
+            {
+              "es": "¿Qué ==quieren== ustedes de cenar?",
+              "en": "What do you all want for dinner?"
+            },
+            {
+              "es": "Te ==quiero== mucho.",
+              "en": "I love you very much."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo quero un taco."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo quiero un taco."
+                }
+              ],
+              "nota": "The e becomes **ie**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros quieremos ir."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros queremos ir."
+                }
+              ],
+              "nota": "No ie in nosotros."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero a ir al cine."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero ir al cine."
+                }
+              ],
+              "nota": "No **a** before the infinitive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "quiero + infinitive",
+              "texto": "Wanting to do things: [[5065|deber, poder, querer + infinitive]]."
+            },
+            {
+              "forma": "prefiero",
+              "texto": "Same change: [[5776|preferir]], [[5812|e → ie -er verbs]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We want to eat._",
+              "r": "Queremos comer.",
+              "nota": "No ie in nosotros."
+            },
+            {
+              "p": "Fix it: _Ella quere un perro._",
+              "r": "Ella quiere un perro.",
+              "nota": "ie in ella."
+            },
+            {
+              "p": "In Spanish (tú): _Do you want a beer?_",
+              "r": "¿Quieres una cerveza?",
+              "nota": "quieres for tú."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      5776
+    ],
+    "sigue": [
+      5065,
+      5812
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5774",
+      "kwiziq": true
+    }
+  ]
+}

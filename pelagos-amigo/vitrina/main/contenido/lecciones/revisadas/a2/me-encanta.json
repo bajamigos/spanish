@@ -1,0 +1,243 @@
+{
+  "tema": 7058,
+  "slug": "me-encanta",
+  "titulo": "To love something or doing something: encantar",
+  "subtitulo": "Me encanta surfear.",
+  "foto": "t10.jpg",
+  "regla": "To say you love a thing or an activity, use encantar, built like gustar: me encanta el mar, me encantan los tacos, me encanta surfear. Keep querer and amar for people.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Encantar** works exactly like **gustar**, only stronger: the thing you love is the subject, and you are the pronoun."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "me / te / le / nos / les",
+            "+ encanta(n) +",
+            "thing or infinitive"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "What you love",
+            "Verb",
+            "Example"
+          ],
+          "filas": [
+            [
+              "one thing",
+              "encanta",
+              "Me encanta el mar."
+            ],
+            [
+              "several things",
+              "encantan",
+              "Me encantan las tortillas de harina."
+            ],
+            [
+              "an activity",
+              "encanta",
+              "Me encanta surfear."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "With infinitives, always **encanta**: **Nos encanta** bailar y cantar."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Querer** and **amar** are for people: **Te quiero**, **amo a mi familia**. For things and activities, **encantar** is the natural choice."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **encantar** = _to enchant_. The tacos enchant you."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Me encanta== el olor del mar.",
+              "en": "I love the smell of the sea."
+            },
+            {
+              "es": "==Me encantan== los tacos de pescado.",
+              "en": "I love fish tacos."
+            },
+            {
+              "es": "A mi hermana ==le encanta== bailar.",
+              "en": "My sister loves dancing."
+            },
+            {
+              "es": "==Nos encanta== trabajar en el huerto los domingos.",
+              "en": "We love working in the garden on Sundays."
+            },
+            {
+              "es": "¿==Te encantan== las películas de ciencia ficción?",
+              "en": "Do you love sci-fi movies?"
+            },
+            {
+              "es": "A mis amigos ==les encanta== entrenar juntos.",
+              "en": "My friends love training together."
+            },
+            {
+              "es": "==Me encanta== leer en la playa.",
+              "en": "I love reading at the beach."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo encanto el surf."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me encanta el surf."
+                }
+              ],
+              "nota": "Like **gustar**: pronoun + **encanta**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me encanta los tacos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me encantan los tacos."
+                }
+              ],
+              "nota": "Plural thing: **encantan**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me encantan surfear y nadar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me encanta surfear y nadar."
+                }
+              ],
+              "nota": "Infinitives: singular."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero el mole."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me encanta el mole."
+                }
+              ],
+              "nota": "For _I love mole_: **encantar**. **Quiero el mole** = _I want the mole_."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "me gusta",
+              "texto": "The milder version: [[6001|gustar]]."
+            },
+            {
+              "forma": "le gusta bailar",
+              "texto": "Same pattern: [[10727|gustar + infinitive]]."
+            },
+            {
+              "forma": "me aburre",
+              "texto": "Other feelings: [[7427|something bores, annoys or saddens you]]."
+            },
+            {
+              "forma": "a mí me encanta",
+              "texto": "Emphasis: [[7032|repeating the indirect pronoun]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I love the sea._",
+              "r": "Me encanta el mar.",
+              "nota": "Me encanta."
+            },
+            {
+              "p": "In Spanish: _We love dancing._",
+              "r": "Nos encanta bailar.",
+              "nota": "Infinitive: encanta."
+            },
+            {
+              "p": "Fix it: _Me encanta las playas de Baja._",
+              "r": "Me encantan las playas de Baja.",
+              "nota": "Plural: encantan."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6001,
+      10727
+    ],
+    "confunde": [],
+    "sigue": [
+      7427,
+      7032
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7058",
+      "kwiziq": true
+    }
+  ]
+}

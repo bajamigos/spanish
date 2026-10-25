@@ -1,0 +1,194 @@
+{
+  "tema": 8078,
+  "slug": "mira-oye",
+  "titulo": "Mira, oye: not really commands",
+  "subtitulo": "Mira, no sé qué te dijeron... ¡Oye, qué bonito!",
+  "foto": "t10.jpg",
+  "regla": "The commands of mirar and oír (mira, mire, miren; oye, oiga, oigan) are often fillers, not orders. Mira: to get attention before saying something (often firm), or ironic surprise (mira tú, mira nada más). Oye: to get attention, to protest, or to show surprise or admiration.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "mira / mire / miren: attention",
+              "texto": "_Look, ..._ before an explanation or a firm point: **Mire, aquí no hacemos devoluciones sin ticket.**"
+            },
+            {
+              "forma": "mira (tú) / mira nada más: irony, surprise",
+              "texto": "_Well, what do you know..._: **Y mira tú, ahora su hijo se levanta a las once.**"
+            },
+            {
+              "forma": "oye / oiga / oigan: attention",
+              "texto": "_Hey, ..._ to start talking or call someone: **Oiga, ¿me cobra?**"
+            },
+            {
+              "forma": "oye: protest",
+              "texto": "_Hey!_ **¡Oye, no te metas en la fila!**"
+            },
+            {
+              "forma": "oye: surprise, praise",
+              "texto": "**¡Oye, qué bien te quedó!**"
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Match the form to the listener: **mira / oye** (tú), **mire / oiga** (usted), **miren / oigan** (ustedes)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Oiga** is the polite way to call a waiter or a stranger in Mexico."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: they're the verbal tap on the shoulder: _look_ and _listen_."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Mira==, creo que deberías calmarte.",
+              "en": "Look, I think you should calm down."
+            },
+            {
+              "es": "==Miren==, no sé qué les dijeron, pero sin ticket no hay devolución.",
+              "en": "Look, I don't know what you were told, but no receipt, no refund."
+            },
+            {
+              "es": "Me decía que mi hija era floja, y ==mira tú==, ahora su hijo no se levanta.",
+              "en": "She said my daughter was lazy, and what do you know, now her son won't get up."
+            },
+            {
+              "es": "No había nada, pero ==mire nada más==, acaba de llegar mercancía.",
+              "en": "We were out, but would you believe it, new stock just came in."
+            },
+            {
+              "es": "==Oiga==, joven, ¿me trae la cuenta?",
+              "en": "Excuse me, could you bring me the check?"
+            },
+            {
+              "es": "==¡Oye!== Ese lugar es mío.",
+              "en": "Hey! That's my seat."
+            },
+            {
+              "es": "==Oye==, qué rico te quedó el mole.",
+              "en": "Wow, your mole turned out delicious."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Oye, señor, ¿me ayuda?"
+                },
+                {
+                  "v": "bien",
+                  "t": "Oiga, señor, ¿me ayuda?"
+                }
+              ],
+              "nota": "Usted needs **oiga**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "orden",
+                  "t": "Mira la foto."
+                },
+                {
+                  "v": "muletilla",
+                  "t": "Mira, la verdad no puedo."
+                }
+              ],
+              "nota": "Same word, two jobs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "commands",
+              "texto": "[[6961|commands for usted / ustedes]]."
+            },
+            {
+              "forma": "tú commands",
+              "texto": "[[6962|irregular tú commands]]: **oye**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Call a waiter politely: _Excuse me, the menu?_",
+              "r": "Oiga, ¿me trae la carta?",
+              "nota": "oiga for usted."
+            },
+            {
+              "p": "Firm start to a friend: _Look, I can't lend you money._",
+              "r": "Mira, no te puedo prestar dinero.",
+              "nota": "mira = attention."
+            },
+            {
+              "p": "Irony: _And what do you know, it rained after all._",
+              "r": "Y mira tú, al final sí llovió.",
+              "nota": "mira tú."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6961,
+      6962
+    ],
+    "confunde": [],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8078",
+      "kwiziq": true
+    }
+  ]
+}

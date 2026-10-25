@@ -1,0 +1,245 @@
+{
+  "tema": 7060,
+  "slug": "se-me-olvido",
+  "titulo": "The accidental se with an indirect object pronoun",
+  "subtitulo": "Se me rompió el vaso. Se nos acabó la leche.",
+  "foto": "t07.jpg",
+  "regla": "For accidents and unplanned events: se + indirect pronoun (me, te, le, nos, les) + verb agreeing with the thing: se me cayó el celular, se le cayeron las llaves. It takes the blame off the person.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "se +",
+            "me / te / le / nos / les",
+            "+ verb + thing"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The **thing** is the subject, so the verb agrees with it: **se me rompió el reloj**, **se me rompieron los lentes**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The **indirect pronoun** shows who it happened to."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The effect: it was an **accident**, not on purpose. **Perdí mi celular** puts the blame on me; **se me perdió el celular** makes it sound like the phone got lost on its own."
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "caérsele",
+              "texto": "_to drop_"
+            },
+            {
+              "forma": "rompérsele",
+              "texto": "_to break (by accident)_"
+            },
+            {
+              "forma": "olvidársele",
+              "texto": "_to forget_"
+            },
+            {
+              "forma": "acabársele",
+              "texto": "_to run out of_"
+            },
+            {
+              "forma": "perdérsele",
+              "texto": "_to lose_"
+            },
+            {
+              "forma": "quemársele",
+              "texto": "_to burn_"
+            },
+            {
+              "forma": "quedársele",
+              "texto": "_to leave behind_"
+            },
+            {
+              "forma": "descomponérsele",
+              "texto": "_to break down_ (machines)"
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: blame the object. **Se me cayó**: it fell, I just happened to be there."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ayer ==se me rompió== el reloj.",
+              "en": "My watch broke yesterday."
+            },
+            {
+              "es": "==Se le cayeron== los libros.",
+              "en": "He dropped his books."
+            },
+            {
+              "es": "==Se nos olvidaron== las llaves.",
+              "en": "We forgot the keys."
+            },
+            {
+              "es": "¡==Se te está quemando== el pan!",
+              "en": "Your toast is burning!"
+            },
+            {
+              "es": "==Se les van a caer== las cajas.",
+              "en": "They're going to drop the boxes."
+            },
+            {
+              "es": "¿==Se les perdió== el gato?",
+              "en": "Did you guys lose your cat?"
+            },
+            {
+              "es": "==Se nos acabó== la tinta de la impresora.",
+              "en": "We ran out of printer ink."
+            },
+            {
+              "es": "==Se me quedó== el libro en la casa.",
+              "en": "I left the book at home."
+            },
+            {
+              "es": "==Se me descompuso== el carro en la carretera.",
+              "en": "My car broke down on the highway."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Se me cayó las llaves."
+                },
+                {
+                  "v": "bien",
+                  "t": "Se me cayeron las llaves."
+                }
+              ],
+              "nota": "The verb agrees with **las llaves**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me se olvidó."
+                },
+                {
+                  "v": "bien",
+                  "t": "Se me olvidó."
+                }
+              ],
+              "nota": "**Se** always first."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Se olvidé las llaves."
+                },
+                {
+                  "v": "bien",
+                  "t": "Se me olvidaron las llaves."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "olvidar / olvidarse",
+              "texto": "[[7602|olvidar, olvidarse, olvidársele]]."
+            },
+            {
+              "forma": "se lo",
+              "texto": "[[5078|se lo]]."
+            },
+            {
+              "forma": "se vende",
+              "texto": "Other **se**: [[6089|passive se]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I dropped my phone._ (accident)",
+              "r": "Se me cayó el celular.",
+              "nota": "se + me + verb."
+            },
+            {
+              "p": "In Spanish: _She forgot the tickets._",
+              "r": "Se le olvidaron los boletos.",
+              "nota": "Plural verb."
+            },
+            {
+              "p": "In Spanish: _We ran out of gas._",
+              "r": "Se nos acabó la gasolina.",
+              "nota": "se nos acabó."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5122
+    ],
+    "confunde": [
+      6089
+    ],
+    "sigue": [
+      7602
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7060",
+      "kwiziq": true
+    }
+  ]
+}

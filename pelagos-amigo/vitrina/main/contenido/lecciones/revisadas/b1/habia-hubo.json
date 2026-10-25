@@ -1,0 +1,223 @@
+{
+  "tema": 6872,
+  "slug": "habia-hubo",
+  "titulo": "Había vs hubo: imperfect vs preterite of haber",
+  "subtitulo": "Había un perro en el parque, hubo un choque en la carretera.",
+  "foto": "t06.jpg",
+  "regla": "There was / were: había (imperfect) describes a scene; hubo (preterite) reports a completed event. Both stay singular.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "There are two ways to say _there was / there were_ in Spanish:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Form",
+            "Tense",
+            "Use"
+          ],
+          "filas": [
+            [
+              "había",
+              "imperfect",
+              "description: what was there, the scene"
+            ],
+            [
+              "hubo",
+              "preterite",
+              "an event that happened, with a beginning and an end"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Which one you use depends on how you see it. **Hubo** presents it as a completed event; **había** describes what was going on at that moment."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Events like accidents, parties, meetings, storms, problems usually take **hubo**. Things and people that were just there usually take **había**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Both stay **singular**, even with plural nouns: **había muchas olas**, **hubo dos accidentes**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **había** is a photo; **hubo** is a news headline."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Había== un perro en el parque.",
+              "en": "There was a dog in the park."
+            },
+            {
+              "es": "==Hubo== un choque en la carretera.",
+              "en": "There was a crash on the highway."
+            },
+            {
+              "es": "==Hubo== buena música en la fiesta.",
+              "en": "There was good music at the party."
+            },
+            {
+              "es": "==Había== muchos clientes en la tienda.",
+              "en": "There were lots of customers in the store."
+            },
+            {
+              "es": "==Hubo== mucha comida en la fiesta.",
+              "en": "There was a lot of food at the party. (the event, as a whole)"
+            },
+            {
+              "es": "==Había== mucha comida en la fiesta.",
+              "en": "There was a lot of food at the party. (describing the scene)"
+            },
+            {
+              "es": "Cuando llegué, ==había== olas enormes.",
+              "en": "When I arrived, there were huge waves."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Habían muchas olas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Había muchas olas."
+                }
+              ],
+              "nota": "Always singular."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hubieron dos accidentes."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hubo dos accidentes."
+                }
+              ],
+              "nota": "Always singular."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer había un temblor a las tres."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer hubo un temblor a las tres."
+                }
+              ],
+              "nota": "An event at a specific time: **hubo**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "siempre / ayer",
+              "texto": "The general rule: [[6874|imperfect vs preterite time markers]]."
+            },
+            {
+              "forma": "hay",
+              "texto": "The present: [[7036|hay vs está]]."
+            },
+            {
+              "forma": "habrá, habría",
+              "texto": "Other tenses: [[5157|habrá]], [[5188|habría]]."
+            },
+            {
+              "forma": "haya",
+              "texto": "Subjunctive: [[5187|haya]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "**Había** or **hubo**? _There was an earthquake last night._",
+              "r": "Anoche hubo un temblor.",
+              "nota": "An event: hubo."
+            },
+            {
+              "p": "**Había** or **hubo**? _There were a lot of people at the beach._ (describing)",
+              "r": "Había mucha gente en la playa.",
+              "nota": "Description: había."
+            },
+            {
+              "p": "Fix it: **Hubieron problemas.**",
+              "r": "Hubo problemas.",
+              "nota": "Always singular."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6874,
+      7036
+    ],
+    "confunde": [
+      6874
+    ],
+    "sigue": [
+      5157,
+      5187
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6872",
+      "kwiziq": true
+    }
+  ]
+}

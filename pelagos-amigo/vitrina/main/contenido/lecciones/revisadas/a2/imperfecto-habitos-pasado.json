@@ -1,0 +1,228 @@
+{
+  "tema": 5111,
+  "slug": "imperfecto-habitos-pasado",
+  "titulo": "The imperfect for past habits",
+  "subtitulo": "De niño jugaba en la playa todos los días.",
+  "foto": "t04.jpg",
+  "regla": "Use the imperfect for things you used to do, or would do, again and again in the past, with no clear start or end. Time words like siempre, todos los días, cada verano, antes or de niño usually go with it.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "For **repeated actions** or **habits** in the past, Spanish uses the **imperfect**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "English says this with **used to**, **would** or the simple past: _I used to surf / I would surf / I surfed every morning_. Spanish says **surfeaba**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "habit in the past",
+            "=",
+            "imperfect"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "These words often signal a habit: **siempre**, **todos los días**, **cada semana**, **cada verano**, **los sábados**, **normalmente**, **a menudo**, **antes**, **de niño**, **cuando era joven**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Don't translate **used to** word by word. **Usar** never means _used to_. If you want an extra word, use **soler** in the imperfect: **solía surfear**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The preterite is for actions you see as **finished events** (_one time, three times, from 2010 to 2015_). The imperfect is for the **routine** itself."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "De niño ==jugaba== en la playa todos los días.",
+              "en": "As a kid I used to play on the beach every day."
+            },
+            {
+              "es": "Antes ==entrenábamos== jiu-jitsu tres veces por semana.",
+              "en": "We used to train jiu-jitsu three times a week."
+            },
+            {
+              "es": "Mi abuela siempre ==hacía== tamales en diciembre.",
+              "en": "My grandma always made tamales in December."
+            },
+            {
+              "es": "Cada verano ==íbamos== a San Felipe.",
+              "en": "Every summer we would go to San Felipe."
+            },
+            {
+              "es": "Los sábados mi papá ==regaba== el huerto.",
+              "en": "On Saturdays my dad would water the garden."
+            },
+            {
+              "es": "Cuando ==vivía== en San Diego, ==cruzaba== la frontera a diario.",
+              "en": "When I lived in San Diego, I crossed the border every day."
+            },
+            {
+              "es": "Normalmente ==comíamos== a las tres.",
+              "en": "We normally ate at three."
+            },
+            {
+              "es": "De joven, ==solía== surfear antes del trabajo.",
+              "en": "When I was young, I used to surf before work."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "De niño jugué en la playa todos los días."
+                },
+                {
+                  "v": "bien",
+                  "t": "De niño jugaba en la playa todos los días."
+                }
+              ],
+              "nota": "A habit: imperfect."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Usaba surfear cada mañana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Surfeaba cada mañana."
+                }
+              ],
+              "nota": "**Usar** is not _used to_. Or: **solía surfear**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cada verano iríamos a San Felipe."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cada verano íbamos a San Felipe."
+                }
+              ],
+              "nota": "Past-habit **would** is imperfect, not conditional."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Siempre comí con mis abuelos los domingos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Siempre comía con mis abuelos los domingos."
+                }
+              ],
+              "nota": "**Siempre** + a routine: imperfect."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hablaba, comía",
+              "texto": "The forms: [[5263|-ar verbs]] and [[5264|-er and -ir verbs in the imperfect]]."
+            },
+            {
+              "forma": "solía",
+              "texto": "Another way to say _used to_: [[5925|soler in the imperfect]]."
+            },
+            {
+              "forma": "comí, hablé",
+              "texto": "Finished events: [[6004|the preterite for completed actions]]."
+            },
+            {
+              "forma": "siempre / ayer",
+              "texto": "Which tense? [[6874|time markers for imperfect vs preterite]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I used to train every night._",
+              "r": "Entrenaba todas las noches.",
+              "nota": "Habit: imperfect."
+            },
+            {
+              "p": "In Spanish: _Every summer we would go to the beach._",
+              "r": "Cada verano íbamos a la playa.",
+              "nota": "would = íbamos."
+            },
+            {
+              "p": "Fix it: _De niño, usaba nadar en la alberca._",
+              "r": "De niño, nadaba en la alberca.",
+              "nota": "Or: solía nadar."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5263,
+      5264
+    ],
+    "confunde": [
+      6004,
+      6874
+    ],
+    "sigue": [
+      5925
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5111",
+      "kwiziq": true
+    }
+  ]
+}

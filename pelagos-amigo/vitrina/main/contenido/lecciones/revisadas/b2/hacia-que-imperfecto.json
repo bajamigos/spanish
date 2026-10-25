@@ -1,0 +1,185 @@
+{
+  "tema": 7064,
+  "slug": "hacia-que-imperfecto",
+  "titulo": "Hacía + time + que + imperfect = had been doing for",
+  "subtitulo": "Hacía dos años que vivía en Tulum.",
+  "foto": "t08.jpg",
+  "regla": "To say how long something had been going on at a past moment: hacía + length of time + que + imperfect. Or: imperfect + desde hacía + time. Often followed by cuando + preterite.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "hacía + [time]",
+            "+ que +",
+            "imperfect"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It's the past version of **hace... que** + present: _had been doing for..._"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Other order: **imperfect + desde hacía + time**: **trabajaba ahí desde hacía tres años**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It's often interrupted by **cuando** + preterite: **hacía tres años que trabajaba ahí cuando lo corrieron**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: move everything one step back: **hace / trabajo** → **hacía / trabajaba**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Hacía== unos meses ==que trabajaba== con su papá.",
+              "en": "He had been working with his dad for a few months."
+            },
+            {
+              "es": "==Hacía== varios días ==que le dolía== el estómago.",
+              "en": "His stomach had been hurting for several days."
+            },
+            {
+              "es": "==Hacía== dos semanas ==que no veía== a su novia.",
+              "en": "He hadn't seen his girlfriend for two weeks."
+            },
+            {
+              "es": "==Hacía== dos semanas ==que no la veía== cuando ella lo llamó de repente.",
+              "en": "He hadn't seen her for two weeks when she suddenly called him."
+            },
+            {
+              "es": "==Hacía== tres años ==que trabajaba== ahí cuando lo corrieron.",
+              "en": "He had been working there for three years when they fired him."
+            },
+            {
+              "es": "Trabajaba en la empresa ==desde hacía== tres años.",
+              "en": "He had been working at the company for three years."
+            },
+            {
+              "es": "No veía películas del oeste ==desde hacía== años.",
+              "en": "I hadn't watched a western in years."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hace dos años que vivía allí cuando..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hacía dos años que vivía allí cuando..."
+                }
+              ],
+              "nota": "Both verbs in the imperfect."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hacía dos años que vivió allí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hacía dos años que vivía allí."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hace dos años que vivo",
+              "texto": "Present: [[6187|hace... que + present]]."
+            },
+            {
+              "forma": "hace dos años que llegué",
+              "texto": "_Ago_: [[7062|hace... que + preterite]], [[7063|hace = ago]]."
+            },
+            {
+              "forma": "desde hace",
+              "texto": "[[5129|desde (hace)]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We had been waiting for an hour._",
+              "r": "Hacía una hora que esperábamos.",
+              "nota": "hacía + imperfect."
+            },
+            {
+              "p": "Other order: _I had been living there for years._",
+              "r": "Vivía allí desde hacía años.",
+              "nota": "desde hacía."
+            },
+            {
+              "p": "In Spanish: _She had been studying for two hours when you called._",
+              "r": "Hacía dos horas que estudiaba cuando llamaste.",
+              "nota": "cuando + preterite."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6187
+    ],
+    "confunde": [
+      7062
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7064",
+      "kwiziq": true
+    }
+  ]
+}

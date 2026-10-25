@@ -1,0 +1,180 @@
+{
+  "tema": 7819,
+  "slug": "no-ver-la-hora",
+  "titulo": "No ver la hora = I can't wait",
+  "subtitulo": "¡No veo la hora de verte!",
+  "foto": "t03.jpg",
+  "regla": "No ver la hora = can't wait. Alone: ¡No veo la hora! + de + infinitive (same subject): No veo la hora de llegar. + de que / en que + subjunctive (another subject): No veo la hora de que abran. In Mexico you'll also hear ¡Ya quiero...!",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¡No veo la hora!",
+              "texto": "_I can't wait!_ On its own."
+            },
+            {
+              "forma": "no ver la hora de + infinitive",
+              "texto": "Same subject: **no veo la hora de llegar**."
+            },
+            {
+              "forma": "no ver la hora de que / en que + subjunctive",
+              "texto": "Another subject: **no veo la hora de que abran el centro comercial**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Mostly present (**no veo**) or imperfect (**no veía**). In the past, the subjunctive becomes imperfect: **no veía la hora de que se fuera**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In Mexico, **¡Ya quiero!** (**ya quiero que sea viernes**) is a very common, casual alternative."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: you're staring at the clock and the hour won't show up."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¡==No veo la hora==!",
+              "en": "I can't wait!"
+            },
+            {
+              "es": "¡==No veía la hora==!",
+              "en": "I couldn't wait!"
+            },
+            {
+              "es": "==No veo la hora de== llegar a la casa y ponerme las pantuflas.",
+              "en": "I can't wait to get home and put on my slippers."
+            },
+            {
+              "es": "==No veo la hora de== subirme a ese avión a Cancún.",
+              "en": "I can't wait to get on that plane to Cancún."
+            },
+            {
+              "es": "==No veía la hora en que== mi hijo ==se fuera== a vivir con su novia.",
+              "en": "I couldn't wait for my son to move in with his girlfriend."
+            },
+            {
+              "es": "==No veo la hora de que== ==abran== la nueva plaza.",
+              "en": "I can't wait for the new mall to open."
+            },
+            {
+              "es": "==No veo la hora de que== mi hija ==saque== su licencia de manejo.",
+              "en": "I can't wait for my daughter to get her driver's license."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No veo la hora de que abren."
+                },
+                {
+                  "v": "bien",
+                  "t": "No veo la hora de que abran."
+                }
+              ],
+              "nota": "Another subject: subjunctive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No veo la hora que llegar."
+                },
+                {
+                  "v": "bien",
+                  "t": "No veo la hora de llegar."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tener ganas",
+              "texto": "Looking forward: [[7425|tener ganas]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I can't wait to see you._",
+              "r": "No veo la hora de verte.",
+              "nota": "de + infinitive."
+            },
+            {
+              "p": "In Spanish: _I can't wait for summer to come._",
+              "r": "No veo la hora de que llegue el verano.",
+              "nota": "de que + subjunctive."
+            },
+            {
+              "p": "Past: _We couldn't wait for them to leave._",
+              "r": "No veíamos la hora de que se fueran.",
+              "nota": "Imperfect subjunctive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [],
+    "sigue": [
+      7425
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7819",
+      "kwiziq": true
+    }
+  ]
+}

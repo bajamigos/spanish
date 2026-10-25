@@ -1,0 +1,247 @@
+{
+  "tema": 6756,
+  "slug": "la-foto-la-moto",
+  "titulo": "Feminine nouns in -o (shortened words)",
+  "subtitulo": "La foto, la moto, la radio.",
+  "foto": "t08.jpg",
+  "regla": "Some nouns ending in -o are feminine because they are short forms of feminine nouns: la foto (fotografía), la moto (motocicleta), la radio (radiodifusión), la disco (discoteca). They keep the feminine article and adjectives, and the plural adds -s.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "A few nouns in **-o** are **feminine**, because they are **short forms** of feminine words. The shortened word keeps the original gender."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Short form",
+            "Full word",
+            "Plural"
+          ],
+          "filas": [
+            [
+              "la foto",
+              "la fotografía",
+              "las fotos"
+            ],
+            [
+              "la moto",
+              "la motocicleta",
+              "las motos"
+            ],
+            [
+              "la radio",
+              "la radiodifusión",
+              "las radios"
+            ],
+            [
+              "la disco",
+              "la discoteca",
+              "las discos"
+            ],
+            [
+              "la quimio",
+              "la quimioterapia",
+              "—"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Articles and adjectives are **feminine**: **una foto bonita**, **la moto roja**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The plural just adds **-s**: **las fotos**, **las motos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In Mexico you'll also hear **el radio** for the device. **La radio** is always right for the medium (_listening to the radio_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The same thing happens with other endings: **la tele** (televisión), **la bici** (bicicleta)."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Tómame ==una foto== con la tabla.",
+              "en": "Take a picture of me with the board."
+            },
+            {
+              "es": "Mi hermano se compró ==una moto== nueva.",
+              "en": "My brother bought a new motorcycle."
+            },
+            {
+              "es": "==Las fotos== del viaje quedaron muy bonitas.",
+              "en": "The trip photos came out really nice."
+            },
+            {
+              "es": "Siempre oigo ==la radio== en la mañana.",
+              "en": "I always listen to the radio in the morning."
+            },
+            {
+              "es": "Anoche fuimos a ==la disco==.",
+              "en": "Last night we went to the club."
+            },
+            {
+              "es": "Mi tía terminó ==la quimio== y está mejor.",
+              "en": "My aunt finished chemo and she's better."
+            },
+            {
+              "es": "==Las motos== hacen mucho ruido en mi calle.",
+              "en": "The motorcycles make a lot of noise on my street."
+            },
+            {
+              "es": "Deja ==la bici== afuera.",
+              "en": "Leave the bike outside."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El foto"
+                },
+                {
+                  "v": "bien",
+                  "t": "La foto"
+                }
+              ],
+              "nota": "Short for **la fotografía**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Una moto rojo"
+                },
+                {
+                  "v": "bien",
+                  "t": "Una moto roja"
+                }
+              ],
+              "nota": "Adjectives go feminine too."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Los fotos del viaje"
+                },
+                {
+                  "v": "bien",
+                  "t": "Las fotos del viaje"
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El mano"
+                },
+                {
+                  "v": "bien",
+                  "t": "La mano"
+                }
+              ],
+              "nota": "Not a short form, but another feminine **-o**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el gato, la gata",
+              "texto": "The usual -o / -a pattern: [[6150|masculine and feminine nouns]]."
+            },
+            {
+              "forma": "el problema",
+              "texto": "The mirror trap, masculine in -a: [[6728|nouns in -ma]]."
+            },
+            {
+              "forma": "el agua",
+              "texto": "Another gender trap: [[6873|el agua, un águila]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _a pretty photo_",
+              "r": "una foto bonita",
+              "nota": "Feminine."
+            },
+            {
+              "p": "In Spanish: _The motorcycles are new._",
+              "r": "Las motos son nuevas.",
+              "nota": "las motos."
+            },
+            {
+              "p": "Fix it: _Me gusta el foto._",
+              "r": "Me gusta la foto.",
+              "nota": "la foto."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6150
+    ],
+    "confunde": [
+      6728,
+      6873
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6756",
+      "kwiziq": true
+    }
+  ]
+}

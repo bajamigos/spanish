@@ -1,0 +1,263 @@
+{
+  "tema": 5267,
+  "slug": "he-hablado-perfecto-ar",
+  "titulo": "Regular -ar verbs in the present perfect",
+  "subtitulo": "He trabajado mucho esta semana.",
+  "foto": "t03.jpg",
+  "regla": "The present perfect is haber in the present (he, has, ha, hemos, han) + the participle. For -ar verbs, the participle swaps -ar for -ado: hablar → he hablado.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "The present perfect (**pretérito perfecto**) has two parts: **haber** in the present + the **past participle**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "For **-ar** verbs, drop **-ar** and add **-ado**: **hablar → hablado**, **trabajar → trabajado**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "he / has / ha / hemos / han",
+            "+ stem +",
+            "-ado"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "haber",
+            "+ participle"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**he**",
+              "hablado"
+            ],
+            [
+              "tú",
+              "**has**",
+              "hablado"
+            ],
+            [
+              "él / ella / usted",
+              "**ha**",
+              "hablado"
+            ],
+            [
+              "nosotros",
+              "**hemos**",
+              "hablado"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "**han**",
+              "hablado"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Only **haber** changes. The participle **never changes**: **ella ha llegado**, **ellas han llegado**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The two parts stay together. **No** and pronouns go **before haber**: **no lo he terminado**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In Mexico it's used for experiences (**nunca he viajado**) and for periods that aren't over (**esta semana**, **hoy**). For a finished recent action, Mexicans prefer the preterite: **¿Ya cenaste?**"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==He trabajado== mucho esta semana.",
+              "en": "I've worked a lot this week."
+            },
+            {
+              "es": "¿==Has probado== los tacos de birria de la esquina?",
+              "en": "Have you tried the birria tacos on the corner?"
+            },
+            {
+              "es": "Mi hermana nunca ==ha viajado== a Oaxaca.",
+              "en": "My sister has never traveled to Oaxaca."
+            },
+            {
+              "es": "==Hemos entrenado== tres veces esta semana.",
+              "en": "We've trained three times this week."
+            },
+            {
+              "es": "Los vecinos ==han plantado== jitomates en el patio.",
+              "en": "The neighbors have planted tomatoes in the yard."
+            },
+            {
+              "es": "¿Ustedes ==han surfeado== en Ensenada?",
+              "en": "Have you guys surfed in Ensenada?"
+            },
+            {
+              "es": "Todavía no ==he terminado== el capítulo.",
+              "en": "I haven't finished the chapter yet."
+            },
+            {
+              "es": "Nunca me ==he enojado== con ella.",
+              "en": "I've never gotten mad at her."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "He hablo con él."
+                },
+                {
+                  "v": "bien",
+                  "t": "He hablado con él."
+                }
+              ],
+              "nota": "Use the participle in **-ado**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo ha trabajado hoy."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo he trabajado hoy."
+                }
+              ],
+              "nota": "**Yo he**, not **yo ha**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "He ya terminado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ya he terminado."
+                }
+              ],
+              "nota": "Nothing goes between **he** and the participle."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ellas han llegadas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ellas han llegado."
+                }
+              ],
+              "nota": "The participle doesn't agree."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "he, has, ha",
+              "texto": "The helper verb: [[5773|haber in the present]]."
+            },
+            {
+              "forma": "he comido",
+              "texto": "The other verbs: [[5588|-er and -ir verbs in the present perfect]]."
+            },
+            {
+              "forma": "hablé vs he hablado",
+              "texto": "Which past to use: [[9261|perfect vs preterite]], and the forms of [[5109|-ar verbs in the preterite]]."
+            },
+            {
+              "forma": "he hecho",
+              "texto": "Irregular participles: [[7048|hecho, dicho, escrito…]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We've worked a lot today._",
+              "r": "Hemos trabajado mucho hoy.",
+              "nota": "hemos + -ado."
+            },
+            {
+              "p": "In Spanish: _Have you ever surfed in Rosarito?_",
+              "r": "¿Alguna vez has surfeado en Rosarito?",
+              "nota": "has + -ado."
+            },
+            {
+              "p": "Fix it: _Ellos ha cantado._",
+              "r": "Ellos han cantado.",
+              "nota": "ellos → han."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5773
+    ],
+    "confunde": [
+      9261,
+      5109
+    ],
+    "sigue": [
+      5588,
+      7048
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5267",
+      "kwiziq": true
+    }
+  ]
+}

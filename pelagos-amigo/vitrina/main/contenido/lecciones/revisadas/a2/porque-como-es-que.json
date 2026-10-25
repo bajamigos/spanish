@@ -1,0 +1,254 @@
+{
+  "tema": 7034,
+  "slug": "porque-como-es-que",
+  "titulo": "Porque, como and es que (cause)",
+  "subtitulo": "No fui a surfear porque llovía. Como llovía, no fui.",
+  "foto": "t02.jpg",
+  "regla": "Porque (because) goes after the main clause; como (since, as) starts the sentence, before the main clause; es que (it's just that, the thing is) introduces an explanation or an excuse, usually in conversation.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Spanish has several ways to give a **cause**. At this level you need three, and the key is **where** each one goes."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Word",
+            "Meaning",
+            "Position",
+            "Example"
+          ],
+          "filas": [
+            [
+              "**porque**",
+              "_because_",
+              "after the main clause",
+              "No fui porque estaba cansado."
+            ],
+            [
+              "**como**",
+              "_since, as_",
+              "at the start, before the main clause",
+              "Como estaba cansado, no fui."
+            ],
+            [
+              "**es que**",
+              "_it's just that, the thing is_",
+              "starts the explanation, often alone",
+              "Es que estaba cansado."
+            ]
+          ]
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "main clause",
+            "+ porque +",
+            "cause"
+          ]
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "Como + cause,",
+            "+",
+            "main clause"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Como** with this meaning **never** goes after the main clause. If the cause comes second, use **porque**. To put the cause first, **como** is the natural choice; starting a statement with **porque** sounds heavy."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Es que** is spoken and friendly. It softens an excuse or answers a complaint: _¿Por qué llegas tarde?_ — **Es que** había mucho tráfico."
+        },
+        {
+          "tipo": "texto",
+          "texto": "You can also start with **porque** when you answer a question with **¿por qué?**: _¿Por qué no comes?_ — **Porque** no tengo hambre."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Spelling: **porque** (one word, no accent) = _because_. **¿Por qué?** (two words, accent) = _why?_"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **como** opens the door, **porque** closes it, **es que** apologizes from the doorway."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No fui a la playa ==porque== había mucho viento.",
+              "en": "I didn't go to the beach because it was very windy."
+            },
+            {
+              "es": "==Como== había mucho viento, no fui a la playa.",
+              "en": "Since it was very windy, I didn't go to the beach."
+            },
+            {
+              "es": "Me quedé en casa ==porque== me dolía la rodilla.",
+              "en": "I stayed home because my knee hurt."
+            },
+            {
+              "es": "==Como== no tenía carro, me fui en el camión.",
+              "en": "Since I didn't have a car, I took the bus."
+            },
+            {
+              "es": "==Como== mañana es sábado, vamos a entrenar jiu-jitsu temprano.",
+              "en": "Since tomorrow is Saturday, we're going to train jiu-jitsu early."
+            },
+            {
+              "es": "—¿Por qué no viniste? —==Es que== se me hizo tarde.",
+              "en": "\"Why didn't you come?\" \"It's just that I was running late.\""
+            },
+            {
+              "es": "Perdón, ==es que== no vi tu mensaje.",
+              "en": "Sorry, the thing is I didn't see your message."
+            },
+            {
+              "es": "—¿Por qué riegas las plantas tan temprano? —==Porque== después hace mucho calor.",
+              "en": "\"Why do you water the plants so early?\" \"Because it gets very hot later.\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No fui a la playa como llovía."
+                },
+                {
+                  "v": "bien",
+                  "t": "No fui a la playa porque llovía."
+                }
+              ],
+              "nota": "Cause second: porque, never como."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cómo llovía, no fui a la playa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Como llovía, no fui a la playa."
+                }
+              ],
+              "nota": "_Since_ = **como**, no accent. **Cómo** means _how_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No comí por qué no tenía hambre."
+                },
+                {
+                  "v": "bien",
+                  "t": "No comí porque no tenía hambre."
+                }
+              ],
+              "nota": "_Because_ is one word, no accent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¿por qué? / porque",
+              "texto": "Spelling and meaning: [[6333|porque vs por qué]]."
+            },
+            {
+              "forma": "por",
+              "texto": "Cause with a noun: [[5962|por for the cause or reason]]."
+            },
+            {
+              "forma": "debido a",
+              "texto": "A more formal cause: [[7086|debido a / debido a que]]."
+            },
+            {
+              "forma": "ya que",
+              "texto": "More options: [[7245|ya que, puesto que, no porque]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish, starting with the cause: _Since I was tired, I went to bed early._",
+              "r": "Como estaba cansado, me acosté temprano.",
+              "nota": "Cause first: como."
+            },
+            {
+              "p": "Fix it: _No salí como hacía frío._",
+              "r": "No salí porque hacía frío.",
+              "nota": "Cause second: porque."
+            },
+            {
+              "p": "Make an excuse: _It's just that I didn't have time._",
+              "r": "Es que no tuve tiempo.",
+              "nota": "es que + explanation."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6333,
+      5962
+    ],
+    "confunde": [],
+    "sigue": [
+      7086,
+      7245
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7034",
+      "kwiziq": true
+    }
+  ]
+}

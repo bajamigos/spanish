@@ -1,0 +1,199 @@
+{
+  "tema": 5982,
+  "slug": "estar-de-trabajo-temporal",
+  "titulo": "Estar de (not ser) for a temporary job",
+  "subtitulo": "Estoy de mesero en Rosarito: a job for now, not a profession.",
+  "foto": "t05.jpg",
+  "regla": "For a temporary job, use estar de + job (no article): estoy de mesero. For a permanent profession, use ser: soy cerrajero.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To talk about a **temporary job**, what you're working as for now, use **estar** + **de** + the job."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**estar**",
+            "**de**",
+            "job"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "No article: **estoy de mesero**, not **estoy de un mesero**. The job agrees with the person: **está de recepcionista**, **estamos de mecánicos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "For your **permanent profession**, use **ser** without **de**: **soy cerrajero** (see [[6090|ser for what you do for a living]])."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **ser** is the career; **estar de** is the side gig."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Estoy de== recepcionista en un hotel.",
+              "en": "I'm working as a receptionist at a hotel."
+            },
+            {
+              "es": "Mario ==estaba de== mesero en un restaurante.",
+              "en": "Mario was working as a waiter in a restaurant."
+            },
+            {
+              "es": "Irene ==va a estar de== secretaria en una oficina.",
+              "en": "Irene is going to work as a secretary in an office."
+            },
+            {
+              "es": "==Estamos de== mecánicos en un taller.",
+              "en": "We're working as mechanics in a shop."
+            },
+            {
+              "es": "Este verano Beto ==está de== salvavidas en Rosarito.",
+              "en": "This summer Beto is working as a lifeguard in Rosarito."
+            },
+            {
+              "es": "Soy cerrajero, pero ahorita ==estoy de== chofer.",
+              "en": "I'm a locksmith, but right now I'm working as a driver."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Soy de mesero este verano."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estoy de mesero este verano."
+                }
+              ],
+              "nota": "Temporary: **estar de**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estoy de un mesero."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estoy de mesero."
+                }
+              ],
+              "nota": "No article."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estoy cerrajero."
+                },
+                {
+                  "v": "bien",
+                  "t": "Soy cerrajero."
+                }
+              ],
+              "nota": "Profession: **ser**, no **de**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "soy cerrajero",
+              "texto": "Permanent profession: [[6090|ser for what you do for a living]]."
+            },
+            {
+              "forma": "está a 20 pesos",
+              "texto": "Another **estar** + preposition: [[5984|estar a for prices]]."
+            },
+            {
+              "forma": "es de Beto",
+              "texto": "**Ser de** for ownership: [[5986|ser de]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I'm working as a cook this month._",
+              "r": "Este mes estoy de cocinero.",
+              "nota": "estar de + job."
+            },
+            {
+              "p": "In Spanish: _She's a doctor._ (her profession)",
+              "r": "Es doctora.",
+              "nota": "ser, no de."
+            },
+            {
+              "p": "In Spanish: _They were working as guides._",
+              "r": "Estaban de guías.",
+              "nota": "estar de, past."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6090,
+      5166
+    ],
+    "confunde": [
+      6090
+    ],
+    "sigue": [
+      5984,
+      5986
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5982",
+      "kwiziq": true
+    }
+  ]
+}

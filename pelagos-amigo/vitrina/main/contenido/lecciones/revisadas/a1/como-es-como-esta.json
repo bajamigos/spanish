@@ -1,0 +1,190 @@
+{
+  "tema": 10702,
+  "slug": "como-es-como-esta",
+  "titulo": "Asking how and what … like: ¿cómo?",
+  "subtitulo": "«¿Cómo estás? ¿Cómo es tu nuevo depa?»",
+  "foto": "t01.jpg",
+  "regla": "¿Cómo? (always with an accent) means how. ¿Cómo + estar? asks how someone or something is right now; ¿Cómo + ser? asks what someone or something is like. Never translate «what … like» word by word.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**¿Cómo?** = _how?_ It always has an **accent** in questions."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**¿Cómo + estar?** = how someone or something **is now**: **¿Cómo estás?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**¿Cómo + ser?** = what someone or something **is like**: **¿Cómo es tu maestra?** _What is your teacher like?_"
+        },
+        {
+          "tipo": "texto",
+          "texto": "It also asks the way you do something: **¿Cómo vas al trabajo?**"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿==Cómo estás==? —Bien, gracias.",
+              "en": "How are you? —Fine, thanks."
+            },
+            {
+              "es": "¿==Cómo es== tu nuevo depa? —Es chiquito pero bonito.",
+              "en": "What's your new apartment like? —It's small but nice."
+            },
+            {
+              "es": "¿==Cómo es== tu maestra de español? —Es muy paciente.",
+              "en": "What's your Spanish teacher like? —She's very patient."
+            },
+            {
+              "es": "¿==Cómo están== las olas hoy? —Están perfectas.",
+              "en": "How are the waves today? —They're perfect."
+            },
+            {
+              "es": "¿==Cómo== vas al trabajo? —En camión.",
+              "en": "How do you get to work? —By bus."
+            },
+            {
+              "es": "¿==Cómo== se dice _surfboard_ en español?",
+              "en": "How do you say _surfboard_ in Spanish?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Qué es tu novia como?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cómo es tu novia?"
+                }
+              ],
+              "nota": "What … like = ¿Cómo es…?"
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Como estás?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cómo estás?"
+                }
+              ],
+              "nota": "Accent in questions."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Qué te llamas?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cómo te llamas?"
+                }
+              ],
+              "nota": "Names: ¿cómo?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¿cómo estás?",
+              "texto": "The greeting: [[5880|How are you?]]."
+            },
+            {
+              "forma": "es / está",
+              "texto": "Why ser or estar: [[5972|ser for essential characteristics]]."
+            },
+            {
+              "forma": "¿dónde?, ¿cuándo?",
+              "texto": "Other question words: [[10701|where]], [[10695|when]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _What is Tijuana like?_",
+              "r": "¿Cómo es Tijuana?",
+              "nota": "Like: ser."
+            },
+            {
+              "p": "In Spanish (tú): _How is your mom?_",
+              "r": "¿Cómo está tu mamá?",
+              "nota": "Now: estar."
+            },
+            {
+              "p": "Fix it: _¿Qué es el clima como?_",
+              "r": "¿Cómo es el clima?",
+              "nota": "¿Cómo es…?"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5880
+    ],
+    "confunde": [
+      5972
+    ],
+    "sigue": [
+      10701,
+      10695
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 10702",
+      "kwiziq": true
+    }
+  ]
+}

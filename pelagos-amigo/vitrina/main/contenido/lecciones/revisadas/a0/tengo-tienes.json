@@ -1,0 +1,208 @@
+{
+  "tema": 6133,
+  "slug": "tengo-tienes",
+  "titulo": "I have / you have: tengo, tienes, tiene",
+  "subtitulo": "«Tengo un perro. ¿Tienes carro?»",
+  "foto": "t05.jpg",
+  "regla": "To say what someone has, use tener: tengo (I have), tienes (you have, tú), tiene (you have, usted). For a question, just add ¿…?",
+  "comparada_kwiziq": "2026-10-17",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Possession (things, pets, family) is **tener** (_to have_)."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Who",
+            "tener",
+            "Meaning"
+          ],
+          "filas": [
+            [
+              "yo",
+              "tengo",
+              "I have"
+            ],
+            [
+              "tú",
+              "tienes",
+              "you have (friends, family, kids)"
+            ],
+            [
+              "usted",
+              "tiene",
+              "you have (strangers, older people, formal)"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Pronouns are usually dropped: the ending already says who."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Questions keep the same words, only **¿…?** and rising voice: **¿Tienes…?** = _Do you have…?_"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Tengo== una tabla de surf nueva.",
+              "en": "I have a new surfboard."
+            },
+            {
+              "es": "==Tengo== dos hermanas.",
+              "en": "I have two sisters."
+            },
+            {
+              "es": "¿==Tienes== carro?",
+              "en": "Do you have a car?"
+            },
+            {
+              "es": "¿==Tienes== hijos?",
+              "en": "Do you have kids?"
+            },
+            {
+              "es": "Señora, ¿==tiene== cambio de cien?",
+              "en": "Ma'am, do you have change for a hundred?"
+            },
+            {
+              "es": "Usted ==tiene== un jardín muy bonito.",
+              "en": "You have a very nice garden."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "He un perro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tengo un perro."
+                }
+              ],
+              "nota": "**Haber** is not possession."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo tiene un perro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo tengo un perro."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Usted tienes cambio?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Usted tiene cambio?"
+                }
+              ],
+              "nota": "**usted** takes **tiene**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tengo, tienes, tiene, tenemos…",
+              "texto": "The full verb: [[5304|tener in the present]]."
+            },
+            {
+              "forma": "tengo 30 años",
+              "texto": "Age uses tener too: [[5099|tener … años]]."
+            },
+            {
+              "forma": "tienes / tiene",
+              "texto": "Choosing the form: [[7230|tú vs usted]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I have a cat._",
+              "r": "Tengo un gato.",
+              "nota": "tengo."
+            },
+            {
+              "p": "Ask your boss politely: _Do you have a pen?_",
+              "r": "¿Tiene una pluma?",
+              "nota": "usted: tiene."
+            },
+            {
+              "p": "Fix it: _¿Tú tiene hermanos?_",
+              "r": "¿Tú tienes hermanos?",
+              "nota": "tú: tienes."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      7230
+    ],
+    "sigue": [
+      5304,
+      5099
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6133",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "tema": 5162,
+  "slug": "futuro-probabilidad-prediccion",
+  "titulo": "Using the simple future for probability and predictions in the future",
+  "subtitulo": "Llegaré como a las doce: what will happen, what probably will, and what someone predicts.",
+  "foto": "t10.jpg",
+  "regla": "The simple future expresses what will happen, what probably will happen, and predictions: estarán ocupados; habrá coches voladores.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "The simple future says what **will happen**, soon or far away in time: **mañana será un gran día**, **dentro de dos años estaré en la universidad**. The speaker feels quite sure."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It also has two more jobs: **probability**, something that _might_ happen, and **prediction**, what someone foresees."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Use",
+            "Example"
+          ],
+          "filas": [
+            [
+              "certain future",
+              "Mañana será un gran día."
+            ],
+            [
+              "probability",
+              "Llegaré como a las doce o doce y media."
+            ],
+            [
+              "prediction",
+              "En 2050 habrá carros voladores."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "With probability, either the tone sounds doubtful, or something in the sentence makes it a guess. It's as if an unspoken phrase were there: **lo más probable es que…**, **no me extrañaría que…**, **supongo que…**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Often the first part of the sentence gives the reason, and the second part, in the future, gives the guess or prediction: **es muy ambicioso; será rico, sin duda**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: think of the future as a fortune teller. Sometimes she's sure, sometimes she's guessing, but she always speaks in the future."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Tengo mucho trabajo, así que ==llegaré== como a las doce.",
+              "en": "I'm very busy, so I'll probably get there around twelve."
+            },
+            {
+              "es": "Hay un choque ahí; ==tendrán== que llamar a la policía.",
+              "en": "There's a crash there; they'll probably have to call the police."
+            },
+            {
+              "es": "No contestan; ==estarán== en el agua.",
+              "en": "They're not answering; they're probably in the water."
+            },
+            {
+              "es": "La adivina me dijo: «==Conocerás== a alguien que te cambiará la vida».",
+              "en": "The fortune teller told me: \"You'll meet someone who will change your life.\""
+            },
+            {
+              "es": "Con tanta tecnología, en 2050 ==habrá== carros voladores.",
+              "en": "With so much technology, there will be flying cars in 2050."
+            },
+            {
+              "es": "Entrena todos los días; ==será== cinta negra pronto.",
+              "en": "He trains every day; he'll be a black belt soon."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Probability in the **future** and probability in the **present** look the same. **Estarán ocupados** can mean _they'll probably be busy_ or _they're probably busy right now_; context decides."
+        },
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "No contestan; estarán ocupados."
+                }
+              ],
+              "nota": "Right now, probably: see [[5060|probability in the present]]."
+            },
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "Mañana estarán ocupados."
+                }
+              ],
+              "nota": "Tomorrow, probably."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¿Dónde estará?",
+              "texto": "Guessing about now: [[5060|the future for probability in the present]]."
+            },
+            {
+              "forma": "habrá",
+              "texto": "The future of **hay**: [[5157|haber in the future]]."
+            },
+            {
+              "forma": "hablaré, tendré",
+              "texto": "The forms: [[5155|regular]], [[5050|tener]], [[5156|querer]]."
+            },
+            {
+              "forma": "Voy a llegar tarde.",
+              "texto": "Plans in everyday speech: [[7067|ir a + infinitive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _There's a lot of traffic; they'll probably arrive late._",
+              "r": "Hay mucho tráfico; llegarán tarde.",
+              "nota": "Probability with the future."
+            },
+            {
+              "p": "Predict: _In ten years there will be gardens on every roof._",
+              "r": "En diez años habrá huertos en todas las azoteas.",
+              "nota": "**Habrá**: the future of **hay**."
+            },
+            {
+              "p": "In Spanish: _She's very good; she'll win, no doubt._",
+              "r": "Es muy buena; ganará, sin duda.",
+              "nota": "Reason first, prediction second."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5155,
+      5050
+    ],
+    "confunde": [
+      5060
+    ],
+    "sigue": [
+      5157,
+      5156,
+      7067
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5162",
+      "kwiziq": true
+    }
+  ]
+}

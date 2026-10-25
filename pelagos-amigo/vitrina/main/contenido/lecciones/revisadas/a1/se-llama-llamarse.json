@@ -1,0 +1,214 @@
+{
+  "tema": 7275,
+  "slug": "se-llama-llamarse",
+  "titulo": "Llamarse: saying someone's name",
+  "subtitulo": "«¿Cómo te llamas? Me llamo Diego.»",
+  "foto": "t02.jpg",
+  "regla": "To say someone's name, use the reflexive verb llamarse (literally to call oneself): me llamo, te llamas, se llama, nos llamamos, se llaman. To ask, use ¿Cómo…?, not ¿Qué…?",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Llamarse** is reflexive: it always needs **me, te, se, nos, se**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Llamarse"
+          ],
+          "filas": [
+            [
+              "yo",
+              "me llamo"
+            ],
+            [
+              "tú",
+              "te llamas"
+            ],
+            [
+              "él, ella, usted",
+              "se llama"
+            ],
+            [
+              "nosotros",
+              "nos llamamos"
+            ],
+            [
+              "ellos, ellas, ustedes",
+              "se llaman"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "To ask a name, use **¿Cómo?**: **¿Cómo te llamas?** (tú), **¿Cómo se llama?** (usted)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It works for things too: **¿Cómo se llama esto?**"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Me llamo== Diego.",
+              "en": "My name is Diego."
+            },
+            {
+              "es": "¿Cómo ==te llamas==?",
+              "en": "What's your name?"
+            },
+            {
+              "es": "Mi entrenador ==se llama== Ricardo.",
+              "en": "My coach's name is Ricardo."
+            },
+            {
+              "es": "¿Cómo ==se llama== usted?",
+              "en": "What's your name? (formal)"
+            },
+            {
+              "es": "==Nos llamamos== Ana y Luis.",
+              "en": "Our names are Ana and Luis."
+            },
+            {
+              "es": "¿Cómo ==se llama== esa playa?",
+              "en": "What's that beach called?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo llamo Ana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me llamo Ana."
+                }
+              ],
+              "nota": "**Llamo a Ana** means _I call Ana_. For your name you need **me**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Qué te llamas?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cómo te llamas?"
+                }
+              ],
+              "nota": "Ask with **cómo**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mi hermana llama Sofía."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mi hermana se llama Sofía."
+                }
+              ],
+              "nota": "Don't drop **se**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "me llamo",
+              "texto": "The first step: [[5043|me llamo]]."
+            },
+            {
+              "forma": "soy Diego",
+              "texto": "Another way to introduce: [[5995|ser to introduce people]]."
+            },
+            {
+              "forma": "me levanto",
+              "texto": "Other verbs like this: [[5085|reflexive verbs in the present]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _What's your name?_ (tú)",
+              "r": "¿Cómo te llamas?",
+              "nota": "Cómo, not qué."
+            },
+            {
+              "p": "In Spanish: _Their names are Luis and Pedro._",
+              "r": "Se llaman Luis y Pedro.",
+              "nota": "Ellos: se llaman."
+            },
+            {
+              "p": "Fix it: _Mi perro llama Rocky._",
+              "r": "Mi perro se llama Rocky.",
+              "nota": "Add se."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5043
+    ],
+    "confunde": [
+      5995
+    ],
+    "sigue": [
+      5085
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7275",
+      "kwiziq": true
+    }
+  ]
+}

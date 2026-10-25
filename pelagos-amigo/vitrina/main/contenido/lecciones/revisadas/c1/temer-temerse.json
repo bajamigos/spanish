@@ -1,0 +1,202 @@
+{
+  "tema": 9966,
+  "slug": "temer-temerse",
+  "titulo": "Temer(se) with indicative or subjunctive",
+  "subtitulo": "Temo que no lleguen. Me temo que no puedo.",
+  "foto": "t03.jpg",
+  "regla": "Temer que + subjunctive = to fear that something will happen: Temo que no terminen a tiempo. Temerse que + indicative = I'm afraid that (polite bad news or a belief): Me temo que no puedo ir. Everyday alternative: tener miedo de que + subjunctive.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Form",
+            "Meaning",
+            "Mood"
+          ],
+          "filas": [
+            [
+              "temer que",
+              "to fear something might happen",
+              "subjunctive"
+            ],
+            [
+              "temerse que",
+              "_I'm afraid that..._ (softening bad news, a belief)",
+              "indicative"
+            ],
+            [
+              "tener miedo de que",
+              "to be afraid that (everyday)",
+              "subjunctive"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Me temo que** is the polite way to give bad news: **me temo que no hay boletos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **temo que** = real fear; **me temo que** = polite bad news."
+        }
+      ]
+    },
+    {
+      "id": "subjuntivo",
+      "titulo": "Temer que + subjunctive",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Temo que== los albañiles no ==terminen== a tiempo.",
+              "en": "I'm afraid the builders won't finish on time."
+            },
+            {
+              "es": "==Temo que== el día de la boda Miguel ==se arrepienta==.",
+              "en": "I'm afraid Miguel will back out on the wedding day."
+            },
+            {
+              "es": "Los usuarios ==temían que== las tarifas ==subieran== mucho.",
+              "en": "Users feared the rates would go up a lot."
+            },
+            {
+              "es": "Tenían miedo de que ==subieran== las tarifas.",
+              "en": "They were afraid the rates would go up. (everyday)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "indicativo",
+      "titulo": "Temerse que + indicative",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Me temo que== no ==puedo== ir a tu fiesta.",
+              "en": "I'm afraid I can't come to your party."
+            },
+            {
+              "es": "==Me temo que== ya no ==hay== lugares.",
+              "en": "I'm afraid there are no seats left."
+            },
+            {
+              "es": "==Me temo que== ==tienes== razón.",
+              "en": "I'm afraid you're right."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me temo que no pueda ir. (polite refusal)"
+                },
+                {
+                  "v": "bien",
+                  "t": "Me temo que no puedo ir."
+                }
+              ],
+              "nota": "Polite bad news: indicative."
+            },
+            {
+              "filas": [
+                {
+                  "v": "sospecha",
+                  "t": "Temo que no terminan a tiempo."
+                },
+                {
+                  "v": "temor",
+                  "t": "Temo que no terminen a tiempo."
+                }
+              ],
+              "nota": "Fear: subjunctive (indicative = suspicion)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "dudo que",
+              "texto": "[[6235|doubt]]."
+            },
+            {
+              "forma": "me preocupa que",
+              "texto": "[[6185|feelings]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Polite: _I'm afraid we're closed._",
+              "r": "Me temo que estamos cerrados.",
+              "nota": "me temo que + indicative."
+            },
+            {
+              "p": "Fear: _I fear he'll get lost._",
+              "r": "Temo que se pierda.",
+              "nota": "temer que + subjunctive."
+            },
+            {
+              "p": "Everyday: _I'm afraid it'll rain._",
+              "r": "Tengo miedo de que llueva.",
+              "nota": "tener miedo de que."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6235
+    ],
+    "confunde": [
+      6185
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9966",
+      "kwiziq": true
+    }
+  ]
+}

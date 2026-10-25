@@ -1,0 +1,266 @@
+{
+  "tema": 6087,
+  "slug": "diminutivo-ito-ita",
+  "titulo": "Diminutive -ito, -ita (words in -o, -a, -io, -ia)",
+  "subtitulo": "perro → perrito, casa → casita, despacio → despacito",
+  "foto": "t02.jpg",
+  "regla": "For words ending in -o or -a, drop the final vowel and add -ito / -ita (plural -itos / -itas): perro → perrito, casa → casita. Words in unstressed -io / -ia drop the whole -io / -ia: despacio → despacito. The new word keeps the gender of the original.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "The diminutive makes something **small**, **cute** or **softer**. In Mexico it's everywhere: **ahorita**, **un momentito**, **cerquita**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Words ending in **-o / -a**: drop the final vowel and add **-ito / -ita**. Plural: **-itos / -itas**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "perr(o)",
+            "+ ito =",
+            "perrito"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Words ending in **-io / -ia** (unstressed i): drop **-io / -ia** and add **-ito / -ita**, so the i disappears: **despacio → despacito**, **Mario → Marito**, **Julia → Julita**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The ending copies the **last vowel** of the word, and the **gender stays**: **el problema → el problemita**, **el mapa → el mapita**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Original",
+            "Diminutive",
+            "Plural"
+          ],
+          "filas": [
+            [
+              "perro",
+              "perrito",
+              "perritos"
+            ],
+            [
+              "casa",
+              "casita",
+              "casitas"
+            ],
+            [
+              "gato",
+              "gatito",
+              "gatitos"
+            ],
+            [
+              "despacio",
+              "despacito",
+              "—"
+            ],
+            [
+              "Julia",
+              "Julita",
+              "—"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Spelling keeps the sound: **c → qu** (poco → **poquito**, chico → **chiquito**), **g → gu** (amigo → **amiguito**), **z → c** (taza → **tacita**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It works with nouns, adjectives and adverbs: **ahora → ahorita**, **cerca → cerquita**, **rápido → rapidito**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi ==perrito== duerme en el sillón.",
+              "en": "My little dog sleeps on the couch."
+            },
+            {
+              "es": "Vivimos en una ==casita== cerca de la playa.",
+              "en": "We live in a little house near the beach."
+            },
+            {
+              "es": "¿Me esperas un ==momentito==?",
+              "en": "Can you wait a sec?"
+            },
+            {
+              "es": "==Ahorita== vengo.",
+              "en": "I'll be right back."
+            },
+            {
+              "es": "Rema ==despacito==, la ola todavía no llega.",
+              "en": "Paddle nice and slow, the wave isn't here yet."
+            },
+            {
+              "es": "Planté unas ==matitas== de chile en el balcón.",
+              "en": "I planted some little chili plants on the balcony."
+            },
+            {
+              "es": "Dame un ==poquito== de salsa, por favor.",
+              "en": "Give me a little salsa, please."
+            },
+            {
+              "es": "Los ==gatitos== de mi vecina son muy traviesos.",
+              "en": "My neighbor's kittens are very naughty."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "un pocito"
+                },
+                {
+                  "v": "bien",
+                  "t": "un poquito"
+                }
+              ],
+              "nota": "**c → qu** before i."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "mi amigito"
+                },
+                {
+                  "v": "bien",
+                  "t": "mi amiguito"
+                }
+              ],
+              "nota": "**g → gu** before i."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ve más despaciito."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ve más despacito."
+                }
+              ],
+              "nota": "**-io** goes completely: no double i."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "el problemito"
+                },
+                {
+                  "v": "bien",
+                  "t": "el problemita"
+                }
+              ],
+              "nota": "The ending copies the last vowel; the article stays **el**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "panecillo",
+              "texto": "Another diminutive, common in fixed words: [[6088|-illo, -cillo, -ecillo]]."
+            },
+            {
+              "forma": "cafecito, camioncito",
+              "texto": "Words in -e, -n, -r: [[6132|-cito, -cita]]."
+            },
+            {
+              "forma": "perrote, golazo",
+              "texto": "The opposite, making things bigger: [[8389|augmentatives -azo, -ote, -ón]]."
+            },
+            {
+              "forma": "el gato, la gata",
+              "texto": "Gender and plural basics: [[6150|masculine and feminine nouns]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _a little house_",
+              "r": "una casita",
+              "nota": "casa → casita."
+            },
+            {
+              "p": "In Spanish: _Just a little bit, please._",
+              "r": "Un poquito, por favor.",
+              "nota": "c → qu."
+            },
+            {
+              "p": "Fix it: _Habla más despacioito._",
+              "r": "Habla más despacito.",
+              "nota": "Drop -io."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6150
+    ],
+    "confunde": [
+      6088
+    ],
+    "sigue": [
+      6132,
+      8389
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6087",
+      "kwiziq": true
+    }
+  ]
+}

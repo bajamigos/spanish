@@ -1,0 +1,246 @@
+{
+  "tema": 6712,
+  "slug": "subjuntivo-presente-seguir",
+  "titulo": "Conjugate seguir, conseguir and perseguir in the present subjunctive",
+  "subtitulo": "Siga, consiga, persigamos: e > i and gu > g at once.",
+  "foto": "t09.jpg",
+  "regla": "Seguir and its family change e > i and gu > g in every form of the present subjunctive: siga, sigas, sigamos, consigan.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Seguir** (_to follow, to keep on_) and its family, **conseguir** (_to get, to manage_) and **perseguir** (_to chase_), take **two changes** in every form of the present subjunctive:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Change",
+            "Why"
+          ],
+          "filas": [
+            [
+              "**e** → **i**",
+              "it's an e > i verb"
+            ],
+            [
+              "**gu** → **g**",
+              "before **a**, the **u** isn't needed to keep the hard g"
+            ]
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "seguir",
+            "conseguir",
+            "perseguir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "siga",
+              "consiga",
+              "persiga"
+            ],
+            [
+              "tú",
+              "sigas",
+              "consigas",
+              "persigas"
+            ],
+            [
+              "él, ella, usted",
+              "siga",
+              "consiga",
+              "persiga"
+            ],
+            [
+              "nosotros",
+              "sigamos",
+              "consigamos",
+              "persigamos"
+            ],
+            [
+              "ustedes, ellos",
+              "sigan",
+              "consigan",
+              "persigan"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the **u** was only a bodyguard against **e** and **i**. Next to **a** it goes home."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No quiere que ==siga== llamándola.",
+              "en": "She doesn't want me to keep calling her."
+            },
+            {
+              "es": "No ==sigas== por ese camino.",
+              "en": "Don't keep going that way."
+            },
+            {
+              "es": "==Siga== a ese carro.",
+              "en": "Follow that car."
+            },
+            {
+              "es": "¡==Persigamos== al ladrón!",
+              "en": "Let's chase the thief!"
+            },
+            {
+              "es": "Espero que ==consigas== tu meta.",
+              "en": "I hope you reach your goal."
+            },
+            {
+              "es": "Qué bueno que ==persigan== sus sueños.",
+              "en": "It's great that they're chasing their dreams."
+            },
+            {
+              "es": "¡==Consigan== buenos descuentos!",
+              "en": "Get good discounts!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Espero que consigues chamba."
+                },
+                {
+                  "v": "bien",
+                  "t": "Espero que consigas chamba."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No sigues por ahí."
+                },
+                {
+                  "v": "bien",
+                  "t": "No sigas por ahí."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Seguamos entrenando."
+                },
+                {
+                  "v": "bien",
+                  "t": "Sigamos entrenando."
+                }
+              ],
+              "nota": "Both changes in nosotros too."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "sigo, sigues",
+              "texto": "The present: [[5848|seguir, conseguir, perseguir]]."
+            },
+            {
+              "forma": "pida, pidamos",
+              "texto": "Other e > i verbs: [[5279|e > i verbs]]."
+            },
+            {
+              "forma": "seguir + gerund",
+              "texto": "_To keep on doing_: [[6180|seguir / continuar + gerund]]."
+            },
+            {
+              "forma": "pague, llegue",
+              "texto": "The opposite spelling change, g → gu: [[5725|-gar verbs]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "**Seguir** with **nosotros**: ___ entrenando.",
+              "r": "Sigamos entrenando.",
+              "nota": "e > i and gu > g."
+            },
+            {
+              "p": "In Spanish: _I hope you get the job._ (tú)",
+              "r": "Espero que consigas el trabajo.",
+              "nota": "consigas."
+            },
+            {
+              "p": "To a taxi driver (usted): _Follow that car._",
+              "r": "Siga a ese carro.",
+              "nota": "siga."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5848,
+      5279
+    ],
+    "confunde": [
+      5725
+    ],
+    "sigue": [
+      6180
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6712",
+      "kwiziq": true
+    }
+  ]
+}

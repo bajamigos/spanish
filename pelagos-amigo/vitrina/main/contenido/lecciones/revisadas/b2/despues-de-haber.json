@@ -1,0 +1,211 @@
+{
+  "tema": 10101,
+  "slug": "despues-de-haber",
+  "titulo": "Antes de / después de / luego de + haber + participle",
+  "subtitulo": "Después de haber comido, nos fuimos a la playa.",
+  "foto": "t10.jpg",
+  "regla": "Antes de / después de / luego de + infinitive = before / after doing. With haber + participle (the perfect infinitive), the action is stressed as completed: después de haber terminado. Pronouns attach to haber.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "After **antes de**, **después de**, **luego de** you use an **infinitive**, never a gerund: **después de comer**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "To stress that the action was **completed**, use the **perfect infinitive**: **haber** + participle."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "antes de / después de / luego de",
+            "+ haber + participle"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Luego de** is a bit more formal than **después de**, and common in Latin America."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Pronouns attach to **haber**: **después de haberte ido**, never ~~después de te haber ido~~ or ~~haber idote~~."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **haber** + participle is the receipt: proof that it's done."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Hizo el examen ==antes de haber repasado==.",
+              "en": "He took the exam before having reviewed."
+            },
+            {
+              "es": "Debiste consultarme ==antes de haber llamado== a sus papás.",
+              "en": "You should have asked me before calling his parents."
+            },
+            {
+              "es": "==Después de haber quitado== toda la maleza del jardín, empecé a plantar.",
+              "en": "After clearing all the weeds from the garden, I started planting."
+            },
+            {
+              "es": "==Luego de haber firmado== el contrato, el cliente se fue.",
+              "en": "After signing the contract, the client left."
+            },
+            {
+              "es": "==Después de haberte ido== tú, llegaron los demás.",
+              "en": "After you'd left, the others arrived."
+            },
+            {
+              "es": "==Luego de haber falsificado== la firma, le confesó todo a la policía.",
+              "en": "After forging the signature, he confessed everything to the police."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "comparar",
+      "titulo": "Simple or perfect?",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "simple",
+                  "t": "Antes de desayunar, me baño."
+                },
+                {
+                  "v": "perfecto",
+                  "t": "Antes de haber desayunado, ya estaba trabajando."
+                }
+              ],
+              "nota": "The perfect stresses completion."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Después de habiendo comido..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Después de haber comido..."
+                }
+              ],
+              "nota": "Infinitive, not gerund."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Después de te haber ido..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Después de haberte ido..."
+                }
+              ],
+              "nota": "Attach to **haber**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "antes de comer",
+              "texto": "[[10102|antes de / después de + infinitive]]."
+            },
+            {
+              "forma": "antes de que",
+              "texto": "With a different subject: [[10029|antes de que / después de que]]."
+            },
+            {
+              "forma": "haber estudiado",
+              "texto": "[[7262|perfect infinitive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _After having finished the work, I rested._",
+              "r": "Después de haber terminado el trabajo, descansé.",
+              "nota": "haber + participle."
+            },
+            {
+              "p": "In Spanish: _before having seen it_",
+              "r": "antes de haberlo visto",
+              "nota": "Attach lo to haber."
+            },
+            {
+              "p": "Fix it: _Luego de firmando, se fue._",
+              "r": "Luego de firmar / Luego de haber firmado, se fue.",
+              "nota": "No gerund."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      10102
+    ],
+    "confunde": [
+      10029
+    ],
+    "sigue": [
+      7262
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 10101",
+      "kwiziq": true
+    }
+  ]
+}

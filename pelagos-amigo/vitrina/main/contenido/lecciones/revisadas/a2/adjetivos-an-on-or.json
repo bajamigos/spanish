@@ -1,0 +1,250 @@
+{
+  "tema": 6059,
+  "slug": "adjetivos-an-on-or",
+  "titulo": "Adjectives in -án, -ón, -or",
+  "subtitulo": "Él es trabajador; ella es trabajadora.",
+  "foto": "t03.jpg",
+  "regla": "Adjectives ending in -án, -ón and -or add -a for the feminine and -es / -as for the plural, and the written accent of -án and -ón disappears: llorón → llorona, llorones, lloronas. Comparatives like mayor, menor, mejor and peor don't take -a.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Most adjectives ending in **-án**, **-ón** or **-or** describe personality: **trabajador**, **hablador**, **llorón**, **dormilón**, **mandón**, **holgazán**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Feminine: add **-a**. Plural: add **-es** (masculine) or **-as** (feminine)."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Masc. sing.",
+            "Fem. sing.",
+            "Masc. pl.",
+            "Fem. pl."
+          ],
+          "filas": [
+            [
+              "trabajador",
+              "trabajadora",
+              "trabajadores",
+              "trabajadoras"
+            ],
+            [
+              "llorón",
+              "llorona",
+              "llorones",
+              "lloronas"
+            ],
+            [
+              "holgazán",
+              "holgazana",
+              "holgazanes",
+              "holgazanas"
+            ],
+            [
+              "dormilón",
+              "dormilona",
+              "dormilones",
+              "dormilonas"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The accent on **-án** and **-ón** is only in the masculine singular. Add a syllable and it goes: **llorón → llorona, llorones**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Exception: comparatives in **-or** have one form for both genders: **mayor, menor, mejor, peor, superior, inferior**. **Mi hermana mayor**, never _mayora_."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi hermana es muy ==trabajadora==.",
+              "en": "My sister is very hardworking."
+            },
+            {
+              "es": "Mis compañeros de jiu-jitsu son muy ==trabajadores==.",
+              "en": "My jiu-jitsu teammates are very hardworking."
+            },
+            {
+              "es": "Mi perro es muy ==dormilón==.",
+              "en": "My dog sleeps a lot."
+            },
+            {
+              "es": "Las hijas de mi vecina son muy ==preguntonas==.",
+              "en": "My neighbor's daughters ask a lot of questions."
+            },
+            {
+              "es": "Mi maestra de surf es bastante ==habladora==.",
+              "en": "My surf teacher is quite chatty."
+            },
+            {
+              "es": "Los gatos de mi casa son muy ==comilones==.",
+              "en": "The cats at my place are big eaters."
+            },
+            {
+              "es": "Tus primas son un poco ==mandonas==.",
+              "en": "Your cousins are a bit bossy."
+            },
+            {
+              "es": "Mi hermana ==mayor== vive en Ensenada.",
+              "en": "My older sister lives in Ensenada."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella es muy trabajador."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella es muy trabajadora."
+                }
+              ],
+              "nota": "Add **-a**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Son niños llorónes."
+                },
+                {
+                  "v": "bien",
+                  "t": "Son niños llorones."
+                }
+              ],
+              "nota": "The accent goes in the plural."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Las chicas son holgazánas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Las chicas son holgazanas."
+                }
+              ],
+              "nota": "No accent in the feminine either."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mi hermana mayora es doctora."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mi hermana mayor es doctora."
+                }
+              ],
+              "nota": "**Mayor** never takes **-a**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "alto, alta",
+              "texto": "The basic pattern: [[6013|masculine and feminine adjectives]]."
+            },
+            {
+              "forma": "altos, altas",
+              "texto": "The basic plural: [[6014|regular plural adjectives]]."
+            },
+            {
+              "forma": "mayor, mejor",
+              "texto": "The ones that don't change: [[6078|mayor, menor, mejor, peor]]."
+            },
+            {
+              "forma": "feliz, felices",
+              "texto": "Another ending: [[6057|plural of adjectives in -z and -l]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _My mom is very hardworking._",
+              "r": "Mi mamá es muy trabajadora.",
+              "nota": "-or + a."
+            },
+            {
+              "p": "Fix it: _Mis hijas son muy llorónas._",
+              "r": "Mis hijas son muy lloronas.",
+              "nota": "No accent."
+            },
+            {
+              "p": "In Spanish: _my younger sister_",
+              "r": "mi hermana menor",
+              "nota": "No -a."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6013,
+      6014
+    ],
+    "confunde": [
+      6078
+    ],
+    "sigue": [
+      6057
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6059",
+      "kwiziq": true
+    }
+  ]
+}

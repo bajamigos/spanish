@@ -1,0 +1,245 @@
+{
+  "tema": 10032,
+  "slug": "siglo-xxi-numeros-romanos",
+  "titulo": "Centuries with Roman numerals",
+  "subtitulo": "«el siglo XXI» (veintiuno)",
+  "foto": "t10.jpg",
+  "regla": "Centuries are written with Roman numerals after siglo (el siglo XXI) and read as ordinary cardinal numbers: el siglo veintiuno, el siglo quince. From I to X you'll also hear ordinals: el siglo primero, el siglo quinto.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "In Spanish, centuries are written with **Roman numerals** in capitals, after the word **siglo**: **el siglo XX, el siglo XXI**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Read them as **cardinal numbers** (uno, dos, tres…): **el siglo XIX** = **el siglo diecinueve**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Written",
+            "Said",
+            "Years"
+          ],
+          "filas": [
+            [
+              "siglo V",
+              "siglo cinco / quinto",
+              "401–500"
+            ],
+            [
+              "siglo XV",
+              "siglo quince",
+              "1401–1500"
+            ],
+            [
+              "siglo XVIII",
+              "siglo dieciocho",
+              "1701–1800"
+            ],
+            [
+              "siglo XX",
+              "siglo veinte",
+              "1901–2000"
+            ],
+            [
+              "siglo XXI",
+              "siglo veintiuno",
+              "2001–2100"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "From I to X, ordinals are common too: **el siglo primero, el siglo quinto**. From XI on, use cardinals."
+        },
+        {
+          "tipo": "texto",
+          "texto": "As in English, the century is one ahead of the year: the 1900s are **el siglo XX**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Useful phrases: **en el siglo XIX** (_in the 19th century_), **a principios del siglo XX** (_at the start of_), **a finales del siglo XVIII** (_at the end of_). For BC / AD: **a. C.** / **d. C.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Popes and kings use Roman numerals too, read the same way: **Benedicto XVI** (dieciséis), **Luis XIV** (catorce), **Juan Pablo II** (segundo)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: write it Roman, say it normal."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Vivimos en el ==siglo XXI==.",
+              "en": "We live in the 21st century. (veintiuno)"
+            },
+            {
+              "es": "Tijuana se fundó a finales del ==siglo XIX==.",
+              "en": "Tijuana was founded at the end of the 19th century. (diecinueve)"
+            },
+            {
+              "es": "Los mexicas fundaron Tenochtitlan en el ==siglo XIV==.",
+              "en": "The Mexica founded Tenochtitlan in the 14th century. (catorce)"
+            },
+            {
+              "es": "Hernán Cortés llegó a México en el ==siglo XVI==.",
+              "en": "Hernán Cortés arrived in Mexico in the 16th century. (dieciséis)"
+            },
+            {
+              "es": "La historia de _The Expanse_ pasa en el ==siglo XXIV==.",
+              "en": "The Expanse is set in the 24th century. (veinticuatro)"
+            },
+            {
+              "es": "Mi bisabuelo nació a principios del ==siglo XX==.",
+              "en": "My great-grandfather was born at the start of the 20th century. (veinte)"
+            },
+            {
+              "es": "Juan Pablo ==II== visitó México cinco veces.",
+              "en": "John Paul II visited Mexico five times. (segundo)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "el siglo 21"
+                },
+                {
+                  "v": "bien",
+                  "t": "el siglo XXI"
+                }
+              ],
+              "nota": "Centuries are written in Roman numerals."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "el XVI siglo"
+                },
+                {
+                  "v": "bien",
+                  "t": "el siglo XVI"
+                }
+              ],
+              "nota": "**Siglo** goes first."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "el siglo veintiún"
+                },
+                {
+                  "v": "bien",
+                  "t": "el siglo veintiuno"
+                }
+              ],
+              "nota": "After the noun, the full form."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "primero, quinto",
+              "texto": "[[7153|Ordinal numbers 1st to 10th]]."
+            },
+            {
+              "forma": "mil novecientos",
+              "texto": "Saying years: [[7177|large numbers]]."
+            },
+            {
+              "forma": "los noventa",
+              "texto": "[[9771|Decades]]."
+            },
+            {
+              "forma": "el 5 de mayo de 1862",
+              "texto": "[[6746|Expressing dates]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Say it: _el siglo XIX_",
+              "r": "el siglo diecinueve",
+              "nota": "A cardinal number."
+            },
+            {
+              "p": "In Spanish: _in the 21st century_",
+              "r": "en el siglo XXI (veintiuno)",
+              "nota": "**en el siglo**"
+            },
+            {
+              "p": "Fix it: _el XVI siglo_",
+              "r": "el siglo XVI",
+              "nota": "**Siglo** first."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7153,
+      7177
+    ],
+    "confunde": [
+      9771
+    ],
+    "sigue": [
+      6746
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 10032",
+      "kwiziq": true
+    }
+  ]
+}

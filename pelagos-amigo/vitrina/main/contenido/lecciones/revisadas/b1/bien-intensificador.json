@@ -1,0 +1,192 @@
+{
+  "tema": 8601,
+  "slug": "bien-intensificador",
+  "titulo": "Using bien as an intensifier (very)",
+  "subtitulo": "Bien rico, bien tarde: bien = muy, and very Mexican.",
+  "foto": "t05.jpg",
+  "regla": "Bien before an adjective or adverb means very: bien rico, bien tarde. Bien never changes; the adjective agrees. Bien mal = very bad.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Bien** can work as an intensifier meaning _very, quite_, before **adjectives** and some **adverbs**. It works just like **muy** or **bastante**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**bien**",
+            "adjective / adverb"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Bien** never changes; the adjective after it agrees with the noun: **bien delgada**, **bien gordos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "You can even say **bien mal** for _very bad_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "This use is a bit more colloquial than **muy**, and it's very common in Mexico."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if you can say **muy**, you can usually say **bien** and sound like a local."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ayer comí unos tacos ==bien== ricos.",
+              "en": "Yesterday I ate some really tasty tacos."
+            },
+            {
+              "es": "Tus hijos son ==bien== serios.",
+              "en": "Your kids are very serious."
+            },
+            {
+              "es": "Lo tengo ==bien== amarrado.",
+              "en": "I've got it tied up tight."
+            },
+            {
+              "es": "Estás ==bien== flaca. Tu dieta funciona.",
+              "en": "You're really thin. Your diet's working."
+            },
+            {
+              "es": "Me dieron cita ==bien== rápido.",
+              "en": "They gave me an appointment really quickly."
+            },
+            {
+              "es": "Llegamos ==bien== tarde a la fiesta.",
+              "en": "We got to the party really late."
+            },
+            {
+              "es": "—¿Cómo está Beto? —Está ==bien mal== después de la noticia.",
+              "en": "\"How's Beto?\" \"He's in really bad shape after the news.\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Están bienes cansados."
+                },
+                {
+                  "v": "bien",
+                  "t": "Están bien cansados."
+                }
+              ],
+              "nota": "**Bien** never changes."
+            },
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "Está bien."
+                },
+                {
+                  "v": "bien",
+                  "t": "Está bien rico."
+                }
+              ],
+              "nota": "Alone, **bien** means _well, fine_. Before an adjective, it means _very_."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "muy vs mucho",
+              "texto": "The basic intensifiers: [[5082|muy and mucho]]."
+            },
+            {
+              "forma": "demasiado, bastante",
+              "texto": "Other quantity words: [[6135|with verbs and adjectives]]."
+            },
+            {
+              "forma": "riquísimo",
+              "texto": "Another way to say _very_: [[6077|-ísimo]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Say **muy cansado** with **bien**.",
+              "r": "bien cansado",
+              "nota": "bien + adjective."
+            },
+            {
+              "p": "In Spanish: _The waves are really big._",
+              "r": "Las olas están bien grandes.",
+              "nota": "grandes agrees; bien doesn't change."
+            },
+            {
+              "p": "In Spanish: _We left really early._",
+              "r": "Salimos bien temprano.",
+              "nota": "bien + adverb."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5082,
+      6135
+    ],
+    "confunde": [
+      5082
+    ],
+    "sigue": [
+      6077
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8601",
+      "kwiziq": true
+    }
+  ]
+}

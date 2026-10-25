@@ -1,0 +1,192 @@
+{
+  "tema": 6051,
+  "slug": "grande-grandes-plural",
+  "titulo": "Plural of adjectives in -e and -a",
+  "subtitulo": "«Mis amigas son muy alegres.»",
+  "foto": "t04.jpg",
+  "regla": "Adjectives ending in -e or -a (grande, idealista) have one form for masculine and feminine. To make them plural, just add -s: grandes, idealistas.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Adjectives ending in **-e** (**grande, alegre, inteligente**) or **-a** (**idealista, optimista**) are the same for masculine and feminine."
+        },
+        {
+          "tipo": "texto",
+          "texto": "For the plural, add **-s**. Nothing else changes."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "grande / idealista",
+            "+ s =",
+            "grandes / idealistas"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **-ista** never turns into **-isto**, even with a masculine noun."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Las olas están ==grandes== hoy.",
+              "en": "The waves are big today."
+            },
+            {
+              "es": "Mis amigos son muy ==optimistas==.",
+              "en": "My friends are very optimistic."
+            },
+            {
+              "es": "Tengo dos perros muy ==inteligentes==.",
+              "en": "I have two very smart dogs."
+            },
+            {
+              "es": "Mis hermanas son muy ==alegres==.",
+              "en": "My sisters are very cheerful."
+            },
+            {
+              "es": "Las casas ==verdes== son de mis tíos.",
+              "en": "The green houses belong to my aunt and uncle."
+            },
+            {
+              "es": "Los burritos de aquí son ==enormes==.",
+              "en": "The burritos here are huge."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Las casas son grandas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Las casas son grandes."
+                }
+              ],
+              "nota": "**-e** stays **-e**: just add **-s**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mis amigos son optimistos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mis amigos son optimistas."
+                }
+              ],
+              "nota": "**-ista** is for both genders."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Los niños son inteligente."
+                },
+                {
+                  "v": "bien",
+                  "t": "Los niños son inteligentes."
+                }
+              ],
+              "nota": "Plural noun, plural adjective."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "rojo, roja, rojos",
+              "texto": "Adjectives in -o: [[6014|regular plural adjectives]]."
+            },
+            {
+              "forma": "grande, idealista",
+              "texto": "One form for both genders: [[6015|adjectives in -e and -a]]."
+            },
+            {
+              "forma": "azul, azules",
+              "texto": "Ending in a consonant: [[6057|plural of adjectives in -z and -l]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Plural: _una chica alegre_ → _dos chicas…_",
+              "r": "dos chicas alegres",
+              "nota": "Just add -s."
+            },
+            {
+              "p": "Plural: _un hombre idealista_ → _dos hombres…_",
+              "r": "dos hombres idealistas",
+              "nota": "Not idealistos."
+            },
+            {
+              "p": "Fix it: _Son unos maestros muy pacientos._",
+              "r": "Son unos maestros muy pacientes.",
+              "nota": "-e + s."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6015,
+      6014
+    ],
+    "confunde": [],
+    "sigue": [
+      6057
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6051",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "tema": 5082,
+  "slug": "muy-mucho",
+  "titulo": "Muy vs mucho",
+  "subtitulo": "Muy grande, entreno mucho, muchas olas.",
+  "foto": "t04.jpg",
+  "regla": "Muy (very) goes before adjectives and adverbs and never changes: muy grande, muy bien. Mucho (a lot, much, many) goes after a verb and never changes there (entreno mucho), or before a noun, agreeing with it: mucho calor, muchas olas.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Muy** = _very_. It goes **before an adjective or adverb** and never changes: **muy grande**, **muy bien**, **muy temprano**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Mucho** = _a lot_. **After a verb** it never changes: **entreno mucho**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Mucho** = _much, many, a lot of_. **Before a noun** it agrees with it: **mucho calor**, **mucha gente**, **muchos amigos**, **muchas olas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if you can answer _very what?_ with an adjective, use **muy**. If it's a thing or an action, use **mucho**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Hoy hay olas ==muy== grandes.",
+              "en": "There are very big waves today."
+            },
+            {
+              "es": "Mi tía cocina ==muy== bien.",
+              "en": "My aunt cooks very well."
+            },
+            {
+              "es": "Entreno ==mucho== los sábados.",
+              "en": "I train a lot on Saturdays."
+            },
+            {
+              "es": "Hace ==mucho== calor en Mexicali.",
+              "en": "It's very hot in Mexicali."
+            },
+            {
+              "es": "Hay ==mucha== gente en la playa.",
+              "en": "There are a lot of people at the beach."
+            },
+            {
+              "es": "Tengo ==muchos== amigos en Rosarito.",
+              "en": "I have a lot of friends in Rosarito."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tengo muy hambre."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tengo mucha hambre."
+                }
+              ],
+              "nota": "**Hambre** is a noun (feminine): **mucha**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es mucho bonito."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es muy bonito."
+                }
+              ],
+              "nota": "Before an adjective: **muy**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me gusta muy."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me gusta mucho."
+                }
+              ],
+              "nota": "**Muy** never stands alone."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "muy, mucho",
+              "texto": "Start here: [[6013|adjectives: masculine and feminine]]."
+            },
+            {
+              "forma": "demasiado, bastante, poco",
+              "texto": "More quantity words: [[5127|demasiado, bastante, poco, mucho]]."
+            },
+            {
+              "forma": "trabajo demasiado",
+              "texto": "The same words after verbs: [[6135|quantity with verbs]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _There are a lot of waves today._",
+              "r": "Hoy hay muchas olas.",
+              "nota": "olas → muchas."
+            },
+            {
+              "p": "In Spanish: _We surf a lot._",
+              "r": "Surfeamos mucho.",
+              "nota": "After a verb: mucho."
+            },
+            {
+              "p": "Fix it: _Tengo muy hambre._",
+              "r": "Tengo mucha hambre.",
+              "nota": "hambre is a noun."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6013
+    ],
+    "confunde": [],
+    "sigue": [
+      5127,
+      6135
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5082",
+      "kwiziq": true
+    }
+  ]
+}

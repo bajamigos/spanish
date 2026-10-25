@@ -1,0 +1,214 @@
+{
+  "tema": 5136,
+  "slug": "nunca-negativo",
+  "titulo": "Using nunca in negative sentences",
+  "subtitulo": "Nunca como chocolate / no como chocolate nunca.",
+  "foto": "t02.jpg",
+  "regla": "Nunca before the verb goes alone (nunca como); after the verb it needs no before the verb (no como nunca). Pronouns stay attached to the verb.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say you **never** do something, use **nunca** in one of two patterns:"
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**nunca**",
+            "affirmative verb"
+          ]
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**no**",
+            "verb",
+            "**nunca**"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "When **nunca** goes **before** the verb, it goes alone, without **no**. When it goes **after** the verb, **no** goes before the verb: a double negative, correct in Spanish."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In the second pattern, **nunca** can go anywhere after the verb: **no ve la tele nunca en su cuarto** = **no ve nunca la tele en su cuarto**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Object and reflexive pronouns stick to the verb; **nunca** can't go between them: **no me lavo nunca los dientes**, never **no me nunca lavo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **nunca** is a **no** in disguise. If it goes first, no other **no** is allowed."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Nunca== comes chocolate.",
+              "en": "You never eat chocolate."
+            },
+            {
+              "es": "==No== comes chocolate ==nunca==.",
+              "en": "You never eat chocolate."
+            },
+            {
+              "es": "Ella ==no== ve la tele en su cuarto ==nunca==.",
+              "en": "She never watches TV in her room."
+            },
+            {
+              "es": "Ella ==no== ve ==nunca== la tele en su cuarto.",
+              "en": "She never watches TV in her room."
+            },
+            {
+              "es": "==No== te podía ver ==nunca== con claridad.",
+              "en": "I could never see you clearly."
+            },
+            {
+              "es": "Amos ==nunca== se queja.",
+              "en": "Amos never complains."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nunca no como mariscos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nunca como mariscos."
+                }
+              ],
+              "nota": "**Nunca** first: no **no**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Como nunca mariscos."
+                },
+                {
+                  "v": "bien",
+                  "t": "No como nunca mariscos."
+                }
+              ],
+              "nota": "**Nunca** after the verb: **no** before."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Te no podía ver nunca."
+                },
+                {
+                  "v": "bien",
+                  "t": "No te podía ver nunca."
+                }
+              ],
+              "nota": "**No** goes before the pronoun."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tampoco",
+              "texto": "The same pattern: [[9188|tampoco]]."
+            },
+            {
+              "forma": "nadie",
+              "texto": "Another negative: [[6075|nadie]]."
+            },
+            {
+              "forma": "ni… ni…",
+              "texto": "Neither… nor: [[7074|ni… ni…]]."
+            },
+            {
+              "forma": "casi nunca",
+              "texto": "Hardly ever: [[9149|apenas / casi no]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Two ways: _I never surf in winter._",
+              "r": "Nunca surfeo en invierno. / No surfeo nunca en invierno.",
+              "nota": "Both patterns."
+            },
+            {
+              "p": "Fix it: **Nunca no llega tarde.**",
+              "r": "Nunca llega tarde.",
+              "nota": "No double **no** before."
+            },
+            {
+              "p": "In Spanish: _She never calls me._ (with no … nunca)",
+              "r": "No me llama nunca.",
+              "nota": "Pronoun next to the verb."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5091
+    ],
+    "confunde": [
+      9188
+    ],
+    "sigue": [
+      6075,
+      7074,
+      9188
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5136",
+      "kwiziq": true
+    }
+  ]
+}

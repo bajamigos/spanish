@@ -1,0 +1,278 @@
+{
+  "tema": 6985,
+  "slug": "verbos-de-cambio",
+  "titulo": "Convertirse en / ponerse / hacerse / quedarse = to become",
+  "subtitulo": "Se convirtió en actriz, se hizo vegetariana, se puso roja, se quedó sordo.",
+  "foto": "t04.jpg",
+  "regla": "To become: convertirse en (a radical change), hacerse (profession, ideology, religion, also by effort), ponerse + adjective (temporary changes in mood, health, look), quedarse + adjective (a lasting result, often a loss).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "English uses _become, get, turn, go_ for all kinds of changes. Spanish picks the verb by the **type of change**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Verb",
+            "Type of change",
+            "Example"
+          ],
+          "filas": [
+            [
+              "convertirse en + noun",
+              "radical transformation",
+              "se convirtió en una estrella"
+            ],
+            [
+              "hacerse + noun / adjective",
+              "profession, beliefs, religion; often by effort",
+              "se hizo doctora, se hizo vegetariano"
+            ],
+            [
+              "ponerse + adjective",
+              "temporary: mood, health, color, looks",
+              "se puso nervioso, se puso rojo"
+            ],
+            [
+              "quedarse + adjective",
+              "a lasting result, often a loss",
+              "se quedó ciego, se quedó sin trabajo"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "All four are pronominal (**se**). Only **convertirse** needs **en**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Convertir** without **se** = _to turn someone into_: **sus hazañas lo convirtieron en un héroe**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **ponerse** is the mood ring, **quedarse** is the scar, **hacerse** is the career, **convertirse** is the butterfly."
+        }
+      ]
+    },
+    {
+      "id": "convertirse",
+      "titulo": "Convertirse en",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Después de años como extra, ==se convirtió en== una actriz famosísima.",
+              "en": "After years as an extra, she became a super famous actress."
+            },
+            {
+              "es": "El abuelo ==se ha convertido en== un viejito muy gruñón.",
+              "en": "Grandpa has turned into a very grumpy old man."
+            },
+            {
+              "es": "Hablar varios idiomas ==convirtió a== María ==en== la candidata ideal.",
+              "en": "Speaking several languages made María the ideal candidate."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hacerse",
+      "titulo": "Hacerse",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi hermana ==se hizo== dentista.",
+              "en": "My sister became a dentist."
+            },
+            {
+              "es": "==Se hizo== vegetariana después de ver el documental.",
+              "en": "She became a vegetarian after watching the documentary."
+            },
+            {
+              "es": "Alicia ==se hizo== católica.",
+              "en": "Alicia became Catholic."
+            },
+            {
+              "es": "Esa cantante ==se hizo== famosa en 2008.",
+              "en": "That singer became famous in 2008."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ponerse",
+      "titulo": "Ponerse",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi hijo chiquito ==se puso== malo.",
+              "en": "My little boy got sick."
+            },
+            {
+              "es": "==Te pusiste== muy triste.",
+              "en": "You got very sad."
+            },
+            {
+              "es": "==Se puso== roja al ver a Javier.",
+              "en": "She turned red when she saw Javier."
+            },
+            {
+              "es": "Mi papá ==se ha puesto== muy gordo.",
+              "en": "My dad has gotten really fat."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quedarse",
+      "titulo": "Quedarse",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Luis ==se quedó== sordo de niño.",
+              "en": "Luis went deaf as a child."
+            },
+            {
+              "es": "El pobre señor ==se quedó== paralítico.",
+              "en": "The poor man was left paralyzed."
+            },
+            {
+              "es": "==Me quedé== sin batería.",
+              "en": "My phone died. (I was left without battery.)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Se convirtió una actriz."
+                },
+                {
+                  "v": "bien",
+                  "t": "Se convirtió en una actriz."
+                }
+              ],
+              "nota": "Needs **en**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me hice nervioso."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me puse nervioso."
+                }
+              ],
+              "nota": "A mood: **ponerse**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Se puso ciego."
+                },
+                {
+                  "v": "bien",
+                  "t": "Se quedó ciego."
+                }
+              ],
+              "nota": "Lasting: **quedarse**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "volverse",
+              "texto": "Another one: [[7072|volverse]]."
+            },
+            {
+              "forma": "quedarse + gerund",
+              "texto": "[[6895|quedarse + gerund]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _He got very angry._",
+              "r": "Se puso muy enojado. / Se enojó mucho.",
+              "nota": "Temporary: ponerse."
+            },
+            {
+              "p": "In Spanish: _She became a lawyer._",
+              "r": "Se hizo abogada.",
+              "nota": "Profession: hacerse."
+            },
+            {
+              "p": "In Spanish: _The town turned into a city._",
+              "r": "El pueblo se convirtió en una ciudad.",
+              "nota": "convertirse en."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      7072
+    ],
+    "sigue": [
+      7072
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6985",
+      "kwiziq": true
+    }
+  ]
+}

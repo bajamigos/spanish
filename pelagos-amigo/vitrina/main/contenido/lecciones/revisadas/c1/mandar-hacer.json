@@ -1,0 +1,179 @@
+{
+  "tema": 8146,
+  "slug": "mandar-hacer",
+  "titulo": "Hacer / mandar + infinitive = to have something done",
+  "subtitulo": "Mandé hacer un vestido. Se hizo construir una casa.",
+  "foto": "t07.jpg",
+  "regla": "Mandar + infinitive (very common in Mexico) and hacer + infinitive = to have something done by someone else, who isn't mentioned: Mandé hacer un vestido para la boda. Me hice construir un cuarto. Implies you arranged, ordered or paid for it.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "mandar / hacer",
+            "+ infinitive + thing"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Someone else does the job; who doesn't matter. You **arranged or paid** for it."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Mandar hacer** is everyday Mexican Spanish: **mandé hacer unas llaves**, **mandamos pintar la casa**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In history or news, the subject may simply appear as the doer: **el rey construyó un palacio** (he had it built)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **mandar** = you gave the order, someone else did the work."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Hicieron pintar== el departamento otra vez porque no les gustó cómo quedó.",
+              "en": "They had the apartment painted again because they didn't like how it turned out."
+            },
+            {
+              "es": "==Me hice construir== un cuarto extra para las visitas.",
+              "en": "I had an extra room built for guests."
+            },
+            {
+              "es": "Voy a ==mandar hacer== un vestido para la boda de mi hija.",
+              "en": "I'm going to have a dress made for my daughter's wedding."
+            },
+            {
+              "es": "==Mandé hacer== copias de las llaves.",
+              "en": "I had copies of the keys made."
+            },
+            {
+              "es": "==Mandamos arreglar== la tele.",
+              "en": "We had the TV fixed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tuve mi vestido hecho."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mandé hacer mi vestido."
+                }
+              ],
+              "nota": "No **tener** + participle for this."
+            },
+            {
+              "filas": [
+                {
+                  "v": "también",
+                  "t": "Mandé a hacer copias."
+                },
+                {
+                  "v": "también",
+                  "t": "Mandé hacer copias."
+                }
+              ],
+              "nota": "Both are correct; **mandar a hacer** is very common in Mexico."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "me corté el pelo",
+              "texto": "[[8040|beauty and body]]."
+            },
+            {
+              "forma": "me arreglaron el carro",
+              "texto": "[[8149|ellos form with an indirect pronoun]]."
+            },
+            {
+              "forma": "hacer que",
+              "texto": "[[8950|making someone do something]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I'm going to have a cake made._",
+              "r": "Voy a mandar hacer un pastel.",
+              "nota": "mandar + infinitive."
+            },
+            {
+              "p": "In Spanish: _They had the roof repaired._",
+              "r": "Mandaron reparar el techo.",
+              "nota": "mandaron."
+            },
+            {
+              "p": "In Spanish: _She had a house built._",
+              "r": "Se hizo construir una casa. / Mandó construir una casa.",
+              "nota": "hacer / mandar."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      8040
+    ],
+    "confunde": [
+      8950
+    ],
+    "sigue": [
+      8149
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8146",
+      "kwiziq": true
+    }
+  ]
+}

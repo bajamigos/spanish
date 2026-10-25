@@ -1,0 +1,170 @@
+{
+  "tema": 9086,
+  "slug": "y-eso-que",
+  "titulo": "Y eso que = even though, and that's despite...",
+  "subtitulo": "No le gusta el café, y eso que es de Veracruz.",
+  "foto": "t01.jpg",
+  "regla": "Y eso que + indicative adds a surprising contrast, like aunque but more colloquial and often tacked on as an afterthought: No le gusta el café, y eso que es de Veracruz.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "[statement]",
+            ", y eso que",
+            "+ indicative"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "_Even though, and that's despite the fact that_. The second part makes the first **surprising**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Colloquial; it usually comes **after** the main statement, often as a separate sentence: **Y eso que...**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Indicative: it's a known fact."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **y eso que** = and get this..."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No le gusta nada el café, ==y eso que== es de Veracruz.",
+              "en": "He doesn't like coffee at all, even though he's from Veracruz."
+            },
+            {
+              "es": "Mis primas son muy sencillas, ==y eso que== son de familia rica.",
+              "en": "My cousins are very down-to-earth, even though they're from a rich family."
+            },
+            {
+              "es": "Manuel se fue con sus amigos hoy. ==Y eso que== le dije que estaba castigado.",
+              "en": "Manuel went out with his friends today. And I'd told him he was grounded."
+            },
+            {
+              "es": "—Laura dice que se muere por él. —¡Órale! ==Y eso que== lo conoce desde hace dos días.",
+              "en": "—Laura says she's crazy about him. —Wow! And she only met him two days ago."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Y eso que sea de Veracruz."
+                },
+                {
+                  "v": "bien",
+                  "t": "Y eso que es de Veracruz."
+                }
+              ],
+              "nota": "Indicative."
+            },
+            {
+              "filas": [
+                {
+                  "v": "aunque",
+                  "t": "Aunque es de Veracruz, no le gusta el café."
+                },
+                {
+                  "v": "y eso que",
+                  "t": "No le gusta el café, y eso que es de Veracruz."
+                }
+              ],
+              "nota": "**Y eso que** comes second."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "aunque",
+              "texto": "[[5146|aunque]]."
+            },
+            {
+              "forma": "con lo que",
+              "texto": "[[7213|con lo que for despite]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Add surprise: _No sabe nadar._ (he lives by the beach)",
+              "r": "No sabe nadar, y eso que vive junto a la playa.",
+              "nota": "y eso que."
+            },
+            {
+              "p": "Complete: _Reprobó, y eso que ___ (estudiar) mucho._",
+              "r": "estudió",
+              "nota": "Indicative."
+            },
+            {
+              "p": "Same idea with aunque:",
+              "r": "Reprobó aunque estudió mucho.",
+              "nota": "aunque."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5146
+    ],
+    "confunde": [
+      7213
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9086",
+      "kwiziq": true
+    }
+  ]
+}

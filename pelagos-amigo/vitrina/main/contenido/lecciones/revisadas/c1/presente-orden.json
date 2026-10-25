@@ -1,0 +1,207 @@
+{
+  "tema": 7121,
+  "slug": "presente-orden",
+  "titulo": "The present tense to give orders, advice or make requests",
+  "subtitulo": "Vas a la tienda y compras pan.",
+  "foto": "t03.jpg",
+  "regla": "In colloquial Spanish, the present indicative can work like a command, for orders, requests and advice: Vas a la tienda y me compras tortillas. ¿Me pasas la sal? Pues vas y hablas con ella. It sounds informal and sometimes firm.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "The **present tense** can replace the imperative to tell someone what to do. It sounds **colloquial**: friendly in a request, firm in an order."
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "orders",
+              "texto": "**Niños, se ponen los suéteres y nos vamos.**"
+            },
+            {
+              "forma": "requests",
+              "texto": "**¿Me pasas la sal?** (very common in Mexico)"
+            },
+            {
+              "forma": "advice",
+              "texto": "**Pues vas y hablas con ella.**"
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Often with **y** linking steps: **vas, buscas, me avisas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: describing the action as if it's already happening makes it hard to say no."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Niños, ==se ponen== los suéteres y ==nos vamos==.",
+              "en": "Kids, put on your sweaters and let's go."
+            },
+            {
+              "es": "Ahorita ==vas== a la tienda y me ==compras== tortillas, por favor.",
+              "en": "Go to the store right now and buy me tortillas, please."
+            },
+            {
+              "es": "—Carmen está enojada. —Pues ==vas== y ==hablas== con ella.",
+              "en": "—Carmen is upset. —Well, go and talk to her."
+            },
+            {
+              "es": "¿Me ==pasas== la sal?",
+              "en": "Can you pass me the salt?"
+            },
+            {
+              "es": "Tú te ==callas== y me ==escuchas==.",
+              "en": "You be quiet and listen to me."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "comparar",
+      "titulo": "Present or imperative",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "imperativo",
+                  "t": "Ve a la tienda y compra pan."
+                },
+                {
+                  "v": "presente",
+                  "t": "Vas a la tienda y compras pan."
+                }
+              ],
+              "nota": "Same idea; the present sounds more colloquial."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Vayas a la tienda y compres pan."
+                },
+                {
+                  "v": "bien",
+                  "t": "Vas a la tienda y compras pan."
+                }
+              ],
+              "nota": "Present **indicative**, not subjunctive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "brusco",
+                  "t": "Tú te callas."
+                },
+                {
+                  "v": "suave",
+                  "t": "¿Me pasas la sal?"
+                }
+              ],
+              "nota": "Tone depends on context."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¡come!",
+              "texto": "[[6748|imperative]]."
+            },
+            {
+              "forma": "¡a comer!",
+              "texto": "[[6179|a + infinitive]]."
+            },
+            {
+              "forma": "no fumar",
+              "texto": "[[7258|infinitive for instructions]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Colloquial order: _Go to your room and do your homework._ (tú)",
+              "r": "Te vas a tu cuarto y haces la tarea.",
+              "nota": "Present."
+            },
+            {
+              "p": "Request: _Can you lend me your charger?_",
+              "r": "¿Me prestas tu cargador?",
+              "nota": "Present."
+            },
+            {
+              "p": "Advice: _Well, call her and apologize._",
+              "r": "Pues la llamas y le pides perdón.",
+              "nota": "Present."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6748
+    ],
+    "confunde": [
+      6179
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7121",
+      "kwiziq": true
+    }
+  ]
+}

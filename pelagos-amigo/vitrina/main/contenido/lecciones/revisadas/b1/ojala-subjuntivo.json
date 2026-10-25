@@ -1,0 +1,210 @@
+{
+  "tema": 5061,
+  "slug": "ojala-subjuntivo",
+  "titulo": "Using ojalá + the present subjunctive to express hope",
+  "subtitulo": "¡Ojalá haya olas!: a strong I hope, always with the subjunctive.",
+  "foto": "t10.jpg",
+  "regla": "Ojalá (or ojalá que) + present subjunctive = I hope, hopefully, about the future. Never the indicative. It's stronger than espero que.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Ojalá** is a very common word meaning _I hope, hopefully, let's hope_. Followed by the **present subjunctive**, it expresses a hope about the **future**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**ojalá** (**que**)",
+            "present subjunctive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It's **always** followed by the subjunctive, never by the indicative. **Que** is optional: **ojalá llueva** = **ojalá que llueva**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It doesn't change for the person: the subject is in the verb after it."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It comes from Arabic and originally meant _God willing_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "You can say the same with **espero que** + subjunctive, but **ojalá** sounds more intense."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **ojalá** is crossing your fingers out loud."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi mamá dice que ojalá me ==case== pronto.",
+              "en": "My mom says she hopes I get married soon."
+            },
+            {
+              "es": "Ojalá ==tengas== suerte en el torneo.",
+              "en": "I hope you're lucky in the tournament."
+            },
+            {
+              "es": "¡Ojalá no ==llueva== mañana!",
+              "en": "I hope it doesn't rain tomorrow!"
+            },
+            {
+              "es": "¡Ojalá que Beto me ==llame== pronto!",
+              "en": "I hope Beto calls me soon!"
+            },
+            {
+              "es": "¡Ojalá que nos ==contraten== a todos!",
+              "en": "I hope they hire all of us!"
+            },
+            {
+              "es": "¡Ojalá ==haya== olas el sábado!",
+              "en": "Hopefully there'll be waves on Saturday!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ojalá que tienes suerte."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ojalá que tengas suerte."
+                }
+              ],
+              "nota": "Never the indicative."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ojalá que va a llover."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ojalá que llueva."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ojalá que hay olas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ojalá que haya olas."
+                }
+              ],
+              "nota": "**Hay** → **haya**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "espero que vengas",
+              "texto": "A calmer hope: [[6076|esperar que]]."
+            },
+            {
+              "forma": "haya",
+              "texto": "The subjunctive of **hay**: [[5187|haber in the subjunctive]]."
+            },
+            {
+              "forma": "ojalá tuviera",
+              "texto": "Wishes that are unlikely or about the past: [[9105|ojalá with past subjunctive]]."
+            },
+            {
+              "forma": "hable, coma, tenga",
+              "texto": "The forms: [[5063|-ar]], [[5151|-er / -ir]], [[6000|yo-go]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I hope you win!_ (tú)",
+              "r": "¡Ojalá ganes!",
+              "nota": "ganar → ganes."
+            },
+            {
+              "p": "In Spanish: _Hopefully there's no traffic._",
+              "r": "Ojalá no haya tráfico.",
+              "nota": "**haya**."
+            },
+            {
+              "p": "Fix it: **Ojalá que puedes venir.**",
+              "r": "Ojalá que puedas venir.",
+              "nota": "puedas."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5063,
+      5151,
+      6076
+    ],
+    "confunde": [
+      6076
+    ],
+    "sigue": [
+      9105,
+      5187
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5061",
+      "kwiziq": true
+    }
+  ]
+}

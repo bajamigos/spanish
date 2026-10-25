@@ -1,0 +1,199 @@
+{
+  "tema": 7254,
+  "slug": "mientras-pasado",
+  "titulo": "Mientras with past tenses (indicative and subjunctive)",
+  "subtitulo": "Mientras tú cocinabas, yo lavaba / Me dejaba salir mientras hiciera la tarea.",
+  "foto": "t08.jpg",
+  "regla": "Mientras + past indicative = while (two actions at the same time): mientras tú veías la tele, yo lavaba los trastes. Mientras (que) + past subjunctive = as long as (a condition): me dejaba salir mientras hiciera la tarea.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Form",
+            "Meaning",
+            "Example"
+          ],
+          "filas": [
+            [
+              "mientras + past indicative",
+              "while (simultaneous)",
+              "Mientras tú dormías, yo leía."
+            ],
+            [
+              "mientras (que) + past subjunctive",
+              "as long as (condition)",
+              "Me dejaba salir mientras hiciera la tarea."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The simultaneous actions are often both in the imperfect; the main one can be preterite if it's a complete event."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: indicative = at the same time; subjunctive = on condition."
+        }
+      ]
+    },
+    {
+      "id": "tiempo",
+      "titulo": "While",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Mientras== tú ==veías== la tele, yo lavaba los trastes.",
+              "en": "While you were watching TV, I was washing the dishes."
+            },
+            {
+              "es": "Los niños jugaron en el parque ==mientras== los adultos ==tomábamos== café.",
+              "en": "The kids played in the park while we adults had coffee."
+            },
+            {
+              "es": "==Mientras== ella ==regañaba== a su hija, nosotras volteamos para otro lado.",
+              "en": "While she was scolding her daughter, we looked away."
+            },
+            {
+              "es": "Su romance fue bonito ==mientras duró==.",
+              "en": "Their romance was lovely while it lasted."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "condicion",
+      "titulo": "As long as",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "De niña, mi mamá me dejaba ver la tele ==mientras que hiciera== la tarea antes.",
+              "en": "As a kid, my mom let me watch TV as long as I did my homework first."
+            },
+            {
+              "es": "Te habría prestado el carro ==mientras== me lo ==devolvieras== el lunes.",
+              "en": "I'd have lent you the car as long as you returned it on Monday."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mientras + indicativo",
+                  "t": "Mientras estudiaba, escuchaba música."
+                },
+                {
+                  "v": "mientras + subjuntivo",
+                  "t": "Me dejaba ir mientras estudiara."
+                }
+              ],
+              "nota": "_While_ vs _as long as_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mientras yo cocinara, él puso la mesa. (at the same time)"
+                },
+                {
+                  "v": "bien",
+                  "t": "Mientras yo cocinaba, él puso la mesa."
+                }
+              ],
+              "nota": "_While_: indicative."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "mientras + present",
+              "texto": "[[6994|mientras in the present]]."
+            },
+            {
+              "forma": "mientras que (contrast)",
+              "texto": "[[7604|mientras que / en cambio]]."
+            },
+            {
+              "forma": "siempre que",
+              "texto": "[[7511|siempre que / a condición de que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _While I was sleeping, it rained._",
+              "r": "Mientras dormía, llovió.",
+              "nota": "While: indicative."
+            },
+            {
+              "p": "Complete: _Me dejaban salir mientras ___ (volver, yo) antes de las diez._",
+              "r": "volviera",
+              "nota": "Condition: subjunctive."
+            },
+            {
+              "p": "In Spanish: _We talked while we were walking._",
+              "r": "Platicamos mientras caminábamos.",
+              "nota": "Imperfect."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6994
+    ],
+    "confunde": [
+      7604
+    ],
+    "sigue": [
+      7511
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7254",
+      "kwiziq": true
+    }
+  ]
+}

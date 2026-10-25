@@ -1,0 +1,218 @@
+{
+  "tema": 5985,
+  "slug": "ser-de-estar-hecho-de",
+  "titulo": "Estar hecho de or ser de to say what something is made of",
+  "subtitulo": "La tabla es de fibra de vidrio / está hecha de fibra de vidrio.",
+  "foto": "t07.jpg",
+  "regla": "Material: ser de + material, or estar hecho de + material (hecho agrees: hecha, hechos, hechas). Question: ¿De qué es? / ¿De qué está hecho?",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say what something is **made of**, you can use **ser** or **estar**, in two slightly different ways:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Verb",
+            "Pattern",
+            "Example"
+          ],
+          "filas": [
+            [
+              "ser",
+              "ser + de + material",
+              "La casa es de madera."
+            ],
+            [
+              "estar",
+              "estar + hecho + de + material",
+              "La casa está hecha de madera."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Hecho** works as an adjective, so it **agrees** with the thing: **hecho**, **hecha**, **hechos**, **hechas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "To ask, **de** comes first: **¿De qué es?** or **¿De qué está hecho?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **ser de** is short; **estar hecho de** tells you it was built, and it agrees like a participle."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "La casa ==es de== madera.",
+              "en": "The house is made of wood."
+            },
+            {
+              "es": "La casa ==está hecha de== madera.",
+              "en": "The house is made of wood."
+            },
+            {
+              "es": "La sudadera ==es de== algodón.",
+              "en": "The sweatshirt is made of cotton."
+            },
+            {
+              "es": "Las lámparas ==están hechas de== vidrio.",
+              "en": "The lamps are made of glass."
+            },
+            {
+              "es": "Mi tabla ==está hecha de== fibra de vidrio.",
+              "en": "My board is made of fiberglass."
+            },
+            {
+              "es": "Las macetas del huerto ==son de== llantas viejas.",
+              "en": "The garden planters are made of old tires."
+            },
+            {
+              "es": "—¿==De qué está hecha== la figura? —De barro.",
+              "en": "\"What's the figurine made of?\" \"Clay.\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La mesa está de madera."
+                },
+                {
+                  "v": "bien",
+                  "t": "La mesa es de madera."
+                },
+                {
+                  "v": "bien",
+                  "t": "La mesa está hecha de madera."
+                }
+              ],
+              "nota": "**Estar** needs **hecho**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Las sillas están hecho de pino."
+                },
+                {
+                  "v": "bien",
+                  "t": "Las sillas están hechas de pino."
+                }
+              ],
+              "nota": "**Hecho** agrees."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Qué está hecho de?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿De qué está hecho?"
+                }
+              ],
+              "nota": "**De** goes first in questions."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "es de Beto",
+              "texto": "**Ser de** for ownership: [[5986|ser de]]."
+            },
+            {
+              "forma": "está roto",
+              "texto": "Participles as adjectives: [[7000|past participles as adjectives]]."
+            },
+            {
+              "forma": "hecho, dicho",
+              "texto": "Irregular participles: [[7048|-to / -cho]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish (with **ser**): _The rings are made of silver._",
+              "r": "Los anillos son de plata.",
+              "nota": "ser de."
+            },
+            {
+              "p": "Same, with **estar**.",
+              "r": "Los anillos están hechos de plata.",
+              "nota": "hechos agrees."
+            },
+            {
+              "p": "In Spanish: _What's the board made of?_",
+              "r": "¿De qué es la tabla? / ¿De qué está hecha la tabla?",
+              "nota": "De qué first."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5972,
+      7000
+    ],
+    "confunde": [
+      5986
+    ],
+    "sigue": [
+      7048
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5985",
+      "kwiziq": true
+    }
+  ]
+}

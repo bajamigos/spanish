@@ -1,0 +1,217 @@
+{
+  "tema": 7056,
+  "slug": "aun-con-y-sin-acento",
+  "titulo": "Aún vs aun (with and without an accent)",
+  "subtitulo": "Aún no llega / Aun así, fue.",
+  "foto": "t04.jpg",
+  "regla": "Aún (accent) = still, yet (= todavía), and even with más / menos / mejor / peor: aún más barato. Aun (no accent) = even (= incluso): aun si, aun con, aun cuando, aun así.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Form",
+            "Means",
+            "Swap test"
+          ],
+          "filas": [
+            [
+              "aún",
+              "still, yet; even (+ más, menos, mejor, peor)",
+              "you can say **todavía**"
+            ],
+            [
+              "aun",
+              "even, despite",
+              "you can say **incluso**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Aún** for time is the same as **todavía**, which is more common: **aún no he ido = todavía no he ido**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Aun** usually comes in fixed combos: **aun si** (_even if_), **aun con** (_even with_), **aun cuando** (_even when / even though_), **aun así** (_even so_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if **todavía** fits, write the accent; if **incluso** fits, don't."
+        }
+      ]
+    },
+    {
+      "id": "con-acento",
+      "titulo": "Aún",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Aún== tengo muy buenos recuerdos de ese viaje.",
+              "en": "I still have great memories of that trip."
+            },
+            {
+              "es": "Mi hermano no ha llegado ==aún== de Monterrey.",
+              "en": "My brother hasn't arrived from Monterrey yet."
+            },
+            {
+              "es": "¿==Aún== estás aquí?",
+              "en": "Are you still here?"
+            },
+            {
+              "es": "Le ofrecieron ==aún más== dinero que en su trabajo anterior.",
+              "en": "They offered him even more money than at his old job."
+            },
+            {
+              "es": "Esa casa no es cara, pero esta es ==aún más== barata.",
+              "en": "That house isn't expensive, but this one is even cheaper."
+            },
+            {
+              "es": "—¿Está mejor tu papá? —No, está ==aún peor==.",
+              "en": "—Is your dad better? —No, he's even worse."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sin-acento",
+      "titulo": "Aun",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No voy contigo ==aun si== me lo suplicas.",
+              "en": "I'm not going with you even if you beg me."
+            },
+            {
+              "es": "==Aun con== ventaja, no ganaron el partido.",
+              "en": "Even with the advantage, they didn't win the game."
+            },
+            {
+              "es": "Se me hace muy caro ==aun con== el descuento.",
+              "en": "It seems really expensive to me, even with the discount."
+            },
+            {
+              "es": "La traté como reina y ==aun así== no quiso ser mi novia.",
+              "en": "I treated her like a queen and even so she didn't want to be my girlfriend."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Aun no he comido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Aún no he comido."
+                }
+              ],
+              "nota": "_Yet_ = **todavía**: accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Aún con descuento es caro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Aun con descuento es caro."
+                }
+              ],
+              "nota": "_Even_ = **incluso**: no accent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "todavía / aún",
+              "texto": "[[8618|todavía / aún for still]]."
+            },
+            {
+              "forma": "aún no + pluperfect",
+              "texto": "[[6007|aún no / todavía no]]."
+            },
+            {
+              "forma": "accents",
+              "texto": "[[6603|sí / si]], [[7179|más / mas]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Accent or not? ____ no sé qué hacer._",
+              "r": "Aún",
+              "nota": "= todavía."
+            },
+            {
+              "p": "Accent or not? _No lo haría ___ si me pagaran._",
+              "r": "aun",
+              "nota": "= incluso."
+            },
+            {
+              "p": "Accent or not? _Este es ___ mejor._",
+              "r": "aún",
+              "nota": "Intensifier with mejor."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      8618
+    ],
+    "confunde": [
+      8618
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7056",
+      "kwiziq": true
+    }
+  ]
+}

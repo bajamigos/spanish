@@ -1,0 +1,169 @@
+{
+  "tema": 7444,
+  "slug": "repeticion-enfasis",
+  "titulo": "Repeating a word for emphasis (café café, quererlo lo quiero)",
+  "subtitulo": "Cenar cenar, no. Quererlo lo quiero, pero...",
+  "foto": "t04.jpg",
+  "regla": "In conversation, repeating a word stresses its real or full sense: No es café café (not real coffee). Infinitive + same verb conjugated + pero... = I do..., but...: Quererlo lo quiero, pero es muy celoso.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "word word",
+              "texto": "_really, properly, the real thing_: **cenar cenar, no**; **negativa negativa no fue**."
+            },
+            {
+              "forma": "infinitive + conjugated verb + pero",
+              "texto": "_I do..., but_: **quererlo lo quiero, pero...**"
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Very colloquial. In Mexico you'll hear things like **café café** (real coffee, not instant) or **¿pero novio novio?** (_an actual boyfriend?_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: saying it twice turns up the volume."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "La verdad, ==negativa negativa== no fue la sorpresa; no me importaba si era niño o niña.",
+              "en": "Honestly, the surprise wasn't really negative; I didn't care if it was a boy or a girl."
+            },
+            {
+              "es": "Bueno, yo ==cenar cenar== no quiero. Mejor unos tacos y una cerveza.",
+              "en": "Well, I don't want a proper dinner. Just some tacos and a beer."
+            },
+            {
+              "es": "A Pablo ==quererlo lo quiero==, pero es tan celoso que a veces pienso en dejarlo.",
+              "en": "I do love Pablo, but he's so jealous I sometimes think of leaving him."
+            },
+            {
+              "es": "¿Pero es tu ==novio novio==?",
+              "en": "But is he your actual boyfriend?"
+            },
+            {
+              "es": "==Saber sé==, pero no me acuerdo.",
+              "en": "I do know, but I can't remember."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "también",
+                  "t": "Querer lo quiero."
+                },
+                {
+                  "v": "más común",
+                  "t": "Quererlo lo quiero."
+                }
+              ],
+              "nota": "Pronoun on both is more common."
+            },
+            {
+              "filas": [
+                {
+                  "v": "normal",
+                  "t": "No quiero cenar."
+                },
+                {
+                  "v": "enfático",
+                  "t": "Cenar cenar no quiero."
+                }
+              ],
+              "nota": "Repetition adds _really_."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "sí for emphasis",
+              "texto": "[[10854|sí for emphasis]]."
+            },
+            {
+              "forma": "¡el frío que hace!",
+              "texto": "[[7933|intensifying]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Emphatic: _It's not really a party; just a few friends._",
+              "r": "Fiesta fiesta no es; solo unos amigos.",
+              "nota": "Repetition."
+            },
+            {
+              "p": "Emphatic: _I do like it, but it's expensive._",
+              "r": "Gustarme me gusta, pero es caro.",
+              "nota": "Infinitive + conjugated."
+            },
+            {
+              "p": "Meaning: _¿Pero amigos amigos?_",
+              "r": "But actual, close friends?",
+              "nota": "Repetition = real."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      10854
+    ],
+    "confunde": [],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7444",
+      "kwiziq": true
+    }
+  ]
+}

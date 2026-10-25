@@ -1,0 +1,213 @@
+{
+  "tema": 5981,
+  "slug": "es-lunes-son-las-tres",
+  "titulo": "Ser for time, days, dates and seasons",
+  "subtitulo": "Es lunes, son las tres y es verano.",
+  "foto": "t04.jpg",
+  "regla": "To say what time, day, date or season it is, use ser, not estar: es lunes, son las tres, hoy es 4 de mayo, es verano.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say **what time, day, date or season it is**, use **ser**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Time: **es** la una, **son** las dos, las tres... Days, dates and seasons: **es**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "What",
+            "Example"
+          ],
+          "filas": [
+            [
+              "time",
+              "Son las tres."
+            ],
+            [
+              "day",
+              "Hoy es lunes."
+            ],
+            [
+              "date",
+              "Hoy es 4 de mayo."
+            ],
+            [
+              "season",
+              "Es verano."
+            ],
+            [
+              "early / late",
+              "Ya es tarde."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **ser** is the calendar on the wall. You just read it."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Son== las seis y ya hay olas.",
+              "en": "It's six and there are already waves."
+            },
+            {
+              "es": "==Es== la una. Vamos a comer.",
+              "en": "It's one o'clock. Let's go eat."
+            },
+            {
+              "es": "Hoy ==es== viernes.",
+              "en": "Today is Friday."
+            },
+            {
+              "es": "Mañana ==es== 16 de septiembre.",
+              "en": "Tomorrow is September 16th."
+            },
+            {
+              "es": "==Es== invierno, pero en Tijuana no hace mucho frío.",
+              "en": "It's winter, but it isn't very cold in Tijuana."
+            },
+            {
+              "es": "Ya ==es== tarde, me voy a dormir.",
+              "en": "It's late now, I'm going to bed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hoy está lunes."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hoy es lunes."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Están las tres."
+                },
+                {
+                  "v": "bien",
+                  "t": "Son las tres."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Está verano."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es verano."
+                }
+              ],
+              "nota": "But **estamos en verano** is fine: _we're in summer_."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "son las tres",
+              "texto": "How to say the clock time: [[7231|telling the time]]."
+            },
+            {
+              "forma": "es 4 de mayo",
+              "texto": "Dates in detail: [[6746|expressing dates]], [[6751|days are masculine]]."
+            },
+            {
+              "forma": "estamos a lunes",
+              "texto": "The casual estar version: [[7247|estar for dates and seasons]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Today is Saturday._",
+              "r": "Hoy es sábado.",
+              "nota": "ser for days."
+            },
+            {
+              "p": "In Spanish: _It's two o'clock._",
+              "r": "Son las dos.",
+              "nota": "Plural: son."
+            },
+            {
+              "p": "Fix it: _Está primavera._",
+              "r": "Es primavera.",
+              "nota": "ser for seasons."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6746,
+      6751
+    ],
+    "confunde": [
+      7247
+    ],
+    "sigue": [
+      7231
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5981",
+      "kwiziq": true
+    }
+  ]
+}

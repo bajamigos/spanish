@@ -1,0 +1,210 @@
+{
+  "tema": 6152,
+  "slug": "tan-que",
+  "titulo": "[verb] + tan + adjective / adverb + que = so... that...",
+  "subtitulo": "Estaba tan cansada que me dormí en el camión.",
+  "foto": "t06.jpg",
+  "regla": "Verb + tan + adjective/adverb + que = so... that...: cause first, then the result. The adjective agrees with its noun. Don't confuse it with tan... como (as... as).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "[verb] +",
+            "tan + adjective / adverb",
+            "+ que + [result]"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The first part is the **cause**; what comes after **que** is the **result**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The order can't be flipped: the result can't come first."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The **adjective agrees**: **tan sucia**, **tan altos**. **Tan** never changes."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Don't confuse it with **tan... como** (_as... as_), a comparison."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **tan... que** builds up pressure and **que** lets it out."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "El paciente está ==tan débil que== tiene que quedarse en el hospital.",
+              "en": "The patient is so weak that he has to stay in the hospital."
+            },
+            {
+              "es": "La computadora funciona ==tan lento que== no puedo terminar el trabajo.",
+              "en": "The computer runs so slowly that I can't finish my work."
+            },
+            {
+              "es": "Estos zapatos salieron ==tan buenos que== compré otro par igual.",
+              "en": "These shoes turned out so good that I bought another identical pair."
+            },
+            {
+              "es": "Ese tráiler va ==tan rápido que== se va a salir de la carretera.",
+              "en": "That semi is going so fast it's going to run off the road."
+            },
+            {
+              "es": "Su camisa está ==tan sucia que== hay que lavarla ya.",
+              "en": "His shirt is so dirty it needs washing right away."
+            },
+            {
+              "es": "Estos chavos son ==tan altos que== pegan con el techo.",
+              "en": "These guys are so tall they hit the ceiling."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exclamacion",
+      "titulo": "Short exclamations",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Without the **que** part, it's an exclamation: **¡Son tan buenos!** (_They're so good!_), **¡Está tan bonito!**"
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es tan guapo como siempre tiene admiradoras."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es tan guapo que siempre tiene admiradoras."
+                }
+              ],
+              "nota": "Result: **que**. Comparison: **como**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La sopa está tan caliento que..."
+                },
+                {
+                  "v": "bien",
+                  "t": "La sopa está tan caliente que..."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Las calles están tan oscuro que..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Las calles están tan oscuras que..."
+                }
+              ],
+              "nota": "Agreement."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tanto dinero que",
+              "texto": "With nouns: [[6153|tanto... que]]."
+            },
+            {
+              "forma": "tan alto como",
+              "texto": "Comparison: [[5116|tan... como]]."
+            },
+            {
+              "forma": "así que",
+              "texto": "Another way to give a result: [[7250|así que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _The movie was so long that I fell asleep._",
+              "r": "La película fue tan larga que me dormí.",
+              "nota": "tan + adjective + que."
+            },
+            {
+              "p": "In Spanish: _He speaks so fast that I don't understand him._",
+              "r": "Habla tan rápido que no le entiendo.",
+              "nota": "tan + adverb."
+            },
+            {
+              "p": "Complete: _Las playeras son ___ caras ___ no compré ninguna._",
+              "r": "tan / que",
+              "nota": "so... that."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5116
+    ],
+    "confunde": [
+      5116
+    ],
+    "sigue": [
+      6153
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6152",
+      "kwiziq": true
+    }
+  ]
+}

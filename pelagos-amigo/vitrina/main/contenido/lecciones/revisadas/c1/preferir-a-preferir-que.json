@@ -1,0 +1,185 @@
+{
+  "tema": 9540,
+  "slug": "preferir-a-preferir-que",
+  "titulo": "Preferir A a B: prefiero el mar a la montaña",
+  "subtitulo": "Prefiero el campo a la playa.",
+  "foto": "t08.jpg",
+  "regla": "With preferir, the second thing compared is introduced by a, not que: Prefiero el café al té. Even with clauses: Prefiero que me digas la verdad a que me mientas. Que only appears as part of the content (prefiero que...). With people's names the first personal a can drop: Prefiero (a) Pedro a Nicolás.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "preferir A",
+            "a",
+            "B"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "_to prefer A **to** B_: **prefiero los perros a los gatos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Same with infinitives and **que** clauses: **prefiero caminar a manejar**, **prefiero que llames a que escribas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Never** ~~prefiero los perros que los gatos~~ in careful Spanish."
+        },
+        {
+          "tipo": "texto",
+          "texto": "a + el = **al**: **prefiero el café al té**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In everyday speech, many people say **me gusta más A que B** instead."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: preferir points **a** the loser."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Prefiero el campo ==a== la playa.",
+              "en": "I prefer the countryside to the beach."
+            },
+            {
+              "es": "Preferimos los restaurantes japoneses ==a== los italianos.",
+              "en": "We prefer Japanese restaurants to Italian ones."
+            },
+            {
+              "es": "Prefiero mil veces los perros ==a== los gatos.",
+              "en": "I prefer dogs to cats a thousand times over."
+            },
+            {
+              "es": "Prefiero que me digas la verdad ==a que== me digas una mentira piadosa.",
+              "en": "I'd rather you told me the truth than a white lie."
+            },
+            {
+              "es": "Prefiero (a) Pedro ==a== Nicolás.",
+              "en": "I prefer Pedro to Nicolás."
+            },
+            {
+              "es": "Prefiero caminar ==a== esperar el camión.",
+              "en": "I'd rather walk than wait for the bus."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Prefiero el té que el café."
+                },
+                {
+                  "v": "bien",
+                  "t": "Prefiero el té al café."
+                }
+              ],
+              "nota": "**a**, not **que**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "preferir",
+                  "t": "Prefiero el té al café."
+                },
+                {
+                  "v": "gustar más",
+                  "t": "Me gusta más el té que el café."
+                }
+              ],
+              "nota": "**Gustar más** uses **que**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "comparisons",
+              "texto": "[[6980|más que vs más de]]."
+            },
+            {
+              "forma": "preferir",
+              "texto": "[[5776|preferir in the present]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I prefer summer to winter._",
+              "r": "Prefiero el verano al invierno.",
+              "nota": "al."
+            },
+            {
+              "p": "In Spanish: _I'd rather you call me than text me._",
+              "r": "Prefiero que me llames a que me escribas.",
+              "nota": "a que."
+            },
+            {
+              "p": "Fix it: _Prefiero leer que ver la tele._",
+              "r": "Prefiero leer a ver la tele.",
+              "nota": "a."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5776,
+      6980
+    ],
+    "confunde": [],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9540",
+      "kwiziq": true
+    }
+  ]
+}

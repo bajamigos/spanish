@@ -1,0 +1,299 @@
+{
+  "tema": 9262,
+  "slug": "imperativo-reflexivos",
+  "titulo": "Using the imperative with reflexive pronouns: affirmative commands",
+  "subtitulo": "¡Levántate! ¡Siéntese! ¡Vámonos! The pronoun hooks onto the end of the command.",
+  "foto": "t05.jpg",
+  "regla": "In affirmative commands with reflexive verbs, the pronoun goes after the verb, attached to it. With nosotros, the final s drops: levantémonos.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "When you give a **positive** command with a **reflexive verb** (**levantarse**, **sentarse**, **ponerse**, **irse**...), the pronoun always goes **after** the verb and is **attached** to it, as one word."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "command",
+            "+ **te / se / nos / se**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Pronoun",
+            "levantarse",
+            "ponerse"
+          ],
+          "filas": [
+            [
+              "tú",
+              "te",
+              "levántate",
+              "ponte"
+            ],
+            [
+              "usted",
+              "se",
+              "levántese",
+              "póngase"
+            ],
+            [
+              "nosotros",
+              "nos",
+              "levantémonos",
+              "pongámonos"
+            ],
+            [
+              "ustedes",
+              "se",
+              "levántense",
+              "pónganse"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Nosotros** has one extra rule: the **-mos** ending loses its **s** before **nos**. **Levantemos** + **nos** → **levantémonos**, never **levantémosnos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Adding a syllable leaves the stress where it was, but now it sits further from the end, so a **written accent** appears to keep the sound: **levanta** → **levántate**, **siente** → **siéntese**, **vayan** → **váyanse**. One-syllable commands like **pon** or **ve** don't need it: **ponte**, **vete**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Irse** with **nosotros** is the famous one: **vamos** + **nos** → **¡vámonos!**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the pronoun is a backpack. In a positive command, you carry it on your back, stuck to the verb: **¡Siéntate!**"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¡==Ponte== el traje, el agua está helada!",
+              "en": "Put your wetsuit on, the water is freezing! (tú)"
+            },
+            {
+              "es": "¡==Levántate== ya, que hay olas!",
+              "en": "Get up now, there are waves! (tú)"
+            },
+            {
+              "es": "==Siéntese== aquí, por favor; ahorita le abro el carro.",
+              "en": "Sit down here, please; I'll open your car right away. (usted)"
+            },
+            {
+              "es": "¡==Lávense== las manos antes de los tacos!",
+              "en": "Wash your hands before the tacos! (ustedes)"
+            },
+            {
+              "es": "¡==Váyanse== de aquí!",
+              "en": "Get out of here! (ustedes)"
+            },
+            {
+              "es": "¡==Relajémonos== en la playa!",
+              "en": "Let's relax at the beach!"
+            },
+            {
+              "es": "¡==Levantémonos== temprano para surfear!",
+              "en": "Let's get up early to surf!"
+            },
+            {
+              "es": "Ya se hizo tarde. ¡==Vámonos==!",
+              "en": "It's late. Let's go!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Te levanta ahora mismo!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Levántate ahora mismo!"
+                }
+              ],
+              "nota": "In a positive command the pronoun never goes in front."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Sentémosnos aquí!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Sentémonos aquí!"
+                }
+              ],
+              "nota": "With **nos**, the **s** of **-mos** drops."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Sientese, por favor!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Siéntese, por favor!"
+                }
+              ],
+              "nota": "Keep the stress where it was: written accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Siéntensen!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Siéntense!"
+                }
+              ],
+              "nota": "You'll hear **siéntensen** in casual speech, but the standard form has only one **n**, before **se**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usos",
+      "titulo": "Positive and negative",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¡Siéntate!",
+              "texto": "Positive command: pronoun after, attached.",
+              "aqui": true
+            },
+            {
+              "forma": "¡No te sientes!",
+              "texto": "Negative command: pronoun before, separate. See [[9255|negative tú commands]]."
+            },
+            {
+              "forma": "¡Dámelo!",
+              "texto": "Two pronouns, both attached: [[9339|double pronouns with the imperative]]."
+            },
+            {
+              "forma": "Voy a sentarme.",
+              "texto": "Infinitives and gerunds can also carry the pronoun: [[5140|position of pronouns]] and [[7426|reflexive pronouns with infinitives]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "me levanto",
+              "texto": "How reflexive verbs work in the present: [[5085|reflexive verbs in the present]]."
+            },
+            {
+              "forma": "¡Pon!",
+              "texto": "The **tú** command itself: [[6748|regular tú commands]] and [[6962|irregular tú commands]]."
+            },
+            {
+              "forma": "¡Siéntese!",
+              "texto": "Where the **usted**, **ustedes** and **nosotros** forms come from: [[6961|commands for usted, ustedes and nosotros]]."
+            },
+            {
+              "forma": "¡Acuérdate!",
+              "texto": "A reflexive verb you'll command a lot: [[5874|recordar, acordar and acordarse]]."
+            },
+            {
+              "forma": "Si tienes frío, ponte la chamarra.",
+              "texto": "A command after a condition: [[6147|si + present, then a command]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "**Sentarse**, **nosotros**, positive: ___ aquí.",
+              "r": "Sentémonos aquí.",
+              "nota": "**sentemos** + **nos**: the **s** drops and **é** gets an accent."
+            },
+            {
+              "p": "In Spanish: _Wake up!_ (tú, **despertarse**)",
+              "r": "¡Despiértate!",
+              "nota": "Pronoun attached, accent to keep the stress."
+            },
+            {
+              "p": "In Spanish: _Leave!_ (ustedes, **irse**)",
+              "r": "¡Váyanse!",
+              "nota": "**vayan** + **se**, with an accent on **vá**."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5085,
+      6748,
+      6962,
+      6961
+    ],
+    "confunde": [
+      9255,
+      5140,
+      7426
+    ],
+    "sigue": [
+      9339,
+      5874,
+      6147
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9262",
+      "kwiziq": true
+    }
+  ]
+}

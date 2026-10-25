@@ -1,0 +1,210 @@
+{
+  "tema": 8950,
+  "slug": "hacer-que",
+  "titulo": "Hacer + subjunctive or infinitive = to make someone do something",
+  "subtitulo": "Me haces reír. Hizo que me sintiera mal.",
+  "foto": "t06.jpg",
+  "regla": "To make someone do / feel something: hacer que + subjunctive (hace que me sienta bien) or hacer + infinitive (me hace reír). With the infinitive, the person is a pronoun before hacer.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Two ways to say _make someone do something_ (cause or force):"
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hacer que + subjunctive",
+              "texto": "**Haces que me sienta bien.** Present **hacer** → present subjunctive; past **hacer** → imperfect subjunctive; present perfect → either."
+            },
+            {
+              "forma": "hacer + infinitive",
+              "texto": "**Me haces reír.** The person is a pronoun before **hacer**: **lo hizo arrodillarse**, **la hizo llorar**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **hacer** is the push; the subjunctive or the infinitive is where you land."
+        }
+      ]
+    },
+    {
+      "id": "que",
+      "titulo": "Hacer que + subjunctive",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Estás haciendo que me ==ponga== nerviosa.",
+              "en": "You're making me nervous."
+            },
+            {
+              "es": "No sé cómo, pero siempre haces que me ==sienta== bien.",
+              "en": "I don't know how, but you always make me feel good."
+            },
+            {
+              "es": "Te vamos a ayudar y vamos a hacer que ==pases== este examen sin problema.",
+              "en": "We'll help you and get you through this exam no problem."
+            },
+            {
+              "es": "Siempre hacían que nos ==sintiéramos== culpables.",
+              "en": "They always made us feel guilty."
+            },
+            {
+              "es": "Con tus comentarios has hecho que se ==enojen== contigo.",
+              "en": "With your comments you've made them angry with you."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "infinitivo",
+      "titulo": "Hacer + infinitive",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Me haces reír==.",
+              "en": "You make me laugh."
+            },
+            {
+              "es": "==La hizo ponerse== nerviosa.",
+              "en": "He made her nervous."
+            },
+            {
+              "es": "==Lo hizo arrodillarse== para pedirle matrimonio.",
+              "en": "She made him kneel to propose."
+            },
+            {
+              "es": "La película ==nos hizo llorar==.",
+              "en": "The movie made us cry."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Haces que me siento bien."
+                },
+                {
+                  "v": "bien",
+                  "t": "Haces que me sienta bien."
+                }
+              ],
+              "nota": "Subjunctive after **que**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hiciste que me ponga nervioso. (story in the past)"
+                },
+                {
+                  "v": "bien",
+                  "t": "Hiciste que me pusiera nervioso."
+                }
+              ],
+              "nota": "Past: imperfect subjunctive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hace a mí reír."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me hace reír."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "me corté el pelo",
+              "texto": "_Have something done_: [[8040|beauty and body]]."
+            },
+            {
+              "forma": "te pido que",
+              "texto": "[[7279|pedir que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Two ways: _You make me happy._",
+              "r": "Haces que sea feliz. / Me haces feliz.",
+              "nota": "que + subjunctive or direct."
+            },
+            {
+              "p": "In Spanish: _The joke made her laugh._",
+              "r": "El chiste la hizo reír.",
+              "nota": "hacer + infinitive."
+            },
+            {
+              "p": "Complete: _El ruido hizo que no ___ (poder, yo) dormir._",
+              "r": "pudiera",
+              "nota": "Past: -ra."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7279
+    ],
+    "confunde": [
+      8040
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8950",
+      "kwiziq": true
+    }
+  ]
+}

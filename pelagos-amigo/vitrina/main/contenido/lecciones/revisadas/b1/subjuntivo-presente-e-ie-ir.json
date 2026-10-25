@@ -1,0 +1,240 @@
+{
+  "tema": 6983,
+  "slug": "subjuntivo-presente-e-ie-ir",
+  "titulo": "Conjugate -ir verbs with e > ie in the present subjunctive",
+  "subtitulo": "Sienta, prefiera, but sintamos: an extra change in nosotros.",
+  "foto": "t08.jpg",
+  "regla": "-ir verbs with e > ie change e > ie in the subjunctive, and e > i in nosotros: sienta, sientas, sintamos, sientan.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Stem-changing verbs (**e > ie**, **o > ue**) normally keep their change in the present subjunctive in every form except **nosotros**, where nothing changes."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**-ir** verbs with **e > ie** are different: in **nosotros** they change **e > i**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "preferir",
+            "mentir",
+            "sentir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "prefiera",
+              "mienta",
+              "sienta"
+            ],
+            [
+              "tú",
+              "prefieras",
+              "mientas",
+              "sientas"
+            ],
+            [
+              "él, ella, usted",
+              "prefiera",
+              "mienta",
+              "sienta"
+            ],
+            [
+              "nosotros",
+              "prefiramos",
+              "mintamos",
+              "sintamos"
+            ],
+            [
+              "ustedes, ellos",
+              "prefieran",
+              "mientan",
+              "sientan"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The vowel that changes is the **e** closest to the end of the stem: **pref-e-rir** → **prefiera**, **prefiramos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Other verbs like this: **divertirse**, **sugerir**, **convertir**, **advertir**, **hervir**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **-ir** verbs never leave nosotros alone. If it isn't **ie**, it's **i**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Lo dijo para que nos ==sintamos== mejor.",
+              "en": "He said it to make us feel better."
+            },
+            {
+              "es": "No se ==sientan== obligados a venir.",
+              "en": "Don't feel obliged to come."
+            },
+            {
+              "es": "No ==mintamos== más.",
+              "en": "Let's not lie anymore."
+            },
+            {
+              "es": "Espero que te ==diviertas== en Rosarito.",
+              "en": "I hope you have fun in Rosarito."
+            },
+            {
+              "es": "Quizás ==prefieran== tacos de pescado.",
+              "en": "Maybe they'd rather have fish tacos."
+            },
+            {
+              "es": "Te sugiero que no le ==mientas== al profe.",
+              "en": "I suggest you don't lie to the coach."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Para que nos sentamos mejor."
+                },
+                {
+                  "v": "bien",
+                  "t": "Para que nos sintamos mejor."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No mientamos."
+                },
+                {
+                  "v": "bien",
+                  "t": "No mintamos."
+                }
+              ],
+              "nota": "**i**, not **ie**, in nosotros."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ojalá que nos divertamos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ojalá que nos divirtamos."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "siento, sentimos",
+              "texto": "The present: [[5574|e > ie -ir verbs]], [[5775|sentir]], [[5776|preferir]]."
+            },
+            {
+              "forma": "durmamos",
+              "texto": "The same idea with o > u: [[9256|dormir and morir]]."
+            },
+            {
+              "forma": "pidamos",
+              "texto": "e > i in every form: [[5279|e > i verbs]]."
+            },
+            {
+              "forma": "cierre, entienda",
+              "texto": "No change in nosotros: [[6236|-ar]] and [[6238|-er]] e > ie verbs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "**Sentir** with **nosotros**: Es normal que ___ miedo.",
+              "r": "Es normal que sintamos miedo.",
+              "nota": "e > i in nosotros."
+            },
+            {
+              "p": "In Spanish: _I hope you have fun._ (tú)",
+              "r": "Espero que te diviertas.",
+              "nota": "e > ie."
+            },
+            {
+              "p": "**Preferir** with **nosotros**: Tal vez ___ quedarnos.",
+              "r": "Tal vez prefiramos quedarnos.",
+              "nota": "e > i."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5574,
+      5775,
+      5776
+    ],
+    "confunde": [
+      6236,
+      6238
+    ],
+    "sigue": [
+      9256,
+      5279
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6983",
+      "kwiziq": true
+    }
+  ]
+}

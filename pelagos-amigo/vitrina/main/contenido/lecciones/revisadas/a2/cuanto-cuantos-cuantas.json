@@ -1,0 +1,265 @@
+{
+  "tema": 8703,
+  "slug": "cuanto-cuantos-cuantas",
+  "titulo": "Cuánto in questions, exclamations and indirect questions",
+  "subtitulo": "¿Cuánto cuesta? ¡Cuánta gente! No sé cuántos años tiene.",
+  "foto": "t04.jpg",
+  "regla": "Cuánto means how much / how many. Before a noun it agrees: cuánto, cuánta, cuántos, cuántas. Before a verb it stays cuánto. It always carries an accent: in direct questions, in exclamations and in indirect questions.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Cuánto** asks about quantity: _how much_ or _how many_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Before a noun**, it agrees with that noun in gender and number:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "Singular",
+            "Plural"
+          ],
+          "filas": [
+            [
+              "Masculine",
+              "¿cuánto dinero?",
+              "¿cuántos años?"
+            ],
+            [
+              "Feminine",
+              "¿cuánta agua?",
+              "¿cuántas horas?"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Before a verb**, it doesn't change: **¿Cuánto cuesta?**, **¿Cuánto trabajas?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "It works in three kinds of sentences, always **with an accent**:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Type",
+            "Example"
+          ],
+          "filas": [
+            [
+              "Direct question",
+              "¿Cuántos hermanos tienes?"
+            ],
+            [
+              "Exclamation",
+              "¡Cuánta gente!"
+            ],
+            [
+              "Indirect question",
+              "No sé cuánto cuesta."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "In Mexico you'll also hear **¿qué tanto?** for _how much_: _¿Qué tanto te falta?_"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **cuánto** is a measuring cup. It takes the shape of whatever you pour in: **cuánta** agua, **cuántos** tacos."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿==Cuánto== cuesta la tabla?",
+              "en": "How much is the board?"
+            },
+            {
+              "es": "¿==Cuántas== veces por semana entrenas?",
+              "en": "How many times a week do you train?"
+            },
+            {
+              "es": "¿==Cuánta== agua necesitan las lechugas?",
+              "en": "How much water do the lettuces need?"
+            },
+            {
+              "es": "¡==Cuántos== carros hay en la garita!",
+              "en": "So many cars at the border crossing!"
+            },
+            {
+              "es": "¡==Cuánto== has crecido!",
+              "en": "How much you've grown!"
+            },
+            {
+              "es": "No sé ==cuántos== años tiene Amos.",
+              "en": "I don't know how old Amos is."
+            },
+            {
+              "es": "Me preguntó ==cuánto== gano.",
+              "en": "He asked me how much I earn."
+            },
+            {
+              "es": "Dime ==cuántas== personas vienen a la carne asada.",
+              "en": "Tell me how many people are coming to the cookout."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Cuántos personas vienen?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cuántas personas vienen?"
+                }
+              ],
+              "nota": "**Personas** is feminine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Cuánto agua tomas?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cuánta agua tomas?"
+                }
+              ],
+              "nota": "**Agua** is feminine (even with _el_)."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No sé cuanto cuesta."
+                },
+                {
+                  "v": "bien",
+                  "t": "No sé cuánto cuesta."
+                }
+              ],
+              "nota": "Indirect questions keep the accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Cuántos cuesta?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cuánto cuesta?"
+                }
+              ],
+              "nota": "Before a verb: always **cuánto**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¿cuántos años?",
+              "texto": "The basics: [[7068|cuánto + noun]] and [[9835|cuánto + verb]]."
+            },
+            {
+              "forma": "¡qué calor!",
+              "texto": "Other exclamations: [[6137|exclamations with qué]]."
+            },
+            {
+              "forma": "cuánto / cuanto",
+              "texto": "When the accent goes away: [[8700|cuánto vs cuanto]]."
+            },
+            {
+              "forma": "no sé qué",
+              "texto": "More indirect questions: [[7013|qué in indirect questions]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _How many hours do you work?_",
+              "r": "¿Cuántas horas trabajas?",
+              "nota": "horas → cuántas."
+            },
+            {
+              "p": "In Spanish, with cuánto: _So much traffic!_",
+              "r": "¡Cuánto tráfico!",
+              "nota": "tráfico → cuánto."
+            },
+            {
+              "p": "Fix it: «No sé cuantos hermanos tiene.»",
+              "r": "No sé cuántos hermanos tiene.",
+              "nota": "Keep the accent."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7068,
+      9835
+    ],
+    "confunde": [
+      8700
+    ],
+    "sigue": [
+      6137,
+      7013
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8703",
+      "kwiziq": true
+    }
+  ]
+}

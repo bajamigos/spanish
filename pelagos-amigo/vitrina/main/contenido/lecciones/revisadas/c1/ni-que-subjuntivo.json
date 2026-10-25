@@ -1,0 +1,183 @@
+{
+  "tema": 8222,
+  "slug": "ni-que-subjuntivo",
+  "titulo": "¡Ni que + subjunctive! = it's not like...",
+  "subtitulo": "¡Ni que fuera millonaria!",
+  "foto": "t02.jpg",
+  "regla": "¡Ni que + subjunctive! rejects someone's attitude as exaggerated or absurd: ¿Mil pesos? ¡Ni que fuera rica! = It's not like I'm rich! Mostly imperfect subjunctive; also present or pluperfect subjunctive.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "¡Ni que",
+            "+ subjunctive!"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Means _it's not like..., anyone would think..., what, are you...?_ It mocks or rejects something as over the top."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Usually **imperfect subjunctive**: **ni que fuera, ni que tuvieras**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Also present (**ni que te vaya a morder**) or pluperfect (**ni que hubiera robado un banco**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **ni que** = _oh please, as if..._"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Javier quiere que le preste diez mil pesos. ¡==Ni que estuviera== loca!",
+              "en": "Javier wants me to lend him ten thousand pesos. As if I were crazy!"
+            },
+            {
+              "es": "Quítate tanto maquillaje. ==Ni que tuvieras== quince años.",
+              "en": "Take off some of that makeup. It's not like you're fifteen."
+            },
+            {
+              "es": "No sé qué le ves. ==Ni que fuera== actor de cine.",
+              "en": "I don't know what you see in him. It's not like he's a movie star."
+            },
+            {
+              "es": "¿Cuántas maletas llevas? ==Ni que te fueras== un año.",
+              "en": "How many suitcases are you taking? Anyone would think you were going for a year."
+            },
+            {
+              "es": "No te alejes tanto, ==ni que te vaya a morder==.",
+              "en": "Don't back away, it's not like I'm going to bite you."
+            },
+            {
+              "es": "Ya no regañes al niño, ==ni que hubiera robado== un banco.",
+              "en": "Stop scolding the boy, it's not like he robbed a bank."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Ni que soy rica!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Ni que fuera rica!"
+                }
+              ],
+              "nota": "Always subjunctive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "ni que",
+                  "t": "¡Ni que fuera rico!"
+                },
+                {
+                  "v": "como si",
+                  "t": "Me hablas como si fuera rico."
+                }
+              ],
+              "nota": "Same irony; **como si** is part of a longer sentence."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "como si (ironic)",
+              "texto": "[[8245|como si + imperfect subjunctive for a reproach]]."
+            },
+            {
+              "forma": "ni siquiera",
+              "texto": "[[7264|ni / ni siquiera]]."
+            },
+            {
+              "forma": "ni... ni",
+              "texto": "[[7074|ni... ni...]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Calm down, it's not like it's the end of the world._",
+              "r": "Cálmate, ni que fuera el fin del mundo.",
+              "nota": "ni que + imperfect subjunctive."
+            },
+            {
+              "p": "In Spanish: _Why so formal? It's not like we didn't know each other._",
+              "r": "¿Por qué tan formal? Ni que no nos conociéramos.",
+              "nota": "Negative inside."
+            },
+            {
+              "p": "Fix it: _¡Ni que eres mi mamá!_",
+              "r": "¡Ni que fueras mi mamá!",
+              "nota": "Subjunctive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6171
+    ],
+    "confunde": [
+      8245
+    ],
+    "sigue": [
+      7264
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8222",
+      "kwiziq": true
+    }
+  ]
+}

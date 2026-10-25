@@ -1,0 +1,240 @@
+{
+  "tema": 6871,
+  "slug": "imperfecto-vs-preterito",
+  "titulo": "Imperfect vs preterite (general use)",
+  "subtitulo": "Abría la puerta / Abrió la puerta.",
+  "foto": "t10.jpg",
+  "regla": "Preterite: a past action seen as complete, with a beginning and an end (abrió = the door is open). Imperfect: a past action seen in progress, with no clear start or end (abría = we watch it opening). English often translates both the same.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Both are past tenses and English often translates both the same way. The difference is **how you look at the action**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Tense",
+            "Viewpoint",
+            "Picture"
+          ],
+          "filas": [
+            [
+              "preterite (abrió)",
+              "complete: it has a beginning and an end",
+              "the result: the door is open"
+            ],
+            [
+              "imperfect (abría)",
+              "in progress, no clear beginning or end",
+              "the process: the door is opening"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the **preterite** is a photo of the finish line; the **imperfect** is a video of the race."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Side by side",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "imperfecto",
+                  "t": "La maestra abría la puerta."
+                },
+                {
+                  "v": "pretérito",
+                  "t": "La maestra abrió la puerta."
+                }
+              ],
+              "nota": "**Abría**: we see the door opening. **Abrió**: the door is open."
+            },
+            {
+              "filas": [
+                {
+                  "v": "imperfecto",
+                  "t": "Susana trabajaba muy duro."
+                },
+                {
+                  "v": "pretérito",
+                  "t": "Susana trabajó muy duro."
+                }
+              ],
+              "nota": "**Trabajaba**: we see her working. **Trabajó**: the work is done."
+            },
+            {
+              "filas": [
+                {
+                  "v": "imperfecto",
+                  "t": "Los niños corrían por los pasillos."
+                },
+                {
+                  "v": "pretérito",
+                  "t": "Los niños corrieron por los pasillos."
+                }
+              ],
+              "nota": "**Corrían**: we see them running. **Corrieron**: the hallway is empty now."
+            },
+            {
+              "filas": [
+                {
+                  "v": "imperfecto",
+                  "t": "Antonio comía una torta al mediodía."
+                },
+                {
+                  "v": "pretérito",
+                  "t": "Antonio se comió una torta al mediodía."
+                }
+              ],
+              "nota": "**Comía**: he's eating. **Se comió**: he's throwing the wrapper away."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "juntos",
+      "titulo": "Together in a story",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "They often appear together: the **imperfect** sets the scene, the **preterite** moves the story forward."
+        },
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Llovía== y no ==había== nadie en la calle. De repente, ==sonó== el teléfono.",
+              "en": "It was raining and there was no one on the street. Suddenly the phone rang."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer comía a las dos y luego me dormí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer comí a las dos y luego me dormí."
+                }
+              ],
+              "nota": "A finished event in a sequence: preterite."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cuando fui niño, viví en Tijuana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cuando era niño, vivía en Tijuana."
+                }
+              ],
+              "nota": "Background, no clear end: imperfect."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "ayer, siempre, de repente",
+              "texto": "Time markers: [[6874|imperfect vs preterite]]."
+            },
+            {
+              "forma": "era / fue, estaba / estuvo, tenía / tuvo",
+              "texto": "[[6864|ser]], [[6868|estar]], [[6869|tener]]."
+            },
+            {
+              "forma": "quise / quería, pude / podía",
+              "texto": "Verbs that change meaning: [[6867|querer]], [[6334|poder]]."
+            },
+            {
+              "forma": "había / hubo",
+              "texto": "[[6872|había vs hubo]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Imperfect or preterite? _Mientras ella ___ (dormir), él ___ (salir)._",
+              "r": "dormía / salió",
+              "nota": "Background vs event."
+            },
+            {
+              "p": "Imperfect or preterite? _Ayer ___ (escribir, yo) tres correos._",
+              "r": "escribí",
+              "nota": "Complete, counted."
+            },
+            {
+              "p": "Imperfect or preterite? _De niña ___ (tener, yo) un perro._",
+              "r": "tenía",
+              "nota": "Background."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6874
+    ],
+    "confunde": [
+      6209
+    ],
+    "sigue": [
+      6864,
+      6867
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6871",
+      "kwiziq": true
+    }
+  ]
+}

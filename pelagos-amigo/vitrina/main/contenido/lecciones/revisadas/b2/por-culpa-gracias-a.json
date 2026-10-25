@@ -1,0 +1,221 @@
+{
+  "tema": 5147,
+  "slug": "por-culpa-gracias-a",
+  "titulo": "Por culpa de / gracias a = because of / thanks to",
+  "subtitulo": "Por culpa de la lluvia / Gracias a tu ayuda.",
+  "foto": "t05.jpg",
+  "regla": "Por culpa de + noun = because of, with a bad result (blame). Gracias a + noun or gracias a que + indicative = thanks to, with a good result. They can be swapped for irony.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Phrase",
+            "Result",
+            "Followed by"
+          ],
+          "filas": [
+            [
+              "por culpa de",
+              "negative (blame)",
+              "noun or name"
+            ],
+            [
+              "gracias a",
+              "positive (credit)",
+              "noun or name"
+            ],
+            [
+              "gracias a que",
+              "positive",
+              "a clause, usually indicative"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Gracias a que** works like **porque**: **pudimos casarnos gracias a que nos ayudaron**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With **irony**, you can swap them: **Gracias a Miguel, perdimos el partido.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **culpa** = blame, **gracias** = thanks. The words say who gets which."
+        }
+      ]
+    },
+    {
+      "id": "culpa",
+      "titulo": "Por culpa de",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No pudimos salir en todo el día ==por culpa de== la lluvia.",
+              "en": "We couldn't go out all day because of the rain."
+            },
+            {
+              "es": "Siempre se están peleando ==por culpa de== su mamá. Es muy metiche.",
+              "en": "They're always fighting because of his mom. She's really nosy."
+            },
+            {
+              "es": "==Por culpa de== Miguel no ganamos el partido.",
+              "en": "We didn't win the game because of Miguel."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gracias",
+      "titulo": "Gracias a",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "El problema se resolvió ==gracias a== la intervención del maestro.",
+              "en": "The problem was solved thanks to the teacher stepping in."
+            },
+            {
+              "es": "==Gracias a== los vecinos, las calles quedaron adornadas para la fiesta.",
+              "en": "Thanks to the neighbors, the streets were decorated for the party."
+            },
+            {
+              "es": "Pudimos celebrar la boda ==gracias a que== nuestros papás nos ayudaron.",
+              "en": "We were able to have the wedding because our parents helped us."
+            },
+            {
+              "es": "==Gracias a== Miguel, hoy perdimos el partido.",
+              "en": "Thanks to Miguel, we lost the game today. (ironic)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Por culpa de tu ayuda, aprobé."
+                },
+                {
+                  "v": "bien",
+                  "t": "Gracias a tu ayuda, aprobé."
+                }
+              ],
+              "nota": "Good result: **gracias a**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Gracias de ti..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Gracias a ti..."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Por culpa la lluvia..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Por culpa de la lluvia..."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "debido a",
+              "texto": "Neutral: [[7086|debido a]]."
+            },
+            {
+              "forma": "por",
+              "texto": "[[7845|por for because of]]."
+            },
+            {
+              "forma": "porque",
+              "texto": "[[7034|cause]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We were late because of the traffic._",
+              "r": "Llegamos tarde por culpa del tráfico.",
+              "nota": "Negative."
+            },
+            {
+              "p": "In Spanish: _Thanks to you, I passed._",
+              "r": "Gracias a ti, aprobé / pasé.",
+              "nota": "Positive."
+            },
+            {
+              "p": "In Spanish: _We finished early thanks to the fact that everyone helped._",
+              "r": "Terminamos temprano gracias a que todos ayudaron.",
+              "nota": "gracias a que + indicative."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7086
+    ],
+    "confunde": [
+      7845
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5147",
+      "kwiziq": true
+    }
+  ]
+}

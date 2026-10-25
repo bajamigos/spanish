@@ -1,0 +1,172 @@
+{
+  "tema": 6465,
+  "slug": "el-infinitivo-sustantivo",
+  "titulo": "El + infinitive = the -ing (as a noun)",
+  "subtitulo": "El caminar todos los días es bueno.",
+  "foto": "t06.jpg",
+  "regla": "An infinitive can work as a noun, matching the English -ing form: (El) caminar es bueno = walking is good. The article el is optional and a bit literary. Infinitives can't go plural, except a few that have become real nouns: los deberes, los placeres, los amaneceres.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "(el)",
+            "+ infinitive",
+            "= -ing as a noun"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Spanish uses the **infinitive**, not the gerund, as a noun: **fumar es malo**, never ~~fumando es malo~~."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**El** is optional; it gives a slightly more formal or literary feel."
+        },
+        {
+          "tipo": "texto",
+          "texto": "No plural: ~~los caminares~~. Exception: infinitives that became nouns: **el deber / los deberes, el amanecer / los amaneceres, el placer, el poder, el ir y venir**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if English says _-ing_ as a subject, Spanish says the infinitive."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==El beber== en exceso puede ser peligroso.",
+              "en": "Drinking too much can be dangerous."
+            },
+            {
+              "es": "==Caminar== todos los días es bueno para la circulación.",
+              "en": "Walking every day is good for circulation."
+            },
+            {
+              "es": "==El vivir== lejos del trabajo es un problema.",
+              "en": "Living far from work is a problem."
+            },
+            {
+              "es": "==El ir y venir== de la gente nos entretenía.",
+              "en": "The coming and going of people kept us entertained."
+            },
+            {
+              "es": "Me encantan ==los amaneceres== en Mazatlán.",
+              "en": "I love the sunrises in Mazatlán."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nadando es bueno para la espalda."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nadar es bueno para la espalda."
+                }
+              ],
+              "nota": "Infinitive, not gerund."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Los caminares son buenos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Caminar es bueno."
+                }
+              ],
+              "nota": "Infinitives don't pluralize."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "al + infinitive",
+              "texto": "[[6175|al + infinitive]]."
+            },
+            {
+              "forma": "infinitive in relative clauses",
+              "texto": "[[9825|relative clauses with the infinitive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Smoking is bad for your health._",
+              "r": "(El) fumar es malo para la salud.",
+              "nota": "Infinitive."
+            },
+            {
+              "p": "In Spanish: _Learning languages opens doors._",
+              "r": "Aprender idiomas abre puertas.",
+              "nota": "No article needed."
+            },
+            {
+              "p": "Fix it: _Leyendo antes de dormir me relaja._",
+              "r": "Leer antes de dormir me relaja.",
+              "nota": "Infinitive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6175
+    ],
+    "confunde": [],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6465",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "tema": 7228,
+  "slug": "puede-que",
+  "titulo": "The subjunctive after puede que (possibility)",
+  "subtitulo": "Puede que llueva. Puede que se haya ido.",
+  "foto": "t04.jpg",
+  "regla": "Puede que = maybe / it may be that, always + subjunctive. Present or future: present subjunctive (puede que venga). Past: present perfect subjunctive (puede que haya llegado) or imperfect subjunctive (puede que perdiera el camión).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Puede que** expresses **possibility**: _maybe, it may be that_. It's **always** followed by the **subjunctive**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Time",
+            "Tense after puede que",
+            "Example"
+          ],
+          "filas": [
+            [
+              "present / future",
+              "present subjunctive",
+              "Puede que venga mañana."
+            ],
+            [
+              "past (completed, linked to now)",
+              "present perfect subjunctive",
+              "Puede que ya hayan comprado."
+            ],
+            [
+              "past (general)",
+              "imperfect subjunctive",
+              "Puede que perdiera el camión."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Puede ser que** works the same way."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **puede que** never promises, so it never takes the indicative."
+        }
+      ]
+    },
+    {
+      "id": "presente",
+      "titulo": "Present and future",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ese chavo de allá ==puede que sea== el primo de Laura.",
+              "en": "That guy over there may be Laura's cousin."
+            },
+            {
+              "es": "No encuentro el lugar en el mapa. ==Puede que estemos== perdidos.",
+              "en": "I can't find the place on the map. We may be lost."
+            },
+            {
+              "es": "==Puede que vaya== mañana al mercado. Todavía no sé.",
+              "en": "I might go to the market tomorrow. I don't know yet."
+            },
+            {
+              "es": "==Puede que== mis papás ==se divorcien== pronto.",
+              "en": "My parents may get divorced soon."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pasado",
+      "titulo": "Past",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Carla no ha llegado. ==Puede que perdiera== el camión de las tres.",
+              "en": "Carla hasn't arrived. She may have missed the three o'clock bus."
+            },
+            {
+              "es": "==Puede que== yo ==haya sido== un poco brusca, pero tenía que decir la verdad.",
+              "en": "I may have been a bit blunt, but I had to tell the truth."
+            },
+            {
+              "es": "==Puede que== Dalí ==fuera== muy excéntrico, pero era un genio.",
+              "en": "Dalí may have been very eccentric, but he was a genius."
+            },
+            {
+              "es": "No compres mucho refresco; ==puede que== los chavos ya ==hayan comprado== bastante.",
+              "en": "Don't buy a lot of soda; the guys may have already bought plenty."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Puede que viene."
+                },
+                {
+                  "v": "bien",
+                  "t": "Puede que venga."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Puede que llegó tarde."
+                },
+                {
+                  "v": "bien",
+                  "t": "Puede que haya llegado tarde. / Puede que llegara tarde."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "puede que",
+                  "t": "Puede que venga."
+                },
+                {
+                  "v": "a lo mejor",
+                  "t": "A lo mejor viene."
+                }
+              ],
+              "nota": "**A lo mejor** takes the indicative."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "es posible que",
+              "texto": "[[6235|doubt and possibility]]."
+            },
+            {
+              "forma": "así que puede que",
+              "texto": "[[7250|así que]]."
+            },
+            {
+              "forma": "haya llegado",
+              "texto": "[[5076|present perfect subjunctive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Complete: _Puede que ___ (hacer) frío mañana._",
+              "r": "haga",
+              "nota": "Present subjunctive."
+            },
+            {
+              "p": "In Spanish: _They may have left already._",
+              "r": "Puede que ya se hayan ido.",
+              "nota": "Perfect subjunctive."
+            },
+            {
+              "p": "Fix it: _Puede que tiene razón._",
+              "r": "Puede que tenga razón.",
+              "nota": "Always subjunctive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6235
+    ],
+    "confunde": [
+      6235
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7228",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "tema": 6713,
+  "slug": "podria-peticiones",
+  "titulo": "Using podría to make polite requests and suggestions",
+  "subtitulo": "¿Podrías ayudarme? Podrías hablar con ella: soft requests and advice.",
+  "foto": "t03.jpg",
+  "regla": "Poder in the conditional + infinitive: polite requests (¿podría pasarme…?) and suggestions about what someone could do (podrías llamarla).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Poder** in the **conditional** (**podría**, **podrías**…) + infinitive is used in two everyday situations:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Use",
+            "Example"
+          ],
+          "filas": [
+            [
+              "suggestion or advice: what someone _could_ do",
+              "Podrías hablar con la jefa."
+            ],
+            [
+              "polite request",
+              "¿Podrías hablar más bajito, por favor?"
+            ]
+          ]
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**podría, podrías, podría, podríamos, podrían**",
+            "infinitive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It's softer than the present (**¿puedes…?**) or a command."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **podrías** is a request in a velvet glove."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Podrías hablar== con la jefa y explicarle la situación.",
+              "en": "You could talk to the boss and explain the situation."
+            },
+            {
+              "es": "¿==Podrían hablar== más bajito, por favor? No me concentro.",
+              "en": "Could you speak more quietly, please? I can't concentrate."
+            },
+            {
+              "es": "—Creo que fui grosero con Luisa. —Pues ==podrías llamarla== y disculparte.",
+              "en": "\"I think I was rude to Luisa.\" \"Well, you could call her and apologize.\""
+            },
+            {
+              "es": "¿==Podrías bajarme== la tabla de ahí arriba? No alcanzo.",
+              "en": "Could you get the board down from up there for me? I can't reach."
+            },
+            {
+              "es": "Señor, ¿==podría mover== su silla un poco?",
+              "en": "Sir, could you move your chair a bit?"
+            },
+            {
+              "es": "==Podríamos ir== a Rosarito el domingo.",
+              "en": "We could go to Rosarito on Sunday."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Podrías a ayudarme?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Podrías ayudarme?"
+                }
+              ],
+              "nota": "No **a** after **poder**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Poderías pasarme la sal?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Podrías pasarme la sal?"
+                }
+              ],
+              "nota": "The stem is **podr-**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "podría, podrías",
+              "texto": "The forms: [[5853|poder in the conditional]]."
+            },
+            {
+              "forma": "deberías",
+              "texto": "Stronger advice: [[5913|deber to say should]]."
+            },
+            {
+              "forma": "quisiera",
+              "texto": "Polite _I'd like_: [[5227|querría, quisiera]]."
+            },
+            {
+              "forma": "me gustaría",
+              "texto": "Another soft wish: [[7059|gustar in the conditional]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Ask politely: _Could you open the door?_ (usted)",
+              "r": "¿Podría abrir la puerta?",
+              "nota": "podría + infinitive."
+            },
+            {
+              "p": "Suggest: _You could take the bus._ (tú)",
+              "r": "Podrías tomar el camión.",
+              "nota": "podrías + infinitive."
+            },
+            {
+              "p": "Suggest: _We could eat tacos._",
+              "r": "Podríamos comer tacos.",
+              "nota": "podríamos."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5853
+    ],
+    "confunde": [
+      5913
+    ],
+    "sigue": [
+      5227,
+      7059
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6713",
+      "kwiziq": true
+    }
+  ]
+}

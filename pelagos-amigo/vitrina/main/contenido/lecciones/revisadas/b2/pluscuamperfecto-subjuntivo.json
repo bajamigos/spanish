@@ -1,0 +1,241 @@
+{
+  "tema": 5842,
+  "slug": "pluscuamperfecto-subjuntivo",
+  "titulo": "Conjugating the pluperfect subjunctive",
+  "subtitulo": "Hubiera ido, hubieras hecho, hubieran dicho.",
+  "foto": "t02.jpg",
+  "regla": "Pluperfect subjunctive = hubiera / hubieras / hubiera / hubiéramos / hubieran (or hubiese...) + participle. Used for past actions where the subjunctive is needed: si hubiera sabido, ojalá hubieras venido, como si hubiera visto un fantasma.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "hubiera / hubieras / hubiera / hubiéramos / hubieran",
+            "+ participle"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The **-ra** set is the everyday one in Mexico and all of Latin America; the **-se** set (**hubiese**) is more formal or written."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Use it where the subjunctive is needed and the action happened **before** another past moment: **me sorprendió que no hubieran llegado**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Key use: impossible conditions in the past: **si hubiera sabido, habría venido**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: it's the pluperfect (**había ido**) in subjunctive clothes (**hubiera ido**)."
+        }
+      ]
+    },
+    {
+      "id": "tabla",
+      "titulo": "Full forms",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "-ra",
+            "-se"
+          ],
+          "filas": [
+            [
+              "yo",
+              "hubiera + participle",
+              "hubiese + participle"
+            ],
+            [
+              "tú",
+              "hubieras + participle",
+              "hubieses + participle"
+            ],
+            [
+              "él, ella, usted",
+              "hubiera + participle",
+              "hubiese + participle"
+            ],
+            [
+              "nosotros",
+              "hubiéramos + participle",
+              "hubiésemos + participle"
+            ],
+            [
+              "ustedes, ellos",
+              "hubieran + participle",
+              "hubiesen + participle"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "A él no le importaba lo que yo ==hubiera dicho==.",
+              "en": "He didn't care what I had said."
+            },
+            {
+              "es": "Parece como si ==hubieras tenido== una pelea.",
+              "en": "You look as if you'd been in a fight."
+            },
+            {
+              "es": "Esperábamos que él ==hubiera hecho== lo mismo por ti.",
+              "en": "We were hoping he'd have done the same for you."
+            },
+            {
+              "es": "Si usted ==hubiera venido== antes, yo lo habría atendido.",
+              "en": "If you'd come earlier, I would have helped you."
+            },
+            {
+              "es": "Si ==hubiéramos hablado== con Raquel, estaría más contenta.",
+              "en": "If we'd talked to Raquel, she'd be happier."
+            },
+            {
+              "es": "Me sorprendió que no ==hubieran llegado==.",
+              "en": "I was surprised they hadn't arrived."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Si habría sabido, ..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Si hubiera sabido, ..."
+                }
+              ],
+              "nota": "After **si**: **hubiera**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hubiera hacido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hubiera hecho."
+                }
+              ],
+              "nota": "Irregular participle."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ojalá habías venido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ojalá hubieras venido."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hubiera",
+              "texto": "[[5955|haber in the imperfect subjunctive]]."
+            },
+            {
+              "forma": "si hubiera...",
+              "texto": "[[7078|si + pluperfect subjunctive]]."
+            },
+            {
+              "forma": "ojalá hubieras",
+              "texto": "[[9105|ojalá in the past]]."
+            },
+            {
+              "forma": "había ido",
+              "texto": "[[5843|pluperfect]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Conjugate: _yo / ver_",
+              "r": "hubiera visto",
+              "nota": "Irregular participle."
+            },
+            {
+              "p": "In Spanish: _If you had told me..._ (tú)",
+              "r": "Si me hubieras dicho...",
+              "nota": "hubieras + participle."
+            },
+            {
+              "p": "In Spanish: _I wish they had won._",
+              "r": "Ojalá hubieran ganado.",
+              "nota": "hubieran ganado."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5843,
+      5955
+    ],
+    "confunde": [
+      5076
+    ],
+    "sigue": [
+      7078
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5842",
+      "kwiziq": true
+    }
+  ]
+}

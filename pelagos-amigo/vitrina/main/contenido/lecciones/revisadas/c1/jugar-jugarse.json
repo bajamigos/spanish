@@ -1,0 +1,177 @@
+{
+  "tema": 7480,
+  "slug": "jugar-jugarse",
+  "titulo": "Jugar vs jugarse",
+  "subtitulo": "Jugamos ajedrez. Se jugó la vida.",
+  "foto": "t05.jpg",
+  "regla": "Jugar = to play (a game, a sport). Jugar con = to play with, fiddle with, or toy with someone's feelings. Jugarse algo = to bet, to risk, to put on the line: se jugó el sueldo, me juego la vida. Jugársela = to risk it.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "jugar (a) + game",
+              "texto": "_to play_: **jugar futbol**, **jugar a las cartas**. Mexico often drops the **a**: **jugamos ajedrez**."
+            },
+            {
+              "forma": "jugar con + thing / person",
+              "texto": "_to play with, fiddle with_; with people, _to toy with_: **está jugando con él**."
+            },
+            {
+              "forma": "jugarse + something",
+              "texto": "_to bet, risk_: **se jugó su reloj**, **me juego el trabajo**."
+            },
+            {
+              "forma": "jugársela",
+              "texto": "_to risk it, take a chance_: **se la jugó y ganó**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **jugar** is fun; **jugarse** has something at stake."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿==Jugamos== ajedrez?",
+              "en": "Shall we play chess?"
+            },
+            {
+              "es": "Ayer los niños ==jugaron== horas en el jardín.",
+              "en": "Yesterday the kids played in the yard for hours."
+            },
+            {
+              "es": "No ==juegues con== los chícharos y cómetelos.",
+              "en": "Stop playing with your peas and eat them."
+            },
+            {
+              "es": "Cristina ==está jugando con== él; no se lo merece.",
+              "en": "Cristina is toying with him; he doesn't deserve it."
+            },
+            {
+              "es": "==Se jugó== su reloj de oro en una partida de cartas.",
+              "en": "He bet his gold watch in a card game."
+            },
+            {
+              "es": "==Me jugué== todo lo que tenía y lo perdí.",
+              "en": "I gambled everything I had and lost it."
+            },
+            {
+              "es": "Los bomberos ==se juegan la vida== todos los días.",
+              "en": "Firefighters risk their lives every day."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "jugar",
+                  "t": "Jugó a la lotería."
+                },
+                {
+                  "v": "jugarse",
+                  "t": "Se jugó el sueldo en la lotería."
+                }
+              ],
+              "nota": "**Jugarse** + what you put at risk."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Te estás jugando con fuego."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estás jugando con fuego."
+                }
+              ],
+              "nota": "_Playing with fire_ = **jugar con fuego**, no **se**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "pronominal verbs",
+              "texto": "[[7447|encontrar / encontrarse]], [[7478|aprovechar / aprovecharse]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Don't risk your job._",
+              "r": "No te juegues el trabajo.",
+              "nota": "jugarse."
+            },
+            {
+              "p": "In Spanish: _They play soccer on Sundays._",
+              "r": "Juegan futbol los domingos.",
+              "nota": "jugar."
+            },
+            {
+              "p": "In Spanish: _She took a chance and it worked out._",
+              "r": "Se la jugó y le salió bien.",
+              "nota": "jugársela."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7478
+    ],
+    "confunde": [],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7480",
+      "kwiziq": true
+    }
+  ]
+}

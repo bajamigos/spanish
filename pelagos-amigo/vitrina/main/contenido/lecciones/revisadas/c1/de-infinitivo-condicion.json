@@ -1,0 +1,204 @@
+{
+  "tema": 7260,
+  "slug": "de-infinitivo-condicion",
+  "titulo": "De + infinitive = if...",
+  "subtitulo": "De ser cierto, es grave. De haberlo sabido, habría venido.",
+  "foto": "t10.jpg",
+  "regla": "De + infinitive can replace a si clause: De ser verdad = si es verdad. Tenses are shown by the main verb and by the infinitive form: de poder (if I could), de haber sabido (if I had known), de ser aprobada (if it is passed), de no llegar (if we didn't get there).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "de",
+            "+ infinitive",
+            ", main clause"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "= **si** + conjugated verb. More compact, a bit formal."
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "de + infinitive",
+              "texto": "real or hypothetical: **de ser posible** = _if possible_."
+            },
+            {
+              "forma": "de haber + participle",
+              "texto": "past, unreal: **de haber sabido** = _if I had known_."
+            },
+            {
+              "forma": "de ser + participle",
+              "texto": "passive: **de ser aprobada** = _if it is passed_."
+            },
+            {
+              "forma": "de no + infinitive",
+              "texto": "negative: **de no llegar** = _if we don't arrive_."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The main verb shows the time: **de poder, iría** (unreal now); **de poder, voy** (real)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **de** = **si** in a suit and tie."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿Oíste las noticias? ==De ser cierto==, la economía va en picada.",
+              "en": "Did you hear the news? If it's true, the economy is in a nosedive."
+            },
+            {
+              "es": "==De ser posible==, te llevaría a ese restaurante.",
+              "en": "If it were possible, I'd take you to that restaurant."
+            },
+            {
+              "es": "==De poder elegir==, yo me quedaría con el rojo.",
+              "en": "If I could choose, I'd go for the red one."
+            },
+            {
+              "es": "No se preocupe. ==De saber algo más==, le aviso por teléfono.",
+              "en": "Don't worry. If I hear anything else, I'll call you."
+            },
+            {
+              "es": "==De haber sabido== que venían, habría hecho algo de comer.",
+              "en": "If I'd known you were coming, I'd have made something to eat."
+            },
+            {
+              "es": "==De ser aprobada== esa ley, muchas mujeres saldrán beneficiadas.",
+              "en": "If that law passes, many women will benefit."
+            },
+            {
+              "es": "==De no llegar== a tiempo, perderíamos el vuelo.",
+              "en": "If we didn't get there on time, we'd miss the flight."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "De sería posible..."
+                },
+                {
+                  "v": "bien",
+                  "t": "De ser posible..."
+                }
+              ],
+              "nota": "Always the infinitive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "de",
+                  "t": "De haberlo sabido, no venía."
+                },
+                {
+                  "v": "si",
+                  "t": "Si lo hubiera sabido, no venía."
+                }
+              ],
+              "nota": "Same meaning."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "si + imperfect subjunctive",
+              "texto": "[[5120|si + imperfect subjunctive]]."
+            },
+            {
+              "forma": "si + pluperfect subjunctive",
+              "texto": "[[7078|si + hubiera]]."
+            },
+            {
+              "forma": "como + subjunctive",
+              "texto": "[[7267|como = if]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "With de: _If possible, call me before noon._",
+              "r": "De ser posible, llámame antes de mediodía.",
+              "nota": "de ser."
+            },
+            {
+              "p": "With de: _If I had known, I would have told you._",
+              "r": "De haberlo sabido, te lo habría dicho.",
+              "nota": "de haber + participle."
+            },
+            {
+              "p": "With de: _If we don't hurry, we'll arrive late._",
+              "r": "De no apurarnos, vamos a llegar tarde.",
+              "nota": "de no + infinitive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5120,
+      7078
+    ],
+    "confunde": [
+      7267
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7260",
+      "kwiziq": true
+    }
+  ]
+}

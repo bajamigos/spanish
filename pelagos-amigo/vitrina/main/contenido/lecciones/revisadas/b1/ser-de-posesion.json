@@ -1,0 +1,200 @@
+{
+  "tema": 5986,
+  "slug": "ser-de-posesion",
+  "titulo": "Ser de (not estar) to indicate ownership",
+  "subtitulo": "Es de Beto: ownership always takes ser.",
+  "foto": "t04.jpg",
+  "regla": "To say who something belongs to: thing + ser + de + person. Never estar: la tabla es de Beto.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say **who something belongs to**, use **ser** + **de** + the owner. Never **estar**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "thing",
+            "**ser**",
+            "**de**",
+            "owner"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It works in any tense: **era de mi abuelo**, **será de nuestros hijos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "To ask, flip it: **¿De quién es?** (_Whose is it?_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: belonging is a permanent label, so it goes with **ser**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Estas medallas ==eran de== mi abuelo.",
+              "en": "These medals were my grandfather's."
+            },
+            {
+              "es": "No es tu problema. ==Es problema de== Andrés.",
+              "en": "It's not your problem. It's Andrés's problem."
+            },
+            {
+              "es": "La casa ==será de== nuestros hijos.",
+              "en": "The house will be our kids'."
+            },
+            {
+              "es": "Esta tabla ==es de== Beto.",
+              "en": "This board is Beto's."
+            },
+            {
+              "es": "—¿==De quién es== la llave? —==Es del== cliente.",
+              "en": "\"Whose key is it?\" \"It's the customer's.\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La tabla está de Beto."
+                },
+                {
+                  "v": "bien",
+                  "t": "La tabla es de Beto."
+                }
+              ],
+              "nota": "Ownership: **ser**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Quién es de la llave?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿De quién es la llave?"
+                }
+              ],
+              "nota": "**De quién** at the start."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es de el cliente."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es del cliente."
+                }
+              ],
+              "nota": "**de + el** = **del**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el carro de Beto",
+              "texto": "**De** for possession: [[7272|de to express possession]]."
+            },
+            {
+              "forma": "es mío",
+              "texto": "Possessives: [[8388|long possessives]], [[6139|possessive pronouns]]."
+            },
+            {
+              "forma": "es de madera",
+              "texto": "Another **ser de**: [[5985|what it's made of]]."
+            },
+            {
+              "forma": "está de mesero",
+              "texto": "**Estar de**: [[5982|a temporary job]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _The car is my dad's._",
+              "r": "El carro es de mi papá.",
+              "nota": "ser de."
+            },
+            {
+              "p": "In Spanish: _Whose are these keys?_",
+              "r": "¿De quién son estas llaves?",
+              "nota": "De quién + ser."
+            },
+            {
+              "p": "In Spanish: _The garden will be the neighborhood's._",
+              "r": "El huerto será de la colonia.",
+              "nota": "ser de, future."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7272,
+      5972
+    ],
+    "confunde": [
+      5982
+    ],
+    "sigue": [
+      5985,
+      8388
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5986",
+      "kwiziq": true
+    }
+  ]
+}

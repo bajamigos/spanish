@@ -1,0 +1,233 @@
+{
+  "tema": 8749,
+  "slug": "colores-genero-numero",
+  "titulo": "Colors: gender and number",
+  "subtitulo": "«Unas sandalias blancas y una tabla roja.»",
+  "foto": "t10.jpg",
+  "regla": "Colors are adjectives and agree with the noun: -o colors have four forms (rojo, roja, rojos, rojas); colors in -e or a consonant only change for number (verde, verdes; azul, azules). As nouns, colors are masculine: el rojo.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Colors go **after** the noun and agree with it."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Ending",
+            "masc. sing.",
+            "fem. sing.",
+            "masc. pl.",
+            "fem. pl."
+          ],
+          "filas": [
+            [
+              "-o",
+              "negro",
+              "negra",
+              "negros",
+              "negras"
+            ],
+            [
+              "-e",
+              "verde",
+              "verde",
+              "verdes",
+              "verdes"
+            ],
+            [
+              "consonant",
+              "azul",
+              "azul",
+              "azules",
+              "azules"
+            ],
+            [
+              "-s",
+              "gris",
+              "gris",
+              "grises",
+              "grises"
+            ],
+            [
+              "-é",
+              "café",
+              "café",
+              "cafés",
+              "cafés"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Naranja** and **rosa** don't change for gender: **un suéter naranja**, **una playera rosa**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The color itself (a noun) is masculine: **el rojo**, **el azul**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Tengo una tabla ==roja==.",
+              "en": "I have a red board."
+            },
+            {
+              "es": "Mis ojos son ==cafés==.",
+              "en": "My eyes are brown."
+            },
+            {
+              "es": "Compré unas sandalias ==blancas==.",
+              "en": "I bought some white sandals."
+            },
+            {
+              "es": "Las plantas del jardín están muy ==verdes==.",
+              "en": "The plants in the garden are very green."
+            },
+            {
+              "es": "El cielo está ==gris== hoy.",
+              "en": "The sky is gray today."
+            },
+            {
+              "es": "==El azul== es mi color favorito.",
+              "en": "Blue is my favorite color."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Una camisa rojo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Una camisa roja."
+                }
+              ],
+              "nota": "**Camisa** is feminine: **roja**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Los ojos azul."
+                },
+                {
+                  "v": "bien",
+                  "t": "Los ojos azules."
+                }
+              ],
+              "nota": "Consonant + **-es** in the plural."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Una playera verda."
+                },
+                {
+                  "v": "bien",
+                  "t": "Una playera verde."
+                }
+              ],
+              "nota": "**-e** colors don't take **-a**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "alto, alta",
+              "texto": "Same as other adjectives: [[6013|singular adjectives]], [[6014|plural adjectives]]."
+            },
+            {
+              "forma": "verde, verdes",
+              "texto": "Colors in -e: [[6051|plural of adjectives in -e and -a]]."
+            },
+            {
+              "forma": "azul, azules",
+              "texto": "Colors in -l: [[6057|plural of adjectives in -z and -l]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _white sandals_ (sandalias)",
+              "r": "sandalias blancas",
+              "nota": "Feminine plural."
+            },
+            {
+              "p": "Fix it: _Tengo dos carros azul._",
+              "r": "Tengo dos carros azules.",
+              "nota": "Plural: azules."
+            },
+            {
+              "p": "In Spanish: _a green T-shirt_ (playera)",
+              "r": "una playera verde",
+              "nota": "-e: no -a."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6013,
+      6014
+    ],
+    "confunde": [
+      6051
+    ],
+    "sigue": [
+      6057
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8749",
+      "kwiziq": true
+    }
+  ]
+}

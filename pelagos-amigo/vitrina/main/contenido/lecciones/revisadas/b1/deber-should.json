@@ -1,0 +1,258 @@
+{
+  "tema": 5913,
+  "slug": "deber-should",
+  "titulo": "Using deber to say should",
+  "subtitulo": "Deberías descansar: the conditional of deber + an infinitive gives advice.",
+  "foto": "t03.jpg",
+  "regla": "To say should, use deber in the conditional + infinitive: debería, deberías, debería, deberíamos, deberían + infinitive.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say _should_ or _ought to_, conjugate **deber** in the **conditional** and add the second verb in the **infinitive**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**deber** in the conditional",
+            "infinitive"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Ending"
+          ],
+          "filas": [
+            [
+              "yo",
+              "-ía"
+            ],
+            [
+              "tú",
+              "-ías"
+            ],
+            [
+              "él, ella, usted",
+              "-ía"
+            ],
+            [
+              "nosotros",
+              "-íamos"
+            ],
+            [
+              "ustedes, ellos",
+              "-ían"
+            ]
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "deber"
+          ],
+          "filas": [
+            [
+              "yo",
+              "debería"
+            ],
+            [
+              "tú",
+              "deberías"
+            ],
+            [
+              "él, ella, usted",
+              "debería"
+            ],
+            [
+              "nosotros",
+              "deberíamos"
+            ],
+            [
+              "ustedes, ellos",
+              "deberían"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The second verb never changes: it stays in the infinitive. Never put **que** in between. You'll hear **deberías de** a lot in Mexico, but the standard form, and the one the quiz wants, has no **de**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **debería** is the voice of good advice: soft, polite, and always followed by a plain infinitive."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Debería probar== la salsa antes de servirla.",
+              "en": "I should taste the salsa before serving it."
+            },
+            {
+              "es": "¿Qué ==deberías hacer== si te agarra una corriente?",
+              "en": "What should you do if a current catches you?"
+            },
+            {
+              "es": "Usted ==debería cuidar== más su tabla.",
+              "en": "You should take better care of your board."
+            },
+            {
+              "es": "==Deberíamos contratar== a otro cerrajero.",
+              "en": "We should hire another locksmith."
+            },
+            {
+              "es": "Ellos ==deberían tomar== el camión más temprano.",
+              "en": "They should take the bus earlier."
+            },
+            {
+              "es": "Yo creo que ==deberían vigilar== más a los niños en la playa.",
+              "en": "I think they should keep a closer eye on the kids at the beach."
+            },
+            {
+              "es": "==Deberías repetir== la técnica cien veces.",
+              "en": "You should repeat the technique a hundred times."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Deberías que descansar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Deberías descansar."
+                }
+              ],
+              "nota": "No **que** after **deber**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Deberíamos entrenamos más."
+                },
+                {
+                  "v": "bien",
+                  "t": "Deberíamos entrenar más."
+                }
+              ],
+              "nota": "The second verb stays in the infinitive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "Debes descansar."
+                }
+              ],
+              "nota": "The present, **debes**, is stronger: _you must_. The conditional, **deberías**, is advice: _you should_."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "debo, debes",
+              "texto": "The present, _must_: [[5065|deber, poder, querer + infinitive]]."
+            },
+            {
+              "forma": "debería haber ido",
+              "texto": "_Should have_: [[5054|debería + haber + participle]]."
+            },
+            {
+              "forma": "tendrías que",
+              "texto": "Another way to give strong advice: [[5914|tener que in the conditional]]."
+            },
+            {
+              "forma": "podrías",
+              "texto": "A softer suggestion: [[6713|poder for polite suggestions]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _You should sleep more._ (tú)",
+              "r": "Deberías dormir más.",
+              "nota": "deberías + infinitive."
+            },
+            {
+              "p": "In Spanish: _We should go to Rosarito._",
+              "r": "Deberíamos ir a Rosarito.",
+              "nota": "deberíamos + ir."
+            },
+            {
+              "p": "Fix it: **Deberían que llamar al cliente.**",
+              "r": "Deberían llamar al cliente.",
+              "nota": "No **que**."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5065,
+      6467,
+      5731
+    ],
+    "confunde": [
+      5914
+    ],
+    "sigue": [
+      6469,
+      5054,
+      6713
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5913",
+      "kwiziq": true
+    }
+  ]
+}

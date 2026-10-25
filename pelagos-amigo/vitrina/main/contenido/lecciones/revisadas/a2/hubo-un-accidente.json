@@ -1,0 +1,227 @@
+{
+  "tema": 5220,
+  "slug": "hubo-un-accidente",
+  "titulo": "There was, there were: hubo",
+  "subtitulo": "Ayer hubo un accidente en la garita.",
+  "foto": "t01.jpg",
+  "regla": "Hubo is the preterite of hay: there was / there were for an event that happened and finished (an accident, a party, a storm, a problem). It never changes: hubo un problema, hubo muchos problemas.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Hubo** = _there was / there were_, for **events** that happened at a point in the past."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "hubo",
+            "+",
+            "event (singular or plural)"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Hubo** never goes plural: **hubo dos accidentes**. **Hubieron** is a common mistake."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Typical nouns: **un accidente, una fiesta, un temblor, una tormenta, un problema, un concierto, una pelea**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It often comes with a time: **ayer**, **anoche**, **el sábado**, **en 2010**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "To describe a scene (what was there), use **había**: _Había mucha gente._ To report an event, use **hubo**: _Hubo una fiesta._"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if you can add _happened_ in English (_there was an accident, it happened_), use **hubo**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Anoche ==hubo== un temblor.",
+              "en": "There was an earthquake last night."
+            },
+            {
+              "es": "Ayer ==hubo== un accidente en la garita.",
+              "en": "There was an accident at the border crossing yesterday."
+            },
+            {
+              "es": "El sábado ==hubo== una fiesta en la playa.",
+              "en": "There was a party on the beach on Saturday."
+            },
+            {
+              "es": "==Hubo== dos peleas en el torneo.",
+              "en": "There were two fights in the tournament."
+            },
+            {
+              "es": "En 2010 ==hubo== un terremoto en Mexicali.",
+              "en": "In 2010 there was an earthquake in Mexicali."
+            },
+            {
+              "es": "¿==Hubo== algún problema con el pedido?",
+              "en": "Was there any problem with the order?"
+            },
+            {
+              "es": "==Hubo== mucho tráfico esta mañana.",
+              "en": "There was a lot of traffic this morning."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hubieron muchos problemas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hubo muchos problemas."
+                }
+              ],
+              "nota": "Always singular."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Anoche había un temblor muy fuerte."
+                },
+                {
+                  "v": "bien",
+                  "t": "Anoche hubo un temblor muy fuerte."
+                }
+              ],
+              "nota": "An event → **hubo**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estuvo una tormenta anoche."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hubo una tormenta anoche."
+                }
+              ],
+              "nota": "_There was_ → **hubo**, not **estuvo**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hubieron dos conciertos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hubo dos conciertos."
+                }
+              ],
+              "nota": "Plural noun, singular **hubo**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hay",
+              "texto": "The present: [[5102|hay = there is, there are]]."
+            },
+            {
+              "forma": "había",
+              "texto": "The description version: [[5270|había = there was]]."
+            },
+            {
+              "forma": "había / hubo",
+              "texto": "Choosing between them: [[6872|había vs hubo]]."
+            },
+            {
+              "forma": "fui, comí",
+              "texto": "The same tense with other verbs: [[6004|the preterite for completed actions]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _There was a storm on Monday._",
+              "r": "El lunes hubo una tormenta.",
+              "nota": "Event → hubo."
+            },
+            {
+              "p": "In Spanish: _There were three accidents yesterday._",
+              "r": "Ayer hubo tres accidentes.",
+              "nota": "Singular hubo."
+            },
+            {
+              "p": "Fix it: «Hubieron muchas fiestas en diciembre.»",
+              "r": "Hubo muchas fiestas en diciembre.",
+              "nota": "No hubieron."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5102,
+      5270
+    ],
+    "confunde": [
+      6872
+    ],
+    "sigue": [
+      6004
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5220",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,268 @@
+{
+  "tema": 7250,
+  "slug": "asi-que-por-lo-tanto",
+  "titulo": "Using así que / por lo tanto (result clauses)",
+  "subtitulo": "Llovió, así que nos quedamos en casa.",
+  "foto": "t09.jpg",
+  "regla": "Así que (so) and por lo tanto (therefore) introduce the result of the main clause. They take the indicative; the subjunctive appears only if you add a word of doubt or possibility (probablemente, puede que).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say what happens **as a result** of the main clause, start the second clause with **así que** (_so_) or **por lo tanto** (_therefore_)."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "[cause]",
+            ", así que / por lo tanto",
+            "[result]"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The result clause takes the **indicative**: it's a fact, not a wish."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Así que** is everyday and conversational. **Por lo tanto** sounds more formal, good for writing and explanations."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **así que** = _so_ in a chat with friends; **por lo tanto** = _therefore_ in an essay."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Se me olvidó la cartera, ==así que== no pude pagar.",
+              "en": "I forgot my wallet, so I couldn't pay."
+            },
+            {
+              "es": "Paola no quiso venir, ==así que== se quedó sola en casa.",
+              "en": "Paola didn't want to come, so she stayed home alone."
+            },
+            {
+              "es": "El mar estaba picado; ==por lo tanto==, cancelaron la clase de surf.",
+              "en": "The sea was rough; therefore they canceled the surf class."
+            },
+            {
+              "es": "Reprobó el examen, ==por lo tanto== no pasó al siguiente nivel.",
+              "en": "He failed the exam, therefore he didn't move up to the next level."
+            },
+            {
+              "es": "Ya es tarde, ==así que== me voy.",
+              "en": "It's late, so I'm leaving."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "subjuntivo",
+      "titulo": "With the subjunctive",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "If you add a word of **doubt or possibility** (**probablemente**, **posiblemente**, **puede que**, **lo más seguro es que**), the verb after it can go in the **subjunctive** (with **puede que** it must), because of that word, not because of **así que**."
+        },
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "indicativo",
+                  "t": "Mi camión va retrasado, así que llego tarde."
+                },
+                {
+                  "v": "subjuntivo",
+                  "t": "Mi camión va retrasado, así que probablemente llegue tarde."
+                }
+              ],
+              "nota": "**Probablemente** adds doubt: subjunctive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "indicativo",
+                  "t": "Se quemó la comida, así que pedimos pizza."
+                },
+                {
+                  "v": "subjuntivo",
+                  "t": "Se quemó la comida, así que puede que pidamos pizza."
+                }
+              ],
+              "nota": "**Puede que** always takes the subjunctive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "indicativo",
+                  "t": "Mi jefa renunció, por lo tanto me dieron su puesto."
+                },
+                {
+                  "v": "subjuntivo",
+                  "t": "Mi jefa renunció, por lo tanto es posible que me den su puesto."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "No word of doubt? Then indicative."
+        }
+      ]
+    },
+    {
+      "id": "otros",
+      "titulo": "Other result connectors",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "You'll also see these, with the same meaning:"
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "entonces",
+              "texto": "_so, then_; very common in conversation."
+            },
+            {
+              "forma": "de modo que / de manera que",
+              "texto": "_so, so that_ (a result)."
+            },
+            {
+              "forma": "por eso",
+              "texto": "_that's why_."
+            },
+            {
+              "forma": "por consiguiente / como consecuencia",
+              "texto": "_consequently_; formal."
+            },
+            {
+              "forma": "conque",
+              "texto": "_so_; casual, a bit old-fashioned."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estaba cansado, así que me acueste."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estaba cansado, así que me acosté."
+                }
+              ],
+              "nota": "A plain result: indicative."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Va a llover, así que puede que nos quedamos."
+                },
+                {
+                  "v": "mejor",
+                  "t": "Va a llover, así que puede que nos quedemos."
+                }
+              ],
+              "nota": "**Puede que** always takes the subjunctive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "o sea, es decir",
+              "texto": "Clarifying or giving a consequence: [[7265|o sea / es decir]]."
+            },
+            {
+              "forma": "pero, sino",
+              "texto": "Contrast instead of result: [[7035|pero, sino]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _It was raining, so we stayed home._",
+              "r": "Estaba lloviendo, así que nos quedamos en casa.",
+              "nota": "Indicative."
+            },
+            {
+              "p": "In Spanish (formal): _The road is closed; therefore, we have to go back._",
+              "r": "La carretera está cerrada; por lo tanto, tenemos que regresar.",
+              "nota": "por lo tanto."
+            },
+            {
+              "p": "Complete: _Hay tráfico, así que puede que ___ (llegar, yo) tarde._",
+              "r": "llegue",
+              "nota": "puede que: subjunctive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6128
+    ],
+    "confunde": [
+      7265
+    ],
+    "sigue": [
+      7604
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7250",
+      "kwiziq": true
+    }
+  ]
+}

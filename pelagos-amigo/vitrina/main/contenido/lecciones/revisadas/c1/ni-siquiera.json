@@ -1,0 +1,191 @@
+{
+  "tema": 7264,
+  "slug": "ni-siquiera",
+  "titulo": "Ni / ni siquiera = not even",
+  "subtitulo": "No tenía ni una cobija. Ni siquiera me saludó.",
+  "foto": "t09.jpg",
+  "regla": "Ni or ni siquiera = not even. After a negative verb: No tenía ni (siquiera) una cobija. At the start, no other negative is needed: Ni siquiera me saludó. Ni is more colloquial; ni siquiera is more emphatic. Also ¡Ni modo! = oh well, no way around it.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "no + verb",
+            "+ ni / ni siquiera",
+            "+ element"
+          ]
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "ni / ni siquiera",
+            "+ element",
+            "+ verb (no extra no)"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Like other negatives: after the verb you need **no** before; in front, no **no**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Ni** alone is shorter and more casual; **ni siquiera** is fuller."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Very common Mexican set phrases: **ni modo** (_oh well_), **ni loco** (_no way_), **ni de chiste** (_not a chance_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **siquiera** = _even_; **ni** makes it negative."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "El pobre no tenía ==ni== una cobija para taparse.",
+              "en": "The poor guy didn't even have a blanket."
+            },
+            {
+              "es": "El pobre no tenía ==ni siquiera== una cobija.",
+              "en": "The poor guy didn't even have a blanket."
+            },
+            {
+              "es": "En casa de Rodrigo no usan internet ==ni para== hacer la tarea.",
+              "en": "At Rodrigo's they don't even use the internet for homework."
+            },
+            {
+              "es": "==Ni siquiera== me saludó.",
+              "en": "He didn't even say hi to me."
+            },
+            {
+              "es": "==Ni== una cobija tenía el pobre.",
+              "en": "Not even a blanket did the poor guy have."
+            },
+            {
+              "es": "—Se acabaron los boletos. —Ni modo.",
+              "en": "—Tickets sold out. —Oh well."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ni siquiera no me saludó."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ni siquiera me saludó."
+                }
+              ],
+              "nota": "In front: no extra **no**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tenía ni siquiera una cobija."
+                },
+                {
+                  "v": "bien",
+                  "t": "No tenía ni siquiera una cobija."
+                }
+              ],
+              "nota": "After the verb: needs **no**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "ni... ni",
+              "texto": "[[7074|ni... ni...]]."
+            },
+            {
+              "forma": "ni que",
+              "texto": "[[8222|¡ni que + subjunctive!]]."
+            },
+            {
+              "forma": "nunca",
+              "texto": "[[5136|nunca]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _She didn't even call me._",
+              "r": "Ni siquiera me llamó.",
+              "nota": "In front: no extra no."
+            },
+            {
+              "p": "In Spanish: _I don't even have time to eat._",
+              "r": "No tengo ni tiempo para comer.",
+              "nota": "no + ni."
+            },
+            {
+              "p": "Fix it: _Ni siquiera no lo intentó._",
+              "r": "Ni siquiera lo intentó.",
+              "nota": "No extra no."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7074,
+      5136
+    ],
+    "confunde": [
+      8222
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7264",
+      "kwiziq": true
+    }
+  ]
+}

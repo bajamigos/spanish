@@ -1,0 +1,207 @@
+{
+  "tema": 7903,
+  "slug": "te-recomiendo-que",
+  "titulo": "Verbs of advice and orders + present subjunctive",
+  "subtitulo": "Te recomiendo que pruebes los tacos.",
+  "foto": "t05.jpg",
+  "regla": "Verbs that advise, order, allow or forbid (sugerir, recomendar, aconsejar, prohibir, permitir, ordenar, necesitar) in the present take que + present subjunctive: Te sugiero que descanses. The person gets an indirect pronoun.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "When you **advise, suggest, order, allow, forbid or need** someone else to do something, the action after **que** goes in the **subjunctive**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Main verbs: **sugerir, recomendar, aconsejar, animar a, prohibir, ordenar, obligar a, permitir, necesitar, advertir**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "(me, te, le...) + verb in the present",
+            "+ que +",
+            "present subjunctive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "After a present perfect in the main clause, both present and imperfect subjunctive are possible."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Some of these also work with an infinitive: **te prohíbo salir**, **te recomiendo descansar**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: advice is a wish for someone else, so subjunctive."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi doctor me sugiere que ==haga== un curso de meditación.",
+              "en": "My doctor suggests I take a meditation course."
+            },
+            {
+              "es": "Te recomiendo que ==compres== este otro carro. Es mucho mejor.",
+              "en": "I recommend you buy this other car. It's much better."
+            },
+            {
+              "es": "Los animo a que ==vengan== todos a la fiesta.",
+              "en": "I encourage you all to come to the party."
+            },
+            {
+              "es": "Le están aconsejando que no ==firme== los papeles todavía.",
+              "en": "They're advising him not to sign the papers yet."
+            },
+            {
+              "es": "Mis papás me prohíben que ==tome== alcohol.",
+              "en": "My parents forbid me to drink alcohol."
+            },
+            {
+              "es": "Te ordeno que ==regreses== ahorita mismo.",
+              "en": "I order you to come back right now."
+            },
+            {
+              "es": "No le permito que me ==hable== así.",
+              "en": "I won't let you talk to me like that."
+            },
+            {
+              "es": "Necesito que ==traigas== esas cajas.",
+              "en": "I need you to bring those boxes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Te recomiendo que compras este."
+                },
+                {
+                  "v": "bien",
+                  "t": "Te recomiendo que compres este."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Necesito que tú traer las cajas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Necesito que traigas las cajas."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Te animo que vengas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Te animo a que vengas."
+                }
+              ],
+              "nota": "**Animar a**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "me recomendó que",
+              "texto": "Past: [[7904|advice and orders + imperfect subjunctive]]."
+            },
+            {
+              "forma": "te pido que",
+              "texto": "[[7279|pedir que]]."
+            },
+            {
+              "forma": "te recomendaría que",
+              "texto": "[[8580|conditional + que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I suggest you rest._ (tú)",
+              "r": "Te sugiero que descanses.",
+              "nota": "Present subjunctive."
+            },
+            {
+              "p": "In Spanish: _They don't allow us to use our phones._",
+              "r": "No nos permiten que usemos el celular. / No nos permiten usar el celular.",
+              "nota": "Subjunctive or infinitive."
+            },
+            {
+              "p": "Complete: _Te aconsejo que no ___ (decir) nada._",
+              "r": "digas",
+              "nota": "Subjunctive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5059
+    ],
+    "confunde": [
+      7279
+    ],
+    "sigue": [
+      7904
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7903",
+      "kwiziq": true
+    }
+  ]
+}

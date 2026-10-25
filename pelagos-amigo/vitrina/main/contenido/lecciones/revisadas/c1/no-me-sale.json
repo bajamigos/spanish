@@ -1,0 +1,177 @@
+{
+  "tema": 7623,
+  "slug": "no-me-sale",
+  "titulo": "No salirle algo a alguien = can't get something right",
+  "subtitulo": "No me sale este ejercicio.",
+  "foto": "t02.jpg",
+  "regla": "(No) salirle algo a alguien = (not) to manage to do something, after trying: No me sale este problema. No le sale pararse de manos. Works like gustar: salir agrees with the thing; the person is the indirect pronoun. Usually negative.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "(no) + me / te / le... + sale / salen",
+            "+ thing / infinitive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "_I can't get it, it won't come out right_, after some effort. Mostly **negative**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Like **gustar**: **salir** agrees with the thing: **no me sale el problema**, **no me salen las cuentas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Positive use exists too: **¡Ya me salió!** (_I got it!_)"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: you try and try, and it just won't come out."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==No me sale== este problema de matemáticas.",
+              "en": "I can't work out this math problem."
+            },
+            {
+              "es": "Mi hija lleva todo el día tratando de pararse de manos, pero ==no le sale==.",
+              "en": "My daughter's been trying to do a handstand all day, but she can't."
+            },
+            {
+              "es": "—Ma, ¡este dibujo ==no me sale==! —Mi amor, hazlo más despacito.",
+              "en": "—Mom, I can't get this drawing right! —Sweetie, do it more slowly."
+            },
+            {
+              "es": "¿==No te salen== las cuentas? A ver, otra vez.",
+              "en": "The numbers don't add up for you? OK, let's try again."
+            },
+            {
+              "es": "¡==Ya me salió==!",
+              "en": "I got it!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No salgo este ejercicio."
+                },
+                {
+                  "v": "bien",
+                  "t": "No me sale este ejercicio."
+                }
+              ],
+              "nota": "Like **gustar**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No me sale las cuentas."
+                },
+                {
+                  "v": "bien",
+                  "t": "No me salen las cuentas."
+                }
+              ],
+              "nota": "Agreement."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "se me da mal",
+              "texto": "[[8727|dársele mal]]."
+            },
+            {
+              "forma": "me cuesta",
+              "texto": "[[7440|costar]]."
+            },
+            {
+              "forma": "me gusta",
+              "texto": "[[6001|gustar-type verbs]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I can't get this song right._ (on the guitar)",
+              "r": "No me sale esta canción.",
+              "nota": "no me sale."
+            },
+            {
+              "p": "In Spanish: _The accounts don't add up for him._",
+              "r": "No le salen las cuentas.",
+              "nota": "salen."
+            },
+            {
+              "p": "In Spanish: _I finally got it!_",
+              "r": "¡Por fin me salió!",
+              "nota": "Positive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6001
+    ],
+    "confunde": [
+      8727
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7623",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,240 @@
+{
+  "tema": 5225,
+  "slug": "vine-viniste-vino",
+  "titulo": "Venir in the preterite",
+  "subtitulo": "¿Por qué no viniste ayer?",
+  "foto": "t02.jpg",
+  "regla": "Venir is irregular in the preterite: stem vin- + -e, -iste, -o, -imos, -ieron, with no written accents: vine, viniste, vino, vinimos, vinieron.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Venir** (_to come_) changes its stem to **vin-** in the preterite."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It takes the irregular endings **-e, -iste, -o, -imos, -ieron**, with **no written accents**: **vine**, **vino**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "venir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "vine"
+            ],
+            [
+              "tú",
+              "viniste"
+            ],
+            [
+              "él / ella / usted",
+              "vino"
+            ],
+            [
+              "nosotros",
+              "vinimos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "vinieron"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Watch **nosotros**: present **venimos**, preterite **vinimos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Verbs built on venir work the same: **convenir** → **convino**, **intervenir** → **intervino**, **prevenir** → **previno**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **él vino** (_he came_) is spelled just like **vino** (_wine_). Easy to remember."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿A qué hora ==vino== el plomero?",
+              "en": "What time did the plumber come?"
+            },
+            {
+              "es": "Hoy ==vine== a la playa a las seis para agarrar las mejores olas.",
+              "en": "Today I came to the beach at six to catch the best waves."
+            },
+            {
+              "es": "¿Por qué no ==viniste== al entrenamiento de jiu-jitsu?",
+              "en": "Why didn't you come to jiu-jitsu practice?"
+            },
+            {
+              "es": "Mis primos ==vinieron== de Ensenada para la boda.",
+              "en": "My cousins came from Ensenada for the wedding."
+            },
+            {
+              "es": "==Vinimos== en camión porque el carro no arrancó.",
+              "en": "We came by bus because the car wouldn't start."
+            },
+            {
+              "es": "¿Ustedes ==vinieron== solos o con sus hijos?",
+              "en": "Did you come alone or with your kids?"
+            },
+            {
+              "es": "Nadie ==vino== a la junta del huerto comunitario.",
+              "en": "Nobody came to the community garden meeting."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer venimos tarde."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer vinimos tarde."
+                }
+              ],
+              "nota": "**Venimos** is the present; the preterite is **vinimos**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mi hermana vinó a verme."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mi hermana vino a verme."
+                }
+              ],
+              "nota": "No accent: **vino**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ellos venieron el sábado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ellos vinieron el sábado."
+                }
+              ],
+              "nota": "Stem **vin-** in every person."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo viní con mi novia."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo vine con mi novia."
+                }
+              ],
+              "nota": "Ending **-e**, not -í."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "vengo, vienes",
+              "texto": "The present first: [[5483|venir in the present]]."
+            },
+            {
+              "forma": "viví, comí",
+              "texto": "Regular -ir verbs carry accents: [[5230|-er and -ir verbs in the preterite]]."
+            },
+            {
+              "forma": "tuve, puse",
+              "texto": "Same endings, other stems: [[5226|tener]] and [[5251|poner]] in the preterite."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _They came by car._",
+              "r": "Vinieron en carro.",
+              "nota": "vinieron."
+            },
+            {
+              "p": "In Spanish: _I came alone._",
+              "r": "Vine solo. / Vine sola.",
+              "nota": "vine, no accent."
+            },
+            {
+              "p": "Fix it: _Ayer venimos a las ocho._",
+              "r": "Ayer vinimos a las ocho.",
+              "nota": "Preterite: vinimos."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5483
+    ],
+    "confunde": [
+      5230
+    ],
+    "sigue": [
+      5226,
+      5251
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5225",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "tema": 9510,
+  "slug": "dentro-de-adentro",
+  "titulo": "Dentro / dentro de (inside)",
+  "subtitulo": "«Las llaves están dentro de la mochila.»",
+  "foto": "t01.jpg",
+  "regla": "Dentro de + noun or pronoun = inside something: dentro de la caja. Dentro alone = inside, when the place is understood. In Mexico, adentro is very common for the same idea.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Dentro de** + noun = _inside_ something: **dentro de la casa**. **De + el = del**: **dentro del carro**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Dentro** alone = _inside_, when we already know where: **Te espero dentro**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In Mexico you'll hear **adentro** a lot, especially alone or with motion: **Vamos adentro**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Also with time: **dentro de** + time = _in_ (from now): **dentro de una hora**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Las llaves están ==dentro de== la mochila.",
+              "en": "The keys are inside the backpack."
+            },
+            {
+              "es": "No hay nada ==dentro del== refri.",
+              "en": "There's nothing in the fridge."
+            },
+            {
+              "es": "El perro duerme ==dentro de== la casa.",
+              "en": "The dog sleeps inside the house."
+            },
+            {
+              "es": "Hace frío, mejor te espero ==dentro==.",
+              "en": "It's cold, I'd better wait for you inside."
+            },
+            {
+              "es": "Ya empezó a llover, ¡vámonos ==adentro==!",
+              "en": "It started raining, let's go inside!"
+            },
+            {
+              "es": "Salimos ==dentro de== una hora.",
+              "en": "We're leaving in an hour."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El gato está dentro la caja."
+                },
+                {
+                  "v": "bien",
+                  "t": "El gato está dentro de la caja."
+                }
+              ],
+              "nota": "Before a noun you need **de**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mi tabla está dentro de el carro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mi tabla está dentro del carro."
+                }
+              ],
+              "nota": "**De + el = del**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hace frío. Te espero dentro de."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hace frío. Te espero dentro."
+                }
+              ],
+              "nota": "No noun after it: no **de**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "en la caja",
+              "texto": "Simpler: [[7919|the preposition en]]."
+            },
+            {
+              "forma": "del carro",
+              "texto": "The contraction: [[5090|al and del]]."
+            },
+            {
+              "forma": "sobre la mesa",
+              "texto": "Another place word: [[8787|sobre]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish, with dentro: _The keys are inside the car._",
+              "r": "Las llaves están dentro del carro.",
+              "nota": "dentro de + el = del."
+            },
+            {
+              "p": "Fix it: _El celular está dentro la mochila._",
+              "r": "El celular está dentro de la mochila.",
+              "nota": "Add de."
+            },
+            {
+              "p": "In Spanish, with dentro: _We leave in an hour._",
+              "r": "Salimos dentro de una hora.",
+              "nota": "dentro de + time."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5090
+    ],
+    "confunde": [
+      7919
+    ],
+    "sigue": [
+      8787
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9510",
+      "kwiziq": true
+    }
+  ]
+}

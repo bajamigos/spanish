@@ -1,0 +1,231 @@
+{
+  "tema": 5270,
+  "slug": "habia-mucha-gente",
+  "titulo": "There was, there were: había",
+  "subtitulo": "Había mucha gente en la playa.",
+  "foto": "t10.jpg",
+  "regla": "Había is the imperfect of hay: there was / there were, used to describe how things were in the past (a scene, a background, a habit). It never changes: había un perro, había muchos perros.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Hay** = _there is / there are_. In the past, to **describe** a scene, use **había**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "había",
+            "+",
+            "noun (singular or plural)"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Había** never goes plural: **había un problema**, **había muchos problemas**. **Habían** is a common mistake, even among native speakers."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Use it for **descriptions** and **background**: what a place was like, what used to be there."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It goes with the same words as **hay**: **había un**, **había mucha**, **había dos**, **no había nada**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Había una vez** = _once upon a time_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "For an **event** that happened (an accident, a party), Spanish uses **hubo** instead."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **había** is a photograph of the past. **Hubo** is a news headline."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Había== mucha gente en la playa.",
+              "en": "There were a lot of people at the beach."
+            },
+            {
+              "es": "En mi colonia no ==había== parques.",
+              "en": "There were no parks in my neighborhood."
+            },
+            {
+              "es": "==Había== tres tablas en el carro.",
+              "en": "There were three boards in the car."
+            },
+            {
+              "es": "Cuando era niño, ==había== un mercado aquí.",
+              "en": "When I was a kid, there was a market here."
+            },
+            {
+              "es": "¿==Había== olas ayer en la mañana?",
+              "en": "Were there waves yesterday morning?"
+            },
+            {
+              "es": "En el jardín ==había== jitomates, chiles y cilantro.",
+              "en": "In the garden there were tomatoes, chiles and cilantro."
+            },
+            {
+              "es": "==Había== una vez una nave llamada Rocinante.",
+              "en": "Once upon a time there was a ship called the Rocinante."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Habían muchos carros."
+                },
+                {
+                  "v": "bien",
+                  "t": "Había muchos carros."
+                }
+              ],
+              "nota": "Always singular."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estaba un perro en la calle."
+                },
+                {
+                  "v": "bien",
+                  "t": "Había un perro en la calle."
+                }
+              ],
+              "nota": "_There was a_ → **había**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El verano pasado hay muchos turistas."
+                },
+                {
+                  "v": "bien",
+                  "t": "El verano pasado había muchos turistas."
+                }
+              ],
+              "nota": "Past description → **había**, not **hay**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Habían dos niños en el parque."
+                },
+                {
+                  "v": "bien",
+                  "t": "Había dos niños en el parque."
+                }
+              ],
+              "nota": "Plural noun, singular **había**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hay",
+              "texto": "The present: [[5102|hay = there is, there are]]."
+            },
+            {
+              "forma": "era, tenía",
+              "texto": "Same job, other verbs: [[6002|the imperfect to describe the past]]."
+            },
+            {
+              "forma": "hubo",
+              "texto": "The event version: [[5220|hubo = there was]]."
+            },
+            {
+              "forma": "había / hubo",
+              "texto": "Choosing between them: [[6872|había vs hubo]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _There were two cats in the house._",
+              "r": "Había dos gatos en la casa.",
+              "nota": "Singular había."
+            },
+            {
+              "p": "In Spanish: _There was nothing in the fridge._",
+              "r": "No había nada en el refri.",
+              "nota": "no + había."
+            },
+            {
+              "p": "Fix it: «Habían muchas personas en la fiesta.»",
+              "r": "Había muchas personas en la fiesta.",
+              "nota": "No habían."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5102,
+      6002
+    ],
+    "confunde": [
+      6872
+    ],
+    "sigue": [
+      5220
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5270",
+      "kwiziq": true
+    }
+  ]
+}

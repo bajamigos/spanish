@@ -1,0 +1,191 @@
+{
+  "tema": 7212,
+  "slug": "aunque-imperfecto",
+  "titulo": "Aunque + imperfect subjunctive",
+  "subtitulo": "Aunque fuera un éxito... / Aunque tuviera dinero, no lo compraría.",
+  "foto": "t06.jpg",
+  "regla": "Aunque + imperfect subjunctive: (1) a past fact both people already know (even though it was): aunque fuera un éxito, tuvimos que ceder; (2) a hypothetical even if, with the conditional: aunque tuviera dinero, no lo compraría.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Aunque** + **imperfect subjunctive** has two uses:"
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "shared past info",
+              "texto": "A past fact both speakers know; it doesn't change the outcome: **aunque fuera un éxito, tuvimos que ceder**. (With the indicative, **aunque fue un éxito**, you'd be stating it as news.)"
+            },
+            {
+              "forma": "hypothetical even if",
+              "texto": "An unreal or unlikely situation, with the **conditional** in the main clause: **aunque tuviera dinero, no lo compraría**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **aunque** + **-ra** = _so what?_ about the past, or _even if_ about the impossible."
+        }
+      ]
+    },
+    {
+      "id": "pasado",
+      "titulo": "Shared past information",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "—La junta de ayer con los clientes fue un éxito. —Sí, pero ==aunque fuera== un éxito, tuvimos que ceder demasiado.",
+              "en": "—Yesterday's meeting with the clients was a success. —Yes, but even though it was, we had to give up too much."
+            },
+            {
+              "es": "==Aunque hablaran== del asunto, todavía no lo han resuelto.",
+              "en": "Even though they talked about it, they still haven't solved it."
+            },
+            {
+              "es": "==Aunque== me ==ofrecieran== ayuda, no he podido superarlo.",
+              "en": "Even though they offered me help, I haven't been able to get over it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hipotesis",
+      "titulo": "Hypothetical even if",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Aunque tuviera== dinero, no me compraría ese carro.",
+              "en": "Even if I had money, I wouldn't buy that car."
+            },
+            {
+              "es": "==Aunque== me lo ==pidieras== de rodillas, no iría.",
+              "en": "Even if you begged me on your knees, I wouldn't go."
+            },
+            {
+              "es": "No lo creería ==aunque== lo ==viera== con mis propios ojos.",
+              "en": "I wouldn't believe it even if I saw it with my own eyes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Aunque tendría dinero, no lo compraría."
+                },
+                {
+                  "v": "bien",
+                  "t": "Aunque tuviera dinero, no lo compraría."
+                }
+              ],
+              "nota": "Hypothetical _even if_: subjunctive, not the conditional, after **aunque**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "noticia",
+                  "t": "Aunque fue un éxito, tuvimos que ceder."
+                },
+                {
+                  "v": "ya sabido",
+                  "t": "Aunque fuera un éxito, tuvimos que ceder."
+                }
+              ],
+              "nota": "Both correct; different message."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "aunque + present",
+              "texto": "[[5146|aunque + present]]."
+            },
+            {
+              "forma": "si tuviera",
+              "texto": "[[5120|si + imperfect subjunctive]]."
+            },
+            {
+              "forma": "tuviera",
+              "texto": "[[5068|imperfect subjunctive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Hypothetical: _Even if it rained, we'd go._",
+              "r": "Aunque lloviera, iríamos.",
+              "nota": "-ra + conditional."
+            },
+            {
+              "p": "Complete: _Aunque ___ (ser, yo) rica, seguiría trabajando._",
+              "r": "fuera",
+              "nota": "Hypothetical."
+            },
+            {
+              "p": "Fix it (hypothetical _even if I could_): _Aunque podría, no lo haría._",
+              "r": "Aunque pudiera, no lo haría.",
+              "nota": "Hypothetical: -ra after aunque, not the conditional."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5146,
+      5068
+    ],
+    "confunde": [
+      5120
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7212",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "tema": 7084,
+  "slug": "luz-luces-plural-z",
+  "titulo": "Plural of nouns in -z",
+  "subtitulo": "Una luz, dos luces.",
+  "foto": "t08.jpg",
+  "regla": "Nouns ending in -z form the plural by changing z to c and adding -es: la luz → las luces, la vez → las veces.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Nouns ending in **-z** add **-es**, and the **z** becomes **c**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "-z",
+            "→",
+            "-ces"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Singular",
+            "Plural"
+          ],
+          "filas": [
+            [
+              "la luz",
+              "las luces"
+            ],
+            [
+              "la vez",
+              "las veces"
+            ],
+            [
+              "el pez",
+              "los peces"
+            ],
+            [
+              "la voz",
+              "las voces"
+            ],
+            [
+              "la nariz",
+              "las narices"
+            ],
+            [
+              "el lápiz",
+              "los lápices"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Spanish almost never writes **ze** or **zi**: it writes **ce**, **ci**. Any written accent stays: **lápiz → lápices**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Apaga ==las luces==, por favor.",
+              "en": "Turn off the lights, please."
+            },
+            {
+              "es": "Voy al gimnasio tres ==veces== por semana.",
+              "en": "I go to the gym three times a week."
+            },
+            {
+              "es": "Vimos muchos ==peces== en el arrecife.",
+              "en": "We saw lots of fish on the reef."
+            },
+            {
+              "es": "Necesito dos ==lápices==.",
+              "en": "I need two pencils."
+            },
+            {
+              "es": "Se oyen ==voces== afuera.",
+              "en": "You can hear voices outside."
+            },
+            {
+              "es": "==Las raíces== del árbol rompieron la banqueta.",
+              "en": "The tree's roots broke the sidewalk."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "las luzes"
+                },
+                {
+                  "v": "bien",
+                  "t": "las luces"
+                }
+              ],
+              "nota": "z → c before e."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "muchos pezes"
+                },
+                {
+                  "v": "bien",
+                  "t": "muchos peces"
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "dos lapices"
+                },
+                {
+                  "v": "bien",
+                  "t": "dos lápices"
+                }
+              ],
+              "nota": "The accent stays."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el mar, los mares",
+              "texto": "Other consonant endings: [[6749|nouns ending in a consonant]]."
+            },
+            {
+              "forma": "felices, capaces",
+              "texto": "Same change in adjectives: [[6057|plural of adjectives in -z and -l]]."
+            },
+            {
+              "forma": "tres veces",
+              "texto": "Using the word vez: [[6936|vez / veces]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Plural of _la nariz_?",
+              "r": "las narices",
+              "nota": "z → ces."
+            },
+            {
+              "p": "In Spanish: _two times_",
+              "r": "dos veces",
+              "nota": "vez → veces."
+            },
+            {
+              "p": "Fix it: _Hay muchos pezes._",
+              "r": "Hay muchos peces.",
+              "nota": "peces."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6749
+    ],
+    "confunde": [],
+    "sigue": [
+      6057,
+      6936
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7084",
+      "kwiziq": true
+    }
+  ]
+}

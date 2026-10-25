@@ -1,0 +1,195 @@
+{
+  "tema": 7257,
+  "slug": "que-subjuntivo-deseo",
+  "titulo": "¡Que + subjunctive! = wishes and repeated orders",
+  "subtitulo": "¡Que te vaya bien! ¡Que te comas la sopa!",
+  "foto": "t07.jpg",
+  "regla": "Que + present subjunctive, with no main verb, has three uses: a wish (¡Que te vaya bien! = I hope it goes well), an insistent repeated order (¡Que te comas la sopa! = I said eat your soup!), and an indirect order for someone else (Que lo haga Juan = let Juan do it).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "¡Que",
+            "+ present subjunctive!"
+          ]
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "wish",
+              "texto": "The hidden verb is **espero / ojalá**: **¡Que te mejores!**, **¡Que disfruten la comida!**"
+            },
+            {
+              "forma": "repeated order",
+              "texto": "The hidden verb is **te dije**: **¡Que te metas a bañar!** Parents' favorite."
+            },
+            {
+              "forma": "indirect order",
+              "texto": "For a third person: **Que pase el siguiente.** **Que lo arregle él.**"
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Always present subjunctive, any person: **que seas, que pase usted, que ganen**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: imagine **ojalá** or **te dije** in front."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¡==Que seas== muy feliz!",
+              "en": "I wish you every happiness!"
+            },
+            {
+              "es": "¡==Que ganen== el partido!",
+              "en": "Good luck winning the game!"
+            },
+            {
+              "es": "¡==Que pase== una feliz Navidad!",
+              "en": "Have a wonderful Christmas!"
+            },
+            {
+              "es": "¡==Que te vaya== bien en el examen!",
+              "en": "Good luck on the exam!"
+            },
+            {
+              "es": "¡Susana, ==que te comas== el pescado!",
+              "en": "Susana, I said eat your fish!"
+            },
+            {
+              "es": "¡Antonio, ==que me dejes== en paz!",
+              "en": "Antonio, I told you to leave me alone!"
+            },
+            {
+              "es": "Yo no voy a lavar los trastes; ==que los lave== tu hermano.",
+              "en": "I'm not doing the dishes; let your brother do them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Que te va bien!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Que te vaya bien!"
+                }
+              ],
+              "nota": "Subjunctive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "deseo",
+                  "t": "¡Que descanses!"
+                },
+                {
+                  "v": "orden repetida",
+                  "t": "¡Que te acuestes ya!"
+                }
+              ],
+              "nota": "Same form; tone and context tell them apart."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "ojalá",
+              "texto": "[[5061|ojalá + present subjunctive]]."
+            },
+            {
+              "forma": "querer que",
+              "texto": "[[5059|querer que]]."
+            },
+            {
+              "forma": "que for purpose",
+              "texto": "[[9967|command, que + subjunctive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Wish someone well: _Get well soon!_",
+              "r": "¡Que te mejores pronto!",
+              "nota": "Wish."
+            },
+            {
+              "p": "Third time asking: _I said turn off the TV!_",
+              "r": "¡Que apagues la tele!",
+              "nota": "Repeated order."
+            },
+            {
+              "p": "Pass the job on: _Let Pedro pay._",
+              "r": "Que pague Pedro.",
+              "nota": "Indirect order."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5061,
+      5059
+    ],
+    "confunde": [
+      9967
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7257",
+      "kwiziq": true
+    }
+  ]
+}

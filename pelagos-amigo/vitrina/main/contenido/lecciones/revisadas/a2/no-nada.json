@@ -1,0 +1,225 @@
+{
+  "tema": 6144,
+  "slug": "no-nada",
+  "titulo": "Nada: nothing, not anything",
+  "subtitulo": "No veo nada.",
+  "foto": "t10.jpg",
+  "regla": "Nada means nothing / not anything. After the verb it needs no before the verb: No veo nada (this double negative is correct). At the start of the sentence it stands alone, with no no: Nada me gusta.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Nada** = _nothing_, _not anything_."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "no",
+            "+ verb +",
+            "nada"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "After the verb, Spanish **needs no** before the verb: **No** veo **nada**. The double negative is correct and required."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "nada",
+            "+",
+            "verb"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "At the start, **nada** stands alone, without **no**: **Nada** funciona. It sounds stronger."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Alone as an answer: ¿Qué hiciste? —**Nada**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "An adjective after it is **masculine singular**: **nada interesante**, **nada nuevo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Handy phrases: **de nada** (_you're welcome_), **nada más** (_just, only_; _nothing else_), **nada de nada** (_nothing at all_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **no** opens the door, **nada** closes it: **no** + verb + **nada**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No veo ==nada==; está muy oscuro.",
+              "en": "I can't see anything; it's really dark."
+            },
+            {
+              "es": "¿Qué compraste? —==Nada==, todo estaba carísimo.",
+              "en": "What did you buy? —Nothing, everything was super expensive."
+            },
+            {
+              "es": "==Nada== me sale bien hoy.",
+              "en": "Nothing's going right for me today."
+            },
+            {
+              "es": "No hay ==nada== en el refri.",
+              "en": "There's nothing in the fridge."
+            },
+            {
+              "es": "No pasó ==nada== interesante en la junta.",
+              "en": "Nothing interesting happened in the meeting."
+            },
+            {
+              "es": "==Nada más== quiero un café, gracias.",
+              "en": "I just want a coffee, thanks."
+            },
+            {
+              "es": "No le dije ==nada== a nadie.",
+              "en": "I didn't tell anyone anything."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Veo nada."
+                },
+                {
+                  "v": "bien",
+                  "t": "No veo nada."
+                }
+              ],
+              "nota": "After the verb, **nada** needs **no**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nada no funciona."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nada funciona."
+                }
+              ],
+              "nota": "**Nada** first → no **no**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No quiero algo."
+                },
+                {
+                  "v": "bien",
+                  "t": "No quiero nada."
+                }
+              ],
+              "nota": "Negative → **nada**, not algo."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "no + verb",
+              "texto": "Negation basics: [[5091|negative sentences with no]]."
+            },
+            {
+              "forma": "algo",
+              "texto": "The positive partner: [[6230|algo]]."
+            },
+            {
+              "forma": "nadie",
+              "texto": "For people: [[6075|nadie]]."
+            },
+            {
+              "forma": "nunca",
+              "texto": "Another double negative: [[5136|nunca]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I don't understand anything._",
+              "r": "No entiendo nada.",
+              "nota": "no + verb + nada."
+            },
+            {
+              "p": "In Spanish: _Nothing works._",
+              "r": "Nada funciona.",
+              "nota": "Nada first, no no."
+            },
+            {
+              "p": "Fix it: _Yo quiero nada._",
+              "r": "Yo no quiero nada.",
+              "nota": "Add no."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5091,
+      6230
+    ],
+    "confunde": [],
+    "sigue": [
+      6075,
+      5136
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6144",
+      "kwiziq": true
+    }
+  ]
+}

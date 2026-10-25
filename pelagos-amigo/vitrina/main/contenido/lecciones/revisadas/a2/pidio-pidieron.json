@@ -1,0 +1,244 @@
+{
+  "tema": 5920,
+  "slug": "pidio-pidieron",
+  "titulo": "Pedir in the preterite",
+  "subtitulo": "Pedí tacos y Beto pidió una torta.",
+  "foto": "t09.jpg",
+  "regla": "Pedir changes e to i in the preterite only in the third person: pedí, pediste, pidió, pedimos, pidieron. Yo, tú and nosotros stay regular.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Pedir** (_to ask for, to order_) takes the regular -ir preterite endings, with one change: **e → i** in the **third person** only."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Preterite of pedir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "pedí"
+            ],
+            [
+              "tú",
+              "pediste"
+            ],
+            [
+              "él, ella, usted",
+              "**pidió**"
+            ],
+            [
+              "nosotros, nosotras",
+              "pedimos"
+            ],
+            [
+              "ellos, ellas, ustedes",
+              "**pidieron**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "This is different from the present, where the change is in almost every form (**pido, pides, pide, piden**). In the preterite, **yo** is **pedí**, with e."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Pedimos** is the same in the present and the preterite; context tells you which."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Other verbs work the same way: **servir** (sirvió), **repetir** (repitió), **seguir** (siguió), **vestir** (vistió)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: only **he, she** and **they** get the **i**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Anoche ==pedí== tacos de birria.",
+              "en": "Last night I ordered birria tacos."
+            },
+            {
+              "es": "¿Qué ==pediste== en el restaurante?",
+              "en": "What did you order at the restaurant?"
+            },
+            {
+              "es": "Beto ==pidió== una torta y un agua de horchata.",
+              "en": "Beto ordered a torta and a horchata."
+            },
+            {
+              "es": "==Pedimos== la cuenta a las once.",
+              "en": "We asked for the check at eleven."
+            },
+            {
+              "es": "Mis papás me ==pidieron== ayuda con el huerto.",
+              "en": "My parents asked me for help with the garden."
+            },
+            {
+              "es": "¿Ustedes ya ==pidieron==?",
+              "en": "Have you all ordered yet?"
+            },
+            {
+              "es": "Mi coach me ==pidió== más intensidad.",
+              "en": "My coach asked me for more intensity."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Él pedió tacos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Él pidió tacos."
+                }
+              ],
+              "nota": "**e → i** in él."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ellos pedieron ayuda."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ellos pidieron ayuda."
+                }
+              ],
+              "nota": "**e → i** in ellos."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo pidí la cuenta."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo pedí la cuenta."
+                }
+              ],
+              "nota": "No change in **yo**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me preguntó un favor."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me pidió un favor."
+                }
+              ],
+              "nota": "Asking **for** something: **pedir**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "pido, pides",
+              "texto": "The present: [[5851|pedir in the present]]."
+            },
+            {
+              "forma": "comí, viví",
+              "texto": "The regular endings: [[5230|-er and -ir verbs in the preterite]]."
+            },
+            {
+              "forma": "sirvió, repitió",
+              "texto": "Same pattern: [[5265|e > i verbs in the preterite]]."
+            },
+            {
+              "forma": "pedir / preguntar",
+              "texto": "Two ways to ask: [[9343|pedir vs preguntar]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _She ordered a coffee._",
+              "r": "Pidió un café.",
+              "nota": "pidió."
+            },
+            {
+              "p": "In Spanish: _They asked me for money._",
+              "r": "Me pidieron dinero.",
+              "nota": "pidieron."
+            },
+            {
+              "p": "Fix it: _Yo pidí agua._",
+              "r": "Yo pedí agua.",
+              "nota": "yo: pedí."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5851,
+      5230
+    ],
+    "confunde": [
+      9343
+    ],
+    "sigue": [
+      5265
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5920",
+      "kwiziq": true
+    }
+  ]
+}

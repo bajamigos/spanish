@@ -1,0 +1,199 @@
+{
+  "tema": 6994,
+  "slug": "mientras-indicativo-subjuntivo",
+  "titulo": "Mientras with the present indicative or the present subjunctive",
+  "subtitulo": "Mientras cocinas (while) vs mientras cocines (as long as).",
+  "foto": "t01.jpg",
+  "regla": "Mientras + present indicative = while (two things at the same time). Mientras + present subjunctive = as long as (a condition).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Mientras** introduces a second clause. Its meaning, and its mood, depend on what you want to say:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Mood",
+            "Meaning",
+            "Example"
+          ],
+          "filas": [
+            [
+              "present indicative",
+              "_while_: two actions at the same time",
+              "Mientras tú cocinas, yo lavo los trastes."
+            ],
+            [
+              "present subjunctive",
+              "_as long as_: a condition",
+              "Acepto mientras me pagues."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Compare two almost identical sentences: **vemos tu programa mientras preparas la cena** (_while you make dinner_, both happen together) vs **vemos tu programa mientras prepares la cena** (_as long as you make dinner_, a deal)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: indicative is a clock (_at the same time_). Subjunctive is a contract (_as long as_)."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Mientras== tú ==ves== la tele, yo lavo los trastes.",
+              "en": "While you watch TV, I do the dishes."
+            },
+            {
+              "es": "Carla se maquilla ==mientras maneja==.",
+              "en": "Carla does her makeup while she drives."
+            },
+            {
+              "es": "Acepto tu oferta ==mientras== me ==pagues== lo que prometes.",
+              "en": "I accept your offer as long as you pay me what you promise."
+            },
+            {
+              "es": "Puedes salir con tus amigos ==mientras== yo ==pueda== salir con los míos.",
+              "en": "You can go out with your friends as long as I can go out with mine."
+            },
+            {
+              "es": "Vemos tu programa ==mientras preparas== la cena.",
+              "en": "We watch your show while you make dinner."
+            },
+            {
+              "es": "Vemos tu programa ==mientras prepares== la cena.",
+              "en": "We'll watch your show as long as you make dinner."
+            },
+            {
+              "es": "==Mientras haya== olas, voy a surfear.",
+              "en": "As long as there are waves, I'm going to surf."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Te presto la tabla mientras la cuidas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Te presto la tabla mientras la cuides."
+                }
+              ],
+              "nota": "A condition: subjunctive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "Escucho música mientras entreno."
+                }
+              ],
+              "nota": "Two things at once: indicative."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "cuando llegues",
+              "texto": "Another time word with both moods: [[5062|cuando]]."
+            },
+            {
+              "forma": "en cuanto llegues",
+              "texto": "_As soon as_: [[8294|en cuanto, apenas]]."
+            },
+            {
+              "forma": "siempre que",
+              "texto": "Other condition words: [[7511|siempre que / a condición de que]]."
+            },
+            {
+              "forma": "mientras comía",
+              "texto": "**Mientras** in the past: [[7254|mientras with past tenses]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I read while I eat._",
+              "r": "Leo mientras como.",
+              "nota": "At the same time: indicative."
+            },
+            {
+              "p": "In Spanish: _You can stay as long as you help._ (tú)",
+              "r": "Te puedes quedar mientras ayudes.",
+              "nota": "Condition: subjunctive."
+            },
+            {
+              "p": "Which one means _as long as_? **mientras estudias** or **mientras estudies**?",
+              "r": "mientras estudies",
+              "nota": "Subjunctive = condition."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5062,
+      5063
+    ],
+    "confunde": [
+      5062
+    ],
+    "sigue": [
+      8294,
+      7511,
+      7254
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6994",
+      "kwiziq": true
+    }
+  ]
+}

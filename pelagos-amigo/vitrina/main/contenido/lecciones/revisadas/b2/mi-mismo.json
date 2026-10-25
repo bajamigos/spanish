@@ -1,0 +1,229 @@
+{
+  "tema": 8421,
+  "slug": "mi-mismo",
+  "titulo": "Emphatic reflexive pronouns: myself, yourself... (mí mismo, sí mismo)",
+  "subtitulo": "Lo hice yo mismo. Habla de sí misma. Está enojado consigo mismo.",
+  "foto": "t10.jpg",
+  "regla": "To stress myself, yourself...: subject + mismo (yo mismo lo hice); preposition + mí / ti / sí + mismo (para mí misma, de sí mismo); con → conmigo, contigo, consigo + mismo. Mismo agrees in gender and number.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "As subject",
+            "After a, de, para, por, en",
+            "After con"
+          ],
+          "filas": [
+            [
+              "yo",
+              "yo mismo / misma",
+              "mí mismo / misma",
+              "conmigo mismo / misma"
+            ],
+            [
+              "tú",
+              "tú mismo / misma",
+              "ti mismo / misma",
+              "contigo mismo / misma"
+            ],
+            [
+              "él, ella, usted",
+              "él mismo, ella misma, usted mismo / misma",
+              "sí mismo / misma",
+              "consigo mismo / misma"
+            ],
+            [
+              "nosotros",
+              "nosotros mismos / nosotras mismas",
+              "nosotros mismos / nosotras mismas",
+              "con nosotros mismos / nosotras mismas"
+            ],
+            [
+              "ustedes, ellos",
+              "ellos mismos, ustedes mismos...",
+              "sí mismos / mismas",
+              "consigo mismos / mismas"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Mismo** agrees: **ella misma**, **ellos mismos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Sí** (with accent) and **consigo** are the reflexive forms for third person and **usted / ustedes**. In everyday Mexican speech, **él mismo / con él mismo** also shows up, but **sí mismo / consigo** is the standard."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **mismo** = _-self_, and it always matches the person."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Lo hice ==yo misma==.",
+              "en": "I did it myself."
+            },
+            {
+              "es": "Hazlo ==tú mismo==.",
+              "en": "Do it yourself."
+            },
+            {
+              "es": "Compré un regalo ==para mí mismo==.",
+              "en": "I bought a present for myself."
+            },
+            {
+              "es": "Solo piensa ==en sí misma==.",
+              "en": "She only thinks about herself."
+            },
+            {
+              "es": "Está enojado ==consigo mismo==.",
+              "en": "He's angry with himself."
+            },
+            {
+              "es": "Tienes que ser honesto ==contigo mismo==.",
+              "en": "You have to be honest with yourself."
+            },
+            {
+              "es": "Lo arreglamos ==nosotros mismos==.",
+              "en": "We fixed it ourselves."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Habla con sí mismo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Habla consigo mismo."
+                }
+              ],
+              "nota": "**Con** + **sí** = **consigo**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Para mi mismo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Para mí mismo."
+                }
+              ],
+              "nota": "**Mí** with accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella lo hizo ella mismo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella lo hizo ella misma."
+                }
+              ],
+              "nota": "Agreement."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "conmigo, contigo",
+              "texto": "[[6141|con + pronouns]]."
+            },
+            {
+              "forma": "para mí, para ti",
+              "texto": "[[6466|prepositions + pronouns]]."
+            },
+            {
+              "forma": "me baño",
+              "texto": "[[5085|reflexive verbs]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _She painted it herself._",
+              "r": "Lo pintó ella misma.",
+              "nota": "ella misma."
+            },
+            {
+              "p": "In Spanish: _He talks to himself._",
+              "r": "Habla consigo mismo.",
+              "nota": "consigo."
+            },
+            {
+              "p": "In Spanish: _I'm proud of myself._ (feminine)",
+              "r": "Estoy orgullosa de mí misma.",
+              "nota": "de mí misma."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6141,
+      6466
+    ],
+    "confunde": [
+      5085
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8421",
+      "kwiziq": true
+    }
+  ]
+}

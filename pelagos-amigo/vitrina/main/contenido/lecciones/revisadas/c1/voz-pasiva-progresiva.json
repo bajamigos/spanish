@@ -1,0 +1,187 @@
+{
+  "tema": 7077,
+  "slug": "voz-pasiva-progresiva",
+  "titulo": "Passive in progressive tenses: está siendo + participle",
+  "subtitulo": "Está siendo atendido. Estaban siendo interrogados.",
+  "foto": "t08.jpg",
+  "regla": "The progressive passive is estar + siendo + participle: El paciente está siendo atendido = is being treated. Estar changes tense; siendo never changes; the participle agrees with the subject. Compound progressive: ha estado siendo investigado.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "estar (any tense)",
+            "+ siendo",
+            "+ participle (agrees)",
+            "(+ por + agent)"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "_is / was being + participle_: the action is in progress."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Siendo** is invariable; the participle agrees: **las casas están siendo pintadas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Active → passive: **La policía está interrogando a Miguel** → **Miguel está siendo interrogado por la policía**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Common in news; in speech, **lo están atendiendo** sounds more natural."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **siendo** = _being_, word for word."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi amigo ==está siendo atacado== ahora mismo.",
+              "en": "My friend is being attacked right now."
+            },
+            {
+              "es": "Los libros ==estaban siendo acomodados== en los estantes.",
+              "en": "The books were being arranged on the shelves."
+            },
+            {
+              "es": "==Estuve siendo atendida== durante horas por una vendedora muy amable.",
+              "en": "I was being helped for hours by a very kind salesclerk."
+            },
+            {
+              "es": "Miguel ==ha estado siendo interrogado== por la policía.",
+              "en": "Miguel has been (being) questioned by the police."
+            },
+            {
+              "es": "Ella ==había estado siendo acosada== por un exnovio.",
+              "en": "She had been being harassed by an ex-boyfriend."
+            },
+            {
+              "es": "El caso ==está siendo investigado==.",
+              "en": "The case is being investigated."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La casa está sienda pintada."
+                },
+                {
+                  "v": "bien",
+                  "t": "La casa está siendo pintada."
+                }
+              ],
+              "nota": "**Siendo** never changes."
+            },
+            {
+              "filas": [
+                {
+                  "v": "formal",
+                  "t": "El paciente está siendo atendido."
+                },
+                {
+                  "v": "cotidiano",
+                  "t": "Están atendiendo al paciente."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "estar + gerund",
+              "texto": "[[5092|estar + gerund]]."
+            },
+            {
+              "forma": "compound passive",
+              "texto": "[[7070|ha sido + participle]]."
+            },
+            {
+              "forma": "passive with estar",
+              "texto": "[[8949|pasiva de estado]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Passive: _The road is being repaired._",
+              "r": "La carretera está siendo reparada.",
+              "nota": "está siendo."
+            },
+            {
+              "p": "Passive: _The suspects were being watched._",
+              "r": "Los sospechosos estaban siendo vigilados.",
+              "nota": "Agreement."
+            },
+            {
+              "p": "Fix it: _Las pruebas están siendas analizadas._",
+              "r": "Las pruebas están siendo analizadas.",
+              "nota": "siendo."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5092,
+      7070
+    ],
+    "confunde": [
+      8949
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7077",
+      "kwiziq": true
+    }
+  ]
+}

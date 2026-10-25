@@ -1,0 +1,216 @@
+{
+  "tema": 6803,
+  "slug": "pasiva-se-deber-poder",
+  "titulo": "The passive se with deber and poder",
+  "subtitulo": "Se puede visitar el museo, se deben pagar impuestos: you can, you must, in general.",
+  "foto": "t04.jpg",
+  "regla": "Se + puede / pueden or debe / deben + infinitive = you can / you must, in general. The verb agrees with the thing: se deben pagar impuestos.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To make general statements, _you can…_ or _you must…_ meaning people in general, use **se** + **poder** or **deber** + **infinitive**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**se**",
+            "**puede(n) / debe(n)**",
+            "infinitive",
+            "thing"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The modal verb goes in the 3rd person and **agrees with the thing**: singular or uncountable → **se puede**, **se debe**; plural → **se pueden**, **se deben**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Thing",
+            "Example"
+          ],
+          "filas": [
+            [
+              "singular / uncountable",
+              "Se puede visitar el museo. / No se debe tomar alcohol en exceso."
+            ],
+            [
+              "plural",
+              "Se pueden comprar joyas aquí. / Se deben pagar los impuestos."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "After **se puede(n)** or **se debe(n)** there's always an **infinitive**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Se** can also be attached to the end of the infinitive: **se puede comprar** = **puede comprarse**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In English it sounds most natural as _you can / you must_, with a general _you_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: it's the passive **se** with a modal in front. The thing at the end still decides singular or plural."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "En esta tienda ==se pueden comprar== joyas muy bonitas.",
+              "en": "You can buy very nice jewelry in this store."
+            },
+            {
+              "es": "No ==se debe tomar== alcohol en exceso.",
+              "en": "You shouldn't drink alcohol in excess."
+            },
+            {
+              "es": "En Tijuana ==se puede visitar== el Centro Cultural.",
+              "en": "In Tijuana you can visit the Cultural Center."
+            },
+            {
+              "es": "==Se deben pagar== los impuestos al SAT.",
+              "en": "Taxes must be paid to the SAT."
+            },
+            {
+              "es": "Aquí no ==se puede surfear== con bandera roja.",
+              "en": "You can't surf here with a red flag."
+            },
+            {
+              "es": "==Se pueden encontrar== tacos buenísimos en cada esquina.",
+              "en": "You can find amazing tacos on every corner."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Se puede comprar joyas aquí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Se pueden comprar joyas aquí."
+                }
+              ],
+              "nota": "Plural thing: **pueden**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Se deben pagando los impuestos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Se deben pagar los impuestos."
+                }
+              ],
+              "nota": "Always an infinitive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "se venden casas",
+              "texto": "The passive **se** without modals: [[6089|pasiva refleja]]."
+            },
+            {
+              "forma": "aquí se come bien",
+              "texto": "Impersonal **se**: [[5132|impersonal se]]."
+            },
+            {
+              "forma": "se debe / se puede",
+              "texto": "Impersonal use, no object: [[6933|se debe / se puede]]."
+            },
+            {
+              "forma": "deber, poder + infinitive",
+              "texto": "The modal verbs: [[5065|deber, poder, querer]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _You can see whales in Ensenada._",
+              "r": "En Ensenada se pueden ver ballenas.",
+              "nota": "Plural thing: pueden."
+            },
+            {
+              "p": "In Spanish: _You must respect the rules._",
+              "r": "Se deben respetar las reglas.",
+              "nota": "Plural: deben."
+            },
+            {
+              "p": "In Spanish: _You can't park here._",
+              "r": "Aquí no se puede estacionar.",
+              "nota": "No object: singular."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6089,
+      5065
+    ],
+    "confunde": [
+      6933
+    ],
+    "sigue": [
+      6933,
+      5132
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6803",
+      "kwiziq": true
+    }
+  ]
+}

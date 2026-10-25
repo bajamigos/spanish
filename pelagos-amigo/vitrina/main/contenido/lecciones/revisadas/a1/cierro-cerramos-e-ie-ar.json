@@ -1,0 +1,230 @@
+{
+  "tema": 5811,
+  "slug": "cierro-cerramos-e-ie-ar",
+  "titulo": "-ar verbs with e > ie in the present",
+  "subtitulo": "Cierro la puerta, cerramos la tienda.",
+  "foto": "t05.jpg",
+  "regla": "Some -ar verbs change the stressed e of the stem to ie in the present: cierro, cierras, cierra, cierran. Nosotros keeps the e: cerramos.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "In some **-ar** verbs, the **e** of the stem becomes **ie** when it is stressed."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It happens in **yo, tú, él** and **ellos**. **Nosotros** keeps the **e**, because the stress moves to the ending."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "cerrar",
+            "empezar",
+            "regar"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**cierro**",
+              "**empiezo**",
+              "**riego**"
+            ],
+            [
+              "tú",
+              "**cierras**",
+              "**empiezas**",
+              "**riegas**"
+            ],
+            [
+              "él / ella / usted",
+              "**cierra**",
+              "**empieza**",
+              "**riega**"
+            ],
+            [
+              "nosotros / nosotras",
+              "cerramos",
+              "empezamos",
+              "regamos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "**cierran**",
+              "**empiezan**",
+              "**riegan**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Others: **pensar** (pienso), **despertar** (despierto), **comenzar** (comienzo), **recomendar** (recomiendo), **calentar** (caliento)."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Cierro== la ventana porque hace frío.",
+              "en": "I close the window because it's cold."
+            },
+            {
+              "es": "¿A qué hora ==empieza== la clase?",
+              "en": "What time does the class start?"
+            },
+            {
+              "es": "==Riego== las plantas del jardín cada mañana.",
+              "en": "I water the garden plants every morning."
+            },
+            {
+              "es": "¿Qué restaurante nos ==recomiendas==?",
+              "en": "Which restaurant do you recommend to us?"
+            },
+            {
+              "es": "Nosotros ==cerramos== la tienda a las nueve.",
+              "en": "We close the store at nine."
+            },
+            {
+              "es": "Los bebés ==despiertan== a toda la familia.",
+              "en": "The babies wake up the whole family."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo cerro la puerta."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo cierro la puerta."
+                }
+              ],
+              "nota": "e > ie in yo."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros empiezamos mañana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros empezamos mañana."
+                }
+              ],
+              "nota": "No change in nosotros."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella rega el jardín."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella riega el jardín."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hablo",
+              "texto": "The regular pattern: [[5492|regular -ar verbs]]."
+            },
+            {
+              "forma": "pienso",
+              "texto": "The most common one: [[5728|pensar]]."
+            },
+            {
+              "forma": "entiendo, quiero",
+              "texto": "The same change in -er verbs: [[5812|-er verbs with e > ie]]."
+            },
+            {
+              "forma": "cuento",
+              "texto": "The other big change: [[5872|-ar verbs with o > ue]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _The movie starts at eight._",
+              "r": "La película empieza a las ocho.",
+              "nota": "e > ie."
+            },
+            {
+              "p": "In Spanish: _We close at ten._",
+              "r": "Cerramos a las diez.",
+              "nota": "No change in nosotros."
+            },
+            {
+              "p": "Fix it: _Ellos calentan la comida._",
+              "r": "Ellos calientan la comida.",
+              "nota": "calientan."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5492
+    ],
+    "confunde": [
+      5872
+    ],
+    "sigue": [
+      5728,
+      5812
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5811",
+      "kwiziq": true
+    }
+  ]
+}

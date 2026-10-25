@@ -1,0 +1,204 @@
+{
+  "tema": 6601,
+  "slug": "cuyo-cuya",
+  "titulo": "Cuyo, cuya, cuyos, cuyas = whose",
+  "subtitulo": "Roberto, cuyo hijo va a la escuela de mi hija...",
+  "foto": "t08.jpg",
+  "regla": "Cuyo means whose and agrees in gender and number with the thing possessed, not with the owner: Marta, cuya jefa..., Roberto, cuyos hijos... It's formal; in speech people rephrase with que + su or de quien.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "owner",
+            ", cuyo / cuya / cuyos / cuyas",
+            "+ thing possessed"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Agrees with **what follows**, like a possessive: **la escritora, cuyo libro... / el escritor, cuyas novelas...**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Can follow a preposition: **la casa en cuyas recámaras dormimos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Formal, mostly written. In speech: **Marta, que su jefa es mi jefa...** (colloquial) or **un amigo del que seguiste los consejos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Never for questions: _Whose is this?_ = **¿De quién es esto?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **cuyo** looks forward, like **su**."
+        }
+      ]
+    },
+    {
+      "id": "tabla",
+      "titulo": "Forms",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "masculine thing",
+            "feminine thing"
+          ],
+          "filas": [
+            [
+              "singular",
+              "cuyo",
+              "cuya"
+            ],
+            [
+              "plural",
+              "cuyos",
+              "cuyas"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Roberto, ==cuyo hijo== va a la escuela de mi hija, es abogado.",
+              "en": "Roberto, whose son goes to my daughter's school, is a lawyer."
+            },
+            {
+              "es": "Marta, ==cuya jefa== también es mi jefa, es buena compañera.",
+              "en": "Marta, whose boss is also my boss, is a good colleague."
+            },
+            {
+              "es": "Tu amigo, ==cuyos consejos== seguiste, no es de fiar.",
+              "en": "Your friend, whose advice you followed, isn't trustworthy."
+            },
+            {
+              "es": "La casa, en ==cuyas recámaras== dormimos, era muy tradicional.",
+              "en": "The house, in whose bedrooms we slept, was very traditional."
+            },
+            {
+              "es": "Es un autor ==cuya obra== conozco poco.",
+              "en": "He's an author whose work I barely know."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La señora, cuyo hija..."
+                },
+                {
+                  "v": "bien",
+                  "t": "La señora, cuya hija..."
+                }
+              ],
+              "nota": "Agrees with **hija**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Cuyo es este libro?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿De quién es este libro?"
+                }
+              ],
+              "nota": "Not a question word."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "relatives",
+              "texto": "[[5154|que, el cual, quien]]."
+            },
+            {
+              "forma": "el que",
+              "texto": "[[6074|el que, la que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _The girl whose dog got lost is crying._",
+              "r": "La niña cuyo perro se perdió está llorando.",
+              "nota": "cuyo agrees with perro."
+            },
+            {
+              "p": "In Spanish: _a city whose streets I love_",
+              "r": "una ciudad cuyas calles me encantan",
+              "nota": "cuyas."
+            },
+            {
+              "p": "Whose is this pen?",
+              "r": "¿De quién es esta pluma?",
+              "nota": "Question = de quién."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5154
+    ],
+    "confunde": [],
+    "sigue": [
+      6074
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6601",
+      "kwiziq": true
+    }
+  ]
+}

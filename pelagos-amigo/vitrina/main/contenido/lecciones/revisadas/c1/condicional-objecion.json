@@ -1,0 +1,157 @@
+{
+  "tema": 8194,
+  "slug": "condicional-objecion",
+  "titulo": "Conditional or perfect conditional to object to what was said",
+  "subtitulo": "—Estaba enferma. —Estarías enferma, pero bien que fuiste a la fiesta.",
+  "foto": "t10.jpg",
+  "regla": "To accept a past claim only to undercut it: conditional (or perfect conditional) + pero: —Tuvo un final triste. —Tendría un final triste, pero vivió como rey. Means maybe so / if you say so, but...",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "conditional (repeating the claim)",
+            "+ pero",
+            "+ objection"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Someone says something about the **past**; you repeat it in the **conditional** to cast doubt: _maybe so, if you say so, but..._"
+        },
+        {
+          "tipo": "texto",
+          "texto": "If they used the pluperfect, answer with the **perfect conditional**: **—Había prometido invitar. —Lo habría prometido, pero...**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the conditional here sounds like _yeah, sure_."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "—Arturo tuvo un final triste. —==Tendría== un final triste, pero vivió como rey.",
+              "en": "—Arturo had a sad ending. —Maybe so, but he lived like a king."
+            },
+            {
+              "es": "—Estaba tan enferma que no pude salir. —==Estarías== muy enferma, pero ¿y la fiesta que hiciste en tu casa?",
+              "en": "—I was so sick I couldn't go out. —Sick, huh? And the party you threw at your place?"
+            },
+            {
+              "es": "—Javier había prometido invitarnos a todos si aprobaba. —Lo ==habría prometido==, pero no ha habido fiesta.",
+              "en": "—Javier had promised to treat us all if he passed. —Maybe he did, but there's been no party."
+            },
+            {
+              "es": "—No sabía nada. —No ==sabría== nada, pero bien que se quedó callado.",
+              "en": "—He didn't know anything. —If you say so, but he sure kept quiet."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "hipótesis",
+                  "t": "Si pudiera, iría."
+                },
+                {
+                  "v": "objeción",
+                  "t": "Podría ser muy listo, pero reprobó."
+                }
+              ],
+              "nota": "Same tense, different job."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "sería, llegaría",
+              "texto": "[[5069|conditional of probability]]."
+            },
+            {
+              "forma": "será lo que sea",
+              "texto": "[[7935|future for rejection]]."
+            },
+            {
+              "forma": "¿cómo va a...?",
+              "texto": "[[8151|stating the obvious]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Object: _—Estaba muy ocupado._",
+              "r": "Estaría muy ocupado, pero contestó otros mensajes.",
+              "nota": "Conditional + pero."
+            },
+            {
+              "p": "Object: _—Había estudiado mucho._",
+              "r": "Habría estudiado mucho, pero reprobó.",
+              "nota": "Perfect conditional."
+            },
+            {
+              "p": "Object: _—Era muy rico._",
+              "r": "Sería muy rico, pero no era feliz.",
+              "nota": "Conditional."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5069
+    ],
+    "confunde": [
+      7935
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8194",
+      "kwiziq": true
+    }
+  ]
+}

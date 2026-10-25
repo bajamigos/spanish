@@ -1,0 +1,270 @@
+{
+  "tema": 7149,
+  "slug": "la-gente-la-ropa",
+  "titulo": "Plural in English, singular in Spanish (and vice versa)",
+  "subtitulo": "La gente es amable. Las noticias son buenas.",
+  "foto": "t09.jpg",
+  "regla": "Some nouns are plural in English but singular in Spanish (people → la gente, clothes → la ropa, police → la policía), and some are singular in English but usually plural in Spanish (news → las noticias, furniture → los muebles, advice → los consejos). The verb and adjectives follow the Spanish noun.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Number doesn't always match between English and Spanish. The **verb** and **adjectives** follow the **Spanish** noun."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "English",
+            "Spanish",
+            "Number in Spanish"
+          ],
+          "filas": [
+            [
+              "people",
+              "la gente",
+              "singular"
+            ],
+            [
+              "clothes",
+              "la ropa",
+              "singular"
+            ],
+            [
+              "the police",
+              "la policía",
+              "singular"
+            ],
+            [
+              "stairs",
+              "la escalera (or las escaleras)",
+              "either"
+            ],
+            [
+              "pants",
+              "el pantalón (or los pantalones)",
+              "either"
+            ],
+            [
+              "news",
+              "las noticias",
+              "plural"
+            ],
+            [
+              "furniture",
+              "los muebles",
+              "plural"
+            ],
+            [
+              "advice",
+              "los consejos",
+              "plural"
+            ],
+            [
+              "vacation",
+              "las vacaciones",
+              "plural"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**La gente** is **singular** and **feminine**: **la gente es amable**, never _son amables_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Words for groups (**la familia, el equipo, el público, la policía**) are singular too: **mi familia vive aquí**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "For one piece, Spanish just uses the singular: **una noticia** (_a piece of news_), **un consejo** (_a piece of advice_), **un mueble** (_a piece of furniture_)."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==La gente== de Tijuana ==es== muy amable.",
+              "en": "People in Tijuana are very friendly."
+            },
+            {
+              "es": "Toda ==mi ropa está== mojada.",
+              "en": "All my clothes are wet."
+            },
+            {
+              "es": "==La policía llegó== en cinco minutos.",
+              "en": "The police arrived in five minutes."
+            },
+            {
+              "es": "==Las noticias== de hoy ==son== muy malas.",
+              "en": "Today's news is really bad."
+            },
+            {
+              "es": "Mi abuela me dio ==un consejo== muy bueno.",
+              "en": "My grandma gave me a very good piece of advice."
+            },
+            {
+              "es": "Compramos ==muebles== nuevos para la sala.",
+              "en": "We bought new furniture for the living room."
+            },
+            {
+              "es": "==Mi equipo entrena== los martes y jueves.",
+              "en": "My team trains on Tuesdays and Thursdays."
+            },
+            {
+              "es": "Este verano me voy de ==vacaciones==.",
+              "en": "This summer I'm going on vacation."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La gente son muy amables."
+                },
+                {
+                  "v": "bien",
+                  "t": "La gente es muy amable."
+                }
+              ],
+              "nota": "**La gente** is singular."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mi ropa están sucias."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mi ropa está sucia."
+                }
+              ],
+              "nota": "**La ropa** is singular."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La policía llegaron."
+                },
+                {
+                  "v": "bien",
+                  "t": "La policía llegó."
+                }
+              ],
+              "nota": "Singular verb."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Las noticias es buena."
+                },
+                {
+                  "v": "bien",
+                  "t": "Las noticias son buenas."
+                }
+              ],
+              "nota": "Plural, or **la noticia es buena** for one item."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "los, las",
+              "texto": "The plural article: [[5101|los, las]]."
+            },
+            {
+              "forma": "los perros, las casas",
+              "texto": "Making plurals: [[6150|masculine and feminine nouns]]."
+            },
+            {
+              "forma": "los García",
+              "texto": "Another plural that doesn't look plural: [[8891|surnames]]."
+            },
+            {
+              "forma": "la gente, la vida",
+              "texto": "When to use the article: [[7181|el, la, los, las]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish, with estar: _People are happy._",
+              "r": "La gente está contenta.",
+              "nota": "Singular, feminine."
+            },
+            {
+              "p": "In Spanish (several stories): _The news is good._",
+              "r": "Las noticias son buenas.",
+              "nota": "Plural."
+            },
+            {
+              "p": "Fix it: _Mi ropa son nuevas._",
+              "r": "Mi ropa es nueva.",
+              "nota": "Singular."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5101,
+      6150
+    ],
+    "confunde": [
+      8891
+    ],
+    "sigue": [
+      7181
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7149",
+      "kwiziq": true
+    }
+  ]
+}

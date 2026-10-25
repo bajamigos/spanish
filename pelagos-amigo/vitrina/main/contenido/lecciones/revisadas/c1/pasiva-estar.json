@@ -1,0 +1,211 @@
+{
+  "tema": 8949,
+  "slug": "pasiva-estar",
+  "titulo": "The passive with estar (resulting state)",
+  "subtitulo": "La puerta está cerrada. La casa está construida sobre una colina.",
+  "foto": "t04.jpg",
+  "regla": "Estar + participle (agreeing) describes the result of an action, not the action itself: Las ventanas están cerradas. Ser + participle describes the action: Las ventanas fueron cerradas por el guardia.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Form",
+            "Focus",
+            "Example"
+          ],
+          "filas": [
+            [
+              "ser + participle",
+              "the action (often with por)",
+              "La casa fue construida en 1990."
+            ],
+            [
+              "estar + participle",
+              "the resulting state",
+              "La casa está construida sobre una colina."
+            ],
+            [
+              "se + verb",
+              "the action, everyday",
+              "Se construyó la casa."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The participle agrees in both."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **ser** shows the hammer; **estar** shows the finished house."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Esa película ==estaba prohibida== durante la dictadura.",
+              "en": "That film was banned during the dictatorship."
+            },
+            {
+              "es": "Me sorprende que todas las ventanas ==estén cerradas==.",
+              "en": "I'm surprised all the windows are closed."
+            },
+            {
+              "es": "La nueva colonia ==está construida== sobre una colina.",
+              "en": "The new neighborhood is built on a hill."
+            },
+            {
+              "es": "La cena ya ==está servida==.",
+              "en": "Dinner is served."
+            },
+            {
+              "es": "La tienda ==está cerrada== los domingos.",
+              "en": "The store is closed on Sundays."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "comparar",
+      "titulo": "Action or result?",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "acción",
+                  "t": "La puerta fue cerrada por el guardia a las diez."
+                },
+                {
+                  "v": "resultado",
+                  "t": "La puerta está cerrada."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La puerta está cerrado."
+                },
+                {
+                  "v": "bien",
+                  "t": "La puerta está cerrada."
+                }
+              ],
+              "nota": "Agreement."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La ciudad está fundada por los españoles en 1531."
+                },
+                {
+                  "v": "bien",
+                  "t": "La ciudad fue fundada en 1531."
+                }
+              ],
+              "nota": "A dated action: **ser**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "fue construida",
+              "texto": "[[6173|passive with ser]]."
+            },
+            {
+              "forma": "se construyó",
+              "texto": "[[6089|passive se]]."
+            },
+            {
+              "forma": "participles as adjectives",
+              "texto": "[[7000|participles]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "State: _The windows are open._",
+              "r": "Las ventanas están abiertas.",
+              "nota": "estar."
+            },
+            {
+              "p": "Action: _The windows were opened by the kids._",
+              "r": "Las ventanas fueron abiertas por los niños.",
+              "nota": "ser + por."
+            },
+            {
+              "p": "Ser or estar? _El museo ___ (closed) los lunes._",
+              "r": "está cerrado",
+              "nota": "State."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6173,
+      7000
+    ],
+    "confunde": [
+      6173
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8949",
+      "kwiziq": true
+    }
+  ]
+}

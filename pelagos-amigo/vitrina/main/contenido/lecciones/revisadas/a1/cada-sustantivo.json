@@ -1,0 +1,189 @@
+{
+  "tema": 6668,
+  "slug": "cada-sustantivo",
+  "titulo": "Cada + noun (each)",
+  "subtitulo": "Cada ola es diferente.",
+  "foto": "t01.jpg",
+  "regla": "Cada + singular noun = each. Cada never changes for gender or number, takes no article, and the verb is singular: cada alumno tiene, cada casa tiene.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Cada** + **singular noun** = _each_."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "cada",
+            "+",
+            "singular noun"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Cada** never changes: **cada chavo**, **cada chava**. No article after it, and the verb is **singular**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Cada== ola es diferente.",
+              "en": "Each wave is different."
+            },
+            {
+              "es": "==Cada== alumno tiene un libro.",
+              "en": "Each student has a book."
+            },
+            {
+              "es": "Hay una tabla para ==cada== persona.",
+              "en": "There's a board for each person."
+            },
+            {
+              "es": "==Cada== casa de la calle tiene un jardín.",
+              "en": "Each house on the street has a garden."
+            },
+            {
+              "es": "Le doy un taco a ==cada== niño.",
+              "en": "I give each kid a taco."
+            },
+            {
+              "es": "==Cada== clase cuesta doscientos pesos.",
+              "en": "Each class costs two hundred pesos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cada alumnos tiene un libro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cada alumno tiene un libro."
+                }
+              ],
+              "nota": "Singular noun."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cada la clase es diferente."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cada clase es diferente."
+                }
+              ],
+              "nota": "No article."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cada niño tienen una pelota."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cada niño tiene una pelota."
+                }
+              ],
+              "nota": "Singular verb."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "cada día",
+              "texto": "With time words: [[6178|cada and todos los for every]]."
+            },
+            {
+              "forma": "todos",
+              "texto": "_All_ instead of _each_: [[6233|todo, toda, todos, todas]]."
+            },
+            {
+              "forma": "cada uno de",
+              "texto": "Each one of: [[7175|cada uno / cada una de]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Each wave is different._",
+              "r": "Cada ola es diferente.",
+              "nota": "cada + singular."
+            },
+            {
+              "p": "Fix it: _Cada alumnos tiene un libro._",
+              "r": "Cada alumno tiene un libro.",
+              "nota": "Singular noun."
+            },
+            {
+              "p": "Fix it: _Cada persona pagan cien pesos._",
+              "r": "Cada persona paga cien pesos.",
+              "nota": "Singular verb."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6178
+    ],
+    "confunde": [
+      6233
+    ],
+    "sigue": [
+      7175
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6668",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "tema": 10027,
+  "slug": "tardarse-demorarse",
+  "titulo": "Using tardar(se) / demorar(se) = to take time",
+  "subtitulo": "Me tardo diez minutos en llegar: the person is the subject.",
+  "foto": "t08.jpg",
+  "regla": "Tardar(se) / demorar(se) + time + en + infinitive: the person (or the vehicle) is the subject. Never me tarda or te tardó.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say how long it takes someone to do something, Spanish uses **tardar** or **demorar**, often with a pronoun: **tardarse**, **demorarse**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "person + **tardar(se)**",
+            "time",
+            "**en**",
+            "infinitive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The big difference with English: the **person** is the subject, not _it_. **Yo tardo cinco minutos** = _it takes me five minutes_. So the verb agrees with the person."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "English",
+            "Spanish"
+          ],
+          "filas": [
+            [
+              "It takes me 5 minutes.",
+              "Tardo / Me tardo / Me demoro 5 minutos."
+            ],
+            [
+              "How long did it take you?",
+              "¿Cuánto (te) tardaste? / ¿Cuánto te demoraste?"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The pronoun versions (**me tardo**, **te demoraste**) are very common in Mexico."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With transportation, the **bus, train or plane** is the subject: **el camión tarda una hora**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Never build it like **gustar**: **me tarda** or **te tardó** are wrong."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: you're the one who's slow, not _it_. The verb points at you."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Tardo== cinco minutos en llegar al taller.",
+              "en": "It takes me five minutes to get to the shop."
+            },
+            {
+              "es": "==Me tardo== cinco minutos en llegar al taller.",
+              "en": "It takes me five minutes to get to the shop."
+            },
+            {
+              "es": "==Me demoro== cinco minutos en llegar al taller.",
+              "en": "It takes me five minutes to get to the shop."
+            },
+            {
+              "es": "¿Cuánto tiempo ==tardaste== en abrir el carro?",
+              "en": "How long did it take you to open the car?"
+            },
+            {
+              "es": "¿Cuánto ==te tardaste== en corregir los exámenes?",
+              "en": "How long did it take you to grade the exams?"
+            },
+            {
+              "es": "El camión ==tarda== una hora en llegar a Rosarito.",
+              "en": "The bus takes an hour to get to Rosarito."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me tarda cinco minutos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me tardo cinco minutos."
+                }
+              ],
+              "nota": "The person is the subject: **tardo**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Cuánto tiempo te tardó?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cuánto tiempo te tardaste?"
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tardé dos horas para terminar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tardé dos horas en terminar."
+                }
+              ],
+              "nota": "**Tardar en** + infinitive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hace tres horas que…",
+              "texto": "Duration: [[6187|hace … que]]."
+            },
+            {
+              "forma": "llevo tres horas esperando",
+              "texto": "How long so far: [[7176|llevar + gerund]]."
+            },
+            {
+              "forma": "¿cuánto?",
+              "texto": "Questions: [[7068|cuánto + noun]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _It takes me an hour to get to work._",
+              "r": "Tardo una hora en llegar al trabajo. / Me tardo una hora en llegar al trabajo.",
+              "nota": "The person is the subject."
+            },
+            {
+              "p": "Fix it: **Le tardó dos días.**",
+              "r": "Se tardó dos días. / Tardó dos días.",
+              "nota": "Not like gustar."
+            },
+            {
+              "p": "In Spanish: _The plane takes three hours._",
+              "r": "El avión tarda tres horas.",
+              "nota": "The vehicle is the subject."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [],
+    "sigue": [
+      6187,
+      7176
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 10027",
+      "kwiziq": true
+    }
+  ]
+}

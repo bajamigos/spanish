@@ -1,0 +1,252 @@
+{
+  "tema": 7248,
+  "slug": "le-gusta-nos-gusta-les-gusta",
+  "titulo": "Gustar with he, she, we, they",
+  "subtitulo": "Le gusta el mar. Nos gustan las olas.",
+  "foto": "t09.jpg",
+  "regla": "To say what he, she, you (usted), we or they like, use le, nos or les + gusta (one thing or an infinitive) or gustan (several things). The thing liked is the subject; the person is the indirect pronoun.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Gustar** works backwards: the thing **pleases** the person. The person is a short pronoun:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Pronoun",
+            "One thing",
+            "Several things"
+          ],
+          "filas": [
+            [
+              "él / ella / usted",
+              "le",
+              "le gusta",
+              "le gustan"
+            ],
+            [
+              "nosotros / nosotras",
+              "nos",
+              "nos gusta",
+              "nos gustan"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "les",
+              "les gusta",
+              "les gustan"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Gusta** for one thing or an action: **Le gusta el café.** **Nos gusta surfear.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Gustan** for several things: **Les gustan los perros.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Le** can mean him, her or you (usted); **les** can mean them or you all. To make it clear, add **a él**, **a ella**, **a usted**, **a ellos**, **a ustedes** or a name: **A Juan le gusta.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Negative: **no** goes before the pronoun: **No nos gusta el frío.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: look at the thing, not the person. The thing decides **gusta** or **gustan**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Le gusta== mucho el jiu-jitsu.",
+              "en": "He really likes jiu-jitsu."
+            },
+            {
+              "es": "A mi mamá ==le gustan== las suculentas.",
+              "en": "My mom likes succulents."
+            },
+            {
+              "es": "==Nos gusta== surfear temprano.",
+              "en": "We like to surf early."
+            },
+            {
+              "es": "==Nos gustan== los tacos de pescado.",
+              "en": "We like fish tacos."
+            },
+            {
+              "es": "A mis amigos ==les gusta== The Expanse.",
+              "en": "My friends like The Expanse."
+            },
+            {
+              "es": "¿==Les gustan== los chiles toreados?",
+              "en": "Do you all like blistered chiles?"
+            },
+            {
+              "es": "A ella no ==le gusta== el ruido.",
+              "en": "She doesn't like noise."
+            },
+            {
+              "es": "Señor, ¿==le gusta== la habitación?",
+              "en": "Sir, do you like the room?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Él gusta el café."
+                },
+                {
+                  "v": "bien",
+                  "t": "A él le gusta el café."
+                }
+              ],
+              "nota": "The person is **le**, not the subject."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Les gusta los tacos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Les gustan los tacos."
+                }
+              ],
+              "nota": "Plural thing → **gustan**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nos gustamos la playa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nos gusta la playa."
+                }
+              ],
+              "nota": "The verb agrees with **la playa**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mis papás les gusta bailar."
+                },
+                {
+                  "v": "bien",
+                  "t": "A mis papás les gusta bailar."
+                }
+              ],
+              "nota": "Add **a** before the person."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "me gusta",
+              "texto": "Start here: [[6001|gustar with me and te]]."
+            },
+            {
+              "forma": "les gusta bailar",
+              "texto": "Liking actions: [[10727|gustar + doing something]]."
+            },
+            {
+              "forma": "a ella le gusta",
+              "texto": "Why both **a ella** and **le**: [[7032|repeating the pronoun with gustar]]."
+            },
+            {
+              "forma": "a mí también",
+              "texto": "Agreeing: [[7681|yo también / a mí tampoco]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _They like the beach._",
+              "r": "Les gusta la playa.",
+              "nota": "One thing → gusta."
+            },
+            {
+              "p": "In Spanish: _We like dogs._",
+              "r": "Nos gustan los perros.",
+              "nota": "Plural → gustan."
+            },
+            {
+              "p": "Fix it: «Ella le gustan el chocolate.»",
+              "r": "A ella le gusta el chocolate.",
+              "nota": "a ella + gusta."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6001
+    ],
+    "confunde": [
+      7032
+    ],
+    "sigue": [
+      10727,
+      7681
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7248",
+      "kwiziq": true
+    }
+  ]
+}

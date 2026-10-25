@@ -1,0 +1,215 @@
+{
+  "tema": 7801,
+  "slug": "creo-que-si",
+  "titulo": "How to say I think so, I guess so, I hope so",
+  "subtitulo": "Creo que sí, supongo que no, espero que sí.",
+  "foto": "t01.jpg",
+  "regla": "I think so = creo que sí / pienso que sí; I guess so = supongo que sí; I hope so = espero que sí. Never drop que, never drop sí / no.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "_I think so_, _I guess so_ and _I hope so_ aren't translated word for word. Spanish uses a verb + **que** + **sí** or **no**:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "English",
+            "Spanish"
+          ],
+          "filas": [
+            [
+              "I think so / I don't think so",
+              "Creo que sí / Creo que no"
+            ],
+            [
+              "",
+              "Pienso que sí / Pienso que no (a bit more formal)"
+            ],
+            [
+              "I guess so / I guess not",
+              "Supongo que sí / Supongo que no"
+            ],
+            [
+              "I hope so / I hope not",
+              "Espero que sí / Espero que no"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Never leave out **que**: **creo sí** ✗. And never leave out **sí** or **no**: **creo que** ✗."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: verb, **que**, and then the answer: **sí** or **no**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "—¿Viene Beto a la carne asada? —==Creo que sí==.",
+              "en": "\"Is Beto coming to the barbecue?\" \"I think so.\""
+            },
+            {
+              "es": "—¿Hay olas mañana? —==Creo que no==.",
+              "en": "\"Are there waves tomorrow?\" \"I don't think so.\""
+            },
+            {
+              "es": "—¿Va a llover? —==Supongo que sí==.",
+              "en": "\"Is it going to rain?\" \"I guess so.\""
+            },
+            {
+              "es": "—¿Vas a ganar? —==Espero que sí==.",
+              "en": "\"Are you going to win?\" \"I hope so.\""
+            },
+            {
+              "es": "—¿Se canceló el vuelo? —==Espero que no==.",
+              "en": "\"Was the flight canceled?\" \"I hope not.\""
+            },
+            {
+              "es": "—¿Lo sabe Naomi? —==Pienso que no==.",
+              "en": "\"Does Naomi know?\" \"I don't think so.\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Creo sí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Creo que sí."
+                }
+              ],
+              "nota": "Keep the **que**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Espero que."
+                },
+                {
+                  "v": "bien",
+                  "t": "Espero que sí."
+                }
+              ],
+              "nota": "Keep **sí** or **no**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No creo que sí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Creo que no."
+                }
+              ],
+              "nota": "_I don't think so_ = **creo que no**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "espero que vengas",
+              "texto": "With a full sentence: [[6076|esperar que + subjunctive]]."
+            },
+            {
+              "forma": "no creo que venga",
+              "texto": "Doubt: [[6235|subjunctive for doubt]]."
+            },
+            {
+              "forma": "yo sí, yo no",
+              "texto": "Short answers: [[7731|yo sí / yo no]]."
+            },
+            {
+              "forma": "sí / si",
+              "texto": "With and without accent: [[6603|sí and si]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Answer: _I think so._",
+              "r": "Creo que sí.",
+              "nota": "creo que + sí."
+            },
+            {
+              "p": "Answer: _I hope not._",
+              "r": "Espero que no.",
+              "nota": "espero que + no."
+            },
+            {
+              "p": "Answer: _I guess so._",
+              "r": "Supongo que sí.",
+              "nota": "supongo que + sí."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6603
+    ],
+    "confunde": [
+      7731
+    ],
+    "sigue": [
+      6076,
+      6235
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7801",
+      "kwiziq": true
+    }
+  ]
+}

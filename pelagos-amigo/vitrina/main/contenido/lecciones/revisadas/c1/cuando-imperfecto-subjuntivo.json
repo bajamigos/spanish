@@ -1,0 +1,175 @@
+{
+  "tema": 7744,
+  "slug": "cuando-imperfecto-subjuntivo",
+  "titulo": "Conditional + cuando + imperfect subjunctive",
+  "subtitulo": "Te ayudaría cuando te portaras bien.",
+  "foto": "t01.jpg",
+  "regla": "Conditional in the main clause + cuando + imperfect subjunctive presents a less certain future, almost like si: Te ayudaría cuando empezaras a portarte bien. Compare cuando + present subjunctive (more certain): Te ayudo cuando te portes bien.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "conditional",
+            "+ cuando +",
+            "imperfect subjunctive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The event after **cuando** is possible but **uncertain**, close to _if_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With the **present** subjunctive (and a future or present in the main clause), it's more likely: **te ayudo cuando te portes bien**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It also appears in reported future: **dijo que me llamaría cuando llegara**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **-ría** + **cuando** + **-ra**: a softer, iffier _when_."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Yo te ==ayudaría cuando== tú ==empezaras== a portarte bien.",
+              "en": "I'd help you if you started behaving."
+            },
+            {
+              "es": "Estaría bien salir a caminar ==cuando dejara== de llover.",
+              "en": "It'd be nice to go for a walk if it stopped raining."
+            },
+            {
+              "es": "Dijo que me ==llamaría cuando llegara== al hotel.",
+              "en": "He said he'd call me when he got to the hotel."
+            },
+            {
+              "es": "Te ==ayudo cuando== te ==portes== bien.",
+              "en": "I'll help you when you behave. (more certain)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Te ayudaría cuando te portes bien."
+                },
+                {
+                  "v": "bien",
+                  "t": "Te ayudaría cuando te portaras bien."
+                }
+              ],
+              "nota": "Conditional + imperfect subjunctive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Te ayudaría cuando te portarías bien."
+                },
+                {
+                  "v": "bien",
+                  "t": "Te ayudaría cuando te portaras bien."
+                }
+              ],
+              "nota": "Never conditional after **cuando**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "cuando + present subjunctive",
+              "texto": "[[5062|cuando]]."
+            },
+            {
+              "forma": "cuando + past",
+              "texto": "[[7251|cuando + indicative]]."
+            },
+            {
+              "forma": "si + imperfect subjunctive",
+              "texto": "[[5120|si clauses]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Complete: _Te prestaría el carro cuando ___ (tener, tú) licencia._",
+              "r": "tuvieras",
+              "nota": "Imperfect subjunctive."
+            },
+            {
+              "p": "More certain version:",
+              "r": "Te presto el carro cuando tengas licencia.",
+              "nota": "Present subjunctive."
+            },
+            {
+              "p": "Report: _He said he'd text me when he arrived._",
+              "r": "Dijo que me mandaría mensaje cuando llegara.",
+              "nota": "Conditional + -ra."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5062,
+      7251
+    ],
+    "confunde": [
+      5120
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7744",
+      "kwiziq": true
+    }
+  ]
+}

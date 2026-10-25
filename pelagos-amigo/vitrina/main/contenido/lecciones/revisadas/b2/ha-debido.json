@@ -1,0 +1,196 @@
+{
+  "tema": 6474,
+  "slug": "ha-debido",
+  "titulo": "Must have done with deber",
+  "subtitulo": "Ha debido de salir. Debe de haber llovido.",
+  "foto": "t03.jpg",
+  "regla": "To guess what must have happened: ha debido (de) + infinitive, or debe (de) + haber + participle: Debe de haber llovido. The de is optional for assumptions. A fact usually backs up the guess.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To make an **assumption about the past** with **deber**, you have two patterns:"
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "ha debido (de) + infinitive",
+              "texto": "**Ha debido de llamar a la policía.**"
+            },
+            {
+              "forma": "debe (de) + haber + participle",
+              "texto": "**Debe de haber llamado a la policía.**"
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "For assumptions, **de** is optional. Without context, **debe + haber** can also sound like obligation, so **de** makes the guess clearer."
+        },
+        {
+          "tipo": "texto",
+          "texto": "A fact usually backs up the guess: **ha debido de ser buena maestra; sus alumnos le trajeron flores**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Pronouns: in front of the whole phrase or attached to the infinitive: **se ha debido retrasar** / **ha debido retrasarse** / **debe haberse retrasado**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Also common: **debió (de)** + infinitive: **debió de llover**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: there's evidence, and **deber** draws the conclusion."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Manuela ==ha debido llamar== a la policía.",
+              "en": "Manuela must have called the police."
+            },
+            {
+              "es": "Todavía no llegan; su vuelo ==ha debido retrasarse==.",
+              "en": "They still haven't arrived; their flight must have been delayed."
+            },
+            {
+              "es": "Sara ==ha debido de dejar== a su hijo en la guardería en la mañana.",
+              "en": "Sara must have dropped her son off at daycare this morning."
+            },
+            {
+              "es": "Cristina ==ha debido de ser== buena maestra; sus alumnos le compraron flores.",
+              "en": "Cristina must have been a good teacher; her students bought her flowers."
+            },
+            {
+              "es": "Manuela ==debe haber llamado== a la policía.",
+              "en": "Manuela must have called the police."
+            },
+            {
+              "es": "==Debe de haber llovido== en la noche, porque los carros están mojados.",
+              "en": "It must have rained last night, because the cars are wet."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Debe de ha llovido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Debe de haber llovido."
+                }
+              ],
+              "nota": "**Haber** stays infinitive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Debe haber retrasádose."
+                },
+                {
+                  "v": "bien",
+                  "t": "Debe haberse retrasado."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "debe de ser",
+              "texto": "[[7052|deber vs deber de]]."
+            },
+            {
+              "forma": "habrá llovido",
+              "texto": "Another way to guess: [[7266|future perfect for the past]]."
+            },
+            {
+              "forma": "debería haber",
+              "texto": "_Should have_: [[5054|deber + haber]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Guess: _He must have forgotten._",
+              "r": "Ha debido de olvidarse. / Debe de haberse olvidado.",
+              "nota": "Two patterns."
+            },
+            {
+              "p": "Guess: _They must have left early._",
+              "r": "Deben de haber salido temprano.",
+              "nota": "deber de + haber."
+            },
+            {
+              "p": "In Spanish: _It must have been expensive._",
+              "r": "Debe de haber sido caro.",
+              "nota": "haber sido."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7052
+    ],
+    "confunde": [
+      5054
+    ],
+    "sigue": [
+      7266
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6474",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,230 @@
+{
+  "tema": 6128,
+  "slug": "que-conjuncion-creo-que",
+  "titulo": "The conjunction que = that",
+  "subtitulo": "«Creo que va a llover.»",
+  "foto": "t10.jpg",
+  "regla": "Que links a verb like creer, decir, saber or pensar to the clause that follows (creo que llueve). Unlike English that, it can never be dropped, and it is never pensar de que.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "After verbs of **thinking**, **saying**, **knowing** and **seeing** (**creer, pensar, decir, saber, ver, parecer**…), **que** introduces the next clause."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "Creo",
+            "+ que +",
+            "va a llover."
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "In English, _that_ is often dropped: _I think (that) it'll rain_. In Spanish **que** is **always required**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "No accent: **que** (_that_). **Qué** with an accent is _what_ in questions and exclamations."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Don't add **de**: **pienso que**, **creo que**, **me dijo que** (not **pienso de que**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Short answers: **creo que sí** (_I think so_), **creo que no** (_I don't think so_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **que** is the hitch between two trailers; without it the second one rolls away."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Creo que== va a llover.",
+              "en": "I think it's going to rain."
+            },
+            {
+              "es": "Mi jefe ==dice que== no hay junta mañana.",
+              "en": "My boss says there's no meeting tomorrow."
+            },
+            {
+              "es": "==Sé que== tienes razón.",
+              "en": "I know you're right."
+            },
+            {
+              "es": "==Pienso que== es una buena idea.",
+              "en": "I think it's a good idea."
+            },
+            {
+              "es": "Me ==dijo que== estaba cansada.",
+              "en": "She told me she was tired."
+            },
+            {
+              "es": "==Veo que== ya terminaste.",
+              "en": "I see you've already finished."
+            },
+            {
+              "es": "==Parece que== las olas están grandes hoy.",
+              "en": "It looks like the waves are big today."
+            },
+            {
+              "es": "¿Vienes a la fiesta? —==Creo que== sí.",
+              "en": "Are you coming to the party? —I think so."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Creo va a llover."
+                },
+                {
+                  "v": "bien",
+                  "t": "Creo que va a llover."
+                }
+              ],
+              "nota": "Never drop **que**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Dice él no puede venir."
+                },
+                {
+                  "v": "bien",
+                  "t": "Dice que él no puede venir."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Pienso de que es buena idea."
+                },
+                {
+                  "v": "bien",
+                  "t": "Pienso que es buena idea."
+                }
+              ],
+              "nota": "No **de**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Sé qué tienes razón."
+                },
+                {
+                  "v": "bien",
+                  "t": "Sé que tienes razón."
+                }
+              ],
+              "nota": "No accent on the conjunction."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¿qué?",
+              "texto": "With and without accent: [[6675|qué vs que]]."
+            },
+            {
+              "forma": "el carro que compré",
+              "texto": "Que as _who / which_: [[5154|relative pronouns]]."
+            },
+            {
+              "forma": "creo que sí",
+              "texto": "Short answers: [[7801|I think so, I guess so, I hope so]]."
+            },
+            {
+              "forma": "espero que",
+              "texto": "When que needs the subjunctive: [[6076|esperar que + subjunctive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I think he's right._",
+              "r": "Creo que tiene razón.",
+              "nota": "que is required."
+            },
+            {
+              "p": "In Spanish: _She says it's cold._",
+              "r": "Dice que hace frío.",
+              "nota": "dice que."
+            },
+            {
+              "p": "Fix it: _Pienso de que el examen es fácil._",
+              "r": "Pienso que el examen es fácil.",
+              "nota": "No de."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6675
+    ],
+    "confunde": [
+      5154
+    ],
+    "sigue": [
+      7801,
+      6076
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6128",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "tema": 8630,
+  "slug": "por-poco-casi",
+  "titulo": "Por poco / casi / un poco más y + present = almost",
+  "subtitulo": "¡Por poco me caigo!",
+  "foto": "t01.jpg",
+  "regla": "To say something almost happened, Spanish often uses the present tense after por poco, casi, un poco más y: Por poco me caigo (I almost fell). Casi + preterite (casi me caí) is also correct and very common.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "por poco / casi / un poco más y",
+            "+",
+            "present tense"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The action is in the **past**, but the verb is in the **present**: it's a dramatic, vivid way to tell a near miss."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Casi** + **preterite** is also correct and very common in Mexico: **casi me caí**. **Por poco** and **un poco más y** almost always take the present."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The expressions never change."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the present tense replays the scare in slow motion."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Anoche, subiendo las escaleras, ==por poco me caigo==.",
+              "en": "Last night, going up the stairs, I almost fell."
+            },
+            {
+              "es": "Anoche, subiendo las escaleras, ==casi me caigo==.",
+              "en": "Last night, going up the stairs, I almost fell."
+            },
+            {
+              "es": "Anoche, subiendo las escaleras, ==un poco más y me caigo==.",
+              "en": "Last night, going up the stairs, I nearly fell."
+            },
+            {
+              "es": "==Por poco== se me escapa el secreto y se lo digo a mi mamá.",
+              "en": "I almost let the secret slip and told my mom."
+            },
+            {
+              "es": "En el concierto ==casi nos desmayamos== al ver a la cantante.",
+              "en": "At the concert we nearly fainted when we saw the singer."
+            },
+            {
+              "es": "Con tanta comida en la boca ==por poco te ahogas==.",
+              "en": "With that much food in your mouth you almost choked."
+            },
+            {
+              "es": "¡Uy! ==Un poco más y te echo== la cerveza encima.",
+              "en": "Whoa! I almost spilled my beer on you."
+            },
+            {
+              "es": "==Casi no llego== a tiempo. No oí el despertador.",
+              "en": "I almost didn't make it on time. I didn't hear the alarm."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "raro",
+                  "t": "Por poco me caí."
+                },
+                {
+                  "v": "natural",
+                  "t": "Por poco me caigo."
+                }
+              ],
+              "nota": "With **por poco**, the present is the norm."
+            },
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "Casi me caigo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Casi me caí."
+                }
+              ],
+              "nota": "With **casi**, both work."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "estuve a punto de",
+              "texto": "[[6509|estar a punto de]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I almost missed the bus._",
+              "r": "Por poco pierdo el camión. / Casi pierdo el camión.",
+              "nota": "Present."
+            },
+            {
+              "p": "In Spanish: _We nearly crashed._",
+              "r": "Un poco más y chocamos.",
+              "nota": "un poco más y + present."
+            },
+            {
+              "p": "In Spanish (casi + preterite): _I almost fell._",
+              "r": "Casi me caí.",
+              "nota": "Also correct with casi."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8630",
+      "kwiziq": true
+    }
+  ]
+}

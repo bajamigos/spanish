@@ -1,0 +1,250 @@
+{
+  "tema": 6231,
+  "slug": "gustar-atraccion",
+  "titulo": "Using gustar to express personal attraction",
+  "subtitulo": "Me gustas. ¿Le gusto? Se gustan.",
+  "foto": "t08.jpg",
+  "regla": "To say you like someone romantically, the person who is liked is the subject: Tú me gustas = I like you (lit. you are pleasing to me). Gustar is conjugated for that person: gusto, gustas, gusta, gustamos, gustan.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Gustar** can mean being **attracted** to someone. The person who **is liked** is the **subject**, and the verb agrees with them. The person who **does the liking** is the indirect pronoun."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Subject",
+            "gustar"
+          ],
+          "filas": [
+            [
+              "yo",
+              "gusto"
+            ],
+            [
+              "tú",
+              "gustas"
+            ],
+            [
+              "él, ella, usted",
+              "gusta"
+            ],
+            [
+              "nosotros",
+              "gustamos"
+            ],
+            [
+              "ustedes, ellos",
+              "gustan"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Literally: **Tú me gustas** = _You are pleasing to me_ = **I like you**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "You can drop the subject (**yo, tú**) and the **a mí, a ti** part, but never the short pronoun (**me, te, le...**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: flip the English. _I like you_ → you please me → **me gustas**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "(Yo) ==te gusto== (a ti).",
+              "en": "You like me. (I'm pleasing to you.)"
+            },
+            {
+              "es": "==Me gustas==.",
+              "en": "I like you."
+            },
+            {
+              "es": "==Le gusto==.",
+              "en": "He / she likes me."
+            },
+            {
+              "es": "==Le gustas==.",
+              "en": "He / she likes you."
+            },
+            {
+              "es": "Ella ==le gusta==.",
+              "en": "He / she likes her."
+            },
+            {
+              "es": "Ellos ==le gustan==.",
+              "en": "He / she likes them."
+            },
+            {
+              "es": "Nosotros ==te gustamos==, ¿verdad?",
+              "en": "You like us, right?"
+            },
+            {
+              "es": "Ustedes ==me gustan== mucho.",
+              "en": "I really like you guys."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reciproco",
+      "titulo": "Liking each other",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "When the liking goes both ways, use **nos** or **se**:"
+        },
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Nosotras ==nos gustamos== mucho.",
+              "en": "We like each other a lot."
+            },
+            {
+              "es": "Ellos ==se gustan==, se nota.",
+              "en": "They like each other, you can tell."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo gusto a ti."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me gustas."
+                }
+              ],
+              "nota": "_I like you_: **tú** is the subject."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me gusta tú."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me gustas tú."
+                }
+              ],
+              "nota": "The verb agrees with **tú**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Gusto a ti?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Te gusto?"
+                }
+              ],
+              "nota": "Keep the short pronoun."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "me gusta el café",
+              "texto": "Liking things: [[6001|gustar]]."
+            },
+            {
+              "forma": "a mí me gusta",
+              "texto": "[[7032|a mí me gusta]]."
+            },
+            {
+              "forma": "nos queremos",
+              "texto": "[[6177|reciprocal verbs]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I like you._ (romantic, tú)",
+              "r": "Me gustas.",
+              "nota": "tú is the subject."
+            },
+            {
+              "p": "In Spanish: _Do you like me?_ (tú)",
+              "r": "¿Te gusto?",
+              "nota": "yo is the subject: gusto."
+            },
+            {
+              "p": "In Spanish: _She likes him._",
+              "r": "Él le gusta. / Le gusta él.",
+              "nota": "él is the subject."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6001,
+      7032
+    ],
+    "confunde": [
+      6001
+    ],
+    "sigue": [
+      6177
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6231",
+      "kwiziq": true
+    }
+  ]
+}

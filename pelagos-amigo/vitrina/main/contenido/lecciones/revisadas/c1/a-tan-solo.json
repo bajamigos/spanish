@@ -1,0 +1,177 @@
+{
+  "tema": 7918,
+  "slug": "a-tan-solo",
+  "titulo": "A tan solo + time + de = just (some time) before",
+  "subtitulo": "A tan solo dos días del examen...",
+  "foto": "t05.jpg",
+  "regla": "A tan solo + length of time + de + noun / infinitive (or de que + subjunctive) = just ... before: A tan solo una hora de salir el vuelo, nos quedamos atorados en el tráfico. De + el = del.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "a tan solo + [time] + de",
+            "+ noun / infinitive / que + subjunctive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It marks a moment **very close before** another event, often for drama: _just two days before the exam..._"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**De** + **el** contracts: **a tan solo dos días del examen**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With a clause: **de que** + **subjunctive** (imperfect for the past): **a tan solo un día de que se estrenara**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Variants: **a solo**, **a escasos** + time + **de**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **a tan solo** = the countdown is almost at zero."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==A tan solo dos minutos de== empezar la película, me llamó mi mamá.",
+              "en": "Just two minutes before the movie started, my mom called me."
+            },
+            {
+              "es": "==A tan solo una hora de== salir el vuelo, nos quedamos atorados en el tráfico.",
+              "en": "Just an hour before our flight left, we got stuck in traffic."
+            },
+            {
+              "es": "==A tan solo dos días del== examen, la maestra dijo que también entraban los temas del primer bimestre.",
+              "en": "Just two days before the exam, the teacher said the first-term topics were also included."
+            },
+            {
+              "es": "==A tan solo veinticuatro horas de que== se transmitiera, cancelaron el programa.",
+              "en": "Just twenty-four hours before it aired, they canceled the show."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "a tan solo dos días de el examen"
+                },
+                {
+                  "v": "bien",
+                  "t": "a tan solo dos días del examen"
+                }
+              ],
+              "nota": "Contract."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "a tan solo un día de que se estrenó"
+                },
+                {
+                  "v": "bien",
+                  "t": "a tan solo un día de que se estrenara"
+                }
+              ],
+              "nota": "With **que**: subjunctive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "antes de que",
+              "texto": "[[10029|antes de que]]."
+            },
+            {
+              "forma": "dentro de",
+              "texto": "[[9511|dentro de]]."
+            },
+            {
+              "forma": "estar a punto de",
+              "texto": "[[6509|estar a punto de]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Just a week before the wedding..._",
+              "r": "A tan solo una semana de la boda...",
+              "nota": "de + noun."
+            },
+            {
+              "p": "In Spanish: _Just minutes before landing..._",
+              "r": "A tan solo unos minutos de aterrizar...",
+              "nota": "de + infinitive."
+            },
+            {
+              "p": "Complete: _A tan solo un día ___ que empezaran las vacaciones..._",
+              "r": "de",
+              "nota": "de que + subjunctive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      10029
+    ],
+    "confunde": [
+      6509
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7918",
+      "kwiziq": true
+    }
+  ]
+}

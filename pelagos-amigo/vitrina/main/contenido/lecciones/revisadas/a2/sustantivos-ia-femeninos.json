@@ -1,0 +1,217 @@
+{
+  "tema": 9776,
+  "slug": "sustantivos-ia-femeninos",
+  "titulo": "Most nouns in -ía / -ia are feminine",
+  "subtitulo": "La farmacia, la policía, la tortillería.",
+  "foto": "t01.jpg",
+  "regla": "Nouns ending in -ía or -ia are almost always feminine: la farmacia, la historia, la panadería. The big exception is el día; and el / la policía, el / la guía change meaning or follow the person. Plural: add -s.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Nouns ending in **-ía** (stressed) or **-ia** (unstressed) are almost always **feminine**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**-ia**: **la farmacia, la historia, la familia, la ciencia, la paciencia, la iglesia, la lluvia, la noticia**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**-ía**: **la energía, la alegría, la biología, la policía**, and all the shops in **-ería**: **la panadería, la tortillería, la carnicería, la papelería**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Plural: add **-s**: **las farmacias, las panaderías**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Exceptions: **el día** (and **el tranvía**) are masculine."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Some words follow the **person**: **el policía** (_the policeman_) / **la policía** (_the police, or a policewoman_); **el guía / la guía** (_the guide_; **la guía** is also _a guidebook_)."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==La farmacia== está en la esquina.",
+              "en": "The pharmacy is on the corner."
+            },
+            {
+              "es": "Compré tortillas en ==la tortillería==.",
+              "en": "I bought tortillas at the tortilla shop."
+            },
+            {
+              "es": "Me encanta ==la historia== de México.",
+              "en": "I love Mexican history."
+            },
+            {
+              "es": "==La policía== cerró la calle.",
+              "en": "The police closed the street."
+            },
+            {
+              "es": "==El policía== me pidió la licencia.",
+              "en": "The police officer asked me for my license."
+            },
+            {
+              "es": "Hoy es ==un día== perfecto para surfear.",
+              "en": "Today is a perfect day for surfing."
+            },
+            {
+              "es": "Mi abuela tiene ==mucha paciencia== con sus plantas.",
+              "en": "My grandma is very patient with her plants."
+            },
+            {
+              "es": "==El guía== nos llevó al cañón.",
+              "en": "The guide took us to the canyon."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "el farmacia"
+                },
+                {
+                  "v": "bien",
+                  "t": "la farmacia"
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "la día"
+                },
+                {
+                  "v": "bien",
+                  "t": "el día"
+                }
+              ],
+              "nota": "The big exception."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hace un día muy bonita."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hace un día muy bonito."
+                }
+              ],
+              "nota": "**Día** is masculine, so the adjective is too."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La policía me pidió la licencia. (one male officer)"
+                },
+                {
+                  "v": "bien",
+                  "t": "El policía me pidió la licencia."
+                }
+              ],
+              "nota": "**El policía** = the officer; **la policía** = the force."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el gato, la gata",
+              "texto": "The basic pattern: [[6150|masculine and feminine nouns]]."
+            },
+            {
+              "forma": "el problema",
+              "texto": "Masculine words in -a: [[6728|nouns in -ma]]."
+            },
+            {
+              "forma": "la canción, la ciudad",
+              "texto": "More feminine endings: [[6068|-ión, -dad, -tad, -umbre]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _the bakery_",
+              "r": "la panadería",
+              "nota": "-ía: feminine."
+            },
+            {
+              "p": "In Spanish: _It was a long day._",
+              "r": "Fue un día largo.",
+              "nota": "el día."
+            },
+            {
+              "p": "Fix it: _Mi familia es muy grande y muy unido._",
+              "r": "Mi familia es muy grande y muy unida.",
+              "nota": "la familia."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6150
+    ],
+    "confunde": [
+      6728
+    ],
+    "sigue": [
+      6068
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9776",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "tema": 5879,
+  "slug": "condicional-venir",
+  "titulo": "Conjugate venir in the conditional",
+  "subtitulo": "Vendría, vendrías, vendríamos: the future stem vendr- with the conditional endings.",
+  "foto": "t01.jpg",
+  "regla": "Venir has the irregular stem vendr- in the conditional, with the regular endings: vendría, vendrías, vendría, vendríamos, vendrían.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Venir** (_to come_) is irregular in the conditional. It uses the same stem as the future, **vendr-**, plus the regular conditional endings."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**vendr-**",
+            "**-ía, -ías, -ía, -íamos, -ían**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "venir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "vendría"
+            ],
+            [
+              "tú",
+              "vendrías"
+            ],
+            [
+              "él, ella, usted",
+              "vendría"
+            ],
+            [
+              "nosotros",
+              "vendríamos"
+            ],
+            [
+              "ustedes, ellos",
+              "vendrían"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Verbs built on **venir** do the same: **intervenir** → **intervendría**, **provenir** → **provendría**, **prevenir** → **prevendría**, **convenir** → **convendría**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Every form has a written accent on the **í** of the ending."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **venir** swaps its **i** for a **d**, like **tener**: **ven-d-ría**, **ten-d-ría**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Yo ==vendría== al partido contigo.",
+              "en": "I'd come to the game with you."
+            },
+            {
+              "es": "Tú ==vendrías== a la playa con nosotros.",
+              "en": "You'd come to the beach with us."
+            },
+            {
+              "es": "Mi vecino ==vendría== a Tijuana todos los días.",
+              "en": "My neighbor would come to Tijuana every day."
+            },
+            {
+              "es": "Nosotros ==vendríamos== siempre aquí a comer.",
+              "en": "We'd always come here to eat."
+            },
+            {
+              "es": "Tus profes ==vendrían== de la universidad.",
+              "en": "Your teachers would come from the university."
+            },
+            {
+              "es": "¿Ustedes ==vendrían== disfrazados?",
+              "en": "Would you come in costume?"
+            },
+            {
+              "es": "Te ==convendría== descansar.",
+              "en": "It would be good for you to rest."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Veniría mañana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Vendría mañana."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Te conveniría esperar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Te convendría esperar."
+                }
+              ],
+              "nota": "Compounds of **venir** follow it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "vendré",
+              "texto": "The future has the same stem: [[5223|venir in the future]]."
+            },
+            {
+              "forma": "hablaría",
+              "texto": "The regular pattern: [[5731|regular verbs in the conditional]]."
+            },
+            {
+              "forma": "tendría, pondría",
+              "texto": "The same **-dr-** stem: [[5772|tener]], [[5892|poner]]."
+            },
+            {
+              "forma": "vine",
+              "texto": "The preterite: [[5225|venir in the preterite]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Would you come with me?_ (tú)",
+              "r": "¿Vendrías conmigo?",
+              "nota": "vendr- + ías."
+            },
+            {
+              "p": "**Venir** with **ellos**: ___ el sábado, pero trabajan.",
+              "r": "Vendrían el sábado, pero trabajan.",
+              "nota": "vendr- + ían."
+            },
+            {
+              "p": "**Convenir**: _It would be good for us to leave early._",
+              "r": "Nos convendría salir temprano.",
+              "nota": "convendr- + ía."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5223,
+      5731
+    ],
+    "confunde": [
+      5223
+    ],
+    "sigue": [
+      5772,
+      5892,
+      5225
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5879",
+      "kwiziq": true
+    }
+  ]
+}

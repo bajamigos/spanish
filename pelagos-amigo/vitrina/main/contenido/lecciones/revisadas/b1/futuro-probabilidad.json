@@ -1,0 +1,263 @@
+{
+  "tema": 5060,
+  "slug": "futuro-probabilidad",
+  "titulo": "Using the simple future to guess about the present",
+  "subtitulo": "¿Dónde estará? The future tense also says I wonder, probably and must be, about right now.",
+  "foto": "t04.jpg",
+  "regla": "To guess or speculate about what is probably true right now, use the simple future: ¿Dónde estará Beto? Estará en el agua.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "The **simple future** (**futuro simple**, also called **futuro imperfecto**) doesn't only talk about tomorrow. It also expresses **probability in the present**: what is probably happening at the moment you speak."
+        },
+        {
+          "tipo": "texto",
+          "texto": "You're not saying what will happen, and you're not stating a fact. You are:"
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "speculating",
+              "texto": "wondering what might be happening: **¿Dónde estará?** = _Where could he be? I wonder where he is._"
+            },
+            {
+              "forma": "probability",
+              "texto": "saying what is probably happening: **Estará en el agua.** = _He's probably in the water._"
+            },
+            {
+              "forma": "inferring",
+              "texto": "guessing what must be going on: **Tendrá hambre.** = _He must be hungry._"
+            }
+          ]
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "guess about **now**",
+            "**simple future**"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It works with any verb and with the future + gerund for actions in progress: **estará entrenando** = _he's probably training_. To guess the time, use **ser**: **serán las seis** = _it's probably about six_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In everyday Mexican Spanish this is very common in questions to yourself: **¿Qué hora será?**, **¿Quién será?** when someone knocks at the door. You'll also hear **ha de** + infinitive with the same meaning: **ha de estar en el agua** = _he must be in the water_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if you could add _I wonder_ or _probably_ in English, Spanish reaches for the future."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Beto todavía no llega. ¿Dónde ==estará==?",
+              "en": "Beto hasn't arrived yet. Where could he be?"
+            },
+            {
+              "es": "No contesta el teléfono; ==estará entrenando==.",
+              "en": "He's not answering the phone; he's probably training."
+            },
+            {
+              "es": "No traigo reloj, pero ==serán== como las seis.",
+              "en": "I don't have a watch, but it's probably about six."
+            },
+            {
+              "es": "Hay muchos carros en la playa; ==habrá== buenas olas.",
+              "en": "There are lots of cars at the beach; there must be good waves."
+            },
+            {
+              "es": "El cliente no encuentra la llave. ==La tendrá== en la otra chamarra.",
+              "en": "The customer can't find the key. He probably has it in his other jacket."
+            },
+            {
+              "es": "No reconozco esta calle, pero ==estaremos== cerca de la taquería.",
+              "en": "I don't recognize this street, but we must be near the taquería."
+            },
+            {
+              "es": "Amos no dice nada. ¿Qué ==estará pensando==?",
+              "en": "Amos isn't saying anything. What could he be thinking?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "This future is about **now**, not about later. And if the guess is about the **past**, the future doesn't work: use the **conditional**. See [[5069|the conditional for guessing about the past]]."
+        },
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer Beto no vino; estará cansado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer Beto no vino; estaría cansado."
+                }
+              ],
+              "nota": "A guess about yesterday takes the conditional: **estaría** = _he was probably tired_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "Hoy Beto no vino; estará cansado."
+                }
+              ],
+              "nota": "This one is right: a guess about now, so the future."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No sé dónde está. Va a estar en el huerto."
+                },
+                {
+                  "v": "bien",
+                  "t": "No sé dónde está. Estará en el huerto."
+                }
+              ],
+              "nota": "**Ir a** is for plans and predictions about later, not for guessing what's happening now."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usos",
+      "titulo": "The same form, other jobs",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¿Dónde estará?",
+              "texto": "A guess about the present.",
+              "aqui": true
+            },
+            {
+              "forma": "Mañana lloverá.",
+              "texto": "A prediction about the future: [[5162|the future for predictions]]."
+            },
+            {
+              "forma": "El sábado surfearé.",
+              "texto": "A plain future action: [[5155|regular verbs in the simple future]]. In speech, plans usually take [[7067|ir a]]."
+            },
+            {
+              "forma": "¿Dónde estaría?",
+              "texto": "A guess about the past: [[5069|the conditional for probability in the past]]."
+            },
+            {
+              "forma": "Ya habrá llegado.",
+              "texto": "A guess about something that has just happened: [[7266|the future perfect to talk about the past]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tendrá, habrá, querrá",
+              "texto": "Irregular stems: [[5050|tener]], [[5157|haber]], [[5156|querer]], [[5159|hacer]], [[5216|poder]] in the future."
+            },
+            {
+              "forma": "estará surfeando",
+              "texto": "The future + gerund for something in progress: [[9342|the progressive future]]."
+            },
+            {
+              "forma": "Si llueve, no iremos.",
+              "texto": "The future after a condition: [[6146|si + present, then the future]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I wonder what time it is._",
+              "r": "¿Qué hora será?",
+              "nota": "A guess about now: **ser** in the future."
+            },
+            {
+              "p": "Guess about now: Naomi no está en la cabina; ___ (estar) en la sala de máquinas.",
+              "r": "Naomi no está en la cabina; estará en la sala de máquinas.",
+              "nota": "**Estará** = _she's probably_."
+            },
+            {
+              "p": "Which one, about last night? **Anoche no contestó; estará dormido** or **Anoche no contestó; estaría dormido**.",
+              "r": "Anoche no contestó; estaría dormido.",
+              "nota": "Guessing about the past takes the conditional."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5155,
+      5050,
+      5157
+    ],
+    "confunde": [
+      5162,
+      5069,
+      7067,
+      5086
+    ],
+    "sigue": [
+      5156,
+      5159,
+      5216,
+      7266,
+      9342,
+      6146
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5060",
+      "kwiziq": true
+    }
+  ]
+}

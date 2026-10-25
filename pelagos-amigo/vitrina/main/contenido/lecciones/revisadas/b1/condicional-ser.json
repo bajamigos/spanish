@@ -1,0 +1,214 @@
+{
+  "tema": 7069,
+  "slug": "condicional-ser",
+  "titulo": "Conjugate ser in the conditional",
+  "subtitulo": "Sería, serías, seríamos: completely regular.",
+  "foto": "t03.jpg",
+  "regla": "Ser is regular in the conditional: sería, serías, sería, seríamos, serían.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Ser** (_to be_) is **regular** in the conditional: the whole infinitive plus the regular endings, like any regular verb."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**ser**",
+            "**-ía, -ías, -ía, -íamos, -ían**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "ser"
+          ],
+          "filas": [
+            [
+              "yo",
+              "sería"
+            ],
+            [
+              "tú",
+              "serías"
+            ],
+            [
+              "él, ella, usted",
+              "sería"
+            ],
+            [
+              "nosotros",
+              "seríamos"
+            ],
+            [
+              "ustedes, ellos",
+              "serían"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**¿Serías tan amable de…?** is a polite way to ask a favor: _would you be so kind as to…?_"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **ser** is wild in the present but calm in the conditional."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Yo ==sería== más prudente que tú.",
+              "en": "I'd be more careful than you."
+            },
+            {
+              "es": "¿==Serías== tan amable de pasarme la chamarra?",
+              "en": "Would you be so kind as to pass me my jacket?"
+            },
+            {
+              "es": "Naomi ==sería== una capitana increíble.",
+              "en": "Naomi would be an amazing captain."
+            },
+            {
+              "es": "Nosotros no ==seríamos== buenos roomies.",
+              "en": "We wouldn't be good roommates."
+            },
+            {
+              "es": "Ellas no ==serían== muy competitivas.",
+              "en": "They wouldn't be very competitive."
+            },
+            {
+              "es": "Ustedes ==serían== un buen ejemplo para mis hijos.",
+              "en": "You'd be a good example for my kids."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Seria increíble."
+                },
+                {
+                  "v": "bien",
+                  "t": "Sería increíble."
+                }
+              ],
+              "nota": "Without the accent, **seria** means _serious_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estaría una buena idea."
+                },
+                {
+                  "v": "bien",
+                  "t": "Sería una buena idea."
+                }
+              ],
+              "nota": "Identity and opinions about something: **ser**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "estaría",
+              "texto": "Its partner: [[7071|estar in the conditional]]."
+            },
+            {
+              "forma": "hablaría",
+              "texto": "The regular pattern: [[5731|regular verbs in the conditional]]."
+            },
+            {
+              "forma": "sea",
+              "texto": "**Ser** in the subjunctive: [[5152|ser in the subjunctive]]."
+            },
+            {
+              "forma": "Sería bueno que…",
+              "texto": "Advanced use: [[6990|sería + adjective + que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _It would be a good idea._",
+              "r": "Sería una buena idea.",
+              "nota": "sería, with accent."
+            },
+            {
+              "p": "**Ser** with **tú**: ¿___ tan amable de ayudarme?",
+              "r": "¿Serías tan amable de ayudarme?",
+              "nota": "serías."
+            },
+            {
+              "p": "In Spanish: _We'd be the best._",
+              "r": "Seríamos los mejores.",
+              "nota": "seríamos."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5731,
+      5070
+    ],
+    "confunde": [
+      7071
+    ],
+    "sigue": [
+      5152,
+      6990
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7069",
+      "kwiziq": true
+    }
+  ]
+}

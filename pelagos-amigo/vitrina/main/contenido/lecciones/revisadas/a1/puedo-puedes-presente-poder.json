@@ -1,0 +1,227 @@
+{
+  "tema": 5564,
+  "slug": "puedo-puedes-presente-poder",
+  "titulo": "Poder in the present",
+  "subtitulo": "¿Puedes venir? No puedo.",
+  "foto": "t10.jpg",
+  "regla": "Poder (can, to be able to) changes o > ue in the present except in nosotros: puedo, puedes, puede, podemos, pueden. It's followed directly by an infinitive.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Poder** means _can_ or _to be able to_. The **o** of the stem becomes **ue** when stressed."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Present"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**puedo**"
+            ],
+            [
+              "tú",
+              "**puedes**"
+            ],
+            [
+              "él / ella / usted",
+              "**puede**"
+            ],
+            [
+              "nosotros / nosotras",
+              "podemos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "**pueden**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Nosotros** keeps the **o**: **podemos**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "poder",
+            "+",
+            "infinitive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "No **a** or **de** in between: **puedo ir**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Hoy no ==puedo== surfear, hay muy pocas olas.",
+              "en": "I can't surf today, there are hardly any waves."
+            },
+            {
+              "es": "¿==Puedes== ayudarme con la tarea?",
+              "en": "Can you help me with the homework?"
+            },
+            {
+              "es": "Aquí no se ==puede== estacionar.",
+              "en": "You can't park here."
+            },
+            {
+              "es": "==Podemos== ir a la playa mañana.",
+              "en": "We can go to the beach tomorrow."
+            },
+            {
+              "es": "Mis vecinos no ==pueden== venir.",
+              "en": "My neighbors can't come."
+            },
+            {
+              "es": "¿==Puede== repetir, por favor?",
+              "en": "Can you (usted) repeat that, please?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros puedemos ir."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros podemos ir."
+                }
+              ],
+              "nota": "No change in nosotros."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Puedo a nadar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Puedo nadar."
+                }
+              ],
+              "nota": "No **a** after poder."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ellos poden ayudar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ellos pueden ayudar."
+                }
+              ],
+              "nota": "o > ue."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "vuelvo, muevo",
+              "texto": "Same change: [[5080|-er verbs with o > ue]]."
+            },
+            {
+              "forma": "debo, quiero",
+              "texto": "Other verbs + infinitive: [[5065|deber, poder, querer + infinitive]]."
+            },
+            {
+              "forma": "veo, oigo",
+              "texto": "Not with perception verbs: [[7990|veo, not puedo ver]]."
+            },
+            {
+              "forma": "pude",
+              "texto": "Next tenses: [[5221|poder in the preterite]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I can't go today._",
+              "r": "Hoy no puedo ir.",
+              "nota": "puedo + infinitive."
+            },
+            {
+              "p": "In Spanish: _Can we (nosotros) come in?_",
+              "r": "¿Podemos pasar?",
+              "nota": "podemos."
+            },
+            {
+              "p": "Fix it: _¿Tú podes venir?_",
+              "r": "¿Tú puedes venir?",
+              "nota": "puedes."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5080
+    ],
+    "confunde": [
+      7990
+    ],
+    "sigue": [
+      5065,
+      5221
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5564",
+      "kwiziq": true
+    }
+  ]
+}

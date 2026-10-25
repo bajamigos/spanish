@@ -1,0 +1,184 @@
+{
+  "tema": 8195,
+  "slug": "anda-andale",
+  "titulo": "Anda, ándale, órale: interjections for urging, surprise and irony",
+  "subtitulo": "¡Ándale, apúrate! ¡Anda, qué sorpresa!",
+  "foto": "t08.jpg",
+  "regla": "Anda (and in Mexico above all ándale) urges someone on: ¡Ándale, apúrate!; shows surprise: ¡Anda, llegó Carlos!; and anda que / anda que no adds irony. In Mexico ándale also means that's it / OK, and órale means wow / come on / OK.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "urging",
+              "texto": "**¡Anda, levántate!** In Mexico: **¡Ándale, apúrate!**, **¡Ándale, ven!**"
+            },
+            {
+              "forma": "surprise, admiration",
+              "texto": "**¡Anda, qué bonito te quedó el pelo!**"
+            },
+            {
+              "forma": "irony (anda que, anda que no)",
+              "texto": "**—Yo no soy nada vanidoso. —¡Anda que no!** (_Yeah, right!_) Less common in Mexico."
+            },
+            {
+              "forma": "Mexican extras",
+              "texto": "**¡Ándale!** = _exactly, that's it_; **¡Órale!** = _wow / OK / come on_."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "They never change: **anda, ándale, órale**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: in Mexico, if in doubt, **¡ándale!**"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Anda==, levántate, que ya es tarde.",
+              "en": "Come on, get up, it's late."
+            },
+            {
+              "es": "==¡Ándale==, apúrate, que nos deja el camión!",
+              "en": "Come on, hurry up, the bus is going to leave us!"
+            },
+            {
+              "es": "¡==Anda==, qué bien te dejaron en la estética!",
+              "en": "Wow, they did a great job at the salon!"
+            },
+            {
+              "es": "¡==Anda==, pero si llegó Carlos!",
+              "en": "Oh, look, Carlos is here!"
+            },
+            {
+              "es": "—Me comí el último chocolate. —==Anda que no== eres descarado.",
+              "en": "—I ate the last chocolate. —You've got some nerve."
+            },
+            {
+              "es": "—¿Entonces nos vemos a las ocho? —==¡Ándale!==",
+              "en": "—So we meet at eight? —Yep, perfect!"
+            },
+            {
+              "es": "==¡Órale==, qué rápido llegaste!",
+              "en": "Whoa, you got here fast!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "menos común en México",
+                  "t": "¡Anda, apúrate!"
+                },
+                {
+                  "v": "más común en México",
+                  "t": "¡Ándale, apúrate! / ¡Ándenle! (to a group)"
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "caminar",
+                  "t": "Anda por el parque."
+                },
+                {
+                  "v": "interjección",
+                  "t": "¡Anda, qué sorpresa!"
+                }
+              ],
+              "nota": "Verb vs interjection."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "andar + gerund",
+              "texto": "[[7182|andar + gerund]]."
+            },
+            {
+              "forma": "a ver",
+              "texto": "[[9126|a ver]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Mexican urging: _Come on, hurry up!_",
+              "r": "¡Ándale, apúrate!",
+              "nota": "ándale."
+            },
+            {
+              "p": "Surprise: _Whoa, you're tall!_",
+              "r": "¡Órale, qué alto estás! / ¡Anda, qué alto estás!",
+              "nota": "Interjection."
+            },
+            {
+              "p": "Agreeing: _—¿Paso por ti a las seis? —(Sure!)_",
+              "r": "¡Ándale!",
+              "nota": "Mexican OK."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      7182
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8195",
+      "kwiziq": true
+    }
+  ]
+}

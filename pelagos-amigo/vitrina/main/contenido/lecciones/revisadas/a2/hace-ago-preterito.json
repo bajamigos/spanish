@@ -1,0 +1,227 @@
+{
+  "tema": 7063,
+  "slug": "hace-ago-preterito",
+  "titulo": "Hace for ago",
+  "subtitulo": "Llegué a Tijuana hace cinco años.",
+  "foto": "t02.jpg",
+  "regla": "To say _ago_, use the preterite + **hace** + a length of time: llegué hace un año. Hace always goes before the time, never after.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "English puts _ago_ after the time (_two years ago_). Spanish puts **hace** before it: **hace dos años**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "preterite",
+            "+ hace +",
+            "length of time"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The **hace** phrase can also open the sentence: **Hace dos días** comí birria."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Hace** never changes: always singular, even with plural times (**hace tres meses**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "To ask how long ago: **¿Hace cuánto (tiempo)** + preterite? ¿Hace cuánto llegaste?"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: read **hace** as _it makes_: _it makes five years_ since I arrived."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Llegué a Tijuana ==hace== cinco años.",
+              "en": "I came to Tijuana five years ago."
+            },
+            {
+              "es": "==Hace== dos días comimos birria en el centro.",
+              "en": "Two days ago we ate birria downtown."
+            },
+            {
+              "es": "Empecé a entrenar jiu-jitsu ==hace== seis meses.",
+              "en": "I started training jiu-jitsu six months ago."
+            },
+            {
+              "es": "Planté los jitomates ==hace== tres semanas.",
+              "en": "I planted the tomatoes three weeks ago."
+            },
+            {
+              "es": "La tienda cerró ==hace== un rato.",
+              "en": "The store closed a while ago."
+            },
+            {
+              "es": "¿==Hace== cuánto te fuiste de Ensenada?",
+              "en": "How long ago did you leave Ensenada?"
+            },
+            {
+              "es": "Vi a tu hermano ==hace== poco.",
+              "en": "I saw your brother a little while ago."
+            },
+            {
+              "es": "Leí ese libro ==hace== mucho tiempo.",
+              "en": "I read that book a long time ago."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Llegué cinco años hace."
+                },
+                {
+                  "v": "bien",
+                  "t": "Llegué hace cinco años."
+                }
+              ],
+              "nota": "**Hace** goes before the time."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Llegué desde hace cinco años."
+                },
+                {
+                  "v": "bien",
+                  "t": "Llegué hace cinco años."
+                }
+              ],
+              "nota": "**Desde hace** means _for_ and goes with the present."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Llegaba hace cinco años."
+                },
+                {
+                  "v": "bien",
+                  "t": "Llegué hace cinco años."
+                }
+              ],
+              "nota": "For _I arrived five years ago_ (one finished event): preterite, not imperfect."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Llegué hacen cinco años."
+                },
+                {
+                  "v": "bien",
+                  "t": "Llegué hace cinco años."
+                }
+              ],
+              "nota": "Always singular **hace**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "desde hace",
+              "texto": "_For_, with the present: [[5129|desde hace + present]]."
+            },
+            {
+              "forma": "hace un año que",
+              "texto": "Same idea, other order: [[7062|hace + time + que + preterite]]."
+            },
+            {
+              "forma": "llegué, comí",
+              "texto": "The tense you need: [[6004|the preterite for completed actions]]."
+            },
+            {
+              "forma": "hace calor",
+              "texto": "Another use of hace: [[9336|hace for the weather]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I moved to Tijuana ten years ago._",
+              "r": "Me mudé a Tijuana hace diez años.",
+              "nota": "Preterite + hace."
+            },
+            {
+              "p": "In Spanish: _How long ago did you start surfing?_",
+              "r": "¿Hace cuánto empezaste a surfear?",
+              "nota": "¿Hace cuánto…?"
+            },
+            {
+              "p": "Fix it: _Comí tacos dos horas hace._",
+              "r": "Comí tacos hace dos horas.",
+              "nota": "Hace before the time."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6004
+    ],
+    "confunde": [
+      5129,
+      9336
+    ],
+    "sigue": [
+      7062
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7063",
+      "kwiziq": true
+    }
+  ]
+}

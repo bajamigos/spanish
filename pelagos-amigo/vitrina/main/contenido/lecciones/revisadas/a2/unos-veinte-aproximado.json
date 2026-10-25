@@ -1,0 +1,223 @@
+{
+  "tema": 6671,
+  "slug": "unos-veinte-aproximado",
+  "titulo": "Unos, unas + number = about",
+  "subtitulo": "Había unas cincuenta personas.",
+  "foto": "t05.jpg",
+  "regla": "Unos / unas + number + noun means about or approximately. Unos or unas agrees with the noun: unos diez minutos, unas veinte personas. For clock times use como a las… or a eso de las….",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Before a number, **unos / unas** means **about**, **approximately**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "unos / unas",
+            "+ number +",
+            "noun"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Unos / unas** agrees with the **noun**, not the number: **unos treinta kilos**, **unas treinta personas**, **unas mil personas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Numbers that have gender agree too: **unos doscientos pesos**, **unas doscientas personas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "For clock times, don't use **unos**: say **como a las ocho** or **a eso de las ocho**. In Mexico, **como** + number is very common for any amount: **como veinte personas**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Había ==unas== cincuenta personas en la fiesta.",
+              "en": "There were about fifty people at the party."
+            },
+            {
+              "es": "La playa está a ==unos== diez minutos de mi casa.",
+              "en": "The beach is about ten minutes from my house."
+            },
+            {
+              "es": "Entreno ==unas== cuatro horas a la semana.",
+              "en": "I train about four hours a week."
+            },
+            {
+              "es": "Las olas tenían ==unos== dos metros.",
+              "en": "The waves were about two meters."
+            },
+            {
+              "es": "Mi abuelo tiene ==unos== ochenta años.",
+              "en": "My grandpa is about eighty."
+            },
+            {
+              "es": "Cosechamos ==unos== veinte jitomates.",
+              "en": "We harvested about twenty tomatoes."
+            },
+            {
+              "es": "El libro cuesta ==unos== trescientos pesos.",
+              "en": "The book costs about three hundred pesos."
+            },
+            {
+              "es": "Llegamos ==como a las== ocho.",
+              "en": "We got there around eight."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "unos veinte personas"
+                },
+                {
+                  "v": "bien",
+                  "t": "unas veinte personas"
+                }
+              ],
+              "nota": "Agree with the noun: **personas** is feminine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "unas doscientos personas"
+                },
+                {
+                  "v": "bien",
+                  "t": "unas doscientas personas"
+                }
+              ],
+              "nota": "**Doscientas** agrees too."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hay acerca de veinte personas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hay unas veinte personas."
+                }
+              ],
+              "nota": "**Acerca de** means _about a topic_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Llego a unas las cinco."
+                },
+                {
+                  "v": "bien",
+                  "t": "Llego como a las cinco."
+                }
+              ],
+              "nota": "Clock times: **como a las** / **a eso de las**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "unos amigos",
+              "texto": "Without a number, it means _some_: [[6604|unos, unas = some]]."
+            },
+            {
+              "forma": "unos cuantos",
+              "texto": "_A few_: [[7509|unos cuantos, unas cuantas]]."
+            },
+            {
+              "forma": "tres perros",
+              "texto": "Numbers before nouns: [[6664|numbers with nouns]]."
+            },
+            {
+              "forma": "mil, un millón",
+              "texto": "Big numbers: [[7177|hundreds, thousands, millions]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish, with unos / unas: _about thirty people_",
+              "r": "unas treinta personas",
+              "nota": "unas for personas."
+            },
+            {
+              "p": "In Spanish, with unos / unas: _It costs about five hundred pesos._",
+              "r": "Cuesta unos quinientos pesos.",
+              "nota": "unos + number."
+            },
+            {
+              "p": "Fix it: _Hay unos cien plantas._",
+              "r": "Hay unas cien plantas.",
+              "nota": "plantas is feminine."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6604,
+      6664
+    ],
+    "confunde": [
+      7509
+    ],
+    "sigue": [
+      7177
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6671",
+      "kwiziq": true
+    }
+  ]
+}

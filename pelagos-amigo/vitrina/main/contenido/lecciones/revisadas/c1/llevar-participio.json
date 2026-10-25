@@ -1,0 +1,198 @@
+{
+  "tema": 7429,
+  "slug": "llevar-participio",
+  "titulo": "Llevar + participle = so far (completed, and continuing)",
+  "subtitulo": "Llevo leídas cincuenta páginas.",
+  "foto": "t03.jpg",
+  "regla": "Llevar + participle (agreeing with the object) = how much has been done so far, with the idea that it will continue: Llevamos recorridos seis kilómetros. Llevo ahorrados 2,000 pesos. Compare haber + participle, which doesn't imply continuing.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "llevar (any tense)",
+            "+ participle (agrees)"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "_So far_: a running total that's still growing."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The participle **agrees** with the object: **llevo leídas cincuenta páginas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Compare **llevar** + **gerund** for duration: **llevo dos horas leyendo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **llevar** + participle is a scoreboard mid-game."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Llevamos recorridos== seis kilómetros. En la tarde seguimos.",
+              "en": "We've done six kilometers so far. We'll keep going this afternoon."
+            },
+            {
+              "es": "==Llevaba leídas== como cincuenta páginas y de repente perdí el libro.",
+              "en": "I'd read about fifty pages so far, and suddenly I lost the book."
+            },
+            {
+              "es": "Este autor ==lleva publicadas== cinco novelas.",
+              "en": "This author has published five novels so far."
+            },
+            {
+              "es": "¿==Llevas ahorrados== dos mil pesos?",
+              "en": "You've saved two thousand pesos so far?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "comparar",
+      "titulo": "Haber or llevar?",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "haber",
+                  "t": "Había leído cincuenta páginas."
+                },
+                {
+                  "v": "llevar",
+                  "t": "Llevaba leídas cincuenta páginas."
+                }
+              ],
+              "nota": "**Llevar** implies you were going to keep reading."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Llevo leído cincuenta páginas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Llevo leídas cincuenta páginas."
+                }
+              ],
+              "nota": "Agreement."
+            },
+            {
+              "filas": [
+                {
+                  "v": "participio",
+                  "t": "Llevo escritas tres cartas."
+                },
+                {
+                  "v": "gerundio",
+                  "t": "Llevo tres horas escribiendo."
+                }
+              ],
+              "nota": "Amount done vs time spent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tener + participle",
+              "texto": "[[7122|tener + participle]]."
+            },
+            {
+              "forma": "llevar + gerund",
+              "texto": "[[7176|llevar for duration]]."
+            },
+            {
+              "forma": "he leído",
+              "texto": "[[5267|present perfect]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I've written twenty pages so far._",
+              "r": "Llevo escritas veinte páginas.",
+              "nota": "Agreement."
+            },
+            {
+              "p": "In Spanish: _We've sold a hundred tickets so far._",
+              "r": "Llevamos vendidos cien boletos.",
+              "nota": "vendidos."
+            },
+            {
+              "p": "Fix it: _Llevan ganado tres partidos._",
+              "r": "Llevan ganados tres partidos.",
+              "nota": "Plural."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7176,
+      7122
+    ],
+    "confunde": [
+      7122
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7429",
+      "kwiziq": true
+    }
+  ]
+}

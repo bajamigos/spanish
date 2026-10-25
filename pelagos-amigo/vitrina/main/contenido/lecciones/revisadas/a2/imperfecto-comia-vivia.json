@@ -1,0 +1,264 @@
+{
+  "tema": 5264,
+  "slug": "imperfecto-comia-vivia",
+  "titulo": "Regular -er and -ir verbs in the imperfect",
+  "subtitulo": "De niño comía tacos y vivía en Rosarito.",
+  "foto": "t02.jpg",
+  "regla": "Regular -er and -ir verbs share one set of imperfect endings: drop -er/-ir and add -ía, -ías, -ía, -íamos, -ían (comía, vivía). Every form carries an accent on the í.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To form the imperfect of a regular **-er** or **-ir** verb, drop the ending and add **-ía**. Both groups use **exactly the same endings**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "com- / viv-",
+            "+",
+            "-ía, -ías, -ía, -íamos, -ían"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "comer",
+            "vivir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "comía",
+              "vivía"
+            ],
+            [
+              "tú",
+              "comías",
+              "vivías"
+            ],
+            [
+              "él / ella / usted",
+              "comía",
+              "vivía"
+            ],
+            [
+              "nosotros / nosotras",
+              "comíamos",
+              "vivíamos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "comían",
+              "vivían"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Every** form has a written accent on the **í**, including **nosotros**: **comíamos**, **vivíamos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Yo** and **él / ella / usted** look the same (**comía**). Add the subject when it isn't clear from context."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Almost every -er/-ir verb is regular here, even ones that are irregular in other tenses: **tener → tenía**, **hacer → hacía**, **poder → podía**, **querer → quería**, **salir → salía**. Only **ser**, **ir** and **ver** break the pattern."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: -ar verbs hum **-aba**; -er and -ir verbs sing **-ía**. Never mix them."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "De niño ==vivía== en Rosarito, a dos cuadras de la playa.",
+              "en": "As a kid I lived in Rosarito, two blocks from the beach."
+            },
+            {
+              "es": "Los domingos ==comíamos== en casa de mi abuela.",
+              "en": "On Sundays we used to eat at my grandma's house."
+            },
+            {
+              "es": "¿Dónde ==vivías== antes de mudarte a Tijuana?",
+              "en": "Where did you live before you moved to Tijuana?"
+            },
+            {
+              "es": "Mi papá ==tenía== un taller mecánico en la Libertad.",
+              "en": "My dad had a mechanic's shop in La Libertad."
+            },
+            {
+              "es": "Al principio no ==entendía== nada en las clases de jiu-jitsu.",
+              "en": "At first I didn't understand anything in jiu-jitsu class."
+            },
+            {
+              "es": "Mis primos ==salían== a surfear todos los fines de semana.",
+              "en": "My cousins used to go out surfing every weekend."
+            },
+            {
+              "es": "En la prepa ==leía== mucha ciencia ficción.",
+              "en": "In high school I read a lot of science fiction."
+            },
+            {
+              "es": "El huerto ==tenía== tres limoneros y muchas hierbas.",
+              "en": "The garden had three lemon trees and lots of herbs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Comiamos tacos de birria cada sábado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Comíamos tacos de birria cada sábado."
+                }
+              ],
+              "nota": "The accent stays in **nosotros** too."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo vivaba con mis papás."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo vivía con mis papás."
+                }
+              ],
+              "nota": "**-aba** is only for -ar verbs."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mi hermana teniá un perro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mi hermana tenía un perro."
+                }
+              ],
+              "nota": "The accent goes on the **í**, not the a."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ellos comíais en la playa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ellos comían en la playa."
+                }
+              ],
+              "nota": "For ellos and ustedes: **-ían**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hablaba",
+              "texto": "The -ar version: [[5263|-ar verbs in the imperfect]]."
+            },
+            {
+              "forma": "veía, era, iba",
+              "texto": "The only irregular ones: [[5268|ver]], [[5088|ser]] and [[5269|ir]] in the imperfect."
+            },
+            {
+              "forma": "comí vs comía",
+              "texto": "Don't mix it with the preterite: [[5230|-er and -ir verbs in the preterite]]."
+            },
+            {
+              "forma": "siempre comía",
+              "texto": "What it's for: [[5111|the imperfect for habits in the past]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We used to live in Ensenada._",
+              "r": "Vivíamos en Ensenada.",
+              "nota": "-íamos, with accent."
+            },
+            {
+              "p": "In Spanish: _You (tú) used to eat a lot of fish._",
+              "r": "Comías mucho pescado.",
+              "nota": "-ías."
+            },
+            {
+              "p": "Fix it: _Mis amigos bebíamos agua de jamaica._",
+              "r": "Mis amigos bebían agua de jamaica.",
+              "nota": "ellos → -ían."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5263
+    ],
+    "confunde": [
+      5230,
+      5268,
+      5088,
+      5269
+    ],
+    "sigue": [
+      5111
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5264",
+      "kwiziq": true
+    }
+  ]
+}

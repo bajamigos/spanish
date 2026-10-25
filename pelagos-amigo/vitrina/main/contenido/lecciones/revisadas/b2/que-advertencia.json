@@ -1,0 +1,196 @@
+{
+  "tema": 6314,
+  "slug": "que-advertencia",
+  "titulo": "Que to introduce a warning or threat",
+  "subtitulo": "¡Que se te hace tarde! ¡Que me voy!",
+  "foto": "t07.jpg",
+  "regla": "Starting an exclamation with que + present tense gives a warning or a threat about the near future: ¡Que llegas tarde! ¡Que te dejo aquí! This que has no accent. A que reinforces it.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "¡Que",
+            "+ present tense!"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "This **que** introduces a **warning** (something bad is about to happen) or a **threat** (something you're about to do). It's colloquial and very expressive."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It refers to the **near future**, but the verb stays in the **present**: **¡Que te dejo!** = **¡Te voy a dejar!**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**No accent**: it's a conjunction, not a question word."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**A que** makes it stronger: **¡A que me voy!** (_I'm leaving, I mean it!_)"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: hear it in a warning voice, half a step before something happens."
+        }
+      ]
+    },
+    {
+      "id": "advertencia",
+      "titulo": "Warnings",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¡==Que== llegas tarde!",
+              "en": "You're going to be late!"
+            },
+            {
+              "es": "¡Apúrate, ==que== se te hace tarde!",
+              "en": "Hurry up, you're running late!"
+            },
+            {
+              "es": "¡==Que== pierdes la apuesta!",
+              "en": "You're going to lose the bet!"
+            },
+            {
+              "es": "¡Cuidado, ==que== te caes!",
+              "en": "Careful, you're going to fall!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "amenaza",
+      "titulo": "Threats",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¡==Que== te dejo aquí!",
+              "en": "I'm going to leave you here!"
+            },
+            {
+              "es": "¡==Que== nos comemos todo!",
+              "en": "We'll eat it all!"
+            },
+            {
+              "es": "¡==A que== me voy!",
+              "en": "I'm leaving, I swear!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Qué te caes!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Que te caes!"
+                }
+              ],
+              "nota": "No accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "pregunta",
+                  "t": "¿Qué te pasa?"
+                },
+                {
+                  "v": "advertencia",
+                  "t": "¡Que se te va el camión!"
+                }
+              ],
+              "nota": "A question takes **qué**; a warning takes **que**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "que = because",
+              "texto": "**Que** for cause: [[6332|que to express cause]]."
+            },
+            {
+              "forma": "qué / que",
+              "texto": "[[6675|qué vs que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Warning: _Careful, you're going to burn yourself!_",
+              "r": "¡Cuidado, que te quemas!",
+              "nota": "que + present."
+            },
+            {
+              "p": "Threat: _I'm going to tell your mom!_",
+              "r": "¡Que le digo a tu mamá!",
+              "nota": "que + present."
+            },
+            {
+              "p": "Accent or not? _¡___ se va el camión!_",
+              "r": "Que",
+              "nota": "No accent."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6675
+    ],
+    "confunde": [
+      6332
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6314",
+      "kwiziq": true
+    }
+  ]
+}

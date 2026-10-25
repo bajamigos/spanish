@@ -1,0 +1,220 @@
+{
+  "tema": 5054,
+  "slug": "deberia-haber",
+  "titulo": "Debería + haber + participle = should have",
+  "subtitulo": "Deberías haberme avisado.",
+  "foto": "t04.jpg",
+  "regla": "Should have done = deber in the conditional (debería, deberías, debería, deberíamos, deberían) + haber + participle: Debería haber estudiado más. Used for advice or regret about the past. Pronouns go in front or attached to haber.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "debería / deberías / debería / deberíamos / deberían",
+            "+ haber + participle"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Use it for **regret** or **advice** about something in the past."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Pronouns: attached to **haber** (**deberías haberme avisado**) or in front of **debería** (**me deberías haber avisado**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In Mexico you'll also hear **debí** + infinitive (**debí estudiar más**) or **hubiera** + participle (**hubiera estudiado más**) with the same meaning."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **debería** + **haber**: the advice arrived too late."
+        }
+      ]
+    },
+    {
+      "id": "dialogo",
+      "titulo": "A conversation",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "—¡Ayer terminé con Jaime! Y ahora me arrepiento...",
+              "en": "—I broke up with Jaime yesterday! And now I regret it..."
+            },
+            {
+              "es": "—Uy, ==deberías haber pensado== un poco más en las consecuencias.",
+              "en": "—Oh, you should have thought a bit more about the consequences."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Debería haber comido== más temprano.",
+              "en": "I should have eaten earlier."
+            },
+            {
+              "es": "==Deberías haber cerrado== la puerta con llave.",
+              "en": "You should have locked the door."
+            },
+            {
+              "es": "Ella ==debería haber frenado== antes.",
+              "en": "She should have braked sooner."
+            },
+            {
+              "es": "No ==deberíamos haberlo escuchado==.",
+              "en": "We shouldn't have listened to him."
+            },
+            {
+              "es": "==Deberían haber tomado== el camión.",
+              "en": "They should have taken the bus."
+            },
+            {
+              "es": "Ustedes ==deberían haber llegado== a las tres, no a las cuatro.",
+              "en": "You should have arrived at three, not at four."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Debería he estudiado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Debería haber estudiado."
+                }
+              ],
+              "nota": "**Haber** in the infinitive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Deberías haber avisádome."
+                },
+                {
+                  "v": "bien",
+                  "t": "Deberías haberme avisado."
+                }
+              ],
+              "nota": "Attach to **haber**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "obligación",
+                  "t": "Debías estudiar."
+                },
+                {
+                  "v": "reproche",
+                  "t": "Deberías haber estudiado."
+                }
+              ],
+              "nota": "Different meanings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "pude haber",
+              "texto": "_Could have_: [[6470|poder + haber]]."
+            },
+            {
+              "forma": "habría hecho",
+              "texto": "_Would have_: [[6992|habría]]."
+            },
+            {
+              "forma": "debe de haber",
+              "texto": "_Must have_: [[6474|ha debido / debe haber]]."
+            },
+            {
+              "forma": "debería",
+              "texto": "[[6469|deber in the conditional]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _You should have told me._ (tú)",
+              "r": "Deberías haberme dicho. / Me deberías haber dicho.",
+              "nota": "deberías + haber."
+            },
+            {
+              "p": "In Spanish: _We shouldn't have come._",
+              "r": "No deberíamos haber venido.",
+              "nota": "no before debería."
+            },
+            {
+              "p": "In Spanish: _They should have saved money._",
+              "r": "Deberían haber ahorrado dinero.",
+              "nota": "deberían haber."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6469,
+      7262
+    ],
+    "confunde": [
+      6474
+    ],
+    "sigue": [
+      6470
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5054",
+      "kwiziq": true
+    }
+  ]
+}

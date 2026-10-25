@@ -1,0 +1,210 @@
+{
+  "tema": 6673,
+  "slug": "como-con-y-sin-acento",
+  "titulo": "Cómo vs como (with and without an accent)",
+  "subtitulo": "¿Cómo estás? / Como te decía… / Yo como tacos.",
+  "foto": "t09.jpg",
+  "regla": "Cómo (accent) = how, in direct and indirect questions and exclamations: no sé cómo se llama. Como (no accent) = as / like, or I eat (from comer).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "cómo",
+              "texto": "**How**: direct questions, indirect questions (**no recuerdo cómo...**) and exclamations (**¡Cómo canta!**)."
+            },
+            {
+              "forma": "como",
+              "texto": "**As, like**: comparisons and linking clauses."
+            },
+            {
+              "forma": "como (verb)",
+              "texto": "**I eat**, from **comer**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **cómo** = how; **como** = like, or lunch."
+        }
+      ]
+    },
+    {
+      "id": "con-acento",
+      "titulo": "Cómo (with accent)",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿==Cómo== tomas el café? ¿Con leche y sin azúcar?",
+              "en": "How do you take your coffee? With milk and no sugar?"
+            },
+            {
+              "es": "No me acuerdo ==cómo== tomas el café.",
+              "en": "I don't remember how you take your coffee."
+            },
+            {
+              "es": "¡==Cómo== canta Natalia Lafourcade!",
+              "en": "Natalia Lafourcade sings so beautifully!"
+            },
+            {
+              "es": "Explícame ==cómo== llegaste aquí.",
+              "en": "Explain to me how you got here."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sin-acento",
+      "titulo": "Como (no accent)",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Como== te decía, esa chava es muy presumida.",
+              "en": "As I was telling you, that girl is really vain."
+            },
+            {
+              "es": "Nunca he conocido a nadie ==como== tú.",
+              "en": "I've never met anyone like you."
+            },
+            {
+              "es": "Es tan alto ==como== su papá.",
+              "en": "He's as tall as his dad."
+            },
+            {
+              "es": "Yo nunca ==como== verduras.",
+              "en": "I never eat vegetables."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Como te llamas?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cómo te llamas?"
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No sé como se dice."
+                },
+                {
+                  "v": "bien",
+                  "t": "No sé cómo se dice."
+                }
+              ],
+              "nota": "Indirect question: accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Canta cómo un ángel."
+                },
+                {
+                  "v": "bien",
+                  "t": "Canta como un ángel."
+                }
+              ],
+              "nota": "Comparison: no accent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tan... como",
+              "texto": "Comparisons of equality use **como**."
+            },
+            {
+              "forma": "cómo, dónde, cuándo",
+              "texto": "[[6313|indirect questions]]."
+            },
+            {
+              "forma": "quién, dónde, cuándo",
+              "texto": "[[7082|quién vs quien]], [[6964|dónde vs donde]], [[6977|cuándo vs cuando]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Accent or not? _Dime ___ lo hiciste._",
+              "r": "cómo",
+              "nota": "Indirect question."
+            },
+            {
+              "p": "Accent or not? _Trabaja ___ mesera._",
+              "r": "como",
+              "nota": "as."
+            },
+            {
+              "p": "Accent or not? _¡___ llueve!_",
+              "r": "Cómo",
+              "nota": "Exclamation."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6313
+    ],
+    "confunde": [
+      6964
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6673",
+      "kwiziq": true
+    }
+  ]
+}

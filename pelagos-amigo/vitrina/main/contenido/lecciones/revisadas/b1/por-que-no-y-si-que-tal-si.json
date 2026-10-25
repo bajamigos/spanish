@@ -1,0 +1,210 @@
+{
+  "tema": 8951,
+  "slug": "por-que-no-y-si-que-tal-si",
+  "titulo": "Making suggestions with por qué no…?, y si…?, qué tal si…?",
+  "subtitulo": "¿Por qué no vamos a la playa? ¿Y si pedimos tacos?",
+  "foto": "t08.jpg",
+  "regla": "Suggestions: ¿Por qué no + present? ¿Y si (no) + present? ¿Qué tal si (no) + present? Por qué no only takes the present.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Three common ways to suggest something, all followed by the **present**:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Structure",
+            "English"
+          ],
+          "filas": [
+            [
+              "¿Por qué no + present?",
+              "_Why don't we / you…?_"
+            ],
+            [
+              "¿Y si (no) + present?",
+              "_What if we…? How about…?_"
+            ],
+            [
+              "¿Qué tal si (no) + present?",
+              "_How about…? What about…?_"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "With **por qué no** the present is the **only** tense possible."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With **y si** and **qué tal si** you may sometimes hear the imperfect subjunctive (**¿y si no le hiciéramos caso?**), but the present is more common."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Por qué** here is two words with an accent: it's a question."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: three doors to the same room: **¿por qué no…?**, **¿y si…?**, **¿qué tal si…?**"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Hace mucho calor. ¿==Por qué no vamos== a la alberca un rato?",
+              "en": "It's really hot. Why don't we go to the pool for a while?"
+            },
+            {
+              "es": "¿==Por qué no hablan== con el profe? Siempre da buenos consejos.",
+              "en": "Why don't you talk to the teacher? He always gives good advice."
+            },
+            {
+              "es": "Te ves cansado. ¿==Por qué no te echas== una siesta?",
+              "en": "You look tired. Why don't you take a nap?"
+            },
+            {
+              "es": "¿==Y si hacemos== una carne asada el domingo e invitamos a todos?",
+              "en": "How about a barbecue on Sunday and inviting everyone?"
+            },
+            {
+              "es": "¿==Y si le pides== el dinero a tus papás?",
+              "en": "What if you ask your parents for the money?"
+            },
+            {
+              "es": "¿==Qué tal si nos escapamos== a Ensenada?",
+              "en": "How about we sneak off to Ensenada?"
+            },
+            {
+              "es": "¿==Qué tal si le compras== unas flores?",
+              "en": "How about buying her some flowers?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Por qué no iremos a la playa?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Por qué no vamos a la playa?"
+                }
+              ],
+              "nota": "Only the present."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Porque no vamos?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Por qué no vamos?"
+                }
+              ],
+              "nota": "Two words, accent on **qué**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¿vamos?",
+              "texto": "Suggestions with just the present: [[8947|present for suggestions]]."
+            },
+            {
+              "forma": "podríamos",
+              "texto": "Softer suggestions: [[6713|podría]]."
+            },
+            {
+              "forma": "yo que tú",
+              "texto": "Advice: [[7431|conditional for advice]]."
+            },
+            {
+              "forma": "vamos, hagamos",
+              "texto": "Let's: [[6961|nosotros commands]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Suggest: _Why don't we eat tacos?_",
+              "r": "¿Por qué no comemos tacos?",
+              "nota": "por qué no + present."
+            },
+            {
+              "p": "Suggest: _How about we go to Rosarito?_",
+              "r": "¿Qué tal si vamos a Rosarito?",
+              "nota": "qué tal si + present."
+            },
+            {
+              "p": "Suggest: _What if we don't go?_",
+              "r": "¿Y si no vamos?",
+              "nota": "y si no + present."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      8947
+    ],
+    "confunde": [
+      8947
+    ],
+    "sigue": [
+      6713,
+      7431
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8951",
+      "kwiziq": true
+    }
+  ]
+}

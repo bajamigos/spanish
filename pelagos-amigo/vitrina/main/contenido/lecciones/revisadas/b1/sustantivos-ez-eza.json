@@ -1,0 +1,202 @@
+{
+  "tema": 7762,
+  "slug": "sustantivos-ez-eza",
+  "titulo": "Gender of nouns ending in -ez and -eza",
+  "subtitulo": "La niñez, la vejez, la belleza, la pobreza: feminine.",
+  "foto": "t01.jpg",
+  "regla": "Nouns ending in -ez (abstract) and -eza are feminine: la niñez, la madurez, la belleza, la tristeza. Other -z nouns have no fixed rule.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Nouns ending in **-ez** are almost always **feminine**, and they tend to be **abstract**: **la niñez**, **la madurez**, **la vejez**, **la escasez**, **la estupidez**, **la rapidez**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Nouns ending in **-eza** are also **feminine**: **la belleza**, **la pobreza**, **la franqueza**, **la tristeza**, **la naturaleza**, **la cerveza**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "There are a couple of exceptions in **-ez** (**el pez**, **el ajedrez**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Other nouns ending in just **-z** have no rule: **la luz**, **la voz**, **la paz** but **el lápiz**, **el arroz**, **el maíz**. Learn them one by one."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Plural of **-z**: change to **-ces**: **el pez** → **los peces**, **la voz** → **las voces**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **-ez** and **-eza** are qualities, and qualities in Spanish wear a skirt: **la belleza**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==La niñez== debería ser una época feliz para todos.",
+              "en": "Childhood should be a happy time for everyone."
+            },
+            {
+              "es": "Ese chavo tiene ==mucha madurez==.",
+              "en": "That guy is very mature."
+            },
+            {
+              "es": "==La vejez== de mi papá va a ser dura.",
+              "en": "My dad's old age is going to be hard."
+            },
+            {
+              "es": "Nos preocupa ==la escasez== de agua.",
+              "en": "We're worried about the water shortage."
+            },
+            {
+              "es": "Lo que acabas de decir es ==una estupidez==.",
+              "en": "What you just said is nonsense."
+            },
+            {
+              "es": "==La franqueza== es una cualidad que admiro.",
+              "en": "Frankness is a quality I admire."
+            },
+            {
+              "es": "==La belleza== de Bahía de los Ángeles es impresionante.",
+              "en": "The beauty of Bahía de los Ángeles is stunning."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El niñez fue feliz."
+                },
+                {
+                  "v": "bien",
+                  "t": "La niñez fue feliz."
+                }
+              ],
+              "nota": "-ez: feminine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El belleza del lugar."
+                },
+                {
+                  "v": "bien",
+                  "t": "La belleza del lugar."
+                }
+              ],
+              "nota": "-eza: feminine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "El pez es azul."
+                }
+              ],
+              "nota": "An exception: **el pez**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "la actitud",
+              "texto": "Another feminine ending: [[9542|-ud]]."
+            },
+            {
+              "forma": "la canción, la ciudad",
+              "texto": "More feminine endings: [[6068|-ión, -dad, -tad]]."
+            },
+            {
+              "forma": "el viaje",
+              "texto": "A masculine ending: [[6151|-aje]]."
+            },
+            {
+              "forma": "la luz, el lápiz",
+              "texto": "Consonant endings: [[6749|nouns ending in a consonant]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Article? ___ rapidez",
+              "r": "la rapidez",
+              "nota": "-ez: feminine."
+            },
+            {
+              "p": "Article? ___ tristeza",
+              "r": "la tristeza",
+              "nota": "-eza: feminine."
+            },
+            {
+              "p": "Article? ___ ajedrez",
+              "r": "el ajedrez",
+              "nota": "An exception."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6749
+    ],
+    "confunde": [
+      6151
+    ],
+    "sigue": [
+      9542,
+      6068
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7762",
+      "kwiziq": true
+    }
+  ]
+}

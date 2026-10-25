@@ -1,0 +1,259 @@
+{
+  "tema": 5258,
+  "slug": "lei-leyo",
+  "titulo": "Leer, creer and proveer in the preterite",
+  "subtitulo": "Leí el libro; ella no lo creyó.",
+  "foto": "t05.jpg",
+  "regla": "In the preterite, leer, creer and proveer change the i to y in él/ella/usted and ellos/ellas/ustedes (leyó, leyeron). The other persons keep the i with an accent: leí, leíste, leímos.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Leer**, **creer**, **proveer** (and **poseer**) have a stem ending in a vowel (**le-**, **cre-**, **prove-**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In **él / ella / usted** and **ellos / ellas / ustedes**, the **i** of the ending becomes **y**: **leyó**, **leyeron**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In **yo**, **tú** and **nosotros**, the **i** stays and gets a **written accent**: **leí**, **leíste**, **leímos**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "leer",
+            "creer",
+            "proveer"
+          ],
+          "filas": [
+            [
+              "yo",
+              "leí",
+              "creí",
+              "proveí"
+            ],
+            [
+              "tú",
+              "leíste",
+              "creíste",
+              "proveíste"
+            ],
+            [
+              "él / ella / usted",
+              "leyó",
+              "creyó",
+              "proveyó"
+            ],
+            [
+              "nosotros / nosotras",
+              "leímos",
+              "creímos",
+              "proveímos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "leyeron",
+              "creyeron",
+              "proveyeron"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The **y** never appears in yo, tú or nosotros: **leímos**, never **leyimos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: three vowels in a row (**le-i-ó**) won't fit, so the middle one turns into **y**: **le-yó**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Anoche ==leí== tres capítulos de The Expanse.",
+              "en": "Last night I read three chapters of The Expanse."
+            },
+            {
+              "es": "¿==Leíste== el mensaje del entrenador?",
+              "en": "Did you read the coach's message?"
+            },
+            {
+              "es": "Naomi no le ==creyó== a Holden al principio.",
+              "en": "Naomi didn't believe Holden at first."
+            },
+            {
+              "es": "Nosotros no ==creímos== el pronóstico y fuimos a surfear.",
+              "en": "We didn't believe the forecast and went surfing."
+            },
+            {
+              "es": "Los clientes ==leyeron== las reseñas antes de venir.",
+              "en": "The customers read the reviews before coming."
+            },
+            {
+              "es": "La estación Tycho ==proveyó== las piezas para la nave.",
+              "en": "Tycho Station supplied the parts for the ship."
+            },
+            {
+              "es": "Mi abuela nunca ==creyó== en la mala suerte.",
+              "en": "My grandma never believed in bad luck."
+            },
+            {
+              "es": "¿Ustedes ==leyeron== las instrucciones del abono?",
+              "en": "Did you all read the fertilizer instructions?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella leió el periódico."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella leyó el periódico."
+                }
+              ],
+              "nota": "i → **y** in él/ella."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tú leiste el libro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tú leíste el libro."
+                }
+              ],
+              "nota": "Accent on the **í**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros creyimos la historia."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros creímos la historia."
+                }
+              ],
+              "nota": "No y in **nosotros**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ellos creieron todo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ellos creyeron todo."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "leo, lees",
+              "texto": "The present: [[5589|leer in the present]]."
+            },
+            {
+              "forma": "comí, comió",
+              "texto": "The regular pattern this adjusts: [[5230|-er and -ir verbs in the preterite]]."
+            },
+            {
+              "forma": "oyó, oyeron",
+              "texto": "The same i → y change: [[5841|oír in the preterite]]."
+            },
+            {
+              "forma": "construyó",
+              "texto": "And again with -uir verbs: [[5219|-uir verbs in the preterite]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _He read the email._",
+              "r": "Leyó el correo.",
+              "nota": "leyó."
+            },
+            {
+              "p": "In Spanish: _We believed him._",
+              "r": "Le creímos.",
+              "nota": "creímos, no y."
+            },
+            {
+              "p": "Fix it: _Yo lei la carta._",
+              "r": "Yo leí la carta.",
+              "nota": "Accent on the í."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5589,
+      5230
+    ],
+    "confunde": [
+      5841
+    ],
+    "sigue": [
+      5219
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5258",
+      "kwiziq": true
+    }
+  ]
+}

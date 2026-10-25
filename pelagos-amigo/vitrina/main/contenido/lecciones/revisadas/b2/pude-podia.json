@@ -1,0 +1,246 @@
+{
+  "tema": 6334,
+  "slug": "pude-podia",
+  "titulo": "Poder in the preterite vs the imperfect",
+  "subtitulo": "Pudo abrir la puerta / No podía abrir la puerta.",
+  "foto": "t02.jpg",
+  "regla": "Pude = managed to, succeeded (we know the result). No pude = failed to. Podía / no podía = could / couldn't, the ability at that time, without saying how it turned out. Always + infinitive.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Tense",
+            "Meaning",
+            "Result known?"
+          ],
+          "filas": [
+            [
+              "pude / no pude",
+              "_managed to / didn't manage to_",
+              "yes"
+            ],
+            [
+              "podía / no podía",
+              "_was able / wasn't able_ (at that time)",
+              "no"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Both are followed by an **infinitive**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **pudo** reports the outcome; **podía** describes the situation."
+        }
+      ]
+    },
+    {
+      "id": "comparar",
+      "titulo": "Compare",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "podía",
+                  "t": "Ella podía ayudar a su amiga."
+                },
+                {
+                  "v": "pudo",
+                  "t": "Ella pudo ayudar a su amiga."
+                }
+              ],
+              "nota": "_She was in a position to help_ vs _she managed to help_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "no podía",
+                  "t": "Javier no podía abrir la puerta."
+                },
+                {
+                  "v": "no pudo",
+                  "t": "Javier no pudo abrir la puerta."
+                }
+              ],
+              "nota": "**No podía**: he was struggling, we don't know how it ended. **No pudo**: he failed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "preterito",
+      "titulo": "Preterite: the result",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==No pude== hablar con ella ayer porque no había señal.",
+              "en": "I couldn't talk to her yesterday because there was no signal."
+            },
+            {
+              "es": "Los ingenieros ==no pudieron== arreglar el problema.",
+              "en": "The engineers didn't manage to fix the problem."
+            },
+            {
+              "es": "Ángela ==pudo== conseguir lugar en el taller de dibujo.",
+              "en": "Ángela managed to get a spot in the drawing workshop."
+            },
+            {
+              "es": "Ustedes ==no pudieron== llegar a tiempo a la estación.",
+              "en": "You didn't make it to the station on time."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "imperfecto",
+      "titulo": "Imperfect: the situation",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Carlos ==no podía== hablar con ella porque estaba nervioso.",
+              "en": "Carlos couldn't talk to her because he was nervous."
+            },
+            {
+              "es": "Anoche Gabriel ==no podía== meter la llave en la cerradura.",
+              "en": "Last night Gabriel couldn't get the key into the lock."
+            },
+            {
+              "es": "Desde la ventana ==podían== espiar al vecino.",
+              "en": "From the window they could spy on the neighbor."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Por fin podía terminar el maratón."
+                },
+                {
+                  "v": "bien",
+                  "t": "Por fin pude terminar el maratón."
+                }
+              ],
+              "nota": "**Por fin** = a result: **pude**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "pudo",
+                  "t": "Pudo nadar hasta la orilla."
+                },
+                {
+                  "v": "sabía",
+                  "t": "Sabía nadar."
+                }
+              ],
+              "nota": "**Pudo** = _managed to_. Knowing how is **saber**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "quise / quería",
+              "texto": "[[6867|querer]]."
+            },
+            {
+              "forma": "he podido / pude",
+              "texto": "[[5052|poder in the present perfect and preterite]]."
+            },
+            {
+              "forma": "pude haber",
+              "texto": "_Could have_: [[6470|poder + haber]]."
+            },
+            {
+              "forma": "¿podrías...?",
+              "texto": "Polite requests: [[6713|podría]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We finally managed to sleep._",
+              "r": "Por fin pudimos dormir.",
+              "nota": "Result: preterite."
+            },
+            {
+              "p": "In Spanish: _I couldn't see well because it was dark._",
+              "r": "No podía ver bien porque estaba oscuro.",
+              "nota": "Situation: imperfect."
+            },
+            {
+              "p": "In Spanish: _They didn't manage to find the house._",
+              "r": "No pudieron encontrar la casa.",
+              "nota": "Failed: no pudieron."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6871,
+      5221
+    ],
+    "confunde": [
+      6867
+    ],
+    "sigue": [
+      5052,
+      6470
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6334",
+      "kwiziq": true
+    }
+  ]
+}

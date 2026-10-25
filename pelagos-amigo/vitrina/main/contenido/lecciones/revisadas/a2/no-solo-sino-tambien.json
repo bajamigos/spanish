@@ -1,0 +1,207 @@
+{
+  "tema": 9953,
+  "slug": "no-solo-sino-tambien",
+  "titulo": "Not only... but also: no solo... sino también",
+  "subtitulo": "No solo surfea, sino que también da clases.",
+  "foto": "t08.jpg",
+  "regla": "Not only... but also = no solo... sino (también) before a noun, adjective or other non-verb; no solo... sino que (también) before a conjugated verb. Never pero también.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To add a second, stronger idea, Spanish uses **no solo** + the first idea + **sino** + the second."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "no solo + A",
+            "+ sino también +",
+            "B (noun, adjective, adverb...)"
+          ]
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "no solo + verb A",
+            "+ sino que también +",
+            "verb B"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**También** is optional but very common. You can also use **además**: _sino **además**_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Sino** here works like the **sino** in _no es A, sino B_. So it's **never pero**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**No solo** can also be **no solamente**. The word **solo** has no accent today (older texts write **sólo**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **sino** keeps the two ideas in one bag; **pero** would cut the bag open."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Habla ==no solo== inglés, ==sino también== francés.",
+              "en": "She speaks not only English but also French."
+            },
+            {
+              "es": "==No solo== surfea, ==sino que también== da clases.",
+              "en": "He doesn't just surf; he also teaches lessons."
+            },
+            {
+              "es": "El huerto ==no solo== es bonito, ==sino también== útil.",
+              "en": "The garden isn't just pretty but also useful."
+            },
+            {
+              "es": "==No solo== llegaste tarde, ==sino que== olvidaste el regalo.",
+              "en": "Not only were you late, but you forgot the present."
+            },
+            {
+              "es": "La novela es buena ==no solo== por la acción, ==sino también== por los personajes.",
+              "en": "The novel is good not only for the action but also for the characters."
+            },
+            {
+              "es": "==No solamente== entrena jiu-jitsu, ==sino que además== compite.",
+              "en": "Not only does she train jiu-jitsu, she also competes."
+            },
+            {
+              "es": "Invitamos ==no solo== a la familia, ==sino también== a los vecinos.",
+              "en": "We invited not only the family but also the neighbors."
+            },
+            {
+              "es": "==No solo== llueve, ==sino que también== hace un frío horrible.",
+              "en": "It's not only raining, it's also horribly cold."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "With a conjugated verb, the safe form is **sino que también**: _No solo cocina, **sino que también** lava los platos._ You'll also hear **sino también** + verb; it's common, but **sino que** is the standard."
+        },
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No solo habla inglés, pero también francés."
+                },
+                {
+                  "v": "bien",
+                  "t": "No solo habla inglés, sino también francés."
+                }
+              ],
+              "nota": "Never pero."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No solo es caro, sino que también feo."
+                },
+                {
+                  "v": "bien",
+                  "t": "No solo es caro, sino también feo."
+                }
+              ],
+              "nota": "No verb after it: just sino."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "sino / sino que",
+              "texto": "Learn first: [[7035|pero, sino, sino que]]."
+            },
+            {
+              "forma": "tanto... como",
+              "texto": "Another way to join two things: [[9254|tanto... como = both... and]]."
+            },
+            {
+              "forma": "ni siquiera",
+              "texto": "The negative side: [[7264|ni / ni siquiera = not even]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _not only cheap but also good_",
+              "r": "no solo barato, sino también bueno",
+              "nota": "sino también."
+            },
+            {
+              "p": "In Spanish: _He not only sings, he also plays the guitar._",
+              "r": "No solo canta, sino que también toca la guitarra.",
+              "nota": "Verb: sino que."
+            },
+            {
+              "p": "Fix it: _No solo es inteligente, pero también es simpática._",
+              "r": "No solo es inteligente, sino que también es simpática.",
+              "nota": "sino que + es (or: sino también simpática)."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7035
+    ],
+    "confunde": [],
+    "sigue": [
+      9254,
+      7264
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9953",
+      "kwiziq": true
+    }
+  ]
+}

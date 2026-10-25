@@ -1,0 +1,213 @@
+{
+  "tema": 6869,
+  "slug": "tenia-tuvo",
+  "titulo": "Tener in the imperfect vs the preterite",
+  "subtitulo": "Tenía un carro / Tuvo un accidente.",
+  "foto": "t05.jpg",
+  "regla": "Tenía = had (possession or state as background, no limits). Tuvo = had in a closed period, or got / received / had an event: tuvo un bebé, tuve un examen, tuvo un accidente.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Form",
+            "Meaning",
+            "Example"
+          ],
+          "filas": [
+            [
+              "tenía",
+              "had: background possession or state",
+              "Marcos tenía un carro nuevo."
+            ],
+            [
+              "tuvo",
+              "had something happen, got, received; or had it for a finished period",
+              "Tuvo un accidente. Tuve ese carro diez años."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "With the preterite, **tener** often becomes an **event**: **tuvo un bebé** (_she had a baby_), **tuve una idea**, **tuvimos una junta**, **tuve noticias de él**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Tener que** follows the same logic: **tenía que ir** (_I was supposed to go_; did I?) vs **tuve que ir** (_I had to go, and I went_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **tenía** is owning; **tuvo** is something happening."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "tenía",
+                  "t": "El pueblo tenía muchos visitantes."
+                },
+                {
+                  "v": "tuvo",
+                  "t": "El pueblo tuvo muchos visitantes ese verano."
+                }
+              ],
+              "nota": "**Tuvo**: a closed period, now it's different."
+            },
+            {
+              "filas": [
+                {
+                  "v": "tenía que",
+                  "t": "Tenía que trabajar, pero me quedé en casa."
+                },
+                {
+                  "v": "tuve que",
+                  "t": "Tuve que trabajar el domingo."
+                }
+              ],
+              "nota": "**Tuve que**: it happened."
+            }
+          ]
+        },
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi hermana ==tuvo== gemelos.",
+              "en": "My sister had twins."
+            },
+            {
+              "es": "Ayer ==tuve== un examen de química.",
+              "en": "Yesterday I had a chemistry exam."
+            },
+            {
+              "es": "De niño ==tenía== un perro que se llamaba Chispas.",
+              "en": "As a kid I had a dog called Chispas."
+            },
+            {
+              "es": "==Tuvimos== que esperar dos horas.",
+              "en": "We had to wait two hours."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tenía un accidente ayer."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tuve un accidente ayer."
+                }
+              ],
+              "nota": "An event: **tuve**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cuando era joven, tuve el pelo largo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cuando era joven, tenía el pelo largo."
+                }
+              ],
+              "nota": "Background: **tenía**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "era / fue",
+              "texto": "[[6864|ser]], [[6868|estar]]."
+            },
+            {
+              "forma": "tenía",
+              "texto": "[[5926|tener in the imperfect]]."
+            },
+            {
+              "forma": "imperfect or preterite?",
+              "texto": "[[6871|general use]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Tenía or tuvo? _Mi abuela ___ un bebé a los cuarenta._",
+              "r": "tuvo",
+              "nota": "An event."
+            },
+            {
+              "p": "Tenía or tuvo? _En esa época ___ mucho trabajo._",
+              "r": "tenía",
+              "nota": "Background."
+            },
+            {
+              "p": "In Spanish: _I had to leave early (and I did)._",
+              "r": "Tuve que salir temprano.",
+              "nota": "tuve que."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5926
+    ],
+    "confunde": [
+      6868
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6869",
+      "kwiziq": true
+    }
+  ]
+}

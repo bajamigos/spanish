@@ -1,0 +1,178 @@
+{
+  "tema": 7563,
+  "slug": "como-si-pluscuamperfecto",
+  "titulo": "Como si + hubiera + participle = as if (it) had...",
+  "subtitulo": "Me miró como si hubiera visto un fantasma.",
+  "foto": "t06.jpg",
+  "regla": "Como si always takes the subjunctive. For something that would have happened before: como si + pluperfect subjunctive (hubiera / hubiese + participle): Me miró como si hubiera visto un fantasma. For something simultaneous: como si + imperfect subjunctive (como si fuera).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "como si",
+            "+ hubiera / hubiese",
+            "+ participle"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "_as if (someone) had..._: the imagined action happened **before**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Never** the indicative after **como si** in this sense (English uses the indicative: _as if he had seen_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Compare: **como si fuera** (now, simultaneous) vs **como si hubiera sido** (before)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: English _had_ = Spanish **hubiera**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Elisa me miraba ==como si hubiera hecho== algo malo.",
+              "en": "Elisa looked at me as if I'd done something wrong."
+            },
+            {
+              "es": "Se portaba ==como si nunca hubiera roto== un plato.",
+              "en": "She acted as if she'd never broken a plate (as if butter wouldn't melt in her mouth)."
+            },
+            {
+              "es": "Sentí algo raro, ==como si hubiese estado== ahí antes.",
+              "en": "I felt something strange, as if I'd been there before."
+            },
+            {
+              "es": "Habla ==como si hubiera vivido== toda su vida en Oaxaca.",
+              "en": "He talks as if he'd lived in Oaxaca all his life."
+            },
+            {
+              "es": "Se fue ==como si no hubiera pasado== nada.",
+              "en": "He left as if nothing had happened."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "como si había visto un fantasma"
+                },
+                {
+                  "v": "bien",
+                  "t": "como si hubiera visto un fantasma"
+                }
+              ],
+              "nota": "Subjunctive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "simultáneo",
+                  "t": "Habla como si supiera todo."
+                },
+                {
+                  "v": "anterior",
+                  "t": "Habla como si hubiera leído todo."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "como si + imperfect subjunctive",
+              "texto": "[[6171|como si + imperfect subjunctive]]."
+            },
+            {
+              "forma": "pluperfect subjunctive",
+              "texto": "[[5842|hubiera + participle]]."
+            },
+            {
+              "forma": "como si (indifference)",
+              "texto": "[[8918|como si for indifference]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _He acted as if he hadn't heard me._",
+              "r": "Hizo como si no me hubiera oído.",
+              "nota": "hubiera + participle."
+            },
+            {
+              "p": "In Spanish: _You look as if you'd seen a ghost._",
+              "r": "Te ves como si hubieras visto un fantasma. / Tienes cara de haber visto un fantasma.",
+              "nota": "como si + hubieras."
+            },
+            {
+              "p": "Fix it: _como si nada había pasado_",
+              "r": "como si nada hubiera pasado",
+              "nota": "Subjunctive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6171,
+      5842
+    ],
+    "confunde": [
+      8918
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7563",
+      "kwiziq": true
+    }
+  ]
+}

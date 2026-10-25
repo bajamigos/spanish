@@ -1,0 +1,273 @@
+{
+  "tema": 5127,
+  "slug": "demasiado-bastante-suficiente",
+  "titulo": "Quantity words: demasiado, bastante, suficiente, poco, tanto, mucho",
+  "subtitulo": "«Hoy hay demasiadas olas.»",
+  "foto": "t06.jpg",
+  "regla": "Before a noun, demasiado, bastante, suficiente, poco, tanto and mucho agree with it. Demasiado, mucho, poco and tanto have four forms; bastante and suficiente only change for number.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "These words say **how much** or **how many**. Before a noun they agree with it."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "meaning",
+            "masc. sing.",
+            "fem. sing.",
+            "masc. pl.",
+            "fem. pl."
+          ],
+          "filas": [
+            [
+              "too much / too many",
+              "demasiado",
+              "demasiada",
+              "demasiados",
+              "demasiadas"
+            ],
+            [
+              "a lot of, many",
+              "mucho",
+              "mucha",
+              "muchos",
+              "muchas"
+            ],
+            [
+              "little, few",
+              "poco",
+              "poca",
+              "pocos",
+              "pocas"
+            ],
+            [
+              "so much / so many",
+              "tanto",
+              "tanta",
+              "tantos",
+              "tantas"
+            ],
+            [
+              "enough, quite a lot",
+              "bastante",
+              "bastante",
+              "bastantes",
+              "bastantes"
+            ],
+            [
+              "enough",
+              "suficiente",
+              "suficiente",
+              "suficientes",
+              "suficientes"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**bastante** = _enough_ or _quite a lot_; **suficiente** = _enough_, just what you need."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Mass nouns stay singular: **suficiente** dinero, **mucha** agua, **poco** tiempo."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Muy** never goes before a noun: **mucha** gente, not muy gente."
+        },
+        {
+          "tipo": "texto",
+          "texto": "After a verb they don't change: entrené **demasiado**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Hoy hay ==demasiadas== olas; mejor espero.",
+              "en": "There are too many waves today; I'd better wait."
+            },
+            {
+              "es": "Me comí ==muchos== tacos en la taquería.",
+              "en": "I ate a lot of tacos at the taco stand."
+            },
+            {
+              "es": "Tengo ==suficientes== tomates para toda la colonia.",
+              "en": "I have enough tomatoes for the whole neighborhood."
+            },
+            {
+              "es": "Hay ==poca== agua en la cisterna.",
+              "en": "There's little water in the tank."
+            },
+            {
+              "es": "Tenemos ==bastante== tiempo antes de la clase.",
+              "en": "We have plenty of time before class."
+            },
+            {
+              "es": "En el gimnasio hay ==pocos== cinturones negros.",
+              "en": "There are few black belts at the gym."
+            },
+            {
+              "es": "¡Hay ==tanta== gente en la playa!",
+              "en": "There are so many people at the beach!"
+            },
+            {
+              "es": "Pon ==bastantes== chiles en la salsa.",
+              "en": "Put plenty of chiles in the salsa."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hay mucho olas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hay muchas olas."
+                }
+              ],
+              "nota": "Agrees with **olas**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hay bastantas personas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hay bastantes personas."
+                }
+              ],
+              "nota": "**Bastante** only changes for number."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tenemos suficientes tiempo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tenemos suficiente tiempo."
+                }
+              ],
+              "nota": "**Tiempo** is singular."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hay muy gente."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hay mucha gente."
+                }
+              ],
+              "nota": "**Muy** never goes before a noun."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "muy vs mucho",
+              "texto": "The basics: [[5082|muy vs mucho]]."
+            },
+            {
+              "forma": "entrené demasiado",
+              "texto": "With verbs (no agreement): [[6135|demasiado, bastante, poco, mucho with verbs]]."
+            },
+            {
+              "forma": "tengo muchos",
+              "texto": "Without a noun: [[7026|quantity pronouns]]."
+            },
+            {
+              "forma": "poco vs un poco",
+              "texto": "A classic mix-up: [[7061|poco vs un poco]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _There's too much traffic today._",
+              "r": "Hoy hay demasiado tráfico.",
+              "nota": "tráfico: masculine."
+            },
+            {
+              "p": "In Spanish, with suficiente: _We have enough chairs._",
+              "r": "Tenemos suficientes sillas.",
+              "nota": "Plural: suficientes."
+            },
+            {
+              "p": "Fix it: _Tengo poca amigos._",
+              "r": "Tengo pocos amigos.",
+              "nota": "amigos → pocos."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5082
+    ],
+    "confunde": [
+      7061
+    ],
+    "sigue": [
+      6135,
+      7026
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5127",
+      "kwiziq": true
+    }
+  ]
+}

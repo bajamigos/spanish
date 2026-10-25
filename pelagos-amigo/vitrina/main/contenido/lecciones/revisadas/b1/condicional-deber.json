@@ -1,0 +1,215 @@
+{
+  "tema": 6469,
+  "slug": "condicional-deber",
+  "titulo": "Conjugate deber in the conditional",
+  "subtitulo": "Debería, deberías: regular, and perfect for advice.",
+  "foto": "t02.jpg",
+  "regla": "Deber is regular in the conditional: debería, deberías, debería, deberíamos, deberían, always followed by an infinitive.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Deber** (_must, should_; also _to owe_) is **regular** in the conditional: the whole infinitive plus the regular endings."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**deber**",
+            "**-ía, -ías, -ía, -íamos, -ían**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "deber"
+          ],
+          "filas": [
+            [
+              "yo",
+              "debería"
+            ],
+            [
+              "tú",
+              "deberías"
+            ],
+            [
+              "él, ella, usted",
+              "debería"
+            ],
+            [
+              "nosotros",
+              "deberíamos"
+            ],
+            [
+              "ustedes, ellos",
+              "deberían"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "When it means _must_ or _should_, **deber** is followed by an **infinitive**. (With a noun it means _to owe_: **te debo cien pesos**.) In the conditional, **deber** + infinitive gives advice: what you _should_ do."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: no surprises in the stem, so all the attention goes to the advice."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Yo ==debería tomar== menos café.",
+              "en": "I should drink less coffee."
+            },
+            {
+              "es": "Tú ==deberías sacar== tu licencia de manejo.",
+              "en": "You should get your driver's license."
+            },
+            {
+              "es": "Usted ==debería relajarse== antes de dormir.",
+              "en": "You should relax before going to sleep."
+            },
+            {
+              "es": "Nosotros ==deberíamos celebrar== el cumpleaños de Beto.",
+              "en": "We should celebrate Beto's birthday."
+            },
+            {
+              "es": "Ellas ==deberían pintar== el cuarto.",
+              "en": "They should paint the room."
+            },
+            {
+              "es": "Ustedes ==deberían visitar== el Centro Cultural Tijuana.",
+              "en": "You should visit the Tijuana Cultural Center."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Debería de que descansar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Debería descansar."
+                }
+              ],
+              "nota": "Just the infinitive after **debería**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Deberiamos salir."
+                },
+                {
+                  "v": "bien",
+                  "t": "Deberíamos salir."
+                }
+              ],
+              "nota": "Accent on the **í**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "Deberías descansar.",
+              "texto": "How to use it for _should_: [[5913|deber to say should]]."
+            },
+            {
+              "forma": "debo, debía",
+              "texto": "Other tenses: [[6467|present]], [[6468|imperfect]]."
+            },
+            {
+              "forma": "debería haber ido",
+              "texto": "_Should have_: [[5054|debería + haber + participle]]."
+            },
+            {
+              "forma": "hablaría",
+              "texto": "The regular pattern: [[5731|regular verbs in the conditional]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _You should rest._ (usted)",
+              "r": "Debería descansar.",
+              "nota": "debería + infinitive."
+            },
+            {
+              "p": "**Deber** with **nosotros**: ___ ahorrar más.",
+              "r": "Deberíamos ahorrar más.",
+              "nota": "deberíamos."
+            },
+            {
+              "p": "In Spanish: _They should call the customer._",
+              "r": "Deberían llamar al cliente.",
+              "nota": "deberían + infinitive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6467,
+      6468,
+      5731
+    ],
+    "confunde": [
+      5913
+    ],
+    "sigue": [
+      5054,
+      5914
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6469",
+      "kwiziq": true
+    }
+  ]
+}

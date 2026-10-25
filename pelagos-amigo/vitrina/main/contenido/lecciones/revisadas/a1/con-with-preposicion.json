@@ -1,0 +1,205 @@
+{
+  "tema": 7895,
+  "slug": "con-with-preposicion",
+  "titulo": "Con = with",
+  "subtitulo": "Café con leche, con mis amigos.",
+  "foto": "t10.jpg",
+  "regla": "Con means with: who you're with, what you use, what something comes with, and how you do it. With mí and ti it becomes conmigo and contigo.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Con** = _with_. It shows **company** (con Ana), a **tool** (con la mano), an **ingredient** (con queso) or a **manner** (con cuidado)."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Pronoun",
+            "With con"
+          ],
+          "filas": [
+            [
+              "mí",
+              "**conmigo**"
+            ],
+            [
+              "ti",
+              "**contigo**"
+            ],
+            [
+              "él, ella, usted",
+              "con él, con ella, con usted"
+            ],
+            [
+              "nosotros, ellos, ustedes",
+              "con nosotros, con ellos, con ustedes"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Never **con mí** or **con ti**: only **conmigo** and **contigo**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Voy a la playa ==con== mis amigos.",
+              "en": "I'm going to the beach with my friends."
+            },
+            {
+              "es": "Un café ==con== leche, por favor.",
+              "en": "A coffee with milk, please."
+            },
+            {
+              "es": "¿Quieres entrenar ==conmigo==?",
+              "en": "Do you want to train with me?"
+            },
+            {
+              "es": "Hablo ==con== mi mamá todos los días.",
+              "en": "I talk with my mom every day."
+            },
+            {
+              "es": "Corta la tela ==con== tijeras.",
+              "en": "Cut the fabric with scissors."
+            },
+            {
+              "es": "Maneja ==con== cuidado.",
+              "en": "Drive carefully."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Vas con mí?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Vas conmigo?"
+                }
+              ],
+              "nota": "con + mí = conmigo."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero hablar con ti."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero hablar contigo."
+                }
+              ],
+              "nota": "con + ti = contigo."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estoy casado a Ana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estoy casado con Ana."
+                }
+              ],
+              "nota": "Married _to_ = casado **con**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "sin azúcar",
+              "texto": "Its opposite: [[8582|sin]]."
+            },
+            {
+              "forma": "conmigo, contigo",
+              "texto": "More on this: [[6141|con + pronouns]]."
+            },
+            {
+              "forma": "para mí, sin ti",
+              "texto": "Other prepositions: [[6466|prepositions + pronouns]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish (tú): _Do you want to go with me?_",
+              "r": "¿Quieres ir conmigo?",
+              "nota": "conmigo."
+            },
+            {
+              "p": "In Spanish: _coffee with milk_",
+              "r": "café con leche",
+              "nota": "con + ingredient."
+            },
+            {
+              "p": "Fix it: _Voy con ti._",
+              "r": "Voy contigo.",
+              "nota": "contigo."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      8582
+    ],
+    "sigue": [
+      6141,
+      6466
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7895",
+      "kwiziq": true
+    }
+  ]
+}

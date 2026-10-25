@@ -1,0 +1,230 @@
+{
+  "tema": 5055,
+  "slug": "condicional-querer",
+  "titulo": "Conjugate querer in the conditional",
+  "subtitulo": "Querría, querrías, querríamos: the future stem querr- with the conditional endings.",
+  "foto": "t10.jpg",
+  "regla": "Querer has the irregular stem querr- in the conditional, with the regular endings: querría, querrías, querría, querríamos, querrían.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Querer** (_to want_) is irregular in the conditional (**el condicional simple**). It uses the same irregular stem as the future, **querr-**, and the regular conditional endings."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**querr-**",
+            "**-ía, -ías, -ía, -íamos, -ían**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "querer"
+          ],
+          "filas": [
+            [
+              "yo",
+              "querría"
+            ],
+            [
+              "tú",
+              "querrías"
+            ],
+            [
+              "él, ella, usted",
+              "querría"
+            ],
+            [
+              "nosotros",
+              "querríamos"
+            ],
+            [
+              "ustedes, ellos",
+              "querrían"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Querer** is irregular in the future, so it's irregular in the conditional too: it uses the same stem **querr-**, with **double r**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Every form has a written accent on the **í** of the ending."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: hear the double **r** roll: **que-rrrí-a**. One **r** is the past; two is _would_."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿==Querrías== estar en su lugar?",
+              "en": "Would you like to be in his place?"
+            },
+            {
+              "es": "¿==Querría== él tocar para nosotros?",
+              "en": "Would he like to play for us?"
+            },
+            {
+              "es": "No ==querríamos== pagar más.",
+              "en": "We wouldn't want to pay more."
+            },
+            {
+              "es": "Ellos ==querrían== un mundo mejor para sus hijos.",
+              "en": "They'd want a better world for their kids."
+            },
+            {
+              "es": "Ustedes ==querrían== ser más altos.",
+              "en": "You'd like to be taller."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quereríamos ir."
+                },
+                {
+                  "v": "bien",
+                  "t": "Querríamos ir."
+                }
+              ],
+              "nota": "The **e** disappears and the **rr** stays."
+            },
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "Quería ir. (I wanted to go)"
+                },
+                {
+                  "v": "bien",
+                  "t": "Querría ir. (I would like to go)"
+                }
+              ],
+              "nota": "One **r**, **quería**, is the imperfect. Double **r**, **querría**, is the conditional. Listen for the roll."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usos",
+      "titulo": "Useful uses",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "Quisiera un café, por favor.",
+              "texto": "To ask politely, Mexicans usually say **quisiera**; **querría** is kept for _would want_. See [[5227|querría, quería and quisiera]].",
+              "aqui": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "querré",
+              "texto": "The future has the same stem: [[5156|querer in the future]]."
+            },
+            {
+              "forma": "hablaría",
+              "texto": "The regular pattern: [[5731|regular verbs in the conditional]]."
+            },
+            {
+              "forma": "quisiera",
+              "texto": "The most common polite form: [[5227|querría, quería and quisiera]]."
+            },
+            {
+              "forma": "me gustaría",
+              "texto": "Another _would like_: [[7059|gustar in the conditional]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Would you like to come?_ (tú)",
+              "r": "¿Querrías venir?",
+              "nota": "querr- + ías."
+            },
+            {
+              "p": "Which one means _I would want_? **quería** or **querría**?",
+              "r": "Querría.",
+              "nota": "Double **r** = conditional."
+            },
+            {
+              "p": "**Querer** with **ellos**: ___ más tiempo.",
+              "r": "Querrían más tiempo.",
+              "nota": "querr- + ían."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5156,
+      5731
+    ],
+    "confunde": [
+      5156
+    ],
+    "sigue": [
+      5227,
+      7059
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5055",
+      "kwiziq": true
+    }
+  ]
+}

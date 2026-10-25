@@ -1,0 +1,258 @@
+{
+  "tema": 6078,
+  "slug": "mejor-peor-mayor-menor",
+  "titulo": "Better, worse, older, younger: mejor, peor, mayor, menor",
+  "subtitulo": "«Mi hermano es mayor que yo.»",
+  "foto": "t10.jpg",
+  "regla": "Four comparatives are irregular: mejor (better), peor (worse), mayor (older) and menor (younger). They are the same for masculine and feminine, add -es in the plural, and take que: mejor que tú.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "adjective",
+            "comparative",
+            "plural",
+            "meaning"
+          ],
+          "filas": [
+            [
+              "bueno",
+              "mejor",
+              "mejores",
+              "better"
+            ],
+            [
+              "malo",
+              "peor",
+              "peores",
+              "worse"
+            ],
+            [
+              "grande (age)",
+              "mayor",
+              "mayores",
+              "older"
+            ],
+            [
+              "pequeño (age)",
+              "menor",
+              "menores",
+              "younger"
+            ]
+          ]
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "mejor / peor / mayor / menor",
+            "+",
+            "que"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "No feminine form: mi hermana **mayor**, la **mejor** idea."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Never add **más**: not más mejor, not más mayor."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Mayor / menor** are for **age**. For physical size use **más grande / más pequeño** (in Mexico also **más chico**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Mejor** and **peor** are also adverbs: cocinas **mejor** que yo."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi hermano es ==mayor== que yo.",
+              "en": "My brother is older than me."
+            },
+            {
+              "es": "Mi hermana ==menor== vive en Mexicali.",
+              "en": "My younger sister lives in Mexicali."
+            },
+            {
+              "es": "Estos tacos son ==mejores== que los de ayer.",
+              "en": "These tacos are better than yesterday's."
+            },
+            {
+              "es": "Hoy el tráfico está ==peor== que nunca.",
+              "en": "Traffic is worse than ever today."
+            },
+            {
+              "es": "Mis primas son ==menores== que yo.",
+              "en": "My cousins are younger than me."
+            },
+            {
+              "es": "Hoy las olas están ==mejores== que ayer.",
+              "en": "The waves are better today than yesterday."
+            },
+            {
+              "es": "Cocinas ==mejor== que yo.",
+              "en": "You cook better than me."
+            },
+            {
+              "es": "Esta tabla es ==peor== para principiantes.",
+              "en": "This board is worse for beginners."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Esta tabla es más buena que esa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Esta tabla es mejor que esa."
+                }
+              ],
+              "nota": "For quality: **mejor**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mi hermana es mayora que yo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mi hermana es mayor que yo."
+                }
+              ],
+              "nota": "Same form for both genders."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Son las peors olas del año."
+                },
+                {
+                  "v": "bien",
+                  "t": "Son las peores olas del año."
+                }
+              ],
+              "nota": "Plural: add **-es**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tu salsa es más mejor."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tu salsa es mejor."
+                }
+              ],
+              "nota": "**Mejor** already means _more good_."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "más … que",
+              "texto": "Regular comparatives: [[6210|más / menos … que]]."
+            },
+            {
+              "forma": "buen, mal",
+              "texto": "Short forms of bueno and malo: [[5057|buen, mal, gran]]."
+            },
+            {
+              "forma": "el mejor",
+              "texto": "The best, the worst: [[7066|irregular superlatives]]."
+            },
+            {
+              "forma": "el más alto",
+              "texto": "The most, the least: [[5056|superlatives]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _My dad is older than my mom._",
+              "r": "Mi papá es mayor que mi mamá.",
+              "nota": "Age: mayor."
+            },
+            {
+              "p": "In Spanish: _These waves are worse than yesterday's._",
+              "r": "Estas olas son (or están) peores que las de ayer.",
+              "nota": "Plural: peores."
+            },
+            {
+              "p": "Fix it: _Tu salsa es más mejor._",
+              "r": "Tu salsa es mejor.",
+              "nota": "No más."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6210
+    ],
+    "confunde": [
+      5057
+    ],
+    "sigue": [
+      7066,
+      5056
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6078",
+      "kwiziq": true
+    }
+  ]
+}

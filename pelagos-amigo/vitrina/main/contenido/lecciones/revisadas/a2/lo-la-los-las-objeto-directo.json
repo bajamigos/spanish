@@ -1,0 +1,257 @@
+{
+  "tema": 5121,
+  "slug": "lo-la-los-las-objeto-directo",
+  "titulo": "Direct object pronouns lo, la, los, las",
+  "subtitulo": "¿El taco? Ya lo comí.",
+  "foto": "t01.jpg",
+  "regla": "Lo, la, los, las replace a direct object (him, her, it, them, formal you) and match its gender and number. They go before a conjugated verb, or can attach to the end of an infinitive or gerund.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "The **direct object** receives the action: **compro el pan**. To avoid repeating it, replace it with **lo, la, los, las**: **lo compro**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Pronoun",
+            "Replaces",
+            "Example"
+          ],
+          "filas": [
+            [
+              "**lo**",
+              "him, it (masc.), you (usted, masc.)",
+              "**Lo** veo."
+            ],
+            [
+              "**la**",
+              "her, it (fem.), you (usted, fem.)",
+              "**La** veo."
+            ],
+            [
+              "**los**",
+              "them (masc. or mixed), you all (masc. or mixed)",
+              "**Los** veo."
+            ],
+            [
+              "**las**",
+              "them (fem.), you all (fem.)",
+              "**Las** veo."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Match the **noun**, not the English: **la tabla** → **la**, **los tacos** → **los**. A mixed group takes **los**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Position: **before** the conjugated verb. With **no**, **no** comes first."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "(no)",
+            "+ lo / la / los / las +",
+            "conjugated verb"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "With an infinitive or gerund, you can also attach it: **lo voy a comprar** = **voy a comprarlo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Subject _it_ is never said in Spanish: _it is expensive_ = **es caro**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿El taco? Ya ==lo== comí.",
+              "en": "The taco? I already ate it."
+            },
+            {
+              "es": "¿Conoces a Marta? Sí, ==la== conozco del gimnasio.",
+              "en": "Do you know Marta? Yes, I know her from the gym."
+            },
+            {
+              "es": "Compré tortillas y ==las== puse en la mesa.",
+              "en": "I bought tortillas and put them on the table."
+            },
+            {
+              "es": "¿Dónde están los guantes? No ==los== encuentro.",
+              "en": "Where are the gloves? I can't find them."
+            },
+            {
+              "es": "¿Ves a Juan y a Lupe? Sí, ==los== veo.",
+              "en": "Do you see Juan and Lupe? Yes, I see them."
+            },
+            {
+              "es": "Las plantas tienen sed. ¿==Las== puedes regar?",
+              "en": "The plants are thirsty. Can you water them?"
+            },
+            {
+              "es": "Señor, ¿==lo== ayudo con las bolsas?",
+              "en": "Sir, can I help you with the bags?"
+            },
+            {
+              "es": "La tabla está rota, pero ==la== voy a arreglar mañana.",
+              "en": "The board is broken, but I'm going to fix it tomorrow."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Veo lo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Lo veo."
+                }
+              ],
+              "nota": "Before the conjugated verb."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Las llaves? Lo tengo."
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Las llaves? Las tengo."
+                }
+              ],
+              "nota": "Match the noun: **las llaves** → **las**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Lo no entiendo."
+                },
+                {
+                  "v": "bien",
+                  "t": "No lo entiendo."
+                }
+              ],
+              "nota": "**No** goes first."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Lo es muy caro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es muy caro."
+                }
+              ],
+              "nota": "Subject _it_ isn't said."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "a Marta",
+              "texto": "Spotting a person as object: [[6870|the personal a]]."
+            },
+            {
+              "forma": "me, te, nos",
+              "texto": "The other direct pronouns: [[10848|me, te, nos]]."
+            },
+            {
+              "forma": "le, les",
+              "texto": "Not the same job: [[5122|indirect object pronouns le, les]]."
+            },
+            {
+              "forma": "comprarlo",
+              "texto": "Attaching pronouns: [[5140|pronouns with infinitives and gerunds]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _The car? I sold it._",
+              "r": "¿El carro? Lo vendí.",
+              "nota": "carro → lo."
+            },
+            {
+              "p": "In Spanish: _The girls? I don't see them._",
+              "r": "¿Las niñas? No las veo.",
+              "nota": "no + las + verb."
+            },
+            {
+              "p": "Fix it: _Compré la camisa y llevo la hoy._",
+              "r": "Compré la camisa y la llevo hoy.",
+              "nota": "Before the verb."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6870
+    ],
+    "confunde": [
+      5122
+    ],
+    "sigue": [
+      10848,
+      5140
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5121",
+      "kwiziq": true
+    }
+  ]
+}

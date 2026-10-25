@@ -1,0 +1,165 @@
+{
+  "tema": 8151,
+  "slug": "como-va-a",
+  "titulo": "¿Cómo / dónde / quién / qué + ir a + infinitive? to state the obvious",
+  "subtitulo": "¿Dónde va a estar? En su casa.",
+  "foto": "t10.jpg",
+  "regla": "Cómo / dónde / quién / qué + ir a + infinitive (present or imperfect) answers a comment by pointing out the obvious or the impossible: —¿Habrá perdido el tren? —¿Cómo lo va a perder, si llegó media hora antes? ¡Quién lo iba a decir! = Who'd have thought!",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "¿cómo / dónde / quién / qué",
+            "+ va / iba + a +",
+            "infinitive?"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Not the future: it's a **reaction** meaning _obviously_ or _that's impossible / absurd_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Present (**va a**) for now; imperfect (**iba a**) for past or for _who would have thought_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Fixed phrase: **¡Quién lo iba a decir!** (_Who'd have thought!_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: say it with a shrug: _well, where else would he be?_"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "—Ojalá Marta no haya perdido el tren. —¿==Cómo lo va a perder==, si llegó media hora antes?",
+              "en": "—I hope Marta didn't miss the train. —How could she, she got there half an hour early?"
+            },
+            {
+              "es": "—¿Dónde estará Antonio? —¿==Dónde va a estar==? En casa de su novia, como siempre.",
+              "en": "—Where could Antonio be? —Where do you think? At his girlfriend's, as usual."
+            },
+            {
+              "es": "—¿Qué te pasa? Te ves muy serio. —¡==Qué me va a pasar==! Nada.",
+              "en": "—What's wrong? You look serious. —What would be wrong? Nothing."
+            },
+            {
+              "es": "—Nadie sabía lo del embarazo de Belén. —¡==Quién lo iba a saber==! No le dijo a nadie.",
+              "en": "—Nobody knew Belén was pregnant. —How would anyone know? She didn't tell anyone."
+            },
+            {
+              "es": "¡==Quién lo iba a decir==! Ahora es millonario.",
+              "en": "Who would have thought! Now he's a millionaire."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "futuro",
+                  "t": "Va a llover mañana."
+                },
+                {
+                  "v": "lo obvio",
+                  "t": "¿Cómo va a llover, si está despejado?"
+                }
+              ],
+              "nota": "Same form, different job."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "ir a + infinitive",
+              "texto": "[[5086|near future]]."
+            },
+            {
+              "forma": "¿que te vas?",
+              "texto": "[[6186|que for disbelief]]."
+            },
+            {
+              "forma": "¡tendría un final triste...!",
+              "texto": "[[8194|conditional for objection]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "React: _—¿Será cara la comida ahí?_ (Of course it is, it's in Polanco!)",
+              "r": "¿Cómo no va a ser cara, si está en Polanco?",
+              "nota": "cómo + ir a."
+            },
+            {
+              "p": "React: _—¿Quién se comió el pastel?_ (Who else? Your brother!)",
+              "r": "¿Quién va a ser? Tu hermano.",
+              "nota": "quién + va a."
+            },
+            {
+              "p": "Fixed phrase: _Who would have thought!_",
+              "r": "¡Quién lo iba a decir!",
+              "nota": "iba a."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5086
+    ],
+    "confunde": [
+      6186
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8151",
+      "kwiziq": true
+    }
+  ]
+}

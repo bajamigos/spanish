@@ -1,0 +1,226 @@
+{
+  "tema": 7990,
+  "slug": "veo-oigo-sin-poder",
+  "titulo": "Perception verbs without poder",
+  "subtitulo": "«Veo el mar desde aquí.» (not «puedo ver»)",
+  "foto": "t04.jpg",
+  "regla": "English often says _I can see, I can hear, I can smell, I can feel_. Spanish usually drops poder and uses the plain present: veo, oigo, huelo, siento. Poder is for real ability or possibility.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "With the senses, English likes _can_: _I **can** see the island_. Spanish just says what you perceive: **Veo la isla**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Sense",
+            "Verb",
+            "yo",
+            "tú",
+            "él / ella / usted"
+          ],
+          "filas": [
+            [
+              "_see_",
+              "ver",
+              "veo",
+              "ves",
+              "ve"
+            ],
+            [
+              "_hear_",
+              "oír",
+              "oigo",
+              "oyes",
+              "oye"
+            ],
+            [
+              "_hear / listen_",
+              "escuchar",
+              "escucho",
+              "escuchas",
+              "escucha"
+            ],
+            [
+              "_smell_",
+              "oler",
+              "huelo",
+              "hueles",
+              "huele"
+            ],
+            [
+              "_feel_",
+              "sentir",
+              "siento",
+              "sientes",
+              "siente"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Questions too: _Can you hear me?_ = **¿Me oyes?** or **¿Me escuchas?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Use **poder** only when the point is the **ability** or what's stopping it: **No puedo ver sin lentes** (_I can't see without glasses_), **Desde aquí no se puede ver el mar** (_the view is blocked_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Quick test: if _can_ adds nothing in English (_I can smell coffee_ = _I smell coffee_), drop **poder** in Spanish."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Veo== las islas Coronado desde la playa.",
+              "en": "I can see the Coronado Islands from the beach."
+            },
+            {
+              "es": "¿Me ==oyes==? Hay mucho ruido.",
+              "en": "Can you hear me? It's really noisy."
+            },
+            {
+              "es": "==Huele== a tacos de adobada.",
+              "en": "I can smell adobada tacos. (lit. _It smells of adobada tacos._)"
+            },
+            {
+              "es": "==Siento== el viento frío en la cara.",
+              "en": "I can feel the cold wind on my face."
+            },
+            {
+              "es": "¿==Ves== esa ola? Viene grande.",
+              "en": "Can you see that wave? It's a big one."
+            },
+            {
+              "es": "No ==oigo== nada con los audífonos.",
+              "en": "I can't hear anything with my headphones on."
+            },
+            {
+              "es": "Sin lentes no ==puedo ver== el pizarrón.",
+              "en": "Without glasses I can't see the board. (ability)"
+            },
+            {
+              "es": "==Escucho== la música de los vecinos.",
+              "en": "I can hear the neighbors' music."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Puedo ver**, **¿puedes oírme?** and **puedo oler** aren't wrong, but they sound translated. Spanish usually drops **poder**: **Veo la playa desde mi casa.** **¿Me oyes?** **Huelo el café.**"
+        },
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo olo las flores."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo huelo las flores."
+                }
+              ],
+              "nota": "oler: o > hue in the stressed forms."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "veo, ves",
+              "texto": "Conjugation: [[5306|ver]], [[5592|oír]], [[5491|oler]]."
+            },
+            {
+              "forma": "siento",
+              "texto": "Feeling with the body or heart: [[5775|sentir]], and [[7054|sentir vs sentirse]]."
+            },
+            {
+              "forma": "no puedo",
+              "texto": "When ability really matters: [[5564|poder]], [[5065|poder + infinitive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I can hear the sea._",
+              "r": "Oigo el mar. / Escucho el mar.",
+              "nota": "No poder."
+            },
+            {
+              "p": "In Spanish: _Can you see the mountain?_",
+              "r": "¿Ves la montaña?",
+              "nota": "Plain present question."
+            },
+            {
+              "p": "In Spanish: _I can smell something burning._",
+              "r": "Huelo algo quemado. / Huele a quemado.",
+              "nota": "huelo, from oler."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5306,
+      5592,
+      5491
+    ],
+    "confunde": [
+      5564
+    ],
+    "sigue": [
+      5775,
+      7054,
+      5065
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7990",
+      "kwiziq": true
+    }
+  ]
+}

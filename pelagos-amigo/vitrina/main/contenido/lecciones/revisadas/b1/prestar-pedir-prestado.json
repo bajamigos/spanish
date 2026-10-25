@@ -1,0 +1,205 @@
+{
+  "tema": 8427,
+  "slug": "prestar-pedir-prestado",
+  "titulo": "To lend and to borrow: prestar and pedir prestado",
+  "subtitulo": "¿Me prestas tu tabla? / Te pedí prestada la tabla.",
+  "foto": "t03.jpg",
+  "regla": "To lend = prestar (agrees with the lender): ¿me prestas…? To borrow = pedir prestado (prestado agrees with the thing): ¿te puedo pedir prestadas tus herramientas?",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "English has two verbs, _to lend_ and _to borrow_. Spanish uses **prestar** and **pedir prestado**:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "English",
+            "Spanish",
+            "Who's the subject"
+          ],
+          "filas": [
+            [
+              "to lend",
+              "prestar",
+              "the one who lends"
+            ],
+            [
+              "to borrow",
+              "pedir (algo) prestado",
+              "the one who borrows"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The most common way to ask to borrow something is actually with **prestar**: **¿me prestas tu pluma?** (_will you lend me your pen?_), often with **poder**: **¿me puedes prestar…?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "With **pedir prestado**, **prestado** works like an adjective and **agrees with the thing**: **prestado**, **prestada**, **prestados**, **prestadas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **prestar** gives; **pedir prestado** asks. And **prestado** dresses like the thing you borrowed."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿==Me prestas== tu pluma, por favor?",
+              "en": "Will you lend me your pen, please?"
+            },
+            {
+              "es": "¿==Me puedes prestar== tu tabla el sábado?",
+              "en": "Can you lend me your board on Saturday?"
+            },
+            {
+              "es": "Beto ==me prestó== su chamarra porque tenía frío.",
+              "en": "Beto lent me his jacket because I was cold."
+            },
+            {
+              "es": "¿Crees que Naomi nos ==prestaría== sus audífonos?",
+              "en": "Do you think Naomi would lend us her headphones?"
+            },
+            {
+              "es": "¿Te puedo ==pedir prestado== tu carro?",
+              "en": "Can I borrow your car?"
+            },
+            {
+              "es": "¿Te puedo ==pedir prestadas== tus herramientas?",
+              "en": "Can I borrow your tools?"
+            },
+            {
+              "es": "Mi vecina ==me pidió prestada== la aspiradora y no me la ha regresado.",
+              "en": "My neighbor borrowed my vacuum and hasn't given it back."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Te puedo prestar tu carro? (meaning _borrow_)"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Me prestas tu carro?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Te puedo pedir prestado tu carro?"
+                }
+              ],
+              "nota": "**Prestar** is _to lend_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Te pedí prestado las llaves."
+                },
+                {
+                  "v": "bien",
+                  "t": "Te pedí prestadas las llaves."
+                }
+              ],
+              "nota": "**Prestado** agrees with the thing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "pedir vs preguntar",
+              "texto": "_To ask for_ vs _to ask a question_: [[9343|pedir vs preguntar]]."
+            },
+            {
+              "forma": "me lo prestas",
+              "texto": "Two pronouns: [[5078|le / les become se]]."
+            },
+            {
+              "forma": "¿podrías…?",
+              "texto": "Polite requests: [[6713|podría]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Ask Beto: _Will you lend me 100 pesos?_",
+              "r": "¿Me prestas cien pesos?",
+              "nota": "prestar = lend."
+            },
+            {
+              "p": "In Spanish: _I borrowed his board._ (with pedir prestado)",
+              "r": "Le pedí prestada su tabla.",
+              "nota": "prestada agrees with tabla."
+            },
+            {
+              "p": "In Spanish: _She lent us the keys._",
+              "r": "Nos prestó las llaves.",
+              "nota": "prestar."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5851
+    ],
+    "confunde": [
+      9343
+    ],
+    "sigue": [
+      9343,
+      6713
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8427",
+      "kwiziq": true
+    }
+  ]
+}

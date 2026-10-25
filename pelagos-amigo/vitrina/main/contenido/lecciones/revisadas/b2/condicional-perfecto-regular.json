@@ -1,0 +1,269 @@
+{
+  "tema": 5186,
+  "slug": "condicional-perfecto-regular",
+  "titulo": "Perfect conditional: regular verbs",
+  "subtitulo": "Habría ido, habrías comido, habrían vivido.",
+  "foto": "t02.jpg",
+  "regla": "Perfect conditional = haber in the conditional (habría, habrías, habría, habríamos, habrían) + participle: habría ido = I would have gone. Nothing goes between habría and the participle. In speech, hubiera + participle often replaces it.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "habría / habrías / habría / habríamos / habrían",
+            "+ participle"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "haber (conditional)"
+          ],
+          "filas": [
+            [
+              "yo",
+              "habría"
+            ],
+            [
+              "tú",
+              "habrías"
+            ],
+            [
+              "él, ella, usted",
+              "habría"
+            ],
+            [
+              "nosotros",
+              "habríamos"
+            ],
+            [
+              "ustedes, ellos",
+              "habrían"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Regular participles: **-ado**, **-ido**. The participle never changes."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Habría** has an accent on the **í** in every person."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Uses: _would have done_ (**habría llamado**), the result of an impossible past condition (**si hubiera sabido, habría venido**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In Mexico, **hubiera** + participle is very common in the result clause too: **yo hubiera llamado**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: conditional of **haber** + **-ado / -ido**."
+        }
+      ]
+    },
+    {
+      "id": "tabla",
+      "titulo": "Full forms",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "llamar",
+            "comer",
+            "salir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "habría llamado",
+              "habría comido",
+              "habría salido"
+            ],
+            [
+              "tú",
+              "habrías llamado",
+              "habrías comido",
+              "habrías salido"
+            ],
+            [
+              "él, ella, usted",
+              "habría llamado",
+              "habría comido",
+              "habría salido"
+            ],
+            [
+              "nosotros",
+              "habríamos llamado",
+              "habríamos comido",
+              "habríamos salido"
+            ],
+            [
+              "ustedes, ellos",
+              "habrían llamado",
+              "habrían comido",
+              "habrían salido"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Yo te ==habría llamado==, pero no tenía tu número.",
+              "en": "I would have called you, but I didn't have your number."
+            },
+            {
+              "es": "¿Qué ==habrías comprado== tú?",
+              "en": "What would you have bought?"
+            },
+            {
+              "es": "Con más tiempo, ==habríamos terminado==.",
+              "en": "With more time, we would have finished."
+            },
+            {
+              "es": "Si hubieran salido antes, no ==habrían perdido== el vuelo.",
+              "en": "If they'd left earlier, they wouldn't have missed the flight."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Habria llamado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Habría llamado."
+                }
+              ],
+              "nota": "Accent on **í**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Habría no ido."
+                },
+                {
+                  "v": "bien",
+                  "t": "No habría ido."
+                }
+              ],
+              "nota": "Nothing in between."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Si habría sabido..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Si hubiera sabido..."
+                }
+              ],
+              "nota": "After **si**: **hubiera**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "habría hecho",
+              "texto": "[[5114|irregular participles]]."
+            },
+            {
+              "forma": "would have",
+              "texto": "[[6992|habría + participle]]."
+            },
+            {
+              "forma": "si hubiera...",
+              "texto": "[[7078|si + pluperfect subjunctive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Conjugate: _tú / ganar_",
+              "r": "habrías ganado",
+              "nota": "habrías + -ado."
+            },
+            {
+              "p": "Conjugate: _nosotros / aprender_",
+              "r": "habríamos aprendido",
+              "nota": "-ido."
+            },
+            {
+              "p": "In Spanish: _They would have helped._",
+              "r": "Habrían ayudado.",
+              "nota": "habrían + participle."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5731
+    ],
+    "confunde": [
+      5185
+    ],
+    "sigue": [
+      5114,
+      6992
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5186",
+      "kwiziq": true
+    }
+  ]
+}

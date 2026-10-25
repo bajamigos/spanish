@@ -1,0 +1,242 @@
+{
+  "tema": 6176,
+  "slug": "aquel-aquella-pronombre",
+  "titulo": "Aquel, aquella, aquellos, aquellas: that one over there",
+  "subtitulo": "¿Esa casa? No, aquella.",
+  "foto": "t07.jpg",
+  "regla": "For that one / those (ones) far from both speakers, or far back in time, use aquel, aquella, aquellos, aquellas, matching the noun. Aquello (neutral, no plural) is for an idea or a thing you can't name.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Spanish has three distances: **este** (here, near me), **ese** (there, near you) and **aquel** (over there, far from both of us)."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "Masculine",
+            "Feminine",
+            "Neutral"
+          ],
+          "filas": [
+            [
+              "Singular",
+              "**aquel**",
+              "**aquella**",
+              "**aquello**"
+            ],
+            [
+              "Plural",
+              "**aquellos**",
+              "**aquellas**",
+              "—"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Careful: the masculine singular is **aquel**, ending in -l. **Aquello** is only the neutral form."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Match the gender and number of the thing: la casa → **aquella**; los cerros → **aquellos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It also points far back in time: ¿Te acuerdas de **aquello**? (_that thing back then_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It often goes with **allá**: **aquel de allá**, **aquellas de allá**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **aquel** is the long arm: it reaches over there, past you and me."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ese barco no, ==aquel== de allá.",
+              "en": "Not that boat, that one over there."
+            },
+            {
+              "es": "Esta ola está chiquita; ==aquella== se ve mejor.",
+              "en": "This wave is tiny; that one over there looks better."
+            },
+            {
+              "es": "¿Cuáles cerros? ==Aquellos==, los de allá.",
+              "en": "Which hills? Those, the ones over there."
+            },
+            {
+              "es": "De todas las casas de la calle, la mía es ==aquella== del fondo.",
+              "en": "Of all the houses on the street, mine is that one at the end."
+            },
+            {
+              "es": "Mis tenis no son esos; son ==aquellos==.",
+              "en": "My sneakers aren't those; they're those over there."
+            },
+            {
+              "es": "¿Te acuerdas de ==aquello== que pasó en la fiesta?",
+              "en": "Do you remember what happened at the party?"
+            },
+            {
+              "es": "==Aquellas== son las montañas de Tecate.",
+              "en": "Those over there are the Tecate mountains."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Prefiero aquello. (el carro)"
+                },
+                {
+                  "v": "bien",
+                  "t": "Prefiero aquel."
+                }
+              ],
+              "nota": "**Aquello** is only for ideas or unknown things."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero aquel uno."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero aquel."
+                }
+              ],
+              "nota": "No word for _one_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Las sillas? Quiero aquellos."
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Las sillas? Quiero aquellas."
+                }
+              ],
+              "nota": "Sillas are feminine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Aquelo es mi carro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Aquel es mi carro."
+                }
+              ],
+              "nota": "Masculine singular ends in -l."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "aquel carro",
+              "texto": "With a noun after it: [[6062|aquel, aquella + noun]]."
+            },
+            {
+              "forma": "este, ese, aquel",
+              "texto": "Choosing by distance: [[6862|este, ese and aquel]]."
+            },
+            {
+              "forma": "ese, eso",
+              "texto": "The middle distance: [[6060|ese, esa, eso]]."
+            },
+            {
+              "forma": "este, esto",
+              "texto": "The near one: [[6055|esto, este, esta]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Not this house, that one over there._",
+              "r": "Esta casa no, aquella.",
+              "nota": "casa → aquella."
+            },
+            {
+              "p": "In Spanish (los cerros): _Those over there are very high._",
+              "r": "Aquellos son muy altos.",
+              "nota": "Masculine plural."
+            },
+            {
+              "p": "Fix it (la tabla): _¿Cuál? Aquel._",
+              "r": "¿Cuál? Aquella.",
+              "nota": "Tabla is feminine."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6062,
+      6055
+    ],
+    "confunde": [
+      6060
+    ],
+    "sigue": [
+      6862
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6176",
+      "kwiziq": true
+    }
+  ]
+}

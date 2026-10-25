@@ -1,0 +1,218 @@
+{
+  "tema": 9212,
+  "slug": "yo-que-tu",
+  "titulo": "Yo que tú / si yo fuera tú / yo de ti = if I were you",
+  "subtitulo": "Yo que tú, la llamaría.",
+  "foto": "t08.jpg",
+  "regla": "If I were you: si yo fuera tú, yo que tú, yo de ti, yo en tu lugar, followed by the conditional (llamaría) or perfect conditional (habría llamado / hubiera llamado). They're fixed phrases; don't mix them.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "si yo fuera tú",
+              "texto": "Literal _if I were you_ (imperfect subjunctive of **ser**)."
+            },
+            {
+              "forma": "yo que tú",
+              "texto": "Idiomatic, very common in Mexico."
+            },
+            {
+              "forma": "yo en tu lugar",
+              "texto": "_in your place_, common too."
+            },
+            {
+              "forma": "yo de ti",
+              "texto": "Idiomatic; you'll hear it less in Mexico."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Then the **conditional** (**llamaría**) or, for the past, the **perfect conditional** (**habría llamado**) or **hubiera** + participle."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Fixed phrases: **yo que tú** and **yo de ti** have no **si**; and it's **que tú** but **de ti**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **yo que tú** = put me in your shoes."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Si yo fuera tú==, llamaría a la policía ahorita mismo.",
+              "en": "If I were you, I'd call the police right now."
+            },
+            {
+              "es": "==Si yo fuera tú==, lo habría dejado plantado en el altar.",
+              "en": "If I were you, I'd have left him at the altar."
+            },
+            {
+              "es": "==Yo que tú==, me disculparía antes de que sea tarde.",
+              "en": "If I were you, I'd apologize before it's too late."
+            },
+            {
+              "es": "==Yo que tú==, le habría dicho la verdad.",
+              "en": "If I were you, I'd have told him the truth."
+            },
+            {
+              "es": "==Yo de ti==, hablaría con ellos para aclarar las cosas.",
+              "en": "If I were you, I'd talk to them to clear things up."
+            },
+            {
+              "es": "==Yo en tu lugar==, aceptaría esa oferta.",
+              "en": "In your place, I'd take that offer."
+            },
+            {
+              "es": "==Yo que tú== hubiera aceptado su oferta.",
+              "en": "If I were you, I'd have accepted their offer."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Si yo que tú, no iría."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo que tú, no iría."
+                }
+              ],
+              "nota": "No **si**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo que ti no iría."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo que tú no iría."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo de tú no iría."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo de ti no iría."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Si yo era tú, ..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Si yo fuera tú, ..."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "si tuviera, iría",
+              "texto": "[[5120|hypothetical si]]."
+            },
+            {
+              "forma": "habría hecho",
+              "texto": "[[6992|would have]]."
+            },
+            {
+              "forma": "te recomendaría que",
+              "texto": "[[8580|advice in the conditional]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish (yo que tú): _If I were you, I'd rest._",
+              "r": "Yo que tú, descansaría.",
+              "nota": "Conditional."
+            },
+            {
+              "p": "In Spanish: _If I were you, I wouldn't have bought it._",
+              "r": "Si yo fuera tú, no lo habría comprado. / Yo que tú, no lo hubiera comprado.",
+              "nota": "Perfect conditional."
+            },
+            {
+              "p": "Fix it: _Yo de tú, no le hablaría._",
+              "r": "Yo de ti, no le hablaría.",
+              "nota": "de ti."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5120
+    ],
+    "confunde": [
+      8580
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9212",
+      "kwiziq": true
+    }
+  ]
+}

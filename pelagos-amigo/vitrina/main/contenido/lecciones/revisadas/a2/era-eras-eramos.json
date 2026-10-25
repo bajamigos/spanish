@@ -1,0 +1,249 @@
+{
+  "tema": 5088,
+  "slug": "era-eras-eramos",
+  "titulo": "Ser in the imperfect",
+  "subtitulo": "Cuando era niño, era muy tímido.",
+  "foto": "t01.jpg",
+  "regla": "Ser is irregular in the imperfect: era, eras, era, éramos, eran. Yo and él/ella share era, and éramos carries an accent.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Ser** is one of only **three** irregular verbs in the imperfect (with **ir** and **ver**)."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "ser"
+          ],
+          "filas": [
+            [
+              "yo",
+              "era"
+            ],
+            [
+              "tú",
+              "eras"
+            ],
+            [
+              "él / ella / usted",
+              "era"
+            ],
+            [
+              "nosotros",
+              "éramos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "eran"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Yo** and **él / ella / usted** share the same form: **era**. Add the subject if it isn't clear."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Éramos** has a **written accent**; the others don't."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Use it to describe people, places and things in the past, to say what someone used to be, and to give the time in the past: **Eran las tres.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: no **-aba**, no **-ía**: just **er-** + **a**. Short and sweet."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Cuando ==era== niño, ==era== muy tímido.",
+              "en": "When I was a kid, I was very shy."
+            },
+            {
+              "es": "Mi abuela ==era== maestra en Mexicali.",
+              "en": "My grandma was a teacher in Mexicali."
+            },
+            {
+              "es": "==Eran== las seis de la mañana y ya había gente en el agua.",
+              "en": "It was six in the morning and there were already people in the water."
+            },
+            {
+              "es": "¿Tú ==eras== el más alto de tu salón?",
+              "en": "Were you the tallest in your class?"
+            },
+            {
+              "es": "Mi hermano y yo ==éramos== inseparables.",
+              "en": "My brother and I were inseparable."
+            },
+            {
+              "es": "Esta colonia ==era== muy tranquila antes.",
+              "en": "This neighborhood used to be very quiet."
+            },
+            {
+              "es": "Ustedes ==eran== vecinos, ¿verdad?",
+              "en": "You guys used to be neighbors, right?"
+            },
+            {
+              "es": "La casa ==era== vieja, pero el jardín ==era== enorme.",
+              "en": "The house was old, but the garden was huge."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros eramos amigos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros éramos amigos."
+                }
+              ],
+              "nota": "Accent: **éramos**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo eraba muy flaco."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo era muy flaco."
+                }
+              ],
+              "nota": "No -aba: ser is irregular."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cuando fui niño, vivía en Tecate."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cuando era niño, vivía en Tecate."
+                }
+              ],
+              "nota": "Childhood is background: **era**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Fueron las diez cuando llegué."
+                },
+                {
+                  "v": "bien",
+                  "t": "Eran las diez cuando llegué."
+                }
+              ],
+              "nota": "Time in the past: **eran**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "soy, eres",
+              "texto": "The present first: [[5070|ser in the present]]."
+            },
+            {
+              "forma": "fue",
+              "texto": "The other past of ser: [[5107|ir and ser in the preterite]]."
+            },
+            {
+              "forma": "iba, veía",
+              "texto": "The other two irregulars: [[5269|ir]] and [[5268|ver]] in the imperfect."
+            },
+            {
+              "forma": "era alto",
+              "texto": "What it's for: [[6002|the imperfect to describe the past]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We were very young._",
+              "r": "Éramos muy jóvenes.",
+              "nota": "Accent on É."
+            },
+            {
+              "p": "In Spanish: _It was two o'clock._",
+              "r": "Eran las dos.",
+              "nota": "Time: eran."
+            },
+            {
+              "p": "Fix it: _Mi papá eraba carpintero._",
+              "r": "Mi papá era carpintero.",
+              "nota": "era."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5070
+    ],
+    "confunde": [
+      5107
+    ],
+    "sigue": [
+      5269,
+      5268,
+      6002
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5088",
+      "kwiziq": true
+    }
+  ]
+}

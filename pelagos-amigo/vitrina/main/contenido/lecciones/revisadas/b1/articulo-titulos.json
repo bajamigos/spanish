@@ -1,0 +1,210 @@
+{
+  "tema": 8431,
+  "slug": "articulo-titulos",
+  "titulo": "Using the definite article or not with titles",
+  "subtitulo": "El señor Ramírez está aquí / Señor Ramírez, pase.",
+  "foto": "t02.jpg",
+  "regla": "Talking about someone with señor, señora, señorita: use the article (el señor Ramírez). Talking to them: no article (Señor Ramírez, pase). Don / doña never take the article.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "When you talk **about** someone using their title (**señor**, **señora**, **señorita**, **doctor**, **profesor**), use the definite article: **el señor Ramírez**, **la doctora Sánchez**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "When you talk **to** the person directly, drop the article: **Señor Ramírez, pase a mi oficina.**"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Talking about",
+            "Talking to"
+          ],
+          "filas": [
+            [
+              "El señor Ramírez está en la sala.",
+              "Señor Ramírez, pase."
+            ],
+            [
+              "La doctora Pérez llamó.",
+              "Doctora Pérez, buenos días."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It works with the last name alone or with the full name: **el señor Miguel Ramos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Don** and **doña** are similar titles of respect, used with the **first name**, and they **never** take the article: **don Pedro**, **doña Luisa**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: about someone, **el**; to someone, no **el**; **don** and **doña**, never."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==El señor Ramírez== está en la sala de espera.",
+              "en": "Mr. Ramírez is in the waiting room."
+            },
+            {
+              "es": "==La señora Sánchez== tiene que firmar los papeles.",
+              "en": "Mrs. Sánchez has to sign the papers."
+            },
+            {
+              "es": "==La señorita Mireles== ya no trabaja aquí.",
+              "en": "Miss Mireles doesn't work here anymore."
+            },
+            {
+              "es": "==El señor Miguel Ramos== le habló dos veces.",
+              "en": "Mr. Miguel Ramos called you twice."
+            },
+            {
+              "es": "==Señor Ramírez==, pase a mi oficina.",
+              "en": "Mr. Ramírez, come into my office."
+            },
+            {
+              "es": "==Don Pedro== me prestó su escalera.",
+              "en": "Don Pedro lent me his ladder."
+            },
+            {
+              "es": "Buenos días, ==doña Luisa==.",
+              "en": "Good morning, doña Luisa."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Señora Sánchez llamó ayer."
+                },
+                {
+                  "v": "bien",
+                  "t": "La señora Sánchez llamó ayer."
+                }
+              ],
+              "nota": "Talking about her: **la**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Buenos días, el señor Ramírez."
+                },
+                {
+                  "v": "bien",
+                  "t": "Buenos días, señor Ramírez."
+                }
+              ],
+              "nota": "Talking to him: no article."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El don Pedro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Don Pedro."
+                }
+              ],
+              "nota": "Never with **don / doña**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el café",
+              "texto": "Articles with general nouns: [[7181|presence of articles]]."
+            },
+            {
+              "forma": "los García",
+              "texto": "Surnames don't go plural: [[8891|surnames]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Dr. Morales is busy._ (female)",
+              "r": "La doctora Morales está ocupada.",
+              "nota": "Talking about her: la."
+            },
+            {
+              "p": "Greet her directly: _Good afternoon, Dr. Morales._",
+              "r": "Buenas tardes, doctora Morales.",
+              "nota": "No article."
+            },
+            {
+              "p": "Fix it: **La doña Luisa vende tamales.**",
+              "r": "Doña Luisa vende tamales.",
+              "nota": "No article with doña."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7181
+    ],
+    "confunde": [
+      7181
+    ],
+    "sigue": [
+      8891
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8431",
+      "kwiziq": true
+    }
+  ]
+}

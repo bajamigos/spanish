@@ -1,0 +1,273 @@
+{
+  "tema": 5109,
+  "slug": "trabaje-preterito-ar",
+  "titulo": "Regular -ar verbs in the preterite",
+  "subtitulo": "Ayer trabajé y Beto descansó.",
+  "foto": "t04.jpg",
+  "regla": "To form the preterite of a regular -ar verb, drop -ar and add -é, -aste, -ó, -amos, -aron. The accents on -é and -ó are essential: hablo is I speak, habló is he spoke.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "The preterite tells what happened and finished: **ayer**, **anoche**, **el sábado**, **la semana pasada**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "habl-",
+            "+",
+            "-é / -aste / -ó / -amos / -aron"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Ending",
+            "hablar",
+            "surfear"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**-é**",
+              "hablé",
+              "surfeé"
+            ],
+            [
+              "tú",
+              "**-aste**",
+              "hablaste",
+              "surfeaste"
+            ],
+            [
+              "él, ella, usted",
+              "**-ó**",
+              "habló",
+              "surfeó"
+            ],
+            [
+              "nosotros",
+              "**-amos**",
+              "hablamos",
+              "surfeamos"
+            ],
+            [
+              "ellos, ustedes",
+              "**-aron**",
+              "hablaron",
+              "surfearon"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The accent changes the meaning: **hablo** (_I speak_) vs **habló** (_he spoke_); **hable** vs **hablé** (_I spoke_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Nosotros** is the same as the present: **hablamos** = _we speak_ or _we spoke_. Context (**ayer**, **el año pasado**) tells you which."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Stem changes from the present disappear: **pensar** → **pensé**, **contar** → **conté**, **jugar** → **jugué**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Spelling in **yo** only: **-car → qué** (busqué), **-gar → gué** (llegué), **-zar → cé** (empecé)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the **ó** is a finish line. Once you cross it, the action is over."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ayer ==trabajé== diez horas en el taller.",
+              "en": "Yesterday I worked ten hours at the shop."
+            },
+            {
+              "es": "¿==Hablaste== con tu jefe?",
+              "en": "Did you talk to your boss?"
+            },
+            {
+              "es": "Mi hermano ==compró== una tabla nueva en Rosarito.",
+              "en": "My brother bought a new board in Rosarito."
+            },
+            {
+              "es": "El sábado ==entrenamos== dos horas.",
+              "en": "On Saturday we trained for two hours."
+            },
+            {
+              "es": "Mis vecinos ==plantaron== cilantro en el patio.",
+              "en": "My neighbors planted cilantro in the yard."
+            },
+            {
+              "es": "Anoche ==miré== tres capítulos de _The Expanse_.",
+              "en": "Last night I watched three episodes of The Expanse."
+            },
+            {
+              "es": "¿A qué hora ==llegaron== ustedes?",
+              "en": "What time did you guys arrive?"
+            },
+            {
+              "es": "La clase ==terminó== tarde.",
+              "en": "Class ended late."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer hablo con mi mamá."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer hablé con mi mamá."
+                }
+              ],
+              "nota": "yo in the preterite: **-é**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella compro tortillas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella compró tortillas."
+                }
+              ],
+              "nota": "Without the accent, it means _I buy_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tú hablastes con él."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tú hablaste con él."
+                }
+              ],
+              "nota": "No **s** at the end of **-aste**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer piensé en ti."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer pensé en ti."
+                }
+              ],
+              "nota": "No stem change in the -ar preterite."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "comí, viví",
+              "texto": "The other endings: [[5230|-er and -ir verbs in the preterite]]."
+            },
+            {
+              "forma": "busqué, llegué, empecé",
+              "texto": "Spelling changes in yo: [[5256|-car]], [[5845|-gar]], [[5844|-zar]]."
+            },
+            {
+              "forma": "ayer trabajé",
+              "texto": "When to use it: [[6004|the preterite for completed actions]]."
+            },
+            {
+              "forma": "trabajaba",
+              "texto": "Not to confuse with: [[5263|-ar verbs in the imperfect]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Yesterday I cooked for my family._",
+              "r": "Ayer cociné para mi familia.",
+              "nota": "cocinar → cociné."
+            },
+            {
+              "p": "In Spanish: _They arrived late._",
+              "r": "Llegaron tarde.",
+              "nota": "-aron."
+            },
+            {
+              "p": "Fix it: _Mi papá trabajo en Tecate el año pasado._",
+              "r": "Mi papá trabajó en Tecate el año pasado.",
+              "nota": "Accent on the ó."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      5263
+    ],
+    "sigue": [
+      5230,
+      5256,
+      5845,
+      5844,
+      6004
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5109",
+      "kwiziq": true
+    }
+  ]
+}

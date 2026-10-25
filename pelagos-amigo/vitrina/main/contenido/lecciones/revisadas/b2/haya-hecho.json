@@ -1,0 +1,252 @@
+{
+  "tema": 5163,
+  "slug": "haya-hecho",
+  "titulo": "Present perfect subjunctive: hacer, escribir, poner and other irregulars",
+  "subtitulo": "Haya hecho, hayas puesto, hayan escrito.",
+  "foto": "t10.jpg",
+  "regla": "Haber is the same for every verb in the present perfect subjunctive (haya, hayas, haya, hayamos, hayan); irregular verbs just have irregular participles: haya hecho, hayas puesto, hayan escrito, hayamos visto.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Haya, hayas, haya, hayamos, hayan** + the participle. Only the participle can be irregular."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Infinitive",
+            "Participle"
+          ],
+          "filas": [
+            [
+              "hacer",
+              "hecho"
+            ],
+            [
+              "decir",
+              "dicho"
+            ],
+            [
+              "poner",
+              "puesto"
+            ],
+            [
+              "ver",
+              "visto"
+            ],
+            [
+              "escribir",
+              "escrito"
+            ],
+            [
+              "volver",
+              "vuelto"
+            ],
+            [
+              "romper",
+              "roto"
+            ],
+            [
+              "abrir",
+              "abierto"
+            ],
+            [
+              "morir",
+              "muerto"
+            ],
+            [
+              "cubrir",
+              "cubierto"
+            ],
+            [
+              "resolver",
+              "resuelto"
+            ],
+            [
+              "freír",
+              "frito / freído"
+            ],
+            [
+              "satisfacer",
+              "satisfecho"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if the participle is irregular in **he hecho**, it's irregular in **haya hecho** too."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Es probable que ==haya hecho== toda la tarea antes del concierto.",
+              "en": "I'll probably have done all my homework before the concert."
+            },
+            {
+              "es": "No creo que ==hayas puesto== los libros en el lugar equivocado.",
+              "en": "I don't think you've put the books in the wrong place."
+            },
+            {
+              "es": "No pienso que ==haya escrito== la reseña para ese periódico.",
+              "en": "I don't think she wrote the review for that newspaper."
+            },
+            {
+              "es": "Es posible que ==hayamos frito== demasiado las papas.",
+              "en": "We may have fried the potatoes too much."
+            },
+            {
+              "es": "Tal vez ==hayan visto== la película sin subtítulos.",
+              "en": "Maybe they saw the movie without subtitles."
+            },
+            {
+              "es": "Es genial que ustedes ==hayan hecho== todo eso solos.",
+              "en": "It's great that you did all that on your own."
+            },
+            {
+              "es": "Ojalá no se ==haya roto== nada.",
+              "en": "I hope nothing broke."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tal-vez",
+      "titulo": "Tal vez",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Tal vez** accepts both moods with no change in meaning: **tal vez he visto** / **tal vez haya visto** (_I may have seen_)."
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Haya hacido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Haya hecho."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hayas ponido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hayas puesto."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hayan escribido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hayan escrito."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "haya hablado",
+              "texto": "[[5076|regular verbs]]."
+            },
+            {
+              "forma": "-to, -cho",
+              "texto": "[[7048|irregular participles]]."
+            },
+            {
+              "forma": "tal vez",
+              "texto": "[[5084|tal vez / quizás]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Conjugate: _yo / decir_",
+              "r": "haya dicho",
+              "nota": "dicho."
+            },
+            {
+              "p": "Conjugate: _nosotros / volver_",
+              "r": "hayamos vuelto",
+              "nota": "vuelto."
+            },
+            {
+              "p": "In Spanish: _I hope you've written to her._ (tú)",
+              "r": "Espero que le hayas escrito.",
+              "nota": "escrito."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5076,
+      7048
+    ],
+    "confunde": [
+      5066
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5163",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "tema": 7028,
+  "slug": "protejo-dirijo-ger-gir",
+  "titulo": "-ger and -gir verbs in the present: g > j in yo",
+  "subtitulo": "«Yo recojo a los niños; tú escoges la película.»",
+  "foto": "t10.jpg",
+  "regla": "Verbs ending in -ger or -gir (proteger, escoger, recoger, dirigir, exigir) change g to j only in the yo form of the present: protejo, escojo, dirijo. All other forms keep the g: proteges, dirige, recogemos.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "In **-ger** and **-gir** verbs, **yo** changes **g** to **j**. The **j** keeps the soft sound; **go** would sound hard."
+        },
+        {
+          "tipo": "texto",
+          "texto": "All the **other persons keep the g**. The endings are regular."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "proteger",
+            "dirigir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "prote**j**o",
+              "diri**j**o"
+            ],
+            [
+              "tú",
+              "proteges",
+              "diriges"
+            ],
+            [
+              "él / ella / usted",
+              "protege",
+              "dirige"
+            ],
+            [
+              "nosotros",
+              "protegemos",
+              "dirigimos"
+            ],
+            [
+              "ustedes / ellos / ellas",
+              "protegen",
+              "dirigen"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Same pattern: **escoger** (escojo), **recoger** (recojo), **exigir** (exijo), **fingir** (finjo)."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Yo ==recojo== a mis hijos a las dos.",
+              "en": "I pick up my kids at two."
+            },
+            {
+              "es": "Siempre ==escojo== la tabla más grande.",
+              "en": "I always choose the biggest board."
+            },
+            {
+              "es": "Yo ==dirijo== la clase de los martes.",
+              "en": "I lead the Tuesday class."
+            },
+            {
+              "es": "El casco ==protege== la cabeza.",
+              "en": "The helmet protects your head."
+            },
+            {
+              "es": "¿Tú ==escoges== la película hoy?",
+              "en": "Are you choosing the movie today?"
+            },
+            {
+              "es": "Nosotros ==recogemos== los jitomates del jardín.",
+              "en": "We pick the tomatoes from the garden."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo protego a mi familia."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo protejo a mi familia."
+                }
+              ],
+              "nota": "yo: g > j."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo recogo la basura."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo recojo la basura."
+                }
+              ],
+              "nota": "recoger: recojo."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tú protejes a tu hermano."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tú proteges a tu hermano."
+                }
+              ],
+              "nota": "Only yo has j."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "protegemos, dirigimos",
+              "texto": "Regular endings: [[5540|-er verbs]] and [[5108|-ir verbs]]."
+            },
+            {
+              "forma": "corrijo, elijo",
+              "texto": "g > j plus e > i: [[5846|corregir and elegir]]."
+            },
+            {
+              "forma": "venzo",
+              "texto": "Another spelling change in yo: [[5929|c > z in -cer/-cir verbs]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I choose the red one._",
+              "r": "Escojo el rojo.",
+              "nota": "escoger: escojo."
+            },
+            {
+              "p": "In Spanish: _She protects the plants._",
+              "r": "Ella protege las plantas.",
+              "nota": "Only yo has j."
+            },
+            {
+              "p": "Fix it: _Yo exigo una respuesta._",
+              "r": "Yo exijo una respuesta.",
+              "nota": "yo: g > j."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5540,
+      5108
+    ],
+    "confunde": [
+      5929
+    ],
+    "sigue": [
+      5846
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7028",
+      "kwiziq": true
+    }
+  ]
+}

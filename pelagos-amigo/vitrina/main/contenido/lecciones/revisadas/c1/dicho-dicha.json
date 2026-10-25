@@ -1,0 +1,198 @@
+{
+  "tema": 6600,
+  "slug": "dicho-dicha",
+  "titulo": "Dicho, dicha, dichos, dichas = said, the aforementioned",
+  "subtitulo": "Firmó el contrato. Dicho contrato...",
+  "foto": "t07.jpg",
+  "regla": "Dicho / dicha / dichos / dichas is a formal demonstrative meaning this, said, the aforementioned, for something just mentioned: Dicho director lleva años aquí. It agrees with the noun and takes no article. Typical of reports, legal and news language.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "dicho / dicha / dichos / dichas",
+            "+ noun just mentioned"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Means _this, said, the aforementioned_. Formal written style."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Agrees with the noun; **no article** in front: **dicha empresa**, not ~~la dicha empresa~~."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Also: **dicho esto** = _that said_; **dicho y hecho** = _no sooner said than done_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **dicho** = _already said_, so it points back."
+        }
+      ]
+    },
+    {
+      "id": "tabla",
+      "titulo": "Forms",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "masculine",
+            "feminine"
+          ],
+          "filas": [
+            [
+              "singular",
+              "dicho",
+              "dicha"
+            ],
+            [
+              "plural",
+              "dichos",
+              "dichas"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "El señor Ramírez es el director de la empresa. ==Dicho director== trabaja aquí desde hace años.",
+              "en": "Mr. Ramírez is the company director. Said director has worked here for years."
+            },
+            {
+              "es": "Bimbo aumenta sus ventas cada año. ==Dicha compañía== es líder en pan de caja.",
+              "en": "Bimbo increases its sales every year. The company leads in sliced bread."
+            },
+            {
+              "es": "Hay que firmar los papeles del divorcio. ==Dichos documentos== deben guardarse en un lugar seguro.",
+              "en": "The divorce papers must be signed. These documents must be kept somewhere safe."
+            },
+            {
+              "es": "Todos deberíamos usar focos ahorradores. ==Dichos focos== duran más.",
+              "en": "We should all use energy-saving bulbs. These bulbs last longer."
+            },
+            {
+              "es": "==Dicho esto==, pasemos al siguiente punto.",
+              "en": "That said, let's move on to the next point."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La dicha empresa..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Dicha empresa..."
+                }
+              ],
+              "nota": "No article."
+            },
+            {
+              "filas": [
+                {
+                  "v": "formal",
+                  "t": "Dicho edificio fue construido en 1920."
+                },
+                {
+                  "v": "cotidiano",
+                  "t": "Ese edificio lo construyeron en 1920."
+                }
+              ],
+              "nota": "In conversation, **este / ese**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "demonstratives",
+              "texto": "[[5094|este, esta]], [[6060|ese, esa]]."
+            },
+            {
+              "forma": "passive",
+              "texto": "[[7070|passive with ser]] for formal style."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Formal: _The museum opened in 1964. This museum..._",
+              "r": "El museo abrió en 1964. Dicho museo...",
+              "nota": "dicho + masculine."
+            },
+            {
+              "p": "Formal: _...the aforementioned measures_",
+              "r": "dichas medidas",
+              "nota": "Plural feminine."
+            },
+            {
+              "p": "Fix it: _Los dichos datos son falsos._",
+              "r": "Dichos datos son falsos.",
+              "nota": "No article."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5094,
+      6060
+    ],
+    "confunde": [],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6600",
+      "kwiziq": true
+    }
+  ]
+}

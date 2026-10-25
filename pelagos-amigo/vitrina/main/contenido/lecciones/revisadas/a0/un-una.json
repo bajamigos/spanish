@@ -1,0 +1,204 @@
+{
+  "tema": 5104,
+  "slug": "un-una",
+  "titulo": "A / an: un, una",
+  "subtitulo": "Un carro, una tabla.",
+  "foto": "t09.jpg",
+  "regla": "To say a/an before a singular noun, use un with masculine nouns and una with feminine nouns. Before a noun it is always un, never uno.",
+  "comparada_kwiziq": "2026-10-17",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Every Spanish noun is **masculine** or **feminine**. The word for _a/an_ matches it."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Noun",
+            "A / an",
+            "Example"
+          ],
+          "filas": [
+            [
+              "masculine",
+              "un",
+              "un carro"
+            ],
+            [
+              "feminine",
+              "una",
+              "una casa"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Uno** is the number _one_ standing alone: **quiero uno**. Right before a noun it shrinks to **un**: **un taco**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Learn each noun with its article: **un día**, **una mano**, **un problema**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Tengo ==un== carro viejo.",
+              "en": "I have an old car."
+            },
+            {
+              "es": "Quiero ==una== tabla de surf nueva.",
+              "en": "I want a new surfboard."
+            },
+            {
+              "es": "Necesito ==un== café.",
+              "en": "I need a coffee."
+            },
+            {
+              "es": "Ella tiene ==una== idea excelente.",
+              "en": "She has an excellent idea."
+            },
+            {
+              "es": "Mi papá tiene ==un== jardín pequeño.",
+              "en": "My dad has a small garden."
+            },
+            {
+              "es": "Es ==una== playa muy bonita.",
+              "en": "It's a very pretty beach."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tengo uno carro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tengo un carro."
+                }
+              ],
+              "nota": "Before a noun: **un**, never **uno**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero un cerveza."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero una cerveza."
+                }
+              ],
+              "nota": "**Cerveza** is feminine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tengo una problema."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tengo un problema."
+                }
+              ],
+              "nota": "**Problema** is masculine, despite the -a."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el, la",
+              "texto": "_The_ instead of _a_: [[5100|el, la]]."
+            },
+            {
+              "forma": "unos, unas",
+              "texto": "In the plural: [[6604|unos, unas = some]]."
+            },
+            {
+              "forma": "soy maestro",
+              "texto": "With professions, no **un/una**: [[6131|zero article]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _a house_",
+              "r": "una casa",
+              "nota": "casa is feminine."
+            },
+            {
+              "p": "In Spanish: _I need a pen._",
+              "r": "Necesito una pluma.",
+              "nota": "pluma is feminine."
+            },
+            {
+              "p": "Fix it: _Tengo uno perro._",
+              "r": "Tengo un perro.",
+              "nota": "un before a noun."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      6131
+    ],
+    "sigue": [
+      5100,
+      6604
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5104",
+      "kwiziq": true
+    }
+  ]
+}

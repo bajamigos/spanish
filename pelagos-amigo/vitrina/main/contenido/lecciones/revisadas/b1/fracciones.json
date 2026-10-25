@@ -1,0 +1,231 @@
+{
+  "tema": 7152,
+  "slug": "fracciones",
+  "titulo": "Expressing fractions",
+  "subtitulo": "Un tercio, dos quintos, la mitad, el doble.",
+  "foto": "t07.jpg",
+  "regla": "Fractions: cardinal + ordinal number like English (un cuarto, dos quintos); 1/2 = la mitad, 1/3 = un tercio; double = el doble. Plural when the top number is more than one.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Don't mix up **fractions** (a part of a whole: _half, a third, a quarter_) and **ordinal numbers** (an order: _1st, 2nd, 3rd_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Fractions work like English: a **cardinal** number on top and an **ordinal** below: **un quinto** (_one fifth_), **dos quintos** (_two fifths_)."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Fraction",
+            "Spanish"
+          ],
+          "filas": [
+            [
+              "1/2",
+              "un medio / la mitad"
+            ],
+            [
+              "1/3",
+              "un tercio"
+            ],
+            [
+              "1/4",
+              "un cuarto"
+            ],
+            [
+              "1/5",
+              "un quinto"
+            ],
+            [
+              "2/3",
+              "dos tercios"
+            ],
+            [
+              "3/4",
+              "tres cuartos"
+            ],
+            [
+              "1/10",
+              "un décimo"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Like in English, the bottom number is **plural** when the top number is more than one: **dos tercios**, **tres cuartos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Third** in a fraction is **tercio**, not **tercero**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "For _half_ and _double_ use the article: **la mitad** (_half_), **el doble** (_double_). **La mitad de la pizza**, **el doble de dinero**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **la mitad** for half, **el doble** for twice. The rest, count them like English."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Me comí ==dos tercios== de la pizza.",
+              "en": "I ate two thirds of the pizza."
+            },
+            {
+              "es": "==Un cuarto== de la población votó en contra.",
+              "en": "A quarter of the population voted against."
+            },
+            {
+              "es": "Solo puse ==la mitad== de la harina.",
+              "en": "I only put in half the flour."
+            },
+            {
+              "es": "Ahora gano ==el doble== que antes.",
+              "en": "Now I earn double what I used to."
+            },
+            {
+              "es": "Faltan ==tres cuartos== de hora para la marea alta.",
+              "en": "There are three quarters of an hour until high tide."
+            },
+            {
+              "es": "==Un quinto== del huerto es para hierbas.",
+              "en": "A fifth of the garden is for herbs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Un tercero de la pizza."
+                },
+                {
+                  "v": "bien",
+                  "t": "Un tercio de la pizza."
+                }
+              ],
+              "nota": "Fractions: **tercio**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Dos quinto."
+                },
+                {
+                  "v": "bien",
+                  "t": "Dos quintos."
+                }
+              ],
+              "nota": "Plural when the top is more than one."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Medio de la clase."
+                },
+                {
+                  "v": "bien",
+                  "t": "La mitad de la clase."
+                }
+              ],
+              "nota": "_Half of_ = **la mitad de**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "primero, segundo",
+              "texto": "Ordinal numbers: [[7153|1st to 10th]], [[10517|ordinals for events]]."
+            },
+            {
+              "forma": "el veinte por ciento",
+              "texto": "Percentages: [[9923|percentages]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _a third of the money_",
+              "r": "un tercio del dinero",
+              "nota": "tercio."
+            },
+            {
+              "p": "In Spanish: _half of the team_",
+              "r": "la mitad del equipo",
+              "nota": "la mitad de."
+            },
+            {
+              "p": "In Spanish: _three fifths_",
+              "r": "tres quintos",
+              "nota": "plural."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7153
+    ],
+    "confunde": [
+      7153
+    ],
+    "sigue": [
+      9923,
+      10517
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7152",
+      "kwiziq": true
+    }
+  ]
+}

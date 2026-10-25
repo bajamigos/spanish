@@ -1,0 +1,222 @@
+{
+  "tema": 6728,
+  "slug": "el-problema-el-tema",
+  "titulo": "Nouns ending in -ma (Greek origin)",
+  "subtitulo": "El problema, el tema, el sistema.",
+  "foto": "t06.jpg",
+  "regla": "Nouns in -ma that come from Greek are masculine even though they end in -a: el problema, el tema, el sistema, el idioma, el clima. Their plural just adds -s: los problemas. Other -ma nouns are feminine as usual: la cama, la forma.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Most nouns in **-a** are feminine, but nouns in **-ma** that come from **Greek** are **masculine**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The common ones: **el problema, el tema, el sistema, el programa, el idioma, el clima, el poema, el drama, el dilema, el esquema, el síntoma, el diploma**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Adjectives and articles go **masculine**: **un problema serio**, **este tema**, **ningún problema**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Plural: just add **-s**: **los problemas, los temas, los idiomas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if the English cousin ends in **-em** or **-gram** (_problem, system, poem, program_), or is a learned word like _drama, dilemma, diploma_, it's masculine."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Not every **-ma** is Greek: **la cama, la forma, la crema, la pluma, la rama, la paloma, la fama** are feminine."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi carro tiene ==un problema== con los frenos.",
+              "en": "My car has a problem with the brakes."
+            },
+            {
+              "es": "==El clima== de Tijuana es muy agradable.",
+              "en": "The weather in Tijuana is very nice."
+            },
+            {
+              "es": "¿Cuál es ==el tema== de la clase de hoy?",
+              "en": "What's the topic of today's class?"
+            },
+            {
+              "es": "Mi vecino habla ==tres idiomas==.",
+              "en": "My neighbor speaks three languages."
+            },
+            {
+              "es": "==El sistema== solar de The Expanse está lleno de conflictos.",
+              "en": "The solar system in The Expanse is full of conflicts."
+            },
+            {
+              "es": "Este ==programa== es muy aburrido.",
+              "en": "This show is really boring."
+            },
+            {
+              "es": "No hay ==ningún problema==.",
+              "en": "No problem at all."
+            },
+            {
+              "es": "Dejé ==la crema== en ==la cama==.",
+              "en": "I left the cream on the bed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La problema es el dinero."
+                },
+                {
+                  "v": "bien",
+                  "t": "El problema es el dinero."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tengo un problema muy seria."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tengo un problema muy serio."
+                }
+              ],
+              "nota": "The adjective is masculine too."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Las sistemas"
+                },
+                {
+                  "v": "bien",
+                  "t": "Los sistemas"
+                }
+              ],
+              "nota": "Plural stays masculine: just add **-s**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El cama"
+                },
+                {
+                  "v": "bien",
+                  "t": "La cama"
+                }
+              ],
+              "nota": "Not Greek: feminine as usual."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el gato, la gata",
+              "texto": "The basic pattern: [[6150|masculine and feminine nouns]]."
+            },
+            {
+              "forma": "el agua",
+              "texto": "Another feminine-looking trap: [[6873|el agua, un águila]]."
+            },
+            {
+              "forma": "la canción, la ciudad",
+              "texto": "Endings that are always feminine: [[6068|-ión, -dad, -tad, -umbre]]."
+            },
+            {
+              "forma": "la farmacia, el día",
+              "texto": "Nouns in -ía / -ia: [[9776|mostly feminine]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _The problem is serious._",
+              "r": "El problema es serio.",
+              "nota": "Masculine."
+            },
+            {
+              "p": "In Spanish: _I speak two languages._",
+              "r": "Hablo dos idiomas.",
+              "nota": "los idiomas."
+            },
+            {
+              "p": "Fix it: _Esta tema es interesante._",
+              "r": "Este tema es interesante.",
+              "nota": "el tema."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6150
+    ],
+    "confunde": [
+      6873,
+      9776
+    ],
+    "sigue": [
+      6068
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6728",
+      "kwiziq": true
+    }
+  ]
+}

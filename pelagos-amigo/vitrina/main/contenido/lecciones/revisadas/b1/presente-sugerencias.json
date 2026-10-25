@@ -1,0 +1,182 @@
+{
+  "tema": 8947,
+  "slug": "presente-sugerencias",
+  "titulo": "Using the present to make suggestions: shall I…?, shall we…?",
+  "subtitulo": "¿Vamos al cine? ¿Te ayudo?: the present, not the future.",
+  "foto": "t07.jpg",
+  "regla": "To offer or suggest (shall I / shall we…?), Spanish uses a question in the present, in yo or nosotros: ¿vamos?, ¿te ayudo? Never the future.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To make a suggestion or an offer like English _Shall I…?_ or _Shall we…?_, Spanish simply uses a **question in the present**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**¿**verb in the present (yo / nosotros)**?**"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Like in English, it's only used for yourself or your own group: **yo** (**¿te ayudo?**) or **nosotros** (**¿vamos?**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Don't use the future, even though _shall_ sounds like the future: **¿vamos al cine?**, not **¿iremos al cine?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: in Spanish, an offer is just a question in the present with a smile."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Beto, ¿==vamos== al cine?",
+              "en": "Beto, shall we go to the movies?"
+            },
+            {
+              "es": "¿Le ==pido== a Carmen su número?",
+              "en": "Shall I ask Carmen for her number?"
+            },
+            {
+              "es": "¿==Salgo== a cantar? Me da un poco de pena…",
+              "en": "Shall I go up and sing? I'm a bit embarrassed…"
+            },
+            {
+              "es": "¿==Jugamos== cartas?",
+              "en": "Shall we play cards?"
+            },
+            {
+              "es": "¿Te ==ayudo== con la tabla?",
+              "en": "Shall I help you with the board?"
+            },
+            {
+              "es": "¿==Pedimos== unos tacos?",
+              "en": "Shall we order some tacos?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Iremos al cine?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Vamos al cine?"
+                }
+              ],
+              "nota": "Not the future."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Saldré a cantar?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Salgo a cantar?"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¿por qué no vamos?",
+              "texto": "Other suggestions: [[8951|por qué no / y si / qué tal si]]."
+            },
+            {
+              "forma": "vamos, hagamos",
+              "texto": "Commands with nosotros: [[6961|nosotros commands]]."
+            },
+            {
+              "forma": "podríamos ir",
+              "texto": "Softer suggestions: [[6713|podría]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Offer: _Shall I open the window?_",
+              "r": "¿Abro la ventana?",
+              "nota": "Present, yo."
+            },
+            {
+              "p": "Suggest: _Shall we go surfing?_",
+              "r": "¿Vamos a surfear?",
+              "nota": "Present, nosotros."
+            },
+            {
+              "p": "Fix it: **¿Cerraré la puerta?** (offering)",
+              "r": "¿Cierro la puerta?",
+              "nota": "Present, not future."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5492
+    ],
+    "confunde": [
+      6961
+    ],
+    "sigue": [
+      8951,
+      6713
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8947",
+      "kwiziq": true
+    }
+  ]
+}

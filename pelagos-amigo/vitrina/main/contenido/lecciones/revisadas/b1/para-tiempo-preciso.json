@@ -1,0 +1,178 @@
+{
+  "tema": 5978,
+  "slug": "para-tiempo-preciso",
+  "titulo": "Para (not por) for a precise time or occasion",
+  "subtitulo": "Vienen para Navidad: for that day, by that date.",
+  "foto": "t04.jpg",
+  "regla": "Use para (not por) for a specific time, event or deadline: para Navidad, para tu cumpleaños, para el lunes. Por + event = because of it.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say **when** something takes place, for a **specific day, event or deadline**, use **para**: **para Navidad**, **para tu cumpleaños**, **para el viernes**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Compare: **vino para la fiesta** = he came for the day of the party (to be there). **Vino por la fiesta** = he came because of the party (that was the reason)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **para** points at a date on the calendar."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mis hermanos vienen a la casa ==para== Navidad.",
+              "en": "My siblings are coming home for Christmas."
+            },
+            {
+              "es": "Te vamos a comprar un reloj ==para== tu cumpleaños.",
+              "en": "We're going to buy you a watch for your birthday."
+            },
+            {
+              "es": "Nos vamos a Cabo ==para== nuestro aniversario.",
+              "en": "We're going to Cabo for our anniversary."
+            },
+            {
+              "es": "Necesito el reporte ==para== el lunes.",
+              "en": "I need the report by Monday."
+            },
+            {
+              "es": "Beto vino ==para== la fiesta.",
+              "en": "Beto came for the party (to be at it)."
+            },
+            {
+              "es": "Beto vino ==por== la fiesta.",
+              "en": "Beto came because of the party."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Termina la tarea por el viernes."
+                },
+                {
+                  "v": "bien",
+                  "t": "Termina la tarea para el viernes."
+                }
+              ],
+              "nota": "Deadline: **para**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Entrega el reporte por el lunes."
+                },
+                {
+                  "v": "bien",
+                  "t": "Entrega el reporte para el lunes."
+                }
+              ],
+              "nota": "Deadline: **para**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "para + infinitive",
+              "texto": "The main use of **para**: [[5970|purpose]]."
+            },
+            {
+              "forma": "por teléfono, por 100 pesos",
+              "texto": "Other uses of **por**: [[5973|medium]], [[5974|exchange]], [[5975|price]], [[5976|per]], [[5977|speed]], [[7273|by whom]]."
+            },
+            {
+              "forma": "para Navidad",
+              "texto": "**Para** for a deadline or occasion: [[5978|precise time]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I need it by tomorrow._",
+              "r": "Lo necesito para mañana.",
+              "nota": "Deadline: para."
+            },
+            {
+              "p": "In Spanish: _We'll be back for New Year's._",
+              "r": "Regresamos para Año Nuevo.",
+              "nota": "Occasion: para."
+            },
+            {
+              "p": "**Por** or **para**? _He came ___ the wedding_ (to be there).",
+              "r": "Vino para la boda.",
+              "nota": "para = for the event."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5970
+    ],
+    "confunde": [
+      5970,
+      5973,
+      5974
+    ],
+    "sigue": [
+      5975,
+      5976,
+      5977,
+      7273,
+      7073
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5978",
+      "kwiziq": true
+    }
+  ]
+}

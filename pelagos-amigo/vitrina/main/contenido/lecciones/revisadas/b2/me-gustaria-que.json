@@ -1,0 +1,197 @@
+{
+  "tema": 7589,
+  "slug": "me-gustaria-que",
+  "titulo": "Wish and feeling verbs in the conditional + imperfect subjunctive",
+  "subtitulo": "Me gustaría que vinieras a mi boda.",
+  "foto": "t10.jpg",
+  "regla": "When the wish or feeling verb is in the conditional (me gustaría que, preferiría que, desearía que, me preocuparía que), the verb after que goes in the imperfect subjunctive. Same subject: infinitive.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "me gustaría / preferiría / desearía / me preocuparía",
+            "+ que +",
+            "imperfect subjunctive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "What's wished for or felt is about now or the future, but the form is the **imperfect subjunctive** because the main verb is conditional."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Same subject: **infinitive** without **que**: **me preocuparía tener que trabajar a los 70**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Sometimes **si** replaces **que**: **me encantaría si pudieras venir** (with **si**, the same imperfect subjunctive)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **-ría** up front, **-ra** behind."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Desearía que todo ==pasara== rápido.",
+              "en": "I wish everything would go by quickly."
+            },
+            {
+              "es": "¿No le preocuparía que su hijo ==se quedara== soltero para siempre?",
+              "en": "Wouldn't she worry that her son might stay single forever?"
+            },
+            {
+              "es": "A ti no te gustaría que Ramiro te ==engañara==.",
+              "en": "You wouldn't like Ramiro to cheat on you."
+            },
+            {
+              "es": "Preferiría que ==fuéramos== al restaurante del centro.",
+              "en": "I'd prefer that we go to the restaurant downtown."
+            },
+            {
+              "es": "Me gustaría que ustedes ==vinieran== a mi boda.",
+              "en": "I'd like you all to come to my wedding."
+            },
+            {
+              "es": "A mí me preocuparía ==tener== que seguir trabajando a los 70.",
+              "en": "I'd worry about having to keep working at 70. (same subject)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me gustaría que vengas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me gustaría que vinieras."
+                }
+              ],
+              "nota": "Conditional + imperfect subjunctive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Preferiría que no fumarías."
+                },
+                {
+                  "v": "bien",
+                  "t": "Preferiría que no fumaras."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me gustaría que yo viajara."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me gustaría viajar."
+                }
+              ],
+              "nota": "Same subject."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "me gusta que",
+              "texto": "Present: [[6185|wish and feeling]]."
+            },
+            {
+              "forma": "te recomendaría que",
+              "texto": "[[8580|conditional + que + imperfect subjunctive]]."
+            },
+            {
+              "forma": "me gustaría",
+              "texto": "[[7059|gustar in the conditional]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Complete: _Me encantaría que ___ (quedarse, tú) más tiempo._",
+              "r": "te quedaras",
+              "nota": "-ra."
+            },
+            {
+              "p": "In Spanish: _I'd prefer you not to call me._ (tú)",
+              "r": "Preferiría que no me llamaras.",
+              "nota": "Conditional + -ra."
+            },
+            {
+              "p": "In Spanish: _I'd like to learn to surf._",
+              "r": "Me gustaría aprender a surfear.",
+              "nota": "Same subject."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6185,
+      7059
+    ],
+    "confunde": [
+      8580
+    ],
+    "sigue": [
+      8580
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7589",
+      "kwiziq": true
+    }
+  ]
+}

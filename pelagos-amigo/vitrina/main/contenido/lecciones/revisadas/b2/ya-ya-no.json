@@ -1,0 +1,240 @@
+{
+  "tema": 7263,
+  "slug": "ya-ya-no",
+  "titulo": "Ya / ya no = now, already, finally, not anymore",
+  "subtitulo": "¡Ya voy! Ya tenía dos hijos. Ya no fumo.",
+  "foto": "t06.jpg",
+  "regla": "Ya = now, right away (¡Ya voy!), already (ya tenía dos hijos), finally (¡ya llegó!). Ya no = not anymore (ya no fumo).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "ya = now / right away",
+              "texto": "With the present or a command: **¡Ya voy!**, **¡Cállate ya!**"
+            },
+            {
+              "forma": "ya = already",
+              "texto": "Any tense: **ya tenía dos hijos**, **ya lo sé**."
+            },
+            {
+              "forma": "ya = finally",
+              "texto": "Usually with the preterite, after a long wait: **¡Ya llegó la primavera!**"
+            },
+            {
+              "forma": "ya no = not anymore",
+              "texto": "Any tense: **ya no te quiero**, **ya no vivía ahí**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "In Mexico **ya** is everywhere: **¿Ya?** (_Done?_), **¡Ya!** (_Enough! / Done!_), **ya mero** (_almost_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **ya** is the moment something clicks; **ya no** is when it stops."
+        }
+      ]
+    },
+    {
+      "id": "ahora",
+      "titulo": "Now",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "—Laura, ven. —¡==Ya== voy!",
+              "en": "—Laura, come here. —Coming!"
+            },
+            {
+              "es": "—No has sacado la basura. —==Ya== la saco.",
+              "en": "—You haven't taken out the trash. —I'm doing it now."
+            },
+            {
+              "es": "¡Cállate ==ya==!",
+              "en": "Shut up already!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ya-mismo",
+      "titulo": "Already",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "En ese entonces, ella ==ya== tenía dos hijos.",
+              "en": "Back then, she already had two kids."
+            },
+            {
+              "es": "==Ya== tengo internet. Antes no había.",
+              "en": "I have internet now. Before there wasn't any."
+            },
+            {
+              "es": "Mi hijo ==ya== hablaba mucho a los dos años y medio.",
+              "en": "My son was already talking a lot at two and a half."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "por-fin",
+      "titulo": "Finally",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¡==Ya== llegó la primavera!",
+              "en": "Spring is finally here!"
+            },
+            {
+              "es": "¡==Ya== se fue la vecina! ¡Qué metiche es!",
+              "en": "The neighbor finally left! She's so nosy!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ya-no",
+      "titulo": "Not anymore",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Ya no== te quiero. Me enamoré de otra persona.",
+              "en": "I don't love you anymore. I fell in love with someone else."
+            },
+            {
+              "es": "==Ya no== vivimos en Ensenada.",
+              "en": "We don't live in Ensenada anymore."
+            },
+            {
+              "es": "==Ya no== había boletos.",
+              "en": "There were no tickets left."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No ya fumo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ya no fumo."
+                }
+              ],
+              "nota": "**Ya no**, in that order."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Todavía no fumo. (I quit)"
+                },
+                {
+                  "v": "bien",
+                  "t": "Ya no fumo."
+                }
+              ],
+              "nota": "**Todavía no** = not yet."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "ya + preterite",
+              "texto": "[[9263|ya with the preterite]]."
+            },
+            {
+              "forma": "ya había",
+              "texto": "[[6009|ya with the pluperfect]]."
+            },
+            {
+              "forma": "todavía no",
+              "texto": "[[9265|not yet]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I'm not hungry anymore._",
+              "r": "Ya no tengo hambre.",
+              "nota": "ya no."
+            },
+            {
+              "p": "In Spanish: _They finally arrived!_",
+              "r": "¡Ya llegaron!",
+              "nota": "ya + preterite."
+            },
+            {
+              "p": "In Spanish: _I already know._",
+              "r": "Ya sé. / Ya lo sé.",
+              "nota": "already."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      9263
+    ],
+    "confunde": [
+      9265
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7263",
+      "kwiziq": true
+    }
+  ]
+}

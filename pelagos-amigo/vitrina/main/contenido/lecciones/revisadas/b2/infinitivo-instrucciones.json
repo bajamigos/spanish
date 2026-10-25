@@ -1,0 +1,184 @@
+{
+  "tema": 7258,
+  "slug": "infinitivo-instrucciones",
+  "titulo": "The infinitive for signs, requests and instructions",
+  "subtitulo": "No fumar. Precalentar el horno.",
+  "foto": "t07.jpg",
+  "regla": "On public signs and in step-by-step instructions (recipes, manuals), Spanish often uses the plain infinitive as a command: No fumar, Batir los huevos. Negative: No + infinitive. It sounds impersonal and softer.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "For commands aimed at **the general public**, like **signs**, and for **step-by-step instructions** like recipes or assembly guides, Spanish often uses the **infinitive**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Negative: just put **No** in front: **No tocar**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It feels **softer and more impersonal** than the imperative. You'll still see imperatives on signs, but the infinitive is very common."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if it's printed on a wall or in a cookbook, think infinitive."
+        }
+      ]
+    },
+    {
+      "id": "letreros",
+      "titulo": "Signs",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==No fumar==.",
+              "en": "No smoking."
+            },
+            {
+              "es": "==Apagar== las luces al salir.",
+              "en": "Turn off the lights when you leave."
+            },
+            {
+              "es": "==No pisar== el pasto.",
+              "en": "Keep off the grass."
+            },
+            {
+              "es": "==No estacionarse==.",
+              "en": "No parking."
+            },
+            {
+              "es": "==Empujar==.",
+              "en": "Push."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "instrucciones",
+      "titulo": "Instructions",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Precalentar== el horno a 180 grados.",
+              "en": "Preheat the oven to 180 degrees."
+            },
+            {
+              "es": "==Cocinar== a fuego lento.",
+              "en": "Cook over low heat."
+            },
+            {
+              "es": "==Doblar== la hoja por la mitad.",
+              "en": "Fold the sheet in half."
+            },
+            {
+              "es": "==Regar== la planta con bastante agua.",
+              "en": "Water the plant generously."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "letrero",
+                  "t": "No tocar."
+                },
+                {
+                  "v": "a una persona",
+                  "t": "¡No toques eso!"
+                }
+              ],
+              "nota": "With a person in front of you, use the imperative."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¡a comer!",
+              "texto": "[[6179|a + infinitive]]."
+            },
+            {
+              "forma": "¡come!",
+              "texto": "[[6748|imperative]]."
+            },
+            {
+              "forma": "se debe",
+              "texto": "[[6933|se debe / se puede]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Sign: _Don't touch._",
+              "r": "No tocar.",
+              "nota": "No + infinitive."
+            },
+            {
+              "p": "Recipe: _Beat the eggs._",
+              "r": "Batir los huevos.",
+              "nota": "Infinitive."
+            },
+            {
+              "p": "Sign: _Ring the bell._",
+              "r": "Tocar el timbre.",
+              "nota": "Infinitive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6748
+    ],
+    "confunde": [
+      6179
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7258",
+      "kwiziq": true
+    }
+  ]
+}

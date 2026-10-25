@@ -1,0 +1,241 @@
+{
+  "tema": 6185,
+  "slug": "deseo-sentimiento-subjuntivo",
+  "titulo": "The subjunctive with verbs of wish and feeling",
+  "subtitulo": "Prefiero que vengas. Me alegra que estés aquí.",
+  "foto": "t05.jpg",
+  "regla": "Verbs of wish or feeling (querer que, preferir que, desear que, me gusta que, me molesta que, me alegra que, me da igual que) take the subjunctive when the subject changes. Same subject: use the infinitive, without que.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "When the main verb expresses a **wish** or a **feeling** about someone else's action, the verb after **que** is in the **subjunctive**, affirmative or negative."
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "wish",
+              "texto": "**quiero que, prefiero que, deseo que, necesito que**"
+            },
+            {
+              "forma": "feeling",
+              "texto": "**me gusta que, me encanta que, me molesta que, me preocupa que, me alegra que, me sorprende que, me da igual que, no me importa que**"
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Key condition**: the two subjects must be **different**. If it's the same person, use the **infinitive** and drop **que**."
+        },
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mismo sujeto",
+                  "t": "Quiero ser feliz."
+                },
+                {
+                  "v": "otro sujeto",
+                  "t": "Quiero que seas feliz."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **que** is a bridge to another person. No other person, no bridge."
+        }
+      ]
+    },
+    {
+      "id": "deseo",
+      "titulo": "Wish",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Prefiero que Belén ==estudie== arquitectura.",
+              "en": "I'd rather Belén studied architecture."
+            },
+            {
+              "es": "Te deseo que ==seas== muy feliz.",
+              "en": "I wish you lots of happiness."
+            },
+            {
+              "es": "Ella no quiere que sus papás ==se separen==.",
+              "en": "She doesn't want her parents to split up."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sentimiento",
+      "titulo": "Feeling",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No se me antoja que ==vengan== a visitarme.",
+              "en": "I don't feel like having you come visit me."
+            },
+            {
+              "es": "A Carmen le gusta que Marcos ==sea== amable con su familia.",
+              "en": "Carmen likes that Marcos is nice to her family."
+            },
+            {
+              "es": "Me alegra mucho que Miguel ==haya conseguido== trabajo.",
+              "en": "I'm really glad Miguel got a job."
+            },
+            {
+              "es": "A Gerardo no le molesta que yo ==ponga== la música fuerte.",
+              "en": "It doesn't bother Gerardo that I play music loud."
+            },
+            {
+              "es": "A mis amigos no les importa que yo ==use== su computadora.",
+              "en": "My friends don't mind me using their computer."
+            },
+            {
+              "es": "Me da igual que no ==quieran== vernos.",
+              "en": "I don't care if you don't want to see us."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero que tú vienes."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero que vengas."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero que yo vaya."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero ir."
+                }
+              ],
+              "nota": "Same subject: infinitive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me molesta que llegas tarde."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me molesta que llegues tarde."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "querer que",
+              "texto": "[[5059|querer que + present subjunctive]], [[7184|in the past]]."
+            },
+            {
+              "forma": "espero que",
+              "texto": "[[6076|esperar que]]."
+            },
+            {
+              "forma": "me gustaría que",
+              "texto": "[[7589|with the conditional]]."
+            },
+            {
+              "forma": "dudo que",
+              "texto": "[[6235|doubt]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Complete: _Me encanta que ___ (venir, tú) a verme._",
+              "r": "vengas",
+              "nota": "Feeling, different subject."
+            },
+            {
+              "p": "In Spanish: _I prefer to stay home._",
+              "r": "Prefiero quedarme en casa.",
+              "nota": "Same subject: infinitive."
+            },
+            {
+              "p": "Complete: _Nos preocupa que no ___ (comer, él) bien._",
+              "r": "coma",
+              "nota": "Subjunctive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5059,
+      6076
+    ],
+    "confunde": [
+      6235
+    ],
+    "sigue": [
+      7589
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6185",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "tema": 5972,
+  "slug": "ser-caracteristicas-esenciales",
+  "titulo": "Ser for essential characteristics",
+  "subtitulo": "«Beto es alto y la playa es bonita.»",
+  "foto": "t03.jpg",
+  "regla": "Use ser (not estar) for what someone or something is like by nature: looks, personality, size, shape, material. Estar is for temporary states.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Ser** describes what someone or something **is like**: looks, personality, size, material."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "ser",
+            "+",
+            "adjective / noun / de + material"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Estar** + adjective describes a **state** or a change: **estoy cansado**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With a noun after it, it's always **ser**: **Tijuana es una ciudad grande**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Beto ==es== alto.",
+              "en": "Beto is tall."
+            },
+            {
+              "es": "La playa de Rosarito ==es== muy bonita.",
+              "en": "Rosarito beach is very pretty."
+            },
+            {
+              "es": "Mi mamá ==es== muy paciente.",
+              "en": "My mom is very patient."
+            },
+            {
+              "es": "Tijuana ==es== una ciudad grande.",
+              "en": "Tijuana is a big city."
+            },
+            {
+              "es": "Mis vecinos ==son== simpáticos.",
+              "en": "My neighbors are nice."
+            },
+            {
+              "es": "La mesa ==es== de madera.",
+              "en": "The table is made of wood."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Beto está un hombre alto."
+                },
+                {
+                  "v": "bien",
+                  "t": "Beto es un hombre alto."
+                }
+              ],
+              "nota": "With a noun: always **ser**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La casa está de madera."
+                },
+                {
+                  "v": "bien",
+                  "t": "La casa es de madera."
+                }
+              ],
+              "nota": "Material: **ser de**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Careful: a few adjectives change meaning. **Ana es aburrida** = Ana is _boring_ (her nature); **Ana está aburrida** = Ana is _bored_ (right now). Both are right."
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "soy, eres, es",
+              "texto": "First, the verb: [[5070|ser in the present]]."
+            },
+            {
+              "forma": "estoy feliz",
+              "texto": "For feelings, estar: [[5980|estar for feelings and emotions]]."
+            },
+            {
+              "forma": "soy de Tijuana",
+              "texto": "Origin also takes ser: [[6806|ser for origin]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish (his nature): _My brother is tall._",
+              "r": "Mi hermano es alto.",
+              "nota": "A trait: ser."
+            },
+            {
+              "p": "In Spanish: _Tijuana is a big city._",
+              "r": "Tijuana es una ciudad grande.",
+              "nota": "Noun after: ser."
+            },
+            {
+              "p": "Fix it: _La mesa está de madera._",
+              "r": "La mesa es de madera.",
+              "nota": "Material: ser."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5070
+    ],
+    "confunde": [
+      5980
+    ],
+    "sigue": [
+      6806
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5972",
+      "kwiziq": true
+    }
+  ]
+}

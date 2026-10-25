@@ -1,0 +1,188 @@
+{
+  "tema": 6755,
+  "slug": "el-siete-numeros-masculinos",
+  "titulo": "Numbers are masculine",
+  "subtitulo": "El siete es mi número de la suerte.",
+  "foto": "t05.jpg",
+  "regla": "When you talk about a number itself (the figure, a grade, a lucky number), it is a masculine noun: el siete, un diez, los ochos.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "A number used as a **noun** (the figure itself) is **masculine**: **el cinco**, **un siete**, **el cero**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It's masculine because it stands for **el número**: **el siete** = **el número siete**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Plural adds **-s** (or **-es**): **los sietes**, **dos ochos**, **tres seises**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Careful: in **la 15** (a room, a bus route), the article goes with the hidden feminine noun: **la (habitación) 15**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==El siete== es mi número de la suerte.",
+              "en": "Seven is my lucky number."
+            },
+            {
+              "es": "Saqué ==un diez== en el examen.",
+              "en": "I got a ten on the test."
+            },
+            {
+              "es": "Tu cinco parece ==un seis==.",
+              "en": "Your five looks like a six."
+            },
+            {
+              "es": "Escribe ==un ocho== grande.",
+              "en": "Write a big eight."
+            },
+            {
+              "es": "==El trece== no me da miedo.",
+              "en": "Thirteen doesn't scare me."
+            },
+            {
+              "es": "Mi número de teléfono tiene ==tres sietes==.",
+              "en": "My phone number has three sevens."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La siete es mi número favorito."
+                },
+                {
+                  "v": "bien",
+                  "t": "El siete es mi número favorito."
+                }
+              ],
+              "nota": "Numbers are masculine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Saqué una nueve."
+                },
+                {
+                  "v": "bien",
+                  "t": "Saqué un nueve."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tu cuatro parece una uno."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tu cuatro parece un uno."
+                }
+              ],
+              "nota": "Masculine: **un uno**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tres tablas",
+              "texto": "Numbers in front of nouns: [[6664|using numbers with nouns]]."
+            },
+            {
+              "forma": "quiero dos",
+              "texto": "A number standing in for a noun: [[6672|numbers as pronouns]]."
+            },
+            {
+              "forma": "el norte",
+              "texto": "Another masculine group: [[6754|cardinal points]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I got a ten._",
+              "r": "Saqué un diez.",
+              "nota": "un diez."
+            },
+            {
+              "p": "In Spanish: _Seven is my lucky number._",
+              "r": "El siete es mi número de la suerte.",
+              "nota": "el siete."
+            },
+            {
+              "p": "Fix it: _La cuatro parece una nueve._",
+              "r": "El cuatro parece un nueve.",
+              "nota": "Both masculine."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6664
+    ],
+    "confunde": [
+      6754
+    ],
+    "sigue": [
+      6672
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6755",
+      "kwiziq": true
+    }
+  ]
+}

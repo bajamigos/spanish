@@ -1,0 +1,250 @@
+{
+  "tema": 6313,
+  "slug": "como-donde-cuando-con-acento",
+  "titulo": "Cómo, dónde, cuándo in questions and exclamations",
+  "subtitulo": "¿Dónde vives? No sé cuándo llega. ¡Cómo llueve!",
+  "foto": "t03.jpg",
+  "regla": "Cómo (how), dónde (where) and cuándo (when) always take an accent in direct questions, indirect questions (no sé dónde…, dime cuándo…) and exclamations (¡cómo llueve!). With no question or exclamation, they're como, donde, cuando.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Cómo** = _how_, **dónde** = _where_, **cuándo** = _when_. When they ask or exclaim, they **always** take an accent."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Type",
+            "Example",
+            "English"
+          ],
+          "filas": [
+            [
+              "Direct question",
+              "¿Cómo te llamas?",
+              "What's your name?"
+            ],
+            [
+              "Direct question",
+              "¿Dónde vives?",
+              "Where do you live?"
+            ],
+            [
+              "Indirect question",
+              "No sé cuándo empieza la clase.",
+              "I don't know when the class starts."
+            ],
+            [
+              "Indirect question",
+              "Dime dónde estás.",
+              "Tell me where you are."
+            ],
+            [
+              "Exclamation",
+              "¡Cómo llueve!",
+              "Look at that rain!"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Indirect questions hide inside a sentence, after verbs like **saber, preguntar, decir, explicar, entender**. No question marks, but the **accent stays**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "A preposition goes in front: **¿de dónde?, ¿adónde?, ¿por dónde?, ¿desde cuándo?, ¿hasta cuándo?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "No question and no exclamation? Then no accent: **Vivo donde nací. Te llamé cuando llegué. Lo hago como me enseñaste.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the accent is a raised eyebrow. If you're wondering, write it."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿==Cómo== se dice _wave_ en español?",
+              "en": "How do you say wave in Spanish?"
+            },
+            {
+              "es": "¿De ==dónde== eres?",
+              "en": "Where are you from?"
+            },
+            {
+              "es": "¿==Cuándo== es tu próxima competencia?",
+              "en": "When is your next tournament?"
+            },
+            {
+              "es": "No sé ==dónde== dejé las llaves del carro.",
+              "en": "I don't know where I left the car keys."
+            },
+            {
+              "es": "Pregúntale ==cuándo== abre la tienda.",
+              "en": "Ask him when the store opens."
+            },
+            {
+              "es": "No entiendo ==cómo== funciona este sistema de riego.",
+              "en": "I don't understand how this irrigation system works."
+            },
+            {
+              "es": "¡==Cómo== has crecido!",
+              "en": "Look how you've grown!"
+            },
+            {
+              "es": "¿Desde ==cuándo== vives en Tijuana?",
+              "en": "How long have you lived in Tijuana?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No sé donde vive."
+                },
+                {
+                  "v": "bien",
+                  "t": "No sé dónde vive."
+                }
+              ],
+              "nota": "Indirect question: keep the accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Como estás?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cómo estás?"
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Como llueve!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Cómo llueve!"
+                }
+              ],
+              "nota": "Exclamations too."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Te llamé cuándo llegué."
+                },
+                {
+                  "v": "bien",
+                  "t": "Te llamé cuando llegué."
+                }
+              ],
+              "nota": "Not a question: no accent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¿qué?",
+              "texto": "Asking with [[9828|qué]]."
+            },
+            {
+              "forma": "no sé qué",
+              "texto": "[[7013|qué in indirect questions]]."
+            },
+            {
+              "forma": "como / cómo",
+              "texto": "With and without the accent: [[6673|cómo vs como]], [[6964|dónde vs donde]], [[6977|cuándo vs cuando]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I don't know where he lives._",
+              "r": "No sé dónde vive.",
+              "nota": "The accent stays."
+            },
+            {
+              "p": "In Spanish: _When does the class start?_",
+              "r": "¿Cuándo empieza la clase?",
+              "nota": "cuándo"
+            },
+            {
+              "p": "Fix it: _No entiendo como funciona._",
+              "r": "No entiendo cómo funciona.",
+              "nota": "Indirect question: cómo."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      9828
+    ],
+    "confunde": [
+      6673,
+      6964,
+      6977
+    ],
+    "sigue": [
+      7013
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6313",
+      "kwiziq": true
+    }
+  ]
+}

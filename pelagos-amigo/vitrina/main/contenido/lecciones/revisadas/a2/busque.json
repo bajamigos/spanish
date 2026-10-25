@@ -1,0 +1,259 @@
+{
+  "tema": 5256,
+  "slug": "busque",
+  "titulo": "-car verbs in the preterite",
+  "subtitulo": "Busqué mis llaves; él buscó la tabla.",
+  "foto": "t07.jpg",
+  "regla": "In the preterite, -ar verbs ending in -car change c to qu in the yo form only (busqué, saqué, toqué) to keep the hard k sound. All other forms are regular: buscaste, buscó.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Verbs ending in **-car** are regular -ar verbs in the preterite, with **one spelling change**: in **yo**, the **c** becomes **qu**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Why? **ce** sounds like _se_. To keep the hard _k_ sound before **é**, Spanish writes **qué**: **busqué**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "buscar",
+            "sacar",
+            "tocar"
+          ],
+          "filas": [
+            [
+              "yo",
+              "busqué",
+              "saqué",
+              "toqué"
+            ],
+            [
+              "tú",
+              "buscaste",
+              "sacaste",
+              "tocaste"
+            ],
+            [
+              "él / ella / usted",
+              "buscó",
+              "sacó",
+              "tocó"
+            ],
+            [
+              "nosotros / nosotras",
+              "buscamos",
+              "sacamos",
+              "tocamos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "buscaron",
+              "sacaron",
+              "tocaron"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Common ones: **buscar**, **sacar**, **tocar**, **practicar**, **explicar**, **marcar**, **pescar**, **secar**, **chocar**, **colocar**, **indicar**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Keep the **accent**: **busqué** (preterite). Without it, **busque** is a different form (subjunctive)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the sound never changes; only the spelling does. Say it first, then write the letters that make that sound."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Busqué== mis llaves por toda la casa.",
+              "en": "I looked for my keys all over the house."
+            },
+            {
+              "es": "Ayer ==practiqué== la llave de brazo veinte veces.",
+              "en": "Yesterday I practiced the armbar twenty times."
+            },
+            {
+              "es": "==Saqué== la tabla del carro y corrí al agua.",
+              "en": "I took the board out of the car and ran to the water."
+            },
+            {
+              "es": "¿Quién ==tocó== la guitarra en la fiesta?",
+              "en": "Who played guitar at the party?"
+            },
+            {
+              "es": "Le ==expliqué== a mi vecina cómo hacer composta.",
+              "en": "I explained to my neighbor how to make compost."
+            },
+            {
+              "es": "Tú ==buscaste== departamento en la colonia Cacho, ¿no?",
+              "en": "You looked for an apartment in Colonia Cacho, right?"
+            },
+            {
+              "es": "Ayer ==pesqué== dos sierras en el muelle de Rosarito.",
+              "en": "Yesterday I caught two Spanish mackerel at the Rosarito pier."
+            },
+            {
+              "es": "La nave ==chocó== contra un asteroide.",
+              "en": "The ship crashed into an asteroid."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer buscé trabajo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer busqué trabajo."
+                }
+              ],
+              "nota": "c → **qu** before é."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo sacé buena calificación."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo saqué buena calificación."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella tocqué la puerta."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella tocó la puerta."
+                }
+              ],
+              "nota": "Only **yo** changes."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer practique con mi equipo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer practiqué con mi equipo."
+                }
+              ],
+              "nota": "Keep the accent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hablé, habló",
+              "texto": "The base pattern: [[5109|regular -ar verbs in the preterite]]."
+            },
+            {
+              "forma": "pagué",
+              "texto": "The twin rule for g → gu: [[5845|-gar verbs in the preterite]]."
+            },
+            {
+              "forma": "empecé",
+              "texto": "And for z → c: [[5844|-zar verbs in the preterite]]."
+            },
+            {
+              "forma": "que busque",
+              "texto": "Same change in every person later: [[5724|-car verbs in the present subjunctive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I took out the trash._",
+              "r": "Saqué la basura.",
+              "nota": "c → qu."
+            },
+            {
+              "p": "In Spanish: _She looked for her phone._",
+              "r": "Buscó su teléfono.",
+              "nota": "Only yo changes."
+            },
+            {
+              "p": "Fix it: _Ayer explicé la regla._",
+              "r": "Ayer expliqué la regla.",
+              "nota": "c → qu."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5109
+    ],
+    "confunde": [
+      5845,
+      5844
+    ],
+    "sigue": [
+      5724
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5256",
+      "kwiziq": true
+    }
+  ]
+}

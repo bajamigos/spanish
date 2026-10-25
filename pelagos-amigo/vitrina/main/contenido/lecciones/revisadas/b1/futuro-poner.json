@@ -1,0 +1,275 @@
+{
+  "tema": 5259,
+  "slug": "futuro-poner",
+  "titulo": "Conjugate poner in the simple future",
+  "subtitulo": "Poner swaps its e for a d: pondré, pondrás, pondremos.",
+  "foto": "t09.jpg",
+  "regla": "Poner replaces the e of its infinitive with d to make the stem pondr-, then adds -é, -ás, -á, -emos, -án.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Poner** (_to put_) is irregular in the **simple future** (**futuro imperfecto**). The endings are the normal ones; the stem is **pondr-**: the **e** of the infinitive turns into a **d**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "irregular stem **pondr-**",
+            "**-é, -ás, -á, -emos, -án**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Ending",
+            "poner → pondr-"
+          ],
+          "filas": [
+            [
+              "yo",
+              "-é",
+              "pondré"
+            ],
+            [
+              "tú",
+              "-ás",
+              "pondrás"
+            ],
+            [
+              "él, ella, usted",
+              "-á",
+              "pondrá"
+            ],
+            [
+              "nosotros",
+              "-emos",
+              "pondremos"
+            ],
+            [
+              "ustedes, ellos",
+              "-án",
+              "pondrán"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Verbs built on **poner** do the same: **componer** → **compondré**, **suponer** → **supondré**, **proponer** → **propondré**, **ponerse** → **me pondré**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **poner**, **tener**, **venir**, **salir** and **valer** are the **d** gang: they all slip in a **d**: **pondré**, **tendré**, **vendré**, **saldré**, **valdré**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Pondré== la tabla en el carro esta noche.",
+              "en": "I'll put the board in the car tonight."
+            },
+            {
+              "es": "==Pondrás== las semillas en la tierra del huerto.",
+              "en": "You'll put the seeds in the soil of the garden."
+            },
+            {
+              "es": "El cliente ==pondrá== la llave nueva en su llavero.",
+              "en": "The customer will put the new key on his key ring."
+            },
+            {
+              "es": "==Pondremos== el dinero para la carne asada.",
+              "en": "We'll put in the money for the carne asada."
+            },
+            {
+              "es": "==Pondrán== un cartel en la taquería para anunciar el torneo.",
+              "en": "They'll put up a poster in the taquería to announce the tournament."
+            },
+            {
+              "es": "Mañana ==me pondré== el traje largo; el agua está fría.",
+              "en": "Tomorrow I'll put on the full wetsuit; the water is cold."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Poneré la llave en la mesa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Pondré la llave en la mesa."
+                }
+              ],
+              "nota": "The **e** becomes **d**: **pondr-**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ponré la llave en la mesa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Pondré la llave en la mesa."
+                }
+              ],
+              "nota": "Don't forget the **d**: **pon-d-ré**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mañana pondrías la música en la fiesta."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mañana pondrás la música en la fiesta."
+                }
+              ],
+              "nota": "**Pondrás** is _will put_; **pondrías** is _would put_ (conditional)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usos",
+      "titulo": "The d gang",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "pondré",
+              "texto": "**poner** → **pondr-**",
+              "aqui": true
+            },
+            {
+              "forma": "tendré",
+              "texto": "**tener** → **tendr-**. See [[5050|tener in the future]]."
+            },
+            {
+              "forma": "vendré",
+              "texto": "**venir** → **vendr-**. See [[5223|venir in the future]]."
+            },
+            {
+              "forma": "saldré",
+              "texto": "**salir** → **saldr-**. See [[5160|salir in the future]]."
+            },
+            {
+              "forma": "valdrá",
+              "texto": "**valer** → **valdr-**. See [[5244|valer in the future]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "trabajaré",
+              "texto": "The endings are the same as for every verb in the future: [[5155|regular verbs in the simple future]]."
+            },
+            {
+              "forma": "pongo → pondré",
+              "texto": "In the present only **yo** is irregular: [[5305|poner in the present]]."
+            },
+            {
+              "forma": "pondría",
+              "texto": "The conditional uses the very same stem, with **-ía** endings: [[5892|the conditional]]."
+            },
+            {
+              "forma": "¿Dónde estará?",
+              "texto": "The future also guesses about right now: [[5060|the future for probability]]."
+            },
+            {
+              "forma": "habré hecho",
+              "texto": "The future of **haber** + participle: [[5066|irregular verbs in the future perfect]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "**Poner**, **yo**: ___ la carne en el asador a las seis.",
+              "r": "Pondré la carne en el asador a las seis.",
+              "nota": "**pondr-** + **-é**."
+            },
+            {
+              "p": "In Spanish: _They will put up a poster._",
+              "r": "Pondrán un cartel.",
+              "nota": "**pondr-** + **-án**."
+            },
+            {
+              "p": "Which one? **Poneremos la mesa** or **Pondremos la mesa**.",
+              "r": "Pondremos la mesa.",
+              "nota": "The **e** turns into **d**."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5155,
+      5305
+    ],
+    "confunde": [
+      5892,
+      5251
+    ],
+    "sigue": [
+      5050,
+      5223,
+      5160,
+      5244,
+      5060,
+      5162,
+      5066
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5259",
+      "kwiziq": true
+    }
+  ]
+}

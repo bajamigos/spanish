@@ -1,0 +1,182 @@
+{
+  "tema": 7845,
+  "slug": "por-causa",
+  "titulo": "Por for due to / because of / for (doing)",
+  "subtitulo": "Lo regañaron por llegar tarde.",
+  "foto": "t02.jpg",
+  "regla": "Por + noun, infinitive or perfect infinitive gives the cause: nos enojamos por una tontería, me regañaron por llegar tarde, nos felicitaron por haber ganado. With a conjugated verb, use porque.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "por + noun",
+              "texto": "_because of_: **nos peleamos por una tontería**."
+            },
+            {
+              "forma": "por + infinitive",
+              "texto": "_for doing_: **me regañaron por llegar tarde**."
+            },
+            {
+              "forma": "por + haber + participle",
+              "texto": "_for having done_: **nos felicitaron por haber aprobado**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "After **por**, never a conjugated verb. For that, use **porque**: **me regañaron porque llegué tarde**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **por** + infinitive is **porque** on a diet."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Nos enojamos ==por== una tontería.",
+              "en": "We got mad over something silly."
+            },
+            {
+              "es": "Me regañaron ==por llegar== tarde.",
+              "en": "I got told off for being late."
+            },
+            {
+              "es": "Nos felicitaron ==por haber aprobado== todo con buena calificación.",
+              "en": "They congratulated us on passing everything with good grades."
+            },
+            {
+              "es": "Lo multaron ==por manejar== muy rápido.",
+              "en": "He got a ticket for driving too fast."
+            },
+            {
+              "es": "Gracias ==por== tu ayuda.",
+              "en": "Thanks for your help."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me regañaron por llegué tarde."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me regañaron por llegar tarde. / Me regañaron porque llegué tarde."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me regañaron para llegar tarde."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me regañaron por llegar tarde."
+                }
+              ],
+              "nota": "Cause: **por**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "porque, como",
+              "texto": "[[7034|cause]]."
+            },
+            {
+              "forma": "gracias a, por culpa de",
+              "texto": "[[5147|por culpa de / gracias a]]."
+            },
+            {
+              "forma": "debido a",
+              "texto": "[[7086|debido a]]."
+            },
+            {
+              "forma": "por + infinitive",
+              "texto": "[[6310|infinitive after prepositions]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _They fired him for lying._",
+              "r": "Lo corrieron por mentir.",
+              "nota": "por + infinitive."
+            },
+            {
+              "p": "In Spanish: _Thanks for having come._",
+              "r": "Gracias por haber venido.",
+              "nota": "por + haber."
+            },
+            {
+              "p": "Fix it: _La castigaron por rompió el vaso._",
+              "r": "La castigaron por romper el vaso. / porque rompió el vaso.",
+              "nota": "No conjugated verb after por."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7034
+    ],
+    "confunde": [
+      5147
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7845",
+      "kwiziq": true
+    }
+  ]
+}

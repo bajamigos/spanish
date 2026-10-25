@@ -1,0 +1,231 @@
+{
+  "tema": 7175,
+  "slug": "cada-uno-de",
+  "titulo": "Cada uno / cada una de (each one of)",
+  "subtitulo": "Cada uno de nosotros paga lo suyo.",
+  "foto": "t10.jpg",
+  "regla": "Cada uno de / cada una de + the, my, these… + plural noun, or + nosotros, ellos, ustedes = each one of. Uno / una matches the gender of the group, and the verb is singular.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Cada uno de** / **cada una de** = _each one of_."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "cada uno / una de",
+            "+",
+            "los, las, mis, estos… + plural noun"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Or with a pronoun: **cada uno de nosotros**, **cada una de ellas**, **cada uno de ustedes**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Uno** or **una** matches the group: **cada uno de los niños**, **cada una de las niñas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The noun needs its article, possessive or demonstrative: **cada uno de los alumnos**, never _de alumnos_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The verb is **singular**: you're talking about each one, one at a time. **Cada uno de los alumnos tiene…**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Without the group: **cada uno**, **cada una** = _each one_."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Cada uno de== los alumnos tiene su cinturón.",
+              "en": "Each one of the students has his belt."
+            },
+            {
+              "es": "==Cada una de== mis plantas necesita algo diferente.",
+              "en": "Each one of my plants needs something different."
+            },
+            {
+              "es": "==Cada uno de== nosotros paga su cuenta.",
+              "en": "Each one of us pays his own bill."
+            },
+            {
+              "es": "==Cada una de== ellas habla tres idiomas.",
+              "en": "Each one of them speaks three languages."
+            },
+            {
+              "es": "Le di un regalo a ==cada uno de== mis sobrinos.",
+              "en": "I gave a present to each one of my nephews."
+            },
+            {
+              "es": "==Cada una de== las olas fue perfecta.",
+              "en": "Each one of the waves was perfect."
+            },
+            {
+              "es": "==Cada uno de== ustedes tiene que traer su tabla.",
+              "en": "Each one of you has to bring your board."
+            },
+            {
+              "es": "Revisé ==cada uno de== estos ejercicios.",
+              "en": "I checked each one of these exercises."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cada uno de los alumnos tienen un libro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cada uno de los alumnos tiene un libro."
+                }
+              ],
+              "nota": "Singular verb."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cada uno de las chicas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cada una de las chicas."
+                }
+              ],
+              "nota": "**Una** for a feminine group."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cada de los niños."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cada uno de los niños."
+                }
+              ],
+              "nota": "Don't drop **uno**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cada uno de alumnos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cada uno de los alumnos."
+                }
+              ],
+              "nota": "Keep the article."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "cada día",
+              "texto": "The simple form: [[6668|cada + noun]]."
+            },
+            {
+              "forma": "cada semana, todas las semanas",
+              "texto": "Every: [[6178|cada and todos]]."
+            },
+            {
+              "forma": "todos los alumnos",
+              "texto": "All at once: [[6233|todo, toda, todos, todas]]."
+            },
+            {
+              "forma": "los dos, ambos",
+              "texto": "Just two of them: [[9341|both]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _each one of my friends_",
+              "r": "cada uno de mis amigos",
+              "nota": "uno + de + mis."
+            },
+            {
+              "p": "In Spanish: _Each one of us has a board._",
+              "r": "Cada uno de nosotros tiene una tabla.",
+              "nota": "Singular verb."
+            },
+            {
+              "p": "Fix it: _Cada uno de las plantas._",
+              "r": "Cada una de las plantas.",
+              "nota": "Feminine group."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6668,
+      6178
+    ],
+    "confunde": [
+      6233
+    ],
+    "sigue": [
+      9341
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7175",
+      "kwiziq": true
+    }
+  ]
+}

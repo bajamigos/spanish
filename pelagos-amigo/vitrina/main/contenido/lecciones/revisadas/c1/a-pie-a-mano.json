@@ -1,0 +1,187 @@
+{
+  "tema": 7902,
+  "slug": "a-pie-a-mano",
+  "titulo": "A for how something is done: a pie, a mano, a gritos",
+  "subtitulo": "Fuimos a pie. Bordado a mano. Lo sacaron a empujones.",
+  "foto": "t02.jpg",
+  "regla": "A + noun often says how something is done: means (a pie, a caballo, a mano, a nado), abruptness or force (a patadas, a empujones, a gritos), the way an action unfolds (a ciegas, a tragos, a oscuras), and style (a la mexicana, a la plancha).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "means, tools (singular noun)",
+              "texto": "**a pie, a caballo, a nado, a mano, a lápiz, a máquina**."
+            },
+            {
+              "forma": "force, abruptness (plural)",
+              "texto": "**a patadas, a empujones, a gritos, a golpes**."
+            },
+            {
+              "forma": "manner (often plural)",
+              "texto": "**a ciegas, a oscuras, a tragos, a escondidas, a carcajadas**."
+            },
+            {
+              "forma": "style: a la + adjective / noun",
+              "texto": "**huevos a la mexicana, pescado a la plancha, a la antigua**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Most vehicles use **en**: **en carro, en avión, en tren, en bici** (but **a caballo, a pie**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **a** answers _how?_ in a single phrase."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Fuimos al pueblo ==a caballo==.",
+              "en": "We went to the village on horseback."
+            },
+            {
+              "es": "Vas a tener que ir ==a pie==; hoy no hay camiones.",
+              "en": "You'll have to walk; there are no buses today."
+            },
+            {
+              "es": "Los muchachos cruzaron el río ==a nado==.",
+              "en": "The boys swam across the river."
+            },
+            {
+              "es": "El rebozo está bordado ==a mano==.",
+              "en": "The shawl is hand-embroidered."
+            },
+            {
+              "es": "Lo sacaron del bar ==a patadas==.",
+              "en": "They kicked him out of the bar."
+            },
+            {
+              "es": "Caminábamos ==a ciegas== porque se nos perdieron las lámparas.",
+              "en": "We were walking blind because we lost our flashlights."
+            },
+            {
+              "es": "Para desayunar, huevos ==a la mexicana==.",
+              "en": "Mexican-style eggs for breakfast."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Fuimos a avión."
+                },
+                {
+                  "v": "bien",
+                  "t": "Fuimos en avión."
+                }
+              ],
+              "nota": "Vehicles: **en**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Fuimos en pie."
+                },
+                {
+                  "v": "bien",
+                  "t": "Fuimos a pie."
+                }
+              ],
+              "nota": "On foot: **a pie**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "a for purpose",
+              "texto": "[[7899|ir / salir / venir a]]."
+            },
+            {
+              "forma": "por for medium",
+              "texto": "[[5973|por for medium]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We came on foot._",
+              "r": "Vinimos a pie.",
+              "nota": "a pie."
+            },
+            {
+              "p": "In Spanish: _She laughed her head off._",
+              "r": "Se reía a carcajadas.",
+              "nota": "a + plural."
+            },
+            {
+              "p": "In Spanish: _They went by train._",
+              "r": "Fueron en tren.",
+              "nota": "en for most vehicles."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5973
+    ],
+    "confunde": [
+      7899
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7902",
+      "kwiziq": true
+    }
+  ]
+}

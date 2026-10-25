@@ -1,0 +1,198 @@
+{
+  "tema": 9105,
+  "slug": "ojala-pasado",
+  "titulo": "Ojalá with past subjunctive tenses",
+  "subtitulo": "Ojalá tuviera más tiempo. Ojalá hubieras venido.",
+  "foto": "t07.jpg",
+  "regla": "Ojalá + present subjunctive = I hope (likely). Ojalá + imperfect subjunctive = I wish (unlikely now or in the future, or an unknown past). Ojalá + haya + participle = I hope it happened. Ojalá + hubiera + participle = I wish it had happened (but it didn't).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Ojalá** (optionally **ojalá que**) always takes the subjunctive. The tense tells you how likely the wish is:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Form",
+            "Meaning",
+            "Example"
+          ],
+          "filas": [
+            [
+              "ojalá + present subjunctive",
+              "hope, possible",
+              "Ojalá venga."
+            ],
+            [
+              "ojalá + imperfect subjunctive",
+              "wish, unlikely (now or future); or a hope about the past",
+              "Ojalá viniera. Ojalá tuviéramos más dinero."
+            ],
+            [
+              "ojalá + haya + participle",
+              "hope it already happened",
+              "Ojalá haya llegado bien."
+            ],
+            [
+              "ojalá + hubiera + participle",
+              "wish about the past, it didn't happen (regret)",
+              "Ojalá hubieras venido."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the further back the tense, the further away the wish."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ojalá que nos ==dejaran== ir a la fiesta de la prepa.",
+              "en": "I wish they'd let us go to the high school party."
+            },
+            {
+              "es": "Ojalá ==tuviéramos== más dinero para irnos al Caribe.",
+              "en": "I wish we had more money to go to the Caribbean."
+            },
+            {
+              "es": "Ojalá ==llegaran== a tiempo a la central.",
+              "en": "I hope they made it to the bus station on time."
+            },
+            {
+              "es": "Ojalá ==haya aprobado== el examen.",
+              "en": "I hope she passed the exam."
+            },
+            {
+              "es": "Ojalá ==hubieras venido== a la boda.",
+              "en": "I wish you had come to the wedding."
+            },
+            {
+              "es": "Ojalá no le ==hubiera dicho== nada.",
+              "en": "I wish I hadn't told him anything."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "posible",
+                  "t": "Ojalá gane mi equipo."
+                },
+                {
+                  "v": "poco probable",
+                  "t": "Ojalá ganara mi equipo."
+                }
+              ],
+              "nota": "Same hope, different odds."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ojalá viniste ayer."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ojalá hubieras venido ayer."
+                }
+              ],
+              "nota": "Never the indicative."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "ojalá + present",
+              "texto": "[[5061|ojalá + present subjunctive]]."
+            },
+            {
+              "forma": "si hubiera...",
+              "texto": "[[7078|si + pluperfect subjunctive]]."
+            },
+            {
+              "forma": "espero que hayas",
+              "texto": "[[6010|esperar que + perfect subjunctive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I wish I spoke Japanese._",
+              "r": "Ojalá hablara japonés.",
+              "nota": "Unlikely: imperfect subjunctive."
+            },
+            {
+              "p": "In Spanish: _I hope he's arrived._",
+              "r": "Ojalá haya llegado.",
+              "nota": "haya + participle."
+            },
+            {
+              "p": "In Spanish: _I wish I had studied more._",
+              "r": "Ojalá hubiera estudiado más.",
+              "nota": "Regret: hubiera."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5061
+    ],
+    "confunde": [
+      6010
+    ],
+    "sigue": [
+      7078
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9105",
+      "kwiziq": true
+    }
+  ]
+}

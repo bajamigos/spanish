@@ -1,0 +1,175 @@
+{
+  "tema": 8245,
+  "slug": "como-si-ironico",
+  "titulo": "¡Como si...! + imperfect subjunctive for an ironic reproach",
+  "subtitulo": "¡Como si tú supieras cocinar!",
+  "foto": "t08.jpg",
+  "regla": "¡Como si + imperfect subjunctive! throws a criticism back ironically: —No sabes cocinar. —¡Como si tú supieras! = Like you can! For a past action, use the pluperfect subjunctive: ¡Como si hubiera sido su culpa!",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "¡Como si",
+            "+ imperfect subjunctive!"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "A comeback: you point out that the other person (or someone) is no better. It means _as if..._ or _like you could talk!_"
+        },
+        {
+          "tipo": "texto",
+          "texto": "For something completed in the past: **pluperfect subjunctive**: **¡Como si hubiera sido su culpa!**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Similar: **¡Ni que** + subjunctive! (**¡Ni que fueras mi mamá!**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: say it with your eyebrows up."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Pedro dice que soy muy fea. ==¡Como si== él ==fuera== muy guapo!",
+              "en": "Pedro says I'm ugly. As if he were so handsome!"
+            },
+            {
+              "es": "—No estás poniendo de tu parte. —==¡Como si== tú ==ayudaras== mucho!",
+              "en": "—You're not doing your part. —Like you help so much!"
+            },
+            {
+              "es": "—No sabes nada de cocina. —==¡Como si== tú ==supieras== freír un huevo!",
+              "en": "—You know nothing about cooking. —Says the guy who can't fry an egg!"
+            },
+            {
+              "es": "—La trataron muy mal en la embajada. —==¡Como si hubiera sido== su culpa que le robaran el pasaporte!",
+              "en": "—They treated her badly at the embassy. —As if it were her fault her passport got stolen!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Como si tú sabes cocinar!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Como si tú supieras cocinar!"
+                }
+              ],
+              "nota": "Never indicative."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Como si tú sepas cocinar!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Como si tú supieras cocinar!"
+                }
+              ],
+              "nota": "Never present subjunctive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "como si (manner)",
+              "texto": "[[6171|como si + imperfect subjunctive]]."
+            },
+            {
+              "forma": "como si (indifference)",
+              "texto": "[[8918|como si + indicative]]."
+            },
+            {
+              "forma": "hubiera sido",
+              "texto": "[[5842|pluperfect subjunctive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Comeback: _—Eres muy flojo._ (Like you work so hard!)",
+              "r": "¡Como si tú trabajaras mucho!",
+              "nota": "-ra."
+            },
+            {
+              "p": "Comeback: _—Llegaste tarde._ (As if you'd been on time!)",
+              "r": "¡Como si tú hubieras llegado a tiempo!",
+              "nota": "Pluperfect subjunctive."
+            },
+            {
+              "p": "Fix it: _¡Como si él tiene dinero!_",
+              "r": "¡Como si él tuviera dinero!",
+              "nota": "Imperfect subjunctive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6171
+    ],
+    "confunde": [
+      8918
+    ],
+    "sigue": [
+      8918
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8245",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "tema": 7033,
+  "slug": "que-poco",
+  "titulo": "¡Qué poco! to express surprise about a small amount",
+  "subtitulo": "¡Qué poco come! ¡Qué poca gente!",
+  "foto": "t02.jpg",
+  "regla": "¡Qué poco + verb! = how little / how rarely (poco never changes): ¡Qué poco duermes! ¡Qué poco/a/os/as + noun! = how little / how few, agreeing with the noun: ¡Qué pocos amigos tiene! Qué always has an accent.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To express surprise at **how little** or **how rarely**, use **¡Qué poco...!**"
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¡qué poco + verb!",
+              "texto": "_how little, how rarely_. **Poco** never changes. A subject goes after the verb: **¡Qué poco habla tu esposo!**"
+            },
+            {
+              "forma": "¡qué poco / poca / pocos / pocas + noun!",
+              "texto": "_how little / how few_. **Poco** agrees with the noun: singular for uncountable (**poca luz**), plural for countable (**pocos amigos**)."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Qué** never changes and always has an accent. Don't use **cuánto** or **cómo** here."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **qué poco** is a raised eyebrow."
+        }
+      ]
+    },
+    {
+      "id": "verbo",
+      "titulo": "With a verb",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¡==Qué poco== come este niño!",
+              "en": "This kid eats so little!"
+            },
+            {
+              "es": "¡==Qué poco== habla tu esposo!",
+              "en": "Your husband barely talks!"
+            },
+            {
+              "es": "¡==Qué poco== salimos últimamente!",
+              "en": "We hardly go out lately!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sustantivo",
+      "titulo": "With a noun",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¡==Qué poco== dinero tiene Luisa en el banco!",
+              "en": "Luisa has so little money in the bank!"
+            },
+            {
+              "es": "¡==Qué poca== luz hay en este cuarto!",
+              "en": "There's so little light in this room!"
+            },
+            {
+              "es": "¡==Qué pocas== clases nos quedan!",
+              "en": "We have so few classes left!"
+            },
+            {
+              "es": "¡==Qué pocos== amigos tiene mi hijo!",
+              "en": "My son has so few friends!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Qué pocos come este niño!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Qué poco come este niño!"
+                }
+              ],
+              "nota": "With a verb: **poco**, always."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Qué poco gente!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Qué poca gente!"
+                }
+              ],
+              "nota": "With a noun: agree."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Cuánto poco dinero!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Qué poco dinero!"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¡cuánto comes!",
+              "texto": "The opposite: [[5081|cuánto + verb]]."
+            },
+            {
+              "forma": "¡qué de gente!",
+              "texto": "[[6863|qué de + noun]]."
+            },
+            {
+              "forma": "¡qué bonito!",
+              "texto": "[[6137|qué + noun / adjective]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _You sleep so little!_",
+              "r": "¡Qué poco duermes!",
+              "nota": "poco + verb."
+            },
+            {
+              "p": "In Spanish: _So few people came!_",
+              "r": "¡Qué poca gente vino!",
+              "nota": "gente: poca."
+            },
+            {
+              "p": "In Spanish: _You have so few books!_",
+              "r": "¡Qué pocos libros tienes!",
+              "nota": "pocos."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6137
+    ],
+    "confunde": [
+      5081
+    ],
+    "sigue": [
+      6863
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7033",
+      "kwiziq": true
+    }
+  ]
+}

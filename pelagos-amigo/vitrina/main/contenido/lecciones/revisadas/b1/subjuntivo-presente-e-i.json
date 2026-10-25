@@ -1,0 +1,241 @@
+{
+  "tema": 5279,
+  "slug": "subjuntivo-presente-e-i",
+  "titulo": "Conjugate e > i verbs in the present subjunctive",
+  "subtitulo": "Pida, pidas, pidamos: the i stays in every form, even nosotros.",
+  "foto": "t05.jpg",
+  "regla": "Verbs with e > i in the present keep the i in every form of the present subjunctive, nosotros included: pida, pidamos.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Most stem-changing verbs (**e > ie**, **o > ue**) keep their change in the subjunctive **except in nosotros**. **E > i** verbs are different: they keep the **i** in **every form**, nosotros included."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "vestir",
+            "pedir",
+            "reír"
+          ],
+          "filas": [
+            [
+              "yo",
+              "vista",
+              "pida",
+              "ría"
+            ],
+            [
+              "tú",
+              "vistas",
+              "pidas",
+              "rías"
+            ],
+            [
+              "él, ella, usted",
+              "vista",
+              "pida",
+              "ría"
+            ],
+            [
+              "nosotros",
+              "vistamos",
+              "pidamos",
+              "riamos"
+            ],
+            [
+              "ustedes, ellos",
+              "vistan",
+              "pidan",
+              "rían"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Other common verbs like this: **competir**, **repetir**, **medir**, **despedir**, **servir**, **sonreír**, **reñir**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Reír** and **sonreír** carry an accent on the **í**, except **riamos** / **sonriamos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: once **pedir** asks for an **i**, it never gives it back."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No me sorprende que ==compitas== en la final.",
+              "en": "It doesn't surprise me that you're competing in the final."
+            },
+            {
+              "es": "No ==sirvan== el café frío.",
+              "en": "Don't serve the coffee cold."
+            },
+            {
+              "es": "Va a ser necesario que ==repitamos== el examen.",
+              "en": "We'll have to retake the exam."
+            },
+            {
+              "es": "Quiero que ==midan== la tabla.",
+              "en": "I want you to measure the board."
+            },
+            {
+              "es": "Es mejor que ==pidamos== la cuenta ya.",
+              "en": "We'd better ask for the check now."
+            },
+            {
+              "es": "No está bien que nos ==riamos== de ellos.",
+              "en": "It's not okay for us to laugh at them."
+            },
+            {
+              "es": "Es importante que se ==vistan== casual.",
+              "en": "It's important that you dress casually."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es mejor que pedamos tacos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es mejor que pidamos tacos."
+                }
+              ],
+              "nota": "The **i** stays in **nosotros**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero que repetas la técnica."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero que repitas la técnica."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No es bueno que nos ríamos."
+                },
+                {
+                  "v": "bien",
+                  "t": "No es bueno que nos riamos."
+                }
+              ],
+              "nota": "No accent on **riamos**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "pido, pides, pedimos",
+              "texto": "The present, where **nosotros** keeps the **e**: [[5851|pedir]], [[5554|competir, reír, servir]]."
+            },
+            {
+              "forma": "siga, consiga",
+              "texto": "e > i with gu > g: [[6712|seguir, conseguir]]."
+            },
+            {
+              "forma": "duerma, durmamos",
+              "texto": "Another verb that changes in **nosotros**: [[9256|o > u in nosotros]]."
+            },
+            {
+              "forma": "vuelva, volvamos",
+              "texto": "The usual pattern, without change in nosotros: [[6227|o > ue -er verbs]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "**Pedir** with **nosotros**: Mejor ___ más tortillas.",
+              "r": "Mejor pidamos más tortillas.",
+              "nota": "The **i** stays."
+            },
+            {
+              "p": "**Servir** with **ellos**: Ojalá que ___ el café caliente.",
+              "r": "Ojalá que sirvan el café caliente.",
+              "nota": "e > i."
+            },
+            {
+              "p": "In Spanish: _I don't want you to repeat it._ (tú)",
+              "r": "No quiero que lo repitas.",
+              "nota": "repetir → repitas."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5851,
+      5554,
+      5063
+    ],
+    "confunde": [
+      6227
+    ],
+    "sigue": [
+      6712,
+      9256,
+      6983
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5279",
+      "kwiziq": true
+    }
+  ]
+}

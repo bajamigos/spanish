@@ -1,0 +1,219 @@
+{
+  "tema": 5232,
+  "slug": "subjuntivo-presente-saber",
+  "titulo": "Conjugate saber in the present subjunctive",
+  "subtitulo": "Sepa, sepas, sepamos: an irregular stem nothing like saber.",
+  "foto": "t04.jpg",
+  "regla": "Saber has the irregular stem sep- with regular endings: sepa, sepas, sepa, sepamos, sepan.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Saber** (_to know_) is irregular in the present subjunctive because its stem is **sep-**. The endings are the regular **-er** ones."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**sep-**",
+            "**-a, -as, -a, -amos, -an**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "saber"
+          ],
+          "filas": [
+            [
+              "yo",
+              "sepa"
+            ],
+            [
+              "tú",
+              "sepas"
+            ],
+            [
+              "él, ella, usted",
+              "sepa"
+            ],
+            [
+              "nosotros",
+              "sepamos"
+            ],
+            [
+              "ustedes, ellos",
+              "sepan"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The **yo** trick doesn't help here: **sé** gives you nothing. Learn **sep-** by heart."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **sepa** sounds like _sepia_, the color of old photos that _know_ the past."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ella no quiere que yo ==sepa== la verdad.",
+              "en": "She doesn't want me to know the truth."
+            },
+            {
+              "es": "Es mejor que ==sepas== las consecuencias.",
+              "en": "It's better that you know the consequences."
+            },
+            {
+              "es": "Es posible que él ==sepa== dónde está la llave.",
+              "en": "It's possible he knows where the key is."
+            },
+            {
+              "es": "Te llamamos en cuanto lo ==sepamos==.",
+              "en": "We'll call you as soon as we know."
+            },
+            {
+              "es": "En cuanto ==sepan== las condiciones, nos avisan.",
+              "en": "As soon as they know the conditions, they'll let us know."
+            },
+            {
+              "es": "Dudo que ustedes ==sepan== lo que pasa.",
+              "en": "I doubt you know what's going on."
+            },
+            {
+              "es": "Quiero que ==sepas== que eres increíble.",
+              "en": "I want you to know you're amazing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Dudo que sabe nadar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Dudo que sepa nadar."
+                }
+              ],
+              "nota": "Doubt takes the subjunctive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero que lo saba."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero que lo sepa."
+                }
+              ],
+              "nota": "The stem is **sep-**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "sé, sabes",
+              "texto": "The present: [[5590|saber in the present]]."
+            },
+            {
+              "forma": "sabré, sabría",
+              "texto": "Other irregular stems: [[5245|caber and saber in the future]], [[5915|in the conditional]]."
+            },
+            {
+              "forma": "en cuanto sepamos",
+              "texto": "After time words about the future: [[8294|en cuanto, apenas]]."
+            },
+            {
+              "forma": "sea, vaya",
+              "texto": "Other irregular stems: [[5152|ser]], [[5231|ir]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I hope you know the way._ (tú)",
+              "r": "Espero que sepas el camino.",
+              "nota": "sep- + as."
+            },
+            {
+              "p": "**Saber** with **ellos**: No creo que ___ surfear.",
+              "r": "No creo que sepan surfear.",
+              "nota": "Doubt: subjunctive."
+            },
+            {
+              "p": "In Spanish: _I want you to know it._ (ustedes)",
+              "r": "Quiero que lo sepan.",
+              "nota": "sep- + an."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5590,
+      5151
+    ],
+    "confunde": [
+      5245
+    ],
+    "sigue": [
+      8294,
+      5152,
+      5231
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5232",
+      "kwiziq": true
+    }
+  ]
+}

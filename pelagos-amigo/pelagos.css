@@ -1,0 +1,1152 @@
+/* Pelagos. Una columna del ancho de un teléfono. El marco es el de pelagos.club:
+   blanco y negro, botones grises con borde negro, barras negras. La portada Reef es el único color.
+   El texto sobre la portada de una lección o de un kwiz usa colores fijos porque esa foto siempre queda oscura debajo.
+   Hay dos modos, claro y oscuro, que se eligen en Ajustes y cambian todas las páginas de una vez (html[data-tema]).
+   Solo cambian los colores: el acomodo y las transparencias son los mismos en los dos. */
+:root, :root[data-tema="claro"] {
+  --page: #ffffff; --card: #f9f9f9; --line: #dddddd;
+  --ink: #000000; --ink-2: #3d3d3d; --ink-3: #5c5c5c;
+  --btn-top: #f9f9f9; --btn-bot: #e0e0e0; --btn-ink: #2b2b2b; --outline: #000000;
+  --shadow: rgba(0,0,0,0.2); --bar: #000000; --bar-bg: #ececec;
+  --tab: #000000; --tab-ink: #ececec;
+  --mark: #ffe27a; --mark-ink: #000000;
+  --no: #b3261e; --si: #14713d; --pen: #b3261e;
+  --verde: #1e9e57; --ambar: #e3a900; --rojo: #d23b32;
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-pen: Georgia, "Times New Roman", serif;
+  /* El vidrio de las tarjetas que van sobre una foto (Hoy y el mapa). */
+  --vidrio: rgba(255,255,255,0.55); --vidrio-2: rgba(255,255,255,0.4); --vidrio-mapa: rgba(255,255,255,0.36);
+  --vidrio-borde: rgba(0,0,0,0.28); --vidrio-luz: rgba(255,255,255,0.6); --vidrio-sombra: rgba(0,0,0,0.28);
+  --halo: 0 1px 5px rgba(255,255,255,0.9);
+  /* Los seis colores del mapa, del más bajo al más alto, y el color de su letra. */
+  /* De rojo a amarillo a verde, como el mapa de Kwiziq (su pedido del 18-Oct-2026). */
+  --k0: rgba(198,40,40,0.92); --k1: rgba(239,108,0,0.92); --k2: rgba(249,200,14,0.92); --k3: rgba(192,216,74,0.92); --k4: rgba(106,191,75,0.92); --k5: rgba(46,125,50,0.92);
+  --t0: #ffffff; --t1: #000000; --t2: #000000; --t3: #000000; --t4: #000000; --t5: #ffffff;
+  /* El mapa de calor: de nada (--c0) al día más caliente (--c4). */
+  --c0: rgba(0,0,0,0.09); --c1: #f8cf9a; --c2: #f39a3d; --c3: #d9531a; --c4: #86190a;
+  /* La Bitácora por materia: vocabulario amarillo, gramática azul, los dos verde. */
+  --y1: #fbe7a1; --y2: #f5cf48; --y3: #dba400; --y4: #946800;
+  --b1: #c9ddff; --b2: #84b3f6; --b3: #2f74d6; --b4: #133f8a;
+  --g1: #c4ecd0; --g2: #74cf93; --g3: #27a356; --g4: #12632f;
+  color-scheme: light;
+}
+:root[data-tema="oscuro"] {
+  --page: #0b0b0b; --card: #171716; --line: #383835;
+  --ink: #ffffff; --ink-2: #d6d5cf; --ink-3: #b3b2ab;
+  --btn-top: #333331; --btn-bot: #1f1f1e; --btn-ink: #f2f2f2; --outline: #9a9a94;
+  --shadow: rgba(0,0,0,0.6); --bar: #ffffff; --bar-bg: #2e2e2c;
+  --tab: #f2f2f2; --tab-ink: #111111;
+  --mark: #5c4500; --mark-ink: #ffeeb0;
+  --no: #ff9d93; --si: #7fdca6; --pen: #ff9d93;
+  --verde: #46d98a; --ambar: #ffd24a; --rojo: #ff6b62;
+  --vidrio: rgba(10,10,10,0.5); --vidrio-2: rgba(0,0,0,0.28); --vidrio-mapa: rgba(10,10,10,0.3);
+  --vidrio-borde: rgba(255,255,255,0.28); --vidrio-luz: rgba(255,255,255,0.12); --vidrio-sombra: rgba(0,0,0,0.45);
+  --halo: 0 1px 6px rgba(0,0,0,0.7);
+  --k0: rgba(229,57,53,0.9); --k1: rgba(245,124,0,0.9); --k2: rgba(251,200,30,0.9); --k3: rgba(190,215,80,0.9); --k4: rgba(102,187,106,0.9); --k5: rgba(67,196,99,0.9);
+  --t0: #ffffff; --t1: #000000; --t2: #000000; --t3: #000000; --t4: #000000; --t5: #000000;
+  --c0: rgba(255,255,255,0.09); --c1: #743813; --c2: #c9581c; --c3: #ff9130; --c4: #ffe36e;
+  --y1: #5a4a12; --y2: #9c7c12; --y3: #e0b52a; --y4: #ffe680;
+  --b1: #17335f; --b2: #2059a8; --b3: #4d93f0; --b4: #b2d3ff;
+  --g1: #16432a; --g2: #1f7a44; --g3: #3fcf73; --g4: #a8f2c2;
+  color-scheme: dark;
+}
+
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--page); color: var(--ink); font: 17px/1.55 var(--font); }
+.app { max-width: 440px; margin: 0 auto; padding-inline: 16px; padding-block: 12px 40px; display: grid; gap: 14px; box-sizing: border-box; }
+.app > * { min-width: 0; }
+.vista { display: grid; gap: 14px; }
+.vista > * { min-width: 0; }
+h1, h2, h3, p, ul, ol, dl, dd, table { margin: 0; }
+h1, h2, h3 { text-wrap: balance; }
+a { color: inherit; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
+[tabindex="-1"]:focus { outline: none; }
+[lang="en"] { font-style: italic; }
+
+/* ---- El marco de Pelagos ---- */
+.brand { text-align: center; font-size: 22px; font-weight: 700; letter-spacing: -0.01em; }
+.brand a { text-decoration: none; display: inline-block; }
+/* Cuatro botones en un renglón: cada uno del ancho de su palabra, y lo que sobra se reparte. */
+.top { display: flex; gap: 5px; }
+.top .ub { flex: 1 1 auto; min-width: 0; white-space: nowrap; font-size: 15px; padding-inline: 4px; }
+/* 22-Oct-2026: arriba solo el ‹ que regresa al Tablero. */
+.top .ub.atras { flex: 0 0 auto; width: 52px; min-height: 44px; font-size: 30px; line-height: 1; font-weight: 700; padding: 0 0 4px; }
+/* El nombre de la materia, abajo del logo y arriba de sus tres botones. */
+.secTitulo { font-size: 28px; font-weight: 800; line-height: 1.15; margin: 0 0 10px; text-shadow: var(--halo); }
+/* Con foto o con el logo de fondo, el nombre va debajo, centrado, arriba de los tres botones (su pedido del 22-Oct-2026). */
+.sobre > .secTitulo { text-align: center; margin: 0; }
+/* Sin foto (las tarjetas de vocabulario), el nombre sube al renglón del ‹, a su derecha: no empuja la tarjeta. */
+.vista > .secTitulo { min-height: 44px; display: flex; align-items: center; margin: -58px 0 0 64px; font-size: 24px; }
+/* La Bitácora del Tablero: una sola tira de 26 semanas. */
+.bitT { display: grid; gap: 12px; }
+/* 23-Oct-2026: se desliza como la de Anki; hoy a tres cuartos y 8 semanas de futuro en gris (lo que te toca repasar). */
+.bitScroll { overflow-x: auto; overflow-y: hidden; scrollbar-width: none; -webkit-overflow-scrolling: touch; touch-action: pan-x pan-y; }
+.bitScroll::-webkit-scrollbar { display: none; }
+.bitT .htira { grid-template-rows: repeat(7, 12px); }
+.bitT .hc { width: 12px; height: 12px; aspect-ratio: auto; position: relative; }
+.bitInfo { margin: 0; min-height: 1.3em; font-size: 14px; color: var(--ink-3); }
+:root { --f1: #d6d6d6; --f2: #aeaeae; --f3: #828282; --f4: #4e4e4e; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --f1: #4c4c47; --f2: #74746d; --f3: #9e9e96; --f4: #d2d2ca; } }
+:root[data-theme="dark"] { --f1: #4c4c47; --f2: #74746d; --f3: #9e9e96; --f4: #d2d2ca; }
+.hc.fut { background: transparent; box-shadow: inset 0 0 0 1px var(--c0); }
+.hc.f1 { --fut: var(--f1); } .hc.f2 { --fut: var(--f2); } .hc.f3 { --fut: var(--f3); } .hc.f4 { --fut: var(--f4); }
+.hc.fut.f1, .hc.fut.f2, .hc.fut.f3, .hc.fut.f4 { background: var(--fut); box-shadow: none; }
+/* Hoy partido: arriba lo hecho (su color), abajo lo que falta (gris). */
+.hc.hoy.fq::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 50%; background: var(--fut); border-radius: 0 0 2px 2px; }
+/* En Juntos, cada cuadro del futuro se parte: arriba lo de vocabulario, abajo lo de gramática, en su proporción
+   (--pv = % de vocabulario; lo escogió Grifo el 23-Oct-2026, la opción 11). El brillo sigue diciendo cuánto en total. */
+.bitT .hc.fp { --tv: color-mix(in srgb, var(--y3) 45%, var(--fut)); --tg: color-mix(in srgb, var(--b3) 45%, var(--fut)); }
+.bitT .hc.fut.fp, .bitT .hc.hoy.fp::after { background: linear-gradient(var(--tv) 0 var(--pv), var(--tg) var(--pv)); }
+
+
+/* «Cómo funciona» (16-Oct-2026) */
+.ayudaIdx { display: grid; gap: 8px; list-style: none; padding: 0; margin: 0; }
+.ayudaIdx a { display: grid; gap: 2px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 8px; text-decoration: none; color: var(--ink); }
+.ayudaIdx a b { font-size: 17px; }
+.ayudaIdx a span { font-size: 14.5px; color: var(--ink-3); }
+.ayudaPag ul { display: grid; gap: 6px; padding-left: 20px; margin: 0; color: var(--ink-2); }
+.ayudaPag .formula { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 14px; overflow-wrap: anywhere; color: var(--ink); }
+.ayudaPag a, .ayudaIdx a b { overflow-wrap: anywhere; }
+.ayudaPag .lk { text-decoration: underline dotted; text-underline-offset: 3px; }
+.glosa dt { font-weight: 700; color: var(--ink); margin-top: 10px; scroll-margin-top: 12px; }
+.glosa dd { margin: 2px 0 0; color: var(--ink-2); }
+.ub { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box;
+  min-height: 44px; padding: 6px 14px; font: inherit; font-size: 14px; font-weight: 600; line-height: 1.25; text-decoration: none; text-align: center;
+  color: var(--btn-ink); background: linear-gradient(to bottom, var(--btn-top), var(--btn-bot));
+  border: 1px solid var(--outline); border-radius: 10px; box-shadow: 0 1px 3px var(--shadow); cursor: pointer; }
+.ub:active, .ub[aria-current="page"] { box-shadow: inset 0 1px 3px var(--shadow); background: var(--btn-bot); }
+.ub[aria-current="page"] { border-width: 2px; }
+.ub:disabled { opacity: 0.6; cursor: default; }
+.ub .sum { font-size: 12px; font-weight: 400; color: var(--ink-3); }
+.crumb { text-align: center; font-size: 14px; color: var(--ink-3); }
+
+.jump { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+.jump.niveles { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.jump.dos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.jump.tres { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.jump a, .jump button { display: block; box-sizing: border-box; width: 100%; padding: 10px 4px; text-align: center; font: inherit; font-size: 14px; font-weight: 700; line-height: 1.55; text-decoration: none;
+  background: var(--tab); color: var(--tab-ink); border: 2px solid var(--tab); border-radius: 4px; cursor: pointer; }
+.jump.niveles a, .jump.dos a, .jump.dos button, .jump.tres a, .jump.tres button { background: var(--page); color: var(--ink); border-color: var(--outline); }
+.jump.niveles a[aria-current="page"], .jump.dos a[aria-current="page"], .jump.dos button[aria-current="page"], .jump.tres a[aria-current="page"], .jump.tres button[aria-pressed="true"], .jump.tres button[aria-current="page"] { background: var(--tab); color: var(--tab-ink); border-color: var(--tab); }
+/* Las dos entradas de una sección (lecciones y quiz; quiz y lista). El nombre puede partirse en dos renglones sin descuadrar. */
+.jump.sec a, .jump.sec button { display: grid; place-items: center; min-height: 44px; padding: 6px 4px; line-height: 1.2; text-wrap: balance; }
+.jump.cuatro button { background: var(--page); color: var(--ink); border-color: var(--outline); font-size: 13px; padding: 9px 0; }
+.jump.cuatro button[aria-pressed="true"] { background: var(--tab); color: var(--tab-ink); border-color: var(--tab); }
+
+/* ---- Tarjetas y texto ---- */
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 18px 16px; display: grid; gap: 12px; scroll-margin-top: 12px; }
+.card > * { min-width: 0; }
+.card h1.h { font-size: 24px; line-height: 1.2; font-weight: 700; }
+.card h2 { font-size: 22px; line-height: 1.2; font-weight: 700; }
+.card h3 { font-size: 15px; font-weight: 700; color: var(--ink-2); margin-top: 6px; }
+.card p { color: var(--ink-2); }
+.card p b, .card li b { color: var(--ink); }
+.small { font-size: 14.5px; color: var(--ink-3); }
+mark { background: var(--mark); color: var(--mark-ink); padding: 0 3px; border-radius: 3px; }
+
+/* ---- Portada Reef ---- */
+.hero { position: relative; display: grid; grid-template-columns: minmax(0, 1fr); background: #151515; border-radius: 8px; overflow: hidden; }
+.hero .ratio { grid-area: 1 / 1; width: 100%; max-width: 100%; aspect-ratio: 3 / 4; }
+.hero img, .hero video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.over { grid-area: 1 / 1; position: relative; z-index: 2; align-self: start; box-sizing: border-box; padding: 14px 16px 48px; color: #ffffff;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.72) 68%, rgba(0,0,0,0.30) 90%, rgba(0,0,0,0) 100%); }
+.lead { display: flex; justify-content: space-between; gap: 10px; font-size: 13.5px; color: rgba(255,255,255,0.86); font-variant-numeric: tabular-nums; }
+.hero h1 { margin-top: 4px; font-size: 26px; line-height: 1.18; font-weight: 700; letter-spacing: -0.01em; text-shadow: 0 1px 10px rgba(0,0,0,0.6); }
+.hero .sub { margin-top: 6px; font-size: 15px; line-height: 1.4; color: rgba(255,255,255,0.92); }
+.score { margin-top: 10px; display: grid; gap: 4px; font-size: 13px; color: rgba(255,255,255,0.86); font-variant-numeric: tabular-nums; }
+.score .track { position: relative; height: 8px; border-radius: 4px; background: rgba(255,255,255,0.22); border: 1px solid rgba(255,255,255,0.45); }
+.score .track i { display: block; height: 100%; border-radius: 3px; background: #ffffff; }
+.score .track b { position: absolute; top: -4px; bottom: -4px; width: 2px; background: #ffffff; }
+.rule { position: absolute; z-index: 3; left: 6%; right: 6%; bottom: 5%; box-sizing: border-box; display: grid; gap: 8px; padding: 14px;
+  color: #ffffff; background: rgba(14,14,14,0.86); border: 1px solid rgba(255,255,255,0.5); border-radius: 14px;
+  -webkit-backdrop-filter: blur(22px); backdrop-filter: blur(22px); }
+@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) { .rule { background: rgba(14,14,14,0.62); } }
+.rule .k { font-size: 12.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.82); }
+.rule p { font-size: 17px; line-height: 1.38; font-weight: 600; }
+.rule button, .back { justify-self: start; font: inherit; font-size: 14px; font-weight: 700; color: #0b0b0b; background: #ffffff; border: 1px solid #ffffff; border-radius: 999px; padding: 7px 16px; cursor: pointer; }
+.back { position: absolute; z-index: 3; left: 6%; bottom: 5%; color: #ffffff; background: rgba(14,14,14,0.62); border-color: rgba(255,255,255,0.5); }
+.hero button:focus-visible { outline: 3px solid #ffffff; outline-offset: 2px; }
+
+/* ---- Piezas de una lección ---- */
+.formula { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-weight: 700; }
+.formula span { border: 2px solid var(--outline); border-radius: 4px; padding: 5px 7px; background: var(--page); font-size: 14.5px; white-space: nowrap; }
+.formula i { font-style: normal; font-size: 18px; }
+
+.scroll { overflow-x: auto; }
+table.conj { border-collapse: collapse; width: 100%; font-size: 17px; }
+table.conj th, table.conj td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--line); }
+table.conj thead th { font-size: 13.5px; font-weight: 600; color: var(--ink-3); }
+table.conj tbody th { font-weight: 400; color: var(--ink-2); }
+table.conj td.f { font-weight: 700; white-space: nowrap; }
+table.conj tr:last-child th, table.conj tr:last-child td { border-bottom: 0; }
+
+.pen { font-family: var(--font-pen); font-style: italic; font-size: 18px; line-height: 1.4; border-left: 3px solid var(--pen); padding-left: 12px; }
+.card p.pen { color: var(--pen); }
+.pen span { display: block; font-size: 13.5px; font-style: normal; font-family: var(--font); color: var(--ink-3); margin-top: 2px; }
+
+.exs { list-style: none; padding: 0; display: grid; gap: 14px; }
+.ex { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2px 10px; align-items: start; }
+.ex .es { grid-column: 1; font-size: 19px; line-height: 1.35; font-weight: 600; color: var(--ink); font-style: normal; }
+.ex .en { grid-column: 1; font-size: 15px; color: var(--ink-3); }
+
+.pairs { display: grid; gap: 10px; }
+.pair { display: grid; gap: 4px; padding: 10px 12px; background: var(--page); border: 1px solid var(--line); border-radius: 6px; }
+.row { display: grid; grid-template-columns: 46px minmax(0, 1fr); gap: 8px; align-items: baseline; font-size: 17.5px; }
+.tag { font-size: 12.5px; font-weight: 700; text-align: center; border-radius: 4px; padding: 1px 0; border: 1.5px solid currentColor; }
+.row.mal .tag { color: var(--no); }
+.row.bien .tag { color: var(--si); }
+.row.mal .t { text-decoration: line-through; text-decoration-color: var(--no); text-decoration-thickness: 2px; color: var(--ink-2); }
+.row.bien .t { font-weight: 700; color: var(--ink); }
+.card .pair .why { font-size: 14.5px; color: var(--ink-3); padding-left: 54px; }
+
+.uses { display: grid; gap: 0; }
+.use { display: grid; gap: 2px; padding: 12px 0; border-top: 1px solid var(--line); }
+.use:first-child { border-top: 0; padding-top: 0; }
+.use:last-child { padding-bottom: 0; }
+.use dt { font-size: 18.5px; font-weight: 700; }
+.use dd { color: var(--ink-2); }
+.here { font-size: 12.5px; font-weight: 700; border: 1.5px solid var(--outline); border-radius: 4px; padding: 0 6px; margin-left: 6px; vertical-align: 2px; white-space: nowrap; }
+
+details.q { background: var(--page); border: 1px solid var(--line); border-radius: 6px; }
+details.q > summary { cursor: pointer; padding: 12px; font-size: 17px; font-weight: 600; }
+details.q .a { padding: 0 12px 12px 12px; display: grid; gap: 4px; }
+details.q .a b { font-size: 18.5px; color: var(--si); }
+details.q .a span { font-size: 14.5px; color: var(--ink-3); }
+
+/* ---- Enlaces entre lecciones: dentro del texto y como botones de dos líneas ---- */
+.lk { font: inherit; font-weight: 600; color: var(--ink); background: none; border: 0; padding: 0; cursor: pointer; text-align: inherit;
+  text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.lv { display: inline-block; font-size: 12px; font-weight: 700; line-height: 1.3; border: 1px solid var(--outline); border-radius: 4px; padding: 0 5px; font-variant-numeric: tabular-nums; text-decoration: none; font-style: normal; }
+.lk .lv { margin-left: 5px; vertical-align: 2px; }
+.links { display: grid; gap: 8px; }
+.tb { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 4px 10px; align-items: baseline; width: 100%; box-sizing: border-box; text-align: left;
+  padding: 10px 12px; font: inherit; color: var(--btn-ink); background: linear-gradient(to bottom, var(--btn-top), var(--btn-bot));
+  border: 1px solid var(--outline); border-radius: 4px; box-shadow: 0 1px 3px var(--shadow); cursor: pointer; text-decoration: none; }
+.tb:active { box-shadow: inset 0 1px 3px var(--shadow); }
+.tb .nm { font-size: 15.5px; font-weight: 600; line-height: 1.3; overflow-wrap: anywhere; }
+.tb .nm.ancho { grid-column: 1 / 3; }
+.tb .nm[lang="en"] { font-style: normal; }
+.tb .pc { font-size: 15px; font-weight: 700; font-variant-numeric: tabular-nums; }
+/* El número va siempre en el color del texto, para que se lea. El color lo lleva la barra. */
+.tb .sm { grid-column: 2 / -1; font-size: 13px; color: var(--ink-3); }
+.tb .sm.ancho { grid-column: 1 / -1; }
+.tb .bar { grid-column: 1 / -1; }
+.marcas { display: inline-flex; flex-wrap: wrap; gap: 4px 10px; vertical-align: middle; }
+.marcas .marca { display: inline-flex; align-items: center; gap: 4px; color: var(--ink-3); }
+.marcas .marca.si { color: var(--ink); font-weight: 600; }
+.marcas .marca svg { width: 14px; height: 14px; flex: none; }
+.marcas .marca.si svg { color: var(--verde); }
+.tb .sm .donde { display: block; margin-bottom: 4px; }
+.tb .resp { margin-left: 10px; }
+.tb .motivo { display: block; margin-top: 4px; }
+.bar { display: block; height: 8px; border-radius: 4px; background: var(--bar-bg); border: 1px solid var(--line); overflow: hidden; }
+.bar i { display: block; height: 100%; background: var(--bar); }
+.bar.verde i { background: var(--verde); }
+.bar.ambar i { background: var(--ambar); }
+.bar.rojo i { background: var(--rojo); }
+.lib { list-style: none; padding: 0; display: grid; gap: 0; }
+.lib li { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 2px 10px; padding: 9px 0; border-top: 1px solid var(--line); font-size: 15.5px; color: var(--ink); }
+.lib li:first-child { border-top: 0; }
+.lib .kind { font-size: 12.5px; font-weight: 700; color: var(--ink-3); padding-top: 3px; }
+.lib .where { grid-column: 2; font-size: 13.5px; color: var(--ink-3); }
+.backs { font-size: 15.5px; line-height: 2; }
+
+/* Categorías de la biblioteca: cerradas hasta que las tocas. */
+details.cat { display: block; padding: 0; }
+details.cat > summary { cursor: pointer; padding: 16px; font-size: 20px; line-height: 1.25; font-weight: 700; }
+details.cat > summary .cc { display: block; margin-top: 2px; font-size: 14.5px; font-weight: 400; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+details.cat > .links { padding: 0 16px 16px; }
+details.cat .tb { padding: 8px 12px; }
+details.cat .tb .nm { font-size: 15px; }
+
+/* ---- El kwiz ---- */
+.go { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+/* Un botón grande y, a su lado, el cuadro de los quizzes de hoy (quiz de gramática y su resultado). */
+.conCuadro { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; align-items: stretch; margin: 8px 0; }
+.conCuadro > .ub.grande { height: auto; }
+.conCuadro + .go { margin-top: 0; }
+.go form { display: contents; }
+.ub.grande { min-height: 52px; padding: 8px 22px; font-size: 16.5px; }
+.links form { display: contents; }
+.kw { display: grid; gap: 14px; }
+.kw > * { min-width: 0; }
+.kwh .ratio { max-height: 44vh; }
+.kwh .over { padding-bottom: 56px; }
+.cue { margin-top: 10px; font-size: 24px; line-height: 1.25; font-weight: 700; text-shadow: 0 1px 10px rgba(0,0,0,0.6); text-wrap: pretty; }
+.hero h1.cue { font-style: normal; }
+.hole { display: inline-block; min-width: 46px; margin: 0 3px; padding: 0 8px; text-align: center; border-bottom: 3px solid #ffffff; color: rgba(255,255,255,0.75); }
+.fq .hole { border-bottom-color: var(--ink); color: var(--ink-3); min-width: 30px; }
+.fq[lang="en"] { font-style: normal; }
+.hrow { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 10px; }
+.chip { font: inherit; font-size: 14px; font-weight: 700; color: #ffffff; background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.5); border-radius: 999px; padding: 5px 14px; cursor: pointer; }
+.ops { display: grid; gap: 8px; }
+.ub.op { width: 100%; min-height: 52px; font-size: 17.5px; border-radius: 4px; align-items: flex-start; text-align: left; padding: 10px 14px; }
+.ub.op:disabled { cursor: default; opacity: 0.75; }
+/* El marco grueso va por dentro: el botón no cambia de tamaño y los de abajo no se mueven. */
+.ub.op.es { opacity: 1; border-color: var(--si); box-shadow: inset 0 0 0 2px var(--si); }
+.ub.op.no { opacity: 1; border-color: var(--no); box-shadow: inset 0 0 0 2px var(--no); }
+.ub.op .nota { display: block; min-height: 1.45em; margin-top: 2px; font-size: 14.5px; font-weight: 700; line-height: 1.45; }
+.ub.op.es .nota { color: var(--si); }
+.ub.op.no .nota { color: var(--no); }
+.lead .fallo { font-size: 15px; font-weight: 700; color: #0b0b0b; background: #ffffff; border-radius: 999px; padding: 0 12px; }
+.campo { width: 100%; box-sizing: border-box; margin-top: 4px; font: inherit; font-size: 19px; padding: 10px 12px; color: var(--ink); background: var(--page); border: 2px solid var(--outline); border-radius: 4px; }
+.teclas { display: flex; gap: 4px; margin: 8px 0 12px; }
+.tecla { flex: 1 1 0; min-width: 0; min-height: 40px; font: inherit; font-size: 17px; color: var(--btn-ink); background: linear-gradient(to bottom, var(--btn-top), var(--btn-bot)); border: 1px solid var(--outline); border-radius: 4px; cursor: pointer; }
+.pill { display: inline-block; font-size: 15px; font-weight: 700; border-radius: 999px; padding: 2px 14px; border: 2px solid currentColor; }
+.pill.bien { color: var(--si); }
+.pill.mal { color: var(--no); }
+.pill.duda { color: var(--ink); }
+.card p.vresp { font-size: 19px; font-weight: 700; color: var(--ink); }
+.card p.vtuya { color: var(--ink-2); }
+.card p.vtuya.mal { text-decoration: line-through; text-decoration-color: var(--no); text-decoration-thickness: 2px; }
+.tach { text-decoration: line-through; text-decoration-color: var(--no); text-decoration-thickness: 2px; }
+.mala { font-size: 14px; color: var(--ink-3); }
+.mala .lk { font-weight: 400; font-size: 14px; color: var(--ink-3); text-decoration-thickness: 1px; }
+.card p.err, .foot p.err { color: var(--no); font-weight: 600; }
+.forma { display: grid; gap: 8px; }
+ol.pasos { padding-left: 24px; display: grid; gap: 8px; color: var(--ink-2); }
+ol.pasos b { color: var(--ink); font-style: normal; }
+.bar.gorda { height: 14px; }
+.go.arriba { margin-top: -2px; }
+/* El enfoque: un botón para todos los niveles y uno por nivel, con cuántos temas tienen preguntas. */
+.enfoque { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 6px; }
+.enfoque .nv { display: grid; justify-items: center; gap: 0; padding: 8px 2px; font: inherit; font-size: 15px; font-weight: 700; line-height: 1.3; cursor: pointer;
+  background: var(--page); color: var(--ink); border: 2px solid var(--outline); border-radius: 4px; }
+.enfoque .nv.ancho { grid-column: 1 / -1; padding: 10px 8px; }
+.enfoque .nv span { font-size: 12.5px; font-weight: 400; color: var(--ink-3); }
+.enfoque .nv[aria-pressed="true"] { background: var(--tab); color: var(--tab-ink); border-color: var(--tab); }
+.enfoque .nv[aria-pressed="true"] span { color: var(--tab-ink); }
+.enfoque .nv:disabled { opacity: 0.45; cursor: default; }
+ul.rota { margin: 0; padding-left: 22px; display: grid; gap: 4px; font-size: 16.5px; color: var(--ink); }
+ul.rota .tutoraDe { color: var(--ink-3); }
+.tb .pc .delta { font-size: 13px; font-weight: 600; margin-left: 4px; color: var(--ink-3); }
+.tb .pc .delta.sube { color: var(--verde); }
+.tb .pc .delta.baja { color: var(--rojo); }
+.pair.rq .row { grid-template-columns: 46px minmax(0, 1fr); }
+.pair.rq .fq { font-size: 17px; font-weight: 600; color: var(--ink); text-decoration: none; }
+
+.foot { text-align: center; font-size: 13.5px; color: var(--ink-3); display: grid; gap: 4px; }
+
+/* ---- Vista previa de un tema enlazado ---- */
+dialog.sheet { position: fixed; inset: auto 0 0 0; margin: 0 auto; width: min(100%, 440px); max-width: 100%; max-height: 80%; box-sizing: border-box; overflow: auto;
+  padding: 18px 16px calc(18px + env(safe-area-inset-bottom, 0px)); color: var(--ink); background: var(--page);
+  border: 1px solid var(--outline); border-bottom: 0; border-radius: 12px 12px 0 0; }
+dialog.sheet::backdrop { background: rgba(0,0,0,0.5); }
+.sheet .in { display: grid; gap: 10px; }
+.sheet .k { font-size: 12.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); }
+.sheet h2 { font-size: 21px; line-height: 1.2; }
+.sheet .r { font-size: 17.5px; color: var(--ink); }
+.sheet .sc { display: grid; gap: 4px; font-size: 14px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.sheet .acts { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* ---- La página de Hoy. Con el retrato de Andrea, la foto queda fija al fondo y las tarjetas son de vidrio
+   (oscuro o claro, según el modo), para que ella se siga viendo al bajar.
+   Sobre una foto el texto secundario va un poco más marcado, para que se lea. */
+body.conandrea { --ink-2: #1c1c1c; --ink-3: #333333; --bar-bg: rgba(0,0,0,0.16); }
+:root[data-tema="oscuro"] body.conandrea { --ink-2: #ececec; --ink-3: #d2d2d2; --bar-bg: rgba(255,255,255,0.2); --no: #ffb3ab; --si: #8ff0b8; --pen: #ffb3ab; }
+.hoy { position: relative; }
+.hoy .fondo { display: none; }
+.hoy .sobre { position: relative; z-index: 1; display: grid; gap: 14px; }
+.hoy .sobre > * { min-width: 0; }
+.card p.fechaHoy { font-size: 19px; font-weight: 700; color: var(--ink); }
+.card p.fechaHoy::first-letter { text-transform: uppercase; }
+
+.ub.redondo { width: 44px; min-height: 44px; padding: 0; border-radius: 50%; }
+.ub.redondo svg { width: 22px; height: 22px; }
+.hoy.confoto .ub.redondo { background: var(--vidrio-2); color: var(--ink); border-color: var(--vidrio-borde); box-shadow: none; }
+
+.hoy.confoto .fondo { display: block; position: sticky; top: 0; z-index: 0; margin-inline: -16px; }
+.hoy.confoto .fondo img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: center top; background: var(--card); }
+.hoy.confoto .fondo video { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: center top; background: var(--card); }
+.hoy.confoto .fondo img.logoFondo { position: absolute; z-index: 1; right: 0; bottom: 0; width: 28%; height: auto; aspect-ratio: auto; object-fit: contain; box-sizing: border-box; padding: 1.2% 1.5%; background: #0b0b0b; border-radius: 14px 0 0 0; pointer-events: none;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,.65)) drop-shadow(0 0 18px rgba(0,0,0,.35)); }
+/* El nombre de la lección del loop (tu tema más bajo): discreto, arriba a la izquierda, bajo los botones. */
+.hoy.confoto .fondo .fondoTema { position: absolute; z-index: 1; top: 8px; left: 16px; max-width: 70%; margin: 0; padding: 3px 9px; font-size: 13px; line-height: 1.3; color: rgba(255, 255, 255, 0.85); background: rgba(0, 0, 0, 0.45); border: 0; border-radius: 6px; pointer-events: auto; cursor: pointer; text-decoration: none; font-family: inherit; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.hoy.confoto .fondo .fondoTema .lv { font-weight: 800; margin-right: 4px; color: #ffffff; }
+.hoy.confoto .fondo .fondoTema:hover, .hoy.confoto .fondo .fondoTema:focus-visible { color: #ffffff; background: rgba(0, 0, 0, 0.65); }
+/* Limpio: el logo de Pelagos de fondo, en el lugar de la foto. Blanco en claro, negro en oscuro. */
+.hoy.confoto .fondo.fondoLogo { background: var(--page); }
+.hoy.confoto .fondo.fondoLogo img { aspect-ratio: 720 / 615; background: var(--page); object-fit: contain; object-position: center; }
+.fondo.fondoLogo .logoOscuro { display: none !important; }
+:root[data-tema="oscuro"] .fondo.fondoLogo .logoOscuro { display: block !important; }
+:root[data-tema="oscuro"] .fondo.fondoLogo .logoClaro { display: none !important; }
+/* Mientras llega el fondo (o mientras carga su video), el logo de Pelagos ocupa el lugar. */
+.hoy.confoto .fondo.cargando { aspect-ratio: 1 / 1; display: grid; place-items: center; background: #0b0b0b; }
+.hoy.confoto .fondo img.logoCarga { width: 72%; aspect-ratio: auto; object-fit: contain; background: none; }
+.hoy.confoto .fondo video, .hoy.confoto .fondo img[data-videofondo] { background: #0b0b0b url("logo.png") center / 72% no-repeat; }
+.hoy.confoto .fondo::after { content: ""; position: absolute; inset: auto 0 0 0; height: 30%; background: linear-gradient(to bottom, transparent, var(--page)); }
+.hoy.confoto .sobre { margin-top: -20%; gap: 18px; }
+.hoy.confoto .card { background: var(--vidrio); border: 1px solid var(--vidrio-borde); border-radius: 16px;
+  -webkit-backdrop-filter: blur(5px) saturate(1.15); backdrop-filter: blur(5px) saturate(1.15);
+  box-shadow: 0 10px 28px var(--vidrio-sombra), inset 0 1px 0 var(--vidrio-luz); text-shadow: var(--halo); }
+.hoy.confoto .card h2 { font-size: 17px; }
+.hoy.confoto .cuadro { background: var(--vidrio-2); border-color: var(--vidrio-borde); border-radius: 12px; }
+.hoy.confoto .tb { background: var(--vidrio-2); border-color: var(--vidrio-borde); border-radius: 12px; box-shadow: none; color: var(--ink); }
+.hoy.confoto .ub.grande { background: var(--ink); color: var(--page); border-color: var(--ink); text-shadow: none; box-shadow: 0 4px 14px var(--vidrio-sombra); }
+
+.cuadros { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.cuadro { display: grid; gap: 6px; align-content: start; border: 1px solid var(--outline); border-radius: 6px; padding: 10px; background: var(--page); }
+a.cuadro { color: inherit; text-decoration: none; }
+.cuadro .cn { font-size: 14px; font-weight: 600; line-height: 1.25; color: var(--ink-2); }
+.cuadro .cn .csub { display: block; font-size: 12px; font-weight: 400; color: var(--ink-3); }
+.podHoy { margin: 4px 0 8px; padding-left: 18px; }
+.cuadro .cv { font-size: 26px; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.cuadro .cv small { font-size: 13px; font-weight: 400; color: var(--ink-3); }
+.cuadro .ce { display: flex; align-items: center; gap: 6px; font-size: 13.5px; font-weight: 600; color: var(--ink-3); }
+.cuadro .ce svg, .partes svg { width: 16px; height: 16px; flex: none; }
+.cuadro.hecho .ce { color: var(--si); }
+.bar.vacia { background: none; border-style: dashed; }
+.extras { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; text-align: center; font-size: 13px; line-height: 1.3; color: var(--ink-3); }
+.extras b { display: block; font-size: 17px; line-height: 1.25; color: var(--ink); white-space: nowrap; }
+.card p.viejo { color: var(--no); font-weight: 600; }
+
+#frase { border-left: 4px solid var(--b3); }
+#frase p.frase { font-size: 17px; font-style: italic; font-weight: 600; line-height: 1.4; color: var(--ink); overflow-wrap: anywhere; }
+#frase p.frase::before { content: "Andrea: "; font-style: normal; font-weight: 800; color: var(--b3); }
+.card p.ciLinea { font-size: 17px; font-weight: 700; line-height: 1.3; color: var(--ink); overflow-wrap: anywhere; }
+.card p.ciLinea a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.card p.ciOido { display: flex; align-items: center; gap: 6px; margin-top: -6px; font-size: 14.5px; font-weight: 600; color: var(--ink); }   /* del mismo color que el renglón del check-in */
+.card p.ciOido .relleno { fill: transparent; }
+.card p.ciOido.no .relleno { fill: var(--si); }   /* sin escuchar: el círculo punteado se rellena de verde */
+.card p.ciOido svg { width: 16px; height: 16px; flex: none; }
+/* Las partes del check-in: todas en un solo renglón. La que viene va rellena; la que no, punteada y apagada. */
+ul.partes { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: nowrap; gap: 4px; }
+ul.partes li { flex: 1 1 auto; min-width: 0; text-align: center; white-space: nowrap; border: 1px solid var(--outline); border-radius: 999px; padding: 5px 5px; font-size: 13px; font-weight: 700; line-height: 1.3; }
+ul.partes li.va { color: var(--tab-ink); background: var(--verde); border-color: var(--verde); text-shadow: none; }
+ul.partes li.nova { color: var(--ink-3); border-style: dashed; font-weight: 600; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.tic { stroke: var(--page); }
+
+/* ---- El mapa de árbol. Una tarjeta de vidrio por nivel, con la portada Reef del día fija al fondo.
+   Cada cuadro es un tema; el color dice en qué franja va (--k0 a --k5, arriba, uno por modo). */
+/* Desde el 9 de octubre (su pedido): el fondo va igual que en el Tablero, la foto arriba y las pestañas en el mismo lugar en todas las páginas. */
+.hoy.mapa.confoto .sobre { gap: 16px; }
+.hoy.mapa .card { padding: 10px 8px 8px; gap: 8px; }
+/* Sin desenfoque: la foto se tiene que seguir viendo entre los cuadros. */
+.hoy.mapa.confoto .card { background: var(--vidrio-mapa); -webkit-backdrop-filter: none; backdrop-filter: none; }
+.hoy.mapa .card h2 { display: flex; align-items: center; gap: 8px; padding-inline: 4px; font-size: 18px; }
+.hoy.mapa .card h2 .lv { font-size: 14px; padding: 1px 7px; }
+.hoy.mapa .card h2 .mpc { margin-left: auto; font-variant-numeric: tabular-nums; }
+.mmapa { position: relative; width: 100%; }
+.mcaja { position: absolute; box-sizing: border-box; padding: 3px; display: flex; flex-direction: column; min-width: 0; }
+.mrot { flex: none; height: 22px; padding: 0 2px; font-size: 13px; line-height: 20px; font-weight: 700; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mrot span { font-weight: 400; color: var(--ink-3); }
+.mcuerpo { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; gap: 2px; }
+.mfila { flex: 1 1 0; min-height: 0; display: flex; gap: 2px; }
+.mc { flex: 1 1 0; min-width: 0; min-height: 0; margin: 0; padding: 0; border: 0; border-radius: 4px; overflow: hidden; cursor: pointer;
+  font: inherit; font-size: 12px; line-height: 1.15; text-shadow: none; display: flex; align-items: center; justify-content: center; background: var(--vidrio-2); color: var(--ink); }
+.mc.vacio { visibility: hidden; cursor: default; }
+.mc.k0 { background: var(--k0); color: var(--t0); } .mc.k1 { background: var(--k1); color: var(--t1); } .mc.k2 { background: var(--k2); color: var(--t2); }
+.mc.k3 { background: var(--k3); color: var(--t3); } .mc.k4 { background: var(--k4); color: var(--t4); } .mc.k5 { background: var(--k5); color: var(--t5); }
+.mc b { font-weight: 700; font-variant-numeric: tabular-nums; }
+.mc.g b { font-size: 15px; }
+.mc.ch b { font-size: 10.5px; letter-spacing: -0.4px; }
+.mc.m2 { flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 1px; text-align: left; padding: 4px 5px; }
+.mc.m2 b { font-size: 17px; line-height: 1.1; }
+.mc .mt { display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; font-size: 11.5px; line-height: 13px; font-style: normal; overflow-wrap: anywhere; -webkit-line-clamp: 1; line-clamp: 1; }
+.mc .mt.r2 { -webkit-line-clamp: 2; line-clamp: 2; } .mc .mt.r3 { -webkit-line-clamp: 3; line-clamp: 3; } .mc .mt.r4 { -webkit-line-clamp: 4; line-clamp: 4; }
+/* Desde el 18-Oct: cada cuadro trae el nombre de su regla en letra chiquita (la que quepa; en el teléfono se agranda con dos dedos). */
+.mc.mn { padding: 1px 2px; align-items: center; justify-content: center; }
+.mc.mn .mt { display: block; overflow: visible; line-height: 1.2; font-weight: 600; text-align: center; overflow-wrap: anywhere; hyphens: auto; -webkit-line-clamp: none; line-clamp: none; }
+.mc:focus-visible { outline: 3px solid var(--ink); outline-offset: -3px; }
+ul.clave { list-style: none; margin: 0; padding: 2px 4px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 14px; font-size: 15px; }
+ul.clave li { display: grid; grid-template-columns: 22px minmax(0, 1fr) auto; gap: 8px; align-items: center; }
+ul.clave .mc { display: block; flex: none; width: 22px; height: 22px; cursor: default; }
+ul.clave b { font-variant-numeric: tabular-nums; }
+
+/* ---- Los dibujitos de lo ganado: chiquitos e inclinados, montados en la esquina del cuadro de su medida, como una calcomanía.
+   Ganado: a color y con brillo. Por ganar: solo el contorno punteado. */
+.cuadro.consello, .card.consello { position: relative; }
+.card.consello .ciLinea { padding-right: 34px; }
+.cuadros { gap: 10px; }
+.cuadro > * { min-width: 0; }
+.cuadro.consello .cn { padding-right: 16px; }
+.sello { position: absolute; top: -14px; right: -10px; width: 40px; height: 40px; transform: rotate(-14deg); pointer-events: none; }
+.sello svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.sello * { stroke-linejoin: round; stroke-linecap: round; }
+.sello.ok { filter: drop-shadow(0 0 5px rgba(255,214,102,0.95)) drop-shadow(0 1px 1px rgba(0,0,0,0.5)); }
+.sello.ok .s1, .sello.ok .s2 { stroke-width: 0.9; }
+.sello.puno.ok .s1 { fill: #a9692f; stroke: #4a2a10; }
+.sello.puno.ok .s2 { fill: #c4833f; stroke: #4a2a10; }
+.sello.labios.ok .s1 { fill: #e11d48; stroke: #8f0f2c; }
+.sello.labios.ok .s3 { fill: none; stroke: #ff9db0; stroke-width: 1; }
+.sello.papaya.ok .s1 { fill: #ff9a3c; stroke: #4d7c0f; stroke-width: 2; }
+.sello.papaya.ok .s2 { fill: #e2531b; stroke: #b63d10; }
+.sello.papaya.ok .s3 { fill: #1c1917; stroke: none; }
+.sello.durazno.ok .s1 { fill: #ff9a76; stroke: #c9453c; }
+.sello.durazno.ok .s2 { fill: #58a62e; stroke: #2f6b14; }
+.sello.durazno.ok .s3 { fill: none; stroke: #d6453d; stroke-width: 1.5; }
+.sello.manzana.ok .s1 { fill: #dc2626; stroke: #7f1d1d; }
+.sello.manzana.ok .s2 { fill: #58a62e; stroke: #2f6b14; }
+.sello.manzana.ok .s3 { fill: none; stroke: #6b4423; stroke-width: 1.8; }
+/* Un premio ganado con GIF se puede tocar: su GIF pasa al fondo del Tablero. Prendido, brilla más y crece un poquito. */
+.sello.toca { pointer-events: auto; cursor: pointer; border-radius: 50%; }
+.sello.toca:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+.sello.toca.activo { filter: drop-shadow(0 0 9px rgba(255,214,102,1)) drop-shadow(0 0 3px rgba(255,255,255,.9)); scale: 1.18; }
+/* Ajustes: un botón por premio, con su dibujito. */
+/* El premio de todas juntas va más grande, en la esquina de la tarjeta del check-in. */
+.sello.grande { width: 52px; height: 52px; top: -16px; right: -8px; transform: rotate(12deg); }
+.sello.no { color: var(--ink-3); opacity: 0.9; }
+/* El relleno es del color de la página, para que la orilla del cuadro no se vea atravesando el contorno. */
+.sello.no .s1, .sello.no .s2 { fill: var(--page); stroke: currentColor; stroke-width: 1.3; stroke-dasharray: 0.2 2.6; }
+.sello.no .s3 { display: none; }
+@media (max-width: 359px) { .sello { width: 36px; height: 36px; top: -13px; right: -9px; } .sello.grande { width: 46px; height: 46px; } }
+
+/* ---- El quiz de vocabulario. La foto arriba con el frente; la respuesta sale en un panel de vidrio sobre la foto.
+   «Mal» y «Bien» están siempre en el mismo lugar: en el tercio de abajo de la pantalla, al centro. */
+.tj { padding-bottom: 34vh; cursor: pointer; }
+/* La foto de la tarjeta, 1/4 más alta que antes (era min(56vh, 72vh - 184px)): ya no sigue la proporción 3:4, la foto se recorta de los lados.
+   Nunca baja hasta los botones. */
+.tjh .ratio { aspect-ratio: auto; height: min(70vh, calc(90vh - 230px), calc(85vh - 180px)); max-height: none; }
+.tjResp { cursor: auto; gap: 6px; }
+.tjResp .exs { gap: 0; }
+.tjResp .ex .es { font-size: 25px; line-height: 1.2; font-weight: 700; color: #ffffff; }
+.tjResp .ex .en { font-size: 15px; color: rgba(255,255,255,0.88); }
+.tjResp .small { font-size: 14px; color: rgba(255,255,255,0.82); }
+.tjResp:focus { outline: none; }
+.tjZona { position: fixed; z-index: 4; left: 50%; top: 85vh; top: 85svh; width: min(calc(100% - 32px), 408px); height: 72px; margin-top: -36px; transform: translateX(-50%); display: grid; align-items: center; }
+.tjToca { margin: 0; text-align: center; font-size: 16px; font-weight: 600; color: var(--ink-3); }
+.tjBotones { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; height: 100%; }
+.tjBotones .ub { min-height: 72px; font-size: 22px; font-weight: 700; border-radius: 14px; border-width: 2px; }
+.tjBotones #jMal { border-color: var(--no); color: var(--no); }
+.tjBotones #jBien { border-color: var(--si); color: var(--si); }
+/* La curva del quiz de vocabulario (22-Oct-2026): tu dominio de hoy en grande y un punto por cada uno de los últimos
+   7 días. Va fija abajo, debajo de los botones, para que la veas mientras repasas. */
+.tjCurva { position: fixed; z-index: 4; left: 50%; bottom: calc(6px + env(safe-area-inset-bottom)); transform: translateX(-50%); width: min(calc(100% - 32px), 408px); box-sizing: border-box; height: 64px; padding: 6px 10px; display: flex; align-items: center; gap: 10px; border-radius: 14px; border: 1px solid var(--vidrio-borde); background: var(--vidrio); -webkit-backdrop-filter: blur(6px) saturate(1.15); backdrop-filter: blur(6px) saturate(1.15); cursor: auto; }
+.tjCurva.enCero { position: static; transform: none; width: 100%; margin-top: 4px; }
+.tjCurvaNum { margin: 0; display: flex; flex-direction: column; min-width: 78px; line-height: 1.1; }
+.tjCurvaNum b { font-size: 24px; font-weight: 800; color: var(--ink); }
+.tjCurvaNum span { font-size: 13px; color: var(--ink-2); }
+.tjCurvaNum span.si { color: var(--si); font-weight: 700; }
+.tjCurvaNum span.no { color: var(--no); font-weight: 700; }
+.tjCurvaSvg { flex: 1; min-width: 0; height: 52px; }
+.tjCurvaArea { fill: var(--verde); opacity: 0.18; }
+.tjCurvaLinea { fill: none; stroke: var(--verde); stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; }
+.tjCurvaDia { fill: var(--page); stroke: var(--verde); stroke-width: 2.5; }
+.tjCurvaHoy { fill: var(--si); stroke: var(--verde); stroke-width: 3; }
+.tjCurvaLetra { font-size: 11px; fill: var(--ink-2); font-family: var(--font); }
+.tjCurvaLetraHoy { font-size: 11px; font-weight: 700; fill: var(--ink); font-family: var(--font); }
+@media (max-height: 720px) { .tjCurva { height: 52px; padding: 4px 10px; } .tjCurvaSvg { height: 44px; } .tjCurvaNum b { font-size: 20px; } }
+
+/* ---- La lista de vocabulario. Como el mapa: tarjetas de vidrio sobre la portada Reef del día, un cuadro por palabra
+   y el color dice qué tan seguido la aciertas (los mismos seis colores, --k0 a --k5). Aquí todo empieza hasta arriba. */
+.hoy.lista .card { padding: 14px 12px; gap: 10px; }
+.hoy.lista.confoto #lvCabeza, .hoy.lista.confoto #lvQuitadas { -webkit-backdrop-filter: blur(5px) saturate(1.15); backdrop-filter: blur(5px) saturate(1.15); background: var(--vidrio); }
+.hoy.lista #lvLista { padding: 8px; }
+.hoy.lista .campo { margin-top: 0; }
+.hoy.lista.confoto .campo, .hoy.lista.confoto .jump.cuatro button:not([aria-pressed="true"]) { background: var(--vidrio); text-shadow: none; }
+.hoy.lista .card h1.h { font-size: 22px; }
+.hoy.lista details.cat { padding: 0; }
+.lvCeldas { display: flex; flex-wrap: wrap; gap: 2px; }
+/* El relleno invisible del final se queda con lo que sobra, para que el último renglón no se estire. */
+.lvCeldas::after { content: ""; flex: 1000 1 0; }
+/* Como el Atlas (su pedido del 18-Oct): cuadros apretados con letra chiquita; en el teléfono se agranda con dos dedos. */
+.vc { flex: 1 1 auto; max-width: 100%; min-height: 0; margin: 0; padding: 2px 4px; border: 1px dashed var(--vidrio-borde); border-radius: 4px; cursor: pointer;
+  font: inherit; font-size: 9px; font-weight: 600; line-height: 1.1; text-align: center; text-shadow: none; overflow-wrap: anywhere; background: var(--vidrio-2); color: var(--ink); }
+.vc.k0 { background: var(--k0); color: var(--t0); } .vc.k1 { background: var(--k1); color: var(--t1); } .vc.k2 { background: var(--k2); color: var(--t2); }
+.vc.k3 { background: var(--k3); color: var(--t3); } .vc.k4 { background: var(--k4); color: var(--t4); } .vc.k5 { background: var(--k5); color: var(--t5); }
+.vc.k0, .vc.k1, .vc.k2, .vc.k3, .vc.k4, .vc.k5 { border: 1px solid transparent; }
+.vc:focus-visible { outline: 3px solid var(--ink); outline-offset: -3px; }
+ul.clave .mc.kx { box-sizing: border-box; border: 1px dashed var(--vidrio-borde); }
+#lvAviso .lk { font-size: inherit; }
+
+/* La ficha de una palabra. */
+.sheet .ex .es { font-size: 26px; line-height: 1.15; font-weight: 700; }
+.sheet .ex .en { font-size: 18px; color: var(--ink-2); }
+.sheet .ex .es:focus { outline: none; }
+.sheet .sc .bar { height: 10px; }
+.hvG { margin: 0; display: grid; gap: 6px; }
+.hvG svg { display: block; max-width: 100%; }
+.hvG .gb { fill: var(--si); }
+.hvG .gm { fill: var(--no); }
+.hvDatos { margin: 0; display: grid; gap: 0; font-size: 15.5px; }
+.hvDatos div { display: grid; grid-template-columns: minmax(0, 11em) minmax(0, 1fr); gap: 10px; padding: 7px 0; border-top: 1px solid var(--line); }
+.hvDatos dt { color: var(--ink-3); }
+.hvDatos dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+.sheet .forma .go { margin-top: 6px; }
+
+/* ---- El mapa de calor. Un año por tarjeta, en dos tiras de medio año. Cada columna es una semana y cada cuadro un día;
+   entre más repasos, más caliente el color (--c0 a --c4, arriba, uno por modo). Aquí el vidrio sí va más cerrado,
+   para que la foto no se confunda con los colores. */
+.hoy.calor.confoto .card { background: var(--vidrio); -webkit-backdrop-filter: blur(6px) saturate(1.1); backdrop-filter: blur(6px) saturate(1.1); }
+.hoy.calor .card { padding: 14px 12px; gap: 10px; }
+.hoy.calor .card h1.h { font-size: 22px; }
+.hoy.calor .extras b { font-size: 19px; }
+.hanio { display: grid; gap: 4px; text-shadow: none; }
+.htira, .hmeses { display: grid; grid-template-columns: repeat(28, minmax(0, 1fr)); gap: 2px; }
+.htira { grid-template-rows: repeat(7, auto); grid-auto-flow: column; }
+.hmeses { margin-top: 6px; font-size: 11.5px; line-height: 1.2; color: var(--ink-3); }
+.hmeses span { grid-row: 1; white-space: nowrap; }
+.hc { display: block; aspect-ratio: 1; border-radius: 2px; background: var(--c0); }
+.hc.vacio { background: none; }
+.hc.c1 { background: var(--c1); } .hc.c2 { background: var(--c2); } .hc.c3 { background: var(--c3); } .hc.c4 { background: var(--c4); }
+.hc.jv.c1 { background: var(--y1); } .hc.jv.c2 { background: var(--y2); } .hc.jv.c3 { background: var(--y3); } .hc.jv.c4 { background: var(--y4); }
+.hc.jg.c1 { background: var(--b1); } .hc.jg.c2 { background: var(--b2); } .hc.jg.c3 { background: var(--b3); } .hc.jg.c4 { background: var(--b4); }
+.hc.ja.c1 { background: var(--g1); } .hc.ja.c2 { background: var(--g2); } .hc.ja.c3 { background: var(--g3); } .hc.ja.c4 { background: var(--g4); }
+/* Las clases (24-Oct-2026): el día completo es vocabulario + gramática + clase. Sin clase, el cuadro sale rayado
+   (rayitas del color de la tarjeta encima de su color). En Habla: con clase, verde lleno; con estudio sin clase,
+   rayado gris; y en el futuro, las clases confirmadas en gris lleno. */
+.hc.sin { position: relative; }
+.hc.sin::before { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  background: repeating-linear-gradient(135deg, transparent 0 2px, color-mix(in srgb, var(--card) 72%, transparent) 2px 4px); }
+.hc.jk { background: var(--g3); }
+.hc.hraya { background: repeating-linear-gradient(135deg, var(--f2) 0 2px, transparent 2px 4px), var(--c0); }
+.hc.fut.kf { background: var(--f3); box-shadow: none; }
+.jump.tres.cuatro { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.tdSeg.cuatro button { font-size: 13px; }
+#calorModo { margin-block: 2px 4px; }
+.htira .hc[data-dia] { cursor: pointer; }
+.hc.hoy { outline: 1.5px solid var(--ink); outline-offset: 0; }
+.hc.sel { outline: 2px solid var(--ink); outline-offset: 1px; position: relative; z-index: 1; }
+ul.hclave { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 12px; font-size: 13.5px; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+ul.hclave li { display: flex; align-items: center; gap: 5px; white-space: nowrap; }
+ul.hclave .hc { width: 15px; height: 15px; border-radius: 3px; }
+#calorDia { min-height: 1.5em; font-weight: 600; color: var(--ink); }
+#calorDia::first-letter { text-transform: uppercase; }
+
+/* La gráfica de un nivel en el Atlas */
+.hoy.mapa .card h2 .mgraf { all: unset; display: flex; align-items: center; gap: 8px; width: 100%; cursor: pointer; border-radius: 8px; }
+.hoy.mapa .card h2 .mgraf:focus-visible { outline: 2px solid var(--b3); outline-offset: 3px; }
+.ggraf { width: 100%; height: auto; display: block; touch-action: none; cursor: crosshair; }
+.ggraf:focus-visible { outline: 2px solid var(--b3); outline-offset: 2px; border-radius: 6px; }
+.ggraf .gr { stroke: var(--line, rgba(127,127,127,.25)); stroke-width: 1; }
+.ggraf .gy, .ggraf .gx { fill: var(--ink-3); font-size: 11px; font-variant-numeric: tabular-nums; }
+.ggraf .gmeta { stroke: var(--g3); stroke-width: 1.5; stroke-dasharray: 4 4; }
+.ggraf .gmt { fill: var(--ink-2); font-size: 11px; font-weight: 700; }
+.ggraf .gl { fill: none; stroke: var(--b3); stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
+.ggraf .gp { fill: var(--b3); stroke: var(--card); stroke-width: 2; }
+.ggraf .gt { stroke: var(--ink-3); stroke-width: 1; stroke-dasharray: 2 3; }
+.ggraf .gtp { fill: var(--y2); stroke: var(--ink); stroke-width: 2; }
+.gLee { font-size: 22px; font-weight: 800; font-variant-numeric: tabular-nums; }
+button.score { all: unset; box-sizing: border-box; margin-top: 10px; display: grid; gap: 4px; width: 100%; cursor: pointer; border-radius: 8px; font-size: 13px; color: rgba(255,255,255,0.86); font-variant-numeric: tabular-nums; }
+button.score:focus-visible { outline: 2px solid var(--b3); outline-offset: 3px; }
+button.score .vergraf { text-decoration: underline; text-underline-offset: 2px; }
+.hvLinea { display: grid; gap: 6px; }
+
+/* Ambiente «limpio»: sin fotos; las cabeceras toman los colores de la página (negro o blanco según el modo) */
+[data-ambiente="limpio"] .hero { background: var(--card); border: 1px solid var(--line); }
+[data-ambiente="limpio"] .hero .ratio { display: none; }
+[data-ambiente="limpio"] .over { background: none; color: var(--ink); padding-bottom: 18px; }
+[data-ambiente="limpio"] .kwh .over { min-height: 30vh; padding-bottom: 56px; }
+[data-ambiente="limpio"] .lead, [data-ambiente="limpio"] .hero .sub, [data-ambiente="limpio"] .score, [data-ambiente="limpio"] button.score { color: var(--ink-2); }
+[data-ambiente="limpio"] .hero h1, [data-ambiente="limpio"] .cue { text-shadow: none; }
+[data-ambiente="limpio"] .score .track { background: var(--line); border-color: var(--ink-3); }
+[data-ambiente="limpio"] .score .track i, [data-ambiente="limpio"] .score .track b { background: var(--ink); }
+[data-ambiente="limpio"] .hole { border-bottom-color: var(--ink); color: var(--ink-3); }
+[data-ambiente="limpio"] .rule { position: static; margin: 0 16px 16px; color: var(--ink); background: var(--page); border-color: var(--line); -webkit-backdrop-filter: none; backdrop-filter: none; }
+[data-ambiente="limpio"] .rule .k { color: var(--ink-3); }
+/* En Limpio el panel de la respuesta de las tarjetas toma el color de la página: las letras siguen la tinta, no el blanco del vidrio. */
+[data-ambiente="limpio"] .tjResp .ex .es { color: var(--ink); }
+[data-ambiente="limpio"] .tjResp .ex .en, [data-ambiente="limpio"] .tjResp .small { color: var(--ink-3); }
+[data-ambiente="limpio"] .rule button { color: var(--page); background: var(--ink); border-color: var(--ink); }
+[data-ambiente="limpio"] .back { position: static; margin: 0 16px 16px; color: var(--ink); background: var(--page); border-color: var(--line); }
+[data-ambiente="limpio"] .hero button:focus-visible { outline-color: var(--ink); }
+
+/* Las tutoras: el episodio se lee como texto hablado; las notas, una lista sencilla. */
+.episodio { display: grid; gap: 10px; font-size: 18px; line-height: 1.5; }
+.episodio p { margin: 0; }
+.notas { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.notas li { border-top: 1px solid var(--line); padding-top: 10px; display: grid; gap: 4px; }
+.notas li p { margin: 0; }
+textarea.campo { resize: vertical; min-height: 5em; line-height: 1.4; }
+
+/* La escena completa de una tutora (web/videos.js) */
+dialog.sheet.escena { width: min(100%, 720px); max-height: 92%; }
+.sheet.escena video { width: 100%; max-height: 72vh; background: #000; border-radius: 8px; }
+/* Subtítulos de la escena: grandes y con mucho contraste */
+.sheet.escena video::cue { font-size: 1.6em; font-weight: 700; color: #fff; background: rgba(0, 0, 0, 0.85); line-height: 1.35; }
+.sheet.escena #escenaCC.prendido { outline: 3px solid #f2b441; }
+.sheet.escena .marco { position: relative; width: 100%; aspect-ratio: 16 / 9; max-height: 72vh; background: #000; border-radius: 8px; overflow: hidden; }
+.sheet.escena .marco iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+/* La lección con clip de tutora: el clip queda fijo al fondo, como el del Tablero, y la portada se vuelve tarjeta. */
+.hoy.contutora .hero { background: rgba(14,14,14,0.62); border: 1px solid rgba(255,255,255,0.35); border-radius: 16px; -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); }
+.hoy.contutora .hero .ratio { display: none; }
+.hoy.contutora .over { background: none; padding-bottom: 14px; }
+.hoy.contutora .rule, .hoy.contutora .back { position: static; margin: 0 14px 14px; }
+.hoy.contutora .crumb { text-shadow: 0 1px 6px var(--page); }
+
+/* ---- Clases (Tablero, entrada «Clases»): tus clases de Worldsacross, tres días a la vez. Ver web/clases.js.
+   Al fondo, una chica Reef distinta cada día, fija a toda la ventana y centrada en la cadera. */
+:root { --clBloque: rgba(255,255,255,0.72); --clLinea: rgba(0,0,0,0.12); --clHoy: rgba(0,0,0,0.04); }
+:root[data-tema="oscuro"] { --clBloque: rgba(255,255,255,0.16); --clLinea: rgba(255,255,255,0.12); --clHoy: rgba(255,255,255,0.06); }
+.clFila { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 10px; }
+.clRango { font-size: 17px; font-weight: 600; color: var(--ink); }
+.clNav { display: flex; gap: 6px; }
+.clNav .ub { min-width: 44px; padding-inline: 12px; font-size: 18px; }
+.clNav .ub:disabled { opacity: 0.4; }
+.clHoras b { font-size: 26px; font-variant-numeric: tabular-nums; }
+.clSigue { font-size: 16px; }
+.clSigue b { color: var(--c3); }
+.clCal { padding: 0 6px 22px 0; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+.clDias, .clCuerpo { display: grid; grid-template-columns: 44px repeat(3, minmax(0, 1fr)); }
+.clDias { text-align: center; padding-block: 10px 6px; }
+.clDias small { display: block; font-size: 13px; color: var(--ink-3); }
+.clDias b { display: inline-grid; place-items: center; width: 36px; height: 36px; font-size: 20px; }
+.clDias .esHoy small { color: var(--ink); font-weight: 700; }
+.clDias .esHoy b { border-radius: 50%; background: var(--tab); color: var(--tab-ink); text-shadow: none; }
+/* «Revisar» debajo de cada fecha (22-Oct-2026): pide que se revise quién de tus favoritos está libre ese día. */
+.clRevisar { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; margin: 6px auto 0; min-height: 44px; width: calc(100% - 8px); box-sizing: border-box; padding: 4px 2px; border-radius: 10px; border: 1px solid var(--line); background: var(--card); color: var(--ink); font: 600 13px/1.15 var(--font); cursor: pointer; }
+.clRevisar small { font-size: 11px; font-weight: 500; color: var(--ink-3); }
+.clRevisar.enCurso { border-style: dashed; color: var(--ink-2); cursor: default; }
+.clCuerpo { position: relative; height: 840px; background-image: repeating-linear-gradient(to bottom, var(--clLinea) 0, var(--clLinea) 1px, transparent 1px, transparent 56px); }
+.clHorasCol { position: relative; font-size: 12px; color: var(--ink-3); }
+.clHorasCol span { position: absolute; right: 6px; line-height: 16px; white-space: nowrap; }
+.clCol { position: relative; border-left: 1px solid var(--clLinea); }
+.clCol.hoyCol { background: var(--clHoy); }
+.clAhora { position: absolute; left: 0; right: 0; height: 2px; background: var(--rojo); z-index: 2; pointer-events: none; }
+.clAhora::before { content: ""; position: absolute; left: -5px; top: -5px; width: 12px; height: 12px; border-radius: 50%; background: var(--rojo); }
+.clB { position: absolute; left: 2px; right: 2px; height: 47px; box-sizing: border-box; display: flex; align-items: center; gap: 5px; padding: 0 4px; overflow: hidden;
+  border: 1px solid var(--vidrio-borde); border-radius: 10px; background: var(--clBloque); color: var(--ink); font: inherit; text-align: left; cursor: pointer; text-shadow: var(--halo); }
+.clB:focus-visible { outline: 2px solid var(--ink); outline-offset: 1px; z-index: 3; }
+.clB img, .clIni { width: 26px; height: 26px; border-radius: 50%; flex: none; object-fit: cover; }
+.clIni { display: grid; place-items: center; background: var(--tab); color: var(--tab-ink); font-size: 14px; font-weight: 700; text-shadow: none; }
+.clT { display: flex; flex-direction: column; min-width: 0; line-height: 1.15; }
+.clN { font-size: 14px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.clH { font-size: 12px; color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.clTema { font-size: 11px; font-weight: 600; color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.clB.sigue { border: 2px solid var(--c3); background: rgba(255,145,48,0.26); }
+/* Confirmada (23-Oct-2026): palomita verde en la esquina de la foto y borde verde. */
+.clFoto { position: relative; flex: none; display: block; line-height: 0; }
+.clOk { position: absolute; right: -4px; bottom: -3px; width: 14px; height: 14px; border-radius: 50%; background: var(--verde); color: var(--page);
+  font: 900 10px/14px var(--font); font-style: normal; text-align: center; box-shadow: 0 0 0 1.5px var(--page); }
+.clB.ok:not(.sigue) { border-color: var(--verde); }
+.clB.hecha { background: transparent; border-color: var(--clLinea); }
+.clB.hecha img { filter: grayscale(1); opacity: 0.75; }
+.clB.hecha .clN { color: var(--ink-3); }
+.clB.libre { border: 2px dashed var(--ink-2); background: transparent; }
+.clB.libre .clN { color: var(--ambar); }
+.clClave { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; font-size: 14px; }
+.clClave i { display: inline-block; width: 14px; height: 14px; margin-right: 6px; vertical-align: -2px; border-radius: 4px; border: 1px solid var(--vidrio-borde); background: var(--clBloque); }
+.clClave i.sigue { border: 2px solid var(--c3); background: rgba(255,145,48,0.4); }
+.clClave i.libre { border: 2px dashed var(--ink-2); background: none; }
+.clClave i.hecha { background: none; border-color: var(--ink-3); }
+.acordeon { text-align: left; font-size: 20px; line-height: 1.4; }
+.acordeon h2 { margin: 0 0 6px; font-size: 24px; text-align: center; }
+.acordeon .acTema { margin: 0 0 10px; opacity: .85; text-align: center; }
+.acordeon .acSec { --ac: var(--ink); margin: 0 0 10px; padding: 8px 12px; border: 2px solid var(--ac); border-left-width: 8px; border-radius: 12px; }
+.acordeon summary { font-weight: 700; font-size: 18px; cursor: pointer; color: var(--ac); }
+.acordeon .acPos { --ac: var(--c3); }
+.acordeon .acArg { --ac: var(--b3); }
+.acordeon .acSal { --ac: var(--rojo); }
+.acordeon .acEj { --ac: var(--y3); }
+.acordeon .acPal { --ac: var(--g3); }
+.acordeon .acMul { --ac: var(--ink-3); }
+.acordeon .acArg li b, .acordeon .acPal dt { color: var(--ac); }
+.acordeon .acPostura { font-weight: 700; font-size: 22px; }
+.acordeon ul, .acordeon ol { margin: 6px 0 0; padding-left: 22px; }
+.acordeon li { margin: 0 0 6px; }
+.acordeon dl { margin: 6px 0 0; }
+.acordeon dt { font-weight: 700; margin-top: 8px; display: flex; align-items: center; gap: 10px; }
+.acordeon .acMas { flex: none; width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--ac); background: transparent; color: var(--ac); font: 700 24px/1 var(--font); cursor: pointer; }
+.acordeon .acMas.ya { background: var(--ac); color: var(--page); cursor: default; }
+.acordeon dd i { opacity: .8; }
+.acordeon dd { margin: 0 0 0 12px; }
+.clFicha { display: grid; justify-items: center; gap: 4px; text-align: center; }
+.clFicha img, .clIni.grande { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 4px solid var(--ink); font-size: 44px; }
+.clFicha.sigue img { border-color: var(--c3); }
+.clFicha.hecha img { border-color: var(--si); }
+.clFicha.libre img { border-color: var(--ambar); }
+.clFicha h2 { margin: 6px 0 0; font-size: 24px; }
+.clCuando { font-size: 18px; }
+.clEstado { font-weight: 700; color: var(--ink-2); }
+.clB.fallida { border: 2px solid var(--rojo); background: color-mix(in srgb, var(--rojo) 18%, transparent); }
+.clB.fallida .clH { color: var(--rojo); font-weight: 700; }
+.clFicha.fallida .clEstado { color: var(--rojo); }
+.clFicha.fallida img, .clFicha.fallida .clIni.grande { border-color: var(--rojo); }
+.clB.pedida { border: 2px solid var(--ambar); background: rgba(255,210,74,0.18); }
+.clB.pedida .clH { color: var(--ambar); font-weight: 700; }
+.clPedidos { font-weight: 700; color: var(--ambar); }
+.clNoSePudo { font-weight: 600; color: var(--rojo); }
+.clOpc { border: 1px solid var(--clLinea); border-radius: 12px; padding: 6px 12px 10px; margin: 0; display: grid; gap: 2px; text-align: left; }
+.clOpc legend { font-weight: 700; font-size: 15px; padding: 0 4px; color: var(--ink-2); }
+.clOpc label { display: flex; align-items: center; gap: 10px; min-height: 44px; font-size: 17px; cursor: pointer; }
+.clOpc input { width: 22px; height: 22px; flex: none; accent-color: var(--c3); }
+.clPregunta { font-size: 18px; text-align: center; text-wrap: balance; margin: 0 0 4px; }
+.clOtros { font-size: 17px; font-weight: 600; color: var(--ambar); }
+.clFTema { font-size: 18px; font-weight: 700; text-wrap: balance; }
+.clLeccion { font-size: 17px; }
+.clLeccion a { color: var(--ink); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+
+/* ---- Hoja de una palabra con su foto de Reef de fondo ---- */
+dialog.sheet.conFoto { overflow: hidden; padding: 0; display: flex; flex-direction: column; }
+dialog.sheet.conFoto:not([open]) { display: none; }
+.sheet.conFoto > .in { position: relative; z-index: 1; overflow: auto; min-height: 0;
+  padding: 18px 16px calc(18px + env(safe-area-inset-bottom, 0px)); }
+.hvFondo { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.hvFondo img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; display: block; }
+.hvFondo::after { content: ""; position: absolute; inset: 0;
+  background: linear-gradient(to bottom, color-mix(in srgb, var(--page) 35%, transparent), color-mix(in srgb, var(--page) 78%, transparent) 30%, color-mix(in srgb, var(--page) 88%, transparent)); }
+.sheet.conFoto .ex .es, .sheet.conFoto .ex .en { text-shadow: 0 1px 6px var(--page); }
+
+.voz audio { display: block; width: 100%; margin-top: 10px; }
+
+/* ---------- Voz de la tutora: la bocina junto a un tema (toca su MP3, nunca la voz del aparato) ---------- */
+.tb-voz { display: flex; gap: 6px; align-items: stretch; min-width: 0; }
+.tb-voz > .tb { flex: 1; min-width: 0; }
+.bocinaVoz { flex: none; width: 48px; min-height: 48px; display: grid; place-items: center; padding: 0; border: 1px solid var(--outline); border-radius: 12px; background: var(--page); color: var(--ink); cursor: pointer; }
+.bocinaVoz svg { width: 24px; height: 24px; fill: currentColor; }
+.bocinaVoz[aria-pressed="true"] { border-color: #5fbf6a; color: #2f9a3d; box-shadow: 0 0 10px 2px rgba(111, 220, 123, .55); }
+.bocinaVoz:focus-visible { outline: 3px solid var(--tab); outline-offset: 2px; }
+.hoy.confoto .bocinaVoz { background: var(--vidrio-2); border-color: var(--vidrio-borde); }
+
+/* ---- El peldaño de la tarjeta: seis puntitos que se llenan al subir y se vacían al caer ---- */
+.tjNivel { display: flex; gap: 9px; margin: 8px 0 2px; }
+.tjNivel i { width: 15px; height: 15px; border-radius: 50%; box-sizing: border-box; border: 2px solid currentColor; opacity: 0.75;
+  transition: background-color 0.25s ease, transform 0.25s ease, opacity 0.25s ease; }
+.tjNivel i.on { opacity: 1; border-color: rgba(255,255,255,0.9); }
+.tjNivel i.on.k0 { background: var(--k0); } .tjNivel i.on.k1 { background: var(--k1); } .tjNivel i.on.k2 { background: var(--k2); }
+.tjNivel i.on.k3 { background: var(--k3); } .tjNivel i.on.k4 { background: var(--k4); } .tjNivel i.on.k5 { background: var(--k5); }
+.tjNivel.sube i.on:last-of-type, .tjNivel.sube i.on:has(+ i:not(.on)) { transform: scale(1.35); }
+.tjNivel.baja { animation: tjCae 0.45s ease; }
+@keyframes tjCae { 0%, 100% { transform: none; } 25% { transform: translateX(-5px); } 50% { transform: translateX(5px); } 75% { transform: translateX(-3px); } }
+[data-ambiente="limpio"] .tjNivel i.on { border-color: var(--ink-3); }
+@media (prefers-reduced-motion: reduce) { .tjNivel i { transition: none; } .tjNivel.baja { animation: none; } }
+
+/* ---- Lectura: tu registro de ElevenReader. Arriba el libro de ahora con su portada grande; abajo el estante. */
+.lectura .lecturaHoy { font-size: 1.15rem; font-weight: 600; margin: .3rem 0 .2rem; }
+.lectura .libroAhora { display: flex; gap: 1rem; align-items: center; color: inherit; text-decoration: none; }
+.lectura .portadaGrande { width: 42%; max-width: 180px; aspect-ratio: 2 / 3; object-fit: cover; border-radius: 8px; box-shadow: 0 6px 18px rgba(0, 0, 0, .35); flex: none; }
+.lectura .libroDatos { display: flex; flex-direction: column; gap: .3rem; min-width: 0; }
+.lectura .libroTitulo { font-weight: 700; font-size: 1.1rem; line-height: 1.25; }
+.lectura .libroFalta { font-weight: 600; }
+.lectura .estante { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: .9rem; }
+.lectura .libro { display: flex; flex-direction: column; gap: .3rem; color: inherit; text-decoration: none; }
+.lectura .libro .libroTitulo { font-size: .9rem; }
+.lectura .portadaChica { width: 100%; aspect-ratio: 2 / 3; object-fit: cover; border-radius: 6px; box-shadow: 0 4px 12px rgba(0, 0, 0, .3); }
+.lectura .sinPortada { display: flex; align-items: center; justify-content: center; padding: .5rem; text-align: center; border: 2px solid var(--ink-3); border-radius: 6px; font-size: .8rem; }
+.lectura .libroAhora:focus-visible, .lectura .libro:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; border-radius: 8px; }
+
+/* Las gráficas de Lectura: una sola serie, barras delgadas con la punta redonda, la meta punteada. */
+.lectura { --lec-barra: var(--verde); }
+.lectura .grafica svg { display: block; width: 100%; height: auto; margin-top: .4rem; overflow: visible; }
+.lectura .barraG { fill: var(--lec-barra); }
+.lectura .ejeG.hoyG { fill: var(--ink); font-weight: 700; }
+.lectura .ejeG { fill: var(--ink-3); font-size: 11px; }
+.lectura .ejeG.sub { font-size: 10px; }
+.lectura .baseG { stroke: var(--ink-3); stroke-width: 1; }
+.lectura .guiaG { stroke: var(--line); stroke-width: 1; }
+.lectura .metaG { stroke: var(--ink-2); stroke-width: 1.5; stroke-dasharray: 4 4; }
+.lectura .hit { fill: transparent; cursor: pointer; outline: none; }
+.lectura .hit.activa, .lectura .hit:focus-visible { fill: currentColor; fill-opacity: .12; }
+.lectura .grafDetalle { min-height: 1.4em; font-weight: 600; }
+.lectura .porLibro { list-style: none; margin: .4rem 0 0; padding: 0; display: grid; gap: .8rem; }
+.lectura .porLibro li { display: grid; grid-template-columns: 1fr auto; gap: .3rem .6rem; align-items: baseline; }
+.lectura .porLibro .bar { grid-column: 1 / -1; }
+.lectura .plValor { font-weight: 700; }
+.lectura .lecBarra i { background: var(--lec-barra); }
+.lectura .lecturaEjemplo { font-weight: 600; border-left: 3px solid var(--ambar); padding-left: .6rem; }
+.lectura .libro .estrellas { color: #9a6c00; letter-spacing: 1px; font-size: .9rem; }
+:root[data-tema="oscuro"] .lectura .libro .estrellas { color: var(--ambar); }
+.lectura .libro .small { line-height: 1.3; }
+.lectura .estante.cuadrado .portadaChica { aspect-ratio: 1 / 1; }
+#lecturaCabeza #bibModo { margin: .6rem 0; }
+#calorClave .granTotal { margin: 0 0 .8rem; }
+#calorClave .granTotal b { display: block; font-size: 1.6rem; line-height: 1.1; }
+.lectura button.libro { background: none; border: 0; padding: 0; margin: 0; width: 100%; text-align: left; color: inherit; font: inherit; cursor: pointer; }
+.lectura button.libro:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; border-radius: 8px; }
+#lecturaCabeza #serModo { margin: .2rem 0 .6rem; }
+.obraFicha .obraCartel { display: block; width: 46%; max-width: 200px; aspect-ratio: 2 / 3; object-fit: cover; border-radius: 8px; margin: 0 auto .8rem; box-shadow: 0 6px 18px rgba(0, 0, 0, .35); }
+.obraFicha h2 { text-align: center; margin: 0 0 .3rem; }
+.obraFicha > .small { text-align: center; }
+.obraFicha .obraSinopsis { line-height: 1.5; }
+
+/* Practica con la tutora (web/practica.js) */
+dialog.sheet.escena.practica { inset: 0; width: 100%; max-width: 720px; height: 100%; max-height: 100%; margin: 0 auto; padding: max(10px, env(safe-area-inset-top)) 12px max(14px, env(safe-area-inset-bottom)); }
+.practica .pr-pantalla { position: relative; }
+.sheet.escena.practica video { max-height: 46vh; max-height: 46dvh; }
+.practica .pr-sub { margin: 6px 0 0; padding: 8px 12px; text-align: center; font-size: 1.2em; font-weight: 700; line-height: 1.35; color: #fff; background: rgba(0, 0, 0, 0.85); border-radius: 8px; }
+.practica .pr-sub[hidden] { display: none; }
+.practica textarea { width: 100%; box-sizing: border-box; font-size: 20px; padding: 10px; border-radius: 10px; }
+.practica .pr-menu { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.practica .pr-menu .k { width: 100%; margin: 6px 0 0; }
+
+/* Kwiz con la tutora (web/fondo.js): su escena arriba de la pregunta, con degradado que se funde con el texto */
+#fondoTutora { position: fixed; inset: 0; z-index: -1; background: #000; }
+#fondoTutora[hidden] { display: none; }
+#fondoTutora video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+#fondoTutora video[hidden] { display: none; }
+#fondoTutora.enLinea { position: relative; inset: auto; z-index: 0; aspect-ratio: 4 / 3; max-height: 48vh; width: 100%; }
+#fondoTutora.enLinea::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 45%; background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000); pointer-events: none; z-index: 1; }
+.kwTutora .hero { display: block; background: #000; }
+.kwTutora .hero .ratio { display: none; }
+.kwTutora .tutoraVideo { position: relative; }
+.kwTutora .hero .over { position: relative; z-index: 2; padding-bottom: 18px; min-height: 0; }
+.kwTutora .tutoraVideo + .over { margin-top: -56px; padding-top: 0; }
+
+/* Ajustes: estado de las lecciones (cuántos temas de cada nivel tienen cada pieza) */
+.pzGrafica { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); margin-top: 8px; }
+.pzNivel h3 { margin: 0 0 6px; font-size: 1rem; }
+.pzNivel .lv { font-weight: 800; }
+.pzFila { display: grid; grid-template-columns: 7.5em 1fr 6.2em; align-items: center; gap: 8px; font-size: 0.86rem; margin: 3px 0; }
+.pzNom { color: var(--ink-2); }
+.pzBarra { height: 10px; border-radius: 5px; background: var(--bar-bg); overflow: hidden; display: block; }
+.pzBarra i { display: block; height: 100%; background: var(--ambar); border-radius: 5px; }
+.pzFila.lleno .pzBarra i { background: var(--verde); }
+.pzFila.cero .pzNum { color: var(--ink-3); }
+.pzNum { white-space: nowrap; text-align: right; font-variant-numeric: tabular-nums; }
+
+/* El clip del premio en el Tablero: la parte de la escena de la tutora del día, arriba, sin sonido, con degradado (como el Kwiz con la tutora) */
+.premioTutora { position: relative; border-radius: 18px; overflow: hidden; background: #000; }
+.premioTutora #fondoTutora.enLinea { max-height: 52vh; }
+.premioTutora .sinClip { margin: 0; padding: 14px 16px; color: #fff; }
+/* En una lección el dedo de lado es para cambiar de lección (ver app.js); de arriba abajo sigue siendo scroll. */
+[data-leccion] { touch-action: pan-y; }
+
+/* «Línea C» arriba de los quizzes (15-Oct-2026): contador de colores, puntitos y cajas, en un solo renglón. */
+.linea { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 8px 0 4px; flex-wrap: nowrap; }
+.lnCuenta { display: flex; align-items: center; gap: 4px; flex: none; }
+.lnCuenta i { font-style: normal; font-weight: 700; opacity: 0.7; }
+.lnN { font-size: 1.3rem; font-weight: 900; line-height: 1; padding-bottom: 3px; border-bottom: 3px solid transparent; }
+.lnN.g0 { color: var(--verde); } .lnN.g1 { color: var(--ambar); } .lnN.g2 { color: var(--rojo); }
+.lnN.cur { border-bottom-color: currentColor; }
+/* Lo que te queda hoy (22-Oct-2026): rayitas para este quiz, círculos para hoy. */
+button.lnN { background: none; border: 0; border-bottom: 3px solid transparent; padding: 0 2px 3px; font: inherit; font-size: 1.3rem; font-weight: 900; cursor: pointer; }
+button.lnN.cur { border-bottom-color: currentColor; }
+button.lnN[aria-pressed="true"] { outline: 3px solid currentColor; outline-offset: 2px; border-radius: 6px; }
+.hoyC { display: flex; gap: 6px; }
+.hoyC .circ { background: none; color: inherit; font: inherit; cursor: pointer; padding: 0; border: 0; }
+.hoyC .circ b { display: inline-flex; align-items: center; justify-content: center; border: 2px solid currentColor; border-radius: 999px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.hoyC .circ[aria-pressed="true"] b { color: var(--page); }
+.hoyC .circ.g0[aria-pressed="true"] b { background: var(--verde); border-color: var(--verde); }
+.hoyC .circ.g1[aria-pressed="true"] b { background: var(--ambar); border-color: var(--ambar); }
+.hoyC .circ.g2[aria-pressed="true"] b { background: var(--rojo); border-color: var(--rojo); }
+.hoyC .g0, .explica .g0 { color: var(--verde); } .hoyC .g1, .explica .g1 { color: var(--ambar); } .hoyC .g2, .explica .g2 { color: var(--rojo); }
+.hoyC.chico { flex-wrap: wrap; gap: 4px; }
+.hoyC.chico .circ b { min-width: 1.3em; padding: 1px 6px; font-size: 13px; }
+.hoyC.medio .circ b { min-width: 1.7em; padding: 2px 10px; font-size: 17px; }
+.hoyFila { display: flex; justify-content: flex-end; align-items: center; gap: 6px; margin: 0 0 8px; font-size: 15px; }
+/* La línea del quiz de gramática (23-Oct-2026): un renglón con este quiz y hoy; abajo tus cajas, grandes y parejas. */
+.lineaG { display: grid; gap: 10px; margin: 0 0 12px; }
+.gFila { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.gFila .hoyFila { margin: 0; }
+.lnCajas.grandes { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 4px; }
+.lnCajas.grandes .lnC { padding: 6px 0; border: 1px solid var(--line); border-radius: 8px; opacity: 1; }
+.lnCajas.grandes .lnC b { font-size: 20px; }
+.lnCajas.grandes .lnC small { display: block; font-size: 13px; }
+.lnCajas.grandes .lnC.cero { opacity: 0.6; }
+.lnCajas.grandes .lnC.cur { background: var(--ink); color: var(--page); border-color: var(--ink); }
+.lnCajas.grandes .lnC.salta { animation: cajaSalta 0.45s ease; } .lnCajas.grandes .lnC.cae { animation: tjCae 0.45s ease; }
+@keyframes cajaSalta { 40% { transform: scale(1.18); } }
+@media (prefers-reduced-motion: reduce) { .lnCajas.grandes .lnC.salta, .lnCajas.grandes .lnC.cae { animation: none; } }
+.hoyGrande { border: 1px solid var(--line); border-radius: 14px; padding: 12px; margin: 12px 0; background: var(--card); }
+.hoyGrande .small { margin: 0 0 6px; }
+.hoyC.grande { justify-content: space-between; text-align: center; }
+.hoyC.grande .circ { flex: 1; }
+.hoyC.grande .circ b { width: 1.9em; height: 1.9em; border-width: 4px; border-radius: 50%; font-size: 40px; font-weight: 900; }
+.hoyC.grande .circ span { display: block; margin-top: 6px; font-size: 16px; color: var(--ink); }
+.explica { margin-top: 10px; border: 2px solid currentColor; border-radius: 12px; padding: 12px; font-size: 17px; line-height: 1.45; background: var(--card); }
+.explica.g0 { border-color: var(--verde); } .explica.g1 { border-color: var(--ambar); } .explica.g2 { border-color: var(--rojo); }
+.explica { color: var(--ink); }
+.linea .tjNivel { margin: 0; gap: 5px; flex: none; }
+.linea .tjNivel i { width: 12px; height: 12px; }
+.lnCajas { display: flex; gap: 5px; flex: none; }
+.lnC { display: flex; flex-direction: column; align-items: center; line-height: 1.1; opacity: 0.85; }
+.lnC b { font-size: 0.78rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.lnC small { font-size: 0.6rem; opacity: 0.8; }
+.lnC.cero { opacity: 0.55; }
+.lnC.cur { opacity: 1; }
+.lnC.cur b { font-weight: 900; text-decoration: underline; text-underline-offset: 2px; }
+@media (max-width: 360px) { .lnC small { display: none; } .lnCajas { gap: 3px; } }
+/* Editar una tarjeta: un lápiz junto a cada renglón (español e inglés), en el Acervo y en el repaso. */
+.conLapiz { display: flex; align-items: center; gap: 10px; }
+.conLapiz > :first-child { flex: 1 1 auto; min-width: 0; overflow-wrap: anywhere; }
+.lapiz { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; margin: -6px 0;
+  border: 0; border-radius: 50%; background: transparent; color: inherit; opacity: 0.85; cursor: pointer; }
+.rule .lapiz, [data-ambiente="limpio"] .rule .lapiz { padding: 0; border: 0; background: transparent; color: inherit; font-size: inherit; }
+.lapiz:hover, .lapiz:focus-visible { opacity: 1; background: rgba(127,127,127,0.18); }
+.lapiz svg { width: 24px; height: 24px; }
+.lapiz[hidden] { display: none; }
+.lapizForma { flex: 1 1 auto; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; min-width: 0; }
+.lapizForma .campo { flex: 1 1 220px; min-width: 0; font-size: 20px; }
+.lapizBotones { display: flex; gap: 8px; }
+.lapizBotones .ub { min-width: 48px; }
+.lapizBotones svg { width: 20px; height: 20px; }
+.lapizForma .err { flex-basis: 100%; margin: 0; }
+/* La regla en una línea, en la página de la tutora: fija en su tarjeta, sin flotar sobre el episodio. */
+.rule.fija { position: static; margin: 12px 0; }
+/* El clip de un premio tocado ocupa el lugar del fondo del Tablero, del mismo tamaño, hasta que lo vuelves a tocar. */
+.hoy.confoto .fondo.conPremio .premioTutora { border-radius: 0; aspect-ratio: 1 / 1; }
+.hoy.confoto .fondo.conPremio #fondoTutora.enLinea { aspect-ratio: 1 / 1; max-height: none; height: 100%; }
+.hoy.confoto .fondo.conPremio #fondoTutora.enLinea::after { display: none; }
+.hoy.confoto .fondo.conPremio .sinClip { position: absolute; inset: auto 0 30% 0; z-index: 2; text-align: center; }
+
+.lectura .lecturaEjemplo a { color: inherit; text-decoration: underline; }
+
+/* El quiz de gramática como el Tablero: el loop de la tutora fijo arriba y la pregunta en tarjetas de vidrio encima. */
+.hoy.kwFondo .kwh.contutora .over { padding-top: 12px; }
+.hoy.kwFondo .kw { gap: 14px; }
+
+/* Atascados: tarjetas y temas (16-Oct-2026, como las «leech» de Anki) */
+.jump.uno { grid-template-columns: minmax(0, 1fr); }
+.jump.uno button { background: var(--page); color: var(--ink); border-color: var(--outline); font-size: 13px; padding: 9px 0; }
+.jump.uno button[aria-pressed="true"] { background: var(--no); color: var(--page); border-color: var(--no); }
+.jump.uno button:disabled { opacity: 0.55; cursor: default; }
+.hoy.lista.confoto .jump.uno button:not([aria-pressed="true"]) { background: var(--vidrio); text-shadow: none; }
+.vc.atas { box-shadow: inset 0 0 0 2px var(--no); }
+.atasAviso { margin: 4px 0 0; padding: 8px 10px; border-left: 4px solid var(--no); color: var(--ink); font-size: 14.5px; }
+.tjAtas { margin: 6px 0 0; font-size: 14px; font-weight: 700; color: var(--no); }
+.tjAtas .lk { color: inherit; text-decoration: underline; }
+/* Sospechosas, atorados y parejas (16-Oct-2026) */
+.sosp { border-left: 3px solid currentColor; padding-left: 8px; }
+.atorados .atorado + .atorado { margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(127,127,127,.3); }
+.tb .motivo.atorado { font-weight: 600; }
+.pareja { margin: 4px 0; }
+.tb.atas { box-shadow: inset 4px 0 0 var(--no); }
+.tjAtas a.lk { color: inherit; text-decoration: underline; }
+.atasAviso p { margin: 0; color: var(--ink); }
+.atasAviso .go { margin-top: 8px; }
+
+/* Tus tendencias en el Tablero (16-Oct-2026): claro y oscuro con las mismas variables */
+.tend { display: flex; flex-direction: column; gap: 10px; }
+.tend h2 { margin: 0; }
+.tend .tdSub { margin: 10px 0 0; font-size: 17px; }
+.tdNums { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.tdNums p { margin: 0; display: flex; flex-direction: column; gap: 2px; }
+.tdGrande { font-size: 30px; font-weight: 700; line-height: 1.1; color: var(--ink); }
+.tdGrande.si { color: var(--si); }
+.tdGris { color: var(--ink-2); font-weight: 400; }
+.tdFila { display: flex; justify-content: space-between; gap: 10px; margin: 0; font-size: 15px; }
+.tdFila b { white-space: nowrap; }
+.tdNv { color: var(--ink-2); }
+.tdLinea polyline { stroke: var(--ink); }
+.tdLinea circle { fill: var(--ink); }
+.tdLinea.si polyline { stroke: var(--si); } .tdLinea.si circle, .tdLinea.si .tdFin { fill: var(--si); }
+.tdLinea.c5 polyline { stroke: var(--b4); } .tdLinea.c5 circle, .tdLinea.c5 .tdFin { fill: var(--b4); }
+.tdLinea.c4 polyline { stroke: var(--b3); } .tdLinea.c4 circle, .tdLinea.c4 .tdFin { fill: var(--b3); }
+.tdLinea text { font-size: 12px; fill: var(--ink-2); }
+.tdLinea .tdFin { font-size: 13px; font-weight: 700; }
+.tdTemas { display: flex; flex-direction: column; gap: 6px; }
+.tdTema { display: flex; flex-direction: column; gap: 6px; padding: 8px 0; min-height: 44px; color: var(--ink); text-decoration: none; background: none; border: 0; font: inherit; text-align: left; width: 100%; cursor: pointer; }
+.tdPista { position: relative; display: block; height: 18px; }
+.tdPista i { position: absolute; display: block; }
+.tdRiel { left: 0; right: 0; top: 7px; height: 4px; border-radius: 2px; background: var(--bar-bg); }
+.tdTramo { top: 6px; height: 6px; border-radius: 3px; }
+.tdAro { top: 3px; width: 12px; height: 12px; margin-left: -6px; border-radius: 50%; border: 2px solid; box-sizing: border-box; background: var(--card); }
+.tdPunto { top: 1px; width: 16px; height: 16px; margin-left: -8px; border-radius: 50%; }
+.tdMeta { top: 0; bottom: 0; width: 2px; margin-left: -1px; background: var(--ink); }
+.tdPista.sube .tdTramo, .tdPista.sube .tdPunto { background: var(--si); } .tdPista.sube .tdAro { border-color: var(--si); }
+.tdPista.baja .tdTramo, .tdPista.baja .tdPunto { background: var(--no); } .tdPista.baja .tdAro { border-color: var(--no); }
+.tdCaja { display: flex; flex-direction: column; gap: 2px; }
+.tdPalabras { display: flex; flex-direction: column; }
+.tdPalabra { display: flex; justify-content: space-between; gap: 12px; min-height: 44px; align-items: center; padding: 0; background: none; border: 0; border-bottom: 1px solid var(--line); font: inherit; font-size: 15px; color: var(--ink); text-align: left; cursor: pointer; }
+.tdPalabra:last-child { border-bottom: 0; }
+.tdPeriodo { margin: 0; }
+.tdDet summary { list-style: none; display: flex; align-items: center; gap: 8px; min-height: 44px; cursor: pointer; }
+.tdDet summary::-webkit-details-marker { display: none; }
+.tdDet summary::after { content: ""; width: 9px; height: 9px; margin-left: auto; border-right: 2px solid var(--ink); border-bottom: 2px solid var(--ink); transform: rotate(45deg); transition: transform .15s; }
+.tdDet[open] summary::after { transform: rotate(-135deg); }
+.tdDet summary .tdSub { margin: 0; }
+
+/* Tu avance por nivel (17-Oct-2026), como la gráfica de Kwiziq: línea de temas cubiertos y área de tu puntaje */
+.pg { margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.pg svg { display: block; }
+.pgRej { stroke: var(--line); stroke-width: 1; }
+.pgEje { font-size: 11px; fill: var(--ink-2); }
+.pgArea { fill: var(--si); fill-opacity: .35; stroke: var(--si); stroke-width: 2; }
+.pgLinea { fill: none; stroke: var(--ink-2); stroke-width: 3; stroke-linejoin: round; }
+.pgPunto { fill: var(--ink-2); }
+.pgLey { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 14px; color: var(--ink-2); }
+.pgLey span { display: inline-flex; align-items: center; gap: 6px; }
+.pgLLinea { display: inline-block; width: 18px; height: 3px; background: var(--ink-2); }
+.pgLArea { display: inline-block; width: 16px; height: 12px; border-radius: 3px; background: var(--si); opacity: .6; }
+.pgNums { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.pgNums p { margin: 0; display: flex; flex-direction: column; gap: 2px; }
+.tdNiveles { margin: 0; }
+#tdGrafNivel { display: block; }
+/* El selector de nivel del Tablero (17-Oct-2026): una barra segmentada, a lo ancho y bajita */
+.tdSeg { display: flex; width: 100%; margin: 0; border: 1.5px solid var(--outline); border-radius: 999px; overflow: hidden; background: var(--page); }
+.tdSeg button { flex: 1 1 0; min-width: 0; min-height: 36px; padding: 0; border: 0; border-left: 1px solid var(--line); background: transparent; color: var(--ink); font: inherit; font-size: 14px; font-weight: 600; letter-spacing: .02em; cursor: pointer; }
+.tdSeg button:first-child { border-left: 0; }
+.tdSeg button[aria-pressed="true"] { background: var(--tab); color: var(--tab-ink); }
+.tdSeg button:focus-visible { outline: 3px solid var(--mark); outline-offset: -3px; }
+.hoy.confoto .tdSeg { background: var(--vidrio); }
+/* El enfoque del quiz y los niveles de cada página de nivel (17-Oct-2026): la misma barra segmentada del Tablero */
+.enfoque { display: flex; flex-direction: column; gap: 8px; }
+.enfoque .nv.ancho { min-height: 36px; padding: 0 12px; border: 1.5px solid var(--outline); border-radius: 999px; background: var(--page); color: var(--ink); font-size: 14px; font-weight: 600; }
+.enfoque .nv.ancho[aria-pressed="true"] { background: var(--tab); color: var(--tab-ink); border-color: var(--tab); }
+.enfSeg .nv { display: flex; align-items: baseline; justify-content: center; gap: 4px; padding: 0 2px; border-radius: 0; line-height: 1; }
+.enfSeg .nv span { font-size: 11.5px; font-weight: 400; color: var(--ink-3); }
+.enfSeg .nv[aria-pressed="true"] span { color: var(--tab-ink); opacity: .8; }
+.enfSeg .nv:disabled { opacity: .4; cursor: default; }
+.jump.niveles { display: flex; gap: 0; border: 1.5px solid var(--outline); border-radius: 999px; overflow: hidden; background: var(--page); }
+.jump.niveles a { flex: 1 1 0; min-width: 0; display: grid; place-items: center; min-height: 36px; padding: 0; border: 0; border-left: 1px solid var(--line); border-radius: 0; background: transparent; color: var(--ink); font-size: 14px; font-weight: 600; line-height: 1; box-shadow: none; }
+.jump.niveles a:first-child { border-left: 0; }
+.jump.niveles a[aria-current="page"] { background: var(--tab); color: var(--tab-ink); }
+.hoy.confoto .jump.niveles, .confoto .jump.niveles { background: var(--vidrio); }
+.enfoque .nv.ancho { display: flex; align-items: center; justify-content: center; }
+.enfoque .enfSeg .nv { min-height: 36px; border: 0; border-left: 1px solid var(--line); border-radius: 0; background: transparent; color: var(--ink); font-size: 14px; font-weight: 600; align-items: center; }
+.enfoque .enfSeg .nv:first-child { border-left: 0; }
+.enfoque .enfSeg .nv[aria-pressed="true"] { background: var(--tab); color: var(--tab-ink); }
+.confoto .enfSeg, .hoy.confoto .enfoque .nv.ancho:not([aria-pressed="true"]) { background: var(--vidrio); }
+
+/* Sellos de premio como candado (17-Oct-2026): discretos, en la esquina de arriba del cuadro */
+.sello { top: 8px; right: 8px; width: 18px; height: 18px; transform: none; filter: none; }
+.sello.grande { top: 50%; right: 10px; width: 22px; height: 22px; margin-top: -11px; transform: none; }
+.sello .cdCuerpo, .sello .cdArco { fill: none; stroke: var(--ink-3); stroke-width: 1.6; }
+.sello.ok .cdCuerpo { fill: #f5c542; stroke: #f5c542; }
+.sello.ok .cdArco { stroke: #f5c542; stroke-width: 2; }
+.sello.ok { filter: drop-shadow(0 0 3px rgba(245,197,66,.55)); }
+.sello.no { opacity: 1; }
+.sello.toca { padding: 12px; margin: -12px; box-sizing: content-box; border-radius: 8px; }
+.sello.toca.activo { filter: drop-shadow(0 0 6px rgba(245,197,66,1)); scale: 1.15; }
+.cuadro.consello .cn { padding-right: 22px; }
+@media (max-width: 359px) { .sello { width: 16px; height: 16px; top: 8px; right: 8px; } .sello.grande { width: 20px; height: 20px; } }
+
+/* Modo oscuro sin botones blancos (pedido del 23-Oct-2026): lo seleccionado (pestañas, modos, niveles, la caja actual)
+   ya no va en blanco: gris oscuro con letra blanca en negritas y borde gris claro. Lo más claro de la página es
+   la acción que de verdad vas a tocar (Revisar, Empezar quiz, Guardar…), en gris claro suave (Grifo escogió gris, sin naranja). */
+:root[data-tema="oscuro"] { --tab: #3a3a37; --tab-ink: #ffffff; --prim: #b9b8b1; --prim-ink: #121212; }
+:root[data-tema="oscuro"] [aria-pressed="true"]:not(.circ):not(.lnN):not(.bocinaVoz),
+:root[data-tema="oscuro"] .jump a[aria-current="page"], :root[data-tema="oscuro"] .jump button[aria-current="page"] {
+  border-color: var(--ink-3); font-weight: 700; }
+:root[data-tema="oscuro"] .lnCajas.grandes .lnC.cur { background: #3a3a37; color: #fff; border-color: var(--ink-3); box-shadow: inset 0 0 0 1px var(--ink-3); }
+:root[data-tema="oscuro"] .ub.grande, :root[data-tema="oscuro"] .hoy.confoto .ub.grande {
+  background: var(--prim); color: var(--prim-ink); border-color: var(--prim); text-shadow: none; }
+:root[data-tema="oscuro"] .ub.grande:active { background: color-mix(in srgb, var(--prim) 80%, black); }
+/* Una sola acción en gris claro por pantalla: los grandes que no son la acción principal se quedan neutros. */
+:root[data-tema="oscuro"] .ub.grande:is(#escenaX, #escenaWebX, #prX, #escenaCC, #repasoAudio, [data-porver], [data-volver],
+  [data-presenta], [data-escuchar], [data-escena], [data-practica], [data-llamar], #ver, #jMal, #jBien) {
+  background: linear-gradient(to bottom, var(--btn-top), var(--btn-bot)); color: var(--btn-ink); border-color: var(--outline); }
+:root[data-tema="oscuro"] .ub.grande#jMal { border-color: var(--no); color: var(--no); }
+:root[data-tema="oscuro"] .ub.grande#jBien { border-color: var(--si); color: var(--si); }
+
+/* 23-Oct-2026: en el Tablero el renglón del ‹ se queda invisible, así el logo y la foto no brincan al cambiar de página. */
+.top.vacio { visibility: hidden; }
+
+/* 24-Oct-2026: la burbuja de los puntos de las gráficas de línea. */
+.ptTip { fill: transparent !important; stroke: none !important; cursor: pointer; pointer-events: all; }
+.ptTip.on { fill: color-mix(in srgb, var(--ink) 18%, transparent) !important; }
+.ptBurbuja { position: absolute; z-index: 50; max-width: min(360px, calc(100vw - 16px)); padding: 8px 12px; border-radius: 10px; background: var(--ink); color: var(--page); font-size: 16px; line-height: 1.3; font-weight: 600; pointer-events: none; box-shadow: 0 4px 14px rgba(0,0,0,.35); }
+.ptBurbuja[hidden] { display: none; }
+
+/* 24-Oct-2026: tus podcasts. La lista de episodios y la barra del reproductor (abajo, en todas las páginas). */
+.podSel { width: 100%; margin: 4px 0 12px; }
+.podLista { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.podEp { display: flex; gap: 12px; align-items: flex-start; width: 100%; text-align: left; padding: 10px; border-radius: 12px;
+  border: 1px solid var(--line); background: transparent; color: inherit; font: inherit; cursor: pointer; }
+.podEp.actual { border-color: var(--ink); background: color-mix(in srgb, var(--ink) 8%, transparent); }
+.podPortada { width: 56px; height: 56px; border-radius: 8px; flex: none; object-fit: cover; }
+.podDatos { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.podTit { font-weight: 700; font-size: 17px; line-height: 1.3; }
+.podEstado { font-size: 14px; font-weight: 600; color: var(--ink-2); }
+.podEstado.nuevo { color: var(--si); }
+.podBarra { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; background: var(--card); border-top: 1px solid var(--line);
+  padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); box-shadow: 0 -6px 18px rgba(0,0,0,.35); }
+.podBarra[hidden] { display: none; }
+.podBarra > * { max-width: 640px; margin-left: auto; margin-right: auto; }
+.podBarraArriba { display: flex; gap: 10px; align-items: center; }
+.podBarraPortada { width: 44px; height: 44px; border-radius: 6px; flex: none; object-fit: cover; }
+.podBarraTxt { display: flex; flex-direction: column; min-width: 0; flex: 1; color: inherit; text-decoration: none; }
+.podBarraTit { font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.podX { min-width: 44px; min-height: 44px; border: 0; background: transparent; color: var(--ink-2); font-size: 20px; cursor: pointer; }
+.podRango { display: block; width: 100%; margin: 8px auto 0; accent-color: var(--ink); height: 28px; }
+.podTiempos { display: flex; justify-content: space-between; }
+.podBotones { display: flex; justify-content: center; gap: 14px; margin-top: 4px; }
+.podBotones button { min-width: 56px; min-height: 52px; border-radius: 26px; border: 1px solid var(--line); background: transparent;
+  color: var(--ink); font: 700 18px/1 system-ui, sans-serif; cursor: pointer; }
+.podBotones .podPlay { min-width: 72px; background: var(--ink); color: var(--page); border-color: var(--ink); font-size: 22px; }
+body.conPod .app { padding-bottom: 210px; }

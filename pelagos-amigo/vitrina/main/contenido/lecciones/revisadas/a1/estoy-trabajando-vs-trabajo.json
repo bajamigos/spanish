@@ -1,0 +1,189 @@
+{
+  "tema": 5994,
+  "slug": "estoy-trabajando-vs-trabajo",
+  "titulo": "Present progressive vs present",
+  "subtitulo": "«Trabajo en un banco, pero este mes estoy trabajando en casa.»",
+  "foto": "t08.jpg",
+  "regla": "Use the simple present for what is permanent or usual (trabajo en un banco) and estar + gerund for what is happening right now or only for a while (este mes estoy trabajando en casa). State verbs like tener, saber and ser usually don't go in the progressive.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Simple present**: what you **always** or **usually** do, what is permanent: **Vivo en Tijuana.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Estar + gerund**: what is happening **right now**, or a **temporary** situation: **Ahora estoy viviendo con mis papás.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Words like **ahora, en este momento, este mes, estos días** often go with the progressive."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Verbs of state (**tener** _to have_, **saber**, **ser**) usually stay in the simple present."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Trabajo== en un hotel.",
+              "en": "I work at a hotel."
+            },
+            {
+              "es": "Este verano ==estoy trabajando== en Rosarito.",
+              "en": "This summer I'm working in Rosarito."
+            },
+            {
+              "es": "==Vivo== en Tijuana desde niño.",
+              "en": "I've lived in Tijuana since I was a kid."
+            },
+            {
+              "es": "Ahora ==estoy viviendo== con mis papás.",
+              "en": "Right now I'm living with my parents."
+            },
+            {
+              "es": "Normalmente ==surfeo== los sábados.",
+              "en": "I usually surf on Saturdays."
+            },
+            {
+              "es": "Shh, el bebé ==está durmiendo==.",
+              "en": "Shh, the baby is sleeping."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estoy teniendo un carro rojo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tengo un carro rojo."
+                }
+              ],
+              "nota": "tener (to own): simple present."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estoy sabiendo nadar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Sé nadar."
+                }
+              ],
+              "nota": "saber: simple present."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estoy siendo de Tijuana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Soy de Tijuana."
+                }
+              ],
+              "nota": "ser de: simple present."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "estoy trabajando",
+              "texto": "The form: [[5092|estar + gerund]]."
+            },
+            {
+              "forma": "surfeo los sábados",
+              "texto": "Habits: [[5992|the present for regular actions]]."
+            },
+            {
+              "forma": "el agua hierve",
+              "texto": "Facts: [[5991|the present for general facts]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I teach English._ (my job)",
+              "r": "Enseño inglés.",
+              "nota": "Permanent: present."
+            },
+            {
+              "p": "In Spanish: _Right now I'm reading a book._",
+              "r": "Ahora estoy leyendo un libro.",
+              "nota": "Now: progressive."
+            },
+            {
+              "p": "Fix it: _Estoy teniendo dos hermanos._",
+              "r": "Tengo dos hermanos.",
+              "nota": "tener: present."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5092
+    ],
+    "confunde": [
+      5992
+    ],
+    "sigue": [
+      5991
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5994",
+      "kwiziq": true
+    }
+  ]
+}

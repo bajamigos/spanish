@@ -1,0 +1,234 @@
+{
+  "tema": 5772,
+  "slug": "condicional-tener",
+  "titulo": "Conjugate tener in the conditional",
+  "subtitulo": "Tendría, tendrías, tendríamos: the future stem tendr- with the conditional endings.",
+  "foto": "t08.jpg",
+  "regla": "Tener has the irregular stem tendr- in the conditional, with the regular endings: tendría, tendrías, tendría, tendríamos, tendrían.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Tener** (_to have_) is irregular in the conditional (**el condicional simple**). It uses the same irregular stem as the future, **tendr-**, and the regular conditional endings."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**tendr-**",
+            "**-ía, -ías, -ía, -íamos, -ían**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "tener"
+          ],
+          "filas": [
+            [
+              "yo",
+              "tendría"
+            ],
+            [
+              "tú",
+              "tendrías"
+            ],
+            [
+              "él, ella, usted",
+              "tendría"
+            ],
+            [
+              "nosotros",
+              "tendríamos"
+            ],
+            [
+              "ustedes, ellos",
+              "tendrían"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Verbs built on **tener** do the same: **mantener** → **mantendría**, **obtener** → **obtendría**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Every form has a written accent on the **í** of the ending."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the **e** of **tener** falls out and a **d** holds the door: **ten-d-ría**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Yo ==tendría== un carro nuevo.",
+              "en": "I'd have a new car."
+            },
+            {
+              "es": "Tú ==tendrías== vacaciones para siempre.",
+              "en": "You'd have endless vacations."
+            },
+            {
+              "es": "Holden ==tendría== muchas admiradoras.",
+              "en": "Holden would have lots of fans."
+            },
+            {
+              "es": "Nosotros ==tendríamos== pocos amigos ahí.",
+              "en": "We'd have few friends there."
+            },
+            {
+              "es": "Ellos ==tendrían== un mejor currículum.",
+              "en": "They'd have a better résumé."
+            },
+            {
+              "es": "Ustedes ==tendrían== que viajar en camión.",
+              "en": "You'd have to travel by bus."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo tenería más tiempo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo tendría más tiempo."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tendriamos que pagar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tendríamos que pagar."
+                }
+              ],
+              "nota": "Accent on the **í**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usos",
+      "titulo": "Useful uses",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "Tendrías que entrenar más.",
+              "texto": "**Tendría que** + infinitive: _would have to, should_. See [[5914|tener que in the conditional]].",
+              "aqui": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tendré",
+              "texto": "The future has the same stem: [[5050|tener in the future]]."
+            },
+            {
+              "forma": "hablaría",
+              "texto": "The regular pattern: [[5731|regular verbs in the conditional]]."
+            },
+            {
+              "forma": "tengo, tenía",
+              "texto": "Other tenses: [[5304|present]], [[5926|imperfect]]."
+            },
+            {
+              "forma": "vendría, pondría",
+              "texto": "The same **-dr-** stem: [[5879|venir]], [[5892|poner]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We'd have more time._",
+              "r": "Tendríamos más tiempo.",
+              "nota": "tendr- + íamos."
+            },
+            {
+              "p": "**Tener** with **ustedes**: ___ que llegar temprano.",
+              "r": "Tendrían que llegar temprano.",
+              "nota": "tendr- + ían."
+            },
+            {
+              "p": "Which one? **Teneria** or **Tendría**?",
+              "r": "Tendría.",
+              "nota": "Irregular stem **tendr-**."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5050,
+      5731
+    ],
+    "confunde": [
+      5050
+    ],
+    "sigue": [
+      5914,
+      5879,
+      5892
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5772",
+      "kwiziq": true
+    }
+  ]
+}

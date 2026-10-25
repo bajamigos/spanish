@@ -1,0 +1,176 @@
+{
+  "tema": 7269,
+  "slug": "futuro-perfecto",
+  "titulo": "The future perfect for actions completed before another future point",
+  "subtitulo": "Para las cuatro habré terminado.",
+  "foto": "t10.jpg",
+  "regla": "Habré + participle = will have done, completed before a future moment: Para las cuatro habré terminado. Cuando llegues, ya habremos comido. Look for para..., cuando + subjunctive, para entonces.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "The **future perfect** says something **will have been completed** by a point in the future."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "habré / habrás / habrá / habremos / habrán",
+            "+ participle"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "There's always a future reference: **para mañana, para entonces, a las diez, cuando** + present subjunctive, or another future action mentioned before."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: stand in the future and look back: **ya habré terminado**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Son las dos. Para las cuatro ==habré terminado== la tarea.",
+              "en": "It's two. By four I'll have finished my homework."
+            },
+            {
+              "es": "Yo voy a comer a las dos, pero tú ya ==habrás comido== para la una.",
+              "en": "I'll eat at two, but you'll have eaten by one."
+            },
+            {
+              "es": "Antes de empezar la clase, ella ==habrá colgado== los dibujos de los niños.",
+              "en": "Before class starts, she'll have hung up the kids' drawings."
+            },
+            {
+              "es": "Cuando llegue Luis, ya ==habremos comido== todos.",
+              "en": "When Luis arrives, we'll all have eaten."
+            },
+            {
+              "es": "Mi jefe va a llamar al mediodía y yo ya le ==habré mandado== el informe.",
+              "en": "My boss will call at noon, and I'll already have sent him the report."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cuando llegarás, habremos comido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cuando llegues, ya habremos comido."
+                }
+              ],
+              "nota": "**Cuando** + future: subjunctive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Para el lunes ya he terminado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Para el lunes ya habré terminado."
+                }
+              ],
+              "nota": "Completed by then: future perfect."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "habrá ido",
+              "texto": "Guessing about the past: [[7266|future perfect for the past]]."
+            },
+            {
+              "forma": "espero que hayas terminado",
+              "texto": "[[7031|esperar que for the future]]."
+            },
+            {
+              "forma": "habré",
+              "texto": "Conjugation: [[5185|regular]], [[5066|irregular]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _By Friday I'll have read the book._",
+              "r": "Para el viernes habré leído el libro.",
+              "nota": "habré + participle."
+            },
+            {
+              "p": "In Spanish: _When you get here, they'll have left._",
+              "r": "Cuando llegues, se habrán ido.",
+              "nota": "cuando + subjunctive."
+            },
+            {
+              "p": "Complete: _Para 2030 ___ (aprender, nosotros) mucho._",
+              "r": "habremos aprendido",
+              "nota": "Future perfect."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5185,
+      5066
+    ],
+    "confunde": [
+      7266
+    ],
+    "sigue": [
+      7031
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7269",
+      "kwiziq": true
+    }
+  ]
+}

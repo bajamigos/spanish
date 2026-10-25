@@ -1,0 +1,169 @@
+{
+  "tema": 5977,
+  "slug": "por-velocidad",
+  "titulo": "Por (not para) to talk about speed",
+  "subtitulo": "A 120 kilómetros por hora.",
+  "foto": "t03.jpg",
+  "regla": "Use por (not para) for speed and rates: a 120 kilómetros por hora.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To talk about **speed**, _per hour_, use **por**: **a cien kilómetros por hora**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The speed itself goes with **a**: **iba a ochenta**, **a 120 por hora**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: on a speedometer, **por** sits between the distance and the hour."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Íbamos ==a== 120 kilómetros ==por== hora.",
+              "en": "We were going 120 kilometers per hour."
+            },
+            {
+              "es": "El barco navega a cuatro millas ==por== hora.",
+              "en": "The boat sails at four miles per hour."
+            },
+            {
+              "es": "No creo que esa moto corra a cien ==por== hora.",
+              "en": "I don't think that motorcycle goes a hundred per hour."
+            },
+            {
+              "es": "El viento sopla a treinta kilómetros ==por== hora.",
+              "en": "The wind is blowing thirty kilometers per hour."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "A 100 kilómetros para hora."
+                },
+                {
+                  "v": "bien",
+                  "t": "A 100 kilómetros por hora."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Íbamos en 80 por hora."
+                },
+                {
+                  "v": "bien",
+                  "t": "Íbamos a 80 por hora."
+                }
+              ],
+              "nota": "The speed takes **a**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "para + infinitive",
+              "texto": "The main use of **para**: [[5970|purpose]]."
+            },
+            {
+              "forma": "por teléfono, por 100 pesos",
+              "texto": "Other uses of **por**: [[5973|medium]], [[5974|exchange]], [[5975|price]], [[5976|per]], [[5977|speed]], [[7273|by whom]]."
+            },
+            {
+              "forma": "para Navidad",
+              "texto": "**Para** for a deadline or occasion: [[5978|precise time]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _at 60 kilometers per hour_",
+              "r": "a sesenta kilómetros por hora",
+              "nota": "a … por hora."
+            },
+            {
+              "p": "In Spanish: _The waves come every ten seconds._ (por… ?)",
+              "r": "Llega una ola cada diez segundos.",
+              "nota": "For _every_, use **cada**; **por** is for per unit."
+            },
+            {
+              "p": "Fix it: **Manejaba para 90 por hora.**",
+              "r": "Manejaba a 90 por hora.",
+              "nota": "a + speed + por hora."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5970
+    ],
+    "confunde": [
+      5970,
+      5973,
+      5974
+    ],
+    "sigue": [
+      5975,
+      5976,
+      5978,
+      7273,
+      7073
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5977",
+      "kwiziq": true
+    }
+  ]
+}

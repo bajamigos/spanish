@@ -1,0 +1,192 @@
+{
+  "tema": 5153,
+  "slug": "que-es-eso",
+  "titulo": "What is that? ¿Qué es eso?",
+  "subtitulo": "¿Qué es eso? Es un nopal.",
+  "foto": "t03.jpg",
+  "regla": "To ask what something is, use ¿Qué es…? on its own, with eso (that), or with a noun (¿Qué es un nopal?). Qué has an accent in questions. Answer with es + the thing.",
+  "comparada_kwiziq": "2026-10-17",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**¿Qué es eso?** = _What is that?_ **¿Qué es?** = _What is it?_"
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "¿Qué es",
+            "+",
+            "eso / un… / el…?"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "To ask what a word means, put the noun after **qué es**: **¿Qué es un tianguis?**, **¿Qué es la birria?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Answer with **es** + the thing: **Es un mercado.** In questions, **qué** always has an accent, and the question opens with **¿**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿==Qué es eso==? — Es un nopal.",
+              "en": "What is that? — It's a cactus paddle."
+            },
+            {
+              "es": "¿==Qué es==? — Es un regalo para ti.",
+              "en": "What is it? — It's a present for you."
+            },
+            {
+              "es": "¿==Qué es== la birria? — Es un guisado de carne.",
+              "en": "What is birria? — It's a meat stew."
+            },
+            {
+              "es": "¿==Qué es== un kimono? — Es el uniforme de jiu-jitsu.",
+              "en": "What is a kimono? — It's the jiu-jitsu uniform (the gi)."
+            },
+            {
+              "es": "Hay un tianguis los domingos. — ¿Un tianguis? ¿==Qué es eso==?",
+              "en": "There's a tianguis on Sundays. — A tianguis? What's that?"
+            },
+            {
+              "es": "¿==Qué es== el Cinturón? — Es una zona de asteroides.",
+              "en": "What is the Belt? — It's an asteroid zone."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Que es eso?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Qué es eso?"
+                }
+              ],
+              "nota": "Accent on **qué** in questions."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Qué está eso?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Qué es eso?"
+                }
+              ],
+              "nota": "Saying what something is: **ser**, not **estar**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Qué es eso?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Qué es eso?"
+                }
+              ],
+              "nota": "Open the question with **¿**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¿qué…?",
+              "texto": "More questions: [[9828|questions with qué]]."
+            },
+            {
+              "forma": "¿qué o cuál?",
+              "texto": "Choosing the question word: [[9926|qué vs cuál + verb]]."
+            },
+            {
+              "forma": "ese, esa",
+              "texto": "_That_ before a noun: [[6061|ese, esa, esos, esas]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _What is that?_",
+              "r": "¿Qué es eso?",
+              "nota": "Accent and ¿."
+            },
+            {
+              "p": "Ask what a taco de canasta is.",
+              "r": "¿Qué es un taco de canasta?",
+              "nota": "qué es + noun."
+            },
+            {
+              "p": "Fix it: _¿Que está eso?_",
+              "r": "¿Qué es eso?",
+              "nota": "qué, es."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      9926
+    ],
+    "sigue": [
+      9828,
+      6061
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5153",
+      "kwiziq": true
+    }
+  ]
+}

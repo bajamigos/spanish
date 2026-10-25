@@ -1,0 +1,201 @@
+{
+  "tema": 6082,
+  "slug": "adjetivos-ar",
+  "titulo": "Forming singular and plural of adjectives ending in -ar",
+  "subtitulo": "Un chico ejemplar, unas mesas circulares: one form for both genders, -es for the plural.",
+  "foto": "t09.jpg",
+  "regla": "Adjectives ending in -ar have one singular form for masculine and feminine and add -es for the plural: popular → populares.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Adjectives ending in **-ar** have the **same form** for masculine and feminine in the singular."
+        },
+        {
+          "tipo": "texto",
+          "texto": "For the plural, masculine or feminine, add **-es**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "Masculine",
+            "Feminine"
+          ],
+          "filas": [
+            [
+              "singular",
+              "un chavo ejemplar",
+              "una chava ejemplar"
+            ],
+            [
+              "plural",
+              "unos aretes circulares",
+              "unas mesas circulares"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Common ones: **popular**, **familiar**, **similar**, **particular**, **regular**, **circular**, **ejemplar**, **escolar**, **solar**, **lunar**, **nuclear**, **militar**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **-ar** adjectives don't care about gender. They only grow an **-es** when there are more."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Un alumno ==ejemplar==.",
+              "en": "A model student."
+            },
+            {
+              "es": "Una alumna ==ejemplar==.",
+              "en": "A model student (female)."
+            },
+            {
+              "es": "Unas mesas ==circulares==.",
+              "en": "Some round tables."
+            },
+            {
+              "es": "Estos cantantes son muy ==populares== ahora.",
+              "en": "These singers are very popular right now."
+            },
+            {
+              "es": "Las minifaldas eran ==populares== en los sesenta.",
+              "en": "Miniskirts were popular in the sixties."
+            },
+            {
+              "es": "En el huerto tenemos paneles ==solares==.",
+              "en": "We have solar panels in the garden."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Una chava populara."
+                },
+                {
+                  "v": "bien",
+                  "t": "Una chava popular."
+                }
+              ],
+              "nota": "No **-a** for the feminine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Unos problemas familiars."
+                },
+                {
+                  "v": "bien",
+                  "t": "Unos problemas familiares."
+                }
+              ],
+              "nota": "Plural with **-es**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "grande, grandes",
+              "texto": "Adjectives in **-e**: [[6051|plural of -e and -a adjectives]]."
+            },
+            {
+              "forma": "feliz, felices",
+              "texto": "Adjectives in **-z** and **-l**: [[6057|plural of -z and -l adjectives]]."
+            },
+            {
+              "forma": "trabajador, trabajadora",
+              "texto": "Adjectives in **-or** do change: [[6059|-án, -ón, -or]]."
+            },
+            {
+              "forma": "popularísimo",
+              "texto": "The superlative: [[6077|-ísimo]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Make it plural: **un panel solar**.",
+              "r": "unos paneles solares",
+              "nota": "-es."
+            },
+            {
+              "p": "Feminine: **un caso particular** → una situación ___.",
+              "r": "una situación particular",
+              "nota": "Same form."
+            },
+            {
+              "p": "In Spanish: _They're very popular._ (ellas)",
+              "r": "Son muy populares.",
+              "nota": "populares."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6051,
+      6057
+    ],
+    "confunde": [
+      6059
+    ],
+    "sigue": [
+      6077
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6082",
+      "kwiziq": true
+    }
+  ]
+}

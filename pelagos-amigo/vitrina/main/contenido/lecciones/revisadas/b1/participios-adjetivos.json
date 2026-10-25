@@ -1,0 +1,222 @@
+{
+  "tema": 7000,
+  "slug": "participios-adjetivos",
+  "titulo": "Past participles as adjectives",
+  "subtitulo": "Está cansado, las ventanas abiertas: participles that agree like adjectives.",
+  "foto": "t08.jpg",
+  "regla": "A past participle (-ado, -ido) can work as an adjective and then agrees in gender and number: cansado, cansada, cansados, cansadas.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "The past participle (**-ado**, **-ido**) isn't only for compound tenses with **haber** (**he comido**, **había llegado**). It can also work as an **adjective**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "As an adjective, it **agrees** in gender and number with the noun:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "Masculine",
+            "Feminine"
+          ],
+          "filas": [
+            [
+              "singular",
+              "obsesionado",
+              "obsesionada"
+            ],
+            [
+              "plural",
+              "obsesionados",
+              "obsesionadas"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It's very common after **estar**, to describe a state: **está cansado**, **la puerta está abierta**. It can also go right after the noun: **los niños cansados**, **un lugar abandonado**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Irregular participles work the same way: **abierto**, **roto**, **hecho**, **escrito**, **muerto**, **cubierto**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Compare: with **haber**, the participle never changes (**han cerrado la tienda**); as an adjective, it agrees (**la tienda está cerrada**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: with **haber** it's frozen; with **estar** or a noun, it comes alive and agrees."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Beto está ==obsesionado== con el dinero.",
+              "en": "Beto is obsessed with money."
+            },
+            {
+              "es": "Naomi está ==obsesionada== con el motor.",
+              "en": "Naomi is obsessed with the engine."
+            },
+            {
+              "es": "Los niños ==cansados== se fueron a dormir.",
+              "en": "The tired kids went to sleep."
+            },
+            {
+              "es": "Llegamos a un lugar ==abandonado==.",
+              "en": "We got to an abandoned place."
+            },
+            {
+              "es": "La policía interrogó a las chicas ==arrestadas==.",
+              "en": "The police questioned the arrested girls."
+            },
+            {
+              "es": "Las montañas ==cubiertas== de nieve se veían increíbles.",
+              "en": "The snow-covered mountains looked amazing."
+            },
+            {
+              "es": "La ventana del carro está ==rota==.",
+              "en": "The car window is broken."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La puerta está abierto."
+                },
+                {
+                  "v": "bien",
+                  "t": "La puerta está abierta."
+                }
+              ],
+              "nota": "As an adjective, it agrees."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Han abiertas las puertas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Han abierto las puertas."
+                }
+              ],
+              "nota": "With **haber**, it never changes."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El vidrio está rompido."
+                },
+                {
+                  "v": "bien",
+                  "t": "El vidrio está roto."
+                }
+              ],
+              "nota": "Irregular participle: **roto**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hecho, dicho, roto",
+              "texto": "Irregular participles: [[7048|participles in -to / -cho]]."
+            },
+            {
+              "forma": "he cerrado",
+              "texto": "Participles in compound tenses: [[5267|present perfect]], [[5843|pluperfect]]."
+            },
+            {
+              "forma": "estoy cansado",
+              "texto": "**Estar** for states: [[5983|estar for physical condition]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _The doors are closed._",
+              "r": "Las puertas están cerradas.",
+              "nota": "Agrees: cerradas."
+            },
+            {
+              "p": "In Spanish: _a broken board_",
+              "r": "una tabla rota",
+              "nota": "roto → rota."
+            },
+            {
+              "p": "In Spanish: _They have closed the taquería._",
+              "r": "Han cerrado la taquería.",
+              "nota": "With haber, no agreement."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7048,
+      5267
+    ],
+    "confunde": [
+      5267
+    ],
+    "sigue": [
+      5983
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7000",
+      "kwiziq": true
+    }
+  ]
+}

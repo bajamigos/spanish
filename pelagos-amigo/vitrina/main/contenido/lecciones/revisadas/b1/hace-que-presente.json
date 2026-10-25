@@ -1,0 +1,204 @@
+{
+  "tema": 6187,
+  "slug": "hace-que-presente",
+  "titulo": "Hace + time + que + present: how long you've been doing something",
+  "subtitulo": "Hace tres años que surfeo: it started then and it's still going.",
+  "foto": "t08.jpg",
+  "regla": "Hace + length of time + que + present = have been doing for: hace un mes que estudio. It goes at the start, and never with the present perfect.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To talk about something that **started in the past and is still going on**, _I've been doing it for…_, use:"
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**hace**",
+            "length of time",
+            "**que**",
+            "present tense"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Spanish uses the **present**, not the present perfect: **hace dos años que no fumo**, not **hace dos años que no he fumado**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "This structure goes at the **beginning** of the sentence."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Another way: present + **desde hace** + time: **surfeo desde hace tres años** (see [[5129|desde hace]])."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **hace … que** + present is a stopwatch that's still running."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Hace== tres meses ==que== Nuria ==vive== en California.",
+              "en": "Nuria has been living in California for three months."
+            },
+            {
+              "es": "==Hace== unos días ==que tengo== dolor de cabeza.",
+              "en": "I've had a headache for a few days."
+            },
+            {
+              "es": "==Hace== un mes ==que estudio== español en la academia.",
+              "en": "I've been studying Spanish at the academy for a month."
+            },
+            {
+              "es": "==Hace== una semana ==que no veo== a Beto.",
+              "en": "I haven't seen Beto for a week."
+            },
+            {
+              "es": "==Hace== tres años ==que trabajo== de cerrajero.",
+              "en": "I've been working as a locksmith for three years."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Trabajo aquí hace tres años que."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hace tres años que trabajo aquí."
+                }
+              ],
+              "nota": "**Hace … que** goes first."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hace dos años que no he fumado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hace dos años que no fumo."
+                }
+              ],
+              "nota": "Present, not present perfect."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hace tres años surfeo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hace tres años que surfeo."
+                }
+              ],
+              "nota": "Don't drop the **que**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "surfeo desde hace tres años",
+              "texto": "The same idea with **desde hace**: [[5129|desde hace + present]]."
+            },
+            {
+              "forma": "hace tres años que llegué",
+              "texto": "_How long ago_, with the preterite: [[7062|hace … que + preterite]]."
+            },
+            {
+              "forma": "llevo tres años surfeando",
+              "texto": "With **llevar** + gerund: [[7176|llevar + gerund]]."
+            },
+            {
+              "forma": "llegué hace un año",
+              "texto": "_Ago_: [[7063|hace for ago]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I've been training for two years._",
+              "r": "Hace dos años que entreno.",
+              "nota": "hace + time + que + present."
+            },
+            {
+              "p": "In Spanish: _I haven't surfed for a month._",
+              "r": "Hace un mes que no surfeo.",
+              "nota": "Present, not perfect."
+            },
+            {
+              "p": "Fix it: **Hace una hora te espero.**",
+              "r": "Hace una hora que te espero.",
+              "nota": "Keep the **que**."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5129,
+      7063
+    ],
+    "confunde": [
+      7062
+    ],
+    "sigue": [
+      7062,
+      7176
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6187",
+      "kwiziq": true
+    }
+  ]
+}

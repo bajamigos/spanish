@@ -1,0 +1,255 @@
+{
+  "tema": 5251,
+  "slug": "puse-puso",
+  "titulo": "Poner in the preterite",
+  "subtitulo": "Puse la tabla en el carro.",
+  "foto": "t10.jpg",
+  "regla": "Poner is irregular in the preterite: stem pus- with unaccented endings: puse, pusiste, puso, pusimos, pusieron. Its derivatives (proponer, suponer, componer…) and ponerse follow it.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "In the preterite, **poner** changes its stem to **pus-**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "pus-",
+            "+",
+            "-e, -iste, -o, -imos, -ieron"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "poner"
+          ],
+          "filas": [
+            [
+              "yo",
+              "puse"
+            ],
+            [
+              "tú",
+              "pusiste"
+            ],
+            [
+              "él / ella / usted",
+              "puso"
+            ],
+            [
+              "nosotros / nosotras",
+              "pusimos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "pusieron"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**No written accents**: **puse**, **puso**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Verbs built on poner do the same: **proponer → propuse**, **suponer → supuso**, **componer → compuso**, **imponer → impuso**, **exponer → expusieron**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Ponerse** + adjective = _to become, get_ (a mood or state): **Me puse nervioso.** **Ponerse** + clothing = _to put on_: **Se puso la sudadera.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **puse** (**s**, _set it_) is from **poner**; **pude** (**d**, _did it_) is from **poder**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Puse== la tabla en el techo del carro.",
+              "en": "I put the board on the car roof."
+            },
+            {
+              "es": "¿Dónde ==pusiste== mis llaves?",
+              "en": "Where did you put my keys?"
+            },
+            {
+              "es": "Mi abuela ==puso== la mesa para doce personas.",
+              "en": "My grandma set the table for twelve people."
+            },
+            {
+              "es": "==Pusimos== los jitomates en macetas más grandes.",
+              "en": "We put the tomatoes in bigger pots."
+            },
+            {
+              "es": "Me ==puse== nervioso antes del torneo.",
+              "en": "I got nervous before the tournament."
+            },
+            {
+              "es": "Ella se ==puso== el rashguard y entró al tatami.",
+              "en": "She put on her rashguard and stepped on the mat."
+            },
+            {
+              "es": "Naomi ==propuso== un plan para salvar la nave.",
+              "en": "Naomi proposed a plan to save the ship."
+            },
+            {
+              "es": "Los vecinos ==pusieron== música a todo volumen.",
+              "en": "The neighbors put on music at full volume."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer poní el libro aquí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer puse el libro aquí."
+                }
+              ],
+              "nota": "Stem **pus-**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Él pusó la mesa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Él puso la mesa."
+                }
+              ],
+              "nota": "No accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo proponí una idea."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo propuse una idea."
+                }
+              ],
+              "nota": "Derivatives follow poner."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me pusé triste."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me puse triste."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "pongo, pones",
+              "texto": "The present: [[5305|poner in the present]]."
+            },
+            {
+              "forma": "pude",
+              "texto": "The look-alike: [[5221|poder in the preterite]]."
+            },
+            {
+              "forma": "hice",
+              "texto": "Another irregular stem: [[5110|hacer in the preterite]]."
+            },
+            {
+              "forma": "he puesto",
+              "texto": "Next step: [[6670|poner in the present perfect]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I put the keys on the table._",
+              "r": "Puse las llaves en la mesa.",
+              "nota": "puse."
+            },
+            {
+              "p": "In Spanish: _They got very happy._",
+              "r": "Se pusieron muy contentos.",
+              "nota": "ponerse = to get."
+            },
+            {
+              "p": "Fix it: _¿Dónde ponaste el café?_",
+              "r": "¿Dónde pusiste el café?",
+              "nota": "pusiste."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5305
+    ],
+    "confunde": [
+      5221
+    ],
+    "sigue": [
+      5110,
+      6670
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5251",
+      "kwiziq": true
+    }
+  ]
+}

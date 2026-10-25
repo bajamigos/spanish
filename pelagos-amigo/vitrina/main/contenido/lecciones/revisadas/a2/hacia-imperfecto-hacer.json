@@ -1,0 +1,245 @@
+{
+  "tema": 5927,
+  "slug": "hacia-imperfecto-hacer",
+  "titulo": "Hacer in the imperfect",
+  "subtitulo": "Hacía frío y mi abuela hacía tortillas.",
+  "foto": "t07.jpg",
+  "regla": "Hacer is regular in the imperfect: hacía, hacías, hacía, hacíamos, hacían. Use it for what you used to do or were doing, and for past weather as background: hacía frío.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Hacer** (_to do, to make_) is irregular in the present (**hago**) and the preterite (**hice**), but **regular in the imperfect**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "hac-",
+            "+",
+            "-ía, -ías, -ía, -íamos, -ían"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Imperfect of hacer"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**hacía**"
+            ],
+            [
+              "tú",
+              "**hacías**"
+            ],
+            [
+              "él, ella, usted",
+              "**hacía**"
+            ],
+            [
+              "nosotros, nosotras",
+              "**hacíamos**"
+            ],
+            [
+              "ellos, ellas, ustedes",
+              "**hacían**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Every form has an accent on the **í**. Without it, **hacia** is a different word: _toward_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Use it for **what you used to do**, **what you were doing**, and for **weather** as background: **hacía frío**, **hacía calor**, **hacía viento**, **hacía sol**, **hacía buen tiempo**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "En diciembre ==hacía== mucho frío en la playa.",
+              "en": "In December it was very cold at the beach."
+            },
+            {
+              "es": "¿Qué ==hacías== cuando te llamé?",
+              "en": "What were you doing when I called you?"
+            },
+            {
+              "es": "Mi abuela ==hacía== tortillas de harina cada mañana.",
+              "en": "My grandma used to make flour tortillas every morning."
+            },
+            {
+              "es": "Antes ==hacíamos== ejercicio en el parque.",
+              "en": "We used to work out in the park."
+            },
+            {
+              "es": "Ese día ==hacía== mucho viento y no había buenas olas.",
+              "en": "That day it was very windy and there were no good waves."
+            },
+            {
+              "es": "Mis primos siempre ==hacían== carne asada los domingos.",
+              "en": "My cousins always had a carne asada on Sundays."
+            },
+            {
+              "es": "==Hacía== buen tiempo, así que fuimos a la playa.",
+              "en": "The weather was nice, so we went to the beach."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Era frío cuando salí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hacía frío cuando salí."
+                }
+              ],
+              "nota": "Weather uses **hacer**, not ser."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mi abuela hizo tortillas cada mañana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mi abuela hacía tortillas cada mañana."
+                }
+              ],
+              "nota": "A habit: imperfect."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hacia mucho calor."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hacía mucho calor."
+                }
+              ],
+              "nota": "**hacia** = _toward_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros haciamos la tarea juntos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros hacíamos la tarea juntos."
+                }
+              ],
+              "nota": "Accent on the **í**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hago / hacía",
+              "texto": "The present: [[5708|hacer in the present]]; the pattern: [[5264|-er and -ir verbs in the imperfect]]."
+            },
+            {
+              "forma": "hice, hizo",
+              "texto": "The preterite: [[5110|hacer in the preterite]]."
+            },
+            {
+              "forma": "hace frío",
+              "texto": "Weather today: [[9336|hace for the weather]]."
+            },
+            {
+              "forma": "hacía frío y eran las seis",
+              "texto": "Setting the scene: [[6002|the imperfect to describe the past]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _It was very hot when we arrived._",
+              "r": "Hacía mucho calor cuando llegamos.",
+              "nota": "Weather: hacía."
+            },
+            {
+              "p": "In Spanish: _What did you (tú) use to do on weekends?_",
+              "r": "¿Qué hacías los fines de semana?",
+              "nota": "hacías."
+            },
+            {
+              "p": "Fix it: _Mis tíos hacieron carne asada cada domingo._",
+              "r": "Mis tíos hacían carne asada cada domingo.",
+              "nota": "Habit: hacían."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5708,
+      5264,
+      9336
+    ],
+    "confunde": [
+      5110
+    ],
+    "sigue": [
+      6002
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5927",
+      "kwiziq": true
+    }
+  ]
+}

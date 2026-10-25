@@ -1,0 +1,284 @@
+{
+  "tema": 5063,
+  "slug": "subjuntivo-presente-ar",
+  "titulo": "Conjugate regular -ar verbs in the present subjunctive",
+  "subtitulo": "The stem comes from the yo form, and the a turns into e: hable, hables, hablemos.",
+  "foto": "t01.jpg",
+  "regla": "Take the present-tense yo form, drop the -o and add -e, -es, -e, -emos, -en. -ar verbs switch to e.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Regular **-ar** verbs in the present indicative are also regular in the **present subjunctive**. The stem is the same as the **yo** form of the present (**yo trabajo**), and the **-o** is replaced with the subjunctive ending."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "present **yo** form",
+            "minus **-o**",
+            "**-e, -es, -e, -emos, -en**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Ending",
+            "hablar → yo hablo"
+          ],
+          "filas": [
+            [
+              "yo",
+              "-e",
+              "hable"
+            ],
+            [
+              "tú",
+              "-es",
+              "hables"
+            ],
+            [
+              "él, ella, usted",
+              "-e",
+              "hable"
+            ],
+            [
+              "nosotros",
+              "-emos",
+              "hablemos"
+            ],
+            [
+              "ustedes, ellos",
+              "-en",
+              "hablen"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Notice: **-ar verbs switch to the vowel e**. **-er** and **-ir** verbs do the opposite and switch to **a**: see [[5151|-er and -ir in the subjunctive]]."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Watch the spelling: to keep the same sound, **-car** becomes **-que** (**busque**), **-gar** becomes **-gue** (**pague**) and **-zar** becomes **-ce** (**empiece**). Each has its own lesson: [[5724|-car]], [[5725|-gar]] and [[5726|-zar]]."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the subjunctive is the world upside down. What was **a** becomes **e**: **hablas**, **hables**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Beto quiere que ==hable== más despacio.",
+              "en": "Beto wants me to speak more slowly."
+            },
+            {
+              "es": "Espero que ==surfees== bien el sábado.",
+              "en": "I hope you surf well on Saturday."
+            },
+            {
+              "es": "El doctor le recomienda que ==camine== mucho.",
+              "en": "The doctor recommends that he walk a lot."
+            },
+            {
+              "es": "Tal vez ==cenemos== tarde hoy.",
+              "en": "We may have dinner late today."
+            },
+            {
+              "es": "Hay que recoger cuando ellos ==terminen==.",
+              "en": "We have to tidy up when they finish."
+            },
+            {
+              "es": "Ojalá que ustedes ==visiten== el huerto.",
+              "en": "I hope you visit the garden."
+            },
+            {
+              "es": "Quiero que ==hables== con tu papá.",
+              "en": "I want you to talk to your dad."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "What triggers the subjunctive in these sentences? [[5059|**querer que**]], [[6076|**esperar que**]], [[5061|**ojalá**]], [[5084|**tal vez**]] and [[5062|**cuando** about the future]]. Each has its own lesson."
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Because the **-ar** subjunctive ends in **e**, it looks like the ordinary present of an **-er** verb. With verbs that are spelled almost the same, it's easy to get lost."
+        },
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es posible que ellas crean un estilo nuevo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es posible que ellas creen un estilo nuevo."
+                }
+              ],
+              "nota": "**Crear** (_to create_) is **-ar**: subjunctive **creen**. **Crean** is the ordinary present."
+            },
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "No creo que ellas crean eso."
+                }
+              ],
+              "nota": "This one is right: **creer** (_to believe_) is **-er**, and its subjunctive is **crean**. See [[10757|**crear**, **creer** and **criar**]]."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero que tú hablas con Beto."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero que tú hables con Beto."
+                }
+              ],
+              "nota": "After **quiero que**, never the ordinary present."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usos",
+      "titulo": "The same form, other jobs",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "Espero que llegues.",
+              "texto": "After a trigger with **que**: wishes, advice, doubt.",
+              "aqui": true
+            },
+            {
+              "forma": "No me hables así.",
+              "texto": "The negative **tú** command is this same form. See [[9255|negative commands]]."
+            },
+            {
+              "forma": "Hablemos claro.",
+              "texto": "**Nosotros** as _let's_. See [[6961|commands for usted, ustedes and nosotros]]."
+            },
+            {
+              "forma": "Hable más fuerte, por favor.",
+              "texto": "The **usted** command comes from here too."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "trabajo → trabaje",
+              "texto": "The stem always comes from **yo**. Review [[5492|-ar in the present]]."
+            },
+            {
+              "forma": "como → coma",
+              "texto": "The other half: [[5151|-er and -ir in the subjunctive]]."
+            },
+            {
+              "forma": "tengo → tenga",
+              "texto": "If **yo** is irregular, so is the subjunctive: [[6000|yo-go verbs]]."
+            },
+            {
+              "forma": "hablara",
+              "texto": "The next step, the past: [[5068|the imperfect subjunctive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "**Trabajar** with **nosotros**: El jefe quiere que ___ el sábado.",
+              "r": "El jefe quiere que trabajemos el sábado.",
+              "nota": "trabajo → trabaj- → trabajemos."
+            },
+            {
+              "p": "In Spanish: _I hope you rest tonight._ (tú, **descansar**)",
+              "r": "Espero que descanses esta noche.",
+              "nota": "**Esperar que** takes the subjunctive: **descanses**."
+            },
+            {
+              "p": "Which one? **Es posible que ellos crean un huerto** or **Es posible que ellos creen un huerto**.",
+              "r": "Es posible que ellos creen un huerto.",
+              "nota": "**Crear** is **-ar**, so it takes **e**."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5492,
+      9255
+    ],
+    "confunde": [
+      5151,
+      10757
+    ],
+    "sigue": [
+      5724,
+      5725,
+      5726,
+      5059,
+      6076,
+      5061,
+      5062,
+      5084,
+      6000,
+      5068,
+      6961
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5063",
+      "kwiziq": true
+    }
+  ]
+}

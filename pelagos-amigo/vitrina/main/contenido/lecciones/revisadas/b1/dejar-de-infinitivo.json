@@ -1,0 +1,204 @@
+{
+  "tema": 6181,
+  "slug": "dejar-de-infinitivo",
+  "titulo": "Dejar de + infinitive: to stop doing something",
+  "subtitulo": "Dejé de fumar: stop or give up, always with an infinitive.",
+  "foto": "t07.jpg",
+  "regla": "Dejar (conjugated) + de + infinitive = to stop doing, to give up doing: dejé de fumar. Never a gerund after de.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say _to stop doing_ something, use **dejar** (conjugated) + **de** + **infinitive**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**dejar**",
+            "**de**",
+            "infinitive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The **de** always comes after **dejar**, and after it comes an **infinitive**, never a gerund. English says _stop shouting_, Spanish says **deja de gritar**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With habits, it's usually _to give up_: **dejé de fumar** = _I gave up smoking_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It works in every tense: **dejé de**, **he dejado de**, **dejarán de**, **deja de**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **dejar** lets go, **de** points at what you let go of, and it's always an infinitive."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Dejé de fumar== hace tres años.",
+              "en": "I quit smoking three years ago."
+            },
+            {
+              "es": "==Hemos dejado de ir== a yoga.",
+              "en": "We've stopped going to yoga."
+            },
+            {
+              "es": "¿Cuándo ==van a dejar de tomar== tanto?",
+              "en": "When are you going to stop drinking so much?"
+            },
+            {
+              "es": "¡==Deja de gritar==!",
+              "en": "Stop shouting!"
+            },
+            {
+              "es": "Beto ==dejó de entrenar== después de la lesión.",
+              "en": "Beto stopped training after the injury."
+            },
+            {
+              "es": "Por fin ==dejó de llover==.",
+              "en": "It finally stopped raining."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Deja de gritando!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Deja de gritar!"
+                }
+              ],
+              "nota": "Infinitive, not gerund."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Dejé fumar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Dejé de fumar."
+                }
+              ],
+              "nota": "Never drop the **de**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "Dejé la tabla en el carro."
+                }
+              ],
+              "nota": "Without **de**, **dejar** means _to leave_ something somewhere."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "volver a surfear",
+              "texto": "To start again: [[6598|volver a]]."
+            },
+            {
+              "forma": "empezar a",
+              "texto": "To start: [[6960|empezar / comenzar a]]."
+            },
+            {
+              "forma": "terminar de",
+              "texto": "To finish: [[7430|terminar de]]."
+            },
+            {
+              "forma": "seguir surfeando",
+              "texto": "To keep on: [[6180|seguir + gerund]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Stop complaining!_ (tú)",
+              "r": "¡Deja de quejarte!",
+              "nota": "dejar de + infinitive."
+            },
+            {
+              "p": "In Spanish: _She gave up eating meat._",
+              "r": "Dejó de comer carne.",
+              "nota": "dejó de."
+            },
+            {
+              "p": "Fix it: **Dejamos de entrenando.**",
+              "r": "Dejamos de entrenar.",
+              "nota": "Infinitive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5065
+    ],
+    "confunde": [
+      6598
+    ],
+    "sigue": [
+      6598,
+      6960,
+      7430,
+      6180
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6181",
+      "kwiziq": true
+    }
+  ]
+}

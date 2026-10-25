@@ -1,0 +1,275 @@
+{
+  "tema": 9143,
+  "slug": "mil-dos-mil-un-millon",
+  "titulo": "Numbers from 1,000 to 1,000,000",
+  "subtitulo": "Mil, dos mil, cien mil, un millón de pesos.",
+  "foto": "t05.jpg",
+  "regla": "1,000 is mil (never un mil), and mil never goes plural: dos mil, cien mil. Hundreds before mil agree with a feminine noun (doscientas mil personas). 1,000,000 is un millón, which does go plural (dos millones) and takes de before a noun (un millón de pesos).",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Mil** = 1,000. Say **mil**, never **un mil**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Mil** doesn't change: **dos mil**, **diez mil**, **cien mil**. No _miles_ here."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Number",
+            "Spanish"
+          ],
+          "filas": [
+            [
+              "1,000",
+              "mil"
+            ],
+            [
+              "2,000",
+              "dos mil"
+            ],
+            [
+              "10,000",
+              "diez mil"
+            ],
+            [
+              "15,500",
+              "quince mil quinientos"
+            ],
+            [
+              "100,000",
+              "cien mil"
+            ],
+            [
+              "101,000",
+              "ciento un mil"
+            ],
+            [
+              "250,000",
+              "doscientos cincuenta mil"
+            ],
+            [
+              "1,000,000",
+              "un millón"
+            ],
+            [
+              "2,000,000",
+              "dos millones"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Hundreds before **mil** agree with a feminine noun: **doscientas mil personas**, **quinientas mil casas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Millón** is a noun: **un millón**, **dos millones**. Before a noun add **de**: **un millón de pesos**. If more numbers follow, no **de**: **un millón doscientos mil pesos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Miles de** = _thousands of_: **miles de personas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Years: **mil novecientos noventa y ocho** (1998), **dos mil veintiséis** (2026)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Mexico writes numbers like the US: **1,000** with a comma, **2.5** with a period. Many other countries write **1.000** and **2,5**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **mil** is lazy, it never changes. **Millón** is a show-off: it takes **un**, **-es** and **de**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi tabla costó ==ocho mil== pesos.",
+              "en": "My board cost eight thousand pesos."
+            },
+            {
+              "es": "El estadio tiene ==treinta mil== lugares.",
+              "en": "The stadium has thirty thousand seats."
+            },
+            {
+              "es": "En el concierto había ==cien mil== personas.",
+              "en": "There were a hundred thousand people at the concert."
+            },
+            {
+              "es": "La ciudad invirtió ==doscientos cincuenta mil== dólares en el parque.",
+              "en": "The city invested two hundred fifty thousand dollars in the park."
+            },
+            {
+              "es": "Se vendieron ==trescientas mil== botellas.",
+              "en": "Three hundred thousand bottles were sold."
+            },
+            {
+              "es": "Mi abuelo nació en ==mil novecientos cuarenta y ocho==.",
+              "en": "My grandfather was born in 1948."
+            },
+            {
+              "es": "Ganó ==un millón de== pesos en la lotería.",
+              "en": "He won a million pesos in the lottery."
+            },
+            {
+              "es": "==Miles de== personas cruzan la frontera cada día.",
+              "en": "Thousands of people cross the border every day."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La moto cuesta un mil dólares."
+                },
+                {
+                  "v": "bien",
+                  "t": "La moto cuesta mil dólares."
+                }
+              ],
+              "nota": "Never **un mil**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ahorré tres miles pesos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ahorré tres mil pesos."
+                }
+              ],
+              "nota": "**Mil** doesn't go plural."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mi casa vale dos millones pesos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mi casa vale dos millones de pesos."
+                }
+              ],
+              "nota": "**Millón** + **de** + noun."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Votaron doscientos mil personas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Votaron doscientas mil personas."
+                }
+              ],
+              "nota": "Agree with **personas**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "dos casas",
+              "texto": "Numbers before nouns: [[6664|using numbers with nouns]]."
+            },
+            {
+              "forma": "el dos mil",
+              "texto": "Numbers as words are masculine: [[6755|numbers are masculine]]."
+            },
+            {
+              "forma": "mil millones",
+              "texto": "Going bigger: [[7177|hundreds, thousands, millions and billions]]."
+            },
+            {
+              "forma": "el diez por ciento",
+              "texto": "Numbers in daily math: [[9923|percentages]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _the year 2026_",
+              "r": "dos mil veintiséis",
+              "nota": "mil never changes."
+            },
+            {
+              "p": "In Spanish: _a million people_",
+              "r": "un millón de personas",
+              "nota": "de before the noun."
+            },
+            {
+              "p": "Fix it: «Gané un mil quinientos pesos.»",
+              "r": "Gané mil quinientos pesos.",
+              "nota": "Just mil."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6664,
+      6755
+    ],
+    "confunde": [],
+    "sigue": [
+      7177,
+      9923
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9143",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "tema": 7029,
+  "slug": "gerundio-mientras",
+  "titulo": "The gerund to say while doing something",
+  "subtitulo": "Caminando por el malecón, vi delfines.",
+  "foto": "t08.jpg",
+  "regla": "A gerund at the start of a sentence can mean while doing: Estudiando en la universidad, conocí a mi esposo. No preposition before it (never mientras + gerund). Mientras + conjugated verb means the same and is a bit less formal.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "A **gerund** (**-ando, -iendo**) can express a **secondary action** happening at the same time as the main one: _while doing_."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "gerund...,",
+            "main clause"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Unlike English _while doing_, Spanish puts **nothing** before the gerund: never ~~mientras caminando~~."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Mientras** + **conjugated verb** says the same thing and sounds a little less formal."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The gerund should share the subject of the main verb: the person who studies is the person who meets."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: in Spanish the gerund travels alone, no _while_ in its backpack."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Viajando== por Oaxaca aprendí mucho sobre los zapotecos.",
+              "en": "While traveling through Oaxaca I learned a lot about the Zapotecs."
+            },
+            {
+              "es": "==Paseando== por el parque, los niños cortaron muchas flores.",
+              "en": "While walking in the park, the kids picked lots of flowers."
+            },
+            {
+              "es": "==Estudiando== en la universidad, conocí al amor de mi vida.",
+              "en": "While studying at university, I met the love of my life."
+            },
+            {
+              "es": "==Haciendo== unos muebles de madera, me corté con la sierra.",
+              "en": "While making some wooden furniture, I cut myself with the saw."
+            },
+            {
+              "es": "==Estudiando== para el examen, encontré unos apuntes perdidos.",
+              "en": "While studying for the exam, I found some lost notes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mientras",
+      "titulo": "Mientras + conjugated verb",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "gerundio",
+                  "t": "Arreglándose para la fiesta, oyó que tocaban la puerta."
+                },
+                {
+                  "v": "mientras",
+                  "t": "Mientras se arreglaba para la fiesta, oyó que tocaban la puerta."
+                }
+              ],
+              "nota": "Same meaning."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mientras caminando, vi a Luis."
+                },
+                {
+                  "v": "bien",
+                  "t": "Caminando, vi a Luis. / Mientras caminaba, vi a Luis."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Arreglándose para la fiesta, alguien tocó la puerta."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mientras ella se arreglaba para la fiesta, alguien tocó la puerta."
+                }
+              ],
+              "nota": "Different subjects: use **mientras**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "al llegar",
+              "texto": "_When / on doing_: [[6175|al + infinitive]]."
+            },
+            {
+              "forma": "estudiando mucho",
+              "texto": "_By doing_: [[6307|gerund for by]]."
+            },
+            {
+              "forma": "mientras",
+              "texto": "[[6994|mientras]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish (gerund): _While running on the beach, I lost my keys._",
+              "r": "Corriendo en la playa, perdí las llaves.",
+              "nota": "Gerund, no preposition."
+            },
+            {
+              "p": "Same with mientras:",
+              "r": "Mientras corría en la playa, perdí las llaves.",
+              "nota": "mientras + conjugated verb."
+            },
+            {
+              "p": "Fix it: _Mientras cocinando, se quemó._",
+              "r": "Cocinando, se quemó. / Mientras cocinaba, se quemó.",
+              "nota": "No mientras + gerund."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6307
+    ],
+    "confunde": [
+      6175
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7029",
+      "kwiziq": true
+    }
+  ]
+}

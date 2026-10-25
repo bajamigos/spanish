@@ -1,0 +1,240 @@
+{
+  "tema": 6088,
+  "slug": "diminutivo-illo-cillo",
+  "titulo": "Diminutive -illo, -cillo, -ecillo",
+  "subtitulo": "pan → panecillo, torta → tortilla, ratón → ratoncillo",
+  "foto": "t03.jpg",
+  "regla": "-illo / -illa is another diminutive, built like -ito: words in -o / -a take -illo / -illa, words in -e, -n, -r take -cillo, and one-syllable words take -ecillo. In Mexico -ito is the everyday diminutive; -illo lives mostly in words with their own meaning (tortilla, bolsillo, ventanilla).",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**-illo / -illa** (plural **-illos / -illas**) is a diminutive like **-ito**, and it follows the same pattern. The gender stays the same."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Word ends in",
+            "Suffix",
+            "Example"
+          ],
+          "filas": [
+            [
+              "-o / -a",
+              "-illo / -illa",
+              "chico → chiquillo, campana → campanilla"
+            ],
+            [
+              "-e, -n, -r (2+ syllables)",
+              "-cillo / -cilla",
+              "pobre → pobrecillo, ratón → ratoncillo"
+            ],
+            [
+              "one syllable",
+              "-ecillo / -ecilla",
+              "pan → panecillo, flor → florecilla"
+            ],
+            [
+              "pie (rare)",
+              "-ececillo",
+              "pie → piececillo"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Same spelling changes as **-ito**: **c → qu** (chico → **chiquillo**), **z → c** (pez → **pececillo**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In Mexico, **-ito** is the normal diminutive. **-illo** can sound literary, a bit pitying (**pobrecillo**) or slightly dismissive."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Many **-illo** words are now **words of their own**, with a new meaning: **torta → tortilla**, **bolsa → bolsillo** (_pocket_), **ventana → ventanilla** (_ticket window_), **cama → camilla** (_stretcher_), **cigarro → cigarrillo**, **paso → pasillo** (_hallway_)."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Me compré un ==panecillo== en la panadería.",
+              "en": "I bought a bread roll at the bakery."
+            },
+            {
+              "es": "Mi abuela hace las ==tortillas== a mano.",
+              "en": "My grandma makes the tortillas by hand."
+            },
+            {
+              "es": "Pague en la ==ventanilla== dos, por favor.",
+              "en": "Please pay at window two."
+            },
+            {
+              "es": "Guardé el celular en el ==bolsillo==.",
+              "en": "I put my phone in my pocket."
+            },
+            {
+              "es": "Un ==chiquillo== me enseñó a pararme en la tabla.",
+              "en": "A little kid taught me to stand up on the board."
+            },
+            {
+              "es": "El ==pobrecillo== se cayó tres veces.",
+              "en": "The poor guy fell three times."
+            },
+            {
+              "es": "Hay ==pececillos== de colores en el estanque.",
+              "en": "There are little colorful fish in the pond."
+            },
+            {
+              "es": "El paciente llegó en una ==camilla==.",
+              "en": "The patient arrived on a stretcher."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "un panillo"
+                },
+                {
+                  "v": "bien",
+                  "t": "un panecillo"
+                }
+              ],
+              "nota": "One syllable: **-ecillo**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "un chicillo"
+                },
+                {
+                  "v": "bien",
+                  "t": "un chiquillo"
+                }
+              ],
+              "nota": "**c → qu** before i."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "una florilla"
+                },
+                {
+                  "v": "bien",
+                  "t": "una florecilla"
+                }
+              ],
+              "nota": "One syllable: **-ecilla**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tengo las llaves en la bolsilla."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tengo las llaves en el bolsillo."
+                }
+              ],
+              "nota": "**Bolsillo** is its own masculine word: _pocket_."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "perrito, casita",
+              "texto": "The everyday diminutive: [[6087|-ito, -ita]]."
+            },
+            {
+              "forma": "cafecito, florecita",
+              "texto": "The -ito version of these endings: [[6132|-cito, -cita]]."
+            },
+            {
+              "forma": "perrote, golazo",
+              "texto": "Making things bigger: [[8389|augmentatives -azo, -ote, -ón]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Diminutive of **pan** with -illo:",
+              "r": "panecillo",
+              "nota": "One syllable: -ecillo."
+            },
+            {
+              "p": "Diminutive of **ratón** with -illo:",
+              "r": "ratoncillo",
+              "nota": "-n: -cillo."
+            },
+            {
+              "p": "In Spanish: _The keys are in my pocket._",
+              "r": "Las llaves están en mi bolsillo.",
+              "nota": "bolsillo = pocket."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6087
+    ],
+    "confunde": [
+      6132
+    ],
+    "sigue": [
+      8389
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6088",
+      "kwiziq": true
+    }
+  ]
+}

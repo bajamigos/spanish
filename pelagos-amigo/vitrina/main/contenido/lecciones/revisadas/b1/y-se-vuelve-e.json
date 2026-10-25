@@ -1,0 +1,226 @@
+{
+  "tema": 7277,
+  "slug": "y-se-vuelve-e",
+  "titulo": "When the conjunction y becomes e",
+  "subtitulo": "Padres e hijos, pero agua y hielo.",
+  "foto": "t10.jpg",
+  "regla": "Y (and) becomes e before a word that starts with the sound i (i- or hi-): Marco e Inés, padres e hijos. Not before hie- (agua y hielo), and not at the start of a question (¿Y Isabel?).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Y** is pronounced like the Spanish vowel **i**. Two **i** sounds in a row would blur together, so **y** changes to **e** when the next word starts with the sound **i**."
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "i-",
+              "texto": "**Marco e Inés**, **museos e iglesias**."
+            },
+            {
+              "forma": "hi-",
+              "texto": "The **h** is silent, so **hi-** also sounds like **i**: **padres e hijos**, **aguja e hilo**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: say it out loud. If you hear **i-i**, switch to **e**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Marco ==e== Inés llegaron ayer.",
+              "en": "Marco and Inés arrived yesterday."
+            },
+            {
+              "es": "Visitamos museos ==e== iglesias en Puebla.",
+              "en": "We visited museums and churches in Puebla."
+            },
+            {
+              "es": "Padres ==e== hijos son bienvenidos.",
+              "en": "Parents and children are welcome."
+            },
+            {
+              "es": "Necesitas aguja ==e== hilo.",
+              "en": "You need a needle and thread."
+            },
+            {
+              "es": "Habla español ==e== inglés.",
+              "en": "She speaks Spanish and English."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "excepciones",
+      "titulo": "Exceptions",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**hie-** sounds like a consonant **y** (**hielo** sounds like _yelo_), so **y** stays:"
+        },
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Limón ==y== hielo, por favor.",
+              "en": "Lemon and ice, please."
+            },
+            {
+              "es": "Las lentejas tienen proteína ==y== hierro.",
+              "en": "Lentils have protein and iron."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "At the **start of a question**, **y** stays even before **i-** or **hi-**:"
+        },
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿==Y== Isabel? ¿Dónde está?",
+              "en": "And Isabel? Where is she?"
+            },
+            {
+              "es": "¿==Y== Hilario? ¿Sabes algo de él?",
+              "en": "And Hilario? Have you heard from him?"
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "A foreign word that **sounds** like **i** also takes **e**, even if it's spelled differently: **mensajes e e-mails** (_e-mail_ is said _imeil_)."
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "español y inglés"
+                },
+                {
+                  "v": "bien",
+                  "t": "español e inglés"
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "agua e hielo"
+                },
+                {
+                  "v": "bien",
+                  "t": "agua y hielo"
+                }
+              ],
+              "nota": "**hie-** keeps **y**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "madre y hija"
+                },
+                {
+                  "v": "bien",
+                  "t": "madre e hija"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "siete u ocho",
+              "texto": "The same idea with **o**: [[7278|o becomes u]]."
+            },
+            {
+              "forma": "o... o...",
+              "texto": "Other conjunctions: [[8076|o / u / o bien]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Complete: _geografía ___ historia_",
+              "r": "geografía e historia",
+              "nota": "hi- sounds like i."
+            },
+            {
+              "p": "Complete: _nieve ___ hielo_",
+              "r": "nieve y hielo",
+              "nota": "hie- keeps y."
+            },
+            {
+              "p": "Complete: _¿___ Irene? ¿No viene?_",
+              "r": "¿Y Irene?",
+              "nota": "Start of a question: y."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      7278
+    ],
+    "sigue": [
+      8076
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7277",
+      "kwiziq": true
+    }
+  ]
+}

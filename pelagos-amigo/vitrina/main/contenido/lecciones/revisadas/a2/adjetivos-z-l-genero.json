@@ -1,0 +1,231 @@
+{
+  "tema": 6056,
+  "slug": "adjetivos-z-l-genero",
+  "titulo": "Adjectives in -z and -l: one form for both genders",
+  "subtitulo": "«Un niño feliz, una niña feliz.»",
+  "foto": "t01.jpg",
+  "regla": "Adjectives ending in -z or -l have the same singular form for masculine and feminine: un carro azul, una casa azul. The exception is nationality and origin words, which add -a: español → española.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "If the adjective ends in **-z** or **-l**, it does **not** change for gender."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "masculine",
+            "feminine"
+          ],
+          "filas": [
+            [
+              "un día feliz",
+              "una tarde feliz"
+            ],
+            [
+              "un examen difícil",
+              "una pregunta difícil"
+            ],
+            [
+              "un mar azul",
+              "una tabla azul"
+            ],
+            [
+              "un perro fiel",
+              "una perra fiel"
+            ],
+            [
+              "un surfista capaz",
+              "una surfista capaz"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Common ones: **feliz, capaz, veloz, audaz, eficaz, fácil, difícil, útil, azul, fiel, cruel, normal, igual, especial, genial, ideal, natural**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Exception: nationality and origin adjectives add **-a**: **español → española**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The plural is another rule: **feliz → felices**, **azul → azules**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi hija es una niña muy ==feliz==.",
+              "en": "My daughter is a very happy girl."
+            },
+            {
+              "es": "Esta ola es ==fácil== para principiantes.",
+              "en": "This wave is easy for beginners."
+            },
+            {
+              "es": "La pared de mi cuarto es ==azul==.",
+              "en": "My bedroom wall is blue."
+            },
+            {
+              "es": "Mi perra es muy ==fiel==.",
+              "en": "My dog is very loyal."
+            },
+            {
+              "es": "La clase de hoy fue ==difícil==.",
+              "en": "Today's class was hard."
+            },
+            {
+              "es": "Ella es ==capaz== de surfear olas enormes.",
+              "en": "She's capable of surfing huge waves."
+            },
+            {
+              "es": "Es una idea ==genial==.",
+              "en": "It's a great idea."
+            },
+            {
+              "es": "Mi vecina es ==española==, pero vive en Tijuana.",
+              "en": "My neighbor is Spanish, but she lives in Tijuana."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es una niña feliza."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es una niña feliz."
+                }
+              ],
+              "nota": "**-z** adjectives don't add -a."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La camioneta es azula."
+                },
+                {
+                  "v": "bien",
+                  "t": "La camioneta es azul."
+                }
+              ],
+              "nota": "**-l** adjectives don't add -a."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mi amiga es español."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mi amiga es española."
+                }
+              ],
+              "nota": "Nationality is the exception: add **-a**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "alto, alta",
+              "texto": "Regular adjectives: [[6013|masculine and feminine of regular adjectives]]."
+            },
+            {
+              "forma": "verde, optimista",
+              "texto": "Others with one form: [[6015|adjectives in -e and -a]]."
+            },
+            {
+              "forma": "felices, azules",
+              "texto": "The plural: [[6057|plural of adjectives in -z and -l]]."
+            },
+            {
+              "forma": "trabajador, trabajadora",
+              "texto": "These do add -a: [[6059|adjectives in -án, -ón, -or]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _a happy woman_",
+              "r": "una mujer feliz",
+              "nota": "No -a."
+            },
+            {
+              "p": "In Spanish: _The class was easy._",
+              "r": "La clase fue fácil.",
+              "nota": "fácil: one form."
+            },
+            {
+              "p": "Fix it: _Mi novia es español._",
+              "r": "Mi novia es española.",
+              "nota": "Nationality adds -a."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6013,
+      6015
+    ],
+    "confunde": [
+      6059
+    ],
+    "sigue": [
+      6057
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6056",
+      "kwiziq": true
+    }
+  ]
+}

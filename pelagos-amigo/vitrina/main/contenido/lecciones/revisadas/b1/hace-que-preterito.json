@@ -1,0 +1,208 @@
+{
+  "tema": 7062,
+  "slug": "hace-que-preterito",
+  "titulo": "Hace + time + que + preterite: how long ago something happened",
+  "subtitulo": "Hace dos horas que se fue: ago, at the start of the sentence.",
+  "foto": "t01.jpg",
+  "regla": "Hace + length of time + que + preterite = how long ago: hace dos días que pasó. A length of time, never a date, between hace and que.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say **how long ago** something happened, use:"
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**hace**",
+            "length of time",
+            "**que**",
+            "preterite"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "This structure goes at the **beginning** of the sentence."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Between **hace** and **que** you need a **length of time** (un minuto, dos horas, seis meses, un año), never a specific date: **hace ayer que** ✗."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Another way: preterite + **hace** + time: **se fue hace dos horas** (see [[7063|hace for ago]])."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Compare: **hace … que** + present = it's still going; + preterite = it happened and finished."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **hace … que** + preterite is a stopwatch that already stopped."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "—¿Dónde está Beto? —==Hace== dos horas ==que se fue==.",
+              "en": "\"Where's Beto?\" \"He left two hours ago.\""
+            },
+            {
+              "es": "==Hace== dos días ==que pasó== el accidente.",
+              "en": "The accident happened two days ago."
+            },
+            {
+              "es": "==Hace== diez años ==que terminé== la escuela.",
+              "en": "I finished school ten years ago."
+            },
+            {
+              "es": "==Hace== un mes ==que compré== la tabla.",
+              "en": "I bought the board a month ago."
+            },
+            {
+              "es": "==Hace== mucho ==que no te vi== tan feliz.",
+              "en": "It's been a long time since I saw you this happy."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hace ayer que fuimos al cine."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer fuimos al cine."
+                }
+              ],
+              "nota": "No dates between **hace** and **que**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Se fue hace dos horas que."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hace dos horas que se fue."
+                }
+              ],
+              "nota": "**Hace … que** goes first."
+            },
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "Hace un año que vivo aquí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hace un año que llegué aquí."
+                }
+              ],
+              "nota": "Present: still going. Preterite: it happened, done."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "llegué hace un año",
+              "texto": "**Hace** after the verb: [[7063|hace for ago]]."
+            },
+            {
+              "forma": "hace un año que vivo aquí",
+              "texto": "Still going: [[6187|hace … que + present]]."
+            },
+            {
+              "forma": "desde hace",
+              "texto": "Since / for: [[5129|desde hace]]."
+            },
+            {
+              "forma": "hacía dos años que…",
+              "texto": "In the past: [[7064|hacía … que + imperfect]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I met her five years ago._ (with hace … que)",
+              "r": "Hace cinco años que la conocí.",
+              "nota": "hace + time + que + preterite."
+            },
+            {
+              "p": "Same idea, with **hace** at the end.",
+              "r": "La conocí hace cinco años.",
+              "nota": "preterite + hace."
+            },
+            {
+              "p": "In Spanish: _The class started ten minutes ago._",
+              "r": "Hace diez minutos que empezó la clase.",
+              "nota": "empezó."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7063,
+      5109
+    ],
+    "confunde": [
+      6187
+    ],
+    "sigue": [
+      5129,
+      7064
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7062",
+      "kwiziq": true
+    }
+  ]
+}

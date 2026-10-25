@@ -1,0 +1,178 @@
+{
+  "tema": 7172,
+  "slug": "quisiera-querria",
+  "titulo": "Quisiera / querría for I would like",
+  "subtitulo": "Quisiera abrir una cuenta.",
+  "foto": "t03.jpg",
+  "regla": "For a polite would like, use quisiera (imperfect subjunctive) or querría (conditional); they mean the same. Me gustaría is more common in conversation. In Mexico quisiera is far more frequent than querría.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To ask or offer very politely, Spanish uses **quisiera** or **querría** + noun or infinitive: _I would like_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Quisiera** is technically the imperfect subjunctive, but here it works like a conditional. Both are correct and formal."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**In Mexico**, **quisiera** is the common one; **querría** sounds bookish. In everyday talk, **me gustaría** is the most frequent of all."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **quisiera** is _I want_ wearing a tie."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿==Quisiera== otra copa de vino, señor?",
+              "en": "Would you like another glass of wine, sir?"
+            },
+            {
+              "es": "¿==Querría== otra copa de vino, señor?",
+              "en": "Would you like another glass of wine, sir?"
+            },
+            {
+              "es": "==Quisiera== abrir una cuenta.",
+              "en": "I'd like to open an account."
+            },
+            {
+              "es": "Yo ==quisiera== dedicarles más tiempo a mis hijos, pero estoy tan ocupada...",
+              "en": "I'd like to spend more time with my kids, but I'm so busy..."
+            },
+            {
+              "es": "Mis papás ==querrían== comprar una casa en la playa.",
+              "en": "My parents would like to buy a house at the beach."
+            },
+            {
+              "es": "No ==quisiera== interrumpirlos, pero es urgente.",
+              "en": "I wouldn't want to interrupt you, but it's urgent."
+            },
+            {
+              "es": "==Me gustaría== reservar una mesa para cuatro.",
+              "en": "I'd like to book a table for four."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "directo",
+                  "t": "Quiero una mesa. (formal restaurant)"
+                },
+                {
+                  "v": "mejor",
+                  "t": "Quisiera una mesa, por favor."
+                }
+              ],
+              "nota": "**Quiero** is fine with friends, blunt with strangers."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quisiería un café."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quisiera un café. / Querría un café."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "quería, quisiera, querría",
+              "texto": "[[5227|polite requests]]."
+            },
+            {
+              "forma": "me gustaría",
+              "texto": "[[7059|gustar in the conditional]]."
+            },
+            {
+              "forma": "¿podría...?",
+              "texto": "[[6713|poder for polite requests]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Politely: _I'd like the bill, please._",
+              "r": "Quisiera la cuenta, por favor.",
+              "nota": "quisiera."
+            },
+            {
+              "p": "Same with querría:",
+              "r": "Querría la cuenta, por favor.",
+              "nota": "Conditional."
+            },
+            {
+              "p": "Politely: _Would you like to sit down?_ (usted)",
+              "r": "¿Quisiera sentarse?",
+              "nota": "quisiera + infinitive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5227,
+      7059
+    ],
+    "confunde": [
+      5227
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7172",
+      "kwiziq": true
+    }
+  ]
+}

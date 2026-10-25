@@ -1,0 +1,232 @@
+{
+  "tema": 6747,
+  "slug": "al-que-del-que",
+  "titulo": "A and de + el que, la que, los que, las que",
+  "subtitulo": "El partido al que fui. El proyecto del que te hablé.",
+  "foto": "t08.jpg",
+  "regla": "With a and de, the relative is el que / la que / los que / las que, and a + el → al, de + el → del: el partido al que fui, el proyecto del que te hablé. The article agrees with the noun.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "When the verb takes **a** (**ir a, asistir a, referirse a**) or **de** (**hablar de, quejarse de**), that preposition goes in front of the relative."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "a",
+            "de"
+          ],
+          "filas": [
+            [
+              "masculine singular",
+              "al que",
+              "del que"
+            ],
+            [
+              "feminine singular",
+              "a la que",
+              "de la que"
+            ],
+            [
+              "masculine plural",
+              "a los que",
+              "de los que"
+            ],
+            [
+              "feminine plural",
+              "a las que",
+              "de las que"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Only **el** contracts: **al**, **del**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With people you can also use **quien**: **la persona de quien te hablé**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **a el** and **de el** always shrink to **al** and **del**."
+        }
+      ]
+    },
+    {
+      "id": "a",
+      "titulo": "With a",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "El partido ==al que== fui el sábado estuvo buenísimo.",
+              "en": "The game I went to on Saturday was great."
+            },
+            {
+              "es": "La fiesta ==a la que== fueron la organizó la escuela.",
+              "en": "The party they went to was organized by the school."
+            },
+            {
+              "es": "Los cantantes ==a los que== los fans adulaban se sentían muy orgullosos.",
+              "en": "The singers the fans were fawning over felt very proud."
+            },
+            {
+              "es": "Las sillas ==a las que== se referían estaban ocupadas.",
+              "en": "The chairs they were referring to were taken."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "de",
+      "titulo": "With de",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "El proyecto ==del que== te hablé se canceló.",
+              "en": "The project I told you about was canceled."
+            },
+            {
+              "es": "La bolsa ==de la que== sacaste el dinero era de Laura.",
+              "en": "The bag you took the money out of was Laura's."
+            },
+            {
+              "es": "Los alumnos ==de los que== nos quejamos fueron expulsados.",
+              "en": "The students we complained about were expelled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El partido a el que fui..."
+                },
+                {
+                  "v": "bien",
+                  "t": "El partido al que fui..."
+                }
+              ],
+              "nota": "Contract."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El proyecto que te hablé..."
+                },
+                {
+                  "v": "bien",
+                  "t": "El proyecto del que te hablé..."
+                }
+              ],
+              "nota": "**Hablar de** keeps its **de**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La fiesta al que fui..."
+                },
+                {
+                  "v": "bien",
+                  "t": "La fiesta a la que fui..."
+                }
+              ],
+              "nota": "Feminine: no contraction."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "con el que",
+              "texto": "[[5124|other prepositions]]."
+            },
+            {
+              "forma": "de lo que",
+              "texto": "[[5125|preposition + lo que]]."
+            },
+            {
+              "forma": "al, del",
+              "texto": "Contractions."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _the movie I told you about_",
+              "r": "la película de la que te hablé",
+              "nota": "de la que."
+            },
+            {
+              "p": "In Spanish: _the concert we went to_",
+              "r": "el concierto al que fuimos",
+              "nota": "al que."
+            },
+            {
+              "p": "In Spanish: _the people I'm referring to_",
+              "r": "las personas a las que me refiero",
+              "nota": "a las que."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5124
+    ],
+    "confunde": [
+      5124
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6747",
+      "kwiziq": true
+    }
+  ]
+}

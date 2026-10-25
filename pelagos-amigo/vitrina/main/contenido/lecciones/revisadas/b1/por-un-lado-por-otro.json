@@ -1,0 +1,184 @@
+{
+  "tema": 8796,
+  "slug": "por-un-lado-por-otro",
+  "titulo": "On the one hand, on the other hand, in addition: connectives",
+  "subtitulo": "Por un lado…, por otro (lado)…: contrast or add two ideas.",
+  "foto": "t06.jpg",
+  "regla": "Por un lado…, por otro lado… lists two ideas, often in contrast, sometimes just adding (also, besides). Por otro lado alone = on the other hand, besides.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "The most common way to say _on the one hand…, on the other hand…_ is **por un lado…, por otro lado…** In Spanish it's _side_ (**lado**), not _hand_."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**por un lado**",
+            "first idea",
+            "**por otro (lado)**",
+            "second idea"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It's used to list two ideas, usually in **contrast**: **por un lado subieron los precios; por otro, bajaron los impuestos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Sometimes it just **adds** an extra point: _plus, besides, also_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Lado** is often dropped the second time: **por otro**. And sometimes only **por otro lado** appears, meaning _on the other hand_ or _besides_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Other ways to add: **además** (_besides_), **también** (_also_), **encima** (_on top of that_, casual)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: a coin has two **lados**: one side, then the other."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Por un lado==, subieron los precios; ==por otro lado==, bajaron los impuestos.",
+              "en": "On the one hand, prices went up; on the other hand, taxes went down."
+            },
+            {
+              "es": "Si vamos al cine, ==por un lado== vemos la película nueva y ==por otro== no nos mojamos.",
+              "en": "If we go to the movies, we see the new film, and besides, we don't get wet."
+            },
+            {
+              "es": "Con la tecnología en clase, ==por un lado== los alumnos están contentos y ==por otro== es más interactivo.",
+              "en": "With technology in class, the students are happy and, in addition, it's more interactive."
+            },
+            {
+              "es": "La casa es cara. ==Por otro lado==, está junto a la playa.",
+              "en": "The house is expensive. On the other hand, it's next to the beach."
+            },
+            {
+              "es": "Es buen entrenador y ==además== es paciente.",
+              "en": "He's a good coach and he's also patient."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Por una mano…, por la otra mano…"
+                },
+                {
+                  "v": "bien",
+                  "t": "Por un lado…, por otro lado…"
+                }
+              ],
+              "nota": "Spanish says **lado**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "En un lado…, en otro lado…"
+                },
+                {
+                  "v": "bien",
+                  "t": "Por un lado…, por otro lado…"
+                }
+              ],
+              "nota": "With **por**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "o sea, es decir",
+              "texto": "Clarifying: [[7265|o sea / es decir]]."
+            },
+            {
+              "forma": "ni… ni…",
+              "texto": "Neither… nor: [[7074|ni… ni…]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _On the one hand I want to go; on the other, I'm tired._",
+              "r": "Por un lado quiero ir; por otro, estoy cansado.",
+              "nota": "por un lado… por otro."
+            },
+            {
+              "p": "In Spanish: _On the other hand, it's cheaper._",
+              "r": "Por otro lado, es más barato.",
+              "nota": "por otro lado alone."
+            },
+            {
+              "p": "Fix it: **Por una mano es bueno.**",
+              "r": "Por un lado es bueno.",
+              "nota": "lado, not mano."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      7265
+    ],
+    "sigue": [
+      7265,
+      7074
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8796",
+      "kwiziq": true
+    }
+  ]
+}

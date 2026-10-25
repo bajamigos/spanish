@@ -1,0 +1,192 @@
+{
+  "tema": 6131,
+  "slug": "soy-maestro",
+  "titulo": "No article with professions",
+  "subtitulo": "Soy maestro. Ella es doctora.",
+  "foto": "t02.jpg",
+  "regla": "With ser + a profession, Spanish uses no article: Soy maestro (I'm a teacher). If you add an adjective, un/una comes back: Es un buen maestro.",
+  "comparada_kwiziq": "2026-10-17",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "English says _I'm **a** teacher_. Spanish drops the _a_: **soy maestro**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "ser",
+            "+ profession",
+            "(no un/una)"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Many professions change for women: **maestro / maestra**, **doctor / doctora**, **panadero / panadera**. Some stay the same: **dentista**, **estudiante**, **policía**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Add an adjective that describes the person, and **un/una** comes back: **es un buen mecánico**, **es una doctora excelente**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Soy ingeniero==.",
+              "en": "I'm an engineer."
+            },
+            {
+              "es": "Mi mamá ==es enfermera==.",
+              "en": "My mom is a nurse."
+            },
+            {
+              "es": "¿==Eres estudiante==?",
+              "en": "Are you a student?"
+            },
+            {
+              "es": "Mi hermano ==es mecánico== en Tijuana.",
+              "en": "My brother is a mechanic in Tijuana."
+            },
+            {
+              "es": "Ella ==es abogada== y trabaja en San Diego.",
+              "en": "She's a lawyer and works in San Diego."
+            },
+            {
+              "es": "Juan ==es un buen cocinero==.",
+              "en": "Juan is a good cook."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Soy un maestro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Soy maestro."
+                }
+              ],
+              "nota": "No article before the profession."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella es una doctor."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella es doctora."
+                }
+              ],
+              "nota": "No article, and match the gender."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella es abogado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella es abogada."
+                }
+              ],
+              "nota": "Use the feminine form for a woman."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "es doctora",
+              "texto": "Why **ser** here: [[6090|ser for professions]]."
+            },
+            {
+              "forma": "un, una",
+              "texto": "The article you leave out: [[5104|un, una]]."
+            },
+            {
+              "forma": "trabajo de…",
+              "texto": "Another way to say it: [[6472|trabajar]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I'm a student._",
+              "r": "Soy estudiante.",
+              "nota": "No un."
+            },
+            {
+              "p": "In Spanish: _She's a lawyer._",
+              "r": "Es abogada.",
+              "nota": "Feminine, no una."
+            },
+            {
+              "p": "In Spanish: _He's a good cook._",
+              "r": "Es un buen cocinero.",
+              "nota": "Adjective: un comes back."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5104
+    ],
+    "confunde": [],
+    "sigue": [
+      6090,
+      6472
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6131",
+      "kwiziq": true
+    }
+  ]
+}

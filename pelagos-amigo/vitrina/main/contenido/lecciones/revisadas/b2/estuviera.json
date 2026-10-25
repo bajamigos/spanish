@@ -1,0 +1,195 @@
+{
+  "tema": 5956,
+  "slug": "estuviera",
+  "titulo": "Estar in the imperfect subjunctive",
+  "subtitulo": "Estuviera, estuvieras, estuviéramos.",
+  "foto": "t07.jpg",
+  "regla": "Estar in the imperfect subjunctive comes from estuvieron: estuviera, estuvieras, estuviera, estuviéramos, estuvieran (or estuviese...). Ojalá estuvieras aquí.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "From the ellos preterite **estuvieron** → **estuvie-** + endings."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "estar (imperfect subjunctive)"
+          ],
+          "filas": [
+            [
+              "yo",
+              "estuviera"
+            ],
+            [
+              "tú",
+              "estuvieras"
+            ],
+            [
+              "él, ella, usted",
+              "estuviera"
+            ],
+            [
+              "nosotros",
+              "estuviéramos"
+            ],
+            [
+              "ustedes, ellos",
+              "estuvieran"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The **-se** forms: **estuviese, estuvieses, estuviese, estuviésemos, estuviesen**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **estuve** in the preterite, **estuviera** here: same irregular stem."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ojalá ==estuvieras== aquí.",
+              "en": "I wish you were here."
+            },
+            {
+              "es": "Si ==estuviera== en tu lugar, no lo haría.",
+              "en": "If I were in your place, I wouldn't do it."
+            },
+            {
+              "es": "Me pidió que ==estuviéramos== listos a las ocho.",
+              "en": "She asked us to be ready at eight."
+            },
+            {
+              "es": "No creía que ==estuvieran== enojados.",
+              "en": "I didn't think they were angry."
+            },
+            {
+              "es": "Habla como si ==estuviera== cansado.",
+              "en": "He talks as if he were tired."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "estara"
+                },
+                {
+                  "v": "bien",
+                  "t": "estuviera"
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "estuvieramos"
+                },
+                {
+                  "v": "bien",
+                  "t": "estuviéramos"
+                }
+              ],
+              "nota": "Accent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "all verbs",
+              "texto": "[[5068|imperfect subjunctive]]."
+            },
+            {
+              "forma": "tuviera",
+              "texto": "[[5957|tener]]."
+            },
+            {
+              "forma": "estuve",
+              "texto": "[[5218|estar in the preterite]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Conjugate: _tú / estar_",
+              "r": "estuvieras",
+              "nota": "estuvie- + ras."
+            },
+            {
+              "p": "Conjugate: _nosotros / estar_",
+              "r": "estuviéramos",
+              "nota": "Accent."
+            },
+            {
+              "p": "In Spanish: _I wish she were here._",
+              "r": "Ojalá estuviera aquí.",
+              "nota": "estuviera."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5068,
+      5218
+    ],
+    "confunde": [
+      5957
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5956",
+      "kwiziq": true
+    }
+  ]
+}

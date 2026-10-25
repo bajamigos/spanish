@@ -1,0 +1,245 @@
+{
+  "tema": 6233,
+  "slug": "todo-toda-adjetivo",
+  "titulo": "Todo, toda, todos, todas (all, every, the whole)",
+  "subtitulo": "Todo el día, todas las semanas.",
+  "foto": "t06.jpg",
+  "regla": "Todo agrees with the noun and goes before the article: todo el / toda la + singular = the whole, all; todos los / todas las + plural = all, every. The article (or a possessive or demonstrative) can't be dropped.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Todo** agrees with its noun: **todo, toda, todos, todas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It goes **before** the article, possessive or demonstrative. That little word is **required**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "Singular: _the whole, all_",
+            "Plural: _all, every_"
+          ],
+          "filas": [
+            [
+              "Masculine",
+              "todo el día",
+              "todos los días"
+            ],
+            [
+              "Feminine",
+              "toda la noche",
+              "todas las semanas"
+            ],
+            [
+              "With a possessive",
+              "toda mi familia",
+              "todos mis amigos"
+            ],
+            [
+              "With a demonstrative",
+              "todo este trabajo",
+              "todas esas plantas"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Todos los / todas las** + time word = _every_: **todos los días**, **todas las mañanas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Todo el mundo** = _everyone_. It takes a **singular** verb: **todo el mundo sabe**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Surfeé ==toda la== mañana.",
+              "en": "I surfed all morning."
+            },
+            {
+              "es": "==Todos los== días entreno jiu-jitsu.",
+              "en": "I train jiu-jitsu every day."
+            },
+            {
+              "es": "Me comí ==todo el== pastel.",
+              "en": "I ate the whole cake."
+            },
+            {
+              "es": "==Todas mis== plantas necesitan agua.",
+              "en": "All my plants need water."
+            },
+            {
+              "es": "==Todos los== estudiantes pasaron el examen.",
+              "en": "All the students passed the exam."
+            },
+            {
+              "es": "Llovió ==toda la== semana en Tijuana.",
+              "en": "It rained all week in Tijuana."
+            },
+            {
+              "es": "==Todo el== mundo habla de la pelea del sábado.",
+              "en": "Everyone is talking about Saturday's fight."
+            },
+            {
+              "es": "Ya limpié ==todas esas== macetas.",
+              "en": "I already cleaned all those pots."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Todo los días."
+                },
+                {
+                  "v": "bien",
+                  "t": "Todos los días."
+                }
+              ],
+              "nota": "Plural noun, plural **todos**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Todos días entreno."
+                },
+                {
+                  "v": "bien",
+                  "t": "Todos los días entreno."
+                }
+              ],
+              "nota": "Keep the article."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Trabajé toda el día."
+                },
+                {
+                  "v": "bien",
+                  "t": "Trabajé todo el día."
+                }
+              ],
+              "nota": "**Día** is masculine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Todo el mundo hablan de eso."
+                },
+                {
+                  "v": "bien",
+                  "t": "Todo el mundo habla de eso."
+                }
+              ],
+              "nota": "Singular verb."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "todos los días, cada día",
+              "texto": "Every in time phrases: [[6178|cada and todos]]."
+            },
+            {
+              "forma": "cada semana",
+              "texto": "One by one: [[6668|cada + noun]]."
+            },
+            {
+              "forma": "lo sé todo",
+              "texto": "Todo on its own: [[6234|todo = everything]]."
+            },
+            {
+              "forma": "cada uno de",
+              "texto": "Each one of them: [[7175|cada uno de]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _all night_",
+              "r": "toda la noche",
+              "nota": "Feminine."
+            },
+            {
+              "p": "In Spanish, with todo: _every week_",
+              "r": "todas las semanas",
+              "nota": "Todas las + plural."
+            },
+            {
+              "p": "Fix it: _Trabajé todo la tarde._",
+              "r": "Trabajé toda la tarde.",
+              "nota": "Tarde is feminine."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6178
+    ],
+    "confunde": [
+      6668
+    ],
+    "sigue": [
+      6234,
+      7175
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6233",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "tema": 6752,
+  "slug": "cual-cuales",
+  "titulo": "Using cuál / cuáles = which / what (interrogative pronouns)",
+  "subtitulo": "¿Cuál es tu carro? Dime cuáles prefieres.",
+  "foto": "t10.jpg",
+  "regla": "Cuál (singular) / cuáles (plural) = which, which one(s), in direct and indirect questions. Same form for masculine and feminine, always with an accent, never with an article (that's el cual, the relative).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Cuál** and **cuáles** ask **which (one / ones)**, choosing from a group, in direct and in indirect questions."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "Form"
+          ],
+          "filas": [
+            [
+              "singular",
+              "cuál"
+            ],
+            [
+              "plural",
+              "cuáles"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "No masculine/feminine difference, only singular and plural."
+        },
+        {
+          "tipo": "texto",
+          "texto": "As a question word it **always** has an accent and **never** takes an article. **El cual / la cual** (with article, no accent) is a relative pronoun, a different thing."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **cuál** is a pointing finger: it picks one from the line-up."
+        }
+      ]
+    },
+    {
+      "id": "directas",
+      "titulo": "Direct questions",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "—¿==Cuál== es tu carro? —El blanco.",
+              "en": "—Which one is your car? —The white one."
+            },
+            {
+              "es": "—¿==Cuál== es su casa? —La más alta.",
+              "en": "—Which one is her house? —The tallest one."
+            },
+            {
+              "es": "En esta tienda hay flores bonitas. ¿==Cuáles== prefieres?",
+              "en": "There are pretty flowers in this shop. Which ones do you prefer?"
+            },
+            {
+              "es": "De todos esos cuadros, ¿==cuáles== pintaste tú?",
+              "en": "Of all those paintings, which ones did you paint?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "indirectas",
+      "titulo": "Indirect questions",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Dime ==cuál== te gusta más.",
+              "en": "Tell me which one you like best."
+            },
+            {
+              "es": "Quería saber ==cuáles== eran mis intenciones.",
+              "en": "She wanted to know what my intentions were."
+            },
+            {
+              "es": "Pregúntale al doctor ==cuáles== son los efectos secundarios.",
+              "en": "Ask the doctor what the side effects are."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Cuál prefieres, estas o esas?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cuáles prefieres, estas o esas?"
+                }
+              ],
+              "nota": "Plural choice: **cuáles**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿El cuál es tu carro?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cuál es tu carro?"
+                }
+              ],
+              "nota": "No article."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Dime cual quieres."
+                },
+                {
+                  "v": "bien",
+                  "t": "Dime cuál quieres."
+                }
+              ],
+              "nota": "Always an accent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¿qué o cuál?",
+              "texto": "[[9926|qué vs cuál]]; **cuál** + noun: [[9335|cuál + noun]]."
+            },
+            {
+              "forma": "el cual",
+              "texto": "The relative: [[5154|que / el cual / quien]]."
+            },
+            {
+              "forma": "qué carro",
+              "texto": "[[7013|qué in indirect questions]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Complete: _¿___ son tus llaves?_",
+              "r": "Cuáles",
+              "nota": "Plural."
+            },
+            {
+              "p": "Complete: _No sé ___ elegir._ (one)",
+              "r": "cuál",
+              "nota": "Indirect, accent."
+            },
+            {
+              "p": "In Spanish: _What is your phone number?_",
+              "r": "¿Cuál es tu número de teléfono?",
+              "nota": "cuál + es."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      9926,
+      9335
+    ],
+    "confunde": [
+      5154
+    ],
+    "sigue": [
+      7013
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6752",
+      "kwiziq": true
+    }
+  ]
+}

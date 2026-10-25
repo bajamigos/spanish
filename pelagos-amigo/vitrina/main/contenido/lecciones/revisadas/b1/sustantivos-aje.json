@@ -1,0 +1,181 @@
+{
+  "tema": 6151,
+  "slug": "sustantivos-aje",
+  "titulo": "Nouns ending in -aje are masculine",
+  "subtitulo": "El viaje, el equipaje, el paisaje: always masculine.",
+  "foto": "t05.jpg",
+  "regla": "All nouns ending in -aje are masculine: el viaje, el equipaje, el mensaje. Plural: add -s (los viajes).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**All** nouns ending in **-aje** are **masculine**: **el viaje**, **el equipaje**, **el mensaje**, **el paisaje**, **el garaje**, **el pasaje**, **el aprendizaje**, **el espionaje**, **el masaje**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The plural just adds **-s**: **los viajes**, **los pasajes**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Articles and adjectives agree in the masculine: **un viaje largo**, **el mensaje nuevo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **-aje** ends in **e**, but it's always a guy: **el viaje**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Tuvimos ==un viaje increíble== a Baja Sur.",
+              "en": "We had an amazing trip to Baja Sur."
+            },
+            {
+              "es": "Siempre llevas ==demasiado equipaje==.",
+              "en": "You always bring too much luggage."
+            },
+            {
+              "es": "==El espionaje== es algo que me apasiona.",
+              "en": "Espionage is something I'm passionate about."
+            },
+            {
+              "es": "Mi hijo hace ==unos viajes increíbles== en verano.",
+              "en": "My son takes some amazing trips in the summer."
+            },
+            {
+              "es": "==Los masajes== en ese spa cuestan ochocientos pesos.",
+              "en": "The massages at that spa cost eight hundred pesos."
+            },
+            {
+              "es": "¿Viste ==el mensaje== que te mandé?",
+              "en": "Did you see the message I sent you?"
+            },
+            {
+              "es": "==El paisaje== de Valle de Guadalupe es precioso.",
+              "en": "The landscape in Valle de Guadalupe is beautiful."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La viaje fue larga."
+                },
+                {
+                  "v": "bien",
+                  "t": "El viaje fue largo."
+                }
+              ],
+              "nota": "Masculine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Una mensaje nueva."
+                },
+                {
+                  "v": "bien",
+                  "t": "Un mensaje nuevo."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el problema, el tema",
+              "texto": "Other masculine words that look feminine: [[6728|nouns in -ma]]."
+            },
+            {
+              "forma": "la actitud",
+              "texto": "Feminine endings: [[9542|-ud]], [[7762|-ez / -eza]], [[6068|-ión, -dad]]."
+            },
+            {
+              "forma": "el / la dentista",
+              "texto": "Both genders: [[6237|-ista]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Article? ___ garaje",
+              "r": "el garaje",
+              "nota": "-aje: masculine."
+            },
+            {
+              "p": "Make it plural: **el masaje relajante**",
+              "r": "los masajes relajantes",
+              "nota": "-s, masculine."
+            },
+            {
+              "p": "Fix it: **La paisaje es bonita.**",
+              "r": "El paisaje es bonito.",
+              "nota": "Masculine."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6749
+    ],
+    "confunde": [
+      6728
+    ],
+    "sigue": [
+      9542,
+      7762,
+      6068
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6151",
+      "kwiziq": true
+    }
+  ]
+}

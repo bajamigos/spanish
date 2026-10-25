@@ -1,0 +1,209 @@
+{
+  "tema": 6463,
+  "slug": "mas-menos-cantidad",
+  "titulo": "Más / menos: more, less, fewer",
+  "subtitulo": "«Necesito más tiempo y menos tráfico.»",
+  "foto": "t07.jpg",
+  "regla": "Más (more) and menos (less, fewer) never change. Before a noun they are adjectives (más tortillas), alone they are pronouns (quiero más), and after a verb they are adverbs (corre más).",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Más** = _more_. **Menos** = _less_ or _fewer_. They **never change** for gender or number: no **menas**, no **mases**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Use",
+            "Pattern",
+            "Example"
+          ],
+          "filas": [
+            [
+              "adjective",
+              "más / menos + noun",
+              "más tortillas, menos tiempo"
+            ],
+            [
+              "pronoun",
+              "más / menos alone",
+              "Quiero más."
+            ],
+            [
+              "adverb",
+              "verb + más / menos",
+              "Corre más."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Más** has an accent. Without it, **mas** is an old word for _but_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: Spanish uses **menos** for both _less_ and _fewer_."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Quiero ==más== tortillas, por favor.",
+              "en": "I want more tortillas, please."
+            },
+            {
+              "es": "Hoy hay ==menos== olas que ayer.",
+              "en": "There are fewer waves today than yesterday."
+            },
+            {
+              "es": "Necesito ==más== tiempo.",
+              "en": "I need more time."
+            },
+            {
+              "es": "¿Quieres ==más==?",
+              "en": "Do you want more?"
+            },
+            {
+              "es": "Mi hermano come ==menos== que yo.",
+              "en": "My brother eats less than me."
+            },
+            {
+              "es": "Tienes que entrenar ==más==.",
+              "en": "You have to train more."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hay menas personas hoy."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hay menos personas hoy."
+                }
+              ],
+              "nota": "**Menos** never changes."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero tortillas más."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero más tortillas."
+                }
+              ],
+              "nota": "**Más** goes before the noun (but with a number: **dos tortillas más**)."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Necesito mas agua."
+                },
+                {
+                  "v": "bien",
+                  "t": "Necesito más agua."
+                }
+              ],
+              "nota": "_More_ needs the accent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "muy, mucho",
+              "texto": "How much: [[5082|muy vs mucho]]."
+            },
+            {
+              "forma": "más… que",
+              "texto": "Comparing: [[6210|más / menos… que]]."
+            },
+            {
+              "forma": "más de",
+              "texto": "With numbers: [[6980|más que / más de]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I need more time._",
+              "r": "Necesito más tiempo.",
+              "nota": "Más + noun."
+            },
+            {
+              "p": "Fix it: _Hay menas carros hoy._",
+              "r": "Hay menos carros hoy.",
+              "nota": "No -as."
+            },
+            {
+              "p": "In Spanish: _You work less._ (tú)",
+              "r": "Trabajas menos.",
+              "nota": "Verb + menos."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5082
+    ],
+    "confunde": [],
+    "sigue": [
+      6210,
+      6980
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6463",
+      "kwiziq": true
+    }
+  ]
+}

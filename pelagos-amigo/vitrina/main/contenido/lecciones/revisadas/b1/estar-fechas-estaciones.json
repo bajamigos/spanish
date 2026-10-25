@@ -1,0 +1,214 @@
+{
+  "tema": 7247,
+  "slug": "estar-fechas-estaciones",
+  "titulo": "Estar (not ser) for dates, days and seasons (colloquial)",
+  "subtitulo": "Estamos a jueves, estamos en verano.",
+  "foto": "t05.jpg",
+  "regla": "Colloquially: estamos a + date / day of the week; estamos en + season. Always the nosotros form, in the present.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "In everyday speech, Spanish often uses **estar** to say what the date, the day or the season is. It's used in the present and always in the **nosotros** form: **estamos**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "What",
+            "Pattern",
+            "Example"
+          ],
+          "filas": [
+            [
+              "date, day of the week",
+              "estamos **a** …",
+              "Estamos a cuatro de enero. / Estamos a jueves."
+            ],
+            [
+              "season",
+              "estamos **en** …",
+              "Estamos en verano."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "With **estamos** you don't need **hoy**: it can only mean today."
+        },
+        {
+          "tipo": "texto",
+          "texto": "To ask: **¿A qué día estamos?** or **¿A cuántos estamos?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "The standard way with **ser** also works: **hoy es jueves**, **es verano** (see [[5981|ser for dates]])."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **a** for the calendar, **en** for the season."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Hoy ==estamos a== cuatro de enero.",
+              "en": "Today is January 4th."
+            },
+            {
+              "es": "==Estamos a== ocho de marzo de 2026.",
+              "en": "It's March 8th, 2026."
+            },
+            {
+              "es": "==Estamos a== jueves.",
+              "en": "It's Thursday."
+            },
+            {
+              "es": "—¿==A qué día estamos==? —==Estamos a== martes, dos de mayo.",
+              "en": "\"What day is it?\" \"It's Tuesday, May 2nd.\""
+            },
+            {
+              "es": "Ya ==estamos en== verano: ¡a la playa!",
+              "en": "It's already summer: to the beach!"
+            },
+            {
+              "es": "¿Por qué traes manga corta? ¡==Estamos en== invierno!",
+              "en": "Why are you wearing short sleeves? It's winter!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estamos en jueves."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estamos a jueves."
+                }
+              ],
+              "nota": "Days and dates: **a**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estamos a verano."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estamos en verano."
+                }
+              ],
+              "nota": "Seasons: **en**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estoy a jueves."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estamos a jueves."
+                }
+              ],
+              "nota": "Always **estamos**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hoy es jueves",
+              "texto": "The standard way: [[5981|ser for dates and time]]."
+            },
+            {
+              "forma": "el 4 de enero",
+              "texto": "Saying dates: [[6746|expressing dates]]."
+            },
+            {
+              "forma": "está a 20 pesos",
+              "texto": "Another **estar a**: [[5984|estar a for prices]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish (with estar): _It's Friday._",
+              "r": "Estamos a viernes.",
+              "nota": "estamos a + day."
+            },
+            {
+              "p": "In Spanish (with estar): _It's fall._",
+              "r": "Estamos en otoño.",
+              "nota": "estamos en + season."
+            },
+            {
+              "p": "Ask (with estar): _What's the date today?_",
+              "r": "¿A cuántos estamos? / ¿A qué día estamos?",
+              "nota": "a + question word."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5981,
+      6746
+    ],
+    "confunde": [
+      5981
+    ],
+    "sigue": [
+      5984
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7247",
+      "kwiziq": true
+    }
+  ]
+}

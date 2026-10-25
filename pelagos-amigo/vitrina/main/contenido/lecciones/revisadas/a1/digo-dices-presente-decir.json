@@ -1,0 +1,215 @@
+{
+  "tema": 5489,
+  "slug": "digo-dices-presente-decir",
+  "titulo": "Decir in the present",
+  "subtitulo": "¿Qué dices? Digo la verdad.",
+  "foto": "t10.jpg",
+  "regla": "Decir (to say, to tell) has yo in -go and changes e to i in the other forms except nosotros: digo, dices, dice, decimos, dicen. Predecir, bendecir and maldecir conjugate the same way.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Decir** (_to say, to tell_) has two changes: **yo → digo**, and **e → i** in tú, él and ellos."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Nosotros** is regular: **decimos**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "decir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**digo**"
+            ],
+            [
+              "tú",
+              "**dices**"
+            ],
+            [
+              "él, ella, usted",
+              "**dice**"
+            ],
+            [
+              "nosotros",
+              "decimos"
+            ],
+            [
+              "ellos, ustedes",
+              "**dicen**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Predecir** (_to predict_), **bendecir** (_to bless_) and **maldecir** (_to curse_) follow it: **predigo, bendices, maldice, predecimos, bendicen**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Siempre ==digo== la verdad.",
+              "en": "I always tell the truth."
+            },
+            {
+              "es": "¿Qué ==dices==?",
+              "en": "What are you saying?"
+            },
+            {
+              "es": "El pronóstico ==dice== que va a llover.",
+              "en": "The forecast says it's going to rain."
+            },
+            {
+              "es": "En México ==decimos== «ahorita» todo el tiempo.",
+              "en": "In Mexico we say \"ahorita\" all the time."
+            },
+            {
+              "es": "Mis amigos ==dicen== que el agua está fría.",
+              "en": "My friends say the water is cold."
+            },
+            {
+              "es": "Mi abuela nos ==bendice== antes de salir.",
+              "en": "My grandma blesses us before we leave."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo dico la verdad."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo digo la verdad."
+                }
+              ],
+              "nota": "yo → **digo**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros dicimos que no."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros decimos que no."
+                }
+              ],
+              "nota": "No change in nosotros."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella dice a mí la verdad."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella me dice la verdad."
+                }
+              ],
+              "nota": "Use **me** before the verb."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tengo, hago",
+              "texto": "More -go verbs: [[5304|tener]], [[5708|hacer]]."
+            },
+            {
+              "forma": "pido, pides",
+              "texto": "The same e → i change: [[5851|pedir]]."
+            },
+            {
+              "forma": "dije, dijo",
+              "texto": "Next, the past: [[5240|decir in the preterite]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I say no._",
+              "r": "Digo que no.",
+              "nota": "yo → digo."
+            },
+            {
+              "p": "Fix it: _Ustedes decen mentiras._",
+              "r": "Ustedes dicen mentiras.",
+              "nota": "e → i."
+            },
+            {
+              "p": "In Spanish: _The app predicts the waves._",
+              "r": "La app predice las olas.",
+              "nota": "Like dice."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5304,
+      5708
+    ],
+    "confunde": [
+      5851
+    ],
+    "sigue": [
+      5240
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5489",
+      "kwiziq": true
+    }
+  ]
+}

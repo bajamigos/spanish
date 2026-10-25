@@ -1,0 +1,250 @@
+{
+  "tema": 5215,
+  "slug": "di-preterito-dar",
+  "titulo": "Dar in the preterite",
+  "subtitulo": "Le di mi número y me dio el suyo.",
+  "foto": "t09.jpg",
+  "regla": "Dar is an -ar verb, but in the preterite it takes the -er/-ir endings: di, diste, dio, dimos, dieron. Di and dio are one syllable, so they have no written accent.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Dar** ends in -ar, but in the preterite it borrows the **-er/-ir endings**, minus the accents."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "dar",
+            "like comer"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**di**",
+              "comí"
+            ],
+            [
+              "tú",
+              "**diste**",
+              "comiste"
+            ],
+            [
+              "él, ella, usted",
+              "**dio**",
+              "comió"
+            ],
+            [
+              "nosotros",
+              "**dimos**",
+              "comimos"
+            ],
+            [
+              "ellos, ustedes",
+              "**dieron**",
+              "comieron"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Di** and **dio** have **one syllable**, so **no written accent**: not dí, dió."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Never the -ar endings: not **dé**, **daste**, **dó**, **daron**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Dar** usually comes with an indirect pronoun: **le di**, **me dio**, **nos dieron**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **dar** wears **ver**'s clothes in the preterite: **di / vi**, **dio / vio**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Le ==di== mi número a la vecina.",
+              "en": "I gave the neighbor my number."
+            },
+            {
+              "es": "¿Quién te ==dio== esa tabla?",
+              "en": "Who gave you that board?"
+            },
+            {
+              "es": "Mi sensei me ==dio== la cinta azul.",
+              "en": "My instructor gave me my blue belt."
+            },
+            {
+              "es": "Le ==dimos== semillas de calabaza a mi tía.",
+              "en": "We gave my aunt some squash seeds."
+            },
+            {
+              "es": "¿Le ==diste== las gracias?",
+              "en": "Did you thank him?"
+            },
+            {
+              "es": "Nos ==dieron== una mesa junto a la ventana.",
+              "en": "They gave us a table by the window."
+            },
+            {
+              "es": "==Dimos== una vuelta por el malecón.",
+              "en": "We took a stroll along the boardwalk."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Le dí un regalo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Le di un regalo."
+                }
+              ],
+              "nota": "One syllable, no accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me dió las llaves."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me dio las llaves."
+                }
+              ],
+              "nota": "No accent on **dio**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Le daste el dinero?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Le diste el dinero?"
+                }
+              ],
+              "nota": "-er/-ir ending: **-iste**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me daron un descuento."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me dieron un descuento."
+                }
+              ],
+              "nota": "**dieron**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "doy",
+              "texto": "The present: [[5485|dar in the present]]."
+            },
+            {
+              "forma": "vi, vio",
+              "texto": "Same shape: [[5217|ver in the preterite]]."
+            },
+            {
+              "forma": "comí, comió",
+              "texto": "The endings dar borrows: [[5230|-er and -ir verbs in the preterite]]."
+            },
+            {
+              "forma": "le di a Juan",
+              "texto": "The pronoun that comes with dar: [[7090|repeating indirect pronouns]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I gave her a book._",
+              "r": "Le di un libro.",
+              "nota": "di, no accent."
+            },
+            {
+              "p": "In Spanish: _They gave us the keys._",
+              "r": "Nos dieron las llaves.",
+              "nota": "dieron."
+            },
+            {
+              "p": "Fix it: _Mi papá me dió permiso._",
+              "r": "Mi papá me dio permiso.",
+              "nota": "No accent."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5485,
+      5230
+    ],
+    "confunde": [
+      5217
+    ],
+    "sigue": [
+      7090
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5215",
+      "kwiziq": true
+    }
+  ]
+}

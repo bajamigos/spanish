@@ -1,0 +1,220 @@
+{
+  "tema": 5085,
+  "slug": "me-levanto-reflexivos-presente",
+  "titulo": "Reflexive verbs in the present",
+  "subtitulo": "Me levanto, me baño y me voy.",
+  "foto": "t07.jpg",
+  "regla": "Reflexive verbs (infinitive in -se) use a pronoun that matches the subject, placed before the conjugated verb: me levanto, te levantas, se levanta, nos levantamos, se levantan.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "A reflexive verb ends in **-se** in the dictionary: **levantarse** (_to get up_), **ducharse** (_to shower_), **llamarse** (_to be called_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Conjugate the verb as usual and put the matching pronoun **before** it."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "levantarse"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**me** levanto"
+            ],
+            [
+              "tú",
+              "**te** levantas"
+            ],
+            [
+              "él / ella / usted",
+              "**se** levanta"
+            ],
+            [
+              "nosotros / nosotras",
+              "**nos** levantamos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "**se** levantan"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The pronoun always matches the subject: **yo → me**, **nosotros → nos**. In the present it never goes after the verb."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Me levanto== a las cinco para surfear.",
+              "en": "I get up at five to go surfing."
+            },
+            {
+              "es": "¿A qué hora ==te bañas==?",
+              "en": "What time do you take a shower?"
+            },
+            {
+              "es": "Mi papá ==se rasura== todos los días.",
+              "en": "My dad shaves every day."
+            },
+            {
+              "es": "Después del jiu-jitsu ==nos duchamos== en el gimnasio.",
+              "en": "After jiu-jitsu we shower at the gym."
+            },
+            {
+              "es": "Los niños ==se lavan== los dientes.",
+              "en": "The kids brush their teeth."
+            },
+            {
+              "es": "¿Cómo ==se llama== tu maestra?",
+              "en": "What's your teacher's name?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros se levantamos tarde."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros nos levantamos tarde."
+                }
+              ],
+              "nota": "nosotros → **nos**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Levanto me a las siete."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me levanto a las siete."
+                }
+              ],
+              "nota": "Before the conjugated verb."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tú se duchas en la noche."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tú te duchas en la noche."
+                }
+              ],
+              "nota": "tú → **te**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hablo, me baño",
+              "texto": "The verb part is regular: [[5492|regular -ar verbs]]."
+            },
+            {
+              "forma": "me llamo",
+              "texto": "The first reflexive you learn: [[7275|llamarse]]."
+            },
+            {
+              "forma": "me acuesto, me despierto",
+              "texto": "With a stem change: [[5872|o > ue]], [[5811|e > ie]]."
+            },
+            {
+              "forma": "voy a levantarme",
+              "texto": "Where the pronoun goes later: [[6145|position of pronouns]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I go to bed at eleven._",
+              "r": "Me acuesto a las once.",
+              "nota": "me + acuesto."
+            },
+            {
+              "p": "In Spanish: _We get up early._",
+              "r": "Nos levantamos temprano.",
+              "nota": "nos."
+            },
+            {
+              "p": "Fix it: _Yo se baño en la mañana._",
+              "r": "Yo me baño en la mañana.",
+              "nota": "yo → me."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5492,
+      7275
+    ],
+    "confunde": [
+      5872,
+      5811
+    ],
+    "sigue": [
+      6145
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5085",
+      "kwiziq": true
+    }
+  ]
+}

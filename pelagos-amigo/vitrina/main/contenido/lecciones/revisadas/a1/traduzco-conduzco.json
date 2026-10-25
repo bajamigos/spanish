@@ -1,0 +1,222 @@
+{
+  "tema": 5653,
+  "slug": "traduzco-conduzco",
+  "titulo": "Traducir and conducir in the present",
+  "subtitulo": "Traduzco del inglés al español.",
+  "foto": "t01.jpg",
+  "regla": "Verbs ending in -ducir (traducir, conducir, producir, reducir) add a z only in yo: traduzco, conduzco. The other persons are regular: traduces, traduce, traducimos, traducen.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Verbs ending in **-ducir**: **traducir** (_to translate_), **conducir** (_to drive_), **producir**, **reducir**, **introducir**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Only **yo** changes: **c → zc**: **traduzco**, **conduzco**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The other persons are regular -ir forms."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "traducir",
+            "conducir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "traduzco",
+              "conduzco"
+            ],
+            [
+              "tú",
+              "traduces",
+              "conduces"
+            ],
+            [
+              "él / ella / usted",
+              "traduce",
+              "conduce"
+            ],
+            [
+              "nosotros",
+              "traducimos",
+              "conducimos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "traducen",
+              "conducen"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "In Mexico, **manejar** is the everyday verb for _to drive_; **conducir** sounds more formal."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Traduzco== documentos del inglés al español.",
+              "en": "I translate documents from English to Spanish."
+            },
+            {
+              "es": "==Conduzco== con cuidado cuando llueve.",
+              "en": "I drive carefully when it rains."
+            },
+            {
+              "es": "Mi papá ==conduce== un camión.",
+              "en": "My dad drives a truck."
+            },
+            {
+              "es": "¿Tú ==traduces== la canción?",
+              "en": "Are you translating the song?"
+            },
+            {
+              "es": "==Traducimos== los menús para los turistas.",
+              "en": "We translate the menus for the tourists."
+            },
+            {
+              "es": "Mis plantas ==producen== muchos jitomates.",
+              "en": "My plants produce lots of tomatoes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo traduco la carta."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo traduzco la carta."
+                }
+              ],
+              "nota": "**zc** in yo."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tú traduzces la carta."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tú traduces la carta."
+                }
+              ],
+              "nota": "The **z** is only for yo."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo conduco al trabajo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo conduzco al trabajo."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "vivo",
+              "texto": "The endings come from [[5108|regular -ir verbs]]."
+            },
+            {
+              "forma": "conozco, ofrezco",
+              "texto": "The same zc in other verbs: [[5928|-cer and -cir verbs]]."
+            },
+            {
+              "forma": "traduje",
+              "texto": "In the past: [[5234|-ducir verbs in the preterite]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish, with conducir: _I drive to Ensenada._",
+              "r": "Conduzco a Ensenada.",
+              "nota": "zc in yo."
+            },
+            {
+              "p": "In Spanish: _She translates the book._",
+              "r": "Ella traduce el libro.",
+              "nota": "Regular."
+            },
+            {
+              "p": "Fix it: _Nosotros traduzcimos._",
+              "r": "Nosotros traducimos.",
+              "nota": "Only yo has zc."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5108
+    ],
+    "confunde": [],
+    "sigue": [
+      5928,
+      5234
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5653",
+      "kwiziq": true
+    }
+  ]
+}

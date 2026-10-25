@@ -1,0 +1,260 @@
+{
+  "tema": 6961,
+  "slug": "imperativo-usted-ustedes-nosotros",
+  "titulo": "Forming commands for usted, ustedes and nosotros",
+  "subtitulo": "Firme aquí, no se preocupen, comamos: the present subjunctive does the work.",
+  "foto": "t07.jpg",
+  "regla": "Commands for usted, ustedes and nosotros, affirmative and negative, use the present subjunctive: hable, coman, comamos, no comamos.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "For **usted**, **ustedes** and **nosotros**, both affirmative and negative commands use the **present subjunctive**. Stem changes and spelling changes come along."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Affirmative",
+            "Negative"
+          ],
+          "filas": [
+            [
+              "usted",
+              "firme aquí",
+              "no firme aquí"
+            ],
+            [
+              "ustedes",
+              "coman",
+              "no coman"
+            ],
+            [
+              "nosotros (_let's_)",
+              "comamos",
+              "no comamos"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Nosotros**: the subjunctive says _let's_ or _let's not_: **¡Hagamos una fiesta!**, **¡No seamos egoístas!**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "In everyday speech, people often prefer **¿Por qué no…?** + present for _let's_ (**¿Por qué no vamos a la playa?**), and **Mejor no…** + present for _let's not_ (**Mejor no vamos**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Usted / ustedes**: used in formal situations, in a bank, a store or with older people: **Firme aquí, por favor**. In Mexico **ustedes** is the only plural _you_, formal or not."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Pronouns are attached to the end in affirmative commands (**siéntese**, **sentémonos**) and go before in negative ones (**no se siente**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if it isn't **tú** saying yes, it's the subjunctive."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ella no quiere que ==comamos== tan rápido.",
+              "en": "She doesn't want us to eat so fast. (subjunctive)"
+            },
+            {
+              "es": "¡==Comamos== más rápido!",
+              "en": "Let's eat faster!"
+            },
+            {
+              "es": "¡No ==comamos== tan rápido!",
+              "en": "Let's not eat so fast!"
+            },
+            {
+              "es": "¡==Limpiemos== el carro!",
+              "en": "Let's clean the car!"
+            },
+            {
+              "es": "¡==Tengamos== paciencia!",
+              "en": "Let's be patient!"
+            },
+            {
+              "es": "==Firme== aquí, por favor.",
+              "en": "Sign here, please."
+            },
+            {
+              "es": "No ==se preocupe==, ya le abro el carro.",
+              "en": "Don't worry, I'll open the car for you."
+            },
+            {
+              "es": "==Pasen== por aquí y ==esperen== un momento.",
+              "en": "Come this way and wait a moment."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Firma aquí, señor."
+                },
+                {
+                  "v": "bien",
+                  "t": "Firme aquí, señor."
+                }
+              ],
+              "nota": "**Firma** is the **tú** command."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Vamos a no comer tanto!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡No comamos tanto!"
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No siéntese ahí."
+                },
+                {
+                  "v": "bien",
+                  "t": "No se siente ahí."
+                }
+              ],
+              "nota": "Negative: pronoun before."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usos",
+      "titulo": "Let's go",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¡Vamos a la playa!",
+              "texto": "With **ir**, _let's go_ is **vamos** (or **vámonos** for _let's leave_), not **vayamos**.",
+              "aqui": true
+            },
+            {
+              "forma": "No vayamos.",
+              "texto": "But in the negative: **no vayamos**."
+            },
+            {
+              "forma": "¿Por qué no vamos?",
+              "texto": "The most common everyday way to suggest something."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "no hables",
+              "texto": "Negative **tú** commands: [[9255|negative tú commands]]."
+            },
+            {
+              "forma": "siéntese, vámonos",
+              "texto": "Reflexive commands: [[9262|affirmative with reflexive pronouns]]."
+            },
+            {
+              "forma": "dígaselo",
+              "texto": "Two pronouns: [[9339|double pronouns with commands]]."
+            },
+            {
+              "forma": "hable, coma",
+              "texto": "Where the forms come from: [[5063|-ar]], [[5151|-er / -ir]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "To a customer (usted): _Don't worry._",
+              "r": "No se preocupe.",
+              "nota": "Pronoun before in the negative."
+            },
+            {
+              "p": "In Spanish: _Let's train tomorrow._",
+              "r": "Entrenemos mañana.",
+              "nota": "nosotros subjunctive."
+            },
+            {
+              "p": "To a group: _Close the door, please._",
+              "r": "Cierren la puerta, por favor.",
+              "nota": "ustedes subjunctive, e > ie."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5063,
+      5151,
+      9255
+    ],
+    "confunde": [
+      9255
+    ],
+    "sigue": [
+      9262,
+      9339
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6961",
+      "kwiziq": true
+    }
+  ]
+}

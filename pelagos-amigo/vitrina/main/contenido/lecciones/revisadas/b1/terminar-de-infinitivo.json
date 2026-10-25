@@ -1,0 +1,202 @@
+{
+  "tema": 7430,
+  "slug": "terminar-de-infinitivo",
+  "titulo": "Terminar de + infinitive: to finish doing something",
+  "subtitulo": "Termino de trabajar a las cinco: the end of an activity.",
+  "foto": "t09.jpg",
+  "regla": "Terminar (conjugated) + de + infinitive = to finish doing. Acabar de can mean this too, but more often means to have just done.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say _to finish doing_ something, the opposite of _to start doing_, use **terminar** (conjugated) + **de** + **infinitive**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**terminar**",
+            "**de**",
+            "infinitive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Acabar de** is sometimes used with this meaning too, but **terminar de** is much more common."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Careful: **acabar de** + infinitive usually means _to have just done_ (**acabo de comer** = _I just ate_). See [[6508|acabar de]]."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Don't confuse it with **terminar** + gerund or **terminar por**, _to end up doing_ (see [[6597|acabar / terminar por]])."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **empezar a**, **terminar de**: the start and the finish line."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Hoy ==termino de trabajar== un poco antes.",
+              "en": "Today I finish work a bit earlier."
+            },
+            {
+              "es": "Beto ==terminó de comer== a las cuatro y media.",
+              "en": "Beto finished eating at four thirty."
+            },
+            {
+              "es": "==Terminaremos de recoger== todo bastante tarde.",
+              "en": "We'll finish cleaning up pretty late."
+            },
+            {
+              "es": "Tengo que ==terminar de escribir== este párrafo.",
+              "en": "I have to finish writing this paragraph."
+            },
+            {
+              "es": "Cuando ==termines de rolar==, estírate.",
+              "en": "When you finish rolling, stretch."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Terminé comer."
+                },
+                {
+                  "v": "bien",
+                  "t": "Terminé de comer."
+                }
+              ],
+              "nota": "Keep the **de**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Terminé de comiendo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Terminé de comer."
+                }
+              ],
+              "nota": "Infinitive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "Acabo de comer."
+                },
+                {
+                  "v": "bien",
+                  "t": "Terminé de comer."
+                }
+              ],
+              "nota": "_I just ate_ vs _I finished eating_."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "empezar a",
+              "texto": "The start: [[6960|empezar / comenzar a]]."
+            },
+            {
+              "forma": "acabo de llegar",
+              "texto": "_Just did_: [[6508|acabar de]]."
+            },
+            {
+              "forma": "terminó llorando",
+              "texto": "_Ended up_: [[6597|acabar / terminar por]]."
+            },
+            {
+              "forma": "dejar de",
+              "texto": "_To stop_: [[6181|dejar de]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I finished reading the book._",
+              "r": "Terminé de leer el libro.",
+              "nota": "terminar de + infinitive."
+            },
+            {
+              "p": "In Spanish: _When are you going to finish working?_ (tú)",
+              "r": "¿Cuándo vas a terminar de trabajar?",
+              "nota": "terminar de."
+            },
+            {
+              "p": "Which means _I just arrived_? **Acabo de llegar** or **Terminé de llegar**?",
+              "r": "Acabo de llegar.",
+              "nota": "acabar de = just."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6960
+    ],
+    "confunde": [
+      6508,
+      6597
+    ],
+    "sigue": [
+      6181
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7430",
+      "kwiziq": true
+    }
+  ]
+}

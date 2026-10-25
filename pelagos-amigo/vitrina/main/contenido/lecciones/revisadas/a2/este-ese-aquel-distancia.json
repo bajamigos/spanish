@@ -1,0 +1,255 @@
+{
+  "tema": 6862,
+  "slug": "este-ese-aquel-distancia",
+  "titulo": "This, that, that over there: este, ese, aquel",
+  "subtitulo": "«Esta llave, ese desarmador, aquel barco.»",
+  "foto": "t02.jpg",
+  "regla": "Spanish has three distances: este (this, near me), ese (that, near you or a little away) and aquel (that over there, far from both of us). All three go before the noun and agree with it in gender and number.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**este** = _this_: near the speaker (**aquí**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**ese** = _that_: near the listener, or a little away (**ahí**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**aquel** = _that (over there)_: far from both people (**allá**)."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "masc. sing.",
+            "fem. sing.",
+            "masc. pl.",
+            "fem. pl."
+          ],
+          "filas": [
+            [
+              "near me",
+              "este",
+              "esta",
+              "estos",
+              "estas"
+            ],
+            [
+              "near you",
+              "ese",
+              "esa",
+              "esos",
+              "esas"
+            ],
+            [
+              "far from both",
+              "aquel",
+              "aquella",
+              "aquellos",
+              "aquellas"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "They agree with the noun: **esta** llave, **esos** carros, **aquellas** olas."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Distance in time works the same way: **este** año (now), **ese** día (one we just mentioned), **aquella** época (long ago)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In everyday Mexican speech **ese** often covers anything not near you; **aquel** stresses that it's really far."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Esta== llave abre la puerta de la casa.",
+              "en": "This key opens the front door."
+            },
+            {
+              "es": "¿Me pasas ==ese== desarmador que tienes ahí?",
+              "en": "Can you pass me that screwdriver you've got there?"
+            },
+            {
+              "es": "¿Ves ==aquellas== olas allá, cerca de las rocas?",
+              "en": "See those waves over there, near the rocks?"
+            },
+            {
+              "es": "==Estos== jitomates son de mi huerto.",
+              "en": "These tomatoes are from my garden."
+            },
+            {
+              "es": "==Esa== camiseta que traes está padrísima.",
+              "en": "That T-shirt you're wearing is awesome."
+            },
+            {
+              "es": "==Aquel== edificio del fondo es el hospital.",
+              "en": "That building at the back is the hospital."
+            },
+            {
+              "es": "¿Te acuerdas de ==aquel== verano en Ensenada?",
+              "en": "Do you remember that summer in Ensenada?"
+            },
+            {
+              "es": "==Este== fin de semana tengo torneo de jiu-jitsu.",
+              "en": "This weekend I have a jiu-jitsu tournament."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Este camisa es nueva."
+                },
+                {
+                  "v": "bien",
+                  "t": "Esta camisa es nueva."
+                }
+              ],
+              "nota": "**Camisa** is feminine: **esta**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Aquello barco es enorme."
+                },
+                {
+                  "v": "bien",
+                  "t": "Aquel barco es enorme."
+                }
+              ],
+              "nota": "Masculine singular is **aquel**, with no -o."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estes libros son míos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estos libros son míos."
+                }
+              ],
+              "nota": "Masculine plural: **estos**, **esos**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Me pasas este plato que tienes ahí?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Me pasas ese plato que tienes ahí?"
+                }
+              ],
+              "nota": "It's near you, not me: **ese**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "este, esta",
+              "texto": "_This_ and _these_ in detail: [[5094|este, esta, estos, estas]]."
+            },
+            {
+              "forma": "ese, esa",
+              "texto": "_That_ near you: [[6061|ese, esa, esos, esas]]."
+            },
+            {
+              "forma": "aquel, aquella",
+              "texto": "All four far forms: [[6062|aquel, aquella, aquellos, aquellas]]."
+            },
+            {
+              "forma": "este, ese (alone)",
+              "texto": "Without a noun: [[6055|demonstrative pronouns]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _this beach_ (here), _that board_ (near you), _those mountains_ (far away).",
+              "r": "esta playa, esa tabla, aquellas montañas",
+              "nota": "Distance + agreement."
+            },
+            {
+              "p": "Fix it: _Este casa es bonita._",
+              "r": "Esta casa es bonita.",
+              "nota": "casa → esta."
+            },
+            {
+              "p": "In Spanish: _Do you see that boat over there?_",
+              "r": "¿Ves aquel barco?",
+              "nota": "Far from both: aquel."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5094,
+      6061
+    ],
+    "confunde": [],
+    "sigue": [
+      6062,
+      6055
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6862",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "tema": 5968,
+  "slug": "por-en-lugar-de",
+  "titulo": "Por (not para) for on behalf of / instead of",
+  "subtitulo": "Trabajó por mí. Hazlo por mí.",
+  "foto": "t03.jpg",
+  "regla": "Use por (not para) for on behalf of, instead of, in someone's place: Mi compañero trabajó por mí. Para mí would mean the work was for my benefit.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say someone does something **instead of** you, **on your behalf**, **in your place**, use **por**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Para** + person means the **recipient** or the one who benefits: **compré un regalo para ti**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Por** + person can also mean _for the sake of_: **lo hago por ti** (_I do it for you, because of you_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **por mí** = in my shoes; **para mí** = into my hands."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi compañero tuvo que trabajar ==por mí== ayer.",
+              "en": "My coworker had to work for me yesterday. (in my place)"
+            },
+            {
+              "es": "¿Podrías comprar el regalo de mi mamá ==por mí==? Estoy enferma.",
+              "en": "Could you buy my mom's present for me? I'm sick."
+            },
+            {
+              "es": "El actor principal se sentía mal, así que un suplente actuó ==por él==.",
+              "en": "The lead actor felt sick, so an understudy performed in his place."
+            },
+            {
+              "es": "Firmé ==por== mi hermano porque él no podía venir.",
+              "en": "I signed on my brother's behalf because he couldn't come."
+            },
+            {
+              "es": "Todo lo que hago, lo hago ==por== mis hijos.",
+              "en": "Everything I do, I do for my kids. (for their sake)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "en mi lugar",
+                  "t": "Trabajó por mí."
+                },
+                {
+                  "v": "para mi beneficio",
+                  "t": "Trabajó para mí."
+                }
+              ],
+              "nota": "**Por mí** = he covered for me. **Para mí** = I was his boss."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Puedes votar para mí? (in my place)"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Puedes votar por mí?"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "para + infinitive",
+              "texto": "The main use of **para**: [[5970|purpose]]."
+            },
+            {
+              "forma": "por teléfono, por 100 pesos",
+              "texto": "Other uses of **por**: [[5973|medium]], [[5974|exchange]], [[5975|price]], [[7273|by whom]]."
+            },
+            {
+              "forma": "para Navidad",
+              "texto": "**Para** for a deadline: [[5978|precise time]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Can you go to the meeting for me?_ (in my place)",
+              "r": "¿Puedes ir a la junta por mí?",
+              "nota": "por = instead of."
+            },
+            {
+              "p": "**Por** or **para**? _Este pastel es ___ ti._ (a gift)",
+              "r": "para",
+              "nota": "Recipient."
+            },
+            {
+              "p": "In Spanish: _She spoke on behalf of the group._",
+              "r": "Habló por el grupo.",
+              "nota": "por."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5970,
+      5974
+    ],
+    "confunde": [
+      5970,
+      5973,
+      5974
+    ],
+    "sigue": [
+      5975,
+      5976
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5968",
+      "kwiziq": true
+    }
+  ]
+}

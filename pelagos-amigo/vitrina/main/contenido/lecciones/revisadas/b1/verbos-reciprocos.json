@@ -1,0 +1,260 @@
+{
+  "tema": 6177,
+  "slug": "verbos-reciprocos",
+  "titulo": "Reciprocal verbs and the position of the pronoun",
+  "subtitulo": "Nos abrazamos, se ayudan, vamos a escribirnos.",
+  "foto": "t03.jpg",
+  "regla": "Reciprocal verbs (each other) use the plural reflexive pronouns nos and se: nos queremos, se ayudan. The pronoun follows the usual position rules. Add el uno al otro or mutuamente to stress it.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "A **reciprocal** action is one that two or more people do **to each other**: _hug each other, help each other, know each other_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Spanish uses the **plural reflexive pronouns**: **nos** (_we... each other_) and **se** (_they / you all... each other_)."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "abrazarse (each other)"
+          ],
+          "filas": [
+            [
+              "nosotros",
+              "nos abrazamos"
+            ],
+            [
+              "ustedes, ellos",
+              "se abrazan"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **nos** and **se** here mean _each other_. If it's only one person, it can't be reciprocal."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Nosotros ==nos== abrazamos mucho.",
+              "en": "We hug each other a lot."
+            },
+            {
+              "es": "¿Tú y Marta ya ==se== conocen?",
+              "en": "Do you and Marta know each other?"
+            },
+            {
+              "es": "Los vecinos ==se== ayudaban cuando podían.",
+              "en": "The neighbors helped each other when they could."
+            },
+            {
+              "es": "Ustedes ==se== escriben por correo, ¿verdad?",
+              "en": "You write to each other by email, right?"
+            },
+            {
+              "es": "Mi hermano y yo ==nos== hablamos todos los días.",
+              "en": "My brother and I talk to each other every day."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "posicion",
+      "titulo": "Where the pronoun goes",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Same rules as any reflexive pronoun:"
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "conjugated verb",
+              "texto": "In front: **nos escribimos**."
+            },
+            {
+              "forma": "infinitive / gerund",
+              "texto": "In front of the whole phrase or attached: **nos podemos escribir** / **podemos escribirnos**; **se están entendiendo** / **están entendiéndose**. Never in the middle."
+            },
+            {
+              "forma": "affirmative command",
+              "texto": "Attached: **¡abrácense!** (_hug each other!_), **¡ayúdense!**"
+            }
+          ]
+        },
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Podemos escribir==nos== mientras estás en Alemania.",
+              "en": "We can write to each other while you're in Germany."
+            },
+            {
+              "es": "==Nos== podemos escribir mientras estás en Alemania.",
+              "en": "We can write to each other while you're in Germany."
+            },
+            {
+              "es": "¿==Se== están entendiendo?",
+              "en": "Are you understanding each other?"
+            },
+            {
+              "es": "¡Abráce==nse==, ya hicieron las paces!",
+              "en": "Hug each other, you've made up!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "refuerzo",
+      "titulo": "El uno al otro / mutuamente",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Nos** and **se** can also be plain reflexive (_ourselves, themselves_). To make it clear, or for emphasis, add **el uno al otro** (**la una a la otra**, **los unos a los otros**) or **mutuamente**:"
+        },
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Julián y Alberto se respetan.",
+              "en": "Julián and Alberto respect each other."
+            },
+            {
+              "es": "Julián y Alberto se respetan ==el uno al otro==.",
+              "en": "Julián and Alberto respect one another."
+            },
+            {
+              "es": "Julián y Alberto se respetan ==mutuamente==.",
+              "en": "Julián and Alberto respect each other mutually."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Podemos nos escribir."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nos podemos escribir. / Podemos escribirnos."
+                }
+              ],
+              "nota": "Never in the middle."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ellos ayudan el uno al otro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ellos se ayudan el uno al otro."
+                }
+              ],
+              "nota": "Keep the pronoun."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "me baño",
+              "texto": "Reflexive verbs: [[5085|reflexive verbs in the present]]."
+            },
+            {
+              "forma": "siéntense",
+              "texto": "Commands: [[9262|imperative with reflexive pronouns]]."
+            },
+            {
+              "forma": "voy a verlo",
+              "texto": "[[5140|attached pronouns]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We love each other._",
+              "r": "Nos queremos.",
+              "nota": "nos."
+            },
+            {
+              "p": "In Spanish: _They see each other every Sunday._",
+              "r": "Se ven todos los domingos.",
+              "nota": "se."
+            },
+            {
+              "p": "Two ways: _We're going to call each other._",
+              "r": "Nos vamos a llamar. / Vamos a llamarnos.",
+              "nota": "Front or attached."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5085
+    ],
+    "confunde": [
+      5085
+    ],
+    "sigue": [
+      9262
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6177",
+      "kwiziq": true
+    }
+  ]
+}

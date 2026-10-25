@@ -1,0 +1,183 @@
+{
+  "tema": 7921,
+  "slug": "dativo-de-interes",
+  "titulo": "Dativo de interés: me, te, le... for who wins or loses",
+  "subtitulo": "Me robaron la cartera. Se me escapó el perro.",
+  "foto": "t10.jpg",
+  "regla": "An indirect object pronoun can mark the person affected by an event, for good or bad, even if they aren't the receiver: Nos cayó un aguacero = it poured on us; Me robaron la cartera = they stole my wallet (from me). Sometimes it's ambiguous: ¡Nos compraron la casa! = for us or from us.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**me, te, le, nos, les** mark someone who **gains or loses** because of what happens."
+        },
+        {
+          "tipo": "texto",
+          "texto": "English uses _on me, from me, for me_ or a possessive: **me robaron la cartera** = _they stole my wallet_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Spanish prefers the pronoun + article over a possessive for things that belong to someone: **me rayaron el carro**, not ~~rayaron mi carro~~ (possible but less natural)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It can be **ambiguous**: **nos compraron la casa** = _bought it for us_ or _bought it from us_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Mexico uses it a lot with family affection: **no me le hagas caso**, **cuídamelo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the pronoun answers _who felt it?_"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ayer ==nos cayó== un aguacero.",
+              "en": "Yesterday we got caught in a downpour."
+            },
+            {
+              "es": "Ese niño un día ==me robó== la cartera.",
+              "en": "That kid stole my wallet one day."
+            },
+            {
+              "es": "==Se me escapó== el hámster.",
+              "en": "My hamster got away (on me)."
+            },
+            {
+              "es": "No te preocupes, ==te van a llover== ofertas de trabajo.",
+              "en": "Don't worry, job offers are going to pour in for you."
+            },
+            {
+              "es": "==Me le== pones mucha atención a la niña, ¿eh?",
+              "en": "You pay close attention to the girl for me, okay?"
+            },
+            {
+              "es": "¡==Nos compraron== la casa!",
+              "en": "They bought us the house! / They bought our house!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "posible",
+                  "t": "Robaron mi cartera."
+                },
+                {
+                  "v": "natural",
+                  "t": "Me robaron la cartera."
+                }
+              ],
+              "nota": "Pronoun + article sounds more natural."
+            },
+            {
+              "filas": [
+                {
+                  "v": "regalo",
+                  "t": "Nos compraron la casa (para nosotros)."
+                },
+                {
+                  "v": "venta",
+                  "t": "Nos compraron la casa (a nosotros)."
+                }
+              ],
+              "nota": "Context decides."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "indirect object pronouns",
+              "texto": "[[7282|me, te, le, nos, les]]."
+            },
+            {
+              "forma": "accidental se",
+              "texto": "[[7060|se me cayó]]."
+            },
+            {
+              "forma": "se aspectual",
+              "texto": "[[8527|se aspectual]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _They scratched my car._",
+              "r": "Me rayaron el carro.",
+              "nota": "Pronoun + article."
+            },
+            {
+              "p": "In Spanish: _The baby got sick on us._",
+              "r": "Se nos enfermó el bebé.",
+              "nota": "se + nos."
+            },
+            {
+              "p": "Two meanings? _Le vendieron la tienda._",
+              "r": "They sold the store to him, or they sold his store.",
+              "nota": "Ambiguous."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7282,
+      7060
+    ],
+    "confunde": [
+      8527
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7921",
+      "kwiziq": true
+    }
+  ]
+}

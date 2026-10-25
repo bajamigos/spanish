@@ -1,0 +1,179 @@
+{
+  "tema": 7213,
+  "slug": "con-lo-que-obstaculo",
+  "titulo": "Con lo que + indicative = with all the..., given how much...",
+  "subtitulo": "¿Vas a salir con lo que llueve?",
+  "foto": "t06.jpg",
+  "regla": "Con lo que + indicative points to something big that should have stopped or changed the result: ¿Sales con lo que llueve? = in all this rain? Often with surprise: No sé cómo..., Me sorprende que... Followed by a subjunctive or used literally, con lo que just means with what(ever).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "main clause",
+            "con lo que",
+            "+ indicative"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Meaning: _given how much..., with all the..., considering..._ The **con lo que** fact is an obstacle, and the result happens anyway (or is surprising)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Often after **No sé cómo..., Me sorprende que..., No puedo creer que...**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "It can also open the sentence as a complaint: **¡Con lo que me costó y ahora no sirve!**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **con lo que** = _with all that..._ and a raised eyebrow."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No sé cómo no estás agotado ==con lo que corres==.",
+              "en": "I don't know how you're not exhausted, with all the running you do."
+            },
+            {
+              "es": "¿Vas a salir ==con lo que está lloviendo==?",
+              "en": "You're going out in all this rain?"
+            },
+            {
+              "es": "Me sorprende que esté tan flaco ==con lo que come==.",
+              "en": "I'm amazed he's so skinny given how much he eats."
+            },
+            {
+              "es": "¡==Con lo que me costó== este curso, y ahora no lo validan!",
+              "en": "After all this course cost me, and now they won't recognize it!"
+            },
+            {
+              "es": "==Con lo que estudiaste==, seguro pasas.",
+              "en": "With all the studying you did, you'll surely pass."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "obstáculo",
+                  "t": "¿Sales con lo que llueve?"
+                },
+                {
+                  "v": "literal",
+                  "t": "Puedes ayudar con lo que tengas."
+                }
+              ],
+              "nota": "With the subjunctive (or a plain sense), it's just _with whatever you have_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Sales con lo que llueva?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Sales con lo que llueve?"
+                }
+              ],
+              "nota": "The obstacle is a real fact: indicative."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "lo que",
+              "texto": "[[5087|lo que]]."
+            },
+            {
+              "forma": "aunque",
+              "texto": "[[5146|aunque]] for _even though_."
+            },
+            {
+              "forma": "y eso que",
+              "texto": "[[9086|y eso que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _You're tired? With all you slept!_",
+              "r": "¿Estás cansado? ¡Con lo que dormiste!",
+              "nota": "con lo que + indicative."
+            },
+            {
+              "p": "In Spanish: _I don't know how she's not cold, with all the wind there is._",
+              "r": "No sé cómo no tiene frío, con lo que sopla el viento.",
+              "nota": "Surprise + con lo que."
+            },
+            {
+              "p": "Obstacle or literal? _Haz la sopa con lo que haya en el refri._",
+              "r": "Literal: with whatever there is.",
+              "nota": "Subjunctive = whatever."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5087,
+      5146
+    ],
+    "confunde": [
+      9086
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7213",
+      "kwiziq": true
+    }
+  ]
+}

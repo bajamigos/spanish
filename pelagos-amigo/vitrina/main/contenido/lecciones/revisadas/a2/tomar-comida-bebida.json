@@ -1,0 +1,253 @@
+{
+  "tema": 8579,
+  "slug": "tomar-comida-bebida",
+  "titulo": "Tomar for having a drink (and comer for food)",
+  "subtitulo": "«Tomo un café y como unos tacos.»",
+  "foto": "t06.jpg",
+  "regla": "For _having_ a drink, use tomar (or beber), never tener. For _having_ food, use comer or the meal verbs desayunar, comer, cenar. Tener means to own or to possess.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "English uses _have_ for food and drink: _have a coffee_, _have lunch_. Spanish **tener** only means _to own_, so it doesn't work here."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "English",
+            "Spanish"
+          ],
+          "filas": [
+            [
+              "_have a drink, a coffee, a beer_",
+              "**tomar** (or **beber**) un café"
+            ],
+            [
+              "_have something to eat_",
+              "**comer** algo"
+            ],
+            [
+              "_have breakfast_",
+              "**desayunar**"
+            ],
+            [
+              "_have lunch_ (main midday meal)",
+              "**comer**"
+            ],
+            [
+              "_have dinner_",
+              "**cenar**"
+            ],
+            [
+              "_have a drink / a snack, go out for one_",
+              "**tomar algo**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Tomar** is the everyday verb for drinks in Mexico; **beber** sounds a bit more formal or written."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Tomar** on its own often means _to drink alcohol_: **¿Tomas?** = _Do you drink?_"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Tomar** also covers medicine: **tomar una pastilla**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In Mexico **la comida** is the main meal of the day (around 2–4 pm), so **comer** is also _to have lunch_."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿Quieres ==tomar== un café?",
+              "en": "Do you want to have a coffee?"
+            },
+            {
+              "es": "Después del entrenamiento ==tomo== mucha agua.",
+              "en": "After training I drink a lot of water."
+            },
+            {
+              "es": "Vamos a ==tomar algo== el viernes.",
+              "en": "Let's go for a drink on Friday."
+            },
+            {
+              "es": "Hoy ==desayuné== chilaquiles.",
+              "en": "Today I had chilaquiles for breakfast."
+            },
+            {
+              "es": "¿A qué hora ==comen== ustedes?",
+              "en": "What time do you have lunch?"
+            },
+            {
+              "es": "Anoche ==cenamos== tacos en la calle Sexta.",
+              "en": "Last night we had tacos for dinner on Sexta street."
+            },
+            {
+              "es": "No ==tomo==, gracias; voy a manejar.",
+              "en": "I don't drink, thanks; I'm driving."
+            },
+            {
+              "es": "==Toma== una pastilla para el dolor.",
+              "en": "Take a pill for the pain."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tengo un café, por favor."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tomo un café. / Me da un café, por favor."
+                }
+              ],
+              "nota": "Tener = own, not have a drink."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Vamos a tener la cena."
+                },
+                {
+                  "v": "bien",
+                  "t": "Vamos a cenar."
+                }
+              ],
+              "nota": "One verb for each meal."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Voy a tener unos tacos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Voy a comer unos tacos."
+                }
+              ],
+              "nota": "Food: comer."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Tienes el desayuno?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Ya desayunaste?"
+                }
+              ],
+              "nota": "Ask with the meal verb."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tomo, como",
+              "texto": "Conjugation: [[5492|regular -ar verbs]], [[5540|regular -er verbs]]."
+            },
+            {
+              "forma": "vamos a cenar",
+              "texto": "Plans: [[5086|the near future]]."
+            },
+            {
+              "forma": "tengo",
+              "texto": "What tener really does: [[5304|tener in the present]]."
+            },
+            {
+              "forma": "me gusta comer",
+              "texto": "Talking about food you like: [[5083|gustar + verb]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Let's have a beer._",
+              "r": "Vamos a tomar una cerveza.",
+              "nota": "tomar for drinks."
+            },
+            {
+              "p": "In Spanish: _We have dinner at nine._",
+              "r": "Cenamos a las nueve.",
+              "nota": "cenar = have dinner."
+            },
+            {
+              "p": "Fix it: _Tengo un jugo de naranja cada mañana._",
+              "r": "Tomo un jugo de naranja cada mañana.",
+              "nota": "tomar, not tener."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5492,
+      5540
+    ],
+    "confunde": [
+      5304
+    ],
+    "sigue": [
+      5086,
+      5083
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8579",
+      "kwiziq": true
+    }
+  ]
+}

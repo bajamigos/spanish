@@ -1,0 +1,201 @@
+{
+  "tema": 7604,
+  "slug": "mientras-que-en-cambio",
+  "titulo": "Using mientras que / en cambio for contrast",
+  "subtitulo": "Yo madrugo, mientras que mi hermano duerme hasta las diez.",
+  "foto": "t04.jpg",
+  "regla": "Mientras que (whereas) and en cambio (on the other hand) introduce a contrasting clause, with the indicative. Mientras que can start the sentence; en cambio can't. Punctuation: , mientras que / ; en cambio,",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To set one fact **against** another, use **mientras que** (_whereas, while_) or **en cambio** (_on the other hand, by contrast_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Both take the **indicative**: you're comparing facts."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "mientras que",
+            "en cambio"
+          ],
+          "filas": [
+            [
+              "Second clause",
+              "yes",
+              "yes"
+            ],
+            [
+              "First clause",
+              "yes",
+              "no"
+            ],
+            [
+              "Punctuation",
+              ", mientras que",
+              "; en cambio, / . En cambio,"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**En cambio** has a longer pause: a semicolon or period before it and a comma after it. **Mientras que** usually just has a comma before."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In this contrast meaning, you can drop **que** (**mientras**), but **mientras que** is more common."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **en cambio** is a hinge: it can only swing the second door."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Hay gente que tira la comida, ==mientras que== otros pasan hambre.",
+              "en": "Some people throw food away, whereas others go hungry."
+            },
+            {
+              "es": "Hay gente que tira la comida; ==en cambio==, otros pasan hambre.",
+              "en": "Some people throw food away; others, on the other hand, go hungry."
+            },
+            {
+              "es": "En Monterrey hace un calor seco, ==mientras que== en Veracruz es húmedo.",
+              "en": "In Monterrey the heat is dry, whereas in Veracruz it's humid."
+            },
+            {
+              "es": "Los de primero se portaron bien. ==En cambio==, los de segundo no dejaron de interrumpir.",
+              "en": "The first-years behaved well. The second-years, on the other hand, kept interrupting."
+            },
+            {
+              "es": "==Mientras que== los de primero se portaron bien, los de segundo no dejaron de interrumpir.",
+              "en": "While the first-years behaved well, the second-years kept interrupting."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "En cambio yo madrugo, mi hermano duerme."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mientras que yo madrugo, mi hermano duerme."
+                }
+              ],
+              "nota": "**En cambio** can't open the sentence."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo madrugo, en cambio mi hermano duerme."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo madrugo; en cambio, mi hermano duerme."
+                }
+              ],
+              "nota": "Give **en cambio** its pause."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "mientras + time",
+              "texto": "**Mientras** meaning _while_ (time): [[6994|mientras with indicative or subjunctive]]."
+            },
+            {
+              "forma": "pero, sino",
+              "texto": "Other contrast words: [[7035|pero, sino]]."
+            },
+            {
+              "forma": "así que",
+              "texto": "Result instead of contrast: [[7250|así que / por lo tanto]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I like the beach, whereas my sister prefers the mountains._",
+              "r": "Me gusta la playa, mientras que mi hermana prefiere la montaña.",
+              "nota": "mientras que."
+            },
+            {
+              "p": "In Spanish: _He saves everything. She, on the other hand, spends it all._",
+              "r": "Él ahorra todo. En cambio, ella se lo gasta todo.",
+              "nota": "Period, en cambio, comma."
+            },
+            {
+              "p": "Is this right? _En cambio Luis es alto, su hermano es bajo._",
+              "r": "No: Mientras que Luis es alto, su hermano es bajo.",
+              "nota": "en cambio can't start."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7035
+    ],
+    "confunde": [
+      6994
+    ],
+    "sigue": [
+      7250
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7604",
+      "kwiziq": true
+    }
+  ]
+}

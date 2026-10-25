@@ -1,0 +1,183 @@
+{
+  "tema": 8250,
+  "slug": "dar-por",
+  "titulo": "Dar algo / a alguien por + participle or adjective",
+  "subtitulo": "Lo dieron por muerto. Lo doy por hecho. No te des por aludida.",
+  "foto": "t04.jpg",
+  "regla": "Dar algo / a alguien por + participle or adjective = to consider, take as, give up as: lo dieron por muerto, lo doy por hecho. Darse por + adjective / participle = to consider oneself: darse por vencido (to give up), no te des por aludido (don't take it personally). Agreement required.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "dar algo / a alguien por + participle / adjective",
+              "texto": "_to consider, take as_: **lo dieron por muerto**, **lo dimos por imposible**, **dar por sentado** (_to take for granted_), **dar por hecho**."
+            },
+            {
+              "forma": "darse por + participle / adjective",
+              "texto": "_to consider oneself_: **darse por vencido** (_to give up_), **darse por aludido** (_to take it personally_), **darse por satisfecho**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The participle or adjective **agrees**: **la daban por loca**, **se dieron por satisfechos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**No te des por vencido** = _Don't give up_, very common."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **dar por** = stamp a label on it."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Lo dieron por muerto==, pero nunca apareció el cuerpo.",
+              "en": "They gave him up for dead, but the body never turned up."
+            },
+            {
+              "es": "Decía tantas barbaridades que ==la daban por loca==.",
+              "en": "She said such outrageous things that people took her for crazy."
+            },
+            {
+              "es": "Lo intentamos una y otra vez, y al final ==lo dimos por imposible==.",
+              "en": "We tried again and again, and in the end we gave it up as impossible."
+            },
+            {
+              "es": "Los adolescentes ==dan por sentadas== muchas cosas.",
+              "en": "Teenagers take a lot of things for granted."
+            },
+            {
+              "es": "No ==te des por aludida==; no hablaba de ti.",
+              "en": "Don't take it personally; I wasn't talking about you."
+            },
+            {
+              "es": "Los clientes ==se dieron por satisfechos== con el descuento.",
+              "en": "The customers were satisfied with the discount."
+            },
+            {
+              "es": "¡No ==te des por vencido==!",
+              "en": "Don't give up!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La daban por loco."
+                },
+                {
+                  "v": "bien",
+                  "t": "La daban por loca."
+                }
+              ],
+              "nota": "Agreement."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me di vencido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me di por vencido."
+                }
+              ],
+              "nota": "Keep **por**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "le dio por",
+              "texto": "Different: [[7916|darle por]]."
+            },
+            {
+              "forma": "participles as adjectives",
+              "texto": "[[7000|participles]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I take it for granted._",
+              "r": "Lo doy por sentado. / Lo doy por hecho.",
+              "nota": "dar por."
+            },
+            {
+              "p": "In Spanish: _She never gave up._",
+              "r": "Nunca se dio por vencida.",
+              "nota": "Agreement."
+            },
+            {
+              "p": "In Spanish: _Consider it done._ (tú)",
+              "r": "Dalo por hecho.",
+              "nota": "Command."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7000
+    ],
+    "confunde": [
+      7916
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8250",
+      "kwiziq": true
+    }
+  ]
+}

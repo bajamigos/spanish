@@ -1,0 +1,200 @@
+{
+  "tema": 5979,
+  "slug": "ser-eventos-la-fiesta-es",
+  "titulo": "Ser for where and when events take place",
+  "subtitulo": "«La fiesta es en mi casa.»",
+  "foto": "t03.jpg",
+  "regla": "To say where or when an event takes place (a party, a concert, a class), use ser, not estar: la fiesta es en mi casa, el concierto es el sábado. People and things still take estar for location.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Events** (party, wedding, concert, class, game, meeting) use **ser** to say where and when they **take place**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "Event: ser",
+            "Person or thing: estar"
+          ],
+          "filas": [
+            [
+              "where",
+              "La fiesta es en mi casa.",
+              "Mi casa está en Playas."
+            ],
+            [
+              "when",
+              "La boda es el sábado.",
+              "—"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if you can say _takes place_, use **ser**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "La fiesta ==es== en mi casa.",
+              "en": "The party is at my place."
+            },
+            {
+              "es": "El concierto ==es== el sábado.",
+              "en": "The concert is on Saturday."
+            },
+            {
+              "es": "¿Dónde ==es== la boda?",
+              "en": "Where's the wedding?"
+            },
+            {
+              "es": "La clase de jiu-jitsu ==es== a las siete.",
+              "en": "Jiu-jitsu class is at seven."
+            },
+            {
+              "es": "El torneo de surf ==es== en Ensenada.",
+              "en": "The surf contest is in Ensenada."
+            },
+            {
+              "es": "La junta ==es== en la oficina del jefe.",
+              "en": "The meeting is in the boss's office."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La fiesta está en mi casa."
+                },
+                {
+                  "v": "bien",
+                  "t": "La fiesta es en mi casa."
+                }
+              ],
+              "nota": "An event: **ser**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El concierto está el sábado."
+                },
+                {
+                  "v": "bien",
+                  "t": "El concierto es el sábado."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mi casa es en Playas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mi casa está en Playas."
+                }
+              ],
+              "nota": "A thing, not an event: **estar**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "está en la cocina",
+              "texto": "People and things: [[5067|estar for location]]."
+            },
+            {
+              "forma": "es lunes, es la una",
+              "texto": "Days and times: [[5981|ser for time and dates]]."
+            },
+            {
+              "forma": "a las siete",
+              "texto": "At what time: [[6665|a la / a las]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _The party is on Friday._",
+              "r": "La fiesta es el viernes.",
+              "nota": "Event: es."
+            },
+            {
+              "p": "In Spanish: _Where is the concert?_",
+              "r": "¿Dónde es el concierto?",
+              "nota": "Event: es."
+            },
+            {
+              "p": "Fix it: _La boda está en Rosarito._",
+              "r": "La boda es en Rosarito.",
+              "nota": "Event: ser."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5981
+    ],
+    "confunde": [
+      5067
+    ],
+    "sigue": [
+      6665
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5979",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,234 @@
+{
+  "tema": 5724,
+  "slug": "subjuntivo-presente-car",
+  "titulo": "Conjugate -car verbs (c > qu) in the present subjunctive",
+  "subtitulo": "Buscar → busque: the c turns into qu to keep the hard sound.",
+  "foto": "t05.jpg",
+  "regla": "Verbs ending in -car change c to qu in every form of the present subjunctive: busque, busques, busquemos.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Verbs ending in **-car** change the **c** to **qu** in the present subjunctive. It's only a spelling change: it keeps the hard _k_ sound of the infinitive, because **c** before **e** would sound like _s_."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**-car** → **-qu-**",
+            "**-e, -es, -e, -emos, -en**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "buscar"
+          ],
+          "filas": [
+            [
+              "yo",
+              "busque"
+            ],
+            [
+              "tú",
+              "busques"
+            ],
+            [
+              "él, ella, usted",
+              "busque"
+            ],
+            [
+              "nosotros",
+              "busquemos"
+            ],
+            [
+              "ustedes, ellos",
+              "busquen"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The change is in **every form**. Other common verbs like this: **explicar** → **explique**, **sacar** → **saque**, **tocar** → **toque**, **practicar** → **practique**, **equivocarse** → **me equivoque**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **c** is shy in front of **e**: it calls its friend **qu** to keep the sound hard."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Deja que yo ==busque== la ruta en el mapa.",
+              "en": "Let me look up the route on the map."
+            },
+            {
+              "es": "Es bueno que ==busques== más opciones.",
+              "en": "It's good that you're looking for more options."
+            },
+            {
+              "es": "Quiero que Beto ==busque== chamba.",
+              "en": "I want Beto to look for work."
+            },
+            {
+              "es": "==Busquemos== otra taquería; esta tiene mucha fila.",
+              "en": "Let's find another taquería; this one has a long line."
+            },
+            {
+              "es": "Será mejor que ==saques== la tabla del carro.",
+              "en": "You'd better take the board out of the car."
+            },
+            {
+              "es": "Es necesario que nos ==expliquen== bien la situación.",
+              "en": "They need to explain the situation clearly to us."
+            },
+            {
+              "es": "Aunque me ==equivoque== a veces, casi siempre tengo razón.",
+              "en": "Even if I get it wrong sometimes, I'm almost always right."
+            },
+            {
+              "es": "Quieren que el profe ==explique== otra vez la técnica.",
+              "en": "They want the coach to explain the technique again."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero que busces otra tabla."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero que busques otra tabla."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es mejor que no toces eso."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es mejor que no toques eso."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Practicemos la guardia."
+                },
+                {
+                  "v": "bien",
+                  "t": "Practiquemos la guardia."
+                }
+              ],
+              "nota": "The **qu** is in **nosotros** too."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "busqué",
+              "texto": "The same change in the preterite, only in **yo**: [[5256|-car verbs in the preterite]]."
+            },
+            {
+              "forma": "pague, empiece",
+              "texto": "The other spelling changes: [[5725|-gar]] and [[5726|-zar]]."
+            },
+            {
+              "forma": "hable, hables",
+              "texto": "The base pattern: [[5063|regular -ar verbs in the subjunctive]]."
+            },
+            {
+              "forma": "No toques.",
+              "texto": "Negative commands use this form: [[9255|negative tú commands]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "**Sacar** with **tú**: Quiero que ___ la basura.",
+              "r": "Quiero que saques la basura.",
+              "nota": "c → qu."
+            },
+            {
+              "p": "In Spanish: _Let's practice the sweep._",
+              "r": "Practiquemos el barrido.",
+              "nota": "practicar → practiquemos."
+            },
+            {
+              "p": "In Spanish: _I don't want you to touch the board._",
+              "r": "No quiero que toques la tabla.",
+              "nota": "tocar → toques."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5063,
+      5256
+    ],
+    "confunde": [
+      5725,
+      5726
+    ],
+    "sigue": [
+      9255,
+      5059
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5724",
+      "kwiziq": true
+    }
+  ]
+}

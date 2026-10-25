@@ -1,0 +1,234 @@
+{
+  "tema": 5064,
+  "slug": "condicional-hacer",
+  "titulo": "Conjugate hacer in the conditional",
+  "subtitulo": "Haría, harías, haríamos: the future stem har- with the conditional endings.",
+  "foto": "t07.jpg",
+  "regla": "Hacer has the irregular stem har- in the conditional, with the regular endings: haría, harías, haría, haríamos, harían.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Hacer** (_to do, to make_) is irregular in the conditional (**el condicional simple**). It uses the same irregular stem as the future, **har-**, and the regular conditional endings."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**har-**",
+            "**-ía, -ías, -ía, -íamos, -ían**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "hacer"
+          ],
+          "filas": [
+            [
+              "yo",
+              "haría"
+            ],
+            [
+              "tú",
+              "harías"
+            ],
+            [
+              "él, ella, usted",
+              "haría"
+            ],
+            [
+              "nosotros",
+              "haríamos"
+            ],
+            [
+              "ustedes, ellos",
+              "harían"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Use it to say that someone _would do_ something."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Every form has a written accent on the **í** of the ending."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **hacer** gets cut short to **har-**: like a board you trimmed, it fits faster."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Yo ==haría== cualquier cosa por ti.",
+              "en": "I would do anything for you."
+            },
+            {
+              "es": "¿Qué ==harías== tú en mi lugar?",
+              "en": "What would you do in my place?"
+            },
+            {
+              "es": "Amos nunca ==haría== eso.",
+              "en": "Amos would never do that."
+            },
+            {
+              "es": "¡Qué ==haríamos== sin ti!",
+              "en": "What would we do without you!"
+            },
+            {
+              "es": "Ellos lo ==harían== sin problema.",
+              "en": "They'd do it, no problem."
+            },
+            {
+              "es": "Ustedes ==harían== una buena pareja.",
+              "en": "You two would make a nice couple."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo hacería lo mismo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo haría lo mismo."
+                }
+              ],
+              "nota": "The stem is **har-**, not **hacer-**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Qué harias?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Qué harías?"
+                }
+              ],
+              "nota": "Keep the accent on the **í**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usos",
+      "titulo": "Useful uses",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¿Qué harías tú?",
+              "texto": "The classic question for advice: _what would you do?_",
+              "aqui": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "haré",
+              "texto": "The future has the same stem: [[5159|hacer in the future]]."
+            },
+            {
+              "forma": "hablaría",
+              "texto": "The regular pattern: [[5731|regular verbs in the conditional]]."
+            },
+            {
+              "forma": "hice, hago",
+              "texto": "Other tenses of hacer: [[5110|preterite]], [[5708|present]]."
+            },
+            {
+              "forma": "diría",
+              "texto": "Another short stem: [[5854|decir in the conditional]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _What would you do with the money?_ (tú)",
+              "r": "¿Qué harías con el dinero?",
+              "nota": "har- + ías."
+            },
+            {
+              "p": "**Hacer** with **nosotros**: ___ la carne asada en el huerto.",
+              "r": "Haríamos la carne asada en el huerto.",
+              "nota": "har- + íamos."
+            },
+            {
+              "p": "In Spanish: _She would never do that._",
+              "r": "Ella nunca haría eso.",
+              "nota": "har- + ía."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5159,
+      5731
+    ],
+    "confunde": [
+      5159
+    ],
+    "sigue": [
+      5854,
+      7431
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5064",
+      "kwiziq": true
+    }
+  ]
+}

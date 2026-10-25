@@ -1,0 +1,244 @@
+{
+  "tema": 5218,
+  "slug": "estuve-preterito-estar",
+  "titulo": "Estar in the preterite",
+  "subtitulo": "Estuve dos horas en la línea.",
+  "foto": "t07.jpg",
+  "regla": "Estar is irregular in the preterite: estuve, estuviste, estuvo, estuvimos, estuvieron. The stem is estuv- and none of the forms has a written accent.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Estar** uses the irregular stem **estuv-** plus special endings."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "estar"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**estuve**"
+            ],
+            [
+              "tú",
+              "**estuviste**"
+            ],
+            [
+              "él, ella, usted",
+              "**estuvo**"
+            ],
+            [
+              "nosotros",
+              "**estuvimos**"
+            ],
+            [
+              "ellos, ustedes",
+              "**estuvieron**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**No written accents**: **estuve**, **estuvo** (not estuvé, estuvó). The stress falls on **-tu-**: es**TU**ve, es**TU**vo."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Use it for a stay or state with a **clear beginning and end**: **estuve dos horas en la línea**, **estuvimos en Ensenada el fin de semana**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "For background (_I was tired, it was sunny_) Spanish usually uses the imperfect **estaba**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **estuv-** sounds like a _stove_: you were there, then you left."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Estuve== dos horas en la línea para cruzar.",
+              "en": "I spent two hours in line to cross the border."
+            },
+            {
+              "es": "¿Dónde ==estuviste== anoche?",
+              "en": "Where were you last night?"
+            },
+            {
+              "es": "La fiesta ==estuvo== muy buena.",
+              "en": "The party was really good."
+            },
+            {
+              "es": "==Estuvimos== en Ensenada todo el fin de semana.",
+              "en": "We were in Ensenada all weekend."
+            },
+            {
+              "es": "Mis papás ==estuvieron== en Oaxaca en diciembre.",
+              "en": "My parents were in Oaxaca in December."
+            },
+            {
+              "es": "==Estuve== enfermo toda la semana pasada.",
+              "en": "I was sick all last week."
+            },
+            {
+              "es": "El mar ==estuvo== picado toda la mañana.",
+              "en": "The sea was choppy all morning."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer estuvé en la playa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer estuve en la playa."
+                }
+              ],
+              "nota": "No accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella estuvó en el gimnasio."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella estuvo en el gimnasio."
+                }
+              ],
+              "nota": "No accent: es**TU**vo."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer esté en la casa todo el día."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer estuve en la casa todo el día."
+                }
+              ],
+              "nota": "Not regular: **estuv-**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ellos estuvieran en la fiesta."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ellos estuvieron en la fiesta."
+                }
+              ],
+              "nota": "**-ieron**, not -ieran."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "estoy",
+              "texto": "The present: [[5166|estar in the present]]."
+            },
+            {
+              "forma": "estaba",
+              "texto": "Background in the past: [[5852|estar in the imperfect]]."
+            },
+            {
+              "forma": "fui, fue",
+              "texto": "The other _to be_: [[5107|ser in the preterite]]."
+            },
+            {
+              "forma": "tuve",
+              "texto": "Same pattern, -uve: [[5226|tener in the preterite]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I was at home all day._",
+              "r": "Estuve en la casa todo el día.",
+              "nota": "estuve, no accent."
+            },
+            {
+              "p": "In Spanish: _Where were you guys on Saturday?_",
+              "r": "¿Dónde estuvieron el sábado?",
+              "nota": "ustedes → estuvieron."
+            },
+            {
+              "p": "Fix it: _El concierto estuvó increíble._",
+              "r": "El concierto estuvo increíble.",
+              "nota": "No accent."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5166
+    ],
+    "confunde": [
+      5852,
+      5107
+    ],
+    "sigue": [
+      5226
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5218",
+      "kwiziq": true
+    }
+  ]
+}

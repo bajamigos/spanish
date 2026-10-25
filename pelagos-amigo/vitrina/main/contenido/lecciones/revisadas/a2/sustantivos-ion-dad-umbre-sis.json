@@ -1,0 +1,263 @@
+{
+  "tema": 6068,
+  "slug": "sustantivos-ion-dad-umbre-sis",
+  "titulo": "Nouns in -ión, -dad, -tad, -umbre, -itis, -sis",
+  "subtitulo": "La canción, la ciudad, la costumbre, la crisis.",
+  "foto": "t01.jpg",
+  "regla": "Nouns ending in -ión, -dad, -tad, -umbre, -itis and -sis are feminine (la canción, la ciudad, la costumbre, la crisis), with a few exceptions like el avión, el camión and el análisis. In the plural, -ión loses its accent, and -itis/-sis nouns don't change.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "These endings are **feminine**:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Ending",
+            "Examples",
+            "Plural"
+          ],
+          "filas": [
+            [
+              "**-ión**",
+              "la canción, la televisión, la región",
+              "las canciones, las regiones"
+            ],
+            [
+              "**-dad**",
+              "la ciudad, la verdad, la universidad",
+              "las ciudades"
+            ],
+            [
+              "**-tad**",
+              "la amistad, la libertad, la mitad",
+              "las amistades"
+            ],
+            [
+              "**-umbre**",
+              "la costumbre, la cumbre, la muchedumbre",
+              "las costumbres"
+            ],
+            [
+              "**-itis**",
+              "la gastritis, la artritis, la bronquitis",
+              "las gastritis"
+            ],
+            [
+              "**-sis**",
+              "la crisis, la tesis, la dosis",
+              "las crisis"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**-ción** and **-sión** are always feminine. A few other **-ión** words are masculine: **el avión**, **el camión**, **el millón**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Some **-sis** words are masculine: **el análisis**, **el énfasis**, **el paréntesis**, **el oasis**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Plural of **-ión**: add **-es** and **drop the accent**: canción → **canciones**, avión → **aviones**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Plural of **-itis** and **-sis**: **no change**, only the article shows it: **la** crisis → **las** crisis, **el** análisis → **los** análisis."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: most of these are abstract ideas (_freedom, truth, crisis_). Ideas in Spanish love **la**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Me gusta mucho ==la canción== que pusiste.",
+              "en": "I really like the song you put on."
+            },
+            {
+              "es": "Tijuana es ==una ciudad== muy grande.",
+              "en": "Tijuana is a very big city."
+            },
+            {
+              "es": "Comer tamales en Navidad es ==una costumbre== muy bonita.",
+              "en": "Eating tamales at Christmas is a lovely tradition."
+            },
+            {
+              "es": "==La amistad== es lo más importante.",
+              "en": "Friendship is the most important thing."
+            },
+            {
+              "es": "Mi abuela tiene ==artritis== en las manos.",
+              "en": "My grandmother has arthritis in her hands."
+            },
+            {
+              "es": "==La crisis== económica afectó a todos.",
+              "en": "The economic crisis affected everyone."
+            },
+            {
+              "es": "Hay muchas ==estaciones== espaciales en esta serie.",
+              "en": "There are many space stations in this series."
+            },
+            {
+              "es": "Tomé ==el camión== al centro, no ==el avión==.",
+              "en": "I took the bus downtown, not the plane."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El ciudad está lejos."
+                },
+                {
+                  "v": "bien",
+                  "t": "La ciudad está lejos."
+                }
+              ],
+              "nota": "-dad: feminine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Las canciónes son nuevas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Las canciones son nuevas."
+                }
+              ],
+              "nota": "Plural -iones: no accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Las crisises"
+                },
+                {
+                  "v": "bien",
+                  "t": "Las crisis"
+                }
+              ],
+              "nota": "-sis doesn't change in the plural."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La camión está lleno."
+                },
+                {
+                  "v": "bien",
+                  "t": "El camión está lleno."
+                }
+              ],
+              "nota": "Exception: el camión, el avión."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el color",
+              "texto": "The masculine side: [[6208|nouns in -or are masculine]]."
+            },
+            {
+              "forma": "el problema",
+              "texto": "Looks feminine, isn't: [[6728|nouns ending in -ma]]."
+            },
+            {
+              "forma": "la energía",
+              "texto": "Another feminine group: [[9776|nouns in -ía / -ia]]."
+            },
+            {
+              "forma": "la salud",
+              "texto": "The next ending: [[9542|nouns in -ud]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _the truth and the freedom_",
+              "r": "la verdad y la libertad",
+              "nota": "-dad, -tad: feminine."
+            },
+            {
+              "p": "In Spanish (plural): _the lessons and the crises_",
+              "r": "las lecciones y las crisis",
+              "nota": "-iones, crisis unchanged."
+            },
+            {
+              "p": "Fix it: _Tengo un examen en la universidad sobre el televisión._",
+              "r": "Tengo un examen en la universidad sobre la televisión.",
+              "nota": "-sión: feminine."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6208
+    ],
+    "confunde": [
+      6728
+    ],
+    "sigue": [
+      9776,
+      9542
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6068",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "tema": 6186,
+  "slug": "que-incredulidad",
+  "titulo": "¿Que...? at the start of a question to express disbelief",
+  "subtitulo": "¿Que te vas a casar?",
+  "foto": "t08.jpg",
+  "regla": "A question starting with que (no accent) repeats something you just heard, with surprise or disbelief: ¿Que te vas a casar? = You're getting married?! It keeps the indicative of the original statement.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "¿Que",
+            "+ what you heard?"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "You echo what someone said, with **surprise** or **disbelief**. It's like saying _(are you telling me) that...?_"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**No accent**: it's the conjunction **que**, not the question word **qué**. The part _you're telling me_ is left out."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Keep the **indicative** of the original statement: **¿Que te ganaste la lotería?**, not ~~que te hayas ganado~~."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: hear it with raised eyebrows."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿==Que== te vas a casar con Javier? No lo puedo creer.",
+              "en": "You're marrying Javier? I can't believe it."
+            },
+            {
+              "es": "¿==Que== subieron el Pico de Orizaba? ¡Increíble!",
+              "en": "You climbed Pico de Orizaba? Incredible!"
+            },
+            {
+              "es": "¿==Que== tu hija va a salir en la tele?",
+              "en": "Your daughter is going to be on TV?"
+            },
+            {
+              "es": "¿==Que== te ganaste la lotería?",
+              "en": "You won the lottery?!"
+            },
+            {
+              "es": "—Me voy a vivir a Japón. —¿==Que== te vas a dónde?",
+              "en": "—I'm moving to Japan. —You're moving where?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "pregunta",
+                  "t": "¿Qué te pasó?"
+                },
+                {
+                  "v": "incredulidad",
+                  "t": "¿Que te pasó qué?"
+                }
+              ],
+              "nota": "**Qué** asks; **que** echoes."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Que te hayas ganado la lotería?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Que te ganaste la lotería?"
+                }
+              ],
+              "nota": "Keep the indicative."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¡que te caes!",
+              "texto": "[[6314|que for warnings]]."
+            },
+            {
+              "forma": "que = because",
+              "texto": "[[6332|que for cause]]."
+            },
+            {
+              "forma": "qué / que",
+              "texto": "[[6675|accents]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "React: _—Renuncié a mi trabajo._",
+              "r": "¿Que renunciaste?",
+              "nota": "Echo with que."
+            },
+            {
+              "p": "Accent or not? _¿___ ya tienes novia?_ (disbelief)",
+              "r": "Que",
+              "nota": "No accent."
+            },
+            {
+              "p": "React: _—Vamos a tener gemelos._",
+              "r": "¿Que van a tener gemelos?",
+              "nota": "Indicative."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6675
+    ],
+    "confunde": [
+      6314
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6186",
+      "kwiziq": true
+    }
+  ]
+}

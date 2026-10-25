@@ -1,0 +1,164 @@
+{
+  "tema": 8216,
+  "slug": "venir-a",
+  "titulo": "Venir a + infinitive: approximation or end of a process",
+  "subtitulo": "Viene a costar unos mil pesos. El tiempo vino a darle la razón.",
+  "foto": "t04.jpg",
+  "regla": "Venir a + infinitive: (1) approximation: viene a costar unos mil pesos (it comes to about...), viene a ser lo mismo (it amounts to the same); (2) end result of a process: el tiempo vino a darle la razón (time ended up proving him right).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "approximation",
+              "texto": "_comes to, more or less, basically_: **viene a costar...**, **viene a decir que...**, **viene a ser lo mismo**."
+            },
+            {
+              "forma": "end of a process",
+              "texto": "_ended up, came to_: **el tiempo vino a darle la razón**, **la pelota vino a parar en mi cara**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Venir** is conjugated; the rest stays infinitive."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **venir a** = it all comes down to..."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Los materiales ==vienen a costar== entre mil y mil quinientos pesos.",
+              "en": "The materials come to about one to one and a half thousand pesos."
+            },
+            {
+              "es": "Entonces ese párrafo ==viene a decir== que...",
+              "en": "So that paragraph is basically saying that..."
+            },
+            {
+              "es": "De una forma o de otra, ==viene a ser== lo mismo.",
+              "en": "One way or another, it amounts to the same thing."
+            },
+            {
+              "es": "Todos lo culparon, pero el tiempo ==vino a darle== la razón.",
+              "en": "Everyone blamed him, but time ended up proving him right."
+            },
+            {
+              "es": "¡La pelota ==vino a parar== en mi cara!",
+              "en": "The ball ended up in my face!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "movimiento",
+                  "t": "Vino a verme ayer."
+                },
+                {
+                  "v": "perífrasis",
+                  "t": "Viene a costar unos mil pesos."
+                }
+              ],
+              "nota": "Literal _came to see_ vs approximation."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "venir + gerund",
+              "texto": "[[9104|venir + gerund]]."
+            },
+            {
+              "forma": "ir + gerund",
+              "texto": "[[6769|ir + gerund]]."
+            },
+            {
+              "forma": "llevar + gerund",
+              "texto": "[[7176|llevar for duration]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Approximation: _It comes to about 200 pesos._",
+              "r": "Viene a costar unos 200 pesos.",
+              "nota": "venir a."
+            },
+            {
+              "p": "In Spanish: _It amounts to the same thing._",
+              "r": "Viene a ser lo mismo.",
+              "nota": "Fixed phrase."
+            },
+            {
+              "p": "End result: _The keys ended up under the bed._",
+              "r": "Las llaves vinieron a parar debajo de la cama.",
+              "nota": "venir a parar."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6769
+    ],
+    "confunde": [
+      9104
+    ],
+    "sigue": [
+      9104
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8216",
+      "kwiziq": true
+    }
+  ]
+}

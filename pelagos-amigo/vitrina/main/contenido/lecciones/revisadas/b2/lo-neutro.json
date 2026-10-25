@@ -1,0 +1,203 @@
+{
+  "tema": 8392,
+  "slug": "lo-neutro",
+  "titulo": "Neuter lo to refer to a clause, verb, adjective or adverb",
+  "subtitulo": "—¿Estás cansada? —Sí, lo estoy.",
+  "foto": "t08.jpg",
+  "regla": "Lo can stand for a whole idea, an action, or an adjective already mentioned: Tenías que disculparte pero no lo hiciste. —¿Es guapa? —Sí, lo es. It never changes (never la / los), and it's required where English drops it.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Lo** can replace something already said that isn't a specific noun:"
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "a clause / idea",
+              "texto": "**¿Lo recordarás?** (= that grandpa's pill is at 12)"
+            },
+            {
+              "forma": "an action",
+              "texto": "**Tenías que disculparte, pero no lo hiciste.**"
+            },
+            {
+              "forma": "an adjective or adverb with ser / estar / parecer",
+              "texto": "**No parece contento, pero lo está.** **—¿Estás bien? —Sí, lo estoy.**"
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Lo** never changes, even for a feminine or plural adjective: **—¿Es guapa? —Sí, lo es.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "It's **required**: English says _Yes, I am_; Spanish needs **sí, lo estoy**, or simply **sí**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **lo** = _it, so, that_, standing in for anything that isn't a thing."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Tenías que disculparte, pero no ==lo== hiciste.",
+              "en": "You were supposed to apologize, but you didn't."
+            },
+            {
+              "es": "Sabes que la pastilla del abuelo es a las doce. ¿==Lo== vas a recordar?",
+              "en": "You know grandpa's pill is at twelve. Will you remember?"
+            },
+            {
+              "es": "No parece muy contento, pero yo sé que ==lo== está.",
+              "en": "He doesn't look very happy, but I know he is."
+            },
+            {
+              "es": "—¿Estás bien, mi amor? —Sí, ==lo== estoy, ma.",
+              "en": "—Are you OK, honey? —Yes, I am, Mom."
+            },
+            {
+              "es": "—Dicen que la chava es muy guapa. —No, no ==lo== es.",
+              "en": "—They say the girl is really pretty. —No, she isn't."
+            },
+            {
+              "es": "—¿Son hermanos? —Sí, ==lo== son.",
+              "en": "—Are they siblings? —Yes, they are."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "—¿Es guapa? —Sí, la es."
+                },
+                {
+                  "v": "bien",
+                  "t": "—¿Es guapa? —Sí, lo es."
+                }
+              ],
+              "nota": "Always **lo**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "—¿Están listos? —Sí, los estamos."
+                },
+                {
+                  "v": "bien",
+                  "t": "—¿Están listos? —Sí, lo estamos."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No parece cansado, pero está."
+                },
+                {
+                  "v": "bien",
+                  "t": "No parece cansado, pero lo está."
+                }
+              ],
+              "nota": "Don't drop **lo**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "lo que",
+              "texto": "[[5087|lo que]]."
+            },
+            {
+              "forma": "lo bien que",
+              "texto": "[[7089|lo + adjective + que]]."
+            },
+            {
+              "forma": "eso, ello",
+              "texto": "[[7424|ello vs eso]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Reply: _—¿Estás cansado? —Yes, I am._",
+              "r": "Sí, lo estoy.",
+              "nota": "lo + estar."
+            },
+            {
+              "p": "Reply: _—¿Es difícil? —No, it isn't._",
+              "r": "No, no lo es.",
+              "nota": "lo + ser."
+            },
+            {
+              "p": "In Spanish: _I promised to call, and I did (it)._",
+              "r": "Prometí llamar y lo hice.",
+              "nota": "lo = the action."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5121
+    ],
+    "confunde": [
+      7424
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8392",
+      "kwiziq": true
+    }
+  ]
+}

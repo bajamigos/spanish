@@ -1,0 +1,193 @@
+{
+  "tema": 5102,
+  "slug": "hay",
+  "titulo": "Hay = there is / there are",
+  "subtitulo": "«Hay olas. Hay una playa.»",
+  "foto": "t04.jpg",
+  "regla": "Hay means both there is and there are: it never changes, whether one thing or many follows. It's the impersonal form of haber.",
+  "comparada_kwiziq": "2026-10-17",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Hay** = _there is_ **and** _there are_. One form for everything."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "hay",
+            "+",
+            "un / una / number / mucho… / plural noun"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It's a special impersonal form of **haber**, so it never agrees with what follows."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Negative: **no hay**. Question: **¿Hay…?** (_Is there…? / Are there…?_)."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Hay== una alberca en el hotel.",
+              "en": "There's a pool at the hotel."
+            },
+            {
+              "es": "Hoy ==hay== muchas olas en Playas.",
+              "en": "There are lots of waves at Playas today."
+            },
+            {
+              "es": "==Hay== tres tacos en el plato.",
+              "en": "There are three tacos on the plate."
+            },
+            {
+              "es": "¿==Hay== leche en el refri?",
+              "en": "Is there milk in the fridge?"
+            },
+            {
+              "es": "No ==hay== mucha gente en el gimnasio.",
+              "en": "There aren't many people at the gym."
+            },
+            {
+              "es": "En mi jardín ==hay== tomates y chiles.",
+              "en": "There are tomatoes and chiles in my garden."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Están muchas olas hoy."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hay muchas olas hoy."
+                }
+              ],
+              "nota": "_There are_ = **hay**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es una alberca aquí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hay una alberca aquí."
+                }
+              ],
+              "nota": "_There is_ = **hay**, not **es**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hay la playa cerca."
+                },
+                {
+                  "v": "bien",
+                  "t": "La playa está cerca."
+                }
+              ],
+              "nota": "Not **hay el / la**: for a specific thing use **está**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hay vs está",
+              "texto": "Which one when: [[7036|hay vs está]]."
+            },
+            {
+              "forma": "hay un / una",
+              "texto": "The articles after hay: [[5104|un, una]]."
+            },
+            {
+              "forma": "he, has, ha… hay",
+              "texto": "The verb behind it: [[5773|haber in the present]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _There are two dogs._",
+              "r": "Hay dos perros.",
+              "nota": "hay for plural too."
+            },
+            {
+              "p": "In Spanish: _Is there coffee?_",
+              "r": "¿Hay café?",
+              "nota": "¿Hay…?"
+            },
+            {
+              "p": "Fix it: _Son muchos carros aquí._",
+              "r": "Hay muchos carros aquí.",
+              "nota": "there are = hay."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5104
+    ],
+    "confunde": [
+      7036
+    ],
+    "sigue": [
+      5773
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5102",
+      "kwiziq": true
+    }
+  ]
+}

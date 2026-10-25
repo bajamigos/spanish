@@ -1,0 +1,209 @@
+{
+  "tema": 5809,
+  "slug": "entiendo-entiendes-presente-entender",
+  "titulo": "Entender in the present",
+  "subtitulo": "No entiendo la pregunta.",
+  "foto": "t07.jpg",
+  "regla": "Entender (to understand) changes the last e of the stem to ie in every form except nosotros: entiendo, entiendes, entiende, entendemos, entienden.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Entender** (_to understand_) is a stem-changing verb: the **second e** (en-**te**n-der) becomes **ie**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Nosotros** keeps the e: **entendemos**. The endings are regular -er endings."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "entender"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**entiendo**"
+            ],
+            [
+              "tú",
+              "**entiendes**"
+            ],
+            [
+              "él, ella, usted",
+              "**entiende**"
+            ],
+            [
+              "nosotros",
+              "entendemos"
+            ],
+            [
+              "ellos, ustedes",
+              "**entienden**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the change happens where the stress falls: en-**TIEN**-do, but en-ten-**DE**-mos."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No ==entiendo== la pregunta.",
+              "en": "I don't understand the question."
+            },
+            {
+              "es": "¿Me ==entiendes==?",
+              "en": "Do you understand me?"
+            },
+            {
+              "es": "Mi perro ==entiende== español e inglés.",
+              "en": "My dog understands Spanish and English."
+            },
+            {
+              "es": "==Entendemos== las reglas del jiu-jitsu.",
+              "en": "We understand the rules of jiu-jitsu."
+            },
+            {
+              "es": "Mis papás no ==entienden== mi trabajo.",
+              "en": "My parents don't understand my job."
+            },
+            {
+              "es": "Ah, ya ==entiendo==.",
+              "en": "Oh, now I get it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo no entendo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo no entiendo."
+                }
+              ],
+              "nota": "e → ie."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros entiendemos todo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros entendemos todo."
+                }
+              ],
+              "nota": "No change in nosotros."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No entiendo a ti."
+                },
+                {
+                  "v": "bien",
+                  "t": "No te entiendo."
+                }
+              ],
+              "nota": "Use the pronoun **te** before the verb."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "pierdo, quiero",
+              "texto": "The same e → ie pattern: [[5812|-er verbs with e > ie]], [[5774|querer]]."
+            },
+            {
+              "forma": "pienso",
+              "texto": "The -ar version: [[5811|-ar verbs with e > ie]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I don't understand the menu._",
+              "r": "No entiendo el menú.",
+              "nota": "yo → entiendo."
+            },
+            {
+              "p": "Fix it: _Ellos no entenden._",
+              "r": "Ellos no entienden.",
+              "nota": "e → ie."
+            },
+            {
+              "p": "In Spanish: _We understand Spanish._",
+              "r": "Entendemos español.",
+              "nota": "nosotros keeps the e."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5812
+    ],
+    "confunde": [],
+    "sigue": [
+      5774,
+      5811
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5809",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "tema": 7082,
+  "slug": "quien-con-y-sin-acento",
+  "titulo": "Quién vs quien (with and without an accent)",
+  "subtitulo": "¿Quién llamó? / Mi tío, quien trabaja mucho…",
+  "foto": "t05.jpg",
+  "regla": "Quién / quiénes (accent) asks a question, direct or indirect: ¿Quién viene? No sé quién viene. Quien / quienes (no accent) is a relative: mi tío, quien vive aquí; quien estudia aprueba.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Both translate as **who**, but they do different jobs."
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "quién / quiénes",
+              "texto": "**Question word**: in direct questions, in indirect questions (**no sé quién...**) and exclamations."
+            },
+            {
+              "forma": "quien / quienes",
+              "texto": "**Relative**: it links a clause to a person, or means _whoever, those who_."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Test: if you can swap _who_ for _which person_ and it still makes sense, write **quién** with an accent."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the accent is a question mark in disguise."
+        }
+      ]
+    },
+    {
+      "id": "con-acento",
+      "titulo": "Quién (with accent)",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿==Quién== quiere un chocolate caliente?",
+              "en": "Who wants a hot chocolate?"
+            },
+            {
+              "es": "No sé en ==quién== confiar.",
+              "en": "I don't know who to trust."
+            },
+            {
+              "es": "No me dijo ==quién== la había llamado.",
+              "en": "She didn't tell me who had called her."
+            },
+            {
+              "es": "Hay muchos candidatos. ¿==Quiénes== son los mejores?",
+              "en": "There are lots of candidates. Who are the best ones?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sin-acento",
+      "titulo": "Quien (no accent)",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi tío, ==quien== siempre ha trabajado muy duro, tiene varias empresas.",
+              "en": "My uncle, who has always worked very hard, owns several companies."
+            },
+            {
+              "es": "Esa chava, con ==quien== salí el mes pasado, tiene novio nuevo.",
+              "en": "That girl, who I went out with last month, has a new boyfriend."
+            },
+            {
+              "es": "==Quien== estudia mucho saca buenas calificaciones.",
+              "en": "Whoever studies a lot gets good grades."
+            },
+            {
+              "es": "Mis hermanos, ==quienes== son muy flojos, nunca quieren caminar al centro.",
+              "en": "My brothers, who are really lazy, never want to walk downtown."
+            },
+            {
+              "es": "Aplaudimos mucho a ==quienes== cantaron.",
+              "en": "We clapped a lot for those who sang."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "prueba",
+      "titulo": "The which person test",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "tiene sentido",
+                  "t": "¿Quién quiere chocolate? → Which person wants chocolate?"
+                },
+                {
+                  "v": "no tiene sentido",
+                  "t": "Quien estudia aprueba. → Which person studies passes?"
+                }
+              ],
+              "nota": "The first one takes the accent; the second doesn't."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Quien es?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Quién es?"
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No sé quien es."
+                },
+                {
+                  "v": "bien",
+                  "t": "No sé quién es."
+                }
+              ],
+              "nota": "Indirect question: still an accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mi prima, quién es doctora, ..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mi prima, quien es doctora, ..."
+                }
+              ],
+              "nota": "Relative: no accent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¿con quién?",
+              "texto": "[[5058|preposition + quién]]."
+            },
+            {
+              "forma": "que, el cual, quien",
+              "texto": "[[5154|relative pronouns]]."
+            },
+            {
+              "forma": "qué / que",
+              "texto": "The same idea: [[6675|qué vs que]], [[6964|dónde vs donde]], [[6673|cómo vs como]], [[6977|cuándo vs cuando]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Accent or not? _No sé ___ rompió el vaso._",
+              "r": "quién",
+              "nota": "Indirect question."
+            },
+            {
+              "p": "Accent or not? ____ mucho abarca, poco aprieta._",
+              "r": "Quien",
+              "nota": "Whoever: no accent."
+            },
+            {
+              "p": "Accent or not? _Mis abuelos, ___ viven en Puebla, vienen mañana._",
+              "r": "quienes",
+              "nota": "Relative."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5154
+    ],
+    "confunde": [
+      5154
+    ],
+    "sigue": [
+      5058
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7082",
+      "kwiziq": true
+    }
+  ]
+}

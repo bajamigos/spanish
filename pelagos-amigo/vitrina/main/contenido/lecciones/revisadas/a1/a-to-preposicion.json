@@ -1,0 +1,189 @@
+{
+  "tema": 7896,
+  "slug": "a-to-preposicion",
+  "titulo": "A = to",
+  "subtitulo": "Voy a la playa.",
+  "foto": "t01.jpg",
+  "regla": "A means to: it marks where you're going (voy a la playa), the clock time something happens (a las tres) and the person who receives something (le doy el libro a Ana). A + el contracts to al.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**A** = _to_ with movement verbs: **ir a**, **llegar a**, **venir a**: **Voy a Rosarito.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**A** + **el** = **al**: **Voy al gimnasio.** No contraction with la, los, las: **a la**, **a los**, **a las**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**A las** + hour = _at_ a clock time: **a las siete**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**A** also marks who receives something: **Le escribo a mi hermano.**"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mañana voy ==a la== playa.",
+              "en": "Tomorrow I'm going to the beach."
+            },
+            {
+              "es": "Llegamos ==al== gimnasio temprano.",
+              "en": "We get to the gym early."
+            },
+            {
+              "es": "¿Vienes ==a== mi casa?",
+              "en": "Are you coming to my house?"
+            },
+            {
+              "es": "La clase empieza ==a las== seis.",
+              "en": "Class starts at six."
+            },
+            {
+              "es": "Le doy el regalo ==a== Ana.",
+              "en": "I give the gift to Ana."
+            },
+            {
+              "es": "Mis primos vienen ==a== Tijuana.",
+              "en": "My cousins are coming to Tijuana."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Voy a el mercado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Voy al mercado."
+                }
+              ],
+              "nota": "**a + el = al**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Voy en la playa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Voy a la playa."
+                }
+              ],
+              "nota": "Going somewhere: **a**, not **en**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Vamos al Tijuana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Vamos a Tijuana."
+                }
+              ],
+              "nota": "Cities take no article, so no **al**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "al, del",
+              "texto": "The contractions: [[5090|al and del]]."
+            },
+            {
+              "forma": "a las tres",
+              "texto": "Clock times: [[6665|a la / a las + time]]."
+            },
+            {
+              "forma": "en la playa",
+              "texto": "Being somewhere: [[7919|en]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I'm going to the beach._",
+              "r": "Voy a la playa.",
+              "nota": "a la."
+            },
+            {
+              "p": "In Spanish: _We arrive at the gym at seven._",
+              "r": "Llegamos al gimnasio a las siete.",
+              "nota": "al + a las."
+            },
+            {
+              "p": "Fix it: _Voy a el mercado._",
+              "r": "Voy al mercado.",
+              "nota": "a + el = al."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5090
+    ],
+    "confunde": [
+      7919
+    ],
+    "sigue": [
+      6665
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7896",
+      "kwiziq": true
+    }
+  ]
+}

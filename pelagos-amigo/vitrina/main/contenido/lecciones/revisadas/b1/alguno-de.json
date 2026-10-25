@@ -1,0 +1,207 @@
+{
+  "tema": 8699,
+  "slug": "alguno-de",
+  "titulo": "Alguno / alguna / algunos / algunas de for one of, some of",
+  "subtitulo": "Alguno de mis amigos, algunas de ellas: part of a group.",
+  "foto": "t06.jpg",
+  "regla": "Alguno / alguna / algunos / algunas + de + noun or pronoun = one of / some of. Singular = one (not specific); plural = some.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To talk about **part of a group**, _one of_ or _some of_, use **alguno / alguna / algunos / algunas** + **de** + a noun or pronoun."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**alguno / alguna / algunos / algunas**",
+            "**de**",
+            "noun / pronoun"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Singular** refers to **one**: **alguna de mis compañeras** = one of them, not specific. **Plural** refers to **some**: **algunas de mis compañeras**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Una de mis compañeras** also works, but it usually points to one in particular; **alguna** is vaguer."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It's often followed by a possessive (**algunos de mis amigos**) or a pronoun (**algunos de ellos**). Before **de**, **alguno** keeps its full form: **alguno de**, never **algún de**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **de** opens the bag; **alguno** pulls one out, **algunos** a handful."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿Te gusta ==alguno de== mis tenis?",
+              "en": "Do you like any of my sneakers?"
+            },
+            {
+              "es": "Me gustan casi todas tus camisas, pero ==algunas de== ellas son un poco simples.",
+              "en": "I like almost all your shirts, but some of them are a bit plain."
+            },
+            {
+              "es": "¿==Alguna de== tus alumnas te regaló algo?",
+              "en": "Did any of your students give you something?"
+            },
+            {
+              "es": "==Algunas de== nuestras compañeras son un poco groseras.",
+              "en": "Some of our coworkers are a bit rude."
+            },
+            {
+              "es": "==Alguna de== nuestras compañeras es un poco grosera.",
+              "en": "One of our coworkers is a bit rude."
+            },
+            {
+              "es": "==Algunos de== los chavos del gym van a surfear.",
+              "en": "Some of the guys from the gym are going surfing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Algún de mis amigos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Alguno de mis amigos."
+                }
+              ],
+              "nota": "Before **de**, full form."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Algunos de mis amigas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Algunas de mis amigas."
+                }
+              ],
+              "nota": "It agrees with the group."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Alguna de mis amigas son groseras."
+                },
+                {
+                  "v": "bien",
+                  "t": "Alguna de mis amigas es grosera."
+                }
+              ],
+              "nota": "Singular **alguna** takes a singular verb."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "algún amigo",
+              "texto": "Before a noun: [[6136|algún]]."
+            },
+            {
+              "forma": "alguno, ninguno",
+              "texto": "As pronouns: [[6462|alguno, alguna, algunos]]."
+            },
+            {
+              "forma": "unos cuantos",
+              "texto": "_A few_: [[7509|unos cuantos]]."
+            },
+            {
+              "forma": "un amigo mío",
+              "texto": "Possessives: [[8388|long possessives]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Some of my friends surf._",
+              "r": "Algunos de mis amigos surfean.",
+              "nota": "algunos de + possessive."
+            },
+            {
+              "p": "In Spanish: _Do you know any of them?_ (ellas)",
+              "r": "¿Conoces a alguna de ellas?",
+              "nota": "alguna de ellas."
+            },
+            {
+              "p": "Fix it: **Algún de ustedes tiene la llave?**",
+              "r": "¿Alguno de ustedes tiene la llave?",
+              "nota": "Full form before **de**."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6136,
+      6462
+    ],
+    "confunde": [
+      6136
+    ],
+    "sigue": [
+      7509,
+      8388
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8699",
+      "kwiziq": true
+    }
+  ]
+}

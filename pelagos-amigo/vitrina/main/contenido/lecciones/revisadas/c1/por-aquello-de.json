@@ -1,0 +1,181 @@
+{
+  "tema": 8617,
+  "slug": "por-aquello-de",
+  "titulo": "Por eso de / por aquello de = because of, seeing as",
+  "subtitulo": "Me llevé suéter por aquello de las dudas.",
+  "foto": "t04.jpg",
+  "regla": "Por eso de / por aquello de + noun, infinitive or que + clause gives a reason in a colloquial way: because of, seeing as, just in case: por aquello de que hay descuentos. Mexico's classic: por aquello de las dudas = just in case.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "por eso de / por aquello de",
+            "+ noun / infinitive / que + clause"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "A colloquial way to give a **cause or motive**: _because of, seeing as, for the sake of_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Eso** and **aquello** are interchangeable."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Without **eso / aquello de**, it's just **por** + cause, same meaning but less colloquial."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Mexican classic: **por aquello de las dudas** = _just in case_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **por aquello de...** = you know, because of that thing."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mis hijos no fueron a la escuela el lunes ==por eso de== la fumigación.",
+              "en": "My kids didn't go to school Monday because of the fumigation thing."
+            },
+            {
+              "es": "Nunca me metí en sus pleitos ==por aquello de== no quedar mal con ninguno.",
+              "en": "I never got involved in their fights so I wouldn't fall out with either of them."
+            },
+            {
+              "es": "==Por aquello de== la amistad, tomémonos otra.",
+              "en": "For friendship's sake, let's have another one."
+            },
+            {
+              "es": "Voy a ir a ese súper ==por aquello de que== tienen buenos descuentos.",
+              "en": "I'm going to that supermarket since they have great discounts."
+            },
+            {
+              "es": "Me llevé un suéter ==por aquello de las dudas==.",
+              "en": "I took a sweater just in case."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "por aquello que tienen descuentos"
+                },
+                {
+                  "v": "bien",
+                  "t": "por aquello de que tienen descuentos"
+                }
+              ],
+              "nota": "Keep **de**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "por aquello de las duda"
+                },
+                {
+                  "v": "bien",
+                  "t": "por aquello de las dudas"
+                }
+              ],
+              "nota": "Fixed plural."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "por + infinitive",
+              "texto": "[[7845|por for cause]]."
+            },
+            {
+              "forma": "lo de",
+              "texto": "[[6182|lo de que]]."
+            },
+            {
+              "forma": "ya que",
+              "texto": "[[7245|ya que, puesto que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Mexican phrase: _just in case_",
+              "r": "por aquello de las dudas",
+              "nota": "Fixed."
+            },
+            {
+              "p": "In Spanish (colloquial): _because of the traffic thing_",
+              "r": "por eso del tráfico / por aquello del tráfico",
+              "nota": "de + el = del."
+            },
+            {
+              "p": "Complete: _Llegué temprano por aquello ___ que hay mucha gente._",
+              "r": "de",
+              "nota": "de que + clause."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7845
+    ],
+    "confunde": [
+      6182
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8617",
+      "kwiziq": true
+    }
+  ]
+}

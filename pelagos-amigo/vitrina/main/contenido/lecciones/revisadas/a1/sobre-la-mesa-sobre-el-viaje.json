@@ -1,0 +1,175 @@
+{
+  "tema": 8787,
+  "slug": "sobre-la-mesa-sobre-el-viaje",
+  "titulo": "The preposition sobre (on, above, about)",
+  "subtitulo": "La tabla está sobre el carro. Hablamos sobre el viaje.",
+  "foto": "t04.jpg",
+  "regla": "Sobre means on / on top of (touching), above / over (not touching), and about (a topic).",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Sobre** + noun = **on / on top of**: something rests on a surface. Same as **encima de**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Sobre** can also mean **above / over**, with no contact: **sobre el mar**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With topics, **sobre** = **about**: **un libro sobre tiburones**. **De** and **acerca de** work too."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **sobre** never takes **de** after it: **sobre la mesa**, but **encima de la mesa**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "La tabla está ==sobre== el carro.",
+              "en": "The board is on the car."
+            },
+            {
+              "es": "Dejé las llaves ==sobre== la mesa.",
+              "en": "I left the keys on the table."
+            },
+            {
+              "es": "Las gaviotas vuelan ==sobre== el mar.",
+              "en": "The seagulls fly over the sea."
+            },
+            {
+              "es": "Hay un puente ==sobre== el río.",
+              "en": "There's a bridge over the river."
+            },
+            {
+              "es": "Vimos un documental ==sobre== los tiburones.",
+              "en": "We watched a documentary about sharks."
+            },
+            {
+              "es": "Mi maestro habla ==sobre== jiu-jitsu todo el día.",
+              "en": "My teacher talks about jiu-jitsu all day."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El gato está sobre de la mesa."
+                },
+                {
+                  "v": "bien",
+                  "t": "El gato está sobre la mesa."
+                }
+              ],
+              "nota": "No **de** after **sobre** (but **encima de**)."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Soñé sobre ti."
+                },
+                {
+                  "v": "bien",
+                  "t": "Soñé contigo."
+                }
+              ],
+              "nota": "**Soñar** takes **con**, not **sobre**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "en la mesa",
+              "texto": "**En** also means _on_: [[7919|the preposition en]]."
+            },
+            {
+              "forma": "entre",
+              "texto": "Between two things: [[9125|the preposition entre]]."
+            },
+            {
+              "forma": "debajo de",
+              "texto": "The opposite, _under_: [[9954|bajo, abajo, debajo de]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish, with sobre: _The phone is on the table._",
+              "r": "El teléfono está sobre la mesa.",
+              "nota": "sobre, no de."
+            },
+            {
+              "p": "In Spanish, with sobre: _a book about the sea_",
+              "r": "un libro sobre el mar",
+              "nota": "sobre = about."
+            },
+            {
+              "p": "Fix it: _El avión vuela sobre de la ciudad._",
+              "r": "El avión vuela sobre la ciudad.",
+              "nota": "Drop de."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      7919
+    ],
+    "sigue": [
+      9125,
+      9954
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8787",
+      "kwiziq": true
+    }
+  ]
+}

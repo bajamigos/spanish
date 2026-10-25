@@ -1,0 +1,213 @@
+{
+  "tema": 5304,
+  "slug": "tengo-tienes-tiene-tener-presente",
+  "titulo": "Tener in the present",
+  "subtitulo": "Tengo una tabla nueva. ¿Tienes tiempo?",
+  "foto": "t10.jpg",
+  "regla": "Tener (to have) goes tengo, tienes, tiene, tenemos, tienen: yo ends in -go, and e changes to ie except in nosotros.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Tener** (_to have_) has two changes: **yo** ends in **-go**, and the **e** becomes **ie** in tú, él and ellos."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "tener"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**tengo**"
+            ],
+            [
+              "tú",
+              "**tienes**"
+            ],
+            [
+              "él, ella, usted",
+              "**tiene**"
+            ],
+            [
+              "nosotros",
+              "tenemos"
+            ],
+            [
+              "ellos, ustedes",
+              "**tienen**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Nosotros** stays regular: **tenemos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Spanish uses tener where English uses _to be_: **tengo hambre** (_I'm hungry_), **tengo 30 años** (_I'm 30_)."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Tengo== dos tablas de surf.",
+              "en": "I have two surfboards."
+            },
+            {
+              "es": "¿==Tienes== tiempo hoy?",
+              "en": "Do you have time today?"
+            },
+            {
+              "es": "Mi hermana ==tiene== veinte años.",
+              "en": "My sister is twenty."
+            },
+            {
+              "es": "==Tenemos== clase de jiu-jitsu a las seis.",
+              "en": "We have jiu-jitsu class at six."
+            },
+            {
+              "es": "Ellos ==tienen== un huerto en la azotea.",
+              "en": "They have a vegetable garden on the roof."
+            },
+            {
+              "es": "¿Usted ==tiene== cambio?",
+              "en": "Do you have change?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo tieno un perro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo tengo un perro."
+                }
+              ],
+              "nota": "yo is **tengo**, with g."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros tienemos hambre."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros tenemos hambre."
+                }
+              ],
+              "nota": "No ie in nosotros."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Soy treinta años."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tengo treinta años."
+                }
+              ],
+              "nota": "Age uses **tener**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tengo 30 años",
+              "texto": "Age: [[5099|tener + años]]."
+            },
+            {
+              "forma": "tengo que",
+              "texto": "Obligation: [[5106|tener que]]."
+            },
+            {
+              "forma": "vengo, vienes",
+              "texto": "Same pattern: [[5483|venir]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We have a dog._",
+              "r": "Tenemos un perro.",
+              "nota": "No ie in nosotros."
+            },
+            {
+              "p": "Fix it: _Yo teno frío._",
+              "r": "Yo tengo frío.",
+              "nota": "tengo for yo."
+            },
+            {
+              "p": "In Spanish: _She is 25._",
+              "r": "Ella tiene veinticinco años.",
+              "nota": "Age with tener."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      5483
+    ],
+    "sigue": [
+      5099,
+      5106
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5304",
+      "kwiziq": true
+    }
+  ]
+}

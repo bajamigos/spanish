@@ -1,0 +1,218 @@
+{
+  "tema": 5157,
+  "slug": "futuro-haber",
+  "titulo": "Conjugate haber in the simple future",
+  "subtitulo": "Habrá: there will be. And habré, habrás… for the future perfect.",
+  "foto": "t07.jpg",
+  "regla": "Haber has the future stem habr-: habré, habrás, habrá, habremos, habrán. Habrá alone means there will be.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Haber** is irregular in the simple future because its stem is **habr-**. The endings are the regular future ones."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**habr-**",
+            "**-é, -ás, -á, -emos, -án**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "haber"
+          ],
+          "filas": [
+            [
+              "yo",
+              "habré"
+            ],
+            [
+              "tú",
+              "habrás"
+            ],
+            [
+              "él, ella, usted",
+              "habrá"
+            ],
+            [
+              "nosotros",
+              "habremos"
+            ],
+            [
+              "ustedes, ellos",
+              "habrán"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Used **on its own**, only **habrá** appears: it's the future of **hay** and means _there will be_. It never goes plural: **habrá tres personas**, not **habrán**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "All the forms are used with a past participle to build the **future perfect**: **habré hecho** (_I will have done_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **hay** today, **habrá** tomorrow. One word for one thing or a hundred."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Habrá== inundaciones en invierno.",
+              "en": "There will be floods in winter."
+            },
+            {
+              "es": "==Habrá== un profe nuevo en septiembre.",
+              "en": "There will be a new teacher in September."
+            },
+            {
+              "es": "¿==Habrá== banda en la boda?",
+              "en": "Will there be a band at the wedding?"
+            },
+            {
+              "es": "==Habrá== tres hombres y dos mujeres en la junta.",
+              "en": "There will be three men and two women at the meeting."
+            },
+            {
+              "es": "Mañana ==habrá== buenas olas en Baja Malibú.",
+              "en": "There will be good waves at Baja Malibu tomorrow."
+            },
+            {
+              "es": "Para las seis, yo ==habré hecho== la comida.",
+              "en": "By six, I will have made lunch."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Habrán muchas olas mañana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Habrá muchas olas mañana."
+                }
+              ],
+              "nota": "_There will be_ is always **habrá**, singular."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Haberá una fiesta."
+                },
+                {
+                  "v": "bien",
+                  "t": "Habrá una fiesta."
+                }
+              ],
+              "nota": "The stem is **habr-**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "habrá",
+              "texto": "Predictions with the future: [[5162|probability and predictions]]."
+            },
+            {
+              "forma": "habría",
+              "texto": "The conditional: [[5188|haber in the conditional]]."
+            },
+            {
+              "forma": "habré hecho",
+              "texto": "The future perfect: [[5066|irregular verbs in the future perfect]]."
+            },
+            {
+              "forma": "hay",
+              "texto": "The present: [[7036|hay and está]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _There will be a lot of people at the beach._",
+              "r": "Habrá mucha gente en la playa.",
+              "nota": "**Habrá**, singular."
+            },
+            {
+              "p": "Fix it: **Habrán dos clases mañana.**",
+              "r": "Habrá dos clases mañana.",
+              "nota": "Always singular."
+            },
+            {
+              "p": "In Spanish: _Will there be tacos?_",
+              "r": "¿Habrá tacos?",
+              "nota": "habrá."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7036,
+      5155
+    ],
+    "confunde": [
+      5188
+    ],
+    "sigue": [
+      5162,
+      5066
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5157",
+      "kwiziq": true
+    }
+  ]
+}

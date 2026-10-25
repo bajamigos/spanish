@@ -1,0 +1,218 @@
+{
+  "tema": 5574,
+  "slug": "presente-e-ie-ir-siento",
+  "titulo": "-ir verbs with e > ie in the present",
+  "subtitulo": "Lo siento mucho.",
+  "foto": "t03.jpg",
+  "regla": "Some -ir verbs change the stressed e of the stem to ie in the present, in every person except nosotros: siento, sientes, siente, sentimos, sienten.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Some -ir verbs change **e → ie** in the stem: **sentir**, **preferir**, **mentir**, **divertirse**, **sugerir**, **convertir**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The change happens in **every person except nosotros**: **prefiero**, but **preferimos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The endings are the regular -ir ones: **-o, -es, -e, -imos, -en**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "sentir",
+            "preferir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "siento",
+              "prefiero"
+            ],
+            [
+              "tú",
+              "sientes",
+              "prefieres"
+            ],
+            [
+              "él / ella / usted",
+              "siente",
+              "prefiere"
+            ],
+            [
+              "nosotros",
+              "sentimos",
+              "preferimos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "sienten",
+              "prefieren"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Lo ==siento== mucho.",
+              "en": "I'm very sorry."
+            },
+            {
+              "es": "¿==Prefieres== café o té?",
+              "en": "Do you prefer coffee or tea?"
+            },
+            {
+              "es": "Ella nunca ==miente==.",
+              "en": "She never lies."
+            },
+            {
+              "es": "==Preferimos== la playa.",
+              "en": "We prefer the beach."
+            },
+            {
+              "es": "Ustedes se ==divierten== mucho en el torneo.",
+              "en": "You all have a lot of fun at the tournament."
+            },
+            {
+              "es": "¿Cómo te ==sientes== hoy?",
+              "en": "How do you feel today?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros prefierimos el mar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros preferimos el mar."
+                }
+              ],
+              "nota": "No change in **nosotros**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo sento frío."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo siento frío."
+                }
+              ],
+              "nota": "The stem changes in **yo**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ellos menten mucho."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ellos mienten mucho."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "siento",
+              "texto": "One verb in detail: [[5775|sentir]]."
+            },
+            {
+              "forma": "prefiero",
+              "texto": "Another one: [[5776|preferir]]."
+            },
+            {
+              "forma": "pido, sirvo",
+              "texto": "A different change, e → i: [[5554|-ir verbs with e > i]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I prefer the beach._",
+              "r": "Prefiero la playa.",
+              "nota": "e → ie."
+            },
+            {
+              "p": "In Spanish: _We feel good._",
+              "r": "Nos sentimos bien.",
+              "nota": "nosotros: no change."
+            },
+            {
+              "p": "Fix it: _Él se diverte._",
+              "r": "Él se divierte.",
+              "nota": "e → ie."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      5554
+    ],
+    "sigue": [
+      5775,
+      5776
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5574",
+      "kwiziq": true
+    }
+  ]
+}

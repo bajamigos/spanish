@@ -1,0 +1,235 @@
+{
+  "tema": 9342,
+  "slug": "futuro-progresivo",
+  "titulo": "Forming the future progressive with estar + gerund",
+  "subtitulo": "Estaré + gerund: will be doing.",
+  "foto": "t08.jpg",
+  "regla": "Estar in the simple future (estaré, estarás, estará, estaremos, estarán) + gerund (-ando, -iendo): estaré trabajando.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Every tense has a progressive form for an action that is **ongoing**. The **future progressive** works like English _will be doing_."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**estar** in the simple future",
+            "gerund"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "estar (simple future)"
+          ],
+          "filas": [
+            [
+              "yo",
+              "estaré"
+            ],
+            [
+              "tú",
+              "estarás"
+            ],
+            [
+              "él, ella, usted",
+              "estará"
+            ],
+            [
+              "nosotros",
+              "estaremos"
+            ],
+            [
+              "ustedes, ellos",
+              "estarán"
+            ]
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Verb type",
+            "Gerund"
+          ],
+          "filas": [
+            [
+              "-ar",
+              "-ando (llamando)"
+            ],
+            [
+              "-er, -ir",
+              "-iendo (aprendiendo, viviendo)"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "This pattern works for most regular verbs. Some gerunds are irregular: **leyendo**, **durmiendo**, **diciendo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It's always **estar**, never **ser**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **estaré** + **-ando**: a movie you know will be rolling at a future moment."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Estaré estudiando== horas para ese examen.",
+              "en": "I'll be studying for hours for that exam."
+            },
+            {
+              "es": "Mañana ==estarás haciendo== muchas cosas.",
+              "en": "Tomorrow you'll be doing lots of things."
+            },
+            {
+              "es": "Beto ==estará viendo== a su novia esta semana.",
+              "en": "Beto will be seeing his girlfriend this week."
+            },
+            {
+              "es": "En la junta ==estaremos hablando== de clientes importantes.",
+              "en": "In the meeting we'll be talking about important clients."
+            },
+            {
+              "es": "Ustedes ==estarán disfrutando== de sus vacaciones en Cabo.",
+              "en": "You'll be enjoying your vacation in Cabo."
+            },
+            {
+              "es": "En unos minutos ==estarán preparando== la botana.",
+              "en": "In a few minutes they'll be preparing the snacks."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Seré estudiando."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estaré estudiando."
+                }
+              ],
+              "nota": "Always **estar**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estaremos deciendo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estaremos diciendo."
+                }
+              ],
+              "nota": "Irregular gerund: **diciendo**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "estaré",
+              "texto": "The future of estar works like any regular verb: [[5155|regular verbs in the future]]."
+            },
+            {
+              "forma": "estoy surfeando",
+              "texto": "The present progressive: [[5092|estar + gerund]]."
+            },
+            {
+              "forma": "Estarán dormidos.",
+              "texto": "The future can also guess about now: [[5060|the future for probability]]."
+            },
+            {
+              "forma": "he estado surfeando",
+              "texto": "The present perfect progressive: [[7050|he estado + gerund]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _At eight I'll be surfing._",
+              "r": "A las ocho estaré surfeando.",
+              "nota": "estaré + gerund."
+            },
+            {
+              "p": "**Trabajar**, **nosotros**: Mañana ___ todo el día.",
+              "r": "Mañana estaremos trabajando todo el día.",
+              "nota": "estaremos + trabajando."
+            },
+            {
+              "p": "In Spanish: _They'll be sleeping._",
+              "r": "Estarán durmiendo.",
+              "nota": "Irregular gerund."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5155,
+      5092
+    ],
+    "confunde": [
+      5060
+    ],
+    "sigue": [
+      7050,
+      7051
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9342",
+      "kwiziq": true
+    }
+  ]
+}

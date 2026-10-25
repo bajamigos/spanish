@@ -1,0 +1,235 @@
+{
+  "tema": 5725,
+  "slug": "subjuntivo-presente-gar",
+  "titulo": "Conjugate -gar verbs (g > gu) in the present subjunctive",
+  "subtitulo": "Pagar → pague: the g turns into gu to keep the hard sound.",
+  "foto": "t06.jpg",
+  "regla": "Verbs ending in -gar change g to gu in every form of the present subjunctive: pague, pagues, paguemos.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Verbs ending in **-gar** change the **g** to **gu** in the present subjunctive. It keeps the hard _g_ sound you hear in the infinitive, because **g** before **e** would sound like a _h_."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**-gar** → **-gu-**",
+            "**-e, -es, -e, -emos, -en**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "pagar"
+          ],
+          "filas": [
+            [
+              "yo",
+              "pague"
+            ],
+            [
+              "tú",
+              "pagues"
+            ],
+            [
+              "él, ella, usted",
+              "pague"
+            ],
+            [
+              "nosotros",
+              "paguemos"
+            ],
+            [
+              "ustedes, ellos",
+              "paguen"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The change is in **every form**. Other useful verbs like this: **apagar** → **apague**, **entregar** → **entregue**, **llegar** → **llegue**, **jugar** → **juegue** (it also has its own **u** → **ue** change), **navegar** → **navegue**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the **u** is a silent bodyguard. It stands between **g** and **e** so the **g** stays tough."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No voy a descansar hasta que ==pague== la deuda.",
+              "en": "I won't rest until I pay off the debt."
+            },
+            {
+              "es": "No voy a dejar que ==pagues== todo.",
+              "en": "I'm not going to let you pay for everything."
+            },
+            {
+              "es": "Deja que él ==pague== las cervezas.",
+              "en": "Let him pay for the beers."
+            },
+            {
+              "es": "No habrá vacaciones hasta que ==paguemos== la renta.",
+              "en": "There won't be a vacation until we pay the rent."
+            },
+            {
+              "es": "==Paguen== en esa ventanilla, por favor.",
+              "en": "Pay at that window, please."
+            },
+            {
+              "es": "No ==apagues== la luz del taller.",
+              "en": "Don't turn off the light in the shop."
+            },
+            {
+              "es": "Cuando me ==entreguen== el carro, voy a estar feliz.",
+              "en": "When they hand me the car, I'll be happy."
+            },
+            {
+              "es": "==Juguemos== un rato a las cartas.",
+              "en": "Let's play cards for a while."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero que lleges temprano."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero que llegues temprano."
+                }
+              ],
+              "nota": "Without the **u**, the **g** would sound like an English _h_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es justo que pagen la mitad."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es justo que paguen la mitad."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Jugemos fútbol."
+                },
+                {
+                  "v": "bien",
+                  "t": "Juguemos fútbol."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "pagué",
+              "texto": "The same change in the preterite, only in **yo**: [[5845|-gar verbs in the preterite]]."
+            },
+            {
+              "forma": "busque, empiece",
+              "texto": "The other spelling changes: [[5724|-car]] and [[5726|-zar]]."
+            },
+            {
+              "forma": "Cuando llegues…",
+              "texto": "Very common after [[5062|cuando about the future]]."
+            },
+            {
+              "forma": "juego, jugamos",
+              "texto": "**Jugar** in the present: [[5855|jugar]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "**Llegar** with **ustedes**: Cuando ___, me avisan.",
+              "r": "Cuando lleguen, me avisan.",
+              "nota": "g → gu."
+            },
+            {
+              "p": "In Spanish: _Don't turn off the music._ (tú)",
+              "r": "No apagues la música.",
+              "nota": "apagar → apagues."
+            },
+            {
+              "p": "**Entregar** with **yo**: Es importante que ___ la llave hoy.",
+              "r": "Es importante que entregue la llave hoy.",
+              "nota": "entregar → entregue."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5063,
+      5845
+    ],
+    "confunde": [
+      5724,
+      5726
+    ],
+    "sigue": [
+      5062,
+      9255,
+      5855
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5725",
+      "kwiziq": true
+    }
+  ]
+}

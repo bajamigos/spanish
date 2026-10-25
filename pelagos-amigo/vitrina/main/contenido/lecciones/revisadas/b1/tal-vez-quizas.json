@@ -1,0 +1,206 @@
+{
+  "tema": 5084,
+  "slug": "tal-vez-quizas",
+  "titulo": "Subjunctive or indicative after tal vez and quizás",
+  "subtitulo": "Tal vez vaya / tal vez voy: both work, but not at the end of the sentence.",
+  "foto": "t03.jpg",
+  "regla": "Tal vez, quizás, quizá (maybe) take the indicative or the subjunctive. Present or future doubt: present indicative or subjunctive. At the end of the sentence: only indicative.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Tal vez**, **quizás** and **quizá** mean _maybe, perhaps_. They express probability or doubt, and they can be followed by the **indicative** or the **subjunctive**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The subjunctive usually sounds a bit more doubtful; the indicative a bit more likely. Both are correct."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Time of the doubt",
+            "Indicative",
+            "Subjunctive"
+          ],
+          "filas": [
+            [
+              "present / future",
+              "Tal vez voy al concierto.",
+              "Tal vez vaya al concierto."
+            ],
+            [
+              "past",
+              "Quizá no aprobó. / Quizá no ha aprobado.",
+              "Quizá no haya aprobado. / Quizá no aprobara."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Placement:** if **tal vez** or **quizás** goes at the **end** of the sentence, only the **indicative** is possible: **No aprobó, tal vez.** ✓ **No haya aprobado, tal vez.** ✗"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: maybe-words open the door to both moods, but only from the front."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No sé qué me pasa; quizás ==estoy== un poco nervioso.",
+              "en": "I don't know what's wrong with me; maybe I'm a bit nervous."
+            },
+            {
+              "es": "No sé qué me pasa; quizás ==esté== un poco nervioso.",
+              "en": "I don't know what's wrong with me; maybe I'm a bit nervous."
+            },
+            {
+              "es": "Tal vez ==voy== al concierto hoy.",
+              "en": "I might go to the concert today."
+            },
+            {
+              "es": "Tal vez ==vaya== a la playa mañana.",
+              "en": "I may go to the beach tomorrow."
+            },
+            {
+              "es": "Tal vez ==tengas== gripa.",
+              "en": "Maybe you have the flu."
+            },
+            {
+              "es": "Quizá Beto no ==haya pasado== el examen.",
+              "en": "Maybe Beto didn't pass the exam."
+            },
+            {
+              "es": "Beto no pasó el examen, ==tal vez==.",
+              "en": "Beto didn't pass the exam, maybe."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Llueva, quizás."
+                },
+                {
+                  "v": "bien",
+                  "t": "Va a llover, quizás."
+                }
+              ],
+              "nota": "At the end: only indicative."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tal vez que venga."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tal vez venga."
+                }
+              ],
+              "nota": "No **que** after **tal vez**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "puede que llueva",
+              "texto": "Another _maybe_, always subjunctive: [[7228|puede que]]."
+            },
+            {
+              "forma": "a lo mejor",
+              "texto": "In Mexico, **a lo mejor** (always indicative) is very common: **a lo mejor voy**."
+            },
+            {
+              "forma": "vaya, tenga, esté",
+              "texto": "The forms: [[5231|ir]], [[6000|yo-go]], [[5229|estar]]."
+            },
+            {
+              "forma": "dudo que",
+              "texto": "Doubt with verbs: [[6235|subjunctive for doubt]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Say it two ways: _Maybe I'll go to Rosarito._ (tal vez)",
+              "r": "Tal vez voy a Rosarito. / Tal vez vaya a Rosarito.",
+              "nota": "Both work."
+            },
+            {
+              "p": "Which one is wrong? **Tal vez llueva.** / **Llueva, tal vez.**",
+              "r": "Llueva, tal vez.",
+              "nota": "At the end: only indicative."
+            },
+            {
+              "p": "In Spanish: _Maybe she knows._ (subjunctive)",
+              "r": "Quizás sepa.",
+              "nota": "saber → sepa."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5063,
+      5151
+    ],
+    "confunde": [
+      7228
+    ],
+    "sigue": [
+      6235,
+      5231
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5084",
+      "kwiziq": true
+    }
+  ]
+}

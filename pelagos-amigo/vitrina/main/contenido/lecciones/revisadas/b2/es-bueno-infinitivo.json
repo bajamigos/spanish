@@ -1,0 +1,227 @@
+{
+  "tema": 7428,
+  "slug": "es-bueno-infinitivo",
+  "titulo": "Impersonal statements + infinitive or que + subjunctive",
+  "subtitulo": "Es importante descansar / Es importante que descanses.",
+  "foto": "t08.jpg",
+  "regla": "Es bueno / importante / necesario... can take an infinitive (general statement) or que + subjunctive (with a subject): Es importante dormir bien / Es importante que duermas bien. Never que + infinitive. Facts (es verdad que) only take que + indicative.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Impersonal expressions like **es bueno, es importante, es necesario, es obligatorio, es mejor** can be followed by:"
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "+ infinitive",
+              "texto": "A **general** statement, no subject: **Es importante respetar a los demás.**"
+            },
+            {
+              "forma": "+ que + subjunctive",
+              "texto": "With a **subject**, even a general one like _you_ or _we_: **Es importante que respetes a los demás.**"
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Both often mean the same. But once you add **que**, the verb **must** be in the subjunctive."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Exception**: expressions of truth or certainty (**es verdad que, es cierto que, es obvio que**) don't take an infinitive; they take **que** + **indicative**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: no **que**, no subject, infinitive. **Que** brings in a subject, and the subjunctive with it."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "infinitivo",
+                  "t": "Es bueno ponerse bloqueador en verano."
+                },
+                {
+                  "v": "que + subjuntivo",
+                  "t": "Es bueno que la gente se ponga bloqueador en verano."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "infinitivo",
+                  "t": "Es obligatorio usar traje de baño en esta alberca."
+                },
+                {
+                  "v": "que + subjuntivo",
+                  "t": "Es obligatorio que todos usemos traje de baño en esta alberca."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "infinitivo",
+                  "t": "Es necesario comprar las bebidas antes de la fiesta."
+                },
+                {
+                  "v": "que + subjuntivo",
+                  "t": "Es necesario que compren las bebidas antes de la fiesta."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Facts:"
+        },
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Es verdad que ==tuvieron== mucho éxito en la campaña.",
+              "en": "It's true that they were very successful in the campaign."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es importante que dormir bien."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es importante dormir bien."
+                }
+              ],
+              "nota": "No **que** before an infinitive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es importante que duermes bien."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es importante que duermas bien."
+                }
+              ],
+              "nota": "With **que**: subjunctive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es verdad ser difícil."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es verdad que es difícil."
+                }
+              ],
+              "nota": "Facts: **que** + indicative."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "es necesario que",
+              "texto": "[[6226|impersonal expressions + subjunctive]]."
+            },
+            {
+              "forma": "sería bueno que",
+              "texto": "[[6990|in the conditional]]."
+            },
+            {
+              "forma": "se debe",
+              "texto": "[[6933|se debe / se puede]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "General: _It's necessary to drink water._",
+              "r": "Es necesario tomar agua.",
+              "nota": "Infinitive."
+            },
+            {
+              "p": "With a subject: _It's necessary for you to drink water._ (tú)",
+              "r": "Es necesario que tomes agua.",
+              "nota": "que + subjunctive."
+            },
+            {
+              "p": "Fix it: _Es mejor que salir temprano._",
+              "r": "Es mejor salir temprano. / Es mejor que salgamos temprano.",
+              "nota": "No que + infinitive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6226
+    ],
+    "confunde": [
+      6226
+    ],
+    "sigue": [
+      6990
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7428",
+      "kwiziq": true
+    }
+  ]
+}

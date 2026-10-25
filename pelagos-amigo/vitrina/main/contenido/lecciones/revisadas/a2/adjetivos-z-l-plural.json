@@ -1,0 +1,272 @@
+{
+  "tema": 6057,
+  "slug": "adjetivos-z-l-plural",
+  "titulo": "Plural of adjectives in -z and -l",
+  "subtitulo": "Niños felices, ejercicios fáciles.",
+  "foto": "t02.jpg",
+  "regla": "Adjectives ending in -z or -l have one form for masculine and feminine. In the plural, -z becomes -ces and -l adds -es: feliz → felices, fácil → fáciles.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Adjectives ending in **-z** or **-l** don't change for gender: **un niño feliz**, **una niña feliz**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "To make them plural:"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**-z → -ces**: feliz → **felices**. The **z** turns into **c** before **e**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**-l → -les**: azul → **azules**, fácil → **fáciles**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Singular",
+            "Plural",
+            "Meaning"
+          ],
+          "filas": [
+            [
+              "feliz",
+              "felices",
+              "_happy_"
+            ],
+            [
+              "capaz",
+              "capaces",
+              "_capable_"
+            ],
+            [
+              "veloz",
+              "veloces",
+              "_fast_"
+            ],
+            [
+              "azul",
+              "azules",
+              "_blue_"
+            ],
+            [
+              "genial",
+              "geniales",
+              "_great_"
+            ],
+            [
+              "fácil",
+              "fáciles",
+              "_easy_"
+            ],
+            [
+              "difícil",
+              "difíciles",
+              "_difficult_"
+            ],
+            [
+              "útil",
+              "útiles",
+              "_useful_"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "A written accent stays where it was: **fácil → fáciles**, **útil → útiles**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Exception: **español** does have a feminine: **española, españolas**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mis sobrinos son niños muy ==felices==.",
+              "en": "My nephews are very happy kids."
+            },
+            {
+              "es": "Las olas de hoy están ==geniales==.",
+              "en": "Today's waves are great."
+            },
+            {
+              "es": "Estos ejercicios son ==fáciles==, pero esos son ==difíciles==.",
+              "en": "These exercises are easy, but those are hard."
+            },
+            {
+              "es": "Las mujeres de mi equipo de jiu-jitsu son muy ==capaces==.",
+              "en": "The women on my jiu-jitsu team are very capable."
+            },
+            {
+              "es": "Me compré unas aletas ==azules==.",
+              "en": "I bought myself some blue fins."
+            },
+            {
+              "es": "Los guepardos son animales muy ==veloces==.",
+              "en": "Cheetahs are very fast animals."
+            },
+            {
+              "es": "Estas herramientas de jardín son muy ==útiles==.",
+              "en": "These garden tools are very useful."
+            },
+            {
+              "es": "Las clases de esta semana fueron ==normales==.",
+              "en": "This week's classes were normal."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Las niñas están felizes."
+                },
+                {
+                  "v": "bien",
+                  "t": "Las niñas están felices."
+                }
+              ],
+              "nota": "**-z → -ces**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tengo dos camisas azulas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tengo dos camisas azules."
+                }
+              ],
+              "nota": "No **-a** for feminine: just add **-es**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Son preguntas facils."
+                },
+                {
+                  "v": "bien",
+                  "t": "Son preguntas fáciles."
+                }
+              ],
+              "nota": "**-l** adds **-es**, and the accent stays."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Las plantas son capazas de crecer aquí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Las plantas son capaces de crecer aquí."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "feliz, fácil",
+              "texto": "The singular first: [[6056|adjectives in -z and -l]]."
+            },
+            {
+              "forma": "altos, altas",
+              "texto": "The basic plural: [[6014|regular plural adjectives]]."
+            },
+            {
+              "forma": "la luz, las luces",
+              "texto": "Nouns do the same: [[7084|plural of nouns in -z]]."
+            },
+            {
+              "forma": "felicísimo",
+              "texto": "Taking them further: [[6081|-ísimo with -z, -or, -n]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _happy kids_",
+              "r": "niños felices",
+              "nota": "-z → -ces."
+            },
+            {
+              "p": "In Spanish: _The exercises are easy._",
+              "r": "Los ejercicios son fáciles.",
+              "nota": "Accent stays."
+            },
+            {
+              "p": "Fix it: _Tengo dos tablas azulas._",
+              "r": "Tengo dos tablas azules.",
+              "nota": "No -a: azules."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6056,
+      6014
+    ],
+    "confunde": [
+      7084
+    ],
+    "sigue": [
+      6081
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6057",
+      "kwiziq": true
+    }
+  ]
+}

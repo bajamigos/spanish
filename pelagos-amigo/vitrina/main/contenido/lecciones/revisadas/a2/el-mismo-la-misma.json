@@ -1,0 +1,261 @@
+{
+  "tema": 6981,
+  "slug": "el-mismo-la-misma",
+  "titulo": "El mismo, la misma = the same",
+  "subtitulo": "Vivimos en la misma colonia.",
+  "foto": "t10.jpg",
+  "regla": "The same is el mismo, la misma, los mismos, las mismas + noun, agreeing with the noun; the same as is el mismo... que. The same thing in general is lo mismo.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**The same** = definite article + **mismo**, and both agree with the noun."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "el / la / los / las",
+            "+ mismo/a/os/as +",
+            "noun"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Form",
+            "Example"
+          ],
+          "filas": [
+            [
+              "el mismo",
+              "el mismo carro"
+            ],
+            [
+              "la misma",
+              "la misma playa"
+            ],
+            [
+              "los mismos",
+              "los mismos amigos"
+            ],
+            [
+              "las mismas",
+              "las mismas olas"
+            ],
+            [
+              "lo mismo",
+              "the same thing (no noun)"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Without a noun, it works as a pronoun: **Es la misma.** = _It's the same one._"
+        },
+        {
+          "tipo": "texto",
+          "texto": "_The same as_ = **el mismo... que**: **tengo la misma tabla que tú**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "For _the same thing_ in general, use neuter **lo mismo**: **siempre pido lo mismo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**A + el mismo = al mismo**: **al mismo tiempo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **mismo** is a mirror. It copies the article's gender and number."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Vivimos en ==la misma== colonia.",
+              "en": "We live in the same neighborhood."
+            },
+            {
+              "es": "Tenemos ==el mismo== maestro de jiu-jitsu.",
+              "en": "We have the same jiu-jitsu teacher."
+            },
+            {
+              "es": "Mi hermano y yo tenemos ==los mismos== ojos.",
+              "en": "My brother and I have the same eyes."
+            },
+            {
+              "es": "Usas ==las mismas== quillas que yo.",
+              "en": "You use the same fins as me."
+            },
+            {
+              "es": "Llegaron ==al mismo== tiempo.",
+              "en": "They arrived at the same time."
+            },
+            {
+              "es": "Esa es ==la misma== playa de la foto.",
+              "en": "That's the same beach as in the photo."
+            },
+            {
+              "es": "Siempre pido ==lo mismo==: tacos de adobada.",
+              "en": "I always order the same thing: adobada tacos."
+            },
+            {
+              "es": "No es ==lo mismo== surfear en invierno que en verano.",
+              "en": "Surfing in winter isn't the same as in summer."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "el mismo playa"
+                },
+                {
+                  "v": "bien",
+                  "t": "la misma playa"
+                }
+              ],
+              "nota": "Agree with **playa**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tenemos mismo maestro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tenemos el mismo maestro."
+                }
+              ],
+              "nota": "The article is required."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Leo los mismos libros como tú."
+                },
+                {
+                  "v": "bien",
+                  "t": "Leo los mismos libros que tú."
+                }
+              ],
+              "nota": "_As_ = **que**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Para mí es el mismo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Para mí es lo mismo."
+                }
+              ],
+              "nota": "_The same thing_: **lo mismo**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el, la, los, las",
+              "texto": "The articles: [[5100|el, la]] and [[5101|los, las]]."
+            },
+            {
+              "forma": "otro",
+              "texto": "The opposite idea: [[6496|otro, otra]]."
+            },
+            {
+              "forma": "yo mismo",
+              "texto": "Mismo after a pronoun means _myself_: [[8421|mí mismo, sí mismo]]."
+            },
+            {
+              "forma": "tan... como",
+              "texto": "Comparing as equal: [[5116|tan... como]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We have the same car._",
+              "r": "Tenemos el mismo carro.",
+              "nota": "el mismo + noun."
+            },
+            {
+              "p": "In Spanish: _It's the same thing._",
+              "r": "Es lo mismo.",
+              "nota": "Neuter lo."
+            },
+            {
+              "p": "Fix it: _Tengo la misma tabla como tú._",
+              "r": "Tengo la misma tabla que tú.",
+              "nota": "As = que."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5100,
+      5101
+    ],
+    "confunde": [
+      8421
+    ],
+    "sigue": [
+      6496,
+      5116
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6981",
+      "kwiziq": true
+    }
+  ]
+}

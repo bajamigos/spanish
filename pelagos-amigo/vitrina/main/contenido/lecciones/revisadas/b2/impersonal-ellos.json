@@ -1,0 +1,223 @@
+{
+  "tema": 6998,
+  "slug": "impersonal-ellos",
+  "titulo": "Impersonal sentences with the ellos form",
+  "subtitulo": "Dicen que va a llover. Tocan la puerta. Me robaron.",
+  "foto": "t09.jpg",
+  "regla": "The third person plural without a subject can mean someone / people / they in general, when we don't know or don't care who did it: Dicen que..., Tocan la puerta, Me robaron la cartera.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Spanish can make a sentence **impersonal** with the **ellos** form of the verb and **no subject**. It means _someone, people, they_, without knowing or caring who."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It works in any tense: **dicen, dijeron, han dicho**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "English has no exact match, so you translate it with _someone, people say, there's..._ or the passive."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Context decides: if the subject was mentioned before, it's just a dropped pronoun, not an impersonal sentence."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if you can't point at who did it, it's impersonal."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Dicen== que mañana va a llover.",
+              "en": "They say it's going to rain tomorrow."
+            },
+            {
+              "es": "==Están llamando== por teléfono.",
+              "en": "The phone is ringing. (someone is calling)"
+            },
+            {
+              "es": "¡==Me robaron==!",
+              "en": "I've been robbed!"
+            },
+            {
+              "es": "==Tocan== la puerta.",
+              "en": "Someone's at the door."
+            },
+            {
+              "es": "En esa fonda ==dan== una comida corrida buenísima.",
+              "en": "That diner serves a great set lunch."
+            },
+            {
+              "es": "==Me pusieron== una multa.",
+              "en": "I got a ticket."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contexto",
+      "titulo": "Impersonal or not?",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "sujeto conocido",
+                  "t": "Carmen y Rosa tocan la puerta."
+                },
+                {
+                  "v": "impersonal",
+                  "t": "Tocan la puerta."
+                }
+              ],
+              "nota": "With no expected visitor, **tocan** = _someone is knocking_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "sujeto omitido",
+                  "t": "¡Detengan a esos dos! ¡Me robaron!"
+                },
+                {
+                  "v": "impersonal",
+                  "t": "¡Me robaron la cartera en el metro!"
+                }
+              ],
+              "nota": "First: those two did it. Second: who knows."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "otros",
+      "titulo": "Other impersonal options",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "se",
+              "texto": "**Aquí se come muy bien.**: [[6933|se debe / se puede]]."
+            },
+            {
+              "forma": "passive",
+              "texto": "**Fue acusado de...**: [[6173|ser + participle]]."
+            },
+            {
+              "forma": "weather verbs",
+              "texto": "**Llueve**, **nieva**: no subject at all."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ellos dicen que va a llover. (people in general)"
+                },
+                {
+                  "v": "bien",
+                  "t": "Dicen que va a llover."
+                }
+              ],
+              "nota": "Adding **ellos** points to specific people."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "se vende",
+              "texto": "[[6089|passive se]]."
+            },
+            {
+              "forma": "uno nunca sabe",
+              "texto": "Another option: **uno** + verb."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _People say he's rich._",
+              "r": "Dicen que es rico.",
+              "nota": "ellos form, no subject."
+            },
+            {
+              "p": "In Spanish: _My bike got stolen._",
+              "r": "Me robaron la bici.",
+              "nota": "Impersonal."
+            },
+            {
+              "p": "In Spanish: _Someone is knocking._",
+              "r": "Tocan la puerta. / Están tocando.",
+              "nota": "Impersonal."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6933
+    ],
+    "confunde": [
+      6089
+    ],
+    "sigue": [
+      6173
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6998",
+      "kwiziq": true
+    }
+  ]
+}

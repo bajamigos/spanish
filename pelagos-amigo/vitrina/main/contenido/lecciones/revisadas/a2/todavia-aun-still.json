@@ -1,0 +1,252 @@
+{
+  "tema": 8618,
+  "slug": "todavia-aun-still",
+  "titulo": "Todavía / aún = still",
+  "subtitulo": "«Todavía vivo en Tijuana. Aún no llega.»",
+  "foto": "t07.jpg",
+  "regla": "Todavía and aún both mean _still_ (something continues): todavía vivo aquí. With no they mean _not yet_: todavía no / aún no. For _no longer_, use ya no.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Todavía** and **aún** (with accent) mean _still_: the situation continues. They're interchangeable; **todavía** is more common in Mexico."
+        },
+        {
+          "tipo": "texto",
+          "texto": "They usually go **before the verb**, but can also go after it or at the end: **Todavía estoy aquí / Estoy aquí todavía**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With a negative they mean _not yet_ (it hasn't happened, but it may):"
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "todavía / aún",
+            "+ no +",
+            "verb"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Or at the end: **No llega todavía**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Spanish",
+            "English"
+          ],
+          "filas": [
+            [
+              "**todavía / aún** + verb",
+              "_still_"
+            ],
+            [
+              "**todavía no / aún no** + verb",
+              "_not yet_"
+            ],
+            [
+              "**ya no** + verb",
+              "_no longer, not anymore_"
+            ],
+            [
+              "**ya** + verb",
+              "_already, now_"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Aún** with an accent = _still_. **Aun** without accent means _even_ (another word)."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Todavía== vivo con mis papás.",
+              "en": "I still live with my parents."
+            },
+            {
+              "es": "¿==Aún== entrenas en la misma academia?",
+              "en": "Do you still train at the same academy?"
+            },
+            {
+              "es": "El agua está fría ==todavía==.",
+              "en": "The water is still cold."
+            },
+            {
+              "es": "==Todavía no== sé surfear bien.",
+              "en": "I don't know how to surf well yet."
+            },
+            {
+              "es": "==Aún no== salen los jitomates en el huerto.",
+              "en": "The tomatoes haven't come up in the garden yet."
+            },
+            {
+              "es": "Son las doce y ==todavía== estás en pijama.",
+              "en": "It's twelve and you're still in your pajamas."
+            },
+            {
+              "es": "==Ya no== vivo en el centro.",
+              "en": "I don't live downtown anymore."
+            },
+            {
+              "es": "¿Ya terminaste? —No, ==todavía no==.",
+              "en": "Are you done? —No, not yet."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Todavía no vivo aquí. (meaning _I no longer live here_)"
+                },
+                {
+                  "v": "bien",
+                  "t": "Ya no vivo aquí."
+                }
+              ],
+              "nota": "Not anymore: ya no."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estoy aun cansado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Todavía estoy cansado. / Aún estoy cansado."
+                }
+              ],
+              "nota": "_Still_ = aún with accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ya todavía estoy aquí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Todavía estoy aquí."
+                }
+              ],
+              "nota": "Don't stack ya and todavía."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No todavía."
+                },
+                {
+                  "v": "bien",
+                  "t": "Todavía no."
+                }
+              ],
+              "nota": "Todavía goes first."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "todavía no llegó",
+              "texto": "_Not yet_ with past actions: [[9265|todavía no with the preterite]]."
+            },
+            {
+              "forma": "ya terminé",
+              "texto": "The opposite idea: [[9263|ya with the preterite]]."
+            },
+            {
+              "forma": "desde hace",
+              "texto": "How long something has gone on: [[5129|desde hace + present]]."
+            },
+            {
+              "forma": "no",
+              "texto": "Basic negation: [[5091|negative sentences with no]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _It's still raining._",
+              "r": "Todavía está lloviendo. / Todavía llueve.",
+              "nota": "todavía = still."
+            },
+            {
+              "p": "In Spanish: _She hasn't arrived yet._ (present)",
+              "r": "Todavía no llega. / Aún no llega.",
+              "nota": "todavía no = not yet."
+            },
+            {
+              "p": "In Spanish: _I don't drink coffee anymore._",
+              "r": "Ya no tomo café.",
+              "nota": "ya no = no longer."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5091,
+      5129
+    ],
+    "confunde": [
+      9263
+    ],
+    "sigue": [
+      9265
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8618",
+      "kwiziq": true
+    }
+  ]
+}

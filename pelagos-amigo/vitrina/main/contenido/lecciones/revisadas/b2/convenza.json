@@ -1,0 +1,217 @@
+{
+  "tema": 6206,
+  "slug": "convenza",
+  "titulo": "Present subjunctive: consonant + -cer / -cir verbs (c > z)",
+  "subtitulo": "Convenza, esparza, venza, ejerza.",
+  "foto": "t05.jpg",
+  "regla": "Verbs ending in consonant + -cer / -cir (convencer, vencer, ejercer, esparcir) change c → z in the yo present (convenzo) and in every form of the present subjunctive: convenza, convenzas, convenzamos, convenzan.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "When **-cer / -cir** comes after a **consonant**, the **c** becomes **z** before **a** or **o**, to keep the _s_ sound (in Mexico)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Present indicative: only **yo** (**convenzo**). Present subjunctive: **every** form."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "convencer",
+            "esparcir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "convenza",
+              "esparza"
+            ],
+            [
+              "tú",
+              "convenzas",
+              "esparzas"
+            ],
+            [
+              "él, ella, usted",
+              "convenza",
+              "esparza"
+            ],
+            [
+              "nosotros",
+              "convenzamos",
+              "esparzamos"
+            ],
+            [
+              "ustedes, ellos",
+              "convenzan",
+              "esparzan"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Others: **vencer → venza**, **ejercer → ejerza**, **torcer → tuerza** (also o → ue)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Don't mix them up with **-cer** after a vowel (**conocer → conozca**), which adds **zc**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: spelling, not sound: **z** keeps the **c** sounding the same."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No creo que lo ==convenza==; es muy necio.",
+              "en": "I don't think I'll convince him; he's very stubborn."
+            },
+            {
+              "es": "Quiere que ==esparzas== las cenizas en el mar.",
+              "en": "She wants you to scatter the ashes in the sea."
+            },
+            {
+              "es": "Dudo que Lara ==convenza== a su papá.",
+              "en": "I doubt Lara will convince her dad."
+            },
+            {
+              "es": "Ojalá ==venzamos== al otro equipo.",
+              "en": "I hope we beat the other team."
+            },
+            {
+              "es": "Espero que ==convenzan== a sus amigas de venir.",
+              "en": "I hope you convince your friends to come."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "convenca"
+                },
+                {
+                  "v": "bien",
+                  "t": "convenza"
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "convenzca"
+                },
+                {
+                  "v": "bien",
+                  "t": "convenza"
+                }
+              ],
+              "nota": "Consonant before **-cer**: just **z**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "vocal + cer",
+                  "t": "conozca"
+                },
+                {
+                  "v": "consonante + cer",
+                  "t": "convenza"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "conozca",
+              "texto": "[[6205|-cer / -cir after a vowel (zc)]]."
+            },
+            {
+              "forma": "regular endings",
+              "texto": "[[5151|-er / -ir verbs]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Conjugate: _tú / vencer_ (subjunctive)",
+              "r": "venzas",
+              "nota": "c → z."
+            },
+            {
+              "p": "Conjugate: _nosotros / convencer_",
+              "r": "convenzamos",
+              "nota": "Every form."
+            },
+            {
+              "p": "Conjugate: _yo / conocer_ (subjunctive)",
+              "r": "conozca",
+              "nota": "Vowel + cer: zc."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5151,
+      6205
+    ],
+    "confunde": [
+      6205
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6206",
+      "kwiziq": true
+    }
+  ]
+}

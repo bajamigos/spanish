@@ -1,0 +1,266 @@
+{
+  "tema": 5983,
+  "slug": "estar-condicion-fisica",
+  "titulo": "Estar for physical condition",
+  "subtitulo": "La puerta está abierta y yo estoy cansado.",
+  "foto": "t02.jpg",
+  "regla": "To describe the physical condition or state that something, someone or a place is in (tired, sick, broken, clean, open, cold...), use estar, not ser.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "When you talk about the **condition** something, someone or a place is in, use **estar**: _tired, sick, broken, clean, dirty, open, closed, full, empty, hot, cold, wet, dry_."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "subject",
+            "+ estar +",
+            "adjective"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The adjective agrees with the subject: **la puerta está abierta**, **los vasos están sucios**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Adjective",
+            "Meaning"
+          ],
+          "filas": [
+            [
+              "cansado/a",
+              "tired"
+            ],
+            [
+              "enfermo/a",
+              "sick"
+            ],
+            [
+              "roto/a, descompuesto/a",
+              "broken (descompuesto: machines)"
+            ],
+            [
+              "limpio/a, sucio/a",
+              "clean, dirty"
+            ],
+            [
+              "abierto/a, cerrado/a",
+              "open, closed"
+            ],
+            [
+              "lleno/a, vacío/a",
+              "full, empty"
+            ],
+            [
+              "frío/a, caliente",
+              "cold, hot"
+            ],
+            [
+              "mojado/a, seco/a",
+              "wet, dry"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Ser** says what something is like by nature (**la casa es grande**); **estar** says the state it's in (**la casa está sucia**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Even **muerto** takes estar: **el pez está muerto**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: ask yourself _what shape is it in?_ If that's the question, the answer uses **estar**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "La puerta ==está== abierta.",
+              "en": "The door is open."
+            },
+            {
+              "es": "==Estoy== muy cansado después del entrenamiento de jiu-jitsu.",
+              "en": "I'm really tired after jiu-jitsu training."
+            },
+            {
+              "es": "El agua ==está== fría hoy; necesitas traje.",
+              "en": "The water is cold today; you need a wetsuit."
+            },
+            {
+              "es": "Mi carro ==está== descompuesto otra vez.",
+              "en": "My car is broken down again."
+            },
+            {
+              "es": "La playa ==está== muy sucia después de la lluvia.",
+              "en": "The beach is really dirty after the rain."
+            },
+            {
+              "es": "¿==Estás== enfermo? Te ves pálido.",
+              "en": "Are you sick? You look pale."
+            },
+            {
+              "es": "Los jitomates ya ==están== maduros.",
+              "en": "The tomatoes are ripe now."
+            },
+            {
+              "es": "La farmacia ya ==está== cerrada.",
+              "en": "The pharmacy is already closed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Soy cansado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estoy cansado."
+                }
+              ],
+              "nota": "A condition: **estar**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La sopa es fría."
+                },
+                {
+                  "v": "bien",
+                  "t": "La sopa está fría."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La ventana es rota."
+                },
+                {
+                  "v": "bien",
+                  "t": "La ventana está rota."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mi pez es muerto."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mi pez está muerto."
+                }
+              ],
+              "nota": "Dead is a state: **estar**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "estar",
+              "texto": "The verb itself: [[5166|estar in the present]]."
+            },
+            {
+              "forma": "ser",
+              "texto": "What it's like by nature: [[5972|ser for essential characteristics]]."
+            },
+            {
+              "forma": "estoy triste",
+              "texto": "Feelings take estar too: [[5980|estar for feelings and emotions]]."
+            },
+            {
+              "forma": "está bien",
+              "texto": "Judging things: [[6308|es bueno / está bien]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _The beer is cold._",
+              "r": "La cerveza está fría.",
+              "nota": "Condition: estar."
+            },
+            {
+              "p": "In Spanish: _My brother is sick._",
+              "r": "Mi hermano está enfermo.",
+              "nota": "estar + enfermo."
+            },
+            {
+              "p": "Fix it: _La tienda es cerrada._",
+              "r": "La tienda está cerrada.",
+              "nota": "A state, not its nature."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5166
+    ],
+    "confunde": [
+      5972
+    ],
+    "sigue": [
+      5980,
+      6308
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5983",
+      "kwiziq": true
+    }
+  ]
+}

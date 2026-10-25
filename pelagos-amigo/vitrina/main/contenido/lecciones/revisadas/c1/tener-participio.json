@@ -1,0 +1,202 @@
+{
+  "tema": 7122,
+  "slug": "tener-participio",
+  "titulo": "Tener + participle = to have something done (accumulated result)",
+  "subtitulo": "Tengo escritas veinte páginas.",
+  "foto": "t05.jpg",
+  "regla": "Tener + participle (agreeing with the object) expresses a result reached by accumulating actions: Tengo escritas veinte páginas, tenemos planeado un viaje. Unlike haber + participle, the participle agrees.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "tener (any tense)",
+            "+ participle",
+            "(agrees with the object)"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Similar to **haber** + participle, but it stresses a **result** you've **built up**, often by repeating an action."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The participle **agrees** with the direct object: **tengo escritas veinte páginas**, **tengo pintadas dos recámaras**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Very common in Mexico with plans: **tengo pensado...**, **tenemos planeado...**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **tener** + participle shows your progress like trophies on a shelf."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Tengo escritas== veinte páginas de mi novela.",
+              "en": "I have twenty pages of my novel written."
+            },
+            {
+              "es": "==Tienes pintadas== dos recámaras. Te falta una.",
+              "en": "You've got two bedrooms painted. One more to go."
+            },
+            {
+              "es": "Marta y yo ==tenemos planeado== un viaje a Egipto.",
+              "en": "Marta and I have a trip to Egypt planned."
+            },
+            {
+              "es": "¿Ya ==tienes pensada== la estrategia para convencer a Inés?",
+              "en": "Have you got a strategy to convince Inés figured out yet?"
+            },
+            {
+              "es": "==Tenía organizados== todos los documentos en orden alfabético.",
+              "en": "I had all the documents organized alphabetically."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "comparar",
+      "titulo": "Haber or tener?",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "haber",
+                  "t": "He escrito veinte páginas."
+                },
+                {
+                  "v": "tener",
+                  "t": "Tengo escritas veinte páginas."
+                }
+              ],
+              "nota": "**Tener** stresses the result built up so far, and the participle agrees."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tengo escrito veinte páginas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tengo escritas veinte páginas."
+                }
+              ],
+              "nota": "Agreement."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "He escritas veinte páginas."
+                },
+                {
+                  "v": "bien",
+                  "t": "He escrito veinte páginas."
+                }
+              ],
+              "nota": "With **haber**, no agreement."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "he hablado",
+              "texto": "[[5267|present perfect]]."
+            },
+            {
+              "forma": "participles as adjectives",
+              "texto": "[[7000|participles as adjectives]]."
+            },
+            {
+              "forma": "llevar + participle",
+              "texto": "Similar: **llevo leídos tres libros**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I have three chapters read._",
+              "r": "Tengo leídos tres capítulos.",
+              "nota": "Agreement."
+            },
+            {
+              "p": "In Spanish: _We have the party planned._",
+              "r": "Tenemos planeada la fiesta.",
+              "nota": "planeada."
+            },
+            {
+              "p": "Fix it: _Tengo hecho las tareas._",
+              "r": "Tengo hechas las tareas.",
+              "nota": "Feminine plural."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7000
+    ],
+    "confunde": [
+      5267
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7122",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "tema": 7262,
+  "slug": "haber-participio",
+  "titulo": "Haber + participle: the perfect infinitive",
+  "subtitulo": "Haber estudiado me ayudó mucho.",
+  "foto": "t08.jpg",
+  "regla": "Haber + participle = having done. It can be a subject (Haber vivido allí me cambió), an object (confesó haber robado) or follow a preposition (por haber mentido). Pronouns attach to haber.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "English _having done_ uses a gerund. Spanish uses the **perfect infinitive**: **haber** + participle."
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "subject",
+              "texto": "**Haber estudiado idiomas** me ha ayudado mucho."
+            },
+            {
+              "forma": "object",
+              "texto": "Confesaron **haber participado** en el robo."
+            },
+            {
+              "forma": "after a preposition",
+              "texto": "Lo expulsaron **por haber insultado** a otro alumno."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Pronouns attach to **haber**: **haberte mudado**, **haberlo superado**. Never in front, never on the participle."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Negative: **no haber** + participle: **declaró no haber robado nada** (_he said he hadn't stolen anything_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: Spanish never says _having_ with a gerund; it says **haber**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Haber estudiado== idiomas me ha ayudado mucho en mi carrera.",
+              "en": "Having studied languages has helped me a lot in my career."
+            },
+            {
+              "es": "Lo mejor de mi trabajo es ==haber conocido== a tantos famosos.",
+              "en": "The best thing about my job is having met so many celebrities."
+            },
+            {
+              "es": "==Haber limpiado== la cocina a fondo me dejó agotada.",
+              "en": "Deep-cleaning the kitchen left me exhausted."
+            },
+            {
+              "es": "Confesaron ==haber participado== en el robo.",
+              "en": "They confessed to having taken part in the robbery."
+            },
+            {
+              "es": "Se arrepintió de ==haberle mentido== a su novia.",
+              "en": "He regretted having lied to his girlfriend."
+            },
+            {
+              "es": "==Haberte mudado== a Monterrey te ayudó a ser más independiente.",
+              "en": "Moving to Monterrey helped you become more independent."
+            },
+            {
+              "es": "El detenido declaró ==no haber robado== nada.",
+              "en": "The detainee stated he hadn't stolen anything."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Habiendo estudiado idiomas me ha ayudado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Haber estudiado idiomas me ha ayudado."
+                }
+              ],
+              "nota": "As a subject: infinitive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Lo haber superado fue un logro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Haberlo superado fue un logro."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Haber superádolo..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Haberlo superado..."
+                }
+              ],
+              "nota": "Attach to **haber**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "después de haber",
+              "texto": "[[10101|antes de / después de + haber]]."
+            },
+            {
+              "forma": "al haber",
+              "texto": "[[6175|al + perfect infinitive]]."
+            },
+            {
+              "forma": "pude haber",
+              "texto": "[[6470|could have]]."
+            },
+            {
+              "forma": "leer es bueno",
+              "texto": "[[7079|infinitive as subject]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Having traveled so much has changed me._",
+              "r": "Haber viajado tanto me ha cambiado.",
+              "nota": "haber + participle."
+            },
+            {
+              "p": "In Spanish: _He was fired for having lied._",
+              "r": "Lo corrieron por haber mentido.",
+              "nota": "After a preposition."
+            },
+            {
+              "p": "Fix it: _Me alegro de te haber visto._",
+              "r": "Me alegro de haberte visto.",
+              "nota": "Attach to haber."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7079
+    ],
+    "confunde": [
+      10101
+    ],
+    "sigue": [
+      6470
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7262",
+      "kwiziq": true
+    }
+  ]
+}

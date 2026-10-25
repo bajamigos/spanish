@@ -1,0 +1,268 @@
+{
+  "tema": 6962,
+  "slug": "haz-di-ven-imperativo-irregular",
+  "titulo": "Irregular affirmative tú commands",
+  "subtitulo": "¡Ven acá! ¡Haz la tarea! ¡Ten cuidado!",
+  "foto": "t02.jpg",
+  "regla": "Eight common verbs have a short, irregular affirmative tú command: di (decir), haz (hacer), ve (ir), pon (poner), sal (salir), sé (ser), ten (tener), ven (venir).",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Most affirmative **tú** commands look like the **él/ella** present: **habla**, **come**, **escribe**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Eight everyday verbs break the pattern. Their command is a **short, one-syllable** form:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Infinitive",
+            "Tú command",
+            "Example"
+          ],
+          "filas": [
+            [
+              "decir",
+              "**di**",
+              "Di la verdad."
+            ],
+            [
+              "hacer",
+              "**haz**",
+              "Haz la tarea."
+            ],
+            [
+              "ir",
+              "**ve**",
+              "Ve a la tienda."
+            ],
+            [
+              "poner",
+              "**pon**",
+              "Pon la mesa."
+            ],
+            [
+              "salir",
+              "**sal**",
+              "Sal de ahí."
+            ],
+            [
+              "ser",
+              "**sé**",
+              "Sé paciente."
+            ],
+            [
+              "tener",
+              "**ten**",
+              "Ten cuidado."
+            ],
+            [
+              "venir",
+              "**ven**",
+              "Ven acá."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Sé** (_be_) has an accent, to tell it apart from the pronoun **se**. **Ve** is also the command of **ver** (_ve la película_ = _watch the movie_); context tells you which."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Verbs built on these keep the pattern, with an accent: **mantener → mantén**, **obtener → obtén**, **proponer → propón**, **deshacer → deshaz**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: _Vin Diesel has ten weapons_: **ven, di, sal, haz, ten, ve, pon, sé**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Ven== a mi casa el sábado.",
+              "en": "Come to my place on Saturday."
+            },
+            {
+              "es": "==Haz== la tarea antes de salir.",
+              "en": "Do your homework before you go out."
+            },
+            {
+              "es": "==Di== la verdad.",
+              "en": "Tell the truth."
+            },
+            {
+              "es": "==Ve== a la tienda por tortillas.",
+              "en": "Go to the store for tortillas."
+            },
+            {
+              "es": "==Pon== la tabla en el carro, por favor.",
+              "en": "Put the board in the car, please."
+            },
+            {
+              "es": "==Sal== temprano para no hacer fila en la garita.",
+              "en": "Leave early so you don't have to wait in line at the border."
+            },
+            {
+              "es": "==Sé== paciente con tu hermano.",
+              "en": "Be patient with your brother."
+            },
+            {
+              "es": "==Ten== cuidado con las olas hoy.",
+              "en": "Be careful with the waves today."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hace la tarea."
+                },
+                {
+                  "v": "bien",
+                  "t": "Haz la tarea."
+                }
+              ],
+              "nota": "**Hace** means _he does_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Dice la verdad."
+                },
+                {
+                  "v": "bien",
+                  "t": "Di la verdad."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Va a la tienda."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ve a la tienda."
+                }
+              ],
+              "nota": "**Va** is _he goes_; the command is **ve**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Se paciente."
+                },
+                {
+                  "v": "bien",
+                  "t": "Sé paciente."
+                }
+              ],
+              "nota": "Accent on **sé**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "habla, come",
+              "texto": "The regular pattern first: [[6748|affirmative tú commands]]."
+            },
+            {
+              "forma": "no digas",
+              "texto": "Saying _don't_: [[9255|negative tú commands]]. **Di** becomes **no digas**."
+            },
+            {
+              "forma": "dime, hazlo",
+              "texto": "Adding pronouns: [[5140|pronouns with commands]]."
+            },
+            {
+              "forma": "diga, hagan",
+              "texto": "For usted and ustedes: [[6961|usted, ustedes and nosotros commands]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Come here!_",
+              "r": "¡Ven acá!",
+              "nota": "venir → ven."
+            },
+            {
+              "p": "In Spanish: _Put the beans on the stove._",
+              "r": "Pon los frijoles en la estufa.",
+              "nota": "poner → pon."
+            },
+            {
+              "p": "Fix it: _Sale ahora._",
+              "r": "Sal ahora.",
+              "nota": "salir → sal."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6748
+    ],
+    "confunde": [
+      9255
+    ],
+    "sigue": [
+      5140,
+      6961
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6962",
+      "kwiziq": true
+    }
+  ]
+}

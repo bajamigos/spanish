@@ -1,0 +1,190 @@
+{
+  "tema": 10701,
+  "slug": "donde-adonde-de-donde",
+  "titulo": "Asking where: dónde, adónde, de dónde",
+  "subtitulo": "«¿Dónde está la playa?»",
+  "foto": "t06.jpg",
+  "regla": "¿Dónde? asks where something is or happens; ¿Adónde? (or ¿A dónde?) asks where to, with verbs of motion like ir; ¿De dónde? asks where from. In questions dónde always has an accent.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**¿Dónde?** = _where?_ (location). Very often with **estar**: **¿Dónde está…?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**¿Adónde?** or **¿A dónde?** = _where to?_, with verbs of motion like **ir**. **¿De dónde?** = _where from?_"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Question words always carry an accent: **dónde**, also inside a sentence (**No sé dónde está**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the little word in front tells the direction: **a** = going to, **de** = coming from."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿==Dónde== está el baño?",
+              "en": "Where's the bathroom?"
+            },
+            {
+              "es": "¿==Dónde== vives?",
+              "en": "Where do you live?"
+            },
+            {
+              "es": "¿==Adónde== vas el sábado?",
+              "en": "Where are you going on Saturday?"
+            },
+            {
+              "es": "¿==A dónde== van ustedes a surfear?",
+              "en": "Where are you guys going surfing?"
+            },
+            {
+              "es": "¿==De dónde== eres?",
+              "en": "Where are you from?"
+            },
+            {
+              "es": "No sé ==dónde== están mis llaves.",
+              "en": "I don't know where my keys are."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Dónde eres?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿De dónde eres?"
+                }
+              ],
+              "nota": "Origin needs **de**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿A dónde está tu casa?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Dónde está tu casa?"
+                }
+              ],
+              "nota": "With **estar** (location): no **a**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Donde vives?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Dónde vives?"
+                }
+              ],
+              "nota": "Questions: always the accent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¿cómo?",
+              "texto": "Other question words: [[10702|asking how]], [[10695|asking when]]."
+            },
+            {
+              "forma": "¿dónde está?",
+              "texto": "Location takes estar: [[5067|estar for locations]]."
+            },
+            {
+              "forma": "cómo, dónde, cuándo",
+              "texto": "With and without accent: [[6313|cómo, dónde, cuándo]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Where are you from?_ (tú)",
+              "r": "¿De dónde eres?",
+              "nota": "Origin: de dónde."
+            },
+            {
+              "p": "In Spanish: _Where are you going?_ (tú)",
+              "r": "¿Adónde vas? (also written ¿A dónde vas?)",
+              "nota": "Motion: a + dónde."
+            },
+            {
+              "p": "Fix it: _¿Donde está el carro?_",
+              "r": "¿Dónde está el carro?",
+              "nota": "Add the accent."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5067
+    ],
+    "confunde": [
+      10702,
+      10695
+    ],
+    "sigue": [
+      6313
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 10701",
+      "kwiziq": true
+    }
+  ]
+}

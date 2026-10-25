@@ -1,0 +1,170 @@
+{
+  "tema": 7439,
+  "slug": "no-se-no-lo-se",
+  "titulo": "No sé vs no lo sé = I don't know",
+  "subtitulo": "—¿Viene Ana? —No sé. / No lo sé.",
+  "foto": "t06.jpg",
+  "regla": "As an immediate reply to a question, both no sé and no lo sé work (no sé is more casual, no lo sé a bit firmer). When it isn't a direct reply, or the thing not known comes later or is spelled out, you need lo or an object: No lo sé todavía, ya te diré. Before a question word, no lo: No sé dónde está.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "direct reply",
+              "texto": "**No sé** or **No lo sé**: both fine. **Lo** = what was just asked."
+            },
+            {
+              "forma": "not a direct reply / with more after",
+              "texto": "Use **lo**: **Pues no lo sé, tengo que revisar.**"
+            },
+            {
+              "forma": "+ question word or si",
+              "texto": "No **lo**: **no sé dónde vive**, **no sé si viene**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**No sé** alone can also be a filler, like _I dunno, kind of_: **Está, no sé, raro.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Same with **no lo creo, no lo entiendo** vs **no creo, no entiendo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if the sentence keeps going with **qué, dónde, si...**, drop the **lo**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "—Ese actor se llama Ricardo, ¿verdad? —==No sé==.",
+              "en": "—That actor's name is Ricardo, right? —I don't know."
+            },
+            {
+              "es": "—¿Se te antoja ir por unos tacos? —==No lo sé==, no tengo mucha hambre.",
+              "en": "—Do you feel like getting tacos? —I don't know, I'm not very hungry."
+            },
+            {
+              "es": "—¿Cómo se escribe esa palabra? —Déjame ver... pues ==no lo sé==.",
+              "en": "—How do you spell that word? —Let me see... well, I don't know."
+            },
+            {
+              "es": "==No sé dónde== dejé las llaves.",
+              "en": "I don't know where I left the keys."
+            },
+            {
+              "es": "==No sé si== voy a poder ir.",
+              "en": "I don't know if I'll be able to go."
+            },
+            {
+              "es": "La película estuvo, ==no sé==, rara.",
+              "en": "The movie was, I dunno, weird."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No lo sé dónde está."
+                },
+                {
+                  "v": "bien",
+                  "t": "No sé dónde está."
+                }
+              ],
+              "nota": "The question word is the object; no **lo**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "saber vs conocer",
+              "texto": "[[6865|saber vs conocer]]."
+            },
+            {
+              "forma": "dropping lo",
+              "texto": "[[7443|hay / lo hay]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I don't know what time it starts._",
+              "r": "No sé a qué hora empieza.",
+              "nota": "No lo before qué."
+            },
+            {
+              "p": "Reply after thinking: _Hmm... no, I don't know._",
+              "r": "Mmm... no, no lo sé.",
+              "nota": "lo after a pause."
+            },
+            {
+              "p": "Fix it: _No lo sé si viene._",
+              "r": "No sé si viene.",
+              "nota": "si = object."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6865
+    ],
+    "confunde": [
+      7443
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7439",
+      "kwiziq": true
+    }
+  ]
+}

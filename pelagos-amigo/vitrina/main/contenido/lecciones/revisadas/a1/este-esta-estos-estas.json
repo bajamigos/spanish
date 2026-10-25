@@ -1,0 +1,204 @@
+{
+  "tema": 5094,
+  "slug": "este-esta-estos-estas",
+  "titulo": "Este, esta, estos, estas (this, these)",
+  "subtitulo": "Este libro, esta casa, estos días, estas playas.",
+  "foto": "t06.jpg",
+  "regla": "This and these before a noun: este + masculine singular, esta + feminine singular, estos + masculine plural, estas + feminine plural. They agree with the noun.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**This / these** before a noun agrees with the noun in gender and number."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "Singular (this)",
+            "Plural (these)"
+          ],
+          "filas": [
+            [
+              "Masculine",
+              "**este** libro",
+              "**estos** días"
+            ],
+            [
+              "Feminine",
+              "**esta** casa",
+              "**estas** playas"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The masculine singular is **este**, never **esto**. **Esto** never goes before a noun."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **est-** is _here, close to me_. Then match the noun's gender and number."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Este== libro es de mi hermano.",
+              "en": "This book is my brother's."
+            },
+            {
+              "es": "==Esta== tabla es nueva.",
+              "en": "This board is new."
+            },
+            {
+              "es": "==Estos== tacos están buenísimos.",
+              "en": "These tacos are delicious."
+            },
+            {
+              "es": "==Estas== playas son muy bonitas.",
+              "en": "These beaches are very pretty."
+            },
+            {
+              "es": "==Este== fin de semana voy a Ensenada.",
+              "en": "This weekend I'm going to Ensenada."
+            },
+            {
+              "es": "==Esta== mañana entrené jiu-jitsu.",
+              "en": "This morning I trained jiu-jitsu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Esto libro es mío."
+                },
+                {
+                  "v": "bien",
+                  "t": "Este libro es mío."
+                }
+              ],
+              "nota": "**Esto** never goes before a noun."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estes tacos son de pescado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estos tacos son de pescado."
+                }
+              ],
+              "nota": "Masculine plural: **estos**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Este tabla es nueva."
+                },
+                {
+                  "v": "bien",
+                  "t": "Esta tabla es nueva."
+                }
+              ],
+              "nota": "**Tabla** is feminine."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "ese, esa",
+              "texto": "That, those: [[6061|ese, esa, esos, esas]]."
+            },
+            {
+              "forma": "este, ese, aquel",
+              "texto": "Near, far, farther: [[6862|este, ese and aquel]]."
+            },
+            {
+              "forma": "esto, este",
+              "texto": "Without a noun: [[6055|this one, these ones]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _this beach_",
+              "r": "esta playa",
+              "nota": "playa is feminine."
+            },
+            {
+              "p": "In Spanish: _these days_",
+              "r": "estos días",
+              "nota": "día is masculine."
+            },
+            {
+              "p": "Fix it: _Esto carro es rápido._",
+              "r": "Este carro es rápido.",
+              "nota": "este + noun."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      6061
+    ],
+    "sigue": [
+      6862,
+      6055
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5094",
+      "kwiziq": true
+    }
+  ]
+}

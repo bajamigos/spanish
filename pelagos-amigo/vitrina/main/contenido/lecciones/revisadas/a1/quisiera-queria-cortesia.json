@@ -1,0 +1,196 @@
+{
+  "tema": 5227,
+  "slug": "quisiera-queria-cortesia",
+  "titulo": "Quisiera, quería, querría: I would like",
+  "subtitulo": "«Quisiera un café, por favor.»",
+  "foto": "t01.jpg",
+  "regla": "To ask politely, soften quiero: quisiera, quería or querría + a noun or an infinitive all mean 'I would like'. Quisiera is the most polite; quería is the everyday one.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Quiero** can sound blunt. To soften it, use **quisiera**, **quería** or **querría**: all mean _I would like_."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Form",
+            "Feel"
+          ],
+          "filas": [
+            [
+              "quisiera",
+              "the most polite"
+            ],
+            [
+              "quería",
+              "friendly, everyday (shops, restaurants)"
+            ],
+            [
+              "querría",
+              "correct, but rare in Mexico"
+            ]
+          ]
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "quisiera / quería / querría",
+            "+",
+            "noun or infinitive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The usted form is the same: **¿Quisiera algo más?** = _Would you like anything else?_"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Quisiera== un café, por favor.",
+              "en": "I'd like a coffee, please."
+            },
+            {
+              "es": "==Quería== dos tacos de pescado.",
+              "en": "I'd like two fish tacos."
+            },
+            {
+              "es": "==Quisiera== hablar con el gerente.",
+              "en": "I'd like to speak with the manager."
+            },
+            {
+              "es": "Buenas tardes, ==quería== una mesa para cuatro.",
+              "en": "Good afternoon, I'd like a table for four."
+            },
+            {
+              "es": "==Querría== saber el precio, por favor.",
+              "en": "I'd like to know the price, please."
+            },
+            {
+              "es": "¿==Quisiera== algo más, señor?",
+              "en": "Would you like anything else, sir?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quisiera de un café."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quisiera un café."
+                }
+              ],
+              "nota": "No **de**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quisiera que hablar con el gerente."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quisiera hablar con el gerente."
+                }
+              ],
+              "nota": "Straight into the infinitive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "quiero",
+              "texto": "The plain form: [[5774|querer in the present]]."
+            },
+            {
+              "forma": "quiero comer",
+              "texto": "Querer + infinitive: [[5065|deber, poder, querer]]."
+            },
+            {
+              "forma": "quería, querías",
+              "texto": "The full tense: [[6502|querer in the imperfect]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish, as politely as possible: _I'd like a glass of water, please._",
+              "r": "Quisiera un vaso de agua, por favor.",
+              "nota": "quisiera."
+            },
+            {
+              "p": "In Spanish, with quería: _I'd like a kilo of tomatoes._",
+              "r": "Quería un kilo de jitomates.",
+              "nota": "quería + noun."
+            },
+            {
+              "p": "Fix it: _Quisiera de pagar con tarjeta._",
+              "r": "Quisiera pagar con tarjeta.",
+              "nota": "No de."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5774,
+      5065
+    ],
+    "confunde": [],
+    "sigue": [
+      6502
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5227",
+      "kwiziq": true
+    }
+  ]
+}

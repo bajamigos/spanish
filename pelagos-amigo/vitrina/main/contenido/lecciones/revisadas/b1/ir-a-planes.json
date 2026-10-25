@@ -1,0 +1,301 @@
+{
+  "tema": 7067,
+  "slug": "ir-a-planes",
+  "titulo": "Using the near future ir a (not the present progressive) for plans",
+  "subtitulo": "The everyday future in Spanish, and why «mañana estoy trabajando» is wrong.",
+  "foto": "t09.jpg",
+  "regla": "For a plan that is already decided, use ir a + infinitive. Estar + gerund is only for what is happening right now.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "When something is already decided or arranged, Spanish uses **ir a** + infinitive. English uses _-ing_ for this (_I'm working tomorrow_); Spanish does not."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**ir** in the present",
+            "**a**",
+            "infinitive"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "**ir a**",
+            "Infinitive"
+          ],
+          "filas": [
+            [
+              "yo",
+              "voy a",
+              "abrir"
+            ],
+            [
+              "tú",
+              "vas a",
+              "entrenar"
+            ],
+            [
+              "él, ella, usted",
+              "va a",
+              "llamar"
+            ],
+            [
+              "nosotros",
+              "vamos a",
+              "salir"
+            ],
+            [
+              "ustedes, ellos",
+              "van a",
+              "venir"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The **a** is never left out: **voy a abrir**, never **voy abrir**. If the conjugation slips, review [[5271|**ir** in the present]]."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if the sentence has **mañana** in it, it doesn't take **-ando**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mañana ==voy a abrir== un Tsuru a las siete.",
+              "en": "I'm opening a Tsuru tomorrow at seven."
+            },
+            {
+              "es": "Mi cliente ==va a pasar== por la llave a las cinco.",
+              "en": "My customer is picking up the key at five."
+            },
+            {
+              "es": "El sábado ==vamos a surfear== en Baja Malibú.",
+              "en": "We're surfing at Baja Malibu on Saturday."
+            },
+            {
+              "es": "¿==Vas a entrenar== jiu-jitsu hoy en la noche?",
+              "en": "Are you training jiu-jitsu tonight?"
+            },
+            {
+              "es": "El domingo no ==voy a trabajar==.",
+              "en": "I'm not working on Sunday."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "[[5092|**Estar** + gerund]] is only for what is happening at this moment. If the sentence has a future time (tomorrow, on Saturday, at five), use **ir a**."
+        },
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mañana estoy trabajando hasta las seis."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mañana voy a trabajar hasta las seis."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El martes estoy yendo al dentista."
+                },
+                {
+                  "v": "bien",
+                  "t": "El martes voy a ir al dentista."
+                }
+              ],
+              "nota": "**Voy a ir**: **ir** twice, and it's perfectly correct."
+            },
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "Ahorita estoy trabajando."
+                }
+              ],
+              "nota": "This one is right: it's happening right now."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usos",
+      "titulo": "Four forms, four uses",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "Voy a trabajar",
+              "texto": "A plan already decided. In spoken Mexican Spanish, this is the everyday future.",
+              "aqui": true
+            },
+            {
+              "forma": "Mañana trabajo",
+              "texto": "Also fine when you say when. It sounds like a schedule or a fixed thing. See [[5993|the present for the future]]."
+            },
+            {
+              "forma": "Trabajaré",
+              "texto": "More formal or written. This is the [[5155|simple future]]. In speech it is often used [[5060|to guess]]: **¿Dónde estará?**"
+            },
+            {
+              "forma": "Estoy trabajando",
+              "texto": "Only right now. Never for a plan."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pronombres",
+      "titulo": "With pronouns",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "The pronoun goes before **ir** or attached to the infinitive, never in between. The full rule is in [[7426|pronouns with infinitives]]."
+        },
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "Me voy a levantar temprano."
+                },
+                {
+                  "v": "bien",
+                  "t": "Voy a levantarme temprano."
+                },
+                {
+                  "v": "mal",
+                  "t": "Voy a me levantar temprano."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "Iba a llamarte, pero se me fue el día.",
+              "texto": "[[6003|**Iba a** + infinitive]]: what you were going to do."
+            },
+            {
+              "forma": "Vamos a comer.",
+              "texto": "**Vamos a** also invites, like _let's_. To leave, **vámonos**: see [[9262|reflexive commands]]."
+            },
+            {
+              "forma": "Estoy a punto de salir.",
+              "texto": "[[6509|**Estar a punto de**]]: it's about to happen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I'm going to the dentist on Tuesday._",
+              "r": "El martes voy a ir al dentista.",
+              "nota": "It's a plan. **Estoy yendo** would mean you're on your way right now."
+            },
+            {
+              "p": "Which one? **El viernes estamos cenando con mis papás** or **El viernes vamos a cenar con mis papás**.",
+              "r": "El viernes vamos a cenar con mis papás.",
+              "nota": "It has a future time."
+            },
+            {
+              "p": "In Spanish: _I can't talk, I'm driving._",
+              "r": "No puedo hablar, estoy manejando.",
+              "nota": "Here **estar** + gerund is right: it's happening now."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5271,
+      5086,
+      6500,
+      6501
+    ],
+    "confunde": [
+      5092,
+      5994,
+      5993,
+      5155
+    ],
+    "sigue": [
+      6003,
+      9262,
+      7426,
+      6509
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Audio",
+      "texto": "Audios y Vámonos · A1 EP 15 · «Voy a surfear»",
+      "donde": "ElevenReader. The **ir a** recipe, step by step."
+    },
+    {
+      "tipo": "Audio",
+      "texto": "Audios y Vámonos · A1 EP 44 · «Estoy cocinando»",
+      "donde": "ElevenReader. The other side of the trap."
+    },
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7067",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,253 @@
+{
+  "tema": 5154,
+  "slug": "que-el-cual-quien",
+  "titulo": "Que / el cual / quien = who, that, which (relative pronouns)",
+  "subtitulo": "Mi vecina, que es doctora… / la cual es doctora… / quien es doctora…",
+  "foto": "t08.jpg",
+  "regla": "Que (who/that/which) works for people and things and never changes. Quien / quienes = who, for people only. El cual / la cual / los cuales / las cuales agree in gender and number. Quien and el cual are more formal than que.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Pronoun",
+            "Refers to",
+            "Changes?",
+            "Register"
+          ],
+          "filas": [
+            [
+              "que",
+              "people and things",
+              "no",
+              "everyday"
+            ],
+            [
+              "quien / quienes",
+              "people only",
+              "number",
+              "more formal"
+            ],
+            [
+              "el cual, la cual, los cuales, las cuales",
+              "people and things",
+              "gender and number",
+              "more formal"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "In a clause set off by **commas** (extra information), all of them work: **mi vecina, que / quien / la cual es doctora, ...**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "In a clause **without commas** (one that identifies who you mean), use **que** as the subject: **el señor que vino ayer**, never **el señor quien vino ayer**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: when in doubt, **que**. It fits almost everywhere and never changes."
+        }
+      ]
+    },
+    {
+      "id": "que",
+      "titulo": "Que",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "La escuela, ==que== está cerrada, abre la próxima semana.",
+              "en": "The school, which is closed, opens next week."
+            },
+            {
+              "es": "Mis amigos, ==que== se llaman Luis y Mario, vienen mañana.",
+              "en": "My friends, who are called Luis and Mario, are coming tomorrow."
+            },
+            {
+              "es": "Me encanta esa casa, ==que== por cierto está en venta.",
+              "en": "I love that house, which is for sale, by the way."
+            },
+            {
+              "es": "El chavo ==que== conocí ayer es surfista.",
+              "en": "The guy I met yesterday is a surfer."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quien",
+      "titulo": "Quien / quienes",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi vecina Clara, ==quien== es estilista, tiene su propio salón.",
+              "en": "My neighbor Clara, who is a hairdresser, has her own salon."
+            },
+            {
+              "es": "Mis vecinos, ==quienes== tienen tres hijos, son muy ruidosos.",
+              "en": "My neighbors, who have three kids, are very noisy."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "el-cual",
+      "titulo": "El cual / la cual / los cuales / las cuales",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "El director, ==el cual== trabaja mucho, es respetado por todos.",
+              "en": "The principal, who works hard, is respected by everyone."
+            },
+            {
+              "es": "Mi mamá, ==la cual== tiene 70 años, se siente muy joven.",
+              "en": "My mom, who is 70, feels very young."
+            },
+            {
+              "es": "Estas mesas, ==las cuales== compré hace poco, son de madera.",
+              "en": "These tables, which I bought recently, are made of wood."
+            },
+            {
+              "es": "Sus primos, ==los cuales== vivían en Tijuana, se mudaron a Colombia.",
+              "en": "His cousins, who used to live in Tijuana, moved to Colombia."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La mesa, quien compré ayer, ..."
+                },
+                {
+                  "v": "bien",
+                  "t": "La mesa, que compré ayer, ..."
+                }
+              ],
+              "nota": "**Quien** is only for people."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mis primas, los cuales viven aquí, ..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mis primas, las cuales viven aquí, ..."
+                }
+              ],
+              "nota": "**El cual** agrees."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El señor quien vino ayer es mi tío."
+                },
+                {
+                  "v": "bien",
+                  "t": "El señor que vino ayer es mi tío."
+                }
+              ],
+              "nota": "No commas: **que**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "lo que",
+              "texto": "When it refers to a whole idea: [[5087|lo que]]."
+            },
+            {
+              "forma": "con el que, en la cual",
+              "texto": "After a preposition: [[5124|preposition + el que]]."
+            },
+            {
+              "forma": "quién / quien",
+              "texto": "With or without accent: [[7082|quién vs quien]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Complete: _Mis tías, ___ viven en Puebla, vienen el sábado._ (formal, agreeing)",
+              "r": "las cuales",
+              "nota": "Feminine plural."
+            },
+            {
+              "p": "Complete: _El libro ___ me prestaste es buenísimo._",
+              "r": "que",
+              "nota": "No commas: que."
+            },
+            {
+              "p": "Can you use **quien** here? _La casa, ___ está en la esquina, ..._",
+              "r": "No: que / la cual.",
+              "nota": "quien = people only."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6128
+    ],
+    "confunde": [
+      5087
+    ],
+    "sigue": [
+      5124,
+      7082
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5154",
+      "kwiziq": true
+    }
+  ]
+}

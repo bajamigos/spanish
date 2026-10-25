@@ -1,0 +1,258 @@
+{
+  "tema": 10757,
+  "slug": "crear-creer-criar",
+  "titulo": "Crear, creer and criar",
+  "subtitulo": "Creo que creé algo bonito; me crie en Sonora.",
+  "foto": "t04.jpg",
+  "regla": "Crear = to create, creer = to believe / think, criar = to raise. Watch the forms that look alike: creo (I create / I believe), crea (he creates / that he believe), creó (created) vs creyó (believed) vs crio (raised).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Verb",
+            "Meaning",
+            "Gerund"
+          ],
+          "filas": [
+            [
+              "crear",
+              "to create",
+              "creando"
+            ],
+            [
+              "creer",
+              "to believe, to think",
+              "creyendo"
+            ],
+            [
+              "criar",
+              "to raise (kids, animals)",
+              "criando"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Creo** is _I create_ and _I believe_; context decides."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Crea, creas, crea, creamos, crean** are both the present of **crear** and the present subjunctive of **creer**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Preterite",
+            "crear",
+            "creer",
+            "criar"
+          ],
+          "filas": [
+            [
+              "yo",
+              "creé",
+              "creí",
+              "crie"
+            ],
+            [
+              "tú",
+              "creaste",
+              "creíste",
+              "criaste"
+            ],
+            [
+              "él, ella, usted",
+              "creó",
+              "creyó",
+              "crio"
+            ],
+            [
+              "nosotros",
+              "creamos",
+              "creímos",
+              "criamos"
+            ],
+            [
+              "ustedes, ellos",
+              "crearon",
+              "creyeron",
+              "criaron"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Crie, crio** have **no accent** (one syllable)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Criarse** = _to grow up_: **me crie en Sonora**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **creyó** has the **y** of **leyó**; **crio** is short like the child it raised."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Yo no ==creo== en los fantasmas.",
+              "en": "I don't believe in ghosts."
+            },
+            {
+              "es": "==Creo== que deberíamos irnos.",
+              "en": "I think we should go."
+            },
+            {
+              "es": "En mi taller ==creo== piezas muy originales.",
+              "en": "In my workshop I create very original pieces."
+            },
+            {
+              "es": "Marcos y Luisa ==crean== un ambiente especial en sus fiestas.",
+              "en": "Marcos and Luisa create a special atmosphere at their parties."
+            },
+            {
+              "es": "Ojalá mis papás me ==crean==.",
+              "en": "I hope my parents believe me."
+            },
+            {
+              "es": "Mi jefe quiere que ==cree== una campaña nueva.",
+              "en": "My boss wants me to create a new campaign."
+            },
+            {
+              "es": "Mi abuela ==crio== a seis hijos.",
+              "en": "My grandma raised six kids."
+            },
+            {
+              "es": "Nadie le ==creyó==.",
+              "en": "Nobody believed him."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nadie le creó."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nadie le creyó."
+                }
+              ],
+              "nota": "_Believed_: **creyó**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me crié en Sonora."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me crie en Sonora."
+                }
+              ],
+              "nota": "No accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "creiendo"
+                },
+                {
+                  "v": "bien",
+                  "t": "creyendo"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "leyó, creyó",
+              "texto": "[[5219|-uir / y verbs in the preterite]]."
+            },
+            {
+              "forma": "críe",
+              "texto": "[[8952|-iar verbs with accents]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Which verb? _Ella ___ (raised) a dos perros._",
+              "r": "crio",
+              "nota": "criar."
+            },
+            {
+              "p": "Which verb? _No me ___ (believed, ellos)._",
+              "r": "creyeron",
+              "nota": "creer."
+            },
+            {
+              "p": "Which verb? _Picasso ___ (created) muchas obras._",
+              "r": "creó",
+              "nota": "crear."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      8952
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 10757",
+      "kwiziq": true
+    }
+  ]
+}

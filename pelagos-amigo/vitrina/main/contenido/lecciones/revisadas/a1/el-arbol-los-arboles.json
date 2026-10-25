@@ -1,0 +1,218 @@
+{
+  "tema": 6749,
+  "slug": "el-arbol-los-arboles",
+  "titulo": "Nouns ending in a consonant",
+  "subtitulo": "El árbol, los árboles; la flor, las flores.",
+  "foto": "t08.jpg",
+  "regla": "Nouns ending in a consonant (except -z) can be masculine (el árbol) or feminine (la flor), so learn the article with the noun. Plural: add -es (los árboles, las flores), and watch the written accent.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Nouns ending in a consonant can be **masculine** (**el árbol, el reloj, el camión**) or **feminine** (**la flor, la ciudad, la canción**). Learn each one with its article."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Plural: add **-es**: **el árbol** → **los árboles**, **la flor** → **las flores**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Watch the accent: **camión** → **camiones**, **canción** → **canciones** (it goes); **examen** → **exámenes** (it appears). The stress stays on the same syllable."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Singular",
+            "Plural"
+          ],
+          "filas": [
+            [
+              "el árbol",
+              "los árboles"
+            ],
+            [
+              "el reloj",
+              "los relojes"
+            ],
+            [
+              "el camión",
+              "los camiones"
+            ],
+            [
+              "la flor",
+              "las flores"
+            ],
+            [
+              "la ciudad",
+              "las ciudades"
+            ],
+            [
+              "el examen",
+              "los exámenes"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "En mi azotea tengo ==flores== y dos ==árboles== de limón.",
+              "en": "On my roof I have flowers and two lemon trees."
+            },
+            {
+              "es": "Los ==camiones== a Rosarito salen cada media hora.",
+              "en": "The buses to Rosarito leave every half hour."
+            },
+            {
+              "es": "Me gustan las ==canciones== de Café Tacvba.",
+              "en": "I like Café Tacvba's songs."
+            },
+            {
+              "es": "Tijuana y San Diego son ==ciudades== vecinas.",
+              "en": "Tijuana and San Diego are neighboring cities."
+            },
+            {
+              "es": "Mi hermano colecciona ==relojes==.",
+              "en": "My brother collects watches."
+            },
+            {
+              "es": "Mañana tengo dos ==exámenes==.",
+              "en": "I have two exams tomorrow."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "las flors"
+                },
+                {
+                  "v": "bien",
+                  "t": "las flores"
+                }
+              ],
+              "nota": "Consonant: **-es**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "los camiónes"
+                },
+                {
+                  "v": "bien",
+                  "t": "los camiones"
+                }
+              ],
+              "nota": "The accent goes."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "los examenes"
+                },
+                {
+                  "v": "bien",
+                  "t": "los exámenes"
+                }
+              ],
+              "nota": "The accent appears."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el hijo, los hijos",
+              "texto": "Nouns in -o and -a: [[6150|regular masculine and feminine nouns]]."
+            },
+            {
+              "forma": "la calle, el puente",
+              "texto": "Nouns in -e: [[6674|nouns ending in -e]]."
+            },
+            {
+              "forma": "el lápiz, los lápices",
+              "texto": "Nouns in -z: [[7084|plural of nouns in -z]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Plural of _el papel_?",
+              "r": "los papeles",
+              "nota": "Add -es."
+            },
+            {
+              "p": "Plural of _la canción_?",
+              "r": "las canciones",
+              "nota": "No accent in the plural."
+            },
+            {
+              "p": "Fix it: _Hay muchos árbols._",
+              "r": "Hay muchos árboles.",
+              "nota": "Add -es."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6150
+    ],
+    "confunde": [
+      6674
+    ],
+    "sigue": [
+      7084
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6749",
+      "kwiziq": true
+    }
+  ]
+}

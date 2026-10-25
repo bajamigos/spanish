@@ -1,0 +1,199 @@
+{
+  "tema": 8294,
+  "slug": "en-cuanto",
+  "titulo": "En cuanto / apenas / tan pronto como = as soon as",
+  "subtitulo": "En cuanto llegues, llámame. Apenas llegué, me quité los zapatos.",
+  "foto": "t05.jpg",
+  "regla": "En cuanto, apenas, tan pronto como = as soon as. Indicative for habits and past events (en cuanto salgo, apenas llegué); subjunctive for the future (en cuanto llegues). Apenas in this sense is very common in Mexico.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "All three introduce an action that happens **right before** another."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Time",
+            "Mood",
+            "Example"
+          ],
+          "filas": [
+            [
+              "habit",
+              "indicative",
+              "En cuanto salgo del trabajo, me relajo."
+            ],
+            [
+              "past",
+              "indicative",
+              "Apenas llegué, me quité los tacones."
+            ],
+            [
+              "future",
+              "subjunctive",
+              "En cuanto llegues, llama a tu papá."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Apenas** for _as soon as_ is very common in Mexico and Latin America (it also means _barely_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: same rule as **cuando**: future means subjunctive."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==En cuanto llegues== a la casa, llama a tu papá.",
+              "en": "As soon as you get home, call your dad."
+            },
+            {
+              "es": "Nos ponemos rojos ==en cuanto nos vemos==.",
+              "en": "We blush as soon as we see each other."
+            },
+            {
+              "es": "==En cuanto termine== este curso de italiano, me voy a inscribir en uno de alemán.",
+              "en": "As soon as I finish this Italian course, I'm signing up for German."
+            },
+            {
+              "es": "==Apenas abro== la puerta de la casa, me pongo las pantuflas.",
+              "en": "As soon as I open the front door, I put on my slippers."
+            },
+            {
+              "es": "No te preocupes, ==apenas pueda== ir al cajero, saco 500 pesos.",
+              "en": "Don't worry, as soon as I can get to an ATM, I'll take out 500 pesos."
+            },
+            {
+              "es": "==Apenas llegué== a la casa, me quité los tacones.",
+              "en": "As soon as I got home, I took off my heels."
+            },
+            {
+              "es": "==Tan pronto como== lo ==vea==, le digo.",
+              "en": "As soon as I see him, I'll tell him."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "En cuanto llegas mañana, llámame."
+                },
+                {
+                  "v": "bien",
+                  "t": "En cuanto llegues mañana, llámame."
+                }
+              ],
+              "nota": "Future: subjunctive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Apenas llegara, me quité los zapatos. (it happened)"
+                },
+                {
+                  "v": "bien",
+                  "t": "Apenas llegué, me quité los zapatos."
+                }
+              ],
+              "nota": "Past fact: indicative."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "cuando",
+              "texto": "[[5062|cuando + subjunctive]]."
+            },
+            {
+              "forma": "antes de que, después de que",
+              "texto": "[[10029|time clauses]]."
+            },
+            {
+              "forma": "hasta que",
+              "texto": "[[7253|desde que / hasta que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _As soon as you finish, let me know._ (tú)",
+              "r": "En cuanto termines, avísame.",
+              "nota": "Future: subjunctive."
+            },
+            {
+              "p": "In Spanish: _As soon as he saw me, he smiled._",
+              "r": "Apenas me vio, sonrió. / En cuanto me vio, sonrió.",
+              "nota": "Past: indicative."
+            },
+            {
+              "p": "Complete: _Tan pronto como ___ (tener, yo) dinero, te pago._",
+              "r": "tenga",
+              "nota": "Subjunctive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5062
+    ],
+    "confunde": [
+      10029
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8294",
+      "kwiziq": true
+    }
+  ]
+}

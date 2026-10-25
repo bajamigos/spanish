@@ -1,0 +1,182 @@
+{
+  "tema": 7898,
+  "slug": "no-mas-que",
+  "titulo": "No + verb + más que = only, just",
+  "subtitulo": "No tengo más que cien pesos. No tienes más que pedirlo.",
+  "foto": "t08.jpg",
+  "regla": "No + verb + más que means only / just, more emphatic than solo: No tengo más que cien pesos. With an infinitive: No tienes más que decirlo = you only have to say it. Often no tener / no haber / no poder más que. Nada can be added: No busca nada más que pleito.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "no + verb",
+            "+ (nada) más que",
+            "+ noun / infinitive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The verb **must be negative**: **no tengo más que...**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Stronger and more idiomatic than **solo**: **solo tienes que confiar** vs **no tienes más que confiar**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Common: **no tener más que, no haber más que, no poder más que**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Don't confuse with **más de** + number: **tengo más de cien pesos** = _more than_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **no... más que** = _nothing more than..._"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==No tenía más que== unas monedas en la bolsa.",
+              "en": "He only had a few coins in his pocket."
+            },
+            {
+              "es": "==No llevo más que== unos minutos esperando.",
+              "en": "I've only been waiting a few minutes."
+            },
+            {
+              "es": "Ese tipo ==no busca más que== pleito.",
+              "en": "That guy is just looking for a fight."
+            },
+            {
+              "es": "==No tienes más que== decirlo y te ayudo.",
+              "en": "You only have to say the word and I'll help."
+            },
+            {
+              "es": "==No hay más que== escucharlo para saber que miente.",
+              "en": "You only need to listen to him to know he's lying."
+            },
+            {
+              "es": "==No podemos más que== esperar.",
+              "en": "All we can do is wait."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "solo",
+                  "t": "No tengo más que cien pesos."
+                },
+                {
+                  "v": "más de",
+                  "t": "Tengo más de cien pesos."
+                }
+              ],
+              "nota": "_Only 100_ vs _more than 100_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tengo más que cien pesos."
+                },
+                {
+                  "v": "bien",
+                  "t": "No tengo más que cien pesos."
+                }
+              ],
+              "nota": "Needs **no**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "más que / más de",
+              "texto": "[[6980|más que vs más de]]."
+            },
+            {
+              "forma": "sino",
+              "texto": "[[7035|pero, sino]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We only have two days left._",
+              "r": "No nos quedan más que dos días.",
+              "nota": "no + más que."
+            },
+            {
+              "p": "In Spanish: _You just have to ask._",
+              "r": "No tienes más que pedirlo.",
+              "nota": "no tener más que + infinitive."
+            },
+            {
+              "p": "Only or more than? _No vinieron más de diez personas._",
+              "r": "Not more than ten (at most ten).",
+              "nota": "más de + number."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6980
+    ],
+    "confunde": [
+      7035
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7898",
+      "kwiziq": true
+    }
+  ]
+}

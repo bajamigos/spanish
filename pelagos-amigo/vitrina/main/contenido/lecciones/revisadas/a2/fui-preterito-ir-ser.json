@@ -1,0 +1,262 @@
+{
+  "tema": 5107,
+  "slug": "fui-preterito-ir-ser",
+  "titulo": "Ir and ser in the preterite",
+  "subtitulo": "Fui a la playa y fue increíble.",
+  "foto": "t06.jpg",
+  "regla": "Ir and ser share the same irregular preterite: fui, fuiste, fue, fuimos, fueron, with no written accents. Context tells you which verb it is: fui a Ensenada (I went) vs fue un buen día (it was).",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Ir** (_to go_) and **ser** (_to be_) have **identical** forms in the preterite."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "ir / ser",
+            "ir: _went_",
+            "ser: _was / were_"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**fui**",
+              "Fui al gimnasio.",
+              "Fui el primero."
+            ],
+            [
+              "tú",
+              "**fuiste**",
+              "¿Fuiste a la fiesta?",
+              "Fuiste muy amable."
+            ],
+            [
+              "él, ella, usted",
+              "**fue**",
+              "Fue a Tecate.",
+              "Fue un día largo."
+            ],
+            [
+              "nosotros",
+              "**fuimos**",
+              "Fuimos al cine.",
+              "Fuimos campeones."
+            ],
+            [
+              "ellos, ustedes",
+              "**fueron**",
+              "Fueron a la playa.",
+              "Fueron muy buenos."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**No written accents**: **fui**, **fue** (not fuí, fué)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "How to tell them apart: **ir** goes somewhere, so it usually has **a** + place (**fui a Ensenada**) or a direction word (**¿adónde fuiste?**). **Ser** describes or judges: **fue increíble**, **fue mi maestro**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With events, **ser** means _took place_: **la fiesta fue en mi casa**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **fui** to a place, **fue** a feeling. Look for the **a**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "El domingo ==fui== a surfear a Baja Malibú.",
+              "en": "On Sunday I went surfing at Baja Malibu."
+            },
+            {
+              "es": "La sesión ==fue== perfecta.",
+              "en": "The session was perfect."
+            },
+            {
+              "es": "¿==Fuiste== al mercado ayer?",
+              "en": "Did you go to the market yesterday?"
+            },
+            {
+              "es": "Mi abuelo ==fue== pescador en San Felipe.",
+              "en": "My grandpa was a fisherman in San Felipe."
+            },
+            {
+              "es": "==Fuimos== a la playa en bici.",
+              "en": "We went to the beach by bike."
+            },
+            {
+              "es": "El torneo ==fue== en Mexicali.",
+              "en": "The tournament was (took place) in Mexicali."
+            },
+            {
+              "es": "Mis amigos ==fueron== a San Diego el fin de semana.",
+              "en": "My friends went to San Diego on the weekend."
+            },
+            {
+              "es": "Esas clases ==fueron== muy útiles.",
+              "en": "Those classes were very useful."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer fuí al centro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer fui al centro."
+                }
+              ],
+              "nota": "No accent on **fui**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella fué a Tijuana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella fue a Tijuana."
+                }
+              ],
+              "nota": "No accent on **fue** either."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ellos fuieron a la playa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ellos fueron a la playa."
+                }
+              ],
+              "nota": "**fueron**: no i."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer yo fue al gimnasio."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer yo fui al gimnasio."
+                }
+              ],
+              "nota": "yo → **fui**, él → **fue**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "voy, soy",
+              "texto": "The present: [[5271|ir]], [[5070|ser]]."
+            },
+            {
+              "forma": "iba, era",
+              "texto": "The imperfect: [[5269|ir]], [[5088|ser]]."
+            },
+            {
+              "forma": "estuve",
+              "texto": "The other _to be_: [[5218|estar in the preterite]]."
+            },
+            {
+              "forma": "fui ayer",
+              "texto": "When to use it: [[6004|the preterite for completed actions]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We went to Rosarito on Saturday._",
+              "r": "Fuimos a Rosarito el sábado.",
+              "nota": "ir → fuimos."
+            },
+            {
+              "p": "In Spanish: _The party was amazing._",
+              "r": "La fiesta fue increíble.",
+              "nota": "ser → fue."
+            },
+            {
+              "p": "Fix it: _¿Adónde fuistes ayer?_",
+              "r": "¿Adónde fuiste ayer?",
+              "nota": "No final s."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5271,
+      5070
+    ],
+    "confunde": [
+      5218,
+      5269,
+      5088
+    ],
+    "sigue": [
+      6004
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5107",
+      "kwiziq": true
+    }
+  ]
+}

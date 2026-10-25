@@ -1,0 +1,244 @@
+{
+  "tema": 8916,
+  "slug": "hay-ahi-ay",
+  "titulo": "Hay, ahí and ay",
+  "subtitulo": "«Ahí hay un perro. ¡Ay, qué miedo!»",
+  "foto": "t09.jpg",
+  "regla": "Three words that sound alike: hay (there is / there are, from haber), ahí (there, the place) and ¡ay! (oh! / ouch!). Hay and ay sound the same; ahí has two syllables, stressed on the í.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Word",
+            "What it is",
+            "Sounds like",
+            "Meaning"
+          ],
+          "filas": [
+            [
+              "**hay**",
+              "verb (haber)",
+              "_eye_ (one syllable)",
+              "_there is / there are_"
+            ],
+            [
+              "**ahí**",
+              "adverb of place",
+              "_a-EE_ (two syllables)",
+              "_there_ (near you)"
+            ],
+            [
+              "**¡ay!**",
+              "interjection",
+              "_eye_ (one syllable)",
+              "_oh! ouch! oh no!_"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Hay** says something **exists**: **Hay olas** (_There are waves_). It never changes for plural."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Ahí** points to a **place**: **Ponlo ahí** (_Put it there_). The accent on the **í** splits it into two syllables."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**¡Ay!** expresses pain, surprise or worry, usually between **¡ !**: **¡Ay, me duele!** Mexicans love **¡Ay, no!** and **¡Ay, qué bonito!**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "English _there_ has two jobs that Spanish splits: _**There** is a café_ = **Hay** un café; _The café is over **there**_ = El café está **ahí**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Hay== muchas olas hoy.",
+              "en": "There are a lot of waves today."
+            },
+            {
+              "es": "Deja las llaves ==ahí==, en la mesa.",
+              "en": "Leave the keys there, on the table."
+            },
+            {
+              "es": "==¡Ay!== Me pegué en el dedo.",
+              "en": "Ouch! I hit my toe."
+            },
+            {
+              "es": "==Ahí== ==hay== una taquería muy buena.",
+              "en": "There's a really good taco place over there."
+            },
+            {
+              "es": "¿==Hay== tortillas? —Sí, ==ahí== están.",
+              "en": "Are there any tortillas? —Yes, there they are."
+            },
+            {
+              "es": "==¡Ay, no!== Se me olvidó el kimono.",
+              "en": "Oh no! I forgot my gi."
+            },
+            {
+              "es": "No ==hay== nadie en la playa.",
+              "en": "There's nobody on the beach."
+            },
+            {
+              "es": "==Ahí== nos vemos.",
+              "en": "See you there. / See you around."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ahí muchas personas aquí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hay muchas personas aquí."
+                }
+              ],
+              "nota": "Existence: hay."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El libro está hay."
+                },
+                {
+                  "v": "bien",
+                  "t": "El libro está ahí."
+                }
+              ],
+              "nota": "Place: ahí, with accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Hay, qué dolor!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Ay, qué dolor!"
+                }
+              ],
+              "nota": "Exclamation: ay, no h."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hay están mis amigos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ahí están mis amigos."
+                }
+              ],
+              "nota": "There they are = place."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hay",
+              "texto": "The basics of hay: [[5102|hay = there is / there are]]."
+            },
+            {
+              "forma": "hay vs está",
+              "texto": "Existence vs location: [[7036|hay vs está]]."
+            },
+            {
+              "forma": "aquí, ahí, allá",
+              "texto": "More place words: [[9338|aquí, acá, ahí, allí, allá]]."
+            },
+            {
+              "forma": "¡qué bonito!",
+              "texto": "Exclamations: [[6137|qué in exclamations]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Fill in with hay, ahí or ay: ___ un gato en el techo.",
+              "r": "Hay un gato en el techo.",
+              "nota": "Existence: hay."
+            },
+            {
+              "p": "Fill in with hay, ahí or ay: Mi carro está ___, junto a la tienda.",
+              "r": "Mi carro está ahí, junto a la tienda.",
+              "nota": "Place: ahí."
+            },
+            {
+              "p": "Fill in with hay, ahí or ay: ¡___, qué susto!",
+              "r": "¡Ay, qué susto!",
+              "nota": "Exclamation: ay."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5102,
+      9338
+    ],
+    "confunde": [
+      7036
+    ],
+    "sigue": [
+      6137
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8916",
+      "kwiziq": true
+    }
+  ]
+}

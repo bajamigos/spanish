@@ -1,0 +1,239 @@
+{
+  "tema": 7035,
+  "slug": "pero-sino-sino-que",
+  "titulo": "Pero, sino and sino que (but)",
+  "subtitulo": "No es caro, pero no tengo dinero. No es caro, sino barato.",
+  "foto": "t03.jpg",
+  "regla": "Pero = but (adds something, even after a negative). Sino = but rather: after a negative, it corrects the first idea and replaces it. Before a conjugated verb, sino becomes sino que.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "English uses _but_ for two different ideas. Spanish splits them."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Pero** = _but, however_. It adds a contrast. Both ideas stay true: _Es caro, **pero** es bueno._"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Sino** = _but rather, but instead_. It comes after a **negative** and **corrects** it: the first idea is false, the second replaces it. _No es caro, **sino** barato._"
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "no + A",
+            "+ sino +",
+            "B (noun, adjective, adverb, infinitive...)"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "When B has a **conjugated verb**, use **sino que**: _No lo compré, **sino que** me lo prestaron._"
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "no + verb A",
+            "+ sino que +",
+            "verb B"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "A negative does **not** automatically mean **sino**. If the second idea doesn't replace the first, it's still **pero**: _No es caro, **pero** no lo voy a comprar._"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Test: if you can say _but rather_ or _instead_ in English, it's **sino**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Me gusta surfear, ==pero== el agua está muy fría.",
+              "en": "I like surfing, but the water is very cold."
+            },
+            {
+              "es": "No soy de Tijuana, ==pero== vivo aquí desde hace años.",
+              "en": "I'm not from Tijuana, but I've lived here for years."
+            },
+            {
+              "es": "No es mexicana, ==sino== guatemalteca.",
+              "en": "She isn't Mexican but Guatemalan."
+            },
+            {
+              "es": "No entrenamos los lunes, ==sino== los martes.",
+              "en": "We don't train on Mondays but on Tuesdays."
+            },
+            {
+              "es": "No quiero comer, ==sino== dormir.",
+              "en": "I don't want to eat; I want to sleep instead."
+            },
+            {
+              "es": "No lo compré, ==sino que== me lo regalaron.",
+              "en": "I didn't buy it; they gave it to me as a gift."
+            },
+            {
+              "es": "No regamos el huerto, ==sino que== esperamos la lluvia.",
+              "en": "We didn't water the garden; instead we waited for the rain."
+            },
+            {
+              "es": "Holden no escapó, ==sino que== volvió por su tripulación.",
+              "en": "Holden didn't escape; instead he went back for his crew."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No es lunes, pero martes."
+                },
+                {
+                  "v": "bien",
+                  "t": "No es lunes, sino martes."
+                }
+              ],
+              "nota": "It corrects: sino."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No lo vendí, sino lo regalé."
+                },
+                {
+                  "v": "bien",
+                  "t": "No lo vendí, sino que lo regalé."
+                }
+              ],
+              "nota": "Conjugated verb after it: sino que."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es caro, sino es bueno."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es caro, pero es bueno."
+                }
+              ],
+              "nota": "No negative, no correction: pero."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No tengo dinero, sino quiero ir."
+                },
+                {
+                  "v": "bien",
+                  "t": "No tengo dinero, pero quiero ir."
+                }
+              ],
+              "nota": "Both are true: pero."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "que",
+              "texto": "The basic linker: [[6128|que = that]]."
+            },
+            {
+              "forma": "no solo... sino también",
+              "texto": "The next step: [[9953|not only... but also]]."
+            },
+            {
+              "forma": "porque / como",
+              "texto": "Another family of linkers: [[7034|porque, como, es que]]."
+            },
+            {
+              "forma": "tanto... como",
+              "texto": "Joining two things: [[9254|tanto... como = both... and]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _It isn't blue but green._",
+              "r": "No es azul, sino verde.",
+              "nota": "Correction: sino."
+            },
+            {
+              "p": "In Spanish: _I didn't call him; I wrote to him instead._",
+              "r": "No lo llamé, sino que le escribí.",
+              "nota": "Verb: sino que."
+            },
+            {
+              "p": "Fix it: _No tengo hambre, sino quiero un café._",
+              "r": "No tengo hambre, pero quiero un café.",
+              "nota": "No correction: pero."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6128
+    ],
+    "confunde": [
+      7034
+    ],
+    "sigue": [
+      9953,
+      9254
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7035",
+      "kwiziq": true
+    }
+  ]
+}

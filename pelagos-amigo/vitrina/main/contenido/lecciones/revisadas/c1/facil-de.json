@@ -1,0 +1,207 @@
+{
+  "tema": 7901,
+  "slug": "facil-de",
+  "titulo": "Ser fácil / difícil + infinitive vs ser fácil / difícil de + infinitive",
+  "subtitulo": "Es fácil armarlo / El mueble es fácil de armar.",
+  "foto": "t05.jpg",
+  "regla": "When the subject is the thing, use de: El mueble es fácil de armar. When the subject is the action (the infinitive), no de: Es fácil armar el mueble. Same with difícil, complicado, agradable, imposible...",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Subject",
+            "Pattern",
+            "Example"
+          ],
+          "filas": [
+            [
+              "the thing",
+              "thing + es + adjective + de + infinitive",
+              "El mueble es fácil de armar."
+            ],
+            [
+              "the action",
+              "es + adjective + infinitive (+ thing)",
+              "Es fácil armar el mueble."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "With **de**, the infinitive has **no object** (the subject already is the object): never ~~fácil de armarlo~~."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Works with any adjective: **difícil, complicado, imposible, agradable, sencillo, rico...**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "The adjective agrees with the thing: **los chícharos no son difíciles de cultivar**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if the sentence starts with the thing, add **de**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "El ropero ==es fácil de armar==.",
+              "en": "The wardrobe is easy to assemble."
+            },
+            {
+              "es": "==Es fácil armar== el ropero.",
+              "en": "It's easy to assemble the wardrobe."
+            },
+            {
+              "es": "Los chícharos no ==son difíciles de cultivar==.",
+              "en": "Peas aren't hard to grow."
+            },
+            {
+              "es": "No ==es difícil cultivar== chícharos.",
+              "en": "It's not hard to grow peas."
+            },
+            {
+              "es": "El subjuntivo ==es complicado de explicar==.",
+              "en": "The subjunctive is complicated to explain."
+            },
+            {
+              "es": "==Es complicado explicar== el subjuntivo.",
+              "en": "It's complicated to explain the subjunctive."
+            },
+            {
+              "es": "El canto de los pájaros ==es agradable de escuchar== en las mañanas.",
+              "en": "Birdsong is nice to hear in the mornings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es fácil de armar el ropero."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es fácil armar el ropero."
+                }
+              ],
+              "nota": "Action as subject: no **de**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El ropero es fácil armar."
+                },
+                {
+                  "v": "bien",
+                  "t": "El ropero es fácil de armar."
+                }
+              ],
+              "nota": "Thing as subject: **de**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es fácil de armarlo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es fácil de armar."
+                }
+              ],
+              "nota": "No object after **de** + infinitive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "es bueno + infinitive",
+              "texto": "[[7428|impersonal + infinitive]]."
+            },
+            {
+              "forma": "infinitive as subject",
+              "texto": "[[7079|infinitive as subject]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Complete: _Este libro es difícil ___ leer._",
+              "r": "de",
+              "nota": "Thing as subject."
+            },
+            {
+              "p": "Complete: _Es difícil ___ leer este libro._",
+              "r": "(nothing)",
+              "nota": "Action as subject."
+            },
+            {
+              "p": "Rewrite with the thing as subject: _Es fácil hacer esta receta._",
+              "r": "Esta receta es fácil de hacer.",
+              "nota": "de + infinitive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7428
+    ],
+    "confunde": [
+      7079
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7901",
+      "kwiziq": true
+    }
+  ]
+}

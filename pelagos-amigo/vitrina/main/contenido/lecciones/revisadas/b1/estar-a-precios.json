@@ -1,0 +1,199 @@
+{
+  "tema": 5984,
+  "slug": "estar-a-precios",
+  "titulo": "Estar a (not ser) for fluctuating prices and quantities",
+  "subtitulo": "El dólar está a 18 pesos: a price that goes up and down.",
+  "foto": "t06.jpg",
+  "regla": "For prices and quantities that fluctuate, use estar + a: el kilo de aguacate está a 60 pesos; el dólar estaba a 20 pesos.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "When you talk about **prices or quantities that change** (exchange rates, market prices, temperatures), use **estar** + **a**, not **ser**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "thing",
+            "**estar**",
+            "**a**",
+            "price / amount"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It works in any tense: **está a**, **estaba a**, **estará a**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "To ask: **¿A cuánto está…?** (_How much is… going for?_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: prices go up and down like the tide, so they take **estar**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "El dólar ==está a== diecisiete pesos.",
+              "en": "The dollar is at seventeen pesos."
+            },
+            {
+              "es": "Un kilo de queso ==está a== ciento veinticinco pesos.",
+              "en": "A kilo of cheese is going for 125 pesos."
+            },
+            {
+              "es": "El dólar ==estaba a== veinte pesos el año pasado.",
+              "en": "The dollar was at twenty pesos last year."
+            },
+            {
+              "es": "Mañana el euro ==estará a== diecinueve pesos.",
+              "en": "Tomorrow the euro will be at nineteen pesos."
+            },
+            {
+              "es": "—¿==A cuánto está== el aguacate? —==A== sesenta el kilo.",
+              "en": "\"How much is avocado going for?\" \"Sixty a kilo.\""
+            },
+            {
+              "es": "El agua ==está a== dieciocho grados.",
+              "en": "The water is at eighteen degrees."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El dólar es a 17 pesos."
+                },
+                {
+                  "v": "bien",
+                  "t": "El dólar está a 17 pesos."
+                }
+              ],
+              "nota": "Fluctuating price: **estar a**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "¿Cuánto está el aguacate?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿A cuánto está el aguacate?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿A cómo está el aguacate?"
+                }
+              ],
+              "nota": "You'll hear it without **a** at the market, but the full form keeps it. Also very common: **¿A cómo está el aguacate?**"
+            },
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "¿Cuánto cuesta?"
+                }
+              ],
+              "nota": "For a fixed price, **costar** is the usual verb."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "por 100 pesos",
+              "texto": "Price with **por**: [[5975|por for price]]."
+            },
+            {
+              "forma": "estoy de mesero",
+              "texto": "Another **estar** + preposition: [[5982|estar de]]."
+            },
+            {
+              "forma": "¿cuánto?",
+              "texto": "Asking quantities: [[7068|cuánto + noun]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Tomatoes are at 30 pesos a kilo._",
+              "r": "El jitomate está a 30 pesos el kilo.",
+              "nota": "estar a."
+            },
+            {
+              "p": "In Spanish: _How much is the dollar at?_",
+              "r": "¿A cuánto está el dólar?",
+              "nota": "A cuánto + estar."
+            },
+            {
+              "p": "In Spanish: _Gas was at 25 pesos._",
+              "r": "La gasolina estaba a 25 pesos.",
+              "nota": "estar a, past."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5166,
+      7068
+    ],
+    "confunde": [
+      5975
+    ],
+    "sigue": [
+      5982
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5984",
+      "kwiziq": true
+    }
+  ]
+}

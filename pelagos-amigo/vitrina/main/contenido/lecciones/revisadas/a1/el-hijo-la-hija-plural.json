@@ -1,0 +1,215 @@
+{
+  "tema": 6150,
+  "slug": "el-hijo-la-hija-plural",
+  "titulo": "Masculine and feminine nouns: -o and -a",
+  "subtitulo": "El hijo, la hija, los hijos, las hijas.",
+  "foto": "t06.jpg",
+  "regla": "Many nouns for people and animals end in -o for males and -a for females (el hijo, la hija); nouns ending in a consonant add -a (el doctor, la doctora). Plural: add -s after a vowel, -es after a consonant. A mixed group uses the masculine plural.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Many nouns for people and animals: **-o** for males, **-a** for females: **el hijo** → **la hija**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "If the masculine ends in a **consonant**, add **-a**: **el doctor** → **la doctora**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Plural: add **-s** after a vowel, **-es** after a consonant. A **mixed** group uses the masculine: **mis hijos** = _my sons and daughters_."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Masc. singular",
+            "Fem. singular",
+            "Masc. plural",
+            "Fem. plural"
+          ],
+          "filas": [
+            [
+              "el hijo",
+              "la hija",
+              "los hijos",
+              "las hijas"
+            ],
+            [
+              "el amigo",
+              "la amiga",
+              "los amigos",
+              "las amigas"
+            ],
+            [
+              "el perro",
+              "la perra",
+              "los perros",
+              "las perras"
+            ],
+            [
+              "el doctor",
+              "la doctora",
+              "los doctores",
+              "las doctoras"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi ==hermana== vive en Ensenada.",
+              "en": "My sister lives in Ensenada."
+            },
+            {
+              "es": "Tengo dos ==hijos==: un ==niño== y una ==niña==.",
+              "en": "I have two children: a boy and a girl."
+            },
+            {
+              "es": "La ==profesora== de jiu-jitsu es brasileña.",
+              "en": "The (female) jiu-jitsu teacher is Brazilian."
+            },
+            {
+              "es": "Los ==vecinos== tienen un huerto en la azotea.",
+              "en": "The neighbors have a garden on the roof."
+            },
+            {
+              "es": "Mis ==primas== surfean en Rosarito.",
+              "en": "My (female) cousins surf in Rosarito."
+            },
+            {
+              "es": "El ==doctor== y la ==doctora== trabajan juntos.",
+              "en": "The (male) doctor and the (female) doctor work together."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La profesor de inglés es simpática."
+                },
+                {
+                  "v": "bien",
+                  "t": "La profesora de inglés es simpática."
+                }
+              ],
+              "nota": "Consonant + **-a** for a woman."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Los doctors"
+                },
+                {
+                  "v": "bien",
+                  "t": "Los doctores"
+                }
+              ],
+              "nota": "After a consonant: **-es**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Juan y Ana son mis hermanas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Juan y Ana son mis hermanos."
+                }
+              ],
+              "nota": "Mixed group: masculine."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el, la",
+              "texto": "The articles: [[5100|el / la]], [[5101|los / las]]."
+            },
+            {
+              "forma": "el caballo, la yegua",
+              "texto": "When the female is a different word: [[6757|gender of living creatures]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Feminine of _el doctor_?",
+              "r": "la doctora",
+              "nota": "Add -a."
+            },
+            {
+              "p": "Plural of _la profesora_?",
+              "r": "las profesoras",
+              "nota": "Vowel: add -s."
+            },
+            {
+              "p": "Fix it: _Pedro y Lucía son mis primas._",
+              "r": "Pedro y Lucía son mis primos.",
+              "nota": "Mixed group: -os."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5100,
+      5101
+    ],
+    "confunde": [],
+    "sigue": [
+      6757
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6150",
+      "kwiziq": true
+    }
+  ]
+}

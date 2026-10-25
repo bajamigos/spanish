@@ -1,0 +1,221 @@
+{
+  "tema": 8704,
+  "slug": "nada-de",
+  "titulo": "Nada / nada de = not at all",
+  "subtitulo": "No tengo nada de sueño. No es nada difícil.",
+  "foto": "t07.jpg",
+  "regla": "No... nada de + noun = no ... at all (no tengo nada de hambre). ¡Nada de + infinitive! = absolutely no ...ing. No... nada + adjective / adverb = not at all (no es nada difícil). Para nada = not at all.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "no... nada de + noun",
+              "texto": "_no... at all_: **no tengo nada de sueño**."
+            },
+            {
+              "forma": "¡nada de + infinitive!",
+              "texto": "_absolutely no...ing_: **¡nada de gritar!**"
+            },
+            {
+              "forma": "no... nada + adjective / adverb",
+              "texto": "_not at all_, **no de**: **no es nada complicado**, **no baila nada mal**."
+            },
+            {
+              "forma": "tener / haber + nada de + adjective",
+              "texto": "**No tiene nada de raro.** (_There's nothing strange about it._)"
+            },
+            {
+              "forma": "para nada",
+              "texto": "_not at all_: **—¿Te molesta? —Para nada.**"
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **nada** in front of a quality turns it down to zero."
+        }
+      ]
+    },
+    {
+      "id": "sustantivo",
+      "titulo": "Nada de + noun",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No tengo ==nada de== sueño; voy a seguir leyendo.",
+              "en": "I'm not sleepy at all; I'm going to keep reading."
+            },
+            {
+              "es": "No me das ==nada de== miedo.",
+              "en": "You don't scare me at all."
+            },
+            {
+              "es": "¡Te di 500 pesos y dices que no tienes ==nada de== dinero!",
+              "en": "I gave you 500 pesos and you say you have no money at all!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "infinitivo",
+      "titulo": "¡Nada de + infinitive!",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Puedes invitar a tus amigos, pero ==nada de== tomar alcohol.",
+              "en": "You can invite your friends, but absolutely no drinking."
+            },
+            {
+              "es": "¡==Nada de== gritar!",
+              "en": "No shouting!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adjetivo",
+      "titulo": "Nada + adjective / adverb",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ese chavo no baila ==nada mal==.",
+              "en": "That guy dances really well. (not badly at all)"
+            },
+            {
+              "es": "No llegaste ==nada temprano==. Ya son las doce.",
+              "en": "You didn't get here early at all. It's already twelve."
+            },
+            {
+              "es": "Las instrucciones no son ==nada complicadas==.",
+              "en": "The instructions aren't complicated at all."
+            },
+            {
+              "es": "Esa historia no tiene ==nada de== especial.",
+              "en": "There's nothing special about that story."
+            },
+            {
+              "es": "No soy celosa ==para nada==.",
+              "en": "I'm not jealous at all."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No es nada de difícil."
+                },
+                {
+                  "v": "bien",
+                  "t": "No es nada difícil."
+                }
+              ],
+              "nota": "Adjective after **ser**: no **de**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No tengo nada hambre."
+                },
+                {
+                  "v": "bien",
+                  "t": "No tengo nada de hambre."
+                }
+              ],
+              "nota": "Noun: **de**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "nada",
+              "texto": "[[6144|nada = nothing]]."
+            },
+            {
+              "forma": "un tanto, algo",
+              "texto": "The opposite, _somewhat_: [[8526|un tanto / algo]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I'm not cold at all._",
+              "r": "No tengo nada de frío.",
+              "nota": "nada de + noun."
+            },
+            {
+              "p": "In Spanish: _The movie isn't boring at all._",
+              "r": "La película no es nada aburrida.",
+              "nota": "No de."
+            },
+            {
+              "p": "Sign for kids: _No running!_",
+              "r": "¡Nada de correr!",
+              "nota": "nada de + infinitive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6144
+    ],
+    "confunde": [
+      8526
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8704",
+      "kwiziq": true
+    }
+  ]
+}

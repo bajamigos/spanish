@@ -1,0 +1,238 @@
+{
+  "tema": 5103,
+  "slug": "cualquier",
+  "titulo": "Cualquier / cualquiera = any (it doesn't matter which)",
+  "subtitulo": "Elige cualquier libro / un libro cualquiera.",
+  "foto": "t02.jpg",
+  "regla": "Cualquier + singular noun = any (whichever): cualquier día. Un / una + noun + cualquiera = any old one: un día cualquiera. Neither changes for gender. Plural cualesquiera is rare. Any in the sense of some / none = algún / ningún.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "cualquier + noun",
+              "texto": "Before a singular noun, masculine or feminine: **cualquier libro**, **cualquier playera**."
+            },
+            {
+              "forma": "un / una + noun + cualquiera",
+              "texto": "After the noun, with an article: **un plato cualquiera**, **una revista cualquiera**. Often a bit dismissive: _any old_."
+            },
+            {
+              "forma": "cualesquiera",
+              "texto": "Plural, formal and rare: **dos libros cualesquiera**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Cualquier(a)** means _any, it doesn't matter which_. For _any_ meaning _some_ or _none_, use **algún** (affirmative) or **ningún** (negative)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Alone, **cualquiera** = _anyone_: **cualquiera puede hacerlo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **cualquier** = eyes closed, pick one."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Agarra ==cualquier== libro.",
+              "en": "Take any book."
+            },
+            {
+              "es": "Lee ==cualquier== página.",
+              "en": "Read any page."
+            },
+            {
+              "es": "Escoge ==cualquier== playera.",
+              "en": "Choose any T-shirt."
+            },
+            {
+              "es": "Pueden elegir ==cualquier== libro de ese librero.",
+              "en": "You can pick any book from that shelf."
+            },
+            {
+              "es": "Agarra un plato ==cualquiera==.",
+              "en": "Take any plate."
+            },
+            {
+              "es": "Compra un pescado ==cualquiera==.",
+              "en": "Buy any fish."
+            },
+            {
+              "es": "==Cualquiera== puede aprender a surfear.",
+              "en": "Anyone can learn to surf."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "algun",
+      "titulo": "Cualquier vs algún / ningún",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "algún",
+                  "t": "Compra alguna fruta."
+                },
+                {
+                  "v": "ningún",
+                  "t": "No compres ninguna fruta."
+                }
+              ],
+              "nota": "_Some fruit / no fruit_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "cualquier",
+                  "t": "Compra cualquier fruta."
+                },
+                {
+                  "v": "no + cualquier",
+                  "t": "¡No compres cualquier fruta!"
+                }
+              ],
+              "nota": "_Any fruit at all / not just any old fruit_."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cualquiera día."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cualquier día."
+                }
+              ],
+              "nota": "Before the noun: **cualquier**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Un día cualquier."
+                },
+                {
+                  "v": "bien",
+                  "t": "Un día cualquiera."
+                }
+              ],
+              "nota": "After the noun: **cualquiera**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No tengo cualquier dinero."
+                },
+                {
+                  "v": "bien",
+                  "t": "No tengo nada de dinero. / No tengo dinero."
+                }
+              ],
+              "nota": "_Not any_ = none."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "algún",
+              "texto": "[[6136|algún]]."
+            },
+            {
+              "forma": "ningún",
+              "texto": "[[6129|ningún]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Call me any day._",
+              "r": "Llámame cualquier día.",
+              "nota": "Before the noun."
+            },
+            {
+              "p": "In Spanish: _It was just an ordinary Tuesday._",
+              "r": "Era un martes cualquiera.",
+              "nota": "After the noun."
+            },
+            {
+              "p": "In Spanish: _Anyone can do it._",
+              "r": "Cualquiera puede hacerlo.",
+              "nota": "cualquiera alone."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6136,
+      6129
+    ],
+    "confunde": [
+      6136
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5103",
+      "kwiziq": true
+    }
+  ]
+}

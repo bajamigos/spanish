@@ -1,0 +1,214 @@
+{
+  "tema": 5188,
+  "slug": "condicional-haber",
+  "titulo": "Conjugate haber in the conditional",
+  "subtitulo": "Habría: there would be, for one thing or many.",
+  "foto": "t08.jpg",
+  "regla": "Haber has the conditional stem habr-: habría, habrías, habría, habríamos, habrían. Habría alone means there would be and stays singular.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Haber** is irregular in the conditional: add the regular conditional endings to the stem **habr-**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**habr-**",
+            "**-ía, -ías, -ía, -íamos, -ían**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "haber"
+          ],
+          "filas": [
+            [
+              "yo",
+              "habría"
+            ],
+            [
+              "tú",
+              "habrías"
+            ],
+            [
+              "él, ella, usted",
+              "habría"
+            ],
+            [
+              "nosotros",
+              "habríamos"
+            ],
+            [
+              "ustedes, ellos",
+              "habrían"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "On its own, **habría** means _there would be_. It stays **singular**, whether one thing or many things follow: **habría mucha gente**, **habría muchos carros**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: like **hay** and **habrá**, **habría** never goes plural when it means _there would be_."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Habría== mucha gente en ese festival.",
+              "en": "There would be a lot of people at that festival."
+            },
+            {
+              "es": "En ese pueblo ==habría== casas muy viejas.",
+              "en": "In that town there would be very old houses."
+            },
+            {
+              "es": "No ==habría== mucho que hacer en Tecate.",
+              "en": "There wouldn't be much to do in Tecate."
+            },
+            {
+              "es": "==Habría== mucha neblina en la mañana.",
+              "en": "There would be a lot of fog in the morning."
+            },
+            {
+              "es": "No ==habría== demasiado tráfico en la carretera.",
+              "en": "There wouldn't be too much traffic on the highway."
+            },
+            {
+              "es": "Sin el huerto, no ==habría== tomates en el barrio.",
+              "en": "Without the garden, there would be no tomatoes in the neighborhood."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Habrían muchas olas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Habría muchas olas."
+                }
+              ],
+              "nota": "_There would be_ is always singular."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Habería tráfico."
+                },
+                {
+                  "v": "bien",
+                  "t": "Habría tráfico."
+                }
+              ],
+              "nota": "The stem is **habr-**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "habrá",
+              "texto": "The future: [[5157|haber in the future]]."
+            },
+            {
+              "forma": "hay",
+              "texto": "The present: [[7036|hay and está]]."
+            },
+            {
+              "forma": "habría hecho",
+              "texto": "The perfect conditional: [[5114|irregular verbs in the perfect conditional]]."
+            },
+            {
+              "forma": "hablaría",
+              "texto": "The regular pattern: [[5731|regular verbs in the conditional]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _There would be more waves in winter._",
+              "r": "Habría más olas en invierno.",
+              "nota": "Singular **habría**."
+            },
+            {
+              "p": "Fix it: **Habrían tres opciones.**",
+              "r": "Habría tres opciones.",
+              "nota": "Always singular."
+            },
+            {
+              "p": "In Spanish: _Would there be time?_",
+              "r": "¿Habría tiempo?",
+              "nota": "habría."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7036,
+      5731
+    ],
+    "confunde": [
+      5157
+    ],
+    "sigue": [
+      5114,
+      5915
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5188",
+      "kwiziq": true
+    }
+  ]
+}

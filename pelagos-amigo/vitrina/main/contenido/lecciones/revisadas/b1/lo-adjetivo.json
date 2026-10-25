@@ -1,0 +1,217 @@
+{
+  "tema": 6979,
+  "slug": "lo-adjetivo",
+  "titulo": "The neuter article lo + adjective (+ ser)",
+  "subtitulo": "Lo bueno es que hay olas: the good thing, the hard part.",
+  "foto": "t08.jpg",
+  "regla": "Lo + masculine singular adjective = the … thing / what is …: lo bueno, lo difícil. Lo + adjective + de highlights a quality. Lo + adjective + ser: lo malo es que…",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Spanish has a **neuter article**, **lo**, that goes with **adjectives** (not nouns). **Lo** + adjective means _the … thing_ or _what is …_: **lo verde** = _what's green_, **lo pesado** = _the heavy stuff_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The adjective is always **masculine singular** here."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**lo**",
+            "adjective"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Lo** + adjective + **de** highlights a quality of something: **lo salado del jamón** = _how salty the ham is_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Very common with **ser**: **lo bueno es que…**, **lo malo es que…**, **lo difícil es…**, **lo importante es…**"
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**lo**",
+            "adjective",
+            "**ser**",
+            "the rest"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **lo** turns an adjective into an idea."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Me encanta todo ==lo verde==.",
+              "en": "I love everything green."
+            },
+            {
+              "es": "Yo llevo ==lo pesado== y tú llevas ==lo ligero==.",
+              "en": "I'll carry the heavy stuff and you carry the light stuff."
+            },
+            {
+              "es": "Tengo ==lo justo== para vivir.",
+              "en": "I have just enough to live on."
+            },
+            {
+              "es": "No soporto ==lo salado== del jamón.",
+              "en": "I can't stand how salty the ham is."
+            },
+            {
+              "es": "Me encantó ==lo romántico== de esa película.",
+              "en": "I loved how romantic that movie was."
+            },
+            {
+              "es": "==Lo malo es== que no puedo ir contigo al cine.",
+              "en": "The bad thing is that I can't go to the movies with you."
+            },
+            {
+              "es": "==Lo bueno es== que mañana no llueve.",
+              "en": "The good thing is that it's not raining tomorrow."
+            },
+            {
+              "es": "==Lo difícil es== levantarse a las cinco.",
+              "en": "The hard part is getting up at five."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El bueno es que hay olas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Lo bueno es que hay olas."
+                }
+              ],
+              "nota": "_The good thing_ = **lo bueno**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Lo buena es que…"
+                },
+                {
+                  "v": "bien",
+                  "t": "Lo bueno es que…"
+                }
+              ],
+              "nota": "Always masculine singular."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Lo buenos es que…"
+                },
+                {
+                  "v": "bien",
+                  "t": "Lo bueno es que…"
+                }
+              ],
+              "nota": "**Lo** never goes plural."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "lo que quiero",
+              "texto": "_What_: [[5087|lo que]]."
+            },
+            {
+              "forma": "lo rápido que corre",
+              "texto": "Lo + adjective + que: [[7089|lo + adjective + que]]."
+            },
+            {
+              "forma": "lo creo",
+              "texto": "Other uses of **lo**: [[8392|neuter lo]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _The important thing is to train._",
+              "r": "Lo importante es entrenar.",
+              "nota": "lo + adjective + ser."
+            },
+            {
+              "p": "In Spanish: _The worst part is the traffic._",
+              "r": "Lo peor es el tráfico.",
+              "nota": "lo peor."
+            },
+            {
+              "p": "Fix it: **La buena es que llegamos.**",
+              "r": "Lo bueno es que llegamos.",
+              "nota": "Neuter **lo**."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      5087
+    ],
+    "sigue": [
+      5087,
+      7089,
+      8392
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6979",
+      "kwiziq": true
+    }
+  ]
+}

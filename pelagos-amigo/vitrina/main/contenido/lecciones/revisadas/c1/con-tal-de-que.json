@@ -1,0 +1,190 @@
+{
+  "tema": 7252,
+  "slug": "con-tal-de-que",
+  "titulo": "Con tal de (que) = as long as / just to, anything to",
+  "subtitulo": "Te ayudo con tal de que me invites. Haría lo que fuera con tal de verte.",
+  "foto": "t04.jpg",
+  "regla": "Con tal de que + subjunctive has two readings: condition (as long as, provided that) or purpose (just so that, anything to). Con tal de + infinitive when the subject is the same: Haría lo que fuera con tal de verte. Context decides the meaning; the form never changes.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "con tal de que",
+            "+ subjunctive"
+          ]
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "con tal de",
+            "+ infinitive (same subject)"
+          ]
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "condition",
+              "texto": "_as long as, provided that_: **te presto el carro con tal de que me lo regreses lleno**."
+            },
+            {
+              "forma": "purpose",
+              "texto": "_just so that, anything to_: **le di dinero con tal de que me dejara en paz**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Always the subjunctive after **que**: present or imperfect, following the main verb."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **con tal de** = _whatever it takes, as long as..._"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Te presto mi bici ==con tal de que== me la regreses mañana.",
+              "en": "I'll lend you my bike as long as you give it back tomorrow."
+            },
+            {
+              "es": "Te di el dinero ==con tal de que== me dejaras en paz.",
+              "en": "I gave you the money just so you'd leave me alone."
+            },
+            {
+              "es": "Te habría cuidado siempre ==con tal de que== estuvieras cerca.",
+              "en": "I'd have looked after you forever, just to have you close."
+            },
+            {
+              "es": "Haría lo que fuera ==con tal de verte== feliz.",
+              "en": "I'd do anything to see you happy."
+            },
+            {
+              "es": "Acepto cualquier trabajo ==con tal de no== estar en la casa.",
+              "en": "I'll take any job, as long as I don't have to stay home."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "con tal de que me dejas en paz"
+                },
+                {
+                  "v": "bien",
+                  "t": "con tal de que me dejes en paz"
+                }
+              ],
+              "nota": "Subjunctive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mismo sujeto",
+                  "t": "Haría todo con tal de ganar."
+                },
+                {
+                  "v": "otro sujeto",
+                  "t": "Haría todo con tal de que ganaras."
+                }
+              ],
+              "nota": "Infinitive vs que + subjunctive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "adverbial clauses",
+              "texto": "[[5168|para que, antes de que, con tal de que]]."
+            },
+            {
+              "forma": "para que",
+              "texto": "[[7255|para que + imperfect subjunctive]]."
+            },
+            {
+              "forma": "unless",
+              "texto": "[[9538|a menos que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _You can go out as long as you're back by ten._",
+              "r": "Puedes salir con tal de que regreses antes de las diez.",
+              "nota": "Condition."
+            },
+            {
+              "p": "In Spanish: _He'd do anything to win._",
+              "r": "Haría cualquier cosa con tal de ganar.",
+              "nota": "Same subject: infinitive."
+            },
+            {
+              "p": "Fix it: _Te lo doy con tal de que te callas._",
+              "r": "Te lo doy con tal de que te calles.",
+              "nota": "Subjunctive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5168,
+      7255
+    ],
+    "confunde": [
+      9538
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7252",
+      "kwiziq": true
+    }
+  ]
+}

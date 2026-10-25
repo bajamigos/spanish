@@ -1,0 +1,213 @@
+{
+  "tema": 5773,
+  "slug": "he-has-ha-haber-presente",
+  "titulo": "Haber in the present",
+  "subtitulo": "¿Has visto The Expanse?",
+  "foto": "t02.jpg",
+  "regla": "Haber is the helper verb of the present perfect: he, has, ha, hemos, han + past participle. For there is / there are it has one form only: hay.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Haber** is a **helper verb**: it goes with a past participle to make the present perfect (**he comido** _I have eaten_)."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "haber"
+          ],
+          "filas": [
+            [
+              "yo",
+              "he"
+            ],
+            [
+              "tú",
+              "has"
+            ],
+            [
+              "él / ella / usted",
+              "ha"
+            ],
+            [
+              "nosotros",
+              "hemos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "han"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It is **not** _to have_ in the sense of owning: that's **tener**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "For **there is / there are**, use the special form **hay**, for singular and plural."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==He== comido demasiado.",
+              "en": "I've eaten too much."
+            },
+            {
+              "es": "¿==Has== visto The Expanse?",
+              "en": "Have you seen The Expanse?"
+            },
+            {
+              "es": "Mi hermana ==ha== viajado a Oaxaca.",
+              "en": "My sister has traveled to Oaxaca."
+            },
+            {
+              "es": "==Hemos== plantado jitomates en el huerto.",
+              "en": "We've planted tomatoes in the garden."
+            },
+            {
+              "es": "¿Ustedes ==han== estado en Ensenada?",
+              "en": "Have you all been to Ensenada?"
+            },
+            {
+              "es": "==Hay== olas grandes hoy.",
+              "en": "There are big waves today."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo ha comido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo he comido."
+                }
+              ],
+              "nota": "yo: **he**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella a llegado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella ha llegado."
+                }
+              ],
+              "nota": "**a** is a preposition; the verb is **ha**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Han muchos carros en la línea."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hay muchos carros en la línea."
+                }
+              ],
+              "nota": "There are: always **hay**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hay",
+              "texto": "There is / there are: [[5102|hay]]."
+            },
+            {
+              "forma": "he hablado",
+              "texto": "With -ar verbs: [[5267|regular -ar verbs in the present perfect]]."
+            },
+            {
+              "forma": "he comido",
+              "texto": "With -er and -ir verbs: [[5588|regular -er and -ir verbs in the present perfect]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I have worked._",
+              "r": "He trabajado.",
+              "nota": "yo: he."
+            },
+            {
+              "p": "In Spanish: _There is a problem._",
+              "r": "Hay un problema.",
+              "nota": "hay."
+            },
+            {
+              "p": "Fix it: _Nosotros han terminado._",
+              "r": "Nosotros hemos terminado.",
+              "nota": "nosotros: hemos."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5102
+    ],
+    "confunde": [],
+    "sigue": [
+      5267,
+      5588
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5773",
+      "kwiziq": true
+    }
+  ]
+}

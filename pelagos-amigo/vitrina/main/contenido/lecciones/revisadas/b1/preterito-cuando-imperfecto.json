@@ -1,0 +1,186 @@
+{
+  "tema": 6005,
+  "slug": "preterito-cuando-imperfecto",
+  "titulo": "The preterite combined with cuando + the imperfect",
+  "subtitulo": "Cuando me bañaba, sonó el teléfono: one action interrupts another.",
+  "foto": "t09.jpg",
+  "regla": "An action in progress (cuando + imperfect) is interrupted by a new action (preterite): cuando me bañaba, sonó el teléfono.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Use the **preterite** for a **new action** in the past that **interrupts** another action that was already happening. The action in progress goes in the **imperfect**, usually after **cuando**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**cuando** + imperfect (background)",
+            "preterite (interruption)"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The imperfect sets the scene, the thing already going on. The preterite is the event that bursts in."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The order can flip: **Sonó el teléfono cuando me bañaba.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: imperfect is the movie playing; preterite is the doorbell."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Cuando ==me bañaba==, ==sonó== el teléfono.",
+              "en": "When I was taking a shower, the phone rang."
+            },
+            {
+              "es": "Cuando Elisa ==entraba== al salón, ==se cayó==.",
+              "en": "As Elisa was walking into the classroom, she fell."
+            },
+            {
+              "es": "Cuando ==veníamos== del mercado, ==tuvimos== un accidente.",
+              "en": "When we were coming back from the market, we had an accident."
+            },
+            {
+              "es": "Cuando ==comían== en ese restaurante, la policía ==detuvo== a un ladrón.",
+              "en": "When they were eating at that restaurant, the police arrested a thief."
+            },
+            {
+              "es": "Cuando ==remaba== al pico, ==llegó== la serie más grande.",
+              "en": "When I was paddling out, the biggest set came in."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cuando me bañé, sonaba el teléfono."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cuando me bañaba, sonó el teléfono."
+                }
+              ],
+              "nota": "Background: imperfect. Interruption: preterite."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cuando entrenábamos, llegaba Beto. (meaning _Beto showed up_)"
+                },
+                {
+                  "v": "bien",
+                  "t": "Cuando entrenábamos, llegó Beto."
+                }
+              ],
+              "nota": "A single new event: preterite."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "estaba comiendo cuando…",
+              "texto": "The progressive version: [[5130|estaba + gerund]]."
+            },
+            {
+              "forma": "ayer, de niño",
+              "texto": "Time markers for each tense: [[6874|imperfect vs preterite]]."
+            },
+            {
+              "forma": "había vs hubo",
+              "texto": "One special pair: [[6872|había vs hubo]]."
+            },
+            {
+              "forma": "había llegado",
+              "texto": "Before both: [[6989|the pluperfect]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _When I was sleeping, the alarm went off._",
+              "r": "Cuando dormía, sonó la alarma.",
+              "nota": "dormía (background), sonó (interruption)."
+            },
+            {
+              "p": "Which tense for each? **Cuando (manejar) a Rosarito, (ver) una ballena.**",
+              "r": "Cuando manejaba a Rosarito, vi una ballena.",
+              "nota": "Imperfect + preterite."
+            },
+            {
+              "p": "In Spanish: _We were eating when Amos arrived._",
+              "r": "Comíamos cuando llegó Amos.",
+              "nota": "Order can flip."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5263,
+      5109
+    ],
+    "confunde": [
+      5130
+    ],
+    "sigue": [
+      6874,
+      6872,
+      6989
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6005",
+      "kwiziq": true
+    }
+  ]
+}

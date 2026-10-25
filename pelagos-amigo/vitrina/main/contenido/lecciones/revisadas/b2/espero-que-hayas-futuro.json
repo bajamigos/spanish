@@ -1,0 +1,187 @@
+{
+  "tema": 7031,
+  "slug": "espero-que-hayas-futuro",
+  "titulo": "Esperar que + present perfect subjunctive (completed action in the future)",
+  "subtitulo": "Espero que hayas terminado para el viernes.",
+  "foto": "t01.jpg",
+  "regla": "Esperar que + haya + participle can express a hope that something will be done by a future point: Espero que lo hayas decidido antes del lunes. There's usually a future reference (para entonces, antes de..., el lunes).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "The **present perfect subjunctive** after **esperar que** can also look **forward**: you hope something **will have happened** by a certain point."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "espero que",
+            "+ haya + participle",
+            "+ future reference"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Look for the time reference: **para entonces, para el viernes, antes de..., el próximo lunes, cuando vuelva**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "English uses _will have done_; Spanish uses **haya hecho**, never the future perfect after **esperar que**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: same form as the past use; the time phrase tells you it's the future."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Espero que ==hayas tomado== una decisión antes de la fecha acordada.",
+              "en": "I hope you'll have made a decision before the agreed date."
+            },
+            {
+              "es": "Esperamos que ==hayan encontrado== lo que buscan para entonces.",
+              "en": "We hope you'll have found what you're looking for by then."
+            },
+            {
+              "es": "Ella espera que yo ya ==haya cobrado== el próximo lunes.",
+              "en": "She hopes I'll have been paid by next Monday."
+            },
+            {
+              "es": "Espero que ==hayan arreglado== la calle cuando regresemos.",
+              "en": "I hope they'll have fixed the street by the time we get back."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "comparar",
+      "titulo": "Past or future?",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "pasado",
+                  "t": "Espero que hayas dormido bien."
+                },
+                {
+                  "v": "futuro",
+                  "t": "Espero que hayas terminado para las cinco."
+                }
+              ],
+              "nota": "Same form; the time phrase decides."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Espero que habrás terminado para el lunes."
+                },
+                {
+                  "v": "bien",
+                  "t": "Espero que hayas terminado para el lunes."
+                }
+              ],
+              "nota": "Subjunctive, not future perfect."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "espero que hayas llegado bien",
+              "texto": "The past use: [[6010|esperar que for the past]]."
+            },
+            {
+              "forma": "espero que vengas",
+              "texto": "[[6076|esperar que + present subjunctive]]."
+            },
+            {
+              "forma": "habré terminado",
+              "texto": "The future perfect: [[7269|futuro perfecto]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I hope you'll have finished by Friday._ (tú)",
+              "r": "Espero que hayas terminado para el viernes.",
+              "nota": "haya + participle."
+            },
+            {
+              "p": "In Spanish: _We hope they'll have arrived by then._",
+              "r": "Esperamos que hayan llegado para entonces.",
+              "nota": "Future reference."
+            },
+            {
+              "p": "Fix it: _Espero que habrán vuelto antes de la cena._",
+              "r": "Espero que hayan vuelto antes de la cena.",
+              "nota": "Subjunctive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6010
+    ],
+    "confunde": [
+      6010
+    ],
+    "sigue": [
+      7269
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7031",
+      "kwiziq": true
+    }
+  ]
+}

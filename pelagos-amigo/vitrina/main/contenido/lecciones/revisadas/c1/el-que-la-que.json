@@ -1,0 +1,193 @@
+{
+  "tema": 6074,
+  "slug": "el-que-la-que",
+  "titulo": "El que, la que, los que, las que = the one(s) who / that",
+  "subtitulo": "El que tiene ojos verdes es su novio.",
+  "foto": "t09.jpg",
+  "regla": "El que, la que, los que, las que mean the one(s) who/that, for people and things. With no noun, the context tells you what it refers to: La que está en la esquina es Verónica. After a noun and a comma, it adds information. Los que can also mean those who / anyone who.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "el / la / los / las",
+            "+ que",
+            "+ verb"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The article agrees with the person or thing meant: **la que** for a woman or a feminine noun."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**No antecedent:** the noun is understood: **el que está sentado** (the man)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**With antecedent:** after a noun and a comma, to add info: **mi prima, la que vive en Tijuana, ...**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Los que / las que** often mean _those who_: **los que quieran, levanten la mano**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **el que** = **el de**, but with a verb after it."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==El que== tiene ojos verdes es el novio de Sara.",
+              "en": "The one with green eyes is Sara's boyfriend."
+            },
+            {
+              "es": "==El que== tiene la primera página rota es mío.",
+              "en": "The one with the torn first page is mine."
+            },
+            {
+              "es": "==La que== está sentada en la esquina se llama Verónica.",
+              "en": "The one sitting in the corner is Verónica."
+            },
+            {
+              "es": "==Las que== son redondas me gustan más.",
+              "en": "I like the round ones better."
+            },
+            {
+              "es": "Mi primo, ==el que== vive en Tijuana, viene mañana.",
+              "en": "My cousin, the one who lives in Tijuana, is coming tomorrow."
+            },
+            {
+              "es": "==Los que== terminen pueden irse.",
+              "en": "Those who finish can leave."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Que tiene ojos verdes es su novio."
+                },
+                {
+                  "v": "bien",
+                  "t": "El que tiene ojos verdes es su novio."
+                }
+              ],
+              "nota": "Needs the article."
+            },
+            {
+              "filas": [
+                {
+                  "v": "persona",
+                  "t": "El que vino ayer."
+                },
+                {
+                  "v": "idea",
+                  "t": "Lo que dijo ayer."
+                }
+              ],
+              "nota": "**Lo que** is for ideas, not people or things."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el de",
+              "texto": "[[6978|el de, la de]]."
+            },
+            {
+              "forma": "lo que",
+              "texto": "[[5087|lo que]]."
+            },
+            {
+              "forma": "preposition + el que",
+              "texto": "[[5124|con el que, para la que]]."
+            },
+            {
+              "forma": "cuyo",
+              "texto": "[[6601|cuyo]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _The one who called you is my sister._",
+              "r": "La que te llamó es mi hermana.",
+              "nota": "la que."
+            },
+            {
+              "p": "In Spanish: _The shoes I want are the ones that are on sale._",
+              "r": "Los zapatos que quiero son los que están en oferta.",
+              "nota": "los que."
+            },
+            {
+              "p": "In Spanish: _Those who want to come, come._",
+              "r": "Los que quieran venir, que vengan.",
+              "nota": "Subjunctive for _anyone who_."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5087,
+      5154
+    ],
+    "confunde": [
+      6978
+    ],
+    "sigue": [
+      5124
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6074",
+      "kwiziq": true
+    }
+  ]
+}

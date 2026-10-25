@@ -1,0 +1,256 @@
+{
+  "tema": 5221,
+  "slug": "pude-pudo",
+  "titulo": "Poder in the preterite",
+  "subtitulo": "Por fin pude pararme en la tabla.",
+  "foto": "t06.jpg",
+  "regla": "Poder is irregular in the preterite: stem pud- with unaccented endings: pude, pudiste, pudo, pudimos, pudieron. Pude means I managed to; no pude means I tried and failed.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "In the preterite, **poder** changes its stem to **pud-**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "pud-",
+            "+",
+            "-e, -iste, -o, -imos, -ieron"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "poder"
+          ],
+          "filas": [
+            [
+              "yo",
+              "pude"
+            ],
+            [
+              "tú",
+              "pudiste"
+            ],
+            [
+              "él / ella / usted",
+              "pudo"
+            ],
+            [
+              "nosotros / nosotras",
+              "pudimos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "pudieron"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**No written accents**: **pude**, **pudo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Meaning: **pude** = _I managed to_ (and did it). **No pude** = _I couldn't_ (I tried and failed)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "For a general ability in the past, with no specific attempt, use the imperfect: **De niño podía nadar horas.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **pude** has a **d** like **did it**; **puse** (from poner) has an **s** like **set it**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Por fin ==pude== pararme en la tabla.",
+              "en": "I finally managed to stand up on the board."
+            },
+            {
+              "es": "¿==Pudiste== hablar con el mecánico?",
+              "en": "Were you able to talk to the mechanic?"
+            },
+            {
+              "es": "Holden no ==pudo== salvar el Canterbury.",
+              "en": "Holden couldn't save the Canterbury."
+            },
+            {
+              "es": "==Pudimos== cruzar la línea en veinte minutos.",
+              "en": "We managed to cross the border in twenty minutes."
+            },
+            {
+              "es": "Mis amigos no ==pudieron== venir a la carne asada.",
+              "en": "My friends couldn't come to the cookout."
+            },
+            {
+              "es": "Ayer no ==pude== escapar de la guardia de mi compañero.",
+              "en": "Yesterday I couldn't escape my partner's guard."
+            },
+            {
+              "es": "Con tanta lluvia, la abuela no ==pudo== regar el huerto.",
+              "en": "With so much rain, Grandma couldn't water the garden."
+            },
+            {
+              "es": "¿Ustedes ==pudieron== ver el atardecer desde el muelle?",
+              "en": "Were you all able to see the sunset from the pier?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer no podí dormir."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer no pude dormir."
+                }
+              ],
+              "nota": "Stem **pud-**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella no pudó venir."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella no pudo venir."
+                }
+              ],
+              "nota": "No accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer puse terminar el trabajo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer pude terminar el trabajo."
+                }
+              ],
+              "nota": "**puse** is from poner."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ellos no pudon venir."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ellos no pudieron venir."
+                }
+              ],
+              "nota": "ellos → **pudieron**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "puedo, puedes",
+              "texto": "The present: [[5564|poder in the present]]."
+            },
+            {
+              "forma": "podía",
+              "texto": "Ability in general in the past: [[6505|poder in the imperfect]]."
+            },
+            {
+              "forma": "puse",
+              "texto": "The look-alike: [[5251|poner in the preterite]]."
+            },
+            {
+              "forma": "tuve",
+              "texto": "Another -u- stem: [[5226|tener in the preterite]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I couldn't sleep last night._",
+              "r": "Anoche no pude dormir.",
+              "nota": "no pude."
+            },
+            {
+              "p": "In Spanish: _They managed to finish._",
+              "r": "Pudieron terminar.",
+              "nota": "pudieron."
+            },
+            {
+              "p": "Fix it: _¿Tú podiste ir?_",
+              "r": "¿Tú pudiste ir?",
+              "nota": "pud-."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5564
+    ],
+    "confunde": [
+      6505,
+      5251
+    ],
+    "sigue": [
+      5226
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5221",
+      "kwiziq": true
+    }
+  ]
+}

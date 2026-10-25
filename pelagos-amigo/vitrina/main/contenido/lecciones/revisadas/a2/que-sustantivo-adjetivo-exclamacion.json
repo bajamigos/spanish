@@ -1,0 +1,248 @@
+{
+  "tema": 6137,
+  "slug": "que-sustantivo-adjetivo-exclamacion",
+  "titulo": "Exclamations with qué",
+  "subtitulo": "¡Qué olas! ¡Qué bonito!",
+  "foto": "t05.jpg",
+  "regla": "¡Qué + noun! means What a...! (¡Qué suerte!); ¡Qué + adjective or adverb! means How...! (¡Qué bonito!, ¡Qué bien!). Qué always has an accent, and there is no article after it.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To exclaim, put **¡Qué** before a noun, an adjective or an adverb."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Pattern",
+            "English",
+            "Example"
+          ],
+          "filas": [
+            [
+              "¡Qué + noun!",
+              "What a...! / Such...!",
+              "¡Qué suerte!"
+            ],
+            [
+              "¡Qué + adjective!",
+              "How...!",
+              "¡Qué bonito!"
+            ],
+            [
+              "¡Qué + adverb!",
+              "How...!",
+              "¡Qué bien!"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "No article after qué: **¡Qué día!**, never ¡Qué un día!"
+        },
+        {
+          "tipo": "texto",
+          "texto": "The adjective agrees with what you're talking about: **¡Qué bonita!** (la playa), **¡Qué ricos!** (los tacos)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "To name the thing, add **ser** or **estar** + the noun: **¡Qué bonita es tu casa!**, **¡Qué cansado estoy!**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Always **qué** with an accent, and **¡ !** at both ends."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **qué** is the drumroll. Whatever comes right after it gets the applause."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¡==Qué olas==! Hoy sí me meto.",
+              "en": "What waves! I'm definitely going in today."
+            },
+            {
+              "es": "¡==Qué calor== hace en Mexicali!",
+              "en": "It's so hot in Mexicali!"
+            },
+            {
+              "es": "¡==Qué suerte==! Encontré estacionamiento.",
+              "en": "What luck! I found parking."
+            },
+            {
+              "es": "¡==Qué lástima==! No puedo ir.",
+              "en": "What a shame! I can't go."
+            },
+            {
+              "es": "¡==Qué bonita== es tu casa!",
+              "en": "Your house is so pretty!"
+            },
+            {
+              "es": "¡==Qué cansado== estoy!",
+              "en": "I'm so tired!"
+            },
+            {
+              "es": "¡==Qué ricos== están estos tacos!",
+              "en": "These tacos are so good!"
+            },
+            {
+              "es": "¡==Qué bien== hablas inglés!",
+              "en": "You speak English so well!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Qué un día!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Qué día!"
+                }
+              ],
+              "nota": "No article."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Cómo bonito!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Qué bonito!"
+                }
+              ],
+              "nota": "_How_ + adjective = **qué**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Que calor!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Qué calor!"
+                }
+              ],
+              "nota": "Accent on **qué**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Qué bonito la playa!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Qué bonita está la playa!"
+                }
+              ],
+              "nota": "Agree with **la playa**, and add the verb."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¿qué es?",
+              "texto": "Qué in questions: [[9828|questions with qué]]."
+            },
+            {
+              "forma": "que / qué",
+              "texto": "With or without the accent: [[6675|qué vs que]]."
+            },
+            {
+              "forma": "¡cuánta gente!",
+              "texto": "Exclaiming about amounts: [[8703|cuánto in exclamations]]."
+            },
+            {
+              "forma": "¡qué día más bonito!",
+              "texto": "Noun and adjective together: [[7280|qué + noun + más / tan + adjective]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _What a surprise!_",
+              "r": "¡Qué sorpresa!",
+              "nota": "qué + noun."
+            },
+            {
+              "p": "In Spanish: _How pretty (la playa)!_",
+              "r": "¡Qué bonita!",
+              "nota": "Agrees with playa."
+            },
+            {
+              "p": "Fix it: _¡Qué un desastre!_",
+              "r": "¡Qué desastre!",
+              "nota": "No article."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      9828
+    ],
+    "confunde": [
+      6675
+    ],
+    "sigue": [
+      8703,
+      7280
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6137",
+      "kwiziq": true
+    }
+  ]
+}

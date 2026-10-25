@@ -1,0 +1,197 @@
+{
+  "tema": 7274,
+  "slug": "gustar-de",
+  "titulo": "Gustar de + noun / infinitive (formal, literary)",
+  "subtitulo": "La señora gustaba de leer poesía.",
+  "foto": "t10.jpg",
+  "regla": "In formal or literary Spanish, gustar de + noun or infinitive works like a normal verb: the person is the subject: Antonio gusta de la buena comida. Compare everyday a Antonio le gusta la buena comida. Also: ¿Gusta? (polite offer, very Mexican).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "subject + gustar (conjugated for the person)",
+            "+ de +",
+            "noun / infinitive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Formal and literary: the **person is the subject**, unlike everyday **me gusta**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With nouns, the article is optional: **gusta de (la) buena comida**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Related polite Mexican use: **¿Gusta?** (_Would you like some?_), offering food; **¿Gusta pasar?** (_Would you like to come in?_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **gustar de** sounds like a 19th-century novel; **¿gusta?** sounds like a Mexican grandma."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "La señora de la casa ==gustaba de== tratar bien a sus empleadas.",
+              "en": "The lady of the house liked to treat her staff well."
+            },
+            {
+              "es": "Los vecinos ==gustaban de== reunirse en las noches a platicar.",
+              "en": "The neighbors liked to get together in the evenings to chat."
+            },
+            {
+              "es": "Antonio ==gusta de== la buena comida y frecuenta restaurantes excelentes.",
+              "en": "Antonio enjoys good food and frequents excellent restaurants."
+            },
+            {
+              "es": "Mi profesor ==gusta de== las obras clásicas.",
+              "en": "My professor is fond of the classics."
+            },
+            {
+              "es": "¿==Gusta==? Están recién hechos.",
+              "en": "Would you like some? They're freshly made."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "comparar",
+      "titulo": "Formal vs everyday",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "formal",
+                  "t": "Antonio gusta de la buena comida."
+                },
+                {
+                  "v": "cotidiano",
+                  "t": "A Antonio le gusta la buena comida."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Antonio gusta la buena comida."
+                },
+                {
+                  "v": "bien",
+                  "t": "Antonio gusta de la buena comida."
+                }
+              ],
+              "nota": "Formal: needs **de**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Le gusta de leer."
+                },
+                {
+                  "v": "bien",
+                  "t": "Le gusta leer."
+                }
+              ],
+              "nota": "Everyday: no **de**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "me gusta",
+              "texto": "[[6001|gustar]]."
+            },
+            {
+              "forma": "me gustas",
+              "texto": "[[6231|gustar for attraction]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Formal: _The poet enjoyed walking at night._",
+              "r": "El poeta gustaba de pasear de noche.",
+              "nota": "gustar de."
+            },
+            {
+              "p": "Everyday version:",
+              "r": "Al poeta le gustaba pasear de noche.",
+              "nota": "le gustaba."
+            },
+            {
+              "p": "Polite offer of food:",
+              "r": "¿Gusta?",
+              "nota": "Mexican usage."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6001
+    ],
+    "confunde": [
+      6231
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7274",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,269 @@
+{
+  "tema": 6982,
+  "slug": "posicion-adjetivos",
+  "titulo": "Position of adjectives",
+  "subtitulo": "Una camisa roja / la blanca nieve / un viejo amigo.",
+  "foto": "t03.jpg",
+  "regla": "Most adjectives go after the noun and distinguish it (una camisa roja). Before the noun, they stress a quality that's natural or for emphasis (la blanca nieve, hermosos paisajes), mostly in writing. Some change meaning: un viejo amigo (long-time) vs un amigo viejo (old).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "noun + adjective",
+              "texto": "The normal order. The adjective **distinguishes** this noun from others: **una computadora japonesa**, **una camisa roja**."
+            },
+            {
+              "forma": "adjective + noun",
+              "texto": "The quality is **natural** or **emphasized**, not used to distinguish: **la blanca nieve**, **hermosos paisajes**. More literary."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "A few adjectives **change meaning** with position:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Adjective",
+            "Before the noun",
+            "After the noun"
+          ],
+          "filas": [
+            [
+              "antiguo",
+              "former (mi antiguo jefe)",
+              "old, antique (un mueble antiguo)"
+            ],
+            [
+              "grande / gran",
+              "great (un gran hombre)",
+              "big (un hombre grande)"
+            ],
+            [
+              "pobre",
+              "unfortunate (el pobre señor)",
+              "poor, no money (un señor pobre)"
+            ],
+            [
+              "viejo",
+              "long-time (un viejo amigo)",
+              "old in age (un amigo viejo)"
+            ],
+            [
+              "nuevo",
+              "another, different (un nuevo carro)",
+              "brand-new (un carro nuevo)"
+            ],
+            [
+              "mismo",
+              "same (el mismo día)",
+              "itself, very (el día mismo)"
+            ],
+            [
+              "único",
+              "only (mi único hijo)",
+              "unique (una oportunidad única)"
+            ],
+            [
+              "cierto",
+              "certain, some (cierta gente)",
+              "true (una noticia cierta)"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: after the noun, adjectives describe; before it, they color."
+        }
+      ]
+    },
+    {
+      "id": "despues",
+      "titulo": "After the noun",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Vas a comprar una computadora ==japonesa==.",
+              "en": "You're going to buy a Japanese computer."
+            },
+            {
+              "es": "Laura y Eva comieron platillos ==picosos==.",
+              "en": "Laura and Eva ate spicy dishes."
+            },
+            {
+              "es": "Escuchamos canciones ==relajantes==.",
+              "en": "We listened to relaxing songs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "antes",
+      "titulo": "Before the noun",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "La ==blanca== nieve se veía preciosa.",
+              "en": "The white snow looked beautiful."
+            },
+            {
+              "es": "Nos encantó ese ==rico== pastel de chocolate.",
+              "en": "We loved that delicious chocolate cake."
+            },
+            {
+              "es": "Pudimos ver ==hermosos== paisajes en el viaje.",
+              "en": "We got to see beautiful landscapes on the trip. (more emphatic)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cambia",
+      "titulo": "Meaning changes",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Pobre== Marisa, tiene tan mala suerte...",
+              "en": "Poor Marisa, she's so unlucky..."
+            },
+            {
+              "es": "El chavo ==pobre== no tenía para el camión.",
+              "en": "The poor guy (no money) couldn't afford the bus."
+            },
+            {
+              "es": "Fernando es un ==viejo== amigo de la universidad.",
+              "en": "Fernando is an old friend from college."
+            },
+            {
+              "es": "Fernando es un amigo ==viejo==; los demás son jóvenes.",
+              "en": "Fernando is an elderly friend; the rest are young."
+            },
+            {
+              "es": "Mi ==antiguo== jefe me llamó.",
+              "en": "My former boss called me."
+            },
+            {
+              "es": "Compraron una mesa ==antigua==.",
+              "en": "They bought an antique table."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Una roja camisa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Una camisa roja."
+                }
+              ],
+              "nota": "Distinguishing color: after."
+            },
+            {
+              "filas": [
+                {
+                  "v": "old age",
+                  "t": "un amigo viejo"
+                },
+                {
+                  "v": "long-time",
+                  "t": "un viejo amigo"
+                }
+              ],
+              "nota": "Position changes the meaning."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "buen, gran",
+              "texto": "[[5057|shortened adjectives]]."
+            },
+            {
+              "forma": "agreement",
+              "texto": "[[6015|adjective endings]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _a great artist_",
+              "r": "un gran artista",
+              "nota": "Before: great."
+            },
+            {
+              "p": "In Spanish: _a big house_",
+              "r": "una casa grande",
+              "nota": "After: big."
+            },
+            {
+              "p": "In Spanish: _my former teacher_ (feminine)",
+              "r": "mi antigua maestra",
+              "nota": "Before: former."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5057
+    ],
+    "confunde": [],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6982",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "tema": 5565,
+  "slug": "suelo-sueles-presente-soler",
+  "titulo": "Soler in the present",
+  "subtitulo": "Suelo surfear temprano.",
+  "foto": "t01.jpg",
+  "regla": "Soler + infinitive means to usually do something. It changes o > ue except in nosotros: suelo, sueles, suele, solemos, suelen.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Soler** + infinitive means _to usually_ do something. It's always followed by an infinitive."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Present"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**suelo**"
+            ],
+            [
+              "tú",
+              "**sueles**"
+            ],
+            [
+              "él / ella / usted",
+              "**suele**"
+            ],
+            [
+              "nosotros / nosotras",
+              "solemos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "**suelen**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The **o** becomes **ue**, except in **nosotros**: **solemos**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "soler",
+            "+",
+            "infinitive"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Suelo== surfear temprano, antes del trabajo.",
+              "en": "I usually surf early, before work."
+            },
+            {
+              "es": "¿A qué hora ==sueles== cenar?",
+              "en": "What time do you usually have dinner?"
+            },
+            {
+              "es": "En diciembre ==suele== hacer frío en Tijuana.",
+              "en": "It's usually cold in Tijuana in December."
+            },
+            {
+              "es": "Los domingos ==solemos== comer con la familia.",
+              "en": "On Sundays we usually eat with the family."
+            },
+            {
+              "es": "Mis amigos ==suelen== entrenar jiu-jitsu en la noche.",
+              "en": "My friends usually train jiu-jitsu at night."
+            },
+            {
+              "es": "No ==suelo== tomar café en la tarde.",
+              "en": "I don't usually drink coffee in the afternoon."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros suelemos salir."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros solemos salir."
+                }
+              ],
+              "nota": "No change in nosotros."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Suelo a correr en la mañana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Suelo correr en la mañana."
+                }
+              ],
+              "nota": "No **a**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Suelo café en la mañana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Suelo tomar café en la mañana."
+                }
+              ],
+              "nota": "Soler always needs a verb."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "puedo, vuelvo",
+              "texto": "Same change: [[5080|-er verbs with o > ue]], [[5564|poder]]."
+            },
+            {
+              "forma": "siempre, normalmente",
+              "texto": "The present alone works too: [[5991|present for general facts]]."
+            },
+            {
+              "forma": "solía",
+              "texto": "In the past: [[5925|soler in the imperfect]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I usually walk to work._",
+              "r": "Suelo caminar al trabajo.",
+              "nota": "suelo + infinitive."
+            },
+            {
+              "p": "In Spanish: _We usually go to the beach._",
+              "r": "Solemos ir a la playa.",
+              "nota": "solemos."
+            },
+            {
+              "p": "Fix it: _Ella sole llegar tarde._",
+              "r": "Ella suele llegar tarde.",
+              "nota": "suele."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5080,
+      5564
+    ],
+    "confunde": [
+      5991
+    ],
+    "sigue": [
+      5925
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5565",
+      "kwiziq": true
+    }
+  ]
+}

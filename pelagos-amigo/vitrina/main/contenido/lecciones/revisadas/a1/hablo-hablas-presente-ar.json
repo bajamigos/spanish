@@ -1,0 +1,222 @@
+{
+  "tema": 5492,
+  "slug": "hablo-hablas-presente-ar",
+  "titulo": "Regular -ar verbs in the present",
+  "subtitulo": "Hablo español y trabajo en Tijuana.",
+  "foto": "t06.jpg",
+  "regla": "Drop -ar and add -o, -as, -a, -amos, -an: hablo, hablas, habla, hablamos, hablan.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Take the stem (the verb without **-ar**) and add the ending for each person."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "habl-",
+            "+",
+            "-o, -as, -a, -amos, -an"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Ending",
+            "hablar"
+          ],
+          "filas": [
+            [
+              "yo",
+              "-o",
+              "**hablo**"
+            ],
+            [
+              "tú",
+              "-as",
+              "**hablas**"
+            ],
+            [
+              "él, ella, usted",
+              "-a",
+              "**habla**"
+            ],
+            [
+              "nosotros",
+              "-amos",
+              "**hablamos**"
+            ],
+            [
+              "ellos, ustedes",
+              "-an",
+              "**hablan**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Most -ar verbs work like this: **trabajar, estudiar, cocinar, escuchar, nadar, surfear, cuidar**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "One form covers _I speak_, _I'm speaking_ and _I do speak_."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Hablo== español e inglés.",
+              "en": "I speak Spanish and English."
+            },
+            {
+              "es": "¿==Trabajas== hoy?",
+              "en": "Are you working today?"
+            },
+            {
+              "es": "Mi hermano ==cocina== muy bien.",
+              "en": "My brother cooks really well."
+            },
+            {
+              "es": "Los sábados ==surfeamos== en Playas de Tijuana.",
+              "en": "On Saturdays we surf at Playas de Tijuana."
+            },
+            {
+              "es": "Ustedes ==escuchan== mucha música.",
+              "en": "You all listen to a lot of music."
+            },
+            {
+              "es": "Ella ==cuida== su jardín todos los días.",
+              "en": "She looks after her garden every day."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo habla español."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo hablo español."
+                }
+              ],
+              "nota": "yo always ends in **-o**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros trabajan mucho."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros trabajamos mucho."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo estoy trabajo hoy."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo trabajo hoy."
+                }
+              ],
+              "nota": "No **estar** before the conjugated verb."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "como, vivo",
+              "texto": "Next patterns: [[5540|-er verbs]] and [[5108|-ir verbs]]."
+            },
+            {
+              "forma": "pienso",
+              "texto": "Some -ar verbs change the stem: [[5811|e → ie]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We cook on Sundays._",
+              "r": "Cocinamos los domingos.",
+              "nota": "-amos for nosotros."
+            },
+            {
+              "p": "Fix it: _Yo estudia mucho._",
+              "r": "Yo estudio mucho.",
+              "nota": "-o for yo."
+            },
+            {
+              "p": "In Spanish (ustedes): _Do you work here?_",
+              "r": "¿Ustedes trabajan aquí?",
+              "nota": "-an for ustedes."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      5811
+    ],
+    "sigue": [
+      5540,
+      5108
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5492",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "tema": 5066,
+  "slug": "futuro-perfecto-irregular",
+  "titulo": "Future perfect: irregular verbs",
+  "subtitulo": "Habré hecho, habrás dicho, habrán vuelto.",
+  "foto": "t01.jpg",
+  "regla": "In the future perfect, haber is the same for every verb (habré, habrás...). Only the participle can be irregular: hecho, dicho, puesto, visto, escrito, vuelto, roto, abierto, muerto, cubierto, resuelto.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Haber** in the future is always the same: **habré, habrás, habrá, habremos, habrán**. What can be irregular is the **participle**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Infinitive",
+            "Participle"
+          ],
+          "filas": [
+            [
+              "hacer",
+              "hecho"
+            ],
+            [
+              "decir",
+              "dicho"
+            ],
+            [
+              "poner",
+              "puesto"
+            ],
+            [
+              "ver",
+              "visto"
+            ],
+            [
+              "escribir",
+              "escrito"
+            ],
+            [
+              "volver",
+              "vuelto"
+            ],
+            [
+              "romper",
+              "roto"
+            ],
+            [
+              "abrir",
+              "abierto"
+            ],
+            [
+              "morir",
+              "muerto"
+            ],
+            [
+              "cubrir",
+              "cubierto"
+            ],
+            [
+              "resolver",
+              "resuelto"
+            ],
+            [
+              "devolver",
+              "devuelto"
+            ],
+            [
+              "descubrir",
+              "descubierto"
+            ],
+            [
+              "deshacer",
+              "deshecho"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Verbs built on them follow the same pattern: **devolver → devuelto**, **descubrir → descubierto**, **deshacer → deshecho**, **proponer → propuesto**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: most irregular participles end in **-to** or **-cho**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Para mañana ==habré hecho== toda la tarea.",
+              "en": "By tomorrow I'll have done all the homework."
+            },
+            {
+              "es": "Para cuando llegue, ya se lo ==habrás dicho==.",
+              "en": "By the time he arrives, you'll have told him."
+            },
+            {
+              "es": "Cuando llegues, ya ==habrán puesto== la mesa.",
+              "en": "When you get there, they'll have set the table."
+            },
+            {
+              "es": "Para el viernes ==habremos visto== todas las películas.",
+              "en": "By Friday we'll have seen all the movies."
+            },
+            {
+              "es": "==Habrá vuelto== a su casa; no contesta.",
+              "en": "He's probably gone back home; he's not answering."
+            },
+            {
+              "es": "Para diciembre ==habrán resuelto== el problema.",
+              "en": "By December they'll have solved the problem."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Habré hacido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Habré hecho."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Habrán volvido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Habrán vuelto."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Habrás escribido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Habrás escrito."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "-to, -cho",
+              "texto": "[[7048|irregular participles]]."
+            },
+            {
+              "forma": "habré terminado",
+              "texto": "[[5185|regular verbs]]."
+            },
+            {
+              "forma": "habría hecho",
+              "texto": "[[5114|perfect conditional, irregular]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Conjugate: _yo / escribir_",
+              "r": "habré escrito",
+              "nota": "escrito."
+            },
+            {
+              "p": "Conjugate: _ellos / romper_",
+              "r": "habrán roto",
+              "nota": "roto."
+            },
+            {
+              "p": "In Spanish: _By then we'll have opened the store._",
+              "r": "Para entonces habremos abierto la tienda.",
+              "nota": "abierto."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5185,
+      7048
+    ],
+    "confunde": [
+      5114
+    ],
+    "sigue": [
+      7269
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5066",
+      "kwiziq": true
+    }
+  ]
+}

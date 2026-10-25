@@ -1,0 +1,287 @@
+{
+  "tema": 9954,
+  "slug": "bajo-abajo-debajo",
+  "titulo": "Prepositions bajo, abajo, debajo (de) meaning \"under\"",
+  "subtitulo": "Debajo de la mesa, aquí abajo, bajo la lluvia.",
+  "foto": "t07.jpg",
+  "regla": "Under something = debajo de (most common) or bajo (more formal, no de). Underneath / down here, with no object = debajo or abajo (adverbs). Bajo also means under figuratively: bajo presión.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Word",
+            "Type",
+            "Use"
+          ],
+          "filas": [
+            [
+              "debajo de + noun",
+              "preposition",
+              "under something (most common)"
+            ],
+            [
+              "bajo + noun",
+              "preposition",
+              "under something (more formal), and figurative uses"
+            ],
+            [
+              "debajo",
+              "adverb",
+              "underneath, below (more precise)"
+            ],
+            [
+              "abajo",
+              "adverb",
+              "down there, downstairs, below (more vague)"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Debajo de** needs **de**. **Bajo** never takes **de**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Debajo** and **abajo** stand alone, with no noun after them."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **abajo** points down the stairs; **debajo de** looks under the table."
+        }
+      ]
+    },
+    {
+      "id": "debajo-de",
+      "titulo": "Debajo de: under something",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Tus zapatos están ==debajo de== la mesa.",
+              "en": "Your shoes are under the table."
+            },
+            {
+              "es": "Escondió su diario ==debajo de== la cama.",
+              "en": "He hid his diary under the bed."
+            },
+            {
+              "es": "Vivió ==debajo de== un puente dos semanas.",
+              "en": "He lived under a bridge for two weeks."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adverbios",
+      "titulo": "Debajo / abajo: underneath, down here",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Tus zapatos están aquí ==debajo==.",
+              "en": "Your shoes are under here."
+            },
+            {
+              "es": "—¿Encima de los papeles? —No, ==debajo==.",
+              "en": "—On top of the papers? —No, underneath."
+            },
+            {
+              "es": "Estoy ==abajo==, en la cochera.",
+              "en": "I'm downstairs, in the garage."
+            },
+            {
+              "es": "Busca en el librero. Seguro están ==abajo==, no arriba.",
+              "en": "Look on the bookshelf. They're probably at the bottom, not at the top."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bajo",
+      "titulo": "Bajo: formal and figurative",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Bajo** means the same as **debajo de**, a little more formal or literary:"
+        },
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Los novios se sentaron ==bajo== el árbol.",
+              "en": "The couple sat beneath the tree."
+            },
+            {
+              "es": "Me escondía ==bajo== la falda de mi mamá.",
+              "en": "I used to hide under my mom's skirt."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It's also used **figuratively**, for control, influence or conditions:"
+        },
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Manejó ==bajo== los efectos del alcohol.",
+              "en": "He drove under the influence of alcohol."
+            },
+            {
+              "es": "Estos niños están ==bajo== mi cuidado.",
+              "en": "These children are in my care."
+            },
+            {
+              "es": "Escribe ==bajo== un seudónimo.",
+              "en": "She writes under a pen name."
+            },
+            {
+              "es": "Trabajo mejor ==bajo== presión.",
+              "en": "I work better under pressure."
+            },
+            {
+              "es": "Hace dos grados ==bajo== cero.",
+              "en": "It's two degrees below zero."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "debajo la mesa"
+                },
+                {
+                  "v": "bien",
+                  "t": "debajo de la mesa"
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "bajo de la mesa"
+                },
+                {
+                  "v": "bien",
+                  "t": "bajo la mesa"
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No estoy arriba, estoy bajo."
+                },
+                {
+                  "v": "bien",
+                  "t": "No estoy arriba, estoy abajo."
+                }
+              ],
+              "nota": "**Bajo** isn't an adverb."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "debajo de presión"
+                },
+                {
+                  "v": "bien",
+                  "t": "bajo presión"
+                }
+              ],
+              "nota": "Figurative: **bajo**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "sobre, encima de",
+              "texto": "The opposite: [[8787|sobre]]."
+            },
+            {
+              "forma": "dentro de",
+              "texto": "Inside: [[9510|dentro / dentro de]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _The cat is under the bed._",
+              "r": "El gato está debajo de la cama.",
+              "nota": "debajo de."
+            },
+            {
+              "p": "In Spanish: _I'm downstairs._",
+              "r": "Estoy abajo.",
+              "nota": "Adverb, no noun."
+            },
+            {
+              "p": "In Spanish: _under the rain_ (formal)",
+              "r": "bajo la lluvia",
+              "nota": "bajo, no de."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      8787
+    ],
+    "confunde": [
+      9510
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9954",
+      "kwiziq": true
+    }
+  ]
+}

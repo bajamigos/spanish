@@ -1,0 +1,202 @@
+{
+  "tema": 8389,
+  "slug": "aumentativos-azo-ote-on",
+  "titulo": "Augmentative suffixes: -azo, -ote, -ón",
+  "subtitulo": "Perrazo, grandote, cabezón, and a golpe with -azo.",
+  "foto": "t10.jpg",
+  "regla": "-azo, -ote, -ón make things bigger, often with admiration or scorn: perrazo, grandote, cabezón. -azo also means a blow with something: cabezazo, codazo.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Instead of adding **grande**, Spanish often uses an **augmentative suffix**: **-azo**, **-ote** or **-ón**. It can mean big size, but it often adds a feeling: **admiration** or **scorn**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Suffix",
+            "Example"
+          ],
+          "filas": [
+            [
+              "-azo, -aza",
+              "perro → perrazo, cuerpo → cuerpazo"
+            ],
+            [
+              "-ote, -ota",
+              "grande → grandote, palabra → palabrota"
+            ],
+            [
+              "-ón, -ona",
+              "cabeza → cabezón, mujer → mujerona"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "They work with nouns, adjectives and some verbs, and they agree in gender and number: **los relámpagos** → **relampagazos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**-azo** has a special use: a **hit** or blow with something: **cabezazo** (headbutt), **codazo** (elbow), **manotazo** (slap), **portazo** (door slam)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**-azo** also means _great, awesome_ (very common in Mexico): **¡qué golazo!**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **-ito** shrinks, **-azo** inflates."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mira ese ==perrazo==. Yo no me le acercaría.",
+              "en": "Look at that huge dog. I wouldn't go near it."
+            },
+            {
+              "es": "Se compraron una ==casota== de lujo en otra colonia.",
+              "en": "They bought a huge luxury house in another neighborhood."
+            },
+            {
+              "es": "¡Qué ==relampagazos==!",
+              "en": "What incredible lightning!"
+            },
+            {
+              "es": "Me di un ==cabezazo== y me mareé.",
+              "en": "I banged my head and got dizzy."
+            },
+            {
+              "es": "En el rol me dio un ==codazo== sin querer.",
+              "en": "He elbowed me by accident while rolling."
+            },
+            {
+              "es": "Salió dando un ==portazo==.",
+              "en": "He left slamming the door."
+            },
+            {
+              "es": "Amos es un tipo ==grandote==.",
+              "en": "Amos is a big guy."
+            },
+            {
+              "es": "¡Qué ==golazo==!",
+              "en": "What a goal!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Una casote."
+                },
+                {
+                  "v": "bien",
+                  "t": "Una casota."
+                }
+              ],
+              "nota": "It agrees in gender."
+            },
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "Me dio un codazo."
+                }
+              ],
+              "nota": "**-azo** + body part = a hit with it, not a big elbow."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "perrito, casita",
+              "texto": "Diminutives: [[6087|-ito]], [[6132|-cito]], [[6088|-illo]]."
+            },
+            {
+              "forma": "altísimo",
+              "texto": "Another way to intensify: [[6077|-ísimo]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Make it big: **el libro**",
+              "r": "el librazo",
+              "nota": "-azo."
+            },
+            {
+              "p": "What's a **rodillazo**?",
+              "r": "A blow with the knee.",
+              "nota": "-azo = a hit."
+            },
+            {
+              "p": "Make it big: **grande** (affectionate)",
+              "r": "grandote",
+              "nota": "-ote."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6087,
+      6132
+    ],
+    "confunde": [
+      6088
+    ],
+    "sigue": [
+      6077
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8389",
+      "kwiziq": true
+    }
+  ]
+}

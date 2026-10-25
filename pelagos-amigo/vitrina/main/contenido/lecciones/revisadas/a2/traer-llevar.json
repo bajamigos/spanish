@@ -1,0 +1,259 @@
+{
+  "tema": 8578,
+  "slug": "traer-llevar",
+  "titulo": "Traer vs llevar",
+  "subtitulo": "«Tráeme un café. Lleva esto a la oficina.»",
+  "foto": "t05.jpg",
+  "regla": "Traer = bring something toward where the speaker is (here). Llevar = take something away to another place (there). Spanish follows the speaker's position strictly, even where English says _bring_.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Traer** = movement **toward the speaker**: _bring (here)_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Llevar** = movement **away from the speaker**, to somewhere else: _take (there)_."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Pronoun",
+            "traer",
+            "llevar"
+          ],
+          "filas": [
+            [
+              "yo",
+              "traigo",
+              "llevo"
+            ],
+            [
+              "tú",
+              "traes",
+              "llevas"
+            ],
+            [
+              "él / ella / usted",
+              "trae",
+              "lleva"
+            ],
+            [
+              "nosotros",
+              "traemos",
+              "llevamos"
+            ],
+            [
+              "ellos / ustedes",
+              "traen",
+              "llevan"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The trap: English says _I'll **bring** wine to your party_. In Spanish you're not at the party yet, so it moves away from you: **Llevo vino a tu fiesta**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The host, who is at the party, says: **Trae vino**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It works like **venir** (come here) vs **ir** (go there): **traer** goes with **venir**, **llevar** with **ir**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Llevar** also means _to wear_ and _to carry_: **Llevo una sudadera**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿Me ==traes== un vaso de agua?",
+              "en": "Can you bring me a glass of water?"
+            },
+            {
+              "es": "Mañana ==llevo== la tabla a la playa.",
+              "en": "Tomorrow I'm taking the board to the beach."
+            },
+            {
+              "es": "==Trae== tu kimono a la clase.",
+              "en": "Bring your gi to class. (said by the coach at the gym)"
+            },
+            {
+              "es": "==Llevo== unas cervezas a la carne asada de Toño.",
+              "en": "I'll bring some beers to Toño's barbecue."
+            },
+            {
+              "es": "El mesero nos ==trae== la cuenta.",
+              "en": "The waiter brings us the check."
+            },
+            {
+              "es": "¿Te ==llevo== al aeropuerto?",
+              "en": "Shall I take you to the airport?"
+            },
+            {
+              "es": "Mi mamá siempre ==trae== tamales cuando viene.",
+              "en": "My mom always brings tamales when she comes over."
+            },
+            {
+              "es": "Voy a ==llevar== estas plantas al huerto.",
+              "en": "I'm going to take these plants to the garden."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Traigo el postre a tu casa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Llevo el postre a tu casa."
+                }
+              ],
+              "nota": "Going to your place: away from me."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Lleva tu toalla aquí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Trae tu toalla aquí."
+                }
+              ],
+              "nota": "Aquí = toward the speaker."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo trao café."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo traigo café."
+                }
+              ],
+              "nota": "Irregular yo form."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Voy a traerte a la escuela."
+                },
+                {
+                  "v": "bien",
+                  "t": "Voy a llevarte a la escuela."
+                }
+              ],
+              "nota": "Going there with you: llevar."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "traigo, trajo",
+              "texto": "Conjugation: [[5591|traer in the present]], [[5224|traer in the preterite]]."
+            },
+            {
+              "forma": "aquí / allá",
+              "texto": "Here and there decide the verb: [[9338|aquí, acá, ahí, allí, allá]]."
+            },
+            {
+              "forma": "llevarse",
+              "texto": "Another meaning: [[9495|llevar vs llevarse]]."
+            },
+            {
+              "forma": "llevo dos años",
+              "texto": "Llevar for time: [[7176|llevar + gerund]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish (you're going to her place): _I'll bring the salad._",
+              "r": "Llevo la ensalada.",
+              "nota": "Away from you: llevar."
+            },
+            {
+              "p": "In Spanish (to a friend coming over): _Bring your guitar!_",
+              "r": "¡Trae tu guitarra!",
+              "nota": "Toward you: traer."
+            },
+            {
+              "p": "Fix it: _El mesero lleva el menú a nosotros aquí._",
+              "r": "El mesero nos trae el menú.",
+              "nota": "Toward us: traer."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5591,
+      9338
+    ],
+    "confunde": [
+      9495
+    ],
+    "sigue": [
+      5224,
+      7176
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8578",
+      "kwiziq": true
+    }
+  ]
+}

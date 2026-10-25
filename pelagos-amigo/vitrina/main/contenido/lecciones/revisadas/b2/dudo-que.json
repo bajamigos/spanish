@@ -1,0 +1,261 @@
+{
+  "tema": 6235,
+  "slug": "dudo-que",
+  "titulo": "The subjunctive to express doubt or uncertainty",
+  "subtitulo": "Dudo que venga. Es posible que llueva.",
+  "foto": "t04.jpg",
+  "regla": "Expressions of doubt or uncertainty take the subjunctive, affirmative or negative: dudo que, es posible que, es probable que, es imposible que, puede ser que. Certainty (estoy seguro de que, es cierto que) takes the indicative.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "When the main clause expresses **doubt, possibility or uncertainty**, the verb after **que** goes in the **subjunctive**, whether the main clause is affirmative or negative."
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "dudo que",
+              "texto": "_I doubt that_"
+            },
+            {
+              "forma": "es posible / imposible que",
+              "texto": "_it's possible / impossible that_"
+            },
+            {
+              "forma": "es probable / improbable que",
+              "texto": "_it's likely / unlikely that_"
+            },
+            {
+              "forma": "es dudoso que",
+              "texto": "_it's doubtful that_"
+            },
+            {
+              "forma": "puede ser que",
+              "texto": "_it may be that_"
+            },
+            {
+              "forma": "temo que",
+              "texto": "_I'm afraid that_"
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "When you're **certain**, use the **indicative**: **estoy seguro de que**, **es cierto que**, **es verdad que**, **no dudo que**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if you can't swear to it, put it in the subjunctive."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Dudo que ==hayan tenido== mala intención.",
+              "en": "I doubt they meant any harm."
+            },
+            {
+              "es": "Es probable que ==comas== muchos mariscos en Ensenada.",
+              "en": "You'll probably eat a lot of seafood in Ensenada."
+            },
+            {
+              "es": "No es posible que ==se pierdan==.",
+              "en": "There's no way they'll get lost."
+            },
+            {
+              "es": "No es probable que ==haga== mal tiempo en Cancún.",
+              "en": "It's unlikely the weather will be bad in Cancún."
+            },
+            {
+              "es": "Es imposible que ==elija== ese camino para ir a la ciudad.",
+              "en": "There's no way he'll take that road into the city."
+            },
+            {
+              "es": "Temo que no ==llegues== a tiempo a tu entrevista.",
+              "en": "I'm afraid you won't make it to your interview on time."
+            },
+            {
+              "es": "Puede ser que los novios ==se casaran== en Haití.",
+              "en": "Maybe the couple got married in Haiti."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "certeza",
+      "titulo": "Certainty: indicative",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "indicativo",
+                  "t": "Estoy segura de que llegaste a tiempo."
+                },
+                {
+                  "v": "subjuntivo",
+                  "t": "No estoy segura de que hayas llegado a tiempo."
+                }
+              ],
+              "nota": "Sure: indicative. Not sure: subjunctive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "indicativo",
+                  "t": "No dudo que tiene razón."
+                },
+                {
+                  "v": "subjuntivo",
+                  "t": "Dudo que tenga razón."
+                }
+              ],
+              "nota": "**No dudo** = I'm sure."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Tal vez, quizás, a lo mejor** work differently: **a lo mejor** always takes the indicative (**a lo mejor viene**), and **tal vez / quizás** can take either."
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Dudo que viene."
+                },
+                {
+                  "v": "bien",
+                  "t": "Dudo que venga."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es posible que llueve."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es posible que llueva."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estoy seguro de que sea él."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estoy seguro de que es él."
+                }
+              ],
+              "nota": "Certainty: indicative."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "no creo que",
+              "texto": "[[6184|negative opinions]]."
+            },
+            {
+              "forma": "puede que",
+              "texto": "[[7228|puede que]]."
+            },
+            {
+              "forma": "es necesario que",
+              "texto": "[[6226|impersonal expressions]]."
+            },
+            {
+              "forma": "me alegra que",
+              "texto": "[[6185|wish and feeling]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Complete: _Dudo que ___ (tener, ellos) dinero._",
+              "r": "tengan",
+              "nota": "Doubt."
+            },
+            {
+              "p": "Complete: _Es probable que ___ (llover) hoy._",
+              "r": "llueva",
+              "nota": "Possibility."
+            },
+            {
+              "p": "Complete: _Estoy seguro de que ___ (ir, ella) a venir._",
+              "r": "va",
+              "nota": "Certainty: indicative."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6184
+    ],
+    "confunde": [
+      6226
+    ],
+    "sigue": [
+      7228
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6235",
+      "kwiziq": true
+    }
+  ]
+}

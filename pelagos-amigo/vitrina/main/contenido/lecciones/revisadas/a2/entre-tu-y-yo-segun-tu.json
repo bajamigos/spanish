@@ -1,0 +1,228 @@
+{
+  "tema": 7088,
+  "slug": "entre-tu-y-yo-segun-tu",
+  "titulo": "Entre and según + pronouns",
+  "subtitulo": "Entre tú y yo. Según tú, ¿quién ganó?",
+  "foto": "t06.jpg",
+  "regla": "Most prepositions take mí and ti (para mí, sin ti), but entre and según take the subject pronouns yo and tú: entre tú y yo, según tú. The other pronouns don't change.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "After most prepositions, _me_ and _you_ are **mí** and **ti**: para **mí**, con**migo**, sin **ti**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Entre** (_between, among_) and **según** (_according to_) are the exceptions. They take **yo** and **tú**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Preposition",
+            "Pronoun",
+            "Example"
+          ],
+          "filas": [
+            [
+              "para, de, sin...",
+              "**mí, ti**",
+              "para mí, sin ti"
+            ],
+            [
+              "**entre**",
+              "**yo, tú**",
+              "entre tú y yo"
+            ],
+            [
+              "**según**",
+              "**yo, tú**",
+              "según yo, según tú"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The other pronouns look the same either way: entre **él** y **ella**, según **usted**, entre **nosotros**, según **ellos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With two people, put **yo** last: _entre **tú y yo**_, _entre **ella y yo**_. It's the polite order."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **entre** and **según** treat you like the subject of the sentence, so you get the subject pronouns."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Entre tú y yo==, no me cae bien el nuevo coach.",
+              "en": "Between you and me, I don't like the new coach."
+            },
+            {
+              "es": "==Según tú==, ¿quién va a ganar la pelea?",
+              "en": "According to you, who's going to win the fight?"
+            },
+            {
+              "es": "==Según yo==, la clase empezaba a las siete.",
+              "en": "As far as I knew, the class started at seven."
+            },
+            {
+              "es": "Lo hicimos ==entre ella y yo==.",
+              "en": "She and I did it between the two of us."
+            },
+            {
+              "es": "==Entre nosotros== no hay secretos.",
+              "en": "There are no secrets between us."
+            },
+            {
+              "es": "==Según ella==, las olas van a estar enormes mañana.",
+              "en": "According to her, the waves are going to be huge tomorrow."
+            },
+            {
+              "es": "Hay un problema ==entre tú y él==.",
+              "en": "There's a problem between you and him."
+            },
+            {
+              "es": "==Según ustedes==, ¿es buena idea?",
+              "en": "In your opinion, is it a good idea?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Entre tú y mí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Entre tú y yo."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Entre ti y yo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Entre tú y yo."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Según ti, ¿qué pasó?"
+                },
+                {
+                  "v": "bien",
+                  "t": "Según tú, ¿qué pasó?"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "para mí",
+              "texto": "The general rule: [[6466|prepositions + pronouns]]."
+            },
+            {
+              "forma": "conmigo",
+              "texto": "Another exception: [[6141|con + pronouns]]."
+            },
+            {
+              "forma": "entre",
+              "texto": "The meaning of entre: [[9125|entre = between, among]]."
+            },
+            {
+              "forma": "según",
+              "texto": "The meaning of según: [[10028|según = according to]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _between you and me_",
+              "r": "entre tú y yo",
+              "nota": "yo and tú."
+            },
+            {
+              "p": "In Spanish: _According to you, it's easy._",
+              "r": "Según tú, es fácil.",
+              "nota": "Not según ti."
+            },
+            {
+              "p": "Fix it: _Entre ella y mí lo pagamos._",
+              "r": "Entre ella y yo lo pagamos.",
+              "nota": "Entre + yo."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6466,
+      9125
+    ],
+    "confunde": [
+      6141
+    ],
+    "sigue": [
+      10028
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7088",
+      "kwiziq": true
+    }
+  ]
+}

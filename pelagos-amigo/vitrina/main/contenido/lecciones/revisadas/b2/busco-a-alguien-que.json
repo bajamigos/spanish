@@ -1,0 +1,233 @@
+{
+  "tema": 7256,
+  "slug": "busco-a-alguien-que",
+  "titulo": "Relative clauses with the indicative or the subjunctive",
+  "subtitulo": "Busco al chavo que habla inglés / Busco a alguien que hable inglés.",
+  "foto": "t03.jpg",
+  "regla": "In a relative clause, use the indicative when the person or thing is known or exists (el chavo que tiene ojos azules), and the subjunctive when it's unknown, hypothetical or doesn't exist (un chavo que tenga ojos azules; no hay nadie que sepa).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "The mood in the **que** clause depends on whether you know the person or thing exists."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Antecedent",
+            "Mood",
+            "Example"
+          ],
+          "filas": [
+            [
+              "known, specific, real",
+              "indicative",
+              "el chavo que tiene ojos azules"
+            ],
+            [
+              "unknown, any, hypothetical",
+              "subjunctive",
+              "un chavo que tenga ojos azules"
+            ],
+            [
+              "doesn't exist (nadie, nada, ningún)",
+              "subjunctive",
+              "no hay nadie que sepa"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Articles help: **el / la** often points to a known one; **un / una / alguien** to any one."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if you could point at them, indicative. If you're still looking, subjunctive."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Side by side",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "indicativo",
+                  "t": "Voy a salir con el chavo que tiene ojos azules."
+                },
+                {
+                  "v": "subjuntivo",
+                  "t": "Voy a salir con un chavo que tenga ojos azules."
+                }
+              ],
+              "nota": "That specific guy vs any guy like that."
+            },
+            {
+              "filas": [
+                {
+                  "v": "indicativo",
+                  "t": "Voy a invitar a la gente que vive en mi colonia."
+                },
+                {
+                  "v": "subjuntivo",
+                  "t": "Voy a invitar a la gente que viva en mi colonia."
+                }
+              ],
+              "nota": "People I know vs whoever lives there."
+            },
+            {
+              "filas": [
+                {
+                  "v": "indicativo",
+                  "t": "Las personas que han reservado pueden pasar."
+                },
+                {
+                  "v": "subjuntivo",
+                  "t": "Las personas que hayan reservado pueden pasar."
+                }
+              ],
+              "nota": "They definitely did vs if anyone did."
+            }
+          ]
+        },
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Busco un departamento ==que tenga== terraza.",
+              "en": "I'm looking for an apartment with a terrace."
+            },
+            {
+              "es": "No conozco a nadie ==que hable== ruso.",
+              "en": "I don't know anyone who speaks Russian."
+            },
+            {
+              "es": "¿Hay alguien aquí ==que sepa== nadar?",
+              "en": "Is there anyone here who can swim?"
+            },
+            {
+              "es": "Tengo un amigo ==que habla== ruso.",
+              "en": "I have a friend who speaks Russian."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No hay nadie que sabe."
+                },
+                {
+                  "v": "bien",
+                  "t": "No hay nadie que sepa."
+                }
+              ],
+              "nota": "Doesn't exist: subjunctive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tengo un hermano que viva en Tijuana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tengo un hermano que vive en Tijuana."
+                }
+              ],
+              "nota": "He exists: indicative."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "que, el cual",
+              "texto": "[[5154|relative pronouns]]."
+            },
+            {
+              "forma": "quien, donde",
+              "texto": "[[8193|como / cuando / donde / quien]]."
+            },
+            {
+              "forma": "todo aquel que",
+              "texto": "[[7076|todo aquel que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Complete: _Necesito a alguien que me ___ (ayudar)._",
+              "r": "ayude",
+              "nota": "Unknown person."
+            },
+            {
+              "p": "Complete: _Conozco a una chava que ___ (cantar) muy bien._",
+              "r": "canta",
+              "nota": "Known person."
+            },
+            {
+              "p": "Complete: _No hay nada que te ___ (gustar)._",
+              "r": "guste",
+              "nota": "Doesn't exist."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5154
+    ],
+    "confunde": [
+      8193
+    ],
+    "sigue": [
+      7076
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7256",
+      "kwiziq": true
+    }
+  ]
+}

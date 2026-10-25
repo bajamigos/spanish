@@ -1,0 +1,193 @@
+{
+  "tema": 7090,
+  "slug": "le-di-a-juan",
+  "titulo": "Repetition of indirect object pronouns (le di a Juan)",
+  "subtitulo": "A mí me diste poco. Le dije a Ana la verdad.",
+  "foto": "t02.jpg",
+  "regla": "If the indirect object a + pronoun comes first in the sentence (a mí, a ella), the short pronoun is required: A mí me diste poco. With a + noun after the verb, the short pronoun is optional but very common, especially in Mexico: Le di el libro a Juan.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "a + pronoun",
+              "texto": "The short pronoun (**me, te, le, nos, les**) is **required**: **a ella le diste mucho**, never ~~a ella diste~~."
+            },
+            {
+              "forma": "a + noun after the verb",
+              "texto": "Optional, but very common in Mexico: **(le) di el libro a Juan**."
+            },
+            {
+              "forma": "a + noun before the verb",
+              "texto": "Required: **a Juan le di el libro**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The **a + pronoun** part alone is optional; it's for emphasis or clarity. Without it, **le** can be ambiguous (_him? her? you?_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: in Spanish the indirect object likes to be said twice."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==A mí me== diste muy poco dinero, pero ==a ella le== diste mucho.",
+              "en": "You gave me very little money, but you gave her a lot."
+            },
+            {
+              "es": "¿==A ti te== regalaron una moto tus papás?",
+              "en": "Did your parents give you a motorcycle?"
+            },
+            {
+              "es": "==Me== diste muy poco dinero, pero ==le== diste mucho.",
+              "en": "You gave me very little money, but you gave him / her a lot. (unclear who)"
+            },
+            {
+              "es": "==Le== dije la verdad ==a Ana==.",
+              "en": "I told Ana the truth."
+            },
+            {
+              "es": "==A mis papás les== mandé una postal.",
+              "en": "I sent my parents a postcard."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "A ella diste mucho."
+                },
+                {
+                  "v": "bien",
+                  "t": "A ella le diste mucho."
+                }
+              ],
+              "nota": "Required."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "A Juan di el libro."
+                },
+                {
+                  "v": "bien",
+                  "t": "A Juan le di el libro."
+                }
+              ],
+              "nota": "Noun first: required."
+            },
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "Di el libro a Juan."
+                },
+                {
+                  "v": "más natural",
+                  "t": "Le di el libro a Juan."
+                }
+              ],
+              "nota": "Both correct; the second is more common."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "a mí me gusta",
+              "texto": "[[7032|with gustar-type verbs]]."
+            },
+            {
+              "forma": "lo vi a él",
+              "texto": "[[6934|direct objects]]."
+            },
+            {
+              "forma": "le, les",
+              "texto": "[[5122|indirect object pronouns]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Fix it: _A nosotros dieron un premio._",
+              "r": "A nosotros nos dieron un premio.",
+              "nota": "nos is required."
+            },
+            {
+              "p": "More natural: _Mandé un mensaje a mi hermana._",
+              "r": "Le mandé un mensaje a mi hermana.",
+              "nota": "le + a mi hermana."
+            },
+            {
+              "p": "In Spanish (contrast): _I told HER, not him._",
+              "r": "Se lo dije a ella, no a él. / Le dije a ella, no a él.",
+              "nota": "a ella for contrast."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5122,
+      7032
+    ],
+    "confunde": [
+      6934
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7090",
+      "kwiziq": true
+    }
+  ]
+}

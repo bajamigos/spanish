@@ -1,0 +1,234 @@
+{
+  "tema": 6227,
+  "slug": "subjuntivo-presente-o-ue-er",
+  "titulo": "Conjugate stem-changing -er verbs (o > ue) in the present subjunctive",
+  "subtitulo": "Vuelva, mueva, volvamos: ue everywhere except nosotros.",
+  "foto": "t07.jpg",
+  "regla": "-er verbs with o > ue in the present keep it in the subjunctive, except nosotros: vuelva, vuelvas, volvamos, vuelvan.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**-er** verbs that change **o > ue** in the present have the same change in the present subjunctive: **ue** in every form **except nosotros**. The endings are the regular **-er** subjunctive ones."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "volver",
+            "mover"
+          ],
+          "filas": [
+            [
+              "yo",
+              "vuelva",
+              "mueva"
+            ],
+            [
+              "tú",
+              "vuelvas",
+              "muevas"
+            ],
+            [
+              "él, ella, usted",
+              "vuelva",
+              "mueva"
+            ],
+            [
+              "nosotros",
+              "volvamos",
+              "movamos"
+            ],
+            [
+              "ustedes, ellos",
+              "vuelvan",
+              "muevan"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Other verbs like this: **poder**, **devolver**, **promover**, **disolver**, **envolver**, **demoler**, **resolver**, **cocer**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Careful: some also change a consonant to keep the sound. **Cocer** → **cueza** (the **c** becomes **z** before **a**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: same boot as the **-ar** verbs. **Nosotros** stays outside with the plain **o**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Dudo que ==vuelva== antes de las cinco.",
+              "en": "I doubt I'll be back before five."
+            },
+            {
+              "es": "No ==vuelvas== con él; es un mentiroso.",
+              "en": "Don't go back to him; he's a liar."
+            },
+            {
+              "es": "==Movamos== estas cajas para allá.",
+              "en": "Let's move these boxes over there."
+            },
+            {
+              "es": "Por favor, no ==muevan== esos papeles.",
+              "en": "Please don't move those papers."
+            },
+            {
+              "es": "¿Quieres que ==cueza== la pasta?",
+              "en": "Do you want me to boil the pasta?"
+            },
+            {
+              "es": "Está bien que ==promuevan== sus descuentos.",
+              "en": "It's good that they promote their discounts."
+            },
+            {
+              "es": "Espero que me ==devuelvas== la tabla mañana.",
+              "en": "I hope you give me back the board tomorrow."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Muevamos la mesa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Movamos la mesa."
+                }
+              ],
+              "nota": "No change in **nosotros**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero que volvas temprano."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero que vuelvas temprano."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Quieres que cuece la pasta?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Quieres que cueza la pasta?"
+                }
+              ],
+              "nota": "**Cocer**: c → z before **a**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "vuelvo, volvemos",
+              "texto": "The present: [[5080|o > ue -er verbs]]."
+            },
+            {
+              "forma": "pueda",
+              "texto": "The most common one: [[6228|poder in the subjunctive]]."
+            },
+            {
+              "forma": "sueñe",
+              "texto": "The **-ar** version: [[6213|o > ue -ar verbs]]."
+            },
+            {
+              "forma": "duerma, durmamos",
+              "texto": "The exception in nosotros: [[9256|o > u in nosotros]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "**Volver** with **ustedes**: Cuando ___, me avisan.",
+              "r": "Cuando vuelvan, me avisan.",
+              "nota": "o > ue."
+            },
+            {
+              "p": "**Mover** with **nosotros**: Mejor ___ el carro.",
+              "r": "Mejor movamos el carro.",
+              "nota": "No change."
+            },
+            {
+              "p": "In Spanish: _I hope you resolve it._ (tú, **resolver**)",
+              "r": "Espero que lo resuelvas.",
+              "nota": "resolver → resuelvas."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5080,
+      5151
+    ],
+    "confunde": [
+      6213,
+      9256
+    ],
+    "sigue": [
+      6228,
+      6238
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6227",
+      "kwiziq": true
+    }
+  ]
+}

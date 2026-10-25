@@ -1,0 +1,190 @@
+{
+  "tema": 10756,
+  "slug": "el-tiene-el-carro",
+  "titulo": "Él vs el (he vs the)",
+  "subtitulo": "Él tiene el carro.",
+  "foto": "t01.jpg",
+  "regla": "Él with an accent is the pronoun he / him. El without an accent is the article the. A + el and de + el contract to al and del, but a él and de él never do.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Él** (accent) = **he / him**: **él es**, **con él**, **para él**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**El** (no accent) = **the**, before a masculine noun: **el carro**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**A + el = al**, **de + el = del**. But the pronoun never contracts: **a él**, **de él**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The accent stays on capitals: **Él**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Él== es mi compa de jiu-jitsu.",
+              "en": "He's my jiu-jitsu buddy."
+            },
+            {
+              "es": "==Él== siempre trae ==el== bloqueador.",
+              "en": "He always brings the sunscreen."
+            },
+            {
+              "es": "Voy a la playa con ==él==.",
+              "en": "I'm going to the beach with him."
+            },
+            {
+              "es": "==El== huerto es de ==él==.",
+              "en": "The garden is his."
+            },
+            {
+              "es": "Este regalo es para ==él==.",
+              "en": "This gift is for him."
+            },
+            {
+              "es": "Le escribo ==a él==, no ==al== maestro.",
+              "en": "I'm writing to him, not to the teacher."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El es mi hermano."
+                },
+                {
+                  "v": "bien",
+                  "t": "Él es mi hermano."
+                }
+              ],
+              "nota": "_He_ = **él**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La tabla es del."
+                },
+                {
+                  "v": "bien",
+                  "t": "La tabla es de él."
+                }
+              ],
+              "nota": "**De él** never contracts."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Voy con el."
+                },
+                {
+                  "v": "bien",
+                  "t": "Voy con él."
+                }
+              ],
+              "nota": "_Him_ = **él**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el / la",
+              "texto": "The article: [[5100|el or la]], [[5090|al and del]]."
+            },
+            {
+              "forma": "tú / tu",
+              "texto": "Same trick: [[6731|tú vs tu]]."
+            },
+            {
+              "forma": "con él",
+              "texto": "Pronouns after prepositions: [[6466|prepositions + pronouns]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Fix it: _Hablé con el ayer._",
+              "r": "Hablé con él ayer.",
+              "nota": "Him: él."
+            },
+            {
+              "p": "In Spanish, with de: _The board is his._",
+              "r": "La tabla es de él.",
+              "nota": "No contraction."
+            },
+            {
+              "p": "Fix it: _Él perro es de mi tía._",
+              "r": "El perro es de mi tía.",
+              "nota": "The: el."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5100,
+      5090
+    ],
+    "confunde": [
+      6731
+    ],
+    "sigue": [
+      6466
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 10756",
+      "kwiziq": true
+    }
+  ]
+}

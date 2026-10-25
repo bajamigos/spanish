@@ -1,0 +1,226 @@
+{
+  "tema": 8342,
+  "slug": "presente-iar",
+  "titulo": "Some -iar verbs take an accent in the present: enviar, criar",
+  "subtitulo": "Envío, crías, enviamos: the i takes the stress.",
+  "foto": "t06.jpg",
+  "regla": "Some -iar verbs (enviar, criar, fotografiar) take an accent on the i in the present except nosotros: envío, envías, envía, enviamos, envían.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Most **-iar** verbs are regular in the present: **cambiar**, **estudiar**, **apreciar**, **copiar** (**cambio**, **estudias**). But some take a **written accent on the i**: **enviar**, **criar**, **liar**, **fotografiar**, **confiar**, **esquiar**, **vaciar**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "enviar",
+            "criar",
+            "fotografiar"
+          ],
+          "filas": [
+            [
+              "yo",
+              "envío",
+              "crío",
+              "fotografío"
+            ],
+            [
+              "tú",
+              "envías",
+              "crías",
+              "fotografías"
+            ],
+            [
+              "él, ella, usted",
+              "envía",
+              "cría",
+              "fotografía"
+            ],
+            [
+              "nosotros",
+              "enviamos",
+              "criamos",
+              "fotografiamos"
+            ],
+            [
+              "ustedes, ellos",
+              "envían",
+              "crían",
+              "fotografían"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "In the infinitive the stress is on **-ar**. In **yo**, **tú**, **él** and **ellos**, it falls on the **i**, so the accent breaks the vowel pair and makes the **i** stressed. In **nosotros** the stress is at the end: no accent."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: compare **cambio** (CAM-bio) and **envío** (en-VÍ-o). If you hear the **i** pop, it gets the accent."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Si ==envían== el paquete hoy, llega en tres días.",
+              "en": "If you send the package today, it'll arrive in three days."
+            },
+            {
+              "es": "Marta ==cría== sola a sus hijos.",
+              "en": "Marta is raising her kids on her own."
+            },
+            {
+              "es": "Yo ==fotografío== las olas desde el muelle.",
+              "en": "I photograph the waves from the pier."
+            },
+            {
+              "es": "Te ==envío== la ubicación.",
+              "en": "I'll send you the location."
+            },
+            {
+              "es": "Nosotros ==criamos== gallinas en el huerto.",
+              "en": "We raise chickens in the garden."
+            },
+            {
+              "es": "No ==confío== en ese mecánico.",
+              "en": "I don't trust that mechanic."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Te envio la foto."
+                },
+                {
+                  "v": "bien",
+                  "t": "Te envío la foto."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cámbio de planes."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cambio de planes."
+                }
+              ],
+              "nota": "**Cambiar** is regular: no accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Enviámos el pedido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Enviamos el pedido."
+                }
+              ],
+              "nota": "No accent in **nosotros**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "actúo, continúa",
+              "texto": "The same idea with **u**: [[8327|-uar verbs]]."
+            },
+            {
+              "forma": "crear, creer, criar",
+              "texto": "Look-alike verbs: [[10757|crear, creer and criar]]."
+            },
+            {
+              "forma": "hablo, hablas",
+              "texto": "The regular pattern: [[5492|-ar verbs in the present]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "**Enviar** with **yo**: Te ___ el mensaje.",
+              "r": "Te envío el mensaje.",
+              "nota": "Accent on the **i**."
+            },
+            {
+              "p": "**Criar** with **nosotros**: ___ abejas.",
+              "r": "Criamos abejas.",
+              "nota": "No accent."
+            },
+            {
+              "p": "Which one? **Estudío** or **Estudio**?",
+              "r": "Estudio.",
+              "nota": "**Estudiar** is regular."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5492
+    ],
+    "confunde": [
+      10757,
+      8327
+    ],
+    "sigue": [
+      8327
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8342",
+      "kwiziq": true
+    }
+  ]
+}

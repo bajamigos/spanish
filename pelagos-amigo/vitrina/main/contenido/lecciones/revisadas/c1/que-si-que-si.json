@@ -1,0 +1,175 @@
+{
+  "tema": 9965,
+  "slug": "que-si-que-si",
+  "titulo": "Que si..., que si... to list complaints, excuses or demands",
+  "subtitulo": "Que si tenía trabajo, que si estaba cansado...",
+  "foto": "t03.jpg",
+  "regla": "In speech, que si..., que si... lists things someone keeps saying (complaints, excuses, demands), usually with annoyance: Me dio mil excusas, que si tenía trabajo, que si estaba cansado...",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "..., que si",
+            "[item]",
+            ", que si",
+            "[item]..."
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It **reports a string** of complaints, excuses, reasons or demands, often with a tone of annoyance or irony: _blah blah this, blah blah that_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "After **que si** can come a clause, a command or just a noun."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Colloquial and spoken. Usually two or three items, then **...** or a summary."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **que si..., que si...** is rolling your eyes out loud."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi papá es bien estricto, ==que si== no te pongas tanto maquillaje, ==que si== deberías estudiar más...",
+              "en": "My dad is super strict, don't wear so much makeup, you should study more..."
+            },
+            {
+              "es": "Los ambientalistas no dejan de quejarse, ==que si== estamos acabando con los bosques, ==que si== las emisiones...",
+              "en": "Environmentalists won't stop complaining, we're destroying the forests, the emissions..."
+            },
+            {
+              "es": "El maestro no me quiso subir la calificación, ==que si== faltaba contenido, ==que si== el vocabulario era pobre...",
+              "en": "The teacher wouldn't raise my grade, there was content missing, the vocabulary was poor..."
+            },
+            {
+              "es": "Le estás dando de comer muy mal a la niña, ==que si== chocolate en la mañana, ==que si== helado en la tarde...",
+              "en": "You're feeding the girl so badly, chocolate in the morning, ice cream in the afternoon..."
+            },
+            {
+              "es": "Nos dio un montón de excusas, ==que si== tenía mucho trabajo, ==que si== estaba muy cansado... y al final no vino.",
+              "en": "He gave us a ton of excuses, he had lots of work, he was really tired... and in the end he didn't come."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "qué sí..., qué sí..."
+                },
+                {
+                  "v": "bien",
+                  "t": "que si..., que si..."
+                }
+              ],
+              "nota": "No accents."
+            },
+            {
+              "filas": [
+                {
+                  "v": "condición",
+                  "t": "Si tienes tiempo, ven."
+                },
+                {
+                  "v": "lista",
+                  "t": "Que si tenía tiempo, que si no..."
+                }
+              ],
+              "nota": "Not a condition here."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¿que te vas?",
+              "texto": "[[6186|que for disbelief]]."
+            },
+            {
+              "forma": "sí / si",
+              "texto": "[[6603|accents]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Complete: _Siempre pone pretextos, ___ le duele la cabeza, ___ tiene sueño..._",
+              "r": "que si / que si",
+              "nota": "List of excuses."
+            },
+            {
+              "p": "Accent or not? _Que si esto, que si aquello._",
+              "r": "No accents.",
+              "nota": "que si."
+            },
+            {
+              "p": "In Spanish: _She complains about everything, the noise, the heat..._",
+              "r": "Se queja de todo, que si el ruido, que si el calor...",
+              "nota": "que si + noun."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6603
+    ],
+    "confunde": [
+      6186
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9965",
+      "kwiziq": true
+    }
+  ]
+}

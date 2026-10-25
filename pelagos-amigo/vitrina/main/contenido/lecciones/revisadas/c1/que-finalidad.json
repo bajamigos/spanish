@@ -1,0 +1,173 @@
+{
+  "tema": 9967,
+  "slug": "que-finalidad",
+  "titulo": "Command, que + subjunctive = so that",
+  "subtitulo": "Cierra la puerta, que no se salga el gato.",
+  "foto": "t05.jpg",
+  "regla": "After a command, a short que + subjunctive clause gives the purpose: Habla más fuerte, que te oigan atrás = so they can hear you. It's a colloquial shortcut for para que, so it always takes the subjunctive.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "command",
+            ", que",
+            "+ subjunctive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The **que** clause tells you _what the command is for_: _so that..._"
+        },
+        {
+          "tipo": "texto",
+          "texto": "It's a shortened **para que**, so the verb is **always subjunctive**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Colloquial: you'll hear it in quick everyday instructions."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: hear an invisible **para** in front of that **que**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Escóndete detrás del carro, ==que no te vean==.",
+              "en": "Hide behind the car, so they don't see you."
+            },
+            {
+              "es": "Déjame los papeles en el escritorio, ==que los firme== mañana temprano.",
+              "en": "Leave the papers on my desk so I can sign them first thing tomorrow."
+            },
+            {
+              "es": "Habla más fuerte, ==que te oigan== los de atrás.",
+              "en": "Speak up, so the people at the back can hear you."
+            },
+            {
+              "es": "Hazte a un lado, ==que pueda ver== el pizarrón.",
+              "en": "Move aside, so I can see the board."
+            },
+            {
+              "es": "Cierra la ventana, ==que no se metan== los moscos.",
+              "en": "Close the window so the mosquitoes don't get in."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cierra la ventana, que no entran los moscos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cierra la ventana, que no entren los moscos."
+                }
+              ],
+              "nota": "Purpose = subjunctive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "causa",
+                  "t": "Cierra la ventana, que hace frío."
+                },
+                {
+                  "v": "finalidad",
+                  "t": "Cierra la ventana, que no entre el frío."
+                }
+              ],
+              "nota": "With the indicative, **que** gives a _reason_ (because it's cold), not a purpose."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "para que",
+              "texto": "[[7510|para que + present subjunctive]]."
+            },
+            {
+              "forma": "commands",
+              "texto": "[[6748|affirmative tú commands]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish, with que: _Turn the music down so the baby doesn't wake up._",
+              "r": "Bájale a la música, que no se despierte el bebé.",
+              "nota": "que + subjunctive."
+            },
+            {
+              "p": "Purpose or reason? _Ponte el suéter, que hace frío._",
+              "r": "Reason: hace frío is indicative.",
+              "nota": "Indicative = because."
+            },
+            {
+              "p": "Fix it: _Apúrate, que llegamos a tiempo._ (meaning: so we get there on time)",
+              "r": "Apúrate, que lleguemos a tiempo.",
+              "nota": "Subjunctive for purpose."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7510,
+      6748
+    ],
+    "confunde": [],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9967",
+      "kwiziq": true
+    }
+  ]
+}

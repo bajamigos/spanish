@@ -1,0 +1,217 @@
+{
+  "tema": 6936,
+  "slug": "una-vez-dos-veces",
+  "titulo": "Vez / veces: once, twice, many times",
+  "subtitulo": "«Surfeo dos veces a la semana.»",
+  "foto": "t07.jpg",
+  "regla": "Time as an occasion (once, twice, how many times) is vez, plural veces: una vez, dos veces, muchas veces. Time as duration is tiempo.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "_Time_ as an **occasion** is **vez**. Plural: **veces** (z becomes c). It's feminine: **una vez**, **la primera vez**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "English",
+            "Spanish"
+          ],
+          "filas": [
+            [
+              "once",
+              "una vez"
+            ],
+            [
+              "twice",
+              "dos veces"
+            ],
+            [
+              "many times, often",
+              "muchas veces"
+            ],
+            [
+              "sometimes",
+              "a veces"
+            ],
+            [
+              "the first time",
+              "la primera vez"
+            ],
+            [
+              "how many times?",
+              "¿cuántas veces?"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "_Twice a week_ = **dos veces a la semana**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "_Time_ as **duration** is **tiempo**: **no tengo tiempo**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Surfeo ==dos veces== a la semana.",
+              "en": "I surf twice a week."
+            },
+            {
+              "es": "Fui a Oaxaca ==una vez==.",
+              "en": "I went to Oaxaca once."
+            },
+            {
+              "es": "==A veces== como tacos en la noche.",
+              "en": "Sometimes I eat tacos at night."
+            },
+            {
+              "es": "Es ==la primera vez== que entreno jiu-jitsu.",
+              "en": "It's the first time I've trained jiu-jitsu."
+            },
+            {
+              "es": "¿==Cuántas veces== vas al gimnasio?",
+              "en": "How many times do you go to the gym?"
+            },
+            {
+              "es": "Riego las plantas ==tres veces== a la semana.",
+              "en": "I water the plants three times a week."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Surfeo dos tiempos a la semana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Surfeo dos veces a la semana."
+                }
+              ],
+              "nota": "Occasions: **veces**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Fui a Oaxaca un vez."
+                },
+                {
+                  "v": "bien",
+                  "t": "Fui a Oaxaca una vez."
+                }
+              ],
+              "nota": "**Vez** is feminine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Lo leí dos vezes."
+                },
+                {
+                  "v": "bien",
+                  "t": "Lo leí dos veces."
+                }
+              ],
+              "nota": "z → c before e."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "vez → veces",
+              "texto": "The spelling change: [[7084|plural of nouns in -z]]."
+            },
+            {
+              "forma": "surfeo los sábados",
+              "texto": "Habits in the present: [[5992|present for regular actions]]."
+            },
+            {
+              "forma": "cada semana, todos los días",
+              "texto": "_Every_: [[6178|cada and todos]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I train three times a week._",
+              "r": "Entreno tres veces a la semana.",
+              "nota": "veces a la semana."
+            },
+            {
+              "p": "In Spanish: _Sometimes I cook._",
+              "r": "A veces cocino.",
+              "nota": "a veces."
+            },
+            {
+              "p": "Fix it: _Es mi primer vez en Tijuana._",
+              "r": "Es mi primera vez en Tijuana.",
+              "nota": "vez is feminine."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7084,
+      5992
+    ],
+    "confunde": [],
+    "sigue": [
+      6178
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6936",
+      "kwiziq": true
+    }
+  ]
+}

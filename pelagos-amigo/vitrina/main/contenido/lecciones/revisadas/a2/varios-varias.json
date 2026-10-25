@@ -1,0 +1,219 @@
+{
+  "tema": 7249,
+  "slug": "varios-varias",
+  "titulo": "Varios, varias (several, some)",
+  "subtitulo": "Fui varias veces. Varios de mis amigos surfean.",
+  "foto": "t01.jpg",
+  "regla": "Varios / varias = several, some (more than two). It is always plural, agrees with the noun, goes before it with no article (varios amigos), and can stand alone as a pronoun or take de + the group: varios de mis amigos.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Varios** (masculine) and **varias** (feminine) = _several, some, a number of_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "They only exist in the **plural** and agree with the noun: **varios días**, **varias veces**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "They go **before** the noun, with **no article**: **varios amigos**, never _unos varios amigos_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "As a pronoun, alone: **Compré tomates; varios estaban podridos.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "With a group, use **de** + article or possessive: **varios de mis amigos**, **varias de las olas**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Tengo ==varios== amigos en Ensenada.",
+              "en": "I have several friends in Ensenada."
+            },
+            {
+              "es": "Fui a la playa ==varias== veces esta semana.",
+              "en": "I went to the beach several times this week."
+            },
+            {
+              "es": "==Varias== plantas de mi jardín ya dieron fruto.",
+              "en": "Several plants in my garden already bore fruit."
+            },
+            {
+              "es": "Vi ==varias== películas de ciencia ficción el fin de semana.",
+              "en": "I watched several sci-fi movies over the weekend."
+            },
+            {
+              "es": "==Varios de== mis compañeros de jiu-jitsu son cinturón negro.",
+              "en": "Several of my jiu-jitsu teammates are black belts."
+            },
+            {
+              "es": "==Varias de== las olas cerraron muy rápido.",
+              "en": "Several of the waves closed out really fast."
+            },
+            {
+              "es": "Compré tomates; ==varios== estaban podridos.",
+              "en": "I bought tomatoes; several were rotten."
+            },
+            {
+              "es": "¿Invitaste a tus primas? —Sí, y ==varias== vinieron.",
+              "en": "Did you invite your cousins? —Yes, and several came."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Fui varios veces."
+                },
+                {
+                  "v": "bien",
+                  "t": "Fui varias veces."
+                }
+              ],
+              "nota": "**Vez** is feminine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Vinieron varios personas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Vinieron varias personas."
+                }
+              ],
+              "nota": "**Persona** is always feminine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tengo unos varios amigos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tengo varios amigos."
+                }
+              ],
+              "nota": "No article."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Varios de amigos vinieron."
+                },
+                {
+                  "v": "bien",
+                  "t": "Varios de mis amigos vinieron."
+                }
+              ],
+              "nota": "**De** + article or possessive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "unos amigos",
+              "texto": "Some, plainly: [[6604|unos, unas]]."
+            },
+            {
+              "forma": "algunos días",
+              "texto": "Close in meaning: [[6136|algún, algunos]]."
+            },
+            {
+              "forma": "algunos vinieron",
+              "texto": "The pronoun cousin: [[6462|alguno, algunos]]."
+            },
+            {
+              "forma": "unos cuantos",
+              "texto": "A few: [[7509|unos cuantos, unas cuantas]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _several times_",
+              "r": "varias veces",
+              "nota": "Vez is feminine."
+            },
+            {
+              "p": "In Spanish: _several of my friends_",
+              "r": "varios de mis amigos",
+              "nota": "de + mis."
+            },
+            {
+              "p": "Fix it: _Tengo unos varios libros._",
+              "r": "Tengo varios libros.",
+              "nota": "No article."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6604
+    ],
+    "confunde": [
+      6136
+    ],
+    "sigue": [
+      6462,
+      7509
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7249",
+      "kwiziq": true
+    }
+  ]
+}

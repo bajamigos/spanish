@@ -1,0 +1,193 @@
+{
+  "tema": 7179,
+  "slug": "mas-con-y-sin-acento",
+  "titulo": "Más vs mas: with and without an accent",
+  "subtitulo": "Más = more; mas = but (formal, written).",
+  "foto": "t08.jpg",
+  "regla": "Más with an accent = more (comparisons, quantities, also plus). Mas without an accent = but, a formal, written synonym of pero.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Más** and **mas** change meaning with the accent."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Form",
+            "Meaning",
+            "Example"
+          ],
+          "filas": [
+            [
+              "más",
+              "_more_ (comparisons, quantities)",
+              "Beto es más alto que yo."
+            ],
+            [
+              "",
+              "_plus_ (math)",
+              "Dos más dos son cuatro."
+            ],
+            [
+              "mas",
+              "_but_ (formal, written, like pero)",
+              "Nos invitaron, mas no fuimos."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "You'll use **más** all the time; **mas** without an accent is rare, mostly in formal or literary writing. In everyday speech, use **pero**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if you mean _more_, give it the accent. If you mean _but_, just say **pero**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Beto siempre ha sido ==más== generoso que su hermano.",
+              "en": "Beto has always been more generous than his brother."
+            },
+            {
+              "es": "Necesito media hora ==más== para terminar el examen.",
+              "en": "I need half an hour more to finish the exam."
+            },
+            {
+              "es": "—¿Quieres otro café? —No, ya no quiero ==más==, gracias.",
+              "en": "\"Do you want another coffee?\" \"No, I don't want any more, thanks.\""
+            },
+            {
+              "es": "Recibimos la invitación a la ceremonia, ==mas== no asistimos.",
+              "en": "We received the invitation to the ceremony, but we didn't attend."
+            },
+            {
+              "es": "Recibimos la invitación, ==pero== no fuimos.",
+              "en": "We got the invitation, but we didn't go. (everyday)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero mas tacos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero más tacos."
+                }
+              ],
+              "nota": "_More_ needs the accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es mas alto que yo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es más alto que yo."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "pero, sino",
+              "texto": "_But_ in everyday Spanish: [[7035|pero, sino, sino que]]."
+            },
+            {
+              "forma": "el más alto",
+              "texto": "Superlatives: [[5056|the most / the least]]."
+            },
+            {
+              "forma": "sí / si, qué / que",
+              "texto": "Other accent pairs: [[6603|sí]], [[6675|qué]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Accent or not? **Quiero ___ agua.** (more)",
+              "r": "Quiero más agua.",
+              "nota": "más."
+            },
+            {
+              "p": "Accent or not? **Lo intentó, ___ no pudo.** (formal but)",
+              "r": "Lo intentó, mas no pudo.",
+              "nota": "mas = but."
+            },
+            {
+              "p": "Say the same in everyday Spanish.",
+              "r": "Lo intentó, pero no pudo.",
+              "nota": "pero."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5056
+    ],
+    "confunde": [
+      7035
+    ],
+    "sigue": [
+      6603,
+      6675
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7179",
+      "kwiziq": true
+    }
+  ]
+}

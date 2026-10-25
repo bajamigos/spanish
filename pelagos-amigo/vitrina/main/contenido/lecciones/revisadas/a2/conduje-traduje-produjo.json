@@ -1,0 +1,249 @@
+{
+  "tema": 5234,
+  "slug": "conduje-traduje-produjo",
+  "titulo": "-ducir verbs in the preterite",
+  "subtitulo": "Traduje el menú al inglés.",
+  "foto": "t10.jpg",
+  "regla": "Verbs ending in -ducir (conducir, traducir, producir, introducir, reducir) are irregular in the preterite: -duj- + -e, -iste, -o, -imos, -eron: conduje, condujiste, condujo, condujimos, condujeron.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Every verb ending in **-ducir** changes **-duc-** to **-duj-** in the preterite: **conducir**, **traducir**, **producir**, **introducir**, **reducir**, **deducir**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The endings are **-e, -iste, -o, -imos**, and **-eron** in ellos (no i after the **j**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**No written accents**: **traduje**, **produjo**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "conducir",
+            "traducir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "conduje",
+              "traduje"
+            ],
+            [
+              "tú",
+              "condujiste",
+              "tradujiste"
+            ],
+            [
+              "él / ella / usted",
+              "condujo",
+              "tradujo"
+            ],
+            [
+              "nosotros",
+              "condujimos",
+              "tradujimos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "condujeron",
+              "tradujeron"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "In Mexico you'll usually hear **manejar** for _to drive_, but **conducir** is fully correct, and it also means _to host_ a show."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: these verbs and **decir** and **traer** form a club: **j** in the stem, **-eron** at the end."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Traduje== el menú al inglés para mis amigos de San Diego.",
+              "en": "I translated the menu into English for my friends from San Diego."
+            },
+            {
+              "es": "Mi primo ==condujo== de Tijuana a La Paz en dos días.",
+              "en": "My cousin drove from Tijuana to La Paz in two days."
+            },
+            {
+              "es": "La fábrica ==produjo== diez mil pantallas el mes pasado.",
+              "en": "The factory produced ten thousand screens last month."
+            },
+            {
+              "es": "¿Quién ==tradujo== este libro?",
+              "en": "Who translated this book?"
+            },
+            {
+              "es": "==Redujimos== el consumo de agua en el huerto con riego por goteo.",
+              "en": "We cut water use in the garden with drip irrigation."
+            },
+            {
+              "es": "Los estudiantes ==tradujeron== el texto sin diccionario.",
+              "en": "The students translated the text without a dictionary."
+            },
+            {
+              "es": "==Introduje== la llave, pero la puerta no abrió.",
+              "en": "I put the key in, but the door didn't open."
+            },
+            {
+              "es": "¿==Condujiste== tú todo el camino?",
+              "en": "Did you drive the whole way?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo conducí toda la noche."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo conduje toda la noche."
+                }
+              ],
+              "nota": "**-duj-**, ending **-e**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ellos tradujieron el documento."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ellos tradujeron el documento."
+                }
+              ],
+              "nota": "After **j**: **-eron**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La empresa produció más."
+                },
+                {
+                  "v": "bien",
+                  "t": "La empresa produjo más."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Introducí la tarjeta."
+                },
+                {
+                  "v": "bien",
+                  "t": "Introduje la tarjeta."
+                }
+              ],
+              "nota": "Same for every -ducir verb."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "conduzco, traduzco",
+              "texto": "The present first: [[5653|traducir and conducir in the present]]."
+            },
+            {
+              "forma": "viví, salí",
+              "texto": "Regular -ir verbs keep accents: [[5230|-er and -ir verbs in the preterite]]."
+            },
+            {
+              "forma": "dijeron",
+              "texto": "The same club: [[5240|decir in the preterite]] and [[5224|traer in the preterite]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I translated the letter._",
+              "r": "Traduje la carta.",
+              "nota": "traduje."
+            },
+            {
+              "p": "In Spanish: _They drove all night._",
+              "r": "Condujeron toda la noche.",
+              "nota": "condujeron, no i."
+            },
+            {
+              "p": "Fix it: _El rancho producío mucho aguacate._",
+              "r": "El rancho produjo mucho aguacate.",
+              "nota": "produjo."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5653
+    ],
+    "confunde": [
+      5230
+    ],
+    "sigue": [
+      5240,
+      5224
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5234",
+      "kwiziq": true
+    }
+  ]
+}

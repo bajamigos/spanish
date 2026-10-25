@@ -1,0 +1,211 @@
+{
+  "tema": 7602,
+  "slug": "olvidar-olvidarse",
+  "titulo": "Olvidar / olvidarse / olvidársele = to forget",
+  "subtitulo": "Olvidé las llaves. Me olvidé de las llaves. Se me olvidaron las llaves.",
+  "foto": "t01.jpg",
+  "regla": "Three ways to forget: olvidar algo, olvidarse de algo (de is required), and the accidental se: se me olvidó / se me olvidaron (the verb agrees with what's forgotten). In Mexico, se me olvidó is the everyday form.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Pattern",
+            "Example"
+          ],
+          "filas": [
+            [
+              "olvidar + thing / infinitive / que",
+              "Olvidé las llaves."
+            ],
+            [
+              "olvidarse + de + thing / infinitive / que",
+              "Me olvidé de las llaves."
+            ],
+            [
+              "se + me / te / le... + olvidar (agrees with the thing)",
+              "Se me olvidaron las llaves."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "With **olvidarse**, **de** is required: never ~~me olvidé las llaves~~."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With the accidental **se**, the **thing** is the subject: **se me olvidó la cartera**, **se me olvidaron los boletos**. Add **a** + person for clarity: **a Elena se le olvidaron**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**In Mexico**, **se me olvidó** is by far the most common in conversation."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **se me olvidó** blames your memory, not you."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Laura ==olvidó== la cita.",
+              "en": "Laura forgot the appointment."
+            },
+            {
+              "es": "Laura ==olvidó ir== a la cita.",
+              "en": "Laura forgot to go to the appointment."
+            },
+            {
+              "es": "Laura ==olvidó que== tenía una cita.",
+              "en": "Laura forgot she had an appointment."
+            },
+            {
+              "es": "==Me olvidé de== las llaves.",
+              "en": "I forgot the keys."
+            },
+            {
+              "es": "==Se me olvidaron== las llaves.",
+              "en": "I forgot the keys."
+            },
+            {
+              "es": "A Elena ==se le olvidó== llamarte.",
+              "en": "Elena forgot to call you."
+            },
+            {
+              "es": "¡==Se nos olvidó== el pastel!",
+              "en": "We forgot the cake!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me olvidé las llaves."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me olvidé de las llaves."
+                }
+              ],
+              "nota": "**Olvidarse** needs **de**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Se me olvidó las llaves."
+                },
+                {
+                  "v": "bien",
+                  "t": "Se me olvidaron las llaves."
+                }
+              ],
+              "nota": "Agrees with **las llaves**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me se olvidó."
+                },
+                {
+                  "v": "bien",
+                  "t": "Se me olvidó."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "se me cayó",
+              "texto": "[[7060|the accidental se]]."
+            },
+            {
+              "forma": "acordarse de",
+              "texto": "The opposite: [[5874|acordarse]]."
+            },
+            {
+              "forma": "perderse",
+              "texto": "[[8948|perder / perderse]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Three ways: _I forgot the passport._",
+              "r": "Olvidé el pasaporte. / Me olvidé del pasaporte. / Se me olvidó el pasaporte.",
+              "nota": "Three patterns."
+            },
+            {
+              "p": "In Spanish: _They forgot the tickets._ (accidental se)",
+              "r": "Se les olvidaron los boletos.",
+              "nota": "Plural verb."
+            },
+            {
+              "p": "Fix it: _Nos olvidamos comprar pan._",
+              "r": "Nos olvidamos de comprar pan.",
+              "nota": "de."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7060
+    ],
+    "confunde": [
+      5874
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7602",
+      "kwiziq": true
+    }
+  ]
+}

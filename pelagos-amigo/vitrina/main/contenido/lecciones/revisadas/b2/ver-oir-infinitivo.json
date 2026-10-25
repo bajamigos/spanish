@@ -1,0 +1,206 @@
+{
+  "tema": 7847,
+  "slug": "ver-oir-infinitivo",
+  "titulo": "Ver, oír, escuchar + infinitive or gerund",
+  "subtitulo": "La vi llegar. Lo oí cantando.",
+  "foto": "t04.jpg",
+  "regla": "Ver / oír / escuchar + infinitive = see / hear someone do something (the whole action): Vi llegar a Marta. + gerund = see / hear someone doing it (in progress): La vi corriendo. The person is a direct object (lo, la), in front of the conjugated verb.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "After **ver, oír, escuchar**, the action you perceive can be an **infinitive** or a **gerund**:"
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "+ infinitive",
+              "texto": "The whole action, complete: **vi llegar a Marta** (_I saw Marta arrive_)."
+            },
+            {
+              "forma": "+ gerund",
+              "texto": "The action in progress: **vi a Marta llegando** (_I saw Marta arriving_)."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Word order: short sentence, **verb + infinitive + a + person** (**vi llegar a Marta**). With more information, **verb + a + person + infinitive + extra** (**vi a Marta llegar muy asustada**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The person is a **direct object**: **la vi llegar**, **lo oí cantar**. The pronoun goes before the conjugated verb."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: infinitive = the whole clip; gerund = you walked in mid-scene."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Vi llegar== a Marta.",
+              "en": "I saw Marta arrive."
+            },
+            {
+              "es": "Vi a Marta ==llegar== muy asustada a la casa.",
+              "en": "I saw Marta get home very scared."
+            },
+            {
+              "es": "==La vi llegar==.",
+              "en": "I saw her arrive."
+            },
+            {
+              "es": "==Lo oí cantar== en la regadera.",
+              "en": "I heard him sing in the shower."
+            },
+            {
+              "es": "==Escuché a== los vecinos ==discutir== anoche.",
+              "en": "I heard the neighbors argue last night."
+            },
+            {
+              "es": "==La vi corriendo== en el malecón.",
+              "en": "I saw her running on the boardwalk."
+            },
+            {
+              "es": "==Los oímos llegando==.",
+              "en": "We heard them arriving."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Vi a ella llegar."
+                },
+                {
+                  "v": "bien",
+                  "t": "La vi llegar."
+                }
+              ],
+              "nota": "Use the pronoun **la**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Vi la llegar."
+                },
+                {
+                  "v": "bien",
+                  "t": "La vi llegar."
+                }
+              ],
+              "nota": "Pronoun before the conjugated verb."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Le vi llegar. (Marta)"
+                },
+                {
+                  "v": "bien",
+                  "t": "La vi llegar."
+                }
+              ],
+              "nota": "Direct object: **la**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "veía, oía",
+              "texto": "[[8786|perception verbs in the imperfect]]."
+            },
+            {
+              "forma": "lo, la",
+              "texto": "[[5121|direct object pronouns]]."
+            },
+            {
+              "forma": "gerunds",
+              "texto": "[[6501|irregular gerunds]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I heard them come in._",
+              "r": "Los oí entrar.",
+              "nota": "Infinitive, pronoun first."
+            },
+            {
+              "p": "In Spanish: _We saw him dancing._",
+              "r": "Lo vimos bailando.",
+              "nota": "Gerund: in progress."
+            },
+            {
+              "p": "In Spanish: _She saw her son fall._",
+              "r": "Vio caerse a su hijo. / Vio a su hijo caerse.",
+              "nota": "Infinitive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5121
+    ],
+    "confunde": [
+      8786
+    ],
+    "sigue": [
+      8786
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7847",
+      "kwiziq": true
+    }
+  ]
+}

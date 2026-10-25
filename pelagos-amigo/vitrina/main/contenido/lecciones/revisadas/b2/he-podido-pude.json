@@ -1,0 +1,213 @@
+{
+  "tema": 5052,
+  "slug": "he-podido-pude",
+  "titulo": "Poder in the present perfect and the preterite (could in the past)",
+  "subtitulo": "No he podido dormir / No pude dormir.",
+  "foto": "t07.jpg",
+  "regla": "He podido and pude both mean was able to / managed to. Present perfect: the time frame is still open or not mentioned (hoy, este mes). Preterite: a finished time (ayer, el año pasado). In Mexico the preterite is used much more, even for today.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say someone **was able / wasn't able** to do something, use **poder** + infinitive in the **present perfect** or the **preterite**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Tense",
+            "When"
+          ],
+          "filas": [
+            [
+              "he podido (present perfect)",
+              "time not mentioned, or a time frame you're still in: hoy, esta mañana, este mes"
+            ],
+            [
+              "pude (preterite)",
+              "a specific, finished time: ayer, el lunes, al final"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**In Mexico**, the preterite is used far more, even for today: **¿Pudiste comprar fruta?** is more natural than **¿Has podido...?** The present perfect is common for _so far / lately_: **no he podido dormir bien estos días**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **he podido** keeps the door open; **pude** closes it."
+        }
+      ]
+    },
+    {
+      "id": "perfecto",
+      "titulo": "Present perfect",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿==Has podido== comprar fruta? —No, no ==he podido==.",
+              "en": "Were you able to buy fruit? —No, I wasn't."
+            },
+            {
+              "es": "Esther ==ha podido== reservar mesa esta mañana.",
+              "en": "Esther was able to book a table this morning."
+            },
+            {
+              "es": "Mi inquilino no ==ha podido== pagar la renta este mes.",
+              "en": "My tenant hasn't been able to pay the rent this month."
+            },
+            {
+              "es": "No ==he podido== ir a muchas fiestas en los últimos meses.",
+              "en": "I haven't been able to go to many parties in the last few months."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "preterito",
+      "titulo": "Preterite",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Perdón, no ==pude== llamarte ayer.",
+              "en": "Sorry, I couldn't call you yesterday."
+            },
+            {
+              "es": "Al final ella ==pudo== recuperar su dinero.",
+              "en": "In the end she managed to get her money back."
+            },
+            {
+              "es": "No ==pudimos== conseguir boletos para el concierto.",
+              "en": "We couldn't get tickets for the concert."
+            },
+            {
+              "es": "¿==Pudiste== hablar con tu abogado?",
+              "en": "Were you able to get hold of your lawyer?"
+            },
+            {
+              "es": "El plomero no ==pudo== arreglar la llave.",
+              "en": "The plumber couldn't fix the faucet."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer no he podido ir."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer no pude ir."
+                }
+              ],
+              "nota": "**Ayer** is closed: preterite."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El lunes no he podido llegar a tiempo a clase."
+                },
+                {
+                  "v": "bien",
+                  "t": "El lunes no pude llegar a tiempo a clase."
+                }
+              ],
+              "nota": "**El lunes** is closed: preterite."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "pude / podía",
+              "texto": "[[6334|preterite vs imperfect]]."
+            },
+            {
+              "forma": "pude haber",
+              "texto": "[[6470|could have]]."
+            },
+            {
+              "forma": "he hablado / hablé",
+              "texto": "Conjugation: [[5267|present perfect]], [[5221|poder in the preterite]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I couldn't sleep last night._",
+              "r": "Anoche no pude dormir.",
+              "nota": "Closed time: preterite."
+            },
+            {
+              "p": "In Spanish: _I haven't been able to rest this week._",
+              "r": "Esta semana no he podido descansar.",
+              "nota": "Still this week."
+            },
+            {
+              "p": "In Spanish: _Did you manage to fix it?_ (tú, Mexico)",
+              "r": "¿Pudiste arreglarlo?",
+              "nota": "Preterite."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5221,
+      5267
+    ],
+    "confunde": [
+      6334
+    ],
+    "sigue": [
+      6470
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5052",
+      "kwiziq": true
+    }
+  ]
+}

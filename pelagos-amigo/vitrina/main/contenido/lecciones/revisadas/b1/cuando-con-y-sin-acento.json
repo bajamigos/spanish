@@ -1,0 +1,208 @@
+{
+  "tema": 6977,
+  "slug": "cuando-con-y-sin-acento",
+  "titulo": "Cuándo vs cuando (with and without an accent)",
+  "subtitulo": "¿Cuándo llegas? / Cuando llegues, avísame.",
+  "foto": "t01.jpg",
+  "regla": "Cuándo (accent) asks when, in direct and indirect questions and exclamations: dime cuándo vienes. Cuando (no accent) links a time clause: me llamó cuando llegó.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "cuándo",
+              "texto": "**Question or exclamation word**: **¿Cuándo es tu cumpleaños?**, **dime cuándo vienes**."
+            },
+            {
+              "forma": "cuando",
+              "texto": "**Relative / linking word**: it introduces a time clause: **me llamó cuando llegó**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Test: if you can swap _when_ for _at what moment_, write **cuándo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **cuándo** asks for the date; **cuando** already has it."
+        }
+      ]
+    },
+    {
+      "id": "con-acento",
+      "titulo": "Cuándo (with accent)",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿==Cuándo== es tu cumpleaños?",
+              "en": "When is your birthday?"
+            },
+            {
+              "es": "¡==Cuándo== se va a acabar todo esto!",
+              "en": "When will all this be over!"
+            },
+            {
+              "es": "Dime ==cuándo== te vas a Italia.",
+              "en": "Tell me when you're going to Italy."
+            },
+            {
+              "es": "No sé ==cuándo== abren.",
+              "en": "I don't know when they open."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sin-acento",
+      "titulo": "Cuando (no accent)",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Me lo propuso ==cuando== fuimos al centro.",
+              "en": "He proposed when we went downtown."
+            },
+            {
+              "es": "El día 7 es ==cuando== celebran el aniversario de Sandra.",
+              "en": "The 7th is when they celebrate Sandra's anniversary."
+            },
+            {
+              "es": "==Cuando== era niña, vivía en Ensenada.",
+              "en": "When I was a girl, I lived in Ensenada."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Cuando vienes?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cuándo vienes?"
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No sé cuando abren."
+                },
+                {
+                  "v": "bien",
+                  "t": "No sé cuándo abren."
+                }
+              ],
+              "nota": "Indirect question: accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cuándo llegué, ya no había nadie."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cuando llegué, ya no había nadie."
+                }
+              ],
+              "nota": "Time clause: no accent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "cuando + subjunctive",
+              "texto": "**Cuando llegues** (future): [[8193|cuando with indicative or subjunctive]]."
+            },
+            {
+              "forma": "cómo, dónde, cuándo",
+              "texto": "[[6313|indirect questions]]."
+            },
+            {
+              "forma": "quién, dónde, cómo",
+              "texto": "[[7082|quién vs quien]], [[6964|dónde vs donde]], [[6673|cómo vs como]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Accent or not? _Pregúntale ___ sale el camión._",
+              "r": "cuándo",
+              "nota": "Indirect question."
+            },
+            {
+              "p": "Accent or not? ____ llueve, me quedo en casa._",
+              "r": "Cuando",
+              "nota": "Time clause."
+            },
+            {
+              "p": "Accent or not? _¿Desde ___ trabajas aquí?_",
+              "r": "cuándo",
+              "nota": "Question."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6313
+    ],
+    "confunde": [
+      6964
+    ],
+    "sigue": [
+      8193
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6977",
+      "kwiziq": true
+    }
+  ]
+}

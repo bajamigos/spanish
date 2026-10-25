@@ -1,0 +1,169 @@
+{
+  "tema": 5975,
+  "slug": "por-precio",
+  "titulo": "Por (not para) to communicate price",
+  "subtitulo": "La vendí por tres mil pesos: por = for (a price).",
+  "foto": "t01.jpg",
+  "regla": "Use por (not para) for the price you buy or sell something for: la vendí por tres mil pesos.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say how much something was **bought or sold for**, use **por**: **vendió su moto por veinte mil pesos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It's an exchange too: money for a thing."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: money changes hands, so **por** stands in the middle."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ojalá que Beto venda su moto ==por== veinte mil pesos.",
+              "en": "I hope Beto sells his motorcycle for twenty thousand pesos."
+            },
+            {
+              "es": "Mis amigos vendieron su casa ==por== dos millones.",
+              "en": "My friends sold their house for two million."
+            },
+            {
+              "es": "Vendo la pintura ==por== cinco mil pesos.",
+              "en": "I'm selling the painting for five thousand pesos."
+            },
+            {
+              "es": "Me encanta tu chamarra. Te la compro ==por== quinientos.",
+              "en": "I love your jacket. I'll buy it from you for five hundred."
+            },
+            {
+              "es": "Conseguí la tabla ==por== la mitad de precio.",
+              "en": "I got the board for half price."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La compré para 300 pesos."
+                },
+                {
+                  "v": "bien",
+                  "t": "La compré por 300 pesos."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "Compré un regalo para Beto."
+                }
+              ],
+              "nota": "**Para** is for the person who receives it, not the price."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "para + infinitive",
+              "texto": "The main use of **para**: [[5970|purpose]]."
+            },
+            {
+              "forma": "por teléfono, por 100 pesos",
+              "texto": "Other uses of **por**: [[5973|medium]], [[5974|exchange]], [[5975|price]], [[5976|per]], [[5977|speed]], [[7273|by whom]]."
+            },
+            {
+              "forma": "para Navidad",
+              "texto": "**Para** for a deadline or occasion: [[5978|precise time]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I sold my board for 4,000 pesos._",
+              "r": "Vendí mi tabla por cuatro mil pesos.",
+              "nota": "price: por."
+            },
+            {
+              "p": "**Por** or **para**? _I bought it ___ my mom ___ 200 pesos._",
+              "r": "Lo compré para mi mamá por doscientos pesos.",
+              "nota": "Para: who it's for. Por: price."
+            },
+            {
+              "p": "In Spanish: _How much did you buy it for?_ (tú)",
+              "r": "¿Por cuánto lo compraste?",
+              "nota": "por cuánto."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5970
+    ],
+    "confunde": [
+      5970,
+      5973,
+      5974
+    ],
+    "sigue": [
+      5976,
+      5977,
+      5978,
+      7273,
+      7073
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5975",
+      "kwiziq": true
+    }
+  ]
+}

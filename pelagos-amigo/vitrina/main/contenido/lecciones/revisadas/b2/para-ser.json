@@ -1,0 +1,176 @@
+{
+  "tema": 5969,
+  "slug": "para-ser",
+  "titulo": "Para (not por) for unequal comparisons: for a...",
+  "subtitulo": "Para ser niño, es muy maduro.",
+  "foto": "t04.jpg",
+  "regla": "Use para (not por) to compare something with what's expected of its kind: Para ser adolescente, es muy responsable (for a teenager). Often para ser + noun / adjective, or para + noun.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To point out something **surprising** compared with what's normal for its kind, use **para**: _for a..._"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Common patterns: **para ser** + noun / adjective, **para** + noun, **para** + time / age."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Never **por** here."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **para ser...** sets the bar, and the rest of the sentence jumps over it, or doesn't."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Para ser== adolescente, es bastante responsable.",
+              "en": "For a teenager, she's pretty responsible."
+            },
+            {
+              "es": "==Para== una universidad tan prestigiosa, los resultados no fueron muy buenos.",
+              "en": "For such a prestigious university, the results weren't very good."
+            },
+            {
+              "es": "==Para== tener ochenta años, mi abuelo camina muchísimo.",
+              "en": "For an eighty-year-old, my grandpa walks a ton."
+            },
+            {
+              "es": "Hace mucho calor ==para== diciembre.",
+              "en": "It's really hot for December."
+            },
+            {
+              "es": "==Para ser== tan caro, este restaurante es malísimo.",
+              "en": "For such an expensive place, this restaurant is terrible."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Por ser niño, es muy maduro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Para ser niño, es muy maduro."
+                }
+              ],
+              "nota": "Surprising comparison: **para**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "comparación",
+                  "t": "Para ser niño, sabe mucho."
+                },
+                {
+                  "v": "causa",
+                  "t": "Por ser niño, no lo dejaron entrar."
+                }
+              ],
+              "nota": "**Por ser** = because he's a kid."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "para + infinitive",
+              "texto": "The main use of **para**: [[5970|purpose]]."
+            },
+            {
+              "forma": "por teléfono, por 100 pesos",
+              "texto": "Other uses of **por**: [[5973|medium]], [[5974|exchange]], [[5975|price]], [[7273|by whom]]."
+            },
+            {
+              "forma": "para Navidad",
+              "texto": "**Para** for a deadline: [[5978|precise time]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _For a beginner, you surf really well._",
+              "r": "Para ser principiante, surfeas muy bien.",
+              "nota": "para ser."
+            },
+            {
+              "p": "In Spanish: _It's cold for May._",
+              "r": "Hace frío para mayo.",
+              "nota": "para + time."
+            },
+            {
+              "p": "**Por** or **para**? _No lo dejaron entrar ___ ser menor de edad._",
+              "r": "por",
+              "nota": "Cause: por."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5970,
+      5974
+    ],
+    "confunde": [
+      5970,
+      5973,
+      5974
+    ],
+    "sigue": [
+      5975,
+      5976
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5969",
+      "kwiziq": true
+    }
+  ]
+}

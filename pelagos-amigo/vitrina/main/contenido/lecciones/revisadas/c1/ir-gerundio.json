@@ -1,0 +1,209 @@
+{
+  "tema": 6769,
+  "slug": "ir-gerundio",
+  "titulo": "Ir + gerund to stress gradual progress",
+  "subtitulo": "Poco a poco voy entendiendo.",
+  "foto": "t04.jpg",
+  "regla": "Ir + gerund stresses that an action progresses bit by bit: Voy entendiendo, fueron llegando los invitados, ve poniendo la mesa. Works in any tense.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "ir (any tense)",
+            "+",
+            "gerund"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Like **estar** + gerund, but it adds the idea of **gradual progress**: _little by little, one by one, getting on with_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Common with **poco a poco**, **cada vez más**, and for preparation: **ve calentando el agua** (_start heating the water_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **ir** + gerund = progress you can watch growing."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ella ==va poniendo== la mesa mientras yo termino de cocinar.",
+              "en": "She's setting the table while I finish cooking."
+            },
+            {
+              "es": "Los alumnos ==fueron terminando== las últimas preguntas del examen.",
+              "en": "The students finished the last exam questions one by one."
+            },
+            {
+              "es": "Nosotros ==iremos pintando== los huevos para la fiesta.",
+              "en": "We'll get on with painting the eggs for the party."
+            },
+            {
+              "es": "Carmen ==ha ido llamando== a los clientes mientras yo hablaba con el jefe.",
+              "en": "Carmen has been calling the clients one by one while I talked to the boss."
+            },
+            {
+              "es": "Qué bueno que te ==hayas ido despidiendo== de todos antes del viaje.",
+              "en": "Good thing you've been saying goodbye to everyone before the trip."
+            },
+            {
+              "es": "Poco a poco ==voy entendiendo== el subjuntivo.",
+              "en": "Little by little I'm getting the subjunctive."
+            },
+            {
+              "es": "==Ve calentando== el comal, ya voy.",
+              "en": "Start heating the griddle, I'm coming."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "comparar",
+      "titulo": "Estar or ir?",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "estar",
+                  "t": "Estoy aprendiendo inglés."
+                },
+                {
+                  "v": "ir",
+                  "t": "Voy aprendiendo inglés poco a poco."
+                }
+              ],
+              "nota": "**Ir** adds gradual progress."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Voy a entendiendo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Voy entendiendo."
+                }
+              ],
+              "nota": "No **a**: **ir a** + infinitive is the future."
+            },
+            {
+              "filas": [
+                {
+                  "v": "futuro",
+                  "t": "Voy a entender."
+                },
+                {
+                  "v": "progreso",
+                  "t": "Voy entendiendo."
+                }
+              ],
+              "nota": "Different meanings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "seguir + gerund",
+              "texto": "[[6180|seguir / continuar]]."
+            },
+            {
+              "forma": "llevar + gerund",
+              "texto": "[[7176|llevar for duration]]."
+            },
+            {
+              "forma": "estar + gerund",
+              "texto": "[[5092|present progressive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _The guests were arriving one by one._",
+              "r": "Los invitados fueron llegando.",
+              "nota": "ir + gerund."
+            },
+            {
+              "p": "In Spanish: _Little by little I'm improving._",
+              "r": "Poco a poco voy mejorando.",
+              "nota": "voy + gerund."
+            },
+            {
+              "p": "In Spanish: _Start setting the table._ (tú)",
+              "r": "Ve poniendo la mesa.",
+              "nota": "Command of ir + gerund."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5092,
+      6180
+    ],
+    "confunde": [
+      6180
+    ],
+    "sigue": [
+      7176
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6769",
+      "kwiziq": true
+    }
+  ]
+}

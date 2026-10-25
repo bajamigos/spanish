@@ -1,0 +1,206 @@
+{
+  "tema": 5124,
+  "slug": "con-el-que",
+  "titulo": "Preposition (not a / de) + el que, la que, los que, las que",
+  "subtitulo": "La casa en la que vivo. El amigo con el que viajé.",
+  "foto": "t05.jpg",
+  "regla": "After a preposition (con, en, para, por, sin, sobre...), the relative is el que / la que / los que / las que, agreeing with the noun: la universidad para la que trabajo. With things you can drop the article (con que); with people you can't (use el que or quien).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "English often leaves the preposition at the end (_the hotel you stayed **in**_). Spanish moves it to the front, before the relative."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "noun +",
+            "preposition + el / la / los / las que",
+            "+ clause"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The article **agrees** with the noun: **el vestido con el que**, **los hoteles en los que**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With **things**, the article can drop after most prepositions: **el vestido con que fui**. With **people**, keep it, or use **quien**: **el señor para el que trabajaba** / **para quien trabajaba**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**El cual / la cual** can replace **el que** here, a bit more formal: **la casa en la cual vivo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: preposition first, then the article that matches."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "El vestido ==con el que== fui al baile era rojo.",
+              "en": "The dress I went to the dance in was red."
+            },
+            {
+              "es": "La universidad ==para la que== trabajé es bastante famosa.",
+              "en": "The university I worked for is quite famous."
+            },
+            {
+              "es": "Los hoteles ==en los que== te quedaste eran de cinco estrellas.",
+              "en": "The hotels you stayed in were five-star."
+            },
+            {
+              "es": "Los tenis ==con los que== hizo ejercicio no eran muy cómodos.",
+              "en": "The sneakers she worked out in weren't very comfortable."
+            },
+            {
+              "es": "El señor ==para el que== reservé el hotel estaba muy contento.",
+              "en": "The man I booked the hotel for was very happy."
+            },
+            {
+              "es": "Los alumnos ==con los que== salí de fiesta eran muy buena onda.",
+              "en": "The students I went out partying with were really nice."
+            },
+            {
+              "es": "La chava ==con quien== salía era francesa.",
+              "en": "The girl I used to go out with was French."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El hotel que me quedé en..."
+                },
+                {
+                  "v": "bien",
+                  "t": "El hotel en el que me quedé..."
+                }
+              ],
+              "nota": "Preposition first."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El señor para que trabajaba..."
+                },
+                {
+                  "v": "bien",
+                  "t": "El señor para el que trabajaba..."
+                }
+              ],
+              "nota": "People keep the article."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La casa en el que vivo..."
+                },
+                {
+                  "v": "bien",
+                  "t": "La casa en la que vivo..."
+                }
+              ],
+              "nota": "Agreement."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "al que, del que",
+              "texto": "[[6747|a / de + el que]]."
+            },
+            {
+              "forma": "con lo que",
+              "texto": "[[5125|preposition + lo que]]."
+            },
+            {
+              "forma": "que, el cual, quien",
+              "texto": "[[5154|relative pronouns]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _the pen I write with_",
+              "r": "la pluma con la que escribo",
+              "nota": "Preposition first."
+            },
+            {
+              "p": "In Spanish: _the company I work for_",
+              "r": "la empresa para la que trabajo",
+              "nota": "para la que."
+            },
+            {
+              "p": "In Spanish: _the friends I traveled with_",
+              "r": "los amigos con los que viajé / con quienes viajé",
+              "nota": "People: keep the article or quien."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5154
+    ],
+    "confunde": [
+      6747
+    ],
+    "sigue": [
+      6747,
+      5125
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5124",
+      "kwiziq": true
+    }
+  ]
+}

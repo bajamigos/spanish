@@ -1,0 +1,184 @@
+{
+  "tema": 9539,
+  "slug": "participio-absoluto",
+  "titulo": "Terminada la clase... = once the class was over",
+  "subtitulo": "Terminada la ceremonia, nos fuimos a la fiesta.",
+  "foto": "t09.jpg",
+  "regla": "A past participle at the start of a sentence can open a time clause: once / after something has happened: Terminada la ceremonia, nos fuimos a la fiesta. The participle agrees with its noun and goes first. Una vez can come before it: Una vez dormidos los niños...",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "(una vez)",
+            "+ participle",
+            "+ noun",
+            ", main clause"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Meaning: _once / after X (has) happened_. The participle action comes **first** in time."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The participle **goes first** and **agrees** with its noun: **terminada la ceremonia**, **dormidos los niños**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Works for past, present and future: the main verb sets the time."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Formal or written; in speech, **cuando / después de que**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: participle first, then the noun: it's a finished box you tick off."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Terminada la ceremonia==, nos fuimos todos a la fiesta.",
+              "en": "Once the ceremony was over, we all went to the party."
+            },
+            {
+              "es": "==Aprobado este último examen==, ya estoy libre hasta septiembre.",
+              "en": "With this last exam passed, I'm free until September."
+            },
+            {
+              "es": "==Una vez dormidos los niños==, podremos cenar tranquilos.",
+              "en": "Once the kids are asleep, we'll be able to have a quiet dinner."
+            },
+            {
+              "es": "==Llegado el momento==, nos reunimos para decidir.",
+              "en": "When the time came, we met to decide."
+            },
+            {
+              "es": "==Servidas las entradas==, empezamos con el plato fuerte.",
+              "en": "Once the starters are served, we'll start on the main course."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Terminado la ceremonia..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Terminada la ceremonia..."
+                }
+              ],
+              "nota": "Agreement."
+            },
+            {
+              "filas": [
+                {
+                  "v": "menos natural",
+                  "t": "La ceremonia terminada, nos fuimos..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Terminada la ceremonia, nos fuimos..."
+                }
+              ],
+              "nota": "Participle first sounds natural."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "participles as adjectives",
+              "texto": "[[7000|participles as adjectives]]."
+            },
+            {
+              "forma": "después de",
+              "texto": "[[10102|después de + infinitive]]."
+            },
+            {
+              "forma": "al + infinitive",
+              "texto": "[[6175|al + infinitive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Once dinner was served, we sat down._",
+              "r": "Servida la cena, nos sentamos.",
+              "nota": "Participle + noun."
+            },
+            {
+              "p": "In Spanish: _Once the decision is made, there's no turning back._",
+              "r": "Tomada la decisión, no hay vuelta atrás.",
+              "nota": "tomada agrees with decisión."
+            },
+            {
+              "p": "Fix it: _Firmado los contratos, empezamos._",
+              "r": "Firmados los contratos, empezamos.",
+              "nota": "Plural."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7000,
+      10102
+    ],
+    "confunde": [
+      6175
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9539",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "tema": 6213,
+  "slug": "subjuntivo-presente-o-ue-ar",
+  "titulo": "Conjugate stem-changing -ar verbs (o > ue) in the present subjunctive",
+  "subtitulo": "Sueñe, vuele, soñemos: ue everywhere except nosotros.",
+  "foto": "t06.jpg",
+  "regla": "-ar verbs with o > ue in the present keep it in the subjunctive, except nosotros: sueñe, sueñes, soñemos, sueñen.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**-ar** verbs that change **o > ue** in the present have the same change in the present subjunctive. The **o** becomes **ue** in every form **except nosotros**. The endings are the regular **-ar** subjunctive ones."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "soñar",
+            "volar"
+          ],
+          "filas": [
+            [
+              "yo",
+              "sueñe",
+              "vuele"
+            ],
+            [
+              "tú",
+              "sueñes",
+              "vueles"
+            ],
+            [
+              "él, ella, usted",
+              "sueñe",
+              "vuele"
+            ],
+            [
+              "nosotros",
+              "soñemos",
+              "volemos"
+            ],
+            [
+              "ustedes, ellos",
+              "sueñen",
+              "vuelen"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Other verbs like this: **sonar**, **encontrar**, **mostrar**, **demostrar**, **soltar**, **contar**, **probar**, **recordar**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: think of a boot. Everyone wears the **ue** inside the boot; **nosotros** stays outside with the plain **o**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ella no quiere que le ==muestre== lo que siento.",
+              "en": "She doesn't want me to show her my feelings."
+            },
+            {
+              "es": "¡No ==sueltes== la cuerda!",
+              "en": "Don't let go of the rope!"
+            },
+            {
+              "es": "Holden no imagina que Naomi ==sueñe== con él.",
+              "en": "Holden doesn't imagine Naomi dreams about him."
+            },
+            {
+              "es": "No creo que ==volemos== otra vez con esa aerolínea.",
+              "en": "I don't think we'll fly with that airline again."
+            },
+            {
+              "es": "Va a ser un milagro que ==encuentren== la llave.",
+              "en": "It'll be a miracle if they find the key."
+            },
+            {
+              "es": "La azafata pide que ==muestren== sus pasaportes.",
+              "en": "The flight attendant asks you to show your passports."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No creo que vuelemos mañana."
+                },
+                {
+                  "v": "bien",
+                  "t": "No creo que volemos mañana."
+                }
+              ],
+              "nota": "No change in **nosotros**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Espero que encontres la tabla."
+                },
+                {
+                  "v": "bien",
+                  "t": "Espero que encuentres la tabla."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "sueño, soñamos",
+              "texto": "The present: [[5872|o > ue -ar verbs]], [[5874|recordar, acordarse]]."
+            },
+            {
+              "forma": "vuelva, mueva",
+              "texto": "The **-er** version: [[6227|o > ue -er verbs]]."
+            },
+            {
+              "forma": "piense, pensemos",
+              "texto": "The **e > ie** version: [[6236|e > ie -ar verbs]]."
+            },
+            {
+              "forma": "duerma, durmamos",
+              "texto": "The exception in nosotros: [[9256|o > u in nosotros]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "**Encontrar** with **tú**: Ojalá que ___ chamba.",
+              "r": "Ojalá que encuentres chamba.",
+              "nota": "o > ue."
+            },
+            {
+              "p": "**Contar** with **nosotros**: Es mejor que ___ el dinero.",
+              "r": "Es mejor que contemos el dinero.",
+              "nota": "No change in nosotros."
+            },
+            {
+              "p": "In Spanish: _I want you to try the tacos._ (tú, **probar**)",
+              "r": "Quiero que pruebes los tacos.",
+              "nota": "probar → pruebes."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5872,
+      5063
+    ],
+    "confunde": [
+      6227,
+      9256
+    ],
+    "sigue": [
+      6236,
+      5874
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6213",
+      "kwiziq": true
+    }
+  ]
+}

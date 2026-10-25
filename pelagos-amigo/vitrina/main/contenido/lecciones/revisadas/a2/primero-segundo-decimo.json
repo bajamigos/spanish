@@ -1,0 +1,282 @@
+{
+  "tema": 7153,
+  "slug": "primero-segundo-decimo",
+  "titulo": "Ordinal numbers: first to tenth",
+  "subtitulo": "«el primer día», «la segunda clase», «el décimo piso»",
+  "foto": "t08.jpg",
+  "regla": "Primero, segundo, tercero, cuarto, quinto, sexto, séptimo, octavo, noveno, décimo. They agree with the noun and usually go before it; primero and tercero become primer and tercer before a masculine singular noun.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "Masculine",
+            "Feminine"
+          ],
+          "filas": [
+            [
+              "1.º",
+              "primero (primer)",
+              "primera"
+            ],
+            [
+              "2.º",
+              "segundo",
+              "segunda"
+            ],
+            [
+              "3.º",
+              "tercero (tercer)",
+              "tercera"
+            ],
+            [
+              "4.º",
+              "cuarto",
+              "cuarta"
+            ],
+            [
+              "5.º",
+              "quinto",
+              "quinta"
+            ],
+            [
+              "6.º",
+              "sexto",
+              "sexta"
+            ],
+            [
+              "7.º",
+              "séptimo",
+              "séptima"
+            ],
+            [
+              "8.º",
+              "octavo",
+              "octava"
+            ],
+            [
+              "9.º",
+              "noveno",
+              "novena"
+            ],
+            [
+              "10.º",
+              "décimo",
+              "décima"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "They're adjectives: they **agree** in gender and number and usually go **before** the noun: **la segunda vuelta**, **los primeros días**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Primero → primer** and **tercero → tercer** before a **masculine singular** noun: **el primer día, el tercer lugar**. The feminine never shortens: **la primera vez, la tercera clase**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Without a noun, use the full form: **Llegué primero. Quedé tercero.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Abbreviations: **1.º, 1.ª, 1.er** (for **primer**), **2.º, 2.ª**…"
+        },
+        {
+          "tipo": "texto",
+          "texto": "After **décimo**, people usually just use the normal number after the noun: **el piso doce**, **el capítulo quince**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **primer** and **tercer** lose their tail only in front of a masculine noun."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Es mi ==primer== torneo de jiu-jitsu.",
+              "en": "It's my first jiu-jitsu tournament."
+            },
+            {
+              "es": "Es la ==primera== vez que surfeo en Baja.",
+              "en": "It's the first time I've surfed in Baja."
+            },
+            {
+              "es": "Vivo en el ==tercer== piso.",
+              "en": "I live on the third floor."
+            },
+            {
+              "es": "Da vuelta en la ==segunda== calle a la derecha.",
+              "en": "Turn at the second street on the right."
+            },
+            {
+              "es": "Mi hijo está en ==cuarto== de primaria.",
+              "en": "My son is in fourth grade."
+            },
+            {
+              "es": "Quedé en ==séptimo== lugar en la competencia.",
+              "en": "I came seventh in the competition."
+            },
+            {
+              "es": "Los ==primeros== días fueron difíciles.",
+              "en": "The first few days were hard."
+            },
+            {
+              "es": "Es su ==décimo== cumpleaños.",
+              "en": "It's his tenth birthday."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "el primero día"
+                },
+                {
+                  "v": "bien",
+                  "t": "el primer día"
+                }
+              ],
+              "nota": "Before a masculine noun: **primer**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "la primer vez"
+                },
+                {
+                  "v": "bien",
+                  "t": "la primera vez"
+                }
+              ],
+              "nota": "The feminine never shortens."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "el tercero lugar"
+                },
+                {
+                  "v": "bien",
+                  "t": "el tercer lugar"
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "el doceavo piso"
+                },
+                {
+                  "v": "bien",
+                  "t": "el piso doce"
+                }
+              ],
+              "nota": "**Doceavo** is a fraction (1/12). Past ten, use the normal number."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "uno, dos, tres",
+              "texto": "Cardinal numbers: [[6755|numbers]]."
+            },
+            {
+              "forma": "primer, tercer",
+              "texto": "More on the short forms: [[6154|primer and tercer before a noun]]."
+            },
+            {
+              "forma": "el primero de mayo",
+              "texto": "[[6746|Expressing dates]]."
+            },
+            {
+              "forma": "mi décimo aniversario",
+              "texto": "[[10517|Ordinals with events and anniversaries]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _the first class_",
+              "r": "la primera clase",
+              "nota": "Feminine: no change."
+            },
+            {
+              "p": "In Spanish: _the third day_",
+              "r": "el tercer día",
+              "nota": "**tercer** before a masculine noun."
+            },
+            {
+              "p": "Fix it: _Es mi primero torneo._",
+              "r": "Es mi primer torneo.",
+              "nota": "**primer**"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6755
+    ],
+    "confunde": [
+      6154
+    ],
+    "sigue": [
+      6746,
+      10517
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7153",
+      "kwiziq": true
+    }
+  ]
+}

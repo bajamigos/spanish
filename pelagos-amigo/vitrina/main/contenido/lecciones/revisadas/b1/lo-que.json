@@ -1,0 +1,264 @@
+{
+  "tema": 5087,
+  "slug": "lo-que",
+  "titulo": "Using lo que = what, which, the thing that",
+  "subtitulo": "Lo que quiero es dormir. Llegó tarde, lo que me molestó.",
+  "foto": "t10.jpg",
+  "regla": "Lo que = what / the thing that, for an idea, not a specific noun: Lo que quiero es descansar. After a comma it means which, referring to the whole previous idea. All that = todo lo que, never todo que.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Lo que** refers to an **idea**, not to a specific noun. It translates as **what**, **the thing that**, or **which**."
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "what / the thing that",
+              "texto": "**Lo que quiero decir es que...** It's part of the sentence itself."
+            },
+            {
+              "forma": "which (after a comma)",
+              "texto": "**Llegó tarde, lo que me molestó.** It sums up the whole idea before it."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**All that / everything that** = **todo lo que**. Never **todo que**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if you could say _the thing that_ in English, Spanish wants **lo que**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Lo que== quiero decir es que no te tengo miedo.",
+              "en": "What I mean is that I'm not scared of you."
+            },
+            {
+              "es": "==Lo que== admiro de ellos es su terquedad.",
+              "en": "What I admire about them is their stubbornness."
+            },
+            {
+              "es": "A él le gusta ==lo que== ella odia.",
+              "en": "He likes what she hates."
+            },
+            {
+              "es": "Puedes hacer ==lo que== quieras.",
+              "en": "You can do whatever you want."
+            },
+            {
+              "es": "No me digas ==lo que== tengo que decidir.",
+              "en": "Don't tell me what I have to decide."
+            },
+            {
+              "es": "¿Qué es ==lo que== quieres?",
+              "en": "What is it that you want?"
+            },
+            {
+              "es": "Le encantan los documentales de historia, ==lo que== a mí me parece aburridísimo.",
+              "en": "She loves history documentaries, which I find super boring."
+            },
+            {
+              "es": "Juntaron mucho dinero, ==lo que== me pone muy contenta.",
+              "en": "They raised a lot of money, which makes me really happy."
+            },
+            {
+              "es": "==Todo lo que== se dijo en la junta es confidencial.",
+              "en": "Everything that was said in the meeting is confidential."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "la-cosa-que",
+      "titulo": "Lo que vs la cosa que",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "When **lo que** starts the sentence, you can usually swap in **la cosa que**. After a comma (meaning _which_), you can't:"
+        },
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "Lo que admiro es su terquedad."
+                },
+                {
+                  "v": "bien",
+                  "t": "La cosa que admiro es su terquedad."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "Juntaron dinero, lo que me alegra."
+                },
+                {
+                  "v": "mal",
+                  "t": "Juntaron dinero, la cosa que me alegra."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "que",
+      "titulo": "Lo que vs que",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Que** refers to the **noun** right before it. **Lo que** refers to the **whole idea**:"
+        },
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "que",
+                  "t": "La escuela, que está cerrada, abre el lunes."
+                },
+                {
+                  "v": "lo que",
+                  "t": "La escuela está cerrada, lo que quiere decir que están de vacaciones."
+                }
+              ],
+              "nota": "**Que** = the school. **Lo que** = the fact that it's closed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Todo que dijo es mentira."
+                },
+                {
+                  "v": "bien",
+                  "t": "Todo lo que dijo es mentira."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Qué quiero es dormir."
+                },
+                {
+                  "v": "bien",
+                  "t": "Lo que quiero es dormir."
+                }
+              ],
+              "nota": "_What_ as _the thing that_ isn't **qué**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "que, el cual, quien",
+              "texto": "Relatives for a noun: [[5154|que / el cual / quien]]."
+            },
+            {
+              "forma": "con lo que",
+              "texto": "After a preposition: [[5125|preposition + lo que]]."
+            },
+            {
+              "forma": "lo que más",
+              "texto": "[[9582|lo que + más / menos]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _What I need is a vacation._",
+              "r": "Lo que necesito son unas vacaciones.",
+              "nota": "lo que."
+            },
+            {
+              "p": "In Spanish: _He didn't call, which worried me._",
+              "r": "No llamó, lo que me preocupó.",
+              "nota": "Refers to the whole idea."
+            },
+            {
+              "p": "In Spanish: _Everything you say is true._",
+              "r": "Todo lo que dices es verdad.",
+              "nota": "todo lo que."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5154
+    ],
+    "confunde": [
+      9828
+    ],
+    "sigue": [
+      5125,
+      9582
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5087",
+      "kwiziq": true
+    }
+  ]
+}

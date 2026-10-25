@@ -1,0 +1,175 @@
+{
+  "tema": 7478,
+  "slug": "aprovechar-aprovecharse",
+  "titulo": "Aprovechar vs aprovecharse de",
+  "subtitulo": "Aproveché el día libre. Se aprovechó de mí.",
+  "foto": "t04.jpg",
+  "regla": "Aprovechar (algo) = to make the most of, make good use of, with no preposition: Aproveché el rato libre para llamarte. It can stand alone: Aprovecho para saludarte. Aprovecharse de (alguien / algo) = to take (unfair) advantage of, exploit.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "aprovechar + something",
+              "texto": "_to make the most of, use well_. Direct object, **no de**: **aprovechar el tiempo, la oferta, la tela**."
+            },
+            {
+              "forma": "aprovechar (para + infinitive)",
+              "texto": "Object understood (_the chance_): **aprovecho para darles las gracias**."
+            },
+            {
+              "forma": "aprovecharse de + someone / something",
+              "texto": "_to take advantage of, exploit_ (negative): **se aprovechó de su confianza**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Que aproveche** / **¡Buen provecho!** = _enjoy your meal_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the **se** and the **de** come together, and they bring bad intentions."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Susana ==aprovechó== un rato libre para llamar a su novio.",
+              "en": "Susana used a bit of free time to call her boyfriend."
+            },
+            {
+              "es": "Los novios ==aprovecharon== la ocasión para anunciar su boda.",
+              "en": "The couple took the opportunity to announce their wedding."
+            },
+            {
+              "es": "Voy a ==aprovechar== este pedazo de tela para hacerme una falda.",
+              "en": "I'm going to use this piece of fabric to make myself a skirt."
+            },
+            {
+              "es": "Como se canceló la clase, los alumnos ==aprovecharon para== ir por unos tacos.",
+              "en": "Since class was cancelled, the students took the chance to go get tacos."
+            },
+            {
+              "es": "Ese tipo ==se aprovechó de== su buena fe.",
+              "en": "That guy took advantage of her good faith."
+            },
+            {
+              "es": "No dejes que ==se aprovechen de== ti.",
+              "en": "Don't let them take advantage of you."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Aproveché de la oferta."
+                },
+                {
+                  "v": "bien",
+                  "t": "Aproveché la oferta."
+                }
+              ],
+              "nota": "No **de** without **se**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "positivo",
+                  "t": "Aprovechó la oportunidad."
+                },
+                {
+                  "v": "negativo",
+                  "t": "Se aprovechó de la situación."
+                }
+              ],
+              "nota": "Use well vs exploit."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "pronominal verbs",
+              "texto": "[[7447|encontrar / encontrarse]], [[7480|jugar / jugarse]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Make the most of your vacation!_",
+              "r": "¡Aprovecha tus vacaciones!",
+              "nota": "No de."
+            },
+            {
+              "p": "In Spanish: _They took advantage of the old man._",
+              "r": "Se aprovecharon del señor mayor.",
+              "nota": "aprovecharse de."
+            },
+            {
+              "p": "Fix it: _Aprovechamos de la luz para pintar._",
+              "r": "Aprovechamos la luz para pintar.",
+              "nota": "No de."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7447
+    ],
+    "confunde": [],
+    "sigue": [
+      7480
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7478",
+      "kwiziq": true
+    }
+  ]
+}

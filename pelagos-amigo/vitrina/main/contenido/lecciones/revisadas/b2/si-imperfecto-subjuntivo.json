@@ -1,0 +1,207 @@
+{
+  "tema": 5120,
+  "slug": "si-imperfecto-subjuntivo",
+  "titulo": "Si + imperfect subjunctive + conditional (hypothetical)",
+  "subtitulo": "Si tuviera dinero, viajaría.",
+  "foto": "t04.jpg",
+  "regla": "For a hypothetical or unlikely situation: si + imperfect subjunctive, then the conditional: Si tuviera más dinero, viajaría. Never si + present subjunctive.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "English uses _if_ + past (_if I had_) and _would_ (_I would go_). Spanish uses **si** + **imperfect subjunctive** and the **conditional simple**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "si +",
+            "imperfect subjunctive",
+            ", conditional"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The two halves can swap places: **Viajaría si tuviera dinero.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "The imperfect subjunctive has two endings, **-ra** and **-se** (**tuviera / tuviese**). In Mexico, **-ra** is by far the most common."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **si** + **-ra**, then **-ría**: **si pudiera, iría**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Si ganáramos== la lotería, ==compraríamos== una casa en la playa.",
+              "en": "If we won the lottery, we'd buy a house on the beach."
+            },
+            {
+              "es": "==Si tuviera== más dinero, ==iría== de vacaciones a Cuba.",
+              "en": "If I had more money, I'd go on vacation to Cuba."
+            },
+            {
+              "es": "==Si fueras== más amable, ==tendrías== más amigos.",
+              "en": "If you were nicer, you'd have more friends."
+            },
+            {
+              "es": "==Si viniera== ella ahora, ==comeríamos== en ese restaurante.",
+              "en": "If she came now, we'd eat at that restaurant."
+            },
+            {
+              "es": "==Si estudiáramos== para los exámenes, ==sacaríamos== buenas calificaciones.",
+              "en": "If we studied for the exams, we'd get good grades."
+            },
+            {
+              "es": "==Si vivieran== más cerca, los ==visitaríamos== cada semana.",
+              "en": "If they lived closer, we'd visit them every week."
+            },
+            {
+              "es": "==Si== ustedes nos ==escucharan==, ==entenderían== mejor nuestra situación.",
+              "en": "If you listened to us, you'd understand our situation better."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Si sea rico, compraría muchas cosas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Si fuera rico, compraría muchas cosas."
+                }
+              ],
+              "nota": "Never **si** + present subjunctive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Si tendría tiempo, iría."
+                },
+                {
+                  "v": "bien",
+                  "t": "Si tuviera tiempo, iría."
+                }
+              ],
+              "nota": "The conditional never goes right after **si** in this structure."
+            },
+            {
+              "filas": [
+                {
+                  "v": "real",
+                  "t": "Si tengo tiempo, voy."
+                },
+                {
+                  "v": "hipotético",
+                  "t": "Si tuviera tiempo, iría."
+                }
+              ],
+              "nota": "Likely: present. Unlikely or imaginary: imperfect subjunctive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tuviera",
+              "texto": "Conjugation: [[5068|imperfect subjunctive]]."
+            },
+            {
+              "forma": "iría",
+              "texto": "[[5731|conditional]]."
+            },
+            {
+              "forma": "si hubiera sabido",
+              "texto": "The past version: [[7078|si + pluperfect subjunctive]]."
+            },
+            {
+              "forma": "como si",
+              "texto": "[[6171|como si + imperfect subjunctive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Complete: _Si ___ (tener, yo) un perro, lo ___ (llevar) a la playa._",
+              "r": "tuviera / llevaría",
+              "nota": "si + -ra, then -ría."
+            },
+            {
+              "p": "In Spanish: _If you lived here, you'd understand._",
+              "r": "Si vivieras aquí, lo entenderías.",
+              "nota": "Hypothetical."
+            },
+            {
+              "p": "Fix it: _Si sería más alto, jugaría básquet._",
+              "r": "Si fuera más alto, jugaría básquet.",
+              "nota": "No conditional after si."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5068,
+      5731
+    ],
+    "confunde": [
+      7431
+    ],
+    "sigue": [
+      7078,
+      6171
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5120",
+      "kwiziq": true
+    }
+  ]
+}

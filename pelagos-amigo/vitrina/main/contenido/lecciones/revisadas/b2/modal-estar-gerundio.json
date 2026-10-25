@@ -1,0 +1,187 @@
+{
+  "tema": 9960,
+  "slug": "modal-estar-gerundio",
+  "titulo": "Modal verbs in progressive tenses",
+  "subtitulo": "Deberías estar estudiando.",
+  "foto": "t10.jpg",
+  "regla": "Modal verb (deber, poder, querer, tener que, necesitar) + estar + gerund = should be doing, could be doing, want to be doing: Deberías estar trabajando. Estar stays in the infinitive. Never ser.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "modal (conjugated)",
+            "+ estar +",
+            "gerund"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Only the modal is conjugated. **Estar** stays in the infinitive, followed by the gerund."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Never **ser** in progressive forms."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Sometimes English doesn't use a progressive: **pueden estar jugando hasta las nueve** = _you can keep playing until nine_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: put **estar + -ndo** after any modal and the action starts moving."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mis hijos ==querían estar jugando== con los otros niños en el parque.",
+              "en": "My kids wanted to be playing with the other kids in the park."
+            },
+            {
+              "es": "==Necesitamos estar vigilando== a los alumnos todo el tiempo.",
+              "en": "We need to be watching the students all the time."
+            },
+            {
+              "es": "Ahorita ==podríamos estar disfrutando== de las vacaciones en Puerto Vallarta.",
+              "en": "Right now we could be enjoying our vacation in Puerto Vallarta."
+            },
+            {
+              "es": "Ustedes ==deberían estar esperando== en la sala.",
+              "en": "You should be waiting in the room."
+            },
+            {
+              "es": "No sé qué ==debes estar pensando==, pero te ves muy serio.",
+              "en": "I don't know what you must be thinking, but you look very serious."
+            },
+            {
+              "es": "==Tuvimos que estar animando== a Clara un rato; estaba tan triste...",
+              "en": "We had to spend a while cheering Clara up; she was so sad..."
+            },
+            {
+              "es": "==Pueden estar jugando== en la tableta hasta las nueve.",
+              "en": "You can keep playing on the tablet until nine."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Deberías ser estudiando."
+                },
+                {
+                  "v": "bien",
+                  "t": "Deberías estar estudiando."
+                }
+              ],
+              "nota": "Always **estar**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Debes estás pensando."
+                },
+                {
+                  "v": "bien",
+                  "t": "Debes estar pensando."
+                }
+              ],
+              "nota": "**Estar** in the infinitive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "deber, poder, querer",
+              "texto": "[[5065|modal verbs]]."
+            },
+            {
+              "forma": "estar + gerund",
+              "texto": "[[5092|present progressive]]."
+            },
+            {
+              "forma": "deber de",
+              "texto": "[[7052|deber de for assumptions]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _You should be sleeping._ (tú)",
+              "r": "Deberías estar durmiendo.",
+              "nota": "modal + estar + gerund."
+            },
+            {
+              "p": "In Spanish: _They must be working._ (assumption)",
+              "r": "Deben de estar trabajando.",
+              "nota": "deber de + estar."
+            },
+            {
+              "p": "Fix it: _Quiero ser bailando._",
+              "r": "Quiero estar bailando.",
+              "nota": "estar."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5065,
+      5092
+    ],
+    "confunde": [],
+    "sigue": [
+      7052
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9960",
+      "kwiziq": true
+    }
+  ]
+}

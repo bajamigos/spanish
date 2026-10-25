@@ -1,0 +1,182 @@
+{
+  "tema": 7900,
+  "slug": "por-mucho-que",
+  "titulo": "Por mucho / más / muy... que = no matter how (much)",
+  "subtitulo": "Por mucho que insista, no voy. Por muy cansado que estés...",
+  "foto": "t06.jpg",
+  "regla": "Por mucho que / por más que + verb = no matter how much: Por más que trabaje, no le alcanza. Por muy + adjective / adverb + que = no matter how...: Por muy rico que sea... Usually subjunctive; indicative for a real repeated fact.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "por mucho / más que + verb",
+              "texto": "_no matter how much_: **por mucho que insista**."
+            },
+            {
+              "forma": "por muy + adjective / adverb + que",
+              "texto": "_no matter how..._: **por muy cansada que estés**."
+            },
+            {
+              "forma": "por más / mucho + noun + que",
+              "texto": "**por más dinero que tenga**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Mostly **subjunctive**. The indicative also appears for real, repeated facts: **por más que le explico, no entiende**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: you can push as hard as you want; the result won't change."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Por mucho que== insista, no lo voy a dejar entrar.",
+              "en": "No matter how much he insists, I'm not letting him in."
+            },
+            {
+              "es": "==Por mucho que== trabajes, nunca te van a ascender.",
+              "en": "However hard you work, they'll never promote you."
+            },
+            {
+              "es": "==Por más que== le explico, no entiende.",
+              "en": "No matter how much I explain, he doesn't get it."
+            },
+            {
+              "es": "No podíamos comprar ese carro ==por mucho que== nos ==gustara==.",
+              "en": "We couldn't afford that car no matter how much we liked it."
+            },
+            {
+              "es": "==Por muy== rica ==que== sea, no es feliz.",
+              "en": "As rich as she may be, she's not happy."
+            },
+            {
+              "es": "==Por más== dinero ==que== tenga, no lo puede comprar todo.",
+              "en": "No matter how much money he has, he can't buy everything."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Por mucho insista, no voy."
+                },
+                {
+                  "v": "bien",
+                  "t": "Por mucho que insista, no voy."
+                }
+              ],
+              "nota": "Keep **que**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Por muy cansado estés..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Por muy cansado que estés..."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "aunque",
+              "texto": "[[5146|aunque]]."
+            },
+            {
+              "forma": "cuanto más",
+              "texto": "[[7154|the more...]]."
+            },
+            {
+              "forma": "adverbial clauses",
+              "texto": "[[5168|subjunctive in adverbial clauses]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _No matter how much I study, I forget._",
+              "r": "Por más que estudio, se me olvida. / Por mucho que estudie, se me olvida.",
+              "nota": "Indicative or subjunctive."
+            },
+            {
+              "p": "In Spanish: _However tired you are, come._ (tú)",
+              "r": "Por muy cansado que estés, ven.",
+              "nota": "por muy + adjective + que."
+            },
+            {
+              "p": "Complete: _Por mucho que ___ (llorar, tú), no te lo voy a comprar._",
+              "r": "llores",
+              "nota": "Subjunctive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5146
+    ],
+    "confunde": [
+      7154
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7900",
+      "kwiziq": true
+    }
+  ]
+}

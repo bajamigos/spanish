@@ -1,0 +1,231 @@
+{
+  "tema": 7066,
+  "slug": "superlativo-mejor-peor",
+  "titulo": "How to say the best, the worst, the oldest, the youngest (irregular superlatives)",
+  "subtitulo": "El mejor, la peor, los mayores, la menor: four special forms.",
+  "foto": "t02.jpg",
+  "regla": "Irregular superlatives: el / la mejor (best), peor (worst), mayor (oldest, biggest), menor (youngest, smallest); plural -es. Never más mejor.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "The general rule is article + **más / menos** + adjective (see [[5056|the most / the least]]). But four adjectives have their own superlative forms:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Adjective",
+            "Superlative",
+            "Plural"
+          ],
+          "filas": [
+            [
+              "bueno",
+              "el / la mejor (_best_)",
+              "los / las mejores"
+            ],
+            [
+              "malo",
+              "el / la peor (_worst_)",
+              "los / las peores"
+            ],
+            [
+              "grande, viejo",
+              "el / la mayor (_biggest, oldest_)",
+              "los / las mayores"
+            ],
+            [
+              "pequeño, joven",
+              "el / la menor (_smallest, youngest_)",
+              "los / las menores"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "They don't change for gender, only for number: **el mejor**, **la mejor**, **los mejores**, **las mejores**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Mejor** and **peor** usually go **before** the noun: **el peor año**, **los mejores meses**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Mayor** and **menor** mostly talk about **age** among people: **el mayor de los hermanos**. They can also mean _greatest_ / _least_: **la mayor satisfacción**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Never add **más** to these: **más mejor** and **más peor** are wrong."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: four VIPs that skip the **más** line."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Para mí, 2020 fue ==el peor año== de mi vida.",
+              "en": "For me, 2020 was the worst year of my life."
+            },
+            {
+              "es": "Esa es ==la peor taquería== de la colonia.",
+              "en": "That's the worst taquería in the neighborhood."
+            },
+            {
+              "es": "Ya pasaron ==los peores meses==.",
+              "en": "The worst months are over."
+            },
+            {
+              "es": "Esos fueron ==los mejores días== del verano.",
+              "en": "Those were the best days of the summer."
+            },
+            {
+              "es": "==La mayor satisfacción== es estar con los nietos.",
+              "en": "The greatest satisfaction is being with the grandkids."
+            },
+            {
+              "es": "Beto y su primo son ==los mayores==.",
+              "en": "Beto and his cousin are the oldest."
+            },
+            {
+              "es": "Laura tiene ocho años; es ==la menor==.",
+              "en": "Laura is eight; she's the youngest."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es el más mejor surfista."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es el mejor surfista."
+                }
+              ],
+              "nota": "Never **más mejor**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Son los mejor tacos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Son los mejores tacos."
+                }
+              ],
+              "nota": "Plural: **mejores**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "Es el más grande del grupo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es el mayor del grupo."
+                }
+              ],
+              "nota": "**Más grande** is about size; **mayor** usually means oldest."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el más alto",
+              "texto": "The general rule: [[5056|the most / the least]]."
+            },
+            {
+              "forma": "buen, mal, gran",
+              "texto": "Short forms before a noun: [[5057|apócope]]."
+            },
+            {
+              "forma": "buenísimo",
+              "texto": "_Extremely_ good: [[6077|-ísimo]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _It's the best beach in Baja._",
+              "r": "Es la mejor playa de Baja.",
+              "nota": "la mejor + noun + de."
+            },
+            {
+              "p": "In Spanish: _They're the worst waves of the year._",
+              "r": "Son las peores olas del año.",
+              "nota": "peores, plural."
+            },
+            {
+              "p": "In Spanish: _I'm the youngest of my brothers._",
+              "r": "Soy el menor de mis hermanos.",
+              "nota": "menor = youngest."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5056
+    ],
+    "confunde": [
+      5057
+    ],
+    "sigue": [
+      6077
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7066",
+      "kwiziq": true
+    }
+  ]
+}

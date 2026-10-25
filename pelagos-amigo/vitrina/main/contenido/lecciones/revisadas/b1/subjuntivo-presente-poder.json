@@ -1,0 +1,219 @@
+{
+  "tema": 6228,
+  "slug": "subjuntivo-presente-poder",
+  "titulo": "Conjugate poder in the present subjunctive",
+  "subtitulo": "Pueda, puedas, podamos: ue everywhere except nosotros.",
+  "foto": "t02.jpg",
+  "regla": "Poder changes o > ue in the present subjunctive except in nosotros: pueda, puedas, pueda, podamos, puedan.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Poder** (_to be able to_) changes **o > ue** in the present, so it has the same change in the present subjunctive: **ue** in every form **except nosotros**. The endings are the regular **-er** subjunctive ones."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "poder"
+          ],
+          "filas": [
+            [
+              "yo",
+              "pueda"
+            ],
+            [
+              "tú",
+              "puedas"
+            ],
+            [
+              "él, ella, usted",
+              "pueda"
+            ],
+            [
+              "nosotros",
+              "podamos"
+            ],
+            [
+              "ustedes, ellos",
+              "puedan"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Remember: whatever its tense, **poder** is always followed by an **infinitive**: **que pueda venir**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **pueda** has the boot on; **podamos** is barefoot."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No creo que ==pueda== comer más hoy.",
+              "en": "I don't think I can eat any more today."
+            },
+            {
+              "es": "Espero que ==puedas== comprarte esa tabla.",
+              "en": "I hope you can buy yourself that board."
+            },
+            {
+              "es": "Qué bueno que Beto ==pueda== caminar bien después de la operación.",
+              "en": "It's great that Beto can walk well after the surgery."
+            },
+            {
+              "es": "Qué lástima que no ==podamos== vernos más seguido.",
+              "en": "Too bad we can't see each other more often."
+            },
+            {
+              "es": "Me sorprende que no ==puedan== quedarse un día más.",
+              "en": "I'm surprised they can't stay one more day."
+            },
+            {
+              "es": "Es bueno que ustedes ==puedan== reclamar el dinero.",
+              "en": "It's good that you can get the money back."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es una pena que no puedamos ir."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es una pena que no podamos ir."
+                }
+              ],
+              "nota": "No change in **nosotros**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Espero que puedes venir."
+                },
+                {
+                  "v": "bien",
+                  "t": "Espero que puedas venir."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ojalá que pueda a surfear."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ojalá que pueda surfear."
+                }
+              ],
+              "nota": "**Poder** + infinitive, no **a**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "puedo, podemos",
+              "texto": "The present: [[5564|poder in the present]]."
+            },
+            {
+              "forma": "vuelva, mueva",
+              "texto": "Other o > ue verbs: [[6227|o > ue -er verbs]]."
+            },
+            {
+              "forma": "podría",
+              "texto": "The conditional: [[5853|poder in the conditional]]."
+            },
+            {
+              "forma": "Espero que puedas.",
+              "texto": "A common trigger: [[6076|esperar que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I hope you can come._ (tú)",
+              "r": "Espero que puedas venir.",
+              "nota": "puedas."
+            },
+            {
+              "p": "**Poder** with **nosotros**: Ojalá que ___ surfear mañana.",
+              "r": "Ojalá que podamos surfear mañana.",
+              "nota": "No change."
+            },
+            {
+              "p": "In Spanish: _I doubt they can open the car._",
+              "r": "Dudo que puedan abrir el carro.",
+              "nota": "puedan + infinitive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5564,
+      6227
+    ],
+    "confunde": [
+      6227
+    ],
+    "sigue": [
+      5853,
+      6076
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6228",
+      "kwiziq": true
+    }
+  ]
+}

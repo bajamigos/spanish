@@ -1,0 +1,179 @@
+{
+  "tema": 6307,
+  "slug": "gerundio-modo",
+  "titulo": "Using the gerund to say by doing something",
+  "subtitulo": "Aprendo repitiendo: the gerund says how, with no preposition.",
+  "foto": "t09.jpg",
+  "regla": "To say by + -ing, use the gerund alone (-ando, -iendo), with no preposition: aprendo repitiendo, never por repitiendo.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say how you achieve something, _by doing_ something, Spanish uses the **gerund** (**-ando**, **-iendo**) on its own."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "main action",
+            "gerund (how)"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "There's **no preposition** before the gerund, unlike English _by_: **se pierde peso comiendo bien**, not **por comiendo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the gerund is the tool in your hand; it doesn't need a handle."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Memorizo la información ==repitiendo== mucho.",
+              "en": "I memorize information by repeating it a lot."
+            },
+            {
+              "es": "Marta controlaba el estrés ==haciendo== ejercicio.",
+              "en": "Marta managed her stress by exercising."
+            },
+            {
+              "es": "Aprendimos mucho ==escribiendo== en el pizarrón.",
+              "en": "We learned a lot by writing on the board."
+            },
+            {
+              "es": "Las cosas se logran ==teniendo== paciencia.",
+              "en": "Things are achieved by being patient."
+            },
+            {
+              "es": "Se mejora en jiu-jitsu ==rolando== todos los días.",
+              "en": "You get better at jiu-jitsu by rolling every day."
+            },
+            {
+              "es": "Abrí el carro ==usando== una cuña.",
+              "en": "I opened the car by using a wedge."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Se pierde peso por comiendo bien."
+                },
+                {
+                  "v": "bien",
+                  "t": "Se pierde peso comiendo bien."
+                }
+              ],
+              "nota": "No **por** before the gerund."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Aprendo con repetir."
+                },
+                {
+                  "v": "bien",
+                  "t": "Aprendo repitiendo."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hablando, comiendo",
+              "texto": "Gerunds: [[6500|regular]] and [[6501|irregular]]."
+            },
+            {
+              "forma": "caminando, escuchaba música",
+              "texto": "The gerund for _while_: [[7029|gerund for while]]."
+            },
+            {
+              "forma": "me gusta nadar",
+              "texto": "The infinitive, not the gerund, as a subject: [[7079|infinitive as subject]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I relax by listening to music._",
+              "r": "Me relajo escuchando música.",
+              "nota": "Gerund, no preposition."
+            },
+            {
+              "p": "In Spanish: _You learn by making mistakes._",
+              "r": "Se aprende cometiendo errores.",
+              "nota": "cometiendo."
+            },
+            {
+              "p": "Fix it: **Gané por entrenando mucho.**",
+              "r": "Gané entrenando mucho.",
+              "nota": "No **por**."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6500,
+      6501
+    ],
+    "confunde": [
+      7079
+    ],
+    "sigue": [
+      7029
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6307",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "tema": 6466,
+  "slug": "preposicion-mas-mi-ti-para-sin",
+  "titulo": "Prepositions + pronouns: para mí, sin ti, de él…",
+  "subtitulo": "«Esto es para ti. No puedo vivir sin ti.»",
+  "foto": "t01.jpg",
+  "regla": "After a preposition (a, para, por, de, en, sin, hacia, sobre…), use mí and ti for I and you. All the other persons keep their usual form: él, ella, usted, nosotros, ustedes, ellos. Exceptions: con (conmigo, contigo) and entre / según (yo, tú).",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "After a **preposition**, **yo** becomes **mí** and **tú** becomes **ti**. Everyone else stays the same."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Subject",
+            "After a preposition"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**mí** (para mí)"
+            ],
+            [
+              "tú",
+              "**ti** (sin ti)"
+            ],
+            [
+              "él / ella / usted",
+              "él / ella / usted (de él)"
+            ],
+            [
+              "nosotros / nosotras",
+              "nosotros / nosotras (por nosotros)"
+            ],
+            [
+              "ustedes",
+              "ustedes (en ustedes)"
+            ],
+            [
+              "ellos / ellas",
+              "ellos / ellas (sobre ellas)"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Prepositions in this pattern: **a, para, por, de, en, sin, hacia, sobre, contra, desde, hasta**…"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Mí** has an accent (it's not **mi**, _my_). **Ti** never has one."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Exceptions: **con** gives **conmigo** and **contigo**; **entre** and **según** keep **yo** and **tú** (**entre tú y yo**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: only the two people in the conversation, **me** and **you**, change their clothes after a preposition."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Este regalo es ==para ti==.",
+              "en": "This gift is for you."
+            },
+            {
+              "es": "No puedo vivir ==sin ti==.",
+              "en": "I can't live without you."
+            },
+            {
+              "es": "¿Están hablando ==de mí==?",
+              "en": "Are you talking about me?"
+            },
+            {
+              "es": "Confía ==en mí==.",
+              "en": "Trust me."
+            },
+            {
+              "es": "Lo hizo ==por ella==.",
+              "en": "He did it for her."
+            },
+            {
+              "es": "El perro corrió ==hacia nosotros==.",
+              "en": "The dog ran toward us."
+            },
+            {
+              "es": "Escribieron un artículo ==sobre ustedes==.",
+              "en": "They wrote an article about you guys."
+            },
+            {
+              "es": "==A mí== me encanta el mole.",
+              "en": "I love mole."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es para tú."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es para ti."
+                }
+              ],
+              "nota": "After a preposition: **ti**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No sé qué haría sin yo."
+                },
+                {
+                  "v": "bien",
+                  "t": "No sé qué haría sin mí."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hablaban de mi."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hablaban de mí."
+                }
+              ],
+              "nota": "**Mí** needs the accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Quieres venir con mí?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Quieres venir conmigo?"
+                }
+              ],
+              "nota": "**Con** is the exception."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "conmigo, contigo",
+              "texto": "The con exception: [[6141|con + pronouns]]."
+            },
+            {
+              "forma": "entre tú y yo",
+              "texto": "The other exceptions: [[7088|entre and según + pronouns]]."
+            },
+            {
+              "forma": "mi / mí",
+              "texto": "The accent: [[9111|mi vs mí]]."
+            },
+            {
+              "forma": "a mí me gusta",
+              "texto": "A + pronoun with gustar: [[7032|repeating the indirect pronoun]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _This is for me._",
+              "r": "Esto es para mí.",
+              "nota": "para mí."
+            },
+            {
+              "p": "In Spanish: _I'm thinking about you_ (tú).",
+              "r": "Estoy pensando en ti.",
+              "nota": "en ti."
+            },
+            {
+              "p": "Fix it: _Salieron sin yo._",
+              "r": "Salieron sin mí.",
+              "nota": "sin mí."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      9111
+    ],
+    "confunde": [
+      6141,
+      7088
+    ],
+    "sigue": [
+      7032
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6466",
+      "kwiziq": true
+    }
+  ]
+}

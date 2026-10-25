@@ -1,0 +1,210 @@
+{
+  "tema": 8040,
+  "slug": "me-corte-el-pelo",
+  "titulo": "To have something done (beauty and body)",
+  "subtitulo": "Me corté el pelo. Se hizo las uñas.",
+  "foto": "t07.jpg",
+  "regla": "For beauty or grooming done by a professional, Spanish uses the reflexive as if you did it yourself: me corté el pelo = I got my hair cut. Never tener + participle.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "English says _I had my hair cut_. Spanish just uses the **reflexive verb**, even though a professional did it: **me corté el pelo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Context makes it clear someone else did it."
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "cortarse el pelo",
+              "texto": "_to get a haircut_"
+            },
+            {
+              "forma": "pintarse / teñirse el pelo",
+              "texto": "_to get your hair dyed_"
+            },
+            {
+              "forma": "hacerse las uñas / el manicure",
+              "texto": "_to get your nails done_"
+            },
+            {
+              "forma": "hacerse el pedicure",
+              "texto": "_to get a pedicure_"
+            },
+            {
+              "forma": "depilarse",
+              "texto": "_to get waxed_"
+            },
+            {
+              "forma": "ponerse luces / rayitos",
+              "texto": "_to get highlights_"
+            },
+            {
+              "forma": "hacerse un facial",
+              "texto": "_to get a facial_"
+            },
+            {
+              "forma": "hacerse un tatuaje",
+              "texto": "_to get a tattoo_"
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Never translate word for word: ~~tengo el pelo cortado~~."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: in Spanish your stylist is invisible."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "—Te ves diferente. —Sí, ==me corté== el pelo.",
+              "en": "—You look different. —Yeah, I got my hair cut."
+            },
+            {
+              "es": "¿==Te pintaste== de güera?",
+              "en": "Did you dye your hair blond?"
+            },
+            {
+              "es": "Elena ==se hizo== las uñas.",
+              "en": "Elena got her nails done."
+            },
+            {
+              "es": "Ayer ==me depilé== las piernas.",
+              "en": "Yesterday I got my legs waxed."
+            },
+            {
+              "es": "El sábado tengo cita. ==Me voy a hacer== el pedicure.",
+              "en": "I have an appointment Saturday. I'm getting a pedicure."
+            },
+            {
+              "es": "Deberías ir a la estética a ==pintarte== las canas.",
+              "en": "You should go to the salon to get your gray hair dyed."
+            },
+            {
+              "es": "==Me hice== un tatuaje en el brazo.",
+              "en": "I got a tattoo on my arm."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tuve mi pelo cortado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me corté el pelo."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me corté mi pelo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me corté el pelo."
+                }
+              ],
+              "nota": "Body parts take **el / la**, not **mi**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el pelo, las manos",
+              "texto": "[[7053|articles with body parts]]."
+            },
+            {
+              "forma": "hacer que",
+              "texto": "Making someone do something: [[8950|hacer + subjunctive / infinitive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I'm going to get my hair cut._",
+              "r": "Me voy a cortar el pelo.",
+              "nota": "Reflexive."
+            },
+            {
+              "p": "In Spanish: _She got her nails done._",
+              "r": "Se hizo las uñas.",
+              "nota": "hacerse."
+            },
+            {
+              "p": "Fix it: _Tengo mis uñas hechas._",
+              "r": "Me hice las uñas.",
+              "nota": "Reflexive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7053
+    ],
+    "confunde": [
+      8950
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8040",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "tema": 5992,
+  "slug": "presente-acciones-habituales",
+  "titulo": "Present tense for regular actions",
+  "subtitulo": "Los sábados surfeo temprano.",
+  "foto": "t05.jpg",
+  "regla": "Use the simple present for things you do regularly: routines and habits. Words like siempre, todos los días or los lunes often go with it.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "For **routines and habits**, Spanish uses the **simple present**: **trabajo**, **como**, **vivo**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "trabajar",
+            "comer",
+            "vivir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "trabajo",
+              "como",
+              "vivo"
+            ],
+            [
+              "tú",
+              "trabajas",
+              "comes",
+              "vives"
+            ],
+            [
+              "él / ella / usted",
+              "trabaja",
+              "come",
+              "vive"
+            ],
+            [
+              "nosotros",
+              "trabajamos",
+              "comemos",
+              "vivimos"
+            ],
+            [
+              "ellos / ustedes",
+              "trabajan",
+              "comen",
+              "viven"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Frequency words help: **siempre**, **normalmente**, **todos los días**, **los lunes**, **a veces**, **nunca**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "For a weekday habit, use **los** + day: **los sábados** = _on Saturdays_. No **en**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Surfeo== todos los días antes del trabajo.",
+              "en": "I surf every day before work."
+            },
+            {
+              "es": "Los martes y jueves ==entreno== jiu-jitsu.",
+              "en": "I train jiu-jitsu on Tuesdays and Thursdays."
+            },
+            {
+              "es": "Mi mamá siempre ==desayuna== chilaquiles.",
+              "en": "My mom always has chilaquiles for breakfast."
+            },
+            {
+              "es": "Normalmente ==riego== el huerto en la mañana.",
+              "en": "I usually water the garden in the morning."
+            },
+            {
+              "es": "¿A qué hora ==sales== del trabajo?",
+              "en": "What time do you get off work?"
+            },
+            {
+              "es": "Nunca ==vemos== la tele en la cena.",
+              "en": "We never watch TV at dinner."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Soy trabajando los lunes."
+                },
+                {
+                  "v": "bien",
+                  "t": "Trabajo los lunes."
+                }
+              ],
+              "nota": "No **ser** + -ndo for habits."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "En los sábados entreno."
+                },
+                {
+                  "v": "bien",
+                  "t": "Los sábados entreno."
+                }
+              ],
+              "nota": "No **en** before days."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Corro todos días."
+                },
+                {
+                  "v": "bien",
+                  "t": "Corro todos los días."
+                }
+              ],
+              "nota": "Keep **los**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "trabajo, como, vivo",
+              "texto": "The endings: [[5492|-ar]], [[5540|-er]], [[5108|-ir verbs]]."
+            },
+            {
+              "forma": "el agua hierve a 100°",
+              "texto": "The present for facts: [[5991|general facts]]."
+            },
+            {
+              "forma": "estoy trabajando",
+              "texto": "Right now, not usually: [[5092|estar + gerund]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I train on Mondays._",
+              "r": "Entreno los lunes.",
+              "nota": "los + day."
+            },
+            {
+              "p": "In Spanish: _She always eats at two._",
+              "r": "Siempre come a las dos.",
+              "nota": "Simple present."
+            },
+            {
+              "p": "Fix it: _Corremos en los domingos._",
+              "r": "Corremos los domingos.",
+              "nota": "No en."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5492,
+      5540,
+      5108
+    ],
+    "confunde": [
+      5092,
+      5991
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5992",
+      "kwiziq": true
+    }
+  ]
+}

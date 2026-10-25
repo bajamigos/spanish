@@ -1,0 +1,235 @@
+{
+  "tema": 6136,
+  "slug": "algun-alguna-adjetivo",
+  "titulo": "Some, any: algún, alguna, algunos, algunas",
+  "subtitulo": "«¿Tienes alguna pregunta?»",
+  "foto": "t08.jpg",
+  "regla": "Before a noun, algún / alguna (singular) mean some, any or a; algunos / algunas (plural) mean some or a few. Alguno drops its -o before a masculine singular noun: algún día.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "singular",
+            "plural"
+          ],
+          "filas": [
+            [
+              "masculine",
+              "algún día",
+              "algunos amigos"
+            ],
+            [
+              "feminine",
+              "alguna vez",
+              "algunas olas"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Before a masculine singular noun, **alguno** becomes **algún**, with an accent."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In questions it means _any_: ¿Tienes **algún** problema?"
+        },
+        {
+          "tipo": "texto",
+          "texto": "In the singular it often means _some … or other_: **Algún** día voy a Japón."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In negative sentences, use **ningún** instead: No tengo **ningún** problema."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Without a noun, it's **alguno**: ¿Tienes alguno?"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Algún== día voy a surfear en Hawái.",
+              "en": "Someday I'm going to surf in Hawaii."
+            },
+            {
+              "es": "¿Tienes ==alguna== pregunta?",
+              "en": "Do you have any questions?"
+            },
+            {
+              "es": "==Algunos== amigos vienen a la carne asada.",
+              "en": "Some friends are coming to the barbecue."
+            },
+            {
+              "es": "Hay ==algunas== olas buenas en la tarde.",
+              "en": "There are some good waves in the afternoon."
+            },
+            {
+              "es": "¿Conoces ==algún== buen taller por aquí?",
+              "en": "Do you know a good mechanic's shop around here?"
+            },
+            {
+              "es": "¿Has visto ==alguna== vez la serie The Expanse?",
+              "en": "Have you ever watched The Expanse?"
+            },
+            {
+              "es": "==Algunas== plantas de mi huerto ya tienen flores.",
+              "en": "Some plants in my garden already have flowers."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Alguno día voy a ir."
+                },
+                {
+                  "v": "bien",
+                  "t": "Algún día voy a ir."
+                }
+              ],
+              "nota": "Before a masculine singular noun: **algún**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Tienes algún pregunta?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Tienes alguna pregunta?"
+                }
+              ],
+              "nota": "**Pregunta** is feminine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Algun dia lo hago."
+                },
+                {
+                  "v": "bien",
+                  "t": "Algún día lo hago."
+                }
+              ],
+              "nota": "**Algún** has an accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No tengo algún problema."
+                },
+                {
+                  "v": "bien",
+                  "t": "No tengo ningún problema."
+                }
+              ],
+              "nota": "Negative _any_ = **ningún**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "unos, unas",
+              "texto": "Another way to say _some_: [[6604|unos, unas]]."
+            },
+            {
+              "forma": "ningún",
+              "texto": "The negative: [[6129|ningún, ninguna]]."
+            },
+            {
+              "forma": "alguno",
+              "texto": "Without a noun: [[6462|alguno, alguna as pronouns]]."
+            },
+            {
+              "forma": "alguno de",
+              "texto": "_One of, some of_: [[8699|alguno de]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Do you have any idea?_",
+              "r": "¿Tienes alguna idea?",
+              "nota": "idea: feminine."
+            },
+            {
+              "p": "In Spanish: _Someday I'm going to learn to cook._",
+              "r": "Algún día voy a aprender a cocinar.",
+              "nota": "algún día."
+            },
+            {
+              "p": "Fix it: _Algunos plantas están secas._",
+              "r": "Algunas plantas están secas.",
+              "nota": "plantas → algunas."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6604
+    ],
+    "confunde": [
+      6129
+    ],
+    "sigue": [
+      6462,
+      8699
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6136",
+      "kwiziq": true
+    }
+  ]
+}

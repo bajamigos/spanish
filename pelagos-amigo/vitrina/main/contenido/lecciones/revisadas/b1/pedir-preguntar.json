@@ -1,0 +1,244 @@
+{
+  "tema": 9343,
+  "slug": "pedir-preguntar",
+  "titulo": "Pedir vs preguntar: two ways to ask",
+  "subtitulo": "Pedir sal, pedir un favor; preguntar la hora, preguntar por Beto.",
+  "foto": "t09.jpg",
+  "regla": "Pedir = ask for (things, favors, orders, someone to do something: pedir que + subjunctive). Preguntar = ask a question, ask for information; preguntar por = ask about someone.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "English _to ask_ is two verbs in Spanish:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Verb",
+            "Use",
+            "Example"
+          ],
+          "filas": [
+            [
+              "pedir",
+              "to ask **for** a thing",
+              "Le pedí sal."
+            ],
+            [
+              "",
+              "to order",
+              "Pedí dos libros en línea."
+            ],
+            [
+              "",
+              "to ask a favor",
+              "¿Te puedo pedir un favor?"
+            ],
+            [
+              "",
+              "to ask someone to do something (+ que + subjunctive)",
+              "Le pedí que me ayudara / me pidió que viniera."
+            ],
+            [
+              "preguntar",
+              "to ask a question, for information",
+              "Le pregunté la hora."
+            ],
+            [
+              "",
+              "+ si / qué / dónde / cuándo…",
+              "Pregúntale si viene."
+            ],
+            [
+              "preguntar por",
+              "to ask about someone",
+              "Beto preguntó por ti."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Pedir** is e > i: **pido**, **pides**, **pidió**. It often goes with an indirect pronoun, since you ask people for things: **me pidió**, **le pedí**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **pedir** wants something; **preguntar** wants to know something."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi hermana me ==pidió== la falda gris.",
+              "en": "My sister asked me for the gray skirt."
+            },
+            {
+              "es": "Le ==pedí== un poco de sal para el guisado.",
+              "en": "I asked him for a bit of salt for the stew."
+            },
+            {
+              "es": "Ayer ==pedí== dos libros por internet.",
+              "en": "Yesterday I ordered two books online."
+            },
+            {
+              "es": "¿Te puedo ==pedir== un favor?",
+              "en": "Can I ask you a favor?"
+            },
+            {
+              "es": "Le ==pido== que me ayude con la mudanza.",
+              "en": "I'm asking him to help me with the move."
+            },
+            {
+              "es": "Le ==pregunté== a Beto a qué hora sale el camión.",
+              "en": "I asked Beto what time the bus leaves."
+            },
+            {
+              "es": "==Pregúntale== si viene a la carne asada.",
+              "en": "Ask him if he's coming to the barbecue."
+            },
+            {
+              "es": "Tu mamá ==preguntó por== ti.",
+              "en": "Your mom asked about you."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Le pregunté un poco de sal."
+                },
+                {
+                  "v": "bien",
+                  "t": "Le pedí un poco de sal."
+                }
+              ],
+              "nota": "Asking **for** a thing: **pedir**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Pregunté dos libros en Amazon."
+                },
+                {
+                  "v": "bien",
+                  "t": "Pedí dos libros en Amazon."
+                }
+              ],
+              "nota": "Ordering: **pedir**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Le pedí si venía."
+                },
+                {
+                  "v": "bien",
+                  "t": "Le pregunté si venía."
+                }
+              ],
+              "nota": "A question: **preguntar**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "pido, pides",
+              "texto": "Pedir in the present: [[5851|pedir]]."
+            },
+            {
+              "forma": "pedí, pidió",
+              "texto": "Pedir in the preterite: [[5920|pedir in the preterite]]."
+            },
+            {
+              "forma": "pedir que + subjunctive",
+              "texto": "Asking someone to do something: [[7279|pedir + present subjunctive]]."
+            },
+            {
+              "forma": "pedir prestado",
+              "texto": "To borrow: [[8427|prestar and pedir prestado]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "**Pedir** or **preguntar**? _I asked him where he lives._",
+              "r": "Le pregunté dónde vive.",
+              "nota": "A question: preguntar."
+            },
+            {
+              "p": "**Pedir** or **preguntar**? _We ordered a pizza._",
+              "r": "Pedimos una pizza.",
+              "nota": "Ordering: pedir."
+            },
+            {
+              "p": "In Spanish: _Beto asked about you._ (tú)",
+              "r": "Beto preguntó por ti.",
+              "nota": "preguntar por."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5851,
+      5920
+    ],
+    "confunde": [
+      8427
+    ],
+    "sigue": [
+      7279,
+      8427
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9343",
+      "kwiziq": true
+    }
+  ]
+}

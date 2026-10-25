@@ -1,0 +1,195 @@
+{
+  "tema": 7078,
+  "slug": "si-hubiera",
+  "titulo": "Si + pluperfect subjunctive + perfect conditional (past hypotheticals)",
+  "subtitulo": "Si hubiera sabido, habría venido.",
+  "foto": "t09.jpg",
+  "regla": "For impossible conditions in the past: si + pluperfect subjunctive (hubiera / hubiese + participle), then the perfect conditional (habría + participle) or the pluperfect subjunctive again (hubiera + participle): Si hubiera llegado antes, habría / hubiera visto a Carlos.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "si + hubiera + participle",
+            ",",
+            "habría / hubiera + participle"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The condition **didn't happen**, so the result didn't either: _if I had known, I would have come_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Result clause: **habría** + participle or **hubiera** + participle. Both are correct; **hubiera** is very common in Mexico."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Hubiese** also works, more formal."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Mixed time: past condition, present result: **si hubiera estudiado, ahora tendría trabajo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Never **habría** right after **si**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **si hubiera**... the door that stayed closed."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Si hubiéramos ganado== la lotería, ==habríamos comprado== una casa en la playa.",
+              "en": "If we had won the lottery, we would have bought a beach house."
+            },
+            {
+              "es": "==Si hubiera llegado== antes, ==habría visto== a Carlos en la fiesta.",
+              "en": "If I'd arrived earlier, I would have seen Carlos at the party."
+            },
+            {
+              "es": "==Si hubiera llegado== antes, ==hubiera visto== a Carlos en la fiesta.",
+              "en": "Same meaning."
+            },
+            {
+              "es": "==Si hubieras firmado== ese contrato, ==te habrías arrepentido==.",
+              "en": "If you'd signed that contract, you'd have regretted it."
+            },
+            {
+              "es": "==Si te hubieras llevado== el paraguas, no ==te habrías mojado== tanto.",
+              "en": "If you'd taken the umbrella, you wouldn't have gotten so wet."
+            },
+            {
+              "es": "==Si hubiera estudiado==, ahora ==tendría== un mejor trabajo.",
+              "en": "If I had studied, I'd have a better job now."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Si habría sabido, ..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Si hubiera sabido, ..."
+                }
+              ],
+              "nota": "Never **habría** after **si**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Si hubiera sabido, vendría ayer."
+                },
+                {
+                  "v": "bien",
+                  "t": "Si hubiera sabido, habría venido ayer."
+                }
+              ],
+              "nota": "Past result: perfect conditional."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "si tuviera",
+              "texto": "[[5120|si + imperfect subjunctive]]."
+            },
+            {
+              "forma": "hubiera ido",
+              "texto": "[[5842|pluperfect subjunctive]]."
+            },
+            {
+              "forma": "habría ido",
+              "texto": "[[5186|perfect conditional]]."
+            },
+            {
+              "forma": "ojalá hubiera",
+              "texto": "[[9105|ojalá in the past]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _If you had called me, I would have helped you._",
+              "r": "Si me hubieras llamado, te habría ayudado. / te hubiera ayudado.",
+              "nota": "Both result forms."
+            },
+            {
+              "p": "Fix it: _Si habría tenido tiempo, habría ido._",
+              "r": "Si hubiera tenido tiempo, habría ido.",
+              "nota": "hubiera after si."
+            },
+            {
+              "p": "Mixed: _If I had slept, I wouldn't be tired now._",
+              "r": "Si hubiera dormido, ahora no estaría cansado.",
+              "nota": "Present result."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5120,
+      5842
+    ],
+    "confunde": [
+      5120
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7078",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "tema": 7761,
+  "slug": "futuro-en-el-pasado",
+  "titulo": "The conditional for a future in the past",
+  "subtitulo": "Dijo que vendría. Sabía que llovería.",
+  "foto": "t02.jpg",
+  "regla": "The conditional can express the future seen from a past moment, especially in reported speech: Dijo que me llevaría a casa (he said he'd take me home). The action may or may not have happened since.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "When you stand in the **past** and look **forward**, the future becomes the **conditional**:"
+        },
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "directo",
+                  "t": "«Te llevo a tu casa», dijo. / «Te llevaré»"
+                },
+                {
+                  "v": "indirecto",
+                  "t": "Dijo que me llevaría a mi casa."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It's typical after **dijo que, prometió que, pensé que, sabía que, decidió que, acordamos que**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Ir a** works too, in the imperfect: **dijo que iba a llover**. Very common in Mexico."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: future from back then = conditional now."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Dijo que me ==llevaría== a mi casa.",
+              "en": "She said she'd take me home."
+            },
+            {
+              "es": "Mis papás dijeron que me ==comprarían== un carro.",
+              "en": "My parents said they'd buy me a car."
+            },
+            {
+              "es": "Todos acordamos que no ==tomaríamos== alcohol hasta diciembre.",
+              "en": "We all agreed we wouldn't drink until December."
+            },
+            {
+              "es": "Carmen decidió que ella ==pagaría== las clases de guitarra de su nieta.",
+              "en": "Carmen decided she would pay for her granddaughter's guitar lessons."
+            },
+            {
+              "es": "El del clima dijo ayer que hoy ==llovería==.",
+              "en": "The weatherman said yesterday it would rain today."
+            },
+            {
+              "es": "Dijo que ==iba a llover==.",
+              "en": "He said it was going to rain."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me dijo que vendrá. (a past promise, already over)"
+                },
+                {
+                  "v": "bien",
+                  "t": "Me dijo que vendría."
+                }
+              ],
+              "nota": "Past frame: conditional."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Pensé que lloverá."
+                },
+                {
+                  "v": "bien",
+                  "t": "Pensé que llovería."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "llegaría a las tres",
+              "texto": "Another use: [[5069|conditional of probability]]."
+            },
+            {
+              "forma": "iría",
+              "texto": "[[5731|conditional conjugation]]."
+            },
+            {
+              "forma": "si tuviera, iría",
+              "texto": "[[5120|hypothetical si]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Report it: _«Te llamaré», dijo._",
+              "r": "Dijo que me llamaría.",
+              "nota": "Future → conditional."
+            },
+            {
+              "p": "In Spanish: _I knew you would win._",
+              "r": "Sabía que ganarías.",
+              "nota": "Conditional."
+            },
+            {
+              "p": "Other option: _He said it was going to rain._",
+              "r": "Dijo que iba a llover.",
+              "nota": "iba a + infinitive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5731
+    ],
+    "confunde": [
+      5069
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7761",
+      "kwiziq": true
+    }
+  ]
+}

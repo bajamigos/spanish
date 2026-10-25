@@ -1,0 +1,175 @@
+{
+  "tema": 9513,
+  "slug": "como-no",
+  "titulo": "¡Cómo no! = of course",
+  "subtitulo": "—¿Me pasas la sal? —¡Cómo no!",
+  "foto": "t06.jpg",
+  "regla": "¡Cómo no! = of course, sure (polite and warm, very common in Mexico): —¿Puedo pasar? —¡Cómo no! Also for something expected: Y, cómo no, Mario llegó tarde (of course, as usual).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "polite yes",
+              "texto": "A warm _of course_ to a request: **—¿Me permite? —¡Cómo no!** **Sí, cómo no.**"
+            },
+            {
+              "forma": "the expected",
+              "texto": "_Of course, naturally, as usual_: **Y, cómo no, llegó tarde.**"
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Accent on **cómo**: it's an exclamation."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Very common in Mexico, in shops and with strangers."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **¡cómo no!** = how could I say no?"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "—¿Me dejas usar tu baño? —¡Sí, ==cómo no==!",
+              "en": "—Can I use your bathroom? —Of course!"
+            },
+            {
+              "es": "—Señora, ¿me permite su abrigo? —==Cómo no==.",
+              "en": "—Ma'am, may I take your coat? —Of course."
+            },
+            {
+              "es": "—¿Puedo llevar a alguien a tu fiesta? —¡==Cómo no==, claro!",
+              "en": "—Can I bring someone to your party? —Of course, sure!"
+            },
+            {
+              "es": "Y, ==cómo no==, Mario llegó media hora tarde.",
+              "en": "And, of course, Mario was half an hour late."
+            },
+            {
+              "es": "—Marisa le prestó el dinero a Paula. —==Cómo no==, Marisa siempre tan generosa.",
+              "en": "—Marisa lent Paula the money. —Of course, Marisa, always so generous."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Como no!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Cómo no!"
+                }
+              ],
+              "nota": "Accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "pregunta",
+                  "t": "¿Cómo no vas a venir?"
+                },
+                {
+                  "v": "sí",
+                  "t": "¡Cómo no!"
+                }
+              ],
+              "nota": "Question vs polite yes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "cómo / como",
+              "texto": "[[6673|cómo vs como]]."
+            },
+            {
+              "forma": "¿cómo va a...?",
+              "texto": "[[8151|stating the obvious]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Polite yes: _—¿Me ayuda con la maleta?_",
+              "r": "¡Cómo no!",
+              "nota": "Polite."
+            },
+            {
+              "p": "In Spanish: _And of course, it rained._",
+              "r": "Y, cómo no, llovió.",
+              "nota": "The expected."
+            },
+            {
+              "p": "Accent? _¡Como no!_",
+              "r": "¡Cómo no!",
+              "nota": "Exclamation."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6673
+    ],
+    "confunde": [
+      8151
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9513",
+      "kwiziq": true
+    }
+  ]
+}

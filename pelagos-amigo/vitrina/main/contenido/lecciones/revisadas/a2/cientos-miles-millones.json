@@ -1,0 +1,306 @@
+{
+  "tema": 7177,
+  "slug": "cientos-miles-millones",
+  "titulo": "Big numbers: hundreds, thousands, millions",
+  "subtitulo": "doscientas personas, tres mil pesos, un millón de pesos",
+  "foto": "t09.jpg",
+  "regla": "Hundreds agree with the noun (doscientos pesos, doscientas personas); mil never changes and never takes un; millón takes un, has a plural (millones) and needs de before a noun. Un billón is a million millions: English billion is mil millones.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Cien** = exactly 100: **cien pesos, cien mil**. From 101 on it's **ciento**: **ciento uno, ciento veinte**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Number",
+            "Masculine",
+            "Feminine"
+          ],
+          "filas": [
+            [
+              "200",
+              "doscientos",
+              "doscientas"
+            ],
+            [
+              "300",
+              "trescientos",
+              "trescientas"
+            ],
+            [
+              "400",
+              "cuatrocientos",
+              "cuatrocientas"
+            ],
+            [
+              "500",
+              "quinientos",
+              "quinientas"
+            ],
+            [
+              "600",
+              "seiscientos",
+              "seiscientas"
+            ],
+            [
+              "700",
+              "setecientos",
+              "setecientas"
+            ],
+            [
+              "800",
+              "ochocientos",
+              "ochocientas"
+            ],
+            [
+              "900",
+              "novecientos",
+              "novecientas"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Hundreds **agree** with the noun: **doscientos pesos, doscientas personas**. Watch the irregular ones: **quinientos, setecientos, novecientos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Mil** never changes and never takes **un**: **mil, dos mil, diez mil**. **Miles de** = _thousands of_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Millón** is a noun: **un millón, dos millones** (no accent in the plural). Before a noun add **de**: **un millón de pesos**. If more numbers follow, no **de**: **un millón quinientos mil pesos**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Number",
+            "Spanish",
+            "English"
+          ],
+          "filas": [
+            [
+              "1,000,000",
+              "un millón",
+              "one million"
+            ],
+            [
+              "1,000,000,000",
+              "mil millones",
+              "one billion"
+            ],
+            [
+              "1,000,000,000,000",
+              "un billón",
+              "one trillion"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Careful: **un billón** is a **million millions**. English _billion_ is **mil millones**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Y** only goes between tens and units: **ciento treinta y dos, dos mil cuarenta y cinco**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Mexico writes numbers like English: **1,500** and **3.5**. Many Spanish-speaking countries swap the comma and the point."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **cien** and **mil** go alone. **Millón** needs a buddy (**un**) and a bridge (**de**)."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "La tabla nueva costó ==ochocientos== dólares.",
+              "en": "The new board cost eight hundred dollars."
+            },
+            {
+              "es": "En la playa había ==doscientas== personas.",
+              "en": "There were two hundred people on the beach."
+            },
+            {
+              "es": "Tijuana tiene más de ==un millón de== habitantes.",
+              "en": "Tijuana has over a million inhabitants."
+            },
+            {
+              "es": "Mi abuelo nació en ==mil novecientos== cuarenta y ocho.",
+              "en": "My grandpa was born in nineteen forty-eight."
+            },
+            {
+              "es": "Compré el terreno por ==quinientos mil== pesos.",
+              "en": "I bought the land for five hundred thousand pesos."
+            },
+            {
+              "es": "En _The Expanse_, ==miles de millones de== personas viven en la Tierra.",
+              "en": "In The Expanse, billions of people live on Earth."
+            },
+            {
+              "es": "El gobierno gastó ==dos millones de== pesos en el parque.",
+              "en": "The government spent two million pesos on the park."
+            },
+            {
+              "es": "Este año vinieron ==cien mil== turistas.",
+              "en": "A hundred thousand tourists came this year."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "un mil pesos"
+                },
+                {
+                  "v": "bien",
+                  "t": "mil pesos"
+                }
+              ],
+              "nota": "Never **un mil**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "un millón pesos"
+                },
+                {
+                  "v": "bien",
+                  "t": "un millón de pesos"
+                }
+              ],
+              "nota": "**De** before the noun."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "doscientos personas"
+                },
+                {
+                  "v": "bien",
+                  "t": "doscientas personas"
+                }
+              ],
+              "nota": "Hundreds agree with the noun."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "un billón de dólares (1,000,000,000)"
+                },
+                {
+                  "v": "bien",
+                  "t": "mil millones de dólares"
+                }
+              ],
+              "nota": "English _billion_ = **mil millones**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "veintiuno, treinta y uno",
+              "texto": "[[6755|Numbers]]."
+            },
+            {
+              "forma": "mil, diez mil",
+              "texto": "[[9143|Numbers from 1,000 to 1,000,000]]."
+            },
+            {
+              "forma": "unos doscientos",
+              "texto": "[[6671|Unos + number = about]]."
+            },
+            {
+              "forma": "más, menos, por",
+              "texto": "[[7083|Doing arithmetic]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _three hundred women_",
+              "r": "trescientas mujeres",
+              "nota": "It agrees."
+            },
+            {
+              "p": "In Spanish: _two million pesos_",
+              "r": "dos millones de pesos",
+              "nota": "**millones de**"
+            },
+            {
+              "p": "Fix it: _Cuesta un mil dólares._",
+              "r": "Cuesta mil dólares.",
+              "nota": "No **un**."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6755,
+      9143
+    ],
+    "confunde": [
+      6671
+    ],
+    "sigue": [
+      7083
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7177",
+      "kwiziq": true
+    }
+  ]
+}

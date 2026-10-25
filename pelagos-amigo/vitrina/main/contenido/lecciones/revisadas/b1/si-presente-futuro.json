@@ -1,0 +1,193 @@
+{
+  "tema": 6146,
+  "slug": "si-presente-futuro",
+  "titulo": "Si + present indicative, then present or future",
+  "subtitulo": "Si hay olas, voy / iré: real conditions about the future.",
+  "foto": "t05.jpg",
+  "regla": "For a likely condition: si + present, then present or future. Never si + present subjunctive or si + future.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say that something will probably happen if a condition is met, a condition with a **high chance**, use **si** (_if_) + the **present**, then the **present** or the **future**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**si** + present",
+            "present / future"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Present or future in the main part doesn't change the meaning: **si me concentro, termino pronto** = **si me concentro, terminaré pronto**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The order can flip: **hablaré con tu profe si tenemos dudas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Si** is never followed by the present subjunctive, and never by the future: **si llueve**, not **si llueva** or **si lloverá**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: after **si**, keep it plain and present. The future waits on the other side of the comma."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Si me ==concentro==, ==termino== el trabajo pronto.",
+              "en": "If I concentrate, I'll finish the job soon."
+            },
+            {
+              "es": "Si me ==concentro==, ==terminaré== el trabajo pronto.",
+              "en": "If I concentrate, I'll finish the job soon."
+            },
+            {
+              "es": "Si Beto ==va== al mercado, ==compra== pescado fresco.",
+              "en": "If Beto goes to the market, he'll buy fresh fish."
+            },
+            {
+              "es": "Si ==hay== olas mañana, ==iremos== a Baja Malibú.",
+              "en": "If there are waves tomorrow, we'll go to Baja Malibu."
+            },
+            {
+              "es": "==Hablaré== con tu profe si ==tenemos== dudas.",
+              "en": "I'll talk to your teacher if we have questions."
+            },
+            {
+              "es": "¿Me ==das== tu tabla si te ==aburres== de ella?",
+              "en": "Will you give me your board if you get bored of it?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Si llueva, no voy."
+                },
+                {
+                  "v": "bien",
+                  "t": "Si llueve, no voy."
+                }
+              ],
+              "nota": "Never the subjunctive after **si** here."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Si tendré tiempo, te llamo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Si tengo tiempo, te llamo."
+                }
+              ],
+              "nota": "Never the future after **si**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "si ves a Beto, salúdalo",
+              "texto": "**Si** + a command: [[6147|si + present + command]]."
+            },
+            {
+              "forma": "si tuviera dinero…",
+              "texto": "Unlikely conditions: [[5120|si + imperfect subjunctive + conditional]]."
+            },
+            {
+              "forma": "cuando llegue",
+              "texto": "**Cuando** takes the subjunctive for the future, **si** doesn't: [[5062|cuando]]."
+            },
+            {
+              "forma": "hablaré",
+              "texto": "The future: [[5155|regular verbs in the future]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _If I have time, I'll train._",
+              "r": "Si tengo tiempo, entreno. / Si tengo tiempo, entrenaré.",
+              "nota": "si + present."
+            },
+            {
+              "p": "Fix it: **Si hará sol, vamos a la playa.**",
+              "r": "Si hace sol, vamos a la playa.",
+              "nota": "No future after si."
+            },
+            {
+              "p": "In Spanish: _We'll eat tacos if you want._ (tú)",
+              "r": "Comeremos tacos si quieres.",
+              "nota": "The order can flip."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5155,
+      5062
+    ],
+    "confunde": [
+      5062
+    ],
+    "sigue": [
+      6147,
+      5120
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6146",
+      "kwiziq": true
+    }
+  ]
+}

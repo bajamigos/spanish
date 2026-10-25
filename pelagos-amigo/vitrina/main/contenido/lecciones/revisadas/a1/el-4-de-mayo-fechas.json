@@ -1,0 +1,196 @@
+{
+  "tema": 6746,
+  "slug": "el-4-de-mayo-fechas",
+  "titulo": "Expressing dates",
+  "subtitulo": "El 4 de mayo de 2026.",
+  "foto": "t10.jpg",
+  "regla": "Dates follow el + number + de + month (+ de + year): el 4 de mayo de 2026. Use plain numbers, except that the 1st is often el primero. Months are lowercase, and el already means on.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "The pattern is **el + number + de + month**, then **de + year** if you need it."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "el 4",
+            "+ de +",
+            "mayo (+ de 2026)"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Use plain numbers: **el 4**, **el 20**. Only the 1st is usually **el primero** (**el 1** is fine too)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**El** already means _on_: **Nací el 3 de marzo**, never **en el**. Months are **lowercase**. With a day name: **el lunes 4 de mayo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "To ask: **¿Qué fecha es hoy?** Answer: **Hoy es 17 de octubre.**"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Nací ==el 12 de julio de 1990==.",
+              "en": "I was born on July 12th, 1990."
+            },
+            {
+              "es": "Hoy es ==17 de octubre==.",
+              "en": "Today is October 17th."
+            },
+            {
+              "es": "La fiesta es ==el sábado 7 de noviembre==.",
+              "en": "The party is on Saturday, November 7th."
+            },
+            {
+              "es": "==El primero de enero== no trabajo.",
+              "en": "I don't work on January 1st."
+            },
+            {
+              "es": "El torneo es ==el 5 de diciembre==.",
+              "en": "The tournament is on December 5th."
+            },
+            {
+              "es": "Mi cumpleaños es ==el 30 de abril==.",
+              "en": "My birthday is April 30th."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mayo 4"
+                },
+                {
+                  "v": "bien",
+                  "t": "el 4 de mayo"
+                }
+              ],
+              "nota": "Day first, then **de** + month."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La boda es en el 15 de junio."
+                },
+                {
+                  "v": "bien",
+                  "t": "La boda es el 15 de junio."
+                }
+              ],
+              "nota": "No **en**: **el** means _on_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "el cuatro de Mayo"
+                },
+                {
+                  "v": "bien",
+                  "t": "el cuatro de mayo"
+                }
+              ],
+              "nota": "Months are lowercase."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "un enero frío",
+              "texto": "Months: [[6750|months are masculine]]."
+            },
+            {
+              "forma": "es lunes, es 4 de mayo",
+              "texto": "[[5981|Ser for time, days and dates]]."
+            },
+            {
+              "forma": "el lunes",
+              "texto": "Days without the number: [[10481|the article with days of the week]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I was born on March 3rd._",
+              "r": "Nací el 3 de marzo.",
+              "nota": "No en."
+            },
+            {
+              "p": "Say the date: _Monday, May 4th_",
+              "r": "el lunes 4 de mayo",
+              "nota": "Day name, number, de, month."
+            },
+            {
+              "p": "Fix it: _La boda es en el 15 de Junio._",
+              "r": "La boda es el 15 de junio.",
+              "nota": "No en; lowercase month."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6750
+    ],
+    "confunde": [],
+    "sigue": [
+      5981,
+      10481
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6746",
+      "kwiziq": true
+    }
+  ]
+}

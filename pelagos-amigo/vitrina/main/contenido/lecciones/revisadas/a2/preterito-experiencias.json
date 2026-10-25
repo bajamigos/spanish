@@ -1,0 +1,241 @@
+{
+  "tema": 9284,
+  "slug": "preterito-experiencias",
+  "titulo": "The preterite for experiences",
+  "subtitulo": "¿Alguna vez probaste los chapulines?",
+  "foto": "t04.jpg",
+  "regla": "In Mexico the preterite is the usual tense for life experiences: ¿alguna vez fuiste a Cancún?, nunca comí chapulines, fui dos veces. The present perfect (¿has ido…?) is also correct, but less common.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To ask or talk about **experiences** (_have you ever…?_, _I've never…_, _I've been there twice_), Mexican Spanish usually uses the **preterite**, where English uses the present perfect."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "English",
+            "Mexican Spanish"
+          ],
+          "filas": [
+            [
+              "_Have you ever been to Cancún?_",
+              "¿Alguna vez fuiste a Cancún?"
+            ],
+            [
+              "_I've never eaten chapulines._",
+              "Nunca comí chapulines."
+            ],
+            [
+              "_I've been to Oaxaca twice._",
+              "Fui a Oaxaca dos veces."
+            ],
+            [
+              "_I've already seen that movie._",
+              "Ya vi esa película."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Key words: **alguna vez** (_ever_), **nunca** (_never_), **ya** (_already_), **una vez, dos veces** (_once, twice_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The present perfect (**¿Alguna vez has ido a Cancún?**) is also correct and you'll hear it, but the preterite sounds more natural in Mexico."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: in Mexico your past is closed. Even your whole life so far fits in the preterite."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿Alguna vez ==surfeaste== en Todos Santos?",
+              "en": "Have you ever surfed in Todos Santos?"
+            },
+            {
+              "es": "Nunca ==comí== chapulines.",
+              "en": "I've never eaten grasshoppers."
+            },
+            {
+              "es": "==Fui== a Oaxaca dos veces.",
+              "en": "I've been to Oaxaca twice."
+            },
+            {
+              "es": "¿Ya ==viste== la nueva temporada?",
+              "en": "Have you seen the new season yet?"
+            },
+            {
+              "es": "Mi hermana nunca ==se subió== a un avión.",
+              "en": "My sister has never been on a plane."
+            },
+            {
+              "es": "¿Alguna vez ==competiste== en un torneo de jiu-jitsu? —Sí, una vez.",
+              "en": "Have you ever competed in a jiu-jitsu tournament? —Yes, once."
+            },
+            {
+              "es": "Nunca ==tuve== perro.",
+              "en": "I've never had a dog."
+            },
+            {
+              "es": "Ya ==leí== todos los libros de esa serie.",
+              "en": "I've already read all the books in that series."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Alguna vez probabas el pozole?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Alguna vez probaste el pozole?"
+                }
+              ],
+              "nota": "Experiences: preterite, not imperfect."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Iba a Oaxaca dos veces."
+                },
+                {
+                  "v": "bien",
+                  "t": "Fui a Oaxaca dos veces."
+                }
+              ],
+              "nota": "Counted times: preterite."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nunca no fui a Cancún."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nunca fui a Cancún."
+                }
+              ],
+              "nota": "**Nunca** before the verb: no extra **no**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Has alguna vez ido a Cancún?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Alguna vez has ido a Cancún?"
+                }
+              ],
+              "nota": "Never split **has** from **ido**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "probé, fui",
+              "texto": "The forms: [[5109|regular -ar verbs in the preterite]], [[5107|ir and ser in the preterite]]."
+            },
+            {
+              "forma": "ya vi",
+              "texto": "Already: [[9263|ya with the preterite]]."
+            },
+            {
+              "forma": "nunca fui",
+              "texto": "Never: [[5136|nunca in negative sentences]]."
+            },
+            {
+              "forma": "he ido / fui",
+              "texto": "Which past to choose: [[9261|present perfect vs preterite]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish (Mexico): _Have you ever been to Oaxaca?_",
+              "r": "¿Alguna vez fuiste a Oaxaca?",
+              "nota": "Alguna vez + preterite."
+            },
+            {
+              "p": "In Spanish (Mexico): _I've never eaten chapulines._",
+              "r": "Nunca comí chapulines.",
+              "nota": "Nunca + preterite."
+            },
+            {
+              "p": "Fix it: _Iba a Cancún tres veces._",
+              "r": "Fui a Cancún tres veces.",
+              "nota": "Counted times: preterite."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5109,
+      5107
+    ],
+    "confunde": [
+      9261
+    ],
+    "sigue": [
+      9263,
+      5136
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9284",
+      "kwiziq": true
+    }
+  ]
+}

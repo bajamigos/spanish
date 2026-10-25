@@ -1,0 +1,197 @@
+{
+  "tema": 7916,
+  "slug": "darle-por",
+  "titulo": "Darle a alguien por (hacer) algo = to suddenly take up something",
+  "subtitulo": "Le dio por correr. Me ha dado por cocinar.",
+  "foto": "t01.jpg",
+  "regla": "Darle a alguien por + infinitive or noun = to suddenly get into something, take it up on a whim: Le dio por correr maratones. Dar stays in the third person singular; the person is the indirect pronoun.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "me / te / le / nos / les + da (dio, ha dado...)",
+            "+ por +",
+            "infinitive / noun"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It expresses a **sudden interest or habit**, with no warning: _he got it into his head to..._, _she's taken to..._"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Dar** is always **third person singular**: **le dio**, **nos dio**, never ~~les dieron~~ for this meaning."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The person is the indirect pronoun, and you can add **a** + person: **a mi mamá le dio por...**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Very common in Mexico: **¿Y ahora qué te dio por hacer?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **darle por** = a bug bit you."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "A mi mamá ==le ha dado por== llamarme todas las noches. Me tiene vigilada.",
+              "en": "My mom has taken to calling me every night. She's keeping tabs on me."
+            },
+            {
+              "es": "Ayer ==me dio por== limpiar la cocina a fondo. Terminé agotada.",
+              "en": "Yesterday I suddenly decided to deep-clean the kitchen. I ended up exhausted."
+            },
+            {
+              "es": "Últimamente ==le ha dado por== coquetear con su jefe.",
+              "en": "Lately she's taken to flirting with her boss."
+            },
+            {
+              "es": "El año pasado ==nos dio por== el golf y este año por el tenis.",
+              "en": "Last year we got into golf and this year it's tennis."
+            },
+            {
+              "es": "De repente ==le dio por== aprender a surfear.",
+              "en": "Out of nowhere he decided to learn to surf."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Les dieron por bailar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Les dio por bailar."
+                }
+              ],
+              "nota": "Always singular."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me dio a correr."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me dio por correr."
+                }
+              ],
+              "nota": "**Por**, not **a**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo di por cocinar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me dio por cocinar."
+                }
+              ],
+              "nota": "The person is the indirect pronoun."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "ponerse a",
+              "texto": "Starting an action: [[6805|ponerse a + infinitive]]."
+            },
+            {
+              "forma": "le di a Juan",
+              "texto": "[[7090|repeating indirect pronouns]]."
+            },
+            {
+              "forma": "me gusta",
+              "texto": "[[6001|gustar-type verbs]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _My dad has taken up gardening._",
+              "r": "A mi papá le ha dado por la jardinería. / le dio por la jardinería.",
+              "nota": "darle por + noun."
+            },
+            {
+              "p": "In Spanish: _We suddenly decided to dance._",
+              "r": "Nos dio por bailar.",
+              "nota": "Singular dio."
+            },
+            {
+              "p": "Fix it: _A ellos les dieron por viajar._",
+              "r": "A ellos les dio por viajar.",
+              "nota": "Singular."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7090
+    ],
+    "confunde": [
+      6805
+    ],
+    "sigue": [
+      6805
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7916",
+      "kwiziq": true
+    }
+  ]
+}

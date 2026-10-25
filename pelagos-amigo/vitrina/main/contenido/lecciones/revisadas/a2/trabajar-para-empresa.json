@@ -1,0 +1,247 @@
+{
+  "tema": 7073,
+  "slug": "trabajar-para-empresa",
+  "titulo": "Para to say who you work for",
+  "subtitulo": "Trabajo para una escuela de surf.",
+  "foto": "t04.jpg",
+  "regla": "To say who your employer or client is, use trabajar para + person or company, never por. Trabajar por means working for money, for a cause, or in someone's place.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "English _work for_ has one preposition. In Spanish, the employer or client takes **para**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "trabajar",
+            "+ para +",
+            "employer / company / person"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Para** points to who **receives** your work: the company, the boss, the client."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Other ways to talk about your job:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Spanish",
+            "Meaning",
+            "Example"
+          ],
+          "filas": [
+            [
+              "trabajar **para**",
+              "_for_ (employer)",
+              "Trabajo para una empresa de software."
+            ],
+            [
+              "trabajar **en**",
+              "_at, in_ (place or field)",
+              "Trabajo en un hospital."
+            ],
+            [
+              "trabajar **de** / **como**",
+              "_as_ (job)",
+              "Trabajo de mesero. Trabajo como diseñador."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Trabajar por** exists, but it means something else: _for money_ (**por** poco dinero), _for a cause_ (**por** los niños) or _in someone's place_ (trabajo **por** mi hermano hoy)."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi hermana trabaja ==para== una empresa de paneles solares.",
+              "en": "My sister works for a solar panel company."
+            },
+            {
+              "es": "Trabajo ==para== una escuela de surf en Rosarito.",
+              "en": "I work for a surf school in Rosarito."
+            },
+            {
+              "es": "¿==Para== quién trabajas?",
+              "en": "Who do you work for?"
+            },
+            {
+              "es": "Mi papá trabajó ==para== el gobierno treinta años.",
+              "en": "My dad worked for the government for thirty years."
+            },
+            {
+              "es": "Ahora trabajo ==para== mí mismo.",
+              "en": "Now I work for myself."
+            },
+            {
+              "es": "Ella trabaja ==para== varios clientes de San Diego.",
+              "en": "She works for several clients in San Diego."
+            },
+            {
+              "es": "Trabajo ==en== una maquiladora, pero no ==para== la empresa: soy contratista.",
+              "en": "I work at a maquiladora, but not for the company: I'm a contractor."
+            },
+            {
+              "es": "Trabaja ==de== mesera ==para== un restaurante del centro.",
+              "en": "She works as a waitress for a restaurant downtown."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Trabajo por Amazon."
+                },
+                {
+                  "v": "bien",
+                  "t": "Trabajo para Amazon."
+                }
+              ],
+              "nota": "Employer: para."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Por quién trabajas?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Para quién trabajas?"
+                }
+              ],
+              "nota": "Asking about the employer: **para quién**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Trabajo a una empresa de software."
+                },
+                {
+                  "v": "bien",
+                  "t": "Trabajo para una empresa de software."
+                }
+              ],
+              "nota": "Not **a**: the employer takes **para**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Trabajo en un mesero."
+                },
+                {
+                  "v": "bien",
+                  "t": "Trabajo de mesero."
+                }
+              ],
+              "nota": "Job: **de** or **como**, no article."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "soy maestro",
+              "texto": "Saying your job: [[6090|ser for professions]]."
+            },
+            {
+              "forma": "para ti",
+              "texto": "The same idea: [[7276|para for the recipient]]."
+            },
+            {
+              "forma": "por mi hermano",
+              "texto": "Instead of someone: [[5968|por for on behalf of / instead of]]."
+            },
+            {
+              "forma": "por dinero",
+              "texto": "Working in exchange for something: [[5974|por for an exchange]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I work for a Mexican company._",
+              "r": "Trabajo para una empresa mexicana.",
+              "nota": "Employer: para."
+            },
+            {
+              "p": "In Spanish: _Who does your brother work for?_",
+              "r": "¿Para quién trabaja tu hermano?",
+              "nota": "para quién."
+            },
+            {
+              "p": "Fix it: _Mi mamá trabaja por un banco._",
+              "r": "Mi mamá trabaja para un banco.",
+              "nota": "Not por."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6090,
+      7276
+    ],
+    "confunde": [
+      5968,
+      5974
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7073",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "tema": 7070,
+  "slug": "voz-pasiva-compuesta",
+  "titulo": "Passive in compound tenses: ha sido construido",
+  "subtitulo": "Los platos han sido lavados. El ganador habrá sido elegido.",
+  "foto": "t07.jpg",
+  "regla": "In compound tenses, the passive uses haber + sido + participle: ha sido construido, había sido vendida, habrán sido elegidos. Sido never changes; the main participle agrees with the subject. The agent comes with por.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "haber (any tense)",
+            "+ sido",
+            "+ participle (agrees)",
+            "(+ por + agent)"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "tense",
+            "example",
+            "English"
+          ],
+          "filas": [
+            [
+              "present perfect",
+              "ha sido lavado",
+              "has been washed"
+            ],
+            [
+              "pluperfect",
+              "había sido lavado",
+              "had been washed"
+            ],
+            [
+              "future perfect",
+              "habrá sido lavado",
+              "will have been washed"
+            ],
+            [
+              "conditional perfect",
+              "habría sido lavado",
+              "would have been washed"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Sido** is invariable; the **last** participle agrees: **las manzanas habían sido horneadas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Active → passive: the object becomes the subject: **El chef ha horneado las manzanas** → **Las manzanas han sido horneadas por el chef**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In speech, **se** or impersonal **ellos** is more natural: **ya lavaron los platos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **sido** is a fixed hinge; only the last word moves."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Los platos ==han sido lavados==.",
+              "en": "The dishes have been washed."
+            },
+            {
+              "es": "==Hemos sido condenados== por la Corte a veinte años.",
+              "en": "We have been sentenced by the court to twenty years."
+            },
+            {
+              "es": "Las manzanas ==habían sido horneadas==.",
+              "en": "The apples had been baked."
+            },
+            {
+              "es": "Los candidatos ==habrán sido elegidos== para la tarde.",
+              "en": "The candidates will have been chosen by the afternoon."
+            },
+            {
+              "es": "La casa ==habría sido vendida== si no fuera por ti.",
+              "en": "The house would have been sold if it weren't for you."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Las cartas han sidas enviadas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Las cartas han sido enviadas."
+                }
+              ],
+              "nota": "**Sido** never changes."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Las cartas han sido enviado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Las cartas han sido enviadas."
+                }
+              ],
+              "nota": "The last participle agrees."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "simple tenses",
+              "texto": "[[6173|ser + participle]]."
+            },
+            {
+              "forma": "progressive",
+              "texto": "[[7077|está siendo + participle]]."
+            },
+            {
+              "forma": "pasiva refleja",
+              "texto": "[[6089|passive se]]."
+            },
+            {
+              "forma": "modals",
+              "texto": "[[7080|modal verbs in the passive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Passive: _The bridge has been repaired._",
+              "r": "El puente ha sido reparado.",
+              "nota": "ha sido + participle."
+            },
+            {
+              "p": "Passive: _The letters had been signed by the director._",
+              "r": "Las cartas habían sido firmadas por el director.",
+              "nota": "Agreement."
+            },
+            {
+              "p": "Fix it: _La obra ha sida terminada._",
+              "r": "La obra ha sido terminada.",
+              "nota": "sido."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6173
+    ],
+    "confunde": [
+      6089
+    ],
+    "sigue": [
+      7077,
+      7080
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7070",
+      "kwiziq": true
+    }
+  ]
+}

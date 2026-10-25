@@ -1,0 +1,247 @@
+{
+  "tema": 7083,
+  "slug": "aritmetica-mas-menos-por-entre",
+  "titulo": "Doing arithmetic: más, menos, por, entre",
+  "subtitulo": "«Dos más dos son cuatro.»",
+  "foto": "t07.jpg",
+  "regla": "Add with más, subtract with menos, multiply with por, divide with entre (or dividido entre). The result comes after son, or es igual a; with uno, use es.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Sign",
+            "Word",
+            "Example",
+            "English"
+          ],
+          "filas": [
+            [
+              "+",
+              "más",
+              "Dos más tres son cinco.",
+              "Two plus three is five."
+            ],
+            [
+              "−",
+              "menos",
+              "Diez menos cuatro son seis.",
+              "Ten minus four is six."
+            ],
+            [
+              "×",
+              "por",
+              "Tres por cuatro son doce.",
+              "Three times four is twelve."
+            ],
+            [
+              "÷",
+              "entre, dividido entre",
+              "Doce entre tres son cuatro.",
+              "Twelve divided by three is four."
+            ],
+            [
+              "=",
+              "son, es igual a",
+              "Cinco más cinco es igual a diez.",
+              "Five plus five equals ten."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The result takes **son** (plural): **dos más dos son cuatro**. When the result is **uno**, use **es**: **tres menos dos es uno**. **Es igual a** works with any result."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Más** has an accent. _Times_ is **por**: **tres por cuatro**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "To ask: **¿Cuánto es siete por ocho?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "The verbs and nouns: **sumar / la suma**, **restar / la resta**, **multiplicar / la multiplicación**, **dividir / la división**, **el resultado**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **entre** = _between_. You split twelve tacos **entre** three friends."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Cuatro ==más== cuatro ==son== ocho.",
+              "en": "Four plus four is eight."
+            },
+            {
+              "es": "Veinte ==menos== cinco ==son== quince.",
+              "en": "Twenty minus five is fifteen."
+            },
+            {
+              "es": "Seis ==por== siete ==son== cuarenta y dos.",
+              "en": "Six times seven is forty-two."
+            },
+            {
+              "es": "Cien ==entre== cuatro ==son== veinticinco.",
+              "en": "A hundred divided by four is twenty-five."
+            },
+            {
+              "es": "Nueve ==menos== ocho ==es== uno.",
+              "en": "Nine minus eight is one."
+            },
+            {
+              "es": "Si ==sumas== mis horas de entrenamiento, ==son== diez a la semana.",
+              "en": "If you add up my training hours, it's ten a week."
+            },
+            {
+              "es": "Tenemos que ==dividir== la cuenta ==entre== cinco.",
+              "en": "We have to split the bill five ways."
+            },
+            {
+              "es": "¿Cuánto ==es== doce ==por== doce?",
+              "en": "What's twelve times twelve?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tres tiempos cuatro son doce."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tres por cuatro son doce."
+                }
+              ],
+              "nota": "_Times_ = **por**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cinco mas cinco son diez."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cinco más cinco son diez."
+                }
+              ],
+              "nota": "**Más** with an accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tres menos dos son uno."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tres menos dos es uno."
+                }
+              ],
+              "nota": "Result **uno**: **es**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "uno, dos, tres",
+              "texto": "[[6755|Numbers]]."
+            },
+            {
+              "forma": "mil, un millón",
+              "texto": "[[7177|Hundreds, thousands, millions]]."
+            },
+            {
+              "forma": "la mitad, un tercio",
+              "texto": "[[7152|Fractions]]."
+            },
+            {
+              "forma": "el diez por ciento",
+              "texto": "[[9923|Percentages]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Seven times eight is fifty-six._",
+              "r": "Siete por ocho son cincuenta y seis.",
+              "nota": "**por** = times."
+            },
+            {
+              "p": "In Spanish: _Thirty divided by six is five._",
+              "r": "Treinta entre seis son cinco.",
+              "nota": "**entre**"
+            },
+            {
+              "p": "In Spanish: _Five minus four is one._",
+              "r": "Cinco menos cuatro es uno.",
+              "nota": "**es** with **uno**."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6755,
+      7177
+    ],
+    "confunde": [
+      7152
+    ],
+    "sigue": [
+      9923
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7083",
+      "kwiziq": true
+    }
+  ]
+}

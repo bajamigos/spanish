@@ -1,0 +1,278 @@
+{
+  "tema": 6145,
+  "slug": "pronombres-verbo-conjugado",
+  "titulo": "Position of pronouns with conjugated verbs",
+  "subtitulo": "Lo compré, no lo toques, me lo recomendó.",
+  "foto": "t01.jpg",
+  "regla": "With a conjugated verb (any tense) and with negative commands, object and reflexive pronouns go in front of the verb, as separate words: lo compré, no lo toques. Order: reflexive, then indirect, then direct (se me, me lo).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Direct object pronouns (**lo, la, los, las**...), indirect ones (**me, te, le, nos, les**) and reflexive ones (**me, te, se, nos**) all go **in front of a conjugated verb**, as separate words."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "(no) +",
+            "pronoun(s)",
+            "+ conjugated verb"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "That includes compound tenses: the pronoun goes before **haber**: **nos han mandado**, **se habían bañado**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Unlike English, the pronoun never goes after a conjugated verb: **los compré**, not ~~compré los~~."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: a conjugated verb is a wall; the pronouns line up in front of it."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ellos ==nos== han mandado una invitación.",
+              "en": "They've sent us an invitation."
+            },
+            {
+              "es": "¿==Me== lees un cuento esta noche?",
+              "en": "Will you read me a story tonight?"
+            },
+            {
+              "es": "Rosario ==lo== compró en la farmacia.",
+              "en": "Rosario bought it at the pharmacy."
+            },
+            {
+              "es": "Ellas ==se== habían bañado antes de salir.",
+              "en": "They had showered before going out."
+            },
+            {
+              "es": "==Los== compré en Guadalajara.",
+              "en": "I bought them in Guadalajara."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "negativo",
+      "titulo": "Negative commands",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "With **negative commands**, the pronoun also goes in front, right after **no**:"
+        },
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¡No ==me== dejes!",
+              "en": "Don't leave me!"
+            },
+            {
+              "es": "No ==lo== toques. Está muy caliente.",
+              "en": "Don't touch it. It's very hot."
+            },
+            {
+              "es": "No ==te== preocupes.",
+              "en": "Don't worry."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "orden",
+      "titulo": "More than one pronoun",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Order",
+            "Example"
+          ],
+          "filas": [
+            [
+              "indirect + direct",
+              "**me lo**, **nos la**, **se lo** (le → se)"
+            ],
+            [
+              "reflexive + indirect",
+              "**se me**, **se te**, **se nos**"
+            ]
+          ]
+        },
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ella ==se lo== entregó enseguida.",
+              "en": "She handed it to him right away. (se = to him, lo = it)"
+            },
+            {
+              "es": "Me gusta este bar. Clara ==me lo== recomendó.",
+              "en": "I like this bar. Clara recommended it to me."
+            },
+            {
+              "es": "Antonio ==nos la== mandó desde Perú.",
+              "en": "Antonio sent it to us from Peru."
+            },
+            {
+              "es": "El susto ==se me== pasó pronto.",
+              "en": "I got over the scare quickly. (se = reflexive, me = indirect)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Compré los ayer."
+                },
+                {
+                  "v": "bien",
+                  "t": "Los compré ayer."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Lo me dio."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me lo dio."
+                }
+              ],
+              "nota": "Indirect before direct."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No toques lo."
+                },
+                {
+                  "v": "bien",
+                  "t": "No lo toques."
+                }
+              ],
+              "nota": "Negative command: in front."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Han nos llamado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nos han llamado."
+                }
+              ],
+              "nota": "In front of **haber**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "dámelo, voy a verlo",
+              "texto": "With infinitives, gerunds and affirmative commands: [[5140|attached pronouns]]."
+            },
+            {
+              "forma": "se lo",
+              "texto": "Why **le** becomes **se**: [[5078|se lo]]."
+            },
+            {
+              "forma": "nos vemos",
+              "texto": "Reciprocal verbs: [[6177|each other]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Replace the object: _Compré las tortillas._",
+              "r": "Las compré.",
+              "nota": "In front."
+            },
+            {
+              "p": "Negative command: _Don't tell him (it)._",
+              "r": "No se lo digas.",
+              "nota": "In front, se lo."
+            },
+            {
+              "p": "In Spanish: _She has given it to me._ (el libro)",
+              "r": "Me lo ha dado.",
+              "nota": "Before haber."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5121,
+      5122
+    ],
+    "confunde": [
+      5140
+    ],
+    "sigue": [
+      5078,
+      6177
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6145",
+      "kwiziq": true
+    }
+  ]
+}

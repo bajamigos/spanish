@@ -1,0 +1,184 @@
+{
+  "tema": 6171,
+  "slug": "como-si",
+  "titulo": "Como si + imperfect subjunctive = as if",
+  "subtitulo": "Habla como si supiera todo.",
+  "foto": "t03.jpg",
+  "regla": "Como si (as if, like) for a hypothetical comparison always takes the imperfect subjunctive (or pluperfect for something earlier): Se porta como si fuera un niño. Never the indicative or the present subjunctive.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "como si",
+            "+",
+            "imperfect subjunctive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It describes **how** something is done by comparing it to an imaginary situation: _as if, like_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "English often uses a simple past (_as if he knew_); Spanish **must** use the imperfect subjunctive (**como si supiera**). Never the indicative, never the present subjunctive."
+        },
+        {
+          "tipo": "texto",
+          "texto": "For something that would have happened earlier, use the pluperfect subjunctive: **como si hubiera visto un fantasma**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **como si** always slides back to **-ra**, even in the present."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Pedro se porta ==como si fuera== un adolescente.",
+              "en": "Pedro acts like he's a teenager."
+            },
+            {
+              "es": "Me habla ==como si quisiera== convencerme.",
+              "en": "He talks to me as if he wanted to convince me."
+            },
+            {
+              "es": "Nos trataron ==como si fuéramos== delincuentes.",
+              "en": "They treated us as if we were criminals."
+            },
+            {
+              "es": "Lo tomó ==como si se tratara== de una broma.",
+              "en": "He took it as if it were a joke."
+            },
+            {
+              "es": "Gasta ==como si tuviera== mucho dinero.",
+              "en": "She spends as if she had lots of money."
+            },
+            {
+              "es": "Estaba pálido, ==como si hubiera visto== un fantasma.",
+              "en": "He was pale, as if he'd seen a ghost."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Habla como si sabe todo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Habla como si supiera todo."
+                }
+              ],
+              "nota": "Never indicative."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Habla como si sepa todo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Habla como si supiera todo."
+                }
+              ],
+              "nota": "Never present subjunctive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "supiera",
+              "texto": "[[5068|imperfect subjunctive]]."
+            },
+            {
+              "forma": "hubiera visto",
+              "texto": "[[5842|pluperfect subjunctive]]."
+            },
+            {
+              "forma": "si tuviera",
+              "texto": "[[5120|si + imperfect subjunctive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Complete: _Me mira como si me ___ (conocer)._",
+              "r": "conociera",
+              "nota": "Imperfect subjunctive."
+            },
+            {
+              "p": "In Spanish: _She acts as if nothing had happened._",
+              "r": "Actúa como si no hubiera pasado nada.",
+              "nota": "Pluperfect subjunctive."
+            },
+            {
+              "p": "Fix it: _Corre como si tiene prisa._",
+              "r": "Corre como si tuviera prisa.",
+              "nota": "como si + -ra."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5068
+    ],
+    "confunde": [
+      5120
+    ],
+    "sigue": [
+      5842
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6171",
+      "kwiziq": true
+    }
+  ]
+}

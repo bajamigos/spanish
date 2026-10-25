@@ -1,0 +1,202 @@
+{
+  "tema": 5058,
+  "slug": "preposicion-quien",
+  "titulo": "Asking about people with preposition + quién",
+  "subtitulo": "¿De quién es? ¿Con quién fuiste? ¿Para quién son?",
+  "foto": "t07.jpg",
+  "regla": "To ask whose, to whom, with whom, for whom, put the preposition before quién / quiénes: ¿De quién es? ¿Con quién fuiste? Use quiénes when you expect more than one person.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "In English the preposition often goes at the end: _Who did you go **with**?_ In Spanish it goes **first**, right before **quién**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "¿",
+            "preposition + quién / quiénes",
+            "...?"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Quién** has a plural, **quiénes**, when you expect more than one person."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Whose?** is **¿De quién...?** Spanish has no single word for it."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Watch out: the preposition can differ from English: **pensar en** (_think about_), **enamorarse de** (_fall in love with_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **¿De quién?** = _whose?_, the owner always comes with **de**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿==De quién== es esa casa?",
+              "en": "Whose house is that?"
+            },
+            {
+              "es": "¿==Con quién== fuiste al cine ayer?",
+              "en": "Who did you go to the movies with yesterday?"
+            },
+            {
+              "es": "¿==A quién== le mandaste la carta?",
+              "en": "Who did you send the letter to?"
+            },
+            {
+              "es": "¿==Para quién== compraste esas flores tan bonitas?",
+              "en": "Who did you buy those pretty flowers for?"
+            },
+            {
+              "es": "¿==Con quiénes== se van de vacaciones?",
+              "en": "Who are you all going on vacation with?"
+            },
+            {
+              "es": "¿==De quiénes== son esos libros?",
+              "en": "Whose books are those?"
+            },
+            {
+              "es": "¿==Por quién== harías una locura?",
+              "en": "Who would you do something crazy for?"
+            },
+            {
+              "es": "¿==En quién== estás pensando? ¿En Marcos o en Álvaro?",
+              "en": "Who are you thinking about? Marcos or Álvaro?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Quién fuiste con?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Con quién fuiste?"
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Quién es este libro?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿De quién es este libro?"
+                }
+              ],
+              "nota": "_Whose_ needs **de**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Con quien hablas?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Con quién hablas?"
+                }
+              ],
+              "nota": "Keep the accent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¿de qué?",
+              "texto": "The same pattern with things: [[8890|preposition + qué]]."
+            },
+            {
+              "forma": "quién / quien",
+              "texto": "[[7082|quién vs quien]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Whose car is this?_",
+              "r": "¿De quién es este carro?",
+              "nota": "de quién."
+            },
+            {
+              "p": "In Spanish: _Who are you talking to?_",
+              "r": "¿Con quién hablas?",
+              "nota": "con quién."
+            },
+            {
+              "p": "In Spanish: _Who are the presents for?_ (several people)",
+              "r": "¿Para quiénes son los regalos?",
+              "nota": "Plural: quiénes."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7082
+    ],
+    "confunde": [
+      8890
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5058",
+      "kwiziq": true
+    }
+  ]
+}

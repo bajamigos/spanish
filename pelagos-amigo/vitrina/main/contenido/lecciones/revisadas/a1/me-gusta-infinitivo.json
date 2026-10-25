@@ -1,0 +1,192 @@
+{
+  "tema": 5083,
+  "slug": "me-gusta-infinitivo",
+  "titulo": "Gustar + infinitive: to like doing",
+  "subtitulo": "«Me gusta surfear.»",
+  "foto": "t06.jpg",
+  "regla": "To say you like doing something, use me gusta + infinitive: me gusta surfear. It's always gusta (singular), even with two or more activities: me gusta leer y cocinar.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "me / te gusta",
+            "+",
+            "infinitive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Use the **infinitive** (-ar, -er, -ir), never the -ing form: **me gusta surfear** = _I like surfing_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Always **gusta**, even with several activities: **me gusta leer y cocinar**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: English says _surfing_; Spanish says _to surf_."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Me gusta surfear== en la mañana.",
+              "en": "I like surfing in the morning."
+            },
+            {
+              "es": "¿==Te gusta cocinar==?",
+              "en": "Do you like to cook?"
+            },
+            {
+              "es": "No ==me gusta correr==.",
+              "en": "I don't like running."
+            },
+            {
+              "es": "==Me gusta leer== novelas de ciencia ficción.",
+              "en": "I like reading sci-fi novels."
+            },
+            {
+              "es": "==Me gusta== entrenar jiu-jitsu y nadar.",
+              "en": "I like training jiu-jitsu and swimming."
+            },
+            {
+              "es": "¿==Te gusta trabajar== en el jardín?",
+              "en": "Do you like working in the garden?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me gusta surfeando."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me gusta surfear."
+                }
+              ],
+              "nota": "Infinitive, not -ando."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me gustan leer y cocinar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me gusta leer y cocinar."
+                }
+              ],
+              "nota": "Activities: always **gusta**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me gusta a nadar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me gusta nadar."
+                }
+              ],
+              "nota": "Nothing between them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "me gusta el mar",
+              "texto": "Liking things: [[6001|gustar]]."
+            },
+            {
+              "forma": "le gusta bailar",
+              "texto": "Other people: [[10727|he likes doing, they like doing]]."
+            },
+            {
+              "forma": "me encanta bailar",
+              "texto": "Loving it: [[7058|to love doing something]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I like dancing._",
+              "r": "Me gusta bailar.",
+              "nota": "gusta + infinitive."
+            },
+            {
+              "p": "In Spanish (tú): _Do you like to read?_",
+              "r": "¿Te gusta leer?",
+              "nota": "te gusta."
+            },
+            {
+              "p": "Fix it: _Me gustan correr y nadar._",
+              "r": "Me gusta correr y nadar.",
+              "nota": "Always gusta."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6001
+    ],
+    "confunde": [],
+    "sigue": [
+      10727,
+      7058
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5083",
+      "kwiziq": true
+    }
+  ]
+}

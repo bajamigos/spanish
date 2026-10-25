@@ -1,0 +1,191 @@
+{
+  "tema": 6934,
+  "slug": "lo-vi-a-el",
+  "titulo": "Repetition of direct object pronouns (lo vi a él)",
+  "subtitulo": "La visité a ella. Lo llamé a él, no a ella.",
+  "foto": "t09.jpg",
+  "regla": "When the direct object is a + pronoun (a él, a ella, a mí), you must also use the short pronoun: Lo vi a él (never Vi a él). The a + pronoun part is optional and adds emphasis or clarity.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "If the direct object appears as **a + pronoun** (**a mí, a ti, a él, a ella, a usted, a nosotros, a ellos, a ustedes**), the **short pronoun** (**me, te, lo, la, nos, los, las**) is **required** too."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "short pronoun + verb",
+            "+",
+            "a + pronoun"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The **a + pronoun** part is optional: **la visité** is complete. Add it to **contrast** or **clarify**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the short pronoun is the base; **a ella** is the highlighter."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Lo== vi ==a él== primero y después ==a ella==.",
+              "en": "I saw him first, and then her."
+            },
+            {
+              "es": "==Las== invité ==a ellas==.",
+              "en": "I invited them."
+            },
+            {
+              "es": "María no vino a mi casa. Yo ==la== visité ==a ella==.",
+              "en": "María didn't come to my house. I visited her."
+            },
+            {
+              "es": "Nosotros ==los== llamamos ==a ustedes== para aclarar las cosas.",
+              "en": "We called you to clear things up."
+            },
+            {
+              "es": "No ==lo== llamé ==a él==; ==la== llamé ==a ella==.",
+              "en": "I didn't call him; I called her."
+            },
+            {
+              "es": "==Me== pegó ==a mí==.",
+              "en": "He hit me."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Vi a él primero."
+                },
+                {
+                  "v": "bien",
+                  "t": "Lo vi a él primero."
+                }
+              ],
+              "nota": "Short pronoun required."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Visité a ella."
+                },
+                {
+                  "v": "bien",
+                  "t": "La visité a ella. / La visité."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Pegó a mí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me pegó a mí."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "le di a ella",
+              "texto": "Indirect objects: [[7090|repeating indirect pronouns]]."
+            },
+            {
+              "forma": "a mí me gusta",
+              "texto": "[[7032|with gustar]]."
+            },
+            {
+              "forma": "lo, la",
+              "texto": "[[5121|direct object pronouns]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I saw her, not him._",
+              "r": "La vi a ella, no a él.",
+              "nota": "Short pronoun + a ella."
+            },
+            {
+              "p": "Fix it: _Invitamos a ellos._",
+              "r": "Los invitamos a ellos. / Los invitamos.",
+              "nota": "los."
+            },
+            {
+              "p": "In Spanish: _They're looking for you._ (usted, emphasis)",
+              "r": "Lo están buscando a usted. / La están buscando a usted.",
+              "nota": "lo / la + a usted."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5121
+    ],
+    "confunde": [
+      7090
+    ],
+    "sigue": [
+      7090
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6934",
+      "kwiziq": true
+    }
+  ]
+}

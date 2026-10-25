@@ -1,0 +1,214 @@
+{
+  "tema": 6229,
+  "slug": "almuerce",
+  "titulo": "Present subjunctive: o > ue and z > c verbs (almorzar, forzar)",
+  "subtitulo": "Almuerce, fuerce, almorcemos.",
+  "foto": "t07.jpg",
+  "regla": "Almorzar and forzar change o → ue (except nosotros) and z → c before e in the present subjunctive: almuerce, almuerces, almuerce, almorcemos, almuercen. Esforzar follows forzar.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "A few verbs combine two changes in the present subjunctive:"
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "o → ue",
+              "texto": "In every form **except nosotros**: **almuerce**, but **almorcemos**."
+            },
+            {
+              "forma": "z → c",
+              "texto": "Before **e**, in every form (spelling rule: **ze** → **ce**)."
+            }
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "almorzar",
+            "forzar"
+          ],
+          "filas": [
+            [
+              "yo",
+              "almuerce",
+              "fuerce"
+            ],
+            [
+              "tú",
+              "almuerces",
+              "fuerces"
+            ],
+            [
+              "él, ella, usted",
+              "almuerce",
+              "fuerce"
+            ],
+            [
+              "nosotros",
+              "almorcemos",
+              "forcemos"
+            ],
+            [
+              "ustedes, ellos",
+              "almuercen",
+              "fuercen"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Esforzarse** works like **forzar**: **no te esfuerces tanto**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: Spanish rarely writes **ze**; it switches to **ce**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "A mi abuela le gusta que ==almuerce== con ella los lunes.",
+              "en": "My grandma likes me to have lunch with her on Mondays."
+            },
+            {
+              "es": "Te aconsejo que no ==fuerces== la cerradura.",
+              "en": "I advise you not to force the lock."
+            },
+            {
+              "es": "No creo que ==fuerce== a su hijo a ir a la escuela.",
+              "en": "I don't think she'll force her son to go to school."
+            },
+            {
+              "es": "No hace falta que ==forcemos== tanto el acento.",
+              "en": "We don't need to force the accent so much."
+            },
+            {
+              "es": "No es buena idea que tus papás y los míos ==almuercen== juntos.",
+              "en": "It's not a good idea for your parents and mine to have lunch together."
+            },
+            {
+              "es": "No ==esfuerces== tanto la voz.",
+              "en": "Don't strain your voice so much."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "almuerze"
+                },
+                {
+                  "v": "bien",
+                  "t": "almuerce"
+                }
+              ],
+              "nota": "**z → c** before **e**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "almuercemos"
+                },
+                {
+                  "v": "bien",
+                  "t": "almorcemos"
+                }
+              ],
+              "nota": "No **ue** in **nosotros**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "vuelva, cuente",
+              "texto": "[[6213|o → ue -ar verbs]]."
+            },
+            {
+              "forma": "empiece",
+              "texto": "[[6236|e → ie verbs]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Conjugate: _yo / almorzar_ (subjunctive)",
+              "r": "almuerce",
+              "nota": "ue + c."
+            },
+            {
+              "p": "Conjugate: _nosotros / forzar_ (subjunctive)",
+              "r": "forcemos",
+              "nota": "No ue."
+            },
+            {
+              "p": "Complete: _Ojalá ellos no ___ (forzar) la puerta._",
+              "r": "fuercen",
+              "nota": "ue + c."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6213
+    ],
+    "confunde": [
+      6236
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6229",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "tema": 6010,
+  "slug": "espero-que-hayas",
+  "titulo": "Esperar que + present perfect subjunctive (completed past action)",
+  "subtitulo": "Espero que lo hayan pasado bien.",
+  "foto": "t05.jpg",
+  "regla": "To hope that something happened or has happened, use esperar que + present perfect subjunctive (haya + participle): Espero que hayas llegado bien. Never the preterite or the present perfect indicative after esperar que.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Esperar que** always takes the subjunctive. When you hope that something **already happened**, use the **present perfect subjunctive**:"
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "espero que",
+            "+ haya / hayas / haya / hayamos / hayan",
+            "+ participle"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "English uses the past or present perfect (_I hope you arrived, I hope she has locked the door_), but in Spanish the indicative is impossible here."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **espero** pulls everything into the subjunctive, even the past."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Espero que lo ==hayan pasado== increíble en Chile.",
+              "en": "I hope you all had an amazing time in Chile."
+            },
+            {
+              "es": "Esperamos que lo ==hayas terminado== a tiempo.",
+              "en": "We hope you finished it on time."
+            },
+            {
+              "es": "Esperan que los niños ==hayan llegado== temprano.",
+              "en": "They hope the kids got there early."
+            },
+            {
+              "es": "Espero que ==hayan reservado== en el restaurante con tiempo.",
+              "en": "I hope you booked the restaurant ahead of time."
+            },
+            {
+              "es": "Esperamos que ==hayan disfrutado== su estancia en nuestro hotel.",
+              "en": "We hope you enjoyed your stay at our hotel."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Espero que llegaste bien anoche."
+                },
+                {
+                  "v": "bien",
+                  "t": "Espero que hayas llegado bien anoche."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Espero que ha cerrado la puerta."
+                },
+                {
+                  "v": "bien",
+                  "t": "Espero que haya cerrado la puerta."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "espero que vengas",
+              "texto": "Hope about the present or future: [[6076|esperar que + present subjunctive]]."
+            },
+            {
+              "forma": "espero que hayas terminado para las cinco",
+              "texto": "A completed action in the future: [[7031|esperar que for the future]]."
+            },
+            {
+              "forma": "haya hecho",
+              "texto": "Conjugation: [[5076|present perfect subjunctive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I hope you slept well._ (tú)",
+              "r": "Espero que hayas dormido bien.",
+              "nota": "haya + participle."
+            },
+            {
+              "p": "In Spanish: _We hope they've received the package._",
+              "r": "Esperamos que hayan recibido el paquete.",
+              "nota": "hayan recibido."
+            },
+            {
+              "p": "Fix it: _Espero que te gustó la comida._",
+              "r": "Espero que te haya gustado la comida.",
+              "nota": "Subjunctive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6076,
+      5076
+    ],
+    "confunde": [
+      7031
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6010",
+      "kwiziq": true
+    }
+  ]
+}

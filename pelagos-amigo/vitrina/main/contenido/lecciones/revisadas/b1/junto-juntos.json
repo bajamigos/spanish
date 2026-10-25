@@ -1,0 +1,203 @@
+{
+  "tema": 6807,
+  "slug": "junto-juntos",
+  "titulo": "Using junto, junta, juntos and juntas = together",
+  "subtitulo": "Fuimos juntos, nunca vi tanta gente junta.",
+  "foto": "t07.jpg",
+  "regla": "Junto, junta, juntos, juntas (together) agree with the noun. Mixed groups use juntos. Singular junto / junta goes with uncountable nouns: piled up.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say _together_, use **junto**, **junta**, **juntos** or **juntas**. It's an adjective, so it **agrees** in gender and number with the noun it refers to."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "Masculine",
+            "Feminine"
+          ],
+          "filas": [
+            [
+              "singular",
+              "junto",
+              "junta"
+            ],
+            [
+              "plural",
+              "juntos",
+              "juntas"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "With countable nouns, use the plural: **Beto y su hijo fueron juntos**, **las chicas se cambiaron juntas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With uncountable nouns, use the singular, and it has a sense of _piled up, gathered in one place_: **tanta gente junta**, **mucho polvo junto**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "A mixed group of men and women takes the masculine: **Carmen y Antonio fueron juntos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **juntos** is like a crew on the Rocinante: it matches whoever is on board."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Había mucho polvo ==junto== en el taller.",
+              "en": "There was a lot of dust piled up in the shop."
+            },
+            {
+              "es": "Nunca había visto tanta gente ==junta==.",
+              "en": "I'd never seen so many people together."
+            },
+            {
+              "es": "Beto y su hijo fueron ==juntos== al cine.",
+              "en": "Beto and his son went to the movies together."
+            },
+            {
+              "es": "Las chicas se cambiaron ==juntas== en el vestidor.",
+              "en": "The girls changed together in the locker room."
+            },
+            {
+              "es": "Holden y Naomi trabajan ==juntos==.",
+              "en": "Holden and Naomi work together."
+            },
+            {
+              "es": "Vamos a entrenar ==juntos== mañana.",
+              "en": "We're going to train together tomorrow."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Las chicas fueron juntos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Las chicas fueron juntas."
+                }
+              ],
+              "nota": "It agrees with the noun."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Fuimos junto."
+                },
+                {
+                  "v": "bien",
+                  "t": "Fuimos juntos."
+                }
+              ],
+              "nota": "Two or more people: plural."
+            },
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "La tabla está junto a la puerta."
+                }
+              ],
+              "nota": "**Junto a** is different: it means _next to_ and never changes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "bueno, buena, buenos",
+              "texto": "Adjective agreement: [[6051|plural of adjectives]]."
+            },
+            {
+              "forma": "igual de alto",
+              "texto": "Another comparison word: [[7085|igual de … que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Naomi and Amos arrived together._",
+              "r": "Naomi y Amos llegaron juntos.",
+              "nota": "Mixed group: juntos."
+            },
+            {
+              "p": "In Spanish: _My sisters live together._",
+              "r": "Mis hermanas viven juntas.",
+              "nota": "juntas."
+            },
+            {
+              "p": "In Spanish: _so much money together_ (piled up)",
+              "r": "tanto dinero junto",
+              "nota": "Uncountable: singular."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6051
+    ],
+    "confunde": [],
+    "sigue": [
+      7085
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6807",
+      "kwiziq": true
+    }
+  ]
+}

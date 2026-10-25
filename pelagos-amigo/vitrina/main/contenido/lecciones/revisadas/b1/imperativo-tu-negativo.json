@@ -1,0 +1,242 @@
+{
+  "tema": 9255,
+  "slug": "imperativo-tu-negativo",
+  "titulo": "Forming negative tú commands",
+  "subtitulo": "No hables, no digas, no pongas: the present subjunctive tells someone not to.",
+  "foto": "t06.jpg",
+  "regla": "Negative tú commands use the tú form of the present subjunctive: no hables, no comas, no digas. Pronouns go before the verb.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To tell one person (**tú**) _not_ to do something, use **no** + the **tú** form of the **present subjunctive**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**no**",
+            "**tú** present subjunctive"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Infinitive",
+            "Negative command"
+          ],
+          "filas": [
+            [
+              "hablar",
+              "no hables"
+            ],
+            [
+              "comer",
+              "no comas"
+            ],
+            [
+              "decir",
+              "no digas"
+            ],
+            [
+              "poner",
+              "no pongas"
+            ],
+            [
+              "ser",
+              "no seas"
+            ],
+            [
+              "ir",
+              "no vayas"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "All the subjunctive irregularities come along: stem changes (**no vuelvas**, **no pierdas**), **yo-go** verbs (**no digas**), spelling changes (**no toques**, **no pagues**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Object and reflexive pronouns go **before** the verb, after **no**: **no te muevas**, **no lo toques**, **no me digas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "This rule doesn't apply to affirmative commands, which have their own forms: **habla**, **di**, **pon** (see [[6748|affirmative tú commands]] and [[6962|irregular ones]])."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the moment you say **no**, flip to the subjunctive: **habla** becomes **no hables**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Estoy enojada. No ==digas== nada.",
+              "en": "I'm upset. Don't say anything."
+            },
+            {
+              "es": "No ==hables== tan rápido. No entiendo nada.",
+              "en": "Don't talk so fast. I don't understand anything."
+            },
+            {
+              "es": "No ==seas== necio y dame eso.",
+              "en": "Don't be stubborn and give me that."
+            },
+            {
+              "es": "Sé bueno y no ==pongas== los pies en la mesa.",
+              "en": "Be good and don't put your feet on the table."
+            },
+            {
+              "es": "No ==gastes== tanto en dulces.",
+              "en": "Don't spend so much on candy."
+            },
+            {
+              "es": "No te ==muevas==, ya casi abro el carro.",
+              "en": "Don't move, I've almost got the car open."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No habla tan rápido."
+                },
+                {
+                  "v": "bien",
+                  "t": "No hables tan rápido."
+                }
+              ],
+              "nota": "Not the affirmative form."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No dices nada."
+                },
+                {
+                  "v": "bien",
+                  "t": "No digas nada."
+                }
+              ],
+              "nota": "**No dices** is a statement: _you don't say anything_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No muévete."
+                },
+                {
+                  "v": "bien",
+                  "t": "No te muevas."
+                }
+              ],
+              "nota": "In the negative, the pronoun goes before."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "habla, di, pon",
+              "texto": "Affirmative tú commands: [[6748|regular]] and [[6962|irregular]]."
+            },
+            {
+              "forma": "no hable, no coman",
+              "texto": "usted, ustedes and nosotros: [[6961|the imperative for usted, ustedes, nosotros]]."
+            },
+            {
+              "forma": "siéntate / no te sientes",
+              "texto": "Reflexive commands: [[9262|affirmative with reflexive pronouns]]."
+            },
+            {
+              "forma": "hable, coma, tenga",
+              "texto": "Where the forms come from: [[5063|-ar]], [[5151|-er / -ir]], [[6000|yo-go]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Turn it negative: **Cierra la puerta.**",
+              "r": "No cierres la puerta.",
+              "nota": "e > ie and the subjunctive."
+            },
+            {
+              "p": "In Spanish: _Don't go alone._ (tú)",
+              "r": "No vayas solo.",
+              "nota": "ir → vayas."
+            },
+            {
+              "p": "In Spanish: _Don't tell him._ (tú)",
+              "r": "No le digas.",
+              "nota": "Pronoun before, **digas**."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5063,
+      5151,
+      6748
+    ],
+    "confunde": [
+      6748,
+      6962
+    ],
+    "sigue": [
+      6961,
+      9262,
+      9339
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9255",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "tema": 7071,
+  "slug": "condicional-estar",
+  "titulo": "Conjugate estar in the conditional",
+  "subtitulo": "Estaría, estarías, estaríamos: completely regular.",
+  "foto": "t04.jpg",
+  "regla": "Estar is regular in the conditional: estaría, estarías, estaría, estaríamos, estarían.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Estar** (_to be_) is **regular** in the conditional: the regular endings go on the whole infinitive."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**estar**",
+            "**-ía, -ías, -ía, -íamos, -ían**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "estar"
+          ],
+          "filas": [
+            [
+              "yo",
+              "estaría"
+            ],
+            [
+              "tú",
+              "estarías"
+            ],
+            [
+              "él, ella, usted",
+              "estaría"
+            ],
+            [
+              "nosotros",
+              "estaríamos"
+            ],
+            [
+              "ustedes, ellos",
+              "estarían"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Use it as usual for **estar**: places, feelings, states, and progressive forms (**estaría surfeando**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **estar** keeps the infinitive whole and adds **-ía**, same as **ser**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Yo ==estaría== un mes de vacaciones.",
+              "en": "I'd be on vacation for a month."
+            },
+            {
+              "es": "Tú ==estarías== muy feliz en esa casa junto a la playa.",
+              "en": "You'd be very happy in that house by the beach."
+            },
+            {
+              "es": "Holden no ==estaría== con Naomi en Ceres.",
+              "en": "Holden wouldn't be with Naomi on Ceres."
+            },
+            {
+              "es": "Nosotros ==estaríamos== equivocados.",
+              "en": "We'd be wrong."
+            },
+            {
+              "es": "Ellos ==estarían== nerviosos antes del torneo.",
+              "en": "They'd be nervous before the tournament."
+            },
+            {
+              "es": "Ustedes ==estarían== muy cómodos en este depa.",
+              "en": "You'd be very comfortable in this apartment."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo sería muy cansado después de rolar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo estaría muy cansado después de rolar."
+                }
+              ],
+              "nota": "To say _tired_, use **estar**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estariamos felices."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estaríamos felices."
+                }
+              ],
+              "nota": "Accent on the **í**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "sería",
+              "texto": "Its partner: [[7069|ser in the conditional]]."
+            },
+            {
+              "forma": "hablaría",
+              "texto": "The regular pattern: [[5731|regular verbs in the conditional]]."
+            },
+            {
+              "forma": "esté",
+              "texto": "**Estar** in the subjunctive: [[5229|estar in the subjunctive]]."
+            },
+            {
+              "forma": "estoy cansado",
+              "texto": "Feelings and states: [[5980|estar for feelings]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _You'd be happy here._ (tú)",
+              "r": "Estarías feliz aquí.",
+              "nota": "estarías."
+            },
+            {
+              "p": "**Estar** with **nosotros**: ___ en la playa todo el día.",
+              "r": "Estaríamos en la playa todo el día.",
+              "nota": "estaríamos."
+            },
+            {
+              "p": "Before the tournament: **sería nervioso** or **estaría nervioso**?",
+              "r": "Estaría nervioso.",
+              "nota": "A temporary state before an event: **estar**. (**Sería nervioso** would mean _he'd be a nervous person_.)"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5731,
+      5166
+    ],
+    "confunde": [
+      7069
+    ],
+    "sigue": [
+      5229,
+      5980
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7071",
+      "kwiziq": true
+    }
+  ]
+}

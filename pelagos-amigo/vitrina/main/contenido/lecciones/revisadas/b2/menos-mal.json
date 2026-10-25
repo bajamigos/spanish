@@ -1,0 +1,193 @@
+{
+  "tema": 10514,
+  "slug": "menos-mal",
+  "titulo": "Menos mal / menos mal que = thank goodness",
+  "subtitulo": "¡Menos mal! Menos mal que traje paraguas.",
+  "foto": "t01.jpg",
+  "regla": "¡Menos mal! = thank goodness, phew. Menos mal que + indicative = it's a good thing that...: Menos mal que llegaste. Never the subjunctive.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¡Menos mal!",
+              "texto": "On its own, as a reply: _Thank goodness! Phew!_"
+            },
+            {
+              "forma": "menos mal que + indicative",
+              "texto": "_It's a good thing that..._, any indicative tense."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Even though it's a feeling, **menos mal que** takes the **indicative**: what you're relieved about is a fact."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **menos mal** = it could have been worse."
+        }
+      ]
+    },
+    {
+      "id": "solo",
+      "titulo": "On its own",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "—Al final no va a haber paro de transporte esta semana. —¡==Menos mal==!",
+              "en": "—In the end there won't be a transit strike this week. —Thank goodness!"
+            },
+            {
+              "es": "—Tranquila, no se rompió nada en la caída. —¡==Menos mal==!",
+              "en": "—Don't worry, he didn't break anything when he fell. —Phew!"
+            },
+            {
+              "es": "—¡Encontré el anillo que había perdido! —¡==Menos mal==!",
+              "en": "—I found the ring I'd lost! —Thank goodness!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "que",
+      "titulo": "Menos mal que...",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Menos mal que== encontraste tu anillo.",
+              "en": "Thank goodness you found your ring."
+            },
+            {
+              "es": "==Menos mal que== la semana que viene tengo dos días libres.",
+              "en": "It's a good thing I have two days off next week."
+            },
+            {
+              "es": "==Menos mal que== traje el paraguas; si no, estaríamos empapados.",
+              "en": "Good thing I brought the umbrella; otherwise we'd be soaked."
+            },
+            {
+              "es": "==Menos mal que== el concierto va a ser gratis.",
+              "en": "Good thing the concert's going to be free."
+            },
+            {
+              "es": "==Menos mal que== la lavadora ya funciona.",
+              "en": "Thank goodness the washing machine works again."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Menos mal que la lavadora ya funcione."
+                },
+                {
+                  "v": "bien",
+                  "t": "Menos mal que la lavadora ya funciona."
+                }
+              ],
+              "nota": "Indicative."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Menos mal que el concierto sea gratis."
+                },
+                {
+                  "v": "bien",
+                  "t": "Menos mal que el concierto es gratis."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "me alegra que",
+              "texto": "Feelings usually take the subjunctive: [[6185|wish and feeling]]."
+            },
+            {
+              "forma": "¡qué bueno!",
+              "texto": "[[6137|qué exclamations]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Reply: _—No pasó nada grave._",
+              "r": "¡Menos mal!",
+              "nota": "On its own."
+            },
+            {
+              "p": "In Spanish: _Good thing you called._ (tú)",
+              "r": "Menos mal que llamaste.",
+              "nota": "Indicative."
+            },
+            {
+              "p": "Complete: _Menos mal que no ___ (llover) ayer._",
+              "r": "llovió",
+              "nota": "Indicative."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6185
+    ],
+    "confunde": [
+      6185
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 10514",
+      "kwiziq": true
+    }
+  ]
+}

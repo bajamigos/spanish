@@ -1,0 +1,221 @@
+{
+  "tema": 6597,
+  "slug": "acabar-terminar-por",
+  "titulo": "Acabar / terminar + por infinitive or + gerund: to end up doing something",
+  "subtitulo": "Acabó por ceder / terminó cediendo: how it all ended.",
+  "foto": "t01.jpg",
+  "regla": "To end up doing: acabar / terminar + por + infinitive, or acabar / terminar + gerund (no preposition). Same meaning.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say _to end up doing_ something, Spanish has four ways, all with the same meaning:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Pattern",
+            "Example"
+          ],
+          "filas": [
+            [
+              "acabar + por + infinitive",
+              "Acabó por regalarle un anillo."
+            ],
+            [
+              "terminar + por + infinitive",
+              "Terminó por dejarlo."
+            ],
+            [
+              "acabar + gerund",
+              "Acabó llorando."
+            ],
+            [
+              "terminar + gerund",
+              "Terminó obedeciendo."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "With the **infinitive**, use **por**. With the **gerund**, no preposition at all."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It works in different tenses: **acabarás por entenderlo**, **siempre termino comiendo tacos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **por** + infinitive, or straight to the gerund. Never mix them."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ella era tan exigente que él ==acabó por regalarle== un anillo.",
+              "en": "She was so demanding that he ended up giving her a ring."
+            },
+            {
+              "es": "Después de diez años juntos, ella ==terminó por dejarlo==.",
+              "en": "After ten years together, she ended up leaving him."
+            },
+            {
+              "es": "Carlos ==acabó llorando== por el estrés del trabajo.",
+              "en": "Carlos ended up crying because of stress at work."
+            },
+            {
+              "es": "Laura ==terminó obedeciendo== a su papá.",
+              "en": "Laura ended up obeying her dad."
+            },
+            {
+              "es": "Siempre ==terminamos comiendo== tacos en la madrugada.",
+              "en": "We always end up eating tacos in the early morning."
+            },
+            {
+              "es": "==Acabarás por entenderlo==.",
+              "en": "You'll end up understanding it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Terminó por llorando."
+                },
+                {
+                  "v": "bien",
+                  "t": "Terminó llorando."
+                },
+                {
+                  "v": "bien",
+                  "t": "Terminó por llorar."
+                }
+              ],
+              "nota": "**Por** goes with the infinitive only."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Acabó llorar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Acabó por llorar."
+                }
+              ],
+              "nota": "Infinitive needs **por**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "Acabo de comer."
+                }
+              ],
+              "nota": "**Acabar de** is different: _to have just done_. See [[6508|acabar de]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "acabo de llegar",
+              "texto": "_Just did_: [[6508|acabar de]]."
+            },
+            {
+              "forma": "terminar de comer",
+              "texto": "_To finish doing_: [[7430|terminar de]]."
+            },
+            {
+              "forma": "dejar de",
+              "texto": "_To stop doing_: [[6181|dejar de]]."
+            },
+            {
+              "forma": "comiendo, llorando",
+              "texto": "Gerunds: [[6500|regular]], [[6501|irregular]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish (gerund): _He ended up paying for everything._",
+              "r": "Terminó pagando todo.",
+              "nota": "terminar + gerund."
+            },
+            {
+              "p": "Same, with **acabar por**.",
+              "r": "Acabó por pagar todo.",
+              "nota": "acabar por + infinitive."
+            },
+            {
+              "p": "Fix it: **Acabamos por bailando.**",
+              "r": "Acabamos bailando. / Acabamos por bailar.",
+              "nota": "Don't mix them."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6500,
+      6508
+    ],
+    "confunde": [
+      6508,
+      7430
+    ],
+    "sigue": [
+      7430,
+      6181
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6597",
+      "kwiziq": true
+    }
+  ]
+}

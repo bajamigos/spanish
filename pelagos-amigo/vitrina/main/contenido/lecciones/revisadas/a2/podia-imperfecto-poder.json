@@ -1,0 +1,248 @@
+{
+  "tema": 6505,
+  "slug": "podia-imperfecto-poder",
+  "titulo": "Poder in the imperfect",
+  "subtitulo": "De niño podía nadar horas.",
+  "foto": "t07.jpg",
+  "regla": "Poder is regular in the imperfect, with no o > ue: podía, podías, podía, podíamos, podían. It means could / was able to, as a general ability or possibility in the past.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Poder** is regular in the imperfect: stem **pod-** + **-ía** endings. No **ue** (the stress falls on **-ía**)."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Poder"
+          ],
+          "filas": [
+            [
+              "yo",
+              "podía"
+            ],
+            [
+              "tú",
+              "podías"
+            ],
+            [
+              "él, ella, usted",
+              "podía"
+            ],
+            [
+              "nosotros, nosotras",
+              "podíamos"
+            ],
+            [
+              "ellos, ellas, ustedes",
+              "podían"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Podía** = _could_, _was able to_, _was allowed to_: a general ability or possibility in the past, or background to a story."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "podía",
+            "+",
+            "infinitive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "For one specific moment when you managed (or failed) to do something, use the preterite: **pude**, **no pude**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Se podía** = _you could_ / _it was possible_ (in general)."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "De niño ==podía== nadar horas en el mar.",
+              "en": "As a kid I could swim for hours in the sea."
+            },
+            {
+              "es": "Antes no ==podías== levantar ni diez kilos.",
+              "en": "Before, you couldn't even lift ten kilos."
+            },
+            {
+              "es": "Desde la azotea ==se podía== ver el mar.",
+              "en": "You could see the sea from the roof."
+            },
+            {
+              "es": "Mi abuelo ==podía== arreglar cualquier carro.",
+              "en": "My grandpa could fix any car."
+            },
+            {
+              "es": "Cuando vivíamos en Ensenada, ==podíamos== surfear antes del trabajo.",
+              "en": "When we lived in Ensenada, we could surf before work."
+            },
+            {
+              "es": "Ustedes no ==podían== entrar sin boleto.",
+              "en": "You all couldn't get in without a ticket."
+            },
+            {
+              "es": "No ==podía== dormir por el ruido de la fiesta.",
+              "en": "I couldn't sleep because of the party noise."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Puedía correr mucho."
+                },
+                {
+                  "v": "bien",
+                  "t": "Podía correr mucho."
+                }
+              ],
+              "nota": "No **ue**: the stress is on **-ía**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Antes podaba nadar más."
+                },
+                {
+                  "v": "bien",
+                  "t": "Antes podía nadar más."
+                }
+              ],
+              "nota": "**-er** verb: **-ía**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Antes podiamos salir tarde."
+                },
+                {
+                  "v": "bien",
+                  "t": "Antes podíamos salir tarde."
+                }
+              ],
+              "nota": "Accent on the **í**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer por fin podía terminar el proyecto."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer por fin pude terminar el proyecto."
+                }
+              ],
+              "nota": "Managed it once: **pude**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "puedo",
+              "texto": "The present: [[5564|poder in the present]]."
+            },
+            {
+              "forma": "comía",
+              "texto": "The endings: [[5264|-er and -ir verbs in the imperfect]]."
+            },
+            {
+              "forma": "pude",
+              "texto": "One moment, managed or not: [[5221|poder in the preterite]]."
+            },
+            {
+              "forma": "podía, iba",
+              "texto": "Habits and abilities: [[5111|the imperfect for habits]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _As a kid I could run all day._",
+              "r": "De niño podía correr todo el día.",
+              "nota": "podía."
+            },
+            {
+              "p": "In Spanish: _Back then we couldn't go out at night._",
+              "r": "Antes no podíamos salir en la noche.",
+              "nota": "podíamos."
+            },
+            {
+              "p": "Fix it: _Ellos no puedían entrar._",
+              "r": "Ellos no podían entrar.",
+              "nota": "No ue."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5564,
+      5264
+    ],
+    "confunde": [
+      5221
+    ],
+    "sigue": [
+      5111
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6505",
+      "kwiziq": true
+    }
+  ]
+}

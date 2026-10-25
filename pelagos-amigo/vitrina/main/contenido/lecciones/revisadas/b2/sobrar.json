@@ -1,0 +1,234 @@
+{
+  "tema": 9106,
+  "slug": "sobrar",
+  "titulo": "The verb sobrar: different meanings",
+  "subtitulo": "Sobró pastel. Aquí sobra gente. Creo que sobramos.",
+  "foto": "t06.jpg",
+  "regla": "Sobrar = to be left over (sobró comida), to be too much / too many (sobran sillas), to not be needed or wanted (aquí sobras), and sobrarle a alguien con algo = to have more than enough with (te sobra con 200 pesos).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Sobrar** works like **gustar** in most uses: the thing that's left or extra is the **subject**, so the verb agrees with it."
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "to be left over",
+              "texto": "**Sobró pastel.**"
+            },
+            {
+              "forma": "too much / too many",
+              "texto": "**Sobran sillas.**"
+            },
+            {
+              "forma": "not needed, unwelcome (a person)",
+              "texto": "**Aquí sobras.**"
+            },
+            {
+              "forma": "sobrarle a alguien con algo",
+              "texto": "_to have more than enough with_: **te sobra con 200 pesos**. Always singular, always with **con**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **sobrar** is everything beyond enough."
+        }
+      ]
+    },
+    {
+      "id": "quedar",
+      "titulo": "Left over",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Sobró== un poco del dinero que nos dieron en la boda.",
+              "en": "There was a bit left over of the money we got at the wedding."
+            },
+            {
+              "es": "==Sobró== café. Si quieres, sírvete una taza.",
+              "en": "There's coffee left. Help yourself to a cup."
+            },
+            {
+              "es": "¿Qué hacemos con la comida que ==sobró==?",
+              "en": "What do we do with the leftover food?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exceso",
+      "titulo": "Too much, too many",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Sobran== cuadros en este cuarto.",
+              "en": "There are way too many pictures in this room."
+            },
+            {
+              "es": "Aquí ==sobra== gente. ¿Por qué invitaste a tantos?",
+              "en": "There are too many people here. Why did you invite so many?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "persona",
+      "titulo": "Not wanted",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No te queremos aquí. Me temo que aquí ==sobras==.",
+              "en": "We don't want you here. I'm afraid you're not needed."
+            },
+            {
+              "es": "Vámonos, Javier, creo que ==sobramos==.",
+              "en": "Let's go, Javier, I think we're not wanted here."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "con",
+      "titulo": "More than enough with",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Te ==sobra con== 200 pesos para unas cervezas y unos tacos.",
+              "en": "200 pesos is more than enough for some beers and tacos."
+            },
+            {
+              "es": "Nos ==sobra con== saber que llegaste bien.",
+              "en": "Knowing you got there safely is plenty for us."
+            },
+            {
+              "es": "Le va a ==sobrar con que== le pidas perdón.",
+              "en": "Just apologizing to her will be more than enough."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Sobró dos tacos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Sobraron dos tacos."
+                }
+              ],
+              "nota": "Agrees with what's left."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Te sobran con 200 pesos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Te sobra con 200 pesos."
+                }
+              ],
+              "nota": "With **con**: always singular."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "faltar",
+              "texto": "The opposite: [[8701|faltar]]."
+            },
+            {
+              "forma": "me queda",
+              "texto": "[[6001|gustar-type verbs]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _There were three tickets left over._",
+              "r": "Sobraron tres boletos.",
+              "nota": "Plural agreement."
+            },
+            {
+              "p": "In Spanish: _I think I'm not wanted here._",
+              "r": "Creo que aquí sobro.",
+              "nota": "sobrar for a person."
+            },
+            {
+              "p": "In Spanish: _An hour is more than enough for you._",
+              "r": "Te sobra con una hora.",
+              "nota": "sobrar con."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6001
+    ],
+    "confunde": [
+      8701
+    ],
+    "sigue": [
+      8701
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9106",
+      "kwiziq": true
+    }
+  ]
+}

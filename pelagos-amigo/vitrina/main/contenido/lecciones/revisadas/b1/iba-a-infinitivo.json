@@ -1,0 +1,198 @@
+{
+  "tema": 6003,
+  "slug": "iba-a-infinitivo",
+  "titulo": "Using ir in the imperfect to say was / were going to",
+  "subtitulo": "Iba a llamarte: plans that were about to happen, or didn't.",
+  "foto": "t08.jpg",
+  "regla": "Ir in the imperfect (iba, ibas, iba, íbamos, iban) + a + infinitive = was / were going to: plans, things about to happen.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say _was / were going to_ do something, use **ir** in the **imperfect** + **a** + **infinitive**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**iba, ibas, iba, íbamos, iban**",
+            "**a**",
+            "infinitive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It's used for actions that **were going to happen**, were **about to happen**, or were **planned**. Often the plan changed: **iba a tomar el camión, pero me fui caminando**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Even though it's a past tense, it can refer to something still in the future, a plan you already had: **—¿Vienes al cine? —Es que iba a tomar un café con Beto.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Don't translate it word for word as **estaba yendo a**: that means you were literally on your way somewhere."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **iba a** is a plan that left the house but maybe never arrived."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Iba a tomar== el camión, pero decidí irme caminando.",
+              "en": "I was going to take the bus, but I decided to walk."
+            },
+            {
+              "es": "Mi hermano ==iba a estudiar== medicina, pero cambió de opinión.",
+              "en": "My brother was going to study medicine, but he changed his mind."
+            },
+            {
+              "es": "—¿Vienes al cine? —Es que ==iba a tomar== un café con Beto.",
+              "en": "\"Are you coming to the movies?\" \"Well, I was going to have coffee with Beto.\""
+            },
+            {
+              "es": "Me tengo que quedar hasta las tres. ¡Qué lástima! ==Iba a llamar== a Beto para ir por tacos.",
+              "en": "I have to stay until three. What a shame! I was going to call Beto to go for tacos."
+            },
+            {
+              "es": "==Íbamos a surfear==, pero no hubo olas.",
+              "en": "We were going to surf, but there were no waves."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estaba yendo a llamarte."
+                },
+                {
+                  "v": "bien",
+                  "t": "Iba a llamarte."
+                }
+              ],
+              "nota": "_Was going to_ = **iba a**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Iba llamarte."
+                },
+                {
+                  "v": "bien",
+                  "t": "Iba a llamarte."
+                }
+              ],
+              "nota": "Never drop the **a**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ibamos a salir."
+                },
+                {
+                  "v": "bien",
+                  "t": "Íbamos a salir."
+                }
+              ],
+              "nota": "**Íbamos** has an accent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "voy a llamarte",
+              "texto": "The present version: [[7067|ir a for plans]]."
+            },
+            {
+              "forma": "iba, ibas",
+              "texto": "**Ir** in the imperfect: [[5269|ir in the imperfect]]."
+            },
+            {
+              "forma": "estoy a punto de",
+              "texto": "_About to_: [[6509|estar a punto de]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I was going to call you._ (tú)",
+              "r": "Iba a llamarte.",
+              "nota": "iba a + infinitive."
+            },
+            {
+              "p": "In Spanish: _We were going to eat at the taquería._",
+              "r": "Íbamos a comer en la taquería.",
+              "nota": "íbamos, with accent."
+            },
+            {
+              "p": "Fix it: **Estaba yendo a decírtelo.**",
+              "r": "Iba a decírtelo.",
+              "nota": "Not **estaba yendo**."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7067,
+      5269
+    ],
+    "confunde": [
+      7067
+    ],
+    "sigue": [
+      6509
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6003",
+      "kwiziq": true
+    }
+  ]
+}

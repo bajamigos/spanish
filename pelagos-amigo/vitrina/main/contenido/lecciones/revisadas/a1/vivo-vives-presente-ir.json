@@ -1,0 +1,228 @@
+{
+  "tema": 5108,
+  "slug": "vivo-vives-presente-ir",
+  "titulo": "Regular -ir verbs in the present",
+  "subtitulo": "Vivo en Tijuana y escribo en español.",
+  "foto": "t08.jpg",
+  "regla": "Drop -ir and add -o, -es, -e, -imos, -en: vivo, vives, vive, vivimos, viven. Same as -er verbs except nosotros (-imos).",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Take the stem (the verb without **-ir**) and add the ending for each person."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "viv-",
+            "+",
+            "-o, -es, -e, -imos, -en"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Ending",
+            "vivir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "-o",
+              "**vivo**"
+            ],
+            [
+              "tú",
+              "-es",
+              "**vives**"
+            ],
+            [
+              "él, ella, usted",
+              "-e",
+              "**vive**"
+            ],
+            [
+              "nosotros",
+              "-imos",
+              "**vivimos**"
+            ],
+            [
+              "ellos, ustedes",
+              "-en",
+              "**viven**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The endings match -er verbs except **nosotros**: **-imos** (vivimos), not -emos."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Like it: **escribir, abrir, recibir, subir, compartir, decidir**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Vivo== en Tijuana.",
+              "en": "I live in Tijuana."
+            },
+            {
+              "es": "¿Dónde ==vives==?",
+              "en": "Where do you live?"
+            },
+            {
+              "es": "Mi primo ==escribe== canciones.",
+              "en": "My cousin writes songs."
+            },
+            {
+              "es": "==Compartimos== departamento con dos amigos.",
+              "en": "We share an apartment with two friends."
+            },
+            {
+              "es": "Ellos ==abren== la tienda a las nueve.",
+              "en": "They open the store at nine."
+            },
+            {
+              "es": "¿Ustedes ==reciben== paquetes aquí?",
+              "en": "Do you all get packages here?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros vivemos en México."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros vivimos en México."
+                }
+              ],
+              "nota": "-ir verbs: **-imos**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo vive en Tijuana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo vivo en Tijuana."
+                }
+              ],
+              "nota": "yo always ends in **-o**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ellos vivan aquí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ellos viven aquí."
+                }
+              ],
+              "nota": "**-an** is for -ar verbs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hablo",
+              "texto": "Learn first: [[5492|-ar verbs]]."
+            },
+            {
+              "forma": "comemos",
+              "texto": "Almost the same: [[5540|-er verbs]]."
+            },
+            {
+              "forma": "prefiero",
+              "texto": "Some -ir verbs change the stem: [[5574|e → ie]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We live near the beach._",
+              "r": "Vivimos cerca de la playa.",
+              "nota": "-imos for nosotros."
+            },
+            {
+              "p": "Fix it: _Nosotros escribemos mucho._",
+              "r": "Nosotros escribimos mucho.",
+              "nota": "-imos, not -emos."
+            },
+            {
+              "p": "In Spanish: _She opens the window._",
+              "r": "Ella abre la ventana.",
+              "nota": "-e for ella."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5492
+    ],
+    "confunde": [
+      5540
+    ],
+    "sigue": [
+      5574
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5108",
+      "kwiziq": true
+    }
+  ]
+}

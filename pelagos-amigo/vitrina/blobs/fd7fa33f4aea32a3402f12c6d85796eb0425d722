@@ -1,0 +1,78 @@
+{
+ "version": 1,
+ "demo": true,
+ "clases": [
+  {
+   "dia": -3,
+   "hora": "10:30",
+   "min": 50,
+   "tutor": "Mariana Soto",
+   "estado": "hecha",
+   "tema": "Conversación libre"
+  },
+  {
+   "dia": -2,
+   "hora": "11:00",
+   "min": 50,
+   "tutor": "Diego Ramírez",
+   "estado": "hecha",
+   "tema": "Debate: el trabajo desde casa"
+  },
+  {
+   "dia": -1,
+   "hora": "12:00",
+   "min": 30,
+   "tutor": "Lucía Herrera",
+   "estado": "hecha"
+  },
+  {
+   "dia": 0,
+   "hora": "18:00",
+   "min": 50,
+   "tutor": "Mariana Soto",
+   "estado": "agendada",
+   "tema": "Conversación libre"
+  },
+  {
+   "dia": 1,
+   "hora": "11:00",
+   "min": 50,
+   "tutor": "Diego Ramírez",
+   "estado": "agendada",
+   "tema": "Debate: ¿ciudades sin coches?"
+  },
+  {
+   "dia": 3,
+   "hora": "12:00",
+   "min": 50,
+   "tutor": "Lucía Herrera",
+   "estado": "agendada"
+  }
+ ],
+ "libres": [
+  {
+   "dia": 1,
+   "hora": "09:00",
+   "min": 50,
+   "tutor": "Lucía Herrera"
+  },
+  {
+   "dia": 2,
+   "hora": "10:00",
+   "min": 50,
+   "tutor": "Mariana Soto"
+  },
+  {
+   "dia": 2,
+   "hora": "15:00",
+   "min": 50,
+   "tutor": "Diego Ramírez"
+  },
+  {
+   "dia": 4,
+   "hora": "09:00",
+   "min": 50,
+   "tutor": "Mariana Soto"
+  }
+ ]
+}

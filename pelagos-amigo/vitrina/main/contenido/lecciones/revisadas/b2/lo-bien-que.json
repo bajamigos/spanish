@@ -1,0 +1,227 @@
+{
+  "tema": 7089,
+  "slug": "lo-bien-que",
+  "titulo": "Lo + adjective / adverb + que + verb = how...",
+  "subtitulo": "¡Lo bien que bailas! No sabes lo cansada que estoy.",
+  "foto": "t05.jpg",
+  "regla": "Lo + adverb or adjective + que + indicative expresses surprise or emphasis about how something is or is done: ¡Lo bien que baila! ¡Lo altas que son! Adverbs don't change; adjectives agree. Lo never changes.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "lo +",
+            "adverb / adjective",
+            "+ que + indicative"
+          ]
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "+ adverb",
+              "texto": "Doesn't change: **¡Lo rápido que corre ese carro!** (masculine singular even for **abuela**: **lo lento que camina**)."
+            },
+            {
+              "forma": "+ adjective",
+              "texto": "Agrees with the subject, usually with **ser, estar, parecer**: **¡Lo altas que son tus hijas!**"
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It can be an exclamation or part of a sentence: **No sabes lo bien que actuó mi hijo.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Lo** never changes."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: think of English _how_: _how well he dances!_ = **¡lo bien que baila!**"
+        }
+      ]
+    },
+    {
+      "id": "adverbio",
+      "titulo": "With adverbs",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¡==Lo bien que== baila Ramiro!",
+              "en": "Ramiro dances so well!"
+            },
+            {
+              "es": "¡==Lo mal que== me fue en el examen!",
+              "en": "I did so badly on the exam!"
+            },
+            {
+              "es": "¡==Lo rápido que== va ese carro!",
+              "en": "That car is going so fast!"
+            },
+            {
+              "es": "¡==Lo lento que== camina tu abuela!",
+              "en": "Your grandma walks so slowly!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adjetivo",
+      "titulo": "With adjectives",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¡==Lo simpático que== parece ese chavo!",
+              "en": "That guy seems so friendly!"
+            },
+            {
+              "es": "¡==Lo seria que== es esa chava!",
+              "en": "That girl is so serious!"
+            },
+            {
+              "es": "¡==Lo verdes que== están los campos esta primavera!",
+              "en": "The fields are so green this spring!"
+            },
+            {
+              "es": "¡==Lo altas que== son tus hijas!",
+              "en": "Your daughters are so tall!"
+            },
+            {
+              "es": "No sabes ==lo bien que== actuó mi hijo en la obra.",
+              "en": "You have no idea how well my son acted in the play."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Lo lenta que camina tu abuela!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Lo lento que camina tu abuela!"
+                }
+              ],
+              "nota": "Adverb: no agreement."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Lo alto que son tus hijas!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Lo altas que son tus hijas!"
+                }
+              ],
+              "nota": "Adjective with **ser**: agrees."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡La bonita que es!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Lo bonita que es!"
+                }
+              ],
+              "nota": "Always **lo**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "lo + adjective + ser",
+              "texto": "[[6979|lo + adjective]]."
+            },
+            {
+              "forma": "lo que",
+              "texto": "[[8392|neuter lo]]."
+            },
+            {
+              "forma": "¡qué bonito!",
+              "texto": "[[6137|qué exclamations]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _You sing so well!_",
+              "r": "¡Lo bien que cantas!",
+              "nota": "Adverb."
+            },
+            {
+              "p": "In Spanish: _You don't know how tired I am!_ (feminine)",
+              "r": "¡No sabes lo cansada que estoy!",
+              "nota": "Adjective agrees."
+            },
+            {
+              "p": "Complete: _¡Lo ___ (caro) que están las casas!_",
+              "r": "caras",
+              "nota": "Agrees with las casas."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6979
+    ],
+    "confunde": [
+      8392
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7089",
+      "kwiziq": true
+    }
+  ]
+}

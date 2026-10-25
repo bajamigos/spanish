@@ -1,0 +1,187 @@
+{
+  "tema": 7511,
+  "slug": "siempre-que",
+  "titulo": "Siempre que / a condición de que = as long as",
+  "subtitulo": "Te ayudo siempre que me ayudes.",
+  "foto": "t10.jpg",
+  "regla": "Siempre que, a condición de que, con la condición de que, siempre y cuando = as long as, provided that, + subjunctive: Te presto el carro siempre y cuando le pongas gasolina. (Siempre que + indicative = whenever.)",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "These connectors set a **condition** for the main clause, and take the **subjunctive**:"
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "siempre que",
+              "texto": "_as long as_"
+            },
+            {
+              "forma": "siempre y cuando",
+              "texto": "_as long as_, very common in Mexico"
+            },
+            {
+              "forma": "a condición de que / con la condición de que",
+              "texto": "_on condition that_"
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Careful: **siempre que** + **indicative** means _whenever_: **siempre que viene, trae pan** (_whenever he comes, he brings bread_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Past main clause → imperfect subjunctive: **me dejaba ir siempre que volviera temprano**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: a condition hasn't happened yet, so subjunctive."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Te ayudo ==siempre que== tú me ==ayudes== a mí.",
+              "en": "I'll help you as long as you help me."
+            },
+            {
+              "es": "Te ayudo ==a condición de que== tú me ==ayudes==.",
+              "en": "I'll help you on condition you help me."
+            },
+            {
+              "es": "Vas a tener buenos resultados ==siempre que estudies== con constancia.",
+              "en": "You'll get good results as long as you study regularly."
+            },
+            {
+              "es": "Puedes usar mi carro ==siempre y cuando== le ==pongas== gasolina.",
+              "en": "You can use my car as long as you put gas in it."
+            },
+            {
+              "es": "Te compro el juguete ==siempre que== me ==des== un beso.",
+              "en": "I'll buy you the toy as long as you give me a kiss."
+            },
+            {
+              "es": "Te llevo a tu casa ==con la condición de que== me ==invites== un café.",
+              "en": "I'll take you home on condition you buy me a coffee."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "condición",
+                  "t": "Te ayudo siempre que me ayudes."
+                },
+                {
+                  "v": "cada vez",
+                  "t": "Siempre que me ayudas, te ayudo."
+                }
+              ],
+              "nota": "Subjunctive = _as long as_; indicative = _whenever_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "A condición que vengas..."
+                },
+                {
+                  "v": "bien",
+                  "t": "A condición de que vengas..."
+                }
+              ],
+              "nota": "Keep **de**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "con tal de que, a menos que",
+              "texto": "[[5168|adverbial clauses]]."
+            },
+            {
+              "forma": "mientras",
+              "texto": "[[7254|mientras + subjunctive = as long as]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _You can go as long as you come back early._",
+              "r": "Puedes ir siempre que regreses temprano. / siempre y cuando regreses temprano.",
+              "nota": "Subjunctive."
+            },
+            {
+              "p": "Meaning? _Siempre que llueve, se va la luz._",
+              "r": "Whenever it rains, the power goes out.",
+              "nota": "Indicative: whenever."
+            },
+            {
+              "p": "Complete: _Te lo presto a condición de que me lo ___ (devolver)._",
+              "r": "devuelvas",
+              "nota": "Subjunctive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5168
+    ],
+    "confunde": [
+      7254
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7511",
+      "kwiziq": true
+    }
+  ]
+}

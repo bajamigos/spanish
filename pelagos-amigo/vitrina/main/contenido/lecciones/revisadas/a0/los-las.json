@@ -1,0 +1,206 @@
+{
+  "tema": 5101,
+  "slug": "los-las",
+  "titulo": "The: los, las (plural)",
+  "subtitulo": "Los tacos, las tortillas.",
+  "foto": "t01.jpg",
+  "regla": "To say the before a plural noun, use los with masculine nouns and las with feminine nouns. The noun keeps the gender it has in the singular.",
+  "comparada_kwiziq": "2026-10-17",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**el** → **los**, **la** → **las**. Only the number changes; the gender stays."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Singular",
+            "Plural"
+          ],
+          "filas": [
+            [
+              "el carro",
+              "los carros"
+            ],
+            [
+              "la casa",
+              "las casas"
+            ],
+            [
+              "el día",
+              "los días"
+            ],
+            [
+              "la mano",
+              "las manos"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "For a mixed group of males and females, use **los**: **los niños** = _the boys_ or _the children_."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Los== tacos de aquí son muy buenos.",
+              "en": "The tacos here are really good."
+            },
+            {
+              "es": "==Las== olas están grandes hoy.",
+              "en": "The waves are big today."
+            },
+            {
+              "es": "¿Dónde están ==las== llaves?",
+              "en": "Where are the keys?"
+            },
+            {
+              "es": "==Los== días son largos en verano.",
+              "en": "The days are long in summer."
+            },
+            {
+              "es": "Me gustan ==las== flores del jardín.",
+              "en": "I like the flowers in the garden."
+            },
+            {
+              "es": "==Los== chavos de mi clase de jiu-jitsu son de Tijuana.",
+              "en": "The guys in my jiu-jitsu class are from Tijuana."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Las problemas son serios."
+                },
+                {
+                  "v": "bien",
+                  "t": "Los problemas son serios."
+                }
+              ],
+              "nota": "Still masculine in the plural."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Los manos están frías."
+                },
+                {
+                  "v": "bien",
+                  "t": "Las manos están frías."
+                }
+              ],
+              "nota": "**Mano** is feminine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero la tortillas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero las tortillas."
+                }
+              ],
+              "nota": "Plural noun, plural article."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el, la",
+              "texto": "The singular: [[5100|el, la]]."
+            },
+            {
+              "forma": "carros, casas",
+              "texto": "Making the noun plural: [[6150|masculine and feminine nouns, singular and plural]]."
+            },
+            {
+              "forma": "unos, unas",
+              "texto": "_Some_, not _the_: [[6604|unos, unas]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _the waves_",
+              "r": "las olas",
+              "nota": "ola is feminine."
+            },
+            {
+              "p": "In Spanish: _the dogs_",
+              "r": "los perros",
+              "nota": "perro is masculine."
+            },
+            {
+              "p": "Fix it: _Los manos_",
+              "r": "Las manos",
+              "nota": "mano is feminine."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5100
+    ],
+    "confunde": [
+      6604
+    ],
+    "sigue": [
+      6150
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5101",
+      "kwiziq": true
+    }
+  ]
+}

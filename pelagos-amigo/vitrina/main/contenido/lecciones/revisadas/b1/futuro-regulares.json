@@ -1,0 +1,301 @@
+{
+  "tema": 5155,
+  "slug": "futuro-regulares",
+  "titulo": "Conjugate regular -ar, -er and -ir verbs in the simple future",
+  "subtitulo": "One set of endings for every verb, stuck onto the whole infinitive.",
+  "foto": "t05.jpg",
+  "regla": "Infinitive + -é, -ás, -á, -emos, -án. The same endings for -ar, -er and -ir verbs.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "The simple future (**el futuro simple**, also called **futuro imperfecto**) says what _will_ happen. To form it, you don't remove anything: you add the endings to the **whole infinitive**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "infinitive",
+            "**-é, -ás, -á, -emos, -án**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Ending"
+          ],
+          "filas": [
+            [
+              "yo",
+              "-é"
+            ],
+            [
+              "tú",
+              "-ás"
+            ],
+            [
+              "él, ella, usted",
+              "-á"
+            ],
+            [
+              "nosotros",
+              "-emos"
+            ],
+            [
+              "ustedes, ellos",
+              "-án"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "These endings are **the same for -ar, -er and -ir verbs**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "hablar",
+            "comer",
+            "vivir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "hablaré",
+              "comeré",
+              "viviré"
+            ],
+            [
+              "tú",
+              "hablarás",
+              "comerás",
+              "vivirás"
+            ],
+            [
+              "él, ella, usted",
+              "hablará",
+              "comerá",
+              "vivirá"
+            ],
+            [
+              "nosotros",
+              "hablaremos",
+              "comeremos",
+              "viviremos"
+            ],
+            [
+              "ustedes, ellos",
+              "hablarán",
+              "comerán",
+              "vivirán"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Every form has a **written accent on the last syllable** except **nosotros** (**-emos**), because the stress falls on the end."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the infinitive stays whole, like a board you don't cut. You just stick the ending on the tail."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Hablaré== con el cliente mañana.",
+              "en": "I'll talk to the customer tomorrow."
+            },
+            {
+              "es": "¿==Entrenarás== el sábado?",
+              "en": "Will you train on Saturday?"
+            },
+            {
+              "es": "Beto ==verá== el partido esta noche.",
+              "en": "Beto will watch the game tonight."
+            },
+            {
+              "es": "Naomi y yo ==leeremos== un rato.",
+              "en": "Naomi and I will read for a while."
+            },
+            {
+              "es": "Ellos ==manejarán== hasta Ensenada.",
+              "en": "They'll drive to Ensenada."
+            },
+            {
+              "es": "¿Ustedes ==comerán== en la taquería?",
+              "en": "Will you eat at the taquería?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mañana hablé con él."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mañana hablaré con él."
+                }
+              ],
+              "nota": "Keep the whole infinitive: **hablar** + **é** = **hablaré**. **Hablé** is the preterite."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros comerémos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros comeremos."
+                }
+              ],
+              "nota": "**Nosotros** is the only form without an accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo vivé en Tijuana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo viviré en Tijuana."
+                }
+              ],
+              "nota": "Keep the whole infinitive: **vivir** + **é**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usos",
+      "titulo": "Future or ir a?",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "Hablaré con ella.",
+              "texto": "The simple future: more formal, written, or for predictions.",
+              "aqui": true
+            },
+            {
+              "forma": "Voy a hablar con ella.",
+              "texto": "In everyday Mexican speech, plans usually use [[7067|ir a + infinitive]]."
+            },
+            {
+              "forma": "¿Dónde estará?",
+              "texto": "The future can also guess about now: [[5060|the future for probability in the present]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tendré, diré, saldré",
+              "texto": "Irregular stems: [[5050|tener]], [[5161|decir]], [[5160|salir]], [[5159|hacer]], [[5216|poder]]."
+            },
+            {
+              "forma": "Lloverá mañana.",
+              "texto": "Predictions and probability: [[5162|the future for probabilities]]."
+            },
+            {
+              "forma": "hablaría",
+              "texto": "Same stem, other endings: [[5731|the conditional]]."
+            },
+            {
+              "forma": "vivo",
+              "texto": "Compare the present: [[5108|-ir verbs in the present]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "**Surfear** with **nosotros**: El domingo ___ en Baja Malibú.",
+              "r": "El domingo surfearemos en Baja Malibú.",
+              "nota": "surfear + emos, no accent."
+            },
+            {
+              "p": "In Spanish: _You'll drink a lot of water._ (tú)",
+              "r": "Beberás mucha agua.",
+              "nota": "beber + ás."
+            },
+            {
+              "p": "In Spanish: _They'll open the taquería at nine._",
+              "r": "Abrirán la taquería a las nueve.",
+              "nota": "abrir + án."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7067,
+      5108
+    ],
+    "confunde": [
+      7067,
+      5731
+    ],
+    "sigue": [
+      5050,
+      5161,
+      5160,
+      5159,
+      5162,
+      5060
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5155",
+      "kwiziq": true
+    }
+  ]
+}

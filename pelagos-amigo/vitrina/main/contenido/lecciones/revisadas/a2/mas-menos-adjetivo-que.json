@@ -1,0 +1,239 @@
+{
+  "tema": 6210,
+  "slug": "mas-menos-adjetivo-que",
+  "titulo": "More … than, less … than: más … que, menos … que",
+  "subtitulo": "«Mi tabla es más larga que la tuya.»",
+  "foto": "t03.jpg",
+  "regla": "To compare two unequal things, put más (more) or menos (less) before the adjective, adverb or noun, and que (than) before the second thing. With a verb, más / menos goes right after the verb: corro más que tú.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "With an **adjective**, **adverb** or **noun**:"
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "más / menos",
+            "+ adjective / adverb / noun +",
+            "que"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "With a **verb**:"
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "verb",
+            "+ más / menos +",
+            "que"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "_Than_ is **que**. The adjective still agrees: Ana es **más alta** que Beto; mis tacos son **menos caros**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "After **que** use **yo** and **tú**, not mí or ti: más alto que **yo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With a number, use **más de / menos de**: más **de** cien pesos."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Good and bad are irregular: **mejor**, **peor** (not más bueno, más malo)."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi tabla es ==más larga que== la tuya.",
+              "en": "My board is longer than yours."
+            },
+            {
+              "es": "Tijuana es ==más grande que== Ensenada.",
+              "en": "Tijuana is bigger than Ensenada."
+            },
+            {
+              "es": "Hoy las olas están ==menos altas que== ayer.",
+              "en": "The waves are smaller today than yesterday."
+            },
+            {
+              "es": "Beto tiene ==más paciencia que== yo.",
+              "en": "Beto has more patience than me."
+            },
+            {
+              "es": "En mi huerto hay ==menos jitomates que== chiles.",
+              "en": "In my garden there are fewer tomatoes than chiles."
+            },
+            {
+              "es": "Entreno ==más que== mi hermano.",
+              "en": "I train more than my brother."
+            },
+            {
+              "es": "Mi primo come ==menos que== tú.",
+              "en": "My cousin eats less than you."
+            },
+            {
+              "es": "Amos pelea ==más rápido que== Holden.",
+              "en": "Amos fights faster than Holden."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Soy más alto de mi hermano."
+                },
+                {
+                  "v": "bien",
+                  "t": "Soy más alto que mi hermano."
+                }
+              ],
+              "nota": "_Than_ = **que**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella es más alta que mí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella es más alta que yo."
+                }
+              ],
+              "nota": "After **que**: **yo**, **tú**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mis tacos son menos caro que los tuyos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mis tacos son menos caros que los tuyos."
+                }
+              ],
+              "nota": "The adjective agrees."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tengo más que veinte tablas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tengo más de veinte tablas."
+                }
+              ],
+              "nota": "With numbers: **más de**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "más, menos",
+              "texto": "The basic words: [[6463|más and menos]]."
+            },
+            {
+              "forma": "más de",
+              "texto": "With numbers: [[6980|más que vs más de]]."
+            },
+            {
+              "forma": "mejor, peor",
+              "texto": "Irregular ones: [[6078|mayor, menor, mejor, peor]]."
+            },
+            {
+              "forma": "tan … como",
+              "texto": "Equal, not more or less: [[5116|tan … como]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _My sister is taller than me._",
+              "r": "Mi hermana es más alta que yo.",
+              "nota": "alta agrees; yo."
+            },
+            {
+              "p": "In Spanish: _I have fewer boards than you._",
+              "r": "Tengo menos tablas que tú.",
+              "nota": "menos + noun + que."
+            },
+            {
+              "p": "Fix it: _Tú surfeas más de yo._",
+              "r": "Tú surfeas más que yo.",
+              "nota": "que, not de."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6463
+    ],
+    "confunde": [
+      6980
+    ],
+    "sigue": [
+      6078,
+      5116
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6210",
+      "kwiziq": true
+    }
+  ]
+}

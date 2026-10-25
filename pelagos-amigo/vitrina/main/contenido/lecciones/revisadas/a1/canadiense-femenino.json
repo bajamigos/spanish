@@ -1,0 +1,176 @@
+{
+  "tema": 6802,
+  "slug": "canadiense-femenino",
+  "titulo": "Nationalities in -e: same form for women",
+  "subtitulo": "«Mi novia es canadiense.»",
+  "foto": "t08.jpg",
+  "regla": "Nationality and origin adjectives ending in -e (canadiense, estadounidense, nicaragüense) have one form for masculine and feminine: they don't change.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Most nationalities end in **-o** and change: **mexicano → mexicana**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "But adjectives of origin ending in **-e** stay the same: **un chavo canadiense**, **una chava canadiense**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Common ones: **canadiense, estadounidense, nicaragüense, costarricense**, and many Mexican states: **sonorense, sinaloense, chihuahuense**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **-ense** is like a team jersey: men and women wear the same one."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi novia es ==canadiense==.",
+              "en": "My girlfriend is Canadian."
+            },
+            {
+              "es": "Mi vecina es ==estadounidense==.",
+              "en": "My neighbor is American."
+            },
+            {
+              "es": "La maestra es ==nicaragüense==.",
+              "en": "The teacher is Nicaraguan."
+            },
+            {
+              "es": "Tengo una amiga ==costarricense==.",
+              "en": "I have a Costa Rican friend."
+            },
+            {
+              "es": "Mi abuela es ==sonorense==.",
+              "en": "My grandma is from Sonora."
+            },
+            {
+              "es": "Me encanta la comida ==sinaloense==.",
+              "en": "I love food from Sinaloa."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella es canadiensa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella es canadiense."
+                }
+              ],
+              "nota": "**-e** doesn't change to **-a**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mi novia es nicaragüensa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mi novia es nicaragüense."
+                }
+              ],
+              "nota": "Same form for women."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "grande, alegre",
+              "texto": "The general rule: [[6015|adjectives in -e and -a]]."
+            },
+            {
+              "forma": "inglés, inglesa",
+              "texto": "Nationalities in -s do change: [[6052|feminine of -s nationalities]]."
+            },
+            {
+              "forma": "canadienses",
+              "texto": "Plural: [[6801|plural of -e nationalities]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Feminine: _un maestro canadiense_ → _una maestra…_",
+              "r": "una maestra canadiense",
+              "nota": "-e stays."
+            },
+            {
+              "p": "Fix it: _Mi esposa es costarricensa._",
+              "r": "Mi esposa es costarricense.",
+              "nota": "No -a."
+            },
+            {
+              "p": "In Spanish: _She is Canadian._",
+              "r": "Ella es canadiense.",
+              "nota": "Same as for a man."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6015
+    ],
+    "confunde": [
+      6052
+    ],
+    "sigue": [
+      6801
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6802",
+      "kwiziq": true
+    }
+  ]
+}

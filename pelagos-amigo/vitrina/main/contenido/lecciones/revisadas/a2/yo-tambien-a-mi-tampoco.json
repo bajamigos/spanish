@@ -1,0 +1,240 @@
+{
+  "tema": 7681,
+  "slug": "yo-tambien-a-mi-tampoco",
+  "titulo": "Me too, me neither: yo también, a mí tampoco",
+  "subtitulo": "—Me gusta el mar. —¡A mí también!",
+  "foto": "t02.jpg",
+  "regla": "To agree with a positive statement, use también (me too); with a negative one, use tampoco (me neither). With normal verbs answer with yo, tú, él…; with gustar-type verbs answer with a mí, a ti, a él…",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say **me too**, use **también**. To say **me neither**, use **tampoco**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**También** answers a **positive** sentence. **Tampoco** answers a **negative** one (with **no**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Pick the pronoun by the verb in the first sentence:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "First sentence",
+            "Me too",
+            "Me neither"
+          ],
+          "filas": [
+            [
+              "Normal verb: _Tengo hambre. / No tengo hambre._",
+              "Yo también.",
+              "Yo tampoco."
+            ],
+            [
+              "Gustar-type verb: _Me gusta. / No me gusta._",
+              "A mí también.",
+              "A mí tampoco."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The same works for other people: **tú también**, **nosotros tampoco**, **a ella también**, **a ellos tampoco**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the answer copies the shape of the question. **Yo** answers **yo**; **me** answers **a mí**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "—Vivo en Tijuana. —==Yo también==.",
+              "en": "—I live in Tijuana. —Me too."
+            },
+            {
+              "es": "—No sé nadar muy bien. —==Yo tampoco==.",
+              "en": "—I can't swim very well. —Me neither."
+            },
+            {
+              "es": "—Me encantan las tortas ahogadas. —¡==A mí también==!",
+              "en": "—I love tortas ahogadas. —Me too!"
+            },
+            {
+              "es": "—No me gusta el frío. —==A mí tampoco==.",
+              "en": "—I don't like the cold. —Me neither."
+            },
+            {
+              "es": "—Entreno jiu-jitsu los martes. —==Nosotros también==.",
+              "en": "—I train jiu-jitsu on Tuesdays. —So do we."
+            },
+            {
+              "es": "—A Luis no le interesa el futbol. —==A Marta tampoco==.",
+              "en": "—Luis isn't interested in soccer. —Neither is Marta."
+            },
+            {
+              "es": "—Estoy cansado. —==Yo también==, vámonos.",
+              "en": "—I'm tired. —Me too, let's go."
+            },
+            {
+              "es": "—No nos molesta la música. —==A nosotros tampoco==.",
+              "en": "—The music doesn't bother us. —It doesn't bother us either."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "—Me gusta el café. —Yo también."
+                },
+                {
+                  "v": "bien",
+                  "t": "—Me gusta el café. —A mí también."
+                }
+              ],
+              "nota": "With gustar, answer with **a mí**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "—No tengo coche. —Yo también no."
+                },
+                {
+                  "v": "bien",
+                  "t": "—No tengo coche. —Yo tampoco."
+                }
+              ],
+              "nota": "Negative → **tampoco**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "—No me gusta el ruido. —A mí también."
+                },
+                {
+                  "v": "bien",
+                  "t": "—No me gusta el ruido. —A mí tampoco."
+                }
+              ],
+              "nota": "Negative → **tampoco**, even with **a mí**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "—Trabajo mucho. —A mí también."
+                },
+                {
+                  "v": "bien",
+                  "t": "—Trabajo mucho. —Yo también."
+                }
+              ],
+              "nota": "**Trabajar** is a normal verb → **yo**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "me gusta",
+              "texto": "The verb behind **a mí**: [[6001|gustar]] and [[7248|le gusta, les gusta]]."
+            },
+            {
+              "forma": "a mí me gusta",
+              "texto": "Why **a mí** appears: [[7032|repeating the pronoun with gustar]]."
+            },
+            {
+              "forma": "tampoco",
+              "texto": "**Tampoco** inside a full sentence: [[9188|tampoco for either / neither]]."
+            },
+            {
+              "forma": "yo no, a mí sí",
+              "texto": "Disagreeing instead: [[7731|yo sí / yo no / a mí sí / a mí no]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Answer _Me too_: «Me encanta la playa.»",
+              "r": "A mí también.",
+              "nota": "encantar → a mí."
+            },
+            {
+              "p": "Answer _Me neither_: «No hablo francés.»",
+              "r": "Yo tampoco.",
+              "nota": "hablar → yo."
+            },
+            {
+              "p": "Fix it: «—No me gustan los lunes. —A mí también no.»",
+              "r": "A mí tampoco.",
+              "nota": "Negative → tampoco."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6001,
+      7248
+    ],
+    "confunde": [
+      7032,
+      9188
+    ],
+    "sigue": [
+      7731
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7681",
+      "kwiziq": true
+    }
+  ]
+}

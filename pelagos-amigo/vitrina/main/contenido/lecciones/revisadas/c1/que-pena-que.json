@@ -1,0 +1,179 @@
+{
+  "tema": 8215,
+  "slug": "que-pena-que",
+  "titulo": "¡Qué + noun / adjective + que + subjunctive! to express feelings",
+  "subtitulo": "¡Qué pena que no vengas! ¡Qué bueno que llegaste!",
+  "foto": "t07.jpg",
+  "regla": "¡Qué pena / bien / raro / alegría + que + subjunctive! reacts with a feeling: ¡Qué pena que no puedas venir! Past: ¡Qué bien que te hayan elegido! The indicative also appears when you're stating a fact: ¡Qué bueno que llegaste! (very common in Mexico).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "¡qué + noun / adjective / adverb",
+            "+ que +",
+            "subjunctive!"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Reacting with a **feeling**: _what a shame / how great / how strange that..._"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Present or future: present subjunctive. Past: **haya** + participle or imperfect subjunctive."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The **indicative** is possible when you're mainly stating what happened: **¡Qué bueno que llegaste!** is everyday Mexican Spanish."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: feeling first, then the subjunctive."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¡==Qué pena que== no ==puedas== venir a mi boda!",
+              "en": "What a shame you can't come to my wedding!"
+            },
+            {
+              "es": "¡==Qué raro que== las luces ==estén== prendidas! ¿Habrá alguien?",
+              "en": "How strange that the lights are on! Could someone be here?"
+            },
+            {
+              "es": "¡==Qué bien que== te ==hayan elegido==!",
+              "en": "How great that they picked you!"
+            },
+            {
+              "es": "¡==Qué alegría que== te ==dijera== que sí!",
+              "en": "I'm so glad she said yes!"
+            },
+            {
+              "es": "¡==Qué bueno que== ==llegaste==!",
+              "en": "So glad you made it! (indicative, common in Mexico)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "coloquial",
+                  "t": "¡Qué pena que no puedes venir!"
+                },
+                {
+                  "v": "mejor",
+                  "t": "¡Qué pena que no puedas venir!"
+                }
+              ],
+              "nota": "Feeling: subjunctive is the norm."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Qué pena no puedas venir!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Qué pena que no puedas venir!"
+                }
+              ],
+              "nota": "Keep **que**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "me alegra que",
+              "texto": "[[6185|feelings + subjunctive]]."
+            },
+            {
+              "forma": "es una lástima que",
+              "texto": "[[6226|impersonal expressions]]."
+            },
+            {
+              "forma": "¡qué bonito!",
+              "texto": "[[6137|qué exclamations]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Complete: _¡Qué lástima que ___ (llover)!_",
+              "r": "llueva",
+              "nota": "Subjunctive."
+            },
+            {
+              "p": "In Spanish: _How great that you've finished!_ (tú)",
+              "r": "¡Qué bien que hayas terminado!",
+              "nota": "Past: haya + participle."
+            },
+            {
+              "p": "Mexican everyday: _So glad you came!_",
+              "r": "¡Qué bueno que viniste!",
+              "nota": "Indicative."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6185,
+      6137
+    ],
+    "confunde": [
+      6226
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8215",
+      "kwiziq": true
+    }
+  ]
+}

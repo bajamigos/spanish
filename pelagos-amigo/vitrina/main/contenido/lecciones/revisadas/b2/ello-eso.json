@@ -1,0 +1,190 @@
+{
+  "tema": 7424,
+  "slug": "ello-eso",
+  "titulo": "Ello vs eso (it / that)",
+  "subtitulo": "Por eso / por ello. Cuenta con ello.",
+  "foto": "t04.jpg",
+  "regla": "Ello and eso both refer back to an idea or situation already mentioned: it / that. Eso is everyday; ello is formal or written, often after prepositions (por ello, para ello, con ello).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Both point back to something already said, an **idea or situation**, not a specific noun."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Pronoun",
+            "Register",
+            "Example"
+          ],
+          "filas": [
+            [
+              "eso",
+              "everyday",
+              "Eso me pone triste. Por eso no vine."
+            ],
+            [
+              "ello",
+              "formal, written",
+              "Por ello, debemos actuar. Para ello, empezaremos..."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Ello** usually appears after prepositions: **por ello, para ello, con ello, de ello, en ello**. As a subject it's quite formal: **ello se debe a...**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Fixed phrase: **cuenta con ello** (_count on it_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: in a chat, **eso**; in an essay, **ello**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Carlos está pasando por un mal momento. ==Eso== me pone triste.",
+              "en": "Carlos is going through a rough patch. That makes me sad."
+            },
+            {
+              "es": "Hoy vamos a estudiar la Revolución. ==Para ello==, vamos a empezar leyendo sobre la época.",
+              "en": "Today we'll study the Revolution. To do so, we'll start by reading about the period."
+            },
+            {
+              "es": "—¿Me ayudas a repasar? —Sí, cuenta ==con ello==.",
+              "en": "—Will you help me review? —Sure, count on it."
+            },
+            {
+              "es": "Los divorcios suelen ser complicados. ==Por ello==, hay que hablar mucho con los hijos.",
+              "en": "Divorces are usually complicated. That's why you need to talk a lot with the kids."
+            },
+            {
+              "es": "Nuestro hijo tiene problemas en la escuela y necesitamos hablar ==de eso==.",
+              "en": "Our son is having problems at school and we need to talk about it."
+            },
+            {
+              "es": "Las ventas bajaron. ==Ello== se debe a la mala calidad del producto.",
+              "en": "Sales dropped. This is due to the poor quality of the product."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Compré un libro y ello es bueno. (the book)"
+                },
+                {
+                  "v": "bien",
+                  "t": "Compré un libro y es bueno."
+                }
+              ],
+              "nota": "**Ello** refers to ideas, not specific nouns."
+            },
+            {
+              "filas": [
+                {
+                  "v": "muy formal",
+                  "t": "Por ello no vine a la fiesta."
+                },
+                {
+                  "v": "natural",
+                  "t": "Por eso no vine a la fiesta."
+                }
+              ],
+              "nota": "In conversation: **eso**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "esto, eso, aquello",
+              "texto": "[[6060|neuter demonstratives]]."
+            },
+            {
+              "forma": "lo",
+              "texto": "[[8392|neuter lo]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Everyday: _That's why I'm tired._",
+              "r": "Por eso estoy cansado.",
+              "nota": "eso."
+            },
+            {
+              "p": "Formal: _Therefore, we recommend..._",
+              "r": "Por ello, recomendamos...",
+              "nota": "ello."
+            },
+            {
+              "p": "Reply: _Count on it!_",
+              "r": "¡Cuenta con ello!",
+              "nota": "Fixed phrase."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6060
+    ],
+    "confunde": [
+      8392
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7424",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,240 @@
+{
+  "tema": 5122,
+  "slug": "le-les-indirecto",
+  "titulo": "Indirect object pronouns le, les",
+  "subtitulo": "Le di el libro a Ana.",
+  "foto": "t03.jpg",
+  "regla": "Le and les mean to / for him, her, it, you (usted / ustedes) or them. They go before the conjugated verb, and Spanish keeps them even when the person is named: Le di el libro a Ana.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "An **indirect object** is the person who receives something or gets something done for them: _I gave the book **to her**_, _I bought tacos **for them**_."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Pronoun",
+            "Means"
+          ],
+          "filas": [
+            [
+              "**le**",
+              "to / for him, her, it, you (usted)"
+            ],
+            [
+              "**les**",
+              "to / for them, you (ustedes)"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It goes **before the conjugated verb**: **Le** escribo. **No les** digo."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Le** and **les** don't show gender. To make it clear, add **a él, a ella, a usted, a ellos, a ellas, a ustedes**: **Le** hablo **a ella**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "When you name the person, you still use **le / les**: **Le** di el libro **a Ana**. It looks repetitive, but it's the normal way."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Verbs that often take it: **dar, decir, escribir, mandar, preguntar, regalar, comprar, prestar, explicar**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **le** is the delivery address on the package. Whatever you **give, say, send**, it needs one."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Le== mandé un mensaje a mi hermana.",
+              "en": "I sent my sister a message."
+            },
+            {
+              "es": "¿==Le== puedes decir a tu jefe que llego tarde?",
+              "en": "Can you tell your boss I'll be late?"
+            },
+            {
+              "es": "==Les== compré unos tacos a los niños.",
+              "en": "I bought the kids some tacos."
+            },
+            {
+              "es": "El maestro ==les== explica la regla a los alumnos.",
+              "en": "The teacher explains the rule to the students."
+            },
+            {
+              "es": "==Le== presté mi tabla de surf a Diego.",
+              "en": "I lent Diego my surfboard."
+            },
+            {
+              "es": "Señora, ¿==le== traigo un café?",
+              "en": "Ma'am, shall I bring you a coffee?"
+            },
+            {
+              "es": "No ==les== conté nada a mis papás.",
+              "en": "I didn't tell my parents anything."
+            },
+            {
+              "es": "==Les== regalamos plantas a nuestros vecinos.",
+              "en": "We gave our neighbors some plants."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Lo di el libro a Ana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Le di el libro a Ana."
+                }
+              ],
+              "nota": "To someone = **le**, not lo."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Le compré regalos a mis primos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Les compré regalos a mis primos."
+                }
+              ],
+              "nota": "Plural person → **les**. You'll hear **le** in casual speech, but write **les**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Escribo le una carta."
+                },
+                {
+                  "v": "bien",
+                  "t": "Le escribo una carta."
+                }
+              ],
+              "nota": "Before the conjugated verb."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Tu hermana? Le veo todos los días."
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Tu hermana? La veo todos los días."
+                }
+              ],
+              "nota": "**Ver** takes a direct object: **la**, not le."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "me, te, le, nos, les",
+              "texto": "The whole set: [[7282|indirect object pronouns]]."
+            },
+            {
+              "forma": "lo, la",
+              "texto": "For the thing itself, not the receiver: [[5121|direct object lo, la, los, las]]."
+            },
+            {
+              "forma": "le gusta",
+              "texto": "Gustar uses le / les too: [[7248|gustar with he, she, they]]."
+            },
+            {
+              "forma": "se lo di",
+              "texto": "Le + lo becomes se lo: [[5078|le / les become se]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I wrote her a letter._",
+              "r": "Le escribí una carta.",
+              "nota": "le = to her."
+            },
+            {
+              "p": "In Spanish: _We told them the truth._",
+              "r": "Les dijimos la verdad.",
+              "nota": "les = to them."
+            },
+            {
+              "p": "Fix it: _Lo di un regalo a mi papá._",
+              "r": "Le di un regalo a mi papá.",
+              "nota": "To someone: le."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7248
+    ],
+    "confunde": [
+      5121
+    ],
+    "sigue": [
+      7282,
+      5078
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5122",
+      "kwiziq": true
+    }
+  ]
+}

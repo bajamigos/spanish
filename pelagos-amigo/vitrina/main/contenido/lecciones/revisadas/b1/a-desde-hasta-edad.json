@@ -1,0 +1,217 @@
+{
+  "tema": 9770,
+  "slug": "a-desde-hasta-edad",
+  "titulo": "Using a / desde / hasta + age",
+  "subtitulo": "A los 15, desde los 13, hasta los 18: los años in every case.",
+  "foto": "t01.jpg",
+  "regla": "At an age: a los + age; since an age: desde los + age; until an age: hasta los + age. Always with los. A los 16 = cuando tenía 16.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say **at**, **since** or **until** what age something happens, use **a**, **desde** or **hasta** + **los** + the age (**años** is optional)."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Meaning",
+            "Pattern",
+            "Example"
+          ],
+          "filas": [
+            [
+              "_at_ an age",
+              "a los + age",
+              "Empecé a surfear a los quince."
+            ],
+            [
+              "_since_ an age",
+              "desde los + age",
+              "Hablo inglés desde los trece."
+            ],
+            [
+              "_until_ an age",
+              "hasta los + age",
+              "Jugué fútbol hasta los dieciocho."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Don't forget **los**: **a los 16**, never **a 16**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**A los** + age is shorter and more casual than **cuando tenía** + age, but it means the same."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **los** is the birthday candles. You always need them."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Fumé mi primer cigarro ==a los== quince años.",
+              "en": "I smoked my first cigarette at fifteen."
+            },
+            {
+              "es": "Elisa se hizo un piercing ==a los== dieciséis sin decirles a sus papás.",
+              "en": "Elisa got a piercing at sixteen without telling her parents."
+            },
+            {
+              "es": "Elisa se hizo un piercing ==cuando tenía== dieciséis años.",
+              "en": "Elisa got a piercing when she was sixteen."
+            },
+            {
+              "es": "Hablo inglés perfecto ==desde los== trece años.",
+              "en": "I've spoken perfect English since I was thirteen."
+            },
+            {
+              "es": "Vivo solo ==desde los== cuarenta.",
+              "en": "I've lived alone since I was forty."
+            },
+            {
+              "es": "Jugué en el equipo de mi ciudad ==hasta los== dieciocho.",
+              "en": "I played for my city's team until I was eighteen."
+            },
+            {
+              "es": "Mi abuelo no perdió el pelo ==hasta los== ochenta.",
+              "en": "My grandpa didn't lose his hair until he was eighty."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Empecé a surfear a 15 años."
+                },
+                {
+                  "v": "bien",
+                  "t": "Empecé a surfear a los 15 años."
+                }
+              ],
+              "nota": "Keep **los**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Desde que 13 años."
+                },
+                {
+                  "v": "bien",
+                  "t": "Desde los 13 años."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cuando tuve 16 años, me fui de casa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cuando tenía 16 años, me fui de casa."
+                }
+              ],
+              "nota": "Age in the past: imperfect **tenía**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "desde hace",
+              "texto": "Since / for with time: [[5129|desde hace]]."
+            },
+            {
+              "forma": "de… a…, desde… hasta…",
+              "texto": "From… to…: [[7229|desde / de / hasta / a]]."
+            },
+            {
+              "forma": "a principios de",
+              "texto": "Parts of a period: [[8581|a principios / a finales de]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I started surfing at twelve._",
+              "r": "Empecé a surfear a los doce.",
+              "nota": "a los + age."
+            },
+            {
+              "p": "In Spanish: _I've trained since I was twenty._",
+              "r": "Entreno desde los veinte.",
+              "nota": "desde los."
+            },
+            {
+              "p": "In Spanish: _She lived in Tijuana until she was ten._",
+              "r": "Vivió en Tijuana hasta los diez.",
+              "nota": "hasta los."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7229
+    ],
+    "confunde": [
+      5129
+    ],
+    "sigue": [
+      8581
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9770",
+      "kwiziq": true
+    }
+  ]
+}

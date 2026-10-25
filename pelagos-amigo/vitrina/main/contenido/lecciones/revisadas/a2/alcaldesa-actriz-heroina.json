@@ -1,0 +1,252 @@
+{
+  "tema": 6729,
+  "slug": "alcaldesa-actriz-heroina",
+  "titulo": "Feminine nouns in -esa, -triz, -ina, -isa",
+  "subtitulo": "La alcaldesa, la actriz, la heroína.",
+  "foto": "t07.jpg",
+  "regla": "Some nouns for people form the feminine with a special ending: -esa (alcaldesa, princesa), -triz (actriz, emperatriz), -ina (heroína, reina) or -isa (poetisa, sacerdotisa). They are feminine and form the plural normally, except -triz → -trices.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Most people nouns make the feminine by changing **-o → -a** or adding **-a**. A few use a special ending instead."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Masculine",
+            "Feminine",
+            "Feminine plural"
+          ],
+          "filas": [
+            [
+              "el alcalde",
+              "la alcaldesa",
+              "las alcaldesas"
+            ],
+            [
+              "el príncipe",
+              "la princesa",
+              "las princesas"
+            ],
+            [
+              "el duque",
+              "la duquesa",
+              "las duquesas"
+            ],
+            [
+              "el actor",
+              "la actriz",
+              "las actrices"
+            ],
+            [
+              "el emperador",
+              "la emperatriz",
+              "las emperatrices"
+            ],
+            [
+              "el héroe",
+              "la heroína",
+              "las heroínas"
+            ],
+            [
+              "el rey",
+              "la reina",
+              "las reinas"
+            ],
+            [
+              "el poeta",
+              "la poetisa",
+              "las poetisas"
+            ],
+            [
+              "el sacerdote",
+              "la sacerdotisa",
+              "las sacerdotisas"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The plural adds **-s**, except **-triz → -trices**: the **z** becomes **c** before **e**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Animals too: **el tigre → la tigresa**, **el gallo → la gallina**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Today many people also say **la poeta**. Both are correct."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==La alcaldesa== visitó el mercado.",
+              "en": "The mayor (f.) visited the market."
+            },
+            {
+              "es": "==Las actrices== de la serie son muy buenas.",
+              "en": "The actresses in the show are very good."
+            },
+            {
+              "es": "==La emperatriz== Carlota vivió en México.",
+              "en": "Empress Carlota lived in Mexico."
+            },
+            {
+              "es": "Mi mamá es ==una heroína== para mí.",
+              "en": "My mom is a hero to me."
+            },
+            {
+              "es": "==El rey== y ==la reina== llegaron juntos.",
+              "en": "The king and queen arrived together."
+            },
+            {
+              "es": "Mi sobrina quiere ser ==princesa==.",
+              "en": "My niece wants to be a princess."
+            },
+            {
+              "es": "Sor Juana es ==una poetisa== mexicana muy famosa.",
+              "en": "Sor Juana is a very famous Mexican poet."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella es una actora famosa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella es una actriz famosa."
+                }
+              ],
+              "nota": "Actor → **actriz**, not -ora."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "las actrizes"
+                },
+                {
+                  "v": "bien",
+                  "t": "las actrices"
+                }
+              ],
+              "nota": "**z → c** before **e**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella es la heroa del equipo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella es la heroína del equipo."
+                }
+              ],
+              "nota": "Héroe → **heroína**, not -oa."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el niño, la niña",
+              "texto": "The regular pattern: [[6150|masculine and feminine nouns]]."
+            },
+            {
+              "forma": "el perro, la perra",
+              "texto": "Animals and people: [[6757|gender of living creatures]]."
+            },
+            {
+              "forma": "el profesor, la profesora",
+              "texto": "The usual -or → -ora: [[6208|nouns in -or]]."
+            },
+            {
+              "forma": "el / la estudiante",
+              "texto": "One form for both: [[6730|nouns with both genders]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Feminine of **el actor**:",
+              "r": "la actriz",
+              "nota": "-triz."
+            },
+            {
+              "p": "Plural of **la emperatriz**:",
+              "r": "las emperatrices",
+              "nota": "z → c."
+            },
+            {
+              "p": "In Spanish: _The mayor (a woman) is very young._",
+              "r": "La alcaldesa es muy joven.",
+              "nota": "-esa."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6150,
+      6757
+    ],
+    "confunde": [
+      6208,
+      6730
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6729",
+      "kwiziq": true
+    }
+  ]
+}

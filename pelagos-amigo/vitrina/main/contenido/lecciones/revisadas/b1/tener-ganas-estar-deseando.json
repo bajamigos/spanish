@@ -1,0 +1,214 @@
+{
+  "tema": 7425,
+  "slug": "tener-ganas-estar-deseando",
+  "titulo": "To look forward to: tener ganas de and estar deseando",
+  "subtitulo": "Tengo ganas de verte, estoy deseando llegar.",
+  "foto": "t08.jpg",
+  "regla": "Tener (muchas) ganas de + infinitive = to feel like / to look forward to. Estar deseando + infinitive = to really look forward to, can't wait to.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Spanish has two common ways to say _to look forward to_ doing something:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Structure",
+            "Meaning"
+          ],
+          "filas": [
+            [
+              "tener (muchas) ganas de + infinitive",
+              "_to feel like doing_ or _to look forward to doing_ (context decides)"
+            ],
+            [
+              "estar deseando + infinitive",
+              "a stronger wish: _to really look forward to, can't wait to_"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Never drop the **de** after **ganas**. Add **muchas** to make it stronger: **tengo muchas ganas de verte**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Estar deseando** is usually translated as _looking forward to_ or _can't wait to_, more than just _feel like_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In Mexico, **estar deseando** sounds a bit formal; you'll more often hear **ya quiero…**, **me muero de ganas de…** or **no veo la hora de…**: **ya queremos verte**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **ganas** are an appetite; **deseando** is counting the days."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Tengo ganas de== comer tacos de pescado.",
+              "en": "I feel like eating fish tacos."
+            },
+            {
+              "es": "==Tengo ganas de== ver a Luisa; la última vez fue hace dos años.",
+              "en": "I'm looking forward to seeing Luisa; the last time was two years ago."
+            },
+            {
+              "es": "==Tengo muchas ganas de== empezar el nuevo curso.",
+              "en": "I'm really looking forward to starting the new course."
+            },
+            {
+              "es": "Ahorita ==tengo muchas ganas de== un helado de chocolate.",
+              "en": "Right now I really feel like a chocolate ice cream."
+            },
+            {
+              "es": "==Estamos deseando== llegar al hotel y meternos a la alberca.",
+              "en": "We can't wait to get to the hotel and jump in the pool."
+            },
+            {
+              "es": "==Estaba deseando== conocer a ese chavo.",
+              "en": "I was really looking forward to meeting that guy."
+            },
+            {
+              "es": "==Estoy deseando== que haya olas.",
+              "en": "I can't wait for there to be waves."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tengo ganas ver a Beto."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tengo ganas de ver a Beto."
+                }
+              ],
+              "nota": "Keep the **de**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estoy deseando de llegar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estoy deseando llegar."
+                }
+              ],
+              "nota": "No **de** after **deseando**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tengo mucho ganas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tengo muchas ganas."
+                }
+              ],
+              "nota": "**Ganas** is feminine plural."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "me gustaría",
+              "texto": "Would like: [[7059|gustar in the conditional]]."
+            },
+            {
+              "forma": "espero que",
+              "texto": "Hope: [[6076|esperar que]]."
+            },
+            {
+              "forma": "estoy surfeando",
+              "texto": "**Estar** + gerund: [[5092|present progressive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I feel like going to the beach._",
+              "r": "Tengo ganas de ir a la playa.",
+              "nota": "tener ganas de + infinitive."
+            },
+            {
+              "p": "In Spanish: _We can't wait to see you._",
+              "r": "Estamos deseando verte.",
+              "nota": "estar deseando + infinitive."
+            },
+            {
+              "p": "Fix it: **Tengo muchos ganas surfear.**",
+              "r": "Tengo muchas ganas de surfear.",
+              "nota": "muchas + de."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5092
+    ],
+    "confunde": [
+      7059
+    ],
+    "sigue": [
+      6076
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7425",
+      "kwiziq": true
+    }
+  ]
+}

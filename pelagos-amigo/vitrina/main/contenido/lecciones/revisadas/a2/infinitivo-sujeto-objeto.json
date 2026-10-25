@@ -1,0 +1,249 @@
+{
+  "tema": 7079,
+  "slug": "infinitivo-sujeto-objeto",
+  "titulo": "The infinitive as subject or object",
+  "subtitulo": "«Nadar es bueno. Me gusta surfear.»",
+  "foto": "t02.jpg",
+  "regla": "When a verb works like a noun (as the subject or the object of another verb), Spanish uses the infinitive, never the gerund: nadar es bueno, me gusta surfear. English _swimming_ is Spanish **nadar**.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "In English, the **-ing** form can act as a noun: _**Swimming** is good_, _I love **reading**_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Spanish never does this with the gerund (**-ando / -iendo**). It uses the **infinitive** (**-ar / -er / -ir**)."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Job in the sentence",
+            "English",
+            "Spanish"
+          ],
+          "filas": [
+            [
+              "subject",
+              "_Running_ is healthy.",
+              "**Correr** es sano."
+            ],
+            [
+              "object of gustar & co.",
+              "_I like surfing._",
+              "Me gusta **surfear**."
+            ],
+            [
+              "after ser / es",
+              "_The hard part is waking up._",
+              "Lo difícil es **despertarse**."
+            ],
+            [
+              "signs and rules",
+              "_No smoking._",
+              "Prohibido **fumar**."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "An infinitive subject takes a **singular** verb: **Correr es sano**, **Me gusta bailar**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Sometimes you'll see **el** before it (**el fumar**), but at this level just use the bare infinitive."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The gerund is for actions in progress (**estoy nadando**), not for naming an activity."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Nadar== es bueno para la espalda.",
+              "en": "Swimming is good for your back."
+            },
+            {
+              "es": "Me encanta ==surfear== en Playas de Tijuana.",
+              "en": "I love surfing at Playas de Tijuana."
+            },
+            {
+              "es": "==Entrenar== jiu-jitsu tres veces por semana es mucho.",
+              "en": "Training jiu-jitsu three times a week is a lot."
+            },
+            {
+              "es": "A mi hermana le gusta ==cocinar==.",
+              "en": "My sister likes cooking."
+            },
+            {
+              "es": "Prohibido ==estacionarse==.",
+              "en": "No parking."
+            },
+            {
+              "es": "Lo más difícil es ==empezar==.",
+              "en": "The hardest part is getting started."
+            },
+            {
+              "es": "==Ver== es ==creer==.",
+              "en": "Seeing is believing."
+            },
+            {
+              "es": "Odio ==esperar== en la línea.",
+              "en": "I hate waiting in line at the border."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nadando es bueno."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nadar es bueno."
+                }
+              ],
+              "nota": "Subject: infinitive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me gusta leyendo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me gusta leer."
+                }
+              ],
+              "nota": "After gustar: infinitive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Viendo es creyendo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ver es creer."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Prohibido fumando."
+                },
+                {
+                  "v": "bien",
+                  "t": "Prohibido fumar."
+                }
+              ],
+              "nota": "Signs use the infinitive too."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "me gusta + verb",
+              "texto": "The pattern with gustar: [[5083|gustar + infinitive]], [[10727|he likes doing, they like doing]]."
+            },
+            {
+              "forma": "es bueno + verb",
+              "texto": "Judging an activity: [[6308|es bueno / está bien]]."
+            },
+            {
+              "forma": "antes de comer",
+              "texto": "After a preposition it's also the infinitive: [[10102|antes de / después de + infinitive]]."
+            },
+            {
+              "forma": "estoy nadando",
+              "texto": "Where the gerund does belong: [[5092|estar + gerund]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Running is fun._",
+              "r": "Correr es divertido.",
+              "nota": "Infinitive, not corriendo."
+            },
+            {
+              "p": "Fix it: _Me gusta bailando._",
+              "r": "Me gusta bailar.",
+              "nota": "gustar + infinitive."
+            },
+            {
+              "p": "In Spanish: _Learning Spanish is easy._",
+              "r": "Aprender español es fácil.",
+              "nota": "Singular verb."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5083,
+      6308
+    ],
+    "confunde": [
+      5092
+    ],
+    "sigue": [
+      10727,
+      10102
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7079",
+      "kwiziq": true
+    }
+  ]
+}

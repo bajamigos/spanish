@@ -1,0 +1,278 @@
+{
+  "tema": 7054,
+  "slug": "sentir-sentirse",
+  "titulo": "Sentir vs sentirse (to feel)",
+  "subtitulo": "Me siento cansado. Siento frío.",
+  "foto": "t01.jpg",
+  "regla": "Sentirse + adjective or adverb says how you feel (me siento bien, se siente sola). Sentir + noun says what you feel (siento frío, siento un dolor). Lo siento = I'm sorry.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Both mean _to feel_, but they're built differently."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Form",
+            "Followed by",
+            "Example"
+          ],
+          "filas": [
+            [
+              "sentirse",
+              "adjective or adverb (how you feel)",
+              "Me siento cansado."
+            ],
+            [
+              "sentir",
+              "noun (what you feel)",
+              "Siento frío."
+            ],
+            [
+              "sentir que",
+              "a sentence (to feel that)",
+              "Siento que va a llover."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "With **sentirse**, the adjective agrees with the person: **ella se siente cansada**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Both change **e > ie**, except nosotros:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "sentir",
+            "sentirse"
+          ],
+          "filas": [
+            [
+              "yo",
+              "siento",
+              "me siento"
+            ],
+            [
+              "tú",
+              "sientes",
+              "te sientes"
+            ],
+            [
+              "él, ella, usted",
+              "siente",
+              "se siente"
+            ],
+            [
+              "nosotros/as",
+              "sentimos",
+              "nos sentimos"
+            ],
+            [
+              "ellos, ellas, ustedes",
+              "sienten",
+              "se sienten"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Lo siento** = _I'm sorry_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **sentirse** is looking in the mirror (how am I?); **sentir** is reaching out to touch something (what's out there?)."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Hoy ==me siento== muy bien.",
+              "en": "I feel really good today."
+            },
+            {
+              "es": "Después del entrenamiento ==me siento== cansado pero feliz.",
+              "en": "After training I feel tired but happy."
+            },
+            {
+              "es": "¿Cómo ==te sientes==?",
+              "en": "How do you feel?"
+            },
+            {
+              "es": "Mi abuela ==se siente== sola.",
+              "en": "My grandma feels lonely."
+            },
+            {
+              "es": "==Siento== mucho frío en los pies.",
+              "en": "My feet feel really cold."
+            },
+            {
+              "es": "==Siento== un dolor en la rodilla.",
+              "en": "I feel a pain in my knee."
+            },
+            {
+              "es": "==Siento que== va a llover.",
+              "en": "I feel like it's going to rain."
+            },
+            {
+              "es": "==Lo siento==, no puedo ir.",
+              "en": "I'm sorry, I can't go."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Siento cansado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me siento cansado."
+                }
+              ],
+              "nota": "How you feel: **sentirse**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me siento frío."
+                },
+                {
+                  "v": "bien",
+                  "t": "Siento frío."
+                }
+              ],
+              "nota": "A noun: **sentir**. (Also: **tengo frío**.)"
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mi mamá siente triste."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mi mamá se siente triste."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me siento mucho, no puedo ir."
+                },
+                {
+                  "v": "bien",
+                  "t": "Lo siento mucho, no puedo ir."
+                }
+              ],
+              "nota": "_I'm sorry_ = **lo siento**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "siento",
+              "texto": "The conjugation: [[5775|sentir in the present]]."
+            },
+            {
+              "forma": "me siento",
+              "texto": "How reflexive verbs work: [[5085|reflexive verbs in the present]]."
+            },
+            {
+              "forma": "estoy triste",
+              "texto": "Another way to say how you feel: [[5980|estar for feelings and emotions]]."
+            },
+            {
+              "forma": "siento, veo, oigo",
+              "texto": "Feeling as perception: [[7990|perception verbs]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _How do you feel?_ (tú)",
+              "r": "¿Cómo te sientes?",
+              "nota": "sentirse."
+            },
+            {
+              "p": "In Spanish: _I'm sorry._",
+              "r": "Lo siento.",
+              "nota": "Fixed phrase."
+            },
+            {
+              "p": "Fix it: _Mi mamá siente triste._",
+              "r": "Mi mamá se siente triste.",
+              "nota": "Adjective: sentirse."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5775,
+      5085
+    ],
+    "confunde": [
+      5980
+    ],
+    "sigue": [
+      7990
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7054",
+      "kwiziq": true
+    }
+  ]
+}

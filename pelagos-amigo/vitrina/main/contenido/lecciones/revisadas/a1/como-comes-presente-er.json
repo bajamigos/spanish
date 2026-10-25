@@ -1,0 +1,227 @@
+{
+  "tema": 5540,
+  "slug": "como-comes-presente-er",
+  "titulo": "Regular -er verbs in the present",
+  "subtitulo": "Como tacos y bebo agua de horchata.",
+  "foto": "t07.jpg",
+  "regla": "Drop -er and add -o, -es, -e, -emos, -en: como, comes, come, comemos, comen.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Take the stem (the verb without **-er**) and add the ending for each person."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "com-",
+            "+",
+            "-o, -es, -e, -emos, -en"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Ending",
+            "comer"
+          ],
+          "filas": [
+            [
+              "yo",
+              "-o",
+              "**como**"
+            ],
+            [
+              "tú",
+              "-es",
+              "**comes**"
+            ],
+            [
+              "él, ella, usted",
+              "-e",
+              "**come**"
+            ],
+            [
+              "nosotros",
+              "-emos",
+              "**comemos**"
+            ],
+            [
+              "ellos, ustedes",
+              "-en",
+              "**comen**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Like it: **beber, aprender, correr, vender, comprender, leer**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: where -ar verbs have **a**, -er verbs have **e**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Como== tacos todos los viernes.",
+              "en": "I eat tacos every Friday."
+            },
+            {
+              "es": "¿==Bebes== café en la mañana?",
+              "en": "Do you drink coffee in the morning?"
+            },
+            {
+              "es": "Mi abuela ==vende== tamales.",
+              "en": "My grandma sells tamales."
+            },
+            {
+              "es": "==Aprendemos== jiu-jitsu en el mismo gimnasio.",
+              "en": "We learn jiu-jitsu at the same gym."
+            },
+            {
+              "es": "Ellos ==corren== en la playa.",
+              "en": "They run on the beach."
+            },
+            {
+              "es": "¿==Comprendes== la pregunta?",
+              "en": "Do you understand the question?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella coma mucho."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella come mucho."
+                }
+              ],
+              "nota": "-er verbs take **e**, not a."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo bebe agua."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo bebo agua."
+                }
+              ],
+              "nota": "yo always ends in **-o**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros comen juntos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros comemos juntos."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hablo",
+              "texto": "Learn first: [[5492|-ar verbs]]."
+            },
+            {
+              "forma": "vivimos",
+              "texto": "Almost the same: [[5108|-ir verbs]], only nosotros differs."
+            },
+            {
+              "forma": "entiendo",
+              "texto": "Some -er verbs change the stem: [[5812|e → ie]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We read a lot._",
+              "r": "Leemos mucho.",
+              "nota": "-emos for nosotros."
+            },
+            {
+              "p": "Fix it: _Él aprenda rápido._",
+              "r": "Él aprende rápido.",
+              "nota": "-e for él."
+            },
+            {
+              "p": "In Spanish (tú): _Do you run?_",
+              "r": "¿Corres?",
+              "nota": "-es for tú."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5492
+    ],
+    "confunde": [
+      5108
+    ],
+    "sigue": [
+      5812
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5540",
+      "kwiziq": true
+    }
+  ]
+}

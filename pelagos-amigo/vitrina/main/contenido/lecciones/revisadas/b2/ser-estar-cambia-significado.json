@@ -1,0 +1,273 @@
+{
+  "tema": 7301,
+  "slug": "ser-estar-cambia-significado",
+  "titulo": "Adjectives that change meaning with ser or estar",
+  "subtitulo": "Es listo / Está listo. Es rico / Está rico.",
+  "foto": "t07.jpg",
+  "regla": "Some adjectives mean different things with ser and estar: ser listo (clever) / estar listo (ready), ser bueno (good) / estar bueno (tasty; hot), ser malo (bad) / estar malo (sick; spoiled), ser rico (rich) / estar rico (delicious), ser aburrido (boring) / estar aburrido (bored)...",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "In general, **ser** keeps the literal, lasting meaning and **estar** gives a state or a figurative meaning. With these adjectives, the change is big enough to learn them as pairs."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Adjective",
+            "with ser",
+            "with estar"
+          ],
+          "filas": [
+            [
+              "listo",
+              "clever",
+              "ready"
+            ],
+            [
+              "bueno",
+              "good (person, quality)",
+              "tasty; attractive (colloquial)"
+            ],
+            [
+              "malo",
+              "bad (person, quality)",
+              "sick; spoiled (food)"
+            ],
+            [
+              "rico",
+              "rich",
+              "delicious"
+            ],
+            [
+              "aburrido",
+              "boring",
+              "bored"
+            ],
+            [
+              "abierto",
+              "open-minded, outgoing",
+              "open"
+            ],
+            [
+              "cerrado",
+              "closed-minded, stubborn",
+              "closed"
+            ],
+            [
+              "atento",
+              "thoughtful, polite",
+              "paying attention"
+            ],
+            [
+              "verde",
+              "green",
+              "unripe; inexperienced"
+            ],
+            [
+              "vivo",
+              "lively, sharp",
+              "alive"
+            ],
+            [
+              "orgulloso",
+              "arrogant, proud",
+              "proud (of someone)"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The adjective still **agrees** with the noun."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if the English word changes, the verb probably changes too."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi sobrino ==es muy bueno==; siempre se porta bien.",
+              "en": "My nephew is very good; he always behaves."
+            },
+            {
+              "es": "Cómete el pozole, ==está muy bueno==.",
+              "en": "Eat the pozole, it's really good."
+            },
+            {
+              "es": "Esa película ==es mala==.",
+              "en": "That movie is bad."
+            },
+            {
+              "es": "No uses la mayonesa; creo que ==está mala==.",
+              "en": "Don't use the mayo; I think it's gone bad."
+            },
+            {
+              "es": "Mi hijo ==es muy abierto==; saluda a todo el mundo.",
+              "en": "My son is very outgoing; he says hi to everyone."
+            },
+            {
+              "es": "¿Crees que la biblioteca ==está abierta== hoy?",
+              "en": "Do you think the library is open today?"
+            },
+            {
+              "es": "Javier ==está abierto a== nuevas oportunidades.",
+              "en": "Javier is open to new opportunities."
+            },
+            {
+              "es": "¡Mi papá ==es tan cerrado==! No acepta otras opiniones.",
+              "en": "My dad is so closed-minded! He won't accept other opinions."
+            },
+            {
+              "es": "¡Qué ==lista eres==! Contestaste todo.",
+              "en": "You're so smart! You answered everything."
+            },
+            {
+              "es": "Avísenme cuando ==estén listas==.",
+              "en": "Let me know when you're ready."
+            },
+            {
+              "es": "Luis ==es muy atento== con sus invitados.",
+              "en": "Luis is very thoughtful with his guests."
+            },
+            {
+              "es": "Niños, necesito que ==estén atentos==.",
+              "en": "Kids, I need you to pay attention."
+            },
+            {
+              "es": "Pobre José, todavía ==está muy verde== con las chavas.",
+              "en": "Poor José, he's still really inexperienced with girls."
+            },
+            {
+              "es": "Este mango ==está verde==.",
+              "en": "This mango isn't ripe."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Soy listo, vámonos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estoy listo, vámonos."
+                }
+              ],
+              "nota": "_Ready_: **estar**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Soy aburrido, no hay nada que hacer."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estoy aburrido, no hay nada que hacer."
+                }
+              ],
+              "nota": "_Bored_: **estar**. **Soy aburrido** = _I'm boring_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Los tacos son muy ricos aquí. (tasting them now)"
+                },
+                {
+                  "v": "bien",
+                  "t": "Los tacos están muy ricos."
+                }
+              ],
+              "nota": "Tasting it: **estar**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "ser, estar",
+              "texto": "[[5972|ser for characteristics]], [[5983|estar for conditions]], [[5980|estar for feelings]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Ser or estar? _La sopa ___ rica._ (tasting it)",
+              "r": "está",
+              "nota": "Delicious."
+            },
+            {
+              "p": "Ser or estar? _Mi tío ___ muy rico; tiene tres casas._",
+              "r": "es",
+              "nota": "Wealthy."
+            },
+            {
+              "p": "Ser or estar? _No puedo salir, ___ malo._ (sick)",
+              "r": "estoy",
+              "nota": "Sick: estar."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5972,
+      5983
+    ],
+    "confunde": [
+      5980
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7301",
+      "kwiziq": true
+    }
+  ]
+}

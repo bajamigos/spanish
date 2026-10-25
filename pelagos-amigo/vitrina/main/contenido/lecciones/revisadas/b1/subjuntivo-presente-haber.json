@@ -1,0 +1,229 @@
+{
+  "tema": 5187,
+  "slug": "subjuntivo-presente-haber",
+  "titulo": "Conjugate haber in the present subjunctive",
+  "subtitulo": "Ojalá haya olas: haya is the subjunctive of hay.",
+  "foto": "t10.jpg",
+  "regla": "Haber has the stem hay- in the present subjunctive: haya, hayas, haya, hayamos, hayan. Alone, only haya is used (the subjunctive of hay).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Haber** has an irregular stem, **hay-**, in the present subjunctive, with regular endings."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "haber"
+          ],
+          "filas": [
+            [
+              "yo",
+              "haya"
+            ],
+            [
+              "tú",
+              "hayas"
+            ],
+            [
+              "él, ella, usted",
+              "haya"
+            ],
+            [
+              "nosotros",
+              "hayamos"
+            ],
+            [
+              "ustedes, ellos",
+              "hayan"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "On its own, only **haya** is used: it's the subjunctive of **hay** (_there is, there are_), and it stays singular: **ojalá haya olas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "All the forms are used with a past participle to build the **present perfect subjunctive**: **espero que hayas comido**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **hay** becomes **haya** the moment a wish or a doubt comes along."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ojalá ==haya== buenas olas mañana.",
+              "en": "I hope there are good waves tomorrow."
+            },
+            {
+              "es": "No creo que ==haya== una boda tan bonita como la suya.",
+              "en": "I don't think there's a wedding as beautiful as yours."
+            },
+            {
+              "es": "Es esencial que ==haya== un acuerdo.",
+              "en": "It's essential that there be an agreement."
+            },
+            {
+              "es": "Quiero que ==haya== un buen presidente.",
+              "en": "I want there to be a good president."
+            },
+            {
+              "es": "No creo que ==haya== un buen sistema aquí.",
+              "en": "I don't think there's a good system here."
+            },
+            {
+              "es": "Espero que no ==haya== problemas con tu presentación.",
+              "en": "I hope there aren't any problems with your presentation."
+            },
+            {
+              "es": "Espero que el niño ==haya comido== bien.",
+              "en": "I hope the boy has eaten well."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ojalá hayan muchas olas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ojalá haya muchas olas."
+                }
+              ],
+              "nota": "_There be_ is always **haya**, singular."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No creo que hay tiempo."
+                },
+                {
+                  "v": "bien",
+                  "t": "No creo que haya tiempo."
+                }
+              ],
+              "nota": "Doubt takes the subjunctive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Espero que haiga comida."
+                },
+                {
+                  "v": "bien",
+                  "t": "Espero que haya comida."
+                }
+              ],
+              "nota": "**Haiga** is heard in casual speech, but it's not standard."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hay",
+              "texto": "The present: [[7036|hay and está]]."
+            },
+            {
+              "forma": "habrá, habría",
+              "texto": "Other tenses: [[5157|future]], [[5188|conditional]]."
+            },
+            {
+              "forma": "haya comido",
+              "texto": "The present perfect subjunctive: [[5076|regular verbs]]."
+            },
+            {
+              "forma": "Ojalá haya…",
+              "texto": "Common triggers: [[5061|ojalá]], [[6076|esperar que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I hope there are tacos._",
+              "r": "Ojalá haya tacos.",
+              "nota": "**Haya**, singular."
+            },
+            {
+              "p": "In Spanish: _I don't think there's time._",
+              "r": "No creo que haya tiempo.",
+              "nota": "Doubt: subjunctive."
+            },
+            {
+              "p": "**Haber** + participle, **tú**: Espero que ___ (descansar).",
+              "r": "Espero que hayas descansado.",
+              "nota": "Present perfect subjunctive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7036,
+      5063
+    ],
+    "confunde": [
+      5157
+    ],
+    "sigue": [
+      5076,
+      5061,
+      6076
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5187",
+      "kwiziq": true
+    }
+  ]
+}

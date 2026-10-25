@@ -1,0 +1,198 @@
+{
+  "tema": 6504,
+  "slug": "ser-de-un",
+  "titulo": "Ser de un / una + noun + adjective",
+  "subtitulo": "Es de un talento extraordinario.",
+  "foto": "t04.jpg",
+  "regla": "Ser + de + un / una + noun + adjective highlights a quality, usually very positive or very negative: Esa cantante es de un talento extraordinario. It's formal and a bit literary; in conversation, use tener: tiene un talento extraordinario.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "ser + de +",
+            "un / una",
+            "+ noun + adjective"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It **highlights** a quality, usually with strong adjectives: **exquisito, extraordinario, pésimo, superior**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It's **formal**, a bit poetic: reviews, descriptions, formal writing. In everyday speech, use **tener** instead."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **es de un...** is the voice of a museum guide."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Estos productos ==son de un sabor exquisito==.",
+              "en": "These products have an exquisite flavor."
+            },
+            {
+              "es": "La maquinaria ==es de una calidad superior==.",
+              "en": "The machinery is of superior quality."
+            },
+            {
+              "es": "Esa cantante ==es de un talento extraordinario==.",
+              "en": "That singer is extraordinarily talented."
+            },
+            {
+              "es": "Su ropa ==era de un gusto pésimo==.",
+              "en": "His clothes were in terrible taste."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "coloquial",
+      "titulo": "The everyday version",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "formal",
+                  "t": "Esa cantante es de un talento extraordinario."
+                },
+                {
+                  "v": "coloquial",
+                  "t": "Esa cantante tiene un talento extraordinario."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "formal",
+                  "t": "Su ropa era de un gusto pésimo."
+                },
+                {
+                  "v": "coloquial",
+                  "t": "Su ropa estaba horrible."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es de talento extraordinario un."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es de un talento extraordinario."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es un de sabor exquisito."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es de un sabor exquisito."
+                }
+              ],
+              "nota": "**de** first, then **un**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "ser de",
+              "texto": "Material and origin: [[7603|de for description]]."
+            },
+            {
+              "forma": "¡qué talento!",
+              "texto": "[[6137|qué + noun]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Formal: _The hotel is of exceptional beauty._",
+              "r": "El hotel es de una belleza excepcional.",
+              "nota": "ser de una + noun + adjective."
+            },
+            {
+              "p": "Everyday version of: _Es de un sabor delicioso._",
+              "r": "Tiene un sabor delicioso.",
+              "nota": "tener."
+            },
+            {
+              "p": "Formal: _His work was of poor quality._",
+              "r": "Su trabajo era de una calidad pésima.",
+              "nota": "ser de una."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7603
+    ],
+    "confunde": [],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6504",
+      "kwiziq": true
+    }
+  ]
+}

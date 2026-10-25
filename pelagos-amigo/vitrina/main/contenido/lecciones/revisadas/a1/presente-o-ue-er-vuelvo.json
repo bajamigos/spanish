@@ -1,0 +1,218 @@
+{
+  "tema": 5080,
+  "slug": "presente-o-ue-er-vuelvo",
+  "titulo": "-er verbs with o > ue in the present",
+  "subtitulo": "Vuelvo a las seis.",
+  "foto": "t09.jpg",
+  "regla": "Some -er verbs change the stressed o of the stem to ue in the present, in every person except nosotros: vuelvo, vuelves, vuelve, volvemos, vuelven.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Some -er verbs change **o → ue** in the stem: **volver**, **poder**, **mover**, **llover**, **devolver**, **resolver**, **morder**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The change happens in **every person except nosotros**: **puedo**, but **podemos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The endings are the regular -er ones: **-o, -es, -e, -emos, -en**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "volver",
+            "poder"
+          ],
+          "filas": [
+            [
+              "yo",
+              "vuelvo",
+              "puedo"
+            ],
+            [
+              "tú",
+              "vuelves",
+              "puedes"
+            ],
+            [
+              "él / ella / usted",
+              "vuelve",
+              "puede"
+            ],
+            [
+              "nosotros",
+              "volvemos",
+              "podemos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "vuelven",
+              "pueden"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Vuelvo== a casa a las seis.",
+              "en": "I come back home at six."
+            },
+            {
+              "es": "¿==Puedes== venir mañana?",
+              "en": "Can you come tomorrow?"
+            },
+            {
+              "es": "Aquí casi nunca ==llueve==.",
+              "en": "It almost never rains here."
+            },
+            {
+              "es": "==Podemos== surfear en la mañana.",
+              "en": "We can surf in the morning."
+            },
+            {
+              "es": "Mis amigos ==vuelven== del gimnasio.",
+              "en": "My friends come back from the gym."
+            },
+            {
+              "es": "¿Me ==devuelves== mi libro?",
+              "en": "Will you give me back my book?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros puedemos ir."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros podemos ir."
+                }
+              ],
+              "nota": "No change in **nosotros**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo volvo a las seis."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo vuelvo a las seis."
+                }
+              ],
+              "nota": "The stem changes in **yo**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ellos moven la mesa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ellos mueven la mesa."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "puedo",
+              "texto": "One verb in detail: [[5564|poder]]."
+            },
+            {
+              "forma": "suelo",
+              "texto": "Another o → ue verb: [[5565|soler]]."
+            },
+            {
+              "forma": "cuento",
+              "texto": "The same change in -ar verbs: [[5872|-ar verbs with o > ue]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I can't._",
+              "r": "No puedo.",
+              "nota": "o → ue."
+            },
+            {
+              "p": "In Spanish: _We come back tomorrow._",
+              "r": "Volvemos mañana.",
+              "nota": "nosotros: no change."
+            },
+            {
+              "p": "Fix it: _Hoy llove._",
+              "r": "Hoy llueve.",
+              "nota": "o → ue."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5872
+    ],
+    "confunde": [],
+    "sigue": [
+      5564,
+      5565
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5080",
+      "kwiziq": true
+    }
+  ]
+}

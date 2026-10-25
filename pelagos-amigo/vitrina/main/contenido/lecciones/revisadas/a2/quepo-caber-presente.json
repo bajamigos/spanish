@@ -1,0 +1,235 @@
+{
+  "tema": 6126,
+  "slug": "quepo-caber-presente",
+  "titulo": "Caber in the present",
+  "subtitulo": "No quepo en estos jeans.",
+  "foto": "t03.jpg",
+  "regla": "Caber (to fit) is regular in the present except for yo: quepo, cabes, cabe, cabemos, caben. The thing that fits is the subject.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Caber** means _to fit_ (to have enough room). In the present only **yo** is irregular: **quepo**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Caber"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**quepo**"
+            ],
+            [
+              "tú",
+              "cabes"
+            ],
+            [
+              "él, ella, usted",
+              "cabe"
+            ],
+            [
+              "nosotros, nosotras",
+              "cabemos"
+            ],
+            [
+              "ellos, ellas, ustedes",
+              "caben"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The thing that fits is the **subject**: **la tabla no cabe** (_the board doesn't fit_). With **caben**, plural things fit: **caben seis personas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "To say _I can't fit X in_, turn it around: **X no cabe**, or **no me cabe X**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "For clothes: **no me caben** = I can't get into them; **no me quedan** = they don't fit me well."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Fixed phrase: **no me cabe duda** = _I have no doubt_."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==No quepo== en estos jeans.",
+              "en": "I don't fit into these jeans."
+            },
+            {
+              "es": "La tabla larga no ==cabe== en mi carro.",
+              "en": "The longboard doesn't fit in my car."
+            },
+            {
+              "es": "¿==Cabemos== todos en tu camioneta?",
+              "en": "Do we all fit in your truck?"
+            },
+            {
+              "es": "En este elevador solo ==caben== seis personas.",
+              "en": "Only six people fit in this elevator."
+            },
+            {
+              "es": "Tú ==cabes== aquí, junto a mí.",
+              "en": "You fit here, next to me."
+            },
+            {
+              "es": "¿==Cabe== una cama más en el cuarto?",
+              "en": "Does one more bed fit in the room?"
+            },
+            {
+              "es": "Ya no ==caben== más macetas en la azotea.",
+              "en": "No more pots fit on the roof."
+            },
+            {
+              "es": "No me ==cabe== duda: es el mejor taco de Tijuana.",
+              "en": "I have no doubt: it's the best taco in Tijuana."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No cabo en el carro."
+                },
+                {
+                  "v": "bien",
+                  "t": "No quepo en el carro."
+                }
+              ],
+              "nota": "Yo form: **quepo**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros quepemos atrás."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros cabemos atrás."
+                }
+              ],
+              "nota": "Only **yo** changes."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No quepo la tabla en el carro."
+                },
+                {
+                  "v": "bien",
+                  "t": "La tabla no cabe en el carro."
+                }
+              ],
+              "nota": "The thing that fits is the subject."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "como, bebo",
+              "texto": "The regular pattern: [[5540|-er verbs in the present]]."
+            },
+            {
+              "forma": "sé",
+              "texto": "Another verb with an odd yo: [[5590|saber in the present]]."
+            },
+            {
+              "forma": "cupe",
+              "texto": "The past: [[5253|caber and saber in the preterite]]."
+            },
+            {
+              "forma": "cabré",
+              "texto": "The future: [[5245|caber and saber in the simple future]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I don't fit in the car._",
+              "r": "No quepo en el carro.",
+              "nota": "quepo."
+            },
+            {
+              "p": "In Spanish: _Do the plants fit here?_",
+              "r": "¿Caben las plantas aquí?",
+              "nota": "Plural subject: caben."
+            },
+            {
+              "p": "Fix it: _Yo no cabo en esta silla._",
+              "r": "Yo no quepo en esta silla.",
+              "nota": "quepo, never cabo."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5540
+    ],
+    "confunde": [
+      5590
+    ],
+    "sigue": [
+      5253,
+      5245
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6126",
+      "kwiziq": true
+    }
+  ]
+}

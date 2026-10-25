@@ -1,0 +1,282 @@
+{
+  "tema": 5140,
+  "slug": "pronombres-infinitivo-gerundio",
+  "titulo": "Pronouns with infinitives, gerunds and affirmative commands",
+  "subtitulo": "Voy a escribirla / La voy a escribir. ¡Dámelo!",
+  "foto": "t02.jpg",
+  "regla": "With a conjugated verb + infinitive or gerund, pronouns go either in front of the whole phrase or attached to the end of the infinitive/gerund (la voy a escribir = voy a escribirla), never in the middle. With affirmative commands they must be attached: dámelo.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "When a conjugated verb is followed by an **infinitive** or a **gerund** (**voy a escribir**, **estoy cantando**, **quiero invitar**), you have **two** equally correct places for the pronouns:"
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "1. in front of the whole phrase",
+              "texto": "**La voy a escribir.** **La estoy cantando.**"
+            },
+            {
+              "forma": "2. attached to the end",
+              "texto": "**Voy a escribirla.** **Estoy cantándola.**"
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Never in the middle, between the two verbs."
+        },
+        {
+          "tipo": "texto",
+          "texto": "When you attach pronouns to a gerund, or two pronouns to an infinitive, add a written **accent** to keep the stress where it was: **cantándola**, **comprárselos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the pronoun can wait at the door or ride on the back, but it never sits in the middle."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿No te ha llegado la carta? Seguro que ==la== va a escribir mañana.",
+              "en": "Hasn't the letter arrived? I'm sure she'll write it tomorrow."
+            },
+            {
+              "es": "Seguro que va a escribir==la== mañana.",
+              "en": "I'm sure she'll write it tomorrow."
+            },
+            {
+              "es": "—¿Estás cantando tu canción favorita? —Sí, ==la== estoy cantando.",
+              "en": "—Are you singing your favorite song? —Yes, I'm singing it."
+            },
+            {
+              "es": "Sí, estoy cantándo==la==.",
+              "en": "Yes, I'm singing it."
+            },
+            {
+              "es": "Es el cumpleaños de Joaquín. Tengo que mandar==le== una tarjeta.",
+              "en": "It's Joaquín's birthday. I have to send him a card."
+            },
+            {
+              "es": "==Le== tengo que mandar una tarjeta.",
+              "en": "I have to send him a card."
+            },
+            {
+              "es": "Rafa y Luis son buena onda. ==Los== quiero invitar a mi fiesta.",
+              "en": "Rafa and Luis are cool. I want to invite them to my party."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mandatos",
+      "titulo": "Affirmative commands",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "With an **affirmative** command, pronouns **must** be attached to the end. They can't go in front:"
+        },
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Los bistecs ya están listos. ¡Cóman==los== ya!",
+              "en": "The steaks are ready. Eat them now!"
+            },
+            {
+              "es": "—¿Llevo los libros? —Sí, tráe==los==, por favor.",
+              "en": "—Shall I bring the books? —Yes, please bring them."
+            },
+            {
+              "es": "¡Da==me== las llaves!",
+              "en": "Give me the keys!"
+            },
+            {
+              "es": "Muéstra==le== el camino.",
+              "en": "Show him the way."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Negative commands go the other way, in front: **no los comas**."
+        }
+      ]
+    },
+    {
+      "id": "dos",
+      "titulo": "Two pronouns",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Indirect first, direct second, and always **together**:"
+        },
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Quiere comprár==selos==.",
+              "en": "She wants to buy them for him."
+            },
+            {
+              "es": "==Se los== quiere comprar.",
+              "en": "She wants to buy them for him."
+            },
+            {
+              "es": "¡Cómpra==selos==!",
+              "en": "Buy them for him!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiere se los comprar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Se los quiere comprar. / Quiere comprárselos."
+                }
+              ],
+              "nota": "Never in the middle."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Los quiere comprar se."
+                },
+                {
+                  "v": "bien",
+                  "t": "Se los quiere comprar."
+                }
+              ],
+              "nota": "Keep them together."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Las dame!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Dámelas!"
+                }
+              ],
+              "nota": "Affirmative command: attached."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estoy cantandola."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estoy cantándola."
+                }
+              ],
+              "nota": "Add the accent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "lo compré",
+              "texto": "With a conjugated verb alone: [[6145|pronouns in front]]."
+            },
+            {
+              "forma": "dáselo",
+              "texto": "[[5078|se lo]]."
+            },
+            {
+              "forma": "siéntate",
+              "texto": "Reflexive commands: [[9262|imperative with reflexive pronouns]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Two ways: _I'm going to call her._",
+              "r": "La voy a llamar. / Voy a llamarla.",
+              "nota": "Front or attached."
+            },
+            {
+              "p": "Command: _Tell me (it)!_",
+              "r": "¡Dímelo!",
+              "nota": "Attached."
+            },
+            {
+              "p": "Two ways: _We're watching it._ (el partido)",
+              "r": "Lo estamos viendo. / Estamos viéndolo.",
+              "nota": "Gerund + accent."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6145
+    ],
+    "confunde": [
+      6145
+    ],
+    "sigue": [
+      5078,
+      9262
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5140",
+      "kwiziq": true
+    }
+  ]
+}

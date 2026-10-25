@@ -1,0 +1,215 @@
+{
+  "tema": 6209,
+  "slug": "estaba-estuve-gerundio",
+  "titulo": "Imperfect progressive vs preterite progressive (was + -ing)",
+  "subtitulo": "Estaba lloviendo / Estuvimos bailando toda la noche.",
+  "foto": "t06.jpg",
+  "regla": "Estaba + gerund describes what was going on, often interrupted by another action. Estuve + gerund is an ongoing action inside a closed time frame: estuvimos bailando toda la noche, de 6 a 7.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "English has one _was + -ing_. Spanish has two, depending on the time frame."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Form",
+            "Use",
+            "Example"
+          ],
+          "filas": [
+            [
+              "estaba + gerund (imperfect progressive)",
+              "describes what was going on; no start or end in view; often interrupted",
+              "Estaba cocinando cuando llamaste."
+            ],
+            [
+              "estuve + gerund (preterite progressive)",
+              "an ongoing action inside a closed, finished time frame",
+              "Estuve cocinando toda la tarde."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The preterite progressive usually comes with a time phrase that closes the action: **toda la noche, de 6 a 7, el sábado pasado, dos horas, hasta que...**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **estaba** is a movie still; **estuve** is the whole clip, start to end."
+        }
+      ]
+    },
+    {
+      "id": "estaba",
+      "titulo": "Estaba + gerund",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Susana ==estaba escribiendo== una carta.",
+              "en": "Susana was writing a letter."
+            },
+            {
+              "es": "Los niños ==estaban jugando== en el jardín.",
+              "en": "The kids were playing in the yard."
+            },
+            {
+              "es": "—¿Qué ==estaban haciendo==? —==Estábamos viendo== la tele.",
+              "en": "—What were you doing? —We were watching TV."
+            },
+            {
+              "es": "Ella ==se estaba lavando== el pelo cuando él llegó.",
+              "en": "She was washing her hair when he arrived."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "For describing a scene, it's often interchangeable with the plain imperfect: **Estaba lloviendo y la gente estaba corriendo** = **Llovía y la gente corría**."
+        }
+      ]
+    },
+    {
+      "id": "estuve",
+      "titulo": "Estuve + gerund",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ayer ==estuvimos bailando== toda la noche.",
+              "en": "Yesterday we were dancing all night."
+            },
+            {
+              "es": "¿Qué ==estuvieron haciendo== de seis a siete?",
+              "en": "What were you doing from six to seven?"
+            },
+            {
+              "es": "El sábado pasado ==estuve calificando== exámenes.",
+              "en": "Last Saturday I was grading exams."
+            },
+            {
+              "es": "==Estuvimos comiendo== hasta que se acabó todo y luego nos fuimos al cine.",
+              "en": "We were eating until everything was gone, and then we went to the movies."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estaba bailando toda la noche ayer."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estuve bailando toda la noche ayer."
+                }
+              ],
+              "nota": "Closed time frame: **estuve**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estuve duchándome cuando sonó el teléfono."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me estaba bañando cuando sonó el teléfono."
+                }
+              ],
+              "nota": "Interrupted: **estaba**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "estaba + gerund",
+              "texto": "[[5130|imperfect progressive]]."
+            },
+            {
+              "forma": "imperfect or preterite?",
+              "texto": "[[6871|imperfect vs preterite]], [[6874|time markers]]."
+            },
+            {
+              "forma": "cuando + imperfect",
+              "texto": "[[6005|preterite with cuando + imperfect]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Complete: _Cuando llegué, ellos ___ (cenar)._",
+              "r": "estaban cenando",
+              "nota": "Interrupted."
+            },
+            {
+              "p": "Complete: _Ayer ___ (trabajar, yo) de nueve a cinco._",
+              "r": "estuve trabajando",
+              "nota": "Closed time frame."
+            },
+            {
+              "p": "In Spanish: _We were talking for three hours._",
+              "r": "Estuvimos platicando tres horas.",
+              "nota": "Closed: estuvimos."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5130
+    ],
+    "confunde": [
+      6871
+    ],
+    "sigue": [
+      6871
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6209",
+      "kwiziq": true
+    }
+  ]
+}

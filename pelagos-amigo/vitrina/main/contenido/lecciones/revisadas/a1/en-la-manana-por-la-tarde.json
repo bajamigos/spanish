@@ -1,0 +1,205 @@
+{
+  "tema": 9344,
+  "slug": "en-la-manana-por-la-tarde",
+  "titulo": "Parts of the day: en la / por la mañana",
+  "subtitulo": "Surfeo en la mañana y entreno por la tarde.",
+  "foto": "t08.jpg",
+  "regla": "In the morning / afternoon / night: en la or por la + mañana, tarde, noche. With a clock time, use de: a las seis de la mañana.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**In the morning / afternoon / evening**: **en la** or **por la** + **mañana**, **tarde**, **noche**. In Mexico, **en la** is the most common. In other countries (like Argentina) you'll hear **a la**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Meaning",
+            "Spanish"
+          ],
+          "filas": [
+            [
+              "_in the morning_",
+              "en la mañana / por la mañana"
+            ],
+            [
+              "_in the afternoon_",
+              "en la tarde / por la tarde"
+            ],
+            [
+              "_at night_",
+              "en la noche / por la noche"
+            ],
+            [
+              "_at six in the morning_",
+              "a las seis de la mañana"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "With **en** or **por**, always use **la**. For a habit, you can also use the plural: **en las mañanas**, **por las tardes**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "After a clock time, it's **de**: **a las diez de la noche**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Surfeo ==en la mañana==, antes del trabajo.",
+              "en": "I surf in the morning, before work."
+            },
+            {
+              "es": "Entreno jiu-jitsu ==por la tarde==.",
+              "en": "I train jiu-jitsu in the afternoon."
+            },
+            {
+              "es": "==En la noche== vemos The Expanse.",
+              "en": "At night we watch The Expanse."
+            },
+            {
+              "es": "Me levanto a las seis ==de la mañana==.",
+              "en": "I get up at six in the morning."
+            },
+            {
+              "es": "Mañana ==en la mañana== riego el huerto.",
+              "en": "Tomorrow morning I'll water the garden."
+            },
+            {
+              "es": "==Por las mañanas== tomo café en la azotea.",
+              "en": "In the mornings I have coffee on the roof."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estudio en mañana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estudio en la mañana."
+                }
+              ],
+              "nota": "Always **la**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Son las diez en la noche."
+                },
+                {
+                  "v": "bien",
+                  "t": "Son las diez de la noche."
+                }
+              ],
+              "nota": "With a clock time: **de**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Corro por la mañanas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Corro por las mañanas."
+                }
+              ],
+              "nota": "Plural: **las**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "a las seis",
+              "texto": "The hour itself: [[6665|a la / a las + time]], [[7231|telling the time]]."
+            },
+            {
+              "forma": "todas las mañanas",
+              "texto": "Every morning: [[6178|cada and todos for every]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I get up at seven in the morning._",
+              "r": "Me levanto a las siete de la mañana.",
+              "nota": "de la mañana."
+            },
+            {
+              "p": "Fix it: _Riego el huerto en tarde._",
+              "r": "Riego el huerto en la tarde.",
+              "nota": "Add la."
+            },
+            {
+              "p": "In Spanish, with por: _I surf in the mornings._",
+              "r": "Surfeo por las mañanas.",
+              "nota": "Habit: las."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7231,
+      6665
+    ],
+    "confunde": [],
+    "sigue": [
+      6178
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9344",
+      "kwiziq": true
+    }
+  ]
+}

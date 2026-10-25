@@ -1,0 +1,295 @@
+{
+  "tema": 5731,
+  "slug": "condicional-regulares",
+  "titulo": "Conjugate regular verbs in the conditional",
+  "subtitulo": "Keep the whole infinitive and add -ía: trabajaría, comería, viviría.",
+  "foto": "t03.jpg",
+  "regla": "Add -ía, -ías, -ía, -íamos, -ían to the whole infinitive. The same endings for -ar, -er and -ir verbs.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "The **conditional** (**condicional simple**) is the _would_ form: **compraría** = _I would buy_. For regular verbs the rule is simple: keep the **whole infinitive** and add the endings."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "whole infinitive",
+            "**-ía, -ías, -ía, -íamos, -ían**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Ending",
+            "surfear",
+            "comer",
+            "vivir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "-ía",
+              "surfearía",
+              "comería",
+              "viviría"
+            ],
+            [
+              "tú",
+              "-ías",
+              "surfearías",
+              "comerías",
+              "vivirías"
+            ],
+            [
+              "él, ella, usted",
+              "-ía",
+              "surfearía",
+              "comería",
+              "viviría"
+            ],
+            [
+              "nosotros",
+              "-íamos",
+              "surfearíamos",
+              "comeríamos",
+              "viviríamos"
+            ],
+            [
+              "ustedes, ellos",
+              "-ían",
+              "surfearían",
+              "comerían",
+              "vivirían"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The endings are the **same for -ar, -er and -ir** verbs, and they're the same as the **imperfect** endings of **-er** and **-ir** verbs (**comía**, **vivía**). The difference is that the conditional keeps the infinitive: **comía** (_I was eating_) vs **comería** (_I would eat_). See [[5264|-er and -ir verbs in the imperfect]]."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Every** form has a written accent on the **í**: **-ía**, **-íamos**... The stress falls on it."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Yo** and **él, ella, usted** are identical (**comería**), so add the subject if it's not clear from context."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the conditional is the future dreaming: same infinitive as **comeré**, but it says _I would..._ with a sigh: **comería**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Yo ==compraría== una tabla más larga.",
+              "en": "I would buy a longer board."
+            },
+            {
+              "es": "Tú ==comerías== más sano con nosotros.",
+              "en": "You would eat more healthily with us."
+            },
+            {
+              "es": "Beto ==dormiría== mejor en una hamaca.",
+              "en": "Beto would sleep better in a hammock."
+            },
+            {
+              "es": "Nosotros ==sembraríamos== maíz en el huerto.",
+              "en": "We would plant corn in the garden."
+            },
+            {
+              "es": "Ustedes nunca ==abrirían== un Tsuru sin permiso del dueño.",
+              "en": "You would never open a Tsuru without the owner's permission."
+            },
+            {
+              "es": "Holden ==arriesgaría== todo por su tripulación.",
+              "en": "Holden would risk everything for his crew."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo comía más tacos, pero estoy lleno."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo comería más tacos, pero estoy lleno."
+                }
+              ],
+              "nota": "**Comía** is the imperfect (_I used to eat, I was eating_). _I would eat_ keeps the infinitive: **comería**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros viviriamos en Rosarito."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros viviríamos en Rosarito."
+                }
+              ],
+              "nota": "The accent on **í** is in every form, **nosotros** too."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ellos trabajarían mañana, ya lo decidieron."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ellos trabajarán mañana, ya lo decidieron."
+                }
+              ],
+              "nota": "**-án** is the future (_will_); **-ían** is the conditional (_would_)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usos",
+      "titulo": "What the conditional does",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "Yo compraría una tabla.",
+              "texto": "_Would_: a hypothesis or wish. See [[7431|the conditional for hypothesis, wish or suggestion]].",
+              "aqui": true
+            },
+            {
+              "forma": "¿Podría ayudarme?",
+              "texto": "Polite requests: [[6713|poder in the conditional for polite requests]]. Also [[7059|me gustaría]]."
+            },
+            {
+              "forma": "Si tuviera dinero, viajaría.",
+              "texto": "With **si** + imperfect subjunctive: [[5120|hypothetical si clauses]]."
+            },
+            {
+              "forma": "Estaría cansado.",
+              "texto": "A guess about the past: [[5069|the conditional for probability in the past]]."
+            },
+            {
+              "forma": "Dijo que vendría.",
+              "texto": "The future seen from the past: [[7761|the conditional as future in the past]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "trabajaré",
+              "texto": "The future also keeps the whole infinitive: [[5155|regular verbs in the simple future]]."
+            },
+            {
+              "forma": "haría, tendría, podría",
+              "texto": "Irregular verbs use their future stem: [[5064|hacer]], [[5772|tener]], [[5853|poder]], [[5055|querer]] in the conditional."
+            },
+            {
+              "forma": "comía",
+              "texto": "Same endings, different tense: [[5264|-er and -ir verbs in the imperfect]]."
+            },
+            {
+              "forma": "debería haber ido",
+              "texto": "_Should have_: [[5054|deber in the conditional + haber + participle]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "**Vivir**, **nosotros**: ___ cerca de la playa.",
+              "r": "Viviríamos cerca de la playa.",
+              "nota": "Whole infinitive + **-íamos**, with an accent."
+            },
+            {
+              "p": "In Spanish: _You (tú) would sleep better._",
+              "r": "Dormirías mejor.",
+              "nota": "**dormir** + **-ías**."
+            },
+            {
+              "p": "Which one means _I would eat_? **comía** or **comería**.",
+              "r": "comería",
+              "nota": "The conditional keeps the infinitive **comer-**."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5155,
+      5264,
+      5263
+    ],
+    "confunde": [
+      5069,
+      5162
+    ],
+    "sigue": [
+      5064,
+      5772,
+      5853,
+      5055,
+      7431,
+      6713,
+      7059,
+      5120,
+      7761,
+      5054
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5731",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "tema": 9254,
+  "slug": "tanto-como-ambos",
+  "titulo": "Tanto... como = both... and",
+  "subtitulo": "Tanto mi hermano como mi hermana tienen perro.",
+  "foto": "t06.jpg",
+  "regla": "Tanto X como Y = both X and Y. It joins two nouns, phrases, adjectives or clauses. As a subject, the verb is plural: Tanto Cristina como David serían buenos. Tanto doesn't change.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "tanto",
+            "X",
+            "como",
+            "Y"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Means _both... and_ (sometimes _whether... or_). It's not a comparison here."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Tanto** never changes in this use."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Two subjects take a **plural** verb: **tanto Cristina como David son...**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **tanto** opens the pair; **como** closes it."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "De adolescente me gustaban ==tanto== los chavos ==como== las chavas.",
+              "en": "As a teenager I liked both boys and girls."
+            },
+            {
+              "es": "==Tanto== mi hermano ==como== mi hermana tienen mascotas.",
+              "en": "Both my brother and my sister have pets."
+            },
+            {
+              "es": "Siempre deberías ponerte bloqueador, ==tanto== en la mañana ==como== en la tarde.",
+              "en": "You should always wear sunscreen, both in the morning and in the afternoon."
+            },
+            {
+              "es": "==Tanto== cuando son chiquitos ==como== cuando son grandes, los hijos preocupan.",
+              "en": "Whether they're little or grown up, kids are always a worry."
+            },
+            {
+              "es": "Ese mueble sirve ==tanto== para guardar juguetes ==como== para guardar ropa.",
+              "en": "That piece of furniture works for storing both toys and clothes."
+            },
+            {
+              "es": "Para este proyecto, ==tanto== Cristina ==como== David serían buenos candidatos.",
+              "en": "For this project, both Cristina and David would be good candidates."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tanto mi hermano como mi hermana tiene perro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tanto mi hermano como mi hermana tienen perro."
+                }
+              ],
+              "nota": "Two subjects: plural."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tantos los niños como los adultos..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tanto los niños como los adultos..."
+                }
+              ],
+              "nota": "**Tanto** doesn't change."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tanto como (comparison)",
+              "texto": "[[5165|tanto como]]."
+            },
+            {
+              "forma": "ni... ni...",
+              "texto": "_Neither... nor_: [[7074|ni... ni...]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Both my mom and my dad work._",
+              "r": "Tanto mi mamá como mi papá trabajan.",
+              "nota": "Plural verb."
+            },
+            {
+              "p": "In Spanish: _both in summer and in winter_",
+              "r": "tanto en verano como en invierno",
+              "nota": "tanto... como."
+            },
+            {
+              "p": "Fix it: _Tantas las playas como las montañas me gustan._",
+              "r": "Me gustan tanto las playas como las montañas.",
+              "nota": "Invariable tanto."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5165
+    ],
+    "confunde": [
+      5165
+    ],
+    "sigue": [
+      7074
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9254",
+      "kwiziq": true
+    }
+  ]
+}

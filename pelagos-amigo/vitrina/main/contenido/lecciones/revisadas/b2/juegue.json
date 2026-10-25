@@ -1,0 +1,218 @@
+{
+  "tema": 6212,
+  "slug": "juegue",
+  "titulo": "Jugar in the present subjunctive",
+  "subtitulo": "Juegue, juegues, juguemos, jueguen.",
+  "foto": "t06.jpg",
+  "regla": "Jugar in the present subjunctive: u → ue (except nosotros) and g → gu before e: juegue, juegues, juegue, juguemos, jueguen.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Jugar** has two changes in the present subjunctive:"
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "u → ue",
+              "texto": "Like in the present: **juego → juegue**. Not in **nosotros**."
+            },
+            {
+              "forma": "g → gu",
+              "texto": "Before **e**, to keep the hard _g_ sound: **juegue**, **juguemos**."
+            }
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "jugar (present subjunctive)"
+          ],
+          "filas": [
+            [
+              "yo",
+              "juegue"
+            ],
+            [
+              "tú",
+              "juegues"
+            ],
+            [
+              "él, ella, usted",
+              "juegue"
+            ],
+            [
+              "nosotros",
+              "juguemos"
+            ],
+            [
+              "ustedes, ellos",
+              "jueguen"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **juegue** = **jue** (stem change) + **gue** (spelling)."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi mamá no quiere que ==juegue== en la calle.",
+              "en": "My mom doesn't want me to play in the street."
+            },
+            {
+              "es": "Es importante que los niños ==jueguen== al aire libre.",
+              "en": "It's important for kids to play outdoors."
+            },
+            {
+              "es": "Ojalá ==juguemos== la final.",
+              "en": "I hope we play in the final."
+            },
+            {
+              "es": "No ==juegues== con fuego.",
+              "en": "Don't play with fire."
+            },
+            {
+              "es": "Cuando ==juegue== México, vamos a ver el partido juntos.",
+              "en": "When Mexico plays, we'll watch the game together."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "juege"
+                },
+                {
+                  "v": "bien",
+                  "t": "juegue"
+                }
+              ],
+              "nota": "Needs **u** after **g**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "jueguemos"
+                },
+                {
+                  "v": "bien",
+                  "t": "juguemos"
+                }
+              ],
+              "nota": "No **ue** in **nosotros**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "jugue (present subjunctive)"
+                },
+                {
+                  "v": "bien",
+                  "t": "juegue"
+                }
+              ],
+              "nota": "Keep the stem change."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "juego",
+              "texto": "[[5855|jugar in the present]]."
+            },
+            {
+              "forma": "pague, llegue",
+              "texto": "[[5725|-gar verbs: g → gu]]."
+            },
+            {
+              "forma": "vuelva",
+              "texto": "[[6213|o → ue verbs]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Conjugate: _tú / jugar_ (subjunctive)",
+              "r": "juegues",
+              "nota": "ue + gu."
+            },
+            {
+              "p": "Conjugate: _nosotros / jugar_ (subjunctive)",
+              "r": "juguemos",
+              "nota": "No ue."
+            },
+            {
+              "p": "Complete: _Quiero que ellos ___ (jugar) conmigo._",
+              "r": "jueguen",
+              "nota": "jueguen."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5855,
+      5725
+    ],
+    "confunde": [
+      6213
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6212",
+      "kwiziq": true
+    }
+  ]
+}

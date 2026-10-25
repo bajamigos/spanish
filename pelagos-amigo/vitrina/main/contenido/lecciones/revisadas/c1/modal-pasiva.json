@@ -1,0 +1,219 @@
+{
+  "tema": 7080,
+  "slug": "modal-pasiva",
+  "titulo": "Modal verbs in the passive voice",
+  "subtitulo": "Debe ser trasladada. No pudieron ser localizadas.",
+  "foto": "t02.jpg",
+  "regla": "Modal verb (deber, tener que, poder, querer, necesitar) + ser + participle = must be done, can be done...: Todos los productos pueden ser comprados en línea. The participle agrees with the subject. In speech, se is often more natural: se pueden comprar.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "modal (conjugated)",
+            "+ ser +",
+            "participle (agrees)"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Only the modal is conjugated. **Ser** stays in the infinitive. The participle agrees with the subject."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It's formal (news, official notices). In conversation, the passive **se** is often more natural: **se pueden comprar en línea**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: modal + **ser** + participle = _must be / can be / had to be + done_."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ella ==debe ser trasladada== a otro hospital.",
+              "en": "She must be transferred to another hospital."
+            },
+            {
+              "es": "Este candidato ==debería ser considerado== para el puesto de director.",
+              "en": "This candidate should be considered for the director position."
+            },
+            {
+              "es": "Lidia ==tuvo que ser atendida== por el gerente del hotel.",
+              "en": "Lidia had to be looked after by the hotel manager."
+            },
+            {
+              "es": "Ellas ==tuvieron que ser acompañadas== a su casa porque era muy tarde.",
+              "en": "They had to be walked home because it was very late."
+            },
+            {
+              "es": "La cantante no ==quiso ser fotografiada== después del concierto.",
+              "en": "The singer refused to be photographed after the concert."
+            },
+            {
+              "es": "Las joyas perdidas no ==pudieron ser localizadas==.",
+              "en": "The lost jewelry couldn't be found."
+            },
+            {
+              "es": "Todos nuestros productos ==pueden ser comprados== en línea.",
+              "en": "All our products can be bought online."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "comparar",
+      "titulo": "Passive with ser or with se",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "formal",
+                  "t": "Los productos pueden ser comprados en línea."
+                },
+                {
+                  "v": "cotidiano",
+                  "t": "Los productos se pueden comprar en línea."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Debe es trasladada."
+                },
+                {
+                  "v": "bien",
+                  "t": "Debe ser trasladada."
+                }
+              ],
+              "nota": "**Ser** in the infinitive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Las joyas no pudieron ser localizado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Las joyas no pudieron ser localizadas."
+                }
+              ],
+              "nota": "Agreement."
+            },
+            {
+              "filas": [
+                {
+                  "v": "estado",
+                  "t": "Debe estar trasladada."
+                },
+                {
+                  "v": "acción",
+                  "t": "Debe ser trasladada."
+                }
+              ],
+              "nota": "**Estar** = resulting state; **ser** = the action."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "fue escrito por",
+              "texto": "[[6173|passive with ser]]."
+            },
+            {
+              "forma": "se pueden comprar",
+              "texto": "[[6803|passive se with modals]]."
+            },
+            {
+              "forma": "deber estar trabajando",
+              "texto": "[[9960|modals in progressive tenses]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Passive: _The forms must be signed._",
+              "r": "Los formularios deben ser firmados.",
+              "nota": "Agreement."
+            },
+            {
+              "p": "Everyday version with se:",
+              "r": "Se deben firmar los formularios.",
+              "nota": "Passive se."
+            },
+            {
+              "p": "Passive: _He didn't want to be recognized._",
+              "r": "No quiso ser reconocido.",
+              "nota": "querer + ser."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6173,
+      6803
+    ],
+    "confunde": [
+      6803
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7080",
+      "kwiziq": true
+    }
+  ]
+}

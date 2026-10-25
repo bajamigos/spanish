@@ -1,0 +1,174 @@
+{
+  "tema": 8246,
+  "slug": "gerundio-mandato",
+  "titulo": "The gerund as a command",
+  "subtitulo": "¡Andando, que es tarde! ¡Caminando!",
+  "foto": "t07.jpg",
+  "regla": "In colloquial speech, a gerund alone can work as a quick command to get things moving: ¡Andando!, ¡Caminando!, ¡Circulando!, ¡Saliendo todos despacio! It can also sound firm or threatening: ¡Ya te estás callando!",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "A **gerund** on its own can be a **command**, especially to **start moving** or speed up."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Common verbs: **andar, caminar, circular, salir, correr, moverse**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Firmer version: **estar** or **ir** + gerund in the present: **¡Ya te estás callando!** (_You'd better be quiet!_), **¡Te me vas saliendo!**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**¡Marchando!** is what a waiter calls when an order is on its way."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the gerund is already in motion, so it pushes people to move."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Vamos, ==saliendo== todos despacio y en silencio.",
+              "en": "Come on, everyone out slowly and quietly."
+            },
+            {
+              "es": "Ya son las tres. ¡==Andando==, que llegamos tarde!",
+              "en": "It's three already. Let's go, we're going to be late!"
+            },
+            {
+              "es": "¡==Circulando==! Solo fue un choquecito.",
+              "en": "Keep moving! It was just a fender bender."
+            },
+            {
+              "es": "¡==Corriendo==, que nos mojamos!",
+              "en": "Run, we're getting wet!"
+            },
+            {
+              "es": "¡Ya te ==estás callando==!",
+              "en": "You'd better be quiet right now!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Andar, que es tarde!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Andando, que es tarde!"
+                }
+              ],
+              "nota": "Gerund."
+            },
+            {
+              "filas": [
+                {
+                  "v": "normal",
+                  "t": "¡Vámonos!"
+                },
+                {
+                  "v": "con gerundio",
+                  "t": "¡Andando!"
+                }
+              ],
+              "nota": "Same idea, more urgent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¡a comer!",
+              "texto": "[[6179|a + infinitive]]."
+            },
+            {
+              "forma": "vas y le dices",
+              "texto": "[[7121|present as an order]]."
+            },
+            {
+              "forma": "¡vete!",
+              "texto": "[[6748|imperative]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Quick command: _Let's get moving!_",
+              "r": "¡Andando! / ¡Caminando!",
+              "nota": "Gerund."
+            },
+            {
+              "p": "Firm: _You'd better be leaving!_",
+              "r": "¡Ya te estás yendo!",
+              "nota": "estar + gerund."
+            },
+            {
+              "p": "Police to traffic: _Keep moving!_",
+              "r": "¡Circulando!",
+              "nota": "Gerund."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6179
+    ],
+    "confunde": [
+      7121
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8246",
+      "kwiziq": true
+    }
+  ]
+}

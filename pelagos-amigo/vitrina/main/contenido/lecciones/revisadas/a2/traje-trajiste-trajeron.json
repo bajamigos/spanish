@@ -1,0 +1,250 @@
+{
+  "tema": 5224,
+  "slug": "traje-trajiste-trajeron",
+  "titulo": "Traer in the preterite",
+  "subtitulo": "¿Quién trajo las tortillas?",
+  "foto": "t09.jpg",
+  "regla": "Traer is irregular in the preterite: stem traj- + -e, -iste, -o, -imos, -eron: traje, trajiste, trajo, trajimos, trajeron (no i after the j). Atraer, distraer, contraer and extraer follow it.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Traer** (_to bring_) changes its stem to **traj-** in the preterite."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The endings are **-e, -iste, -o, -imos**, and **-eron** in ellos: after a **j**, the **i** of -ieron disappears."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**No written accents**: **traje**, **trajo**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "traer",
+            "distraer"
+          ],
+          "filas": [
+            [
+              "yo",
+              "traje",
+              "distraje"
+            ],
+            [
+              "tú",
+              "trajiste",
+              "distrajiste"
+            ],
+            [
+              "él / ella / usted",
+              "trajo",
+              "distrajo"
+            ],
+            [
+              "nosotros",
+              "trajimos",
+              "distrajimos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "trajeron",
+              "distrajeron"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "All its family works the same: **atraer** → **atrajo**, **contraer** → **contrajo**, **extraer** → **extrajeron**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **traje** is also _a suit_. «Traje el traje» = _I brought the suit_."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿Quién ==trajo== las tortillas?",
+              "en": "Who brought the tortillas?"
+            },
+            {
+              "es": "==Traje== mi tabla nueva para enseñártela.",
+              "en": "I brought my new board to show it to you."
+            },
+            {
+              "es": "¿==Trajiste== tu kimono? Hoy hay entrenamiento.",
+              "en": "Did you bring your gi? There's practice today."
+            },
+            {
+              "es": "Mis tíos nos ==trajeron== mangos de Sinaloa.",
+              "en": "My aunt and uncle brought us mangoes from Sinaloa."
+            },
+            {
+              "es": "==Trajimos== composta para el huerto.",
+              "en": "We brought compost for the garden."
+            },
+            {
+              "es": "El ruido me ==distrajo== y perdí la ola.",
+              "en": "The noise distracted me and I missed the wave."
+            },
+            {
+              "es": "La playa ==atrajo== a miles de turistas el fin de semana.",
+              "en": "The beach drew thousands of tourists over the weekend."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Traí el pastel."
+                },
+                {
+                  "v": "bien",
+                  "t": "Traje el pastel."
+                }
+              ],
+              "nota": "Irregular stem **traj-**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ellos trajieron la comida."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ellos trajeron la comida."
+                }
+              ],
+              "nota": "After **j**: **-eron**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella trajó su guitarra."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella trajo su guitarra."
+                }
+              ],
+              "nota": "No accent: **trajo**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me distraí con el celular."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me distraje con el celular."
+                }
+              ],
+              "nota": "The family copies traer: **distraje**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "traigo",
+              "texto": "The present first: [[5591|traer and caer in the present]]."
+            },
+            {
+              "forma": "traer vs llevar",
+              "texto": "Bring or take: [[8578|traer vs llevar]]."
+            },
+            {
+              "forma": "dijeron",
+              "texto": "Same -eron after j: [[5240|decir in the preterite]]."
+            },
+            {
+              "forma": "condujeron",
+              "texto": "And again: [[5234|-ducir verbs in the preterite]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We brought drinks._",
+              "r": "Trajimos bebidas.",
+              "nota": "trajimos."
+            },
+            {
+              "p": "In Spanish: _Who brought the dog?_",
+              "r": "¿Quién trajo al perro?",
+              "nota": "trajo, no accent."
+            },
+            {
+              "p": "Fix it: _Mis primos trajieron cerveza._",
+              "r": "Mis primos trajeron cerveza.",
+              "nota": "After j: -eron."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5591
+    ],
+    "confunde": [
+      8578
+    ],
+    "sigue": [
+      5240,
+      5234
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5224",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "tema": 7053,
+  "slug": "me-duele-la-cabeza",
+  "titulo": "Articles with body parts and clothing",
+  "subtitulo": "Me duele la cabeza. Ponte la chamarra.",
+  "foto": "t07.jpg",
+  "regla": "With body parts and clothing, Spanish uses el, la, los, las (not mi, tu, su) when it's already clear whose they are, usually because a pronoun like me, te or se already tells you.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "For **body parts** and **clothes**, use **el, la, los, las**, not **mi, tu, su**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The owner is already clear from the pronoun (**me, te, se, le**) or from the subject."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "me / te / se / le",
+            "+ verb +",
+            "el / la / los / las + body part or clothing"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Use a possessive only when the owner isn't clear otherwise: **Tu chamarra está en el carro.**"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Me duele ==la espalda== después del jiu-jitsu.",
+              "en": "My back hurts after jiu-jitsu."
+            },
+            {
+              "es": "Lávate ==las manos== antes de comer.",
+              "en": "Wash your hands before eating."
+            },
+            {
+              "es": "Ponte ==la chamarra==, hace frío.",
+              "en": "Put on your jacket, it's cold."
+            },
+            {
+              "es": "Se rompió ==el brazo== surfeando.",
+              "en": "He broke his arm surfing."
+            },
+            {
+              "es": "Quítate ==los zapatos== en la casa.",
+              "en": "Take your shoes off in the house."
+            },
+            {
+              "es": "Tengo ==los ojos== cafés.",
+              "en": "I have brown eyes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me duele mi cabeza."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me duele la cabeza."
+                }
+              ],
+              "nota": "**Me** already says whose head."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Él se quitó sus zapatos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Él se quitó los zapatos."
+                }
+              ],
+              "nota": "**Se** already says whose shoes."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tengo mis ojos verdes."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tengo los ojos verdes."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "me duele",
+              "texto": "The verb for pain: [[5878|doler]]."
+            },
+            {
+              "forma": "me lavo",
+              "texto": "Pronouns that show the owner: [[5085|reflexive verbs]]."
+            },
+            {
+              "forma": "mi, tu, su",
+              "texto": "When you do need them: [[6012|possessive adjectives]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _My head hurts._",
+              "r": "Me duele la cabeza.",
+              "nota": "la, not mi."
+            },
+            {
+              "p": "In Spanish (tú): _Put on your jacket._",
+              "r": "Ponte la chamarra.",
+              "nota": "la, not tu."
+            },
+            {
+              "p": "Fix it: _Me lavo mis dientes._",
+              "r": "Me lavo los dientes.",
+              "nota": "Me already says whose."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5085
+    ],
+    "confunde": [
+      6012
+    ],
+    "sigue": [
+      5878
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7053",
+      "kwiziq": true
+    }
+  ]
+}

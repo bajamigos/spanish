@@ -1,0 +1,253 @@
+{
+  "tema": 5599,
+  "slug": "construyo-huyo",
+  "titulo": "Huir and construir in the present",
+  "subtitulo": "Construyo un gallinero; el gato huye.",
+  "foto": "t03.jpg",
+  "regla": "Verbs ending in -uir (huir, construir, destruir, incluir…) add a y before the ending in the present: construyo, huyes, incluye, construyen. Nosotros has no y: construimos, huimos.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "In the present, verbs ending in **-uir** add a **y** after the **u** in every person **except nosotros**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "huir",
+            "construir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "huyo",
+              "construyo"
+            ],
+            [
+              "tú",
+              "huyes",
+              "construyes"
+            ],
+            [
+              "él / ella / usted",
+              "huye",
+              "construye"
+            ],
+            [
+              "nosotros / nosotras",
+              "huimos",
+              "construimos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "huyen",
+              "construyen"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Nosotros** is regular: **construimos**, **huimos** (the ending starts with **i**, so no y is needed)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The same pattern works for all **-uir** verbs: **destruir**, **incluir**, **concluir**, **contribuir**, **distribuir**, **sustituir**, **influir**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It does **not** apply to **-guir** verbs, where the u is silent: **seguir → sigo**, **conseguir → consigue**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the **y** is a little bridge between the u and the vowel that follows. Nosotros already has an **i**, so it doesn't need the bridge."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Este fin de semana ==construyo== una cama elevada para los jitomates.",
+              "en": "This weekend I'm building a raised bed for the tomatoes."
+            },
+            {
+              "es": "Los gatos ==huyen== cuando llega el perro del vecino.",
+              "en": "The cats run away when the neighbor's dog shows up."
+            },
+            {
+              "es": "Nosotros ==construimos== un gallinero en la azotea.",
+              "en": "We're building a chicken coop on the roof."
+            },
+            {
+              "es": "El precio ==incluye== la renta de la tabla.",
+              "en": "The price includes the board rental."
+            },
+            {
+              "es": "¿Por qué ==huyes== de tus problemas?",
+              "en": "Why do you run away from your problems?"
+            },
+            {
+              "es": "Las olas grandes ==destruyen== los castillos de arena.",
+              "en": "Big waves destroy the sandcastles."
+            },
+            {
+              "es": "En la novela, los cinturianos ==construyen== una estación enorme.",
+              "en": "In the novel, the Belters build a huge station."
+            },
+            {
+              "es": "Dormir bien ==contribuye== mucho a tu progreso en el tatami.",
+              "en": "Sleeping well contributes a lot to your progress on the mat."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo construo una casa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo construyo una casa."
+                }
+              ],
+              "nota": "Add the **y**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros construyimos un muro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros construimos un muro."
+                }
+              ],
+              "nota": "No y in **nosotros**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El menú inclue bebida."
+                },
+                {
+                  "v": "bien",
+                  "t": "El menú incluye bebida."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo siguyo la ruta."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo sigo la ruta."
+                }
+              ],
+              "nota": "**-guir** verbs don't take the y."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "vivo, vivimos",
+              "texto": "The regular base: [[5108|-ir verbs in the present]]."
+            },
+            {
+              "forma": "sigo, sigues",
+              "texto": "Looks similar, works differently: [[5848|seguir and conseguir]]."
+            },
+            {
+              "forma": "construyó, huyeron",
+              "texto": "The y comes back in the past: [[5219|-uir verbs in the preterite]]."
+            },
+            {
+              "forma": "que construya",
+              "texto": "Later: [[5930|-uir verbs in the present subjunctive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I'm fleeing from the city._",
+              "r": "Huyo de la ciudad.",
+              "nota": "yo → huyo."
+            },
+            {
+              "p": "In Spanish: _We build tables._",
+              "r": "Construimos mesas.",
+              "nota": "No y in nosotros."
+            },
+            {
+              "p": "Fix it: _Ellos destruen todo._",
+              "r": "Ellos destruyen todo.",
+              "nota": "Add the y."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5108
+    ],
+    "confunde": [
+      5848
+    ],
+    "sigue": [
+      5219,
+      5930
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5599",
+      "kwiziq": true
+    }
+  ]
+}

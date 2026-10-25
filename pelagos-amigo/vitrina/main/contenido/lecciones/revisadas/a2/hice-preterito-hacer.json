@@ -1,0 +1,244 @@
+{
+  "tema": 5110,
+  "slug": "hice-preterito-hacer",
+  "titulo": "Hacer in the preterite",
+  "subtitulo": "¿Qué hiciste ayer? Hice la tarea.",
+  "foto": "t08.jpg",
+  "regla": "Hacer is irregular in the preterite: hice, hiciste, hizo, hicimos, hicieron. The stem is hic-, it becomes hiz- in hizo, and no form has a written accent.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Hacer** changes its stem to **hic-** in the preterite."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "hacer"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**hice**"
+            ],
+            [
+              "tú",
+              "**hiciste**"
+            ],
+            [
+              "él, ella, usted",
+              "**hizo**"
+            ],
+            [
+              "nosotros",
+              "**hicimos**"
+            ],
+            [
+              "ellos, ustedes",
+              "**hicieron**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Hizo** is written with **z**: **hico** would be said with a hard _k_ sound (_iko_), so the c becomes z to keep the s sound of **hice**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**No written accents**: **hice**, **hizo** (not hicé, hizó)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Weather in the past: **hizo calor**, **hizo frío**, **hizo viento**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **hizo** has a **z** like a lightning bolt. Something happened."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿Qué ==hiciste== el fin de semana?",
+              "en": "What did you do on the weekend?"
+            },
+            {
+              "es": "==Hice== una composta para el huerto.",
+              "en": "I made a compost pile for the vegetable garden."
+            },
+            {
+              "es": "Mi mamá ==hizo== tamales para Navidad.",
+              "en": "My mom made tamales for Christmas."
+            },
+            {
+              "es": "Ayer ==hizo== mucho calor en Tijuana.",
+              "en": "It was really hot in Tijuana yesterday."
+            },
+            {
+              "es": "==Hicimos== una fogata en la playa.",
+              "en": "We made a bonfire on the beach."
+            },
+            {
+              "es": "Mis compañeros ==hicieron== cien lagartijas.",
+              "en": "My teammates did a hundred push-ups."
+            },
+            {
+              "es": "¿Ustedes ==hicieron== la reservación?",
+              "en": "Did you guys make the reservation?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella hico la cena."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella hizo la cena."
+                }
+              ],
+              "nota": "**hizo** with **z**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo hicé ejercicio."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo hice ejercicio."
+                }
+              ],
+              "nota": "No accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer hací la tarea."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer hice la tarea."
+                }
+              ],
+              "nota": "Irregular stem **hic-**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer hace mucho calor."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer hizo mucho calor."
+                }
+              ],
+              "nota": "Past weather: **hizo**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hago",
+              "texto": "The present: [[5708|hacer in the present]]."
+            },
+            {
+              "forma": "hacía",
+              "texto": "Background in the past: [[5927|hacer in the imperfect]]."
+            },
+            {
+              "forma": "he hecho",
+              "texto": "The present perfect: [[6066|hacer in the present perfect]]."
+            },
+            {
+              "forma": "hace dos años",
+              "texto": "Not a preterite: [[7063|hace for ago]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I did my homework._",
+              "r": "Hice la tarea.",
+              "nota": "hice, no accent."
+            },
+            {
+              "p": "In Spanish: _It was cold last night._",
+              "r": "Anoche hizo frío.",
+              "nota": "hizo with z."
+            },
+            {
+              "p": "Fix it: _¿Qué hicistes ayer?_",
+              "r": "¿Qué hiciste ayer?",
+              "nota": "No final s."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5708
+    ],
+    "confunde": [
+      5927,
+      7063
+    ],
+    "sigue": [
+      6066
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5110",
+      "kwiziq": true
+    }
+  ]
+}

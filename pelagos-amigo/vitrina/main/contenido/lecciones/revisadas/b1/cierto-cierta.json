@@ -1,0 +1,188 @@
+{
+  "tema": 8196,
+  "slug": "cierto-cierta",
+  "titulo": "Using cierto, cierta, ciertos, ciertas for certain",
+  "subtitulo": "Cierta persona, ciertas preguntas: before the noun it means a certain.",
+  "foto": "t04.jpg",
+  "regla": "Cierto before a noun = a certain (no un): cierta persona. It agrees. After the noun it means true: una noticia cierta.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Cierto** is an indefinite adjective meaning _certain_. It agrees with the noun: **cierto lugar**, **cierta persona**, **ciertos amigos**, **ciertas ideas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Like English _certain_, it points to specific things or people without naming them. It's more specific than **algún / alguna**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Before a singular noun it means _a certain_, and it usually goes **without un / una**: **cierta persona**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Sometimes it means _some, a degree of_: **con cierta ironía**, **tengo cierto interés**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**After** the noun, **cierto** means _true, reliable_: **una noticia cierta**. And **es cierto** = _it's true_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: before the noun, it hides a name. After the noun, it swears it's true."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Ciertos== vecinos se quejaron de la basura.",
+              "en": "Certain neighbors complained about the trash."
+            },
+            {
+              "es": "Se van a ver esta noche en ==cierto== lugar.",
+              "en": "They're going to meet tonight in a certain place."
+            },
+            {
+              "es": "Los periodistas harán ==ciertas== preguntas incómodas.",
+              "en": "The reporters will ask certain awkward questions."
+            },
+            {
+              "es": "==Cierta== persona me contó la verdad.",
+              "en": "A certain person told me the truth."
+            },
+            {
+              "es": "Me contestó con ==cierta== ironía.",
+              "en": "She answered with a certain irony."
+            },
+            {
+              "es": "Es una noticia ==cierta==.",
+              "en": "It's true news."
+            },
+            {
+              "es": "Es ==cierto==: Amos no miente.",
+              "en": "It's true: Amos doesn't lie."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Una cierta persona me llamó."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cierta persona me llamó."
+                }
+              ],
+              "nota": "Usually without **una**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ciertos ideas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ciertas ideas."
+                }
+              ],
+              "nota": "It agrees."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "algún, alguna",
+              "texto": "_Some, any_: [[6136|algún]], [[6462|alguno]]."
+            },
+            {
+              "forma": "alguno de",
+              "texto": "_One of, some of_: [[8699|alguno de]]."
+            },
+            {
+              "forma": "unos cuantos",
+              "texto": "_A few_: [[7509|unos cuantos]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _a certain day_",
+              "r": "cierto día",
+              "nota": "No **un**."
+            },
+            {
+              "p": "In Spanish: _certain rules_",
+              "r": "ciertas reglas",
+              "nota": "Feminine plural."
+            },
+            {
+              "p": "In Spanish: _It's true._",
+              "r": "Es cierto.",
+              "nota": "After **ser**: true."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6136
+    ],
+    "confunde": [
+      6462
+    ],
+    "sigue": [
+      8699
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8196",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "tema": 7426,
+  "slug": "comertelo",
+  "titulo": "Reflexive and direct object pronouns with infinitives, gerunds and commands",
+  "subtitulo": "Quiero comérmelo. Está bebiéndoselas. ¡Cómetelo!",
+  "foto": "t05.jpg",
+  "regla": "With pronominal verbs (comerse, beberse, leerse, cortarse), the reflexive pronoun comes first, then the direct object: me lo, te las, se los. Attach both to infinitives, gerunds and affirmative commands (with an accent), or put them before the conjugated verb.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Some verbs take a reflexive pronoun to **intensify** (**comerse, beberse, leerse, tomarse**). Add a direct object pronoun and you get two: the **reflexive goes first**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "reflexive (me, te, se, nos)",
+            "+",
+            "direct object (lo, la, los, las)"
+          ]
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "infinitive / gerund",
+              "texto": "Attached (**comérmelo, bebiéndoselas**) or before the conjugated verb (**me lo quiero comer**, **se las está bebiendo**)."
+            },
+            {
+              "forma": "affirmative command",
+              "texto": "Always attached: **¡cómetelo!**, **¡bébetela!**"
+            },
+            {
+              "forma": "conjugated verb / negative command",
+              "texto": "Before: **me lo comí**, **no te lo comas**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Attaching two pronouns adds a syllable, so the stressed vowel takes an accent: **comérmelo, cortártelo, bebiéndoselas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: reflexive first, then the thing."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Tengo un libro nuevo y quiero ==leérmelo== pronto.",
+              "en": "I have a new book and I want to read it soon."
+            },
+            {
+              "es": "Tu pelo está larguísimo. Deberías ==cortártelo==.",
+              "en": "Your hair is super long. You should get it cut."
+            },
+            {
+              "es": "Hay tres copas en la mesa y ella está ==bebiéndoselas== todas.",
+              "en": "There are three glasses on the table and she's drinking them all."
+            },
+            {
+              "es": "Déjame papitas. Te ==las== estás comiendo todas.",
+              "en": "Leave me some chips. You're eating them all."
+            },
+            {
+              "es": "¡==Cómetelo== todo!",
+              "en": "Eat it all up!"
+            },
+            {
+              "es": "No ==te lo== comas.",
+              "en": "Don't eat it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero comerlome."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero comérmelo."
+                }
+              ],
+              "nota": "Reflexive first."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estás comiendotelas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estás comiéndotelas."
+                }
+              ],
+              "nota": "Accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Te lo come!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Cómetelo!"
+                }
+              ],
+              "nota": "Affirmative command: attached."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "voy a verlo",
+              "texto": "[[5140|object pronouns with infinitives]]."
+            },
+            {
+              "forma": "siéntate",
+              "texto": "[[9262|reflexive commands]]."
+            },
+            {
+              "forma": "me corté el pelo",
+              "texto": "[[8040|have something done]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Attach: _Se lo va a tomar._",
+              "r": "Va a tomárselo.",
+              "nota": "Reflexive + lo, accent."
+            },
+            {
+              "p": "Command: _Drink it (la leche)!_ (tú)",
+              "r": "¡Bébetela!",
+              "nota": "te + la."
+            },
+            {
+              "p": "Two ways: _I'm eating them (las galletas)._",
+              "r": "Me las estoy comiendo. / Estoy comiéndomelas.",
+              "nota": "Front or attached."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5140,
+      9262
+    ],
+    "confunde": [
+      5078
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7426",
+      "kwiziq": true
+    }
+  ]
+}

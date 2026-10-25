@@ -1,0 +1,254 @@
+{
+  "tema": 5240,
+  "slug": "dije-dijiste-dijeron",
+  "titulo": "Decir in the preterite",
+  "subtitulo": "¿Qué te dijo el doctor?",
+  "foto": "t06.jpg",
+  "regla": "Decir is irregular in the preterite: stem dij- + -e, -iste, -o, -imos, -eron: dije, dijiste, dijo, dijimos, dijeron (no i after the j). Predecir, bendecir, maldecir and contradecir follow it: predijo, bendijo, maldijeron.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Decir** (_to say, to tell_) changes its stem to **dij-** in the preterite."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The endings are **-e, -iste, -o, -imos**, and **-eron** in ellos: after a **j**, the **i** of -ieron disappears."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**No written accents**: **dije**, **dijo**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "decir",
+            "predecir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "dije",
+              "predije"
+            ],
+            [
+              "tú",
+              "dijiste",
+              "predijiste"
+            ],
+            [
+              "él / ella / usted",
+              "dijo",
+              "predijo"
+            ],
+            [
+              "nosotros",
+              "dijimos",
+              "predijimos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "dijeron",
+              "predijeron"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "All the verbs built on decir do the same: **bendecir** → **bendijo**, **maldecir** → **maldije**, **contradecir** → **contradijeron**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the **j** is greedy and eats the **i**: **dijeron**, never dijieron."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿Qué te ==dijo== el doctor?",
+              "en": "What did the doctor tell you?"
+            },
+            {
+              "es": "Te ==dije== que la marea iba a subir.",
+              "en": "I told you the tide was going to come in."
+            },
+            {
+              "es": "Ya les ==dijimos== a todos que la fiesta es el sábado.",
+              "en": "We already told everyone the party is on Saturday."
+            },
+            {
+              "es": "Mis papás me ==dijeron== que no.",
+              "en": "My parents told me no."
+            },
+            {
+              "es": "¿Por qué no me ==dijiste== nada?",
+              "en": "Why didn't you tell me anything?"
+            },
+            {
+              "es": "El padre ==bendijo== a los novios.",
+              "en": "The priest blessed the bride and groom."
+            },
+            {
+              "es": "La app ==predijo== lluvia, pero salió el sol.",
+              "en": "The app predicted rain, but the sun came out."
+            },
+            {
+              "es": "==Maldije== mi suerte cuando se me rompió la tabla.",
+              "en": "I cursed my luck when my board broke."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ellos dijieron la verdad."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ellos dijeron la verdad."
+                }
+              ],
+              "nota": "After **j**: **-eron**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo decí que sí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo dije que sí."
+                }
+              ],
+              "nota": "Irregular stem **dij-**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella dijó que venía."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella dijo que venía."
+                }
+              ],
+              "nota": "No accent: **dijo**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El padre bendeció la casa."
+                },
+                {
+                  "v": "bien",
+                  "t": "El padre bendijo la casa."
+                }
+              ],
+              "nota": "Derivatives copy decir."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "digo, dices",
+              "texto": "The present first: [[5489|decir and its derivatives in the present]]."
+            },
+            {
+              "forma": "he dicho",
+              "texto": "Recent past: [[6240|decir in the present perfect]]."
+            },
+            {
+              "forma": "trajeron",
+              "texto": "Same -eron after j: [[5224|traer in the preterite]]."
+            },
+            {
+              "forma": "tradujeron",
+              "texto": "And again: [[5234|-ducir verbs in the preterite]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _They told me the truth._",
+              "r": "Me dijeron la verdad.",
+              "nota": "dijeron, no i."
+            },
+            {
+              "p": "In Spanish (tú): _What did you say?_",
+              "r": "¿Qué dijiste?",
+              "nota": "dijiste."
+            },
+            {
+              "p": "Fix it: _Mis amigos dijieron que no._",
+              "r": "Mis amigos dijeron que no.",
+              "nota": "After j: -eron."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5489
+    ],
+    "confunde": [
+      6240
+    ],
+    "sigue": [
+      5224,
+      5234
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5240",
+      "kwiziq": true
+    }
+  ]
+}

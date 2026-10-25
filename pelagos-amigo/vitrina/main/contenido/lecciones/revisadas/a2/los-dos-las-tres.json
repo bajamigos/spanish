@@ -1,0 +1,206 @@
+{
+  "tema": 6663,
+  "slug": "los-dos-las-tres",
+  "titulo": "Plural article + number + noun",
+  "subtitulo": "Los dos hermanos, las tres amigas.",
+  "foto": "t04.jpg",
+  "regla": "To say the two / the three…, use los or las + number + noun, in that order; the article agrees with the noun. Los dos / las dos on their own also mean both (of them).",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say **the two…**, **the three…**, put the plural article **first**, then the number, then the noun."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "los / las",
+            "+ number +",
+            "noun"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The article agrees with the **noun**: **los dos perros**, **las dos perras**. **Uno** isn't used here: it's **el / la** + singular noun."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Los dos / las dos** alone mean **both** or **the two of us / them**: **—¿Cuál quieres? —Las dos.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "With **primeros / últimos**, the number usually goes first: **los tres primeros días** (_the first three days_), **las dos últimas semanas** (_the last two weeks_)."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Los dos== hermanos surfean en Playas de Tijuana.",
+              "en": "The two brothers surf at Playas de Tijuana."
+            },
+            {
+              "es": "==Las tres== macetas están en el balcón.",
+              "en": "The three pots are on the balcony."
+            },
+            {
+              "es": "Vi ==las seis== temporadas de The Expanse en un mes.",
+              "en": "I watched the six seasons of The Expanse in a month."
+            },
+            {
+              "es": "==Los cinco== alumnos nuevos entrenan los martes.",
+              "en": "The five new students train on Tuesdays."
+            },
+            {
+              "es": "—¿Cuál quieres? —==Las dos==.",
+              "en": "\"Which one do you want?\" \"Both.\""
+            },
+            {
+              "es": "Vamos a ir ==los dos== juntos.",
+              "en": "The two of us are going together."
+            },
+            {
+              "es": "==Los tres primeros== días fueron difíciles.",
+              "en": "The first three days were hard."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Dos los hermanos llegaron."
+                },
+                {
+                  "v": "bien",
+                  "t": "Los dos hermanos llegaron."
+                }
+              ],
+              "nota": "The article goes first."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Los dos chicas"
+                },
+                {
+                  "v": "bien",
+                  "t": "Las dos chicas"
+                }
+              ],
+              "nota": "The article agrees with the noun."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ambos de ellos vinieron."
+                },
+                {
+                  "v": "bien",
+                  "t": "Vinieron los dos."
+                }
+              ],
+              "nota": "_Both of them_: **los dos** (or **ambos**, with no de)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "los, las",
+              "texto": "The plural articles: [[5101|los, las]]."
+            },
+            {
+              "forma": "dos perros",
+              "texto": "Numbers before nouns: [[6664|numbers with nouns]]."
+            },
+            {
+              "forma": "ambos, los dos",
+              "texto": "More ways to say _both_: [[9341|ambos, los dos]]."
+            },
+            {
+              "forma": "tengo tres",
+              "texto": "Numbers on their own: [[6672|numbers as pronouns]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _the two dogs_",
+              "r": "los dos perros",
+              "nota": "los + number + noun."
+            },
+            {
+              "p": "In Spanish, with a number (two women): _Both are from Tijuana._",
+              "r": "Las dos son de Tijuana.",
+              "nota": "las dos = both."
+            },
+            {
+              "p": "Fix it: _Dos las amigas viven aquí._",
+              "r": "Las dos amigas viven aquí.",
+              "nota": "Article first."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5101,
+      6664
+    ],
+    "confunde": [
+      9341
+    ],
+    "sigue": [
+      6672
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6663",
+      "kwiziq": true
+    }
+  ]
+}

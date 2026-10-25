@@ -1,0 +1,237 @@
+{
+  "tema": 5062,
+  "slug": "cuando-subjuntivo-indicativo",
+  "titulo": "Cuando + the present subjunctive vs cuando + the present indicative",
+  "subtitulo": "Cuando llegues (it hasn't happened yet) vs cuando llego (it really happens).",
+  "foto": "t09.jpg",
+  "regla": "Cuando + subjunctive for a future event that hasn't happened yet; cuando + indicative for what really happens, like habits.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Cuando** (_when_) can take the present indicative or the present subjunctive, and each one refers to a different kind of action."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Mood",
+            "When",
+            "Example"
+          ],
+          "filas": [
+            [
+              "subjunctive",
+              "a future event that hasn't happened yet",
+              "Cuando llegues, me hablas."
+            ],
+            [
+              "indicative",
+              "something that actually happens (a habit, a fact)",
+              "Cuando llego, como."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "With the subjunctive, the other half of the sentence is usually a **future** or a **command**: **cuando sea grande, tendré un huerto**; **cuando vayas al mercado, compra fruta**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The same rule applies to synonyms of **cuando**, like **cada vez que** and **en el momento en que**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if you could replace _when_ with _whenever, as usual_, use the indicative. If it's _when, someday_, use the subjunctive."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Cuando ==sea== grande, tendré un taller.",
+              "en": "When I'm older, I'll have a workshop."
+            },
+            {
+              "es": "Cuando ==vayas== a la taquería, tráeme dos de asada.",
+              "en": "When you go to the taquería, bring me two asada tacos."
+            },
+            {
+              "es": "Cuando ==estemos== de vacaciones, no usaré el celular.",
+              "en": "When we're on vacation, I won't use my phone."
+            },
+            {
+              "es": "Cuando tus primos ==lleguen==, ya será tarde.",
+              "en": "When your cousins arrive, it'll be late."
+            },
+            {
+              "es": "Cuando ==lleguen== al hotel, deben entregar los papeles.",
+              "en": "When you arrive at the hotel, you must hand in the papers."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Two similar sentences. In the first, it really happens; in the second, it's a future idea:"
+        },
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Cuando ==voy== a Rosarito, me quedo con Beto.",
+              "en": "When I go to Rosarito, I stay with Beto. (it happens)"
+            },
+            {
+              "es": "Cuando ==vaya== a Rosarito, me quedaré con Beto.",
+              "en": "When I go to Rosarito, I'll stay with Beto. (future)"
+            },
+            {
+              "es": "Cada vez que ==veo== a Luisa, me acuerdo de su hermana.",
+              "en": "Every time I see Luisa, I remember her sister."
+            },
+            {
+              "es": "Te acordarás de mí cada vez que ==veas== el mar.",
+              "en": "You'll remember me every time you see the sea."
+            },
+            {
+              "es": "En el momento en que ==llego== al gym, el profe me saluda.",
+              "en": "The moment I arrive at the gym, the coach greets me."
+            },
+            {
+              "es": "En el momento en que ==llegues== al gym, saluda al profe.",
+              "en": "The moment you arrive at the gym, greet the coach."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Don't use the future after **cuando**. English says _when I'm older_, never _when I will be older_; Spanish does the same, with the subjunctive."
+        },
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cuando seré grande, tendré un huerto."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cuando sea grande, tendré un huerto."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cuando llegas mañana, avísame."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cuando llegues mañana, avísame."
+                }
+              ],
+              "nota": "Tomorrow hasn't happened: subjunctive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "Apenas llegues, me hablas.",
+              "texto": "Other time words with the same rule: [[8294|en cuanto, apenas, tan pronto como]]."
+            },
+            {
+              "forma": "Quiero que vengas.",
+              "texto": "Other triggers: [[5059|querer que]], [[5061|ojalá]], [[6076|esperar que]]."
+            },
+            {
+              "forma": "mientras",
+              "texto": "Another time word with both moods: [[6994|mientras]]."
+            },
+            {
+              "forma": "vaya, sea, estemos",
+              "texto": "The forms: [[5231|ir]], [[5152|ser]], [[5229|estar]] in the subjunctive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _When you see Beto, tell him hi._",
+              "r": "Cuando veas a Beto, salúdalo.",
+              "nota": "Future event: subjunctive."
+            },
+            {
+              "p": "Which one? **Cuando hace viento, no surfeo** or **Cuando haga viento, no surfeo**.",
+              "r": "Cuando hace viento, no surfeo.",
+              "nota": "A habit: indicative."
+            },
+            {
+              "p": "In Spanish: _When we arrive, we'll eat._",
+              "r": "Cuando lleguemos, comeremos.",
+              "nota": "**Llegar** keeps its sound with **gu**: lleguemos."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5063,
+      5151,
+      5059
+    ],
+    "confunde": [
+      8294
+    ],
+    "sigue": [
+      6994,
+      5061,
+      6076,
+      5231
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5062",
+      "kwiziq": true
+    }
+  ]
+}

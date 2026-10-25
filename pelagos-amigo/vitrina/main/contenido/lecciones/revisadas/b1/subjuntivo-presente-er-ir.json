@@ -1,0 +1,279 @@
+{
+  "tema": 5151,
+  "slug": "subjuntivo-presente-er-ir",
+  "titulo": "Conjugate regular -er and -ir verbs in the present subjunctive",
+  "subtitulo": "-er and -ir verbs switch to a: coma, vivas, abramos.",
+  "foto": "t02.jpg",
+  "regla": "Take the present-tense yo form, drop the -o and add -a, -as, -a, -amos, -an. -er and -ir verbs switch to a.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Regular **-er** and **-ir** verbs follow **the same pattern** in the present subjunctive, and the pattern includes a change of vowel at the end. The stem is the **yo** form of the present (**yo bebo** → **beb-**), and the **-o** is replaced with:"
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "present **yo** form",
+            "minus **-o**",
+            "**-a, -as, -a, -amos, -an**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Ending",
+            "comer",
+            "vivir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "-a",
+              "coma",
+              "viva"
+            ],
+            [
+              "tú",
+              "-as",
+              "comas",
+              "vivas"
+            ],
+            [
+              "él, ella, usted",
+              "-a",
+              "coma",
+              "viva"
+            ],
+            [
+              "nosotros",
+              "-amos",
+              "comamos",
+              "vivamos"
+            ],
+            [
+              "ustedes, ellos",
+              "-an",
+              "coman",
+              "vivan"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**-er and -ir verbs switch to the vowel a**, while **-ar** verbs switch to **e** ([[5063|-ar in the subjunctive]]). In the subjunctive, **-er** and **-ir** have no difference at all."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: they cross over. The **a** verbs go to **e**, and the **e** and **i** verbs go to **a**. Like in jiu-jitsu, always to the other side."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Es mejor que ==coma== despacio antes de entrenar.",
+              "en": "It's better if I eat slowly before training."
+            },
+            {
+              "es": "No quiero que ==bebas== cerveza en la playa.",
+              "en": "I don't want you to drink beer on the beach."
+            },
+            {
+              "es": "Espero que ==vivas== feliz en tu depa nuevo.",
+              "en": "I hope you live happily in your new apartment."
+            },
+            {
+              "es": "Quizás ==abran== el regalo más tarde.",
+              "en": "They may open the present later."
+            },
+            {
+              "es": "Espero que ==reciban== muchos regalos.",
+              "en": "I hope you all get lots of presents."
+            },
+            {
+              "es": "¡No ==leamos== hoy! Vámonos a surfear.",
+              "en": "Let's not read today! Let's go surf."
+            },
+            {
+              "es": "No ==escriban== en esa hoja, por favor.",
+              "en": "Don't write on that sheet, please. (to several people)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "The **-er** / **-ir** subjunctive ends in **a**, which looks like the ordinary present of an **-ar** verb. Don't go on habit: after the trigger, the **a** is the right one."
+        },
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Espero que vives feliz."
+                },
+                {
+                  "v": "bien",
+                  "t": "Espero que vivas feliz."
+                }
+              ],
+              "nota": "After **espero que**, use the **a**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No quiero que comes tanto."
+                },
+                {
+                  "v": "bien",
+                  "t": "No quiero que comas tanto."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es mejor que Beto aprende rápido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es mejor que Beto aprenda rápido."
+                }
+              ],
+              "nota": "**Es mejor que** also takes the subjunctive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usos",
+      "titulo": "The same form, other jobs",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "Quiero que comas.",
+              "texto": "After a trigger with **que**.",
+              "aqui": true
+            },
+            {
+              "forma": "No comas eso.",
+              "texto": "The negative **tú** command. See [[9255|negative commands]]."
+            },
+            {
+              "forma": "No leamos hoy.",
+              "texto": "**Nosotros** as _let's_ or _let's not_. See [[6961|commands for usted, ustedes and nosotros]]."
+            },
+            {
+              "forma": "Quizás abran.",
+              "texto": "Doubt with [[5084|**tal vez** and **quizás**]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hablo → hable",
+              "texto": "The other half: [[5063|-ar in the subjunctive]]."
+            },
+            {
+              "forma": "como, vivo",
+              "texto": "Where the stem comes from: [[5540|-er in the present]] and [[5108|-ir in the present]]."
+            },
+            {
+              "forma": "creo → crea",
+              "texto": "Watch the look-alikes: [[10757|**crear**, **creer** and **criar**]]."
+            },
+            {
+              "forma": "tengo → tenga",
+              "texto": "If **yo** is irregular, so is the subjunctive: [[6000|yo-go verbs]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "**Abrir** with **ustedes**: Es mejor que ___ la cochera temprano.",
+              "r": "Es mejor que abran la cochera temprano.",
+              "nota": "abro → abr- → abran."
+            },
+            {
+              "p": "In Spanish: _I don't want you to run at night._ (tú, **correr**)",
+              "r": "No quiero que corras de noche.",
+              "nota": "corro → corr- → corras."
+            },
+            {
+              "p": "In Spanish: _Let's not eat here._",
+              "r": "No comamos aquí.",
+              "nota": "**Nosotros**, subjunctive: **comamos**."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5540,
+      5108,
+      5063
+    ],
+    "confunde": [
+      10757
+    ],
+    "sigue": [
+      6000,
+      5059,
+      9255,
+      6961,
+      5084
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5151",
+      "kwiziq": true
+    }
+  ]
+}

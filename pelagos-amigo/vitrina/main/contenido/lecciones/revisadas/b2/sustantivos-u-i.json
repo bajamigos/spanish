@@ -1,0 +1,202 @@
+{
+  "tema": 8863,
+  "slug": "sustantivos-u-i",
+  "titulo": "Most nouns ending in -u and -i are masculine",
+  "subtitulo": "El menú, el champú, el colibrí, el espíritu.",
+  "foto": "t09.jpg",
+  "regla": "Nouns ending in -u or -i are almost all masculine: el menú, el champú, el iglú, el rubí, el maniquí, el colibrí, el espíritu. Common exceptions: la tribu, la metrópoli(s); la bici is short for a feminine word.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "There aren't many, but nouns ending in **-u** or **-i** are almost always **masculine**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Most are stressed on the last syllable and take an accent: **menú, champú, iglú, rubí, maniquí, colibrí, esquí**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Some aren't stressed at the end and are masculine too: **el espíritu, el ímpetu, el taxi, el safari**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Exceptions: **la tribu**, **la metrópoli**; and shortened words keep the gender of the full word: **la bici** (bicicleta), **la mini** (minifalda)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Plural of stressed **-ú / -í**: **-es** is the careful form (**rubíes**), but **-s** is common (**menús, champús**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **-u** and **-i** walk with **el**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==El menú== de hoy incluye postre y agua gratis.",
+              "en": "Today's set menu includes free dessert and water."
+            },
+            {
+              "es": "Compré ==un champú== especial para el pelo seco.",
+              "en": "I bought a special shampoo for dry hair."
+            },
+            {
+              "es": "Los exploradores construyeron ==un iglú==.",
+              "en": "The explorers built an igloo."
+            },
+            {
+              "es": "Mi piedra preciosa favorita es ==el rubí==.",
+              "en": "My favorite gem is ruby."
+            },
+            {
+              "es": "Había ==un maniquí== en el aparador que parecía una persona.",
+              "en": "There was a mannequin in the shop window that looked like a person."
+            },
+            {
+              "es": "Vimos ==un colibrí== azul precioso.",
+              "en": "We saw a beautiful blue hummingbird."
+            },
+            {
+              "es": "Se siente ==el espíritu== navideño.",
+              "en": "You can feel the Christmas spirit."
+            },
+            {
+              "es": "==El taxi== llegó tarde.",
+              "en": "The taxi was late."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "la menú"
+                },
+                {
+                  "v": "bien",
+                  "t": "el menú"
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "el bici"
+                },
+                {
+                  "v": "bien",
+                  "t": "la bici"
+                }
+              ],
+              "nota": "Short for **la bicicleta**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "el tribu"
+                },
+                {
+                  "v": "bien",
+                  "t": "la tribu"
+                }
+              ],
+              "nota": "Exception."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el agua",
+              "texto": "[[6873|feminine nouns with el]]."
+            },
+            {
+              "forma": "-e nouns",
+              "texto": "[[6674|gender of nouns ending in -e]]."
+            },
+            {
+              "forma": "gender",
+              "texto": "[[6749|nouns ending in a consonant]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Article: ___ esquí",
+              "r": "el esquí",
+              "nota": "Masculine."
+            },
+            {
+              "p": "Article: ___ tribu",
+              "r": "la tribu",
+              "nota": "Exception."
+            },
+            {
+              "p": "Article: ___ jabalí",
+              "r": "el jabalí",
+              "nota": "Masculine."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6674
+    ],
+    "confunde": [
+      6873
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8863",
+      "kwiziq": true
+    }
+  ]
+}

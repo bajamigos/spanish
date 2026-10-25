@@ -1,0 +1,239 @@
+{
+  "tema": 6462,
+  "slug": "alguno-algunos-pronombre",
+  "titulo": "Alguno, alguna, algunos, algunas as pronouns",
+  "subtitulo": "¿Una pluma? ¿Tienes alguna? Algunos sí, otros no.",
+  "foto": "t05.jpg",
+  "regla": "Without a noun, alguno / alguna means one, any one (from a known group) and algunos / algunas means some (of them). It agrees with the noun it replaces and is never shortened to algún. For people in general, algunos = some people.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Use **alguno** without a noun when the noun is already clear: **¿Tienes alguna?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Singular** (alguno, alguna) = _one, any one_. **Plural** (algunos, algunas) = _some (of them)_."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "Singular: _one, any_",
+            "Plural: _some_"
+          ],
+          "filas": [
+            [
+              "Masculine",
+              "alguno",
+              "algunos"
+            ],
+            [
+              "Feminine",
+              "alguna",
+              "algunas"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It agrees with the noun it replaces: a pen (**una pluma**) → **alguna**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "As a pronoun it's always **alguno**, never **algún**. **Algún** only goes right before a masculine noun."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Algunos** with no group = _some people_: **Algunos dicen que…**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "For a person or thing **not** from a known group, use **alguien** or **algo**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Necesito una pluma. ¿Tienes ==alguna==?",
+              "en": "I need a pen. Do you have one?"
+            },
+            {
+              "es": "¿Te gustaron los tacos? —==Algunos== sí, otros no.",
+              "en": "Did you like the tacos? —Some I did, others I didn't."
+            },
+            {
+              "es": "Hay muchas playas en Baja; ==algunas== son perfectas para principiantes.",
+              "en": "There are lots of beaches in Baja; some are perfect for beginners."
+            },
+            {
+              "es": "Me faltan tornillos. ¿Te quedó ==alguno==?",
+              "en": "I'm short on screws. Do you have one left?"
+            },
+            {
+              "es": "==Algunos== dicen que mañana va a llover.",
+              "en": "Some people say it's going to rain tomorrow."
+            },
+            {
+              "es": "De mis amigas, ==algunas== viven en San Diego.",
+              "en": "Of my friends, some live in San Diego."
+            },
+            {
+              "es": "¿Leíste los libros de The Expanse? —He leído ==algunos==.",
+              "en": "Have you read The Expanse books? —I've read some."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Tienes algún?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Tienes alguno?"
+                }
+              ],
+              "nota": "**Algún** only before a noun."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Necesito una toalla. ¿Tienes alguno?"
+                },
+                {
+                  "v": "bien",
+                  "t": "Necesito una toalla. ¿Tienes alguna?"
+                }
+              ],
+              "nota": "Agree with **toalla**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Hay alguno en la puerta?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Hay alguien en la puerta?"
+                }
+              ],
+              "nota": "Someone, no group: **alguien**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Hay leche? —Sí, hay alguna."
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Hay leche? —Sí, hay un poco."
+                }
+              ],
+              "nota": "Not with uncountable things."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "algún día",
+              "texto": "Before a noun: [[6136|algún, alguna + noun]]."
+            },
+            {
+              "forma": "alguien",
+              "texto": "Someone, no group: [[6311|alguien]]."
+            },
+            {
+              "forma": "ninguno",
+              "texto": "The negative: [[6464|ninguno, ninguna]]."
+            },
+            {
+              "forma": "alguno de",
+              "texto": "One / some of a group: [[8699|alguno de]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I need a beer. Is there one left?_",
+              "r": "Necesito una cerveza. ¿Queda alguna?",
+              "nota": "Feminine singular."
+            },
+            {
+              "p": "In Spanish: _Did you like the songs? —Some._",
+              "r": "¿Te gustaron las canciones? —Algunas.",
+              "nota": "Feminine plural."
+            },
+            {
+              "p": "Fix it: _¿Tienes un cargador? —Sí, tengo algún._",
+              "r": "¿Tienes un cargador? —Sí, tengo alguno.",
+              "nota": "No noun: alguno."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6136
+    ],
+    "confunde": [
+      6311
+    ],
+    "sigue": [
+      6464,
+      8699
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6462",
+      "kwiziq": true
+    }
+  ]
+}

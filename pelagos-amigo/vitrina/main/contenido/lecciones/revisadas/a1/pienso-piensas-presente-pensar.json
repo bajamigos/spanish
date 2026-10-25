@@ -1,0 +1,213 @@
+{
+  "tema": 5728,
+  "slug": "pienso-piensas-presente-pensar",
+  "titulo": "Pensar in the present",
+  "subtitulo": "Pienso que sí. ¿Tú qué piensas?",
+  "foto": "t06.jpg",
+  "regla": "Pensar (to think) changes e > ie in the present except in nosotros: pienso, piensas, piensa, pensamos, piensan.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Pensar** means _to think_. The **e** of the stem becomes **ie** when stressed."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Present"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**pienso**"
+            ],
+            [
+              "tú",
+              "**piensas**"
+            ],
+            [
+              "él / ella / usted",
+              "**piensa**"
+            ],
+            [
+              "nosotros / nosotras",
+              "pensamos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "**piensan**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Nosotros** keeps the **e**: **pensamos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Pensar que** = _to think that_; **pensar en** = _to think about_; **¿qué piensas de...?** = _what do you think of...?_"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Pienso== que va a llover.",
+              "en": "I think it's going to rain."
+            },
+            {
+              "es": "¿En qué ==piensas==?",
+              "en": "What are you thinking about?"
+            },
+            {
+              "es": "Mi hermano siempre ==piensa== en el surf.",
+              "en": "My brother is always thinking about surfing."
+            },
+            {
+              "es": "==Pensamos== que la película es muy buena.",
+              "en": "We think the movie is really good."
+            },
+            {
+              "es": "¿Qué ==piensan== ustedes de la nueva temporada de The Expanse?",
+              "en": "What do you guys think of the new season of The Expanse?"
+            },
+            {
+              "es": "No ==pienso== mucho en eso.",
+              "en": "I don't think about that much."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo penso que sí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo pienso que sí."
+                }
+              ],
+              "nota": "e > ie in yo."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros piensamos igual."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros pensamos igual."
+                }
+              ],
+              "nota": "No change in nosotros."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ellas pensan mucho."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ellas piensan mucho."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "cierro, empiezo",
+              "texto": "Same pattern: [[5811|-ar verbs with e > ie]]."
+            },
+            {
+              "forma": "quiero",
+              "texto": "Same change in an -er verb: [[5774|querer]]."
+            },
+            {
+              "forma": "pienso ir",
+              "texto": "Pensar + infinitive, _to plan to_: [[8860|pensar + infinitive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I think you're right._",
+              "r": "Pienso que tienes razón.",
+              "nota": "pienso que."
+            },
+            {
+              "p": "In Spanish: _What are you (tú) thinking about?_",
+              "r": "¿En qué piensas?",
+              "nota": "pensar en."
+            },
+            {
+              "p": "Fix it: _Nosotros piensamos en el viaje._",
+              "r": "Nosotros pensamos en el viaje.",
+              "nota": "pensamos."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5811
+    ],
+    "confunde": [
+      5774
+    ],
+    "sigue": [
+      8860
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5728",
+      "kwiziq": true
+    }
+  ]
+}

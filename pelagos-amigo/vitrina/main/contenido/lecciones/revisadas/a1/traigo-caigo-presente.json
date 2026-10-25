@@ -1,0 +1,221 @@
+{
+  "tema": 5591,
+  "slug": "traigo-caigo-presente",
+  "titulo": "Traer and caer in the present",
+  "subtitulo": "Traigo las tortillas. ¡Me caigo!",
+  "foto": "t03.jpg",
+  "regla": "Traer (to bring) and caer (to fall) are regular in the present except yo, which adds -ig-: traigo, caigo.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Traer** means _to bring_; **caer** means _to fall_ (**caerse** = _to fall down_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Only **yo** is irregular: it adds **-ig-**: **traigo**, **caigo**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "traer",
+            "caer"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**traigo**",
+              "**caigo**"
+            ],
+            [
+              "tú",
+              "traes",
+              "caes"
+            ],
+            [
+              "él / ella / usted",
+              "trae",
+              "cae"
+            ],
+            [
+              "nosotros / nosotras",
+              "traemos",
+              "caemos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "traen",
+              "caen"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The other forms follow the regular **-er** pattern."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Traigo== las tortillas para la carne asada.",
+              "en": "I'm bringing the tortillas for the cookout."
+            },
+            {
+              "es": "¿Qué ==traes== en la mochila?",
+              "en": "What do you have in your backpack?"
+            },
+            {
+              "es": "Cuando las olas están grandes, ==me caigo== mucho de la tabla.",
+              "en": "When the waves are big, I fall off the board a lot."
+            },
+            {
+              "es": "Nosotros ==traemos== las bebidas.",
+              "en": "We're bringing the drinks."
+            },
+            {
+              "es": "Las hojas ==caen== en otoño.",
+              "en": "The leaves fall in autumn."
+            },
+            {
+              "es": "Mis primos siempre ==traen== a su perro.",
+              "en": "My cousins always bring their dog."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo trayo el pastel."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo traigo el pastel."
+                }
+              ],
+              "nota": "Yo is **traigo**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Siempre me cao."
+                },
+                {
+                  "v": "bien",
+                  "t": "Siempre me caigo."
+                }
+              ],
+              "nota": "Yo is **caigo**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros traimos la comida."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros traemos la comida."
+                }
+              ],
+              "nota": "Regular -er ending: **-emos**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "pongo, salgo",
+              "texto": "Other verbs with a **g** in yo: [[5305|poner]], [[5484|salir]]."
+            },
+            {
+              "forma": "llevo",
+              "texto": "Bring or take?: [[8578|traer vs llevar]]."
+            },
+            {
+              "forma": "traje",
+              "texto": "Next tenses: [[5224|traer in the preterite]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I'm bringing the music._",
+              "r": "Traigo la música.",
+              "nota": "traigo."
+            },
+            {
+              "p": "In Spanish: _I fall a lot in jiu-jitsu._",
+              "r": "Me caigo mucho en el jiu-jitsu.",
+              "nota": "me caigo."
+            },
+            {
+              "p": "Fix it: _¿Ustedes traemos los platos?_",
+              "r": "¿Ustedes traen los platos?",
+              "nota": "ustedes = traen."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5305,
+      5484
+    ],
+    "confunde": [
+      8578
+    ],
+    "sigue": [
+      5224
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5591",
+      "kwiziq": true
+    }
+  ]
+}

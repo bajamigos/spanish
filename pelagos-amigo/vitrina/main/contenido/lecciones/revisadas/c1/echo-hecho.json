@@ -1,0 +1,223 @@
+{
+  "tema": 10307,
+  "slug": "echo-hecho",
+  "titulo": "Echo vs hecho",
+  "subtitulo": "Le echo sal. Ya está hecho.",
+  "foto": "t09.jpg",
+  "regla": "Echo, echas, echa (no h) come from echar (to throw, put in, pour): le echo sal. Hecho, hecha, hechos, hechas (with h) are the participle of hacer (done, made): ya está hecho. They sound the same.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Spelling",
+            "From",
+            "Meaning",
+            "Example"
+          ],
+          "filas": [
+            [
+              "echo, echas, echa, echan",
+              "echar",
+              "I throw / put / pour",
+              "Le echo sal."
+            ],
+            [
+              "hecho, hecha, hechos, hechas",
+              "hacer",
+              "done, made; a fact",
+              "La tarea ya está hecha."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "They sound **identical**, so spelling is the only clue."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Hecho** is also a noun: **un hecho** (_a fact_), **de hecho** (_in fact_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Echar** appears in many expressions: **echar un ojo** (_keep an eye on_), **echarle ganas** (_give it your all_, very Mexican), **echar a perder** (_to ruin_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **hacer** has an **h**, so its participle **hecho** keeps it."
+        }
+      ]
+    },
+    {
+      "id": "echo",
+      "titulo": "Echo (echar)",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Siempre ==echo== los papeles en el bote de basura.",
+              "en": "I always throw papers in the trash can."
+            },
+            {
+              "es": "Nunca le ==echo== sal a la comida.",
+              "en": "I never put salt on my food."
+            },
+            {
+              "es": "Tranquila, yo les ==echo== un ojo a los niños.",
+              "en": "Don't worry, I'll keep an eye on the kids."
+            },
+            {
+              "es": "Le ==echo== ganas a todo.",
+              "en": "I give everything my all."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hecho",
+      "titulo": "Hecho (hacer)",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ya he ==hecho== la tarea.",
+              "en": "I've already done my homework."
+            },
+            {
+              "es": "Esta mesa está ==hecha== a mano.",
+              "en": "This table is handmade."
+            },
+            {
+              "es": "==De hecho==, ya lo sabía.",
+              "en": "In fact, I already knew."
+            },
+            {
+              "es": "Es un ==hecho== que el clima está cambiando.",
+              "en": "It's a fact that the climate is changing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ya está echo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ya está hecho."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Le hecho sal."
+                },
+                {
+                  "v": "bien",
+                  "t": "Le echo sal."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "correcto",
+                  "t": "Te echo de menos."
+                },
+                {
+                  "v": "más común en México",
+                  "t": "Te extraño."
+                }
+              ],
+              "nota": "Both mean _I miss you_."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hecho, dicho",
+              "texto": "[[7048|irregular participles]]."
+            },
+            {
+              "forma": "crear, creer, criar",
+              "texto": "[[10757|look-alike verbs]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Echo or hecho? _¿Ya está ___ la cena?_",
+              "r": "hecha",
+              "nota": "Participle of hacer."
+            },
+            {
+              "p": "Echo or hecho? _Siempre les ___ limón a los tacos._",
+              "r": "echo",
+              "nota": "echar."
+            },
+            {
+              "p": "Echo or hecho? _De ___, no me gusta._",
+              "r": "hecho",
+              "nota": "de hecho."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7048
+    ],
+    "confunde": [
+      10757
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 10307",
+      "kwiziq": true
+    }
+  ]
+}

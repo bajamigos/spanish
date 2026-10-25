@@ -1,0 +1,201 @@
+{
+  "tema": 7510,
+  "slug": "para-que-presente",
+  "titulo": "Para que + present subjunctive (purpose)",
+  "subtitulo": "Te lo digo para que lo sepas.",
+  "foto": "t09.jpg",
+  "regla": "Para que (so that) always takes the subjunctive. With a present, progressive or command in the main clause, use the present subjunctive: Te lo explico para que lo entiendas. After a present perfect, present or imperfect subjunctive. Same subject: para + infinitive.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "present / progressive / command",
+            "+ para que +",
+            "present subjunctive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Para que** introduces a **purpose** and never takes the indicative."
+        },
+        {
+          "tipo": "texto",
+          "texto": "After the **present perfect**, both the present and the imperfect subjunctive work."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Different subjects** are required. Same subject: **para** + infinitive."
+        },
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mismo sujeto",
+                  "t": "Estudio para aprender."
+                },
+                {
+                  "v": "otro sujeto",
+                  "t": "Te explico para que aprendas."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **para que** always hands the action to someone else."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Siempre llego temprano a la oficina ==para que== mi jefa ==piense== que soy puntual.",
+              "en": "I always get to the office early so my boss thinks I'm punctual."
+            },
+            {
+              "es": "Repasamos inglés diario ==para que== el examen final no ==sea== tan difícil.",
+              "en": "We review English every day so the final exam isn't so hard."
+            },
+            {
+              "es": "Miguel está arreglando toda la casa ==para que== su esposa ==descanse== hoy.",
+              "en": "Miguel is tidying the whole house so his wife can rest today."
+            },
+            {
+              "es": "Le estoy mandando un mensaje a Luis ==para que== ==pase== por mí a las diez.",
+              "en": "I'm texting Luis so he picks me up at ten."
+            },
+            {
+              "es": "He salido temprano del trabajo ==para que podamos== comer juntos.",
+              "en": "I've left work early so we can eat together."
+            },
+            {
+              "es": "He salido temprano del trabajo ==para que pudiéramos== comer juntos.",
+              "en": "I've left work early so we could eat together."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Te lo digo para que lo sabes."
+                },
+                {
+                  "v": "bien",
+                  "t": "Te lo digo para que lo sepas."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estudio para que yo apruebe."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estudio para aprobar."
+                }
+              ],
+              "nota": "Same subject: infinitive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "para que + -ra",
+              "texto": "[[7255|para que in the past]]."
+            },
+            {
+              "forma": "para + infinitive",
+              "texto": "[[5970|para for purpose]]."
+            },
+            {
+              "forma": "antes de que, hasta que",
+              "texto": "[[5168|adverbial clauses]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Complete: _Habla más fuerte para que te ___ (oír, nosotros)._",
+              "r": "oigamos",
+              "nota": "Present subjunctive."
+            },
+            {
+              "p": "In Spanish: _I'm saving so my kids can study._",
+              "r": "Ahorro para que mis hijos puedan estudiar.",
+              "nota": "Different subject."
+            },
+            {
+              "p": "In Spanish: _I'm saving to travel._",
+              "r": "Ahorro para viajar.",
+              "nota": "Same subject: infinitive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5970,
+      5168
+    ],
+    "confunde": [
+      7255
+    ],
+    "sigue": [
+      7255
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7510",
+      "kwiziq": true
+    }
+  ]
+}

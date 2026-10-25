@@ -1,0 +1,238 @@
+{
+  "tema": 6075,
+  "slug": "nadie-pronombre",
+  "titulo": "Nadie: no one, nobody, not anyone",
+  "subtitulo": "No vino nadie.",
+  "foto": "t01.jpg",
+  "regla": "Nadie means no one / not anyone. Before the verb it stands alone (Nadie vino); after the verb it needs no before the verb (No vino nadie). As an object it takes the personal a: No conozco a nadie.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Nadie** = _no one, nobody, not anyone_. Only for **people**. It never changes, and the verb is **singular**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Position",
+            "Pattern",
+            "Example"
+          ],
+          "filas": [
+            [
+              "Before the verb",
+              "**nadie** + verb",
+              "**Nadie** sabe."
+            ],
+            [
+              "After the verb",
+              "**no** + verb + **nadie**",
+              "**No** sabe **nadie**."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "When it's the object of the verb, it takes the **personal a**: No veo **a nadie**. It also goes after prepositions: **con nadie**, **para nadie**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Alone as an answer: ¿Quién llamó? —**Nadie**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It stacks with other negatives: No le dije **nada** a **nadie**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **nadie** is an empty room. Say **no** at the door unless **nadie** walks in first."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Nadie== sabe dónde están las llaves.",
+              "en": "Nobody knows where the keys are."
+            },
+            {
+              "es": "No vino ==nadie== a la clase de hoy.",
+              "en": "No one came to today's class."
+            },
+            {
+              "es": "No conozco a ==nadie== en esta ciudad.",
+              "en": "I don't know anyone in this city."
+            },
+            {
+              "es": "¿Quién se comió mis tacos? —¡==Nadie==!",
+              "en": "Who ate my tacos? —Nobody!"
+            },
+            {
+              "es": "No hablo con ==nadie== antes de mi café.",
+              "en": "I don't talk to anyone before my coffee."
+            },
+            {
+              "es": "==Nadie== me avisó que no había clase.",
+              "en": "Nobody told me there was no class."
+            },
+            {
+              "es": "Aquí no hay ==nadie==.",
+              "en": "There's nobody here."
+            },
+            {
+              "es": "No le dije nada a ==nadie==.",
+              "en": "I didn't tell anyone anything."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Conozco a nadie."
+                },
+                {
+                  "v": "bien",
+                  "t": "No conozco a nadie."
+                }
+              ],
+              "nota": "After the verb, **nadie** needs **no**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nadie no vino."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nadie vino."
+                }
+              ],
+              "nota": "**Nadie** first → no **no**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No veo nadie."
+                },
+                {
+                  "v": "bien",
+                  "t": "No veo a nadie."
+                }
+              ],
+              "nota": "Person as object → personal **a**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nadie saben."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nadie sabe."
+                }
+              ],
+              "nota": "Singular verb."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "alguien",
+              "texto": "The positive partner: [[6311|alguien]]."
+            },
+            {
+              "forma": "a nadie",
+              "texto": "Why the a: [[6870|the personal a]]."
+            },
+            {
+              "forma": "nada",
+              "texto": "For things: [[6144|nada]]."
+            },
+            {
+              "forma": "ninguno",
+              "texto": "Not any one of a group: [[6464|ninguno, ninguna]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Nobody knows._",
+              "r": "Nadie sabe. / No sabe nadie.",
+              "nota": "Both orders work."
+            },
+            {
+              "p": "In Spanish: _I don't know anyone here._",
+              "r": "No conozco a nadie aquí.",
+              "nota": "no + verb + a nadie."
+            },
+            {
+              "p": "Fix it: _Nadie no llamó._",
+              "r": "Nadie llamó.",
+              "nota": "Nadie first, no no."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6311,
+      6870
+    ],
+    "confunde": [
+      6144,
+      6464
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6075",
+      "kwiziq": true
+    }
+  ]
+}

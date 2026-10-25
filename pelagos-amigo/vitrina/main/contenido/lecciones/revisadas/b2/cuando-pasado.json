@@ -1,0 +1,185 @@
+{
+  "tema": 7251,
+  "slug": "cuando-pasado",
+  "titulo": "Cuando + indicative for past events",
+  "subtitulo": "Cuando llegó, ya me había dormido.",
+  "foto": "t10.jpg",
+  "regla": "Cuando + past indicative (preterite, imperfect, present perfect, pluperfect) for things that really happened: Se enojó cuando llegué tarde. Cuando + past subjunctive refers to something future or hypothetical from a past point: Dijo que me llamaría cuando llegara.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "For events that **actually happened**, **cuando** takes the **indicative**, in any past tense."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Cuando** + **past subjunctive** isn't about a real past event: it's the future seen from the past, or a hypothetical: **dijo que me llamaría cuando llegara** (he hadn't arrived yet)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: did it happen? Indicative. Was it still waiting? Subjunctive."
+        }
+      ]
+    },
+    {
+      "id": "indicativo",
+      "titulo": "Real past events",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "María se enojó mucho ==cuando== Marcos ==llegó== tardísimo.",
+              "en": "María got really angry when Marcos got home super late."
+            },
+            {
+              "es": "Marta pasaba los veranos en Veracruz ==cuando era== niña.",
+              "en": "Marta used to spend summers in Veracruz when she was a girl."
+            },
+            {
+              "es": "==Cuando he tenido== problemas, mis amigos siempre me han ayudado.",
+              "en": "Whenever I've had problems, my friends have always helped me."
+            },
+            {
+              "es": "Mi mamá me llamó ==cuando== yo ya ==me había acostado==.",
+              "en": "My mom called me when I'd already gone to bed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "subjuntivo",
+      "titulo": "Future or hypothetical",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Cuando hayas vuelto== de Londres, vas a poder practicar inglés.",
+              "en": "When you've come back from London, you'll be able to practice English."
+            },
+            {
+              "es": "Dijo que me llamaría ==cuando llegara== al hotel.",
+              "en": "He said he'd call me when he got to the hotel."
+            },
+            {
+              "es": "Te habría perdonado ==cuando== le ==hubieras pedido== perdón.",
+              "en": "She would have forgiven you when you'd apologized."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me llamó cuando llegara. (he did arrive)"
+                },
+                {
+                  "v": "bien",
+                  "t": "Me llamó cuando llegó."
+                }
+              ],
+              "nota": "Real event: indicative."
+            },
+            {
+              "filas": [
+                {
+                  "v": "pasado real",
+                  "t": "Me llamó cuando llegó."
+                },
+                {
+                  "v": "futuro del pasado",
+                  "t": "Dijo que me llamaría cuando llegara."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "cuando llegues",
+              "texto": "[[5062|cuando + present subjunctive]]."
+            },
+            {
+              "forma": "cuando era niña",
+              "texto": "[[6005|cuando + imperfect]]."
+            },
+            {
+              "forma": "como, donde, quien",
+              "texto": "[[8193|indicative or subjunctive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Complete: _Cuando ___ (ser, yo) niño, vivía en Tijuana._",
+              "r": "era",
+              "nota": "Real past."
+            },
+            {
+              "p": "Complete: _Prometió que vendría cuando ___ (terminar, él)._",
+              "r": "terminara",
+              "nota": "Future from the past."
+            },
+            {
+              "p": "Complete: _Ayer, cuando ___ (salir, nosotros), llovía._",
+              "r": "salimos",
+              "nota": "Real event."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6005,
+      5062
+    ],
+    "confunde": [
+      8193
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7251",
+      "kwiziq": true
+    }
+  ]
+}

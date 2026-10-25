@@ -1,0 +1,233 @@
+{
+  "tema": 6867,
+  "slug": "quise-queria",
+  "titulo": "Querer in the preterite vs the imperfect",
+  "subtitulo": "Quería ayudar / Quise ayudar / No quiso ayudar.",
+  "foto": "t01.jpg",
+  "regla": "Quería = wanted (a desire). Quise = tried to. No quería = didn't want to. No quiso = refused.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "Imperfect",
+            "Preterite"
+          ],
+          "filas": [
+            [
+              "affirmative",
+              "quería = _wanted_",
+              "quise = _tried to, set out to_"
+            ],
+            [
+              "negative",
+              "no quería = _didn't want to_",
+              "no quise = _refused to_"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The **imperfect** describes the desire. The **preterite** turns it into an action: an attempt, or a refusal."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **no quiso** slams the door; **no quería** just didn't feel like it."
+        }
+      ]
+    },
+    {
+      "id": "afirmativo",
+      "titulo": "Affirmative",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "quería",
+                  "t": "Daniel quería sorprender a su novia con flores."
+                },
+                {
+                  "v": "quiso",
+                  "t": "Daniel quiso sorprender a su novia con flores."
+                }
+              ],
+              "nota": "_Wanted to_ vs _tried to_."
+            }
+          ]
+        },
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mis hijas ==quisieron== jugar con la consola sin permiso.",
+              "en": "My daughters tried to play the video game without permission."
+            },
+            {
+              "es": "María ==quiso== advertirme del peligro.",
+              "en": "María tried to warn me about the danger."
+            },
+            {
+              "es": "Mis papás ==querían== salir temprano para evitar el tráfico.",
+              "en": "My parents wanted to leave early to avoid traffic."
+            },
+            {
+              "es": "La señora ==quería== pagar en efectivo.",
+              "en": "The lady wanted to pay cash."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "negativo",
+      "titulo": "Negative",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "no quería",
+                  "t": "El niño no quería terminarse la leche."
+                },
+                {
+                  "v": "no quiso",
+                  "t": "El niño no quiso terminarse la leche."
+                }
+              ],
+              "nota": "_Didn't want to_ vs _refused to_."
+            }
+          ]
+        },
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==No quisimos== ayudarlo.",
+              "en": "We refused to help him."
+            },
+            {
+              "es": "Hablaban bajito porque ==no querían== despertar al bebé.",
+              "en": "They were whispering because they didn't want to wake the baby."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quise un café, pero no había."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quería un café, pero no había."
+                }
+              ],
+              "nota": "A wish: **quería**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Le pedí ayuda pero no quería ayudarme. (he refused)"
+                },
+                {
+                  "v": "bien",
+                  "t": "Le pedí ayuda pero no quiso ayudarme."
+                }
+              ],
+              "nota": "A refusal: **no quiso**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "pude / podía",
+              "texto": "[[6334|poder]]."
+            },
+            {
+              "forma": "imperfect or preterite?",
+              "texto": "[[6871|general use]]."
+            },
+            {
+              "forma": "quise",
+              "texto": "Conjugation: [[5246|querer in the preterite]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _She refused to come._",
+              "r": "No quiso venir.",
+              "nota": "no quiso = refused."
+            },
+            {
+              "p": "In Spanish: _I wanted to travel, but I didn't have money._",
+              "r": "Quería viajar, pero no tenía dinero.",
+              "nota": "A desire."
+            },
+            {
+              "p": "In Spanish: _He tried to open the window._",
+              "r": "Quiso abrir la ventana.",
+              "nota": "quiso = tried."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6871
+    ],
+    "confunde": [
+      6334
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6867",
+      "kwiziq": true
+    }
+  ]
+}

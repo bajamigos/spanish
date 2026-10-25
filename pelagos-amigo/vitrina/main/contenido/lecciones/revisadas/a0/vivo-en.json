@@ -1,0 +1,205 @@
+{
+  "tema": 5042,
+  "slug": "vivo-en",
+  "titulo": "Saying where you live with vivo en",
+  "subtitulo": "Vivo en Tijuana.",
+  "foto": "t08.jpg",
+  "regla": "To say where you live, use vivo en + city, country or region. To ask, use ¿Dónde vives? (tú) or ¿Dónde vive usted? (usted).",
+  "comparada_kwiziq": "2026-10-17",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Vivo en** + place = _I live in_ + place. **Vivo** is the **yo** form of **vivir**, so you can drop **yo**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "To",
+            "Question",
+            "Answer"
+          ],
+          "filas": [
+            [
+              "a friend (tú)",
+              "¿Dónde vives?",
+              "Vivo en Tijuana."
+            ],
+            [
+              "someone formal (usted)",
+              "¿Dónde vive usted?",
+              "Vivo en Tijuana."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Cities take no article: **vivo en Tijuana**. Some countries can: **vivo en (los) Estados Unidos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "For a neighborhood: **vivo en el barrio de** + name, or in Mexico, **vivo en la colonia** + name."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Vivo en== Tijuana.",
+              "en": "I live in Tijuana."
+            },
+            {
+              "es": "¿Dónde ==vives==? — ==Vivo en== Ensenada.",
+              "en": "Where do you live? — I live in Ensenada."
+            },
+            {
+              "es": "¿Dónde ==vive usted==? — ==Vivo en== Baja California.",
+              "en": "Where do you live? — I live in Baja California."
+            },
+            {
+              "es": "==Vivo en== México, pero trabajo en San Diego.",
+              "en": "I live in Mexico, but I work in San Diego."
+            },
+            {
+              "es": "==Vivo en== la colonia Chapultepec.",
+              "en": "I live in the Chapultepec neighborhood."
+            },
+            {
+              "es": "Ahora ==vivo en== Playas de Tijuana, cerca del mar.",
+              "en": "Now I live in Playas de Tijuana, near the sea."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Vivo a Tijuana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Vivo en Tijuana."
+                }
+              ],
+              "nota": "_In_ a place is **en**, not **a**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Vivo en la Tijuana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Vivo en Tijuana."
+                }
+              ],
+              "nota": "No article before a city."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Dónde tú vives?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Dónde vives?"
+                }
+              ],
+              "nota": "The verb goes right after **dónde**; drop **tú**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "soy de",
+              "texto": "Where you're **from**, not where you live: [[5041|soy de + place]]."
+            },
+            {
+              "forma": "en",
+              "texto": "The preposition itself: [[7919|en = in, on, at]]."
+            },
+            {
+              "forma": "vivo, vives, vive",
+              "texto": "The whole verb: [[5108|regular -ir verbs in the present]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I live in Mexico._",
+              "r": "Vivo en México.",
+              "nota": "vivo en + country."
+            },
+            {
+              "p": "Ask a friend: _Where do you live?_",
+              "r": "¿Dónde vives?",
+              "nota": "tú form: vives."
+            },
+            {
+              "p": "Fix it: _Vivo a Ensenada._",
+              "r": "Vivo en Ensenada.",
+              "nota": "en, not a."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7919
+    ],
+    "confunde": [
+      5041
+    ],
+    "sigue": [
+      5108
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5042",
+      "kwiziq": true
+    }
+  ]
+}

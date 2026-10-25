@@ -1,0 +1,238 @@
+{
+  "tema": 10029,
+  "slug": "antes-de-que",
+  "titulo": "Antes de que / después de que / luego de que (indicative or subjunctive)",
+  "subtitulo": "Antes de que llegues / Después de que llegó / Después de que llegues.",
+  "foto": "t01.jpg",
+  "regla": "Antes de que always takes the subjunctive. Después de que / luego de que: indicative for present habits and past events (past subjunctive also possible), subjunctive for the future.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Conjunction",
+            "Present habit",
+            "Past",
+            "Future"
+          ],
+          "filas": [
+            [
+              "antes (de) que",
+              "subjunctive",
+              "subjunctive (imperfect)",
+              "subjunctive"
+            ],
+            [
+              "después (de) que / luego (de) que",
+              "indicative",
+              "indicative (or imperfect subjunctive)",
+              "subjunctive"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Antes de que** never takes the indicative: the action hasn't happened yet."
+        },
+        {
+          "tipo": "texto",
+          "texto": "If the subject is the **same**, use the infinitive instead: **antes de salir**, **después de cenar**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **antes de que** is always waiting, so always subjunctive. **Después de que** only waits when it's about the future."
+        }
+      ]
+    },
+    {
+      "id": "antes",
+      "titulo": "Antes de que",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Tengo que terminar esta redacción ==antes de que sean== las diez.",
+              "en": "I have to finish this essay before ten."
+            },
+            {
+              "es": "==Antes de que digas== nada, yo no tuve la culpa.",
+              "en": "Before you say anything, it wasn't my fault."
+            },
+            {
+              "es": "Siempre hago el súper en línea ==antes de que se vacíe== el refri.",
+              "en": "I always order groceries online before the fridge is empty."
+            },
+            {
+              "es": "Pude terminar el examen ==antes de que sonara== la campana.",
+              "en": "I managed to finish the exam before the bell rang."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "despues",
+      "titulo": "Después de que / luego de que",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Después de que== Laura ==termina== su clase de baile, su papá pasa por ella.",
+              "en": "After Laura finishes her dance class, her dad picks her up. (habit)"
+            },
+            {
+              "es": "==Después de que== su mamá se lo ==prohibió==, ella fue al concierto.",
+              "en": "After her mom forbade it, she went to the concert."
+            },
+            {
+              "es": "==Después de que== su mamá se lo ==prohibiera==, ella fue al concierto.",
+              "en": "After her mom forbade it, she went to the concert. (same meaning, more formal)"
+            },
+            {
+              "es": "==Después de que== Laura ==termine== su clase, su papá va a pasar por ella.",
+              "en": "After Laura finishes her class, her dad will pick her up. (future)"
+            },
+            {
+              "es": "Salimos a pasear ==luego de que hayas hecho== la tarea.",
+              "en": "We'll go for a walk after you've done your homework."
+            },
+            {
+              "es": "Apago la luz ==después de que te duermas==.",
+              "en": "I'll turn off the light after you fall asleep."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Antes de que son las diez..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Antes de que sean las diez..."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Pude terminar antes de que sonó la campana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Pude terminar antes de que sonara la campana."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Te llamo después de que llego."
+                },
+                {
+                  "v": "bien",
+                  "t": "Te llamo después de que llegue."
+                }
+              ],
+              "nota": "Future: subjunctive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "antes de salir",
+              "texto": "Same subject: [[10102|antes de + infinitive]], [[10101|+ haber + participle]]."
+            },
+            {
+              "forma": "cuando llegues",
+              "texto": "Same logic: [[5062|cuando + subjunctive]]."
+            },
+            {
+              "forma": "hasta que",
+              "texto": "[[7253|desde que / hasta que]]."
+            },
+            {
+              "forma": "para que, antes de que...",
+              "texto": "[[5168|adverbial clauses + present subjunctive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Complete: _Vámonos antes de que ___ (llover)._",
+              "r": "llueva",
+              "nota": "Always subjunctive."
+            },
+            {
+              "p": "Complete: _Te llamo después de que ___ (salir, yo) del trabajo._",
+              "r": "salga",
+              "nota": "Future: subjunctive."
+            },
+            {
+              "p": "Complete: _Ayer, después de que ___ (irse, ellos), limpié._",
+              "r": "se fueron",
+              "nota": "Past: indicative."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      10102,
+      5168
+    ],
+    "confunde": [
+      5062
+    ],
+    "sigue": [
+      7253
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 10029",
+      "kwiziq": true
+    }
+  ]
+}

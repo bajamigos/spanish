@@ -1,0 +1,218 @@
+{
+  "tema": 5812,
+  "slug": "presente-e-ie-er-entiendo",
+  "titulo": "-er verbs with e > ie in the present",
+  "subtitulo": "No entiendo, ¿me lo explicas?",
+  "foto": "t04.jpg",
+  "regla": "Some -er verbs change the stressed e of the stem to ie in the present, in every person except nosotros: entiendo, entiendes, entiende, entendemos, entienden.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Some -er verbs change **e → ie** in the stem: **entender**, **querer**, **perder**, **encender**, **defender**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The change happens in **every person except nosotros**, where the stress falls on the ending: **entendemos**, **queremos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The endings are the regular -er ones: **-o, -es, -e, -emos, -en**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "entender",
+            "querer"
+          ],
+          "filas": [
+            [
+              "yo",
+              "entiendo",
+              "quiero"
+            ],
+            [
+              "tú",
+              "entiendes",
+              "quieres"
+            ],
+            [
+              "él / ella / usted",
+              "entiende",
+              "quiere"
+            ],
+            [
+              "nosotros",
+              "entendemos",
+              "queremos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "entienden",
+              "quieren"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No ==entiendo== la pregunta.",
+              "en": "I don't understand the question."
+            },
+            {
+              "es": "¿==Quieres== ir a surfear el sábado?",
+              "en": "Do you want to go surfing on Saturday?"
+            },
+            {
+              "es": "Mi hermano siempre ==pierde== las llaves.",
+              "en": "My brother always loses his keys."
+            },
+            {
+              "es": "Nosotros ==entendemos== el plan.",
+              "en": "We understand the plan."
+            },
+            {
+              "es": "¿Ustedes ==quieren== tacos o tortas?",
+              "en": "Do you want tacos or tortas?"
+            },
+            {
+              "es": "==Enciendo== la luz de la cocina.",
+              "en": "I turn on the kitchen light."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros entiendemos el plan."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros entendemos el plan."
+                }
+              ],
+              "nota": "No change in **nosotros**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo quero un café."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo quiero un café."
+                }
+              ],
+              "nota": "The stem changes in **yo**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ellos perden el partido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ellos pierden el partido."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "entender",
+              "texto": "The same change in -ar verbs: [[5811|-ar verbs with e > ie]]."
+            },
+            {
+              "forma": "sentir",
+              "texto": "And in -ir verbs: [[5574|-ir verbs with e > ie]]."
+            },
+            {
+              "forma": "comer",
+              "texto": "The endings come from [[5540|regular -er verbs]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We want to eat._",
+              "r": "Queremos comer.",
+              "nota": "nosotros: no change."
+            },
+            {
+              "p": "In Spanish (tú): _Do you understand?_",
+              "r": "¿Entiendes?",
+              "nota": "e → ie."
+            },
+            {
+              "p": "Fix it: _Yo perdo mucho._",
+              "r": "Yo pierdo mucho.",
+              "nota": "yo: ie."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5540
+    ],
+    "confunde": [],
+    "sigue": [
+      5811,
+      5574
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5812",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "tema": 9494,
+  "slug": "que-tan",
+  "titulo": "¿Qué tan / cuán + adjective / adverb? = how...?",
+  "subtitulo": "¿Qué tan lejos está?",
+  "foto": "t09.jpg",
+  "regla": "To ask about the degree of a quality: ¿qué tan + adjective / adverb? (how big, how far, how well): ¿Qué tan grande es? Very common in Mexico. Cuán is the same but formal. Works in direct and indirect questions; the adjective agrees.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "¿qué tan / cuán",
+            "+ adjective / adverb",
+            "+ verb?"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It asks **how much** of a quality: _how big, how far, how long, how well_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Qué tan** is the everyday choice in Mexico and much of Latin America. **Cuán** means the same but sounds formal or literary."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Both have accents and never change; the **adjective** agrees: **¿qué tan pesadas son?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Works in **indirect** questions too: **dime qué tan tostado lo quieres**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **qué tan** = _how_ + a quality."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "—Alfredo, ¿==qué tan grande== es tu casa? —Grandísima, tiene ocho recámaras.",
+              "en": "—Alfredo, how big is your house? —Huge, it has eight bedrooms."
+            },
+            {
+              "es": "Siempre dices que tu esposo está muy gordo, pero ¿==qué tan gordo== está?",
+              "en": "You always say your husband is really fat, but just how fat is he?"
+            },
+            {
+              "es": "Dime ==qué tan tostado== quieres el pan.",
+              "en": "Tell me how toasted you want the bread."
+            },
+            {
+              "es": "Carlos, enséñale a Valentina ==qué tan bien== bailas cumbia.",
+              "en": "Carlos, show Valentina how well you dance cumbia."
+            },
+            {
+              "es": "—¿==Qué tan largo== es el documental? —Dura como dos horas.",
+              "en": "—How long is the documentary? —About two hours."
+            },
+            {
+              "es": "¿==Qué tan pesadas== son esas maletas?",
+              "en": "How heavy are those suitcases?"
+            },
+            {
+              "es": "¿==Qué tan lejos== está la playa?",
+              "en": "How far is the beach?"
+            },
+            {
+              "es": "No sabes ==cuán== feliz me haces.",
+              "en": "You don't know how happy you make me. (formal)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Cómo grande es?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Qué tan grande es?"
+                }
+              ],
+              "nota": "Not **cómo** + adjective."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Qué tan pesado son las maletas?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Qué tan pesadas son las maletas?"
+                }
+              ],
+              "nota": "Agreement."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Que tan lejos?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Qué tan lejos?"
+                }
+              ],
+              "nota": "Accent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¿cuánto?",
+              "texto": "[[8703|cuánto]]."
+            },
+            {
+              "forma": "¡lo bien que!",
+              "texto": "[[7089|lo + adjective + que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _How old is the building?_ (qué tan)",
+              "r": "¿Qué tan viejo es el edificio?",
+              "nota": "qué tan + adjective."
+            },
+            {
+              "p": "In Spanish: _How well do you speak English?_",
+              "r": "¿Qué tan bien hablas inglés?",
+              "nota": "qué tan + adverb."
+            },
+            {
+              "p": "Indirect: _I don't know how expensive the tickets are._",
+              "r": "No sé qué tan caros son los boletos.",
+              "nota": "Agreement."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      8703
+    ],
+    "confunde": [
+      7089
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9494",
+      "kwiziq": true
+    }
+  ]
+}

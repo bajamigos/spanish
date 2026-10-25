@@ -1,0 +1,187 @@
+{
+  "tema": 6863,
+  "slug": "que-de",
+  "titulo": "¡Qué de + noun! = so much / so many",
+  "subtitulo": "¡Qué de gente! ¡Qué de regalos!",
+  "foto": "t01.jpg",
+  "regla": "¡Qué de + noun! expresses surprise at a large quantity: ¡Qué de gente! It never changes and only works in exclamations. Cuánto + noun is the more common equivalent: ¡Cuánta gente!",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "¡Qué de",
+            "+ noun!"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Surprise at **how much** or **how many**. Works with singular and plural nouns."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Qué de** never changes; **qué** has an accent."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Only in **exclamations**, never questions."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It's colloquial. **¡Cuánto / cuánta / cuántos / cuántas + noun!** says the same and is more common in Mexico."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **qué de** = _what a lot of_."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¡==Qué de== cerveza nos tomamos!",
+              "en": "We drank so much beer!"
+            },
+            {
+              "es": "¡==Qué de== dinero tienes! Eres rico...",
+              "en": "You have so much money! You're rich..."
+            },
+            {
+              "es": "¡==Qué de== historias nos cuentas, abuelo!",
+              "en": "You tell us so many stories, grandpa!"
+            },
+            {
+              "es": "¡==Qué de== sobrinos tienes!",
+              "en": "You have so many nephews!"
+            },
+            {
+              "es": "¡==Qué de== papeles tengo que firmar!",
+              "en": "So many papers to sign!"
+            },
+            {
+              "es": "¡==Cuánta== gente!",
+              "en": "So many people! (more common)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Qué de cerveza tomaron?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cuánta cerveza tomaron?"
+                }
+              ],
+              "nota": "Questions: **cuánto**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Qué de gentes!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Qué de gente!"
+                }
+              ],
+              "nota": "The noun keeps its normal form."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¡cuánta gente!",
+              "texto": "[[7027|cuánto + noun in exclamations]]."
+            },
+            {
+              "forma": "¡qué poco!",
+              "texto": "The opposite: [[7033|qué poco]]."
+            },
+            {
+              "forma": "¡cuánto comes!",
+              "texto": "[[5081|cuánto + verb]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Exclaim: _So many people!_ (qué de)",
+              "r": "¡Qué de gente!",
+              "nota": "qué de + noun."
+            },
+            {
+              "p": "Same with cuánto:",
+              "r": "¡Cuánta gente!",
+              "nota": "Agrees."
+            },
+            {
+              "p": "Can you ask _¿Qué de dinero tienes?_",
+              "r": "No: ¿Cuánto dinero tienes?",
+              "nota": "Only exclamations."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7027
+    ],
+    "confunde": [
+      5081
+    ],
+    "sigue": [
+      7033
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6863",
+      "kwiziq": true
+    }
+  ]
+}

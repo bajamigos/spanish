@@ -1,0 +1,193 @@
+{
+  "tema": 8247,
+  "slug": "de-tanto-que",
+  "titulo": "De tanto / de tan ... que = because of so much...",
+  "subtitulo": "Me duele la panza de tanto que comí. De tan cansado que estaba, se durmió.",
+  "foto": "t09.jpg",
+  "regla": "De + tanto / tanta / tantos / tantas + noun + que / como + indicative gives the cause: from so much...: de tanta gente que había. De + tan + adjective/adverb + que / como: de tan cansado que estaba. De tanto + infinitive also works: de tanto gritar = from shouting so much.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "de tanto / tanta / tantos / tantas",
+            "+ noun",
+            "+ que / como + indicative"
+          ]
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "de tan",
+            "+ adjective / adverb",
+            "+ que / como + indicative"
+          ]
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "de tanto",
+            "+ infinitive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The **de** clause is the **cause** of the main clause: _because there was / it was so much..._"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Tanto** agrees with the noun; **tan** never changes."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Indicative: the cause is a fact."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **de** = _from_: sick _from_ so much candy."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No pudimos entrar a la fiesta ==de tanta gente que había==.",
+              "en": "We couldn't get into the party, there were so many people."
+            },
+            {
+              "es": "Le dolió la panza ==de tantos chocolates que se comió==.",
+              "en": "He got a stomachache from all the chocolates he ate."
+            },
+            {
+              "es": "Me voy a desmayar ==de tanto dolor que tengo==.",
+              "en": "I'm going to faint, I'm in so much pain."
+            },
+            {
+              "es": "Lo van a sacar del grupo ==de tan aburrido que es==.",
+              "en": "They're going to kick him out of the group, he's so dull."
+            },
+            {
+              "es": "Un día va a chocar ==de tan mal como maneja==.",
+              "en": "One of these days he'll crash, he drives so badly."
+            },
+            {
+              "es": "Me quedé sin voz ==de tanto gritar==.",
+              "en": "I lost my voice from shouting so much."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "de tan gente que había"
+                },
+                {
+                  "v": "bien",
+                  "t": "de tanta gente que había"
+                }
+              ],
+              "nota": "Noun: **tanto/a/os/as**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "de tanto cansado que estaba"
+                },
+                {
+                  "v": "bien",
+                  "t": "de tan cansado que estaba"
+                }
+              ],
+              "nota": "Adjective: **tan**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tan... que",
+              "texto": "[[6152|so... that]]."
+            },
+            {
+              "forma": "con lo que",
+              "texto": "[[7213|con lo que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I can't sleep, I'm so nervous._",
+              "r": "No puedo dormir de tan nervioso que estoy.",
+              "nota": "de tan + adjective."
+            },
+            {
+              "p": "In Spanish: _My eyes hurt from reading so much._",
+              "r": "Me duelen los ojos de tanto leer.",
+              "nota": "de tanto + infinitive."
+            },
+            {
+              "p": "Fix it: _No se oía nada de tan ruido que había._",
+              "r": "No se oía nada de tanto ruido que había.",
+              "nota": "Noun: tanto."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6152
+    ],
+    "confunde": [
+      7213
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8247",
+      "kwiziq": true
+    }
+  ]
+}

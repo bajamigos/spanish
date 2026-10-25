@@ -1,0 +1,348 @@
+{
+  "tema": 5068,
+  "slug": "imperfecto-subjuntivo-conjugacion",
+  "titulo": "Conjugating the imperfect subjunctive",
+  "subtitulo": "Hablara, comiera, viviera; fuera, tuviera, dijera.",
+  "foto": "t06.jpg",
+  "regla": "Take the ellos form of the preterite, drop -ron, add -ra, -ras, -ra, -ramos, -ran (or -se, -ses, -se, -semos, -sen). Nosotros gets an accent: habláramos. Any verb irregular in the preterite keeps that irregularity: tuvieron → tuviera.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Every verb, regular or not, follows the same recipe:"
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "ellos preterite − ron",
+            "+",
+            "-ra / -ras / -ra / -ramos / -ran"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**hablaron → habla- → hablara**; **tuvieron → tuvie- → tuviera**; **fueron → fue- → fuera**; **dijeron → dije- → dijera**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Nosotros** takes a written accent on the syllable before the ending: **habláramos, comiéramos, fuéramos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "There's a second set of endings, **-se, -ses, -se, -semos, -sen** (**hablase**). They mean the same; in Mexico **-ra** is much more common, and **-se** sounds formal or bookish."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: learn the ellos preterite well and you get this tense for free."
+        }
+      ]
+    },
+    {
+      "id": "tabla",
+      "titulo": "Regular verbs (-ra)",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "hablar",
+            "comer",
+            "vivir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "hablara",
+              "comiera",
+              "viviera"
+            ],
+            [
+              "tú",
+              "hablaras",
+              "comieras",
+              "vivieras"
+            ],
+            [
+              "él, ella, usted",
+              "hablara",
+              "comiera",
+              "viviera"
+            ],
+            [
+              "nosotros",
+              "habláramos",
+              "comiéramos",
+              "viviéramos"
+            ],
+            [
+              "ustedes, ellos",
+              "hablaran",
+              "comieran",
+              "vivieran"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The **-se** set: **hablase, hablases, hablase, hablásemos, hablasen**."
+        }
+      ]
+    },
+    {
+      "id": "irregulares",
+      "titulo": "Irregular stems",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Infinitive",
+            "ellos preterite",
+            "Imperfect subjunctive"
+          ],
+          "filas": [
+            [
+              "ser / ir",
+              "fueron",
+              "fuera"
+            ],
+            [
+              "tener",
+              "tuvieron",
+              "tuviera"
+            ],
+            [
+              "estar",
+              "estuvieron",
+              "estuviera"
+            ],
+            [
+              "hacer",
+              "hicieron",
+              "hiciera"
+            ],
+            [
+              "decir",
+              "dijeron",
+              "dijera"
+            ],
+            [
+              "poder",
+              "pudieron",
+              "pudiera"
+            ],
+            [
+              "poner",
+              "pusieron",
+              "pusiera"
+            ],
+            [
+              "querer",
+              "quisieron",
+              "quisiera"
+            ],
+            [
+              "saber",
+              "supieron",
+              "supiera"
+            ],
+            [
+              "venir",
+              "vinieron",
+              "viniera"
+            ],
+            [
+              "dar",
+              "dieron",
+              "diera"
+            ],
+            [
+              "traer",
+              "trajeron",
+              "trajera"
+            ],
+            [
+              "pedir",
+              "pidieron",
+              "pidiera"
+            ],
+            [
+              "dormir",
+              "durmieron",
+              "durmiera"
+            ],
+            [
+              "leer",
+              "leyeron",
+              "leyera"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ojalá yo ==fuera== una estrella de rock.",
+              "en": "I wish I were a rock star."
+            },
+            {
+              "es": "Ojalá ==estuvieras== aquí.",
+              "en": "I wish you were here."
+            },
+            {
+              "es": "Ella dudaba mucho que él ==dijera== que sí.",
+              "en": "She really doubted he'd say yes."
+            },
+            {
+              "es": "El banco nos dijo que ==firmáramos== los papeles.",
+              "en": "The bank told us to sign the papers."
+            },
+            {
+              "es": "No creo que se ==estacionaran== en el centro.",
+              "en": "I don't think they parked downtown."
+            },
+            {
+              "es": "Si ==pudiera==, viajaría por todo el país.",
+              "en": "If I could, I'd travel all over the country."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "tenera"
+                },
+                {
+                  "v": "bien",
+                  "t": "tuviera"
+                }
+              ],
+              "nota": "From **tuvieron**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "hablaramos"
+                },
+                {
+                  "v": "bien",
+                  "t": "habláramos"
+                }
+              ],
+              "nota": "Accent in **nosotros**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "dijiera"
+                },
+                {
+                  "v": "bien",
+                  "t": "dijera"
+                }
+              ],
+              "nota": "From **dijeron**: no **i**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "si tuviera",
+              "texto": "[[5120|si + imperfect subjunctive]]."
+            },
+            {
+              "forma": "estuviera, tuviera",
+              "texto": "[[5956|estar]], [[5957|tener]]."
+            },
+            {
+              "forma": "quisiera",
+              "texto": "[[7172|quisiera]]."
+            },
+            {
+              "forma": "preterite",
+              "texto": "[[5109|preterite of -ar verbs]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Conjugate: _yo / poder_",
+              "r": "pudiera",
+              "nota": "pudieron → pudie-."
+            },
+            {
+              "p": "Conjugate: _nosotros / ir_",
+              "r": "fuéramos",
+              "nota": "Accent."
+            },
+            {
+              "p": "Conjugate: _ellos / traer_",
+              "r": "trajeran",
+              "nota": "trajeron → traje-."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5109
+    ],
+    "confunde": [
+      5076
+    ],
+    "sigue": [
+      5120,
+      5956
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5068",
+      "kwiziq": true
+    }
+  ]
+}

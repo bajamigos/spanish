@@ -1,0 +1,217 @@
+{
+  "tema": 5993,
+  "slug": "presente-para-futuro",
+  "titulo": "Using the present to refer to a future action (with a future time phrase)",
+  "subtitulo": "Mañana voy a la playa: the present works for the future if you say when.",
+  "foto": "t10.jpg",
+  "regla": "The present can refer to the future when a time phrase says so: el año que viene viajo; mañana vamos a la playa. Without it, it's the present.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "You can use the **present** to talk about a **future** action, as long as something in the sentence tells you it's in the future: a time phrase like **mañana**, **el año que viene**, **la semana próxima**, **el mes que viene**, **después**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "future time phrase",
+            "present tense"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Without a time phrase, the sentence talks about the present: **salgo con mi novia** = _I go out with my girlfriend_ (in general). With one, it's the future: **después salgo con mi novia** = _I'm going out with my girlfriend later_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "If the future context was already clear in the conversation, the time phrase can be left out."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It sounds like a fixed plan or a schedule. For a decided plan, **ir a** is also very common: see [[7067|ir a]]."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the present can time-travel, but only with a ticket: the time phrase."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "El año que viene ==viajo== por Sudamérica.",
+              "en": "Next year I'm traveling around South America."
+            },
+            {
+              "es": "La próxima semana ==vienes== a Tijuana.",
+              "en": "Next week you're coming to Tijuana."
+            },
+            {
+              "es": "Mañana ==vamos== a la playa.",
+              "en": "Tomorrow we're going to the beach."
+            },
+            {
+              "es": "El mes que viene Beto y Ana ==compiten== en un torneo.",
+              "en": "Next month Beto and Ana are competing in a tournament."
+            },
+            {
+              "es": "Después ==salgo== con mi novia.",
+              "en": "I'm going out with my girlfriend later."
+            },
+            {
+              "es": "El vuelo ==sale== a las seis.",
+              "en": "The flight leaves at six."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mañana estoy saliendo a las seis."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mañana salgo a las seis."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mañana voy a salir a las seis."
+                }
+              ],
+              "nota": "For a scheduled plan, not the present progressive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "Salgo con mi novia."
+                }
+              ],
+              "nota": "Without a time phrase, it's the present: _I go out with my girlfriend_."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usos",
+      "titulo": "Four ways to talk about the future",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "Mañana salgo a las seis.",
+              "texto": "Present + time phrase: a fixed plan or schedule.",
+              "aqui": true
+            },
+            {
+              "forma": "Mañana voy a salir a las seis.",
+              "texto": "[[7067|Ir a]]: the everyday future in Mexico."
+            },
+            {
+              "forma": "Mañana trabajaré.",
+              "texto": "[[5155|Simple future]]: more formal or written."
+            },
+            {
+              "forma": "Mañana estoy saliendo a las seis.",
+              "texto": "Not for scheduled plans; it describes something in progress at that moment."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "voy a trabajar",
+              "texto": "The everyday future: [[7067|ir a + infinitive]]."
+            },
+            {
+              "forma": "trabajaré",
+              "texto": "The simple future: [[5155|regular verbs in the future]]."
+            },
+            {
+              "forma": "estoy trabajando",
+              "texto": "Only for now: [[5994|present progressive vs present]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish (present): _We're leaving tomorrow at six._",
+              "r": "Mañana salimos a las seis.",
+              "nota": "Time phrase + present."
+            },
+            {
+              "p": "In Spanish (present): _Next week I start the new job._",
+              "r": "La próxima semana empiezo el trabajo nuevo.",
+              "nota": "empiezo, present."
+            },
+            {
+              "p": "Fix it: **Mañana estoy yendo al dentista.**",
+              "r": "Mañana voy al dentista.",
+              "nota": "Present, not progressive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5492
+    ],
+    "confunde": [
+      7067,
+      5994
+    ],
+    "sigue": [
+      7067,
+      5155
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5993",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "tema": 6013,
+  "slug": "adjetivos-o-a-singular",
+  "titulo": "Masculine and feminine of regular adjectives: -o / -a",
+  "subtitulo": "«Un carro rojo, una casa roja.»",
+  "foto": "t02.jpg",
+  "regla": "Adjectives ending in -o agree with the noun: -o for masculine, -a for feminine (un perro negro, una perra negra). They usually go after the noun. What counts is the noun's gender, not its ending: el problema es complicado.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "An adjective **agrees** with its noun. Regular adjectives end in **-o** (masculine) and **-a** (feminine)."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Masculine",
+            "Feminine"
+          ],
+          "filas": [
+            [
+              "un carro roj**o**",
+              "una casa roj**a**"
+            ],
+            [
+              "el mar frí**o**",
+              "la playa frí**a**"
+            ],
+            [
+              "mi hermano alt**o**",
+              "mi hermana alt**a**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It usually goes **after** the noun. Follow the noun's **gender**, not its letter: **el problema** is masculine, so **complicado**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Tengo un perro ==negro==.",
+              "en": "I have a black dog."
+            },
+            {
+              "es": "Mi hermana es muy ==simpática==.",
+              "en": "My sister is really nice."
+            },
+            {
+              "es": "La tabla de surf es ==nueva==.",
+              "en": "The surfboard is new."
+            },
+            {
+              "es": "El mar está ==frío== hoy.",
+              "en": "The sea is cold today."
+            },
+            {
+              "es": "Tijuana es una ciudad ==fronteriza==.",
+              "en": "Tijuana is a border city."
+            },
+            {
+              "es": "Este jitomate está ==maduro==.",
+              "en": "This tomato is ripe."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La casa es bonito."
+                },
+                {
+                  "v": "bien",
+                  "t": "La casa es bonita."
+                }
+              ],
+              "nota": "casa is feminine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mi mamá es alto."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mi mamá es alta."
+                }
+              ],
+              "nota": "mamá is feminine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El problema es complicada."
+                },
+                {
+                  "v": "bien",
+                  "t": "El problema es complicado."
+                }
+              ],
+              "nota": "problema is masculine."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el carro, la casa",
+              "texto": "First the noun: [[6150|masculine and feminine nouns]]."
+            },
+            {
+              "forma": "rojos, rojas",
+              "texto": "Next: [[6014|plural adjectives]]."
+            },
+            {
+              "forma": "grande, verde",
+              "texto": "These don't change: [[6015|adjectives in -e and -a]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _a white house_",
+              "r": "una casa blanca",
+              "nota": "-a for feminine."
+            },
+            {
+              "p": "In Spanish: _My dad is tall._",
+              "r": "Mi papá es alto.",
+              "nota": "-o for masculine."
+            },
+            {
+              "p": "Fix it: _La playa está lleno._",
+              "r": "La playa está llena.",
+              "nota": "playa is feminine."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6150
+    ],
+    "confunde": [
+      6015
+    ],
+    "sigue": [
+      6014
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6013",
+      "kwiziq": true
+    }
+  ]
+}

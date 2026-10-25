@@ -1,0 +1,189 @@
+{
+  "tema": 7846,
+  "slug": "segun-conforme",
+  "titulo": "Según / conforme = as, according to",
+  "subtitulo": "Según lo acordado. Conforme a las reglas.",
+  "foto": "t03.jpg",
+  "regla": "Según and conforme introduce how something is done: as, according to, as per. Según + noun, no preposition (según las reglas); conforme a + noun (conforme a las reglas). Both often go with lo / lo que: según lo acordado, conforme a lo previsto. Slightly formal.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "según + clause / noun",
+              "texto": "**según le pidió la maestra**, **según las reglas**. No preposition."
+            },
+            {
+              "forma": "conforme + clause / a + noun",
+              "texto": "**conforme le pidió**, **conforme a las reglas**."
+            },
+            {
+              "forma": "según lo / conforme a lo",
+              "texto": "**según lo acordado**, **conforme a lo previsto**, **según lo que me dijo**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Both are a bit formal. **Según** is also everyday for _according to_ a person: **según Manuel...**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **conforme** needs **a** before a noun; **según** travels light."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Se disculpó con el grupo ==según== le pidió la maestra.",
+              "en": "He apologized to the class as the teacher asked."
+            },
+            {
+              "es": "Se disculpó con el grupo ==conforme== le pidió la maestra.",
+              "en": "He apologized to the class as the teacher asked."
+            },
+            {
+              "es": "Hicimos el examen ==conforme a== las reglas.",
+              "en": "We took the exam according to the rules."
+            },
+            {
+              "es": "Hicimos el examen ==según== las reglas.",
+              "en": "We took the exam according to the rules."
+            },
+            {
+              "es": "Nos pagaron la comida, ==según lo acordado==.",
+              "en": "They paid for our lunch, as agreed."
+            },
+            {
+              "es": "==Según lo que== me dijo Manuel, todo iba bien.",
+              "en": "According to what Manuel told me, everything was going well."
+            },
+            {
+              "es": "Nos vimos en la plaza a las seis, ==conforme a lo previsto==.",
+              "en": "We met in the square at six, as planned."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "según a las reglas"
+                },
+                {
+                  "v": "bien",
+                  "t": "según las reglas"
+                }
+              ],
+              "nota": "No **a** after **según**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "conforme las reglas"
+                },
+                {
+                  "v": "bien",
+                  "t": "conforme a las reglas"
+                }
+              ],
+              "nota": "**Conforme a** before a noun."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "según, conforme (time)",
+              "texto": "[[7850|as, at the same time as]]."
+            },
+            {
+              "forma": "según + pronoun",
+              "texto": "[[7088|entre, según + pronoun]]."
+            },
+            {
+              "forma": "según",
+              "texto": "[[10028|según = according to]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Formal: _as agreed_",
+              "r": "según lo acordado / conforme a lo acordado",
+              "nota": "lo + participle."
+            },
+            {
+              "p": "Complete: _Lo hicimos conforme ___ las instrucciones._",
+              "r": "a",
+              "nota": "conforme a."
+            },
+            {
+              "p": "In Spanish: _according to what she said_",
+              "r": "según lo que dijo",
+              "nota": "según lo que."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      10028
+    ],
+    "confunde": [
+      7850
+    ],
+    "sigue": [
+      7850
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7846",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,271 @@
+{
+  "tema": 5156,
+  "slug": "futuro-querer",
+  "titulo": "Conjugate querer in the simple future",
+  "subtitulo": "Querer loses its e and keeps a double r: querré, querrás, querremos.",
+  "foto": "t07.jpg",
+  "regla": "Querer drops the e of its infinitive to make the stem querr- (with double r), then adds -é, -ás, -á, -emos, -án.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Querer** (_to want_; also _to love_ a person) is irregular in the **simple future** (**futuro imperfecto**): the endings are normal, but the stem is not."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The **e** of the infinitive disappears, and the two **r**'s end up side by side: **quer(e)r-** → **querr-**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "irregular stem **querr-**",
+            "**-é, -ás, -á, -emos, -án**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Ending",
+            "querer → querr-"
+          ],
+          "filas": [
+            [
+              "yo",
+              "-é",
+              "querré"
+            ],
+            [
+              "tú",
+              "-ás",
+              "querrás"
+            ],
+            [
+              "él, ella, usted",
+              "-á",
+              "querrá"
+            ],
+            [
+              "nosotros",
+              "-emos",
+              "querremos"
+            ],
+            [
+              "ustedes, ellos",
+              "-án",
+              "querrán"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Remember the **double r** in every form. It sounds like a rolled **rr**, just like **perro**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the dropped **e** leaves the two **r**'s hugging. Roll them: **querrrré**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Después de rolar, ==querré== unos tacos de carne asada.",
+              "en": "After rolling, I'll want some carne asada tacos."
+            },
+            {
+              "es": "Cuando veas esas olas, ==querrás== sacar la tabla.",
+              "en": "When you see those waves, you'll want to take out the board."
+            },
+            {
+              "es": "No sé qué ==querrá== el cliente: ¿copia o llave nueva?",
+              "en": "I don't know what the customer will want: a copy or a new key?"
+            },
+            {
+              "es": "Creo que ==querremos== sembrar más tomates en el huerto.",
+              "en": "I think we'll want to plant more tomatoes in the garden."
+            },
+            {
+              "es": "Ustedes ==querrán== ver el Rocinante por dentro, ¿no?",
+              "en": "You'll want to see the Rocinante inside, won't you?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mañana quereré ir a Rosarito."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mañana querré ir a Rosarito."
+                }
+              ],
+              "nota": "The **e** of **querer** drops out."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Beto querá venir."
+                },
+                {
+                  "v": "bien",
+                  "t": "Beto querrá venir."
+                }
+              ],
+              "nota": "Two **r**'s, always. **Querá** doesn't exist."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Quierrás café?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Querrás café?"
+                }
+              ],
+              "nota": "The **ie** of the present (**quiero**) never appears in the future."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usos",
+      "titulo": "Other verbs that drop the e",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "querré",
+              "texto": "**querer** → **querr-**",
+              "aqui": true
+            },
+            {
+              "forma": "podré",
+              "texto": "**poder** → **podr-**. See [[5216|poder in the future]]."
+            },
+            {
+              "forma": "sabré, cabré",
+              "texto": "**saber** → **sabr-**, **caber** → **cabr-**. See [[5245|caber and saber in the future]]."
+            },
+            {
+              "forma": "habrá",
+              "texto": "**haber** → **habr-**. See [[5157|haber in the future]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "trabajaré",
+              "texto": "The endings are the same as for every verb in the future: [[5155|regular verbs in the simple future]]."
+            },
+            {
+              "forma": "quiero → querré",
+              "texto": "The present changes **e** → **ie**: [[5774|querer in the present]]."
+            },
+            {
+              "forma": "querría",
+              "texto": "The conditional uses the very same stem, with **-ía** endings: [[5055|the conditional]]."
+            },
+            {
+              "forma": "¿Dónde estará?",
+              "texto": "The future also guesses about right now: [[5060|the future for probability]]."
+            },
+            {
+              "forma": "habré hecho",
+              "texto": "The future of **haber** + participle: [[5066|irregular verbs in the future perfect]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "**Querer**, **ellos**: Mis primos ___ ir a la playa.",
+              "r": "Mis primos querrán ir a la playa.",
+              "nota": "**querr-** + **-án**."
+            },
+            {
+              "p": "In Spanish: _I don't know what she'll want._",
+              "r": "No sé qué querrá ella.",
+              "nota": "**querr-** + **-á**, with double **r**."
+            },
+            {
+              "p": "Which one? **¿Querás más tortillas?** or **¿Querrás más tortillas?**",
+              "r": "¿Querrás más tortillas?",
+              "nota": "The stem is **querr-**, double **r**."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5155,
+      5774
+    ],
+    "confunde": [
+      5055,
+      5246
+    ],
+    "sigue": [
+      5216,
+      5245,
+      5157,
+      5060,
+      5162,
+      5066,
+      5050
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5156",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "tema": 7059,
+  "slug": "me-gustaria",
+  "titulo": "Using gustar in the conditional = would like",
+  "subtitulo": "Me gustaría ir, ¿te gustaría venir?: the polite way to want.",
+  "foto": "t10.jpg",
+  "regla": "Would like = indirect pronoun + gustaría (only this form) + infinitive: me gustaría, te gustaría, le gustaría, nos gustaría, les gustaría.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "The most common way to say _would like (to do something)_ is **gustar** in the **conditional**. Only the 3rd person singular form, **gustaría**, is used with an infinitive."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**me / te / le / nos / les**",
+            "**gustaría**",
+            "infinitive"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "English",
+            "Spanish"
+          ],
+          "filas": [
+            [
+              "I would like",
+              "me gustaría"
+            ],
+            [
+              "you would like",
+              "te gustaría"
+            ],
+            [
+              "he / she / you (usted) would like",
+              "le gustaría"
+            ],
+            [
+              "we would like",
+              "nos gustaría"
+            ],
+            [
+              "they / you all would like",
+              "les gustaría"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Gustar** is a reverse verb: the person goes in the **indirect object pronoun** (**me**, **te**, **le**…), not as the subject."
+        },
+        {
+          "tipo": "texto",
+          "texto": "After **gustaría** comes an **infinitive**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "A common mistake is to use a subject pronoun: **yo gustaría** ✗. To add emphasis, use **a mí**: **a mí me gustaría**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: before an infinitive, **gustaría** never changes; the pronoun in front tells you who wants it. (Before a plural noun it does: **me gustarían unos tacos**.)"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Este año ==me gustaría== tomar un curso de fotografía.",
+              "en": "This year I'd like to take a photography class."
+            },
+            {
+              "es": "—¿==Te gustaría== conocer a mis papás? —No, gracias.",
+              "en": "\"Would you like to meet my parents?\" \"No, thanks.\""
+            },
+            {
+              "es": "A Naomi ==le gustaría== viajar a la Tierra.",
+              "en": "Naomi would like to travel to Earth."
+            },
+            {
+              "es": "==Nos gustaría== inscribirnos a clases de salsa.",
+              "en": "We'd like to sign up for salsa classes."
+            },
+            {
+              "es": "==Les gustaría== hacer una gran fiesta de aniversario.",
+              "en": "They'd like to throw a big anniversary party."
+            },
+            {
+              "es": "¿==Les gustaría== participar en la encuesta?",
+              "en": "Would you like to take part in the survey?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo gustaría ir al cine."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me gustaría ir al cine."
+                }
+              ],
+              "nota": "No subject pronoun."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo me gustaría ir."
+                },
+                {
+                  "v": "bien",
+                  "t": "A mí me gustaría ir."
+                }
+              ],
+              "nota": "For emphasis: **a mí**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nos gustaríamos ir."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nos gustaría ir."
+                }
+              ],
+              "nota": "Always **gustaría**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "me gusta",
+              "texto": "Gustar in the present: [[6001|gustar]], [[5083|gustar + verb]]."
+            },
+            {
+              "forma": "a Beto le gusta",
+              "texto": "Repeating the pronoun: [[7032|repetition with gustar]]."
+            },
+            {
+              "forma": "quisiera",
+              "texto": "Another polite _I'd like_: [[5227|querría, quisiera]]."
+            },
+            {
+              "forma": "me gustó",
+              "texto": "Gustar in the past: [[7905|gustar in past tenses]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I'd like to surf in Hawaii._",
+              "r": "Me gustaría surfear en Hawái.",
+              "nota": "me gustaría + infinitive."
+            },
+            {
+              "p": "In Spanish: _Would you like to come?_ (usted)",
+              "r": "¿Le gustaría venir?",
+              "nota": "le gustaría."
+            },
+            {
+              "p": "Fix it: **Ellos gustarían comer tacos.**",
+              "r": "Les gustaría comer tacos.",
+              "nota": "Indirect pronoun + gustaría."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6001,
+      5083,
+      5731
+    ],
+    "confunde": [
+      5227
+    ],
+    "sigue": [
+      7032,
+      7905
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7059",
+      "kwiziq": true
+    }
+  ]
+}

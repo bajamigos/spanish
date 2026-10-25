@@ -1,0 +1,161 @@
+{
+  "tema": 7984,
+  "slug": "futuro-objecion",
+  "titulo": "The future and future perfect to object (may well..., but...)",
+  "subtitulo": "—Julia come mucho. —Comerá mucho, pero no engorda.",
+  "foto": "t02.jpg",
+  "regla": "Repeat a claim in the simple future (about now) or future perfect (about the past) + pero to concede it and object: —Tus hijos son generosos. —Serán generosos, pero nunca vienen. = They may be generous, but...",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "future (repeating the claim)",
+            "+ pero",
+            "+ objection"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "You don't deny it; you **concede** it and push back: _may well be, but..._"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Simple future for the present or future; **future perfect** for the recent past: **—Ha estudiado mucho. —Habrá estudiado mucho, pero reprobó.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Compare the conditional for a past claim: **tendría un final triste, pero...**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **será**, **pero** = sure, but..."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "—Está claro que el América va a ganar el partido. —==Ganará== el partido, pero no creo que gane el torneo.",
+              "en": "—America is obviously going to win the game. —They may win the game, but I don't think they'll win the tournament."
+            },
+            {
+              "es": "—Julia come muchísimo. —==Comerá== mucho, pero nunca engorda.",
+              "en": "—Julia eats a ton. —She may eat a lot, but she never gains weight."
+            },
+            {
+              "es": "—Tus hijos son muy generosos contigo. —==Serán== generosos, pero nunca vienen a verme.",
+              "en": "—Your kids are very generous with you. —They may be generous, but they never visit."
+            },
+            {
+              "es": "—Ha estudiado muchísimo. —==Habrá estudiado== mucho, pero sigue sin entender.",
+              "en": "—He's studied a lot. —He may well have studied, but he still doesn't get it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "predicción",
+                  "t": "Mañana lloverá."
+                },
+                {
+                  "v": "objeción",
+                  "t": "Lloverá, pero yo voy a la playa."
+                }
+              ],
+              "nota": "Same form, different job."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tendría... pero",
+              "texto": "[[8194|conditional for objection]]."
+            },
+            {
+              "forma": "¡no serás capaz!",
+              "texto": "[[7935|future for surprise]]."
+            },
+            {
+              "forma": "estará en casa",
+              "texto": "[[5060|future of probability]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Object: _—Es muy guapo._",
+              "r": "Será muy guapo, pero es muy aburrido.",
+              "nota": "Future + pero."
+            },
+            {
+              "p": "Object: _—Ha trabajado mucho._",
+              "r": "Habrá trabajado mucho, pero no terminó.",
+              "nota": "Future perfect."
+            },
+            {
+              "p": "Object: _—Tienen mucho dinero._",
+              "r": "Tendrán mucho dinero, pero no son felices.",
+              "nota": "tendrán."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5060
+    ],
+    "confunde": [
+      8194
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7984",
+      "kwiziq": true
+    }
+  ]
+}

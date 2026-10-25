@@ -1,0 +1,210 @@
+{
+  "tema": 6598,
+  "slug": "volver-a-infinitivo",
+  "titulo": "Volver a + infinitive to say again",
+  "subtitulo": "Volví a surfear: doing something again.",
+  "foto": "t02.jpg",
+  "regla": "Volver (conjugated) + a + infinitive = to do again: volví a llamarla. In the present it often refers to the future.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say an action **happens again**, use **volver** (conjugated) + **a** + **infinitive**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**volver**",
+            "**a**",
+            "infinitive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Here **volver** loses its literal meaning (_to go back somewhere_). The infinitive carries the meaning: **volvió al teatro** = _she went back to the theater_; **volvió a trabajar en el teatro** = _she worked at the theater again_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It works in every tense. In the **present**, it often refers to the **future**: **este verano vuelvo a trabajar en la tienda**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In negative sentences it means _never again, not … again_: **no hemos vuelto a ver a Susana**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Don't forget the **a**. Remember **volver** is o > ue: **vuelvo**, **vuelves**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **volver a** is the replay button."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Este verano ==vuelvo a trabajar== en esa tienda.",
+              "en": "This summer I'm working at that store again."
+            },
+            {
+              "es": "Si ==vuelves a llamarme== creída, me voy a enojar.",
+              "en": "If you call me stuck-up again, I'm going to get mad."
+            },
+            {
+              "es": "No ==hemos vuelto a ver== a Susana.",
+              "en": "We haven't seen Susana again."
+            },
+            {
+              "es": "El carro ==volvió a derrapar== en la segunda curva.",
+              "en": "The car skidded again on the second curve."
+            },
+            {
+              "es": "No ==voy a volver a pisar== ese bar nunca.",
+              "en": "I'm never setting foot in that bar again."
+            },
+            {
+              "es": "Después de la lesión, ==volví a rolar==.",
+              "en": "After the injury, I started rolling again."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Volví surfear."
+                },
+                {
+                  "v": "bien",
+                  "t": "Volví a surfear."
+                }
+              ],
+              "nota": "Keep the **a**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Volvo a intentar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Vuelvo a intentar."
+                }
+              ],
+              "nota": "o > ue."
+            },
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "Volví a la playa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Volví a surfear en la playa."
+                }
+              ],
+              "nota": "First: _I went back_. Second: _I surfed again_."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "vuelvo, volvemos",
+              "texto": "The present: [[5080|o > ue -er verbs]]."
+            },
+            {
+              "forma": "dejar de",
+              "texto": "The opposite, _to stop_: [[6181|dejar de]]."
+            },
+            {
+              "forma": "empezar a",
+              "texto": "_To start_: [[6960|empezar a]]."
+            },
+            {
+              "forma": "seguir + gerund",
+              "texto": "_To keep on_: [[6180|seguir + gerund]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I'll call you again tomorrow._",
+              "r": "Mañana te vuelvo a llamar.",
+              "nota": "volver a, present for future."
+            },
+            {
+              "p": "In Spanish: _We never saw him again._",
+              "r": "No lo volvimos a ver.",
+              "nota": "Negative: never again."
+            },
+            {
+              "p": "Fix it: **Volvió estudiar.**",
+              "r": "Volvió a estudiar.",
+              "nota": "Keep the **a**."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5080
+    ],
+    "confunde": [
+      6181
+    ],
+    "sigue": [
+      6960,
+      6180
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6598",
+      "kwiziq": true
+    }
+  ]
+}

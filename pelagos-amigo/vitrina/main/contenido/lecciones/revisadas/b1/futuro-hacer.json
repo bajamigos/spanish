@@ -1,0 +1,265 @@
+{
+  "tema": 5159,
+  "slug": "futuro-hacer",
+  "titulo": "Conjugate hacer in the simple future",
+  "subtitulo": "Hacer shrinks to har-: haré, harás, haremos. No c, no e.",
+  "foto": "t08.jpg",
+  "regla": "Hacer uses the irregular stem har-, then adds -é, -ás, -á, -emos, -án.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Hacer** (_to do, to make_) is irregular in the **simple future** (**futuro imperfecto**) because its stem is irregular: **har-**. The **c** and the **e** both disappear."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "irregular stem **har-**",
+            "**-é, -ás, -á, -emos, -án**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Ending",
+            "hacer → har-"
+          ],
+          "filas": [
+            [
+              "yo",
+              "-é",
+              "haré"
+            ],
+            [
+              "tú",
+              "-ás",
+              "harás"
+            ],
+            [
+              "él, ella, usted",
+              "-á",
+              "hará"
+            ],
+            [
+              "nosotros",
+              "-emos",
+              "haremos"
+            ],
+            [
+              "ustedes, ellos",
+              "-án",
+              "harán"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Verbs built on **hacer** do the same: **deshacer** → **desharé**, **rehacer** → **reharé**, **satisfacer** → **satisfaré**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: in the future you're too busy to say the whole word: **ha(ce)ré** → **haré**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Haré== la carne asada el domingo.",
+              "en": "I'll make the carne asada on Sunday."
+            },
+            {
+              "es": "¿==Harás== lo que te dice el profe en el entrenamiento?",
+              "en": "Will you do what the coach tells you in training?"
+            },
+            {
+              "es": "Amos no ==hará== el trabajo de Holden.",
+              "en": "Amos won't do Holden's job."
+            },
+            {
+              "es": "Nosotros ==haremos== las tortillas.",
+              "en": "We'll make the tortillas."
+            },
+            {
+              "es": "Ustedes ==harán== muchos amigos en el agua.",
+              "en": "You'll make lots of friends in the water."
+            },
+            {
+              "es": "Mañana ==hará== calor en Rosarito.",
+              "en": "It will be hot in Rosarito tomorrow."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Haceré la tarea en la noche."
+                },
+                {
+                  "v": "bien",
+                  "t": "Haré la tarea en la noche."
+                }
+              ],
+              "nota": "Never **haceré**: the stem is **har-**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mañana hara frío."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mañana hará frío."
+                }
+              ],
+              "nota": "**Hará** needs its accent. Without it, it reads like a different word."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ya lo decidieron: ellos harían la cena."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ya lo decidieron: ellos harán la cena."
+                }
+              ],
+              "nota": "It's decided, so it's the future: **harán** (_will make_). **Harían** (_would make_) is the conditional."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usos",
+      "titulo": "Other verbs with a special stem",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "haré",
+              "texto": "**hacer** → **har-**",
+              "aqui": true
+            },
+            {
+              "forma": "diré",
+              "texto": "**decir** → **dir-**. See [[5161|decir in the future]]."
+            },
+            {
+              "forma": "hará calor",
+              "texto": "Weather with **hacer** works in the future too: **hará frío**, **hará sol**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "trabajaré",
+              "texto": "The endings are the same as for every verb in the future: [[5155|regular verbs in the simple future]]."
+            },
+            {
+              "forma": "hago → haré",
+              "texto": "In the present only **yo** is irregular: [[5708|hacer in the present]]."
+            },
+            {
+              "forma": "haría",
+              "texto": "The conditional uses the very same stem, with **-ía** endings: [[5064|the conditional]]."
+            },
+            {
+              "forma": "¿Dónde estará?",
+              "texto": "The future also guesses about right now: [[5060|the future for probability]]."
+            },
+            {
+              "forma": "habré hecho",
+              "texto": "The future of **haber** + participle: [[5066|irregular verbs in the future perfect]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "**Hacer**, **nosotros**: ___ el postre para la fiesta.",
+              "r": "Haremos el postre para la fiesta.",
+              "nota": "**har-** + **-emos**."
+            },
+            {
+              "p": "In Spanish: _Will you (tú) do what I say?_",
+              "r": "¿Harás lo que te digo?",
+              "nota": "**har-** + **-ás**."
+            },
+            {
+              "p": "Which one? **Beto haceró la llave** or **Beto hará la llave**.",
+              "r": "Beto hará la llave.",
+              "nota": "Stem **har-**, ending **-á**."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5155,
+      5708
+    ],
+    "confunde": [
+      5064,
+      5110
+    ],
+    "sigue": [
+      5161,
+      5060,
+      5162,
+      5066,
+      5050
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5159",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,252 @@
+{
+  "tema": 5253,
+  "slug": "supe-cupe-preterito",
+  "titulo": "Caber and saber in the preterite",
+  "subtitulo": "Supe la noticia ayer. No cupimos en el carro.",
+  "foto": "t05.jpg",
+  "regla": "Caber and saber share an irregular preterite with a u stem and no accents: cupe, cupiste, cupo, cupimos, cupieron; supe, supiste, supo, supimos, supieron. In the preterite, saber usually means found out.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Caber** (_to fit_) and **saber** (_to know_) change their stem in the preterite: **cab-** → **cup-**, **sab-** → **sup-**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "They take the special irregular endings: **-e, -iste, -o, -imos, -ieron**. **No written accents**: **supe**, **supo**, not _supé, supó_."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Caber",
+            "Saber"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**cupe**",
+              "**supe**"
+            ],
+            [
+              "tú",
+              "**cupiste**",
+              "**supiste**"
+            ],
+            [
+              "él, ella, usted",
+              "**cupo**",
+              "**supo**"
+            ],
+            [
+              "nosotros, nosotras",
+              "**cupimos**",
+              "**supimos**"
+            ],
+            [
+              "ellos, ellas, ustedes",
+              "**cupieron**",
+              "**supieron**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "In the preterite, **saber** marks the moment you learned something: **supe** = _I found out_, _I heard_. For what you simply knew, use the imperfect **sabía**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Caber** is about space: **no cupo** = _it didn't fit_, **cupimos todos** = _we all fit_."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Supe== la noticia ayer en la noche.",
+              "en": "I found out the news last night."
+            },
+            {
+              "es": "¿Cómo ==supiste== que me iba de Tijuana?",
+              "en": "How did you find out I was leaving Tijuana?"
+            },
+            {
+              "es": "Nunca ==supimos== quién se llevó la tabla.",
+              "en": "We never found out who took the board."
+            },
+            {
+              "es": "Mis papás ==supieron== la verdad muy tarde.",
+              "en": "My parents learned the truth very late."
+            },
+            {
+              "es": "La tabla no ==cupo== en la camioneta.",
+              "en": "The board didn't fit in the truck."
+            },
+            {
+              "es": "==Cupimos== los cinco en el carro de Beto.",
+              "en": "All five of us fit in Beto's car."
+            },
+            {
+              "es": "Las macetas no ==cupieron== en el balcón.",
+              "en": "The pots didn't fit on the balcony."
+            },
+            {
+              "es": "No ==cupe== en el traje de neopreno de mi hermano.",
+              "en": "I didn't fit into my brother's wetsuit."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Supé la noticia ayer."
+                },
+                {
+                  "v": "bien",
+                  "t": "Supe la noticia ayer."
+                }
+              ],
+              "nota": "No accent on these irregular forms."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ellos sabieron la verdad."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ellos supieron la verdad."
+                }
+              ],
+              "nota": "Stem **sup-**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La tabla no cabió en el carro."
+                },
+                {
+                  "v": "bien",
+                  "t": "La tabla no cupo en el carro."
+                }
+              ],
+              "nota": "Stem **cup-**, ending **-o**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Antes supe nadar, pero ya se me olvidó."
+                },
+                {
+                  "v": "bien",
+                  "t": "Antes sabía nadar, pero ya se me olvidó."
+                }
+              ],
+              "nota": "Knowing how, as an ongoing state: imperfect **sabía**. **Supe** = _found out_."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "sé, sabes",
+              "texto": "The present: [[5590|saber]] and [[6126|caber in the present]]."
+            },
+            {
+              "forma": "tuve, pude",
+              "texto": "Same kind of stem change: [[5226|tener]] and [[5221|poder in the preterite]]."
+            },
+            {
+              "forma": "sabré, cabré",
+              "texto": "Later: [[5245|caber and saber in the future]]."
+            },
+            {
+              "forma": "saber / conocer",
+              "texto": "Two ways to know: [[6865|saber vs conocer]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I found out yesterday._",
+              "r": "Lo supe ayer.",
+              "nota": "supe = found out."
+            },
+            {
+              "p": "In Spanish: _The boards didn't fit in the car._",
+              "r": "Las tablas no cupieron en el carro.",
+              "nota": "cupieron."
+            },
+            {
+              "p": "Fix it: _¿Cuándo sabiste la noticia?_",
+              "r": "¿Cuándo supiste la noticia?",
+              "nota": "supiste."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5590,
+      6126,
+      5226,
+      5221
+    ],
+    "confunde": [
+      6865
+    ],
+    "sigue": [
+      5245
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5253",
+      "kwiziq": true
+    }
+  ]
+}

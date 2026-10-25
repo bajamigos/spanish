@@ -1,0 +1,192 @@
+{
+  "tema": 7509,
+  "slug": "unos-cuantos",
+  "titulo": "Using unos cuantos / unas cuantas + noun for a few",
+  "subtitulo": "Unos cuantos amigos, unas cuantas llamadas: a few, always plural.",
+  "foto": "t02.jpg",
+  "regla": "Unos cuantos / unas cuantas + plural noun = a few. Always plural, and it agrees in gender with the noun.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say _a few_, use **unos cuantos** or **unas cuantas**. It's always **plural**, because it always means more than one, and it works with things or people."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**unos cuantos / unas cuantas**",
+            "plural noun"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It **agrees** in gender with the noun: **unos cuantos amigos**, **unas cuantas llamadas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It sounds more positive than **pocos** (_few, not many_): **unos cuantos** = _a handful, some_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **unos cuantos** is a handful you can count on one hand, and they all wear the same gender."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Vi a Beto con ==unos cuantos== amigos en el parque.",
+              "en": "I saw Beto with a few friends in the park."
+            },
+            {
+              "es": "Voy a salir tarde: tengo que hacer ==unas cuantas== llamadas.",
+              "en": "I'm leaving late: I have to make a few calls."
+            },
+            {
+              "es": "Ahorró ==unos cuantos== pesos para el sábado.",
+              "en": "He saved a few pesos for Saturday."
+            },
+            {
+              "es": "Había ==unas cuantas== personas esperando el camión.",
+              "en": "There were a few people waiting for the bus."
+            },
+            {
+              "es": "Agarré ==unas cuantas== olas buenas.",
+              "en": "I caught a few good waves."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Unos cuantas personas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Unas cuantas personas."
+                }
+              ],
+              "nota": "**Persona** is feminine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Un cuanto amigo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Unos cuantos amigos."
+                }
+              ],
+              "nota": "Always plural."
+            },
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "Tengo pocos amigos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tengo unos cuantos amigos."
+                }
+              ],
+              "nota": "**Pocos** sounds like _not many_; **unos cuantos** like _a few, some_."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "poco, un poco",
+              "texto": "The difference: [[7061|poco and un poco]]."
+            },
+            {
+              "forma": "algunos",
+              "texto": "_Some_: [[6462|alguno, alguna, algunos]]."
+            },
+            {
+              "forma": "¿cuántos?",
+              "texto": "The question word: [[8700|cuánto and cuanto]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _a few tacos_",
+              "r": "unos cuantos tacos",
+              "nota": "masculine plural."
+            },
+            {
+              "p": "In Spanish: _a few hours_",
+              "r": "unas cuantas horas",
+              "nota": "feminine plural."
+            },
+            {
+              "p": "In Spanish: _I have a few ideas._",
+              "r": "Tengo unas cuantas ideas.",
+              "nota": "ideas: feminine."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6462
+    ],
+    "confunde": [
+      7061
+    ],
+    "sigue": [
+      8699
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7509",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,265 @@
+{
+  "tema": 6748,
+  "slug": "imperativo-tu-afirmativo",
+  "titulo": "Affirmative tú commands",
+  "subtitulo": "¡Rema, rema, que viene la ola!",
+  "foto": "t01.jpg",
+  "regla": "For most verbs, the affirmative tú command is the same as the él/ella form of the present: habla, come, escribe. Stem changes stay: cierra, vuelve, pide.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To tell a friend (**tú**) to do something, take the **él/ella form of the present**. That's the command."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "él form of the present",
+            "=",
+            "tú command"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Infinitive",
+            "Él/ella present",
+            "Tú command"
+          ],
+          "filas": [
+            [
+              "hablar",
+              "habla",
+              "**¡Habla!**"
+            ],
+            [
+              "comer",
+              "come",
+              "**¡Come!**"
+            ],
+            [
+              "escribir",
+              "escribe",
+              "**¡Escribe!**"
+            ],
+            [
+              "cerrar (e → ie)",
+              "cierra",
+              "**¡Cierra!**"
+            ],
+            [
+              "volver (o → ue)",
+              "vuelve",
+              "**¡Vuelve!**"
+            ],
+            [
+              "pedir (e → i)",
+              "pide",
+              "**¡Pide!**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Stem changes stay**: **piensa**, **duerme**, **sigue**, **riega**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "This is only for **affirmative** commands. Negative tú commands use another form: **no hables**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "A handful of very common verbs are irregular (**di, haz, ve, pon, sal, sé, ten, ven**). They have their own lesson."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Habla== más despacio, por favor.",
+              "en": "Speak more slowly, please."
+            },
+            {
+              "es": "==Come== algo antes del entrenamiento.",
+              "en": "Eat something before training."
+            },
+            {
+              "es": "==Escribe== tu nombre aquí.",
+              "en": "Write your name here."
+            },
+            {
+              "es": "==Cierra== la puerta, que hace frío.",
+              "en": "Close the door, it's cold."
+            },
+            {
+              "es": "==Vuelve== temprano, mañana hay clase.",
+              "en": "Come back early, there's class tomorrow."
+            },
+            {
+              "es": "==Riega== las plantas en la tarde.",
+              "en": "Water the plants in the afternoon."
+            },
+            {
+              "es": "==Pide== la cuenta, ya nos vamos.",
+              "en": "Ask for the check, we're leaving."
+            },
+            {
+              "es": "¡==Rema==, rema, que viene la ola!",
+              "en": "Paddle, paddle, here comes the wave!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Hablar más despacio!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Habla más despacio!"
+                }
+              ],
+              "nota": "Not the infinitive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Volve temprano."
+                },
+                {
+                  "v": "bien",
+                  "t": "Vuelve temprano."
+                }
+              ],
+              "nota": "Keep the stem change."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Escribes tu nombre aquí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Escribe tu nombre aquí."
+                }
+              ],
+              "nota": "No **-s**: **escribes** is _you write_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hables más fuerte."
+                },
+                {
+                  "v": "bien",
+                  "t": "Habla más fuerte."
+                }
+              ],
+              "nota": "**Hables** is for negatives: **no hables**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "habla, come, vive",
+              "texto": "The base is the present: [[5492|-ar]], [[5540|-er]] and [[5108|-ir verbs]]."
+            },
+            {
+              "forma": "di, haz, ve",
+              "texto": "The exceptions: [[6962|irregular tú commands]]."
+            },
+            {
+              "forma": "no hables",
+              "texto": "The negative: [[9255|negative tú commands]]."
+            },
+            {
+              "forma": "cómelo, llámame",
+              "texto": "Adding pronouns: [[5140|pronouns with affirmative commands]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Eat your vegetables!_",
+              "r": "¡Come tus verduras!",
+              "nota": "come."
+            },
+            {
+              "p": "In Spanish: _Close the window._",
+              "r": "Cierra la ventana.",
+              "nota": "e → ie stays."
+            },
+            {
+              "p": "Fix it (a command): _Duermes bien._",
+              "r": "Duerme bien.",
+              "nota": "No -s; o → ue stays."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5492,
+      5540,
+      5108
+    ],
+    "confunde": [
+      9255
+    ],
+    "sigue": [
+      6962,
+      5140
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6748",
+      "kwiziq": true
+    }
+  ]
+}

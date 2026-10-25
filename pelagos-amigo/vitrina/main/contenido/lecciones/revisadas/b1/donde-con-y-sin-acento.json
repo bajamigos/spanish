@@ -1,0 +1,207 @@
+{
+  "tema": 6964,
+  "slug": "donde-con-y-sin-acento",
+  "titulo": "Dónde vs donde (with and without an accent)",
+  "subtitulo": "¿Dónde vives? / El pueblo donde nací.",
+  "foto": "t08.jpg",
+  "regla": "Dónde (accent) is a question or exclamation word, also in indirect questions: no sé dónde está. Donde (no accent) is a relative that introduces a clause: el pueblo donde nací.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Both mean **where**. The accent depends on the job the word does."
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "dónde",
+              "texto": "**Question or exclamation word**: direct (**¿Dónde vives?**) or indirect (**me preguntó dónde estaba**). There may be no question mark at all."
+            },
+            {
+              "forma": "donde",
+              "texto": "**Relative**: it introduces a clause about a place. Take that clause away and the sentence still works."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Test: if you can swap _where_ for _in what place / to what place_, write **dónde**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **dónde** is looking for the place; **donde** already found it."
+        }
+      ]
+    },
+    {
+      "id": "con-acento",
+      "titulo": "Dónde (with accent)",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿==Dónde== vives?",
+              "en": "Where do you live?"
+            },
+            {
+              "es": "Marcela me preguntó ==dónde== estaba su carro.",
+              "en": "Marcela asked me where her car was."
+            },
+            {
+              "es": "No me dijo ==dónde== había estado toda la mañana.",
+              "en": "She didn't tell me where she'd been all morning."
+            },
+            {
+              "es": "¡==Dónde== guardas el dinero!",
+              "en": "Where on earth do you keep the money!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sin-acento",
+      "titulo": "Donde (no accent)",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Trabajo en un país ==donde== los sueldos son bastante buenos.",
+              "en": "I work in a country where salaries are quite good."
+            },
+            {
+              "es": "Es un espectáculo ==donde== el caballo salta.",
+              "en": "It's a show where the horse jumps."
+            },
+            {
+              "es": "Vamos a la playa ==donde== aprendí a surfear.",
+              "en": "Let's go to the beach where I learned to surf."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Donde** can also be followed by an **infinitive**, with _can_ understood:"
+        },
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Necesito un lugar ==donde== relajarme.",
+              "en": "I need a place where I can relax."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No sé donde está."
+                },
+                {
+                  "v": "bien",
+                  "t": "No sé dónde está."
+                }
+              ],
+              "nota": "Indirect question: accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La casa dónde vivo."
+                },
+                {
+                  "v": "bien",
+                  "t": "La casa donde vivo."
+                }
+              ],
+              "nota": "Relative: no accent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "cómo, dónde, cuándo",
+              "texto": "Indirect questions: [[6313|cómo, dónde, cuándo]]."
+            },
+            {
+              "forma": "quién, cómo, cuándo",
+              "texto": "The same idea: [[7082|quién vs quien]], [[6673|cómo vs como]], [[6977|cuándo vs cuando]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Accent or not? _¿Sabes ___ queda el museo?_",
+              "r": "dónde",
+              "nota": "Indirect question."
+            },
+            {
+              "p": "Accent or not? _Es el café ___ nos conocimos._",
+              "r": "donde",
+              "nota": "Relative."
+            },
+            {
+              "p": "Accent or not? _Busco un lugar ___ estacionarme._",
+              "r": "donde",
+              "nota": "Relative + infinitive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6313
+    ],
+    "confunde": [
+      6977
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6964",
+      "kwiziq": true
+    }
+  ]
+}

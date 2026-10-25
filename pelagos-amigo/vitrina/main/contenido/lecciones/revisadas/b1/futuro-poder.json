@@ -1,0 +1,279 @@
+{
+  "tema": 5216,
+  "slug": "futuro-poder",
+  "titulo": "Conjugate poder in the simple future",
+  "subtitulo": "Poder loses its e before the endings: podré, podrás, podremos.",
+  "foto": "t06.jpg",
+  "regla": "Poder drops the e of its infinitive to make the stem podr-, then adds -é, -ás, -á, -emos, -án.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Poder** (_to be able to, can_) is irregular in the **simple future** (also called **futuro imperfecto**). The endings are the normal ones; only the stem changes."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Instead of using the whole infinitive (**poder-**), the **e** disappears and the stem is **podr-**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "irregular stem **podr-**",
+            "**-é, -ás, -á, -emos, -án**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Ending",
+            "poder → podr-"
+          ],
+          "filas": [
+            [
+              "yo",
+              "-é",
+              "podré"
+            ],
+            [
+              "tú",
+              "-ás",
+              "podrás"
+            ],
+            [
+              "él, ella, usted",
+              "-á",
+              "podrá"
+            ],
+            [
+              "nosotros",
+              "-emos",
+              "podremos"
+            ],
+            [
+              "ustedes, ellos",
+              "-án",
+              "podrán"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Every form except **podremos** carries a written accent on the ending."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the future is in a hurry, so **poder** swallows its **e**: **pod(e)ré** → **podré**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mañana no ==podré== abrir el Tsuru del cliente; no tengo la herramienta.",
+              "en": "Tomorrow I won't be able to open the customer's Tsuru; I don't have the tool."
+            },
+            {
+              "es": "¿==Podrás== llegar a Rosarito a las siete?",
+              "en": "Will you be able to get to Rosarito at seven?"
+            },
+            {
+              "es": "Beto ==podrá== rolar otra vez cuando sane su rodilla.",
+              "en": "Beto will be able to roll again when his knee heals."
+            },
+            {
+              "es": "En el huerto ==podremos== cosechar chiles en un mes.",
+              "en": "In the garden we'll be able to harvest chiles in a month."
+            },
+            {
+              "es": "Ustedes no ==podrán== entrar sin llave.",
+              "en": "You won't be able to get in without a key."
+            },
+            {
+              "es": "No sé si Naomi ==podrá== arreglar el Rocinante a tiempo.",
+              "en": "I don't know if Naomi will be able to fix the Rocinante in time."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "The regular pattern would keep the whole infinitive. With **poder** that's wrong."
+        },
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mañana poderé surfear."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mañana podré surfear."
+                }
+              ],
+              "nota": "The **e** of **poder** goes away: **podr-**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Puederás venir?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Podrás venir?"
+                }
+              ],
+              "nota": "The **ue** of the present (**puedo**) never appears in the future."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ya confirmaron: ellos podrían venir mañana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ya confirmaron: ellos podrán venir mañana."
+                }
+              ],
+              "nota": "It's confirmed, so it's the future: **podrán** (_will be able_). **Podrían** (_could_) is the conditional, with **-ía**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usos",
+      "titulo": "Other verbs that drop the e",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "podré",
+              "texto": "**poder** → **podr-**",
+              "aqui": true
+            },
+            {
+              "forma": "querré",
+              "texto": "**querer** → **querr-**. See [[5156|querer in the future]]."
+            },
+            {
+              "forma": "sabré, cabré",
+              "texto": "**saber** → **sabr-**, **caber** → **cabr-**. See [[5245|caber and saber in the future]]."
+            },
+            {
+              "forma": "habrá",
+              "texto": "**haber** → **habr-**. See [[5157|haber in the future]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "trabajaré",
+              "texto": "The endings are the same as for every verb in the future: [[5155|regular verbs in the simple future]]."
+            },
+            {
+              "forma": "puedo → podré",
+              "texto": "The present is a different story (**o** → **ue**): [[5564|poder in the present]]."
+            },
+            {
+              "forma": "podría",
+              "texto": "The conditional uses the very same stem, with **-ía** endings: [[5853|the conditional]]."
+            },
+            {
+              "forma": "¿Dónde estará?",
+              "texto": "The future also guesses about right now: [[5060|the future for probability]]."
+            },
+            {
+              "forma": "habré hecho",
+              "texto": "The future of **haber** + participle: [[5066|irregular verbs in the future perfect]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "**Poder**, **nosotros**: El sábado ___ surfear en Baja Malibú.",
+              "r": "El sábado podremos surfear en Baja Malibú.",
+              "nota": "**podr-** + **-emos**. No accent on this one."
+            },
+            {
+              "p": "In Spanish: _I won't be able to train tomorrow._",
+              "r": "Mañana no podré entrenar.",
+              "nota": "**podr-** + **-é**."
+            },
+            {
+              "p": "Which one? **¿Poderás abrir la puerta?** or **¿Podrás abrir la puerta?**",
+              "r": "¿Podrás abrir la puerta?",
+              "nota": "The **e** of **poder** disappears."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5155,
+      5564
+    ],
+    "confunde": [
+      5853,
+      5221
+    ],
+    "sigue": [
+      5156,
+      5245,
+      5157,
+      5060,
+      5162,
+      5066,
+      5050
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5216",
+      "kwiziq": true
+    }
+  ]
+}

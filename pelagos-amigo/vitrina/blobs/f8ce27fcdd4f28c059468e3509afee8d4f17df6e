@@ -1,0 +1,915 @@
+{
+ "version": 1,
+ "actualizado": "2026-10-21T00:15:15Z",
+ "meta": 60,
+ "libros": [
+  {
+   "titulo": "La guerra de Calibán (Chingón)",
+   "autor": "James S. A. Corey",
+   "portada": "https://storage.googleapis.com/eleven-public-cdn/database/reader_customers/ljEp3KNMeuTpAGEeIxGpXpPOJfs2/read/u%3Aa8e4UoY51nZ8QwhXlIt9/thumbnail.webp?v=1791158807",
+   "falta": "18 h 48 min",
+   "estado": "leyendo",
+   "medio": "ElevenReader"
+  },
+  {
+   "titulo": "Amos Illustrated El despertar del Leviatán",
+   "autor": "James S. A. Corey",
+   "portada": "https://storage.googleapis.com/eleven-public-cdn/database/reader_customers/ljEp3KNMeuTpAGEeIxGpXpPOJfs2/read/u%3ABiCFwSqEjKjg0tXUxqkr/thumbnail.webp?v=1791158815",
+   "estado": "pendiente",
+   "medio": "ElevenReader"
+  },
+  {
+   "titulo": "Artemisa",
+   "autor": "Andy Weir",
+   "estado": "terminado",
+   "paginas": 335,
+   "medio": "Kindle",
+   "portada": "https://covers.openlibrary.org/b/id/15240256-M.jpg",
+   "nota": 4
+  },
+  {
+   "titulo": "Proyecto Hail Mary",
+   "autor": "Andy Weir",
+   "estado": "terminado",
+   "paginas": 482,
+   "medio": "Kindle",
+   "portada": "https://covers.openlibrary.org/b/id/11482074-M.jpg",
+   "nota": 5,
+   "terminado": "2026-04-16",
+   "veces": 2
+  },
+  {
+   "titulo": "El despertar del Leviatán",
+   "autor": "James S. A. Corey",
+   "estado": "terminado",
+   "paginas": 561,
+   "medio": "Kindle",
+   "portada": "https://covers.openlibrary.org/b/id/7893611-M.jpg",
+   "nota": 5
+  },
+  {
+   "titulo": "La guerra de Calibán",
+   "autor": "James S. A. Corey",
+   "estado": "terminado",
+   "paginas": 595,
+   "medio": "Kindle",
+   "portada": "https://covers.openlibrary.org/b/id/13857856-M.jpg",
+   "nota": 5
+  },
+  {
+   "titulo": "La puerta de Abadón",
+   "autor": "James S. A. Corey",
+   "estado": "terminado",
+   "paginas": 539,
+   "medio": "Kindle",
+   "portada": "https://covers.openlibrary.org/b/id/8256073-M.jpg",
+   "nota": 4
+  },
+  {
+   "titulo": "La quema de Cíbola",
+   "autor": "James S. A. Corey",
+   "estado": "terminado",
+   "paginas": 583,
+   "medio": "Kindle",
+   "portada": "https://covers.openlibrary.org/b/id/12325324-M.jpg",
+   "nota": 4
+  },
+  {
+   "titulo": "Los juegos de Némesis",
+   "autor": "James S. A. Corey",
+   "estado": "terminado",
+   "paginas": 544,
+   "medio": "Kindle",
+   "portada": "https://covers.openlibrary.org/b/id/13540556-M.jpg",
+   "nota": 5
+  },
+  {
+   "titulo": "Las cenizas de Babilonia",
+   "autor": "James S. A. Corey",
+   "estado": "terminado",
+   "paginas": 608,
+   "medio": "Kindle",
+   "portada": "https://covers.openlibrary.org/b/id/10630353-M.jpg",
+   "nota": 5
+  },
+  {
+   "titulo": "El alzamiento de Persépolis",
+   "autor": "James S. A. Corey",
+   "estado": "terminado",
+   "paginas": 560,
+   "medio": "Kindle",
+   "portada": "https://covers.openlibrary.org/b/id/11448680-M.jpg",
+   "nota": 5
+  },
+  {
+   "titulo": "La cólera de Tiamat",
+   "autor": "James S. A. Corey",
+   "estado": "terminado",
+   "paginas": 544,
+   "medio": "Kindle",
+   "portada": "https://covers.openlibrary.org/b/id/13540519-M.jpg",
+   "nota": 5
+  },
+  {
+   "titulo": "La caída de Leviatán",
+   "autor": "James S. A. Corey",
+   "estado": "terminado",
+   "paginas": 528,
+   "medio": "Kindle",
+   "portada": "https://covers.openlibrary.org/b/id/14424717-M.jpg",
+   "nota": 5
+  },
+  {
+   "titulo": "El secreto maya",
+   "autor": "Clive Cussler",
+   "estado": "terminado",
+   "paginas": 363,
+   "medio": "Kindle",
+   "portada": "https://covers.openlibrary.org/b/id/11303754-M.jpg",
+   "nota": 3
+  },
+  {
+   "titulo": "El oro de Esparta",
+   "autor": "Clive Cussler",
+   "estado": "terminado",
+   "paginas": 446,
+   "medio": "Kindle",
+   "portada": "https://covers.openlibrary.org/b/id/6307124-M.jpg",
+   "nota": 3
+  },
+  {
+   "titulo": "Imperio perdido",
+   "autor": "Clive Cussler",
+   "estado": "terminado",
+   "paginas": 452,
+   "medio": "Kindle",
+   "portada": "https://covers.openlibrary.org/b/id/6463356-M.jpg",
+   "nota": 3
+  },
+  {
+   "titulo": "El reino",
+   "autor": "Clive Cussler",
+   "estado": "abandonado",
+   "paginas": 409,
+   "medio": "Kindle",
+   "portada": "https://covers.openlibrary.org/b/id/13495475-M.jpg",
+   "nota": 2,
+   "avance": 0.52
+  },
+  {
+   "titulo": "Muerte y vida de Bobby Z",
+   "autor": "Don Winslow",
+   "estado": "terminado",
+   "paginas": 274,
+   "medio": "Kindle",
+   "portada": "https://covers.openlibrary.org/b/id/418992-M.jpg",
+   "nota": 5,
+   "terminado": "2024-02-06"
+  },
+  {
+   "titulo": "La sombra de Mitzlán",
+   "autor": "Jesús Escudero",
+   "estado": "abandonado",
+   "paginas": 185,
+   "medio": "Audiolibro",
+   "nota": 2,
+   "avance": 0.5
+  },
+  {
+   "titulo": "El poder del perro",
+   "autor": "Don Winslow",
+   "estado": "terminado",
+   "paginas": 752,
+   "medio": "Kindle",
+   "portada": "https://covers.openlibrary.org/b/id/13995987-M.jpg",
+   "nota": 5
+  },
+  {
+   "titulo": "El cártel",
+   "autor": "Don Winslow",
+   "estado": "terminado",
+   "paginas": 870,
+   "medio": "Kindle",
+   "portada": "https://covers.openlibrary.org/b/id/11146953-M.jpg",
+   "nota": 5
+  },
+  {
+   "titulo": "La frontera",
+   "autor": "Don Winslow",
+   "estado": "terminado",
+   "paginas": 816,
+   "medio": "Kindle",
+   "portada": "https://covers.openlibrary.org/b/id/14289269-M.jpg",
+   "nota": 4
+  },
+  {
+   "titulo": "El marciano",
+   "autor": "Andy Weir",
+   "estado": "leyendo",
+   "paginas": 375,
+   "medio": "Kindle",
+   "portada": "https://covers.openlibrary.org/b/id/7383186-M.jpg",
+   "nota": 4,
+   "avance": 0.2
+  },
+  {
+   "titulo": "El invierno de Frankie Machine",
+   "autor": "Don Winslow",
+   "estado": "terminado",
+   "paginas": 415,
+   "medio": "Kindle",
+   "portada": "https://covers.openlibrary.org/b/id/7391156-M.jpg",
+   "nota": 4
+  },
+  {
+   "titulo": "Días de combate",
+   "autor": "Paco Ignacio Taibo II",
+   "estado": "leyendo",
+   "paginas": 176,
+   "medio": "Kindle",
+   "portada": "https://covers.openlibrary.org/b/id/5253921-M.jpg",
+   "nota": 4,
+   "avance": 0.8
+  },
+  {
+   "titulo": "Los náufragos del Wager",
+   "autor": "David Grann",
+   "estado": "abandonado",
+   "paginas": 432,
+   "medio": "Kindle",
+   "portada": "https://covers.openlibrary.org/b/id/13245246-M.jpg",
+   "nota": 2,
+   "avance": 0.25
+  },
+  {
+   "titulo": "Cosa fácil",
+   "autor": "Paco Ignacio Taibo II",
+   "estado": "pendiente",
+   "paginas": 176,
+   "medio": "Kindle",
+   "portada": "https://covers.openlibrary.org/b/id/860934-M.jpg"
+  },
+  {
+   "titulo": "No habrá final feliz",
+   "autor": "Paco Ignacio Taibo II",
+   "estado": "pendiente",
+   "paginas": 175,
+   "medio": "Kindle",
+   "portada": "https://covers.openlibrary.org/b/id/860955-M.jpg"
+  },
+  {
+   "titulo": "La sombra de la sombra",
+   "autor": "Paco Ignacio Taibo II",
+   "estado": "pendiente",
+   "paginas": 240,
+   "medio": "Kindle",
+   "portada": "https://covers.openlibrary.org/b/id/11716329-M.jpg"
+  },
+  {
+   "titulo": "De paso",
+   "autor": "Paco Ignacio Taibo II",
+   "estado": "pendiente",
+   "paginas": 120,
+   "medio": "Kindle",
+   "portada": "https://covers.openlibrary.org/b/id/6960556-M.jpg"
+  },
+  {
+   "titulo": "Ernesto Guevara, también conocido como el Che",
+   "autor": "Paco Ignacio Taibo II",
+   "estado": "pendiente",
+   "paginas": 624,
+   "medio": "Kindle",
+   "portada": "https://covers.openlibrary.org/b/id/4252687-M.jpg"
+  },
+  {
+   "titulo": "Los detectives salvajes",
+   "autor": "Roberto Bolaño",
+   "estado": "pendiente",
+   "paginas": 783,
+   "medio": "Kindle",
+   "portada": "https://covers.openlibrary.org/b/id/15215334-M.jpg"
+  }
+ ],
+ "dias": {
+  "2026-10-05": 39,
+  "2026-10-07": 14,
+  "2026-10-08": 39,
+  "2026-10-09": 111,
+  "2026-10-10": 22,
+  "2026-10-11": 0,
+  "2026-10-13": 64,
+  "2026-10-14": 74,
+  "2026-10-15": 7,
+  "2026-10-17": 2,
+  "2026-10-20": 2
+ },
+ "series": [
+  {
+   "titulo": "Club de Cuervos",
+   "tipo": "Serie",
+   "horas": 33.8,
+   "genero": "Comedia y deportes",
+   "estado": "terminado",
+   "nota": 4,
+   "portada": "https://image.tmdb.org/t/p/w300/fctsQt5NjZg5VxFVr9amJpHCjzo.jpg"
+  },
+  {
+   "titulo": "Yankee",
+   "tipo": "Serie",
+   "horas": 15.8,
+   "genero": "Crimen y acción",
+   "estado": "terminado",
+   "nota": 2,
+   "portada": "https://image.tmdb.org/t/p/w300/vjAnDlC1xWAAF7MKEhE2TG0pfI4.jpg"
+  },
+  {
+   "titulo": "Los gringo hunters",
+   "tipo": "Serie",
+   "horas": 9.5,
+   "genero": "Crimen y suspenso",
+   "estado": "terminado",
+   "nota": 3,
+   "portada": "https://image.tmdb.org/t/p/w300/e1vXNV05iOY4TD1cYeIlJTPFkUT.jpg"
+  },
+  {
+   "titulo": "Diablero",
+   "tipo": "Serie",
+   "horas": 9.3,
+   "genero": "Terror y fantasía",
+   "estado": "terminado",
+   "nota": 3,
+   "portada": "https://image.tmdb.org/t/p/w300/gi955avqiP9bkVZ9o4ngqG6Q84d.jpg"
+  },
+  {
+   "titulo": "Mentiras, la serie",
+   "tipo": "Serie",
+   "horas": 6.5,
+   "genero": "Drama y suspenso",
+   "estado": "terminado",
+   "nota": 4,
+   "portada": "https://image.tmdb.org/t/p/w300/jzfyq5YqzpGG83ZBcODK5BwvcGM.jpg"
+  },
+  {
+   "titulo": "La oficina",
+   "tipo": "Serie",
+   "horas": 5.4,
+   "genero": "Comedia",
+   "estado": "terminado",
+   "nota": 4,
+   "portada": "https://image.tmdb.org/t/p/w300/uUEPJHIGiNeV69RIco01j5Yqu1F.jpg"
+  },
+  {
+   "titulo": "Las muertas",
+   "tipo": "Serie",
+   "horas": 5,
+   "genero": "Crimen real y drama",
+   "estado": "terminado",
+   "nota": 3,
+   "portada": "https://image.tmdb.org/t/p/w300/dmOakRGmoD9VCkISe3R4umhYbie.jpg"
+  },
+  {
+   "titulo": "La casa de las flores",
+   "tipo": "Serie",
+   "horas": 1.1,
+   "genero": "Drama y musical",
+   "estado": "abandonado",
+   "nota": 1,
+   "portada": "https://image.tmdb.org/t/p/w300/hdEQvxIAxMXmrBKJyLvBDZ288dM.jpg"
+  },
+  {
+   "titulo": "La ley de Herodes",
+   "tipo": "Película",
+   "horas": 2,
+   "genero": "Sátira política y comedia",
+   "estado": "terminado",
+   "nota": 4,
+   "portada": "https://image.tmdb.org/t/p/w300/653dXbr6dXffXG0oN8OfZGShFRP.jpg"
+  },
+  {
+   "titulo": "Ya no estoy aquí",
+   "tipo": "Película",
+   "horas": 1.87,
+   "genero": "Drama y musical",
+   "estado": "terminado",
+   "nota": 2,
+   "portada": "https://image.tmdb.org/t/p/w300/min2PJ67s9HUD5ZeCSKTfSgniSC.jpg"
+  },
+  {
+   "titulo": "Sueño en otro idioma",
+   "tipo": "Película",
+   "horas": 1.72,
+   "genero": "Drama y fantasía",
+   "estado": "terminado",
+   "nota": 3,
+   "portada": "https://image.tmdb.org/t/p/w300/7P9Xy30U4JsPfjZzxMQD7N3UzE9.jpg"
+  },
+  {
+   "titulo": "Belascoarán",
+   "tipo": "Serie",
+   "horas": 4,
+   "genero": "Detectives y drama",
+   "estado": "terminado",
+   "nota": 4,
+   "portada": "https://image.tmdb.org/t/p/w300/f69Rkfde5qLiQQIlUrSRk7siJZv.jpg"
+  },
+  {
+   "titulo": "Ingobernable",
+   "tipo": "Serie",
+   "horas": 5.2,
+   "genero": "Suspenso y drama",
+   "estado": "abandonado",
+   "nota": 1,
+   "portada": "https://image.tmdb.org/t/p/w300/mREc0h6fpGRQ3OEfiWqD9TfudaC.jpg"
+  },
+  {
+   "titulo": "El Mantequilla: maestro de la estafa",
+   "tipo": "Serie",
+   "horas": 6,
+   "genero": "Crimen y comedia",
+   "estado": "terminado",
+   "nota": 3,
+   "portada": "https://image.tmdb.org/t/p/w300/65437aNfbCJ2Mcx5v70hNVxppfb.jpg"
+  },
+  {
+   "titulo": "Somos.",
+   "tipo": "Serie",
+   "horas": 5,
+   "genero": "Drama social y crimen",
+   "estado": "terminado",
+   "nota": 3,
+   "portada": "https://image.tmdb.org/t/p/w300/opHopqkLzkftwUl4jTLcwckjuu.jpg"
+  },
+  {
+   "titulo": "Historia de un crimen: Colosio",
+   "tipo": "Serie",
+   "horas": 6,
+   "genero": "Crimen real",
+   "estado": "abandonado",
+   "nota": 1,
+   "portada": "https://image.tmdb.org/t/p/w300/f1TLw1yoaj98O2RTJCtqZVeGa2S.jpg"
+  },
+  {
+   "titulo": "La cabeza de Joaquín Murrieta",
+   "tipo": "Serie",
+   "horas": 6.3,
+   "genero": "Western y acción",
+   "estado": "terminado",
+   "nota": 3,
+   "portada": "https://image.tmdb.org/t/p/w300/v9qDbKohdhfu3nqTbNWb103Xeo7.jpg"
+  },
+  {
+   "titulo": "Chacalería",
+   "tipo": "Película",
+   "horas": 2,
+   "genero": "Drama",
+   "estado": "terminado",
+   "nota": 2,
+   "portada": "https://image.tmdb.org/t/p/w300/fHbYjD625PoRiFDHzmlfeaawvCm.jpg"
+  },
+  {
+   "titulo": "La máquina",
+   "tipo": "Serie",
+   "horas": 4.8,
+   "genero": "Drama deportivo",
+   "estado": "terminado",
+   "nota": 3,
+   "portada": "https://image.tmdb.org/t/p/w300/hDsIZmWVr4kTJFjgZ8Gwzx6nDJD.jpg"
+  },
+  {
+   "titulo": "Bandidos",
+   "tipo": "Serie",
+   "horas": 5.3,
+   "genero": "Acción y aventura",
+   "estado": "terminado",
+   "nota": 2,
+   "portada": "https://image.tmdb.org/t/p/w300/2yXMGkZ8l8oXbmBp4YmDNYz7D5w.jpg"
+  },
+  {
+   "titulo": "ZeroZeroZero",
+   "tipo": "Serie",
+   "horas": 7.5,
+   "genero": "Crimen y drama",
+   "estado": "pendiente",
+   "portada": "https://image.tmdb.org/t/p/w300/c0AISx9tx6crOih0KdjQsfAm3Uo.jpg"
+  },
+  {
+   "titulo": "Los Azules",
+   "tipo": "Serie",
+   "horas": 10,
+   "genero": "Drama",
+   "estado": "pendiente"
+  },
+  {
+   "titulo": "Pedro Páramo",
+   "tipo": "Película",
+   "horas": 2.2,
+   "genero": "Fantasía",
+   "estado": "pendiente",
+   "portada": "https://image.tmdb.org/t/p/w300/lpl7d2ALW2TkPt7ziXPGxGJrU0h.jpg"
+  },
+  {
+   "titulo": "Daughters of the Forest",
+   "tipo": "Película",
+   "horas": 9,
+   "genero": "Ciencia ficción",
+   "estado": "pendiente",
+   "portada": "https://image.tmdb.org/t/p/w300/zVz7KDiqA3mdOVYWC9vse7c56dw.jpg"
+  },
+  {
+   "titulo": "Salcedo, cuero y boogaloo",
+   "tipo": "Serie",
+   "horas": 2,
+   "genero": "Drama y musical",
+   "estado": "pendiente",
+   "portada": "https://image.tmdb.org/t/p/w300/6YJwwuKbJvV8nwK97nH1rsfmLFh.jpg"
+  },
+  {
+   "titulo": "Celda 211",
+   "tipo": "Serie",
+   "horas": 1.9,
+   "genero": "Suspenso en la cárcel",
+   "estado": "pendiente",
+   "portada": "https://image.tmdb.org/t/p/w300/33NDIkBySD5qzRylVgxlkymZfLW.jpg"
+  }
+ ],
+ "seriesHoras": 136.59,
+ "podcasts": [
+  {
+   "titulo": "GusGri Podcast",
+   "nota": 3,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/bb/86/61/bb8661d2-3880-a5b7-4061-2abadf360242/mza_7416188253602619712.jpg/300x300bb.jpg"
+  },
+  {
+   "titulo": "Ya te digo",
+   "nota": 3,
+   "portada": "portadas/ya-te-digo.jpg"
+  },
+  {
+   "titulo": "Valle del Cielo Gris",
+   "nota": 3,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts124/v4/15/83/90/158390ab-ea95-3cb1-df17-d6829eb770ca/mza_5484004006730529278.jpeg/300x300bb.jpg"
+  },
+  {
+   "titulo": "Leyendas Legendarias",
+   "nota": 3,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/d3/c7/ea/d3c7ea9a-0e50-1bec-25d8-2c67b265b5fc/mza_13166419366128668668.jpg/300x300bb.jpg"
+  },
+  {
+   "titulo": "El Pasquín",
+   "nota": 3,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/2a/c8/c4/2ac8c447-ffa4-1d3b-a099-61d199fddeea/mza_9217063011699314580.jpeg/300x300bb.jpg"
+  },
+  {
+   "titulo": "Diego Ruzzarin",
+   "nota": 3,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/d1/5e/21/d15e2135-1ef9-0313-22ae-da61c366a754/mza_14519396202043773504.png/300x300bb.jpg"
+  },
+  {
+   "titulo": "Migala",
+   "nota": 3,
+   "portada": "portadas/migala.jpg"
+  },
+  {
+   "titulo": "Academia de Conspiraciones",
+   "nota": 3,
+   "portada": "portadas/academia-de-conspiraciones.jpg"
+  },
+  {
+   "titulo": "Crónicas de la Espiral",
+   "nota": 3,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/40/0f/f0/400ff0a9-57c5-f434-7944-2a36b04f054d/mza_6655624788950469800.jpeg/300x300bb.jpg"
+  },
+  {
+   "titulo": "Pasando guardia",
+   "nota": 3,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/57/ff/10/57ff1029-3fad-9d65-4385-34eb0a374fef/mza_6457425026847687584.jpg/300x300bb.jpg"
+  },
+  {
+   "titulo": "La vida me da acidez",
+   "nota": 3,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/72/1e/69/721e6908-f1d7-bd89-0388-51bb100b7f80/mza_1743146777412331156.jpg/300x300bb.jpg"
+  },
+  {
+   "titulo": "10 Minute Spanish Tips",
+   "nota": 3,
+   "portada": "portadas/10-minute-spanish-tips.jpg"
+  },
+  {
+   "titulo": "Simulacro",
+   "nota": 3,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/29/57/e2/2957e2e0-be4a-5125-1d97-73f1e73c6c6e/mza_8737025610711820891.jpg/300x300bb.jpg"
+  },
+  {
+   "titulo": "Mundo Futuro",
+   "nota": 3,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/34/09/76/3409767f-8ac5-89a5-2384-6dd61951fbf6/mza_14442498094340125164.jpg/300x300bb.jpg"
+  },
+  {
+   "titulo": "Ídolo: la balada de Chalino Sánchez",
+   "nota": 2,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/9a/c4/72/9ac4729b-d24e-1cf0-4624-97c9d880e5f0/mza_10279836338782304265.jpg/300x300bb.jpg"
+  },
+  {
+   "titulo": "Delirios crónicos",
+   "nota": 2,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/31/66/a9/3166a941-36ba-4b68-10ca-1c8b1bb58d1d/mza_1861676945428733808.png/300x300bb.jpg"
+  },
+  {
+   "titulo": "Radio Ambulante",
+   "nota": 2,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/d8/cd/6b/d8cd6bfc-e830-636b-120e-b41a033e6daf/mza_3995577235346338075.jpg/300x300bb.jpg"
+  },
+  {
+   "titulo": "Broojula",
+   "nota": 2,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/ec/86/05/ec86056b-7da1-cab7-beb4-bb4d14454c9d/mza_7797282290964909964.jpg/300x300bb.jpg"
+  },
+  {
+   "titulo": "A bote pronto",
+   "nota": 2,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/af/e8/4c/afe84cbc-297b-53a4-9e57-b301461aaefb/mza_8453708553188826472.jpg/300x300bb.jpg"
+  },
+  {
+   "titulo": "No hay tos",
+   "nota": 2,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/42/f2/f4/42f2f4d7-26a4-5019-1e2c-85774e47bd2a/mza_7306382576665177363.jpg/300x300bb.jpg"
+  },
+  {
+   "titulo": "Toxicomanía",
+   "nota": 2,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/47/e4/6e/47e46ef3-6ae1-8679-26f7-1db73e636f28/mza_14037202568569041304.jpg/300x300bb.jpg"
+  },
+  {
+   "titulo": "Status Clo",
+   "nota": 2
+  },
+  {
+   "titulo": "Nadie me preguntó",
+   "nota": 2,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/22/49/f6/2249f691-6a40-5c64-10f0-879e2cbf2466/mza_15525991417205500678.jpg/300x300bb.jpg"
+  },
+  {
+   "titulo": "El EC Podcast",
+   "nota": 2,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts122/v4/3a/a8/43/3aa84307-cd66-babd-4de7-05203b987a61/mza_13076838980756654721.jpg/300x300bb.jpg"
+  },
+  {
+   "titulo": "El Hilo",
+   "nota": 2,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts122/v4/0f/2b/66/0f2b66f8-6be1-b8a5-fafd-787ee3f2fe92/mza_2445418320498918112.jpg/300x300bb.jpg"
+  },
+  {
+   "titulo": "El Dollop",
+   "nota": 2,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/6e/c8/a3/6ec8a320-360d-542f-826b-df63ab552d81/mza_515936559690943008.jpg/300x300bb.jpg"
+  },
+  {
+   "titulo": "Niñas bien",
+   "nota": 2,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/a3/d2/df/a3d2dfd4-e037-4907-afe8-5a8e14048052/mza_3098770887966327574.jpeg/300x300bb.jpg"
+  },
+  {
+   "titulo": "Cazagringos",
+   "nota": 2,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/34/66/39/34663949-9813-7d60-2c85-36c6f71ca842/mza_2959043946620178722.jpeg/300x300bb.jpg"
+  },
+  {
+   "titulo": "Historia para tontos",
+   "nota": 2,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/4d/20/fa/4d20fa84-03e6-0ce1-baec-95812bc5dcc7/mza_8522035798224197657.jpg/300x300bb.jpg"
+  },
+  {
+   "titulo": "TED en Español",
+   "nota": 1,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/b4/50/da/b450da28-9bda-1c61-377f-9f399488bc82/mza_11744387144389933497.jpg/300x300bb.jpg"
+  },
+  {
+   "titulo": "Conclusiones (Fernando del Rincón)",
+   "nota": 1,
+   "portada": "portadas/conclusiones.jpg"
+  },
+  {
+   "titulo": "Cállate y vende",
+   "nota": 1,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/f2/e1/d9/f2e1d913-4537-2cd3-31e2-814547f09bd4/mza_14641040910760234586.jpeg/300x300bb.jpg"
+  },
+  {
+   "titulo": "Dimes y billetes",
+   "nota": 1,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/aa/a9/04/aaa904af-8e95-a55d-3b60-e175b0247474/mza_4984696320838870314.jpg/300x300bb.jpg"
+  },
+  {
+   "titulo": "Peras y manzanas",
+   "nota": 1,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/62/26/cd/6226cd79-268d-23c0-682b-41d4a1d0f8ef/mza_3035310843366826314.jpeg/300x300bb.jpg"
+  },
+  {
+   "titulo": "Curiosidades de la Historia",
+   "nota": 1,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/c5/18/f5/c518f528-58a5-0fa1-eac6-88ea5e493e83/mza_5726812221270559590.jpg/300x300bb.jpg"
+  },
+  {
+   "titulo": "La mesa, con León Krauze",
+   "nota": 1,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/12/bc/c9/12bcc9c5-32d4-9de4-5e17-cb5e045cd43d/mza_3249266753192715886.jpeg/300x300bb.jpg"
+  },
+  {
+   "titulo": "Aprender de grandes",
+   "nota": 1,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/92/d5/7c/92d57c1f-a0f8-d378-3240-85b48fb9bff2/mza_4356653938994729036.jpg/300x300bb.jpg"
+  },
+  {
+   "titulo": "Conversaciones",
+   "nota": 1,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/96/60/55/966055a6-f887-74b6-3b1e-d12f08f287cc/mza_8357041267720385129.jpg/300x300bb.jpg"
+  },
+  {
+   "titulo": "El Washington Post",
+   "nota": 1,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts113/v4/20/90/35/20903595-de41-1af6-e7a1-3da05ccad6b8/mza_11203940832306033261.jpg/300x300bb.jpg"
+  },
+  {
+   "titulo": "Sinergéticos",
+   "nota": 1,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/e3/4b/02/e34b022a-d413-6c2c-1791-03cf1411d3bd/mza_10987539898967268124.jpg/300x300bb.jpg"
+  },
+  {
+   "titulo": "TJ XP",
+   "nota": 1,
+   "portada": "portadas/tj-xp.jpg"
+  },
+  {
+   "titulo": "Todo BJJ",
+   "nota": 1,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts114/v4/2f/a4/a7/2fa4a7f9-4202-6093-14b8-30e9447d5fc3/mza_7430831213570578141.jpg/300x300bb.jpg"
+  },
+  {
+   "titulo": "Maldita pobreza",
+   "nota": 1,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/db/04/e0/db04e05f-a790-ccac-9dc5-27ecc7f85997/mza_4019517193020061001.jpg/300x300bb.jpg"
+  },
+  {
+   "titulo": "Tras las líneas",
+   "nota": 1,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/dc/b9/cb/dcb9cb23-1812-4f6d-5bdb-e6cf75c57db2/mza_2525701399969640855.jpg/300x300bb.jpg"
+  },
+  {
+   "titulo": "Central",
+   "nota": 1,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/37/ba/d8/37bad82d-6ab7-14e1-2bcf-f083fe5e9665/mza_16538587155971170746.jpg/300x300bb.jpg"
+  },
+  {
+   "titulo": "Historias únicas",
+   "nota": 1,
+   "portada": "portadas/historias-unicas.jpg"
+  },
+  {
+   "titulo": "Ed's Manifesto",
+   "nota": 1
+  },
+  {
+   "titulo": "Grips & Mics",
+   "nota": 1,
+   "portada": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts125/v4/71/e0/e1/71e0e143-90ba-93b8-6e4d-1c1b3d923ad1/mza_6009508037154890220.jpg/300x300bb.jpg"
+  }
+ ],
+ "podcastsHoras": 3263,
+ "granTotal": {
+  "horas": 5833.95,
+  "desde": "2019-09-03",
+  "corte": "2026-10-13",
+  "nota": "De su hoja «Spanish Learning Tracker» (Dashboard, Total Hours). Pelagos le suma lo que cuenta solo desde el día siguiente al corte."
+ },
+ "estrenos": [
+  {
+   "obra": "tv:295684",
+   "titulo": "Aquel",
+   "fecha": "2026-10-09",
+   "portada": "https://image.tmdb.org/t/p/w300/8fEln7Xp26DXiuddBVb9diuFulJ.jpg",
+   "generos": "Drama",
+   "sinopsis": "Serie biográfica íntima sobre Raphael, el cantante español: sus orígenes, su carrera y su música, rumbo a 60 años de éxito mundial."
+  },
+  {
+   "obra": "tv:290233",
+   "titulo": "El círculo",
+   "fecha": "2026-10-07",
+   "portada": "https://image.tmdb.org/t/p/w300/hkZ8ID4k0nGOdGJa1ynjj8nTmiW.jpg",
+   "generos": "Misterio, crimen",
+   "sinopsis": "El asesinato de una actriz famosa destapa una red de secretos, espionaje y corrupción política que pone en peligro a cuatro amigos de la infancia."
+  },
+  {
+   "obra": "tv:290720",
+   "titulo": "El problema final",
+   "fecha": "2026-09-25",
+   "portada": "https://image.tmdb.org/t/p/w300/jVHx7Yxh41Xf1txD5AsX5MZ4E1e.jpg",
+   "generos": "Crimen, misterio",
+   "sinopsis": "Un actor en decadencia usa las mañas de detective de su personaje famoso para resolver una muerte sospechosa en un hotel aislado, donde todos son sospechosos."
+  },
+  {
+   "obra": "tv:310290",
+   "titulo": "Mis muertos tristes",
+   "fecha": "2026-09-24",
+   "portada": "https://image.tmdb.org/t/p/w300/3ZgL0K4S9ovBmUvS72giGjsSsmX.jpg",
+   "generos": "Drama, fantasía",
+   "sinopsis": "Ema, una médica de 60 años, ve y oye a los muertos y siempre ha huido de ese don. Cuando llega su sobrina Julie, que también se comunica con ellos pero de forma mucho más intensa, las voces del más allá empiezan a contagiar a todo el barrio."
+  },
+  {
+   "obra": "tv:332282",
+   "titulo": "Habilidad física: 100-México",
+   "fecha": "2026-09-16",
+   "portada": "https://image.tmdb.org/t/p/w300/1XlmHy8pD2XQg0cttKA5xHt5sYh.jpg",
+   "generos": "Reality",
+   "sinopsis": "Albañiles, policías, campeones de CrossFit y más compiten en pruebas físicas brutales, combates cuerpo a cuerpo y levantamientos enormes por un premio jugoso. Versión mexicana de Physical: 100."
+  },
+  {
+   "obra": "tv:332863",
+   "titulo": "En coma",
+   "fecha": "2026-09-11",
+   "portada": "https://image.tmdb.org/t/p/w300/faILRvzJEGdJgb1cYsrGWpsXvqe.jpg",
+   "generos": "Drama, misterio",
+   "sinopsis": "Tras una explosión, Anabel queda en coma. Rafael, un enfermero que escucha a los muertos, tiene que mantenerla con vida antes de que sus enemigos la encuentren."
+  },
+  {
+   "obra": "movie:1558568",
+   "titulo": "Gracias, equipo",
+   "fecha": "2026-09-11",
+   "portada": "https://image.tmdb.org/t/p/w300/8qDW83ImLRREI5PruuZvl4crm99.jpg",
+   "generos": "Comedia",
+   "sinopsis": "Una quesera española venida a menos organiza un retiro de integración en el pueblo donde nació la empresa. La escapada para volver a los «valores tradicionales» termina en trampa.",
+   "duracion": "1 h 33 min"
+  },
+  {
+   "obra": "movie:1744876",
+   "titulo": "Fito Páez: El mundo cabe en una canción",
+   "fecha": "2026-09-03",
+   "portada": "https://image.tmdb.org/t/p/w300/vG6rXAyLSu5MqIZG5jTjP6tpdbl.jpg",
+   "generos": "Documental, música",
+   "sinopsis": "Un año pegado a Fito Páez, casi sin que se note la cámara: grabaciones, ensayos y giras por América Latina, Europa y Estados Unidos, y un repaso de su vida.",
+   "duracion": "1 h 52 min"
+  },
+  {
+   "obra": "tv:290234",
+   "titulo": "Mal de amores",
+   "fecha": "2026-09-02",
+   "portada": "https://image.tmdb.org/t/p/w300/rGeWjJxZpFCftDDroRIa1BvYfqX.jpg",
+   "generos": "Drama",
+   "sinopsis": "En plena Revolución mexicana, Emilia Sauri vive dividida entre dos amores apasionados, en un mundo dominado por la violencia."
+  },
+  {
+   "obra": "tv:292558",
+   "titulo": "Toda la verdad de mis mentiras",
+   "fecha": "2026-08-28",
+   "portada": "https://image.tmdb.org/t/p/w300/dAISEl3uXtw64jlkTCm1H1XnQ4W.jpg",
+   "generos": "Drama, comedia",
+   "sinopsis": "Coco y Marín, amigos íntimos que comparten departamento, se lanzan con su grupo de amigos a un viaje en caravana divertido y surrealista."
+  },
+  {
+   "obra": "movie:1621552",
+   "titulo": "La captura",
+   "fecha": "2026-08-21",
+   "portada": "https://image.tmdb.org/t/p/w300/iwCeOpuBtuTP1kLosqgniey5OvX.jpg",
+   "generos": "Crimen, acción, suspenso",
+   "sinopsis": "Dos policías mexicanos, en las últimas horas de su turno, paran un coche robado y se topan de frente con uno de los criminales más peligrosos del mundo.",
+   "duracion": "1 h 31 min"
+  },
+  {
+   "obra": "movie:1616131",
+   "titulo": "Un hijo propio",
+   "fecha": "2026-08-07",
+   "portada": "https://image.tmdb.org/t/p/w300/AqFRon8p9ffsxD55tp6gKi24cMc.jpg",
+   "generos": "Documental",
+   "sinopsis": "Una mujer desesperada por ser madre, ahogada por lo que esperan de ella su familia y la sociedad, finge un embarazo y termina metida en un crimen.",
+   "duracion": "1 h 36 min"
+  }
+ ],
+ "estrenosDia": "2026-10-14",
+ "horas": {
+  "2026-10-14": {
+   "7": 23,
+   "9": 12,
+   "10": 15,
+   "11": 1,
+   "12": 1,
+   "14": 1,
+   "16": 1,
+   "17": 20
+  },
+  "2026-10-15": {
+   "8": 1,
+   "9": 5,
+   "15": 1
+  },
+  "2026-10-17": {
+   "16": 2
+  },
+  "2026-10-20": {
+   "17": 1
+  }
+ },
+ "libroDia": {
+  "2026-10-14": "u:a8e4UoY51nZ8QwhXlIt9",
+  "2026-10-15": "u:a8e4UoY51nZ8QwhXlIt9",
+  "2026-10-17": "u:a8e4UoY51nZ8QwhXlIt9",
+  "2026-10-20": "u:a8e4UoY51nZ8QwhXlIt9"
+ }
+}

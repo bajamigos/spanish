@@ -1,0 +1,251 @@
+{
+  "tema": 5129,
+  "slug": "desde-hace-presente",
+  "titulo": "Desde hace + present",
+  "subtitulo": "Surfeo desde hace tres años.",
+  "foto": "t06.jpg",
+  "regla": "To say how long something has been going on, use the present + desde hace + length of time: surfeo desde hace tres años = I've been surfing for three years. With a starting point, use desde alone: vivo aquí desde 2019.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "English uses _have been doing_ for actions that started in the past and are still going on. Spanish uses the **present**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "present",
+            "+ desde hace +",
+            "length of time"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Desde hace** + a length of time (_for_): **desde hace dos años**, **desde hace un mes**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Desde** + a point in time (_since_): **desde 2019**, **desde enero**, **desde el lunes**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "English",
+            "Spanish"
+          ],
+          "filas": [
+            [
+              "_for three years_",
+              "desde hace tres años"
+            ],
+            [
+              "_since 2019_",
+              "desde 2019"
+            ],
+            [
+              "_since Monday_",
+              "desde el lunes"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "To ask: **¿Desde cuándo** + present? ¿Desde cuándo vives en Tijuana?"
+        },
+        {
+          "tipo": "texto",
+          "texto": "You may also hear the perfect (**he surfeado por tres años**). It isn't wrong, but the present + **desde hace** is the natural way to say it."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the action is still alive, so the verb stays in the present."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Surfeo desde hace== tres años.",
+              "en": "I've been surfing for three years."
+            },
+            {
+              "es": "==Vivo== en Tijuana ==desde== 2019.",
+              "en": "I've lived in Tijuana since 2019."
+            },
+            {
+              "es": "==Entreno== jiu-jitsu ==desde hace== un año.",
+              "en": "I've been training jiu-jitsu for a year."
+            },
+            {
+              "es": "Mi vecina ==tiene== un huerto en la azotea ==desde hace== cinco años.",
+              "en": "My neighbor has had a rooftop garden for five years."
+            },
+            {
+              "es": "==Llueve desde== el domingo.",
+              "en": "It's been raining since Sunday."
+            },
+            {
+              "es": "==Estudiamos== español ==desde hace== mucho tiempo.",
+              "en": "We've been studying Spanish for a long time."
+            },
+            {
+              "es": "¿==Desde cuándo trabajas== aquí?",
+              "en": "How long have you been working here?"
+            },
+            {
+              "es": "No ==veo== a mis primos ==desde hace== meses.",
+              "en": "I haven't seen my cousins for months."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Surfeé desde hace tres años."
+                },
+                {
+                  "v": "bien",
+                  "t": "Surfeo desde hace tres años."
+                }
+              ],
+              "nota": "Still surfing: present, not preterite."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Vivo aquí desde tres años."
+                },
+                {
+                  "v": "bien",
+                  "t": "Vivo aquí desde hace tres años."
+                }
+              ],
+              "nota": "A length of time needs **hace**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Vivo aquí desde hace 2019."
+                },
+                {
+                  "v": "bien",
+                  "t": "Vivo aquí desde 2019."
+                }
+              ],
+              "nota": "A date: just **desde**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estudio español por dos años."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estudio español desde hace dos años."
+                }
+              ],
+              "nota": "**Estudio español por dos años** sounds like a plan for the next two years. Still going on: **desde hace**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hace dos años",
+              "texto": "_Ago_, with the preterite: [[7063|hace = ago]]."
+            },
+            {
+              "forma": "hace un año que…",
+              "texto": "Same idea, other order: [[6187|hace + time + que + present]]."
+            },
+            {
+              "forma": "llevo un año surfeando",
+              "texto": "Another way: [[7176|llevar + gerund]]."
+            },
+            {
+              "forma": "desde los 13",
+              "texto": "Since an age: [[9770|a / desde / hasta + age]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I've been living in Tijuana for two years._",
+              "r": "Vivo en Tijuana desde hace dos años.",
+              "nota": "Present + desde hace."
+            },
+            {
+              "p": "In Spanish: _I've been training since March._",
+              "r": "Entreno desde marzo.",
+              "nota": "A point in time: desde."
+            },
+            {
+              "p": "Fix it: _Entreno jiu-jitsu desde dos años._",
+              "r": "Entreno jiu-jitsu desde hace dos años.",
+              "nota": "A length of time needs hace."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      7063
+    ],
+    "sigue": [
+      6187,
+      7176,
+      9770
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5129",
+      "kwiziq": true
+    }
+  ]
+}

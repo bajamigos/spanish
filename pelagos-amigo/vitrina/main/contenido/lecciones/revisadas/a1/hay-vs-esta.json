@@ -1,0 +1,203 @@
+{
+  "tema": 7036,
+  "slug": "hay-vs-esta",
+  "titulo": "Hay vs está",
+  "subtitulo": "Hay una tabla en el carro. La tabla está en el carro.",
+  "foto": "t01.jpg",
+  "regla": "Use hay to say that something exists (with un, una, numbers, mucho or no article). Use está / están to say where a specific thing is (with el, la, mi, a name).",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Hay** = _there is / there are_. It says something **exists**. It never changes."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Está / están** = _is / are (located)_. It says **where** a **specific** thing is."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "Goes with",
+            "Example"
+          ],
+          "filas": [
+            [
+              "hay",
+              "un, una, unos, numbers, mucho, no article",
+              "Hay una tabla en el carro."
+            ],
+            [
+              "está / están",
+              "el, la, los, las, mi, tu, names",
+              "La tabla está en el carro."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **hay** introduces a stranger; **está** points at someone you already know."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Hay== un Oxxo en la esquina.",
+              "en": "There's an Oxxo on the corner."
+            },
+            {
+              "es": "El Oxxo ==está== en la esquina.",
+              "en": "The Oxxo is on the corner."
+            },
+            {
+              "es": "==Hay== muchos surfistas hoy.",
+              "en": "There are a lot of surfers today."
+            },
+            {
+              "es": "¿==Hay== un baño por aquí?",
+              "en": "Is there a bathroom around here?"
+            },
+            {
+              "es": "¿Dónde ==está== el baño?",
+              "en": "Where's the bathroom?"
+            },
+            {
+              "es": "Mis llaves ==están== en la mesa.",
+              "en": "My keys are on the table."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hay la tabla en el carro."
+                },
+                {
+                  "v": "bien",
+                  "t": "La tabla está en el carro."
+                }
+              ],
+              "nota": "With **la**: **está**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Está un Oxxo en la esquina."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hay un Oxxo en la esquina."
+                }
+              ],
+              "nota": "With **un**: **hay**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hay mis llaves en la mesa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mis llaves están en la mesa."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hay",
+              "texto": "The word itself: [[5102|hay]]."
+            },
+            {
+              "forma": "está en",
+              "texto": "Where things are: [[5067|estar for location]]."
+            },
+            {
+              "forma": "hay, ahí, ay",
+              "texto": "Three words that sound alike: [[8916|hay, ahí and ay]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _There are two dogs in the garden._",
+              "r": "Hay dos perros en el jardín.",
+              "nota": "Number: hay."
+            },
+            {
+              "p": "In Spanish: _My car is outside._",
+              "r": "Mi carro está afuera.",
+              "nota": "mi: está."
+            },
+            {
+              "p": "Fix it: _Hay el mercado cerca de aquí._",
+              "r": "El mercado está cerca de aquí.",
+              "nota": "el: está."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5102,
+      5067
+    ],
+    "confunde": [
+      8916
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7036",
+      "kwiziq": true
+    }
+  ]
+}

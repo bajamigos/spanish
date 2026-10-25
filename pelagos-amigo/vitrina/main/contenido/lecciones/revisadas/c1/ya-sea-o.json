@@ -1,0 +1,178 @@
+{
+  "tema": 8284,
+  "slug": "ya-sea-o",
+  "titulo": "Ya sea... o... = whether... or..., either... or...",
+  "subtitulo": "Ya sea en efectivo o con tarjeta. Ya fuera de día o de noche.",
+  "foto": "t05.jpg",
+  "regla": "Ya sea + A + o + B offers two options, any of which works: whether..., or..., either... or...: Paga ya sea en efectivo o con tarjeta. Use ya fuera for the past. Variants: sea... o..., sea... sea..., fuera... fuera...",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "ya sea",
+            "+ A",
+            "+ o",
+            "+ B"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Ya sea** for present and future; **ya fuera** for the past."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Variants: **sea... o...**, **sea... sea...**, **fuera... fuera...**; the **ya** can drop."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**o** → **u** before an _o_ sound: **ya fuera voluntario u obligado**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **ya sea** = _be it..._"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No me queda otra que pagar la multa, ==ya sea== de contado ==o== a plazos.",
+              "en": "I have no choice but to pay the fine, either all at once or in installments."
+            },
+            {
+              "es": "Tienes que comer algo ligero, ==ya sea== una ensalada ==o== una sopa.",
+              "en": "You need to eat something light, be it a salad or a soup."
+            },
+            {
+              "es": "Tenía que conseguir cualquier trabajo, ==ya fuera== de día ==o== de noche.",
+              "en": "I had to get any job, whether by day or by night."
+            },
+            {
+              "es": "Te dije que mi hijo iría a la universidad, ==ya fuera== por gusto ==u== obligado.",
+              "en": "I told you my son would go to college, willingly or not."
+            },
+            {
+              "es": "==Sea== por dinero ==o== por amor, ella se va a casar con él.",
+              "en": "Whether for money or for love, she's going to marry him."
+            },
+            {
+              "es": "==Fuera== a propósito, ==fuera== sin querer, me chocaron el carro.",
+              "en": "On purpose or by accident, they crashed into my car."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ya sea en carro y en camión."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ya sea en carro o en camión."
+                }
+              ],
+              "nota": "The options are joined by **o**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "presente",
+                  "t": "Ven, ya sea hoy o mañana."
+                },
+                {
+                  "v": "pasado",
+                  "t": "Vino, ya fuera por curiosidad o por obligación."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "ni... ni",
+              "texto": "[[7074|ni... ni...]]."
+            },
+            {
+              "forma": "whatever / whoever",
+              "texto": "[[8946|subjunctive + relative + subjunctive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _You can come either Saturday or Sunday._",
+              "r": "Puedes venir ya sea el sábado o el domingo.",
+              "nota": "ya sea... o."
+            },
+            {
+              "p": "Past: _I had to sell it, whether cheap or expensive._",
+              "r": "Tenía que venderlo, ya fuera barato o caro.",
+              "nota": "ya fuera."
+            },
+            {
+              "p": "Fix it: _ya sea siete o ocho_",
+              "r": "ya sea siete u ocho",
+              "nota": "o → u."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7074
+    ],
+    "confunde": [
+      8946
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8284",
+      "kwiziq": true
+    }
+  ]
+}

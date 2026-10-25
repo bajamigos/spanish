@@ -1,0 +1,246 @@
+{
+  "tema": 6060,
+  "slug": "ese-esa-eso-pronombre",
+  "titulo": "Ese, esa, esos, esas, eso: that one, those",
+  "subtitulo": "¿Ese? No, eso no.",
+  "foto": "t06.jpg",
+  "regla": "For that one / those (ones), use ese, esa, esos, esas, matching the noun. Eso (neutral, no plural) is for an unknown thing, an idea or something just said: Eso es mentira.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Ese** points to something a bit away from you, often near the person you're talking to: _that one_, _those ones_. No noun follows."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "Masculine",
+            "Feminine",
+            "Neutral"
+          ],
+          "filas": [
+            [
+              "Singular",
+              "**ese**",
+              "**esa**",
+              "**eso**"
+            ],
+            [
+              "Plural",
+              "**esos**",
+              "**esas**",
+              "—"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Match the gender and number of the thing: el carro → **ese**; las chanclas → **esas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Eso** is neutral: for something you can't name, an idea, or what someone just said: ¿Qué es **eso**? **Eso** es mentira."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Everyday phrases: **¡Eso!** (_That's it! / Way to go!_), **por eso** (_that's why_), **eso sí** (_that's for sure_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Written **without an accent** today: **ese**, not _ése_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **eso** is _that thing_ or _that idea_. If you can't point at a noun, it's **eso**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿Cuál es tu carro? —==Ese==, el rojo.",
+              "en": "Which one is your car? —That one, the red one."
+            },
+            {
+              "es": "No me gustan estas papas; prefiero ==esas==.",
+              "en": "I don't like these fries; I prefer those."
+            },
+            {
+              "es": "¿Qué es ==eso== que traes en la mano?",
+              "en": "What's that you've got in your hand?"
+            },
+            {
+              "es": "==Eso== que dijiste no es cierto.",
+              "en": "What you said isn't true."
+            },
+            {
+              "es": "Me dormí tarde; por ==eso== no fui a entrenar.",
+              "en": "I went to sleep late; that's why I didn't go to training."
+            },
+            {
+              "es": "¿Ves esas olas? ==Esas== son las buenas.",
+              "en": "See those waves? Those are the good ones."
+            },
+            {
+              "es": "==Esos== son los vecinos que tienen huerto en la azotea.",
+              "en": "Those are the neighbors with the rooftop garden."
+            },
+            {
+              "es": "¡==Eso==! Ya te salió la llave.",
+              "en": "That's it! You nailed the submission."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero ese uno."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero ese."
+                }
+              ],
+              "nota": "No word for _one_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Qué es ese?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Qué es eso?"
+                }
+              ],
+              "nota": "Unknown thing → **eso**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Por ese no fui."
+                },
+                {
+                  "v": "bien",
+                  "t": "Por eso no fui."
+                }
+              ],
+              "nota": "_That's why_ = **por eso**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Las chanclas? Quiero esos."
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Las chanclas? Quiero esas."
+                }
+              ],
+              "nota": "Chanclas are feminine."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "ese carro",
+              "texto": "With a noun after it: [[6061|ese, esa + noun]]."
+            },
+            {
+              "forma": "¿Qué es eso?",
+              "texto": "The first eso you learned: [[5153|asking what is that?]]."
+            },
+            {
+              "forma": "este, esto",
+              "texto": "This one: [[6055|esto, este, esta]]."
+            },
+            {
+              "forma": "aquel",
+              "texto": "That one over there: [[6176|aquel, aquella]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _That's why I didn't go._",
+              "r": "Por eso no fui.",
+              "nota": "por eso."
+            },
+            {
+              "p": "In Spanish (los tacos): _I want those._",
+              "r": "Quiero esos.",
+              "nota": "Masculine plural."
+            },
+            {
+              "p": "Fix it (an unknown thing): _¿Qué es ese?_",
+              "r": "¿Qué es eso?",
+              "nota": "Neutral eso."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6061,
+      5153
+    ],
+    "confunde": [
+      6055
+    ],
+    "sigue": [
+      6176
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6060",
+      "kwiziq": true
+    }
+  ]
+}

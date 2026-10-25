@@ -1,0 +1,234 @@
+{
+  "tema": 8946,
+  "slug": "sea-lo-que-sea",
+  "titulo": "Subjunctive + relative + subjunctive: whatever, wherever, whenever, whoever",
+  "subtitulo": "Sea lo que sea. Digas lo que digas. Vayas donde vayas.",
+  "foto": "t06.jpg",
+  "regla": "Repeat the same verb in the subjunctive around a relative: sea lo que sea (whatever it is), digas lo que digas (no matter what you say), vayas donde vayas (wherever you go), venga quien venga (whoever comes), pase lo que pase (no matter what). Past: pasara lo que pasara.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "subjunctive",
+            "+ lo que / donde / cuando / como / quien / cual +",
+            "same subjunctive"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Meaning",
+            "Pattern",
+            "Example"
+          ],
+          "filas": [
+            [
+              "whatever",
+              "verb + lo que + verb",
+              "diga lo que diga"
+            ],
+            [
+              "whichever",
+              "verb + cual(es) + verb",
+              "sean cuales sean"
+            ],
+            [
+              "wherever",
+              "verb + donde + verb",
+              "vayas donde vayas"
+            ],
+            [
+              "whenever",
+              "verb + cuando + verb",
+              "llegue cuando llegue"
+            ],
+            [
+              "however",
+              "verb + como + verb",
+              "lo hagas como lo hagas"
+            ],
+            [
+              "whoever",
+              "verb + quien + verb",
+              "venga quien venga"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Same verb, same tense, twice. Present subjunctive for now / future; imperfect for the past: **pasara lo que pasara**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: say the verb twice and you've covered every possibility."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Vas a tener que aceptar la verdad, ==sea lo que sea==.",
+              "en": "You'll have to accept the truth, whatever it is."
+            },
+            {
+              "es": "==Te pongas lo que te pongas==, siempre te ves guapísima.",
+              "en": "Whatever you wear, you always look gorgeous."
+            },
+            {
+              "es": "No le hagas caso a Ramiro, ==diga lo que diga==.",
+              "en": "Don't listen to Ramiro, no matter what he says."
+            },
+            {
+              "es": "==Pasara lo que pasara== en esa fiesta, prefiero no saberlo.",
+              "en": "Whatever happened at that party, I'd rather not know."
+            },
+            {
+              "es": "Voy a aceptar su propuesta, ==sean cuales sean== sus condiciones.",
+              "en": "I'll accept his proposal, whatever his conditions are."
+            },
+            {
+              "es": "Ahí tienes dos corbatas; ==escojas cual escojas==, te va a quedar bien.",
+              "en": "There are two ties; whichever you pick, it'll look good."
+            },
+            {
+              "es": "==Vayas donde vayas==, llámame.",
+              "en": "Wherever you go, call me."
+            },
+            {
+              "es": "==Pase lo que pase==, te quiero.",
+              "en": "No matter what happens, I love you."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Diga lo que dice."
+                },
+                {
+                  "v": "bien",
+                  "t": "Diga lo que diga."
+                }
+              ],
+              "nota": "Same subjunctive twice."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Pase lo que pasa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Pase lo que pase."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Pasara lo que pase."
+                },
+                {
+                  "v": "bien",
+                  "t": "Pasara lo que pasara."
+                }
+              ],
+              "nota": "Same tense twice."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "como / donde / quien + subjunctive",
+              "texto": "[[8193|whatever, wherever]]."
+            },
+            {
+              "forma": "por mucho que",
+              "texto": "[[7900|no matter how much]]."
+            },
+            {
+              "forma": "aunque",
+              "texto": "[[5146|aunque]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _No matter what happens..._",
+              "r": "Pase lo que pase...",
+              "nota": "Fixed phrase."
+            },
+            {
+              "p": "In Spanish: _Whoever calls, I'm not here._",
+              "r": "Llame quien llame, no estoy.",
+              "nota": "quien."
+            },
+            {
+              "p": "In Spanish: _Wherever you live, ..._ (tú)",
+              "r": "Vivas donde vivas, ...",
+              "nota": "donde."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      8193
+    ],
+    "confunde": [
+      7900
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8946",
+      "kwiziq": true
+    }
+  ]
+}

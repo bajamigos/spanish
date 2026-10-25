@@ -1,0 +1,215 @@
+{
+  "tema": 6312,
+  "slug": "elija-corrija",
+  "titulo": "Present subjunctive: -ger / -gir verbs with g > j and e > i",
+  "subtitulo": "Elija, corrija, elijamos.",
+  "foto": "t08.jpg",
+  "regla": "Elegir and corregir change e → i in every form and g → j before a in the present subjunctive: elija, elijas, elija, elijamos, elijan; corrija, corrijamos.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Elegir** and **corregir** have two changes:"
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "e → i",
+              "texto": "In **every** form of the present subjunctive, nosotros included."
+            },
+            {
+              "forma": "g → j",
+              "texto": "Before **a**, to keep the _h_-like sound: **elija**, not ~~eliga~~."
+            }
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "elegir",
+            "corregir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "elija",
+              "corrija"
+            ],
+            [
+              "tú",
+              "elijas",
+              "corrijas"
+            ],
+            [
+              "él, ella, usted",
+              "elija",
+              "corrija"
+            ],
+            [
+              "nosotros",
+              "elijamos",
+              "corrijamos"
+            ],
+            [
+              "ustedes, ellos",
+              "elijan",
+              "corrijan"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Reelegir** follows **elegir**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the **yo** present (**elijo, corrijo**) already shows both changes; the subjunctive keeps them."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Quiero que ==elijas== tú el restaurante.",
+              "en": "I want you to choose the restaurant."
+            },
+            {
+              "es": "Es importante que la maestra ==corrija== los exámenes hoy.",
+              "en": "It's important for the teacher to grade the exams today."
+            },
+            {
+              "es": "Ojalá ==elijamos== bien.",
+              "en": "I hope we choose well."
+            },
+            {
+              "es": "No me ==corrijas== delante de todos.",
+              "en": "Don't correct me in front of everyone."
+            },
+            {
+              "es": "Les pido que ==elijan== un representante.",
+              "en": "I'm asking you to choose a representative."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "eliga"
+                },
+                {
+                  "v": "bien",
+                  "t": "elija"
+                }
+              ],
+              "nota": "**g → j**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "elejamos"
+                },
+                {
+                  "v": "bien",
+                  "t": "elijamos"
+                }
+              ],
+              "nota": "**e → i** in nosotros too."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "escoja, dirija",
+              "texto": "[[5721|-ger / -gir: g → j]]."
+            },
+            {
+              "forma": "pida",
+              "texto": "[[5279|e → i verbs]]."
+            },
+            {
+              "forma": "elijo",
+              "texto": "[[5846|corregir, elegir in the present]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Conjugate: _tú / corregir_ (subjunctive)",
+              "r": "corrijas",
+              "nota": "i + j."
+            },
+            {
+              "p": "Conjugate: _nosotros / elegir_ (subjunctive)",
+              "r": "elijamos",
+              "nota": "e → i stays."
+            },
+            {
+              "p": "Complete: _Es mejor que ustedes ___ (elegir) ahora._",
+              "r": "elijan",
+              "nota": "elijan."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5846,
+      5721
+    ],
+    "confunde": [
+      5279
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6312",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "tema": 5090,
+  "slug": "al-del-contracciones",
+  "titulo": "Al and del: a + el, de + el",
+  "subtitulo": "Voy al mercado. Vengo del gym.",
+  "foto": "t07.jpg",
+  "regla": "A + el always becomes al, and de + el always becomes del. Only with el: a la, a los, a las, de la, de los, de las never contract, and neither does él (he).",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**a** + **el** = **al** · **de** + **el** = **del**. This is **required**, not optional."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "a + el = al",
+            "·",
+            "de + el = del"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Only with **el**: **a la**, **a los**, **a las**, **de la**, **de los**, **de las** stay as they are."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Él** (_he_, with an accent) never contracts: **de él**, **a él**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Voy ==al== gimnasio a las seis.",
+              "en": "I go to the gym at six."
+            },
+            {
+              "es": "Vengo ==del== mercado.",
+              "en": "I'm coming from the market."
+            },
+            {
+              "es": "La casa ==del== vecino tiene un huerto enorme.",
+              "en": "The neighbor's house has a huge garden."
+            },
+            {
+              "es": "Llamo ==al== doctor mañana.",
+              "en": "I'll call the doctor tomorrow."
+            },
+            {
+              "es": "Vamos ==a la== playa, no ==al== cine.",
+              "en": "We're going to the beach, not to the movies."
+            },
+            {
+              "es": "Es el carro ==de él==, no ==del== profesor.",
+              "en": "It's his car, not the teacher's."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Voy a el parque."
+                },
+                {
+                  "v": "bien",
+                  "t": "Voy al parque."
+                }
+              ],
+              "nota": "Same with **de el** → **del**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Voy al playa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Voy a la playa."
+                }
+              ],
+              "nota": "Only **el** contracts."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es el carro dél."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es el carro de él."
+                }
+              ],
+              "nota": "**Él** (_he_) never contracts."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "a",
+              "texto": "General uses of a: [[7896|preposition a]]."
+            },
+            {
+              "forma": "el carro del vecino",
+              "texto": "De for whose it is: [[7272|de for possession]]."
+            },
+            {
+              "forma": "el / él",
+              "texto": "The article vs the pronoun: [[10756|él vs el]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Fill in (de + el): _Vengo ___ gimnasio._",
+              "r": "Vengo del gimnasio.",
+              "nota": "de + el = del."
+            },
+            {
+              "p": "Fill in (a + la): _Voy ___ playa._",
+              "r": "Voy a la playa.",
+              "nota": "No contraction with la."
+            },
+            {
+              "p": "Fix it: _Llamo a el doctor._",
+              "r": "Llamo al doctor.",
+              "nota": "a + el = al."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7896
+    ],
+    "confunde": [
+      10756
+    ],
+    "sigue": [
+      7272
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5090",
+      "kwiziq": true
+    }
+  ]
+}

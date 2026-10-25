@@ -1,0 +1,235 @@
+{
+  "tema": 6498,
+  "slug": "otro-otra-pronombre",
+  "titulo": "Otro, otra, otros, otras as pronouns",
+  "subtitulo": "¿Me das otra? Uno es negro y el otro es blanco.",
+  "foto": "t07.jpg",
+  "regla": "Without a noun, otro / otra means another one, el otro / la otra means the other one, and otros / otras (los otros, las otras) means others (the others). It agrees with the noun it replaces and never takes un / una.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Use **otro** without a noun when the noun is already clear: **¿Me das otra?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "It agrees with the noun it replaces: **otro, otra, otros, otras**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "Without article",
+            "With article"
+          ],
+          "filas": [
+            [
+              "Singular",
+              "otro, otra = _another (one)_",
+              "el otro, la otra = _the other (one)_"
+            ],
+            [
+              "Plural",
+              "otros, otras = _others_",
+              "los otros, las otras = _the others_"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Never un / una** before it: _another one_ = **otro**, not **un otro**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "For two things: **uno… el otro**: **uno es negro y el otro es blanco**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **otro** already has the _an_ inside."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Esta cerveza está caliente. ¿Me das ==otra==?",
+              "en": "This beer is warm. Can you give me another one?"
+            },
+            {
+              "es": "Tengo dos gatos: uno es negro y ==el otro== es blanco.",
+              "en": "I have two cats: one is black and the other one is white."
+            },
+            {
+              "es": "Algunos alumnos llegaron temprano; ==los otros== llegaron tarde.",
+              "en": "Some students arrived early; the others arrived late."
+            },
+            {
+              "es": "No me gusta esta camisa; quiero ==otra==.",
+              "en": "I don't like this shirt; I want another one."
+            },
+            {
+              "es": "Yo pienso así, pero ==otros== piensan diferente.",
+              "en": "That's how I see it, but others think differently."
+            },
+            {
+              "es": "Ya me comí ese taco. ¿Hay ==otros==?",
+              "en": "I already ate that taco. Are there others?"
+            },
+            {
+              "es": "Una ola me tumbó y luego ==otra== me arrastró a la orilla.",
+              "en": "One wave knocked me down and then another dragged me to the shore."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Me das una otra?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Me das otra?"
+                }
+              ],
+              "nota": "No **una** before **otra**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero otro uno."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero otro."
+                }
+              ],
+              "nota": "_Another one_ = **otro**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tengo dos hermanos: uno vive aquí y otro en Cancún."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tengo dos hermanos: uno vive aquí y el otro en Cancún."
+                }
+              ],
+              "nota": "Only two: **el otro**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Este vaso está sucio; dame otra."
+                },
+                {
+                  "v": "bien",
+                  "t": "Este vaso está sucio; dame otro."
+                }
+              ],
+              "nota": "Agree with **vaso**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "otro día",
+              "texto": "Before a noun: [[6496|otro, otra + noun]]."
+            },
+            {
+              "forma": "alguno",
+              "texto": "_One, some_ from a group: [[6462|alguno, alguna]]."
+            },
+            {
+              "forma": "varios",
+              "texto": "_Several_: [[7249|varios, varias]]."
+            },
+            {
+              "forma": "el mismo",
+              "texto": "The opposite, _the same one_: [[6981|el mismo, la misma]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _This tortilla is cold. Is there another one?_",
+              "r": "Esta tortilla está fría. ¿Hay otra?",
+              "nota": "No una."
+            },
+            {
+              "p": "In Spanish: _I have two boards: one is long and the other one is short._",
+              "r": "Tengo dos tablas: una es larga y la otra es corta.",
+              "nota": "la otra."
+            },
+            {
+              "p": "Fix it: _Este plato está roto. ¿Me das una otra?_",
+              "r": "Este plato está roto. ¿Me das otro?",
+              "nota": "No una; agree with plato."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6496
+    ],
+    "confunde": [
+      6462,
+      7249
+    ],
+    "sigue": [
+      6981
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6498",
+      "kwiziq": true
+    }
+  ]
+}

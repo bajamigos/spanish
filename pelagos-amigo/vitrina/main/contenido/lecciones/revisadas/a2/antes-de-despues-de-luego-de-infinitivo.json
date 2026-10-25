@@ -1,0 +1,248 @@
+{
+  "tema": 10102,
+  "slug": "antes-de-despues-de-luego-de-infinitivo",
+  "titulo": "Antes de / después de / luego de + noun or infinitive",
+  "subtitulo": "«Después de entrenar, como algo.»",
+  "foto": "t03.jpg",
+  "regla": "Before / after something or doing something: antes de, después de, luego de + a noun or an infinitive (antes de la clase, después de comer). The de is required and the verb is never a gerund. Luego de is common in Latin America, a bit more formal.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Antes de** = _before_. **Después de** and **luego de** = _after_. All three need **de**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "After them comes a **noun** (_before something_) or an **infinitive** (_before doing something_)."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Meaning",
+            "+ noun",
+            "+ infinitive"
+          ],
+          "filas": [
+            [
+              "_before_",
+              "antes de la clase",
+              "antes de salir"
+            ],
+            [
+              "_after_",
+              "después de la cena",
+              "después de comer"
+            ],
+            [
+              "_after_ (more formal, LatAm)",
+              "luego de la reunión",
+              "luego de llegar"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "English uses _-ing_ here (_before leaving_). Spanish uses the **infinitive**: **antes de salir**, never **antes de saliendo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Reflexive verbs keep the pronoun stuck to the infinitive and matched to the subject: **antes de bañarme**, **después de levantarte**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "This works when the subject is the same in both parts. With a different subject you need **antes de que / después de que** + a conjugated verb, a later topic."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: after **de**, Spanish always wants the infinitive. Think _before to eat_, never _before eating_."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Lávate las manos ==antes de comer==.",
+              "en": "Wash your hands before eating."
+            },
+            {
+              "es": "==Antes de la clase== de jiu-jitsu, estiro diez minutos.",
+              "en": "Before jiu-jitsu class, I stretch for ten minutes."
+            },
+            {
+              "es": "==Después de surfear==, siempre tengo mucha hambre.",
+              "en": "After surfing, I'm always really hungry."
+            },
+            {
+              "es": "Nos vemos ==después del== trabajo.",
+              "en": "See you after work."
+            },
+            {
+              "es": "==Luego de llegar== a la oficina, revisó sus correos.",
+              "en": "After arriving at the office, she checked her emails."
+            },
+            {
+              "es": "Apaga la luz ==antes de salir==.",
+              "en": "Turn off the light before you leave."
+            },
+            {
+              "es": "==Después de bañarme==, me puse ropa limpia.",
+              "en": "After showering, I put on clean clothes."
+            },
+            {
+              "es": "==Antes de== las ocho no abre nada.",
+              "en": "Nothing opens before eight."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Después de comiendo, dormí la siesta."
+                },
+                {
+                  "v": "bien",
+                  "t": "Después de comer, dormí la siesta."
+                }
+              ],
+              "nota": "Infinitive, never gerund."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Antes salir, cierra la puerta."
+                },
+                {
+                  "v": "bien",
+                  "t": "Antes de salir, cierra la puerta."
+                }
+              ],
+              "nota": "Don't drop **de**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Después de la trabajo vamos por unos tacos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Después del trabajo vamos por unos tacos."
+                }
+              ],
+              "nota": "**de + el = del**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Antes de bañarse, me lavé los dientes."
+                },
+                {
+                  "v": "bien",
+                  "t": "Antes de bañarme, me lavé los dientes."
+                }
+              ],
+              "nota": "The pronoun matches the subject (yo → me)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "acabo de llegar",
+              "texto": "Another de + infinitive: [[6508|acabar de + infinitive]]."
+            },
+            {
+              "forma": "antes de que llegues",
+              "texto": "Different subject: [[10029|antes de que / después de que]]."
+            },
+            {
+              "forma": "después de haber comido",
+              "texto": "The perfect version: [[10101|antes de / después de + haber + participle]]."
+            },
+            {
+              "forma": "sin comer, para salir",
+              "texto": "The general rule: [[6310|the infinitive after prepositions]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _After training, I take a shower._",
+              "r": "Después de entrenar, me baño.",
+              "nota": "después de + infinitive."
+            },
+            {
+              "p": "In Spanish: _Call me before leaving._",
+              "r": "Llámame antes de salir.",
+              "nota": "antes de salir."
+            },
+            {
+              "p": "Fix it: _Antes de durmiendo, leo un poco._",
+              "r": "Antes de dormir, leo un poco.",
+              "nota": "No gerund."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6508
+    ],
+    "confunde": [
+      10029
+    ],
+    "sigue": [
+      10101,
+      6310
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 10102",
+      "kwiziq": true
+    }
+  ]
+}

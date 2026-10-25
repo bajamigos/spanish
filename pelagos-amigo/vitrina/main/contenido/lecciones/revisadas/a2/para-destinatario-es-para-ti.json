@@ -1,0 +1,227 @@
+{
+  "tema": 7276,
+  "slug": "para-destinatario-es-para-ti",
+  "titulo": "Para (not por) for the recipient of an action",
+  "subtitulo": "«Compré flores para mi mamá.»",
+  "foto": "t09.jpg",
+  "regla": "Use para to say who receives something or who an action is meant for: un regalo para ti, cociné para todos. Por + person means because of or on behalf of that person, not for them to receive.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Para** + person = _for_ (the person who **gets** it or **benefits** from it)."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "thing / action",
+            "+ para +",
+            "recipient"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "With pronouns: **para mí, para ti, para él, para ella, para usted, para nosotros, para ustedes, para ellos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It works with things (**un regalo para Ana**) and with actions done for someone (**cociné para todos**, **canta para su novia**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Por** + person means _because of_ or _in place of_ that person: **lo hice por ti** = _I did it because of you_; **trabajé por Juan** = _I covered Juan's shift_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **para** is the address label on the package. It tells you who gets it."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Este regalo es ==para ti==.",
+              "en": "This gift is for you."
+            },
+            {
+              "es": "Compré flores ==para mi mamá==.",
+              "en": "I bought flowers for my mom."
+            },
+            {
+              "es": "Hice tacos ==para todos==.",
+              "en": "I made tacos for everyone."
+            },
+            {
+              "es": "Hay un paquete ==para usted== en la entrada.",
+              "en": "There's a package for you at the front door."
+            },
+            {
+              "es": "Escribió una canción ==para su novia==.",
+              "en": "He wrote a song for his girlfriend."
+            },
+            {
+              "es": "¿Las tortillas son ==para nosotros==?",
+              "en": "Are the tortillas for us?"
+            },
+            {
+              "es": "Trajo cervezas ==para los vecinos==.",
+              "en": "He brought beers for the neighbors."
+            },
+            {
+              "es": "Estoy haciendo un huerto ==para mis hijos==.",
+              "en": "I'm making a vegetable garden for my kids."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Compré un regalo por mi mamá."
+                },
+                {
+                  "v": "bien",
+                  "t": "Compré un regalo para mi mamá."
+                }
+              ],
+              "nota": "She gets it: **para**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es para tú."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es para ti."
+                }
+              ],
+              "nota": "After **para**: **ti**, not **tú**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Este café es por mí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Este café es para mí."
+                }
+              ],
+              "nota": "**Por mí** = because of me / fine by me."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cociné por mis amigos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cociné para mis amigos."
+                }
+              ],
+              "nota": "**Por mis amigos** = in their place / because of them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "es para ti",
+              "texto": "With ser: [[5988|ser para for a recipient]]."
+            },
+            {
+              "forma": "lo hice por ti",
+              "texto": "Cause, not recipient: [[5962|por for cause or reason]]."
+            },
+            {
+              "forma": "para mí, para ti",
+              "texto": "The pronoun forms: [[6466|prepositions + pronouns]]."
+            },
+            {
+              "forma": "trabajo para",
+              "texto": "The employer: [[7073|para for who you work for]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _This coffee is for you_ (tú).",
+              "r": "Este café es para ti.",
+              "nota": "para ti."
+            },
+            {
+              "p": "In Spanish: _I bought a board for my brother._",
+              "r": "Compré una tabla para mi hermano.",
+              "nota": "Recipient: para."
+            },
+            {
+              "p": "Fix it: _Hice la cena por ustedes._ (they eat it)",
+              "r": "Hice la cena para ustedes.",
+              "nota": "They receive it."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5988,
+      6466
+    ],
+    "confunde": [
+      5962
+    ],
+    "sigue": [
+      7073
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7276",
+      "kwiziq": true
+    }
+  ]
+}

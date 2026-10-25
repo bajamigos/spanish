@@ -1,0 +1,257 @@
+{
+  "tema": 8388,
+  "slug": "posesivos-largos",
+  "titulo": "Long-form possessive adjectives: mío, tuyo, suyo, nuestro",
+  "subtitulo": "Un amigo mío, unas primas nuestras: the possessive after the noun.",
+  "foto": "t01.jpg",
+  "regla": "Long possessives go after the noun and agree with the thing owned: mío, tuyo, suyo, nuestro (-a, -os, -as). Un amigo mío = a friend of mine.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Besides the short possessives that go before the noun (**mi**, **tu**, **su**…), Spanish has a **long form** that goes **after** the noun. It does the same job, but it puts the emphasis on _whose_ it is, like English _a friend of mine_."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Owner",
+            "Masc. sing.",
+            "Masc. pl.",
+            "Fem. sing.",
+            "Fem. pl."
+          ],
+          "filas": [
+            [
+              "yo",
+              "mío",
+              "míos",
+              "mía",
+              "mías"
+            ],
+            [
+              "tú",
+              "tuyo",
+              "tuyos",
+              "tuya",
+              "tuyas"
+            ],
+            [
+              "él, ella, usted, ellos, ustedes",
+              "suyo",
+              "suyos",
+              "suya",
+              "suyas"
+            ],
+            [
+              "nosotros",
+              "nuestro",
+              "nuestros",
+              "nuestra",
+              "nuestras"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Each one agrees in gender and number with the **thing owned**, not with the owner: **Marcos es amigo mío**, **Victoria es amiga mía**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Suyo** can mean _his, hers, its, yours (usted / ustedes), theirs_. When that's unclear, use **de** + the person: **un amigo de ella**, **la tabla de usted**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the long form is the short one with a megaphone: **mi amigo** vs **un amigo mío**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Marcos es amigo ==mío==.",
+              "en": "Marcos is a friend of mine."
+            },
+            {
+              "es": "Victoria es amiga ==mía==.",
+              "en": "Victoria is a friend of mine."
+            },
+            {
+              "es": "Estos niños son hijos ==nuestros==.",
+              "en": "These boys are our sons."
+            },
+            {
+              "es": "Estas niñas son hijas ==nuestras==.",
+              "en": "These girls are our daughters."
+            },
+            {
+              "es": "Un primo ==tuyo== me arregló el carro.",
+              "en": "A cousin of yours fixed my car."
+            },
+            {
+              "es": "Esa tabla no es ==suya==, es de Beto.",
+              "en": "That board isn't his, it's Beto's."
+            },
+            {
+              "es": "¡Dios ==mío==!",
+              "en": "My God!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es un mi amigo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es un amigo mío."
+                }
+              ],
+              "nota": "After **un**, use the long form."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Son amigas mío."
+                },
+                {
+                  "v": "bien",
+                  "t": "Son amigas mías."
+                }
+              ],
+              "nota": "It agrees with the thing owned."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Una tía nuestro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Una tía nuestra."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usos",
+      "titulo": "From adjective to pronoun",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "un amigo mío",
+              "texto": "After a noun: long possessive adjective.",
+              "aqui": true
+            },
+            {
+              "forma": "Es mío.",
+              "texto": "After **ser**, alone: _it's mine_."
+            },
+            {
+              "forma": "El mío es azul.",
+              "texto": "With an article it becomes a pronoun: [[6139|possessive pronouns]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "mi, tu, su",
+              "texto": "The short forms: [[6012|possessive adjectives]]."
+            },
+            {
+              "forma": "el mío, la tuya",
+              "texto": "Possessive pronouns: [[6139|mine, yours]]."
+            },
+            {
+              "forma": "algunos de mis amigos",
+              "texto": "_Some of_: [[8699|alguno de]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _a friend of ours_ (female)",
+              "r": "una amiga nuestra",
+              "nota": "nuestra agrees with amiga."
+            },
+            {
+              "p": "In Spanish: _That money is mine._",
+              "r": "Ese dinero es mío.",
+              "nota": "mío, masculine."
+            },
+            {
+              "p": "In Spanish: _some cousins of yours_ (tú, male)",
+              "r": "unos primos tuyos",
+              "nota": "tuyos."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6012
+    ],
+    "confunde": [
+      6139
+    ],
+    "sigue": [
+      6139,
+      8699
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8388",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "tema": 7027,
+  "slug": "cuanto-exclamaciones",
+  "titulo": "Cuánto + noun in exclamations about quantities",
+  "subtitulo": "¡Cuántas olas! ¡Cuánta gente!: so much, so many.",
+  "foto": "t09.jpg",
+  "regla": "¡Cuánto / cuánta / cuántos / cuántas + noun! expresses surprise at a quantity. It agrees with the noun and keeps its accent.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To express surprise at how much or how many of something there is, put **cuánto, cuánta, cuántos, cuántas** in front of the noun, just like in a question, but with exclamation marks."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**¡cuánto / cuánta / cuántos / cuántas**",
+            "noun**!**"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It **agrees** in gender and number with the noun, and it always keeps its **accent**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In English it's usually _so much / so many…_ or _what a lot of…_"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: same word as the question, but you already know the answer: _a lot!_"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¡==Cuánto== pollo comimos!",
+              "en": "We ate so much chicken!"
+            },
+            {
+              "es": "¡==Cuánta== cerveza hay en el refri!",
+              "en": "There's so much beer in the fridge!"
+            },
+            {
+              "es": "¡==Cuántos== nietos tiene doña Luisa!",
+              "en": "Doña Luisa has so many grandkids!"
+            },
+            {
+              "es": "¡==Cuántas== curvas tiene esta carretera!",
+              "en": "This road has so many curves!"
+            },
+            {
+              "es": "¡==Cuánta== gente hay en la playa hoy!",
+              "en": "There are so many people at the beach today!"
+            },
+            {
+              "es": "¡==Cuántas== olas!",
+              "en": "So many waves!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Cuántos gente!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Cuánta gente!"
+                }
+              ],
+              "nota": "**Gente** is feminine singular."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Cuanta agua!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Cuánta agua!"
+                }
+              ],
+              "nota": "Keep the accent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¿cuántos tacos?",
+              "texto": "The question: [[7068|cuánto + noun]]."
+            },
+            {
+              "forma": "¡cuánto comes!",
+              "texto": "With a verb: [[5081|cuánto + verb in exclamations]]."
+            },
+            {
+              "forma": "¡qué de gente!",
+              "texto": "Another way: [[6863|qué de + noun]]."
+            },
+            {
+              "forma": "cuánto / cuanto",
+              "texto": "With or without accent: [[8700|cuánto and cuanto]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _So many people!_",
+              "r": "¡Cuánta gente!",
+              "nota": "cuánta agrees with gente."
+            },
+            {
+              "p": "In Spanish: _So many tacos!_",
+              "r": "¡Cuántos tacos!",
+              "nota": "masculine plural."
+            },
+            {
+              "p": "In Spanish: _So much traffic!_",
+              "r": "¡Cuánto tráfico!",
+              "nota": "masculine singular."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7068
+    ],
+    "confunde": [
+      8700
+    ],
+    "sigue": [
+      5081,
+      6863
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7027",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,245 @@
+{
+  "tema": 5165,
+  "slug": "tanto-como-sustantivo-verbo",
+  "titulo": "As much / as many as: tanto como",
+  "subtitulo": "«Tengo tantos tomates como Beto.»",
+  "foto": "t05.jpg",
+  "regla": "With a noun, use tanto / tanta / tantos / tantas + noun + como, agreeing with the noun. With a verb, use verb + tanto como, and tanto never changes.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "With a **noun**, **tanto** agrees with the noun:"
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "tanto / tanta / tantos / tantas",
+            "+ noun +",
+            "como"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "singular",
+            "plural"
+          ],
+          "filas": [
+            [
+              "masculine",
+              "tanto dinero",
+              "tantos tacos"
+            ],
+            [
+              "feminine",
+              "tanta agua",
+              "tantas olas"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "With a **verb**, it's always **tanto**:"
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "verb",
+            "+ tanto +",
+            "como"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Negative: **no … tanto como** = _not as much / as many as_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Before an adjective or adverb use **tan**, not tanto: tan alto como yo."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Tengo ==tantos== tomates ==como== Beto en su huerto.",
+              "en": "I have as many tomatoes as Beto in his garden."
+            },
+            {
+              "es": "Bebo ==tanta== agua ==como== tú después de remar.",
+              "en": "I drink as much water as you after paddling."
+            },
+            {
+              "es": "Hoy hay ==tantas== olas ==como== ayer.",
+              "en": "There are as many waves today as yesterday."
+            },
+            {
+              "es": "No tengo ==tanto== dinero ==como== mi primo.",
+              "en": "I don't have as much money as my cousin."
+            },
+            {
+              "es": "No hay ==tanta== gente ==como== el domingo pasado.",
+              "en": "There aren't as many people as last Sunday."
+            },
+            {
+              "es": "Entreno ==tanto como== mi profe de jiu-jitsu.",
+              "en": "I train as much as my jiu-jitsu teacher."
+            },
+            {
+              "es": "Mi hija lee ==tanto como== yo.",
+              "en": "My daughter reads as much as I do."
+            },
+            {
+              "es": "¿Trabajas ==tanto como== antes?",
+              "en": "Do you work as much as before?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tengo tanto tablas como tú."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tengo tantas tablas como tú."
+                }
+              ],
+              "nota": "With a noun it agrees: **tablas** → **tantas**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Duermo tanta como tú."
+                },
+                {
+                  "v": "bien",
+                  "t": "Duermo tanto como tú."
+                }
+              ],
+              "nota": "With a verb it never changes."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Entreno tan como tú."
+                },
+                {
+                  "v": "bien",
+                  "t": "Entreno tanto como tú."
+                }
+              ],
+              "nota": "**Tan** only before adjectives and adverbs."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tengo tantos libros que tú."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tengo tantos libros como tú."
+                }
+              ],
+              "nota": "**como**, not que."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tan … como",
+              "texto": "With adjectives and adverbs: [[5116|tan … como]]."
+            },
+            {
+              "forma": "más … que",
+              "texto": "Unequal comparisons: [[6210|más / menos … que]]."
+            },
+            {
+              "forma": "mucho, poco",
+              "texto": "Other quantity words: [[5127|demasiado, bastante, poco, mucho]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I don't have as many friends as you._",
+              "r": "No tengo tantos amigos como tú.",
+              "nota": "amigos → tantos."
+            },
+            {
+              "p": "In Spanish: _She surfs as much as her brother._",
+              "r": "Ella surfea tanto como su hermano.",
+              "nota": "Verb: tanto."
+            },
+            {
+              "p": "Fix it: _Hay tanto gente como ayer._",
+              "r": "Hay tanta gente como ayer.",
+              "nota": "gente is feminine."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5116,
+      6210
+    ],
+    "confunde": [],
+    "sigue": [
+      5127
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5165",
+      "kwiziq": true
+    }
+  ]
+}

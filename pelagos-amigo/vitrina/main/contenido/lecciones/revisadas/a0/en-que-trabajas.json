@@ -1,0 +1,206 @@
+{
+  "tema": 6472,
+  "slug": "en-que-trabajas",
+  "titulo": "I work / What do you do? with trabajar",
+  "subtitulo": "«¿En qué trabajas? Trabajo en una escuela.»",
+  "foto": "t07.jpg",
+  "regla": "Trabajar is a regular -ar verb: trabajo, trabajas, trabaja. Use en + place and de / como + job (no un/una); ask ¿En qué trabajas? or ¿A qué te dedicas?",
+  "comparada_kwiziq": "2026-10-17",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Who",
+            "trabajar"
+          ],
+          "filas": [
+            [
+              "yo",
+              "trabajo"
+            ],
+            [
+              "tú",
+              "trabajas"
+            ],
+            [
+              "usted",
+              "trabaja"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Trabajo en** + place: **trabajo en una oficina**. **Trabajo de** / **como** + job, with no **un/una**: **trabajo de mesero**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "To ask what someone does: **¿En qué trabajas?** (tú), **¿En qué trabaja?** (usted). Another common way: **¿A qué te dedicas?** / **¿A qué se dedica?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Yes/no questions: same words, add **¿…?** and raise your voice: **¿Trabajas hoy?**"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Trabajo en== una escuela de surf.",
+              "en": "I work at a surf school."
+            },
+            {
+              "es": "==Trabajo de== mesero los fines de semana.",
+              "en": "I work as a waiter on weekends."
+            },
+            {
+              "es": "Mi prima ==trabaja como== enfermera.",
+              "en": "My cousin works as a nurse."
+            },
+            {
+              "es": "¿==En qué trabajas==?",
+              "en": "What do you do?"
+            },
+            {
+              "es": "¿==A qué se dedica== usted?",
+              "en": "What do you do for a living?"
+            },
+            {
+              "es": "¿Tú ==trabajas== en la maquila?",
+              "en": "Do you work at the factory?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Trabajo como un mesero."
+                },
+                {
+                  "v": "bien",
+                  "t": "Trabajo como mesero."
+                }
+              ],
+              "nota": "No **un/una** before the job."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Trabajo a una oficina."
+                },
+                {
+                  "v": "bien",
+                  "t": "Trabajo en una oficina."
+                }
+              ],
+              "nota": "Place = **en**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Qué trabajas?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿En qué trabajas?"
+                }
+              ],
+              "nota": "Keep **en**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hablo, trabajo",
+              "texto": "The pattern behind it: [[5492|regular -ar verbs]]."
+            },
+            {
+              "forma": "soy maestro",
+              "texto": "No article with jobs: [[6131|zero article]]."
+            },
+            {
+              "forma": "soy enfermera",
+              "texto": "Saying your job with ser: [[6090|ser for professions]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I work in a restaurant._",
+              "r": "Trabajo en un restaurante.",
+              "nota": "en + place."
+            },
+            {
+              "p": "Ask a stranger: _What do you do?_",
+              "r": "¿En qué trabaja? / ¿A qué se dedica?",
+              "nota": "usted forms."
+            },
+            {
+              "p": "Fix it: _Trabajo de una maestra._",
+              "r": "Trabajo de maestra.",
+              "nota": "no una."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5492
+    ],
+    "confunde": [
+      6131
+    ],
+    "sigue": [
+      6090
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6472",
+      "kwiziq": true
+    }
+  ]
+}

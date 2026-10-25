@@ -1,0 +1,219 @@
+{
+  "tema": 6496,
+  "slug": "otro-otra-adjetivo",
+  "titulo": "Otro, otra, otros, otras (another, other)",
+  "subtitulo": "¿Me das otro taco?",
+  "foto": "t07.jpg",
+  "regla": "Otro agrees with the noun (otro, otra, otros, otras) and never takes un / una: otro café = another coffee. It can follow el, la, mis, etc. (el otro día), and it goes before numbers: otros dos = two more.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Otro** = _another, other_. It agrees with the noun: **otro, otra, otros, otras**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Another** is just **otro**. Never **un otro**: **otro café**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "_The other_ / _my other_: put the article or possessive first: **el otro día**, **la otra playa**, **mis otros amigos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With a number, **otro** comes first: **otros dos tacos** = _two more tacos_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Handy phrase: **otra vez** = _again_."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿Me das ==otro== taco, por favor?",
+              "en": "Can I have another taco, please?"
+            },
+            {
+              "es": "Quiero ==otra== cerveza.",
+              "en": "I want another beer."
+            },
+            {
+              "es": "==El otro== día vi a tu hermano en la playa.",
+              "en": "The other day I saw your brother at the beach."
+            },
+            {
+              "es": "Tengo ==otros== planes para el sábado.",
+              "en": "I have other plans for Saturday."
+            },
+            {
+              "es": "==Mis otras== plantas están en la azotea.",
+              "en": "My other plants are on the roof."
+            },
+            {
+              "es": "Necesitamos ==otras dos== sillas.",
+              "en": "We need two more chairs."
+            },
+            {
+              "es": "Vamos a intentarlo ==otra vez==.",
+              "en": "Let's try it again."
+            },
+            {
+              "es": "Busca en ==otra== tienda.",
+              "en": "Look in another store."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero un otro café."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero otro café."
+                }
+              ],
+              "nota": "No **un**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Lo hice una otra vez."
+                },
+                {
+                  "v": "bien",
+                  "t": "Lo hice otra vez."
+                }
+              ],
+              "nota": "No **una**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero otro cerveza."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero otra cerveza."
+                }
+              ],
+              "nota": "Agree with the noun."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Compré dos otros boletos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Compré otros dos boletos."
+                }
+              ],
+              "nota": "**Otros** before the number."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "alto, altas",
+              "texto": "Agreement basics: [[6014|regular plural adjectives]]."
+            },
+            {
+              "forma": "el mismo",
+              "texto": "The opposite idea: [[6981|el mismo, la misma]]."
+            },
+            {
+              "forma": "varios días",
+              "texto": "Another indefinite: [[7249|varios, varias]]."
+            },
+            {
+              "forma": "¿quieres otro?",
+              "texto": "Without the noun: [[6498|otro as a pronoun]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _another beer_",
+              "r": "otra cerveza",
+              "nota": "No una."
+            },
+            {
+              "p": "Fix it: _Quiero un otro taco._",
+              "r": "Quiero otro taco.",
+              "nota": "Drop un."
+            },
+            {
+              "p": "In Spanish, starting with otro: _two more days_",
+              "r": "otros dos días",
+              "nota": "Otros first."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6014
+    ],
+    "confunde": [
+      6981
+    ],
+    "sigue": [
+      7249,
+      6498
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6496",
+      "kwiziq": true
+    }
+  ]
+}

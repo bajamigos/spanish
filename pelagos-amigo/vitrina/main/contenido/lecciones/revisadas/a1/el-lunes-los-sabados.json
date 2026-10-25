@@ -1,0 +1,209 @@
+{
+  "tema": 10481,
+  "slug": "el-lunes-los-sabados",
+  "titulo": "The article with days of the week",
+  "subtitulo": "El sábado voy a surfear. Los martes entreno.",
+  "foto": "t01.jpg",
+  "regla": "To say on which day something happens, put el before the day for one occasion (el lunes = on Monday) and los for a habit (los lunes = on Mondays). Never use en.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**El + day** = one occasion: **el sábado** = _on Saturday_ (this coming one, or the last one)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Los + day** = every week: **los sábados** = _on Saturdays_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "No **en**: the article already means _on_."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Singular",
+            "Plural"
+          ],
+          "filas": [
+            [
+              "el lunes … el viernes",
+              "los lunes … los viernes"
+            ],
+            [
+              "el sábado",
+              "los sábados"
+            ],
+            [
+              "el domingo",
+              "los domingos"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Lunes** to **viernes** already end in **-s**, so they don't change in the plural."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==El sábado== voy a surfear.",
+              "en": "On Saturday I'm going surfing."
+            },
+            {
+              "es": "==Los martes== tengo jiu-jitsu.",
+              "en": "On Tuesdays I have jiu-jitsu."
+            },
+            {
+              "es": "La reunión es ==el jueves==.",
+              "en": "The meeting is on Thursday."
+            },
+            {
+              "es": "==Los domingos== comemos con mi familia.",
+              "en": "On Sundays we eat with my family."
+            },
+            {
+              "es": "Te veo ==el lunes== en la mañana.",
+              "en": "See you Monday morning."
+            },
+            {
+              "es": "==Los viernes== riego el huerto.",
+              "en": "On Fridays I water the garden."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Voy a surfear en sábado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Voy a surfear el sábado."
+                }
+              ],
+              "nota": "No **en**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Los domingo descanso."
+                },
+                {
+                  "v": "bien",
+                  "t": "Los domingos descanso."
+                }
+              ],
+              "nota": "Sábado and domingo add **-s**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Los luneses"
+                },
+                {
+                  "v": "bien",
+                  "t": "Los lunes"
+                }
+              ],
+              "nota": "Lunes to viernes don't change."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el lunes, el martes",
+              "texto": "Why el: [[6751|days of the week are masculine]]."
+            },
+            {
+              "forma": "el 4 de mayo",
+              "texto": "Adding the date: [[6746|expressing dates]]."
+            },
+            {
+              "forma": "todos los lunes",
+              "texto": "Another way to say every: [[6178|cada and todos for every]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _On Saturday I'm going to the beach._",
+              "r": "El sábado voy a la playa.",
+              "nota": "One occasion: el."
+            },
+            {
+              "p": "In Spanish: _I train on Tuesdays._",
+              "r": "Entreno los martes.",
+              "nota": "Habit: los."
+            },
+            {
+              "p": "Fix it (every week): _Trabajo en domingos._",
+              "r": "Trabajo los domingos.",
+              "nota": "No en; los + plural."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6751
+    ],
+    "confunde": [],
+    "sigue": [
+      6746,
+      6178
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 10481",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "tema": 5483,
+  "slug": "vengo-vienes-presente-venir",
+  "titulo": "Venir in the present",
+  "subtitulo": "Vengo de la playa. ¿Vienes?",
+  "foto": "t09.jpg",
+  "regla": "Venir (to come) has two changes in the present: yo is vengo, and the stressed e becomes ie in tú, él and ellos (vienes, viene, vienen). Nosotros is venimos.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Venir** means _to come_. It has two irregularities:"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Yo** takes a **g**: **vengo**. **Tú, él** and **ellos** change **e > ie**: **vienes, viene, vienen**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Present"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**vengo**"
+            ],
+            [
+              "tú",
+              "**vienes**"
+            ],
+            [
+              "él / ella / usted",
+              "**viene**"
+            ],
+            [
+              "nosotros / nosotras",
+              "venimos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "**vienen**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Nosotros** is regular: **venimos**. It works just like **tener** (tengo, tienes...)."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Vengo== de la playa.",
+              "en": "I'm coming from the beach."
+            },
+            {
+              "es": "¿==Vienes== a la fiesta el sábado?",
+              "en": "Are you coming to the party on Saturday?"
+            },
+            {
+              "es": "Mi abuela ==viene== de Sinaloa.",
+              "en": "My grandma comes from Sinaloa."
+            },
+            {
+              "es": "==Venimos== a entrenar todos los martes.",
+              "en": "We come to train every Tuesday."
+            },
+            {
+              "es": "¿A qué hora ==vienen== ustedes?",
+              "en": "What time are you guys coming?"
+            },
+            {
+              "es": "El camión ==viene== lleno.",
+              "en": "The bus is coming full."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo veno mañana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo vengo mañana."
+                }
+              ],
+              "nota": "Yo is **vengo**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros vienemos en carro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros venimos en carro."
+                }
+              ],
+              "nota": "No change in nosotros."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ellos venen tarde."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ellos vienen tarde."
+                }
+              ],
+              "nota": "e > ie."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tengo, tienes",
+              "texto": "The same pattern: [[5304|tener]]."
+            },
+            {
+              "forma": "voy, vas",
+              "texto": "Its opposite: [[5271|ir]]."
+            },
+            {
+              "forma": "vine",
+              "texto": "Next tenses: [[5225|venir in the preterite]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I come from the gym._",
+              "r": "Vengo del gimnasio.",
+              "nota": "vengo."
+            },
+            {
+              "p": "In Spanish: _Is she (ella) coming tomorrow?_",
+              "r": "¿Viene mañana?",
+              "nota": "viene."
+            },
+            {
+              "p": "Fix it: _Nosotros vienimos a las seis._",
+              "r": "Nosotros venimos a las seis.",
+              "nota": "venimos."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5304
+    ],
+    "confunde": [
+      5271
+    ],
+    "sigue": [
+      5225
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5483",
+      "kwiziq": true
+    }
+  ]
+}

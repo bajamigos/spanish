@@ -1,0 +1,230 @@
+{
+  "tema": 5065,
+  "slug": "debo-puedo-quiero-infinitivo",
+  "titulo": "Deber, poder, querer + infinitive",
+  "subtitulo": "«Quiero comer, pero debo trabajar.»",
+  "foto": "t10.jpg",
+  "regla": "Deber (must, should), poder (can) and querer (to want) go straight into an infinitive, with nothing in between: debo trabajar, puedo nadar, quiero comer.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "deber / poder / querer (conjugated)",
+            "+",
+            "infinitive"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "deber",
+            "poder",
+            "querer"
+          ],
+          "filas": [
+            [
+              "yo",
+              "debo",
+              "puedo",
+              "quiero"
+            ],
+            [
+              "tú",
+              "debes",
+              "puedes",
+              "quieres"
+            ],
+            [
+              "él / ella / usted",
+              "debe",
+              "puede",
+              "quiere"
+            ],
+            [
+              "nosotros",
+              "debemos",
+              "podemos",
+              "queremos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "deben",
+              "pueden",
+              "quieren"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Conjugate the first verb only. The second stays in the **infinitive**, with no **que**, **a** or **de**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Poder** (o → ue) and **querer** (e → ie) change their stem, except with **nosotros**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Debo trabajar== el sábado.",
+              "en": "I must work on Saturday."
+            },
+            {
+              "es": "==Puedo nadar== una hora sin parar.",
+              "en": "I can swim for an hour without stopping."
+            },
+            {
+              "es": "==Quiero comer== tacos de birria.",
+              "en": "I want to eat birria tacos."
+            },
+            {
+              "es": "¿==Puedes ayudarme==?",
+              "en": "Can you help me?"
+            },
+            {
+              "es": "No ==debes manejar== tan rápido.",
+              "en": "You shouldn't drive so fast."
+            },
+            {
+              "es": "==Queremos aprender== a surfear.",
+              "en": "We want to learn to surf."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero que comer."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero comer."
+                }
+              ],
+              "nota": "No **que**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Puedo a nadar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Puedo nadar."
+                }
+              ],
+              "nota": "No **a**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero voy a la playa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero ir a la playa."
+                }
+              ],
+              "nota": "Second verb: infinitive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "debo, debes",
+              "texto": "Conjugation and meaning: [[6467|deber in the present]]."
+            },
+            {
+              "forma": "tengo que",
+              "texto": "_Have to_: [[5106|tener que]]."
+            },
+            {
+              "forma": "quisiera",
+              "texto": "Asking politely: [[5227|quisiera, quería, querría]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I can't go._",
+              "r": "No puedo ir.",
+              "nota": "poder + infinitive."
+            },
+            {
+              "p": "In Spanish: _We want to eat._",
+              "r": "Queremos comer.",
+              "nota": "No stem change with nosotros."
+            },
+            {
+              "p": "Fix it: _Debes que estudiar._",
+              "r": "Debes estudiar.",
+              "nota": "No que after deber."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6467
+    ],
+    "confunde": [
+      5106
+    ],
+    "sigue": [
+      5227
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5065",
+      "kwiziq": true
+    }
+  ]
+}

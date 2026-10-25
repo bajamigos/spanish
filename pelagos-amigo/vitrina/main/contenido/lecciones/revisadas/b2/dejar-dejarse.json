@@ -1,0 +1,196 @@
+{
+  "tema": 7445,
+  "slug": "dejar-dejarse",
+  "titulo": "Dejar vs dejarse",
+  "subtitulo": "Me dejó su bici. Dejé la bolsa en la puerta. Déjate de cosas.",
+  "foto": "t06.jpg",
+  "regla": "Dejar algo a alguien = to lend (prestar is more common in Mexico). Dejar algo en un lugar = to leave something on purpose. Dejarse algo = to leave something behind by accident (in Mexico, se me olvidó is more usual). Also dejar + infinitive = to let, dejar de = to stop.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "dejar algo a alguien",
+              "texto": "_to lend_: **le dejé la bici a mi hermano**. In Mexico **prestar** is more common: **le presté la bici**."
+            },
+            {
+              "forma": "dejar algo en un lugar",
+              "texto": "_to leave something somewhere on purpose_: **dejé la bolsa junto a la puerta**."
+            },
+            {
+              "forma": "dejarse algo (en un lugar)",
+              "texto": "_to leave something behind by accident_: **me dejé la cartera en casa**. In Mexico you'll more often hear **se me olvidó la cartera** or **dejé la cartera**."
+            },
+            {
+              "forma": "dejar + infinitive",
+              "texto": "_to let_: **no me dejan salir**."
+            },
+            {
+              "forma": "dejar de + infinitive",
+              "texto": "_to stop doing_: **dejé de fumar**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **dejar** on purpose; **dejarse** by accident."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Daniel le ==dejó== la bici a su hermano.",
+              "en": "Daniel lent his bike to his brother."
+            },
+            {
+              "es": "Mis abuelos nos ==dejaron== su casa para las vacaciones.",
+              "en": "My grandparents lent us their house for the holidays."
+            },
+            {
+              "es": "¡==Me dejé== el monedero en la casa!",
+              "en": "I left my coin purse at home!"
+            },
+            {
+              "es": "¡==Se me olvidó== el monedero en la casa!",
+              "en": "I forgot my coin purse at home! (more common in Mexico)"
+            },
+            {
+              "es": "==Dejé== la mochila del gimnasio junto a la puerta para acordarme.",
+              "en": "I left my gym bag by the door so I'd remember it."
+            },
+            {
+              "es": "No ==dejes== los platos sucios en el fregadero.",
+              "en": "Don't leave the dirty dishes in the sink."
+            },
+            {
+              "es": "Mis papás no me ==dejan== salir entre semana.",
+              "en": "My parents don't let me go out on weeknights."
+            },
+            {
+              "es": "==Dejé de== tomar refresco.",
+              "en": "I stopped drinking soda."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Dejé fumar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Dejé de fumar."
+                }
+              ],
+              "nota": "_Stop_: **dejar de**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "a propósito",
+                  "t": "Dejé las llaves en la mesa."
+                },
+                {
+                  "v": "sin querer",
+                  "t": "Se me olvidaron las llaves en la mesa."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "se me olvidó",
+              "texto": "[[7602|olvidar / olvidarse]]."
+            },
+            {
+              "forma": "prestar",
+              "texto": "Lending."
+            },
+            {
+              "forma": "dormir / dormirse",
+              "texto": "[[7446|other pronominal pairs]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Can you lend me your pen?_ (tú)",
+              "r": "¿Me prestas tu pluma? / ¿Me dejas tu pluma?",
+              "nota": "prestar / dejar."
+            },
+            {
+              "p": "In Spanish: _I quit smoking._",
+              "r": "Dejé de fumar.",
+              "nota": "dejar de."
+            },
+            {
+              "p": "In Spanish: _They don't let us use phones._",
+              "r": "No nos dejan usar el celular.",
+              "nota": "dejar + infinitive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7602
+    ],
+    "confunde": [
+      7602
+    ],
+    "sigue": [
+      7446
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7445",
+      "kwiziq": true
+    }
+  ]
+}

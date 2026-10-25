@@ -1,0 +1,198 @@
+{
+  "tema": 10854,
+  "slug": "si-enfatico",
+  "titulo": "Si / sí for emphasis",
+  "subtitulo": "¡Pero si acabo de llegar! Ahora sí. Él sí sabe.",
+  "foto": "t02.jpg",
+  "regla": "Si / pero si + sentence (no accent) protests or objects: ¡Pero si yo no dije nada! Sí (accent) stresses that something really is the case: Él sí sabe. Eso sí. Ahora sí.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¡si...! / ¡pero si...!",
+              "texto": "No accent. Surprise, protest or justification: _but..., what are you talking about?_ **¡Si yo no abrí la boca!**"
+            },
+            {
+              "forma": "sí + verb",
+              "texto": "Accent. Stresses the truth, often in contrast: **yo no fui, pero él sí fue**; **ahora sí entendí**."
+            },
+            {
+              "forma": "eso sí",
+              "texto": "_mind you, but_: **Es caro; eso sí, está riquísimo.**"
+            },
+            {
+              "forma": "¡ahora sí!",
+              "texto": "_now we're talking, now for real_."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **si** without accent pushes back; **sí** with accent insists."
+        }
+      ]
+    },
+    {
+      "id": "si",
+      "titulo": "Si / pero si",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "—Tú eres el que empeoró todo. —¿Qué? ==¡Si== yo no abrí la boca!",
+              "en": "—You're the one who made it worse. —What? I didn't even open my mouth!"
+            },
+            {
+              "es": "—¿Cómo? ==¡Pero si== acabo de llegar!",
+              "en": "—What? But I just got here!"
+            },
+            {
+              "es": "—Ma, quiero cocinar hoy. —==Pero si== estás muy chiquita, mi amor.",
+              "en": "—Mom, I want to cook today. —But you're too little, sweetie."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "si-acento",
+      "titulo": "Sí for emphasis",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Yo no sé bailar, pero mi hermana ==sí== sabe.",
+              "en": "I can't dance, but my sister sure can."
+            },
+            {
+              "es": "==Ahora sí== entendí.",
+              "en": "Now I really get it."
+            },
+            {
+              "es": "El restaurante es caro; ==eso sí==, la comida es buenísima.",
+              "en": "The restaurant is pricey; mind you, the food is amazing."
+            },
+            {
+              "es": "¡Esto ==sí== es vida!",
+              "en": "Now this is living!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Pero sí acabo de llegar!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Pero si acabo de llegar!"
+                }
+              ],
+              "nota": "Protest: no accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Él si sabe."
+                },
+                {
+                  "v": "bien",
+                  "t": "Él sí sabe."
+                }
+              ],
+              "nota": "Emphasis: accent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "sí / si",
+              "texto": "[[6603|sí vs si]]."
+            },
+            {
+              "forma": "que si, que si",
+              "texto": "[[9965|que si...]]."
+            },
+            {
+              "forma": "a ver si",
+              "texto": "[[9126|a ver]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Protest: _But I already paid!_",
+              "r": "¡Pero si ya pagué!",
+              "nota": "No accent."
+            },
+            {
+              "p": "Emphasis: _I didn't go, but she did._",
+              "r": "Yo no fui, pero ella sí.",
+              "nota": "sí."
+            },
+            {
+              "p": "Accent or not? _¡___ te lo dije ayer!_ (protest)",
+              "r": "Si",
+              "nota": "No accent."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6603
+    ],
+    "confunde": [
+      9965
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 10854",
+      "kwiziq": true
+    }
+  ]
+}

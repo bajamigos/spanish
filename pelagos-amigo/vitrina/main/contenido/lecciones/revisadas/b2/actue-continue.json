@@ -1,0 +1,203 @@
+{
+  "tema": 8944,
+  "slug": "actue-continue",
+  "titulo": "Present subjunctive: -uar verbs (actuar, continuar)",
+  "subtitulo": "Actúe, continúes, continuemos.",
+  "foto": "t02.jpg",
+  "regla": "Most -uar verbs (actuar, continuar, graduarse, evaluar) stress and accent the u in the present subjunctive, except nosotros: actúe, actúes, actúe, actuemos, actúen. Exceptions with -cuar / -guar (averiguar → averigüe) don't take the accent.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "The stress falls on the **u**, so it gets a written accent: **ú**. **Nosotros** keeps the stress on the ending, so no accent."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "actuar",
+            "continuar"
+          ],
+          "filas": [
+            [
+              "yo",
+              "actúe",
+              "continúe"
+            ],
+            [
+              "tú",
+              "actúes",
+              "continúes"
+            ],
+            [
+              "él, ella, usted",
+              "actúe",
+              "continúe"
+            ],
+            [
+              "nosotros",
+              "actuemos",
+              "continuemos"
+            ],
+            [
+              "ustedes, ellos",
+              "actúen",
+              "continúen"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Same pattern: **graduarse → me gradúe**, **evaluar → evalúe**, **situar → sitúe**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Not with **-guar** / **-cuar**: **averiguar → averigüe** (with diaeresis), **adecuar → adecue**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the present already shows it: **actúo, continúas** → **actúe, continúes**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Es posible que ==actúe== en la pastorela de la escuela.",
+              "en": "I might act in the school's Christmas play."
+            },
+            {
+              "es": "Espero que todos ==actuemos== con calma en la junta.",
+              "en": "I hope we all act calmly in the meeting."
+            },
+            {
+              "es": "Más vale que ==continúen== con su trabajo.",
+              "en": "You'd better carry on with your work."
+            },
+            {
+              "es": "Quiero que ==continúen== con su excelente labor.",
+              "en": "I want you to keep up your excellent work."
+            },
+            {
+              "es": "Ojalá ==me gradúe== el próximo año.",
+              "en": "I hope I graduate next year."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "continue (subjunctive, yo)"
+                },
+                {
+                  "v": "bien",
+                  "t": "continúe"
+                }
+              ],
+              "nota": "Accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "actúemos"
+                },
+                {
+                  "v": "bien",
+                  "t": "actuemos"
+                }
+              ],
+              "nota": "No accent in nosotros."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "envíe",
+              "texto": "[[8952|-iar verbs with accents]]."
+            },
+            {
+              "forma": "hable",
+              "texto": "[[5063|regular -ar verbs]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Conjugate: _tú / continuar_ (subjunctive)",
+              "r": "continúes",
+              "nota": "ú."
+            },
+            {
+              "p": "Conjugate: _nosotros / actuar_ (subjunctive)",
+              "r": "actuemos",
+              "nota": "No accent."
+            },
+            {
+              "p": "Complete: _Espero que el profesor me ___ (evaluar) bien._",
+              "r": "evalúe",
+              "nota": "ú."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5063
+    ],
+    "confunde": [
+      8952
+    ],
+    "sigue": [
+      8952
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8944",
+      "kwiziq": true
+    }
+  ]
+}

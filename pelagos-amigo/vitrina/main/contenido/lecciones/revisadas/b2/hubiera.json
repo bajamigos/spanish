@@ -1,0 +1,215 @@
+{
+  "tema": 5955,
+  "slug": "hubiera",
+  "titulo": "Haber in the imperfect subjunctive",
+  "subtitulo": "Hubiera, hubieras, hubiéramos.",
+  "foto": "t01.jpg",
+  "regla": "Haber in the imperfect subjunctive: hubiera, hubieras, hubiera, hubiéramos, hubieran (or hubiese...). It builds the pluperfect subjunctive (hubiera ido) and also works alone: ojalá hubiera más tiempo (there were).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "From the preterite **hubieron** → **hubie-** + endings."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "haber (imperfect subjunctive)"
+          ],
+          "filas": [
+            [
+              "yo",
+              "hubiera"
+            ],
+            [
+              "tú",
+              "hubieras"
+            ],
+            [
+              "él, ella, usted",
+              "hubiera"
+            ],
+            [
+              "nosotros",
+              "hubiéramos"
+            ],
+            [
+              "ustedes, ellos",
+              "hubieran"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The **-se** forms: **hubiese, hubieses, hubiese, hubiésemos, hubiesen**; more formal."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Two jobs:"
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "auxiliary",
+              "texto": "**hubiera** + participle = pluperfect subjunctive: **si hubiera sabido...**"
+            },
+            {
+              "forma": "hay → hubiera",
+              "texto": "_there were_, always singular: **ojalá hubiera más playas así**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **hubo** → **hubiera**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Si ==hubiera== sabido, te habría avisado.",
+              "en": "If I'd known, I would have told you."
+            },
+            {
+              "es": "Ojalá ==hubieras== venido.",
+              "en": "I wish you had come."
+            },
+            {
+              "es": "Ojalá ==hubiera== más tiempo.",
+              "en": "I wish there were more time."
+            },
+            {
+              "es": "No creía que ==hubiera== tanta gente.",
+              "en": "I didn't think there'd be so many people."
+            },
+            {
+              "es": "Si ==hubiéramos== salido antes, no habríamos perdido el vuelo.",
+              "en": "If we'd left earlier, we wouldn't have missed the flight."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ojalá hubieran más sillas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ojalá hubiera más sillas."
+                }
+              ],
+              "nota": "_There were_: always singular."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "hubieramos"
+                },
+                {
+                  "v": "bien",
+                  "t": "hubiéramos"
+                }
+              ],
+              "nota": "Accent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hubiera ido",
+              "texto": "[[5842|pluperfect subjunctive]]."
+            },
+            {
+              "forma": "si hubiera...",
+              "texto": "[[7078|si + pluperfect subjunctive]]."
+            },
+            {
+              "forma": "haya",
+              "texto": "[[5187|haber in the present subjunctive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Conjugate: _tú / haber_",
+              "r": "hubieras",
+              "nota": "hubie- + ras."
+            },
+            {
+              "p": "In Spanish: _I wish there were more parks._",
+              "r": "Ojalá hubiera más parques.",
+              "nota": "Singular."
+            },
+            {
+              "p": "Conjugate: _nosotros / haber_",
+              "r": "hubiéramos",
+              "nota": "Accent."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5068,
+      5187
+    ],
+    "confunde": [
+      5076
+    ],
+    "sigue": [
+      5842
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5955",
+      "kwiziq": true
+    }
+  ]
+}

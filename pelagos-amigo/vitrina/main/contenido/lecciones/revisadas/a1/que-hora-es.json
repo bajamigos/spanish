@@ -1,0 +1,221 @@
+{
+  "tema": 7231,
+  "slug": "que-hora-es",
+  "titulo": "Telling the time",
+  "subtitulo": "¿Qué hora es? Son las tres y media.",
+  "foto": "t02.jpg",
+  "regla": "Ask ¿Qué hora es? Answer with es la una (1:00 to 1:59) and son las + number for every other hour, then add y + minutes, y cuarto, y media or menos + minutes.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Ask: **¿Qué hora es?** Answer with **ser** + **la / las** + hour."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Es la una** (only 1:00 to 1:59). Every other hour: **son las** dos, tres, cuatro..."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Time",
+            "Spanish"
+          ],
+          "filas": [
+            [
+              "1:00",
+              "Es la una."
+            ],
+            [
+              "2:00",
+              "Son las dos."
+            ],
+            [
+              "3:10",
+              "Son las tres y diez."
+            ],
+            [
+              "4:15",
+              "Son las cuatro y cuarto."
+            ],
+            [
+              "5:30",
+              "Son las cinco y media."
+            ],
+            [
+              "6:45",
+              "Son las siete menos cuarto."
+            ],
+            [
+              "8:50",
+              "Son las nueve menos diez."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Add **de la mañana**, **de la tarde** or **de la noche**. In Mexico you'll also hear **diez para las nueve** (8:50)."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿Qué hora es? ==Son las== ocho.",
+              "en": "What time is it? It's eight."
+            },
+            {
+              "es": "==Es la una y media==.",
+              "en": "It's one thirty."
+            },
+            {
+              "es": "==Son las seis y cuarto== de la mañana.",
+              "en": "It's a quarter past six in the morning."
+            },
+            {
+              "es": "Ya ==son las once== de la noche.",
+              "en": "It's already eleven at night."
+            },
+            {
+              "es": "==Son las cinco menos cuarto==.",
+              "en": "It's a quarter to five."
+            },
+            {
+              "es": "==Son diez para las== tres.",
+              "en": "It's ten to three."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Son la una."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es la una."
+                }
+              ],
+              "nota": "Only one hour: **es**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es las tres."
+                },
+                {
+                  "v": "bien",
+                  "t": "Son las tres."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Son tres y media."
+                },
+                {
+                  "v": "bien",
+                  "t": "Son las tres y media."
+                }
+              ],
+              "nota": "Keep **las**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "son las tres",
+              "texto": "Why it's ser: [[5981|ser for time, days, dates]]."
+            },
+            {
+              "forma": "a las tres",
+              "texto": "At what time something happens: [[6665|a la / a las]]."
+            },
+            {
+              "forma": "en la mañana",
+              "texto": "Parts of the day: [[9344|en / a / por la mañana]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _It's 1:15._",
+              "r": "Es la una y cuarto.",
+              "nota": "Es la una."
+            },
+            {
+              "p": "In Spanish: _It's 9:30._",
+              "r": "Son las nueve y media.",
+              "nota": "y media."
+            },
+            {
+              "p": "Fix it: _Es las dos._",
+              "r": "Son las dos.",
+              "nota": "Plural: son."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5981
+    ],
+    "confunde": [
+      6665
+    ],
+    "sigue": [
+      9344
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7231",
+      "kwiziq": true
+    }
+  ]
+}

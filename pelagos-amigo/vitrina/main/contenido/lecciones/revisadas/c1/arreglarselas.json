@@ -1,0 +1,210 @@
+{
+  "tema": 10031,
+  "slug": "arreglarselas",
+  "titulo": "Arreglárselas, ingeniárselas = to manage, find a way",
+  "subtitulo": "Me las arreglo para llegar a tiempo.",
+  "foto": "t03.jpg",
+  "regla": "Arreglárselas and ingeniárselas mean to manage, to find a way after some effort. They always carry se + las: the se changes with the subject (me las, te las, se las, nos las), las never changes. Usually followed by para + infinitive or para que.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "arreglárselas (present)"
+          ],
+          "filas": [
+            [
+              "yo",
+              "me las arreglo"
+            ],
+            [
+              "tú",
+              "te las arreglas"
+            ],
+            [
+              "él, ella, usted",
+              "se las arregla"
+            ],
+            [
+              "nosotros",
+              "nos las arreglamos"
+            ],
+            [
+              "ustedes, ellos",
+              "se las arreglan"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The first pronoun changes with the subject; **las** is frozen and refers to nothing in particular."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Often **para** + infinitive / **para que** + subjunctive: **me las arreglo para pagar**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With infinitives and gerunds, the pronouns can go before or attached: **me las voy a arreglar / voy a arreglármelas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In Mexico, **arreglárselas** and **ingeniárselas** are the common ones; **apañárselas** is rarely heard."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **las** is the mess you somehow sort out."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Tranquila, mamá, ==me las arreglo== para llegar a tiempo.",
+              "en": "Don't worry, Mom, I'll find a way to get there on time."
+            },
+            {
+              "es": "El estudiante ==se las ingenió== para no presentar el examen.",
+              "en": "The student managed to get out of taking the exam."
+            },
+            {
+              "es": "¿Cómo ==te las vas a arreglar== para que te diga que sí?",
+              "en": "How are you going to get him to say yes?"
+            },
+            {
+              "es": "¿Cómo ==se las están arreglando== para dormir cinco en un cuarto?",
+              "en": "How are the five of them managing to sleep in one room?"
+            },
+            {
+              "es": "Sin carro ==nos las arreglamos== bien.",
+              "en": "We get by fine without a car."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me lo arreglé para llegar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me las arreglé para llegar."
+                }
+              ],
+              "nota": "Always **las**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Se las arreglé..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me las arreglé..."
+                }
+              ],
+              "nota": "The first pronoun follows the subject."
+            },
+            {
+              "filas": [
+                {
+                  "v": "literal",
+                  "t": "Arreglé la bici."
+                },
+                {
+                  "v": "expresión",
+                  "t": "Me las arreglé sin bici."
+                }
+              ],
+              "nota": "Without **se las**, **arreglar** just means _to fix_."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "pronoun position",
+              "texto": "[[7426|reflexive pronouns with infinitive and gerund]]."
+            },
+            {
+              "forma": "lograr / conseguir",
+              "texto": "**Logré / conseguí** + infinitive: _I managed to_, without the sense of struggle."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _She managed to finish on time._",
+              "r": "Se las arregló para terminar a tiempo.",
+              "nota": "se las + preterite."
+            },
+            {
+              "p": "In Spanish: _We'll find a way._",
+              "r": "Nos las vamos a arreglar. / Ya nos las arreglaremos.",
+              "nota": "nos las."
+            },
+            {
+              "p": "Fix it: _Te la arreglas muy bien solo._",
+              "r": "Te las arreglas muy bien solo.",
+              "nota": "las."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7426
+    ],
+    "confunde": [],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 10031",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "tema": 7481,
+  "slug": "toca",
+  "titulo": "Tocar + infinitive = it's someone's turn / time to do something",
+  "subtitulo": "Te toca lavar los trastes. Toca ahorrar.",
+  "foto": "t10.jpg",
+  "regla": "(Me / te / le...) toca + infinitive = it's (my / your...) turn to, or something has to be done: Te toca tirar el dado. Nos toca ahorrar. Toca is always singular. ¿A quién le toca? = Whose turn is it?",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "(me / te / le / nos / les) + toca",
+            "+",
+            "infinitive"
+          ]
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "someone's turn",
+              "texto": "**Sara, te toca tirar.** **¿A quién le toca sacar la basura?**"
+            },
+            {
+              "forma": "it has to be done",
+              "texto": "**Toca ahorrar.** **Nos toca madrugar.**"
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Works like **gustar**, but **tocar** is **always singular** here, in any tense: **les tocó recoger todo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **te toca** = the ball's in your court."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Los niños necesitan zapatos nuevos, así que ==toca ahorrar==.",
+              "en": "The kids need new shoes, so we have to save."
+            },
+            {
+              "es": "Así que ==nos toca ahorrar==.",
+              "en": "So we have to save."
+            },
+            {
+              "es": "Sara, ==te toca tirar== el dado.",
+              "en": "Sara, it's your turn to roll the die."
+            },
+            {
+              "es": "—¿A quién ==le toca sacar== la basura hoy? —A Javier.",
+              "en": "—Whose turn is it to take out the trash today? —Javier's."
+            },
+            {
+              "es": "Cuando yo sea vieja, ==te va a tocar aguantar== mis mañas.",
+              "en": "When I'm old, you'll have to put up with my quirks."
+            },
+            {
+              "es": "==Les tocó recoger== todo y trapear el piso.",
+              "en": "They had to clean everything up and mop the floor."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Les tocaron recoger todo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Les tocó recoger todo."
+                }
+              ],
+              "nota": "Always singular."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo toco lavar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me toca lavar."
+                }
+              ],
+              "nota": "Like **gustar**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "me gusta",
+              "texto": "[[6001|gustar-type verbs]]."
+            },
+            {
+              "forma": "hay que",
+              "texto": "[[6262|hay que]]."
+            },
+            {
+              "forma": "tener que",
+              "texto": "[[5106|tener que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _It's your turn to cook._ (tú)",
+              "r": "Te toca cocinar.",
+              "nota": "te toca."
+            },
+            {
+              "p": "In Spanish: _We had to wait three hours._",
+              "r": "Nos tocó esperar tres horas.",
+              "nota": "Singular tocó."
+            },
+            {
+              "p": "In Spanish: _Whose turn is it?_",
+              "r": "¿A quién le toca?",
+              "nota": "Fixed question."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6001
+    ],
+    "confunde": [
+      6262
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7481",
+      "kwiziq": true
+    }
+  ]
+}

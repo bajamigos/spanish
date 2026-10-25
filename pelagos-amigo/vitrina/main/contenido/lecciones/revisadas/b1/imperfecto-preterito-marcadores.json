@@ -1,0 +1,230 @@
+{
+  "tema": 6874,
+  "slug": "imperfecto-preterito-marcadores",
+  "titulo": "The imperfect vs the preterite: time markers",
+  "subtitulo": "Siempre iba (imperfect) vs ayer fui (preterite): the time words give it away.",
+  "foto": "t05.jpg",
+  "regla": "Time markers of frequency or ongoing time (siempre, todos los días, cada mes, de niño) → imperfect. Specific, closed times (ayer, el año pasado, una vez) → preterite.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Both the imperfect and the preterite talk about the past, and English often translates them the same way. The time words in the sentence are a big clue."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The **imperfect** says in general when, or how often, something happened: an ongoing stretch or a habit, with no clear start or end. The **preterite** says specifically when: a finished event with a clear time."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Imperfect markers",
+            "Preterite markers"
+          ],
+          "filas": [
+            [
+              "siempre",
+              "ayer, anteayer, anoche"
+            ],
+            [
+              "todos los días, todas las semanas",
+              "el año pasado, la semana pasada"
+            ],
+            [
+              "cada mes, cada verano",
+              "una vez, dos veces"
+            ],
+            [
+              "a menudo, muchas veces",
+              "en 2019, el lunes"
+            ],
+            [
+              "de niño, cuando era joven",
+              "de repente, en ese momento"
+            ],
+            [
+              "normalmente, generalmente",
+              "desde el primer momento"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if you could add _used to_ in English, it's probably the imperfect."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Siempre iba== a Ensenada con mis papás.",
+              "en": "I always used to go to Ensenada with my parents."
+            },
+            {
+              "es": "==Todos los días estudiabas== para el examen.",
+              "en": "You studied for the exam every day."
+            },
+            {
+              "es": "==Cada mes visitábamos== a la abuela.",
+              "en": "Every month we visited Grandma."
+            },
+            {
+              "es": "¡Se ==reían== juntos tantas veces!",
+              "en": "They laughed together so many times!"
+            },
+            {
+              "es": "==Ayer== Beto ==comió== pescado.",
+              "en": "Yesterday Beto ate fish."
+            },
+            {
+              "es": "==El año pasado fuimos== a Oaxaca.",
+              "en": "Last year we went to Oaxaca."
+            },
+            {
+              "es": "Nos ==gustamos desde el primer momento==.",
+              "en": "We liked each other from the very first moment."
+            },
+            {
+              "es": "==Ayer en la mañana hice== la chamba.",
+              "en": "Yesterday morning I did the job."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "De niño fui a la playa todos los veranos."
+                },
+                {
+                  "v": "bien",
+                  "t": "De niño iba a la playa todos los veranos."
+                }
+              ],
+              "nota": "A habit: imperfect."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer surfeaba en Rosarito."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer surfeé en Rosarito."
+                }
+              ],
+              "nota": "A finished event on a specific day: preterite."
+            },
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "Ayer, cuando surfeaba, vi una ballena."
+                }
+              ],
+              "nota": "Unless it's the background for another event: see [[6005|preterite + cuando + imperfect]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "cuando me bañaba, sonó…",
+              "texto": "Background and interruption: [[6005|preterite + cuando + imperfect]]."
+            },
+            {
+              "forma": "había vs hubo",
+              "texto": "**Haber**: [[6872|había vs hubo]]."
+            },
+            {
+              "forma": "de niño jugaba",
+              "texto": "Habits in the past: [[5111|the imperfect for habits]]."
+            },
+            {
+              "forma": "hacía frío",
+              "texto": "Description: [[6002|the imperfect to describe]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Which tense? **Todos los sábados (ir, nosotros) a Rosarito.**",
+              "r": "Todos los sábados íbamos a Rosarito.",
+              "nota": "Habit: imperfect."
+            },
+            {
+              "p": "Which tense? **El lunes pasado (abrir, yo) tres carros.**",
+              "r": "El lunes pasado abrí tres carros.",
+              "nota": "Specific time: preterite."
+            },
+            {
+              "p": "Which tense? **De niño (tener) un perro.**",
+              "r": "De niño tenía un perro.",
+              "nota": "De niño: imperfect."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5263,
+      5109,
+      5111
+    ],
+    "confunde": [
+      6005
+    ],
+    "sigue": [
+      6005,
+      6872,
+      6871
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6874",
+      "kwiziq": true
+    }
+  ]
+}

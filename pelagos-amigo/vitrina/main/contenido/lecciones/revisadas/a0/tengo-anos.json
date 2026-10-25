@@ -1,0 +1,216 @@
+{
+  "tema": 5099,
+  "slug": "tengo-anos",
+  "titulo": "Saying your age with tener … años",
+  "subtitulo": "«Tengo treinta años.»",
+  "foto": "t03.jpg",
+  "regla": "In Spanish you have years: tener + number + años (Tengo 30 años). Never use ser or estar for age, and say años (un año, not uno año); ask with ¿Cuántos años tienes? / ¿Cuántos años tiene usted?",
+  "comparada_kwiziq": "2026-10-17",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "(yo) tengo",
+            "+ number +",
+            "años"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Literally _I have 30 years_. Age is **tener**, never **ser** or **estar**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Say **años** in a full sentence. **Yo** is optional, and the number can be in words or digits."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Who",
+            "Say it",
+            "Ask it"
+          ],
+          "filas": [
+            [
+              "I",
+              "tengo … años",
+              "—"
+            ],
+            [
+              "you (tú)",
+              "tienes … años",
+              "¿Cuántos años tienes?"
+            ],
+            [
+              "you (usted), he, she",
+              "tiene … años",
+              "¿Cuántos años tiene usted?"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "With one year: **un año** (not **uno año**)."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Tengo== treinta y dos ==años==.",
+              "en": "I'm thirty-two."
+            },
+            {
+              "es": "Yo ==tengo== 45 ==años==.",
+              "en": "I'm 45."
+            },
+            {
+              "es": "¿Cuántos ==años tienes==?",
+              "en": "How old are you?"
+            },
+            {
+              "es": "¿Cuántos ==años tiene== usted, don Ramón?",
+              "en": "How old are you, Don Ramón?"
+            },
+            {
+              "es": "Mi sobrina ==tiene== un ==año==.",
+              "en": "My niece is one."
+            },
+            {
+              "es": "Mi abuela ==tiene== noventa ==años== y todavía cuida su jardín.",
+              "en": "My grandma is ninety and still takes care of her garden."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Soy treinta años."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tengo treinta años."
+                }
+              ],
+              "nota": "Age is **tener**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mi hija tiene uno año."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mi hija tiene un año."
+                }
+              ],
+              "nota": "Before **año**: **un**, not **uno**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Cuántos años eres?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cuántos años tienes?"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tengo un carro",
+              "texto": "The same verb for possession: [[6133|tengo / tienes]]."
+            },
+            {
+              "forma": "tengo, tienes, tiene",
+              "texto": "All of tener: [[5304|tener in the present]]."
+            },
+            {
+              "forma": "a los quince",
+              "texto": "At an age: [[9770|a / desde / hasta + age]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I'm twenty-five._",
+              "r": "Tengo veinticinco años.",
+              "nota": "tener + años."
+            },
+            {
+              "p": "Ask a friend: _How old are you?_",
+              "r": "¿Cuántos años tienes?",
+              "nota": "tú: tienes."
+            },
+            {
+              "p": "Fix it: _Mi hijo es cinco años._",
+              "r": "Mi hijo tiene cinco años.",
+              "nota": "tener, not ser."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6133
+    ],
+    "confunde": [],
+    "sigue": [
+      5304,
+      9770
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5099",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "tema": 7850,
+  "slug": "a-medida-que",
+  "titulo": "Según / conforme / a medida que = as (at the same time as)",
+  "subtitulo": "A medida que pasa el tiempo... Conforme vayan llegando...",
+  "foto": "t04.jpg",
+  "regla": "Según, conforme and a medida que = as (two things progressing together): A medida que pasa el tiempo, Luis se anima más. Indicative for present or past; subjunctive for the future: conforme vayan llegando los invitados, ofréceles algo.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Según, conforme, a medida que** express that one action develops **as** the other does, like a gradual **mientras**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "All three are interchangeable. **A medida que** is the most common; **conforme** too in Mexico."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Time",
+            "Mood",
+            "Example"
+          ],
+          "filas": [
+            [
+              "present / past",
+              "indicative",
+              "A medida que pasa el tiempo..."
+            ],
+            [
+              "future",
+              "subjunctive",
+              "Conforme vayan llegando..."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Ir** + gerund is common here: **según vayas conociendo...**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: think of two dials turning together."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Según== van creciendo mis hijos, se vuelven menos platicadores.",
+              "en": "As my kids get older, they become less chatty."
+            },
+            {
+              "es": "Mañana, ==conforme== yo ==anote== los nombres, tú les puedes ofrecer café.",
+              "en": "Tomorrow, as I write down the names, you can offer them coffee."
+            },
+            {
+              "es": "==A medida que== pasa el tiempo, Luis se anima un poco más.",
+              "en": "As time goes by, Luis cheers up a bit more."
+            },
+            {
+              "es": "==Según vayas conociendo== a tus compañeros, te vas a sentir más a gusto.",
+              "en": "As you get to know your coworkers, you'll feel more at ease."
+            },
+            {
+              "es": "==A medida que== salían del salón, les devolvíamos los celulares.",
+              "en": "As they came out of the classroom, we gave them their phones back."
+            },
+            {
+              "es": "==Conforme vayan llegando== los invitados, ofréceles algo de tomar.",
+              "en": "As the guests arrive, offer them something to drink."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Conforme van llegando mañana, ofréceles algo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Conforme vayan llegando mañana, ofréceles algo."
+                }
+              ],
+              "nota": "Future: subjunctive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "A medida pasa el tiempo..."
+                },
+                {
+                  "v": "bien",
+                  "t": "A medida que pasa el tiempo..."
+                }
+              ],
+              "nota": "Keep **que**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "mientras",
+              "texto": "[[6994|mientras]]."
+            },
+            {
+              "forma": "según, conforme (manner)",
+              "texto": "[[7846|as, according to]]."
+            },
+            {
+              "forma": "cuanto más",
+              "texto": "[[7154|the more..., the more...]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _As it got dark, it got colder._",
+              "r": "A medida que oscurecía, hacía más frío.",
+              "nota": "Indicative, past."
+            },
+            {
+              "p": "Complete: _Conforme ___ (terminar, ustedes), pueden irse._",
+              "r": "terminen",
+              "nota": "Future: subjunctive."
+            },
+            {
+              "p": "In Spanish: _As I learn, I enjoy it more._",
+              "r": "A medida que aprendo, lo disfruto más.",
+              "nota": "Indicative, present."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6994
+    ],
+    "confunde": [
+      7846
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7850",
+      "kwiziq": true
+    }
+  ]
+}

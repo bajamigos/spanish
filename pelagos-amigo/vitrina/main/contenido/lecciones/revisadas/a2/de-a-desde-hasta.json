@@ -1,0 +1,228 @@
+{
+  "tema": 7229,
+  "slug": "de-a-desde-hasta",
+  "titulo": "From... to...: de... a and desde... hasta",
+  "subtitulo": "De lunes a viernes, desde las ocho hasta las cinco.",
+  "foto": "t07.jpg",
+  "regla": "To say from... to... in time or space, use the pair de... a or the pair desde... hasta. Keep the pairs together. Desde... hasta is a bit more emphatic about the start and end points.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Spanish has two pairs for _from... to..._ They work for **time** and for **places**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Pair",
+            "Example"
+          ],
+          "filas": [
+            [
+              "**de... a**",
+              "Trabajo **de** lunes **a** viernes, **de** nueve **a** cinco."
+            ],
+            [
+              "**desde... hasta**",
+              "Trabajo **desde** las nueve **hasta** las cinco."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**De... a** is the everyday, neutral pair. **Desde... hasta** stresses the starting and finishing points: _all the way from... all the way to..._"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Don't mix the pairs: **desde... a** is wrong, and **de... hasta**, though you'll hear it, sounds sloppy. Keep each pair together."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Remember the contractions: **de + el = del**, **a + el = al**: _**del** centro **al** malecón_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With hours, both pairs can take the article: _de **las** ocho a **las** diez_, _desde **las** ocho hasta **las** diez_. With days, **de lunes a viernes** has no article; **desde el lunes hasta el viernes** does."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Each word also works alone: **desde** = _since, from_; **hasta** = _until, as far as_: _Te espero **hasta** las seis._"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "La tienda abre ==de== lunes ==a== sábado.",
+              "en": "The store is open from Monday to Saturday."
+            },
+            {
+              "es": "Tengo clase ==de== siete ==a== nueve.",
+              "en": "I have class from seven to nine."
+            },
+            {
+              "es": "Caminamos ==desde== la playa ==hasta== el faro.",
+              "en": "We walked all the way from the beach to the lighthouse."
+            },
+            {
+              "es": "Llovió ==desde== el viernes ==hasta== el domingo.",
+              "en": "It rained from Friday all the way to Sunday."
+            },
+            {
+              "es": "¿Cuánto se hace ==de== Tijuana ==a== Ensenada?",
+              "en": "How long does it take from Tijuana to Ensenada?"
+            },
+            {
+              "es": "Fuimos ==del== centro ==al== malecón en bici.",
+              "en": "We biked from downtown to the boardwalk."
+            },
+            {
+              "es": "La línea estuvo llena ==desde== las cinco ==hasta== las diez.",
+              "en": "The border line was packed from five until ten."
+            },
+            {
+              "es": "Riego el jardín ==de== mayo ==a== octubre.",
+              "en": "I water the garden from May to October."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Trabajo desde lunes a viernes."
+                },
+                {
+                  "v": "bien",
+                  "t": "Trabajo de lunes a viernes."
+                }
+              ],
+              "nota": "Don't mix the pairs."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Fuimos de el centro a el mercado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Fuimos del centro al mercado."
+                }
+              ],
+              "nota": "de + el = del, a + el = al."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estudio de nueve para once."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estudio de nueve a once."
+                }
+              ],
+              "nota": "_To_ in a range is **a**, not **para**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "a las ocho",
+              "texto": "Telling time: [[7231|telling the time]], [[6665|a la / a las]]."
+            },
+            {
+              "forma": "desde hace",
+              "texto": "Not a range: [[5129|desde hace + present]]."
+            },
+            {
+              "forma": "a los quince",
+              "texto": "With ages: [[9770|a / desde / hasta + age]]."
+            },
+            {
+              "forma": "hasta que",
+              "texto": "With a verb: [[7253|desde que / hasta que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _from Monday to Friday_",
+              "r": "de lunes a viernes",
+              "nota": "Or: desde el lunes hasta el viernes."
+            },
+            {
+              "p": "In Spanish (emphatic): _We walked all the way from the hotel to the beach._",
+              "r": "Caminamos desde el hotel hasta la playa.",
+              "nota": "desde... hasta."
+            },
+            {
+              "p": "Fix it: _Trabajo desde las ocho a las tres._",
+              "r": "Trabajo desde las ocho hasta las tres.",
+              "nota": "Or: de las ocho a las tres."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7231,
+      6665
+    ],
+    "confunde": [
+      5129
+    ],
+    "sigue": [
+      9770,
+      7253
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7229",
+      "kwiziq": true
+    }
+  ]
+}

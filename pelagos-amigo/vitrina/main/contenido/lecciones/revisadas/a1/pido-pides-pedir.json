@@ -1,0 +1,213 @@
+{
+  "tema": 5851,
+  "slug": "pido-pides-pedir",
+  "titulo": "Pedir in the present",
+  "subtitulo": "Siempre pido tacos al pastor.",
+  "foto": "t05.jpg",
+  "regla": "Pedir (to ask for, to order) changes the stem e to i in every person except nosotros: pido, pides, pide, pedimos, piden.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Pedir** means _to ask for_, _to request_ or _to order_ (food, a favor, a ride)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The stem **e → i** in **every person except nosotros**: **pido**, but **pedimos**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "pedir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "pido"
+            ],
+            [
+              "tú",
+              "pides"
+            ],
+            [
+              "él / ella / usted",
+              "pide"
+            ],
+            [
+              "nosotros",
+              "pedimos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "piden"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "To ask a **question**, use **preguntar**, not pedir."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Siempre ==pido== tacos al pastor.",
+              "en": "I always order tacos al pastor."
+            },
+            {
+              "es": "¿Qué ==pides== tú?",
+              "en": "What are you ordering?"
+            },
+            {
+              "es": "Mi mamá ==pide== la cuenta.",
+              "en": "My mom asks for the check."
+            },
+            {
+              "es": "==Pedimos== un Uber para ir a la playa.",
+              "en": "We order an Uber to go to the beach."
+            },
+            {
+              "es": "Los niños ==piden== dulces.",
+              "en": "The kids ask for candy."
+            },
+            {
+              "es": "Te ==pido== un favor.",
+              "en": "I'm asking you for a favor."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo pedo un taco."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo pido un taco."
+                }
+              ],
+              "nota": "**Pedo** is Mexican slang, not a form of pedir."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros pidimos la cuenta."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros pedimos la cuenta."
+                }
+              ],
+              "nota": "No change in **nosotros**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Le pregunto un favor."
+                },
+                {
+                  "v": "bien",
+                  "t": "Le pido un favor."
+                }
+              ],
+              "nota": "A favor is asked for: **pedir**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "servir, repetir",
+              "texto": "Other verbs with this change: [[5554|-ir verbs with e > i]]."
+            },
+            {
+              "forma": "corrijo, elijo",
+              "texto": "e > i plus a spelling change: [[5846|corregir and elegir]]."
+            },
+            {
+              "forma": "pedir / preguntar",
+              "texto": "Two ways to ask: [[9343|pedir vs preguntar]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I order a coffee._",
+              "r": "Pido un café.",
+              "nota": "yo: pido."
+            },
+            {
+              "p": "In Spanish: _We ask for help._",
+              "r": "Pedimos ayuda.",
+              "nota": "nosotros: no change."
+            },
+            {
+              "p": "Fix it: _Ellos pedin la cuenta._",
+              "r": "Ellos piden la cuenta.",
+              "nota": "e → i, ending -en."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      9343
+    ],
+    "sigue": [
+      5554,
+      5846
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5851",
+      "kwiziq": true
+    }
+  ]
+}

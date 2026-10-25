@@ -1,0 +1,221 @@
+{
+  "tema": 5069,
+  "slug": "condicional-probabilidad-pasado",
+  "titulo": "The conditional to express probability about the past",
+  "subtitulo": "¿A qué hora llegaría? Serían las tres.",
+  "foto": "t03.jpg",
+  "regla": "The conditional simple can express a guess about the past: Serían las tres = It was probably three. ¿Dónde estaría? = I wonder where he was. For a known fact, use the preterite or imperfect. For a guess about the present, use the future.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Besides _would_, the **conditional simple** can express a **guess or speculation about the past**: what you think **probably** happened or was the case."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "You know it",
+            "You're guessing"
+          ],
+          "filas": [
+            [
+              "Llegó a las tres.",
+              "Llegaría a las tres. (_He probably got in at three._)"
+            ],
+            [
+              "Eran las siete.",
+              "Serían las siete. (_It must have been seven._)"
+            ],
+            [
+              "Tenía veinte años.",
+              "Tendría veinte años. (_She was probably twenty._)"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "As a question, it means _I wonder..._: **¿Dónde estaría?** = _I wonder where he was._"
+        },
+        {
+          "tipo": "texto",
+          "texto": "For a guess about the **present**, use the **future**: **serán las tres** (_it's probably three_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: future guesses about now, conditional guesses about then. Move one step back in time."
+        }
+      ]
+    },
+    {
+      "id": "dialogo",
+      "titulo": "A conversation",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "—Son las once y Antonio sigue dormido.",
+              "en": "—It's eleven and Antonio is still asleep."
+            },
+            {
+              "es": "—¿A qué hora ==llegaría== anoche?",
+              "en": "—I wonder what time he got home last night."
+            },
+            {
+              "es": "—Yo creo que ==llegaría== como a las tres.",
+              "en": "—I think he probably got in around three."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "More examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿A qué hora ==saldría== el camión?",
+              "en": "I wonder what time the bus left."
+            },
+            {
+              "es": "==Serían== las siete cuando por fin terminó la junta.",
+              "en": "It must have been seven when the meeting finally ended."
+            },
+            {
+              "es": "==Tendríamos== diez años en esa foto.",
+              "en": "We were probably ten in that photo."
+            },
+            {
+              "es": "La última vez que la vi, ==tendría== unos veinte años.",
+              "en": "The last time I saw her, she was probably about twenty."
+            },
+            {
+              "es": "Ustedes todavía ==vivirían== en Bogotá cuando tomaron esta foto, ¿no?",
+              "en": "You were probably still living in Bogotá when you took this photo, right?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "hecho",
+                  "t": "Llegó a las tres."
+                },
+                {
+                  "v": "suposición",
+                  "t": "Llegaría a las tres."
+                }
+              ],
+              "nota": "Same event: fact vs guess."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ahorita estaría en casa. (guess about now)"
+                },
+                {
+                  "v": "bien",
+                  "t": "Ahorita estará en casa."
+                }
+              ],
+              "nota": "About the present: future."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "serán las tres",
+              "texto": "Guessing about the present: [[5060|future of probability]]."
+            },
+            {
+              "forma": "dijo que vendría",
+              "texto": "[[7761|future in the past]]."
+            },
+            {
+              "forma": "habría llegado",
+              "texto": "The perfect conditional: [[5186|condicional perfecto]]."
+            },
+            {
+              "forma": "llegaría",
+              "texto": "Conjugation: [[5731|conditional of regular verbs]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Guess about the past: _It was probably midnight._",
+              "r": "Sería medianoche.",
+              "nota": "Conditional."
+            },
+            {
+              "p": "In Spanish: _I wonder who called yesterday._",
+              "r": "¿Quién llamaría ayer?",
+              "nota": "Conditional question."
+            },
+            {
+              "p": "Guess about the present: _She's probably at work._",
+              "r": "Estará en el trabajo.",
+              "nota": "Future."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5060,
+      5731
+    ],
+    "confunde": [
+      7761
+    ],
+    "sigue": [
+      5186
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5069",
+      "kwiziq": true
+    }
+  ]
+}

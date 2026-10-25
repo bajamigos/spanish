@@ -1,0 +1,235 @@
+{
+  "tema": 9923,
+  "slug": "por-ciento-porcentajes",
+  "titulo": "Percentages: el diez por ciento",
+  "subtitulo": "«El veinte por ciento de los clientes.»",
+  "foto": "t01.jpg",
+  "regla": "Say percentages as el + number + por ciento (+ de + noun): el veinte por ciento de los clientes. Un also works and often sounds approximate; cien por ciento means 100 % or totally. Por ciento is two words and never takes -s.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "el / un",
+            "+ number + por ciento +",
+            "de + noun"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "A percentage is **masculine singular**: **el diez por ciento**, never **la** or **los**. **De + el = del**: **un descuento del veinte por ciento**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Un** instead of **el** is also correct and often sounds approximate: **un treinta por ciento de los alumnos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Por ciento** is two words and never takes **-s**: **cincuenta por ciento**. Written: **30 %** or **30%**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Cien por ciento** = 100 %, and also _totally_: **Estoy cien por ciento seguro.** As a noun it takes **el**: **dar el cien por ciento**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The verb can agree with the percentage (singular) or with the plural noun after **de**: **El 60 % de los alumnos aprobó** or **aprobaron**. Both are correct."
+        },
+        {
+          "tipo": "texto",
+          "texto": "_Percentage_ is **el porcentaje**: **¿Qué porcentaje…?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **por ciento** is _per cent_, word for word: two words, like the English roots."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ahorro ==el diez por ciento== de mi sueldo.",
+              "en": "I save ten percent of my salary."
+            },
+            {
+              "es": "==El cincuenta por ciento== de mis jitomates ya están maduros.",
+              "en": "Fifty percent of my tomatoes are already ripe."
+            },
+            {
+              "es": "La tienda de surf tiene un descuento ==del veinte por ciento==.",
+              "en": "The surf shop has a twenty percent discount."
+            },
+            {
+              "es": "Hoy solo vino ==un treinta por ciento== de los alumnos.",
+              "en": "Only about thirty percent of the students came today."
+            },
+            {
+              "es": "Estoy ==cien por ciento== seguro.",
+              "en": "I'm a hundred percent sure."
+            },
+            {
+              "es": "==El noventa por ciento== del tiempo entreno en la mañana.",
+              "en": "Ninety percent of the time I train in the morning."
+            },
+            {
+              "es": "¿Qué ==porcentaje== de tu jardín es de verduras?",
+              "en": "What percentage of your garden is vegetables?"
+            },
+            {
+              "es": "Siempre da ==el cien por ciento== en el tatami.",
+              "en": "He always gives a hundred percent on the mat."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "la diez por ciento"
+                },
+                {
+                  "v": "bien",
+                  "t": "el diez por ciento"
+                }
+              ],
+              "nota": "Always masculine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "cincuenta por cientos"
+                },
+                {
+                  "v": "bien",
+                  "t": "cincuenta por ciento"
+                }
+              ],
+              "nota": "No **-s**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "un descuento de el veinte por ciento"
+                },
+                {
+                  "v": "bien",
+                  "t": "un descuento del veinte por ciento"
+                }
+              ],
+              "nota": "**De + el = del**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Veinte porcentaje de los clientes"
+                },
+                {
+                  "v": "bien",
+                  "t": "El veinte por ciento de los clientes"
+                }
+              ],
+              "nota": "**Porcentaje** is _percentage_, not _percent_."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "cien, mil",
+              "texto": "[[7177|Large numbers]]."
+            },
+            {
+              "forma": "más, menos, por",
+              "texto": "[[7083|Doing arithmetic]]."
+            },
+            {
+              "forma": "la mitad, un tercio",
+              "texto": "[[7152|Fractions]]."
+            },
+            {
+              "forma": "unos treinta",
+              "texto": "Approximate numbers: [[6671|unos + number]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _twenty percent of the students_",
+              "r": "el veinte por ciento de los alumnos",
+              "nota": "el + por ciento + de"
+            },
+            {
+              "p": "In Spanish: _a ten percent discount_",
+              "r": "un descuento del diez por ciento",
+              "nota": "**del**"
+            },
+            {
+              "p": "Fix it: _Estoy cien por cientos seguro._",
+              "r": "Estoy cien por ciento seguro.",
+              "nota": "No **-s**."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7177,
+      7083
+    ],
+    "confunde": [
+      6671
+    ],
+    "sigue": [
+      7152
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9923",
+      "kwiziq": true
+    }
+  ]
+}

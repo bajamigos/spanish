@@ -1,0 +1,294 @@
+{
+  "tema": 5245,
+  "slug": "futuro-caber-saber",
+  "titulo": "Conjugate caber and saber in the simple future",
+  "subtitulo": "Twins in the future: both lose their e. Cabré, sabré; cabremos, sabremos.",
+  "foto": "t10.jpg",
+  "regla": "Caber and saber drop the e of the infinitive to make the stems cabr- and sabr-, then add -é, -ás, -á, -emos, -án.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Saber** (_to know_) and **caber** (_to fit_) are irregular in the **simple future** (**futuro imperfecto**) for the same reason: the **e** of the infinitive disappears. The endings are the regular ones."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**sabr-** / **cabr-**",
+            "**-é, -ás, -á, -emos, -án**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Ending",
+            "saber → sabr-",
+            "caber → cabr-"
+          ],
+          "filas": [
+            [
+              "yo",
+              "-é",
+              "sabré",
+              "cabré"
+            ],
+            [
+              "tú",
+              "-ás",
+              "sabrás",
+              "cabrás"
+            ],
+            [
+              "él, ella, usted",
+              "-á",
+              "sabrá",
+              "cabrá"
+            ],
+            [
+              "nosotros",
+              "-emos",
+              "sabremos",
+              "cabremos"
+            ],
+            [
+              "ustedes, ellos",
+              "-án",
+              "sabrán",
+              "cabrán"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Caber** is used with **en** for the place: **caber en el carro**. When it's things that fit, the verb agrees with them: **tres tablas cabrán en la camioneta**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: they rhyme, so learn them as a pair: **sabré y cabré**, **sabrás y cabrás**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿Crees que ==cabré== en ese traje?",
+              "en": "Do you think I'll fit in that wetsuit?"
+            },
+            {
+              "es": "Con tantas cosas no ==cabrás== en la cochera.",
+              "en": "With so many things you won't fit in the garage."
+            },
+            {
+              "es": "Tranquilo, la tabla grande ==cabrá== en la camioneta.",
+              "en": "Don't worry, the big board will fit in the truck."
+            },
+            {
+              "es": "No ==cabremos== todos en el Tsuru.",
+              "en": "We won't all fit in the Tsuru."
+            },
+            {
+              "es": "No ==sabré== el resultado del torneo hasta mañana.",
+              "en": "I won't know the tournament result until tomorrow."
+            },
+            {
+              "es": "Holden ==sabrá== la verdad muy pronto.",
+              "en": "Holden will know the truth very soon."
+            },
+            {
+              "es": "¿==Sabremos== si hay olas antes de salir?",
+              "en": "Will we know if there are waves before we leave?"
+            },
+            {
+              "es": "Ustedes ==sabrán== cómo hablar con el cliente.",
+              "en": "You'll know how to talk to the customer."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mañana saberé la respuesta."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mañana sabré la respuesta."
+                }
+              ],
+              "nota": "The **e** of **saber** drops out: **sabr-**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No quepré en el carro."
+                },
+                {
+                  "v": "bien",
+                  "t": "No cabré en el carro."
+                }
+              ],
+              "nota": "**Quepo** is the present **yo** of **caber**. In the future, the stem is **cabr-**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Las tablas no cabrá en el carro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Las tablas no cabrán en el carro."
+                }
+              ],
+              "nota": "The things that fit are the subject: plural things, plural verb."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usos",
+      "titulo": "Other verbs that drop the e",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "sabré, cabré",
+              "texto": "**saber** → **sabr-**, **caber** → **cabr-**",
+              "aqui": true
+            },
+            {
+              "forma": "podré",
+              "texto": "**poder** → **podr-**. See [[5216|poder in the future]]."
+            },
+            {
+              "forma": "querré",
+              "texto": "**querer** → **querr-**. See [[5156|querer in the future]]."
+            },
+            {
+              "forma": "habrá",
+              "texto": "**haber** → **habr-**. See [[5157|haber in the future]]."
+            },
+            {
+              "forma": "¿Quién sabe?",
+              "texto": "**Saber** or **conocer**? See [[6865|saber vs conocer]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "supe, cupe",
+              "texto": "Their preterite is irregular too: [[5253|caber and saber in the preterite]]."
+            },
+            {
+              "forma": "trabajaré",
+              "texto": "The endings are the same as for every verb in the future: [[5155|regular verbs in the simple future]]."
+            },
+            {
+              "forma": "sé → sabré",
+              "texto": "In the present only **yo** is odd (**sé**; **caber** has **quepo**): [[5590|saber in the present]]."
+            },
+            {
+              "forma": "sabría, cabría",
+              "texto": "The conditional uses the very same stem, with **-ía** endings: [[5915|the conditional]]."
+            },
+            {
+              "forma": "¿Dónde estará?",
+              "texto": "The future also guesses about right now: [[5060|the future for probability]]."
+            },
+            {
+              "forma": "habré hecho",
+              "texto": "The future of **haber** + participle: [[5066|irregular verbs in the future perfect]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "**Caber**, **nosotros**: No ___ todos en el elevador.",
+              "r": "No cabremos todos en el elevador.",
+              "nota": "**cabr-** + **-emos**."
+            },
+            {
+              "p": "In Spanish: _You (tú) will know my answer tomorrow._",
+              "r": "Sabrás mi respuesta mañana.",
+              "nota": "**sabr-** + **-ás**."
+            },
+            {
+              "p": "Which one? **Tres kilos de limones caberán en la bolsa** or **Tres kilos de limones cabrán en la bolsa**.",
+              "r": "Tres kilos de limones cabrán en la bolsa.",
+              "nota": "Stem **cabr-**, and plural because the lemons are the subject."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5155,
+      5590
+    ],
+    "confunde": [
+      5915,
+      5253,
+      6865
+    ],
+    "sigue": [
+      5216,
+      5156,
+      5157,
+      5060,
+      5162,
+      5066,
+      5232
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5245",
+      "kwiziq": true
+    }
+  ]
+}

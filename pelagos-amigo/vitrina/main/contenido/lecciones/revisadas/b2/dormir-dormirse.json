@@ -1,0 +1,209 @@
+{
+  "tema": 7446,
+  "slug": "dormir-dormirse",
+  "titulo": "Dormir vs dormirse",
+  "subtitulo": "Dormí diez horas / Me dormí enseguida.",
+  "foto": "t07.jpg",
+  "regla": "Dormir = to sleep (the state): dormí ocho horas. Dormirse = to fall asleep (the moment): me dormí en el cine. Quedarse dormido = to fall asleep, and also to oversleep. Never caerse dormido.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Verb",
+            "Meaning",
+            "Example"
+          ],
+          "filas": [
+            [
+              "dormir",
+              "to sleep (ongoing)",
+              "Anoche dormí diez horas."
+            ],
+            [
+              "dormirse",
+              "to fall asleep (the moment)",
+              "El bebé se durmió enseguida."
+            ],
+            [
+              "quedarse dormido",
+              "to fall asleep; to oversleep",
+              "Me quedé dormido y llegué tarde."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Both are **o → ue / u**: **duermo, me duermo**; preterite **durmió, se durmió**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Never translate _fall_ literally: ~~se cayó dormida~~."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **dormir** is the night; **dormirse** is the click of the switch."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Anoche ==dormí== diez horas. Estaba muy cansada.",
+              "en": "Last night I slept ten hours. I was really tired."
+            },
+            {
+              "es": "A veces tengo que ==dormir== en el sillón cuando mi esposa se enoja.",
+              "en": "Sometimes I have to sleep on the couch when my wife gets mad."
+            },
+            {
+              "es": "El bebé ==se durmió== enseguida.",
+              "en": "The baby fell asleep right away."
+            },
+            {
+              "es": "Mamá, no ==me puedo dormir==. Mi hermano no deja de hacer ruido.",
+              "en": "Mom, I can't fall asleep. My brother won't stop making noise."
+            },
+            {
+              "es": "Ella ==se quedó dormida== de repente.",
+              "en": "She suddenly fell asleep."
+            },
+            {
+              "es": "Perdón por llegar tarde, ==me quedé dormido==.",
+              "en": "Sorry I'm late, I overslept."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Se cayó dormida."
+                },
+                {
+                  "v": "bien",
+                  "t": "Se quedó dormida. / Se durmió."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me dormí ocho horas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Dormí ocho horas."
+                }
+              ],
+              "nota": "Duration: **dormir**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Dormí en la película a la mitad."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me dormí a la mitad de la película."
+                }
+              ],
+              "nota": "The moment: **dormirse**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "dejar / dejarse",
+              "texto": "[[7445|dejar vs dejarse]]."
+            },
+            {
+              "forma": "acordar / acordarse",
+              "texto": "[[7479|acordar vs acordarse]]."
+            },
+            {
+              "forma": "durmió",
+              "texto": "[[5266|dormir in the preterite]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I fell asleep on the bus._",
+              "r": "Me dormí en el camión. / Me quedé dormido en el camión.",
+              "nota": "dormirse."
+            },
+            {
+              "p": "In Spanish: _The kids slept well._",
+              "r": "Los niños durmieron bien.",
+              "nota": "dormir."
+            },
+            {
+              "p": "In Spanish: _I overslept._",
+              "r": "Me quedé dormido / dormida.",
+              "nota": "quedarse dormido."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5266
+    ],
+    "confunde": [
+      7445
+    ],
+    "sigue": [
+      7479
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7446",
+      "kwiziq": true
+    }
+  ]
+}

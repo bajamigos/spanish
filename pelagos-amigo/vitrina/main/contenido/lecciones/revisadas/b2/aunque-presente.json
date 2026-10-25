@@ -1,0 +1,205 @@
+{
+  "tema": 5146,
+  "slug": "aunque-presente",
+  "titulo": "Aunque + present indicative vs present subjunctive",
+  "subtitulo": "Aunque llueve, salgo / Aunque llueva, salgo.",
+  "foto": "t10.jpg",
+  "regla": "Aunque + indicative: a fact you're stating, maybe new for the listener (although it IS raining). Aunque + subjunctive: something already known to both (even though), or something that may or may not happen (even if).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Aunque** (_although, even though, even if_) takes either mood, and the meaning changes."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Mood",
+            "Meaning",
+            "Example"
+          ],
+          "filas": [
+            [
+              "indicative",
+              "a fact the speaker states, often new info for the listener",
+              "Voy a salir aunque llueve. (_It is raining, FYI._)"
+            ],
+            [
+              "subjunctive",
+              "a fact both people already know; it doesn't matter",
+              "Voy a salir aunque llueva. (_Yes, it's raining, so what._)"
+            ],
+            [
+              "subjunctive",
+              "a possibility that may or may not happen",
+              "Voy a salir al rato aunque llueva. (_Even if it rains._)"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Sometimes the subjunctive is ambiguous between _known_ and _possible_: **Aunque esté nevando, voy a sacar al perro** could be either."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Same rule for **a pesar de que**, **por más que**, **por mucho que**, **si bien** (**si bien** usually takes the indicative)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: indicative = I'm telling you. Subjunctive = it doesn't matter."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Aunque== Guadalajara ==es== una ciudad impresionante, prefiero Monterrey.",
+              "en": "Although Guadalajara is an impressive city, I prefer Monterrey. (I'm telling you.)"
+            },
+            {
+              "es": "==Aunque== Guadalajara ==sea== una ciudad impresionante, prefiero Monterrey.",
+              "en": "Even though Guadalajara is impressive (we both know), I prefer Monterrey."
+            },
+            {
+              "es": "==Aunque== me ==duele== la cabeza, voy a seguir trabajando.",
+              "en": "Although I have a headache, I'm going to keep working."
+            },
+            {
+              "es": "==Aunque== me ==supliques==, no me voy a casar contigo.",
+              "en": "Even if you beg me, I'm not going to marry you."
+            },
+            {
+              "es": "No vas a ir a ese viaje ==aunque consigas== el dinero.",
+              "en": "You're not going on that trip even if you get the money."
+            },
+            {
+              "es": "==Por más que== me lo ==explicas==, no lo entiendo.",
+              "en": "No matter how much you explain it, I don't get it."
+            },
+            {
+              "es": "==Por mucho que== me lo ==expliques==, no lo voy a entender.",
+              "en": "No matter how much you explain it, I'm not going to get it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mañana voy aunque llueve. (it might rain)"
+                },
+                {
+                  "v": "bien",
+                  "t": "Mañana voy aunque llueva."
+                }
+              ],
+              "nota": "A possibility: subjunctive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "hecho nuevo",
+                  "t": "Aunque es caro, lo voy a comprar."
+                },
+                {
+                  "v": "ya sabido",
+                  "t": "Aunque sea caro, lo voy a comprar."
+                }
+              ],
+              "nota": "Both correct; different message."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "aunque + past",
+              "texto": "[[7212|aunque + imperfect subjunctive]]."
+            },
+            {
+              "forma": "cuando + subjunctive",
+              "texto": "The same logic: [[5062|cuando]]."
+            },
+            {
+              "forma": "pero",
+              "texto": "[[7035|pero, sino]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Complete (it might happen): _Voy a ir aunque ___ (hacer) frío._",
+              "r": "haga",
+              "nota": "Possibility: subjunctive."
+            },
+            {
+              "p": "Complete (telling a fact): _Aunque ___ (ser, él) mi hermano, no confío en él._",
+              "r": "es",
+              "nota": "Stated fact: indicative."
+            },
+            {
+              "p": "In Spanish: _Even if you don't believe me, it's true._",
+              "r": "Aunque no me creas, es verdad.",
+              "nota": "Subjunctive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7035
+    ],
+    "confunde": [
+      5062
+    ],
+    "sigue": [
+      7212
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5146",
+      "kwiziq": true
+    }
+  ]
+}

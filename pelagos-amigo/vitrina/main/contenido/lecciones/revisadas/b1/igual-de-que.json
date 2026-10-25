@@ -1,0 +1,202 @@
+{
+  "tema": 7085,
+  "slug": "igual-de-que",
+  "titulo": "Igual de … que = as … as",
+  "subtitulo": "Mi pueblo es igual de bonito que el tuyo.",
+  "foto": "t10.jpg",
+  "regla": "Igual de + adjective / adverb + que = as … as. Igual de never changes; the adjective agrees. With a plural subject comparing each other, drop que.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say two things are equal in some quality, the most common way is [[5116|tan … como]]. Another way is **igual de … que**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**igual de**",
+            "adjective / adverb",
+            "**que**"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Igual de** never changes. The adjective agrees with the noun as usual: **igual de altos**, **igual de divertidas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "When the subject is plural and the things are compared **with each other**, drop **que**: **esos dos gatos son igual de lindos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It also works with adverbs: **trabaja igual de duro que sus empleados**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **igual** is frozen like a statue; the adjective next to it does all the moving."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi pueblo es ==igual de bonito que== el tuyo.",
+              "en": "My town is as pretty as yours."
+            },
+            {
+              "es": "Su hija es ==igual de alta que== Carmen.",
+              "en": "Her daughter is as tall as Carmen."
+            },
+            {
+              "es": "Los papás de Beto son ==igual de estrictos que== sus abuelos.",
+              "en": "Beto's parents are as strict as his grandparents."
+            },
+            {
+              "es": "Las fiestas de Rosarito son ==igual de divertidas que== las de Ensenada.",
+              "en": "Rosarito's parties are as fun as Ensenada's."
+            },
+            {
+              "es": "Esos dos gatos son ==igual de lindos==.",
+              "en": "Those two cats are just as cute as each other."
+            },
+            {
+              "es": "Mi jefe trabaja ==igual de duro que== nosotros.",
+              "en": "My boss works as hard as we do."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Son iguales de altos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Son igual de altos."
+                }
+              ],
+              "nota": "**Igual de** never changes."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es igual de alto como yo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es igual de alto que yo."
+                }
+              ],
+              "nota": "**Igual de** goes with **que**; **tan** goes with **como**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Los dos son igual de rápidos que."
+                },
+                {
+                  "v": "bien",
+                  "t": "Los dos son igual de rápidos."
+                }
+              ],
+              "nota": "Comparing each other: no **que**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tan alto como",
+              "texto": "The most common way: [[5116|tan … como]]."
+            },
+            {
+              "forma": "tanto como",
+              "texto": "With nouns and verbs: [[5165|tanto como]]."
+            },
+            {
+              "forma": "el más alto",
+              "texto": "Superlatives: [[5056|the most / the least]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _This board is as good as that one._",
+              "r": "Esta tabla es igual de buena que esa.",
+              "nota": "igual de + agreeing adjective + que."
+            },
+            {
+              "p": "In Spanish: _Both beaches are just as pretty._",
+              "r": "Las dos playas son igual de bonitas.",
+              "nota": "No **que**."
+            },
+            {
+              "p": "Fix it: **Es igual de rápido como Beto.**",
+              "r": "Es igual de rápido que Beto.",
+              "nota": "igual de … que."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5116
+    ],
+    "confunde": [
+      5116,
+      5165
+    ],
+    "sigue": [
+      5056
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7085",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "tema": 7441,
+  "slug": "tal-como",
+  "titulo": "Tal como / tal y como / tal cual = just as, exactly as",
+  "subtitulo": "Me gustas tal como eres.",
+  "foto": "t02.jpg",
+  "regla": "Tal como, tal y como (more emphatic) and tal cual = just as, exactly as, unchanged: Me lo devolvió tal como se lo presté. Me gustas tal cual eres. Never tal y cual for \"just as\".",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "They express that something is **exactly as** it was, or done **just as** agreed or described."
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tal como",
+              "texto": "_just as_, the most common"
+            },
+            {
+              "forma": "tal y como",
+              "texto": "_just as_, a bit more emphatic"
+            },
+            {
+              "forma": "tal cual",
+              "texto": "_just as, as is_; also alone: **lo dejé tal cual**"
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Never ~~tal y cual~~ for \"just as\"."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **tal cual** = no edits."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Me devolvió el libro ==tal como== se lo presté, perfecto.",
+              "en": "He returned the book just as I lent it to him, in perfect shape."
+            },
+            {
+              "es": "La película era ==tal cual== me la describiste.",
+              "en": "The movie was exactly as you described it."
+            },
+            {
+              "es": "No te preocupes, te hago el descuento ==tal como== quedamos ayer.",
+              "en": "Don't worry, I'll give you the discount just as we agreed yesterday."
+            },
+            {
+              "es": "Me gustas ==tal cual== eres. No cambies.",
+              "en": "I like you just the way you are. Don't change."
+            },
+            {
+              "es": "Ayer por fin conocí a Eduardo. Es ==tal y como== me lo imaginaba.",
+              "en": "Yesterday I finally met Eduardo. He's exactly as I imagined."
+            },
+            {
+              "es": "Dejé todo ==tal cual==.",
+              "en": "I left everything just as it was."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "tal y cual eres"
+                },
+                {
+                  "v": "bien",
+                  "t": "tal cual eres / tal como eres"
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tal que lo dijiste."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tal como lo dijiste."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "como",
+              "texto": "[[6673|cómo vs como]]."
+            },
+            {
+              "forma": "como si",
+              "texto": "[[6171|como si]]."
+            },
+            {
+              "forma": "según lo acordado",
+              "texto": "[[7846|según / conforme]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Do it just as I told you._ (tú)",
+              "r": "Hazlo tal como te dije.",
+              "nota": "tal como."
+            },
+            {
+              "p": "In Spanish: _I left it as is._",
+              "r": "Lo dejé tal cual.",
+              "nota": "tal cual alone."
+            },
+            {
+              "p": "Fix it: _Te quiero tal y cual eres._",
+              "r": "Te quiero tal cual eres. / tal como eres.",
+              "nota": "No tal y cual."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6673
+    ],
+    "confunde": [
+      6171
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7441",
+      "kwiziq": true
+    }
+  ]
+}

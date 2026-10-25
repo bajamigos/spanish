@@ -1,0 +1,198 @@
+{
+  "tema": 7245,
+  "slug": "ya-que-puesto-que",
+  "titulo": "Ya que / puesto que / porque / no porque",
+  "subtitulo": "Ya que estás aquí, ayúdame. No porque me guste, sino porque...",
+  "foto": "t07.jpg",
+  "regla": "Porque, ya que, puesto que (because, since) take the indicative. Ya que and puesto que often present a known reason and can open the sentence. No porque (not because) can take the subjunctive or the indicative: no porque me guste / me gusta, sino porque...",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Connector",
+            "Mood",
+            "Note"
+          ],
+          "filas": [
+            [
+              "porque",
+              "indicative",
+              "usually after the main clause"
+            ],
+            [
+              "ya que",
+              "indicative",
+              "a known reason; can go first; very common"
+            ],
+            [
+              "puesto que",
+              "indicative",
+              "more formal"
+            ],
+            [
+              "no porque..., sino porque...",
+              "subjunctive or indicative",
+              "rejects one reason and gives the real one"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Never the subjunctive after **porque, ya que, puesto que** when they give a real cause."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: a real reason is a fact, so indicative. Only a rejected reason (**no porque**) can go subjunctive."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Estoy haciendo horas extra ==porque necesito== dinero para pagar mis deudas.",
+              "en": "I'm working overtime because I need money to pay my debts."
+            },
+            {
+              "es": "Elegimos ese hotel ==ya que== nos lo ==recomendó== mi amiga.",
+              "en": "We picked that hotel since my friend recommended it."
+            },
+            {
+              "es": "==Ya que== estás aquí, ayúdame con esto.",
+              "en": "Since you're here, help me with this."
+            },
+            {
+              "es": "Debes estudiar más, ==puesto que== esa materia ==es== bastante difícil.",
+              "en": "You should study more, since that subject is quite hard."
+            },
+            {
+              "es": "Voy al gimnasio, ==no porque== me ==guste==, sino porque tengo que bajar de peso.",
+              "en": "I go to the gym not because I like it, but because I need to lose weight."
+            },
+            {
+              "es": "Voy al gimnasio, ==no porque== me ==gusta==, sino porque tengo que bajar de peso.",
+              "en": "Same meaning, indicative."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ya que sea tarde, me voy."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ya que es tarde, me voy."
+                }
+              ],
+              "nota": "Real cause: indicative."
+            },
+            {
+              "filas": [
+                {
+                  "v": "raro",
+                  "t": "Porque es tarde, me voy."
+                },
+                {
+                  "v": "mejor",
+                  "t": "Como es tarde, me voy. / Ya que es tarde, me voy."
+                }
+              ],
+              "nota": "To open a sentence, use **como** or **ya que**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "porque, como, es que",
+              "texto": "[[7034|cause]]."
+            },
+            {
+              "forma": "que = because",
+              "texto": "[[6332|que for cause]]."
+            },
+            {
+              "forma": "por + infinitive",
+              "texto": "[[7845|por for cause]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Since you're going out, buy bread._",
+              "r": "Ya que vas a salir, compra pan.",
+              "nota": "ya que + indicative."
+            },
+            {
+              "p": "Formal: _since the results were negative..._",
+              "r": "puesto que los resultados fueron negativos...",
+              "nota": "puesto que."
+            },
+            {
+              "p": "In Spanish: _I study, not because I have to, but because I like it._",
+              "r": "Estudio no porque tenga que hacerlo, sino porque me gusta.",
+              "nota": "no porque + subjunctive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7034
+    ],
+    "confunde": [
+      6332
+    ],
+    "sigue": [
+      7845
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7245",
+      "kwiziq": true
+    }
+  ]
+}

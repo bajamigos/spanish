@@ -1,0 +1,227 @@
+{
+  "tema": 6262,
+  "slug": "hay-que-infinitivo",
+  "titulo": "Hay que for obligation",
+  "subtitulo": "Hay que pagar en efectivo.",
+  "foto": "t06.jpg",
+  "regla": "Hay que + infinitive means one has to / it's necessary to, said in general, without naming who. It never changes for person; to say who has to, use tener que.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Hay que** + infinitive = _one has to_, _you have to_, _it's necessary to_."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "hay que",
+            "+",
+            "infinitive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It's **impersonal**: it doesn't say who. It's a general rule or need for everyone."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It **never changes** for person: **hay que** for everybody."
+        },
+        {
+          "tipo": "texto",
+          "texto": "To say **who** has to, use **tener que**: **tengo que pagar** = _I have to pay_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**No hay que** = _there's no need to_ / _you shouldn't_: **no hay que preocuparse**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **hay que** is the sign on the wall. It talks to everyone and to nobody in particular."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Hay que== pagar en efectivo.",
+              "en": "You have to pay in cash."
+            },
+            {
+              "es": "Para agarrar las mejores olas ==hay que== madrugar.",
+              "en": "To catch the best waves you have to get up early."
+            },
+            {
+              "es": "==Hay que== regar las plantas todos los días.",
+              "en": "The plants need watering every day."
+            },
+            {
+              "es": "En el tatami ==hay que== quitarse los zapatos.",
+              "en": "You have to take your shoes off on the mat."
+            },
+            {
+              "es": "¿==Hay que== reservar?",
+              "en": "Do you need to book?"
+            },
+            {
+              "es": "==Hay que== llevar pasaporte para cruzar a San Diego.",
+              "en": "You need a passport to cross to San Diego."
+            },
+            {
+              "es": "==No hay que== preocuparse.",
+              "en": "There's no need to worry."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hay pagar en efectivo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hay que pagar en efectivo."
+                }
+              ],
+              "nota": "Don't drop **que**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hay que tú estudiar más."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tienes que estudiar más."
+                }
+              ],
+              "nota": "A specific person: **tener que**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hay que estudiando."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hay que estudiar."
+                }
+              ],
+              "nota": "Infinitive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hayamos que irnos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tenemos que irnos."
+                }
+              ],
+              "nota": "Hay que never conjugates for person."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hay",
+              "texto": "The same verb: [[5102|hay = there is / there are]]."
+            },
+            {
+              "forma": "tengo que",
+              "texto": "Obligation for a person: [[5106|tener que]]."
+            },
+            {
+              "forma": "debes",
+              "texto": "What you should do: [[6467|deber]]."
+            },
+            {
+              "forma": "necesito",
+              "texto": "Needing to do something: [[6070|necesitar + infinitive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _You have to be patient._ (in general)",
+              "r": "Hay que tener paciencia.",
+              "nota": "Impersonal."
+            },
+            {
+              "p": "In Spanish: _Do you need to pay?_ (in general)",
+              "r": "¿Hay que pagar?",
+              "nota": "hay que + infinitive."
+            },
+            {
+              "p": "Fix it: _Hay estudiar mucho._",
+              "r": "Hay que estudiar mucho.",
+              "nota": "Add que."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5102
+    ],
+    "confunde": [
+      5106
+    ],
+    "sigue": [
+      6467,
+      6070
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6262",
+      "kwiziq": true
+    }
+  ]
+}

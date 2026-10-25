@@ -1,0 +1,189 @@
+{
+  "tema": 5973,
+  "slug": "por-medio",
+  "titulo": "Por (not para) to express a medium or channel",
+  "subtitulo": "Por teléfono, por correo, por internet: how something travels.",
+  "foto": "t10.jpg",
+  "regla": "Use por (not para) for the means or channel: por teléfono, por correo, por avión (sending). To travel by vehicle, en is common: voy en avión.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say **how** something is communicated or sent, the **way, medium or channel**, use **por**: **por teléfono**, **por correo**, **por internet**, **por mensaje**, **por avión**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With **transportation**, **en** is also correct: with **viajar** and **ir** people usually say **en** (**voy en avión**), and with **mandar / enviar** they usually say **por** (**lo mando por avión**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **por** is the cable or the road the message travels on."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Habla con su mamá ==por== teléfono.",
+              "en": "She's talking to her mom on the phone."
+            },
+            {
+              "es": "La mercancía llega ==por== barco.",
+              "en": "The goods arrive by ship."
+            },
+            {
+              "es": "Las cartas internacionales viajan ==por== avión.",
+              "en": "International letters travel by air."
+            },
+            {
+              "es": "Te mando la ubicación ==por== WhatsApp.",
+              "en": "I'll send you the location on WhatsApp."
+            },
+            {
+              "es": "Mis papás van a viajar a Cancún ==en== avión.",
+              "en": "My parents are going to travel to Cancún by plane."
+            },
+            {
+              "es": "Prefiero mandar el paquete ==por== avión.",
+              "en": "I'd rather send the package by air."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hablamos para teléfono."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hablamos por teléfono."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Te lo mando para correo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Te lo mando por correo."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "Voy en camión."
+                },
+                {
+                  "v": "bien",
+                  "t": "Lo mando por paquetería."
+                }
+              ],
+              "nota": "Traveling: **en**. Sending: **por**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "para + infinitive",
+              "texto": "The main use of **para**: [[5970|purpose]]."
+            },
+            {
+              "forma": "por teléfono, por 100 pesos",
+              "texto": "Other uses of **por**: [[5973|medium]], [[5974|exchange]], [[5975|price]], [[5976|per]], [[5977|speed]], [[7273|by whom]]."
+            },
+            {
+              "forma": "para Navidad",
+              "texto": "**Para** for a deadline or occasion: [[5978|precise time]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We talked on the phone._",
+              "r": "Hablamos por teléfono.",
+              "nota": "por = medium."
+            },
+            {
+              "p": "In Spanish: _Send it to me by email._ (tú)",
+              "r": "Mándamelo por correo.",
+              "nota": "por."
+            },
+            {
+              "p": "In Spanish: _I go to work by bus._",
+              "r": "Voy al trabajo en camión.",
+              "nota": "Traveling: en."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5970
+    ],
+    "confunde": [
+      5970,
+      5974,
+      5975
+    ],
+    "sigue": [
+      5976,
+      5977,
+      5978,
+      7273,
+      7073
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5973",
+      "kwiziq": true
+    }
+  ]
+}

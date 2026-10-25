@@ -1,0 +1,233 @@
+{
+  "tema": 5818,
+  "slug": "condicional-valer",
+  "titulo": "Conjugate valer in the conditional",
+  "subtitulo": "Valdría, valdrías, valdríamos: the future stem valdr- with the conditional endings.",
+  "foto": "t04.jpg",
+  "regla": "Valer has the irregular stem valdr- in the conditional, with the regular endings: valdría, valdrías, valdría, valdríamos, valdrían.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Valer** (_to cost, to be worth_) is irregular in the conditional (**el condicional simple**). It uses the same irregular stem as the future, **valdr-**, and the regular conditional endings."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**valdr-**",
+            "**-ía, -ías, -ía, -íamos, -ían**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "valer"
+          ],
+          "filas": [
+            [
+              "yo",
+              "valdría"
+            ],
+            [
+              "tú",
+              "valdrías"
+            ],
+            [
+              "él, ella, usted",
+              "valdría"
+            ],
+            [
+              "nosotros",
+              "valdríamos"
+            ],
+            [
+              "ustedes, ellos",
+              "valdrían"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Valer para** means _to be good at, to be cut out for_. In Mexico you'll more often hear **servir para** or **ser bueno para**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Every form has a written accent on the **í** of the ending."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **valer** gets a **d** too, like **salir**: **val-d-ría**, **sal-d-ría**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Yo ==valdría== millones como ingeniero.",
+              "en": "I'd be worth millions as an engineer."
+            },
+            {
+              "es": "Tú no ==valdrías== para eso.",
+              "en": "You wouldn't be cut out for that."
+            },
+            {
+              "es": "Este carro ==valdría== mucho en el mercado negro.",
+              "en": "This car would be worth a lot on the black market."
+            },
+            {
+              "es": "Nosotros ==valdríamos== para cantar.",
+              "en": "We'd be good at singing."
+            },
+            {
+              "es": "Las joyas ==valdrían== una fortuna.",
+              "en": "The jewels would be worth a fortune."
+            },
+            {
+              "es": "¿No ==valdría== la pena esperar?",
+              "en": "Wouldn't it be worth waiting?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Esta tabla valería mucho."
+                },
+                {
+                  "v": "bien",
+                  "t": "Esta tabla valdría mucho."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Valdrian una fortuna."
+                },
+                {
+                  "v": "bien",
+                  "t": "Valdrían una fortuna."
+                }
+              ],
+              "nota": "Accent on the **í**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usos",
+      "titulo": "Useful uses",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¿Valdría la pena?",
+              "texto": "**Valer la pena**: _to be worth it_.",
+              "aqui": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "valdré",
+              "texto": "The future has the same stem: [[5244|valer in the future]]."
+            },
+            {
+              "forma": "hablaría",
+              "texto": "The regular pattern: [[5731|regular verbs in the conditional]]."
+            },
+            {
+              "forma": "vale",
+              "texto": "The present: **vale**, **valen**."
+            },
+            {
+              "forma": "saldría, tendría",
+              "texto": "The same **-dr-** family: [[5877|salir]], [[5772|tener]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _It would be worth it._",
+              "r": "Valdría la pena.",
+              "nota": "valdr- + ía."
+            },
+            {
+              "p": "**Valer** with **ellas**: Esas llaves ___ mucho.",
+              "r": "Esas llaves valdrían mucho.",
+              "nota": "valdr- + ían."
+            },
+            {
+              "p": "Which one? **Valería** or **Valdría**?",
+              "r": "Valdría.",
+              "nota": "Irregular stem **valdr-**."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5244,
+      5731
+    ],
+    "confunde": [
+      5244
+    ],
+    "sigue": [
+      5877,
+      5772
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5818",
+      "kwiziq": true
+    }
+  ]
+}

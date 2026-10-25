@@ -1,0 +1,320 @@
+{
+  "tema": 6000,
+  "slug": "subjuntivo-presente-yo-go",
+  "titulo": "Conjugate yo-go verbs in the present subjunctive",
+  "subtitulo": "Tengo → tenga. The g from yo stays in every person.",
+  "foto": "t06.jpg",
+  "regla": "If the present-tense yo form ends in -go, the g stays through the whole subjunctive, with -er / -ir endings: tenga, tengas, tengamos.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Some irregular verbs have a **yo** form ending in **-go** in the present: **tengo, vengo, pongo, hago, digo, salgo, traigo, oigo, caigo**. To form the subjunctive, **take that stem with the g and keep it through the whole conjugation**. The endings are the same as for regular **-er** and **-ir** verbs."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**yo** form in **-go**",
+            "minus **-o**",
+            "**-a, -as, -a, -amos, -an**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "tener",
+            "venir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "tenga",
+              "venga"
+            ],
+            [
+              "tú",
+              "tengas",
+              "vengas"
+            ],
+            [
+              "él, ella, usted",
+              "tenga",
+              "venga"
+            ],
+            [
+              "nosotros",
+              "tengamos",
+              "vengamos"
+            ],
+            [
+              "ustedes, ellos",
+              "tengan",
+              "vengan"
+            ]
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Verb",
+            "Present **yo**",
+            "Subjunctive"
+          ],
+          "filas": [
+            [
+              "poner",
+              "pongo",
+              "ponga"
+            ],
+            [
+              "hacer",
+              "hago",
+              "haga"
+            ],
+            [
+              "decir",
+              "digo",
+              "diga"
+            ],
+            [
+              "salir",
+              "salgo",
+              "salga"
+            ],
+            [
+              "traer",
+              "traigo",
+              "traiga"
+            ],
+            [
+              "oír",
+              "oigo",
+              "oiga"
+            ],
+            [
+              "caer",
+              "caigo",
+              "caiga"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the **g** is a tattoo. Once **yo** has it, everyone keeps it."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No ==tengas== miedo, aquí estoy.",
+              "en": "Don't be afraid, I'm here."
+            },
+            {
+              "es": "No ==vengan== después de las diez.",
+              "en": "Don't come any later than ten. (to several people)"
+            },
+            {
+              "es": "Es mejor que ==pongas== los vasos en el lavaplatos.",
+              "en": "It's best if you put the glasses in the dishwasher."
+            },
+            {
+              "es": "==Hagamos== lo correcto.",
+              "en": "Let's do the right thing."
+            },
+            {
+              "es": "Conviene que ==traigan== las sombrillas a la playa.",
+              "en": "It'd be good for them to bring the umbrellas to the beach."
+            },
+            {
+              "es": "Ojalá ==tengan== suerte y consigan el trabajo.",
+              "en": "I hope you're lucky and get the job."
+            },
+            {
+              "es": "Quiero que me ==digas== la verdad.",
+              "en": "I want you to tell me the truth."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "The **g** doesn't stay only in **yo**. And the form isn't built from the infinitive."
+        },
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ojalá que tienen suerte."
+                },
+                {
+                  "v": "mal",
+                  "t": "Ojalá que tenan suerte."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ojalá que tengan suerte."
+                }
+              ],
+              "nota": "Not the ordinary present, and not without the **g**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero que hacemos la carne asada."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero que hagamos la carne asada."
+                }
+              ],
+              "nota": "**Hago** → **hagamos**. The **g** goes with **nosotros** too."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es mejor que sales temprano."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es mejor que salgas temprano."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usos",
+      "titulo": "Everyday forms",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "Quiero que vengas.",
+              "texto": "After a trigger with **que**.",
+              "aqui": true
+            },
+            {
+              "forma": "Dígame qué pasó.",
+              "texto": "The **usted** command comes from here too: **dígame**, **venga**, **póngase cómodo**. See [[6961|usted commands]]."
+            },
+            {
+              "forma": "¡Oiga!",
+              "texto": "To get the attention of someone you call **usted**."
+            },
+            {
+              "forma": "No pongas eso ahí.",
+              "texto": "The negative **tú** command. See [[9255|negative commands]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tengo, pongo, salgo",
+              "texto": "Where the **g** comes from: [[5304|**tener** in the present]], [[5305|**poner**]], [[5484|**salir**]], [[5708|**hacer**]], [[5591|**traer** and **caer**]], [[5592|**oír**]]."
+            },
+            {
+              "forma": "como → coma",
+              "texto": "Where the endings come from: [[5151|-er and -ir in the subjunctive]]."
+            },
+            {
+              "forma": "conozco → conozca",
+              "texto": "The same idea with another letter: [[6205|-cer and -cir in the subjunctive]]."
+            },
+            {
+              "forma": "Ojalá que vengas.",
+              "texto": "An easy trigger: [[5061|**ojalá**]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "**Hacer** with **nosotros**: Beto quiere que ___ la carne asada juntos.",
+              "r": "Beto quiere que hagamos la carne asada juntos.",
+              "nota": "hago → hag- → hagamos."
+            },
+            {
+              "p": "In Spanish: _Don't say anything to Beto._ (tú)",
+              "r": "No le digas nada a Beto.",
+              "nota": "digo → digas."
+            },
+            {
+              "p": "In Spanish: _I hope they bring the tacos._",
+              "r": "Espero que traigan los tacos.",
+              "nota": "traigo → traigan."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5304,
+      5305,
+      5484,
+      5708,
+      5591,
+      5592,
+      5151
+    ],
+    "confunde": [
+      6205
+    ],
+    "sigue": [
+      5061,
+      9255,
+      6961
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6000",
+      "kwiziq": true
+    }
+  ]
+}

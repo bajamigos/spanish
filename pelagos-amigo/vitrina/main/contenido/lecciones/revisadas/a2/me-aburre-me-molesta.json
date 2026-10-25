@@ -1,0 +1,263 @@
+{
+  "tema": 7427,
+  "slug": "me-aburre-me-molesta",
+  "titulo": "Something bores, annoys or saddens you",
+  "subtitulo": "Me aburre el golf. Me molesta el ruido.",
+  "foto": "t01.jpg",
+  "regla": "Aburrir, molestar, entristecer, preocupar and enojar work like gustar: the thing that causes the feeling is the subject, and the person is me / te / le / nos / les: me aburre el golf, nos molestan los mosquitos.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "In English the person is the subject: _I'm bored by golf_. In Spanish the **thing** is the subject and the person is the **indirect pronoun**, as with **gustar**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "me / te / le / nos / les",
+            "+ verb (3rd person) +",
+            "thing or infinitive"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Verb",
+            "Meaning",
+            "Example"
+          ],
+          "filas": [
+            [
+              "aburrir",
+              "_to bore_",
+              "Me aburre el golf."
+            ],
+            [
+              "molestar",
+              "_to bother, annoy_",
+              "Me molesta el ruido."
+            ],
+            [
+              "entristecer",
+              "_to sadden_",
+              "Me entristece esa noticia."
+            ],
+            [
+              "preocupar",
+              "_to worry_",
+              "Nos preocupa la renta."
+            ],
+            [
+              "enojar",
+              "_to make angry_",
+              "Le enoja esperar."
+            ],
+            [
+              "chocar (informal, Mexico)",
+              "_to really annoy_",
+              "Me choca el tráfico."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The verb agrees with the thing: **me molesta** el ruido, **me molestan** los mosquitos. With an infinitive, singular: **me aburre** esperar."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Careful: **yo aburro** means _I bore (people)_. For _I'm bored by it_: **me aburre**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the thing does it to you, so the thing gets the verb."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Me aburren== las juntas largas.",
+              "en": "Long meetings bore me."
+            },
+            {
+              "es": "==Me molesta== el ruido de los carros en la noche.",
+              "en": "The noise of cars at night bothers me."
+            },
+            {
+              "es": "A mi abuela ==le entristece== ver el mar contaminado.",
+              "en": "Seeing the polluted sea makes my grandma sad."
+            },
+            {
+              "es": "==Nos preocupa== la sequía por el huerto.",
+              "en": "We're worried about the drought because of the garden."
+            },
+            {
+              "es": "¿==Te molestan== los mosquitos?",
+              "en": "Do the mosquitoes bother you?"
+            },
+            {
+              "es": "A Pedro ==le enoja== perder en el tatami.",
+              "en": "Losing on the mat makes Pedro angry."
+            },
+            {
+              "es": "==Me choca== esperar en la garita.",
+              "en": "I can't stand waiting at the border crossing."
+            },
+            {
+              "es": "A los niños ==les aburre== hacer la tarea.",
+              "en": "Doing homework bores the kids."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo aburro con el golf."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me aburre el golf."
+                }
+              ],
+              "nota": "**Yo aburro** = _I bore people_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me molestan el ruido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me molesta el ruido."
+                }
+              ],
+              "nota": "One thing: singular."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me molesta los mosquitos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me molestan los mosquitos."
+                }
+              ],
+              "nota": "Plural thing: plural verb."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "A Pedro enoja perder."
+                },
+                {
+                  "v": "bien",
+                  "t": "A Pedro le enoja perder."
+                }
+              ],
+              "nota": "Keep **le**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "le gusta",
+              "texto": "The model verb: [[7248|gustar with he, she, we, they]]."
+            },
+            {
+              "forma": "me encanta",
+              "texto": "The happy one: [[7058|encantar]]."
+            },
+            {
+              "forma": "estoy aburrido",
+              "texto": "The same feeling with estar: [[5980|estar for feelings]]."
+            },
+            {
+              "forma": "me duele",
+              "texto": "Same pattern for pain: [[5878|doler]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Traffic annoys me._",
+              "r": "Me molesta el tráfico.",
+              "nota": "Thing = subject."
+            },
+            {
+              "p": "In Spanish: _Long movies bore us._",
+              "r": "Nos aburren las películas largas.",
+              "nota": "Plural: aburren."
+            },
+            {
+              "p": "Fix it: _Me molesta los perros del vecino._",
+              "r": "Me molestan los perros del vecino.",
+              "nota": "Plural thing: molestan."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7248,
+      5878
+    ],
+    "confunde": [
+      5980
+    ],
+    "sigue": [
+      7058
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7427",
+      "kwiziq": true
+    }
+  ]
+}

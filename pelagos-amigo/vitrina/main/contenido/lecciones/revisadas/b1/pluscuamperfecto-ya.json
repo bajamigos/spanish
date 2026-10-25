@@ -1,0 +1,223 @@
+{
+  "tema": 6009,
+  "slug": "pluscuamperfecto-ya",
+  "titulo": "Using ya with the pluperfect",
+  "subtitulo": "Ya había salido: already, before something else happened.",
+  "foto": "t03.jpg",
+  "regla": "Ya (already) goes before haber or after the participle, never between them: ya había comido / había comido ya.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Ya** means _already_. With the pluperfect it says something was done before another past moment: **ya había comido cuando llegaste**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Where does **ya** go? At the start of the verb group, **before haber**, or at the end of it, **after the participle**. It can also come later, after other parts of the sentence."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**ya**",
+            "**había**",
+            "participle"
+          ]
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**había**",
+            "participle",
+            "**ya**"
+          ]
+        },
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "Beto ya había comprado una tabla nueva."
+                },
+                {
+                  "v": "bien",
+                  "t": "Beto había comprado ya una tabla nueva."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "What it can't do is sit between **haber** and the participle, the way _already_ does in English (_had already bought_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **había** + participle is one block, like a tabla with its leash. **Ya** waits at either end."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Ya había abierto== el carro cuando llegó el cliente.",
+              "en": "I had already opened the car when the customer arrived."
+            },
+            {
+              "es": "==Ya habías entendido== la técnica cuando el profe la explicó.",
+              "en": "You had already understood the technique when the coach explained it."
+            },
+            {
+              "es": "Amos ==había salido ya== cuando se acordó de las herramientas.",
+              "en": "Amos had already left when he remembered the tools."
+            },
+            {
+              "es": "==Ya nos habíamos dormido== cuando llegó el paquete.",
+              "en": "We had already fallen asleep when the package arrived."
+            },
+            {
+              "es": "Antes del partido, ==ya habíamos pedido== los tacos.",
+              "en": "Before the game, we had already ordered the tacos."
+            },
+            {
+              "es": "Para las ocho y media, ==ya habías terminado== el pastel.",
+              "en": "By eight thirty, you had already finished the cake."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "English puts _already_ in the middle. Spanish doesn't."
+        },
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Había ya comprado la tabla."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ya había comprado la tabla."
+                },
+                {
+                  "v": "bien",
+                  "t": "Había comprado ya la tabla."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nos habíamos ya dormido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ya nos habíamos dormido."
+                }
+              ],
+              "nota": "The pronoun goes before **haber**, and **ya** before the pronoun."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "había comido",
+              "texto": "How the tense is built: [[5843|regular]] and [[5049|irregular]] pluperfect."
+            },
+            {
+              "forma": "todavía no había llegado",
+              "texto": "The opposite, _not yet_: [[6007|aún no / todavía no with the pluperfect]]."
+            },
+            {
+              "forma": "Ya llegué.",
+              "texto": "**Ya** with the preterite: [[9263|ya with the preterite]]."
+            },
+            {
+              "forma": "Ya no surfeo.",
+              "texto": "_Not anymore_ and other meanings: [[7263|ya / ya no]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _The waves had already gone down when we arrived._",
+              "r": "Las olas ya habían bajado cuando llegamos.",
+              "nota": "**Ya** before **había**. Or: habían bajado ya."
+            },
+            {
+              "p": "Fix it: **Habíamos ya cenado.**",
+              "r": "Ya habíamos cenado. / Habíamos cenado ya.",
+              "nota": "Never between haber and the participle."
+            },
+            {
+              "p": "In Spanish: _You had already left._ (tú, **salir**)",
+              "r": "Ya habías salido.",
+              "nota": "ya + habías + salido."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5843,
+      5049
+    ],
+    "confunde": [
+      7263
+    ],
+    "sigue": [
+      6007,
+      9263,
+      6989
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6009",
+      "kwiziq": true
+    }
+  ]
+}

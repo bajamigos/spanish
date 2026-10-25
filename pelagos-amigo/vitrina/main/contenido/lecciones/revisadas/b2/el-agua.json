@@ -1,0 +1,211 @@
+{
+  "tema": 6873,
+  "slug": "el-agua",
+  "titulo": "Feminine nouns with stressed a- take el (el agua, un águila)",
+  "subtitulo": "El agua fría, las aguas, esta agua.",
+  "foto": "t07.jpg",
+  "regla": "Feminine nouns starting with a stressed a- or ha- (agua, alma, águila, hambre, hacha, área) take el and un in the singular, but stay feminine: el agua fría, esta agua, mucha hambre. In the plural they use las / unas: las aguas.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "When a **feminine** noun starts with a **stressed a** (or **ha-**), **la** would clash with it, so the singular takes **el**: **el agua**, **el alma**, **el hambre**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Same with **un**: **un águila**, **un hacha** (**una** is also accepted, but **un** is preferred). Also **algún / ningún**: **algún arma**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The noun is **still feminine**: adjectives and other words stay feminine: **el agua fría**, **esta agua**, **mucha hambre**, **toda el agua**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Plural: back to normal: **las aguas, unas alas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Only when the **first syllable is stressed**: **la amapola**, **la abeja** (stress elsewhere)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Exceptions: letters and names: **la a**, **la hache**, **la Ana**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **el** is a sound fix, not a sex change."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==El agua== está ==fría==.",
+              "en": "The water is cold."
+            },
+            {
+              "es": "El pájaro se lastimó ==el ala==.",
+              "en": "The bird hurt its wing."
+            },
+            {
+              "es": "Tengo ==mucha hambre==.",
+              "en": "I'm really hungry."
+            },
+            {
+              "es": "Vimos ==un águila== en la sierra.",
+              "en": "We saw an eagle in the mountains."
+            },
+            {
+              "es": "==Esta área== es solo para empleados.",
+              "en": "This area is for employees only."
+            },
+            {
+              "es": "==Las aguas== del Caribe son turquesa.",
+              "en": "The waters of the Caribbean are turquoise."
+            },
+            {
+              "es": "==La amapola== es roja.",
+              "en": "The poppy is red. (stress not on the first a)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "la agua"
+                },
+                {
+                  "v": "bien",
+                  "t": "el agua"
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "el agua frío"
+                },
+                {
+                  "v": "bien",
+                  "t": "el agua fría"
+                }
+              ],
+              "nota": "Still feminine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "este agua"
+                },
+                {
+                  "v": "bien",
+                  "t": "esta agua"
+                }
+              ],
+              "nota": "Demonstratives stay feminine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "los alas"
+                },
+                {
+                  "v": "bien",
+                  "t": "las alas"
+                }
+              ],
+              "nota": "Plural: **las**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el, la",
+              "texto": "[[6757|gender of nouns]]."
+            },
+            {
+              "forma": "-u, -i nouns",
+              "texto": "[[8863|nouns ending in -u and -i]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Article: ___ hambre (singular)",
+              "r": "el hambre",
+              "nota": "Stressed a."
+            },
+            {
+              "p": "Complete: _El agua está muy ___ (caliente / frío)._",
+              "r": "fría",
+              "nota": "Feminine."
+            },
+            {
+              "p": "Article: ___ aulas (plural)",
+              "r": "las aulas",
+              "nota": "Plural: las."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6757
+    ],
+    "confunde": [
+      8863
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6873",
+      "kwiziq": true
+    }
+  ]
+}

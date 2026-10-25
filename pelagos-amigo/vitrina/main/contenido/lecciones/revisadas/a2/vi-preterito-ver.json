@@ -1,0 +1,244 @@
+{
+  "tema": 5217,
+  "slug": "vi-preterito-ver",
+  "titulo": "Ver in the preterite",
+  "subtitulo": "Ayer vi a Beto en la playa.",
+  "foto": "t10.jpg",
+  "regla": "Ver in the preterite is vi, viste, vio, vimos, vieron: regular -er endings on the stem v-, but vi and vio are one syllable and take no written accent.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Ver** uses the stem **v-** with the normal **-er** endings."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "ver"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**vi**"
+            ],
+            [
+              "tú",
+              "**viste**"
+            ],
+            [
+              "él, ella, usted",
+              "**vio**"
+            ],
+            [
+              "nosotros",
+              "**vimos**"
+            ],
+            [
+              "ellos, ustedes",
+              "**vieron**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Vi** and **vio** have **one syllable**, so **no written accent**: not ví, vió."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Don't keep the **e** of the infinitive: not **veí**, **veió**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "When you see a **person**, add **a**: **vi a Beto**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **vi** is short like a blink. You saw it, and that was it."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ayer ==vi== a mi primo en la playa.",
+              "en": "Yesterday I saw my cousin at the beach."
+            },
+            {
+              "es": "¿==Viste== las olas de esta mañana?",
+              "en": "Did you see this morning's waves?"
+            },
+            {
+              "es": "Holden ==vio== una nave extraña cerca de Saturno.",
+              "en": "Holden saw a strange ship near Saturn."
+            },
+            {
+              "es": "==Vimos== el atardecer desde el malecón.",
+              "en": "We watched the sunset from the boardwalk."
+            },
+            {
+              "es": "Mis vecinos ==vieron== un coyote en el cerro.",
+              "en": "My neighbors saw a coyote on the hill."
+            },
+            {
+              "es": "¿Ustedes ==vieron== la pelea anoche?",
+              "en": "Did you guys watch the fight last night?"
+            },
+            {
+              "es": "No ==vi== la señal y me pasé la salida.",
+              "en": "I didn't see the sign and missed the exit."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer ví a mi amigo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer vi a mi amigo."
+                }
+              ],
+              "nota": "One syllable, no accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Quién vió el partido?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Quién vio el partido?"
+                }
+              ],
+              "nota": "No accent on **vio**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer veí una película."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer vi una película."
+                }
+              ],
+              "nota": "Stem **v-**, no e."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Vi mi hermana en el centro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Vi a mi hermana en el centro."
+                }
+              ],
+              "nota": "Person: add **a**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "veo",
+              "texto": "The present: [[5306|ver in the present]]."
+            },
+            {
+              "forma": "veía",
+              "texto": "Background in the past: [[5268|ver in the imperfect]]."
+            },
+            {
+              "forma": "di, dio",
+              "texto": "Same shape: [[5215|dar in the preterite]]."
+            },
+            {
+              "forma": "vi a Beto",
+              "texto": "The a before people: [[6870|the personal a]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I saw a whale in Ensenada._",
+              "r": "Vi una ballena en Ensenada.",
+              "nota": "vi, no accent."
+            },
+            {
+              "p": "In Spanish: _Did you see María?_",
+              "r": "¿Viste a María?",
+              "nota": "viste + a."
+            },
+            {
+              "p": "Fix it: _Ellos veieron la serie._",
+              "r": "Ellos vieron la serie.",
+              "nota": "Stem v-."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5306
+    ],
+    "confunde": [
+      5268,
+      5215
+    ],
+    "sigue": [
+      6870
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5217",
+      "kwiziq": true
+    }
+  ]
+}

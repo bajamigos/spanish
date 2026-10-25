@@ -1,0 +1,209 @@
+{
+  "tema": 6053,
+  "slug": "ingleses-inglesas",
+  "titulo": "Plural of nationalities ending in -s",
+  "subtitulo": "Ingleses, inglesas, franceses, francesas.",
+  "foto": "t10.jpg",
+  "regla": "Nationality and origin adjectives ending in -és form the masculine plural with -eses (inglés → ingleses) and the feminine plural with -esas (inglesas). The written accent disappears. A mixed group takes the masculine.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Masculine plural: **-és → -eses**. Feminine plural: **-esa → -esas**. No written accent in any plural."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Singular m.",
+            "Singular f.",
+            "Plural m.",
+            "Plural f."
+          ],
+          "filas": [
+            [
+              "inglés",
+              "inglesa",
+              "**ingleses**",
+              "**inglesas**"
+            ],
+            [
+              "francés",
+              "francesa",
+              "**franceses**",
+              "**francesas**"
+            ],
+            [
+              "japonés",
+              "japonesa",
+              "**japoneses**",
+              "**japonesas**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "A group of men and women takes the masculine: **mis papás son ingleses**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mis vecinos son ==ingleses==.",
+              "en": "My neighbors are English."
+            },
+            {
+              "es": "Hay muchos turistas ==franceses== en Cancún.",
+              "en": "There are lots of French tourists in Cancún."
+            },
+            {
+              "es": "Mis amigas ==portuguesas== surfean muy bien.",
+              "en": "My Portuguese friends (female) surf very well."
+            },
+            {
+              "es": "Las motos ==japonesas== son buenas.",
+              "en": "Japanese motorcycles are good."
+            },
+            {
+              "es": "Mis abuelos son ==irlandeses==.",
+              "en": "My grandparents are Irish."
+            },
+            {
+              "es": "Me gustan los quesos ==holandeses==.",
+              "en": "I like Dutch cheeses."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mis papás son inglés."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mis papás son ingleses."
+                }
+              ],
+              "nota": "Plural: **-eses**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Los turistas son francéses."
+                },
+                {
+                  "v": "bien",
+                  "t": "Los turistas son franceses."
+                }
+              ],
+              "nota": "No accent in the plural."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mis amigas son japoneses."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mis amigas son japonesas."
+                }
+              ],
+              "nota": "All women: **-esas**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "inglesa",
+              "texto": "The feminine singular: [[6052|feminine of -s nationalities]]."
+            },
+            {
+              "forma": "altos, altas",
+              "texto": "Regular plurals: [[6014|plural of adjectives]]."
+            },
+            {
+              "forma": "canadienses",
+              "texto": "Nationalities ending in -e: [[6801|plural of -e nationalities]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Masculine plural of _portugués_",
+              "r": "portugueses",
+              "nota": "-eses, no accent."
+            },
+            {
+              "p": "In Spanish: _The (female) teachers are French._",
+              "r": "Las maestras son francesas.",
+              "nota": "-esas."
+            },
+            {
+              "p": "Fix it: _Mis papás son inglés._",
+              "r": "Mis papás son ingleses.",
+              "nota": "Mixed group: -eses."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6052,
+      6014
+    ],
+    "confunde": [
+      6801
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6053",
+      "kwiziq": true
+    }
+  ]
+}

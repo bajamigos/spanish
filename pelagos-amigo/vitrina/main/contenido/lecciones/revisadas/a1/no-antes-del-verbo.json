@@ -1,0 +1,192 @@
+{
+  "tema": 5091,
+  "slug": "no-antes-del-verbo",
+  "titulo": "Negative sentences with no",
+  "subtitulo": "No hablo japonés. No me gusta.",
+  "foto": "t02.jpg",
+  "regla": "To make a sentence negative, put no right before the verb. If there's an object or reflexive pronoun (me, te, lo, se…), no goes before the pronoun: no lo sé, no me gusta.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Put **no** right **before the verb**: **Hablo inglés → No hablo inglés.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "If there's a **pronoun** before the verb (**me, te, lo, la, se, le, nos…**), **no** goes **before the pronoun**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "no",
+            "+ (pronoun) +",
+            "verb"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Answering a question, you often say **no** twice: **¿Vienes? —No, no puedo.**"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==No hablo== japonés.",
+              "en": "I don't speak Japanese."
+            },
+            {
+              "es": "==No me gusta== el café frío.",
+              "en": "I don't like cold coffee."
+            },
+            {
+              "es": "==No lo sé==.",
+              "en": "I don't know."
+            },
+            {
+              "es": "Hoy ==no hay== olas.",
+              "en": "There are no waves today."
+            },
+            {
+              "es": "¿Vienes? —No, ==no puedo==.",
+              "en": "Are you coming? —No, I can't."
+            },
+            {
+              "es": "Mi hermano ==no se levanta== temprano.",
+              "en": "My brother doesn't get up early."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hablo no inglés."
+                },
+                {
+                  "v": "bien",
+                  "t": "No hablo inglés."
+                }
+              ],
+              "nota": "**No** goes before the verb."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me no gusta."
+                },
+                {
+                  "v": "bien",
+                  "t": "No me gusta."
+                }
+              ],
+              "nota": "**No** goes before the pronoun."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Lo no sé."
+                },
+                {
+                  "v": "bien",
+                  "t": "No lo sé."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "no me gusta",
+              "texto": "The verb gustar: [[6001|gustar]]."
+            },
+            {
+              "forma": "no voy a ir",
+              "texto": "No with longer verb groups: [[6261|no with complex verb structures]]."
+            },
+            {
+              "forma": "no veo nada",
+              "texto": "Double negatives: [[6144|nada]], [[6075|nadie]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I don't understand._",
+              "r": "No entiendo.",
+              "nota": "No before the verb."
+            },
+            {
+              "p": "Fix it: _Me no gusta el tráfico._",
+              "r": "No me gusta el tráfico.",
+              "nota": "No before me."
+            },
+            {
+              "p": "In Spanish, using lo: _I don't know._",
+              "r": "No lo sé.",
+              "nota": "No before lo."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6001
+    ],
+    "confunde": [],
+    "sigue": [
+      6261,
+      6144,
+      6075
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5091",
+      "kwiziq": true
+    }
+  ]
+}

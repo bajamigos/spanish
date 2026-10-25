@@ -1,0 +1,243 @@
+{
+  "tema": 6240,
+  "slug": "he-dicho-perfecto-decir",
+  "titulo": "Decir in the present perfect",
+  "subtitulo": "Te lo he dicho mil veces.",
+  "foto": "t05.jpg",
+  "regla": "Decir in the present perfect is haber in the present + the irregular participle dicho (never decido): he dicho, has dicho, ha dicho, hemos dicho, han dicho.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Build it with **haber** in the present + **dicho**. The participle of **decir** is irregular: **dicho**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "he / has / ha / hemos / han",
+            "+",
+            "dicho"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Decir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "he dicho"
+            ],
+            [
+              "tú",
+              "has dicho"
+            ],
+            [
+              "él, ella, usted",
+              "ha dicho"
+            ],
+            [
+              "nosotros, nosotras",
+              "hemos dicho"
+            ],
+            [
+              "ellos, ellas, ustedes",
+              "han dicho"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Dicho** never changes: **ha dicho la verdad**, **han dicho cosas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Pronouns go before **haber**, never in the middle: **te lo he dicho**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Verbs built on **decir** do the same: **predecir** → **predicho**, **contradecir** → **contradicho**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Careful: **decidido** is from **decidir** (_to decide_), a different verb."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Te lo ==he dicho== mil veces: ¡riega las plantas!",
+              "en": "I've told you a thousand times: water the plants!"
+            },
+            {
+              "es": "Mi jefe no me ==ha dicho== nada del aumento.",
+              "en": "My boss hasn't told me anything about the raise."
+            },
+            {
+              "es": "¿Qué te ==han dicho== en el banco?",
+              "en": "What have they told you at the bank?"
+            },
+            {
+              "es": "==Hemos dicho== que sí a la invitación.",
+              "en": "We've said yes to the invitation."
+            },
+            {
+              "es": "¿Ya le ==has dicho== a Mario?",
+              "en": "Have you told Mario yet?"
+            },
+            {
+              "es": "El doctor ==ha dicho== que necesito descansar.",
+              "en": "The doctor has said I need to rest."
+            },
+            {
+              "es": "Nunca ==he dicho== una mentira tan grande.",
+              "en": "I've never told such a big lie."
+            },
+            {
+              "es": "Los vecinos ==han dicho== que va a llover.",
+              "en": "The neighbors have said it's going to rain."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ya he decido la verdad."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ya he dicho la verdad."
+                }
+              ],
+              "nota": "Participle: **dicho**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella ha dicha que no."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella ha dicho que no."
+                }
+              ],
+              "nota": "**Dicho** never agrees."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Te he lo dicho."
+                },
+                {
+                  "v": "bien",
+                  "t": "Te lo he dicho."
+                }
+              ],
+              "nota": "Pronouns go before **haber**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "digo",
+              "texto": "The present: [[5489|decir in the present]]."
+            },
+            {
+              "forma": "hecho, dicho, puesto",
+              "texto": "Other irregular ones: [[7048|participles in -to / -cho]]."
+            },
+            {
+              "forma": "dije",
+              "texto": "The simple past: [[5240|decir in the preterite]]."
+            },
+            {
+              "forma": "he dicho vs dije",
+              "texto": "Which one to pick: [[9261|perfect vs simple past]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _She has told me the truth._",
+              "r": "Me ha dicho la verdad.",
+              "nota": "ha dicho."
+            },
+            {
+              "p": "Fix it: _Ustedes no han decido nada._",
+              "r": "Ustedes no han dicho nada.",
+              "nota": "dicho."
+            },
+            {
+              "p": "In Spanish: _I've told it to him._",
+              "r": "Se lo he dicho.",
+              "nota": "Pronouns before he."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5489,
+      7048
+    ],
+    "confunde": [
+      5240
+    ],
+    "sigue": [
+      9261
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6240",
+      "kwiziq": true
+    }
+  ]
+}

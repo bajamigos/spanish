@@ -1,0 +1,216 @@
+{
+  "tema": 5721,
+  "slug": "subjuntivo-presente-ger-gir",
+  "titulo": "Conjugate -ger and -gir verbs (g > j) in the present subjunctive",
+  "subtitulo": "Proteger → proteja: the g becomes j to keep the soft sound.",
+  "foto": "t09.jpg",
+  "regla": "Verbs ending in -ger and -gir change g to j in every form of the present subjunctive: proteja, dirija, escojamos.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Verbs ending in **-ger** and **-gir** change the **g** to **j** in every form of the present subjunctive. This keeps the sound of the infinitive, because **g** before **a** would sound hard."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "proteger",
+            "dirigir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "proteja",
+              "dirija"
+            ],
+            [
+              "tú",
+              "protejas",
+              "dirijas"
+            ],
+            [
+              "él, ella, usted",
+              "proteja",
+              "dirija"
+            ],
+            [
+              "nosotros",
+              "protejamos",
+              "dirijamos"
+            ],
+            [
+              "ustedes, ellos",
+              "protejan",
+              "dirijan"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Other verbs like this: **recoger**, **escoger**, **acoger**, **exigir**, **sumergir**, **fingir**, and **coger**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Coger** is a vulgar word in Mexico. Use **agarrar** or **tomar** instead: **toma el camión**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **g** goes soft only with **e** and **i**. To stay soft before **a**, it puts on a **j**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No quiere que ==proteja== tanto a mis hijos.",
+              "en": "She doesn't want me to protect my kids so much."
+            },
+            {
+              "es": "Es bueno que Naomi ==dirija== al equipo.",
+              "en": "It's good that Naomi leads the team."
+            },
+            {
+              "es": "Es mejor que ==escojamos== otra playa.",
+              "en": "We'd better pick another beach."
+            },
+            {
+              "es": "Te pido que ==recojas== a tu hermana.",
+              "en": "I'm asking you to pick up your sister."
+            },
+            {
+              "es": "Es necesario que ==exijamos== una explicación.",
+              "en": "We need to demand an explanation."
+            },
+            {
+              "es": "Es indispensable que ustedes ==protejan== a los jóvenes.",
+              "en": "It's essential that you protect young people."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es mejor que escogamos aquí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es mejor que escojamos aquí."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero que recogas la basura."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero que recojas la basura."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "protejo, escojo",
+              "texto": "The present, where only **yo** changes: [[7028|-ger / -gir in the present]]."
+            },
+            {
+              "forma": "corrija, elija",
+              "texto": "**-gir** with e > i too: [[5846|corregir and elegir]]."
+            },
+            {
+              "forma": "busque, pague",
+              "texto": "Other spelling changes: [[5724|-car]], [[5725|-gar]], [[5726|-zar]]."
+            },
+            {
+              "forma": "coma, viva",
+              "texto": "The base pattern: [[5151|-er and -ir in the subjunctive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "**Escoger** with **tú**: Quiero que ___ la tabla.",
+              "r": "Quiero que escojas la tabla.",
+              "nota": "g → j."
+            },
+            {
+              "p": "**Recoger** with **ustedes**: Es mejor que ___ sus cosas.",
+              "r": "Es mejor que recojan sus cosas.",
+              "nota": "g → j."
+            },
+            {
+              "p": "In Spanish: _I hope they protect the garden._",
+              "r": "Espero que protejan el huerto.",
+              "nota": "proteger → protejan."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7028,
+      5151
+    ],
+    "confunde": [
+      5724,
+      5725
+    ],
+    "sigue": [
+      5846,
+      5726
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5721",
+      "kwiziq": true
+    }
+  ]
+}

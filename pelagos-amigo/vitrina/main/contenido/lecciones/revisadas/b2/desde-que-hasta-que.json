@@ -1,0 +1,210 @@
+{
+  "tema": 7253,
+  "slug": "desde-que-hasta-que",
+  "titulo": "Desde que / hasta que with the indicative and subjunctive",
+  "subtitulo": "Desde que llegué... / Hasta que llegues.",
+  "foto": "t05.jpg",
+  "regla": "Desde que (since) and hasta que (until): indicative for present habits and past events; subjunctive for the future. Desde que + past subjunctive also exists but sounds formal.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "Present / past",
+            "Future"
+          ],
+          "filas": [
+            [
+              "desde que (since)",
+              "indicative",
+              "subjunctive"
+            ],
+            [
+              "hasta que (until)",
+              "indicative",
+              "subjunctive"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Desde que** marks the **start**; **hasta que** marks the **end**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With past events, **desde que** + imperfect subjunctive (**desde que me torciera el tobillo**) exists but sounds formal or literary."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if the moment hasn't come yet, use the subjunctive."
+        }
+      ]
+    },
+    {
+      "id": "desde",
+      "titulo": "Desde que",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Pienso en ti ==desde que me despierto==.",
+              "en": "I think about you from the moment I wake up."
+            },
+            {
+              "es": "No juego futbol ==desde que me torcí== el tobillo.",
+              "en": "I haven't played soccer since I twisted my ankle."
+            },
+            {
+              "es": "Siempre he sido muy inquieta ==desde que era== niña.",
+              "en": "I've always been restless since I was a kid."
+            },
+            {
+              "es": "Mañana, ==desde que aterrices== hasta que ==llegues== al hotel, van a pasar un par de horas.",
+              "en": "Tomorrow, from when you land until you get to the hotel, a couple of hours will go by."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hasta",
+      "titulo": "Hasta que",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "A veces espero despierta a mi hija ==hasta que llega== a casa.",
+              "en": "Sometimes I wait up for my daughter until she gets home."
+            },
+            {
+              "es": "Mi abuelo trabajó en el correo ==hasta que se murió==.",
+              "en": "My grandfather worked at the post office until he died."
+            },
+            {
+              "es": "No me voy ==hasta que me lo expliques==.",
+              "en": "I'm not leaving until you explain it to me."
+            },
+            {
+              "es": "Vamos a esperar ==hasta que deje== de llover.",
+              "en": "We'll wait until it stops raining."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Espérame hasta que llego."
+                },
+                {
+                  "v": "bien",
+                  "t": "Espérame hasta que llegue."
+                }
+              ],
+              "nota": "Future: subjunctive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Vivo aquí desde que nazca."
+                },
+                {
+                  "v": "bien",
+                  "t": "Vivo aquí desde que nací."
+                }
+              ],
+              "nota": "Past: indicative."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "antes de que",
+              "texto": "[[10029|antes de que / después de que]]."
+            },
+            {
+              "forma": "desde, hasta",
+              "texto": "[[7229|desde / hasta for from / to]]."
+            },
+            {
+              "forma": "hasta que + present subjunctive",
+              "texto": "[[5168|adverbial clauses]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Complete: _No salgas hasta que yo te ___ (llamar)._",
+              "r": "llame",
+              "nota": "Future: subjunctive."
+            },
+            {
+              "p": "Complete: _Trabajó ahí hasta que ___ (jubilarse)._",
+              "r": "se jubiló",
+              "nota": "Past: indicative."
+            },
+            {
+              "p": "In Spanish: _since we met_",
+              "r": "desde que nos conocimos",
+              "nota": "Past: indicative."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7229,
+      5168
+    ],
+    "confunde": [
+      10029
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7253",
+      "kwiziq": true
+    }
+  ]
+}

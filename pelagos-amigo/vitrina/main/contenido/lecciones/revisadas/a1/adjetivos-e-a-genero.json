@@ -1,0 +1,200 @@
+{
+  "tema": 6015,
+  "slug": "adjetivos-e-a-genero",
+  "titulo": "Adjectives ending in -e and -a",
+  "subtitulo": "Un chavo inteligente, una chava inteligente.",
+  "foto": "t03.jpg",
+  "regla": "Most adjectives ending in -e, and those ending in -a (like optimista), have one form for masculine and feminine singular: un chavo inteligente, una chava inteligente; un hombre optimista, una mujer optimista.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Most adjectives ending in **-e** don't change for gender: **grande**, **inteligente**, **verde**, **interesante**, **triste**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Adjectives ending in **-a** don't change either: **optimista**, **pesimista**, **realista**, **egoísta**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Masculine",
+            "Feminine"
+          ],
+          "filas": [
+            [
+              "un chavo **inteligente**",
+              "una chava **inteligente**"
+            ],
+            [
+              "un hombre **optimista**",
+              "una mujer **optimista**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **-o** adjectives switch to **-a** (**alto → alta**), but if it ends in **-e** or **-a**, leave it alone."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi hermano es muy ==inteligente==.",
+              "en": "My brother is very smart."
+            },
+            {
+              "es": "Mi hermana también es ==inteligente==.",
+              "en": "My sister is smart too."
+            },
+            {
+              "es": "Hoy hay una ola ==enorme==.",
+              "en": "There's a huge wave today."
+            },
+            {
+              "es": "Tengo un jardín ==grande==.",
+              "en": "I have a big garden."
+            },
+            {
+              "es": "Mi entrenador es muy ==optimista==.",
+              "en": "My coach is very optimistic."
+            },
+            {
+              "es": "La maestra es ==optimista== también.",
+              "en": "The teacher is optimistic too."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella es muy inteligenta."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella es muy inteligente."
+                }
+              ],
+              "nota": "**-e** doesn't change."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Él es optimisto."
+                },
+                {
+                  "v": "bien",
+                  "t": "Él es optimista."
+                }
+              ],
+              "nota": "**-a** doesn't change."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es una casa granda."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es una casa grande."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "alto, alta",
+              "texto": "Adjectives that do change: [[6013|regular adjectives]]."
+            },
+            {
+              "forma": "inteligentes",
+              "texto": "The plural: [[6051|plural of adjectives in -e and -a]]."
+            },
+            {
+              "forma": "canadiense",
+              "texto": "Nationalities in -e: [[6802|feminine of -e nationalities]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _a green car_",
+              "r": "un carro verde",
+              "nota": "verde doesn't change."
+            },
+            {
+              "p": "In Spanish: _My sister is very optimistic._",
+              "r": "Mi hermana es muy optimista.",
+              "nota": "Same form."
+            },
+            {
+              "p": "Fix it: _La película es interesanta._",
+              "r": "La película es interesante.",
+              "nota": "-e stays."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6013
+    ],
+    "confunde": [],
+    "sigue": [
+      6051,
+      6802
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6015",
+      "kwiziq": true
+    }
+  ]
+}

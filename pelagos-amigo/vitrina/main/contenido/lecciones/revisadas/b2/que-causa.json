@@ -1,0 +1,208 @@
+{
+  "tema": 6332,
+  "slug": "que-causa",
+  "titulo": "Que to express cause",
+  "subtitulo": "Apúrate, que se va el camión.",
+  "foto": "t08.jpg",
+  "regla": "Que (no accent) can introduce a reason, like porque, especially after a command or a statement: Me voy, que tengo que trabajar. It's informal and goes after the main clause.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "In conversation, **que** can work like **porque** to explain **why**:"
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "[statement / command]",
+            ", que",
+            "+ reason"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It goes **after** the main clause, usually after a comma, and it's informal. It's very common after commands: **Apúrate, que...**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**No accent**: it's a conjunction, not a question word."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **que** here is a shrug that adds _because..._"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Me voy al súper, ==que== tengo que hacer el mandado.",
+              "en": "I'm going to the supermarket, I have to do the shopping."
+            },
+            {
+              "es": "Pónganse a estudiar, ==que== tienen mucho que aprender.",
+              "en": "Get studying, you have a lot to learn."
+            },
+            {
+              "es": "Hoy no vine a trabajar, ==que== estoy enfermo.",
+              "en": "I didn't come to work today, I'm sick."
+            },
+            {
+              "es": "Voy a hablar con la maestra, ==que== no entiendo nada.",
+              "en": "I'm going to talk to the teacher, because I don't understand a thing."
+            },
+            {
+              "es": "Apúrate, ==que== se va el camión.",
+              "en": "Hurry up, the bus is leaving."
+            },
+            {
+              "es": "Ponte el suéter, ==que== hace frío.",
+              "en": "Put on your sweater, it's cold."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "porque",
+      "titulo": "Same as porque",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "que",
+                  "t": "Voy a hablar con la maestra, que no entiendo nada."
+                },
+                {
+                  "v": "porque",
+                  "t": "Voy a hablar con la maestra, porque no entiendo nada."
+                }
+              ],
+              "nota": "Same meaning; **que** is more casual."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Abrígate, qué hace frío."
+                },
+                {
+                  "v": "bien",
+                  "t": "Abrígate, que hace frío."
+                }
+              ],
+              "nota": "No accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Que tengo hambre, voy a comer."
+                },
+                {
+                  "v": "bien",
+                  "t": "Voy a comer, que tengo hambre."
+                }
+              ],
+              "nota": "The reason comes second."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "porque, como, es que",
+              "texto": "[[7034|cause]]."
+            },
+            {
+              "forma": "ya que, puesto que",
+              "texto": "[[7245|ya que, puesto que]]."
+            },
+            {
+              "forma": "¡que te caes!",
+              "texto": "[[6314|que for warnings]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Join with que: _Cierra la ventana. Hace mucho aire._",
+              "r": "Cierra la ventana, que hace mucho aire.",
+              "nota": "que = because."
+            },
+            {
+              "p": "In Spanish (casual): _Let's go, it's late._",
+              "r": "Vámonos, que es tarde.",
+              "nota": "que + reason."
+            },
+            {
+              "p": "Accent or not? _Come algo, ___ no desayunaste._",
+              "r": "que",
+              "nota": "No accent."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7034
+    ],
+    "confunde": [
+      6314
+    ],
+    "sigue": [
+      7245
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6332",
+      "kwiziq": true
+    }
+  ]
+}

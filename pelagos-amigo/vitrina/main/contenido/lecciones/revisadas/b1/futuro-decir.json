@@ -1,0 +1,208 @@
+{
+  "tema": 5161,
+  "slug": "futuro-decir",
+  "titulo": "Conjugate decir in the simple future",
+  "subtitulo": "Diré, dirás, diremos: a short stem, regular endings.",
+  "foto": "t07.jpg",
+  "regla": "Decir has the irregular future stem dir- with the regular endings: diré, dirás, dirá, diremos, dirán.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Decir** (_to say, to tell_) is irregular in the future because its stem is **dir-**. The endings are the regular future ones."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**dir-**",
+            "**-é, -ás, -á, -emos, -án**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "decir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "diré"
+            ],
+            [
+              "tú",
+              "dirás"
+            ],
+            [
+              "él, ella, usted",
+              "dirá"
+            ],
+            [
+              "nosotros",
+              "diremos"
+            ],
+            [
+              "ustedes, ellos",
+              "dirán"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **decir** loses its middle and keeps only **dir-**: say less, mean more."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Le ==diré== a Beto que llamaste.",
+              "en": "I'll tell Beto you called."
+            },
+            {
+              "es": "==Dirás== la verdad.",
+              "en": "You'll tell the truth."
+            },
+            {
+              "es": "Me pregunto qué ==dirá== la gente del precio.",
+              "en": "I wonder what people will say about the price."
+            },
+            {
+              "es": "No te preocupes, no se lo ==diremos==.",
+              "en": "Don't worry, we won't tell him."
+            },
+            {
+              "es": "Los profes ==dirán== cuánto tiempo tenemos.",
+              "en": "The teachers will tell us how much time we have."
+            },
+            {
+              "es": "Ustedes ==dirán== que no estuve ahí.",
+              "en": "You'll say I wasn't there."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Deciré la verdad."
+                },
+                {
+                  "v": "bien",
+                  "t": "Diré la verdad."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Diremós que no."
+                },
+                {
+                  "v": "bien",
+                  "t": "Diremos que no."
+                }
+              ],
+              "nota": "No accent on **nosotros**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "diría",
+              "texto": "Same stem in the conditional: [[5854|decir in the conditional]]."
+            },
+            {
+              "forma": "haré",
+              "texto": "Another short stem: [[5159|hacer in the future]]."
+            },
+            {
+              "forma": "he dicho",
+              "texto": "The participle: [[6240|decir in the present perfect]]."
+            },
+            {
+              "forma": "hablaré",
+              "texto": "The regular pattern: [[5155|regular verbs in the future]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _What will you say?_ (tú)",
+              "r": "¿Qué dirás?",
+              "nota": "dir- + ás."
+            },
+            {
+              "p": "**Decir** with **ellos**: Mañana te ___ la hora.",
+              "r": "Mañana te dirán la hora.",
+              "nota": "dir- + án."
+            },
+            {
+              "p": "In Spanish: _I won't tell anyone._",
+              "r": "No se lo diré a nadie.",
+              "nota": "dir- + é."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5155
+    ],
+    "confunde": [
+      5854
+    ],
+    "sigue": [
+      5159,
+      6240
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5161",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "tema": 9260,
+  "slug": "lo-mio-lo-tuyo",
+  "titulo": "Lo mío, lo tuyo, lo suyo = my thing, your thing...",
+  "subtitulo": "Bailar no es lo mío. Lo nuestro se acabó.",
+  "foto": "t02.jpg",
+  "regla": "Neuter lo + possessive pronoun means my/your/his thing, matters concerning me/you: Lo tuyo con Andrés = your thing with Andrés. Common uses: what someone is good at (Lo mío es la pintura; bailar no es lo mío), minding one's own business (Ella va a lo suyo), and what belongs to someone (Lo mío es tuyo).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "lo",
+            "+ mío / tuyo / suyo / nuestro"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Lo** never changes: it means _the thing(s), the matter_ of that person."
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "a known matter",
+              "texto": "**Lo tuyo con Andrés** = _your thing with Andrés_; **lo nuestro** = _our relationship_."
+            },
+            {
+              "forma": "talent, taste",
+              "texto": "**Lo mío es la pintura.** **Bailar no es lo mío** = _not my thing_."
+            },
+            {
+              "forma": "one's own business",
+              "texto": "**Ella va a lo suyo** = _she does her own thing_. **¡A lo nuestro!** = _back to work_."
+            },
+            {
+              "forma": "belongings",
+              "texto": "**Lo mío es tuyo** = _what's mine is yours_."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **lo mío** = _my thing_, in every sense of that English phrase."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No le conté a nadie ==lo mío==.",
+              "en": "I didn't tell anyone about my situation."
+            },
+            {
+              "es": "==Lo tuyo con Andrés== me parece una locura.",
+              "en": "This thing with you and Andrés seems crazy to me."
+            },
+            {
+              "es": "==Lo nuestro== es suyo.",
+              "en": "What's ours is yours."
+            },
+            {
+              "es": "No insistas, coquetear no es ==lo tuyo==.",
+              "en": "Give it up, flirting isn't your thing."
+            },
+            {
+              "es": "—¿Vienes al antro? —No, gracias, bailar no es ==lo mío==.",
+              "en": "—Are you coming to the club? —No thanks, dancing isn't my thing."
+            },
+            {
+              "es": "Ella siempre va a ==lo suyo==.",
+              "en": "She always does her own thing."
+            },
+            {
+              "es": "Bueno, ya platicamos mucho. ¡A ==lo nuestro==!",
+              "en": "Okay, enough chatting. Back to work!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Bailar no es el mío."
+                },
+                {
+                  "v": "bien",
+                  "t": "Bailar no es lo mío."
+                }
+              ],
+              "nota": "Neuter **lo**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "pronombre",
+                  "t": "Este carro es el mío."
+                },
+                {
+                  "v": "lo + posesivo",
+                  "t": "Los carros son lo mío."
+                }
+              ],
+              "nota": "**El mío** = _mine_ (a specific car); **lo mío** = _my thing_."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "possessive pronouns",
+              "texto": "[[6139|el mío, la tuya]]."
+            },
+            {
+              "forma": "lo + adjective",
+              "texto": "[[6979|lo + adjective]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Cooking is my thing._",
+              "r": "Lo mío es la cocina. / Cocinar es lo mío.",
+              "nota": "lo mío."
+            },
+            {
+              "p": "In Spanish: _Math isn't his thing._",
+              "r": "Las matemáticas no son lo suyo.",
+              "nota": "lo suyo."
+            },
+            {
+              "p": "In Spanish: _What we had is over._",
+              "r": "Lo nuestro se acabó.",
+              "nota": "lo nuestro."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6139,
+      6979
+    ],
+    "confunde": [],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9260",
+      "kwiziq": true
+    }
+  ]
+}

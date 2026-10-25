@@ -1,0 +1,186 @@
+{
+  "tema": 8565,
+  "slug": "decir-contar",
+  "titulo": "Decir vs contar (to tell)",
+  "subtitulo": "Dime la hora / Cuéntame qué pasó.",
+  "foto": "t09.jpg",
+  "regla": "Contar = to tell with details: a story, a joke, what happened. Decir = to say or tell a specific piece of information. In reported speech both work; contar sounds like news or gossip.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Verb",
+            "Use",
+            "Example"
+          ],
+          "filas": [
+            [
+              "contar",
+              "a story, joke, anecdote, what happened (details)",
+              "Cuéntame cómo te fue."
+            ],
+            [
+              "decir",
+              "a specific piece of info, words, an order",
+              "Dime a qué hora paso por ti."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "In **reported speech**, both work: **me dijo que...** / **me contó que...** With **contar**, it sounds like news or juicy gossip."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Contar** is irregular (o → ue): **cuento, cuentas, cuenta**. **Decir**: **digo, dices, dice**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **contar** tells a story; **decir** tells a fact."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Cuéntame== cómo te fue hoy.",
+              "en": "Tell me how your day went."
+            },
+            {
+              "es": "==Dime== a qué hora paso por ti.",
+              "en": "Tell me what time I should pick you up."
+            },
+            {
+              "es": "Me ==dijo== que había comido con Lola.",
+              "en": "She told me she'd eaten with Lola."
+            },
+            {
+              "es": "Me ==contó== que había comido con Lola.",
+              "en": "She told me (news!) she'd eaten with Lola."
+            },
+            {
+              "es": "—Eres un tonto. —¿Qué ==dijiste==?",
+              "en": "—You're an idiot. —What did you say?"
+            },
+            {
+              "es": "Javier ==cuenta== unos chistes buenísimos.",
+              "en": "Javier tells great jokes."
+            },
+            {
+              "es": "Mi maestra ==dice== que soy el más listo del salón.",
+              "en": "My teacher says I'm the smartest in the class."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "menos común",
+                  "t": "Dime un chiste."
+                },
+                {
+                  "v": "mejor",
+                  "t": "Cuéntame un chiste."
+                }
+              ],
+              "nota": "Jokes are told: **contar**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cuéntame tu número."
+                },
+                {
+                  "v": "bien",
+                  "t": "Dime tu número."
+                }
+              ],
+              "nota": "One fact: **decir**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "dijo que viniera",
+              "texto": "**Decir que** + subjunctive as an order: [[7281|pedir / decir que]]."
+            },
+            {
+              "forma": "hablar",
+              "texto": "**Hablar** = to talk, speak."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Decir or contar? ___me qué pasó en la fiesta._",
+              "r": "Cuéntame",
+              "nota": "Details."
+            },
+            {
+              "p": "Decir or contar? ___me tu dirección._",
+              "r": "Dime",
+              "nota": "One fact."
+            },
+            {
+              "p": "In Spanish: _My grandpa tells great stories._",
+              "r": "Mi abuelo cuenta historias buenísimas.",
+              "nota": "contar."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8565",
+      "kwiziq": true
+    }
+  ]
+}

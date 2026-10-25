@@ -1,0 +1,201 @@
+{
+  "tema": 7230,
+  "slug": "tu-o-usted-formal",
+  "titulo": "Tú vs usted (informal vs formal)",
+  "subtitulo": "¿Tú quieres un taco? ¿Usted quiere un café, señora?",
+  "foto": "t10.jpg",
+  "regla": "Use tú with friends, family, kids and people your age; usted with older people, strangers, bosses and customers. Usted takes the él/ella verb form, and your is su. For more than one person, use ustedes.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Tú** is informal: friends, family, kids, people your age. **Usted** is formal: older people, strangers, your boss, customers."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Usted** uses the **él / ella** verb form, and _your_ is **su**, not tu."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "tú",
+            "usted"
+          ],
+          "filas": [
+            [
+              "ser",
+              "tú eres",
+              "usted es"
+            ],
+            [
+              "tener",
+              "tú tienes",
+              "usted tiene"
+            ],
+            [
+              "How are you?",
+              "¿Cómo estás?",
+              "¿Cómo está?"
+            ],
+            [
+              "your house",
+              "tu casa",
+              "su casa"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Plural: **ustedes** for everyone, formal or not."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿==Tú== quieres un taco?",
+              "en": "Do you want a taco? (to a friend)"
+            },
+            {
+              "es": "¿==Usted quiere== un café, señora?",
+              "en": "Would you like a coffee, ma'am?"
+            },
+            {
+              "es": "Don Javier, ¿==usted es== de aquí?",
+              "en": "Don Javier, are you from here?"
+            },
+            {
+              "es": "Oye, ¿==tienes== tiempo hoy?",
+              "en": "Hey, do you have time today?"
+            },
+            {
+              "es": "Disculpe, ¿==tiene== hora?",
+              "en": "Excuse me, do you have the time?"
+            },
+            {
+              "es": "==Ustedes== son mis mejores amigos.",
+              "en": "You guys are my best friends."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Usted quieres café?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Usted quiere café?"
+                }
+              ],
+              "nota": "**Usted** + él/ella form."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Usted es muy amable. Gracias por tu ayuda."
+                },
+                {
+                  "v": "bien",
+                  "t": "Usted es muy amable. Gracias por su ayuda."
+                }
+              ],
+              "nota": "Don't mix: **usted** goes with **su**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tú / tu",
+              "texto": "Accent or not: [[6731|tú vs tu]]."
+            },
+            {
+              "forma": "¿Cómo está?",
+              "texto": "Greetings: [[5880|how are you?]]."
+            },
+            {
+              "forma": "es / eres",
+              "texto": "The verb forms: [[5070|ser in the present]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Fix it: _¿Usted tienes hijos?_",
+              "r": "¿Usted tiene hijos?",
+              "nota": "tiene."
+            },
+            {
+              "p": "In Spanish, formal: _your house_",
+              "r": "su casa",
+              "nota": "usted → su."
+            },
+            {
+              "p": "In Spanish, informal: _How are you?_",
+              "r": "¿Cómo estás?",
+              "nota": "tú form."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5070,
+      6731
+    ],
+    "confunde": [],
+    "sigue": [
+      5880
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7230",
+      "kwiziq": true
+    }
+  ]
+}

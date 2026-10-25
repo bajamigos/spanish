@@ -1,0 +1,251 @@
+{
+  "tema": 9338,
+  "slug": "aqui-aca-ahi-alla",
+  "titulo": "Aquí, acá, ahí, allí, allá: here and there",
+  "subtitulo": "Aquí estoy yo, ahí estás tú, allá está el mar.",
+  "foto": "t06.jpg",
+  "regla": "Aquí and acá mean here (near me). Ahí means there (near you, or not far). Allí and allá mean over there (far from both of us). Acá and allá are vaguer, go well with movement and can take más or muy; in Mexico acá, ahí and allá are the everyday choices.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Spanish has three distances, like **este, ese, aquel**:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Distance",
+            "Adverb",
+            "Like…"
+          ],
+          "filas": [
+            [
+              "Near me: _here_",
+              "aquí / acá",
+              "este"
+            ],
+            [
+              "Near you, or not far: _there_",
+              "ahí",
+              "ese"
+            ],
+            [
+              "Far from both of us: _over there_",
+              "allí / allá",
+              "aquel"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Aquí** and **allí** point to an exact spot. **Acá** and **allá** are vaguer: _around here_, _over that way_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Acá** and **allá** go well with movement: **Ven acá.** **Vamos para allá.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Only **acá** and **allá** take **más** or **muy**: **más acá**, **muy allá**. Never **más aquí**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Allá** also points to far places and times: **allá en el sur**, **allá por los noventa**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In Mexico **acá**, **ahí** and **allá** are the most common in speech; **allí** sounds more formal."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: say them as you point. Your finger stays on you, moves to your friend, then flies to the horizon."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Aquí== en Tijuana hace calor en septiembre.",
+              "en": "Here in Tijuana it's hot in September."
+            },
+            {
+              "es": "¡Ven ==acá==, rápido!",
+              "en": "Come here, quick!"
+            },
+            {
+              "es": "Tu celular está ==ahí==, junto a ti.",
+              "en": "Your phone is there, next to you."
+            },
+            {
+              "es": "¿Qué tienes ==ahí== en la mano?",
+              "en": "What have you got there in your hand?"
+            },
+            {
+              "es": "¿Ves aquella casa? ==Allí== vive mi tío.",
+              "en": "See that house over there? My uncle lives there."
+            },
+            {
+              "es": "Las olas buenas están ==allá==, en la punta.",
+              "en": "The good waves are over there, at the point."
+            },
+            {
+              "es": "Pon la maceta un poco ==más acá==.",
+              "en": "Put the pot a little closer this way."
+            },
+            {
+              "es": "==Allá== en Ganímedes todo crece en invernaderos.",
+              "en": "Over there on Ganymede everything grows in greenhouses."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hay está mi mochila."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ahí está mi mochila."
+                }
+              ],
+              "nota": "**Hay** = there is; **ahí** = there (place)."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Qué hay allá, junto a ti?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Qué hay ahí, junto a ti?"
+                }
+              ],
+              "nota": "Near the listener → **ahí**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Muévelo más aquí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Muévelo más acá."
+                }
+              ],
+              "nota": "**Más** only with **acá** / **allá**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ven allá."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ven acá."
+                }
+              ],
+              "nota": "**Ven** brings someone toward you."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "este, ese, aquel",
+              "texto": "The same three distances: [[6862|este, ese and aquel]]."
+            },
+            {
+              "forma": "hay / ahí / ay",
+              "texto": "Three words that sound alike: [[8916|hay, ahí and ay]]."
+            },
+            {
+              "forma": "está aquí",
+              "texto": "Location uses estar: [[5067|estar for locations]]."
+            },
+            {
+              "forma": "hay / está",
+              "texto": "Saying what's there: [[7036|hay vs está]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish (to a friend, about his keys next to him): _Your keys are there._",
+              "r": "Tus llaves están ahí.",
+              "nota": "Near you → ahí."
+            },
+            {
+              "p": "In Spanish: _Come here!_",
+              "r": "¡Ven acá!",
+              "nota": "Movement → acá."
+            },
+            {
+              "p": "Fix it: «Siéntate más aquí.»",
+              "r": "Siéntate más acá.",
+              "nota": "más + acá."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6862,
+      5067
+    ],
+    "confunde": [
+      8916,
+      7036
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9338",
+      "kwiziq": true
+    }
+  ]
+}

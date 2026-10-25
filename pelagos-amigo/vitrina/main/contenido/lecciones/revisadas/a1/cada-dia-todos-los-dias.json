@@ -1,0 +1,206 @@
+{
+  "tema": 6178,
+  "slug": "cada-dia-todos-los-dias",
+  "titulo": "Cada and todos los for every (time)",
+  "subtitulo": "Cada día = todos los días.",
+  "foto": "t05.jpg",
+  "regla": "To say every + a time word, use cada + singular noun (cada día, cada semana) or todos los / todas las + plural noun (todos los días, todas las semanas). Both mean the same.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Two ways to say _every day, every week, every Monday_. They mean the same."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Pattern",
+            "Example"
+          ],
+          "filas": [
+            [
+              "**cada** + singular noun",
+              "cada día, cada semana, cada lunes"
+            ],
+            [
+              "**todos los** + masculine plural",
+              "todos los días, todos los lunes, todos los años"
+            ],
+            [
+              "**todas las** + feminine plural",
+              "todas las semanas, todas las mañanas"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Cada** never changes. **Todos / todas** agree with the noun and always need **los / las**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Cada** also counts intervals: **cada dos días** = _every two days_. Careful: **todo el día** = _all day_, not every day."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Surfeo ==todos los días== a las siete.",
+              "en": "I surf every day at seven."
+            },
+            {
+              "es": "Entreno jiu-jitsu ==cada martes==.",
+              "en": "I train jiu-jitsu every Tuesday."
+            },
+            {
+              "es": "Riego el jardín ==cada dos días==.",
+              "en": "I water the garden every two days."
+            },
+            {
+              "es": "Mis papás vienen a comer ==todos los domingos==.",
+              "en": "My parents come over for lunch every Sunday."
+            },
+            {
+              "es": "Pago la renta ==cada mes==.",
+              "en": "I pay the rent every month."
+            },
+            {
+              "es": "Vamos a Ensenada ==todas las semanas==.",
+              "en": "We go to Ensenada every week."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Surfeo todos días."
+                },
+                {
+                  "v": "bien",
+                  "t": "Surfeo todos los días."
+                }
+              ],
+              "nota": "Keep **los**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Voy al gimnasio cada semanas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Voy al gimnasio cada semana."
+                }
+              ],
+              "nota": "**Cada** + singular."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Corro todos las mañanas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Corro todas las mañanas."
+                }
+              ],
+              "nota": "**Mañana** is feminine: **todas las**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "los lunes",
+              "texto": "Talking about routines: [[5992|present for regular actions]]."
+            },
+            {
+              "forma": "cada persona",
+              "texto": "Cada with other nouns: [[6668|cada + noun = each]]."
+            },
+            {
+              "forma": "todo el día",
+              "texto": "All the uses of todo: [[6233|todo, toda, todos, todas]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish, with todos: _I surf every day._",
+              "r": "Surfeo todos los días.",
+              "nota": "todos los + plural."
+            },
+            {
+              "p": "In Spanish, with cada: _I pay rent every month._",
+              "r": "Pago la renta cada mes.",
+              "nota": "cada + singular."
+            },
+            {
+              "p": "Fix it: _Voy a la playa todos las mañanas._",
+              "r": "Voy a la playa todas las mañanas.",
+              "nota": "mañanas is feminine."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5992
+    ],
+    "confunde": [
+      6233
+    ],
+    "sigue": [
+      6668
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6178",
+      "kwiziq": true
+    }
+  ]
+}

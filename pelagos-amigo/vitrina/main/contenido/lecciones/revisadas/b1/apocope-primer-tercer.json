@@ -1,0 +1,207 @@
+{
+  "tema": 6154,
+  "slug": "apocope-primer-tercer",
+  "titulo": "Primero and tercero become primer and tercer before a noun",
+  "subtitulo": "El primer día, el tercer intento, but la primera vez.",
+  "foto": "t04.jpg",
+  "regla": "Primero → primer and tercero → tercer only before a masculine singular noun. Feminine, plural or without a noun: full form.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Two ordinal numbers shorten before a **masculine singular** noun: **primero** → **primer** (_first_) and **tercero** → **tercer** (_third_)."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Before a masculine singular noun",
+            "Everywhere else"
+          ],
+          "filas": [
+            [
+              "el primer día",
+              "la primera vez"
+            ],
+            [
+              "el tercer intento",
+              "la tercera candidata"
+            ],
+            [
+              "",
+              "los primeros años"
+            ],
+            [
+              "",
+              "fui el primero en llegar"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Feminine** nouns: no shortening. **Plurals**: no shortening. And when the word works alone as a pronoun, without a noun after it, it keeps the full form: **soy el primero**, **voy al tercero** (the third floor)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: same rule as **buen** and **mal**: only the boys in the singular lose the **-o**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "El ==primer== candidato pasó la entrevista.",
+              "en": "The first candidate passed the interview."
+            },
+            {
+              "es": "Este es el ==tercer== carro que abro hoy.",
+              "en": "This is the third car I've opened today."
+            },
+            {
+              "es": "La ==tercera== candidata también pasó.",
+              "en": "The third candidate (female) passed too."
+            },
+            {
+              "es": "Es la ==primera== vez que surfeo aquí.",
+              "en": "It's the first time I've surfed here."
+            },
+            {
+              "es": "Los ==primeros== años de prepa son difíciles.",
+              "en": "The first years of high school are hard."
+            },
+            {
+              "es": "Fui el ==primero== en llegar a la meta.",
+              "en": "I was the first to reach the finish line."
+            },
+            {
+              "es": "—¿A qué piso va? —Al ==tercero==.",
+              "en": "\"What floor are you going to?\" \"The third.\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El primero día de clases."
+                },
+                {
+                  "v": "bien",
+                  "t": "El primer día de clases."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La primer vez."
+                },
+                {
+                  "v": "bien",
+                  "t": "La primera vez."
+                }
+              ],
+              "nota": "Feminine: full form."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Fui el primer en llegar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Fui el primero en llegar."
+                }
+              ],
+              "nota": "No noun after it: full form."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "buen, mal, gran",
+              "texto": "The same shortening: [[5057|bueno, malo, grande]]."
+            },
+            {
+              "forma": "algún, ningún",
+              "texto": "More short forms: **algún día**, **ningún problema**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _the first wave_ (la ola)",
+              "r": "la primera ola",
+              "nota": "Feminine: full form."
+            },
+            {
+              "p": "In Spanish: _the third round_ (el round)",
+              "r": "el tercer round",
+              "nota": "Masculine singular: tercer."
+            },
+            {
+              "p": "In Spanish: _She was the first to arrive._",
+              "r": "Fue la primera en llegar.",
+              "nota": "No shortening."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5057
+    ],
+    "confunde": [
+      5057
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6154",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,239 @@
+{
+  "tema": 6468,
+  "slug": "debia-imperfecto-deber",
+  "titulo": "Deber in the imperfect",
+  "subtitulo": "Debía llegar a las ocho.",
+  "foto": "t06.jpg",
+  "regla": "Deber is regular in the imperfect: debía, debías, debía, debíamos, debían. Debía + infinitive = was supposed to / had to; debía + noun = owed.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Deber** is a regular **-er** verb: stem **deb-** + **-ía** endings. Every form has an accent on the **í**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Deber"
+          ],
+          "filas": [
+            [
+              "yo",
+              "debía"
+            ],
+            [
+              "tú",
+              "debías"
+            ],
+            [
+              "él, ella, usted",
+              "debía"
+            ],
+            [
+              "nosotros, nosotras",
+              "debíamos"
+            ],
+            [
+              "ellos, ellas, ustedes",
+              "debían"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Debía** + infinitive: _was supposed to_, _had to_. It often means the plan didn't happen, or a rule that applied for a while."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "debía",
+            "+",
+            "infinitive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "No **a** before the infinitive: **debía estudiar**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With a noun, **deber** means _to owe_: **me debía dinero** = _he owed me money_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Yo** and **él / ella / usted** share the same form: **debía**. Add the subject if it's unclear."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Debía== llegar a las ocho, pero había mucho tráfico en la línea.",
+              "en": "I was supposed to arrive at eight, but there was a lot of traffic at the border."
+            },
+            {
+              "es": "De niño ==debía== hacer la tarea antes de salir a jugar.",
+              "en": "As a kid I had to do my homework before going out to play."
+            },
+            {
+              "es": "¿No ==debías== estar en el trabajo?",
+              "en": "Weren't you supposed to be at work?"
+            },
+            {
+              "es": "Mi primo me ==debía== quinientos pesos.",
+              "en": "My cousin owed me five hundred pesos."
+            },
+            {
+              "es": "==Debíamos== regar el huerto cada tarde.",
+              "en": "We had to water the garden every afternoon."
+            },
+            {
+              "es": "En esa escuela los alumnos ==debían== llevar uniforme.",
+              "en": "At that school the students had to wear a uniform."
+            },
+            {
+              "es": "Ustedes ==debían== avisarme antes.",
+              "en": "You all were supposed to tell me beforehand."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Debaba estudiar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Debía estudiar."
+                }
+              ],
+              "nota": "**-er** verb: **-ía**, not -aba."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Debia salir temprano."
+                },
+                {
+                  "v": "bien",
+                  "t": "Debía salir temprano."
+                }
+              ],
+              "nota": "Accent on the **í**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Debíamos a pagar la renta."
+                },
+                {
+                  "v": "bien",
+                  "t": "Debíamos pagar la renta."
+                }
+              ],
+              "nota": "No **a** before the infinitive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "debo",
+              "texto": "The present: [[6467|deber in the present]]."
+            },
+            {
+              "forma": "comía",
+              "texto": "The endings: [[5264|-er and -ir verbs in the imperfect]]."
+            },
+            {
+              "forma": "tenía que",
+              "texto": "Another way to say _had to_: [[5926|tener in the imperfect]]."
+            },
+            {
+              "forma": "debería",
+              "texto": "_Should_, softer: [[6469|deber in the conditional]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I was supposed to call you._",
+              "r": "Debía llamarte.",
+              "nota": "debía + infinitive."
+            },
+            {
+              "p": "In Spanish: _They owed me a favor._",
+              "r": "Me debían un favor.",
+              "nota": "owe = deber."
+            },
+            {
+              "p": "Fix it: _Nosotros debiamos a salir._",
+              "r": "Nosotros debíamos salir.",
+              "nota": "Accent, no a."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6467,
+      5264
+    ],
+    "confunde": [
+      5926
+    ],
+    "sigue": [
+      6469
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6468",
+      "kwiziq": true
+    }
+  ]
+}

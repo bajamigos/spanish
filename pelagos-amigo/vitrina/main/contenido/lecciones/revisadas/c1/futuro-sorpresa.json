@@ -1,0 +1,167 @@
+{
+  "tema": 7935,
+  "slug": "futuro-sorpresa",
+  "titulo": "The future and future perfect to express surprise or rejection",
+  "subtitulo": "¡No serás capaz! ¡No te lo habrás comido tú!",
+  "foto": "t07.jpg",
+  "regla": "In exclamations, the simple future expresses surprise, disapproval or suspicion about the present or near future: ¡No serás capaz! ¡Será posible! The future perfect does it about the past: ¡No habrás sido capaz! ¡No lo habrás tomado tú!",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "future (present / future)",
+              "texto": "**¡No serás capaz!** (_You wouldn't dare!_) **¿Será posible?** (_Can you believe it?_)"
+            },
+            {
+              "forma": "future perfect (past)",
+              "texto": "**¡No habrás sido capaz!** (_You didn't!_) **¡No lo habrás tomado tú!** (_Don't tell me you took it!_)"
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Not a real future; it's an attitude: disbelief, disapproval, suspicion."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Common fixed lines: **¡Será posible!**, **¿Qué te habrás creído?** (_Who do you think you are?_)"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the future here raises an eyebrow, it doesn't predict."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "—Voy a ir a una playa nudista. —¡No ==serás== capaz!",
+              "en": "—I'm going to a nudist beach. —You wouldn't dare!"
+            },
+            {
+              "es": "Ese señor me empujó al pasar. ¡==Será== grosero!",
+              "en": "That man pushed me as he went by. How rude can you be!"
+            },
+            {
+              "es": "—Ayer puse la maleta de mi novio en la calle. —¡No ==habrás sido== capaz!",
+              "en": "—Yesterday I put my boyfriend's suitcase out on the street. —You didn't!"
+            },
+            {
+              "es": "Me faltan 200 pesos. ¡No los ==habrás agarrado== tú!",
+              "en": "I'm missing 200 pesos. Don't tell me you took them!"
+            },
+            {
+              "es": "¿Qué ==te habrás creído==?",
+              "en": "Who do you think you are?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "predicción",
+                  "t": "Mañana serás capaz de nadar."
+                },
+                {
+                  "v": "rechazo",
+                  "t": "¡No serás capaz!"
+                }
+              ],
+              "nota": "Tone and **no** make the difference."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "estará en casa",
+              "texto": "Future for guessing: [[5060|future of probability]]."
+            },
+            {
+              "forma": "habrá salido",
+              "texto": "[[7266|future perfect for guessing]]."
+            },
+            {
+              "forma": "tendría un final triste",
+              "texto": "[[8194|conditional for objection]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "React: _—Me voy a tatuar la cara._ (You wouldn't dare!)",
+              "r": "¡No serás capaz!",
+              "nota": "Future."
+            },
+            {
+              "p": "React: _—Me comí tu pastel._ (You didn't!)",
+              "r": "¡No habrás sido capaz!",
+              "nota": "Future perfect."
+            },
+            {
+              "p": "Fixed line: _Who do you think you are?_",
+              "r": "¿Qué te habrás creído?",
+              "nota": "Future perfect."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5060,
+      7266
+    ],
+    "confunde": [
+      8194
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7935",
+      "kwiziq": true
+    }
+  ]
+}

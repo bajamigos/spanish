@@ -1,0 +1,220 @@
+{
+  "tema": 6757,
+  "slug": "gato-gata-toro-vaca",
+  "titulo": "Gender of living creatures",
+  "subtitulo": "El gato y la gata, el toro y la vaca.",
+  "foto": "t06.jpg",
+  "regla": "For people and animals, the female form is made in different ways: changing -o to -a (gato / gata), adding -a (león / leona), using a different word (toro / vaca), or keeping one word and changing only the article (el / la estudiante). Some animals have one gender for both sexes (la ballena, el tiburón): add macho or hembra.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Most change **-o** to **-a**: **el gato / la gata**, **el niño / la niña**, **el perro / la perra**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Many ending in a consonant add **-a**: **el león / la leona**, **el profesor / la profesora**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Pattern",
+            "Male",
+            "Female"
+          ],
+          "filas": [
+            [
+              "-o → -a",
+              "el gato",
+              "la gata"
+            ],
+            [
+              "+ -a",
+              "el león",
+              "la leona"
+            ],
+            [
+              "other word",
+              "el toro, el caballo, el hombre",
+              "la vaca, la yegua, la mujer"
+            ],
+            [
+              "only the article",
+              "el estudiante, el turista",
+              "la estudiante, la turista"
+            ],
+            [
+              "one form for both",
+              "la ballena, el tiburón",
+              "la ballena, el tiburón"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "With the last group, say **macho** or **hembra**: **la ballena macho**, **el tiburón hembra**. The article doesn't change."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi ==gata== duerme todo el día.",
+              "en": "My (female) cat sleeps all day."
+            },
+            {
+              "es": "==La yegua== y ==el caballo== están en el rancho.",
+              "en": "The mare and the horse are at the ranch."
+            },
+            {
+              "es": "Mi tío tiene ==una vaca== y ==un toro==.",
+              "en": "My uncle has a cow and a bull."
+            },
+            {
+              "es": "==La estudiante== nueva es de Tecate.",
+              "en": "The new (female) student is from Tecate."
+            },
+            {
+              "es": "Vimos ==una ballena== cerca de Ensenada.",
+              "en": "We saw a whale near Ensenada."
+            },
+            {
+              "es": "Dicen que hay ==un tiburón hembra== en la bahía.",
+              "en": "They say there's a female shark in the bay."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La gato es negra."
+                },
+                {
+                  "v": "bien",
+                  "t": "La gata es negra."
+                }
+              ],
+              "nota": "A female cat is **la gata**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El vaca"
+                },
+                {
+                  "v": "bien",
+                  "t": "La vaca"
+                }
+              ],
+              "nota": "The female of **el toro** is a different word."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El ballena macho"
+                },
+                {
+                  "v": "bien",
+                  "t": "La ballena macho"
+                }
+              ],
+              "nota": "**Ballena** is always feminine; **macho** marks the sex."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el chico, la chica",
+              "texto": "The basic pattern: [[6150|masculine and feminine nouns]]."
+            },
+            {
+              "forma": "el / la cantante",
+              "texto": "Nouns in -e: [[6674|nouns ending in -e]]."
+            },
+            {
+              "forma": "la actriz, la alcaldesa",
+              "texto": "Special female endings: [[6729|-esa, -triz, -ina, -isa]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _the cow and the bull_",
+              "r": "la vaca y el toro",
+              "nota": "Two different words."
+            },
+            {
+              "p": "In Spanish: _a female shark_",
+              "r": "un tiburón hembra",
+              "nota": "Article stays masculine."
+            },
+            {
+              "p": "Fix it (the cat is female): _El gato es blanca._",
+              "r": "La gata es blanca.",
+              "nota": "la gata."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6150
+    ],
+    "confunde": [
+      6674
+    ],
+    "sigue": [
+      6729
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6757",
+      "kwiziq": true
+    }
+  ]
+}

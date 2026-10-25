@@ -1,0 +1,185 @@
+{
+  "tema": 9825,
+  "slug": "que-hacer",
+  "titulo": "Relative clauses with the infinitive (cosas que hacer)",
+  "subtitulo": "Tengo mucho que hacer. No hay nada que comer.",
+  "foto": "t02.jpg",
+  "regla": "Que + infinitive after tener, haber, quedar = something to do: Tengo muchas cosas que hacer. No hay nada que comer. Me quedan dos capítulos que leer. English uses to.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "tener / haber / quedar + noun",
+            "+ que +",
+            "infinitive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "English: _things **to** do_. Spanish: **cosas que hacer**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It's like a shortened clause: **monumentos que [puedes] visitar**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Other relatives work too, with prepositions: **no tengo con qué escribir**, **no hay dónde sentarse**, **busco a alguien con quien hablar**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: wherever English says _something to..._, Spanish says **algo que...**"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "En mi ciudad hay muchos monumentos interesantes ==que visitar==.",
+              "en": "In my city there are lots of interesting monuments to visit."
+            },
+            {
+              "es": "Hoy no puedo salir; tengo un montón de cosas ==que hacer==.",
+              "en": "I can't go out today; I have a ton of things to do."
+            },
+            {
+              "es": "Me quedan dos capítulos ==que leer==.",
+              "en": "I have two chapters left to read."
+            },
+            {
+              "es": "No había ninguna historia ==que contar==.",
+              "en": "There was no story to tell."
+            },
+            {
+              "es": "¡Vámonos, no tenemos tiempo ==que perder==!",
+              "en": "Let's go, we have no time to lose!"
+            },
+            {
+              "es": "No tengo ==con qué== escribir.",
+              "en": "I don't have anything to write with."
+            },
+            {
+              "es": "No hay ==dónde== sentarse.",
+              "en": "There's nowhere to sit."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "común",
+                  "t": "Tengo muchas cosas para hacer."
+                },
+                {
+                  "v": "estándar",
+                  "t": "Tengo muchas cosas que hacer."
+                }
+              ],
+              "nota": "**Para** is heard a lot, but **que** is the standard."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tengo mucho a hacer."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tengo mucho que hacer."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tener que",
+              "texto": "_Have to_: [[5106|tener que]]."
+            },
+            {
+              "forma": "que, el cual",
+              "texto": "[[5154|relative pronouns]]."
+            },
+            {
+              "forma": "infinitive after prepositions",
+              "texto": "[[6310|infinitive after prepositions]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _There's nothing to drink._",
+              "r": "No hay nada que tomar.",
+              "nota": "que + infinitive."
+            },
+            {
+              "p": "In Spanish: _I have a lot to study._",
+              "r": "Tengo mucho que estudiar.",
+              "nota": "mucho que."
+            },
+            {
+              "p": "In Spanish: _I need someone to talk to._",
+              "r": "Necesito a alguien con quien hablar.",
+              "nota": "con quien + infinitive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5106
+    ],
+    "confunde": [
+      5154
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9825",
+      "kwiziq": true
+    }
+  ]
+}

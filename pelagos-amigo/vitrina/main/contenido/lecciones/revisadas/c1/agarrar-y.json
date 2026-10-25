@@ -1,0 +1,178 @@
+{
+  "tema": 9317,
+  "slug": "agarrar-y",
+  "titulo": "Ir y / agarrar y to introduce something sudden",
+  "subtitulo": "Y que agarra y se va. Fue y le dijo todo.",
+  "foto": "t09.jpg",
+  "regla": "Ir + y or agarrar + y + verb introduces a sudden, unexpected action, usually in storytelling: Y el idiota de Pedro va y le dice todo. Agarré y me fui. Both verbs are conjugated. Agarrar y is very common in Mexico.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "ir / agarrar (conjugated)",
+            "+ y +",
+            "verb (same tense)"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It adds **surprise or suddenness**: _goes and..., up and..._"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Typical in anecdotes, often in the narrative present."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Agarrar y** is everyday Mexican Spanish: **agarré y me fui**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **agarra y** = before anyone could stop him."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Y el menso de Pedro ==va y== le dice a Joaquín que estoy enamorada de él.",
+              "en": "And that idiot Pedro goes and tells Joaquín I'm in love with him."
+            },
+            {
+              "es": "Y el mecánico ==agarra y== me dice que son 2,000 pesos, no 1,500.",
+              "en": "And the mechanic goes and tells me it's 2,000 pesos, not 1,500."
+            },
+            {
+              "es": "Después de regañarlo, ==agarré y== me fui.",
+              "en": "After telling him off, I up and left."
+            },
+            {
+              "es": "Mi jefa ==agarró y== me dijo que tengo que ser más amable con los clientes.",
+              "en": "My boss went and told me I have to be nicer to customers."
+            },
+            {
+              "es": "Vas a ver que el tipo se enoja y ==va a agarrar y== le va a dar un golpe.",
+              "en": "You'll see, the guy's going to get mad and go and hit him."
+            },
+            {
+              "es": "Ella ==fue y== se puso a bailar arriba de la mesa.",
+              "en": "She went and started dancing on the table."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Agarra y se fue."
+                },
+                {
+                  "v": "bien",
+                  "t": "Agarró y se fue. / Agarra y se va."
+                }
+              ],
+              "nota": "Same tense for both."
+            },
+            {
+              "filas": [
+                {
+                  "v": "literal",
+                  "t": "Fue y compró pan."
+                },
+                {
+                  "v": "sorpresa",
+                  "t": "Fue y le dijo todo a mi mamá."
+                }
+              ],
+              "nota": "Context decides."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "ponerse a",
+              "texto": "[[6805|ponerse a]]."
+            },
+            {
+              "forma": "le dio por",
+              "texto": "[[7916|darle por]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish (sudden): _And she goes and quits her job._",
+              "r": "Y agarra y renuncia a su trabajo.",
+              "nota": "agarrar y."
+            },
+            {
+              "p": "In Spanish: _I up and left._",
+              "r": "Agarré y me fui.",
+              "nota": "Preterite both."
+            },
+            {
+              "p": "In Spanish: _He went and told everyone._",
+              "r": "Fue y se lo dijo a todos.",
+              "nota": "ir y."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6805
+    ],
+    "confunde": [
+      7916
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9317",
+      "kwiziq": true
+    }
+  ]
+}

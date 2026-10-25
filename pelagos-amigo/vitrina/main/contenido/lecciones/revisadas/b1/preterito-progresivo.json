@@ -1,0 +1,246 @@
+{
+  "tema": 6183,
+  "slug": "preterito-progresivo",
+  "titulo": "Forming the preterite progressive with estar + gerund",
+  "subtitulo": "Estuve surfeando toda la tarde: an action that went on for a closed stretch of time.",
+  "foto": "t01.jpg",
+  "regla": "Estar in the preterite (estuve, estuviste, estuvo, estuvimos, estuvieron) + gerund (-ando, -iendo): estuve trabajando.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Every Spanish past tense has a progressive form for actions that were **ongoing** in the past. The **preterite progressive** is very close to the English past continuous: **estuve caminando**, _I was walking_."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**estar** in the preterite",
+            "gerund"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "estar (preterite)"
+          ],
+          "filas": [
+            [
+              "yo",
+              "estuve"
+            ],
+            [
+              "tú",
+              "estuviste"
+            ],
+            [
+              "él, ella, usted",
+              "estuvo"
+            ],
+            [
+              "nosotros",
+              "estuvimos"
+            ],
+            [
+              "ustedes, ellos",
+              "estuvieron"
+            ]
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Verb type",
+            "Gerund",
+            "Example"
+          ],
+          "filas": [
+            [
+              "-ar",
+              "-ando",
+              "llamar → llamando"
+            ],
+            [
+              "-er",
+              "-iendo",
+              "aprender → aprendiendo"
+            ],
+            [
+              "-ir",
+              "-iendo",
+              "vivir → viviendo"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "This works for most regular verbs. Some verbs have irregular gerunds (**durmiendo**, **leyendo**, **corrigiendo**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It often comes with a time frame that has a clear start and end: **durante cuatro horas**, **hasta las diez**, **toda la noche**, **toda la tarde**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the preterite closes the box; the gerund fills it with action. A finished stretch of something happening."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Yo ==estuve caminando== durante cuatro horas.",
+              "en": "I was walking for four hours."
+            },
+            {
+              "es": "Tú ==estuviste corrigiendo== exámenes hasta las diez.",
+              "en": "You were grading exams until ten."
+            },
+            {
+              "es": "Ella ==estuvo bailando== con ese chavo toda la noche.",
+              "en": "She was dancing with that guy all night."
+            },
+            {
+              "es": "Nosotros ==estuvimos hablando== con los periodistas.",
+              "en": "We were talking to the reporters."
+            },
+            {
+              "es": "Ellos ==estuvieron arreglando== la llave del agua.",
+              "en": "They were fixing the faucet."
+            },
+            {
+              "es": "Ayer ==estuvimos surfeando== toda la tarde.",
+              "en": "Yesterday we were surfing all afternoon."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer estaba surfeando cuatro horas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer estuve surfeando cuatro horas."
+                }
+              ],
+              "nota": "A closed stretch of time takes the preterite of **estar**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estuve dormiendo toda la tarde."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estuve durmiendo toda la tarde."
+                }
+              ],
+              "nota": "Irregular gerund: **durmiendo**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "estoy surfeando",
+              "texto": "The present progressive: [[5092|estar + gerund]]."
+            },
+            {
+              "forma": "estaba surfeando",
+              "texto": "The imperfect progressive, for background: [[5130|estaba + gerund]]. Compare both: [[6209|imperfect vs preterite progressive]]."
+            },
+            {
+              "forma": "he estado surfeando",
+              "texto": "The present perfect progressive: [[7050|he estado + gerund]]."
+            },
+            {
+              "forma": "durmiendo, leyendo",
+              "texto": "Gerunds: [[6500|regular]] and [[6501|irregular]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We were training all night._",
+              "r": "Estuvimos entrenando toda la noche.",
+              "nota": "estuvimos + entrenando."
+            },
+            {
+              "p": "**Estar** + **leer** with **yo**: ___ dos horas.",
+              "r": "Estuve leyendo dos horas.",
+              "nota": "Irregular gerund: **leyendo**."
+            },
+            {
+              "p": "In Spanish: _They were working until ten._",
+              "r": "Estuvieron trabajando hasta las diez.",
+              "nota": "estuvieron + trabajando."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5092,
+      5218,
+      6500
+    ],
+    "confunde": [
+      5130,
+      6209
+    ],
+    "sigue": [
+      7050,
+      7051,
+      6501
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6183",
+      "kwiziq": true
+    }
+  ]
+}

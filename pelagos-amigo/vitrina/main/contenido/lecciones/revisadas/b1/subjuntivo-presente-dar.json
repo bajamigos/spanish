@@ -1,0 +1,219 @@
+{
+  "tema": 5262,
+  "slug": "subjuntivo-presente-dar",
+  "titulo": "Conjugate dar in the present subjunctive",
+  "subtitulo": "Dé, des, demos: a tiny stem, and an accent that tells it apart from de.",
+  "foto": "t03.jpg",
+  "regla": "Dar has the short stem d- with regular endings: dé, des, dé, demos, den. Dé carries an accent to tell it apart from de.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Dar** (_to give_) has regular endings in the present subjunctive, but an irregular and very short stem: just **d-**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "dar"
+          ],
+          "filas": [
+            [
+              "yo",
+              "dé"
+            ],
+            [
+              "tú",
+              "des"
+            ],
+            [
+              "él, ella, usted",
+              "dé"
+            ],
+            [
+              "nosotros",
+              "demos"
+            ],
+            [
+              "ustedes, ellos",
+              "den"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Yo** and **él / ella / usted** carry a written accent, **dé**, to tell them apart from the preposition **de** (_of, from_). The other forms have no accent."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **dé** wears a hat so nobody mistakes it for little **de**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Beto quiere que te ==dé== dinero.",
+              "en": "Beto wants me to give you money."
+            },
+            {
+              "es": "Es bueno que ==des== tus ahorros a una causa.",
+              "en": "It's good that you give your savings to a cause."
+            },
+            {
+              "es": "Quiero que ella me ==dé== un consejo.",
+              "en": "I want her to give me some advice."
+            },
+            {
+              "es": "Conviene que le ==demos== los papeles al abogado.",
+              "en": "We should give the papers to the lawyer."
+            },
+            {
+              "es": "Esperamos que ==den== folletos en la oficina.",
+              "en": "We hope they hand out brochures at the office."
+            },
+            {
+              "es": "Ojalá que ustedes ==den== la buena noticia pronto.",
+              "en": "I hope you share the good news soon."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero que me de la llave."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero que me dé la llave."
+                }
+              ],
+              "nota": "Without the accent it's **de**, _of_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es mejor que les dén el dinero."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es mejor que les den el dinero."
+                }
+              ],
+              "nota": "Only **dé** has an accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No quiero que me das eso."
+                },
+                {
+                  "v": "bien",
+                  "t": "No quiero que me des eso."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "doy, das",
+              "texto": "The present: [[5485|dar in the present]]."
+            },
+            {
+              "forma": "di, dio",
+              "texto": "The preterite: [[5215|dar in the preterite]]."
+            },
+            {
+              "forma": "esté",
+              "texto": "Another verb with a meaningful accent: [[5229|estar in the subjunctive]]."
+            },
+            {
+              "forma": "No me des eso.",
+              "texto": "Negative commands use this form: [[9255|negative tú commands]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I want him to give me the key._",
+              "r": "Quiero que me dé la llave.",
+              "nota": "**dé** with accent."
+            },
+            {
+              "p": "**Dar** with **nosotros**: Es justo que le ___ las gracias.",
+              "r": "Es justo que le demos las gracias.",
+              "nota": "No accent."
+            },
+            {
+              "p": "In Spanish: _Don't give him the board._ (tú)",
+              "r": "No le des la tabla.",
+              "nota": "**des**, no accent."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5485,
+      5063
+    ],
+    "confunde": [
+      5229
+    ],
+    "sigue": [
+      5215,
+      9255
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5262",
+      "kwiziq": true
+    }
+  ]
+}

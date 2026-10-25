@@ -1,0 +1,254 @@
+{
+  "tema": 5231,
+  "slug": "subjuntivo-presente-ir",
+  "titulo": "Conjugate irregular verb ir in the present subjunctive",
+  "subtitulo": "The stem is irregular, the endings aren't. And vamos is not the same as que vayamos.",
+  "foto": "t03.jpg",
+  "regla": "Ir has the irregular stem vay- with regular endings: vaya, vayas, vaya, vayamos, vayan.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Ir** is irregular in the present subjunctive because it has an **irregular stem: vay-**. The **yo** trick doesn't work here (**voy** gives you nothing). But the **endings are regular**: the same **-a, -as, -a, -amos, -an** as **-er** and **-ir** verbs."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**vay-**",
+            "**-a, -as, -a, -amos, -an**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "ir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "vaya"
+            ],
+            [
+              "tú",
+              "vayas"
+            ],
+            [
+              "él, ella, usted",
+              "vaya"
+            ],
+            [
+              "nosotros",
+              "vayamos"
+            ],
+            [
+              "ustedes, ellos",
+              "vayan"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **vaya** sounds like **valla**, the fence around the garden. To go anywhere in the subjunctive, first you jump the fence."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No creo que ==vaya== a la fiesta después.",
+              "en": "I don't think I'll go to the party later."
+            },
+            {
+              "es": "No quiero que ==vayas== sola a Rosarito.",
+              "en": "I don't want you to go to Rosarito alone."
+            },
+            {
+              "es": "No me impresiona que ==vaya== en un BMW.",
+              "en": "It doesn't impress me that he goes around in a BMW."
+            },
+            {
+              "es": "Beto sugiere que ==vayamos== en la mañana, cuando no hay viento.",
+              "en": "Beto suggests we go in the morning, when there's no wind."
+            },
+            {
+              "es": "Es buena idea que ==vayan== juntos.",
+              "en": "It's a good idea for you to go together."
+            },
+            {
+              "es": "Me encanta que ==vayan== de campamento.",
+              "en": "I love that they're going camping."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "After a trigger, don't use the ordinary present (**voy, vas, vamos**), and don't build the stem from **ir**."
+        },
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No quiero que vas sola."
+                },
+                {
+                  "v": "bien",
+                  "t": "No quiero que vayas sola."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Sugiere que vamos en la mañana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Sugiere que vayamos en la mañana."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "¡Vamos a la playa!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡No vayamos a la playa!"
+                }
+              ],
+              "nota": "To say _let's go_, Mexican Spanish uses **vamos**. In the negative, the subjunctive is used: **no vayamos**. See [[6961|nosotros commands]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usos",
+      "titulo": "Vaya in other places",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "Quiero que vayas.",
+              "texto": "After a trigger with **que**.",
+              "aqui": true
+            },
+            {
+              "forma": "No vayas.",
+              "texto": "The negative **tú** command. See [[9255|negative commands]]."
+            },
+            {
+              "forma": "Vaya con cuidado.",
+              "texto": "The **usted** command. **Váyase** if it's **irse**."
+            },
+            {
+              "forma": "Que te vaya bien.",
+              "texto": "The everyday goodbye: it's a wish, so it takes the subjunctive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "voy, vas, va",
+              "texto": "The ordinary present: [[5271|**ir** in the present]]."
+            },
+            {
+              "forma": "sea, seas",
+              "texto": "Another irregular stem: [[5152|**ser** in the subjunctive]]."
+            },
+            {
+              "forma": "como → coma",
+              "texto": "Where the endings come from: [[5151|-er and -ir in the subjunctive]]."
+            },
+            {
+              "forma": "Ojalá que vayas.",
+              "texto": "An easy trigger: [[5061|**ojalá**]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I want us to go to Baja Malibu._",
+              "r": "Quiero que vayamos a Baja Malibú.",
+              "nota": "**Nosotros**: **vayamos**, not **vamos**."
+            },
+            {
+              "p": "Which one? **Es mejor que vas temprano** or **Es mejor que vayas temprano**.",
+              "r": "Es mejor que vayas temprano.",
+              "nota": "**Es mejor que** takes the subjunctive."
+            },
+            {
+              "p": "In Spanish: _I hope it goes well for you._",
+              "r": "Espero que te vaya bien.",
+              "nota": "The everyday goodbye."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5271,
+      5151
+    ],
+    "confunde": [
+      6961
+    ],
+    "sigue": [
+      5152,
+      5061,
+      9255
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5231",
+      "kwiziq": true
+    }
+  ]
+}

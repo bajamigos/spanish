@@ -1,0 +1,188 @@
+{
+  "tema": 7526,
+  "slug": "por-si-acaso",
+  "titulo": "Por si / por si acaso = (just) in case",
+  "subtitulo": "Llévate el paraguas por si llueve.",
+  "foto": "t03.jpg",
+  "regla": "Por si or por si acaso + indicative = in case: Llévate la chamarra por si hace frío. With the imperfect or pluperfect subjunctive, it sounds less likely: por si lloviera. Never the present subjunctive. Por si acaso alone = just in case.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "por si (acaso)",
+            "+ present / past indicative"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The everyday form: **por si llueve**, **por si no te quedó claro**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "por si (acaso)",
+            "+ imperfect / pluperfect subjunctive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Makes the possibility **less likely**: **por si lloviera**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Never** the present subjunctive: ~~por si llueva~~."
+        },
+        {
+          "tipo": "texto",
+          "texto": "On its own: **Llévate un suéter, por si acaso.** = _just in case_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **por si** follows **si**'s rules: no present subjunctive."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Me voy a llevar el paraguas ==por si llueve==.",
+              "en": "I'm taking the umbrella in case it rains."
+            },
+            {
+              "es": "Toma el dinero que te debo, ==por si acaso se me olvida== después.",
+              "en": "Here's the money I owe you, in case I forget later."
+            },
+            {
+              "es": "Expliqué otra vez la lección ==por si no les había quedado== claro.",
+              "en": "I explained the lesson again in case it hadn't been clear."
+            },
+            {
+              "es": "No le digas nada a Roberto, ==por si te pregunta==.",
+              "en": "Don't tell Roberto anything, in case he asks you."
+            },
+            {
+              "es": "Te dejo mi número ==por si necesitaras== algo.",
+              "en": "I'll leave you my number in case you should need anything."
+            },
+            {
+              "es": "Compra más tortillas, ==por si acaso==.",
+              "en": "Buy more tortillas, just in case."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "por si llueva"
+                },
+                {
+                  "v": "bien",
+                  "t": "por si llueve / por si lloviera"
+                }
+              ],
+              "nota": "No present subjunctive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "en caso de que",
+                  "t": "en caso de que llueva"
+                },
+                {
+                  "v": "por si",
+                  "t": "por si llueve"
+                }
+              ],
+              "nota": "**En caso de que** takes the subjunctive; **por si** usually the indicative."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "si + present",
+              "texto": "[[6147|si + present]]."
+            },
+            {
+              "forma": "a menos que",
+              "texto": "[[9538|a menos que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Take a sweater in case it gets cold._",
+              "r": "Llévate un suéter por si hace frío.",
+              "nota": "Indicative."
+            },
+            {
+              "p": "Less likely: _...in case you should need help._",
+              "r": "...por si necesitaras ayuda.",
+              "nota": "Imperfect subjunctive."
+            },
+            {
+              "p": "Fix it: _Te aviso por si quieras venir._",
+              "r": "Te aviso por si quieres venir.",
+              "nota": "No present subjunctive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6147
+    ],
+    "confunde": [
+      9538
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7526",
+      "kwiziq": true
+    }
+  ]
+}

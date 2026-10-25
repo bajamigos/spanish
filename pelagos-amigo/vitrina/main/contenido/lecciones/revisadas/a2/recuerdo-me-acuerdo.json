@@ -1,0 +1,262 @@
+{
+  "tema": 5874,
+  "slug": "recuerdo-me-acuerdo",
+  "titulo": "Recordar, acordar and acordarse",
+  "subtitulo": "Recuerdo tu nombre. Me acuerdo de ti.",
+  "foto": "t03.jpg",
+  "regla": "Recordar, acordar and acordarse are o > ue verbs: the o becomes ue in every present form except nosotros (recuerdo, recordamos; me acuerdo, nos acordamos). Recordar algo and acordarse de algo both mean to remember; acordar alone means to agree on.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "All three are **o → ue** stem-changing **-ar** verbs. The change happens in every present form **except nosotros**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "recordar",
+            "acordarse"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**recuerdo**",
+              "me **acuerdo**"
+            ],
+            [
+              "tú",
+              "**recuerdas**",
+              "te **acuerdas**"
+            ],
+            [
+              "él, ella, usted",
+              "**recuerda**",
+              "se **acuerda**"
+            ],
+            [
+              "nosotros",
+              "recordamos",
+              "nos acordamos"
+            ],
+            [
+              "ellos, ustedes",
+              "**recuerdan**",
+              "se **acuerdan**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Recordar** + thing: _to remember_. No **de**: **recuerdo su nombre**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Acordarse de** + thing: _to remember_. Reflexive, and it needs **de**: **me acuerdo de su nombre**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Acordar** (not reflexive) means _to agree on, to decide together_: **acordamos vernos a las ocho**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "recordar algo",
+            "=",
+            "acordarse de algo"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **acordarse** brings its own baggage, **me** and **de**. **Recordar** travels light."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No ==recuerdo== dónde dejé las llaves.",
+              "en": "I don't remember where I left the keys."
+            },
+            {
+              "es": "¿==Te acuerdas de== la ola de ayer?",
+              "en": "Do you remember yesterday's wave?"
+            },
+            {
+              "es": "Mi abuela ==recuerda== todas las recetas de memoria.",
+              "en": "My grandma remembers every recipe by heart."
+            },
+            {
+              "es": "==Nos acordamos de== ti cada vez que pasamos por Rosarito.",
+              "en": "We remember you every time we drive through Rosarito."
+            },
+            {
+              "es": "Mis alumnos nunca ==se acuerdan de== la técnica nueva.",
+              "en": "My students never remember the new technique."
+            },
+            {
+              "es": "Ustedes ==recuerdan== la primera temporada de _The Expanse_, ¿verdad?",
+              "en": "You guys remember the first season of The Expanse, right?"
+            },
+            {
+              "es": "El equipo y yo ==recordamos== bien ese torneo.",
+              "en": "The team and I remember that tournament well."
+            },
+            {
+              "es": "Los vecinos ==acuerdan== regar el huerto los lunes.",
+              "en": "The neighbors agree to water the garden on Mondays."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo acuerdo de tu cumpleaños."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo me acuerdo de tu cumpleaños."
+                }
+              ],
+              "nota": "To remember: **acordarse**, with **me**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me acuerdo tu cumpleaños."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me acuerdo de tu cumpleaños."
+                }
+              ],
+              "nota": "**acordarse** needs **de**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Recuerdo de tu cumpleaños."
+                },
+                {
+                  "v": "bien",
+                  "t": "Recuerdo tu cumpleaños."
+                }
+              ],
+              "nota": "**recordar** takes no **de**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros recuerdamos el viaje."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros recordamos el viaje."
+                }
+              ],
+              "nota": "No **ue** in **nosotros**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "cuento, encuentro",
+              "texto": "The pattern: [[5872|-ar verbs with o > ue]]."
+            },
+            {
+              "forma": "me acuerdo",
+              "texto": "Reflexive pronouns: [[5085|reflexive verbs in the present]]."
+            },
+            {
+              "forma": "acordar / acordarse",
+              "texto": "Agree vs remember, in depth: [[7479|acordar vs acordarse]]."
+            },
+            {
+              "forma": "me recuerda a",
+              "texto": "Another meaning: [[7802|recordar = to remind]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Do you (tú) remember my name?_ (two ways)",
+              "r": "¿Recuerdas mi nombre? / ¿Te acuerdas de mi nombre?",
+              "nota": "recordar algo = acordarse de algo."
+            },
+            {
+              "p": "In Spanish: _We remember that day._",
+              "r": "Recordamos ese día. / Nos acordamos de ese día.",
+              "nota": "No ue in nosotros."
+            },
+            {
+              "p": "Fix it: _Ella no acuerda de nada._",
+              "r": "Ella no se acuerda de nada.",
+              "nota": "Add se."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5872,
+      5085
+    ],
+    "confunde": [
+      7479
+    ],
+    "sigue": [
+      7802
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5874",
+      "kwiziq": true
+    }
+  ]
+}

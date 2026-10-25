@@ -1,0 +1,205 @@
+{
+  "tema": 6664,
+  "slug": "un-perro-dos-perros-numeros",
+  "titulo": "Numbers with nouns",
+  "subtitulo": "Un hermano, dos hermanas, veintiún años.",
+  "foto": "t01.jpg",
+  "regla": "Numbers go before the noun and don't change, except uno (un before a masculine noun, una before a feminine one, also in 21, 31…) and the hundreds (doscientos, doscientas). From two up, the noun is plural.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "The number goes **before** the noun, and from **two** up the noun is **plural**: **dos tacos**, **tres casas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Most numbers never change. **Uno** does: **un** before a masculine noun, **una** before a feminine one. Same in **21, 31, 41…**: **veintiún años**, **veintiuna personas**, **treinta y un días**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The hundreds also agree: **doscientos pesos**, **doscientas personas**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Masculine",
+            "Feminine"
+          ],
+          "filas": [
+            [
+              "un perro",
+              "una casa"
+            ],
+            [
+              "veintiún perros",
+              "veintiuna casas"
+            ],
+            [
+              "doscientos perros",
+              "doscientas casas"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Tengo ==un== hermano y ==dos== hermanas.",
+              "en": "I have one brother and two sisters."
+            },
+            {
+              "es": "Quiero ==tres== tacos de asada, por favor.",
+              "en": "I'd like three carne asada tacos, please."
+            },
+            {
+              "es": "Mi abuela tiene ==veintiún== nietos.",
+              "en": "My grandma has twenty-one grandchildren."
+            },
+            {
+              "es": "En la clase hay ==veintiuna== personas.",
+              "en": "There are twenty-one people in the class."
+            },
+            {
+              "es": "==Doscientas== personas corrieron el maratón.",
+              "en": "Two hundred people ran the marathon."
+            },
+            {
+              "es": "Tengo ==treinta y un== años.",
+              "en": "I'm thirty-one years old."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tengo uno hermano."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tengo un hermano."
+                }
+              ],
+              "nota": "Before a noun: **un**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "doscientos personas"
+                },
+                {
+                  "v": "bien",
+                  "t": "doscientas personas"
+                }
+              ],
+              "nota": "Hundreds agree."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "dos taco"
+                },
+                {
+                  "v": "bien",
+                  "t": "dos tacos"
+                }
+              ],
+              "nota": "Plural from two up."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "un, una",
+              "texto": "The article: [[5104|un / una]]."
+            },
+            {
+              "forma": "tengo 30 años",
+              "texto": "Saying your age: [[5099|tener … años]]."
+            },
+            {
+              "forma": "el tres",
+              "texto": "Numbers as nouns: [[6755|numbers are masculine]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _21 years_",
+              "r": "veintiún años",
+              "nota": "un before a masculine noun."
+            },
+            {
+              "p": "In Spanish: _31 women_",
+              "r": "treinta y una mujeres",
+              "nota": "una before a feminine noun."
+            },
+            {
+              "p": "Fix it: _Hay uno perro en la calle._",
+              "r": "Hay un perro en la calle.",
+              "nota": "uno → un."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5104,
+      5099
+    ],
+    "confunde": [],
+    "sigue": [
+      6755
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6664",
+      "kwiziq": true
+    }
+  ]
+}

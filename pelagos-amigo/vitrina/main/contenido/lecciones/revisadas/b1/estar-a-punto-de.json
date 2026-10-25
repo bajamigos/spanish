@@ -1,0 +1,202 @@
+{
+  "tema": 6509,
+  "slug": "estar-a-punto-de",
+  "titulo": "Estar a punto de + infinitive: to be about to do something",
+  "subtitulo": "Estoy a punto de salir: it's just about to happen.",
+  "foto": "t10.jpg",
+  "regla": "Estar (conjugated) + a punto de + infinitive = to be about to. In the present perfect it can mean it nearly happened but didn't.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say someone is **about to** do something, use **estar** (conjugated) + **a punto de** + **infinitive**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**estar**",
+            "**a punto de**",
+            "infinitive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It works in different tenses: **estoy a punto de**, **estaba a punto de** (often with **cuando** + preterite), **esté a punto de**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In the preterite (and in the present perfect), it can mean something **nearly happened but didn't**: **estuve a punto de atropellar a un gato** = _I nearly ran over a cat_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **a punto** is the point of the wave just before it breaks."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Estoy a punto de aterrizar== en Tijuana.",
+              "en": "I'm about to land in Tijuana."
+            },
+            {
+              "es": "Beto ==está a punto de llamarte==.",
+              "en": "Beto is about to call you."
+            },
+            {
+              "es": "==Estábamos a punto de salir== cuando llegó mi mamá.",
+              "en": "We were about to leave when my mom arrived."
+            },
+            {
+              "es": "No creo que ==esté a punto de llover==.",
+              "en": "I don't think it's about to rain."
+            },
+            {
+              "es": "==Estuve a punto de atropellar== a un gato.",
+              "en": "I nearly ran over a cat."
+            },
+            {
+              "es": "La ola ==estaba a punto de romper== cuando me paré.",
+              "en": "The wave was about to break when I stood up."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estoy a punto salir."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estoy a punto de salir."
+                }
+              ],
+              "nota": "Keep the **de**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estoy a punto de saliendo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estoy a punto de salir."
+                }
+              ],
+              "nota": "Infinitive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Soy a punto de llorar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estoy a punto de llorar."
+                }
+              ],
+              "nota": "Always **estar**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "voy a salir",
+              "texto": "A plan: [[7067|ir a]]."
+            },
+            {
+              "forma": "iba a salir",
+              "texto": "What you were going to do: [[6003|iba a]]."
+            },
+            {
+              "forma": "acabo de salir",
+              "texto": "What you just did: [[6508|acabar de]]."
+            },
+            {
+              "forma": "por poco me caigo",
+              "texto": "Nearly: [[8630|por poco and casi]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _The movie is about to start._",
+              "r": "La película está a punto de empezar.",
+              "nota": "estar a punto de + infinitive."
+            },
+            {
+              "p": "In Spanish: _I was about to call you when you arrived._",
+              "r": "Estaba a punto de llamarte cuando llegaste.",
+              "nota": "estaba a punto de."
+            },
+            {
+              "p": "In Spanish: _We nearly lost the keys._",
+              "r": "Estuvimos a punto de perder las llaves.",
+              "nota": "Nearly happened."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7067,
+      6508
+    ],
+    "confunde": [
+      6003
+    ],
+    "sigue": [
+      8630
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6509",
+      "kwiziq": true
+    }
+  ]
+}

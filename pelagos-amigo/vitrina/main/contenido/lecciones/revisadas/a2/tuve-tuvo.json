@@ -1,0 +1,257 @@
+{
+  "tema": 5226,
+  "slug": "tuve-tuvo",
+  "titulo": "Tener in the preterite",
+  "subtitulo": "Ayer tuve clase de jiu-jitsu.",
+  "foto": "t04.jpg",
+  "regla": "Tener is irregular in the preterite: its stem becomes tuv- and it takes endings without accents: tuve, tuviste, tuvo, tuvimos, tuvieron.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "In the preterite, **tener** changes its stem to **tuv-** and uses a special set of endings."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "tuv-",
+            "+",
+            "-e, -iste, -o, -imos, -ieron"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "tener"
+          ],
+          "filas": [
+            [
+              "yo",
+              "tuve"
+            ],
+            [
+              "tú",
+              "tuviste"
+            ],
+            [
+              "él / ella / usted",
+              "tuvo"
+            ],
+            [
+              "nosotros / nosotras",
+              "tuvimos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "tuvieron"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**No written accents**: **tuve**, **tuvo** (compare regular **comí**, **comió**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Verbs built on tener do the same: **mantener → mantuve**, **obtener → obtuve**, **detener → detuvo**, **contener → contuvo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Tuve que** + infinitive = _I had to_ (and did it): **Tuve que trabajar.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **estar** works the same way (**estuve**, **estuvo**). Learn the **-uv-** pair together."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ayer ==tuve== clase de jiu-jitsu a las siete.",
+              "en": "Yesterday I had jiu-jitsu class at seven."
+            },
+            {
+              "es": "¿==Tuviste== problemas en la garita?",
+              "en": "Did you have problems at the border crossing?"
+            },
+            {
+              "es": "Mi hermana ==tuvo== un bebé en mayo.",
+              "en": "My sister had a baby in May."
+            },
+            {
+              "es": "==Tuvimos== que esperar dos horas para cruzar.",
+              "en": "We had to wait two hours to cross."
+            },
+            {
+              "es": "Los vecinos ==tuvieron== una cosecha enorme de chiles este año.",
+              "en": "The neighbors had a huge chili harvest this year."
+            },
+            {
+              "es": "La Rocinante ==tuvo== que aterrizar en Ganímedes.",
+              "en": "The Rocinante had to land on Ganymede."
+            },
+            {
+              "es": "Ustedes ==tuvieron== suerte con las olas hoy.",
+              "en": "You all got lucky with the waves today."
+            },
+            {
+              "es": "==Obtuve== mi cinta azul el año pasado.",
+              "en": "I got my blue belt last year."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer tení un examen."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer tuve un examen."
+                }
+              ],
+              "nota": "Stem **tuv-**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella tuvó un accidente."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella tuvo un accidente."
+                }
+              ],
+              "nota": "No accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Tú tuvistes tiempo?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Tú tuviste tiempo?"
+                }
+              ],
+              "nota": "No final s in **tú**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ellos tuvon que salir."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ellos tuvieron que salir."
+                }
+              ],
+              "nota": "ellos → **tuvieron**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tengo, tienes",
+              "texto": "The present: [[5304|tener in the present]]."
+            },
+            {
+              "forma": "tenía",
+              "texto": "Description and background: [[5926|tener in the imperfect]]."
+            },
+            {
+              "forma": "estuve",
+              "texto": "Same -uv- pattern: [[5218|estar in the preterite]]."
+            },
+            {
+              "forma": "puse, pude",
+              "texto": "Other irregular stems: [[5251|poner]] and [[5221|poder]] in the preterite."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I had to work on Saturday._",
+              "r": "Tuve que trabajar el sábado.",
+              "nota": "tuve que."
+            },
+            {
+              "p": "In Spanish: _We had a problem with the car._",
+              "r": "Tuvimos un problema con el carro.",
+              "nota": "tuvimos."
+            },
+            {
+              "p": "Fix it: _Mis papás teneron una fiesta._",
+              "r": "Mis papás tuvieron una fiesta.",
+              "nota": "tuvieron."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5304
+    ],
+    "confunde": [
+      5926
+    ],
+    "sigue": [
+      5218,
+      5251,
+      5221
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5226",
+      "kwiziq": true
+    }
+  ]
+}

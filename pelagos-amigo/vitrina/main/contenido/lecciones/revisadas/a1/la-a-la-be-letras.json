@@ -1,0 +1,224 @@
+{
+  "tema": 9318,
+  "slug": "la-a-la-be-letras",
+  "titulo": "Letters of the alphabet are feminine",
+  "subtitulo": "La a, la be, la hache, la eñe.",
+  "foto": "t09.jpg",
+  "regla": "Letters of the alphabet are feminine, because they stand for la letra: la a, la eme, una hache. This stays true even for letters starting with a stressed a sound: la a, la hache, not el.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Letters are **feminine**, because they mean **la letra**: **la a**, **la be**, **una eme**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Letter",
+            "Name"
+          ],
+          "filas": [
+            [
+              "a",
+              "la a"
+            ],
+            [
+              "b",
+              "la be (be grande)"
+            ],
+            [
+              "h",
+              "la hache"
+            ],
+            [
+              "j",
+              "la jota"
+            ],
+            [
+              "ñ",
+              "la eñe"
+            ],
+            [
+              "v",
+              "la ve (ve chica)"
+            ],
+            [
+              "x",
+              "la equis"
+            ],
+            [
+              "y",
+              "la ye (i griega)"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "No exception for a stressed **a** sound: **la a**, **una a**, **la hache**. Never **el a** or **el hache**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Plural: **las aes**, **las emes**, **las erres**. **Equis** stays the same: **las equis**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==La hache== no suena.",
+              "en": "The h is silent."
+            },
+            {
+              "es": "Mi apellido empieza con ==la ge==.",
+              "en": "My last name starts with g."
+            },
+            {
+              "es": "Escribe ==una eme== mayúscula.",
+              "en": "Write a capital M."
+            },
+            {
+              "es": "Te faltó ==la ese== al final.",
+              "en": "You left off the s at the end."
+            },
+            {
+              "es": "«Perro» tiene dos ==erres==.",
+              "en": "\"Perro\" has two r's."
+            },
+            {
+              "es": "==La equis== de «México» suena como jota.",
+              "en": "The x in \"México\" sounds like a j."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El eme"
+                },
+                {
+                  "v": "bien",
+                  "t": "La eme"
+                }
+              ],
+              "nota": "Letters are feminine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "un a"
+                },
+                {
+                  "v": "bien",
+                  "t": "una a"
+                }
+              ],
+              "nota": "No **el** / **un** before a letter, even a stressed **a**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El jota suena fuerte."
+                },
+                {
+                  "v": "bien",
+                  "t": "La jota suena fuerte."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "la casa",
+              "texto": "Feminine articles: [[5100|el and la]]."
+            },
+            {
+              "forma": "el siete",
+              "texto": "Numbers go the other way, masculine: [[6755|numbers are masculine]]."
+            },
+            {
+              "forma": "el agua",
+              "texto": "The stressed-a rule that letters ignore: [[6873|el agua, un águila]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _the a_ (the letter)",
+              "r": "la a",
+              "nota": "Feminine, even before a stressed a."
+            },
+            {
+              "p": "In Spanish: _a capital M_",
+              "r": "una eme mayúscula",
+              "nota": "Feminine."
+            },
+            {
+              "p": "Fix it: _El hache no suena._",
+              "r": "La hache no suena.",
+              "nota": "la hache."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5100
+    ],
+    "confunde": [
+      6755,
+      6873
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9318",
+      "kwiziq": true
+    }
+  ]
+}

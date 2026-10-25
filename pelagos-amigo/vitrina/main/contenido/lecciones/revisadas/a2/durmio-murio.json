@@ -1,0 +1,250 @@
+{
+  "tema": 5266,
+  "slug": "durmio-murio",
+  "titulo": "Dormir and morir in the preterite",
+  "subtitulo": "El bebé durmió toda la noche.",
+  "foto": "t08.jpg",
+  "regla": "Dormir and morir change o to u in él/ella/usted and ellos/ustedes in the preterite: durmió, durmieron; murió, murieron. The other forms are regular: dormí, dormiste, dormimos.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Dormir** (_to sleep_) and **morir** (_to die_) use the regular -ir endings in the preterite."
+        },
+        {
+          "tipo": "texto",
+          "texto": "But in **él / ella / usted** and **ellos / ustedes**, the **o** of the stem becomes **u**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "dormir",
+            "morir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "dormí",
+              "morí"
+            ],
+            [
+              "tú",
+              "dormiste",
+              "moriste"
+            ],
+            [
+              "él / ella / usted",
+              "durmió",
+              "murió"
+            ],
+            [
+              "nosotros",
+              "dormimos",
+              "morimos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "durmieron",
+              "murieron"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Don't carry over the present change: there is **no ue** in the preterite (**duermo** today, **dormí** yesterday)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The pronominal forms change too: **se durmió** (_fell asleep_), **se murió** (_died_, very common in Mexico)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the **u** only goes to the third persons, the ones you talk **about**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "El bebé ==durmió== toda la noche.",
+              "en": "The baby slept through the night."
+            },
+            {
+              "es": "Anoche ==dormí== muy mal por el calor.",
+              "en": "Last night I slept really badly because of the heat."
+            },
+            {
+              "es": "¿==Dormiste== bien?",
+              "en": "Did you sleep well?"
+            },
+            {
+              "es": "==Dormimos== en la playa, en una casa de campaña.",
+              "en": "We slept on the beach, in a tent."
+            },
+            {
+              "es": "Los niños ==se durmieron== en el carro.",
+              "en": "The kids fell asleep in the car."
+            },
+            {
+              "es": "Mi abuelo ==murió== en 2015.",
+              "en": "My grandpa died in 2015."
+            },
+            {
+              "es": "Se me ==murieron== las plantas de albahaca por el sol.",
+              "en": "My basil plants died because of the sun."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella dormió ocho horas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella durmió ocho horas."
+                }
+              ],
+              "nota": "o → **u** in él / ella."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Sus gatos morieron."
+                },
+                {
+                  "v": "bien",
+                  "t": "Sus gatos murieron."
+                }
+              ],
+              "nota": "o → **u** in ellos."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer duermí poco."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer dormí poco."
+                }
+              ],
+              "nota": "No ue in the preterite."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Durmimos en un hotel."
+                },
+                {
+                  "v": "bien",
+                  "t": "Dormimos en un hotel."
+                }
+              ],
+              "nota": "nosotros keeps the **o**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "duermo, muero",
+              "texto": "The present change: [[5873|-ir verbs with o > ue in the present]]."
+            },
+            {
+              "forma": "pidió, sirvió",
+              "texto": "Same third-person change, e > i: [[5265|stem-changing -ir verbs in the preterite]]."
+            },
+            {
+              "forma": "me dormí",
+              "texto": "Sleeping vs falling asleep: [[7446|dormir vs dormirse]]."
+            },
+            {
+              "forma": "durmamos",
+              "texto": "The u comes back later: [[9256|dormir and morir in the present subjunctive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _She slept on the sofa._",
+              "r": "Durmió en el sofá.",
+              "nota": "durmió."
+            },
+            {
+              "p": "In Spanish: _My plants died._",
+              "r": "Mis plantas se murieron.",
+              "nota": "murieron."
+            },
+            {
+              "p": "Fix it: _Ellos dormieron mucho._",
+              "r": "Ellos durmieron mucho.",
+              "nota": "o → u."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5873
+    ],
+    "confunde": [
+      5265
+    ],
+    "sigue": [
+      7446,
+      9256
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5266",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "tema": 5708,
+  "slug": "hago-haces-hace-hacer-presente",
+  "titulo": "Hacer in the present",
+  "subtitulo": "Hago ejercicio. ¿Qué haces tú?",
+  "foto": "t01.jpg",
+  "regla": "Hacer (to do, to make) goes hago, haces, hace, hacemos, hacen: only yo is irregular.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Hacer** means _to do_ and _to make_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Only **yo** is irregular: **hago**. The rest are regular -er forms."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "hacer"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**hago**"
+            ],
+            [
+              "tú",
+              "haces"
+            ],
+            [
+              "él, ella, usted",
+              "hace"
+            ],
+            [
+              "nosotros",
+              "hacemos"
+            ],
+            [
+              "ellos, ustedes",
+              "hacen"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "For weather, use **hace** + noun: **hace calor**, **hace frío**, **hace viento**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Hago== ejercicio en la mañana.",
+              "en": "I work out in the morning."
+            },
+            {
+              "es": "¿Qué ==haces== hoy?",
+              "en": "What are you doing today?"
+            },
+            {
+              "es": "Mi abuela ==hace== las mejores tortillas.",
+              "en": "My grandma makes the best tortillas."
+            },
+            {
+              "es": "==Hacemos== composta con los restos de comida.",
+              "en": "We make compost from food scraps."
+            },
+            {
+              "es": "¿Qué ==hacen== ustedes los domingos?",
+              "en": "What do you all do on Sundays?"
+            },
+            {
+              "es": "==Hace== mucho calor en septiembre.",
+              "en": "It's very hot in September."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo hace la tarea."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo hago la tarea."
+                }
+              ],
+              "nota": "yo is **hago**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo haco la cena."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo hago la cena."
+                }
+              ],
+              "nota": "With **g**, not c."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es muy caliente hoy."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hace mucho calor hoy."
+                }
+              ],
+              "nota": "Weather: **hace** + noun."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "pongo, salgo",
+              "texto": "Other yo forms in -go: [[5305|poner]], [[5484|salir]]."
+            },
+            {
+              "forma": "hace frío",
+              "texto": "Talking about the weather: [[9340|hay, está or hace]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I make the coffee._",
+              "r": "Hago el café.",
+              "nota": "hago for yo."
+            },
+            {
+              "p": "Fix it: _Nosotros hagamos ejercicio._",
+              "r": "Nosotros hacemos ejercicio.",
+              "nota": "Only yo has g."
+            },
+            {
+              "p": "In Spanish: _It's cold._",
+              "r": "Hace frío.",
+              "nota": "Weather with hace."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      9340
+    ],
+    "sigue": [
+      5305,
+      5484
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5708",
+      "kwiziq": true
+    }
+  ]
+}

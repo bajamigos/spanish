@@ -1,0 +1,211 @@
+{
+  "tema": 8327,
+  "slug": "presente-uar",
+  "titulo": "Conjugate -uar verbs in the present: actuar, continuar",
+  "subtitulo": "Actúo, continúas, continuamos: the accent jumps onto the u.",
+  "foto": "t05.jpg",
+  "regla": "Verbs in -uar like actuar and continuar take an accent on the u in the present except nosotros: actúo, actúas, actúa, actuamos, actúan.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Verbs ending in **-uar** take a **written accent on the u** in most forms of the present."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "actuar",
+            "continuar"
+          ],
+          "filas": [
+            [
+              "yo",
+              "actúo",
+              "continúo"
+            ],
+            [
+              "tú",
+              "actúas",
+              "continúas"
+            ],
+            [
+              "él, ella, usted",
+              "actúa",
+              "continúa"
+            ],
+            [
+              "nosotros",
+              "actuamos",
+              "continuamos"
+            ],
+            [
+              "ustedes, ellos",
+              "actúan",
+              "continúan"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Why? In the infinitive the stress is on the end (**actu-AR**). In **yo**, **tú**, **él** and **ellos**, the stress moves to the **u** (**ac-TÚ-o**). The accent breaks the vowel pair so the **u** can carry the stress. In **nosotros** the stress stays at the end, so there's no accent."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Other verbs like this: **evaluar**, **graduarse**, **situar**, **acentuar**. Watch out: **averiguar** doesn't do this."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the **u** stands up and takes a bow, **actúo**. Only **nosotros** keeps it sitting."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Alex ==actúa== en el teatro; es el protagonista.",
+              "en": "Alex performs at the theater; he's the lead."
+            },
+            {
+              "es": "Los músicos ==actúan== cada sábado en el bar.",
+              "en": "The musicians perform every Saturday at the bar."
+            },
+            {
+              "es": "Después del intermedio ==continúa== la obra.",
+              "en": "The play continues after the intermission."
+            },
+            {
+              "es": "Los trabajadores ==continúan== con la huelga.",
+              "en": "The workers are continuing the strike."
+            },
+            {
+              "es": "Creo que nos perdimos. ¿==Continuamos== o descansamos?",
+              "en": "I think we're lost. Shall we keep going or rest?"
+            },
+            {
+              "es": "Ustedes ==continúan== haciendo ruido.",
+              "en": "You keep making noise."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo continuo entrenando."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo continúo entrenando."
+                }
+              ],
+              "nota": "**Continuo** without accent is the adjective _continuous_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros continúamos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros continuamos."
+                }
+              ],
+              "nota": "No accent in **nosotros**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "envío, crío",
+              "texto": "The same idea with **i**: [[8342|-iar verbs with an accent]]."
+            },
+            {
+              "forma": "continuar + gerund",
+              "texto": "_To keep on doing_: [[6180|seguir / continuar + gerund]]."
+            },
+            {
+              "forma": "hablo, hablas",
+              "texto": "The regular pattern: [[5492|-ar verbs in the present]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "**Continuar** with **yo**: ___ con el proyecto.",
+              "r": "Continúo con el proyecto.",
+              "nota": "Accent on the **u**."
+            },
+            {
+              "p": "**Actuar** with **nosotros**: ___ esta noche.",
+              "r": "Actuamos esta noche.",
+              "nota": "No accent."
+            },
+            {
+              "p": "**Graduarse** with **ella**: Mi hermana se ___ en junio.",
+              "r": "Mi hermana se gradúa en junio.",
+              "nota": "Accent on the **u**."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5492
+    ],
+    "confunde": [
+      8342
+    ],
+    "sigue": [
+      6180
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8327",
+      "kwiziq": true
+    }
+  ]
+}

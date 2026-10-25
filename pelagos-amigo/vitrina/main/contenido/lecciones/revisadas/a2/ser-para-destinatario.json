@@ -1,0 +1,255 @@
+{
+  "tema": 5988,
+  "slug": "ser-para-destinatario",
+  "titulo": "Ser para for a recipient",
+  "subtitulo": "Este regalo es para ti.",
+  "foto": "t03.jpg",
+  "regla": "To say who something is for, use ser + para + the person: el regalo es para ti. Never estar. After para, use mí and ti, not yo and tú.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say **who something is for**, use **ser + para** + the person."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "thing",
+            "+ ser + para +",
+            "person"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Never **estar** here: **es para ti**, not **está para ti**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "To ask, put **para** first: **¿Para quién es?** = _Who is it for?_"
+        },
+        {
+          "tipo": "texto",
+          "texto": "After **para**, use these pronouns:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "After para"
+          ],
+          "filas": [
+            [
+              "I",
+              "para **mí**"
+            ],
+            [
+              "you (tú)",
+              "para **ti**"
+            ],
+            [
+              "he, she, you (usted)",
+              "para él, para ella, para usted"
+            ],
+            [
+              "we",
+              "para nosotros/as"
+            ],
+            [
+              "they, you all",
+              "para ellos/as, para ustedes"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Mí** has an accent; **ti** never does."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **para** is the delivery address on the box. **Es** just says the box belongs there."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Este regalo ==es para== ti.",
+              "en": "This present is for you."
+            },
+            {
+              "es": "—¿==Para== quién ==es== el café? —==Es para== mí.",
+              "en": "\"Who's the coffee for?\" \"It's for me.\""
+            },
+            {
+              "es": "Las flores ==son para== mi mamá.",
+              "en": "The flowers are for my mom."
+            },
+            {
+              "es": "Estos tacos ==son para== nosotros.",
+              "en": "These tacos are for us."
+            },
+            {
+              "es": "La tabla nueva ==es para== mi sobrino.",
+              "en": "The new board is for my nephew."
+            },
+            {
+              "es": "Señora, esta carta ==es para== usted.",
+              "en": "Ma'am, this letter is for you."
+            },
+            {
+              "es": "¿Los boletos ==son para== ellos?",
+              "en": "Are the tickets for them?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El regalo está para ti."
+                },
+                {
+                  "v": "bien",
+                  "t": "El regalo es para ti."
+                }
+              ],
+              "nota": "Recipient: **ser**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es para yo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es para mí."
+                }
+              ],
+              "nota": "After para: **mí**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es para tú."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es para ti."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Quién es para?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Para quién es?"
+                }
+              ],
+              "nota": "**Para** goes first in the question."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "para mí, para ti",
+              "texto": "Pronouns after prepositions: [[6466|prepositions + pronouns]]."
+            },
+            {
+              "forma": "compré esto para ti",
+              "texto": "With action verbs: [[7276|para for the recipient of an action]]."
+            },
+            {
+              "forma": "es para cortar",
+              "texto": "What something is for: [[5989|ser para for a purpose]]."
+            },
+            {
+              "forma": "para mí, es caro",
+              "texto": "Not a recipient but an opinion: [[5967|para mí = in my opinion]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _The flowers are for you (usted)._",
+              "r": "Las flores son para usted.",
+              "nota": "ser + para."
+            },
+            {
+              "p": "In Spanish: _Who is the beer for?_",
+              "r": "¿Para quién es la cerveza?",
+              "nota": "Para first."
+            },
+            {
+              "p": "Fix it: _El libro está para mí._",
+              "r": "El libro es para mí.",
+              "nota": "Never estar."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6466
+    ],
+    "confunde": [
+      5967
+    ],
+    "sigue": [
+      7276,
+      5989
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5988",
+      "kwiziq": true
+    }
+  ]
+}

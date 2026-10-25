@@ -1,0 +1,193 @@
+{
+  "tema": 6806,
+  "slug": "soy-mexicano",
+  "titulo": "Ser for origin and nationality",
+  "subtitulo": "Soy mexicano, soy de Tijuana.",
+  "foto": "t10.jpg",
+  "regla": "For nationality and origin, use ser: ser + nationality (soy mexicano) or ser de + place (soy de Tijuana). Nationalities are lowercase and agree with the person.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "For **nationality** and **origin**, use **ser**. Where you're from doesn't change."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "ser",
+            "+",
+            "nationality / de + place"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Nationalities are **lowercase** and **agree**: mexican**o**, mexican**a**, mexican**os**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Estar en** + place is where someone is right now: **soy de** Tijuana, but **estoy en** Ensenada."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Soy== mexicano.",
+              "en": "I'm Mexican."
+            },
+            {
+              "es": "==Soy de== Tijuana.",
+              "en": "I'm from Tijuana."
+            },
+            {
+              "es": "¿De dónde ==eres==?",
+              "en": "Where are you from?"
+            },
+            {
+              "es": "Mi entrenador ==es== brasileño.",
+              "en": "My coach is Brazilian."
+            },
+            {
+              "es": "Mis vecinas ==son== colombianas.",
+              "en": "My neighbors are Colombian."
+            },
+            {
+              "es": "Ella ==es de== San Diego, pero vive aquí.",
+              "en": "She's from San Diego, but she lives here."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estoy de Tijuana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Soy de Tijuana."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Soy Mexicano."
+                },
+                {
+                  "v": "bien",
+                  "t": "Soy mexicano."
+                }
+              ],
+              "nota": "Lowercase."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella es mexicano."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella es mexicana."
+                }
+              ],
+              "nota": "It agrees."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "soy de",
+              "texto": "The basic phrase: [[5041|soy de]]."
+            },
+            {
+              "forma": "francesa, canadiense",
+              "texto": "Nationality endings: [[6052|-s endings]], [[6802|-e endings]]."
+            },
+            {
+              "forma": "estoy en",
+              "texto": "Where you are now: [[5067|estar for location]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish (a woman): _I'm Mexican._",
+              "r": "Soy mexicana.",
+              "nota": "Agrees, lowercase."
+            },
+            {
+              "p": "In Spanish: _We're from Ensenada._",
+              "r": "Somos de Ensenada.",
+              "nota": "ser de."
+            },
+            {
+              "p": "Fix it: _Ellos están de Brasil._",
+              "r": "Ellos son de Brasil.",
+              "nota": "ser, not estar."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5041
+    ],
+    "confunde": [
+      5067
+    ],
+    "sigue": [
+      6052,
+      6802
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6806",
+      "kwiziq": true
+    }
+  ]
+}

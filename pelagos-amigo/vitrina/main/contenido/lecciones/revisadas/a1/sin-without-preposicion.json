@@ -1,0 +1,175 @@
+{
+  "tema": 8582,
+  "slug": "sin-without-preposicion",
+  "titulo": "Sin = without",
+  "subtitulo": "Café sin azúcar.",
+  "foto": "t03.jpg",
+  "regla": "Sin means without. Use sin + noun (usually with no article: café sin azúcar) or sin + infinitive where English uses -ing (se fue sin decir nada).",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Sin** = _without_: **sin azúcar**, **sin dinero**, **sin ti**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "After **sin**, the noun usually goes **without an article**: **un taco sin cebolla**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Sin** + **infinitive** = _without_ + _-ing_: **sin comer**, never **sin comiendo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Pronouns: **sin mí**, **sin ti** (no special form like conmigo). And it pairs with nada, nadie: **sin decir nada**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Un café ==sin== azúcar, por favor.",
+              "en": "A coffee without sugar, please."
+            },
+            {
+              "es": "Dos tacos ==sin== cebolla.",
+              "en": "Two tacos without onion."
+            },
+            {
+              "es": "No puedo vivir ==sin== el mar.",
+              "en": "I can't live without the ocean."
+            },
+            {
+              "es": "Salí ==sin== desayunar.",
+              "en": "I left without having breakfast."
+            },
+            {
+              "es": "Se fue ==sin== decir nada.",
+              "en": "He left without saying anything."
+            },
+            {
+              "es": "No voy ==sin== ti.",
+              "en": "I'm not going without you."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Salí sin desayunando."
+                },
+                {
+                  "v": "bien",
+                  "t": "Salí sin desayunar."
+                }
+              ],
+              "nota": "After **sin**, the infinitive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Entrené sin tú."
+                },
+                {
+                  "v": "bien",
+                  "t": "Entrené sin ti."
+                }
+              ],
+              "nota": "After a preposition: **ti**, not **tú**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "con leche",
+              "texto": "Its opposite: [[7895|con]]."
+            },
+            {
+              "forma": "sin mí, para ti",
+              "texto": "Pronouns after prepositions: [[6466|prepositions + pronouns]]."
+            },
+            {
+              "forma": "antes de salir",
+              "texto": "Another preposition + infinitive: [[10102|antes de / después de + infinitive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _coffee without sugar_",
+              "r": "café sin azúcar",
+              "nota": "sin + noun."
+            },
+            {
+              "p": "In Spanish: _He left without saying anything._",
+              "r": "Se fue sin decir nada.",
+              "nota": "sin + infinitive."
+            },
+            {
+              "p": "Fix it: _Entrené sin tú._",
+              "r": "Entrené sin ti.",
+              "nota": "sin ti."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      7895
+    ],
+    "sigue": [
+      6466,
+      10102
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8582",
+      "kwiziq": true
+    }
+  ]
+}

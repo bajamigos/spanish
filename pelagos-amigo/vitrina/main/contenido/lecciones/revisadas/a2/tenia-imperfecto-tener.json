@@ -1,0 +1,248 @@
+{
+  "tema": 5926,
+  "slug": "tenia-imperfecto-tener",
+  "titulo": "Tener in the imperfect",
+  "subtitulo": "Cuando tenía doce años, tenía un perro.",
+  "foto": "t08.jpg",
+  "regla": "Tener is regular in the imperfect: tenía, tenías, tenía, teníamos, tenían. Use it for age, things you had, and states like tener hambre or tener miedo in the past.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Tener** (_to have_) is irregular in the present (**tengo, tienes**) and the preterite (**tuve**), but **regular in the imperfect**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "ten-",
+            "+",
+            "-ía, -ías, -ía, -íamos, -ían"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Imperfect of tener"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**tenía**"
+            ],
+            [
+              "tú",
+              "**tenías**"
+            ],
+            [
+              "él, ella, usted",
+              "**tenía**"
+            ],
+            [
+              "nosotros, nosotras",
+              "**teníamos**"
+            ],
+            [
+              "ellos, ellas, ustedes",
+              "**tenían**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Every form has an accent on the **í**. **Yo** and **él** share **tenía**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Main uses: **age** (**tenía diez años**), **what you had** (**tenía un perro**), **states** with tener (**tenía hambre, frío, miedo, sueño, razón**) and **obligations** as background (**tenía que trabajar**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: age in the past is always **tenía**, never **tuve** and never **era**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Cuando empecé a surfear, ==tenía== doce años.",
+              "en": "When I started surfing, I was twelve."
+            },
+            {
+              "es": "De niño ==tenía== un perro que se llamaba Chato.",
+              "en": "As a kid I had a dog called Chato."
+            },
+            {
+              "es": "==Teníamos== mucha hambre después del entrenamiento.",
+              "en": "We were really hungry after training."
+            },
+            {
+              "es": "¿==Tenías== miedo de las olas grandes?",
+              "en": "Were you afraid of the big waves?"
+            },
+            {
+              "es": "Mis abuelos ==tenían== un huerto en el patio.",
+              "en": "My grandparents had a vegetable garden in the yard."
+            },
+            {
+              "es": "Ese año ==tenía que== trabajar los sábados.",
+              "en": "That year I had to work on Saturdays."
+            },
+            {
+              "es": "Usted ==tenía== razón.",
+              "en": "You were right."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cuando llegué a Tijuana, tuve veinte años."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cuando llegué a Tijuana, tenía veinte años."
+                }
+              ],
+              "nota": "Age: imperfect."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Era diez años cuando aprendí a nadar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tenía diez años cuando aprendí a nadar."
+                }
+              ],
+              "nota": "Age uses **tener**, not ser."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo estaba hambre."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo tenía hambre."
+                }
+              ],
+              "nota": "Hunger, cold, fear: **tener**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Teniamos un perro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Teníamos un perro."
+                }
+              ],
+              "nota": "Accent on the **í**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tengo, tienes",
+              "texto": "The present: [[5304|tener in the present]]."
+            },
+            {
+              "forma": "tuve, tuvo",
+              "texto": "The preterite: [[5226|tener in the preterite]]."
+            },
+            {
+              "forma": "tengo que",
+              "texto": "Obligation: [[5106|tener que]]."
+            },
+            {
+              "forma": "a los diez",
+              "texto": "Another way to give an age: [[9770|a / desde / hasta + age]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _When I was ten, I had a dog._",
+              "r": "Cuando tenía diez años, tenía un perro.",
+              "nota": "tenía twice."
+            },
+            {
+              "p": "In Spanish: _We were cold, so we closed the window._",
+              "r": "Teníamos frío, así que cerramos la ventana.",
+              "nota": "tener frío."
+            },
+            {
+              "p": "Fix it: _¿Cuántos años tuviste en 2010?_",
+              "r": "¿Cuántos años tenías en 2010?",
+              "nota": "Age: tenías."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5304,
+      5106
+    ],
+    "confunde": [
+      5226
+    ],
+    "sigue": [
+      9770
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5926",
+      "kwiziq": true
+    }
+  ]
+}

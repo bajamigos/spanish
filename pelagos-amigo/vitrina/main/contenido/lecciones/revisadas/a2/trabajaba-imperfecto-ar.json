@@ -1,0 +1,268 @@
+{
+  "tema": 5263,
+  "slug": "trabajaba-imperfecto-ar",
+  "titulo": "-ar verbs in the imperfect",
+  "subtitulo": "De niño, surfeaba todos los días.",
+  "foto": "t01.jpg",
+  "regla": "To form the imperfect of an -ar verb, drop -ar and add -aba, -abas, -aba, -ábamos, -aban. Every -ar verb is regular in the imperfect, and only nosotros has a written accent.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "The imperfect describes the past as **ongoing or repeated**: what you **used to do** or **were doing**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "trabaj-",
+            "+",
+            "-aba / -abas / -aba / -ábamos / -aban"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Ending",
+            "trabajar",
+            "jugar"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**-aba**",
+              "trabajaba",
+              "jugaba"
+            ],
+            [
+              "tú",
+              "**-abas**",
+              "trabajabas",
+              "jugabas"
+            ],
+            [
+              "él, ella, usted",
+              "**-aba**",
+              "trabajaba",
+              "jugaba"
+            ],
+            [
+              "nosotros",
+              "**-ábamos**",
+              "trabajábamos",
+              "jugábamos"
+            ],
+            [
+              "ellos, ustedes",
+              "**-aban**",
+              "trabajaban",
+              "jugaban"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**No exceptions** for -ar verbs: no stem changes (**jugaba**, **pensaba**, **contaba**) and no spelling changes."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Only **nosotros** has a written accent: **-ábamos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Yo** and **él / ella** are identical (**trabajaba**). Add the pronoun or a name when it isn't clear."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **-aba** is a wave that keeps rolling. **-é / -ó** (preterite) is the wave that breaks."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "De joven, ==trabajaba== en un taller en Ensenada.",
+              "en": "When I was young, I used to work at a shop in Ensenada."
+            },
+            {
+              "es": "¿==Surfeabas== todos los días cuando vivías en Rosarito?",
+              "en": "Did you surf every day when you lived in Rosarito?"
+            },
+            {
+              "es": "Mi abuela ==cocinaba== frijoles cada domingo.",
+              "en": "My grandma used to cook beans every Sunday."
+            },
+            {
+              "es": "De niños, ==jugábamos== fútbol en la calle.",
+              "en": "As kids, we used to play soccer in the street."
+            },
+            {
+              "es": "Mis papás ==plantaban== maíz en el rancho.",
+              "en": "My parents used to plant corn on the ranch."
+            },
+            {
+              "es": "Yo ==estudiaba== cuando sonó el teléfono.",
+              "en": "I was studying when the phone rang."
+            },
+            {
+              "es": "Antes ==entrenaban== en un gimnasio pequeño.",
+              "en": "They used to train in a small gym."
+            },
+            {
+              "es": "¿Ustedes ==hablaban== inglés en la casa?",
+              "en": "Did you guys speak English at home?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros jugabamos en el parque."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros jugábamos en el parque."
+                }
+              ],
+              "nota": "Accent on **-ábamos**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tú trabajabas mucho y ella trabajabas poco."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tú trabajabas mucho y ella trabajaba poco."
+                }
+              ],
+              "nota": "**-s** only for tú."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "De niño, juegaba mucho."
+                },
+                {
+                  "v": "bien",
+                  "t": "De niño, jugaba mucho."
+                }
+              ],
+              "nota": "No stem change in the imperfect."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo trabajába en Tijuana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo trabajaba en Tijuana."
+                }
+              ],
+              "nota": "Only nosotros has an accent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "comía, vivía",
+              "texto": "The other endings: [[5264|-er and -ir verbs in the imperfect]]."
+            },
+            {
+              "forma": "trabajé",
+              "texto": "Not to confuse with: [[5109|regular -ar verbs in the preterite]]."
+            },
+            {
+              "forma": "siempre jugaba",
+              "texto": "When to use it: [[5111|habits in the past]], [[6002|describing the past]]."
+            },
+            {
+              "forma": "estaba trabajando",
+              "texto": "Ongoing actions: [[5130|estaba + gerund]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I used to work at night._",
+              "r": "Trabajaba en la noche.",
+              "nota": "-aba."
+            },
+            {
+              "p": "In Spanish: _We used to walk to school._",
+              "r": "Caminábamos a la escuela.",
+              "nota": "-ábamos, with accent."
+            },
+            {
+              "p": "Fix it: _Mis amigos surfeaba en Baja Malibú._",
+              "r": "Mis amigos surfeaban en Baja Malibú.",
+              "nota": "ellos → -aban."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      5109
+    ],
+    "sigue": [
+      5264,
+      5111,
+      6002,
+      5130
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5263",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "tema": 5846,
+  "slug": "corrijo-elijo-presente",
+  "titulo": "Corregir and elegir in the present",
+  "subtitulo": "Yo elijo la tabla, tú eliges las olas.",
+  "foto": "t06.jpg",
+  "regla": "Corregir and elegir change e to i in every person except nosotros, and in yo the g becomes j: corrijo, corriges, corregimos; elijo, eliges, elegimos.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Corregir** (_to correct_) and **elegir** (_to choose_) have **two changes** in the present."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**e → i** in the stem, in **every person except nosotros**: **corriges**, **eliges**, but **corregimos**, **elegimos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**g → j** only in **yo**, to keep the soft sound before **o**: **corrijo**, **elijo**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "corregir",
+            "elegir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "corrijo",
+              "elijo"
+            ],
+            [
+              "tú",
+              "corriges",
+              "eliges"
+            ],
+            [
+              "él / ella / usted",
+              "corrige",
+              "elige"
+            ],
+            [
+              "nosotros",
+              "corregimos",
+              "elegimos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "corrigen",
+              "eligen"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "El maestro ==corrige== los exámenes.",
+              "en": "The teacher grades the exams."
+            },
+            {
+              "es": "Yo siempre ==elijo== la tabla más grande.",
+              "en": "I always pick the biggest board."
+            },
+            {
+              "es": "¿Tú ==corriges== mis errores?",
+              "en": "Do you correct my mistakes?"
+            },
+            {
+              "es": "==Elegimos== un restaurante en la Revolución.",
+              "en": "We choose a restaurant on Avenida Revolución."
+            },
+            {
+              "es": "Ellos ==eligen== al capitán del equipo.",
+              "en": "They choose the team captain."
+            },
+            {
+              "es": "==Corrijo== la tarea de mi hermano.",
+              "en": "I correct my brother's homework."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo corrigo la tarea."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo corrijo la tarea."
+                }
+              ],
+              "nota": "**j** before o in yo."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tú elijes el restaurante."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tú eliges el restaurante."
+                }
+              ],
+              "nota": "The **j** is only for yo."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros corrigimos los errores."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros corregimos los errores."
+                }
+              ],
+              "nota": "No e → i in **nosotros**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "escojo, dirijo",
+              "texto": "The g → j change alone: [[7028|-ger and -gir verbs]]."
+            },
+            {
+              "forma": "pido",
+              "texto": "The e → i change alone: [[5851|pedir]]."
+            },
+            {
+              "forma": "sirvo, repito",
+              "texto": "More e → i verbs: [[5554|-ir verbs with e > i]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish, with elegir: _I choose the blue shirt._",
+              "r": "Elijo la camisa azul.",
+              "nota": "g → j in yo."
+            },
+            {
+              "p": "In Spanish: _She corrects the text._",
+              "r": "Ella corrige el texto.",
+              "nota": "e → i, g stays."
+            },
+            {
+              "p": "Fix it: _Nosotros eligimos._",
+              "r": "Nosotros elegimos.",
+              "nota": "nosotros: no change."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7028,
+      5851
+    ],
+    "confunde": [],
+    "sigue": [
+      5554
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5846",
+      "kwiziq": true
+    }
+  ]
+}

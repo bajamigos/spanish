@@ -1,0 +1,188 @@
+{
+  "tema": 9828,
+  "slug": "que-quieres-preguntas-con-que",
+  "titulo": "Questions with qué (what)",
+  "subtitulo": "¿Qué quieres?",
+  "foto": "t05.jpg",
+  "regla": "Qué means what. In questions it always carries an accent, and it goes first in the question, or right after its preposition: ¿Qué quieres? ¿De qué hablas?",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Qué** = _what_. Put it at the start of the question, then the verb: **¿Qué haces?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Qué** + noun asks _what / which_ + noun: **¿Qué música te gusta?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "If there's a preposition, it goes **before** qué, never at the end: **¿De qué?**, **¿Con qué?**, **¿Para qué?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "In questions, **qué** always has an accent, even in indirect questions: **No sé qué quieres.**"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿==Qué== quieres comer?",
+              "en": "What do you want to eat?"
+            },
+            {
+              "es": "¿==Qué== haces los domingos?",
+              "en": "What do you do on Sundays?"
+            },
+            {
+              "es": "¿==Qué== música te gusta?",
+              "en": "What music do you like?"
+            },
+            {
+              "es": "¿==De qué== hablan ustedes?",
+              "en": "What are you all talking about?"
+            },
+            {
+              "es": "¿==Qué== hora es?",
+              "en": "What time is it?"
+            },
+            {
+              "es": "No sé ==qué== pasó.",
+              "en": "I don't know what happened."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Que quieres?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Qué quieres?"
+                }
+              ],
+              "nota": "Accent in every question."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Qué hablas de?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿De qué hablas?"
+                }
+              ],
+              "nota": "The preposition goes before qué."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Qué es tu número?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cuál es tu número?"
+                }
+              ],
+              "nota": "For a specific piece of info with **es**, use **cuál**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¿Qué es eso?",
+              "texto": "The first qué question: [[5153|what is that?]]."
+            },
+            {
+              "forma": "¿Cuál es?",
+              "texto": "When to switch to cuál: [[9926|qué vs cuál + verb]]."
+            },
+            {
+              "forma": "¡Qué bonito!",
+              "texto": "Qué in exclamations: [[6137|exclamations with qué]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish (tú): _What do you want to eat?_",
+              "r": "¿Qué quieres comer?",
+              "nota": "qué + verb."
+            },
+            {
+              "p": "In Spanish (tú, simple present): _What are you talking about?_",
+              "r": "¿De qué hablas?",
+              "nota": "Preposition first."
+            },
+            {
+              "p": "Fix it: _¿Que hora es?_",
+              "r": "¿Qué hora es?",
+              "nota": "Accent on qué."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5153
+    ],
+    "confunde": [
+      9926,
+      6137
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9828",
+      "kwiziq": true
+    }
+  ]
+}

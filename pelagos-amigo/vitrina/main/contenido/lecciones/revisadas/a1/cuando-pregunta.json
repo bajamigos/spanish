@@ -1,0 +1,192 @@
+{
+  "tema": 10695,
+  "slug": "cuando-pregunta",
+  "titulo": "How to ask when: ¿cuándo?",
+  "subtitulo": "¿Cuándo es tu cumpleaños?",
+  "foto": "t02.jpg",
+  "regla": "To ask when, use ¿Cuándo + verb + subject? Cuándo always has a written accent in questions, and the verb comes right after it. For an exact clock time, ask ¿A qué hora?",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "_When?_ = **¿Cuándo?**, always with a written accent in questions."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "¿Cuándo",
+            "+ verb +",
+            "(subject)?"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The verb comes **right after cuándo**: **¿Cuándo llega tu hermano?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "For an exact time, ask **¿A qué hora...?** Without the accent, **cuando** isn't a question: **Surfeo cuando hay olas.**"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿==Cuándo== es tu cumpleaños?",
+              "en": "When is your birthday?"
+            },
+            {
+              "es": "¿==Cuándo== vas a Ensenada?",
+              "en": "When are you going to Ensenada?"
+            },
+            {
+              "es": "¿==Cuándo== empiezan las clases?",
+              "en": "When do classes start?"
+            },
+            {
+              "es": "¿==Cuándo== llega tu hermano?",
+              "en": "When is your brother arriving?"
+            },
+            {
+              "es": "¿==Cuándo== entrenas jiu-jitsu? Los martes y los jueves.",
+              "en": "When do you train jiu-jitsu? On Tuesdays and Thursdays."
+            },
+            {
+              "es": "¿==Desde cuándo== vives en Tijuana?",
+              "en": "How long have you lived in Tijuana?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Cuando es tu cumpleaños?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cuándo es tu cumpleaños?"
+                }
+              ],
+              "nota": "Question: accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Cuándo tu hermano llega?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cuándo llega tu hermano?"
+                }
+              ],
+              "nota": "Verb right after **cuándo**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Cuándo hora empieza la clase?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿A qué hora empieza la clase?"
+                }
+              ],
+              "nota": "Exact time: **a qué hora**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¿a qué hora?",
+              "texto": "Exact times: [[6665|a la / a las + time]]."
+            },
+            {
+              "forma": "¿dónde?",
+              "texto": "Asking where: [[10701|¿dónde?]]."
+            },
+            {
+              "forma": "cómo, dónde, cuándo",
+              "texto": "Accent or no accent: [[6313|cómo, dónde, cuándo]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _When is the party?_",
+              "r": "¿Cuándo es la fiesta?",
+              "nota": "Accent on cuándo."
+            },
+            {
+              "p": "In Spanish (tú): _When do you work?_",
+              "r": "¿Cuándo trabajas?",
+              "nota": "cuándo + verb."
+            },
+            {
+              "p": "Fix it: _¿Cuando tu papá llega?_",
+              "r": "¿Cuándo llega tu papá?",
+              "nota": "Accent, verb first."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6665
+    ],
+    "confunde": [],
+    "sigue": [
+      10701,
+      6313
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 10695",
+      "kwiziq": true
+    }
+  ]
+}

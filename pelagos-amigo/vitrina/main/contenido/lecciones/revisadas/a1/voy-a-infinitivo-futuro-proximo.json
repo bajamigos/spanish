@@ -1,0 +1,193 @@
+{
+  "tema": 5086,
+  "slug": "voy-a-infinitivo-futuro-proximo",
+  "titulo": "The near future: ir a + infinitive",
+  "subtitulo": "Voy a surfear mañana.",
+  "foto": "t08.jpg",
+  "regla": "To say what is going to happen, use ir in the present + a + infinitive: voy a surfear. The a is never left out, and the second verb never changes.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Spanish builds the _going to_ future just like English: **ir** in the present + **a** + **infinitive**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "voy / vas / va / vamos / van",
+            "+ a +",
+            "infinitive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Only **ir** changes with the person. The second verb stays in the infinitive: **vamos a comer**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Never drop the **a**: **voy a ir**, not _voy ir_."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Voy a surfear== mañana temprano.",
+              "en": "I'm going to surf early tomorrow."
+            },
+            {
+              "es": "¿Qué ==vas a hacer== el fin de semana?",
+              "en": "What are you going to do this weekend?"
+            },
+            {
+              "es": "==Va a llover== en la tarde.",
+              "en": "It's going to rain in the afternoon."
+            },
+            {
+              "es": "==Vamos a plantar== tomates en el jardín.",
+              "en": "We're going to plant tomatoes in the garden."
+            },
+            {
+              "es": "Mis primos ==van a venir== a la carne asada.",
+              "en": "My cousins are going to come to the cookout."
+            },
+            {
+              "es": "¿Ustedes ==van a ver== la pelea?",
+              "en": "Are you guys going to watch the fight?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Voy surfear mañana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Voy a surfear mañana."
+                }
+              ],
+              "nota": "Never drop **a**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Vamos a comemos tacos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Vamos a comer tacos."
+                }
+              ],
+              "nota": "Infinitive after **a**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo va a estudiar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo voy a estudiar."
+                }
+              ],
+              "nota": "Conjugate **ir**: yo **voy**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "voy, vas, va",
+              "texto": "Learn ir first: [[5271|ir in the present]]."
+            },
+            {
+              "forma": "estoy surfeando",
+              "texto": "Not for plans in Spanish: [[5994|present progressive vs present]]."
+            },
+            {
+              "forma": "voy a ir",
+              "texto": "Using it for plans: [[7067|ir a for plans]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I'm going to eat._",
+              "r": "Voy a comer.",
+              "nota": "voy a + infinitive."
+            },
+            {
+              "p": "In Spanish: _They're going to travel to Ensenada._",
+              "r": "Van a viajar a Ensenada.",
+              "nota": "van a."
+            },
+            {
+              "p": "Fix it: _¿Vas trabajar hoy?_",
+              "r": "¿Vas a trabajar hoy?",
+              "nota": "Add a."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5271
+    ],
+    "confunde": [
+      5994
+    ],
+    "sigue": [
+      7067
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5086",
+      "kwiziq": true
+    }
+  ]
+}

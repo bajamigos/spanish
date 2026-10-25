@@ -1,0 +1,210 @@
+{
+  "tema": 5485,
+  "slug": "doy-das-presente-dar",
+  "titulo": "Dar in the present",
+  "subtitulo": "Te doy mi número.",
+  "foto": "t04.jpg",
+  "regla": "Dar (to give) is regular in the present except yo, which ends in -oy: doy, das, da, damos, dan. None of these forms has a written accent.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Dar** (_to give_) is irregular only in **yo**: **doy**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The rest follow the -ar pattern: **das, da, damos, dan**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "dar"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**doy**"
+            ],
+            [
+              "tú",
+              "das"
+            ],
+            [
+              "él, ella, usted",
+              "da"
+            ],
+            [
+              "nosotros",
+              "damos"
+            ],
+            [
+              "ellos, ustedes",
+              "dan"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **doy** rhymes with **voy, soy, estoy**. And no accents: **da** and **das** are one syllable."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Te ==doy== mi número.",
+              "en": "I'll give you my number."
+            },
+            {
+              "es": "¿Me ==das== un aventón al centro?",
+              "en": "Will you give me a ride downtown?"
+            },
+            {
+              "es": "La maestra nos ==da== mucha tarea.",
+              "en": "The teacher gives us a lot of homework."
+            },
+            {
+              "es": "Los sábados ==damos== clases de surf.",
+              "en": "On Saturdays we give surf lessons."
+            },
+            {
+              "es": "Mis papás me ==dan== dinero para el camión.",
+              "en": "My parents give me money for the bus."
+            },
+            {
+              "es": "Siempre les ==doy== agua a mis plantas en la mañana.",
+              "en": "I always water my plants in the morning."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo te do el dinero."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo te doy el dinero."
+                }
+              ],
+              "nota": "Yo: **doy**, like voy, soy, estoy."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Me dás tu número?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Me das tu número?"
+                }
+              ],
+              "nota": "One syllable, no accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Doy a ella el libro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Le doy el libro a ella."
+                }
+              ],
+              "nota": "You need **le**; _a ella_ is optional."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "voy, soy, estoy",
+              "texto": "The same -oy ending: [[5271|ir]], [[5070|ser]], [[5166|estar]]."
+            },
+            {
+              "forma": "di, dio",
+              "texto": "Next, the past: [[5215|dar in the preterite]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I give you my word._",
+              "r": "Te doy mi palabra.",
+              "nota": "yo → doy."
+            },
+            {
+              "p": "Fix it: _¿Me dás un aventón?_",
+              "r": "¿Me das un aventón?",
+              "nota": "No accent."
+            },
+            {
+              "p": "In Spanish: _We give classes on Saturdays._",
+              "r": "Damos clases los sábados.",
+              "nota": "nosotros → damos."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5271,
+      5070,
+      5166
+    ],
+    "confunde": [],
+    "sigue": [
+      5215
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5485",
+      "kwiziq": true
+    }
+  ]
+}

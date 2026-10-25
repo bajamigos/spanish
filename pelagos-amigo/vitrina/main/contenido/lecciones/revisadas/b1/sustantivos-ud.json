@@ -1,0 +1,194 @@
+{
+  "tema": 9542,
+  "slug": "sustantivos-ud",
+  "titulo": "Most nouns ending in -ud are feminine",
+  "subtitulo": "La actitud, la salud, la virtud: feminine, plural in -es.",
+  "foto": "t03.jpg",
+  "regla": "Most nouns ending in -ud are feminine and abstract: la salud, la actitud, la juventud. Plural: -udes. Exceptions: el ataúd, el laúd, el alud.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Most nouns ending in **-ud** are **feminine**, and they're usually **abstract**: **la actitud**, **la virtud**, **la salud**, **la juventud**, **la multitud**, **la solicitud**, **la exactitud**, **la inquietud**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The plural adds **-es**: **la actitud** → **las actitudes**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Adjectives agree in the feminine: **una actitud positiva**, **una solicitud complicada**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Exceptions (masculine): **el ataúd** (_coffin_), **el laúd** (_lute_), **el alud** (_avalanche_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: health, youth, attitude: all **la**. Only the coffin (and a couple of rare words) is **el**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Traes ==una actitud== muy negativa.",
+              "en": "You've got a very negative attitude."
+            },
+            {
+              "es": "Mi esposo tiene ==una virtud==: es súper generoso.",
+              "en": "My husband has one virtue: he's super generous."
+            },
+            {
+              "es": "No veía a mi amiga entre ==la multitud==.",
+              "en": "I couldn't see my friend in the crowd."
+            },
+            {
+              "es": "==La salud== es más importante que el dinero.",
+              "en": "Health is more important than money."
+            },
+            {
+              "es": "Ayer mandé ==la solicitud== para ese trabajo.",
+              "en": "Yesterday I sent the application for that job."
+            },
+            {
+              "es": "Hay que dibujar el mapa con ==mucha exactitud==.",
+              "en": "You have to draw the map very precisely."
+            },
+            {
+              "es": "==Las actitudes== positivas ayudan en el tatami.",
+              "en": "Positive attitudes help on the mat."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El salud es lo primero."
+                },
+                {
+                  "v": "bien",
+                  "t": "La salud es lo primero."
+                }
+              ],
+              "nota": "-ud: feminine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Las actituds."
+                },
+                {
+                  "v": "bien",
+                  "t": "Las actitudes."
+                }
+              ],
+              "nota": "Plural: -es."
+            },
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "El ataúd era de madera."
+                }
+              ],
+              "nota": "An exception."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "la vejez, la belleza",
+              "texto": "Other feminine endings: [[7762|-ez / -eza]]."
+            },
+            {
+              "forma": "la ciudad, la canción",
+              "texto": "More feminine endings: [[6068|-dad, -ión]]."
+            },
+            {
+              "forma": "el viaje",
+              "texto": "A masculine ending: [[6151|-aje]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Article? ___ juventud",
+              "r": "la juventud",
+              "nota": "-ud: feminine."
+            },
+            {
+              "p": "Plural: **la virtud**",
+              "r": "las virtudes",
+              "nota": "-es."
+            },
+            {
+              "p": "Article? ___ ataúd",
+              "r": "el ataúd",
+              "nota": "An exception."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6749
+    ],
+    "confunde": [
+      7762
+    ],
+    "sigue": [
+      7762,
+      6068
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9542",
+      "kwiziq": true
+    }
+  ]
+}

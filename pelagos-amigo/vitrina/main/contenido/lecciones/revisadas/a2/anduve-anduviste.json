@@ -1,0 +1,243 @@
+{
+  "tema": 5222,
+  "slug": "anduve-anduviste",
+  "titulo": "Andar in the preterite",
+  "subtitulo": "El sábado anduve por todo el centro.",
+  "foto": "t03.jpg",
+  "regla": "Andar is irregular in the preterite: stem anduv- + -e, -iste, -o, -imos, -ieron: anduve, anduviste, anduvo, anduvimos, anduvieron. Never «andé» or «andó».",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Andar** means _to walk, to go around_, and in Mexico also _to be_ (in a state or somewhere): **ando cansado**, **¿dónde andas?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "It looks like a regular -ar verb, but in the preterite it is **irregular**: the stem is **anduv-**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The endings are **-e, -iste, -o, -imos, -ieron**, with **no written accents**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "andar"
+          ],
+          "filas": [
+            [
+              "yo",
+              "anduve"
+            ],
+            [
+              "tú",
+              "anduviste"
+            ],
+            [
+              "él / ella / usted",
+              "anduvo"
+            ],
+            [
+              "nosotros",
+              "anduvimos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "anduvieron"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Andar en bici / en patineta** = _to ride a bike / a skateboard_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: andar copies **estar**: **estuve** → **anduve**. Both hide a **-uv-**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "El sábado ==anduve== en bici por todo el malecón de Playas.",
+              "en": "On Saturday I rode my bike along the whole Playas boardwalk."
+            },
+            {
+              "es": "¿Dónde ==anduviste== toda la tarde?",
+              "en": "Where were you all afternoon?"
+            },
+            {
+              "es": "==Anduvimos== tres horas por los cerros de Tecate.",
+              "en": "We walked for three hours through the hills of Tecate."
+            },
+            {
+              "es": "La semana pasada ==anduve== muy ocupado con el trabajo.",
+              "en": "Last week I was really busy with work."
+            },
+            {
+              "es": "Mi tía ==anduvo== buscando sus llaves media hora.",
+              "en": "My aunt spent half an hour looking for her keys."
+            },
+            {
+              "es": "Los niños ==anduvieron== descalzos en la playa todo el día.",
+              "en": "The kids went barefoot on the beach all day."
+            },
+            {
+              "es": "¿Ustedes ==anduvieron== por el centro ayer?",
+              "en": "Were you guys downtown yesterday?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer andé por el centro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer anduve por el centro."
+                }
+              ],
+              "nota": "Irregular: **anduve**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella andó con su perro en la playa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella anduvo con su perro en la playa."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Anduví mucho."
+                },
+                {
+                  "v": "bien",
+                  "t": "Anduve mucho."
+                }
+              ],
+              "nota": "Ending **-e**, no accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ellos anduvaron en bici."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ellos anduvieron en bici."
+                }
+              ],
+              "nota": "**-ieron**, not -aron."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "estuve",
+              "texto": "The same -uv- pattern: [[5218|estar in the preterite]]."
+            },
+            {
+              "forma": "tuve",
+              "texto": "Another one: [[5226|tener in the preterite]]."
+            },
+            {
+              "forma": "anduve buscando",
+              "texto": "Going around doing something: [[7182|andar + gerund]]."
+            },
+            {
+              "forma": "ayer anduve…",
+              "texto": "When to use it: [[6004|the preterite for completed actions]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We walked a lot yesterday._",
+              "r": "Ayer anduvimos mucho.",
+              "nota": "anduvimos."
+            },
+            {
+              "p": "In Spanish (tú): _Where were you all day?_",
+              "r": "¿Dónde anduviste todo el día?",
+              "nota": "anduviste."
+            },
+            {
+              "p": "Fix it: _Mi papá andó en bici._",
+              "r": "Mi papá anduvo en bici.",
+              "nota": "anduvo."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5218
+    ],
+    "confunde": [
+      6004
+    ],
+    "sigue": [
+      5226,
+      7182
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5222",
+      "kwiziq": true
+    }
+  ]
+}

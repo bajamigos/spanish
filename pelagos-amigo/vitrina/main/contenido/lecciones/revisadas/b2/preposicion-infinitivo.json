@@ -1,0 +1,198 @@
+{
+  "tema": 6310,
+  "slug": "preposicion-infinitivo",
+  "titulo": "The infinitive after prepositions (not the gerund)",
+  "subtitulo": "Sin mirar, después de cenar, antes de salir.",
+  "foto": "t05.jpg",
+  "regla": "After any preposition, Spanish uses the infinitive where English uses -ing: sin mirar (without looking), interesado en ofrecerte (interested in offering you), acostumbrada a dormir (used to sleeping). Never a gerund after a preposition.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "preposition",
+            "+",
+            "infinitive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "English uses _-ing_ after prepositions (_without looking, after eating_). Spanish **always** uses the **infinitive**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The only verb form that can follow a preposition directly is the infinitive (simple or perfect: **por haber llegado tarde**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if a preposition stands in front, the verb stays in the dictionary form."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Estoy interesado ==en ofrecerte== un trabajo.",
+              "en": "I'm interested in offering you a job."
+            },
+            {
+              "es": "==Después de cenar== vamos a ver la tele.",
+              "en": "After dinner we'll watch TV."
+            },
+            {
+              "es": "Hice la traducción ==sin mirar== el diccionario.",
+              "en": "I did the translation without looking at the dictionary."
+            },
+            {
+              "es": "Está acostumbrada ==a dormir== en un colchón duro.",
+              "en": "She's used to sleeping on a hard mattress."
+            },
+            {
+              "es": "Ya había dejado ==de bailar== cuando él llegó a la fiesta.",
+              "en": "I'd already stopped dancing when he got to the party."
+            },
+            {
+              "es": "Tengo que enfocarme ==en mejorar== mi español.",
+              "en": "I have to focus on improving my Spanish."
+            },
+            {
+              "es": "Gracias ==por venir==.",
+              "en": "Thanks for coming."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Sin mirando."
+                },
+                {
+                  "v": "bien",
+                  "t": "Sin mirar."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Gracias por viniendo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Gracias por venir."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Antes de saliendo..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Antes de salir..."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "al llegar",
+              "texto": "[[6175|al + infinitive]]."
+            },
+            {
+              "forma": "leer es bueno",
+              "texto": "[[7079|infinitive as subject]]."
+            },
+            {
+              "forma": "sin que",
+              "texto": "[[7525|sin / sin que]]."
+            },
+            {
+              "forma": "por llegar tarde",
+              "texto": "[[7845|por for cause]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Thanks for helping me._",
+              "r": "Gracias por ayudarme.",
+              "nota": "por + infinitive."
+            },
+            {
+              "p": "In Spanish: _I'm tired of waiting._",
+              "r": "Estoy cansado de esperar.",
+              "nota": "de + infinitive."
+            },
+            {
+              "p": "In Spanish: _She left without saying goodbye._",
+              "r": "Se fue sin despedirse.",
+              "nota": "sin + infinitive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7079
+    ],
+    "confunde": [
+      6175
+    ],
+    "sigue": [
+      7525
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6310",
+      "kwiziq": true
+    }
+  ]
+}

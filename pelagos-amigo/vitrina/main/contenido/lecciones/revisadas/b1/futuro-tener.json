@@ -1,0 +1,233 @@
+{
+  "tema": 5050,
+  "slug": "futuro-tener",
+  "titulo": "Conjugate tener in the simple future",
+  "subtitulo": "Tendré, tendrás, tendremos: the stem changes, the endings don't.",
+  "foto": "t06.jpg",
+  "regla": "Tener has the irregular future stem tendr- with the regular endings: tendré, tendrás, tendrá, tendremos, tendrán.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Tener** is irregular in the future: its stem is **tendr-** instead of **tener-**. The endings are the regular future ones."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**tendr-**",
+            "**-é, -ás, -á, -emos, -án**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "tener"
+          ],
+          "filas": [
+            [
+              "yo",
+              "tendré"
+            ],
+            [
+              "tú",
+              "tendrás"
+            ],
+            [
+              "él, ella, usted",
+              "tendrá"
+            ],
+            [
+              "nosotros",
+              "tendremos"
+            ],
+            [
+              "ustedes, ellos",
+              "tendrán"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Every verb built on **tener** has the same stem: **obtener** → **obtendré**, **detener** → **detendré**, **retener** → **retendré**, **mantener** → **mantendré**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the **e** of **tener** falls out and a **d** jumps in to hold the door: **ten-d-ré**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Cuando sea mayor, ==tendré== un huerto enorme.",
+              "en": "When I'm older, I'll have a huge garden."
+            },
+            {
+              "es": "==Tendrás== más dinero el sábado, después de trabajar.",
+              "en": "You'll have more money on Saturday, after work."
+            },
+            {
+              "es": "El cliente ==tendrá== un carro rentado.",
+              "en": "The customer will have a rental car."
+            },
+            {
+              "es": "==Tendremos== un verano muy caluroso.",
+              "en": "We'll have a very hot summer."
+            },
+            {
+              "es": "Ellos ==tendrán== las tablas en el carro.",
+              "en": "They'll have the boards in the car."
+            },
+            {
+              "es": "Ustedes ==tendrán== media hora de descanso.",
+              "en": "You'll have a half-hour break."
+            },
+            {
+              "es": "Holden ==mantendrá== el rumbo.",
+              "en": "Holden will keep the course."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Teneré tiempo mañana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tendré tiempo mañana."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tendremós que pagar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tendremos que pagar."
+                }
+              ],
+              "nota": "No accent on **nosotros**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El policía lo detenerá."
+                },
+                {
+                  "v": "bien",
+                  "t": "El policía lo detendrá."
+                }
+              ],
+              "nota": "Compounds of **tener** follow it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tendré que",
+              "texto": "Obligation: [[5106|tener que]]. In the conditional: [[5914|tendría que]]."
+            },
+            {
+              "forma": "hablaré",
+              "texto": "The regular pattern: [[5155|regular verbs in the future]]."
+            },
+            {
+              "forma": "vendré, pondré, saldré",
+              "texto": "The same **-dr-** stem: [[5223|venir]], [[5259|poner]], [[5160|salir]]."
+            },
+            {
+              "forma": "tendría",
+              "texto": "The conditional uses the same stem: [[5772|tener in the conditional]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We'll have to wait._",
+              "r": "Tendremos que esperar.",
+              "nota": "tendr- + emos."
+            },
+            {
+              "p": "**Tener** with **tú**: ¿___ tiempo para rolar?",
+              "r": "¿Tendrás tiempo para rolar?",
+              "nota": "tendr- + ás."
+            },
+            {
+              "p": "**Obtener** with **ella**: Naomi ___ el permiso mañana.",
+              "r": "Naomi obtendrá el permiso mañana.",
+              "nota": "Compounds keep **-dr-**."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5304,
+      5155
+    ],
+    "confunde": [
+      5772
+    ],
+    "sigue": [
+      5223,
+      5259,
+      5160,
+      5106,
+      5914
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5050",
+      "kwiziq": true
+    }
+  ]
+}

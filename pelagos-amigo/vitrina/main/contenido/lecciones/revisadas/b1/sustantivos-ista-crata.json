@@ -1,0 +1,218 @@
+{
+  "tema": 6237,
+  "slug": "sustantivos-ista-crata",
+  "titulo": "Gender of nouns and adjectives ending in -ista and -crata",
+  "subtitulo": "El dentista / la dentista: the article tells you who.",
+  "foto": "t06.jpg",
+  "regla": "Nouns ending in -ista and -crata have the same form for both genders; only the article changes: el / la dentista, los / las demócratas.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Nouns ending in **-ista** and **-crata** usually refer to people, and they have **one form** for men and women. Only the **article** changes."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "Masculine",
+            "Feminine"
+          ],
+          "filas": [
+            [
+              "singular",
+              "el dentista",
+              "la dentista"
+            ],
+            [
+              "plural",
+              "los dentistas",
+              "las dentistas"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The plural just adds **-s**. A mixed group takes **los**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Many are jobs or people who support an idea: **periodista**, **futbolista**, **artista**, **taxista**, **electricista**, **ciclista**, **feminista**; **demócrata**, **burócrata**, **aristócrata**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "As adjectives they also have one form: **un chavo optimista**, **una chava optimista**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **-ista** never changes its clothes; the article does the talking."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==El dentista== me puso una resina ayer.",
+              "en": "The dentist gave me a filling yesterday."
+            },
+            {
+              "es": "==La dentista== dice que me lave los dientes diario.",
+              "en": "The dentist (female) says to brush my teeth every day."
+            },
+            {
+              "es": "==Los dentistas== se reunieron en el colegio médico.",
+              "en": "The dentists met at the medical association."
+            },
+            {
+              "es": "Naomi es ==mecánica== y ==una gran artista==.",
+              "en": "Naomi is a mechanic and a great artist."
+            },
+            {
+              "es": "Mi hermana es ==periodista==.",
+              "en": "My sister is a journalist."
+            },
+            {
+              "es": "==El taxista== nos dejó en la playa.",
+              "en": "The taxi driver dropped us at the beach."
+            },
+            {
+              "es": "Es ==una persona muy optimista==.",
+              "en": "She's a very optimistic person."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella es dentisto."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella es dentista."
+                }
+              ],
+              "nota": "No **-o** form."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Él es una artista."
+                },
+                {
+                  "v": "bien",
+                  "t": "Él es un artista."
+                }
+              ],
+              "nota": "The article changes for a man."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Un chavo optimisto."
+                },
+                {
+                  "v": "bien",
+                  "t": "Un chavo optimista."
+                }
+              ],
+              "nota": "Adjectives too: one form."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el / la estudiante",
+              "texto": "Other nouns with one form: [[6674|nouns in -e]]."
+            },
+            {
+              "forma": "actor / actriz",
+              "texto": "Nouns that do change: [[6729|-esa, -triz, -ina, -isa]]."
+            },
+            {
+              "forma": "soy periodista",
+              "texto": "Professions with **ser**: [[6090|ser for professions]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "A female cyclist: ___ ciclista",
+              "r": "la ciclista",
+              "nota": "Only the article changes."
+            },
+            {
+              "p": "Plural: **el electricista**",
+              "r": "los electricistas",
+              "nota": "-s."
+            },
+            {
+              "p": "In Spanish: _My brother is a pianist._",
+              "r": "Mi hermano es pianista.",
+              "nota": "No article with ser + profession."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6674,
+      6757
+    ],
+    "confunde": [
+      6729
+    ],
+    "sigue": [
+      6090
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6237",
+      "kwiziq": true
+    }
+  ]
+}

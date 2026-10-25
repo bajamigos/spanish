@@ -1,0 +1,225 @@
+{
+  "tema": 8891,
+  "slug": "los-garcia-apellidos",
+  "titulo": "Surnames don't go plural",
+  "subtitulo": "Los García viven al lado.",
+  "foto": "t10.jpg",
+  "regla": "To talk about a family by its surname, use los + the surname unchanged: los García, los Hernández, los Simpson. The article and the verb go plural, the surname doesn't.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say **the Garcías**, **the Smiths**, Spanish puts **los** before the surname and leaves the surname **as it is**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "los",
+            "+",
+            "surname (no -s)"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The **verb** is plural: **los García viven aquí**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "This works for foreign names too: **los Simpson**, **los Kennedy**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With **la familia** + surname, the verb is **singular**: **la familia García vive aquí**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Los señores** + surname = _Mr. and Mrs._: **los señores Torres**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "First names are different: they can go plural: **hay dos Marías en mi clase**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Los García== viven en la casa de al lado.",
+              "en": "The Garcías live next door."
+            },
+            {
+              "es": "Vamos a cenar con ==los Hernández== el sábado.",
+              "en": "We're having dinner with the Hernándezes on Saturday."
+            },
+            {
+              "es": "¿Ya viste el nuevo capítulo de ==los Simpson==?",
+              "en": "Have you seen the new episode of The Simpsons?"
+            },
+            {
+              "es": "==Los López== tienen un huerto en la azotea.",
+              "en": "The Lópezes have a garden on the roof."
+            },
+            {
+              "es": "==La familia Ramírez== se fue a Ensenada.",
+              "en": "The Ramírez family went to Ensenada."
+            },
+            {
+              "es": "==Los señores Torres== son muy amables.",
+              "en": "Mr. and Mrs. Torres are very nice."
+            },
+            {
+              "es": "En mi clase hay dos ==Marías==.",
+              "en": "There are two Marías in my class."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "los Garcías"
+                },
+                {
+                  "v": "bien",
+                  "t": "los García"
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "los Hernándezes"
+                },
+                {
+                  "v": "bien",
+                  "t": "los Hernández"
+                }
+              ],
+              "nota": "No **-es** either."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "los Smiths"
+                },
+                {
+                  "v": "bien",
+                  "t": "los Smith"
+                }
+              ],
+              "nota": "Foreign names stay the same too."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La familia García viven aquí."
+                },
+                {
+                  "v": "bien",
+                  "t": "La familia García vive aquí."
+                }
+              ],
+              "nota": "**La familia** is singular."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "los, las",
+              "texto": "The plural article: [[5101|los, las]]."
+            },
+            {
+              "forma": "los relojes",
+              "texto": "Normal plurals of nouns in a consonant: [[6749|nouns ending in a consonant]]."
+            },
+            {
+              "forma": "los lápices",
+              "texto": "Normal plural of -z (not for surnames!): [[7084|plural of -z]]."
+            },
+            {
+              "forma": "la gente es",
+              "texto": "Groups with a singular verb: [[7149|collective nouns]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _The Pérezes are from Tijuana._",
+              "r": "Los Pérez son de Tijuana.",
+              "nota": "No -es."
+            },
+            {
+              "p": "In Spanish: _The Martínez family lives here._",
+              "r": "La familia Martínez vive aquí.",
+              "nota": "Singular verb."
+            },
+            {
+              "p": "Fix it: _Cenamos con los Gonzálezes._",
+              "r": "Cenamos con los González.",
+              "nota": "Surname unchanged."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5101,
+      6749
+    ],
+    "confunde": [
+      7084,
+      7149
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8891",
+      "kwiziq": true
+    }
+  ]
+}

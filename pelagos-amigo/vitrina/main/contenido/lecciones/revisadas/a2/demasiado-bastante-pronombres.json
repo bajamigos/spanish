@@ -1,0 +1,269 @@
+{
+  "tema": 7026,
+  "slug": "demasiado-bastante-pronombres",
+  "titulo": "Mucho, poco, demasiado, bastante, suficiente, tanto as pronouns",
+  "subtitulo": "¿Tortillas? Hay muchas. ¿Sillas? No hay suficientes.",
+  "foto": "t02.jpg",
+  "regla": "Mucho, poco, demasiado, bastante, suficiente and tanto can stand alone, replacing a noun already mentioned. They agree with that noun: mucho, mucha, muchos, muchas; bastante and suficiente change only for number. Plural masculine on its own (muchos, pocos) can mean many / few people.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "When the noun is already clear, drop it and keep the quantity word: **¿Hay tortillas? —Sí, hay muchas.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "The word **agrees** with the noun it replaces: **singular** for things you can't count (agua, tiempo), **plural** for things you can count (sillas, amigos)."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "Masc. sing.",
+            "Fem. sing.",
+            "Masc. pl.",
+            "Fem. pl."
+          ],
+          "filas": [
+            [
+              "_a lot, many_",
+              "mucho",
+              "mucha",
+              "muchos",
+              "muchas"
+            ],
+            [
+              "_little, few_",
+              "poco",
+              "poca",
+              "pocos",
+              "pocas"
+            ],
+            [
+              "_too much, too many_",
+              "demasiado",
+              "demasiada",
+              "demasiados",
+              "demasiadas"
+            ],
+            [
+              "_so much, so many_",
+              "tanto",
+              "tanta",
+              "tantos",
+              "tantas"
+            ],
+            [
+              "_quite a lot, enough_",
+              "bastante",
+              "bastante",
+              "bastantes",
+              "bastantes"
+            ],
+            [
+              "_enough_",
+              "suficiente",
+              "suficiente",
+              "suficientes",
+              "suficientes"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Bastante** and **suficiente** have **no feminine form**: only **-s** for plural."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With no noun at all, **muchos, pocos, bastantes** = _many / few / quite a few people_: **Muchos piensan que…**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the pronoun wears the noun's clothes. Tortillas → **muchas**; agua → **poca**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿Hay tortillas? —Sí, hay ==muchas==.",
+              "en": "Are there tortillas? —Yes, there are lots."
+            },
+            {
+              "es": "¿Cuánta agua tomaste? —==Poca==; se me olvidó la botella.",
+              "en": "How much water did you drink? —Not much; I forgot my bottle."
+            },
+            {
+              "es": "No compres más cerveza; ya tenemos ==bastante==.",
+              "en": "Don't buy more beer; we already have plenty."
+            },
+            {
+              "es": "¿Tienes tablas de surf? —Tengo ==demasiadas==; ya no caben en el garaje.",
+              "en": "Do you have surfboards? —Too many; they don't fit in the garage anymore."
+            },
+            {
+              "es": "¿Hay sillas para todos? —No, no hay ==suficientes==.",
+              "en": "Are there chairs for everyone? —No, there aren't enough."
+            },
+            {
+              "es": "¡Mira los tomates! Nunca había cosechado ==tantos==.",
+              "en": "Look at the tomatoes! I'd never harvested so many."
+            },
+            {
+              "es": "==Muchos== dicen que el jiu-jitsu es violento, pero ==pocos== lo han probado.",
+              "en": "Many people say jiu-jitsu is violent, but few have tried it."
+            },
+            {
+              "es": "¿Tienes tiempo? —==Poco==; tengo clase a las seis.",
+              "en": "Do you have time? —Not much; I have class at six."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Tienes primos? —Sí, tengo mucho."
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Tienes primos? —Sí, tengo muchos."
+                }
+              ],
+              "nota": "It agrees with **primos**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Quieres salsa? —No, ya tengo bastanta."
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Quieres salsa? —No, ya tengo bastante."
+                }
+              ],
+              "nota": "**Bastante** never becomes **-a**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Hay platos? —No, no hay suficiente."
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Hay platos? —No, no hay suficientes."
+                }
+              ],
+              "nota": "Countable noun: plural."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tengo muy muchos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tengo muchísimos."
+                }
+              ],
+              "nota": "Never **muy** + **mucho**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "muchas tortillas",
+              "texto": "The same words before a noun: [[5127|quantitative adjectives]]."
+            },
+            {
+              "forma": "muy / mucho",
+              "texto": "Which one goes where: [[5082|muy vs mucho]] and [[6135|demasiado, bastante, muy as adverbs]]."
+            },
+            {
+              "forma": "poco / un poco",
+              "texto": "_Not much_ vs _a little_: [[7061|poco vs un poco]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Do you have friends in Ensenada? —Yes, quite a few._",
+              "r": "¿Tienes amigos en Ensenada? —Sí, bastantes.",
+              "nota": "Plural, no gender change."
+            },
+            {
+              "p": "In Spanish: _Is there coffee? —Yes, but not much._",
+              "r": "¿Hay café? —Sí, pero poco.",
+              "nota": "Café: singular masculine."
+            },
+            {
+              "p": "Fix it: _¿Hay cervezas? —Sí, hay demasiado._",
+              "r": "¿Hay cervezas? —Sí, hay demasiadas.",
+              "nota": "Agrees with cervezas."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5127
+    ],
+    "confunde": [
+      5082,
+      6135
+    ],
+    "sigue": [
+      7061
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7026",
+      "kwiziq": true
+    }
+  ]
+}

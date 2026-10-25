@@ -1,0 +1,206 @@
+{
+  "tema": 5160,
+  "slug": "futuro-salir",
+  "titulo": "Conjugate salir in the simple future",
+  "subtitulo": "Saldré, saldrás, saldremos: a d slips into the stem.",
+  "foto": "t08.jpg",
+  "regla": "Salir has the irregular future stem saldr- with the regular endings: saldré, saldrás, saldrá, saldremos, saldrán.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Salir** (_to leave, to go out_) is irregular in the future because its stem is **saldr-**. The endings are regular."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**saldr-**",
+            "**-é, -ás, -á, -emos, -án**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "salir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "saldré"
+            ],
+            [
+              "tú",
+              "saldrás"
+            ],
+            [
+              "él, ella, usted",
+              "saldrá"
+            ],
+            [
+              "nosotros",
+              "saldremos"
+            ],
+            [
+              "ustedes, ellos",
+              "saldrán"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: just like **tener** → **tendré** and **venir** → **vendré**, the vowel goes and a **d** comes in: **sal-d-ré**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Estoy cansado, así que no ==saldré== hoy en la noche.",
+              "en": "I'm tired, so I won't go out tonight."
+            },
+            {
+              "es": "¿==Saldrás== con tus amigos?",
+              "en": "Will you go out with your friends?"
+            },
+            {
+              "es": "Seguro que Beto ==saldrá== con esa chava.",
+              "en": "I'm sure Beto will go out with that girl."
+            },
+            {
+              "es": "==Saldremos== temprano, antes del viento.",
+              "en": "We'll leave early, before the wind."
+            },
+            {
+              "es": "El Rocinante ==saldrá== de la estación a las seis.",
+              "en": "The Rocinante will leave the station at six."
+            },
+            {
+              "es": "==Saldrán== del laberinto sin problema.",
+              "en": "They'll get out of the maze with no problem."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Saliré temprano."
+                },
+                {
+                  "v": "bien",
+                  "t": "Saldré temprano."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Saldremós a las seis."
+                },
+                {
+                  "v": "bien",
+                  "t": "Saldremos a las seis."
+                }
+              ],
+              "nota": "No accent on **nosotros**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "saldría",
+              "texto": "Same stem in the conditional: [[5877|salir in the conditional]]."
+            },
+            {
+              "forma": "tendré, vendré, pondré",
+              "texto": "The same **-dr-** family: [[5050|tener]], [[5223|venir]], [[5259|poner]]."
+            },
+            {
+              "forma": "salgo",
+              "texto": "The present: [[5484|salir in the present]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We'll go out on Friday._",
+              "r": "Saldremos el viernes.",
+              "nota": "saldr- + emos."
+            },
+            {
+              "p": "**Salir** with **ustedes**: ¿A qué hora ___?",
+              "r": "¿A qué hora saldrán?",
+              "nota": "saldr- + án."
+            },
+            {
+              "p": "Which one? **Saliré** or **Saldré**?",
+              "r": "Saldré.",
+              "nota": "Irregular stem **saldr-**."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5484,
+      5155
+    ],
+    "confunde": [
+      5877
+    ],
+    "sigue": [
+      5050,
+      5223,
+      5259
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5160",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,265 @@
+{
+  "tema": 7037,
+  "slug": "quedar-quedarse-quedarle",
+  "titulo": "Quedar, quedarse and quedarle: the different meanings of quedar",
+  "subtitulo": "Quedan dos tacos, quedé con Beto, me quedo aquí, te queda bien.",
+  "foto": "t02.jpg",
+  "regla": "Quedar = to be left / to arrange to meet (quedar con) / to end up (+ adjective). Quedarse = to stay / to keep (quedarse con). Quedarle = to fit, to suit / to have left (me quedan 20 pesos).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Quedar** is a very flexible verb. Its meaning changes with how you use it:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Form",
+            "Meaning",
+            "Example"
+          ],
+          "filas": [
+            [
+              "quedar (3rd person)",
+              "_to be left, remain_",
+              "Quedan dos plátanos."
+            ],
+            [
+              "quedar (con alguien)",
+              "_to arrange to meet, to meet_",
+              "Quedé con Beto a las ocho."
+            ],
+            [
+              "quedar + adjective",
+              "_to end up, be left_ (the result)",
+              "Quedó satisfecha."
+            ],
+            [
+              "quedarse",
+              "_to stay_",
+              "Me quedo en casa."
+            ],
+            [
+              "quedarse con",
+              "_to keep_",
+              "Me quedo con la azul."
+            ],
+            [
+              "quedarse + adjective",
+              "_to become, be left_ (a change)",
+              "Se quedó dormido."
+            ],
+            [
+              "quedarle (me, te, le…)",
+              "_to fit, to suit_",
+              "Esa camisa te queda bien."
+            ],
+            [
+              "quedarle (me, te, le…)",
+              "_to have left_",
+              "Me quedan veinte pesos."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "To arrange to meet, Mexico more often says **quedar de** + infinitive: **quedé de verme con Beto a las ocho**, **¿quedamos de vernos?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Quedar** for _to be left_ only uses the 3rd person: **queda / quedan**, **quedó / quedaron**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Quedarle** works like **gustar**: the thing is the subject, the person goes in the pronoun."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: with no pronoun, things remain; with **se**, people stay; with **le**, it's about you."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Solo ==quedan== dos plátanos en el frutero.",
+              "en": "There are only two bananas left in the fruit bowl."
+            },
+            {
+              "es": "¡==Queda== un minuto para que termine el partido!",
+              "en": "There's one minute left in the game!"
+            },
+            {
+              "es": "==Quedé== con mi mamá a las dos para comer.",
+              "en": "I arranged to meet my mom at two for lunch."
+            },
+            {
+              "es": "¿==Quedamos== a las ocho?",
+              "en": "Shall we meet at eight?"
+            },
+            {
+              "es": "La alumna ==quedó== satisfecha con la respuesta.",
+              "en": "The student was satisfied with the answer."
+            },
+            {
+              "es": "Hoy ==me quedo== en casa; no hay olas.",
+              "en": "Today I'm staying home; there are no waves."
+            },
+            {
+              "es": "==Me quedo con== la tabla azul.",
+              "en": "I'll keep / take the blue board."
+            },
+            {
+              "es": "Beto ==se quedó== dormido en el camión.",
+              "en": "Beto fell asleep on the bus."
+            },
+            {
+              "es": "Esa chamarra ==te queda== muy bien.",
+              "en": "That jacket looks great on you."
+            },
+            {
+              "es": "==Me quedan== veinte pesos.",
+              "en": "I have twenty pesos left."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Queda dos tacos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quedan dos tacos."
+                }
+              ],
+              "nota": "It agrees with what's left."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quedo en casa hoy."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me quedo en casa hoy."
+                }
+              ],
+              "nota": "_To stay_ = **quedarse**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Esos pantalones te queda chicos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Esos pantalones te quedan chicos."
+                }
+              ],
+              "nota": "Like **gustar**: agrees with the thing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "me gusta, me quedan",
+              "texto": "Verbs like gustar: [[6001|gustar]], [[7032|repetition of indirect pronouns]]."
+            },
+            {
+              "forma": "quedarse + gerund",
+              "texto": "_To keep doing_: [[6895|quedarse + gerund]]."
+            },
+            {
+              "forma": "ponerse, quedarse",
+              "texto": "Verbs of change: [[6985|to become]]."
+            },
+            {
+              "forma": "me levanto",
+              "texto": "Reflexive verbs: [[5085|reflexive verbs in the present]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _There are three waves left in the set._",
+              "r": "Quedan tres olas en la serie.",
+              "nota": "quedar, plural."
+            },
+            {
+              "p": "In Spanish: _I'm staying in Rosarito tonight._",
+              "r": "Hoy en la noche me quedo en Rosarito.",
+              "nota": "quedarse."
+            },
+            {
+              "p": "In Spanish: _That shirt doesn't suit you._ (tú)",
+              "r": "Esa camisa no te queda.",
+              "nota": "quedarle."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5085,
+      6001
+    ],
+    "confunde": [
+      6985
+    ],
+    "sigue": [
+      6895,
+      6985
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7037",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "tema": 6129,
+  "slug": "ningun-ninguna-adjetivo",
+  "titulo": "Not any: ningún, ninguna",
+  "subtitulo": "«No tengo ningún problema.»",
+  "foto": "t09.jpg",
+  "regla": "To say not any or no + noun, use no + verb + ningún (masculine) or ninguna (feminine) + a singular noun. Spanish keeps both negatives, and ninguno drops its -o before a masculine noun.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "no + verb",
+            "+ ningún / ninguna +",
+            "singular noun"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**ningún** + masculine noun (with an accent): ningún carro. **ninguna** + feminine noun: ninguna mesa."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Keep the **no** before the verb. Two negatives are normal in Spanish: **No** tengo **ningún** problema."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The noun is almost always **singular**: no tengo ningún amigo aquí. **Ningunos / ningunas** only appear with nouns used in the plural, like **ningunas vacaciones**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "English _any_ in a negative sentence is **ningún**, never algún."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Ningún** can also start the sentence; then there's no **no**: **Ningún** carro pasó."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No tengo ==ningún== problema.",
+              "en": "I don't have any problem."
+            },
+            {
+              "es": "No hay ==ninguna== ola hoy; el mar está plano.",
+              "en": "There isn't a single wave today; the sea is flat."
+            },
+            {
+              "es": "No conozco a ==ningún== vecino de la colonia.",
+              "en": "I don't know any neighbors in the neighborhood."
+            },
+            {
+              "es": "No veo ==ninguna== diferencia.",
+              "en": "I don't see any difference."
+            },
+            {
+              "es": "Todavía no tengo ==ningún== tomate maduro.",
+              "en": "I don't have any ripe tomatoes yet."
+            },
+            {
+              "es": "No hay ==ningún== lugar para estacionarse.",
+              "en": "There's nowhere to park."
+            },
+            {
+              "es": "No fui a ==ninguna== clase esta semana.",
+              "en": "I didn't go to any classes this week."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No tengo algún problema."
+                },
+                {
+                  "v": "bien",
+                  "t": "No tengo ningún problema."
+                }
+              ],
+              "nota": "Negative _any_ = **ningún**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tengo ningún problema."
+                },
+                {
+                  "v": "bien",
+                  "t": "No tengo ningún problema."
+                }
+              ],
+              "nota": "Keep **no** before the verb."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No hay ninguno carro."
+                },
+                {
+                  "v": "bien",
+                  "t": "No hay ningún carro."
+                }
+              ],
+              "nota": "Before a masculine noun: **ningún**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No tengo ningunos amigos aquí."
+                },
+                {
+                  "v": "bien",
+                  "t": "No tengo ningún amigo aquí."
+                }
+              ],
+              "nota": "Use the singular."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "no",
+              "texto": "Basic negatives: [[5091|negative sentences with no]]."
+            },
+            {
+              "forma": "algún",
+              "texto": "The positive: [[6136|algún, alguna]]."
+            },
+            {
+              "forma": "ningún carro pasó",
+              "texto": "Starting the sentence: [[6134|ningún + noun + verb]]."
+            },
+            {
+              "forma": "ninguno",
+              "texto": "Without a noun: [[6464|ninguno, ninguna as pronouns]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I don't have any questions._",
+              "r": "No tengo ninguna pregunta.",
+              "nota": "Singular in Spanish."
+            },
+            {
+              "p": "In Spanish: _There isn't any free table._",
+              "r": "No hay ninguna mesa libre.",
+              "nota": "mesa → ninguna."
+            },
+            {
+              "p": "Fix it: _No hay ninguno taller abierto._",
+              "r": "No hay ningún taller abierto.",
+              "nota": "ningún."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5091
+    ],
+    "confunde": [
+      6136
+    ],
+    "sigue": [
+      6134,
+      6464
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6129",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,255 @@
+{
+  "tema": 9337,
+  "slug": "medidas-distancias",
+  "titulo": "Measurements and distances",
+  "subtitulo": "«Mido un metro ochenta. Ensenada está a cien kilómetros.»",
+  "foto": "t08.jpg",
+  "regla": "Height and length: medir (mido 1.75, mide tres metros de largo). Weight: pesar (peso 70 kilos). Distance: estar a + distance (está a 5 kilómetros). Latin America, Mexico included, uses the metric system.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Mexico uses the **metric system**: **metros**, **centímetros**, **kilómetros**, **kilos**, **litros**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Height** uses **medir** (e > i): **mido, mides, mide, medimos, miden**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "What",
+            "Question",
+            "Answer"
+          ],
+          "filas": [
+            [
+              "height",
+              "¿Cuánto mides?",
+              "Mido un metro setenta y cinco (1.75 m)."
+            ],
+            [
+              "weight",
+              "¿Cuánto pesas?",
+              "Peso setenta kilos."
+            ],
+            [
+              "length / width / height of a thing",
+              "¿Cuánto mide?",
+              "Mide tres metros de largo / de ancho / de alto."
+            ],
+            [
+              "depth",
+              "¿Qué tan profunda es?",
+              "Tiene dos metros de profundidad."
+            ],
+            [
+              "distance",
+              "¿A qué distancia está? / ¿Qué tan lejos está?",
+              "Está a cinco kilómetros."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Distance uses **estar a** + amount: **La playa está a diez minutos / a dos kilómetros de aquí**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "For the dimensions of things, use **medir** or **tener** + amount + **de largo / ancho / alto**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Abbreviations never take **-s** or a period: **5 km, 70 kg, 20 cm**. Mexico writes decimals with a point: **1.80 m** (read **un metro ochenta**)."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Mido== un metro ochenta.",
+              "en": "I'm 1.80 m tall (about 5'11\")."
+            },
+            {
+              "es": "Mi tabla ==mide== siete pies.",
+              "en": "My board is seven feet long. (surfboards are measured in feet)"
+            },
+            {
+              "es": "¿Cuánto ==pesas==? —==Peso== setenta y dos kilos.",
+              "en": "How much do you weigh? —I weigh seventy-two kilos."
+            },
+            {
+              "es": "Ensenada ==está a== unos cien kilómetros de Tijuana.",
+              "en": "Ensenada is about a hundred kilometers from Tijuana."
+            },
+            {
+              "es": "La playa ==está a== diez minutos en carro.",
+              "en": "The beach is ten minutes away by car."
+            },
+            {
+              "es": "El huerto ==mide== cuatro metros ==de largo== y dos ==de ancho==.",
+              "en": "The garden is four meters long and two wide."
+            },
+            {
+              "es": "La alberca ==tiene== dos metros ==de profundidad==.",
+              "en": "The pool is two meters deep."
+            },
+            {
+              "es": "¿==Qué tan lejos== está el gimnasio?",
+              "en": "How far is the gym?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Soy un metro setenta."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mido un metro setenta."
+                }
+              ],
+              "nota": "Height: medir."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La playa es cinco kilómetros de aquí."
+                },
+                {
+                  "v": "bien",
+                  "t": "La playa está a cinco kilómetros de aquí."
+                }
+              ],
+              "nota": "Distance: estar a."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El cuarto es tres metros largo."
+                },
+                {
+                  "v": "bien",
+                  "t": "El cuarto mide tres metros de largo."
+                }
+              ],
+              "nota": "Add de: de largo."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Peso 70 kgs."
+                },
+                {
+                  "v": "bien",
+                  "t": "Peso 70 kg."
+                }
+              ],
+              "nota": "No -s on abbreviations."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¿cuánto mides?",
+              "texto": "Asking how much: [[7068|cuánto + noun]], [[9835|cuánto + verb]]."
+            },
+            {
+              "forma": "unos cien kilómetros",
+              "texto": "Approximate amounts: [[6671|unos, unas + number]]."
+            },
+            {
+              "forma": "está a cinco kilómetros",
+              "texto": "Location always takes estar: [[5067|estar for location]]."
+            },
+            {
+              "forma": "mido",
+              "texto": "The e > i stem change: [[5554|-ir verbs with e > i]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _How tall are you?_",
+              "r": "¿Cuánto mides?",
+              "nota": "medir."
+            },
+            {
+              "p": "In Spanish: _The store is two kilometers away._",
+              "r": "La tienda está a dos kilómetros.",
+              "nota": "estar a + distance."
+            },
+            {
+              "p": "Fix it: _La mesa es dos metros de largo._",
+              "r": "La mesa mide dos metros de largo. / La mesa tiene dos metros de largo.",
+              "nota": "medir (or tener) + de largo."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5554,
+      7068
+    ],
+    "confunde": [
+      5067
+    ],
+    "sigue": [
+      9835,
+      6671
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9337",
+      "kwiziq": true
+    }
+  ]
+}

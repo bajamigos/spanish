@@ -1,0 +1,188 @@
+{
+  "tema": 7270,
+  "slug": "ser-muy-de",
+  "titulo": "Ser / no ser muy de + infinitive = to be (not) the type to",
+  "subtitulo": "No soy muy de salir de noche.",
+  "foto": "t01.jpg",
+  "regla": "Ser muy de / mucho de + infinitive (or noun) = to be the type who likes..., to be big on: Soy muy de quedarme en casa. No soy muy de fiestas. Ser más de = to be more of a ... person. No ser tanto de = not so much into.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "ser / no ser + muy de / mucho de",
+            "+ infinitive / noun"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It describes **what kind of person** you are, your preferences and habits."
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "ser muy de / mucho de",
+              "texto": "_to be big on, the type who_"
+            },
+            {
+              "forma": "ser más de",
+              "texto": "_to be more of a..._, contrasting with what was said (not in the negative)"
+            },
+            {
+              "forma": "no ser tanto de",
+              "texto": "_not so much into..._"
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Colloquial, and you'll hear it among young people in Mexico too: **no soy muy de fiestas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **soy muy de...** is a personality tag."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "—A mí me encanta desvelarme los sábados. —Pues yo ==soy muy de== quedarme en casa viendo una película.",
+              "en": "—I love staying up all night on Saturdays. —Well, I'm more the stay-home-and-watch-a-movie type."
+            },
+            {
+              "es": "Yo ==soy mucho de== acostarme temprano.",
+              "en": "I'm big on going to bed early."
+            },
+            {
+              "es": "==No soy muy de== salir de noche. Prefiero el día.",
+              "en": "I'm not much for going out at night. I prefer daytime."
+            },
+            {
+              "es": "Ella ==es más de== divertirse con sus amigas.",
+              "en": "She's more into having fun with her friends."
+            },
+            {
+              "es": "Mis hijos ==no son tanto de== videojuegos; prefieren el futbol.",
+              "en": "My kids aren't so much into video games; they prefer soccer."
+            },
+            {
+              "es": "==No soy muy de== dulces.",
+              "en": "I'm not big on sweets."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Soy muy de me quedo en casa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Soy muy de quedarme en casa."
+                }
+              ],
+              "nota": "Infinitive after **de**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No soy más de salir."
+                },
+                {
+                  "v": "bien",
+                  "t": "No soy muy de salir."
+                }
+              ],
+              "nota": "**Más de** isn't used in the negative."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "me gusta",
+              "texto": "[[6001|gustar]]."
+            },
+            {
+              "forma": "ser de",
+              "texto": "[[6504|ser de un / una]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I'm not really a morning person._ (madrugar)",
+              "r": "No soy muy de madrugar.",
+              "nota": "no ser muy de."
+            },
+            {
+              "p": "In Spanish: _He's more of a beach person._",
+              "r": "Es más de playa.",
+              "nota": "ser más de."
+            },
+            {
+              "p": "In Spanish: _I'm big on cooking at home._",
+              "r": "Soy muy de cocinar en casa.",
+              "nota": "ser muy de."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6001
+    ],
+    "confunde": [],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7270",
+      "kwiziq": true
+    }
+  ]
+}

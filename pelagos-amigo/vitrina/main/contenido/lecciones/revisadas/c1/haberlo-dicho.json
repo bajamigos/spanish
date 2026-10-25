@@ -1,0 +1,181 @@
+{
+  "tema": 8281,
+  "slug": "haberlo-dicho",
+  "titulo": "¡Haber + participle! = you should have...",
+  "subtitulo": "¡Haberme avisado! ¡No haber ido!",
+  "foto": "t03.jpg",
+  "regla": "¡Haber + participle! is a reproach: you should have...: ¡Haber ahorrado más! ¡Habérmelo dicho! Negative: ¡No haber faltado tanto! In Mexico, ¡Hubieras + participle! is the common version: ¡Me hubieras dicho!",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "¡(No) haber",
+            "+ participle!"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "A **reproach** about the past, usually as a reply: _well, you should have..._"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Pronouns attach to **haber**: **¡habérmelo dicho!**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**In Mexico** the everyday version is **¡hubieras** + participle!: **¡me hubieras avisado!**, **¡no hubieras ido!**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: it's an I-told-you-so, delivered too late."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "—Casi no tengo dinero en el banco. —¡==Haber ahorrado== un poco más!",
+              "en": "—I have hardly any money in the bank. —You should have saved a bit more!"
+            },
+            {
+              "es": "—Llevo días sin dormir. —¡==Habérmelo dicho==! No sabía nada.",
+              "en": "—I haven't slept in days. —You should have told me! I had no idea."
+            },
+            {
+              "es": "—No me gusta mi trabajo nuevo. —Pues ==haberlo pensado== mejor.",
+              "en": "—I don't like my new job. —Well, you should have thought it through."
+            },
+            {
+              "es": "—El plomero me cobró un dineral. —¡==Haber llamado== a Juan!",
+              "en": "—The plumber charged me a fortune. —You should have called Juan!"
+            },
+            {
+              "es": "—No entiendo este tema. —¡==No haber faltado== tanto a clase!",
+              "en": "—I don't get this topic. —You shouldn't have missed so many classes!"
+            },
+            {
+              "es": "—¡==Me hubieras dicho==! —Perdón.",
+              "en": "—You should've told me! —Sorry. (common in Mexico)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Haber me dicho!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Haberme dicho!"
+                }
+              ],
+              "nota": "Attach to **haber**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Hay que ahorrado!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Haber ahorrado!"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "deberías haber",
+              "texto": "[[5054|debería haber]]."
+            },
+            {
+              "forma": "hubiera",
+              "texto": "[[5842|pluperfect subjunctive]]."
+            },
+            {
+              "forma": "haber + participle",
+              "texto": "[[7262|perfect infinitive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Reproach: _You should have come earlier!_",
+              "r": "¡Haber venido antes! / ¡Hubieras venido antes!",
+              "nota": "haber + participle."
+            },
+            {
+              "p": "Reproach: _You shouldn't have bought it!_",
+              "r": "¡No haberlo comprado! / ¡No lo hubieras comprado!",
+              "nota": "Negative."
+            },
+            {
+              "p": "Mexican version of _¡Habérmelo dicho!_",
+              "r": "¡Me lo hubieras dicho!",
+              "nota": "hubieras."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7262,
+      5054
+    ],
+    "confunde": [
+      5054
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8281",
+      "kwiziq": true
+    }
+  ]
+}

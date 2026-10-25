@@ -1,0 +1,187 @@
+{
+  "tema": 7273,
+  "slug": "por-autor",
+  "titulo": "Por (not para) to say \"by\" someone or something",
+  "subtitulo": "Pintado por Frida, arrestado por la policía.",
+  "foto": "t02.jpg",
+  "regla": "To say by whom or by what something was done, use por (never para), usually after a participle: un mural pintado por Diego Rivera.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say **by** [someone / something], the one who does the action, use **por**, never **para**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It usually comes after a **participle** used as an adjective: **diseñado por**, **escrito por**, **arrestado por**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "[participle]",
+            "+ por +",
+            "[who / what does it]"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The participle agrees with the noun it describes: **las calles iluminadas por**, **el gato asustado por**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The same **por** shows up in the passive voice: **fue escrito por**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **por** = **por** quién. Who did it? **Por** tells you."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ese mural, pintado ==por== Diego Rivera, es enorme.",
+              "en": "That mural, painted by Diego Rivera, is huge."
+            },
+            {
+              "es": "El ladrón, arrestado ==por== la policía ayer, está en la cárcel.",
+              "en": "The thief, arrested by the police yesterday, is in jail."
+            },
+            {
+              "es": "Al final fui a la fiesta, animada ==por== mi amiga Clara.",
+              "en": "In the end I went to the party, encouraged by my friend Clara."
+            },
+            {
+              "es": "Las calles, iluminadas ==por== los faroles, estaban vacías.",
+              "en": "The streets, lit by the streetlights, were empty."
+            },
+            {
+              "es": "Jaime, aplaudido ==por== todos, salió de la sala.",
+              "en": "Jaime, applauded by everyone, left the room."
+            },
+            {
+              "es": "Es un libro escrito ==por== una periodista de Oaxaca.",
+              "en": "It's a book written by a journalist from Oaxaca."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Una canción escrita para Juan Gabriel."
+                },
+                {
+                  "v": "bien",
+                  "t": "Una canción escrita por Juan Gabriel."
+                }
+              ],
+              "nota": "**Para Juan Gabriel** = he receives it. **Por** = he wrote it."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Fue construido para los aztecas. (= for them)"
+                },
+                {
+                  "v": "bien",
+                  "t": "Fue construido por los aztecas."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "fue escrito por",
+              "texto": "The passive voice: [[6173|ser + participle + por]]."
+            },
+            {
+              "forma": "por teléfono, por 100 pesos",
+              "texto": "Other uses of **por**: [[5973|medium]], [[5974|exchange]], [[5975|price]]."
+            },
+            {
+              "forma": "para ti",
+              "texto": "**Para** for a recipient: [[5988|ser para]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _a song sung by my sister_",
+              "r": "una canción cantada por mi hermana",
+              "nota": "por = by."
+            },
+            {
+              "p": "In Spanish: _The houses, destroyed by the hurricane, ..._",
+              "r": "Las casas, destruidas por el huracán, ...",
+              "nota": "Agreement: destruidas."
+            },
+            {
+              "p": "**Por** or **para**? _Un regalo ___ ti, hecho ___ mí._",
+              "r": "Un regalo para ti, hecho por mí.",
+              "nota": "Recipient: para. Maker: por."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5974
+    ],
+    "confunde": [
+      5970
+    ],
+    "sigue": [
+      6173
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7273",
+      "kwiziq": true
+    }
+  ]
+}

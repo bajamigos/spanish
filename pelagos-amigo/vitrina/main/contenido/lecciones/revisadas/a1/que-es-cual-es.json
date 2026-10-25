@@ -1,0 +1,210 @@
+{
+  "tema": 9926,
+  "slug": "que-es-cual-es",
+  "titulo": "Qué vs cuál + verb",
+  "subtitulo": "¿Qué es un burrito? ¿Cuál es tu número?",
+  "foto": "t06.jpg",
+  "regla": "Before a verb, qué asks for a definition or open information (¿Qué es un burrito?), while cuál (plural cuáles) asks you to pick or identify a specific one (¿Cuál es tu número?). Both translate as what or which.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**¿Qué es…?** asks for a **definition** or explanation: _what is it, what does it mean?_"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**¿Cuál es…?** asks for a **specific item** from all the possible ones: name, number, address, capital, favorite… Plural: **¿Cuáles son…?**"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Question",
+            "Asks for",
+            "Example"
+          ],
+          "filas": [
+            [
+              "¿Qué es…?",
+              "a definition",
+              "¿Qué es el jiu-jitsu?"
+            ],
+            [
+              "¿Cuál es…?",
+              "a specific one",
+              "¿Cuál es tu dirección?"
+            ],
+            [
+              "¿Cuáles son…?",
+              "specific ones",
+              "¿Cuáles son tus horarios?"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "With other verbs: **¿Qué quieres?** is open; **¿Cuál quieres?** means _which one_ from a set you can see."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿==Qué es== un burrito?",
+              "en": "What is a burrito?"
+            },
+            {
+              "es": "¿==Cuál es== tu número de teléfono?",
+              "en": "What's your phone number?"
+            },
+            {
+              "es": "¿==Cuál es== la capital de Baja California?",
+              "en": "What's the capital of Baja California?"
+            },
+            {
+              "es": "¿==Cuáles son== tus películas favoritas?",
+              "en": "What are your favorite movies?"
+            },
+            {
+              "es": "Hay tres tablas. ¿==Cuál quieres==?",
+              "en": "There are three boards. Which one do you want?"
+            },
+            {
+              "es": "¿==Qué quieres== hacer hoy?",
+              "en": "What do you want to do today?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Qué es tu número de teléfono?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cuál es tu número de teléfono?"
+                }
+              ],
+              "nota": "A specific number: **cuál**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Qué es la capital de Baja California?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cuál es la capital de Baja California?"
+                }
+              ],
+              "nota": "One city among all: **cuál**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Cuál es tus zapatos favoritos?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cuáles son tus zapatos favoritos?"
+                }
+              ],
+              "nota": "Plural: **cuáles son**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¿Qué quieres?",
+              "texto": "The basics of qué: [[9828|questions with qué]]."
+            },
+            {
+              "forma": "¿Cuál carro?",
+              "texto": "Cuál before a noun: [[9335|cuál + noun]]."
+            },
+            {
+              "forma": "¿Dónde? ¿Cuándo?",
+              "texto": "More question words: [[6313|cómo, dónde, cuándo]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish (definition): _What is a burrito?_",
+              "r": "¿Qué es un burrito?",
+              "nota": "Definition: qué."
+            },
+            {
+              "p": "In Spanish (tú): _What's your address?_",
+              "r": "¿Cuál es tu dirección?",
+              "nota": "Specific info: cuál."
+            },
+            {
+              "p": "In Spanish (tú): _What are your favorite movies?_",
+              "r": "¿Cuáles son tus películas favoritas?",
+              "nota": "Plural: cuáles son."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      9828
+    ],
+    "confunde": [
+      9335
+    ],
+    "sigue": [
+      6313
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9926",
+      "kwiziq": true
+    }
+  ]
+}

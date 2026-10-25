@@ -1,0 +1,226 @@
+{
+  "tema": 5967,
+  "slug": "para-mi-en-mi-opinion",
+  "titulo": "Para mí = in my opinion",
+  "subtitulo": "«Para mí, es la mejor serie.»",
+  "foto": "t08.jpg",
+  "regla": "Para + person gives that person's opinion or point of view: para mí (in my opinion), ¿para ti es caro?, para mi papá… Not por: por mí means I don't mind / fine by me.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Para** + person = _in (that person's) opinion_, _for (that person)_, _as (that person) sees it_."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "Para",
+            "+ person +",
+            ", opinion"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "With pronouns: **para mí**, **para ti**, **para él**, **para ella**, **para usted**, **para nosotros**, **para ustedes**, **para ellos**. **Mí** takes an accent."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With names or nouns: **para mi hermano**, **para los turistas**, **para Laura**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Por mí** means something else: _I don't mind_ / _fine by me_: **Por mí, está bien**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **para mí** points the opinion at me, like a sticker on my forehead: _this is what I think_."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Para mí==, The Expanse es la mejor serie de ciencia ficción.",
+              "en": "In my opinion, The Expanse is the best sci-fi series."
+            },
+            {
+              "es": "¿==Para ti== es caro este restaurante?",
+              "en": "Do you think this restaurant is expensive?"
+            },
+            {
+              "es": "==Para mi hermano==, el jiu-jitsu es más difícil que el surf.",
+              "en": "For my brother, jiu-jitsu is harder than surfing."
+            },
+            {
+              "es": "==Para ella==, no hay nada mejor que unos tacos de birria.",
+              "en": "For her, there's nothing better than birria tacos."
+            },
+            {
+              "es": "==Para nosotros==, Tijuana es la mejor ciudad del mundo.",
+              "en": "For us, Tijuana is the best city in the world."
+            },
+            {
+              "es": "==Para los turistas==, todo aquí es barato.",
+              "en": "To tourists, everything here is cheap."
+            },
+            {
+              "es": "¿Y ==para usted==, qué es lo más importante?",
+              "en": "And for you, what's most important?"
+            },
+            {
+              "es": "==Para mí== que va a llover.",
+              "en": "I have a feeling it's going to rain."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Por mí, es la mejor película."
+                },
+                {
+                  "v": "bien",
+                  "t": "Para mí, es la mejor película."
+                }
+              ],
+              "nota": "Opinion = **para**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Para mi, el café es muy fuerte."
+                },
+                {
+                  "v": "bien",
+                  "t": "Para mí, el café es muy fuerte."
+                }
+              ],
+              "nota": "**Mí** with an accent after a preposition."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Para yo, es muy difícil."
+                },
+                {
+                  "v": "bien",
+                  "t": "Para mí, es muy difícil."
+                }
+              ],
+              "nota": "Never **yo** after **para**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Para tú es caro?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Para ti es caro?"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "mi / mí",
+              "texto": "The accent: [[9111|mi vs mí]]."
+            },
+            {
+              "forma": "creo que",
+              "texto": "Another way to give an opinion: [[6128|que = that]]."
+            },
+            {
+              "forma": "para mí, sin ti",
+              "texto": "All prepositions + pronouns: [[6466|prepositions + pronouns]]."
+            },
+            {
+              "forma": "por mí que…",
+              "texto": "The advanced pair: [[7155|por mí, que… vs para mí que…]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish, with para: _In my opinion, this beer is very good._",
+              "r": "Para mí, esta cerveza está muy buena.",
+              "nota": "para mí."
+            },
+            {
+              "p": "In Spanish, with para: _Is it far, in your opinion?_ (tú)",
+              "r": "¿Para ti está lejos?",
+              "nota": "para ti."
+            },
+            {
+              "p": "Fix it: _Por mi papá, el fútbol es aburrido._",
+              "r": "Para mi papá, el fútbol es aburrido.",
+              "nota": "His opinion: para."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      9111,
+      6466
+    ],
+    "confunde": [
+      7155
+    ],
+    "sigue": [
+      6128
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5967",
+      "kwiziq": true
+    }
+  ]
+}

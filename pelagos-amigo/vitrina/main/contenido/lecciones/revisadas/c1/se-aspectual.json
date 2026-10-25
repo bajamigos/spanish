@@ -1,0 +1,217 @@
+{
+  "tema": 8527,
+  "slug": "se-aspectual",
+  "titulo": "Se aspectual: comerse, leerse, saberse",
+  "subtitulo": "Se comió todo el pastel. Me sé la canción.",
+  "foto": "t07.jpg",
+  "regla": "Adding a reflexive pronoun to verbs like comer, beber, leer, saber, aprender, ver gives the action a sense of completion or personal involvement: Comió pastel (ate some cake) vs Se comió el pastel (ate up the cake). It needs a specific object, usually with an article or a quantity.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Comer** reports what happened; **comerse** stresses that it was finished, all of it, often with some feeling."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Common verbs: **comerse, beberse / tomarse, leerse, verse (una serie), aprenderse, saberse, creerse, fumarse, ganarse**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It needs a **definite, limited object**: **se comió el pastel / tres tacos**, not ~~se comió pastel~~."
+        },
+        {
+          "tipo": "texto",
+          "texto": "English often uses _up, down, through, all_: _eat up, drink down, read through_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **se** = _the whole thing_."
+        }
+      ]
+    },
+    {
+      "id": "tabla",
+      "titulo": "Without and with se",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "neutral",
+            "with se",
+            "nuance"
+          ],
+          "filas": [
+            [
+              "Laura comió una manzana.",
+              "Laura se comió una manzana.",
+              "ate it up"
+            ],
+            [
+              "Tomó cerveza.",
+              "Se tomó la cerveza.",
+              "drank the whole thing"
+            ],
+            [
+              "Leyó el libro.",
+              "Se leyó el libro en un día.",
+              "read it right through"
+            ],
+            [
+              "Sé la respuesta.",
+              "Me sé la canción de memoria.",
+              "know it by heart"
+            ],
+            [
+              "Vimos la serie.",
+              "Nos vimos la serie entera.",
+              "binged it"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿==Te tomaste== toda la leche?",
+              "en": "Did you drink all the milk?"
+            },
+            {
+              "es": "Javier ==se leyó== en un fin de semana el libro que le regalé.",
+              "en": "Javier read the whole book I gave him in a weekend."
+            },
+            {
+              "es": "==Me aprendí== los verbos irregulares.",
+              "en": "I learned the irregular verbs by heart."
+            },
+            {
+              "es": "Mi hermano ==se cree== todo lo que le dicen.",
+              "en": "My brother believes everything people tell him."
+            },
+            {
+              "es": "¡==Se comieron== todos los tamales!",
+              "en": "They ate up all the tamales!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me comí pan."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me comí el pan. / Comí pan."
+                }
+              ],
+              "nota": "Se aspectual needs a defined object."
+            },
+            {
+              "filas": [
+                {
+                  "v": "neutral",
+                  "t": "Sabe inglés."
+                },
+                {
+                  "v": "aspectual",
+                  "t": "Se sabe todo el diálogo."
+                }
+              ],
+              "nota": "**Saberse** = to know something specific by heart."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "dativo de interés",
+              "texto": "[[7921|dativo de interés]]."
+            },
+            {
+              "forma": "pronominal verbs",
+              "texto": "[[7447|encontrar vs encontrarse]]."
+            },
+            {
+              "forma": "accidental se",
+              "texto": "[[7060|accidental se]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _He ate up the whole pizza._",
+              "r": "Se comió toda la pizza.",
+              "nota": "comerse."
+            },
+            {
+              "p": "In Spanish: _I know all the songs by heart._",
+              "r": "Me sé todas las canciones.",
+              "nota": "saberse."
+            },
+            {
+              "p": "Neutral or aspectual? _Bebo agua._",
+              "r": "Neutral: no defined object.",
+              "nota": "No se with a mass noun."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7060
+    ],
+    "confunde": [
+      7921
+    ],
+    "sigue": [
+      7447
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8527",
+      "kwiziq": true
+    }
+  ]
+}

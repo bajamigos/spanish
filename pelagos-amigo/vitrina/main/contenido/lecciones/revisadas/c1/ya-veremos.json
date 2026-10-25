@@ -1,0 +1,160 @@
+{
+  "tema": 9653,
+  "slug": "ya-veremos",
+  "titulo": "Ya + future = at some point (ya veremos, ya me contarás)",
+  "subtitulo": "Ya veremos. Ya lo arreglaremos.",
+  "foto": "t08.jpg",
+  "regla": "Ya + simple future = at some point, eventually, without saying when: Ya veremos (We'll see). Ya hablaremos. Ya me contarás cómo te fue. Often reassuring or a polite way to postpone.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "ya",
+            "+ simple future"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It points to an **unspecified moment** later: _sometime, eventually, in due course_. English often leaves it untranslated."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Reassuring (**ya lo arreglaremos**) or noncommittal (**ya veremos**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In Mexico **ya** + **ir a** works too: **ya vamos a ver**, **ya me vas a contar**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **ya veremos** = maybe, ask me later."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "—¿Cuándo te vienes a vivir conmigo? —==Ya veremos==.",
+              "en": "—When are you moving in with me? —We'll see."
+            },
+            {
+              "es": "==Ya hablaremos== de eso.",
+              "en": "We'll talk about that another time."
+            },
+            {
+              "es": "==Ya me contarás== cómo te fue en la entrevista.",
+              "en": "Let me know how the interview goes."
+            },
+            {
+              "es": "==Ya lo solucionaremos==, no te preocupes.",
+              "en": "We'll sort it out, don't worry."
+            },
+            {
+              "es": "Tranquilo, ==ya lo hablaremos== con calma.",
+              "en": "Relax, we'll talk it over calmly at some point."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "ya = already",
+                  "t": "Ya lo vi."
+                },
+                {
+                  "v": "ya = sometime",
+                  "t": "Ya lo veremos."
+                }
+              ],
+              "nota": "Past: already. Future: eventually."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "ya / ya no",
+              "texto": "[[7263|ya / ya no]]."
+            },
+            {
+              "forma": "future",
+              "texto": "[[5162|simple future]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Noncommittal: _We'll see._",
+              "r": "Ya veremos.",
+              "nota": "ya + future."
+            },
+            {
+              "p": "Reassuring: _We'll find it eventually._",
+              "r": "Ya lo encontraremos.",
+              "nota": "ya + future."
+            },
+            {
+              "p": "In Spanish: _Let me know how it goes._",
+              "r": "Ya me contarás cómo te va.",
+              "nota": "ya me contarás."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7263
+    ],
+    "confunde": [
+      7263
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9653",
+      "kwiziq": true
+    }
+  ]
+}

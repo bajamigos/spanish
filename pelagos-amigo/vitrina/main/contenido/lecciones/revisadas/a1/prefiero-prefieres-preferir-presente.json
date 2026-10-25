@@ -1,0 +1,196 @@
+{
+  "tema": 5776,
+  "slug": "prefiero-prefieres-preferir-presente",
+  "titulo": "Preferir in the present",
+  "subtitulo": "Prefiero el mar. ¿Tú qué prefieres?",
+  "foto": "t02.jpg",
+  "regla": "Preferir (to prefer) goes prefiero, prefieres, prefiere, preferimos, prefieren: the second e changes to ie except in nosotros.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Preferir** (_to prefer_) is a stem-changing verb: the **second e** becomes **ie**: pref**ie**ro."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "preferir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**prefiero**"
+            ],
+            [
+              "tú",
+              "**prefieres**"
+            ],
+            [
+              "él, ella, usted",
+              "**prefiere**"
+            ],
+            [
+              "nosotros",
+              "preferimos"
+            ],
+            [
+              "ellos, ustedes",
+              "**prefieren**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Nosotros** keeps the e: **preferimos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It takes a noun or an infinitive: **prefiero el té**, **prefiero caminar**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Prefiero== el café sin azúcar.",
+              "en": "I prefer coffee without sugar."
+            },
+            {
+              "es": "¿==Prefieres== playa o montaña?",
+              "en": "Do you prefer the beach or the mountains?"
+            },
+            {
+              "es": "Mi novia ==prefiere== las películas de terror.",
+              "en": "My girlfriend prefers horror movies."
+            },
+            {
+              "es": "==Preferimos== surfear temprano.",
+              "en": "We prefer to surf early."
+            },
+            {
+              "es": "Ellos ==prefieren== quedarse en casa.",
+              "en": "They prefer to stay home."
+            },
+            {
+              "es": "¿Qué ==prefiere== usted, té o café?",
+              "en": "What do you prefer, tea or coffee?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo prefero el té."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo prefiero el té."
+                }
+              ],
+              "nota": "The e becomes **ie**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros prefierimos ir en camión."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros preferimos ir en camión."
+                }
+              ],
+              "nota": "No ie in nosotros."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "e → ie",
+              "texto": "The whole group: [[5574|stem-changing -ir verbs]]."
+            },
+            {
+              "forma": "quiero",
+              "texto": "Same change: [[5774|querer]], [[5775|sentir]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I prefer tea._",
+              "r": "Prefiero el té.",
+              "nota": "ie in yo."
+            },
+            {
+              "p": "Fix it: _Nosotros prefierimos la playa._",
+              "r": "Nosotros preferimos la playa.",
+              "nota": "No ie in nosotros."
+            },
+            {
+              "p": "In Spanish (ustedes): _What do you prefer?_",
+              "r": "¿Qué prefieren?",
+              "nota": "prefieren for ustedes."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      5774
+    ],
+    "sigue": [
+      5574,
+      5775
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5776",
+      "kwiziq": true
+    }
+  ]
+}

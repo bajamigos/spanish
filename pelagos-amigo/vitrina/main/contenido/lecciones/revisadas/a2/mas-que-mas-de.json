@@ -1,0 +1,234 @@
+{
+  "tema": 6980,
+  "slug": "mas-que-mas-de",
+  "titulo": "Más que / más de (more than)",
+  "subtitulo": "Come más que yo. Tengo más de cien pesos.",
+  "foto": "t09.jpg",
+  "regla": "Más que and menos que compare two things: Mi hermano come más que yo. Más de and menos de go before a number or quantity: Tengo más de cien pesos, menos de la mitad.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "_More than_ / _less than_ has two forms in Spanish."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Use",
+            "Form",
+            "Example"
+          ],
+          "filas": [
+            [
+              "Comparing two things",
+              "más / menos … que",
+              "Corre más que yo."
+            ],
+            [
+              "Before a number or quantity",
+              "más / menos de",
+              "Corre más de diez kilómetros."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Que** compares people, things or actions: **más alto que tú**, **menos dinero que ayer**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**De** goes before a **number** or an **amount**: **más de cien**, **menos de la mitad**, **más de una hora**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "After **que**, use subject pronouns: **más que yo**, **más que tú**, never _más que mí_."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi hermano come ==más que== yo.",
+              "en": "My brother eats more than I do."
+            },
+            {
+              "es": "Tijuana es ==más grande que== Ensenada.",
+              "en": "Tijuana is bigger than Ensenada."
+            },
+            {
+              "es": "Entreno ==menos que== tú.",
+              "en": "I train less than you."
+            },
+            {
+              "es": "Hoy las olas están ==más altas que== ayer.",
+              "en": "The waves are bigger today than yesterday."
+            },
+            {
+              "es": "Tengo ==más de== cien pesos.",
+              "en": "I have more than a hundred pesos."
+            },
+            {
+              "es": "Vinieron ==menos de== diez personas a la clase.",
+              "en": "Fewer than ten people came to class."
+            },
+            {
+              "es": "La tabla cuesta ==más de== cinco mil pesos.",
+              "en": "The board costs more than five thousand pesos."
+            },
+            {
+              "es": "Mi jardín tiene ==más de== veinte plantas.",
+              "en": "My garden has more than twenty plants."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tengo más que cien pesos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tengo más de cien pesos."
+                }
+              ],
+              "nota": "Number: **de**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mi hermano es más alto de mí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mi hermano es más alto que yo."
+                }
+              ],
+              "nota": "Comparing: **que** + **yo**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hay menos que diez sillas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hay menos de diez sillas."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me comí más que la mitad."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me comí más de la mitad."
+                }
+              ],
+              "nota": "Amounts too."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "más / menos",
+              "texto": "The words themselves: [[6463|más and menos]]."
+            },
+            {
+              "forma": "más caro que",
+              "texto": "Comparing in detail: [[6210|más … que, menos … que]]."
+            },
+            {
+              "forma": "tan alto como",
+              "texto": "Equal, not more: [[5116|tan … como]]."
+            },
+            {
+              "forma": "mayor, mejor",
+              "texto": "Irregular comparatives: [[6078|mayor, menor, mejor, peor]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _more than twenty people_",
+              "r": "más de veinte personas",
+              "nota": "Number: de."
+            },
+            {
+              "p": "In Spanish: _She runs more than I do._",
+              "r": "Ella corre más que yo.",
+              "nota": "Comparing: que."
+            },
+            {
+              "p": "Fix it: _Gano menos que mil pesos._",
+              "r": "Gano menos de mil pesos.",
+              "nota": "Number: de."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6463,
+      6210
+    ],
+    "confunde": [
+      5116
+    ],
+    "sigue": [
+      6078
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6980",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,235 @@
+{
+  "tema": 6134,
+  "slug": "ningun-sustantivo-verbo",
+  "titulo": "Ningún / ninguna + noun before the verb",
+  "subtitulo": "Ningún alumno vino. Ninguna tienda está abierta.",
+  "foto": "t04.jpg",
+  "regla": "When ningún / ninguna + noun comes before the verb, it means no + noun and you don't add no: Ningún alumno vino. If it comes after the verb, you need no before the verb: No vino ningún alumno.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Ningún** (masculine) and **ninguna** (feminine) + noun = _no_ + noun, _not a single_ + noun."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Put it **before the verb** and the sentence is already negative. **Don't add no.**"
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "Ningún / Ninguna + noun",
+            "+",
+            "verb"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Put it **after the verb** and you need **no** before the verb (double negative)."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "No + verb",
+            "+",
+            "ningún / ninguna + noun"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Use the **singular**: noun and verb. **Ningún amigo vino**, not _ningunos amigos vinieron_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Ninguno** drops the **-o** before a masculine noun: **ningún carro**. The feminine stays whole: **ninguna casa**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Ningún== amigo me llamó en mi cumpleaños.",
+              "en": "No friend called me on my birthday."
+            },
+            {
+              "es": "==Ninguna== tienda está abierta a esta hora.",
+              "en": "No store is open at this time."
+            },
+            {
+              "es": "==Ningún== surfista entró al agua hoy.",
+              "en": "No surfer went into the water today."
+            },
+            {
+              "es": "==Ninguna== planta de mi jardín sobrevivió al calor.",
+              "en": "Not one plant in my garden survived the heat."
+            },
+            {
+              "es": "==Ningún== estudiante sabe la respuesta.",
+              "en": "No student knows the answer."
+            },
+            {
+              "es": "==Ninguna== película me gustó.",
+              "en": "I didn't like any of the movies."
+            },
+            {
+              "es": "==Ningún== restaurante de la calle acepta tarjeta.",
+              "en": "No restaurant on the street takes cards."
+            },
+            {
+              "es": "==No== vino ==ningún== alumno.",
+              "en": "No student came."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ningún alumno no vino."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ningún alumno vino."
+                }
+              ],
+              "nota": "Before the verb: no **no**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Vino ningún alumno."
+                },
+                {
+                  "v": "bien",
+                  "t": "No vino ningún alumno."
+                }
+              ],
+              "nota": "After the verb: add **no**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ninguno carro funciona."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ningún carro funciona."
+                }
+              ],
+              "nota": "**Ningún** before a masculine noun."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ningunas tiendas están abiertas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ninguna tienda está abierta."
+                }
+              ],
+              "nota": "Singular."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "no como carne",
+              "texto": "The basics: [[5091|negative sentences with no]]."
+            },
+            {
+              "forma": "no tengo ningún",
+              "texto": "The double negative: [[6129|ningún, ninguna = not any]]."
+            },
+            {
+              "forma": "algún amigo",
+              "texto": "The positive version: [[6136|algún, alguna]]."
+            },
+            {
+              "forma": "ninguno vino",
+              "texto": "Without the noun: [[6464|ninguno as a pronoun]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _No store is open._",
+              "r": "Ninguna tienda está abierta.",
+              "nota": "No no."
+            },
+            {
+              "p": "Fix it: _Ningún carro no funciona._",
+              "r": "Ningún carro funciona.",
+              "nota": "Drop no."
+            },
+            {
+              "p": "Start with ningún: _No vino ningún maestro._",
+              "r": "Ningún maestro vino.",
+              "nota": "No no before the verb."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5091,
+      6129
+    ],
+    "confunde": [
+      6136
+    ],
+    "sigue": [
+      6464
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6134",
+      "kwiziq": true
+    }
+  ]
+}

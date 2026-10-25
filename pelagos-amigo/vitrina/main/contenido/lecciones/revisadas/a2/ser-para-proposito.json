@@ -1,0 +1,227 @@
+{
+  "tema": 5989,
+  "slug": "ser-para-proposito",
+  "titulo": "Ser para for a purpose",
+  "subtitulo": "¿Para qué es esto? Es para abrir latas.",
+  "foto": "t04.jpg",
+  "regla": "To say what something is for, use ser + para + an infinitive or a noun: es para cortar, es para la tabla. Never estar.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say **what something is for** (its purpose), use **ser + para**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "thing",
+            "+ ser + para +",
+            "infinitive / noun"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "English uses _-ing_ (_it's for cutting_); Spanish uses the **infinitive**: **es para cortar**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "To ask, use **¿Para qué es?** = _What is it for?_ (also **¿Para qué sirve?**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Never **estar**: **estar para** means something else (_to be about to_, _to be in the mood for_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: think of the label on a tool. The label always says **es para**..."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Este bloqueador ==es para== la cara.",
+              "en": "This sunscreen is for your face."
+            },
+            {
+              "es": "La cera ==es para== la tabla.",
+              "en": "The wax is for the board."
+            },
+            {
+              "es": "Estas tijeras ==son para== cortar tela.",
+              "en": "These scissors are for cutting fabric."
+            },
+            {
+              "es": "—¿==Para== qué ==es== este botón? —==Es para== apagar la alarma.",
+              "en": "\"What's this button for?\" \"It's for turning off the alarm.\""
+            },
+            {
+              "es": "Esta llave ==es para== la bodega.",
+              "en": "This key is for the storage room."
+            },
+            {
+              "es": "Los guantes ==son para== trabajar en el huerto.",
+              "en": "The gloves are for working in the garden."
+            },
+            {
+              "es": "El dinero ==es para== el viaje a Ensenada.",
+              "en": "The money is for the trip to Ensenada."
+            },
+            {
+              "es": "Esta app ==es para== aprender español.",
+              "en": "This app is for learning Spanish."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La cera está para la tabla."
+                },
+                {
+                  "v": "bien",
+                  "t": "La cera es para la tabla."
+                }
+              ],
+              "nota": "Purpose: **ser**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es para cortando pescado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es para cortar pescado."
+                }
+              ],
+              "nota": "Infinitive, not gerund."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es por abrir latas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es para abrir latas."
+                }
+              ],
+              "nota": "Purpose: **para**, not por."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Qué es para?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Para qué es?"
+                }
+              ],
+              "nota": "**Para qué** goes first."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "para + infinitive",
+              "texto": "The basic use: [[5970|para for purpose]]."
+            },
+            {
+              "forma": "es una llave",
+              "texto": "Saying what it is: [[9798|ser to identify things]]."
+            },
+            {
+              "forma": "es para ti",
+              "texto": "Who it's for: [[5988|ser para for a recipient]]."
+            },
+            {
+              "forma": "para Ensenada",
+              "texto": "Where it's headed: [[5965|para for a destination]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _What is this for?_",
+              "r": "¿Para qué es esto?",
+              "nota": "Para qué first."
+            },
+            {
+              "p": "In Spanish: _This knife is for cutting fish._",
+              "r": "Este cuchillo es para cortar pescado.",
+              "nota": "para + infinitive."
+            },
+            {
+              "p": "Fix it: _Las tijeras están para cortar papel._",
+              "r": "Las tijeras son para cortar papel.",
+              "nota": "Purpose: ser."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5970,
+      9798
+    ],
+    "confunde": [
+      5988
+    ],
+    "sigue": [
+      5965
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5989",
+      "kwiziq": true
+    }
+  ]
+}

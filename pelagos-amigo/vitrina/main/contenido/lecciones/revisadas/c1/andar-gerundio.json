@@ -1,0 +1,194 @@
+{
+  "tema": 7182,
+  "slug": "andar-gerundio",
+  "titulo": "Andar + gerund = to go around doing something",
+  "subtitulo": "Anda diciendo que soy flojo. Ando buscando trabajo.",
+  "foto": "t10.jpg",
+  "regla": "Andar + gerund = to go around doing, to be (busy) doing, often vaguely or repeatedly: Anda diciendo cosas de ti. Very common in Mexico in everyday speech: ¿Qué andas haciendo? Ando buscando trabajo.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "andar (any tense)",
+            "+",
+            "gerund"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Like **estar** + gerund, but with a sense of **going around**, repeating, or a vague ongoing activity. **Andar** loses its meaning of _to walk_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Often slightly negative: **anda diciendo**, **anda coqueteando**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**In Mexico** it's everyday and neutral: **¿Qué andas haciendo?** (_What are you up to?_), **ando trabajando**, **anda enfermo** (also **andar** + adjective)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **andar** + gerund = doing it here and there, all over."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Carmen ==anda diciendo== que eres un tonto.",
+              "en": "Carmen's going around saying you're an idiot."
+            },
+            {
+              "es": "No ==andes esculcando== en mis cajones.",
+              "en": "Don't go snooping in my drawers."
+            },
+            {
+              "es": "Esos chavos ==andan coqueteando== con todas.",
+              "en": "Those guys go around flirting with every girl."
+            },
+            {
+              "es": "María ==andaba buscando== una falda roja.",
+              "en": "María was looking all over for a red skirt."
+            },
+            {
+              "es": "—¿Qué ==andas haciendo==? —Nada, aquí ==ando==.",
+              "en": "—What are you up to? —Nothing, just hanging around."
+            },
+            {
+              "es": "==Ando buscando== trabajo.",
+              "en": "I'm looking for work."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "comparar",
+      "titulo": "Estar or andar?",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "estar",
+                  "t": "María estaba buscando una falda."
+                },
+                {
+                  "v": "andar",
+                  "t": "María andaba buscando una falda."
+                }
+              ],
+              "nota": "**Andar** suggests going from place to place."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Anda a decir cosas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Anda diciendo cosas."
+                }
+              ],
+              "nota": "Gerund, no **a**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "ir + gerund",
+              "texto": "[[6769|ir + gerund]]."
+            },
+            {
+              "forma": "seguir + gerund",
+              "texto": "[[6180|seguir + gerund]]."
+            },
+            {
+              "forma": "ándale",
+              "texto": "[[8195|anda, ándale]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _What are you up to?_ (Mexico)",
+              "r": "¿Qué andas haciendo?",
+              "nota": "andar + gerund."
+            },
+            {
+              "p": "In Spanish: _He goes around telling lies._",
+              "r": "Anda diciendo mentiras.",
+              "nota": "Negative tone."
+            },
+            {
+              "p": "In Spanish: _I was looking all over for you._",
+              "r": "Te andaba buscando.",
+              "nota": "Imperfect."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5092,
+      6769
+    ],
+    "confunde": [
+      6769
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7182",
+      "kwiziq": true
+    }
+  ]
+}

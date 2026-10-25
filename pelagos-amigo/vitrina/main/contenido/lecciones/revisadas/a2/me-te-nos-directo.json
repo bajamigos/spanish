@@ -1,0 +1,250 @@
+{
+  "tema": 10848,
+  "slug": "me-te-nos-directo",
+  "titulo": "Direct object pronouns me, te, nos",
+  "subtitulo": "¿Me ves? Sí, te veo.",
+  "foto": "t02.jpg",
+  "regla": "Me, te and nos are the direct object pronouns for me, you (tú) and us. They go right before the conjugated verb: Te veo mañana. Os is the vosotros form; in Mexico, for ustedes use los / las.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "A **direct object** receives the action directly: _she sees **me**_, _I call **you**_, _they invite **us**_."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Pronoun",
+            "Example"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**me**",
+              "Ana **me** invita. _Ana invites me._"
+            ],
+            [
+              "tú",
+              "**te**",
+              "Yo **te** llamo. _I'll call you._"
+            ],
+            [
+              "nosotros, nosotras",
+              "**nos**",
+              "El profe **nos** espera. _The teacher is waiting for us._"
+            ],
+            [
+              "vosotros, vosotras",
+              "**os**",
+              "Not used in Mexico."
+            ],
+            [
+              "ustedes",
+              "**los, las**",
+              "**Los** veo mañana. _I'll see you (all) tomorrow._"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The pronoun goes **before the conjugated verb**. With **no**, the order is **no + pronoun + verb**: **No te** oigo."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With an infinitive you can also attach it to the end: **Te** voy a llamar = Voy a llamar**te**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Me, te, nos** look exactly like the indirect and reflexive pronouns. Only the job changes."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: think of the pronoun as a sticker you slap on the front of the verb: **me** ves, **te** veo, **nos** ven."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿==Me== escuchas? Se corta la llamada.",
+              "en": "Can you hear me? The call keeps cutting out."
+            },
+            {
+              "es": "==Te== quiero mucho, abuela.",
+              "en": "I love you so much, Grandma."
+            },
+            {
+              "es": "Mi entrenador ==nos== espera en el gimnasio a las siete.",
+              "en": "My coach is waiting for us at the gym at seven."
+            },
+            {
+              "es": "¿==Me== llevas a la playa mañana?",
+              "en": "Will you take me to the beach tomorrow?"
+            },
+            {
+              "es": "No ==te== conozco. ¿Cómo te llamas?",
+              "en": "I don't know you. What's your name?"
+            },
+            {
+              "es": "==Nos== invitaron a una carne asada en Playas.",
+              "en": "They invited us to a carne asada in Playas."
+            },
+            {
+              "es": "Mañana ==te== llamo, ¿va?",
+              "en": "I'll call you tomorrow, OK?"
+            },
+            {
+              "es": "Voy a esperar==te== afuera.",
+              "en": "I'm going to wait for you outside."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo veo te."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo te veo."
+                }
+              ],
+              "nota": "Before the conjugated verb."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella llama a mí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella me llama."
+                }
+              ],
+              "nota": "**A mí** can't replace **me**. For emphasis: **me** llama **a mí**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Él me no ve."
+                },
+                {
+                  "v": "bien",
+                  "t": "Él no me ve."
+                }
+              ],
+              "nota": "**No** goes before the pronoun."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ellos nosotros invitan."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ellos nos invitan."
+                }
+              ],
+              "nota": "Us as an object = **nos**, not nosotros."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "lo, la, los, las",
+              "texto": "For him, her, it, them: [[5121|direct object lo, la, los, las]]."
+            },
+            {
+              "forma": "me, te, nos (to me)",
+              "texto": "Same forms, different job: [[7282|indirect object pronouns]]."
+            },
+            {
+              "forma": "te voy a llamar",
+              "texto": "Where the pronoun goes: [[6145|position with conjugated verbs]], [[5140|with infinitives and commands]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _She doesn't know me._",
+              "r": "Ella no me conoce.",
+              "nota": "no + me + verb."
+            },
+            {
+              "p": "In Spanish: _They're waiting for us._",
+              "r": "Nos esperan.",
+              "nota": "esperar = wait for."
+            },
+            {
+              "p": "Fix it: _Yo llamo te mañana._",
+              "r": "Yo te llamo mañana.",
+              "nota": "te before the verb."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5121
+    ],
+    "confunde": [
+      7282
+    ],
+    "sigue": [
+      6145,
+      5140
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 10848",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "tema": 5271,
+  "slug": "voy-vas-va-ir-presente",
+  "titulo": "Ir in the present",
+  "subtitulo": "Voy a la playa. ¿Vas tú también?",
+  "foto": "t09.jpg",
+  "regla": "Ir (to go) is completely irregular: voy, vas, va, vamos, van. Use a for where you go (a + el = al).",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Ir** (_to go_) doesn't follow the -ir pattern at all. Every form starts with **v**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "ir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**voy**"
+            ],
+            [
+              "tú",
+              "**vas**"
+            ],
+            [
+              "él, ella, usted",
+              "**va**"
+            ],
+            [
+              "nosotros",
+              "**vamos**"
+            ],
+            [
+              "ellos, ustedes",
+              "**van**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Say where with **a**: voy **a** la playa. **A + el** becomes **al**: voy **al** gimnasio."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Voy== al gimnasio todos los días.",
+              "en": "I go to the gym every day."
+            },
+            {
+              "es": "¿==Vas== a la fiesta del sábado?",
+              "en": "Are you going to Saturday's party?"
+            },
+            {
+              "es": "Mi papá ==va== al trabajo en carro.",
+              "en": "My dad goes to work by car."
+            },
+            {
+              "es": "==Vamos== a la playa temprano.",
+              "en": "We go to the beach early."
+            },
+            {
+              "es": "¿Ustedes ==van== a San Diego mañana?",
+              "en": "Are you all going to San Diego tomorrow?"
+            },
+            {
+              "es": "¿Adónde ==va== usted?",
+              "en": "Where are you going?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo iro al gimnasio."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo voy al gimnasio."
+                }
+              ],
+              "nota": "Ir isn't a regular -ir verb."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Voy a el mercado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Voy al mercado."
+                }
+              ],
+              "nota": "**a + el = al**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Vamos la playa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Vamos a la playa."
+                }
+              ],
+              "nota": "Ir needs **a** before the place."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "voy a comer",
+              "texto": "Ir for plans: [[5086|ir a + infinitive]]."
+            },
+            {
+              "forma": "vivo",
+              "texto": "Not like regular [[5108|-ir verbs]]."
+            },
+            {
+              "forma": "fui",
+              "texto": "In the past: [[5107|ir and ser in the preterite]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We're going to the market._",
+              "r": "Vamos al mercado.",
+              "nota": "a + el = al."
+            },
+            {
+              "p": "Fix it: _Ellos va a la escuela._",
+              "r": "Ellos van a la escuela.",
+              "nota": "van for ellos."
+            },
+            {
+              "p": "In Spanish (tú): _Where are you going?_",
+              "r": "¿Adónde vas?",
+              "nota": "vas for tú."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      5108
+    ],
+    "sigue": [
+      5086,
+      5107
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5271",
+      "kwiziq": true
+    }
+  ]
+}

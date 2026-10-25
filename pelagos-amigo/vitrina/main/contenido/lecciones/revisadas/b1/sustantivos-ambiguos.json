@@ -1,0 +1,206 @@
+{
+  "tema": 6730,
+  "slug": "sustantivos-ambiguos",
+  "titulo": "Nouns with both genders and no change in meaning",
+  "subtitulo": "El sartén / la sartén, el mar / la mar, el azúcar / la azúcar.",
+  "foto": "t07.jpg",
+  "regla": "Some nouns can be masculine or feminine with the same meaning; the speaker, the region or the register decides: el / la sartén, el / la mar, el / la azúcar, el / la tilde.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "A few nouns can be **masculine or feminine** with the **same meaning**. Which one people use depends on the region, the register, or just the speaker."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Noun",
+            "Notes"
+          ],
+          "filas": [
+            [
+              "el / la sartén",
+              "In Mexico, **el sartén** is very common."
+            ],
+            [
+              "el / la mar",
+              "**El mar** is general; **la mar** is poetic, or used by fishermen and sailors."
+            ],
+            [
+              "el / la azúcar",
+              "Both are heard; **la azúcar** is common in parts of Latin America."
+            ],
+            [
+              "el / la calor",
+              "**El calor** is standard; **la calor** is regional and casual."
+            ],
+            [
+              "el / la tilde",
+              "**La tilde** is more common."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Whichever gender you choose, keep the adjectives and articles **consistent**: **un sartén limpio** or **una sartén limpia**, never mixed."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: pick a side and stay on it. Mixing genders in one phrase is the only real mistake."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Necesito ==una sartén limpia== para cocinar.",
+              "en": "I need a clean pan to cook."
+            },
+            {
+              "es": "Necesito ==un sartén limpio== para cocinar.",
+              "en": "I need a clean pan to cook."
+            },
+            {
+              "es": "==El mar== estaba azul.",
+              "en": "The sea was blue."
+            },
+            {
+              "es": "==La mar== estaba azul.",
+              "en": "The sea was blue. (poetic, or a fisherman talking)"
+            },
+            {
+              "es": "No quiero que le pongas ==tanto azúcar== al café.",
+              "en": "I don't want you to put so much sugar in the coffee."
+            },
+            {
+              "es": "No quiero que le pongas ==tanta azúcar== al café.",
+              "en": "I don't want you to put so much sugar in the coffee."
+            },
+            {
+              "es": "Nunca pongo bien ==las tildes==.",
+              "en": "I never put the accent marks right."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Un sartén limpia."
+                },
+                {
+                  "v": "bien",
+                  "t": "Un sartén limpio."
+                },
+                {
+                  "v": "bien",
+                  "t": "Una sartén limpia."
+                }
+              ],
+              "nota": "Don't mix genders."
+            },
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "El calor de Mexicali es brutal."
+                }
+              ],
+              "nota": "**El calor** is the safe choice."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el agua",
+              "texto": "Feminine words with **el**: [[6873|stressed a]]."
+            },
+            {
+              "forma": "el viaje",
+              "texto": "Always masculine: [[6151|-aje]]."
+            },
+            {
+              "forma": "el / la dentista",
+              "texto": "Both genders for people: [[6237|-ista]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Complete consistently: **La sartén está ___** (caliente / sucio)",
+              "r": "La sartén está sucia.",
+              "nota": "Feminine all the way."
+            },
+            {
+              "p": "Which is the general, everyday form? **el mar** or **la mar**?",
+              "r": "el mar",
+              "nota": "La mar is poetic."
+            },
+            {
+              "p": "Fix it: **Un azúcar morena.**",
+              "r": "Un azúcar moreno. / Una azúcar morena.",
+              "nota": "Keep it consistent."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6749
+    ],
+    "confunde": [
+      6873
+    ],
+    "sigue": [
+      6151,
+      6237
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6730",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,267 @@
+{
+  "tema": 6261,
+  "slug": "no-he-comido-no-voy-a",
+  "titulo": "Negation with no in compound verb forms",
+  "subtitulo": "«No lo he visto.» «No voy a ir.»",
+  "foto": "t02.jpg",
+  "regla": "No goes in front of the whole verb group: before the conjugated verb (no he comido, no voy a ir, no puedo salir, no estoy trabajando) and before any pronoun in front of it (no lo he visto). For a plain negative it never goes in the middle.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "In Spanish, **no** goes right before the **conjugated verb**. In a verb group (two or more verbs together), that means **no** goes at the very front, not in the middle like English _not_."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Structure",
+            "Affirmative",
+            "Negative"
+          ],
+          "filas": [
+            [
+              "haber + participle",
+              "He comido.",
+              "**No** he comido."
+            ],
+            [
+              "ir a + infinitive",
+              "Voy a salir.",
+              "**No** voy a salir."
+            ],
+            [
+              "estar + gerund",
+              "Estoy trabajando.",
+              "**No** estoy trabajando."
+            ],
+            [
+              "poder, querer, deber + infinitive",
+              "Puedo ir.",
+              "**No** puedo ir."
+            ],
+            [
+              "tener que + infinitive",
+              "Tengo que pagar.",
+              "**No** tengo que pagar."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "If an object or reflexive pronoun comes before the verb, **no** goes before the pronoun: **no lo** he visto, **no me** voy a quedar."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "no",
+            "+ (pronoun) +",
+            "verb group"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "If the pronoun is stuck to the end of the infinitive or gerund, **no** still opens the group: **no** voy a hacer**lo**, **no** estoy viéndo**la**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Haber** and the participle never split: nothing goes between **he** and **comido**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**No** after **ir a**, **poder** or **querer** (**voy a no ir**, **puedo no ir**) is possible, but it means something different: _I'm going to (choose to) not go_, _I'm allowed not to go_. For a plain negative, **no** goes first."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **no** is the bouncer. It stands at the door, in front of the whole group."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==No he== surfeado en toda la semana.",
+              "en": "I haven't surfed all week."
+            },
+            {
+              "es": "==No voy a== ir a la clase de jiu-jitsu hoy.",
+              "en": "I'm not going to jiu-jitsu class today."
+            },
+            {
+              "es": "==No estoy== durmiendo bien últimamente.",
+              "en": "I'm not sleeping well lately."
+            },
+            {
+              "es": "==No puedo== salir, tengo que regar el huerto.",
+              "en": "I can't go out, I have to water the garden."
+            },
+            {
+              "es": "==No lo he== visto en el gimnasio.",
+              "en": "I haven't seen him at the gym."
+            },
+            {
+              "es": "==No me voy a== levantar temprano mañana.",
+              "en": "I'm not going to get up early tomorrow."
+            },
+            {
+              "es": "==No tienes que== pagar la entrada.",
+              "en": "You don't have to pay to get in."
+            },
+            {
+              "es": "¿Por qué ==no la has== llamado?",
+              "en": "Why haven't you called her?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "He no comido."
+                },
+                {
+                  "v": "bien",
+                  "t": "No he comido."
+                }
+              ],
+              "nota": "**No** before **haber**, never after."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estoy no trabajando hoy."
+                },
+                {
+                  "v": "bien",
+                  "t": "No estoy trabajando hoy."
+                }
+              ],
+              "nota": "**No** before **estar**, not before the gerund."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Lo no he visto."
+                },
+                {
+                  "v": "bien",
+                  "t": "No lo he visto."
+                }
+              ],
+              "nota": "**No** before the pronoun."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No he lo visto."
+                },
+                {
+                  "v": "bien",
+                  "t": "No lo he visto."
+                }
+              ],
+              "nota": "The pronoun goes before **haber**, never between."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "no + verb",
+              "texto": "The basic rule: [[5091|negative sentences with no]]."
+            },
+            {
+              "forma": "no puedo ir",
+              "texto": "Verb + infinitive: [[5065|deber, poder, querer + infinitive]]."
+            },
+            {
+              "forma": "no lo he visto",
+              "texto": "Where the pronoun goes: [[5121|lo, la, los, las]]."
+            },
+            {
+              "forma": "no he hecho nada",
+              "texto": "Double negatives: [[6144|nada]], [[6075|nadie]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I haven't eaten._",
+              "r": "No he comido.",
+              "nota": "**no** before **he**."
+            },
+            {
+              "p": "In Spanish: _We're not going to train today._",
+              "r": "No vamos a entrenar hoy.",
+              "nota": "**no** before **vamos**."
+            },
+            {
+              "p": "Fix it: _Lo no he leído._",
+              "r": "No lo he leído.",
+              "nota": "**no** before the pronoun."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5091,
+      5065
+    ],
+    "confunde": [
+      5121
+    ],
+    "sigue": [
+      6144,
+      6075
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6261",
+      "kwiziq": true
+    }
+  ]
+}

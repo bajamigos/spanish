@@ -1,0 +1,218 @@
+{
+  "tema": 5726,
+  "slug": "subjuntivo-presente-zar",
+  "titulo": "Conjugate -zar verbs (z > c) in the present subjunctive",
+  "subtitulo": "Utilizar → utilice: z can't stand in front of e.",
+  "foto": "t10.jpg",
+  "regla": "Verbs ending in -zar change z to c in every form of the present subjunctive: utilice, utilices, utilicemos.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Verbs ending in **-zar** change the **z** to **c** in the present subjunctive. The reason is spelling: in Spanish, **z** almost never comes before **e** or **i**, so before **e** it becomes **c**. The sound doesn't change."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**-zar** → **-c-**",
+            "**-e, -es, -e, -emos, -en**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "utilizar"
+          ],
+          "filas": [
+            [
+              "yo",
+              "utilice"
+            ],
+            [
+              "tú",
+              "utilices"
+            ],
+            [
+              "él, ella, usted",
+              "utilice"
+            ],
+            [
+              "nosotros",
+              "utilicemos"
+            ],
+            [
+              "ustedes, ellos",
+              "utilicen"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The change is in **every form**. Other verbs like this: **abrazar** → **abrace**, **alcanzar** → **alcance**, **cruzar** → **cruce**, **organizar** → **organice**, **analizar** → **analice**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Some **-zar** verbs also have a stem change, like **empezar** → **empiece**: see [[5990|-zar verbs with e > ie]]."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **z** and **e** never hold hands in Spanish. **C** steps in between them."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ten cuidado cuando ==utilices== la sierra.",
+              "en": "Be careful when you use the saw."
+            },
+            {
+              "es": "Espero que los niños ==crucen== la calle con cuidado.",
+              "en": "I hope the kids cross the street carefully."
+            },
+            {
+              "es": "¡No me ==abraces== tan fuerte!",
+              "en": "Don't hug me so tight!"
+            },
+            {
+              "es": "No me gusta que ==utilices== mis herramientas.",
+              "en": "I don't like you using my tools."
+            },
+            {
+              "es": "Espero que ==utilicen== el huerto comunitario.",
+              "en": "I hope you use the community garden."
+            },
+            {
+              "es": "Ojalá que ==alcancemos== la ola.",
+              "en": "I hope we catch the wave."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No me abrazes."
+                },
+                {
+                  "v": "bien",
+                  "t": "No me abraces."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es mejor que cruzemos aquí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es mejor que crucemos aquí."
+                }
+              ],
+              "nota": "The **c** is in **nosotros** too."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "empecé",
+              "texto": "The same change in the preterite, only in **yo**: [[5844|-zar verbs in the preterite]]."
+            },
+            {
+              "forma": "empiece",
+              "texto": "**-zar** with a stem change: [[5990|empezar, comenzar]]."
+            },
+            {
+              "forma": "busque, pague",
+              "texto": "The other spelling changes: [[5724|-car]] and [[5725|-gar]]."
+            },
+            {
+              "forma": "hable",
+              "texto": "The base pattern: [[5063|regular -ar verbs in the subjunctive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "**Organizar** with **nosotros**: Es mejor que ___ la carne asada hoy.",
+              "r": "Es mejor que organicemos la carne asada hoy.",
+              "nota": "z → c."
+            },
+            {
+              "p": "In Spanish: _Don't cross the street here._ (tú)",
+              "r": "No cruces la calle aquí.",
+              "nota": "cruzar → cruces."
+            },
+            {
+              "p": "**Alcanzar** with **ellos**: Ojalá que ___ el camión.",
+              "r": "Ojalá que alcancen el camión.",
+              "nota": "alcanzar → alcancen."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5063,
+      5844
+    ],
+    "confunde": [
+      5724,
+      5725
+    ],
+    "sigue": [
+      5990,
+      9255
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5726",
+      "kwiziq": true
+    }
+  ]
+}

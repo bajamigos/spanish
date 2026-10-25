@@ -1,0 +1,213 @@
+{
+  "tema": 9544,
+  "slug": "a-lo-mejor",
+  "titulo": "A lo mejor (+ indicative) = maybe",
+  "subtitulo": "A lo mejor vamos a la playa.",
+  "foto": "t09.jpg",
+  "regla": "A lo mejor = maybe, and it always takes the indicative, even though it expresses doubt: A lo mejor llueve. It's very common and colloquial in Mexico. Lo mismo (maybe) works the same way but is rare in Mexico. Tal vez / quizás can take either mood.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**A lo mejor** means _maybe, perhaps_. It's colloquial and super common in Mexico."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Even though it expresses doubt, it **always** takes the **indicative**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "a lo mejor",
+            "+",
+            "indicative"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Lo mismo** can mean the same (_maybe_) and also takes the indicative, but you'll rarely hear it with this meaning in Mexico."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Compare: **tal vez / quizás** take the indicative or the subjunctive; **puede que** takes only the subjunctive."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **a lo mejor** sounds unsure but grammatically it's confident: indicative."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==A lo mejor== vamos a Holbox este verano.",
+              "en": "We might go to Holbox this summer."
+            },
+            {
+              "es": "Pedro y Carmen se miran mucho y se ponen rojos. ==A lo mejor== se gustan.",
+              "en": "Pedro and Carmen keep looking at each other and blushing. Maybe they like each other."
+            },
+            {
+              "es": "==A lo mejor== me inscribo en esas clases de francés.",
+              "en": "I might sign up for those French classes."
+            },
+            {
+              "es": "Juan no ha llegado. ==A lo mejor== se quedó dormido.",
+              "en": "Juan isn't here yet. Maybe he overslept."
+            },
+            {
+              "es": "Nadie contesta... ==a lo mejor== ya cerraron el restaurante.",
+              "en": "No one's answering... maybe the restaurant closed."
+            },
+            {
+              "es": "Estoy muy estresada. ==A lo mejor== pido un día libre.",
+              "en": "I'm really stressed. Maybe I'll ask for a day off."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "comparar",
+      "titulo": "Compare",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Expression",
+            "Mood"
+          ],
+          "filas": [
+            [
+              "a lo mejor",
+              "indicative"
+            ],
+            [
+              "tal vez, quizás",
+              "indicative or subjunctive"
+            ],
+            [
+              "puede que, es posible que",
+              "subjunctive"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "A lo mejor llueva."
+                },
+                {
+                  "v": "bien",
+                  "t": "A lo mejor llueve."
+                }
+              ],
+              "nota": "Always indicative."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Puede que llueve."
+                },
+                {
+                  "v": "bien",
+                  "t": "Puede que llueva."
+                }
+              ],
+              "nota": "**Puede que** is the opposite."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tal vez, quizás",
+              "texto": "[[5084|tal vez / quizás]]."
+            },
+            {
+              "forma": "puede que",
+              "texto": "[[7228|puede que]]."
+            },
+            {
+              "forma": "dudo que",
+              "texto": "[[6235|doubt]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish (a lo mejor): _Maybe she's sick._",
+              "r": "A lo mejor está enferma.",
+              "nota": "Indicative."
+            },
+            {
+              "p": "Fix it: _A lo mejor vengan mañana._",
+              "r": "A lo mejor vienen mañana.",
+              "nota": "Indicative."
+            },
+            {
+              "p": "Same idea with puede que:",
+              "r": "Puede que vengan mañana.",
+              "nota": "Subjunctive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5084
+    ],
+    "confunde": [
+      7228
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9544",
+      "kwiziq": true
+    }
+  ]
+}

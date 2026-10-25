@@ -1,0 +1,281 @@
+{
+  "tema": 6670,
+  "slug": "he-puesto-perfecto-poner",
+  "titulo": "Poner in the present perfect",
+  "subtitulo": "¿Dónde has puesto las llaves?",
+  "foto": "t09.jpg",
+  "regla": "Poner in the present perfect is haber in the present + the irregular participle puesto (never ponido): he puesto, has puesto, ha puesto, hemos puesto, han puesto. Verbs built on poner do the same: propuesto, compuesto, supuesto.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Build it with **haber** in the present + **puesto**. The participle of **poner** is irregular: **puesto**, never ponido."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "he / has / ha / hemos / han",
+            "+",
+            "puesto"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Poner"
+          ],
+          "filas": [
+            [
+              "yo",
+              "he puesto"
+            ],
+            [
+              "tú",
+              "has puesto"
+            ],
+            [
+              "él, ella, usted",
+              "ha puesto"
+            ],
+            [
+              "nosotros, nosotras",
+              "hemos puesto"
+            ],
+            [
+              "ellos, ellas, ustedes",
+              "han puesto"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Puesto** never changes: **he puesto la mesa**, **han puesto las sillas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With **ponerse**, the pronoun goes before **haber**: **me he puesto la chamarra**, **se ha puesto nervioso**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Every verb built on **poner** ends in **-puesto**:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Verb",
+            "Participle"
+          ],
+          "filas": [
+            [
+              "componer",
+              "compuesto"
+            ],
+            [
+              "descomponer",
+              "descompuesto"
+            ],
+            [
+              "proponer",
+              "propuesto"
+            ],
+            [
+              "suponer",
+              "supuesto"
+            ],
+            [
+              "exponer",
+              "expuesto"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿Dónde ==has puesto== las llaves?",
+              "en": "Where have you put the keys?"
+            },
+            {
+              "es": "==He puesto== las semillas de jitomate en agua.",
+              "en": "I've put the tomato seeds in water."
+            },
+            {
+              "es": "==Hemos puesto== la mesa para ocho personas.",
+              "en": "We've set the table for eight people."
+            },
+            {
+              "es": "El profe nos ==ha puesto== mucha tarea esta semana.",
+              "en": "The teacher has given us a lot of homework this week."
+            },
+            {
+              "es": "Los vecinos ==han puesto== música a todo volumen.",
+              "en": "The neighbors have put on music at full volume."
+            },
+            {
+              "es": "Mi hermano ==se ha puesto== muy nervioso.",
+              "en": "My brother has gotten very nervous."
+            },
+            {
+              "es": "La empresa ==ha propuesto== un nuevo horario.",
+              "en": "The company has proposed a new schedule."
+            },
+            {
+              "es": "Se ==ha descompuesto== el carro otra vez.",
+              "en": "The car has broken down again."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "He ponido la mesa."
+                },
+                {
+                  "v": "bien",
+                  "t": "He puesto la mesa."
+                }
+              ],
+              "nota": "Irregular participle: **puesto**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La he puesta en la mesa."
+                },
+                {
+                  "v": "bien",
+                  "t": "La he puesto en la mesa."
+                }
+              ],
+              "nota": "**Puesto** never agrees."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "He me puesto la chamarra."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me he puesto la chamarra."
+                }
+              ],
+              "nota": "Pronoun before **haber**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Han proponido un plan."
+                },
+                {
+                  "v": "bien",
+                  "t": "Han propuesto un plan."
+                }
+              ],
+              "nota": "Derivatives too: **-puesto**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "pongo",
+              "texto": "The present: [[5305|poner in the present]]."
+            },
+            {
+              "forma": "hecho, dicho, puesto",
+              "texto": "Other irregular ones: [[7048|participles in -to / -cho]]."
+            },
+            {
+              "forma": "puse",
+              "texto": "The simple past: [[5251|poner in the preterite]]."
+            },
+            {
+              "forma": "había puesto",
+              "texto": "One step back in time: [[5049|the pluperfect of hacer, decir, poner…]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I've put the plants on the roof._",
+              "r": "He puesto las plantas en la azotea.",
+              "nota": "he puesto."
+            },
+            {
+              "p": "Fix it: _¿Dónde has ponido mi tabla?_",
+              "r": "¿Dónde has puesto mi tabla?",
+              "nota": "puesto."
+            },
+            {
+              "p": "In Spanish: _They have proposed an idea._",
+              "r": "Han propuesto una idea.",
+              "nota": "propuesto."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5305,
+      7048
+    ],
+    "confunde": [
+      5251
+    ],
+    "sigue": [
+      5049
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6670",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "tema": 6234,
+  "slug": "todo-pronombre",
+  "titulo": "Todo = everything, todos = everyone",
+  "subtitulo": "Todo está listo. Todos quieren surfear.",
+  "foto": "t04.jpg",
+  "regla": "Alone, todo means everything (singular verb) and todos/todas means everyone or all of them (plural verb). When todo refers to something already mentioned, it agrees with it and usually goes with an object pronoun: me las comí todas.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Todo** on its own = _everything_. It takes a **singular** verb: **Todo está listo.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Todos** = _everyone, all of them_ (**todas** if they're all female). It takes a **plural** verb: **Todos saben.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "When it refers to something already mentioned, **todo** agrees with it: **todo, toda, todos, todas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "As the object, it usually comes with **lo, la, los, las**: **¿Y las tortillas? —Me las comí todas.**"
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "(lo / la / los / las)",
+            "+ verb +",
+            "todo / toda / todos / todas"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Todo el mundo** = _everyone_, but with a **singular** verb: **Todo el mundo sabe.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **todo** is the whole pot; **todos** are the people around it."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Todo== está listo para la carne asada.",
+              "en": "Everything's ready for the cookout."
+            },
+            {
+              "es": "¿Entendiste la clase? —Sí, ==todo==.",
+              "en": "Did you understand the class? —Yes, all of it."
+            },
+            {
+              "es": "==Todos== quieren surfear hoy; el mar está perfecto.",
+              "en": "Everyone wants to surf today; the sea is perfect."
+            },
+            {
+              "es": "¿Y las tortillas? —Me ==las== comí ==todas==.",
+              "en": "And the tortillas? —I ate them all."
+            },
+            {
+              "es": "¿Ya regaste el jardín? —Sí, ==lo== regué ==todo==.",
+              "en": "Did you water the garden? —Yes, all of it."
+            },
+            {
+              "es": "Las chicas del gimnasio llegaron; ==todas== traen cinta azul.",
+              "en": "The girls from the gym arrived; they all have blue belts."
+            },
+            {
+              "es": "==Todo el mundo== conoce a doña Lupe en la colonia.",
+              "en": "Everyone in the neighborhood knows doña Lupe."
+            },
+            {
+              "es": "No ==todo== es trabajo; también hay que descansar.",
+              "en": "Not everything is work; you also have to rest."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Todos está listo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Todo está listo."
+                }
+              ],
+              "nota": "_Everything_ = **todo**, singular."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Todo saben la respuesta."
+                },
+                {
+                  "v": "bien",
+                  "t": "Todos saben la respuesta."
+                }
+              ],
+              "nota": "_Everyone_ = **todos**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Todo el mundo están aquí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Todo el mundo está aquí."
+                }
+              ],
+              "nota": "Singular verb."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Y las galletas? —Me los comí todos."
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Y las galletas? —Me las comí todas."
+                }
+              ],
+              "nota": "Agree with **galletas**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "todo el día",
+              "texto": "Todo before a noun: [[6233|todo, toda, todos, todas + noun]]."
+            },
+            {
+              "forma": "cada / todos los",
+              "texto": "_Every_ in time phrases: [[6178|cada and todos]]."
+            },
+            {
+              "forma": "nada",
+              "texto": "The opposite, _nothing_: [[6144|nada]]."
+            },
+            {
+              "forma": "cada uno",
+              "texto": "One by one: [[7175|cada uno de]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Everything is very expensive here._",
+              "r": "Todo está muy caro aquí.",
+              "nota": "Singular verb."
+            },
+            {
+              "p": "In Spanish: _And the beers? —They drank them all._",
+              "r": "¿Y las cervezas? —Se las tomaron todas.",
+              "nota": "las + todas."
+            },
+            {
+              "p": "Fix it: _Todo el mundo hablan inglés en la oficina._",
+              "r": "Todo el mundo habla inglés en la oficina.",
+              "nota": "Singular verb."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6233
+    ],
+    "confunde": [
+      6178,
+      6144
+    ],
+    "sigue": [
+      7175
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6234",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "tema": 6179,
+  "slug": "a-infinitivo-mandato",
+  "titulo": "A + infinitive to give a command",
+  "subtitulo": "¡A comer! ¡A dormir! ¡A lavarse las manos!",
+  "foto": "t01.jpg",
+  "regla": "A + infinitive gives a quick command to whoever is there: ¡A comer!, ¡A callar! Keep se with pronominal verbs (¡A lavarse las manos!), or use te. Not for negative commands.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "¡A",
+            "+ infinitive!"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "A short, energetic command for whoever is in front of you, one person or many. You don't have to say who."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With **pronominal** verbs, keep **se** (**¡A lavarse las manos!**) or use the specific pronoun: **te** for one person (**¡A lavarte los dientes!**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "You can still name who it's for: **Andrés, ¡a bañarte!**, **¡Todos a bailar!**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "It's **only affirmative**. For _don't_, use a normal negative command."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: it's the voice of a mom at dinnertime: **¡A comer!**"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¡==A callar==!",
+              "en": "Quiet!"
+            },
+            {
+              "es": "¡==A comer==, que se enfría!",
+              "en": "Come eat, it's getting cold!"
+            },
+            {
+              "es": "¡==A lavarse== las manos!",
+              "en": "Go wash your hands!"
+            },
+            {
+              "es": "Andrés, ¡==a lavarte== las manos!",
+              "en": "Andrés, go wash your hands!"
+            },
+            {
+              "es": "¡Todos ==a bailar==!",
+              "en": "Everybody dance!"
+            },
+            {
+              "es": "Ya son las diez. ¡==A dormir==!",
+              "en": "It's ten already. Bedtime!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡A no pintar en la pared!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡No pintes en la pared!"
+                }
+              ],
+              "nota": "No negative version."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡A comiendo!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡A comer!"
+                }
+              ],
+              "nota": "After a preposition: infinitive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¡come!",
+              "texto": "The regular command: [[6748|imperative of tú]], [[6961|usted, ustedes]]."
+            },
+            {
+              "forma": "¡no comas!",
+              "texto": "[[9255|negative commands]]."
+            },
+            {
+              "forma": "no fumar",
+              "texto": "The infinitive in signs and instructions: [[7258|infinitive for instructions]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Quick command: _Everybody, to work!_",
+              "r": "¡A trabajar!",
+              "nota": "a + infinitive."
+            },
+            {
+              "p": "To one kid: _Go brush your teeth!_",
+              "r": "¡A lavarte los dientes!",
+              "nota": "te for one person."
+            },
+            {
+              "p": "Can you say _¡A no gritar!_?",
+              "r": "No: ¡No griten!",
+              "nota": "Only affirmative."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6748
+    ],
+    "confunde": [
+      7258
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6179",
+      "kwiziq": true
+    }
+  ]
+}

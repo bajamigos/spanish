@@ -1,0 +1,217 @@
+{
+  "tema": 8076,
+  "slug": "o-u-o-bien",
+  "titulo": "Conjunctions o / u / o... o / o bien... o bien",
+  "subtitulo": "O vamos en camión o vamos en carro.",
+  "foto": "t03.jpg",
+  "regla": "O (u before o- / ho-) = or. To say either... or, repeat it: o... o... or o bien... o bien... The first o can be dropped, but never the second.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**O** (_or_) joins two words, two phrases or two whole clauses."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It becomes **u** before a word starting with the sound **o**: **mujeres u hombres**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "To say **either... or**, put **o** in front of **each** option: **o... o...**. **O bien... o bien...** means the same and sounds a bit more formal."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "o / o bien",
+            "[option 1]",
+            "o / o bien",
+            "[option 2]"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "You can drop the **first** **o** / **o bien**, but never the second."
+        },
+        {
+          "tipo": "texto",
+          "texto": "You may even see them mixed: **o bien a las cinco o a las seis**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: one **o** asks; two **o**'s insist that you choose."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No sé si pedir tacos ==o== enchiladas.",
+              "en": "I don't know whether to order tacos or enchiladas."
+            },
+            {
+              "es": "¿Te gusta más el rojo ==o== el verde?",
+              "en": "Do you like the red one or the green one better?"
+            },
+            {
+              "es": "En septiembre vamos a Mérida ==o== nos vamos a Oaxaca.",
+              "en": "In September we're going to Mérida or we're heading to Oaxaca."
+            },
+            {
+              "es": "Hay dos opciones: ==o== vamos en camión ==o== vamos en carro.",
+              "en": "There are two options: either we go by bus or we go by car."
+            },
+            {
+              "es": "==O bien== invitamos a la familia ==o bien== invitamos a los amigos.",
+              "en": "Either we invite the family or we invite our friends."
+            },
+            {
+              "es": "Tiene que venir ==o== tu papá ==o== tu mamá.",
+              "en": "Either your dad or your mom has to come."
+            },
+            {
+              "es": "Invitamos a la familia ==o bien== a los amigos.",
+              "en": "(Either) we invite the family or our friends."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eleccion",
+      "titulo": "Choice or both?",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "With **o... o...** you usually have to **choose** one option. With a single **o**, both can be possible:"
+        },
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "elige uno",
+                  "t": "Tiene que venir o tu papá o tu mamá."
+                },
+                {
+                  "v": "los dos valen",
+                  "t": "Aceptan a todo el público, mujeres u hombres."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "O vamos en tren, vamos en camión."
+                },
+                {
+                  "v": "bien",
+                  "t": "O vamos en tren o vamos en camión."
+                }
+              ],
+              "nota": "Never drop the second **o**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "siete o ocho"
+                },
+                {
+                  "v": "bien",
+                  "t": "siete u ocho"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "ni... ni...",
+              "texto": "The negative version, _neither... nor_: [[7074|ni... ni...]]."
+            },
+            {
+              "forma": "u",
+              "texto": "[[7278|o becomes u]] and [[7277|y becomes e]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Either you call him or I call him._",
+              "r": "O lo llamas tú o lo llamo yo.",
+              "nota": "o... o..."
+            },
+            {
+              "p": "In Spanish: _Do you want coffee or tea?_",
+              "r": "¿Quieres café o té?",
+              "nota": "One o."
+            },
+            {
+              "p": "Complete: _O bien pagas en efectivo ___ con tarjeta._",
+              "r": "o bien / o",
+              "nota": "Never drop the second one."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7278
+    ],
+    "confunde": [
+      7074
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8076",
+      "kwiziq": true
+    }
+  ]
+}

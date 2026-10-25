@@ -1,0 +1,178 @@
+{
+  "tema": 6895,
+  "slug": "quedarse-gerundio",
+  "titulo": "Quedarse + gerund = to keep doing something",
+  "subtitulo": "Se quedó mirándome. Nos quedamos platicando.",
+  "foto": "t03.jpg",
+  "regla": "Quedarse + gerund = to stay doing, to carry on doing something, often starting at that moment: se quedó mirándome. Works in any tense. Always the gerund.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "quedarse (conjugated)",
+            "+ gerund"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It means **to stay doing / to carry on doing** something. It works in every tense."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It often suggests the action **starts at that moment and then continues**: **un señor se quedó mirándome** = _a man started staring at me and kept staring_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Pronouns: in front of **quedarse** or attached to the gerund: **se quedó mirándome** / **se me quedó mirando**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **quedarse** freezes you inside the action."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Miguel siempre ==se queda mirándome== a los ojos.",
+              "en": "Miguel always keeps looking into my eyes."
+            },
+            {
+              "es": "==Nos quedamos esperando== el camión hasta tarde.",
+              "en": "We kept waiting for the bus until late."
+            },
+            {
+              "es": "Antes siempre ==me quedaba trabajando== hasta tarde. Ya no.",
+              "en": "I used to stay working late. Not anymore."
+            },
+            {
+              "es": "No me gusta que ==se queden viendo== películas hasta tan tarde.",
+              "en": "I don't like you guys staying up watching movies so late."
+            },
+            {
+              "es": "==Se quedó mirando== al bebé con ternura.",
+              "en": "She stayed gazing at the baby tenderly."
+            },
+            {
+              "es": "Mientras caminaba, un señor ==se quedó mirándome==.",
+              "en": "As I was walking, a man started staring at me."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Se quedó mirar al bebé."
+                },
+                {
+                  "v": "bien",
+                  "t": "Se quedó mirando al bebé."
+                }
+              ],
+              "nota": "Gerund only."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Se quedó mirado al bebé."
+                },
+                {
+                  "v": "bien",
+                  "t": "Se quedó mirando al bebé."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "seguir + gerund",
+              "texto": "[[6180|seguir / continuar + gerund]]."
+            },
+            {
+              "forma": "quedarse sordo",
+              "texto": "**Quedarse** for change: [[6985|verbs of change]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We stayed talking until two._",
+              "r": "Nos quedamos platicando hasta las dos.",
+              "nota": "quedarse + gerund."
+            },
+            {
+              "p": "In Spanish: _He stood there looking at me._",
+              "r": "Se quedó mirándome. / Se me quedó mirando.",
+              "nota": "Gerund."
+            },
+            {
+              "p": "Fix it: _Me quedé estudiar toda la noche._",
+              "r": "Me quedé estudiando toda la noche.",
+              "nota": "Gerund."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6180
+    ],
+    "confunde": [
+      6180
+    ],
+    "sigue": [
+      6985
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6895",
+      "kwiziq": true
+    }
+  ]
+}

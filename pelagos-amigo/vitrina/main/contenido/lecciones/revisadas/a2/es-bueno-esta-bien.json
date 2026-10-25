@@ -1,0 +1,248 @@
+{
+  "tema": 6308,
+  "slug": "es-bueno-esta-bien",
+  "titulo": "Es bueno/malo vs está bien/mal",
+  "subtitulo": "Es bueno dormir bien; está mal mentir.",
+  "foto": "t07.jpg",
+  "regla": "Es bueno / es malo (+ infinitive) says something is good or bad for you or of good or bad quality. Está bien / está mal says something is OK, right or correct, or wrong. Bien and mal never change.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Two pairs, two jobs:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Form",
+            "Meaning",
+            "Example"
+          ],
+          "filas": [
+            [
+              "es bueno / es malo",
+              "good or bad for you, beneficial or harmful",
+              "Es bueno dormir ocho horas."
+            ],
+            [
+              "ser bueno/a, malo/a",
+              "good or bad quality",
+              "La película es buena."
+            ],
+            [
+              "está bien / está mal",
+              "OK, right, correct; wrong",
+              "Está mal mentir."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Es bueno / es malo + infinitive** gives general advice: **es bueno comer verduras**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Está bien / está mal** judges whether something is right, acceptable or correct: **tu respuesta está bien**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Está bien** alone = _OK, fine, all right_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Bueno** and **malo** are adjectives and agree (**las películas son buenas**). **Bien** and **mal** are adverbs and **never change** (**las respuestas están bien**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **bueno** asks _is it good for me?_; **bien** asks _is it right?_"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Es bueno== dormir ocho horas.",
+              "en": "It's good to sleep eight hours."
+            },
+            {
+              "es": "==Es malo== comer tanta azúcar.",
+              "en": "Eating so much sugar is bad for you."
+            },
+            {
+              "es": "==Es bueno== regar las plantas temprano.",
+              "en": "It's good to water the plants early."
+            },
+            {
+              "es": "Esta película ==es buena==.",
+              "en": "This movie is good."
+            },
+            {
+              "es": "==Está mal== copiar en el examen.",
+              "en": "Cheating on the exam is wrong."
+            },
+            {
+              "es": "==Está mal== tirar basura en la playa.",
+              "en": "Throwing trash on the beach is wrong."
+            },
+            {
+              "es": "Tu respuesta ==está bien==.",
+              "en": "Your answer is right."
+            },
+            {
+              "es": "—¿Nos vemos a las seis? —==Está bien==.",
+              "en": "\"See you at six?\" \"OK.\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es bien hacer ejercicio."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es bueno hacer ejercicio."
+                }
+              ],
+              "nota": "Good for you: **es bueno**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tus respuestas son bien."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tus respuestas están bien."
+                }
+              ],
+              "nota": "Correct: **está(n) bien**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mentir es bien."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mentir está mal."
+                }
+              ],
+              "nota": "Right or wrong: **estar**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Las fotos están bienes."
+                },
+                {
+                  "v": "bien",
+                  "t": "Las fotos están bien."
+                }
+              ],
+              "nota": "**Bien** never changes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "es grande",
+              "texto": "Ser for what things are like: [[5972|ser for essential characteristics]]."
+            },
+            {
+              "forma": "está roto",
+              "texto": "Estar for the state things are in: [[5983|estar for physical condition]]."
+            },
+            {
+              "forma": "buen día",
+              "texto": "Bueno and malo before a noun: [[5057|buen, mal, gran]]."
+            },
+            {
+              "forma": "mejor, peor",
+              "texto": "Better and worse: [[6078|mayor, menor, mejor, peor]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _It's good to drink water._",
+              "r": "Es bueno tomar agua.",
+              "nota": "es bueno + infinitive."
+            },
+            {
+              "p": "In Spanish: _Lying is wrong._",
+              "r": "Está mal mentir.",
+              "nota": "Right or wrong: está."
+            },
+            {
+              "p": "Fix it: _Tu tarea es bien._",
+              "r": "Tu tarea está bien.",
+              "nota": "Correct = está bien."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5972
+    ],
+    "confunde": [
+      5983
+    ],
+    "sigue": [
+      5057,
+      6078
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6308",
+      "kwiziq": true
+    }
+  ]
+}

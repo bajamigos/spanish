@@ -1,0 +1,189 @@
+{
+  "tema": 6990,
+  "slug": "seria-bueno-que",
+  "titulo": "Sería + adjective + que + imperfect subjunctive",
+  "subtitulo": "Sería bueno que estudiaras más.",
+  "foto": "t05.jpg",
+  "regla": "Sería + adjective + que (sería bueno / mejor / genial / aconsejable que) is followed by the imperfect subjunctive: Sería genial que ganaran. Never the indicative or the conditional after que.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Es bueno que** + present subjunctive becomes softer and more hypothetical in the conditional: **sería bueno que** + **imperfect subjunctive**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "sería + adjective",
+            "+ que +",
+            "imperfect subjunctive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The idea after **que** is hypothetical, usually about the future."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **-ría** in the main clause calls for **-ra** after **que**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Sería bueno que Carmen ==estudiara== más.",
+              "en": "It would be good if Carmen studied more."
+            },
+            {
+              "es": "Sería aconsejable que todos ==dejáramos== de fumar.",
+              "en": "It would be advisable for all of us to quit smoking."
+            },
+            {
+              "es": "Sería genial que les ==tocara== el premio.",
+              "en": "It would be great if they won the prize."
+            },
+            {
+              "es": "Sería mejor que ==salieras== temprano para evitar el tráfico.",
+              "en": "It would be better if you left early to avoid traffic."
+            },
+            {
+              "es": "Sería una lástima que ==cerraran== esa taquería.",
+              "en": "It would be a shame if they closed that taco place."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Sería mejor que vienes."
+                },
+                {
+                  "v": "bien",
+                  "t": "Sería mejor que vinieras."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Sería genial que ganarían."
+                },
+                {
+                  "v": "bien",
+                  "t": "Sería genial que ganaran."
+                }
+              ],
+              "nota": "Never the conditional after **que**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Sería bueno que estudies."
+                },
+                {
+                  "v": "bien",
+                  "t": "Sería bueno que estudiaras."
+                }
+              ],
+              "nota": "**Sería** pairs with the imperfect subjunctive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "es bueno que",
+              "texto": "Present version: [[6226|impersonal expressions]]."
+            },
+            {
+              "forma": "me gustaría que",
+              "texto": "[[8580|conditional + que + imperfect subjunctive]]."
+            },
+            {
+              "forma": "estudiara",
+              "texto": "Conjugation: [[5068|imperfect subjunctive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Complete: _Sería mejor que ___ (llamar, tú) antes._",
+              "r": "llamaras",
+              "nota": "Imperfect subjunctive."
+            },
+            {
+              "p": "In Spanish: _It would be great if you came._ (tú)",
+              "r": "Sería genial que vinieras.",
+              "nota": "sería + que + -ra."
+            },
+            {
+              "p": "Fix it: _Sería importante que lleguen a tiempo._",
+              "r": "Sería importante que llegaran a tiempo.",
+              "nota": "Match the conditional."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6226,
+      5068
+    ],
+    "confunde": [
+      6226
+    ],
+    "sigue": [
+      8580
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6990",
+      "kwiziq": true
+    }
+  ]
+}

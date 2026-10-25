@@ -1,0 +1,219 @@
+{
+  "tema": 5106,
+  "slug": "tener-que-infinitivo",
+  "titulo": "Tener que: to have to",
+  "subtitulo": "«Tengo que trabajar.»",
+  "foto": "t09.jpg",
+  "regla": "To say you have to do something, use tener que + infinitive: tengo que trabajar. Conjugate tener, keep the infinitive, and never drop que.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "tener (conjugated)",
+            "+ que +",
+            "infinitive"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Tener que"
+          ],
+          "filas": [
+            [
+              "yo",
+              "tengo que"
+            ],
+            [
+              "tú",
+              "tienes que"
+            ],
+            [
+              "él / ella / usted",
+              "tiene que"
+            ],
+            [
+              "nosotros",
+              "tenemos que"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "tienen que"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**No tengo que** = _I don't have to_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **que** is the hinge. Without it, the door falls off."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Tengo que trabajar== mañana.",
+              "en": "I have to work tomorrow."
+            },
+            {
+              "es": "¿==Tienes que estudiar== hoy?",
+              "en": "Do you have to study today?"
+            },
+            {
+              "es": "Mi hermana ==tiene que ir== al doctor.",
+              "en": "My sister has to go to the doctor."
+            },
+            {
+              "es": "==Tenemos que regar== el jardín.",
+              "en": "We have to water the garden."
+            },
+            {
+              "es": "Ustedes no ==tienen que pagar== nada.",
+              "en": "You don't have to pay anything."
+            },
+            {
+              "es": "==Tengo que levantarme== temprano para surfear.",
+              "en": "I have to get up early to surf."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tengo trabajar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tengo que trabajar."
+                }
+              ],
+              "nota": "Never drop **que**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tengo que trabajo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tengo que trabajar."
+                }
+              ],
+              "nota": "Infinitive after **que**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo tiene que estudiar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo tengo que estudiar."
+                }
+              ],
+              "nota": "Conjugate **tener**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tengo, tienes, tiene",
+              "texto": "All of tener: [[5304|tener in the present]]."
+            },
+            {
+              "forma": "debo, necesito",
+              "texto": "Other ways to say it: [[5065|deber + infinitive]], [[6070|necesitar]]."
+            },
+            {
+              "forma": "hay que",
+              "texto": "Impersonal _one has to_: [[6262|hay que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I have to study._",
+              "r": "Tengo que estudiar.",
+              "nota": "tengo que."
+            },
+            {
+              "p": "In Spanish: _We have to go to the bank._",
+              "r": "Tenemos que ir al banco.",
+              "nota": "tenemos que."
+            },
+            {
+              "p": "Fix it: _Ella tiene limpiar la casa._",
+              "r": "Ella tiene que limpiar la casa.",
+              "nota": "Add que."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5304
+    ],
+    "confunde": [
+      5065,
+      6070
+    ],
+    "sigue": [
+      6262
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5106",
+      "kwiziq": true
+    }
+  ]
+}

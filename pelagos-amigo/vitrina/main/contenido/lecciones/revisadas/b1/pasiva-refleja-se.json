@@ -1,0 +1,222 @@
+{
+  "tema": 6089,
+  "slug": "pasiva-refleja-se",
+  "titulo": "Forming the passive with se (la pasiva refleja)",
+  "subtitulo": "Se vende casa, se venden tablas: the thing decides singular or plural.",
+  "foto": "t04.jpg",
+  "regla": "Passive se: se + verb in the 3rd person, singular or plural to agree with the thing: se vende carro, se venden carros.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Spanish doesn't use the passive (_the house was sold_) as much as English does. A very common way to say it is with **se**: **se vende casa** = _house for sale_, _a house is being sold_."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**se**",
+            "verb in 3rd person",
+            "thing"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It works with **transitive** verbs, verbs that take a direct object. **Se** never changes."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The verb **agrees with the thing**: singular thing → singular verb, plural thing → plural verb."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Thing",
+            "Verb",
+            "Example"
+          ],
+          "filas": [
+            [
+              "singular",
+              "vende",
+              "Se vende carro."
+            ],
+            [
+              "plural",
+              "venden",
+              "Se venden carros."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It works in any tense: **se publicaron**, **se han hecho**, **se harán**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: read the sign backwards. **Se venden tablas**: the boards are the ones being sold, so they decide the verb."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Se vende== depa de lujo en la playa.",
+              "en": "Luxury apartment for sale at the beach."
+            },
+            {
+              "es": "==Se venden== depas de lujo en la playa.",
+              "en": "Luxury apartments for sale at the beach."
+            },
+            {
+              "es": "==Se buscan== cocineros con experiencia.",
+              "en": "Experienced cooks wanted."
+            },
+            {
+              "es": "==Se necesita== cerrajero.",
+              "en": "Locksmith needed."
+            },
+            {
+              "es": "Aquí ==se vende== el periódico barato.",
+              "en": "The newspaper is sold cheap here."
+            },
+            {
+              "es": "El otro día ==se publicaron== unas noticias feas.",
+              "en": "Some ugly news was published the other day."
+            },
+            {
+              "es": "Las cortinas nuevas ==se hicieron== en dos días.",
+              "en": "The new curtains were made in two days."
+            },
+            {
+              "es": "Las negociaciones ==se harán== pronto.",
+              "en": "The negotiations will take place soon."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Se vende tablas usadas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Se venden tablas usadas."
+                }
+              ],
+              "nota": "Plural thing: plural verb."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Se necesitan un mecánico."
+                },
+                {
+                  "v": "bien",
+                  "t": "Se necesita un mecánico."
+                }
+              ],
+              "nota": "Singular thing: singular verb."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "se debe pagar",
+              "texto": "With modal verbs: [[6803|se + deber / poder]]."
+            },
+            {
+              "forma": "aquí se come bien",
+              "texto": "Impersonal **se**, no object: [[5132|impersonal se]]."
+            },
+            {
+              "forma": "fue vendida",
+              "texto": "The passive with **ser**: [[6173|ser + participle]]."
+            },
+            {
+              "forma": "dicen que…",
+              "texto": "Impersonal **ellos**: [[6998|the ellos form]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Make a sign: _Rooms for rent._ (rentar)",
+              "r": "Se rentan cuartos.",
+              "nota": "Plural thing: rentan."
+            },
+            {
+              "p": "Make a sign: _Spanish spoken._",
+              "r": "Se habla español.",
+              "nota": "Singular."
+            },
+            {
+              "p": "In Spanish: _The tickets were sold in an hour._",
+              "r": "Los boletos se vendieron en una hora.",
+              "nota": "Plural, preterite."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5132
+    ],
+    "confunde": [
+      5132,
+      6173
+    ],
+    "sigue": [
+      6803,
+      6998
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6089",
+      "kwiziq": true
+    }
+  ]
+}

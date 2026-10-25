@@ -1,0 +1,220 @@
+{
+  "tema": 5229,
+  "slug": "subjuntivo-presente-estar",
+  "titulo": "Conjugate estar in the present subjunctive",
+  "subtitulo": "Esté, estés, estemos: regular, but with accents in the right places.",
+  "foto": "t02.jpg",
+  "regla": "Estar has a regular stem and endings in the present subjunctive, with a written accent on the last syllable except estemos: esté, estés, esté, estemos, estén.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Estar** is almost regular in the present subjunctive: the stem and the endings are the regular **-ar** ones. What's special is the **written accent**: the stress falls on the last syllable, so most forms carry an accent."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "estar"
+          ],
+          "filas": [
+            [
+              "yo",
+              "esté"
+            ],
+            [
+              "tú",
+              "estés"
+            ],
+            [
+              "él, ella, usted",
+              "esté"
+            ],
+            [
+              "nosotros",
+              "estemos"
+            ],
+            [
+              "ustedes, ellos",
+              "estén"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "All forms are stressed on the last syllable and carry an accent **except nosotros**, **estemos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **estar** leans forward: **es-TÉ**, **es-TÉN**. Only **estemos** stands up straight."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Beto no quiere que ==esté== triste.",
+              "en": "Beto doesn't want me to be sad."
+            },
+            {
+              "es": "A mi papá no le gusta que ==estés== aquí.",
+              "en": "My dad doesn't like you being here."
+            },
+            {
+              "es": "Espero que él ==esté== bien.",
+              "en": "I hope he's okay."
+            },
+            {
+              "es": "Me alegra que ==estemos== todos juntos.",
+              "en": "I'm glad we're all together."
+            },
+            {
+              "es": "Es increíble que ==estén== a salvo.",
+              "en": "It's great that they're safe."
+            },
+            {
+              "es": "Les pido que ==estén== atentos en el agua.",
+              "en": "I'm asking you to stay alert in the water."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Espero que este bien."
+                },
+                {
+                  "v": "bien",
+                  "t": "Espero que esté bien."
+                }
+              ],
+              "nota": "Without the accent, **este** means _this_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me alegra que estémos juntos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me alegra que estemos juntos."
+                }
+              ],
+              "nota": "No accent on **estemos**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ojalá que están bien."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ojalá que estén bien."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "estoy, estás",
+              "texto": "The present: [[5166|estar in the present]]."
+            },
+            {
+              "forma": "sea",
+              "texto": "Its partner: [[5152|ser in the subjunctive]]."
+            },
+            {
+              "forma": "dé",
+              "texto": "Another verb whose accent matters: [[5262|dar in the subjunctive]]."
+            },
+            {
+              "forma": "Espero que estés bien.",
+              "texto": "Common triggers: [[6076|esperar que]], [[5061|ojalá]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I hope you're well._ (tú)",
+              "r": "Espero que estés bien.",
+              "nota": "estés, with accent."
+            },
+            {
+              "p": "**Estar** with **nosotros**: Es bueno que ___ listos.",
+              "r": "Es bueno que estemos listos.",
+              "nota": "No accent."
+            },
+            {
+              "p": "Which one? **Ojalá que este aquí** or **Ojalá que esté aquí**?",
+              "r": "Ojalá que esté aquí.",
+              "nota": "**Este** without accent means _this_."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5166,
+      5063
+    ],
+    "confunde": [
+      5152
+    ],
+    "sigue": [
+      5262,
+      6076,
+      5061
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5229",
+      "kwiziq": true
+    }
+  ]
+}

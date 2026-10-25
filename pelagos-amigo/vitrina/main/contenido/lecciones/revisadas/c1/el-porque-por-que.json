@@ -1,0 +1,201 @@
+{
+  "tema": 6599,
+  "slug": "el-porque-por-que",
+  "titulo": "El porqué vs por que",
+  "subtitulo": "No entiendo el porqué. Luchó por que lo escucharan.",
+  "foto": "t01.jpg",
+  "regla": "Porqué (one word, accent) is a noun: the reason: el porqué de su actitud, los porqués. Por que (two words, no accent) is por + que: when a verb or noun that takes por is followed by que: Me preocupo por que estés bien; also = por el cual: la razón por que... Not to be confused with porque (because) and por qué (why).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "tabla",
+      "titulo": "Four look-alikes",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "form",
+            "what it is",
+            "example"
+          ],
+          "filas": [
+            [
+              "por qué",
+              "why (question)",
+              "¿Por qué lloras?"
+            ],
+            [
+              "porque",
+              "because",
+              "Lloro porque estoy feliz."
+            ],
+            [
+              "el porqué",
+              "the reason (noun)",
+              "No sé el porqué."
+            ],
+            [
+              "por que",
+              "por + que",
+              "Luché por que me escucharan."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el porqué / los porqués",
+              "texto": "A masculine noun = _reason, cause_. Takes an article or determiner: **el porqué, su porqué, los porqués**."
+            },
+            {
+              "forma": "por que",
+              "texto": "**por** (from a verb or noun) + **que**: **preocuparse por que, luchar por que, apostar por que**. Also **la razón por que** = _the reason why_ (= por la que)."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if you can put **el** in front, it's **porqué**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No entiendo ==el porqué== de su actitud tan negativa.",
+              "en": "I don't understand the reason for his negative attitude."
+            },
+            {
+              "es": "No te voy a explicar ==los porqués== de mi decisión.",
+              "en": "I'm not going to explain the reasons for my decision."
+            },
+            {
+              "es": "Hice todo lo posible ==por que== no termináramos separados.",
+              "en": "I did everything I could so we wouldn't end up apart."
+            },
+            {
+              "es": "Me preocupo ==por que== tengas todo lo que necesitas.",
+              "en": "I worry about you having everything you need."
+            },
+            {
+              "es": "Esa es la razón ==por que== renunció.",
+              "en": "That's the reason why he quit."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No sé el por qué."
+                },
+                {
+                  "v": "bien",
+                  "t": "No sé el porqué."
+                }
+              ],
+              "nota": "Noun: one word."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Porqué no vienes?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Por qué no vienes?"
+                }
+              ],
+              "nota": "Question: two words."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "porque / por qué",
+              "texto": "[[6333|porque vs por qué]]."
+            },
+            {
+              "forma": "preposition + que",
+              "texto": "[[6747|a / de + el que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Write it: _I'd like to know the reason._",
+              "r": "Me gustaría saber el porqué.",
+              "nota": "Noun."
+            },
+            {
+              "p": "Write it: _They fought so that we'd have rights._",
+              "r": "Lucharon por que tuviéramos derechos.",
+              "nota": "por + que."
+            },
+            {
+              "p": "Write it: _Why? Because._",
+              "r": "¿Por qué? Porque sí.",
+              "nota": "The classics."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6333
+    ],
+    "confunde": [],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6599",
+      "kwiziq": true
+    }
+  ]
+}

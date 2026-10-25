@@ -1,0 +1,210 @@
+{
+  "tema": 5775,
+  "slug": "siento-sientes-presente-sentir",
+  "titulo": "Sentir in the present",
+  "subtitulo": "Lo siento mucho.",
+  "foto": "t06.jpg",
+  "regla": "Sentir (to feel, to be sorry) changes e to ie in the present in every form except nosotros: siento, sientes, siente, sentimos, sienten.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Sentir** (_to feel_) is a stem-changing verb: the **e** of the stem becomes **ie**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Nosotros** keeps the e: **sentimos**. The endings are regular -ir endings."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "sentir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**siento**"
+            ],
+            [
+              "tú",
+              "**sientes**"
+            ],
+            [
+              "él, ella, usted",
+              "**siente**"
+            ],
+            [
+              "nosotros",
+              "sentimos"
+            ],
+            [
+              "ellos, ustedes",
+              "**sienten**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Lo siento** = _I'm sorry_. To say how you feel (_I feel good_), use **sentirse**: **me siento bien**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Lo ==siento==, llego tarde.",
+              "en": "Sorry, I'm going to be late."
+            },
+            {
+              "es": "¿==Sientes== el temblor?",
+              "en": "Do you feel the earthquake?"
+            },
+            {
+              "es": "Mi abuelo ==siente== dolor en la rodilla.",
+              "en": "My grandpa feels pain in his knee."
+            },
+            {
+              "es": "==Sentimos== mucha emoción antes de la competencia.",
+              "en": "We feel a lot of excitement before the competition."
+            },
+            {
+              "es": "Los perros ==sienten== el miedo.",
+              "en": "Dogs sense fear."
+            },
+            {
+              "es": "==Siento== que algo no está bien.",
+              "en": "I feel that something isn't right."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo sento el viento."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo siento el viento."
+                }
+              ],
+              "nota": "e → ie."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros sientimos el frío."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros sentimos el frío."
+                }
+              ],
+              "nota": "No change in nosotros."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo siento bien hoy."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo me siento bien hoy."
+                }
+              ],
+              "nota": "_How_ you feel needs **me**: sentirse."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "prefiero, miento",
+              "texto": "The same e → ie pattern: [[5574|-ir verbs with e > ie]], [[5776|preferir]]."
+            },
+            {
+              "forma": "me siento bien",
+              "texto": "Feel + how: [[7054|sentir vs sentirse]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I'm very sorry._",
+              "r": "Lo siento mucho.",
+              "nota": "yo → siento."
+            },
+            {
+              "p": "Fix it: _Nosotros sientimos el viento._",
+              "r": "Nosotros sentimos el viento.",
+              "nota": "No ie in nosotros."
+            },
+            {
+              "p": "In Spanish: _Do you feel the cold?_",
+              "r": "¿Sientes el frío?",
+              "nota": "tú → sientes."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5574
+    ],
+    "confunde": [
+      7054
+    ],
+    "sigue": [
+      5776
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5775",
+      "kwiziq": true
+    }
+  ]
+}

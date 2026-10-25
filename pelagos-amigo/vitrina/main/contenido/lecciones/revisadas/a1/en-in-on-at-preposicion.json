@@ -1,0 +1,189 @@
+{
+  "tema": 7919,
+  "slug": "en-in-on-at-preposicion",
+  "titulo": "En = in, on, at",
+  "subtitulo": "Estoy en la playa.",
+  "foto": "t02.jpg",
+  "regla": "En means in, on, inside or at for where someone or something is (estoy en casa, las llaves están en la mesa). It also goes with transport (en camión), months and years (en octubre).",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**En** = _in, on, inside, at_ for **where** something is or happens: **Vivo en Tijuana.** **Está en la mesa.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**En** is for **being** somewhere; for **going** somewhere, use **a**: **Estoy en la playa** but **Voy a la playa**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Also: transport (**en carro**, **en camión**), months and years (**en octubre**, **en 2025**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Not with days of the week: **el lunes**, never **en el lunes**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Vivo ==en== Tijuana.",
+              "en": "I live in Tijuana."
+            },
+            {
+              "es": "Las llaves están ==en== la mesa.",
+              "en": "The keys are on the table."
+            },
+            {
+              "es": "Estoy ==en== casa.",
+              "en": "I'm at home."
+            },
+            {
+              "es": "Trabajo ==en== una escuela.",
+              "en": "I work at a school."
+            },
+            {
+              "es": "Vamos ==en== camión.",
+              "en": "We're going by bus."
+            },
+            {
+              "es": "Mi cumpleaños es ==en== octubre.",
+              "en": "My birthday is in October."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estoy a casa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estoy en casa."
+                }
+              ],
+              "nota": "Being somewhere: **en**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Vivo a Tijuana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Vivo en Tijuana."
+                }
+              ],
+              "nota": "Live _in_ = vivir **en**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mi cumpleaños es en el lunes."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mi cumpleaños es el lunes."
+                }
+              ],
+              "nota": "Days take **el**, no **en**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "vivo en",
+              "texto": "Where you live: [[5042|vivo en]]."
+            },
+            {
+              "forma": "voy a",
+              "texto": "Going somewhere: [[7896|a]]."
+            },
+            {
+              "forma": "en la mañana",
+              "texto": "Parts of the day: [[9344|en / a / por + part of day]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I live in Tijuana._",
+              "r": "Vivo en Tijuana.",
+              "nota": "vivir en."
+            },
+            {
+              "p": "In Spanish: _I'm at home._",
+              "r": "Estoy en casa.",
+              "nota": "en casa."
+            },
+            {
+              "p": "Fix it: _Mi cumpleaños es en el lunes._",
+              "r": "Mi cumpleaños es el lunes.",
+              "nota": "No en with days."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5042
+    ],
+    "confunde": [
+      7896
+    ],
+    "sigue": [
+      9344
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7919",
+      "kwiziq": true
+    }
+  ]
+}

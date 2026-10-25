@@ -1,0 +1,211 @@
+{
+  "tema": 7180,
+  "slug": "adonde",
+  "titulo": "Adónde / adonde / dónde / donde",
+  "subtitulo": "¿Adónde vas? / ¿Dónde estás? / el lugar adonde vamos.",
+  "foto": "t10.jpg",
+  "regla": "With verbs of movement (ir, llevar, venir), you can use adónde / adonde (or a dónde) or dónde / donde: ¿Adónde vas? = ¿Dónde vas? Without movement, only dónde / donde: ¿Dónde estás? Accent for questions and exclamations; no accent for relatives.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Verb",
+            "Possible forms",
+            "Example"
+          ],
+          "filas": [
+            [
+              "movement (ir, llevar, venir, mudarse)",
+              "adónde / a dónde / dónde",
+              "¿Adónde vas?"
+            ],
+            [
+              "no movement (estar, vivir, comer)",
+              "only dónde / donde",
+              "¿Dónde estás?"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Accent rule: **adónde / dónde** in direct and indirect questions and exclamations; **adonde / donde** (no accent) as relatives: **el café adonde vamos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**¿A dónde?** written as two words is also correct and very common in Mexico."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **a** points to a destination, so it only goes with movement."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿==Adónde== vas, Manuel?",
+              "en": "Where are you going, Manuel?"
+            },
+            {
+              "es": "¿==A dónde== vas, Manuel?",
+              "en": "Where are you going, Manuel?"
+            },
+            {
+              "es": "No sé ==adónde== lleva María esos libros.",
+              "en": "I don't know where María is taking those books."
+            },
+            {
+              "es": "¿==Dónde== están mis lentes?",
+              "en": "Where are my glasses?"
+            },
+            {
+              "es": "Cenamos ==donde== tú quieras.",
+              "en": "We'll have dinner wherever you want."
+            },
+            {
+              "es": "—¿==Adónde== se mudan? —A Mérida.",
+              "en": "—Where are you moving to? —To Mérida."
+            },
+            {
+              "es": "No tengo idea de ==dónde== dejé el celular anoche.",
+              "en": "I have no idea where I left my phone last night."
+            },
+            {
+              "es": "Vamos a la cafetería ==adonde== fuimos ayer.",
+              "en": "Let's go to the café we went to yesterday."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Adónde están mis lentes?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Dónde están mis lentes?"
+                }
+              ],
+              "nota": "No movement: no **a**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cenamos adonde tú quieras."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cenamos donde tú quieras."
+                }
+              ],
+              "nota": "**Cenar** isn't movement."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Adonde vas?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Adónde vas?"
+                }
+              ],
+              "nota": "Question: accent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "dónde / donde",
+              "texto": "[[6964|dónde vs donde]]."
+            },
+            {
+              "forma": "¿de dónde?",
+              "texto": "Other prepositions: **¿de dónde eres?**, **¿por dónde?**"
+            },
+            {
+              "forma": "donde + subjunctive",
+              "texto": "[[8193|wherever]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Fill in: _¿___ fueron de vacaciones?_",
+              "r": "Adónde / A dónde / Dónde",
+              "nota": "Movement."
+            },
+            {
+              "p": "Fill in: _¿___ trabajas?_",
+              "r": "Dónde",
+              "nota": "No movement."
+            },
+            {
+              "p": "Fill in: _Ese es el pueblo ___ vamos cada año._ (relative)",
+              "r": "adonde / donde",
+              "nota": "No accent."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6964
+    ],
+    "confunde": [
+      6964
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7180",
+      "kwiziq": true
+    }
+  ]
+}

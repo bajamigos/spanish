@@ -1,0 +1,229 @@
+{
+  "tema": 7259,
+  "slug": "no-verdad-coletillas",
+  "titulo": "Question tags: ¿no? and ¿verdad?",
+  "subtitulo": "«Eres de Tijuana, ¿verdad?»",
+  "foto": "t03.jpg",
+  "regla": "To turn a statement into a check like _isn't it?_ or _right?_, add **¿no?** or **¿verdad?** at the end. They never change. After a negative statement, use only **¿verdad?**",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "English builds a tag from the verb: _isn't it?_, _don't you?_, _didn't he?_. Spanish is much easier: one **fixed** tag for everything."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "statement",
+            ", +",
+            "¿no? / ¿verdad?"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**¿no?** and **¿verdad?** mean the same with an affirmative statement: you expect a _yes_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "After a **negative** statement, use **¿verdad?**, not **¿no?**: **No vienes, ¿verdad?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Write a **comma** before the tag, and put the **¿ ?** only around the tag."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In Mexico you'll also hear **¿o no?** (a bit pushier) and **¿cierto?** They work like **¿no?**"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Eres de Tijuana, ==¿verdad?==",
+              "en": "You're from Tijuana, aren't you?"
+            },
+            {
+              "es": "Hace calor, ==¿no?==",
+              "en": "It's hot, isn't it?"
+            },
+            {
+              "es": "Mañana hay buenas olas, ==¿no?==",
+              "en": "There are good waves tomorrow, right?"
+            },
+            {
+              "es": "No te gusta el cilantro, ==¿verdad?==",
+              "en": "You don't like cilantro, do you?"
+            },
+            {
+              "es": "Ustedes ya comieron, ==¿verdad?==",
+              "en": "You've already eaten, haven't you?"
+            },
+            {
+              "es": "Ella entrena jiu-jitsu, ==¿no?==",
+              "en": "She trains jiu-jitsu, doesn't she?"
+            },
+            {
+              "es": "No hay tráfico en la garita, ==¿verdad?==",
+              "en": "There's no traffic at the border crossing, is there?"
+            },
+            {
+              "es": "Está padre la película, ==¿o no?==",
+              "en": "The movie is great, isn't it?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No tienes hambre, ¿no?"
+                },
+                {
+                  "v": "bien",
+                  "t": "No tienes hambre, ¿verdad?"
+                }
+              ],
+              "nota": "After a negative: ¿verdad?"
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Hace frío, no?"
+                },
+                {
+                  "v": "bien",
+                  "t": "Hace frío, ¿no?"
+                }
+              ],
+              "nota": "The question marks go only around the tag."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Eres mexicano, ¿no eres?"
+                },
+                {
+                  "v": "bien",
+                  "t": "Eres mexicano, ¿no?"
+                }
+              ],
+              "nota": "The tag never repeats the verb."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Vienes mañana ¿verdad?"
+                },
+                {
+                  "v": "bien",
+                  "t": "Vienes mañana, ¿verdad?"
+                }
+              ],
+              "nota": "Comma before the tag."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "no vienes",
+              "texto": "Making the statement negative: [[5091|no]], [[6261|no with longer verb phrases]]."
+            },
+            {
+              "forma": "¿qué...?",
+              "texto": "Full questions with a question word: [[9828|qué]], [[6313|cómo, dónde, cuándo]]."
+            },
+            {
+              "forma": "¿por qué?",
+              "texto": "Don't mix up [[6333|porque and por qué]]."
+            },
+            {
+              "forma": "yo tampoco",
+              "texto": "Answering a check: [[7681|yo también / yo tampoco]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _You're tired, aren't you?_",
+              "r": "Estás cansado, ¿no? / ¿verdad?",
+              "nota": "Either tag works."
+            },
+            {
+              "p": "In Spanish: _You don't speak French, do you?_",
+              "r": "No hablas francés, ¿verdad?",
+              "nota": "Negative: ¿verdad?"
+            },
+            {
+              "p": "Fix it: _¿Es tu carro, no?_",
+              "r": "Es tu carro, ¿no?",
+              "nota": "¿ ? only around the tag."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5091,
+      6261,
+      9828
+    ],
+    "confunde": [
+      6333
+    ],
+    "sigue": [
+      6313,
+      7681
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7259",
+      "kwiziq": true
+    }
+  ]
+}

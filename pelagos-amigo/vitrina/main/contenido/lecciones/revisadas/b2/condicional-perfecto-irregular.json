@@ -1,0 +1,275 @@
+{
+  "tema": 5114,
+  "slug": "condicional-perfecto-irregular",
+  "titulo": "Perfect conditional: irregular verbs",
+  "subtitulo": "Habría hecho, habrías dicho, habrían puesto.",
+  "foto": "t03.jpg",
+  "regla": "In the perfect conditional, haber is the same for every verb (habría, habrías, habría, habríamos, habrían). Only the participle can be irregular: habría hecho, habrías dicho, habrían vuelto.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Haber** in the conditional never changes from verb to verb: **habría, habrías, habría, habríamos, habrían**. Irregular verbs just have irregular **participles**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Infinitive",
+            "Participle"
+          ],
+          "filas": [
+            [
+              "hacer",
+              "hecho"
+            ],
+            [
+              "decir",
+              "dicho"
+            ],
+            [
+              "poner",
+              "puesto"
+            ],
+            [
+              "ver",
+              "visto"
+            ],
+            [
+              "escribir",
+              "escrito"
+            ],
+            [
+              "volver",
+              "vuelto"
+            ],
+            [
+              "romper",
+              "roto"
+            ],
+            [
+              "abrir",
+              "abierto"
+            ],
+            [
+              "morir",
+              "muerto"
+            ],
+            [
+              "cubrir",
+              "cubierto"
+            ],
+            [
+              "resolver",
+              "resuelto"
+            ],
+            [
+              "freír",
+              "frito / freído"
+            ],
+            [
+              "satisfacer",
+              "satisfecho"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Compounds follow the base verb: **devolver → devuelto**, **proponer → propuesto**, **descubrir → descubierto**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **-to** and **-cho** are the irregular sounds to listen for."
+        }
+      ]
+    },
+    {
+      "id": "tabla",
+      "titulo": "Example: hacer",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "hacer"
+          ],
+          "filas": [
+            [
+              "yo",
+              "habría hecho"
+            ],
+            [
+              "tú",
+              "habrías hecho"
+            ],
+            [
+              "él, ella, usted",
+              "habría hecho"
+            ],
+            [
+              "nosotros",
+              "habríamos hecho"
+            ],
+            [
+              "ustedes, ellos",
+              "habrían hecho"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Yo no lo ==habría hecho== así.",
+              "en": "I wouldn't have done it that way."
+            },
+            {
+              "es": "¿Qué le ==habrías dicho== tú?",
+              "en": "What would you have told him?"
+            },
+            {
+              "es": "Con más tiempo, ==habríamos escrito== un mejor informe.",
+              "en": "With more time, we would have written a better report."
+            },
+            {
+              "es": "Si lo hubieran sabido, ==habrían vuelto== antes.",
+              "en": "If they'd known, they would have come back sooner."
+            },
+            {
+              "es": "En tu lugar, yo ==habría abierto== la carta.",
+              "en": "In your place, I would have opened the letter."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Habría hacido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Habría hecho."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Habrían ponido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Habrían puesto."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Habríamos vido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Habríamos visto."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "habría llamado",
+              "texto": "[[5186|regular verbs]]."
+            },
+            {
+              "forma": "habré hecho",
+              "texto": "[[5066|future perfect, irregular]]."
+            },
+            {
+              "forma": "would have",
+              "texto": "[[6992|habría + participle]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Conjugate: _yo / decir_",
+              "r": "habría dicho",
+              "nota": "dicho."
+            },
+            {
+              "p": "Conjugate: _ellas / romper_",
+              "r": "habrían roto",
+              "nota": "roto."
+            },
+            {
+              "p": "In Spanish: _We would have seen it._",
+              "r": "Lo habríamos visto.",
+              "nota": "visto."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5186,
+      7048
+    ],
+    "confunde": [
+      5066
+    ],
+    "sigue": [
+      6992
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5114",
+      "kwiziq": true
+    }
+  ]
+}

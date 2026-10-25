@@ -1,0 +1,203 @@
+{
+  "tema": 6180,
+  "slug": "seguir-gerundio",
+  "titulo": "Seguir / continuar + gerund = to keep on doing something",
+  "subtitulo": "Sigue lloviendo. Continuó trabajando.",
+  "foto": "t02.jpg",
+  "regla": "Seguir or continuar + gerund = to keep (on) doing: sigue lloviendo. No preposition and no infinitive in between. Seguir changes e > i (sigo, sigue).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "seguir / continuar",
+            "+ gerund"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Both mean _to keep on, to continue doing_ and work just like English _keep + -ing_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**No preposition** and **no infinitive**: never ~~seguir a~~, ~~continuar a~~."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Seguir** is irregular: **e → i** (**sigo, sigues, sigue, siguen**) and **gu → g** in **sigo**. **Continuar** has an accent in **continúo, continúas, continúa, continúan**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **sigue** + **-ando / -iendo**: it keeps rolling."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Sigue caminando== un poco más y vas a ver una farmacia.",
+              "en": "Keep walking a bit more and you'll see a pharmacy."
+            },
+            {
+              "es": "==Continúa caminando== un poco más y vas a ver una farmacia.",
+              "en": "Keep walking a bit more and you'll see a pharmacy."
+            },
+            {
+              "es": "Luis ==siguió insistiendo== para convencer a la chava.",
+              "en": "Luis kept insisting to convince the girl."
+            },
+            {
+              "es": "Mi papá ==sigue fumando== a pesar de lo que dice el doctor.",
+              "en": "My dad keeps smoking despite what the doctor says."
+            },
+            {
+              "es": "==Siguieron platicando== hasta el amanecer.",
+              "en": "They kept talking until dawn."
+            },
+            {
+              "es": "Los voluntarios ==han continuado juntando== dinero para los niños.",
+              "en": "The volunteers have kept raising money for the kids."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "negativo",
+      "titulo": "Seguir sin + infinitive",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "For _still not doing_, use **seguir sin** + **infinitive**: **Sigo sin entender.** (_I still don't understand._) Here the infinitive is correct because it comes after **sin**."
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Siguieron a bailar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Siguieron bailando."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Continuó a trabajar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Continuó trabajando."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo sego estudiando."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo sigo estudiando."
+                }
+              ],
+              "nota": "**Sigo**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "quedarse + gerund",
+              "texto": "Staying in an action: [[6895|quedarse + gerund]]."
+            },
+            {
+              "forma": "estar + gerund",
+              "texto": "[[5092|present progressive]]."
+            },
+            {
+              "forma": "siguiendo",
+              "texto": "Gerunds: [[6500|regular]], [[6501|irregular]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _It keeps raining._",
+              "r": "Sigue lloviendo.",
+              "nota": "seguir + gerund."
+            },
+            {
+              "p": "In Spanish: _We kept working until late._",
+              "r": "Seguimos trabajando hasta tarde. / Continuamos trabajando hasta tarde.",
+              "nota": "No preposition."
+            },
+            {
+              "p": "In Spanish: _I still don't have a car._",
+              "r": "Sigo sin tener carro.",
+              "nota": "seguir sin + infinitive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5092,
+      6501
+    ],
+    "confunde": [
+      6895
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6180",
+      "kwiziq": true
+    }
+  ]
+}

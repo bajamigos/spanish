@@ -1,0 +1,183 @@
+{
+  "tema": 7065,
+  "slug": "menos-excepto",
+  "titulo": "Using menos to say except",
+  "subtitulo": "Todos menos yo: except, with subject pronouns.",
+  "foto": "t03.jpg",
+  "regla": "Menos (never changes) = except: todos menos Beto. With pronouns use subject forms: menos yo, menos tú. For except that + sentence: excepto que / salvo que.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say _except_, the most common word is **menos** (literally _minus, less_). It never changes and is usually followed by a noun, a pronoun or a demonstrative."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With pronouns, Spanish uses the **subject** forms: **menos yo**, **menos tú**, never **menos mí** or **menos me**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The order can change without changing the meaning: **todos menos yo fuman** = **todos fuman menos yo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Excepto** and **salvo** mean the same: **todos fuman excepto yo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "To say _except that_ + a whole sentence, use **excepto que** or **salvo que**, not **menos que**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: think of math. Everyone **menos** you: you're subtracted, but you're still **yo**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Vinieron todos a mi casa ==menos== Cristina.",
+              "en": "Everyone came to my house except Cristina."
+            },
+            {
+              "es": "Todo estaba incluido en el precio, ==menos== las bebidas.",
+              "en": "Everything was included in the price except the drinks."
+            },
+            {
+              "es": "Todos los alumnos ==menos yo== pasaron el examen.",
+              "en": "All the students except me passed the exam."
+            },
+            {
+              "es": "Todos surfean ==menos== él.",
+              "en": "Everyone surfs except him."
+            },
+            {
+              "es": "Todos fuman ==excepto yo==.",
+              "en": "Everyone smokes except me."
+            },
+            {
+              "es": "Las vacaciones estuvieron padrísimas, ==salvo que== llovió un poco.",
+              "en": "The vacation was great, except that it rained a bit."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Todos fuman menos mí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Todos fuman menos yo."
+                }
+              ],
+              "nota": "Subject pronoun."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estuvo increíble, menos que llovió."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estuvo increíble, excepto que llovió."
+                }
+              ],
+              "nota": "Before a sentence: **excepto que / salvo que**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "más que, menos que",
+              "texto": "Comparisons: [[5116|tan … como]] and **más / menos que**."
+            },
+            {
+              "forma": "tampoco",
+              "texto": "Negative agreement: [[9188|tampoco]]."
+            },
+            {
+              "forma": "ni… ni…",
+              "texto": "_Neither… nor_: [[7074|ni… ni…]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Everyone came except you._ (tú)",
+              "r": "Vinieron todos menos tú.",
+              "nota": "menos + subject pronoun."
+            },
+            {
+              "p": "In Spanish: _I eat everything except fish._",
+              "r": "Como de todo menos pescado.",
+              "nota": "menos + noun."
+            },
+            {
+              "p": "In Spanish: _It was perfect, except that I lost the keys._",
+              "r": "Fue perfecto, excepto que perdí las llaves.",
+              "nota": "excepto que + sentence."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5116
+    ],
+    "confunde": [],
+    "sigue": [
+      9188,
+      7074
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7065",
+      "kwiziq": true
+    }
+  ]
+}

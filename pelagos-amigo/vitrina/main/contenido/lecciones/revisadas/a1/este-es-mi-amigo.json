@@ -1,0 +1,190 @@
+{
+  "tema": 5995,
+  "slug": "este-es-mi-amigo",
+  "titulo": "Ser to introduce people",
+  "subtitulo": "Este es mi amigo Beto.",
+  "foto": "t06.jpg",
+  "regla": "To introduce someone (or yourself), use ser: soy Claude, este es Beto, esta es mi hermana, estos son mis papás. Never estar.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To **introduce** someone, use **ser**. Never **estar**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "este / esta / estos / estas",
+            "+ es / son +",
+            "person"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Este** or **esta** matches the person: **este es** Beto, **esta es** Ana. For more than one: **estos son**, **estas son**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Yourself: **soy** + name. Tip: **ser** says _who_; **estar** only says _where_ or _how_."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Hola, ==soy== Claude.",
+              "en": "Hi, I'm Claude."
+            },
+            {
+              "es": "==Este es== mi amigo Beto.",
+              "en": "This is my friend Beto."
+            },
+            {
+              "es": "==Esta es== Mariana, mi novia.",
+              "en": "This is Mariana, my girlfriend."
+            },
+            {
+              "es": "==Estos son== mis papás.",
+              "en": "These are my parents."
+            },
+            {
+              "es": "==Estas son== mis compañeras de trabajo.",
+              "en": "These are my coworkers."
+            },
+            {
+              "es": "Mira, ==ella es== Sofía, mi entrenadora.",
+              "en": "Look, this is Sofía, my coach."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Esta está mi hermana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Esta es mi hermana."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Este es mi amiga Laura."
+                },
+                {
+                  "v": "bien",
+                  "t": "Esta es mi amiga Laura."
+                }
+              ],
+              "nota": "**Esta** for a woman."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hola, estoy Claude."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hola, soy Claude."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "soy",
+              "texto": "The verb itself: [[5070|ser in the present]]."
+            },
+            {
+              "forma": "me llamo",
+              "texto": "Another way to give your name: [[5043|me llamo]]."
+            },
+            {
+              "forma": "es mi hermano",
+              "texto": "Saying how people are related: [[6449|ser for relationships]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish (introducing): _This is my sister Ana._",
+              "r": "Esta es mi hermana Ana.",
+              "nota": "esta + es."
+            },
+            {
+              "p": "In Spanish: _These are my friends._ (all men)",
+              "r": "Estos son mis amigos.",
+              "nota": "estos + son."
+            },
+            {
+              "p": "Fix it: _Este está mi papá._",
+              "r": "Este es mi papá.",
+              "nota": "ser, not estar."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5070,
+      5043
+    ],
+    "confunde": [],
+    "sigue": [
+      6449
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5995",
+      "kwiziq": true
+    }
+  ]
+}

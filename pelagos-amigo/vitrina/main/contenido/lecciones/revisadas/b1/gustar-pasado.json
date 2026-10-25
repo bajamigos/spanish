@@ -1,0 +1,225 @@
+{
+  "tema": 7905,
+  "slug": "gustar-pasado",
+  "titulo": "Gustar and similar verbs in past tenses",
+  "subtitulo": "¿Te gustó la película? Me encantaban las caricaturas.",
+  "foto": "t02.jpg",
+  "regla": "Gustar-type verbs work the same in every tense: indirect pronoun + verb in 3rd person, singular or plural to agree with the thing: me gustó / me gustaron, me molestaba.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Gustar** and the other reverse verbs (**encantar**, **interesar**, **molestar**, **importar**, **doler**…) work the same way in every tense."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The verb goes in the **3rd person**, singular or plural, to agree with **the thing** liked, not with the person. The person goes in the pronoun (**me**, **te**, **le**, **nos**, **les**)."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Tense",
+            "Singular thing",
+            "Plural things"
+          ],
+          "filas": [
+            [
+              "preterite",
+              "me gustó",
+              "me gustaron"
+            ],
+            [
+              "imperfect",
+              "me gustaba",
+              "me gustaban"
+            ],
+            [
+              "present perfect",
+              "me ha gustado",
+              "me han gustado"
+            ],
+            [
+              "pluperfect",
+              "me había gustado",
+              "me habían gustado"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Preterite: a specific experience (**¿te gustó la película?**). Imperfect: a feeling that lasted or a habit (**de niño me encantaban las caricaturas**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: find the thing first. It decides singular or plural, in any tense."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿==Te gustó== el pozole ayer?",
+              "en": "Did you like the pozole yesterday?"
+            },
+            {
+              "es": "No ==me interesó== el discurso.",
+              "en": "The speech didn't interest me."
+            },
+            {
+              "es": "No me podía concentrar. El ruido ==me molestaba== mucho.",
+              "en": "I couldn't concentrate. The noise was bothering me a lot."
+            },
+            {
+              "es": "De joven no ==me interesaban== los deportes, pero ahora entreno diario.",
+              "en": "When I was young I wasn't interested in sports, but now I train every day."
+            },
+            {
+              "es": "==Nos encantaron== las olas de Ensenada.",
+              "en": "We loved the waves in Ensenada."
+            },
+            {
+              "es": "Nunca ==me habían gustado== los mariscos hasta que probé esos tacos.",
+              "en": "I'd never liked seafood until I tried those tacos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me gustó los tacos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me gustaron los tacos."
+                }
+              ],
+              "nota": "Plural thing: plural verb."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo gusté la película."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me gustó la película."
+                }
+              ],
+              "nota": "The person goes in the pronoun."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Te gustaron la playa?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Te gustó la playa?"
+                }
+              ],
+              "nota": "Singular thing: singular verb."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "me gusta, me gustan",
+              "texto": "The present: [[6001|gustar]], [[7248|he likes, she likes]]."
+            },
+            {
+              "forma": "a Beto le gustó",
+              "texto": "Repeating the pronoun: [[7032|repetition with gustar]]."
+            },
+            {
+              "forma": "me gustaría",
+              "texto": "The conditional: [[7059|would like]]."
+            },
+            {
+              "forma": "fui / iba",
+              "texto": "Preterite vs imperfect: [[6874|time markers]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I loved the tacos._",
+              "r": "Me encantaron los tacos.",
+              "nota": "Plural thing."
+            },
+            {
+              "p": "In Spanish: _As a kid, I liked cartoons._",
+              "r": "De niño me gustaban las caricaturas.",
+              "nota": "Imperfect for a lasting feeling."
+            },
+            {
+              "p": "In Spanish: _Did you like the beach?_ (ustedes)",
+              "r": "¿Les gustó la playa?",
+              "nota": "les + gustó."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6001,
+      7248
+    ],
+    "confunde": [
+      6874
+    ],
+    "sigue": [
+      7032,
+      7059
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7905",
+      "kwiziq": true
+    }
+  ]
+}

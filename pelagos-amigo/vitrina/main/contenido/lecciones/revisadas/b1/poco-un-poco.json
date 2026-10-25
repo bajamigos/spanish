@@ -1,0 +1,230 @@
+{
+  "tema": 7061,
+  "slug": "poco-un-poco",
+  "titulo": "Difference between poco and un poco",
+  "subtitulo": "Como poco (not much) vs como un poco (a bit).",
+  "foto": "t09.jpg",
+  "regla": "Poco = little, not much (negative); un poco = a bit (positive). With nouns: poco / poca / pocos / pocas agree; un poco de + uncountable noun.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Poco** and **un poco** both talk about a small quantity, but the feeling is opposite:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Form",
+            "Feeling",
+            "Example"
+          ],
+          "filas": [
+            [
+              "poco",
+              "_little, not much_: negative",
+              "Como poco. (I don't eat much.)"
+            ],
+            [
+              "un poco",
+              "_a bit, some_: positive",
+              "Como un poco. (I eat a bit.)"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "In English, **poco** often sounds better as a negative: **gano poco** = _I don't earn much_. Add **muy** to stress it: **muy poco**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**With verbs**, both are adverbs and never change: **duermo poco**, **descansé un poco**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**With nouns**, **poco** is an adjective and agrees: **poco dinero**, **poca grasa**, **pocos amigos**, **pocas olas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Un poco de** + an uncountable noun = _a bit of_: **un poco de agua**, **un poco de tiempo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Un poco** + adjective often softens a criticism: **está un poco caro**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **poco** is a glass half empty; **un poco** is a glass with something in it."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "A mediodía siempre como ==poco==.",
+              "en": "I never eat much at noon."
+            },
+            {
+              "es": "A mediodía como ==un poco== y sigo trabajando.",
+              "en": "At noon I eat a bit and keep working."
+            },
+            {
+              "es": "Este mes gané ==poco==.",
+              "en": "I didn't earn much this month."
+            },
+            {
+              "es": "Ahorré ==un poco== para las vacaciones.",
+              "en": "I saved a bit for vacation."
+            },
+            {
+              "es": "Dormimos ==muy poco== por el ruido.",
+              "en": "We slept very little because of the noise."
+            },
+            {
+              "es": "Hoy hay ==pocas== olas.",
+              "en": "There aren't many waves today."
+            },
+            {
+              "es": "¿Me das ==un poco de== agua?",
+              "en": "Can you give me a bit of water?"
+            },
+            {
+              "es": "La tabla está ==un poco== cara.",
+              "en": "The board is a bit expensive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Hay poco olas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hay pocas olas."
+                }
+              ],
+              "nota": "With a noun, **poco** agrees."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero un poco agua."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero un poco de agua."
+                }
+              ],
+              "nota": "**Un poco de** + noun."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero una poca de agua."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero un poco de agua."
+                }
+              ],
+              "nota": "**Un poco de** never changes for gender."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "demasiado, bastante, mucho",
+              "texto": "Other quantity words: [[5127|with nouns]], [[6135|with verbs]]."
+            },
+            {
+              "forma": "apenas como",
+              "texto": "_Hardly_: [[9149|apenas and casi no]]."
+            },
+            {
+              "forma": "unos cuantos",
+              "texto": "_A few_: [[7509|unos cuantos]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I don't sleep much._",
+              "r": "Duermo poco.",
+              "nota": "poco = not much."
+            },
+            {
+              "p": "In Spanish: _Rest a bit._ (tú)",
+              "r": "Descansa un poco.",
+              "nota": "un poco = a bit."
+            },
+            {
+              "p": "In Spanish: _There are few people at the beach._",
+              "r": "Hay poca gente en la playa.",
+              "nota": "poca agrees with gente."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5127,
+      6135
+    ],
+    "confunde": [
+      9149
+    ],
+    "sigue": [
+      7509
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7061",
+      "kwiziq": true
+    }
+  ]
+}

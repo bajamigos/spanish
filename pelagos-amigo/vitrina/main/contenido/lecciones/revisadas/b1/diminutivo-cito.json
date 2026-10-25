@@ -1,0 +1,222 @@
+{
+  "tema": 6132,
+  "slug": "diminutivo-cito",
+  "titulo": "The diminutive suffix -cito, -cita with words ending in -e, -n and -r",
+  "subtitulo": "Fuentecita, camioncito, amorcito: small, and often affectionate.",
+  "foto": "t04.jpg",
+  "regla": "Words ending in -e, -n or -r usually take -cito / -cita / -citos / -citas: calle → callecita, camión → camioncito, amor → amorcito.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Instead of adding **pequeño** (_small_), Spanish often uses a diminutive suffix. With most words ending in **-e**, **-n** or **-r**, add **-cito**, **-cita**, **-citos**, **-citas**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Ending",
+            "Example"
+          ],
+          "filas": [
+            [
+              "-e",
+              "fuente → fuentecita, calle → callecita, suave → suavecito"
+            ],
+            [
+              "-n",
+              "camión → camioncito, Carmen → Carmencita"
+            ],
+            [
+              "-r",
+              "amor → amorcito, calor → calorcito"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The suffix agrees in gender and number: **-cito**, **-cita**, **-citos**, **-citas**. Written accents disappear because the stress moves: **camión** → **camioncito**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It doesn't only mean small: it often adds **affection** or **softens** the word (**amorcito**, **ahorita**, **despacito**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It works with nouns, adjectives and adverbs: **verdecito**, **suavecito**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Diminutives are used a lot in Mexico."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **-cito** is a hug for the word."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "En la plaza hay una ==fuentecita== de piedra.",
+              "en": "There's a little stone fountain in the square."
+            },
+            {
+              "es": "Más adelante vas a ver una ==callecita== angosta.",
+              "en": "Further on you'll see a narrow little street."
+            },
+            {
+              "es": "El parque está bien ==verdecito==.",
+              "en": "The park is nice and green."
+            },
+            {
+              "es": "Acaricia al perro ==suavecito==.",
+              "en": "Pet the dog gently."
+            },
+            {
+              "es": "Le compré un ==camioncito== de juguete a mi sobrino.",
+              "en": "I bought my nephew a little toy truck."
+            },
+            {
+              "es": "Hoy en la tarde veo a mi ==amorcito==.",
+              "en": "I'm seeing my sweetheart this afternoon."
+            },
+            {
+              "es": "Hace un ==calorcito== rico en la playa.",
+              "en": "It's nice and warm at the beach."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Un camióncito."
+                },
+                {
+                  "v": "bien",
+                  "t": "Un camioncito."
+                }
+              ],
+              "nota": "The old accent goes away."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Una calleita."
+                },
+                {
+                  "v": "bien",
+                  "t": "Una callecita."
+                }
+              ],
+              "nota": "-e words take **-cita**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Una fuentecito."
+                },
+                {
+                  "v": "bien",
+                  "t": "Una fuentecita."
+                }
+              ],
+              "nota": "It agrees in gender."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "casita, perrito",
+              "texto": "Words ending in -o / -a: [[6087|-ito, -ita]]."
+            },
+            {
+              "forma": "pasillo, cigarrillo",
+              "texto": "Another diminutive: [[6088|-illo, -cillo]]."
+            },
+            {
+              "forma": "perrazo, grandote",
+              "texto": "The opposite: [[8389|augmentatives -azo, -ote, -ón]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Make it small: **el tren**",
+              "r": "el trencito",
+              "nota": "-n + cito."
+            },
+            {
+              "p": "Make it small: **la nube**",
+              "r": "la nubecita",
+              "nota": "-e + cita."
+            },
+            {
+              "p": "Make it small: **el motor**",
+              "r": "el motorcito",
+              "nota": "-r + cito."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6087
+    ],
+    "confunde": [
+      6088
+    ],
+    "sigue": [
+      8389
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6132",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "tema": 5915,
+  "slug": "condicional-caber-saber",
+  "titulo": "Conjugate caber and saber in the conditional",
+  "subtitulo": "Cabría, sabría: the e disappears, the endings stay regular.",
+  "foto": "t05.jpg",
+  "regla": "Caber and saber have irregular conditional stems cabr- and sabr-, with regular endings: cabría, sabría, cabríamos, sabríamos.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Saber** (_to know_) and **caber** (_to fit_) are irregular in the conditional because their stems are irregular: the **e** of the infinitive disappears. The endings are the regular conditional ones."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**sabr-** / **cabr-**",
+            "**-ía, -ías, -ía, -íamos, -ían**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "saber",
+            "caber"
+          ],
+          "filas": [
+            [
+              "yo",
+              "sabría",
+              "cabría"
+            ],
+            [
+              "tú",
+              "sabrías",
+              "cabrías"
+            ],
+            [
+              "él, ella, usted",
+              "sabría",
+              "cabría"
+            ],
+            [
+              "nosotros",
+              "sabríamos",
+              "cabríamos"
+            ],
+            [
+              "ustedes, ellos",
+              "sabrían",
+              "cabrían"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Caber** is about physical space: what fits where. **Saber** is _to know_ something, or _to know how_ to do something (**saber** + infinitive)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: both lose their **e** to squeeze in: **cab-r-ía** fits better, **sab-r-ía** knows it."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Yo ==cabría== en ese traje de neopreno.",
+              "en": "I'd fit in that wetsuit."
+            },
+            {
+              "es": "Tú no ==cabrías== en el elevador con la tabla.",
+              "en": "You wouldn't fit in the elevator with the board."
+            },
+            {
+              "es": "Nosotros ==cabríamos== en el taxi.",
+              "en": "We'd fit in the cab."
+            },
+            {
+              "es": "Las chamarras no ==cabrían== en esa maleta.",
+              "en": "The jackets wouldn't fit in that suitcase."
+            },
+            {
+              "es": "Yo ==sabría== abrir ese carro sin llave.",
+              "en": "I'd know how to open that car without a key."
+            },
+            {
+              "es": "El profe no ==sabría== nada de eso.",
+              "en": "The teacher wouldn't know anything about that."
+            },
+            {
+              "es": "Ustedes ==sabrían== todas las respuestas.",
+              "en": "You'd know all the answers."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo sabería la respuesta."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo sabría la respuesta."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No cabería en el carro."
+                },
+                {
+                  "v": "bien",
+                  "t": "No cabría en el carro."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Sabrías a cocinar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Sabrías cocinar."
+                }
+              ],
+              "nota": "**Saber** + infinitive, with no **a**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "sabré, cabré",
+              "texto": "The future has the same stems: [[5245|caber and saber in the future]]."
+            },
+            {
+              "forma": "podría, querría",
+              "texto": "Other verbs that drop the **e**: [[5853|poder]], [[5055|querer]], [[5188|haber]]."
+            },
+            {
+              "forma": "hablaría",
+              "texto": "The regular pattern: [[5731|regular verbs in the conditional]]."
+            },
+            {
+              "forma": "sepa",
+              "texto": "**Saber** in the subjunctive: [[5232|saber]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Would you know how to do it?_ (tú)",
+              "r": "¿Sabrías hacerlo?",
+              "nota": "sabr- + ías."
+            },
+            {
+              "p": "**Caber** with **nosotros**: No ___ todos en el carro.",
+              "r": "No cabríamos todos en el carro.",
+              "nota": "cabr- + íamos."
+            },
+            {
+              "p": "Which one? **Sabería** or **Sabría**?",
+              "r": "Sabría.",
+              "nota": "The **e** disappears."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5245,
+      5731
+    ],
+    "confunde": [
+      5245
+    ],
+    "sigue": [
+      5853,
+      5055,
+      5188,
+      5232
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5915",
+      "kwiziq": true
+    }
+  ]
+}

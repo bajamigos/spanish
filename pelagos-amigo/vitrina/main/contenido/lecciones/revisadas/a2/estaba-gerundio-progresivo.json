@@ -1,0 +1,256 @@
+{
+  "tema": 5130,
+  "slug": "estaba-gerundio-progresivo",
+  "titulo": "Estaba + gerund",
+  "subtitulo": "Estaba durmiendo cuando sonó el teléfono.",
+  "foto": "t10.jpg",
+  "regla": "Estar in the imperfect + gerund (estaba comiendo) describes an action in progress at a moment in the past, often interrupted by another action in the preterite.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say what someone **was doing**, use **estar in the imperfect** + the **gerund**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "estaba / estabas / estaba / estábamos / estaban",
+            "+ gerund (-ando / -iendo)"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Example"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**estaba** trabajando"
+            ],
+            [
+              "tú",
+              "**estabas** comiendo"
+            ],
+            [
+              "él / ella / usted",
+              "**estaba** escribiendo"
+            ],
+            [
+              "nosotros",
+              "**estábamos** hablando"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "**estaban** durmiendo"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Only **estar** changes; the gerund never does. Irregular gerunds stay irregular: **estaba leyendo**, **estaban durmiendo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It sets the background, and the **preterite** brings in the interruption: **Estaba durmiendo cuando sonó el teléfono.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "It's close to the plain imperfect (**dormía**), but stresses that the action was **in the middle** of happening."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With **ir** and **venir**, Mexicans usually prefer the plain imperfect: **iba al trabajo** sounds more natural than **estaba yendo al trabajo**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Estaba durmiendo== cuando sonó el teléfono.",
+              "en": "I was sleeping when the phone rang."
+            },
+            {
+              "es": "¿Qué ==estabas haciendo== a las diez?",
+              "en": "What were you doing at ten?"
+            },
+            {
+              "es": "==Estábamos esperando== una ola cuando vimos un delfín.",
+              "en": "We were waiting for a wave when we saw a dolphin."
+            },
+            {
+              "es": "Mi mamá ==estaba cocinando== frijoles.",
+              "en": "My mom was cooking beans."
+            },
+            {
+              "es": "Los niños ==estaban jugando== en el patio.",
+              "en": "The kids were playing in the yard."
+            },
+            {
+              "es": "¿Ustedes ==estaban viendo== la pelea?",
+              "en": "Were you guys watching the fight?"
+            },
+            {
+              "es": "==Estaba leyendo== cuando se fue la luz.",
+              "en": "I was reading when the power went out."
+            },
+            {
+              "es": "Holden ==estaba hablando== con Naomi cuando sonó la alarma.",
+              "en": "Holden was talking with Naomi when the alarm went off."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estaba comido cuando llegaste."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estaba comiendo cuando llegaste."
+                }
+              ],
+              "nota": "Gerund (**-iendo**), not participle."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estaba dormiendo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estaba durmiendo."
+                }
+              ],
+              "nota": "o > u."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estuve durmiendo cuando sonó el teléfono."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estaba durmiendo cuando sonó el teléfono."
+                }
+              ],
+              "nota": "Interrupted background: imperfect."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ellos estaba jugando."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ellos estaban jugando."
+                }
+              ],
+              "nota": "**Estar** agrees with the subject."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "estaba",
+              "texto": "The forms of estar: [[5852|estar in the imperfect]]."
+            },
+            {
+              "forma": "estoy comiendo",
+              "texto": "The present version: [[5092|estar + gerund]]. Tricky gerunds: [[6501|irregular gerunds]]."
+            },
+            {
+              "forma": "estuve trabajando",
+              "texto": "Done and dusted: [[6183|the preterite progressive]]."
+            },
+            {
+              "forma": "cuando llegó",
+              "texto": "Background + interruption: [[6005|the preterite with cuando + imperfect]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I was training when you called._",
+              "r": "Estaba entrenando cuando me llamaste.",
+              "nota": "estaba + -ando."
+            },
+            {
+              "p": "In Spanish: _What were you guys talking about?_",
+              "r": "¿De qué estaban hablando?",
+              "nota": "estaban + gerund."
+            },
+            {
+              "p": "Fix it: _Estábamos comido cuando llegó Beto._",
+              "r": "Estábamos comiendo cuando llegó Beto.",
+              "nota": "comiendo."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5852,
+      5092,
+      6501
+    ],
+    "confunde": [
+      6183
+    ],
+    "sigue": [
+      6005
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5130",
+      "kwiziq": true
+    }
+  ]
+}

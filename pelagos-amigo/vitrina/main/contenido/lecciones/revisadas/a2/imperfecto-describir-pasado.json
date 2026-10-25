@@ -1,0 +1,253 @@
+{
+  "tema": 6002,
+  "slug": "imperfecto-describir-pasado",
+  "titulo": "The imperfect to describe the past",
+  "subtitulo": "Eran las seis, hacía frío y la playa estaba vacía.",
+  "foto": "t06.jpg",
+  "regla": "To describe how things were in the past (time, age, weather, places, people, feelings, what was going on), use the imperfect. It sets the scene; it doesn't tell what happened next.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "The imperfect **paints the background** of a past scene. Use it for:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "What you describe",
+            "Example"
+          ],
+          "filas": [
+            [
+              "clock time",
+              "**Eran** las seis. **Era** la una."
+            ],
+            [
+              "age",
+              "**Tenía** veinte años."
+            ],
+            [
+              "weather",
+              "**Hacía** frío. **Llovía**."
+            ],
+            [
+              "places and things",
+              "La playa **estaba** vacía. **Había** mucha gente."
+            ],
+            [
+              "people (looks, character)",
+              "**Era** alto y muy serio."
+            ],
+            [
+              "feelings and states",
+              "**Estaba** cansado. **Tenía** hambre."
+            ],
+            [
+              "what was going on",
+              "La gente **bailaba**."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Clock time uses **ser**: **era** la una, but **eran** las dos, las seis, las once."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The preterite tells the **events** (_llegué, empezó, se fue_). The imperfect describes the **setting** around them."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if you could film it as a still frame, use the imperfect."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Eran== las seis y ==hacía== frío.",
+              "en": "It was six o'clock and it was cold."
+            },
+            {
+              "es": "==Era== la una de la mañana cuando llegamos.",
+              "en": "It was one in the morning when we arrived."
+            },
+            {
+              "es": "Cuando me mudé a Tijuana, ==tenía== veinte años.",
+              "en": "When I moved to Tijuana, I was twenty."
+            },
+            {
+              "es": "==Llovía== y la playa ==estaba== vacía.",
+              "en": "It was raining and the beach was empty."
+            },
+            {
+              "es": "==Había== mucha gente en el mercado.",
+              "en": "There were a lot of people at the market."
+            },
+            {
+              "es": "Mi primer maestro de jiu-jitsu ==era== alto y muy serio.",
+              "en": "My first jiu-jitsu teacher was tall and very serious."
+            },
+            {
+              "es": "==Estábamos== cansados y ==teníamos== hambre.",
+              "en": "We were tired and hungry."
+            },
+            {
+              "es": "El mar ==estaba== tranquilo y las olas ==eran== pequeñas.",
+              "en": "The sea was calm and the waves were small."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Fue las seis cuando llegué."
+                },
+                {
+                  "v": "bien",
+                  "t": "Eran las seis cuando llegué."
+                }
+              ],
+              "nota": "Clock time: imperfect, plural from las dos on."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cuando me mudé, tuve veinte años."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cuando me mudé, tenía veinte años."
+                }
+              ],
+              "nota": "Age in the past: **tenía**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cuando salimos, hizo mucho frío."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cuando salimos, hacía mucho frío."
+                }
+              ],
+              "nota": "Weather as background: **hacía**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cuando llegué, hubo mucha neblina."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cuando llegué, había mucha neblina."
+                }
+              ],
+              "nota": "Describing the scene: **había**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "era, estaba",
+              "texto": "The forms: [[5088|ser]] and [[5852|estar in the imperfect]]."
+            },
+            {
+              "forma": "había",
+              "texto": "There was / there were: [[5270|había]]."
+            },
+            {
+              "forma": "jugaba todos los días",
+              "texto": "The other big use: [[5111|habits in the past]]."
+            },
+            {
+              "forma": "llovía cuando salí",
+              "texto": "Scene plus event: [[6005|the preterite with cuando + the imperfect]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _It was eight o'clock and it was raining._",
+              "r": "Eran las ocho y llovía.",
+              "nota": "Time and weather: imperfect."
+            },
+            {
+              "p": "In Spanish: _When I arrived in Tijuana, I was twenty-five._",
+              "r": "Cuando llegué a Tijuana, tenía veinticinco años.",
+              "nota": "tenía for age."
+            },
+            {
+              "p": "Fix it: _Fue muy tarde y yo estuve cansado._",
+              "r": "Era muy tarde y yo estaba cansado.",
+              "nota": "Both describe."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5088,
+      5852,
+      5270
+    ],
+    "confunde": [
+      5111
+    ],
+    "sigue": [
+      6005
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6002",
+      "kwiziq": true
+    }
+  ]
+}

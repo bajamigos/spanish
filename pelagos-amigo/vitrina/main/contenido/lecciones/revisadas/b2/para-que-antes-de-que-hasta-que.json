@@ -1,0 +1,261 @@
+{
+  "tema": 5168,
+  "slug": "para-que-antes-de-que-hasta-que",
+  "titulo": "Adverbial clauses + present subjunctive (para que, antes de que, hasta que, con tal de que...)",
+  "subtitulo": "Antes de que llegues, hasta que termines, con tal de que vengas.",
+  "foto": "t05.jpg",
+  "regla": "Conjunctions that introduce something hypothetical or still to come take the subjunctive: para que, antes de que, con tal de que, a condición de que, a menos que, en caso de que, sin que (always), and hasta que, siempre que, mientras, aunque, por más que (when the event hasn't happened).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "An adverbial clause takes the **subjunctive** when what it describes is **hypothetical or anticipated**, not a completed fact or a habit."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Conjunction",
+            "Meaning",
+            "Mood"
+          ],
+          "filas": [
+            [
+              "para que",
+              "so that",
+              "always subjunctive"
+            ],
+            [
+              "antes de que",
+              "before",
+              "always subjunctive"
+            ],
+            [
+              "sin que",
+              "without",
+              "always subjunctive"
+            ],
+            [
+              "con tal (de) que / a condición de que",
+              "provided that",
+              "always subjunctive"
+            ],
+            [
+              "a menos que",
+              "unless",
+              "always subjunctive"
+            ],
+            [
+              "en caso de que",
+              "in case",
+              "always subjunctive"
+            ],
+            [
+              "hasta que",
+              "until",
+              "subjunctive if still to come"
+            ],
+            [
+              "siempre que / mientras (que)",
+              "as long as",
+              "subjunctive for a condition"
+            ],
+            [
+              "aunque / por más que / por mucho que",
+              "even if, no matter how much",
+              "subjunctive if hypothetical"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if it hasn't happened yet, or might never happen, use the subjunctive."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Estoy ahorrando ==para que== mis hijos ==puedan== ir a la universidad.",
+              "en": "I'm saving so my kids can go to college."
+            },
+            {
+              "es": "==Antes de que== me ==eches== la culpa, déjame explicarte.",
+              "en": "Before you blame me, let me explain."
+            },
+            {
+              "es": "No sales de la casa ==hasta que recojas== tu cuarto.",
+              "en": "You're not leaving the house until you clean your room."
+            },
+            {
+              "es": "No me importa si llegas tarde ==con tal de que hagas== bien tu trabajo.",
+              "en": "I don't mind if you come late as long as you do your work well."
+            },
+            {
+              "es": "Puedes ir a la fiesta ==a condición de que== no ==regreses== muy tarde.",
+              "en": "You can go to the party on condition you don't come back too late."
+            },
+            {
+              "es": "Me voy ==a menos que== me ==pidas== que me quede.",
+              "en": "I'm leaving unless you ask me to stay."
+            },
+            {
+              "es": "==En caso de que tengas== un problema, llámanos.",
+              "en": "In case you have a problem, call us."
+            },
+            {
+              "es": "No puedes hacer lo que quieras ==sin que== ellos ==se enteren==.",
+              "en": "You can't do whatever you want without them finding out."
+            },
+            {
+              "es": "Contratamos al nuevo maestro ==siempre que tengamos== presupuesto.",
+              "en": "We'll hire the new teacher as long as we have the budget."
+            },
+            {
+              "es": "==Aunque== me ==regales== rosas, no voy a salir contigo.",
+              "en": "Even if you give me roses, I'm not going out with you."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Te llamo antes de que sales."
+                },
+                {
+                  "v": "bien",
+                  "t": "Te llamo antes de que salgas."
+                }
+              ],
+              "nota": "Always subjunctive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Salió sin que nadie lo vio."
+                },
+                {
+                  "v": "bien",
+                  "t": "Salió sin que nadie lo viera."
+                }
+              ],
+              "nota": "**Sin que** is always subjunctive (here the past form)."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Espera hasta que llego."
+                },
+                {
+                  "v": "bien",
+                  "t": "Espera hasta que llegue."
+                }
+              ],
+              "nota": "Still to come: subjunctive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "para que",
+              "texto": "[[7510|para que + present]], [[7255|+ imperfect]]."
+            },
+            {
+              "forma": "antes de que / después de que",
+              "texto": "[[10029|time clauses]]."
+            },
+            {
+              "forma": "desde que / hasta que",
+              "texto": "[[7253|desde que / hasta que]]."
+            },
+            {
+              "forma": "aunque",
+              "texto": "[[5146|aunque + present]]."
+            },
+            {
+              "forma": "siempre que",
+              "texto": "[[7511|siempre que / a condición de que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Complete: _Te lo presto con tal de que me lo ___ (devolver) mañana._",
+              "r": "devuelvas",
+              "nota": "Always subjunctive."
+            },
+            {
+              "p": "Complete: _Llévate un suéter en caso de que ___ (hacer) frío._",
+              "r": "haga",
+              "nota": "Always subjunctive."
+            },
+            {
+              "p": "Complete: _No me voy hasta que me ___ (decir, tú) la verdad._",
+              "r": "digas",
+              "nota": "Still to come."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5059
+    ],
+    "confunde": [
+      10029
+    ],
+    "sigue": [
+      7510,
+      7511
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5168",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "tema": 5914,
+  "slug": "condicional-tener-que",
+  "titulo": "Conjugate tener que (would have to) in the conditional",
+  "subtitulo": "Tendría que firmar: what you would have to do.",
+  "foto": "t04.jpg",
+  "regla": "Tener que in the conditional uses the stem tendr-: tendría, tendrías, tendría, tendríamos, tendrían + que + infinitive.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Tener que** + infinitive means _to have to_. In the conditional it means _would have to_. **Tener** is irregular here: add the conditional endings to the stem **tendr-**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**tendr-** + **-ía**…",
+            "**que**",
+            "infinitive"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "tener que"
+          ],
+          "filas": [
+            [
+              "yo",
+              "tendría que"
+            ],
+            [
+              "tú",
+              "tendrías que"
+            ],
+            [
+              "él, ella, usted",
+              "tendría que"
+            ],
+            [
+              "nosotros",
+              "tendríamos que"
+            ],
+            [
+              "ustedes, ellos",
+              "tendrían que"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The **que** can never be left out."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **tendría que** is a chain of three links: tendría, **que**, infinitive. Lose one and the chain breaks."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Yo ==tendría que firmar== ese contrato millonario.",
+              "en": "I'd have to sign that million-dollar contract."
+            },
+            {
+              "es": "Tú ==tendrías que tomarte== una selfie en el arco de Tijuana.",
+              "en": "You'd have to take a selfie at the Tijuana arch."
+            },
+            {
+              "es": "El alumno ==tendría que repasar== para subir sus calificaciones.",
+              "en": "The student would have to review to raise his grades."
+            },
+            {
+              "es": "Nosotros ==tendríamos que ganar== más dinero.",
+              "en": "We'd have to earn more money."
+            },
+            {
+              "es": "Ellos ==tendrían que trabajar== los fines de semana.",
+              "en": "They'd have to work on weekends."
+            },
+            {
+              "es": "Ustedes ==tendrían que pagar== un diez por ciento de depósito.",
+              "en": "You'd have to pay a ten percent deposit."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tendría pagar más."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tendría que pagar más."
+                }
+              ],
+              "nota": "Never drop the **que**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tenería que trabajar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tendría que trabajar."
+                }
+              ],
+              "nota": "The stem is **tendr-**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tengo que",
+              "texto": "The present: [[5106|tener que]]."
+            },
+            {
+              "forma": "tendría",
+              "texto": "**Tener** alone in the conditional: [[5772|tener in the conditional]]."
+            },
+            {
+              "forma": "tendré que",
+              "texto": "The future: [[5050|tener in the future]]."
+            },
+            {
+              "forma": "debería",
+              "texto": "Softer advice: [[5913|deber to say should]]."
+            },
+            {
+              "forma": "hay que",
+              "texto": "Impersonal obligation: [[6262|hay que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We'd have to leave early._",
+              "r": "Tendríamos que salir temprano.",
+              "nota": "tendríamos + que + infinitive."
+            },
+            {
+              "p": "**Tener que** with **tú**: ___ entrenar más.",
+              "r": "Tendrías que entrenar más.",
+              "nota": "Keep the **que**."
+            },
+            {
+              "p": "In Spanish: _They'd have to pay._",
+              "r": "Tendrían que pagar.",
+              "nota": "tendrían que."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5106,
+      5772
+    ],
+    "confunde": [
+      5913
+    ],
+    "sigue": [
+      5050,
+      6262,
+      6469
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5914",
+      "kwiziq": true
+    }
+  ]
+}

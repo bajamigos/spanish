@@ -1,0 +1,193 @@
+{
+  "tema": 6182,
+  "slug": "lo-de-que",
+  "titulo": "Lo de que / lo de = that thing about...",
+  "subtitulo": "¿Lo de que te vas es cierto? Lo de ayer fue increíble.",
+  "foto": "t07.jpg",
+  "regla": "Lo de que + clause (indicative or subjunctive) and lo de + infinitive / noun / adverb refer back to something already mentioned: Lo de que María se muda, ¿es verdad? Lo de ayer, ¿es cierto?",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "lo de que + clause",
+              "texto": "**Lo de que María se muda a Francia, ¿es verdad?** Indicative or subjunctive, same meaning."
+            },
+            {
+              "forma": "lo de + infinitive",
+              "texto": "**Lo de irse a Francia...**"
+            },
+            {
+              "forma": "lo de + noun / name",
+              "texto": "**Lo de María**, **lo de su decisión**."
+            },
+            {
+              "forma": "lo de + adverb",
+              "texto": "**Lo de ayer**, **lo de anoche**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It refers to something **already known or mentioned**: _that thing about..., the business with..._"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **lo de** = the topic everyone already knows about."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Lo de que== María se va a vivir a Francia, ¿es verdad?",
+              "en": "That thing about María moving to France, is it true?"
+            },
+            {
+              "es": "==Lo de que== tengas un trabajo nuevo me parece genial.",
+              "en": "The news about your new job is great."
+            },
+            {
+              "es": "==Lo de que== yo pago todo era una broma.",
+              "en": "That thing about me paying for everything was a joke."
+            },
+            {
+              "es": "==Lo de que== yo pague todo era una broma.",
+              "en": "Same meaning, subjunctive."
+            },
+            {
+              "es": "==Lo de== irse a Francia, ¿es cierto?",
+              "en": "That thing about going to France, is it true?"
+            },
+            {
+              "es": "==Lo de== María, ¿es verdad?",
+              "en": "That thing with María, is it true?"
+            },
+            {
+              "es": "==Lo de== anoche no se lo cuentes a nadie.",
+              "en": "Don't tell anyone about last night."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El de que te vas..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Lo de que te vas..."
+                }
+              ],
+              "nota": "Neuter **lo**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Lo que de ayer..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Lo de ayer..."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "lo que",
+              "texto": "[[5087|lo que]]."
+            },
+            {
+              "forma": "lo neutro",
+              "texto": "[[8392|neuter lo]]."
+            },
+            {
+              "forma": "eso de",
+              "texto": "[[8617|por eso / aquello de]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _That thing about the party, is it true?_",
+              "r": "Lo de la fiesta, ¿es verdad?",
+              "nota": "lo de + noun."
+            },
+            {
+              "p": "In Spanish: _That thing about you quitting surprised me._ (tú)",
+              "r": "Lo de que renunciaste / renunciaras me sorprendió.",
+              "nota": "lo de que."
+            },
+            {
+              "p": "In Spanish: _Forget about yesterday._",
+              "r": "Olvida lo de ayer.",
+              "nota": "lo de + adverb."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5087,
+      8392
+    ],
+    "confunde": [
+      5087
+    ],
+    "sigue": [
+      8617
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6182",
+      "kwiziq": true
+    }
+  ]
+}

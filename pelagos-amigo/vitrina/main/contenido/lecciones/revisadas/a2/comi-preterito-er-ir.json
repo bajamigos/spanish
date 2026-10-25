@@ -1,0 +1,275 @@
+{
+  "tema": 5230,
+  "slug": "comi-preterito-er-ir",
+  "titulo": "-er and -ir verbs in the preterite",
+  "subtitulo": "Comí tacos y luego salí a caminar.",
+  "foto": "t05.jpg",
+  "regla": "Regular -er and -ir verbs share the same preterite endings: drop -er/-ir and add -í, -iste, -ió, -imos, -ieron (comí, comiste, comió, comimos, comieron).",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "In the preterite, **-er** and **-ir** verbs have **one set of endings**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "com- / viv-",
+            "+",
+            "-í / -iste / -ió / -imos / -ieron"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Ending",
+            "comer",
+            "salir",
+            "escribir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**-í**",
+              "comí",
+              "salí",
+              "escribí"
+            ],
+            [
+              "tú",
+              "**-iste**",
+              "comiste",
+              "saliste",
+              "escribiste"
+            ],
+            [
+              "él, ella, usted",
+              "**-ió**",
+              "comió",
+              "salió",
+              "escribió"
+            ],
+            [
+              "nosotros",
+              "**-imos**",
+              "comimos",
+              "salimos",
+              "escribimos"
+            ],
+            [
+              "ellos, ustedes",
+              "**-ieron**",
+              "comieron",
+              "salieron",
+              "escribieron"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Accents only on **yo (-í)** and **él/ella (-ió)**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "For **-er** verbs, **nosotros** changes: **comemos** (now) → **comimos** (past). For **-ir** verbs it's the same: **vivimos** = _we live_ or _we lived_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Stem-changing **-er** verbs lose the change: **volver** → **volví**, **entender** → **entendí**. (-ir verbs like **pedir** and **dormir** keep a change in él and ellos: see Related rules.)"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: think of **-í** as a dot that closes the sentence: comí. Done."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Anoche ==comí== en un puesto de tacos de la Revolución.",
+              "en": "Last night I ate at a taco stand on Revolución."
+            },
+            {
+              "es": "¿A qué hora ==saliste== del gimnasio?",
+              "en": "What time did you leave the gym?"
+            },
+            {
+              "es": "Mi primo ==vendió== su carro la semana pasada.",
+              "en": "My cousin sold his car last week."
+            },
+            {
+              "es": "==Aprendimos== una barrida nueva en la clase de jiu-jitsu.",
+              "en": "We learned a new sweep in jiu-jitsu class."
+            },
+            {
+              "es": "Los tomates ==crecieron== mucho este verano.",
+              "en": "The tomatoes grew a lot this summer."
+            },
+            {
+              "es": "Le ==escribí== un correo al casero.",
+              "en": "I wrote an email to the landlord."
+            },
+            {
+              "es": "¿Ustedes ==vivieron== en Ensenada?",
+              "en": "Did you guys live in Ensenada?"
+            },
+            {
+              "es": "Ayer ==volví== tarde a la casa.",
+              "en": "Yesterday I got home late."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer comé tacos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer comí tacos."
+                }
+              ],
+              "nota": "-er verbs use **-í**, not -é."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella salío temprano."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella salió temprano."
+                }
+              ],
+              "nota": "The accent goes on the **ó**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ellos comiron todo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ellos comieron todo."
+                }
+              ],
+              "nota": "**-ieron**, with **e**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ayer vuelví a la playa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ayer volví a la playa."
+                }
+              ],
+              "nota": "No stem change here."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hablé",
+              "texto": "The -ar endings: [[5109|regular -ar verbs in the preterite]]."
+            },
+            {
+              "forma": "leyó, creyeron",
+              "texto": "The i becomes y: [[5258|leer, creer and proveer]]."
+            },
+            {
+              "forma": "pidió, durmió",
+              "texto": "-ir verbs with a stem change: [[5265|e > i]], [[5266|dormir and morir]]."
+            },
+            {
+              "forma": "comía",
+              "texto": "Not to confuse with: [[5264|-er and -ir verbs in the imperfect]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I opened the window._",
+              "r": "Abrí la ventana.",
+              "nota": "abrir → abrí."
+            },
+            {
+              "p": "In Spanish: _We ate at my grandma's house._",
+              "r": "Comimos en casa de mi abuela.",
+              "nota": "-imos."
+            },
+            {
+              "p": "Fix it: _Ellos salieron tarde y corrió a la playa._",
+              "r": "Ellos salieron tarde y corrieron a la playa.",
+              "nota": "ellos → -ieron."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5109
+    ],
+    "confunde": [
+      5264
+    ],
+    "sigue": [
+      5258,
+      5265,
+      5266
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5230",
+      "kwiziq": true
+    }
+  ]
+}

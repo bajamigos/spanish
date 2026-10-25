@@ -1,0 +1,219 @@
+{
+  "tema": 6467,
+  "slug": "debo-deber-presente",
+  "titulo": "Deber in the present",
+  "subtitulo": "«Debo estudiar más.»",
+  "foto": "t09.jpg",
+  "regla": "Deber is a regular -er verb: debo, debes, debe, debemos, deben. With an infinitive it means should / must (debo estudiar); with a noun it means to owe (te debo cien pesos). No preposition and no que before the infinitive.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Deber** is a **regular -er** verb."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "deber"
+          ],
+          "filas": [
+            [
+              "yo",
+              "deb**o**"
+            ],
+            [
+              "tú",
+              "deb**es**"
+            ],
+            [
+              "él / ella / usted",
+              "deb**e**"
+            ],
+            [
+              "nosotros",
+              "deb**emos**"
+            ],
+            [
+              "ustedes / ellos / ellas",
+              "deb**en**"
+            ]
+          ]
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "deber",
+            "+",
+            "infinitive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Deber + infinitive** = _should, must_: **Debes descansar.** **Deber + noun** = _to owe_: **Te debo cien pesos.**"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Debo== estudiar para el examen.",
+              "en": "I must study for the exam."
+            },
+            {
+              "es": "No ==debes== manejar tan rápido.",
+              "en": "You shouldn't drive so fast."
+            },
+            {
+              "es": "Mi hermano ==debe== descansar más.",
+              "en": "My brother should rest more."
+            },
+            {
+              "es": "==Debemos== regar las plantas todos los días.",
+              "en": "We should water the plants every day."
+            },
+            {
+              "es": "Ustedes ==deben== llegar a las ocho.",
+              "en": "You must arrive at eight."
+            },
+            {
+              "es": "Te ==debo== doscientos pesos.",
+              "en": "I owe you two hundred pesos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo debe estudiar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo debo estudiar."
+                }
+              ],
+              "nota": "yo: debo."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Debes que trabajar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Debes trabajar."
+                }
+              ],
+              "nota": "No que: that's tener que."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Debemos a salir temprano."
+                },
+                {
+                  "v": "bien",
+                  "t": "Debemos salir temprano."
+                }
+              ],
+              "nota": "No a before the infinitive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "debo, puedo, quiero",
+              "texto": "Verbs + infinitive: [[5065|deber, poder, querer + infinitive]]."
+            },
+            {
+              "forma": "tengo que",
+              "texto": "Similar meaning: [[5106|tener que]] and [[6262|hay que]]."
+            },
+            {
+              "forma": "debía",
+              "texto": "Next: [[6468|deber in the imperfect]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _You (tú) should sleep more._",
+              "r": "Debes dormir más.",
+              "nota": "debes + infinitive."
+            },
+            {
+              "p": "In Spanish: _We owe a lot of money._",
+              "r": "Debemos mucho dinero.",
+              "nota": "deber + noun = owe."
+            },
+            {
+              "p": "Fix it: _Ellos debe trabajar._",
+              "r": "Ellos deben trabajar.",
+              "nota": "ellos: deben."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5065
+    ],
+    "confunde": [
+      5106,
+      6262
+    ],
+    "sigue": [
+      6468
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6467",
+      "kwiziq": true
+    }
+  ]
+}

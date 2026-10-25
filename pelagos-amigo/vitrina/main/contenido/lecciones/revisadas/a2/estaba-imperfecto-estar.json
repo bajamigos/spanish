@@ -1,0 +1,249 @@
+{
+  "tema": 5852,
+  "slug": "estaba-imperfecto-estar",
+  "titulo": "Estar in the imperfect",
+  "subtitulo": "Estaba cansado. ¿Dónde estabas?",
+  "foto": "t08.jpg",
+  "regla": "Estar is regular in the imperfect: estaba, estabas, estaba, estábamos, estaban. Use it for where someone was and how things were in the past.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Estar** follows the regular **-ar** imperfect: stem **est-** + **-aba**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "estar"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**estaba**"
+            ],
+            [
+              "tú",
+              "**estabas**"
+            ],
+            [
+              "él / ella / usted",
+              "**estaba**"
+            ],
+            [
+              "nosotros",
+              "**estábamos**"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "**estaban**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Yo** and **él/ella** share the same form, **estaba**. Add the subject if it's not clear."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Only **estábamos** has a written accent."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Use it for the same things as **estar** in the present, but in the past: **location** (**estaba en casa**), **states and feelings** (**estaba cansado**), and the **background** of a story (**la playa estaba llena**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **estaba** sets the stage; the preterite brings in the action."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Estaba== muy cansado después del entrenamiento.",
+              "en": "I was very tired after training."
+            },
+            {
+              "es": "¿Dónde ==estabas== anoche?",
+              "en": "Where were you last night?"
+            },
+            {
+              "es": "La playa ==estaba== llena de gente.",
+              "en": "The beach was full of people."
+            },
+            {
+              "es": "==Estábamos== en la fila de la garita cuando me llamaste.",
+              "en": "We were in line at the border when you called me."
+            },
+            {
+              "es": "Mis papás ==estaban== muy contentos con la noticia.",
+              "en": "My parents were very happy about the news."
+            },
+            {
+              "es": "¿Ustedes ==estaban== en casa a las ocho?",
+              "en": "Were you guys home at eight?"
+            },
+            {
+              "es": "El agua ==estaba== helada esa mañana.",
+              "en": "The water was freezing that morning."
+            },
+            {
+              "es": "La Rocinante ==estaba== cerca de Ganímedes.",
+              "en": "The Rocinante was near Ganymede."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estabamos en la playa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estábamos en la playa."
+                }
+              ],
+              "nota": "Accent on **estábamos**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo estabo en casa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo estaba en casa."
+                }
+              ],
+              "nota": "**Yo** ends in **-aba**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tú estaba enojado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tú estabas enojado."
+                }
+              ],
+              "nota": "**Tú** needs the **-s**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella era cansada."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella estaba cansada."
+                }
+              ],
+              "nota": "A state is **estar**. (**Era cansada** = _she was tiresome_.)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "trabajaba",
+              "texto": "The pattern: [[5263|-ar verbs in the imperfect]]."
+            },
+            {
+              "forma": "estaba vs estuve",
+              "texto": "The other past of estar: [[5218|estar in the preterite]]."
+            },
+            {
+              "forma": "estaba comiendo",
+              "texto": "Actions in progress: [[5130|estaba + gerund]]."
+            },
+            {
+              "forma": "era, estaba",
+              "texto": "Setting the scene: [[6002|the imperfect to describe the past]], and [[5088|ser in the imperfect]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We were very tired._",
+              "r": "Estábamos muy cansados.",
+              "nota": "Accent on á."
+            },
+            {
+              "p": "In Spanish: _Where were you guys?_",
+              "r": "¿Dónde estaban ustedes?",
+              "nota": "ustedes → estaban."
+            },
+            {
+              "p": "Fix it: _Tú estaba en la playa._",
+              "r": "Tú estabas en la playa.",
+              "nota": "tú → estabas."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5263
+    ],
+    "confunde": [
+      5218,
+      5088
+    ],
+    "sigue": [
+      5130,
+      6002
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5852",
+      "kwiziq": true
+    }
+  ]
+}

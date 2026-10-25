@@ -1,0 +1,166 @@
+{
+  "tema": 7268,
+  "slug": "presente-historico",
+  "titulo": "The present to tell past events",
+  "subtitulo": "Colón llega a América en 1492.",
+  "foto": "t08.jpg",
+  "regla": "Spanish often tells past events in the present tense: in history and biographies (presente histórico), in news headlines, and in lively everyday stories (Ayer voy por la calle y me encuentro a Juan). It makes the past feel close and vivid.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "history, biographies",
+              "texto": "**Hidalgo da el Grito de Dolores en 1810.** Very common in textbooks and timelines."
+            },
+            {
+              "forma": "news headlines",
+              "texto": "**Rescatan a dos excursionistas en el Nevado de Toluca.** The event feels fresh."
+            },
+            {
+              "forma": "everyday storytelling",
+              "texto": "**Ayer voy saliendo del metro y ¿a quién me encuentro?** It drops the listener into the scene."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "A date or time phrase (**en 1810, ayer, el sábado**) usually makes clear it's the past."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In conversation, people mix it with the preterite to highlight the key moment."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the present tense is a time machine: it takes the listener back with you."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Cristóbal Colón ==llega== a América en 1492.",
+              "en": "Columbus arrived in America in 1492."
+            },
+            {
+              "es": "El 15 de abril de 1912 ==se hunde== el Titanic.",
+              "en": "On April 15, 1912, the Titanic sank."
+            },
+            {
+              "es": "Frida Kahlo ==nace== en Coyoacán en 1907.",
+              "en": "Frida Kahlo was born in Coyoacán in 1907."
+            },
+            {
+              "es": "==Descubren== una ciudad maya bajo la selva de Guatemala.",
+              "en": "Mayan city discovered under the Guatemalan jungle."
+            },
+            {
+              "es": "El sábado ==estoy== en la fila del banco y de repente ==se va== la luz.",
+              "en": "Saturday I'm in line at the bank and suddenly the power goes out."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "pasado",
+                  "t": "Frida nació en 1907."
+                },
+                {
+                  "v": "también",
+                  "t": "Frida nace en 1907."
+                }
+              ],
+              "nota": "Both are correct; the present is the narrative style."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "conditional / future to narrate",
+              "texto": "[[7261|the conditional or future to narrate the past]]."
+            },
+            {
+              "forma": "present for the future",
+              "texto": "[[5993|the present for the future]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Headline style: _Two hikers rescued on the Nevado de Toluca._",
+              "r": "Rescatan a dos excursionistas en el Nevado de Toluca.",
+              "nota": "Present + impersonal ellos."
+            },
+            {
+              "p": "History style: _Mexico gained independence in 1821._",
+              "r": "México consigue su independencia en 1821.",
+              "nota": "Historical present."
+            },
+            {
+              "p": "Storytelling: _Yesterday I'm walking home and I see a fox._",
+              "r": "Ayer voy caminando a la casa y veo un zorro.",
+              "nota": "Vivid present."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5993
+    ],
+    "confunde": [],
+    "sigue": [
+      7261
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7268",
+      "kwiziq": true
+    }
+  ]
+}

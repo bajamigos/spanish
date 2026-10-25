@@ -1,0 +1,215 @@
+{
+  "tema": 5305,
+  "slug": "pongo-pones-presente-poner",
+  "titulo": "Poner in the present",
+  "subtitulo": "Yo pongo la música.",
+  "foto": "t02.jpg",
+  "regla": "Poner (to put) is regular in the present except yo: pongo. The rest: pones, pone, ponemos, ponen.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Poner** means _to put_ or _to place_. It's also _to turn on_ (music, the TV) and _to set_ (the table)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Only **yo** is irregular: **pongo**, with a **g**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Present"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**pongo**"
+            ],
+            [
+              "tú",
+              "pones"
+            ],
+            [
+              "él / ella / usted",
+              "pone"
+            ],
+            [
+              "nosotros / nosotras",
+              "ponemos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "ponen"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The other forms follow the regular **-er** pattern."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Pongo== la tabla en el carro.",
+              "en": "I put the board in the car."
+            },
+            {
+              "es": "¿Dónde ==pones== las llaves?",
+              "en": "Where do you put the keys?"
+            },
+            {
+              "es": "Mi mamá ==pone== la mesa.",
+              "en": "My mom sets the table."
+            },
+            {
+              "es": "==Ponemos== música mientras cocinamos.",
+              "en": "We put music on while we cook."
+            },
+            {
+              "es": "Ellos ==ponen== las plantas al sol.",
+              "en": "They put the plants in the sun."
+            },
+            {
+              "es": "Siempre ==pongo== mucha salsa en los tacos.",
+              "en": "I always put a lot of salsa on my tacos."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo pono la mesa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo pongo la mesa."
+                }
+              ],
+              "nota": "Yo is **pongo**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros ponimos la tele."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros ponemos la tele."
+                }
+              ],
+              "nota": "Regular -er ending: **-emos**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella pongo música."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella pone música."
+                }
+              ],
+              "nota": "Only yo has **g**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "salgo, hago",
+              "texto": "Other verbs with a **g** in yo: [[5484|salir]], [[5708|hacer]]."
+            },
+            {
+              "forma": "como",
+              "texto": "The regular pattern: [[5540|regular -er verbs]]."
+            },
+            {
+              "forma": "puse",
+              "texto": "Next tenses: [[5251|poner in the preterite]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I put the milk in the fridge._",
+              "r": "Pongo la leche en el refri.",
+              "nota": "pongo."
+            },
+            {
+              "p": "In Spanish: _Who (singular) sets the table?_",
+              "r": "¿Quién pone la mesa?",
+              "nota": "pone."
+            },
+            {
+              "p": "Fix it: _Yo pone mi ropa aquí._",
+              "r": "Yo pongo mi ropa aquí.",
+              "nota": "pongo."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5540
+    ],
+    "confunde": [
+      5484,
+      5708
+    ],
+    "sigue": [
+      5251
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5305",
+      "kwiziq": true
+    }
+  ]
+}

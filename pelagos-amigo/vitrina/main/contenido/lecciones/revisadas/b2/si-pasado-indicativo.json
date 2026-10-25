@@ -1,0 +1,185 @@
+{
+  "tema": 7271,
+  "slug": "si-pasado-indicativo",
+  "titulo": "Si (if) followed by past tenses in the indicative",
+  "subtitulo": "Si ha llovido, habrá charcos. Si iba al centro, gastaba mucho.",
+  "foto": "t09.jpg",
+  "regla": "Si + past indicative presents the condition as real or very likely: Si llovió anoche, la calle estará mojada. Si iba al salón, gastaba mucho (whenever). Si never takes the future or the conditional.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Si** + **indicative** (present or past) treats the condition as **real or likely**."
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "si + present perfect / preterite",
+              "texto": "A real possibility about the past: **si tuvo un accidente, no va a venir**."
+            },
+            {
+              "forma": "si + imperfect",
+              "texto": "Often _whenever_, a past habit: **si iba al centro, gastaba mucho**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Si** never takes the **future** or the **conditional**: ~~si irás~~, ~~si iría~~."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Compare: **si** + imperfect subjunctive = unreal: **si tuviera dinero, viajaría**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: indicative **si** = maybe it really happened."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Si ha llovido== mucho, las calles van a tener charcos.",
+              "en": "If it has rained a lot, the streets will be full of puddles."
+            },
+            {
+              "es": "==Si iba== a la estética, gastaba mucho dinero.",
+              "en": "Whenever I went to the salon, I spent a lot of money."
+            },
+            {
+              "es": "==Si tuvo== un accidente, no va a ir a trabajar esta semana.",
+              "en": "If he had an accident, he won't go to work this week."
+            },
+            {
+              "es": "==Si llegaste== tarde, seguro te regañaron.",
+              "en": "If you got there late, I'm sure they scolded you."
+            },
+            {
+              "es": "==Si no estudiaste==, no te quejes.",
+              "en": "If you didn't study, don't complain."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Si irás al centro, compra pan."
+                },
+                {
+                  "v": "bien",
+                  "t": "Si vas al centro, compra pan."
+                }
+              ],
+              "nota": "No future after **si**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "real",
+                  "t": "Si llovió, el pasto está mojado."
+                },
+                {
+                  "v": "irreal",
+                  "t": "Si hubiera llovido, el pasto estaría mojado."
+                }
+              ],
+              "nota": "Real vs unreal."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "si tuviera",
+              "texto": "[[5120|si + imperfect subjunctive]]."
+            },
+            {
+              "forma": "si hubiera",
+              "texto": "[[7078|si + pluperfect subjunctive]]."
+            },
+            {
+              "forma": "sí / si",
+              "texto": "[[6603|accents]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _If he left at six, he'll be here soon._",
+              "r": "Si salió a las seis, va a llegar pronto.",
+              "nota": "Real: indicative."
+            },
+            {
+              "p": "Fix it: _Si tendrás tiempo, llámame._",
+              "r": "Si tienes tiempo, llámame.",
+              "nota": "No future."
+            },
+            {
+              "p": "In Spanish: _Whenever I was bored, I read._",
+              "r": "Si me aburría, leía.",
+              "nota": "si + imperfect."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5120
+    ],
+    "confunde": [
+      5120
+    ],
+    "sigue": [
+      7078
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7271",
+      "kwiziq": true
+    }
+  ]
+}

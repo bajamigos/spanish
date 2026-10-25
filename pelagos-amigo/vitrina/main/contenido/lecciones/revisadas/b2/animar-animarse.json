@@ -1,0 +1,195 @@
+{
+  "tema": 7482,
+  "slug": "animar-animarse",
+  "titulo": "Animar vs animarse",
+  "subtitulo": "Animó la fiesta. Anímate, ven con nosotros.",
+  "foto": "t09.jpg",
+  "regla": "Animar algo = to liven up. Animar a alguien = to cheer someone up. Animar a alguien a + infinitive = to encourage someone to. Animarse = to cheer up, or to decide to do something: ¿Te animas a venir? = Are you up for coming?",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "animar algo",
+              "texto": "_to liven up_: **la música animó la fiesta**."
+            },
+            {
+              "forma": "animar a alguien",
+              "texto": "_to cheer someone up_: **anímala, está triste**."
+            },
+            {
+              "forma": "animar a alguien a + infinitive",
+              "texto": "_to encourage someone to_: **me animó a estudiar**. Two **a**'s."
+            },
+            {
+              "forma": "animarse",
+              "texto": "_to cheer up_: **¡anímate!**"
+            },
+            {
+              "forma": "animarse a + infinitive",
+              "texto": "_to feel up for, decide to_: **¿te animas a venir?**, **no me animo a decirle**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**¿Te animas?** is a super common Mexican invitation: _Are you in?_"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **animar** puts energy into something; **animarse** finds the energy inside you."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "La llegada de las chavas ==animó== la fiesta.",
+              "en": "The girls arriving livened up the party."
+            },
+            {
+              "es": "La música de banda ==animaba== mucho el ambiente.",
+              "en": "The banda music really livened up the atmosphere."
+            },
+            {
+              "es": "Clara está triste. Ve y ==anímala==.",
+              "en": "Clara's sad. Go cheer her up."
+            },
+            {
+              "es": "Julián me ==animó a== inscribirme en el maratón.",
+              "en": "Julián encouraged me to sign up for the marathon."
+            },
+            {
+              "es": "¡==Anímate==! Ya va a pasar.",
+              "en": "Cheer up! It'll pass."
+            },
+            {
+              "es": "Vamos a ir a la playa. ¿==Te animas==?",
+              "en": "We're going to the beach. You in?"
+            },
+            {
+              "es": "No ==me animo a== decirle la verdad.",
+              "en": "I can't bring myself to tell her the truth."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me animó estudiar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me animó a estudiar."
+                }
+              ],
+              "nota": "**Animar a** + infinitive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Animas a venir?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Te animas a venir?"
+                }
+              ],
+              "nota": "_Up for it_: **animarse**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "te animo a que",
+              "texto": "[[7903|advice + subjunctive]]."
+            },
+            {
+              "forma": "dejar / dejarse",
+              "texto": "[[7445|other pronominal pairs]]."
+            },
+            {
+              "forma": "acordar / acordarse",
+              "texto": "[[7479|acordar vs acordarse]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Are you up for dancing?_ (tú)",
+              "r": "¿Te animas a bailar?",
+              "nota": "animarse a."
+            },
+            {
+              "p": "In Spanish: _My teacher encouraged me to write._",
+              "r": "Mi maestra me animó a escribir.",
+              "nota": "animar a + infinitive."
+            },
+            {
+              "p": "In Spanish: _The clown livened up the party._",
+              "r": "El payaso animó la fiesta.",
+              "nota": "animar algo."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7445
+    ],
+    "confunde": [
+      7903
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7482",
+      "kwiziq": true
+    }
+  ]
+}

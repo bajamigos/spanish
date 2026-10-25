@@ -1,0 +1,259 @@
+{
+  "tema": 7282,
+  "slug": "me-te-le-nos-les-indirecto",
+  "titulo": "Indirect object pronouns me, te, le, nos, les",
+  "subtitulo": "¿Me pasas la sal?",
+  "foto": "t04.jpg",
+  "regla": "To / for me, you, him, her, us, them: me, te, le, nos, les (os for vosotros). They go right before the conjugated verb: Mi mamá me manda fotos.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "The **indirect object** is the person who gets something, or for whom something is done: _she sends **me** photos_ = _she sends photos **to me**_."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Pronoun",
+            "Means"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**me**",
+              "to / for me"
+            ],
+            [
+              "tú",
+              "**te**",
+              "to / for you"
+            ],
+            [
+              "él, ella, usted",
+              "**le**",
+              "to / for him, her, you"
+            ],
+            [
+              "nosotros, nosotras",
+              "**nos**",
+              "to / for us"
+            ],
+            [
+              "vosotros, vosotras",
+              "**os**",
+              "not used in Mexico"
+            ],
+            [
+              "ellos, ellas, ustedes",
+              "**les**",
+              "to / for them, you (all)"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Me, te, nos** are the same as the direct object pronouns. Only **le / les** differ from **lo, la, los, las**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Position: **before the conjugated verb**: **Te** escribo. **No me** contestó. With an infinitive you can attach it: **Te** voy a mandar = Voy a mandar**te**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "To stress or clarify, add **a mí, a ti, a él…**, but keep the short pronoun: **Me** mandó un mensaje **a mí**, no a ti."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: English hides the _to_: _tell me_ = _tell **to** me_. If you can add _to_ or _for_, it's indirect."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿==Me== pasas la salsa?",
+              "en": "Can you pass me the salsa?"
+            },
+            {
+              "es": "Mi mamá ==me== manda memes todo el día.",
+              "en": "My mom sends me memes all day."
+            },
+            {
+              "es": "==Te== traje un café.",
+              "en": "I brought you a coffee."
+            },
+            {
+              "es": "El profe ==nos== enseñó una llave nueva.",
+              "en": "The coach taught us a new submission."
+            },
+            {
+              "es": "==Le== pregunté la hora a un señor.",
+              "en": "I asked a man for the time."
+            },
+            {
+              "es": "¿Qué ==les== dijo el doctor a tus papás?",
+              "en": "What did the doctor tell your parents?"
+            },
+            {
+              "es": "No ==me== contestaste el mensaje.",
+              "en": "You didn't answer my message."
+            },
+            {
+              "es": "Voy a regalar==te== una planta de chile.",
+              "en": "I'm going to give you a chili plant."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mi mamá manda me fotos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mi mamá me manda fotos."
+                }
+              ],
+              "nota": "Before the conjugated verb."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Dio a mí un regalo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me dio un regalo."
+                }
+              ],
+              "nota": "**A mí** alone isn't enough: you need **me**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Lo dije la verdad."
+                },
+                {
+                  "v": "bien",
+                  "t": "Le dije la verdad."
+                }
+              ],
+              "nota": "To him / her = **le**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Puedes me decir?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Me puedes decir? / ¿Puedes decirme?"
+                }
+              ],
+              "nota": "Before the conjugated verb or attached to the infinitive, never between."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "le, les",
+              "texto": "The third person in detail: [[5122|le and les]]."
+            },
+            {
+              "forma": "me ves, te veo",
+              "texto": "Same forms as a direct object: [[10848|me, te, nos as direct objects]]."
+            },
+            {
+              "forma": "me gusta",
+              "texto": "Gustar runs on these pronouns: [[6001|gustar]]."
+            },
+            {
+              "forma": "te lo voy a decir",
+              "texto": "Where pronouns go: [[6145|position with conjugated verbs]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Can you pass me the salt?_",
+              "r": "¿Me pasas la sal?",
+              "nota": "me = to me."
+            },
+            {
+              "p": "In Spanish: _The coach taught us a new move._",
+              "r": "El profe nos enseñó una llave nueva.",
+              "nota": "nos = to us."
+            },
+            {
+              "p": "Fix it: _Ella dio a mí su número._",
+              "r": "Ella me dio su número.",
+              "nota": "me before the verb."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5122,
+      6001
+    ],
+    "confunde": [
+      10848
+    ],
+    "sigue": [
+      6145
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7282",
+      "kwiziq": true
+    }
+  ]
+}

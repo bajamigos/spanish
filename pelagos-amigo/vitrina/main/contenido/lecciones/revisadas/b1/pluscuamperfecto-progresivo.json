@@ -1,0 +1,235 @@
+{
+  "tema": 7051,
+  "slug": "pluscuamperfecto-progresivo",
+  "titulo": "Forming the pluperfect progressive with estar + gerund",
+  "subtitulo": "Había estado + gerund: had been doing.",
+  "foto": "t02.jpg",
+  "regla": "Estar in the pluperfect (había estado, habías estado, había estado, habíamos estado, habían estado) + gerund (-ando, -iendo): había estado trabajando.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Every tense has a progressive form for an action that is **ongoing**. The **pluperfect progressive** works like English _had been doing_."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**estar** in the pluperfect",
+            "gerund"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "estar (pluperfect)"
+          ],
+          "filas": [
+            [
+              "yo",
+              "había estado"
+            ],
+            [
+              "tú",
+              "habías estado"
+            ],
+            [
+              "él, ella, usted",
+              "había estado"
+            ],
+            [
+              "nosotros",
+              "habíamos estado"
+            ],
+            [
+              "ustedes, ellos",
+              "habían estado"
+            ]
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Verb type",
+            "Gerund"
+          ],
+          "filas": [
+            [
+              "-ar",
+              "-ando (llamando)"
+            ],
+            [
+              "-er, -ir",
+              "-iendo (aprendiendo, viviendo)"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "This pattern works for most regular verbs. Some gerunds are irregular: **leyendo**, **durmiendo**, **diciendo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It's always **estar**, never **ser**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **había estado** + **-ando**: a movie that was rolling before the next scene began."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Yo ==había estado bailando== con Naomi.",
+              "en": "I had been dancing with Naomi."
+            },
+            {
+              "es": "Tú ==habías estado jugando== fútbol en el parque.",
+              "en": "You had been playing soccer in the park."
+            },
+            {
+              "es": "Ella ==había estado practicando== su discurso.",
+              "en": "She had been practicing her speech."
+            },
+            {
+              "es": "==Habíamos estado tomando== café con unos amigos.",
+              "en": "We had been having coffee with some friends."
+            },
+            {
+              "es": "Ellos ==habían estado organizando== toda la boda.",
+              "en": "They had been organizing the whole wedding."
+            },
+            {
+              "es": "Ustedes ==habían estado jugando== cartas.",
+              "en": "You had been playing cards."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Había sido bailando."
+                },
+                {
+                  "v": "bien",
+                  "t": "Había estado bailando."
+                }
+              ],
+              "nota": "Always **estar**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Habia estado durmiendo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Había estado durmiendo."
+                }
+              ],
+              "nota": "**Había** keeps its accent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "he estado surfeando",
+              "texto": "The present perfect progressive: [[7050|he estado + gerund]]."
+            },
+            {
+              "forma": "había surfeado",
+              "texto": "The pluperfect: [[5843|regular verbs]]."
+            },
+            {
+              "forma": "Cuando llegué, ya…",
+              "texto": "Two past actions in order: [[6989|the pluperfect before another past action]]."
+            },
+            {
+              "forma": "estaba surfeando",
+              "texto": "The imperfect progressive: [[5130|estaba + gerund]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We had been surfing for hours._",
+              "r": "Habíamos estado surfeando durante horas.",
+              "nota": "habíamos estado + gerund."
+            },
+            {
+              "p": "In Spanish: _She had been reading._",
+              "r": "Había estado leyendo.",
+              "nota": "Irregular gerund: **leyendo**."
+            },
+            {
+              "p": "**Entrenar**, **ellos**: ___ toda la semana.",
+              "r": "Habían estado entrenando toda la semana.",
+              "nota": "habían estado + entrenando."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5843,
+      7050
+    ],
+    "confunde": [
+      6183
+    ],
+    "sigue": [
+      6989,
+      9342
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7051",
+      "kwiziq": true
+    }
+  ]
+}

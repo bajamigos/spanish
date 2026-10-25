@@ -1,0 +1,223 @@
+{
+  "tema": 6311,
+  "slug": "alguien-pronombre",
+  "titulo": "Alguien: someone, anyone",
+  "subtitulo": "¿Hay alguien en casa?",
+  "foto": "t09.jpg",
+  "regla": "Alguien means someone, and anyone in questions. It is only for people, never changes form and takes a singular verb. As an object it needs the personal a: Busco a alguien. In negative sentences use nadie.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Alguien** = _someone, somebody_. In questions it also means _anyone, anybody_: ¿Hay **alguien** aquí?"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Only for **people**. It **never changes**, and the verb is **singular**: **Alguien** llamó."
+        },
+        {
+          "tipo": "texto",
+          "texto": "When it's the object of the verb, it takes the **personal a**: Veo **a alguien**. ¿Conoces **a alguien** en Ensenada?"
+        },
+        {
+          "tipo": "texto",
+          "texto": "An adjective after it is **masculine singular**: **alguien especial**, **alguien nuevo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In a **negative** sentence, _anyone_ is **nadie**: _I don't see anyone_ = **No veo a nadie**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **algo** is a thing, **alguien** is a person. The extra **-ien** has a face."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Alguien== tocó la puerta.",
+              "en": "Someone knocked on the door."
+            },
+            {
+              "es": "¿Hay ==alguien== en casa?",
+              "en": "Is anyone home?"
+            },
+            {
+              "es": "Te busca ==alguien== en la recepción.",
+              "en": "Someone's looking for you at the front desk."
+            },
+            {
+              "es": "¿Conoces a ==alguien== en Ensenada?",
+              "en": "Do you know anyone in Ensenada?"
+            },
+            {
+              "es": "==Alguien== dejó la llave del agua abierta.",
+              "en": "Someone left the tap running."
+            },
+            {
+              "es": "Vi a ==alguien== en la playa con tu tabla.",
+              "en": "I saw someone at the beach with your board."
+            },
+            {
+              "es": "Necesito hablar con ==alguien== de la oficina.",
+              "en": "I need to talk to someone from the office."
+            },
+            {
+              "es": "Quiero conocer a ==alguien== especial.",
+              "en": "I want to meet someone special."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Veo alguien."
+                },
+                {
+                  "v": "bien",
+                  "t": "Veo a alguien."
+                }
+              ],
+              "nota": "Person as object → personal **a**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No conozco a alguien."
+                },
+                {
+                  "v": "bien",
+                  "t": "No conozco a nadie."
+                }
+              ],
+              "nota": "Negative → **nadie**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Alguien llamaron."
+                },
+                {
+                  "v": "bien",
+                  "t": "Alguien llamó."
+                }
+              ],
+              "nota": "Singular verb."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Hay alguno en casa?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Hay alguien en casa?"
+                }
+              ],
+              "nota": "**Alguno** is one of a known group."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "nadie",
+              "texto": "The negative partner: [[6075|nadie]]."
+            },
+            {
+              "forma": "a alguien",
+              "texto": "Why the a: [[6870|the personal a]]."
+            },
+            {
+              "forma": "algo",
+              "texto": "For things: [[6230|algo]]."
+            },
+            {
+              "forma": "alguno",
+              "texto": "One of a known group: [[6462|alguno, alguna]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Someone called._",
+              "r": "Alguien llamó.",
+              "nota": "Singular verb."
+            },
+            {
+              "p": "In Spanish: _I'm looking for someone._",
+              "r": "Busco a alguien.",
+              "nota": "Personal a."
+            },
+            {
+              "p": "Fix it: _No veo alguien._",
+              "r": "No veo a nadie.",
+              "nota": "Negative → a nadie."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6870
+    ],
+    "confunde": [
+      6462
+    ],
+    "sigue": [
+      6075,
+      6230
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6311",
+      "kwiziq": true
+    }
+  ]
+}

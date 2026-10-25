@@ -1,0 +1,189 @@
+{
+  "tema": 7255,
+  "slug": "para-que-imperfecto",
+  "titulo": "Para que + imperfect subjunctive (purpose)",
+  "subtitulo": "Le di el diccionario para que lo usara.",
+  "foto": "t06.jpg",
+  "regla": "Para que (so that) always takes the subjunctive. With a past main verb, use the imperfect subjunctive: Te lo dije para que lo supieras. After a present perfect, present or imperfect subjunctive both work. Same subject: para + infinitive.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Para que** introduces a **purpose** and always takes the **subjunctive**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Main verb",
+            "After para que"
+          ],
+          "filas": [
+            [
+              "present / future / command",
+              "present subjunctive: **lo digo para que lo sepas**"
+            ],
+            [
+              "past (preterite, imperfect)",
+              "imperfect subjunctive: **lo dije para que lo supieras**"
+            ],
+            [
+              "present perfect",
+              "either: **he salido temprano para que podamos / pudiéramos comer juntos**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The two subjects must be **different**. If it's the same person, use **para** + infinitive: **me senté adelante para ver mejor**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: past in front, **-ra** behind."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Le regalé el diccionario ==para que lo usara== en clase.",
+              "en": "I gave him the dictionary so he'd use it in class."
+            },
+            {
+              "es": "Blanca estaba organizando un viaje ==para que tuvieran== una segunda luna de miel.",
+              "en": "Blanca was planning a trip so they'd have a second honeymoon."
+            },
+            {
+              "es": "Me agarraba del brazo ==para que no pudiera== escaparme.",
+              "en": "He was holding my arm so I couldn't get away."
+            },
+            {
+              "es": "Salí temprano del trabajo ==para que pudiéramos== comer juntos.",
+              "en": "I left work early so we could eat together."
+            },
+            {
+              "es": "Me senté en primera fila ==para ver== mejor.",
+              "en": "I sat in the front row to see better. (same subject)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Te llamé para que me ayudas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Te llamé para que me ayudaras."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Fui para que yo viera el partido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Fui para ver el partido."
+                }
+              ],
+              "nota": "Same subject: infinitive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "para que + present subjunctive",
+              "texto": "[[7510|para que in the present]]."
+            },
+            {
+              "forma": "para + infinitive",
+              "texto": "[[5970|para for purpose]]."
+            },
+            {
+              "forma": "quisiera que",
+              "texto": "[[7184|querer que + imperfect subjunctive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Complete: _Te lo expliqué para que lo ___ (entender)._",
+              "r": "entendieras",
+              "nota": "Past main verb: -ra."
+            },
+            {
+              "p": "Complete: _Te lo explico para que lo ___ (entender)._",
+              "r": "entiendas",
+              "nota": "Present: present subjunctive."
+            },
+            {
+              "p": "In Spanish: _I saved money to buy a car._ (same subject)",
+              "r": "Ahorré dinero para comprar un carro.",
+              "nota": "para + infinitive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7510,
+      5068
+    ],
+    "confunde": [
+      7510
+    ],
+    "sigue": [
+      7184
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7255",
+      "kwiziq": true
+    }
+  ]
+}

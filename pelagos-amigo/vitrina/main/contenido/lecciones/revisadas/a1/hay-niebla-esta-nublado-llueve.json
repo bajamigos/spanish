@@ -1,0 +1,210 @@
+{
+  "tema": 9340,
+  "slug": "hay-niebla-esta-nublado-llueve",
+  "titulo": "Weather with hay, está or a weather verb",
+  "subtitulo": "Hay niebla, está nublado, llueve.",
+  "foto": "t04.jpg",
+  "regla": "Talk about the weather with hay + noun (hay niebla), está + adjective or -ndo form (está nublado, está lloviendo), or a weather verb on its own (llueve, nieva). Weather verbs have no subject and only use the él form.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Spanish has three easy ways to describe the weather (besides **hace**)."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Pattern",
+            "Use",
+            "Examples"
+          ],
+          "filas": [
+            [
+              "**hay** + noun",
+              "there is fog, wind…",
+              "hay niebla, hay viento, hay nubes, hay tormenta"
+            ],
+            [
+              "**está** + adjective / -ndo",
+              "what the sky is like now",
+              "está nublado, está soleado, está lloviendo, está nevando"
+            ],
+            [
+              "weather verb",
+              "it rains, it snows…",
+              "llueve, nieva, truena, graniza"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Weather verbs have **no subject**: just **llueve**, never _it_ + verb. They only use the **él** form."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Careful: **lluvia** is the noun (_rain_), **llueve** is the verb (_it rains_)."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "En Tijuana ==hay== mucha niebla en las mañanas de junio.",
+              "en": "In Tijuana it's very foggy on June mornings."
+            },
+            {
+              "es": "Hoy ==está nublado==, pero no hace frío.",
+              "en": "It's cloudy today, but it isn't cold."
+            },
+            {
+              "es": "==Está lloviendo== y no traigo paraguas.",
+              "en": "It's raining and I don't have an umbrella."
+            },
+            {
+              "es": "En verano casi nunca ==llueve== en Tijuana.",
+              "en": "It almost never rains in Tijuana in summer."
+            },
+            {
+              "es": "¿==Nieva== en la sierra de Juárez? Sí, a veces.",
+              "en": "Does it snow in the Sierra de Juárez? Yes, sometimes."
+            },
+            {
+              "es": "==Hay== tormenta; mejor no surfeamos hoy.",
+              "en": "There's a storm; we'd better not surf today."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es lloviendo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Está lloviendo."
+                }
+              ],
+              "nota": "Raining right now: **estar** + -ndo."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Está niebla."
+                },
+                {
+                  "v": "bien",
+                  "t": "Hay niebla."
+                }
+              ],
+              "nota": "A noun goes with **hay**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Lluvia mucho en Tijuana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Llueve mucho en Tijuana."
+                }
+              ],
+              "nota": "**Lluvia** is the noun; the verb is **llueve**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hay",
+              "texto": "The basics of hay: [[5102|hay = there is / there are]]."
+            },
+            {
+              "forma": "hace calor",
+              "texto": "The other weather pattern: [[9336|hace + weather]]."
+            },
+            {
+              "forma": "está lloviendo",
+              "texto": "How the -ndo form works: [[5092|estar + gerund]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish, with estar: _It's raining._",
+              "r": "Está lloviendo.",
+              "nota": "estar + -ndo."
+            },
+            {
+              "p": "In Spanish, with one verb: _It snows a lot here._",
+              "r": "Aquí nieva mucho.",
+              "nota": "Just nieva, no subject."
+            },
+            {
+              "p": "Fix it: _Está niebla._",
+              "r": "Hay niebla.",
+              "nota": "hay + noun."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5102
+    ],
+    "confunde": [
+      9336
+    ],
+    "sigue": [
+      5092
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9340",
+      "kwiziq": true
+    }
+  ]
+}

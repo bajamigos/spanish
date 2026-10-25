@@ -1,0 +1,275 @@
+{
+  "tema": 5223,
+  "slug": "futuro-venir",
+  "titulo": "Conjugate venir in the simple future",
+  "subtitulo": "Venir swaps its i for a d: vendré, vendrás, vendremos.",
+  "foto": "t02.jpg",
+  "regla": "Venir replaces the i of its infinitive with d to make the stem vendr-, then adds -é, -ás, -á, -emos, -án.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Venir** (_to come_) is irregular in the **simple future** (**futuro imperfecto**) because of its stem: **vendr-**. The **i** of the infinitive turns into a **d**. The endings are the regular ones."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "irregular stem **vendr-**",
+            "**-é, -ás, -á, -emos, -án**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Ending",
+            "venir → vendr-"
+          ],
+          "filas": [
+            [
+              "yo",
+              "-é",
+              "vendré"
+            ],
+            [
+              "tú",
+              "-ás",
+              "vendrás"
+            ],
+            [
+              "él, ella, usted",
+              "-á",
+              "vendrá"
+            ],
+            [
+              "nosotros",
+              "-emos",
+              "vendremos"
+            ],
+            [
+              "ustedes, ellos",
+              "-án",
+              "vendrán"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Verbs built on **venir** do the same: **convenir** → **convendrá**, **prevenir** → **prevendré**, **intervenir** → **intervendré**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **venir** and **tener** are twins in the future: **vendré**, **tendré**. Same shape, one letter apart."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Vendré== de Rosarito al mediodía.",
+              "en": "I'll come from Rosarito at noon."
+            },
+            {
+              "es": "¿==Vendrás== al huerto después del trabajo?",
+              "en": "Will you come to the garden after work?"
+            },
+            {
+              "es": "Beto ==vendrá== con toda su familia a la carne asada.",
+              "en": "Beto will come with his whole family to the cookout."
+            },
+            {
+              "es": "==Vendremos== con las tablas y las hieleras.",
+              "en": "We'll come with the boards and the coolers."
+            },
+            {
+              "es": "Las gaviotas ==vendrán== si dejas tortillas en la arena.",
+              "en": "The seagulls will come if you leave tortillas on the sand."
+            },
+            {
+              "es": "Ustedes ==vendrán== a entrenar el sábado, ¿verdad?",
+              "en": "You'll come to train on Saturday, right?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mañana veniré temprano."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mañana vendré temprano."
+                }
+              ],
+              "nota": "The **i** turns into **d**: **vendr-**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mañana vendiré temprano."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mañana vendré temprano."
+                }
+              ],
+              "nota": "**Vendiré** doesn't exist. And watch out: **venderé** is the future of **vender** (_to sell_)."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Vienrás mañana?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Vendrás mañana?"
+                }
+              ],
+              "nota": "The **ie** of the present (**vienes**) never appears in the future."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usos",
+      "titulo": "The d gang",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "vendré",
+              "texto": "**venir** → **vendr-**",
+              "aqui": true
+            },
+            {
+              "forma": "tendré",
+              "texto": "**tener** → **tendr-**. See [[5050|tener in the future]]."
+            },
+            {
+              "forma": "pondré",
+              "texto": "**poner** → **pondr-**. See [[5259|poner in the future]]."
+            },
+            {
+              "forma": "saldré",
+              "texto": "**salir** → **saldr-**. See [[5160|salir in the future]]."
+            },
+            {
+              "forma": "valdrá",
+              "texto": "**valer** → **valdr-**. See [[5244|valer in the future]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "trabajaré",
+              "texto": "The endings are the same as for every verb in the future: [[5155|regular verbs in the simple future]]."
+            },
+            {
+              "forma": "vengo → vendré",
+              "texto": "The present has **-go** in **yo** and **ie**: [[5483|venir in the present]]."
+            },
+            {
+              "forma": "vendría",
+              "texto": "The conditional uses the very same stem, with **-ía** endings: [[5879|the conditional]]."
+            },
+            {
+              "forma": "¿Dónde estará?",
+              "texto": "The future also guesses about right now: [[5060|the future for probability]]."
+            },
+            {
+              "forma": "habré hecho",
+              "texto": "The future of **haber** + participle: [[5066|irregular verbs in the future perfect]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "**Venir**, **nosotros**: ___ con mucho equipaje.",
+              "r": "Vendremos con mucho equipaje.",
+              "nota": "**vendr-** + **-emos**."
+            },
+            {
+              "p": "In Spanish: _Will you (tú) come to my place later?_",
+              "r": "¿Vendrás a mi casa después?",
+              "nota": "**vendr-** + **-ás**."
+            },
+            {
+              "p": "Which one? **Miguel venirá a la fiesta** or **Miguel vendrá a la fiesta**.",
+              "r": "Miguel vendrá a la fiesta.",
+              "nota": "The stem is **vendr-**."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5155,
+      5483
+    ],
+    "confunde": [
+      5879,
+      5225
+    ],
+    "sigue": [
+      5050,
+      5259,
+      5160,
+      5244,
+      5060,
+      5162,
+      5066
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5223",
+      "kwiziq": true
+    }
+  ]
+}

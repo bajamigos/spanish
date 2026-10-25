@@ -1,0 +1,187 @@
+{
+  "tema": 7266,
+  "slug": "futuro-perfecto-pasado",
+  "titulo": "The future perfect to guess about the past",
+  "subtitulo": "Habrá ido a la estética. Se habrán dormido.",
+  "foto": "t09.jpg",
+  "regla": "The future perfect (habré, habrás, habrá... + participle) can express a guess about something that has happened: Habrá salido = He must have gone out / He's probably gone out. Often a reply to something in the present or present perfect.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "The **future perfect** can express a **supposition about the recent past**. English says _must have_ or _probably_."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "habré / habrás / habrá / habremos / habrán",
+            "+ participle"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "No extra word is needed; the tense itself carries the guess."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It's often triggered by a comment in the **present** or **present perfect**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Compare: about the present, use the simple future (**estará en casa**); further back, the conditional (**llegaría a las tres**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **habrá** + participle = I bet it's already happened."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Se habrán dormido== al llegar al hotel; el viaje fue larguísimo.",
+              "en": "They must have gone to sleep when they got to the hotel; the trip was super long."
+            },
+            {
+              "es": "Lo ==habré conocido== antes; su cara se me hace conocida.",
+              "en": "I must have met him before; his face looks familiar."
+            },
+            {
+              "es": "—Marisa está muy guapa hoy. —==Habrá ido== a la estética.",
+              "en": "—Marisa looks great today. —She must have gone to the salon."
+            },
+            {
+              "es": "—¿A dónde fue tu hermano? —==Habrá ido== a casa de Miguel. Siempre va los sábados.",
+              "en": "—Where did your brother go? —He's probably gone to Miguel's. He always goes on Saturdays."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "hecho",
+                  "t": "Fue a la estética."
+                },
+                {
+                  "v": "suposición",
+                  "t": "Habrá ido a la estética."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Habrá sido muy caro ahorita. (about now)"
+                },
+                {
+                  "v": "bien",
+                  "t": "Será muy caro."
+                }
+              ],
+              "nota": "About the present: simple future."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "será, estará",
+              "texto": "Guess about the present: [[5060|future of probability]]."
+            },
+            {
+              "forma": "llegaría",
+              "texto": "Guess about the past: [[5069|conditional of probability]]."
+            },
+            {
+              "forma": "debe de haber",
+              "texto": "[[7052|deber de]]."
+            },
+            {
+              "forma": "habré terminado",
+              "texto": "Other use: [[7269|future perfect for future actions]]."
+            },
+            {
+              "forma": "habré",
+              "texto": "Conjugation: [[5185|regular]], [[5066|irregular]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Guess: _They must have left already._",
+              "r": "Ya se habrán ido.",
+              "nota": "habrán + participle."
+            },
+            {
+              "p": "Guess: _I must have lost it._",
+              "r": "Lo habré perdido.",
+              "nota": "habré perdido."
+            },
+            {
+              "p": "Reply: _—Tiene los ojos rojos. —___ (llorar)._",
+              "r": "Habrá llorado.",
+              "nota": "Guess about the past."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5060,
+      5185
+    ],
+    "confunde": [
+      5069
+    ],
+    "sigue": [
+      7269
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7266",
+      "kwiziq": true
+    }
+  ]
+}

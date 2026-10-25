@@ -1,0 +1,189 @@
+{
+  "tema": 7525,
+  "slug": "sin-que",
+  "titulo": "Sin + infinitive / sin que + subjunctive = without",
+  "subtitulo": "Se fue sin despedirse. Salió sin que nadie lo viera.",
+  "foto": "t01.jpg",
+  "regla": "Without doing: sin + infinitive when the subject is the same (se fue sin pagar). Sin que + subjunctive when the subject changes (salí sin que me vieran). Sin que always takes the subjunctive.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "sin + infinitive",
+              "texto": "Same subject: **logramos platicar sin enojarnos**."
+            },
+            {
+              "forma": "sin que + subjunctive",
+              "texto": "Different subject: **sal sin que tu papá te vea**. Always subjunctive; past main verb → imperfect subjunctive."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "English uses _without_ + _-ing_ for both."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **sin que** brings in someone else, and the subjunctive with them."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Intenta salir de tu casa ==sin que== tu papá te ==vea==.",
+              "en": "Try to sneak out without your dad seeing you."
+            },
+            {
+              "es": "Logramos platicar ==sin que== nadie se ==enojara==.",
+              "en": "We managed to talk without anyone getting angry."
+            },
+            {
+              "es": "Deberíamos subir un poco los precios ==sin que== los clientes lo ==noten== mucho.",
+              "en": "We should raise prices a bit without customers noticing much."
+            },
+            {
+              "es": "Logramos platicar ==sin enojarnos==.",
+              "en": "We managed to talk without getting angry."
+            },
+            {
+              "es": "Terminamos de pintar el cuarto ==sin dejar== ni una gota en el piso.",
+              "en": "We finished painting the room without leaving a drop on the floor."
+            },
+            {
+              "es": "Se fue ==sin despedirse==.",
+              "en": "He left without saying goodbye."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Salió sin que nadie lo vio."
+                },
+                {
+                  "v": "bien",
+                  "t": "Salió sin que nadie lo viera."
+                }
+              ],
+              "nota": "Always subjunctive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Se fue sin despidiéndose."
+                },
+                {
+                  "v": "bien",
+                  "t": "Se fue sin despedirse."
+                }
+              ],
+              "nota": "Infinitive after **sin**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Comí sin que yo pagara."
+                },
+                {
+                  "v": "bien",
+                  "t": "Comí sin pagar."
+                }
+              ],
+              "nota": "Same subject: infinitive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "para que, antes de que",
+              "texto": "[[5168|adverbial clauses]]."
+            },
+            {
+              "forma": "sin mirar",
+              "texto": "[[6310|infinitive after prepositions]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I left without paying._",
+              "r": "Me fui sin pagar.",
+              "nota": "Same subject."
+            },
+            {
+              "p": "In Spanish: _They left without us noticing._",
+              "r": "Se fueron sin que nos diéramos cuenta.",
+              "nota": "sin que + subjunctive."
+            },
+            {
+              "p": "Complete: _Entra sin que te ___ (oír, ellos)._",
+              "r": "oigan",
+              "nota": "Different subject."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6310,
+      5168
+    ],
+    "confunde": [
+      5168
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7525",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "tema": 5990,
+  "slug": "subjuntivo-presente-empezar",
+  "titulo": "Conjugate empezar and comenzar in the present subjunctive (z > c and e > ie)",
+  "subtitulo": "Empiece, empecemos: two changes at once.",
+  "foto": "t09.jpg",
+  "regla": "Empezar and comenzar change z to c in every form and e to ie in every form except nosotros: empiece, empecemos, empiecen.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Some **-zar** verbs take **two changes at once** in the present subjunctive:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Change",
+            "Where"
+          ],
+          "filas": [
+            [
+              "**z** → **c**",
+              "every form (z almost never comes before e)"
+            ],
+            [
+              "**e** → **ie**",
+              "every form except **nosotros**"
+            ]
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "empezar",
+            "comenzar"
+          ],
+          "filas": [
+            [
+              "yo",
+              "empiece",
+              "comience"
+            ],
+            [
+              "tú",
+              "empieces",
+              "comiences"
+            ],
+            [
+              "él, ella, usted",
+              "empiece",
+              "comience"
+            ],
+            [
+              "nosotros",
+              "empecemos",
+              "comencemos"
+            ],
+            [
+              "ustedes, ellos",
+              "empiecen",
+              "comiencen"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: two locks on one door. The **c** lock is always on; the **ie** lock is off for **nosotros**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "En cuanto ==empiece== la prepa, voy a estudiar más.",
+              "en": "As soon as I start high school, I'm going to study more."
+            },
+            {
+              "es": "Cuando ==empieces== a trabajar, ahorra.",
+              "en": "When you start working, save."
+            },
+            {
+              "es": "Ojalá ==empiece== ya la pelea.",
+              "en": "I hope the fight starts already."
+            },
+            {
+              "es": "==Empecemos== por la guardia.",
+              "en": "Let's start with the guard."
+            },
+            {
+              "es": "Es necesario que ==empiecen== a portarse bien.",
+              "en": "They need to start behaving."
+            },
+            {
+              "es": "¡Que ==comience== la sesión!",
+              "en": "Let the session begin!"
+            },
+            {
+              "es": "==Comencemos== por el principio.",
+              "en": "Let's start from the beginning."
+            },
+            {
+              "es": "Espero que ==comiences== con el pie derecho.",
+              "en": "I hope you get off on the right foot."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Empiecemos ya."
+                },
+                {
+                  "v": "bien",
+                  "t": "Empecemos ya."
+                }
+              ],
+              "nota": "No **ie** in **nosotros**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cuando empiezes, avísame."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cuando empieces, avísame."
+                }
+              ],
+              "nota": "**z** → **c** before **e**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero que empeces hoy."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero que empieces hoy."
+                }
+              ],
+              "nota": "**e** → **ie**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "utilice, cruce",
+              "texto": "Only the spelling change: [[5726|-zar verbs]]."
+            },
+            {
+              "forma": "piense, pensemos",
+              "texto": "Only the stem change: [[6236|e > ie -ar verbs]]."
+            },
+            {
+              "forma": "empecé",
+              "texto": "The preterite: [[5844|-zar verbs in the preterite]]."
+            },
+            {
+              "forma": "empezar a",
+              "texto": "**Empezar a** + infinitive: [[6960|empezar / comenzar a]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "**Empezar** with **nosotros**: ___ a las ocho.",
+              "r": "Empecemos a las ocho.",
+              "nota": "c, but no ie."
+            },
+            {
+              "p": "**Comenzar** with **ellos**: Cuando ___ las clases, te aviso.",
+              "r": "Cuando comiencen las clases, te aviso.",
+              "nota": "ie and c."
+            },
+            {
+              "p": "In Spanish: _I hope you start soon._ (tú)",
+              "r": "Espero que empieces pronto.",
+              "nota": "empieces."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5726,
+      6236
+    ],
+    "confunde": [
+      5726
+    ],
+    "sigue": [
+      5844,
+      6960,
+      5062
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5990",
+      "kwiziq": true
+    }
+  ]
+}

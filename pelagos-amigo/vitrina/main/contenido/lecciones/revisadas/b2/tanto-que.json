@@ -1,0 +1,201 @@
+{
+  "tema": 6153,
+  "slug": "tanto-que",
+  "titulo": "[verb] + tanto / tanta / tantos / tantas + noun + que = so much / many... that...",
+  "subtitulo": "Había tanta gente que no pudimos entrar.",
+  "foto": "t07.jpg",
+  "regla": "Verb + tanto/a/os/as + noun + que = so much / so many... that...: cause, then result. Tanto agrees with the noun. Don't confuse it with tanto... como (as much / many as).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "[verb] +",
+            "tanto / tanta / tantos / tantas + noun",
+            "+ que + [result]"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Tanto** works as an adjective here, so it **agrees** with the noun: **tanto calor**, **tanta comida**, **tantos trabajadores**, **tantas veces**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Cause first, result after **que**. The order can't be flipped."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Don't confuse it with **tanto... como** (_as much / many... as_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **tan** + adjective, **tanto** + noun, and the noun picks the ending."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¡Tengo ==tanto calor que== me voy a desmayar!",
+              "en": "I'm so hot I'm going to faint!"
+            },
+            {
+              "es": "Hacen ==tanta comida== en Navidad ==que== tienen sobras para dos semanas.",
+              "en": "They make so much food at Christmas that they have leftovers for two weeks."
+            },
+            {
+              "es": "Corrieron a ==tantos trabajadores que== hay protestas en las calles.",
+              "en": "They fired so many workers that there are protests in the streets."
+            },
+            {
+              "es": "Lo voy a llamar ==tantas veces que== va a decir que soy un latoso.",
+              "en": "I'm going to call him so many times he'll say I'm a pest."
+            },
+            {
+              "es": "Tiene ==tanto dinero que== no sabe en qué gastarlo.",
+              "en": "He has so much money he doesn't know what to spend it on."
+            },
+            {
+              "es": "Había ==tanta gente que== no pudimos entrar.",
+              "en": "There were so many people that we couldn't get in."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "verbo",
+      "titulo": "With a verb",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "With no noun, **tanto** goes after the verb and doesn't change: **Comí tanto que me dolía la panza.** (_I ate so much my stomach hurt._)"
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Había tanto gente que..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Había tanta gente que..."
+                }
+              ],
+              "nota": "**Gente** is feminine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tengo tan hambre que..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tengo tanta hambre que..."
+                }
+              ],
+              "nota": "**Hambre** is a noun: **tanta**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tiene tantos libros como no caben."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tiene tantos libros que no caben."
+                }
+              ],
+              "nota": "Result: **que**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tan cansado que",
+              "texto": "With adjectives: [[6152|tan... que]]."
+            },
+            {
+              "forma": "tanto como",
+              "texto": "Comparison: [[5165|tanto como]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I have so much work that I can't go out._",
+              "r": "Tengo tanto trabajo que no puedo salir.",
+              "nota": "tanto + masculine noun."
+            },
+            {
+              "p": "Complete: _Comió ___ tacos que se enfermó._",
+              "r": "tantos",
+              "nota": "Masculine plural."
+            },
+            {
+              "p": "Complete: _Tenía ___ sed que se tomó dos litros de agua._",
+              "r": "tanta",
+              "nota": "Sed is feminine."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5165
+    ],
+    "confunde": [
+      6152
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6153",
+      "kwiziq": true
+    }
+  ]
+}

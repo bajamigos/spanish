@@ -1,0 +1,178 @@
+{
+  "tema": 6978,
+  "slug": "el-de-la-de",
+  "titulo": "El de, la de, los de, las de = the one(s) with / from / of",
+  "subtitulo": "El de la derecha. La de flores amarillas.",
+  "foto": "t05.jpg",
+  "regla": "Article + de picks out which one you mean without repeating the noun: Me gusta la de flores amarillas = the one with yellow flowers. The article agrees with the noun it replaces. Don't add another preposition after de.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "el / la / los / las",
+            "+ de",
+            "+ noun / place / description"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The article replaces a noun already known: **la (camisa) de rayas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It agrees in gender and number with that noun."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**De** covers _with, from, of, in, on_: **el de la derecha** = _the one on the right_; **los de segundo** = _the ones in second year_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Never stack prepositions: ~~la de con flores~~."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **el de...** = _the one with/from..._"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mira esos cuadros. ==El de la derecha== está espectacular.",
+              "en": "Look at those paintings. The one on the right is spectacular."
+            },
+            {
+              "es": "Todas están bonitas, pero ==la de flores amarillas== me encanta.",
+              "en": "They're all pretty, but I love the one with yellow flowers."
+            },
+            {
+              "es": "Mis alumnos son buenos, pero ==los de segundo== son geniales.",
+              "en": "My students are good, but the second-year ones are great."
+            },
+            {
+              "es": "Las pláticas de hoy estuvieron bien, pero ==las de ayer== fueron más útiles.",
+              "en": "Today's talks were fine, but yesterday's were more useful."
+            },
+            {
+              "es": "—¿Qué taco quieres? —==El de pastor==.",
+              "en": "—Which taco do you want? —The al pastor one."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La de con flores amarillas."
+                },
+                {
+                  "v": "bien",
+                  "t": "La de flores amarillas."
+                }
+              ],
+              "nota": "Just **de**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El uno de la derecha."
+                },
+                {
+                  "v": "bien",
+                  "t": "El de la derecha."
+                }
+              ],
+              "nota": "No **uno** in Spanish."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el que",
+              "texto": "[[6074|el que, la que]] for _the one who / that_."
+            },
+            {
+              "forma": "demonstratives",
+              "texto": "[[6060|ese, esa, eso]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I prefer the blue car to the one from my brother._",
+              "r": "Prefiero el carro azul al de mi hermano.",
+              "nota": "al = a + el de."
+            },
+            {
+              "p": "In Spanish: _Which glasses? The ones on the table._",
+              "r": "¿Cuáles lentes? Los de la mesa.",
+              "nota": "Agrees with lentes."
+            },
+            {
+              "p": "Fix it: _Quiero la uno de chocolate._",
+              "r": "Quiero la de chocolate.",
+              "nota": "No uno."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6060
+    ],
+    "confunde": [
+      6074
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6978",
+      "kwiziq": true
+    }
+  ]
+}

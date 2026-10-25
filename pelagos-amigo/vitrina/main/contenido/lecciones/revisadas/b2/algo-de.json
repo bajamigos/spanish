@@ -1,0 +1,185 @@
+{
+  "tema": 7075,
+  "slug": "algo-de",
+  "titulo": "Algo de + noun = some, a bit of",
+  "subtitulo": "¿Tienes algo de dinero? Siento algo de miedo.",
+  "foto": "t10.jpg",
+  "regla": "Algo de + singular (often uncountable or abstract) noun = some, a bit of: algo de dinero, algo de miedo. It never changes. For plural nouns, use algunos / algunas. Un poco de is the most common alternative.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "algo de",
+            "+ singular noun"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "_Some, a bit of_. Mostly with **uncountable** or **abstract** nouns: **dinero, tiempo, miedo, comida, razón**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Algo de** never changes and doesn't go with plural nouns. For plurals: **algunos / algunas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Un poco de** means the same and is more common."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Also: **algo de** + infinitive (**¿hay algo de comer?**) and **tener algo de** + adjective (**tiene algo de raro**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **algo de** = a scoop of something you can't count."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Déjame ==algo de== carne para la noche.",
+              "en": "Leave me some meat for tonight."
+            },
+            {
+              "es": "Todavía siento ==algo de== rencor por lo que me hizo.",
+              "en": "I still feel some resentment for what he did to me."
+            },
+            {
+              "es": "Si te queda ==algo de== sentido común, no salgas con ella.",
+              "en": "If you have any common sense left, don't go out with her."
+            },
+            {
+              "es": "¿Tienes ==algo de== dinero?",
+              "en": "Do you have any money?"
+            },
+            {
+              "es": "Mamá, ¿hay ==algo de== comer?",
+              "en": "Mom, is there anything to eat?"
+            },
+            {
+              "es": "Este asunto tiene ==algo de== raro.",
+              "en": "There's something odd about this."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "algo de bebidas"
+                },
+                {
+                  "v": "bien",
+                  "t": "algunas bebidas"
+                }
+              ],
+              "nota": "Plural: **algunos / algunas**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "alga de comida"
+                },
+                {
+                  "v": "bien",
+                  "t": "algo de comida"
+                }
+              ],
+              "nota": "Never changes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "algún, alguna",
+              "texto": "[[6136|algún]]."
+            },
+            {
+              "forma": "un poco",
+              "texto": "[[6135|quantity adverbs]]."
+            },
+            {
+              "forma": "nada de",
+              "texto": "[[8704|nada de]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I need some time._",
+              "r": "Necesito algo de tiempo.",
+              "nota": "algo de + singular."
+            },
+            {
+              "p": "In Spanish: _We bought some cookies._",
+              "r": "Compramos algunas galletas.",
+              "nota": "Plural: algunas."
+            },
+            {
+              "p": "In Spanish: _Is there anything to drink?_",
+              "r": "¿Hay algo de tomar?",
+              "nota": "algo de + infinitive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6136
+    ],
+    "confunde": [
+      8704
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7075",
+      "kwiziq": true
+    }
+  ]
+}

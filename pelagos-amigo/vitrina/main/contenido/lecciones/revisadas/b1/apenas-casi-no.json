@@ -1,0 +1,368 @@
+{
+  "tema": 9149,
+  "slug": "apenas-casi-no",
+  "titulo": "Using apenas / casi no for _hardly_",
+  "subtitulo": "Two ways to say _hardly_. One works alone; the other never goes out without its no.",
+  "foto": "t04.jpg",
+  "regla": "Apenas goes alone before the verb, or after it with no in front. Casi always takes no, in that order: casi no.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say _hardly_, _barely_ or _hardly ever_, Spanish uses **apenas** or **casi no**. They mean the same thing, but they don't sit in the sentence the same way."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**apenas**",
+            "verb"
+          ]
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**casi no**",
+            "verb"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Form",
+            "Where it goes",
+            "Example"
+          ],
+          "filas": [
+            [
+              "apenas",
+              "alone, before the verb",
+              "Apenas duermo."
+            ],
+            [
+              "no … apenas",
+              "**no** before the verb, **apenas** after it",
+              "No duermo apenas."
+            ],
+            [
+              "casi no",
+              "always with **no**, in that order",
+              "Casi no duermo."
+            ],
+            [
+              "casi nunca",
+              "for _hardly ever_",
+              "Casi nunca duermo."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Object pronouns go between **apenas** or **casi no** and the verb: **==apenas la== conozco**, **==casi no te== oigo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **apenas** is independent and goes out alone. **Casi** never goes out without its **no**."
+        }
+      ]
+    },
+    {
+      "id": "apenas",
+      "titulo": "Apenas: alone, or at the end",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "The usual place is **right before the verb**, and the sentence stays affirmative, with no **no**."
+        },
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Después de rolar, ==apenas puedo== levantar los brazos.",
+              "en": "After rolling, I can barely lift my arms."
+            },
+            {
+              "es": "A la vecina nueva ==apenas la conozco==.",
+              "en": "I hardly know the new neighbor."
+            },
+            {
+              "es": "—¿Ves mucho a Beto? —No, ==apenas lo veo==.",
+              "en": "Do you see Beto a lot? No, I hardly see him."
+            },
+            {
+              "es": "Con la neblina ==apenas se ve== el pico.",
+              "en": "With the fog you can barely see the peak."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "You can also build it like [[5136|**nunca**]]: **no** before the verb and **apenas** after it. This is Spanish double negation, and it's correct."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**no**",
+            "verb",
+            "**apenas**"
+          ]
+        },
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==No== la ==conozco apenas==.",
+              "en": "I hardly know her."
+            },
+            {
+              "es": "Beto ==no== limpia su cuarto ==apenas==.",
+              "en": "Beto hardly ever cleans his room."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "In summary, you have two options: **apenas** + an affirmative sentence, or **no** + verb + **apenas**."
+        }
+      ]
+    },
+    {
+      "id": "casi",
+      "titulo": "Casi no: always together, always in that order",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Casi** does the same job, but it **always needs the verb in the negative**: **casi no** + verb. Without the **no**, the sentence no longer means _hardly_."
+        },
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Entre semana ==casi no tengo== tiempo para surfear.",
+              "en": "I hardly have time to surf during the week."
+            },
+            {
+              "es": "==Casi no visito== a mis papás porque viven en Ensenada.",
+              "en": "I hardly ever visit my parents because they live in Ensenada."
+            },
+            {
+              "es": "En temporada baja Beto y yo ==casi no nos vemos==.",
+              "en": "In the off-season Beto and I hardly see each other."
+            },
+            {
+              "es": "==Casi no te oigo==, se está cortando la llamada.",
+              "en": "I can barely hear you, the call is breaking up."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "To say _hardly ever_, use **casi nunca**:"
+        },
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Amos ==casi nunca== se queja.",
+              "en": "Amos hardly ever complains."
+            },
+            {
+              "es": "Nosotros ==casi nunca== nos peleamos; nos llevamos increíble.",
+              "en": "We hardly ever fight; we get along great."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "With **casi**, the **no** goes **after** it, right next to it, and both go **before the verb**. You can't swap them, split them, or leave the **no** out."
+        },
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No casi tengo tiempo para leer."
+                },
+                {
+                  "v": "bien",
+                  "t": "Casi no tengo tiempo para leer."
+                }
+              ],
+              "nota": "Never **no casi**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No tengo tiempo casi para leer."
+                },
+                {
+                  "v": "bien",
+                  "t": "Casi no tengo tiempo para leer."
+                }
+              ],
+              "nota": "**Casi** can't move to the end the way **apenas** can."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Apenas no te oigo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Apenas te oigo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Casi no te oigo."
+                }
+              ],
+              "nota": "**Apenas** before the verb takes no **no**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "Casi tengo el dinero para la tabla."
+                }
+              ],
+              "nota": "Without **no**, **casi** isn't _hardly_ anymore. It's _almost_: you almost have it. See [[8630|**por poco** and **casi**]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usos",
+      "titulo": "Four forms, one idea",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "Apenas duermo",
+              "texto": "The shortest. **Apenas** alone, before the verb.",
+              "aqui": true
+            },
+            {
+              "forma": "Casi no duermo",
+              "texto": "The everyday one in Mexico. Always **casi no**.",
+              "aqui": true
+            },
+            {
+              "forma": "No duermo apenas",
+              "texto": "Double negation, like [[5136|**nunca**]]. You hear it less, but the quiz asks for it.",
+              "aqui": true
+            },
+            {
+              "forma": "Casi nunca duermo",
+              "texto": "When you mean _hardly ever_."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Other meanings of apenas and casi",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "Por poco me caigo de la tabla.",
+              "texto": "[[8630|**Por poco** / **casi**]] + present: _nearly_, something that almost happened and didn't."
+            },
+            {
+              "forma": "Apenas llegues, me hablas.",
+              "texto": "Another **apenas**: _as soon as_. See [[8294|**en cuanto**, **apenas**, **tan pronto como**]]."
+            },
+            {
+              "forma": "No entreno nunca.",
+              "texto": "The same double negation: [[5136|**nunca** in negative sentences]]."
+            },
+            {
+              "forma": "Entreno demasiado.",
+              "texto": "Other quantity words with a verb: [[6135|**demasiado**, **bastante**, **poco**, **mucho**]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Which one? **No casi tengo tiempo** or **Casi no tengo tiempo**.",
+              "r": "Casi no tengo tiempo.",
+              "nota": "Always **casi no**, in that order."
+            },
+            {
+              "p": "Say **casi no te oigo** with **apenas**.",
+              "r": "Apenas te oigo.",
+              "nota": "**Apenas** before the verb takes no **no**. **No te oigo apenas** also works."
+            },
+            {
+              "p": "In Spanish: _I hardly know him._ Say it both ways with **apenas**.",
+              "r": "Apenas lo conozco. / No lo conozco apenas.",
+              "nota": "Alone before the verb, or at the end with **no** in front."
+            },
+            {
+              "p": "**Yo casi no salgo**: very little, or almost always?",
+              "r": "Very little.",
+              "nota": "**Casi no** is _hardly_, not _almost_."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5091,
+      5136,
+      5082
+    ],
+    "confunde": [
+      8630,
+      8294
+    ],
+    "sigue": [
+      6135,
+      5089,
+      5116
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Audio",
+      "texto": "Audios y Vámonos · EP 22 · «Apenas y casi no»",
+      "donde": "ElevenReader. Four minutes, the rule out loud."
+    },
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9149",
+      "kwiziq": true
+    }
+  ]
+}

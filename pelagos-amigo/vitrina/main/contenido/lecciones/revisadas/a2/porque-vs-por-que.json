@@ -1,0 +1,235 @@
+{
+  "tema": 6333,
+  "slug": "porque-vs-por-que",
+  "titulo": "Porque vs por qué",
+  "subtitulo": "«¿Por qué lloras?» «Porque estoy feliz.»",
+  "foto": "t04.jpg",
+  "regla": "Por qué (two words, accent) = why, in direct and indirect questions: ¿Por qué lloras? No sé por qué. Porque (one word, no accent) = because: Lloro porque estoy feliz.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Por qué** (two words, accent on **qué**) = _why_. It **asks**, in direct questions and in indirect ones: **no sé por qué**, **dime por qué**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Porque** (one word, no accent) = _because_. It **answers**: it introduces a reason."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Form",
+            "Meaning",
+            "Example"
+          ],
+          "filas": [
+            [
+              "por qué",
+              "why",
+              "¿Por qué no viniste?"
+            ],
+            [
+              "por qué (indirect)",
+              "why",
+              "No sé por qué se fue."
+            ],
+            [
+              "porque",
+              "because",
+              "No vine porque estaba cansado."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "To open a sentence with the reason, use **como**, not **porque**: **Como estaba cansado, no vine.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: a question needs two words, an answer just one. **Por qué** asks, **porque** answers."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿==Por qué== no fuiste a entrenar?",
+              "en": "Why didn't you go to training?"
+            },
+            {
+              "es": "No fui ==porque== me dolía la rodilla.",
+              "en": "I didn't go because my knee hurt."
+            },
+            {
+              "es": "¿==Por qué== estudias español?",
+              "en": "Why are you studying Spanish?"
+            },
+            {
+              "es": "==Porque== quiero hablar con mis vecinos.",
+              "en": "Because I want to talk to my neighbors."
+            },
+            {
+              "es": "No entiendo ==por qué== se secaron los jitomates.",
+              "en": "I don't understand why the tomatoes dried up."
+            },
+            {
+              "es": "Surfeo temprano ==porque== no hay mucha gente.",
+              "en": "I surf early because there aren't many people."
+            },
+            {
+              "es": "Dime ==por qué== estás enojado.",
+              "en": "Tell me why you're angry."
+            },
+            {
+              "es": "¿==Por qué== no vamos a la playa?",
+              "en": "Why don't we go to the beach?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Porque no viniste?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Por qué no viniste?"
+                }
+              ],
+              "nota": "Asking: two words."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No vine por qué estaba enfermo."
+                },
+                {
+                  "v": "bien",
+                  "t": "No vine porque estaba enfermo."
+                }
+              ],
+              "nota": "Answering: one word."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No sé porque se fue."
+                },
+                {
+                  "v": "bien",
+                  "t": "No sé por qué se fue."
+                }
+              ],
+              "nota": "Indirect question: still **por qué**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Por que lloras?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Por qué lloras?"
+                }
+              ],
+              "nota": "Don't forget the accent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¿cómo? ¿dónde?",
+              "texto": "Other question words with an accent: [[6313|cómo, dónde, cuándo]]."
+            },
+            {
+              "forma": "como, es que",
+              "texto": "Other ways to give a reason: [[7034|porque, como, es que]]."
+            },
+            {
+              "forma": "¿por qué no…?",
+              "texto": "Making suggestions: [[8951|¿por qué no…?, ¿y si…?]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Why are you laughing?_",
+              "r": "¿Por qué te ríes?",
+              "nota": "Two words, accent."
+            },
+            {
+              "p": "In Spanish: _I'm tired because I trained a lot._",
+              "r": "Estoy cansado porque entrené mucho.",
+              "nota": "One word."
+            },
+            {
+              "p": "Fix it: _No sé porque está cerrado._",
+              "r": "No sé por qué está cerrado.",
+              "nota": "Indirect question."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6313
+    ],
+    "confunde": [
+      7034
+    ],
+    "sigue": [
+      8951
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6333",
+      "kwiziq": true
+    }
+  ]
+}

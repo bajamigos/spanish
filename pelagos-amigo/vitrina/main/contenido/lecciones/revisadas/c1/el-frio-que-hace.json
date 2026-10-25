@@ -1,0 +1,180 @@
+{
+  "tema": 7933,
+  "slug": "el-frio-que-hace",
+  "titulo": "¡El / la / los / las + noun + que + verb! to intensify",
+  "subtitulo": "¡El frío que hace! ¡Las cosas que dice!",
+  "foto": "t09.jpg",
+  "regla": "¡El / la / los / las + noun + que + verb! is an exclamation that intensifies quantity or quality: ¡El frío que hace! (It's so cold!). The article agrees with the noun. Sometimes context is needed to know if it's good or bad.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "¡el / la / los / las + noun",
+            "+ que +",
+            "verb!"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It **intensifies**: _so much, such, what a..._"
+        },
+        {
+          "tipo": "texto",
+          "texto": "The **article agrees** with the noun: **el frío, la empresa, los discursos, las penas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Sometimes it's clear (**¡el frío que hace!**); sometimes you need context to know if it's praise or complaint (**¡los discursos que da!**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: it's an exclamation with the volume turned up and the adjective left out."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¡==El frío que== hace hoy!",
+              "en": "It's so cold today!"
+            },
+            {
+              "es": "¡==La empresa que== armó Miguel!",
+              "en": "What a company Miguel has built!"
+            },
+            {
+              "es": "¡==Los discursos que== da el presidente! No puedo creer lo aburridos que son.",
+              "en": "The speeches the president gives! I can't believe how boring they are."
+            },
+            {
+              "es": "¡==Las penurias que== pasamos tu abuelo y yo!",
+              "en": "The hardships your grandpa and I went through!"
+            },
+            {
+              "es": "¡==La lata que== me das!",
+              "en": "What a pain you are!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Lo frío que hace!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡El frío que hace!"
+                }
+              ],
+              "nota": "**Frío** here is a noun: **el**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡El cosas que dice!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Las cosas que dice!"
+                }
+              ],
+              "nota": "Agreement."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¡la de vino que...!",
+              "texto": "[[7934|la de + noun + que]]."
+            },
+            {
+              "forma": "¡lo bien que baila!",
+              "texto": "[[7089|lo + adjective + que]]."
+            },
+            {
+              "forma": "¡qué frío!",
+              "texto": "[[6137|qué exclamations]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Exclaim: _It's so hot!_",
+              "r": "¡El calor que hace!",
+              "nota": "el + noun + que."
+            },
+            {
+              "p": "Exclaim: _The things you say!_",
+              "r": "¡Las cosas que dices!",
+              "nota": "las cosas."
+            },
+            {
+              "p": "Exclaim: _What a house they have!_",
+              "r": "¡La casa que tienen!",
+              "nota": "la casa."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6137
+    ],
+    "confunde": [
+      7934
+    ],
+    "sigue": [
+      7934
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7933",
+      "kwiziq": true
+    }
+  ]
+}

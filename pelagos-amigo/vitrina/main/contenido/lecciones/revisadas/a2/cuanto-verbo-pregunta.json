@@ -1,0 +1,260 @@
+{
+  "tema": 9835,
+  "slug": "cuanto-verbo-pregunta",
+  "titulo": "Cuánto + verb: how much",
+  "subtitulo": "«¿Cuánto cuesta?» «¿Cuánto mides?»",
+  "foto": "t06.jpg",
+  "regla": "Right before a verb, ¿cuánto…? means how much and never changes: ¿cuánto cuesta?, ¿cuánto cuestan?, ¿cuánto pesas? Only when it stands for a noun already mentioned does it agree: ¿cuántas quieres?",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "When **cuánto** goes straight before a verb, it asks _how much_ about the action: price, weight, height, time, amount. Here it's an adverb, so it **doesn't change**: always **cuánto**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "¿Cuánto",
+            "+",
+            "verb…?"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The verb agrees with its subject, but **cuánto** stays the same: **¿Cuánto cuesta la tabla? ¿Cuánto cuestan las tablas?**"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Spanish",
+            "English"
+          ],
+          "filas": [
+            [
+              "¿Cuánto cuesta?",
+              "How much is it?"
+            ],
+            [
+              "¿Cuánto es?",
+              "How much is it? (the total)"
+            ],
+            [
+              "¿Cuánto mides?",
+              "How tall are you?"
+            ],
+            [
+              "¿Cuánto pesas?",
+              "How much do you weigh?"
+            ],
+            [
+              "¿Cuánto ganas?",
+              "How much do you earn?"
+            ],
+            [
+              "¿Cuánto falta?",
+              "How much longer? / How far is it?"
+            ],
+            [
+              "¿Cuánto tardas?",
+              "How long does it take you?"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "But if **cuánto** replaces a noun you already mentioned, it agrees with it: _—Quiero tortillas. —¿**Cuántas** quieres?_"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **cuánto** + verb is frozen. **Cuánto** + noun is a mirror."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿==Cuánto== cuesta una clase de surf?",
+              "en": "How much is a surf lesson?"
+            },
+            {
+              "es": "¿==Cuánto== cuestan los jitomates?",
+              "en": "How much are the tomatoes?"
+            },
+            {
+              "es": "¿==Cuánto== mides?",
+              "en": "How tall are you?"
+            },
+            {
+              "es": "¿==Cuánto== pesas ahora?",
+              "en": "How much do you weigh now?"
+            },
+            {
+              "es": "¿==Cuánto== falta para llegar a Ensenada?",
+              "en": "How much longer until we get to Ensenada?"
+            },
+            {
+              "es": "¿==Cuánto== te debo?",
+              "en": "How much do I owe you?"
+            },
+            {
+              "es": "¿==Cuánto== duermes cada noche?",
+              "en": "How much do you sleep each night?"
+            },
+            {
+              "es": "No sé ==cuánto== gana mi hermano.",
+              "en": "I don't know how much my brother earns."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Cuántos cuestan los tacos?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cuánto cuestan los tacos?"
+                }
+              ],
+              "nota": "Before a verb: always **cuánto**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Cuánta pesa la mochila?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cuánto pesa la mochila?"
+                }
+              ],
+              "nota": "It doesn't copy the subject."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Cómo mucho cuesta?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cuánto cuesta?"
+                }
+              ],
+              "nota": "_How much_ is one word: **cuánto**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Cuánto alto eres?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cuánto mides?"
+                }
+              ],
+              "nota": "For height, use **medir**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¿cuántas olas?",
+              "texto": "Before a noun it agrees: [[7068|cuánto + noun]]."
+            },
+            {
+              "forma": "no sé cuánto",
+              "texto": "[[8703|Cuánto in questions, exclamations and indirect questions]]."
+            },
+            {
+              "forma": "¡cuánto llueve!",
+              "texto": "[[5081|¡Cuánto + verb! in exclamations]]."
+            },
+            {
+              "forma": "¿qué tan alto?",
+              "texto": "[[9494|¿Qué tan + adjective?]]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _How much are the avocados?_",
+              "r": "¿Cuánto cuestan los aguacates?",
+              "nota": "**Cuánto** doesn't change."
+            },
+            {
+              "p": "In Spanish, with **cuánto** + **medir**: _How tall is your brother?_",
+              "r": "¿Cuánto mide tu hermano?",
+              "nota": "medir"
+            },
+            {
+              "p": "Fix it: _¿Cuántas cuestan las clases?_",
+              "r": "¿Cuánto cuestan las clases?",
+              "nota": "Frozen before a verb."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7068
+    ],
+    "confunde": [
+      9494
+    ],
+    "sigue": [
+      8703,
+      5081
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9835",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "tema": 9188,
+  "slug": "tampoco",
+  "titulo": "Using tampoco for either / neither",
+  "subtitulo": "Yo tampoco: the negative partner of también.",
+  "foto": "t10.jpg",
+  "regla": "Tampoco = either / neither. Before the verb it goes alone (tampoco viene); after the verb, it needs no before the verb (no viene tampoco).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say _either_ or _neither_ in a negative sentence, use **tampoco**. It's the negative partner of **también** (_too, also_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "There are two patterns:"
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "subject",
+            "**tampoco**",
+            "affirmative verb"
+          ]
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "subject",
+            "**no**",
+            "verb",
+            "**tampoco**"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "When **tampoco** goes **before** the verb, don't add **no**. When it goes **after** the verb, **no** goes before the verb (a double negative, which is correct in Spanish)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In the second pattern, **tampoco** can go anywhere after the verb; the meaning doesn't change: **no viene tampoco a la junta**, **no viene a la junta tampoco**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "On its own, as a short answer: **yo tampoco**, **a mí tampoco** (see [[7681|yo también / yo tampoco]])."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **tampoco** is a **no** in disguise. If it walks in first, no other **no** is allowed in the room."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Beto no viene a la junta y Carolina ==tampoco== viene.",
+              "en": "Beto isn't coming to the meeting, and neither is Carolina."
+            },
+            {
+              "es": "Beto no viene a la junta y Carolina no viene ==tampoco==.",
+              "en": "Beto isn't coming to the meeting, and Carolina isn't either."
+            },
+            {
+              "es": "Carolina no viene ==tampoco== a la junta.",
+              "en": "Carolina isn't coming to the meeting either."
+            },
+            {
+              "es": "—No me gusta el viento. —A mí ==tampoco==.",
+              "en": "\"I don't like the wind.\" \"Me neither.\""
+            },
+            {
+              "es": "Holden ==tampoco== sabía nada.",
+              "en": "Holden didn't know anything either."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Carolina tampoco no viene."
+                },
+                {
+                  "v": "bien",
+                  "t": "Carolina tampoco viene."
+                },
+                {
+                  "v": "bien",
+                  "t": "Carolina no viene tampoco."
+                }
+              ],
+              "nota": "Before the verb, **tampoco** goes alone."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "—No tengo hambre. —Yo también."
+                },
+                {
+                  "v": "bien",
+                  "t": "—No tengo hambre. —Yo tampoco."
+                }
+              ],
+              "nota": "After a negative, agree with **tampoco**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "yo tampoco, a mí tampoco",
+              "texto": "Short answers: [[7681|yo también / yo tampoco]]."
+            },
+            {
+              "forma": "no … nunca",
+              "texto": "The same double negation: [[5136|nunca in negative sentences]]."
+            },
+            {
+              "forma": "yo sí, yo no",
+              "texto": "Contrasting answers: [[7731|yo sí / yo no]]."
+            },
+            {
+              "forma": "no … nadie",
+              "texto": "More negatives: [[6075|nadie]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I don't surf either._ (with **tampoco** first)",
+              "r": "Yo tampoco surfeo.",
+              "nota": "No **no** before the verb."
+            },
+            {
+              "p": "Same idea, with **tampoco** at the end.",
+              "r": "Yo no surfeo tampoco.",
+              "nota": "**No** before the verb."
+            },
+            {
+              "p": "—No me gustan los mariscos. —___",
+              "r": "A mí tampoco.",
+              "nota": "Agree with a negative."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5091,
+      5136,
+      7681
+    ],
+    "confunde": [
+      7681
+    ],
+    "sigue": [
+      7731,
+      6075
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9188",
+      "kwiziq": true
+    }
+  ]
+}

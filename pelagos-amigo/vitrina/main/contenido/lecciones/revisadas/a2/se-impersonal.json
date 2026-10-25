@@ -1,0 +1,230 @@
+{
+  "tema": 5132,
+  "slug": "se-impersonal",
+  "titulo": "Impersonal se = one, you, people",
+  "subtitulo": "Aquí se come bien.",
+  "foto": "t03.jpg",
+  "regla": "To talk about people in general (English _one_, _you_, _people_) or to give instructions, use **se** + the verb in the 3rd person singular: aquí se come bien, ¿cómo se dice…? If a plural noun follows, the verb goes plural: se venden casas.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "English often uses a general _you_, _one_ or _people_: _You eat well here_. Spanish uses **se** + the verb in the **él / ella** form."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "se",
+            "+",
+            "verb in the 3rd person singular"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "No one in particular is named: **se** stands for anyone."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It's perfect for **instructions** and **recipes**: **Se pica** la cebolla y **se fríe** en aceite."
+        },
+        {
+          "tipo": "texto",
+          "texto": "If a **plural** noun follows the verb, the verb goes **plural**: **se venden** tacos, **se rentan** tablas. (That's the passive se.)"
+        },
+        {
+          "tipo": "texto",
+          "texto": "A general **tú** is also heard (**aquí comes bien**), but for rules, signs and instructions **se** is the norm: **No se puede fumar aquí.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **se** is the faceless crowd: nobody in particular, everybody in general."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Aquí ==se come== muy bien.",
+              "en": "You eat really well here."
+            },
+            {
+              "es": "¿Cómo ==se dice== _wave_ en español?",
+              "en": "How do you say \"wave\" in Spanish?"
+            },
+            {
+              "es": "En el gimnasio no ==se entra== con zapatos.",
+              "en": "You don't go into the gym with shoes on."
+            },
+            {
+              "es": "Primero ==se lava== el arroz y luego ==se fríe== un poco.",
+              "en": "First you wash the rice and then you fry it a little."
+            },
+            {
+              "es": "Por esta calle ==se llega== a la playa.",
+              "en": "You get to the beach along this street."
+            },
+            {
+              "es": "No ==se puede== estacionar aquí.",
+              "en": "You can't park here."
+            },
+            {
+              "es": "En Tijuana ==se vive== bien.",
+              "en": "People live well in Tijuana."
+            },
+            {
+              "es": "==Se venden== plantas de jitomate.",
+              "en": "Tomato plants for sale."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Cómo dice _wave_ en español?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cómo se dice _wave_ en español?"
+                }
+              ],
+              "nota": "Without **se** it means _how does he / she say_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Aquí se comen bien."
+                },
+                {
+                  "v": "bien",
+                  "t": "Aquí se come bien."
+                }
+              ],
+              "nota": "No plural noun: singular verb."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Se vende tablas de surf."
+                },
+                {
+                  "v": "bien",
+                  "t": "Se venden tablas de surf."
+                }
+              ],
+              "nota": "Plural noun: plural verb."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No se puedes fumar aquí."
+                },
+                {
+                  "v": "bien",
+                  "t": "No se puede fumar aquí."
+                }
+              ],
+              "nota": "**Se** takes the él / ella form, never the tú form."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "se venden casas",
+              "texto": "With a plural noun: [[6089|the passive se]]."
+            },
+            {
+              "forma": "se debe, se puede",
+              "texto": "Must and can, impersonally: [[6933|se debe / se puede]]."
+            },
+            {
+              "forma": "dicen que…",
+              "texto": "Another way to talk about people in general: [[6998|the impersonal ellos form]]."
+            },
+            {
+              "forma": "se levanta",
+              "texto": "A different se: [[5085|reflexive verbs]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _How do you say \"surfboard\" in Spanish?_",
+              "r": "¿Cómo se dice _surfboard_ en español?",
+              "nota": "Se dice."
+            },
+            {
+              "p": "In Spanish (a rule for everyone): _You can't swim here._",
+              "r": "No se puede nadar aquí.",
+              "nota": "Se puede."
+            },
+            {
+              "p": "Fix it: _Se renta cuartos._",
+              "r": "Se rentan cuartos.",
+              "nota": "Plural noun, plural verb."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      5085
+    ],
+    "sigue": [
+      6089,
+      6933,
+      6998
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5132",
+      "kwiziq": true
+    }
+  ]
+}

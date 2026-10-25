@@ -1,0 +1,204 @@
+{
+  "tema": 6604,
+  "slug": "unos-unas",
+  "titulo": "Unos, unas: some, a few",
+  "subtitulo": "Unos tacos, unas plantas.",
+  "foto": "t10.jpg",
+  "regla": "Unos and unas are the plural of un and una: unos + masculine plural, unas + feminine plural. They mean some or a few with things you can count.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Un** → **unos**, **una** → **unas**. They mean _some_ or _a few_."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "Masculine",
+            "Feminine"
+          ],
+          "filas": [
+            [
+              "Singular",
+              "un amigo",
+              "una amiga"
+            ],
+            [
+              "Plural",
+              "unos amigos",
+              "unas amigas"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The noun must be **plural**, and **unos/unas** match its gender. A mixed group uses **unos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Only with things you can count. For _some water_, _some coffee_: just **agua**, **café**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Tengo ==unos== amigos en Ensenada.",
+              "en": "I have some friends in Ensenada."
+            },
+            {
+              "es": "Compré ==unas== plantas para la azotea.",
+              "en": "I bought some plants for the roof."
+            },
+            {
+              "es": "Vamos a comer ==unos== tacos.",
+              "en": "Let's go eat some tacos."
+            },
+            {
+              "es": "Hay ==unas== olas buenas en Playas.",
+              "en": "There are some good waves at Playas."
+            },
+            {
+              "es": "Necesito ==unos== lentes nuevos.",
+              "en": "I need a new pair of glasses."
+            },
+            {
+              "es": "==Unas== amigas vienen a la casa hoy.",
+              "en": "A few (female) friends are coming over today."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "unos plantas"
+                },
+                {
+                  "v": "bien",
+                  "t": "unas plantas"
+                }
+              ],
+              "nota": "**Planta** is feminine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tengo un amigos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tengo unos amigos."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero unos agua."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero agua."
+                }
+              ],
+              "nota": "Not with things you can't count."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "un, una",
+              "texto": "The singular: [[5104|un / una]]."
+            },
+            {
+              "forma": "los, las",
+              "texto": "_The_ in the plural: [[5101|los / las]]."
+            },
+            {
+              "forma": "unos veinte",
+              "texto": "With numbers it means _about_: [[6671|unos + number]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _some (female) friends_",
+              "r": "unas amigas",
+              "nota": "Feminine plural."
+            },
+            {
+              "p": "Fill in (some): _Necesito ___ tijeras._",
+              "r": "Necesito unas tijeras.",
+              "nota": "Tijeras is feminine."
+            },
+            {
+              "p": "Fix it: _Vamos a comer unas tacos._",
+              "r": "Vamos a comer unos tacos.",
+              "nota": "Taco is masculine."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5104
+    ],
+    "confunde": [
+      5101
+    ],
+    "sigue": [
+      6671
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6604",
+      "kwiziq": true
+    }
+  ]
+}

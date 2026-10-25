@@ -1,0 +1,236 @@
+{
+  "tema": 6173,
+  "slug": "pasiva-ser",
+  "titulo": "The passive voice with ser + participle (+ por)",
+  "subtitulo": "Fue construido por los mayas.",
+  "foto": "t04.jpg",
+  "regla": "Passive voice: ser (any tense) + participle agreeing with the subject (+ por + agent): Los ladrones fueron arrestados por la policía. It's much less common than in English; Spanish often prefers the active or the passive se.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "ser (any tense)",
+            "+ participle",
+            "(+ por + agent)"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The **participle agrees** with the subject: **la casa fue vendida**, **los ladrones fueron arrestados**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Use it when the action matters more than who did it (agent omitted), or to highlight the agent with **por**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It's **much less common** than in English, mostly in news, history and formal writing. In conversation, Spanish prefers the active voice (**la policía arrestó a los ladrones**) or the passive **se** (**se vendió la casa**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **ser** + participle + **por**: the classic passive, best for headlines and history books."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "El incendio ==será apagado== muy pronto.",
+              "en": "The fire will be put out very soon."
+            },
+            {
+              "es": "Los ladrones ==fueron arrestados==.",
+              "en": "The thieves were arrested."
+            },
+            {
+              "es": "Las faltas ==son anotadas por== la secretaria.",
+              "en": "Absences are recorded by the secretary."
+            },
+            {
+              "es": "El señor López ==era muy apreciado por== todos los vecinos.",
+              "en": "Mr. López was well liked by all the neighbors."
+            },
+            {
+              "es": "_Pedro Páramo_ ==fue escrito por== Juan Rulfo.",
+              "en": "Pedro Páramo was written by Juan Rulfo."
+            },
+            {
+              "es": "Las pruebas ==serán analizadas por== la policía.",
+              "en": "The evidence will be analyzed by the police."
+            },
+            {
+              "es": "Chichén Itzá ==fue construida por== los mayas.",
+              "en": "Chichén Itzá was built by the Maya."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "comparar",
+      "titulo": "Other options",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "pasiva con ser",
+                  "t": "La casa fue vendida."
+                },
+                {
+                  "v": "se",
+                  "t": "Se vendió la casa."
+                }
+              ],
+              "nota": "**Se** sounds more natural in conversation."
+            },
+            {
+              "filas": [
+                {
+                  "v": "pasiva",
+                  "t": "Los ladrones fueron arrestados por la policía."
+                },
+                {
+                  "v": "activa",
+                  "t": "La policía arrestó a los ladrones."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Las cartas fueron escrito por ella."
+                },
+                {
+                  "v": "bien",
+                  "t": "Las cartas fueron escritas por ella."
+                }
+              ],
+              "nota": "Agreement."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Fue construido para los mayas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Fue construido por los mayas."
+                }
+              ],
+              "nota": "Agent: **por**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La puerta está abierta por el portero."
+                },
+                {
+                  "v": "bien",
+                  "t": "La puerta fue abierta por el portero."
+                }
+              ],
+              "nota": "Action: **ser**. **Estar** = resulting state."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "por = by",
+              "texto": "[[7273|por for by]]."
+            },
+            {
+              "forma": "se venden",
+              "texto": "[[6089|passive se]]."
+            },
+            {
+              "forma": "dicen que",
+              "texto": "[[6998|impersonal ellos]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Passive: _The rules were changed._",
+              "r": "Las reglas fueron cambiadas.",
+              "nota": "Agreement."
+            },
+            {
+              "p": "Passive with agent: _The song was sung by Natalia._",
+              "r": "La canción fue cantada por Natalia.",
+              "nota": "por + agent."
+            },
+            {
+              "p": "More natural with se: _The house was sold._",
+              "r": "Se vendió la casa.",
+              "nota": "Passive se."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7273,
+      7000
+    ],
+    "confunde": [
+      6089
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6173",
+      "kwiziq": true
+    }
+  ]
+}

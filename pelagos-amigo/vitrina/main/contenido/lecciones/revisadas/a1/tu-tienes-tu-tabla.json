@@ -1,0 +1,186 @@
+{
+  "tema": 6731,
+  "slug": "tu-tienes-tu-tabla",
+  "titulo": "Tú vs tu (you vs your)",
+  "subtitulo": "Tú tienes tu tabla.",
+  "foto": "t09.jpg",
+  "regla": "Tú with an accent is the pronoun you. Tu without an accent is your and always goes before a noun; its plural is tus.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Tú** (accent) = **you**, the person doing the action: **tú eres**, **tú tienes**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Tu** (no accent) = **your**, always before a noun: **tu casa**. Plural noun: **tus**: **tus amigos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if a noun follows, no accent. If it's _you_, put the hat on: **tú**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Tú== eres de Tijuana, ¿verdad?",
+              "en": "You're from Tijuana, right?"
+            },
+            {
+              "es": "¿Dónde está ==tu== tabla?",
+              "en": "Where's your board?"
+            },
+            {
+              "es": "¿==Tú== vienes con ==tu== novia?",
+              "en": "Are you coming with your girlfriend?"
+            },
+            {
+              "es": "==Tus== hermanas surfean muy bien.",
+              "en": "Your sisters surf really well."
+            },
+            {
+              "es": "==Tu== casa tiene un huerto muy bonito.",
+              "en": "Your house has a really nice garden."
+            },
+            {
+              "es": "Yo voy a la playa. ¿Y ==tú==?",
+              "en": "I'm going to the beach. And you?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Tu eres de aquí?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Tú eres de aquí?"
+                }
+              ],
+              "nota": "_You_ = **tú**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me gusta tú carro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me gusta tu carro."
+                }
+              ],
+              "nota": "_Your_ = **tu**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Dónde están tu llaves?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Dónde están tus llaves?"
+                }
+              ],
+              "nota": "Plural noun: **tus**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "mi, tu, su",
+              "texto": "All of them: [[6012|possessive adjectives]]."
+            },
+            {
+              "forma": "tú / usted",
+              "texto": "Informal or formal: [[7230|tú vs usted]]."
+            },
+            {
+              "forma": "él / el",
+              "texto": "Same trick: [[10756|él vs el]], [[9111|mi vs mí]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish, with the pronoun: _You have your keys._",
+              "r": "Tú tienes tus llaves.",
+              "nota": "tú + tus."
+            },
+            {
+              "p": "Fix it: _¿Tu quieres un café?_",
+              "r": "¿Tú quieres un café?",
+              "nota": "Pronoun: tú."
+            },
+            {
+              "p": "Fix it: _Tú mamá es muy amable._",
+              "r": "Tu mamá es muy amable.",
+              "nota": "Your: tu."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6012
+    ],
+    "confunde": [
+      10756,
+      9111
+    ],
+    "sigue": [
+      7230
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6731",
+      "kwiziq": true
+    }
+  ]
+}

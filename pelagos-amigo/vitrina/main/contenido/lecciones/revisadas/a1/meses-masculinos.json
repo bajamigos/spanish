@@ -1,0 +1,214 @@
+{
+  "tema": 6750,
+  "slug": "meses-masculinos",
+  "titulo": "Months are masculine",
+  "subtitulo": "Fue un enero muy frío.",
+  "foto": "t02.jpg",
+  "regla": "Months are masculine and written in lowercase. They usually go without an article (en mayo); when one is needed, it's masculine: un enero frío, el diciembre pasado.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Months are **masculine**: **un enero frío**, **el diciembre pasado**. Adjectives agree in the masculine."
+        },
+        {
+          "tipo": "texto",
+          "texto": "They're written in **lowercase**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Usually **no article**: **en mayo**, **hasta agosto**. Use **el / un** only with a description: **un marzo lluvioso**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "1–4",
+            "5–8",
+            "9–12"
+          ],
+          "filas": [
+            [
+              "enero",
+              "mayo",
+              "septiembre"
+            ],
+            [
+              "febrero",
+              "junio",
+              "octubre"
+            ],
+            [
+              "marzo",
+              "julio",
+              "noviembre"
+            ],
+            [
+              "abril",
+              "agosto",
+              "diciembre"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Junio== es muy ==nublado== en Tijuana.",
+              "en": "June is very cloudy in Tijuana."
+            },
+            {
+              "es": "Fue ==un octubre== muy ==caluroso==.",
+              "en": "It was a very hot October."
+            },
+            {
+              "es": "Mi cumpleaños es en ==mayo==.",
+              "en": "My birthday is in May."
+            },
+            {
+              "es": "==El diciembre pasado== fuimos a Oaxaca.",
+              "en": "Last December we went to Oaxaca."
+            },
+            {
+              "es": "==Febrero== es ==corto==: tiene veintiocho días.",
+              "en": "February is short: it has twenty-eight days."
+            },
+            {
+              "es": "==Agosto== es ==perfecto== para surfear.",
+              "en": "August is perfect for surfing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Fue una enero muy fría."
+                },
+                {
+                  "v": "bien",
+                  "t": "Fue un enero muy frío."
+                }
+              ],
+              "nota": "Masculine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mi cumpleaños es en Mayo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mi cumpleaños es en mayo."
+                }
+              ],
+              "nota": "Lowercase."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mi cumpleaños es en el mayo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mi cumpleaños es en mayo."
+                }
+              ],
+              "nota": "No article."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el lunes",
+              "texto": "Days work the same way: [[6751|days of the week are masculine]]."
+            },
+            {
+              "forma": "el 5 de mayo",
+              "texto": "Saying the date: [[6746|expressing dates]]."
+            },
+            {
+              "forma": "frío, fría",
+              "texto": "Agreement: [[6013|masculine and feminine adjectives]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _in April_",
+              "r": "en abril",
+              "nota": "Lowercase, no article."
+            },
+            {
+              "p": "Fill in (lluvioso / lluviosa): _Fue un marzo muy ___._",
+              "r": "Fue un marzo muy lluvioso.",
+              "nota": "Masculine."
+            },
+            {
+              "p": "Fix it: _Mi cumpleaños es en Julio._",
+              "r": "Mi cumpleaños es en julio.",
+              "nota": "Lowercase."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6013
+    ],
+    "confunde": [],
+    "sigue": [
+      6751,
+      6746
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6750",
+      "kwiziq": true
+    }
+  ]
+}

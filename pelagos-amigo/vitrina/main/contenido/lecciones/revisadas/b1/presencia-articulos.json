@@ -1,0 +1,217 @@
+{
+  "tema": 7181,
+  "slug": "presencia-articulos",
+  "titulo": "When Spanish needs the definite article el, la, los, las",
+  "subtitulo": "El café mancha los dientes: Spanish uses the article where English doesn't.",
+  "foto": "t09.jpg",
+  "regla": "Nouns used in a general sense as the subject need the article in Spanish: el café, la salud, los perros. English leaves it out.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Spanish and English don't use articles the same way. A very common mistake is leaving out **el, la, los, las** at the start of a sentence."
+        },
+        {
+          "tipo": "texto",
+          "texto": "When a noun is the **subject** and you're talking about it **in general** (all coffee, health in general, whales as a species), Spanish **needs the article**; English doesn't."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "English",
+            "Spanish"
+          ],
+          "filas": [
+            [
+              "Coffee stains your teeth.",
+              "**El** café mancha los dientes."
+            ],
+            [
+              "Whales are mammals.",
+              "**Las** ballenas son mamíferos."
+            ],
+            [
+              "Health is more important than money.",
+              "**La** salud es más importante que el dinero."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It also happens with abstract nouns (**la generosidad**, **el amor**) and with general likes: **me gusta el café**, **odio el tráfico**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if English says it about everything of that kind, Spanish puts **el** or **la** in front."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==El café== cambia el color de los dientes.",
+              "en": "Coffee changes the color of your teeth."
+            },
+            {
+              "es": "==La cafeína== a veces provoca mareos.",
+              "en": "Caffeine sometimes causes dizziness."
+            },
+            {
+              "es": "==Los políticos== están discutiendo la reforma.",
+              "en": "Politicians are discussing the reform."
+            },
+            {
+              "es": "==Los latinoamericanos== tienen una cultura muy rica.",
+              "en": "Latin Americans have a very rich culture."
+            },
+            {
+              "es": "==Las ballenas== son mamíferos.",
+              "en": "Whales are mammals."
+            },
+            {
+              "es": "==La generosidad== es la mejor virtud.",
+              "en": "Generosity is the best virtue."
+            },
+            {
+              "es": "Me encanta ==el mar== en invierno.",
+              "en": "I love the ocean in winter."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Café cambia el color de los dientes."
+                },
+                {
+                  "v": "bien",
+                  "t": "El café cambia el color de los dientes."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Perros son leales."
+                },
+                {
+                  "v": "bien",
+                  "t": "Los perros son leales."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me gusta surf."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me gusta el surf."
+                }
+              ],
+              "nota": "General likes take the article."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el señor Ramírez",
+              "texto": "Articles with titles: [[8431|titles]]."
+            },
+            {
+              "forma": "me duele la cabeza",
+              "texto": "Articles with body parts: [[7053|body parts and clothing]]."
+            },
+            {
+              "forma": "el lunes",
+              "texto": "Days of the week: [[10481|days for events]]."
+            },
+            {
+              "forma": "lo bueno",
+              "texto": "The neuter article: [[6979|lo + adjective]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Water is essential._",
+              "r": "El agua es esencial.",
+              "nota": "General subject: article."
+            },
+            {
+              "p": "In Spanish: _Dogs need exercise._",
+              "r": "Los perros necesitan ejercicio.",
+              "nota": "los."
+            },
+            {
+              "p": "In Spanish: _I love tacos._",
+              "r": "Me encantan los tacos.",
+              "nota": "General likes: article."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7053
+    ],
+    "confunde": [
+      6979
+    ],
+    "sigue": [
+      8431,
+      10481
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7181",
+      "kwiziq": true
+    }
+  ]
+}

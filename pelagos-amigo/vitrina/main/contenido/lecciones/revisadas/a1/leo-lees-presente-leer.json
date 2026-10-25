@@ -1,0 +1,213 @@
+{
+  "tema": 5589,
+  "slug": "leo-lees-presente-leer",
+  "titulo": "Leer in the present",
+  "subtitulo": "Leo las noticias en el celular.",
+  "foto": "t08.jpg",
+  "regla": "Leer (to read) is regular in the present: le- + -o, -es, -e, -emos, -en gives leo, lees, lee, leemos, leen. Every form except leo has two e's in a row.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Leer** (_to read_) is a **regular -er verb** in the present."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The stem **le-** ends in e, so the -er endings add a second e: **lees, lee, leemos, leen**. Only **leo** has one."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "leer"
+          ],
+          "filas": [
+            [
+              "yo",
+              "leo"
+            ],
+            [
+              "tú",
+              "lees"
+            ],
+            [
+              "él, ella, usted",
+              "lee"
+            ],
+            [
+              "nosotros",
+              "leemos"
+            ],
+            [
+              "ellos, ustedes",
+              "leen"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Creer** (_to believe_) works the same way: creo, crees, cree, creemos, creen."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Leo== las noticias en el celular.",
+              "en": "I read the news on my phone."
+            },
+            {
+              "es": "¿==Lees== novelas de ciencia ficción?",
+              "en": "Do you read science fiction novels?"
+            },
+            {
+              "es": "Mi hija ==lee== muy rápido.",
+              "en": "My daughter reads very fast."
+            },
+            {
+              "es": "==Leemos== el menú antes de pedir.",
+              "en": "We read the menu before ordering."
+            },
+            {
+              "es": "Los alumnos ==leen== en voz alta.",
+              "en": "The students read out loud."
+            },
+            {
+              "es": "¿==Crees== que va a llover?",
+              "en": "Do you think it's going to rain?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo leeo mucho."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo leo mucho."
+                }
+              ],
+              "nota": "Only one e in leo."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella le un libro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella lee un libro."
+                }
+              ],
+              "nota": "**le** is a pronoun; the verb is **lee**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros lemos el periódico."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros leemos el periódico."
+                }
+              ],
+              "nota": "Two e's."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "como, bebo",
+              "texto": "The base pattern: [[5540|regular -er verbs]]."
+            },
+            {
+              "forma": "leí, leyó",
+              "texto": "Next, the past: [[5258|leer in the preterite]]."
+            },
+            {
+              "forma": "leyendo",
+              "texto": "The gerund takes a y: [[6501|irregular gerunds]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I read before sleeping._",
+              "r": "Leo antes de dormir.",
+              "nota": "yo → leo."
+            },
+            {
+              "p": "Fix it: _Mi papá le el periódico._",
+              "r": "Mi papá lee el periódico.",
+              "nota": "Two e's."
+            },
+            {
+              "p": "In Spanish: _They read a lot._",
+              "r": "Leen mucho.",
+              "nota": "ellos → leen."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5540
+    ],
+    "confunde": [],
+    "sigue": [
+      5258,
+      6501
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5589",
+      "kwiziq": true
+    }
+  ]
+}

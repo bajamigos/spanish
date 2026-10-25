@@ -1,0 +1,212 @@
+{
+  "tema": 6674,
+  "slug": "la-calle-el-puente",
+  "titulo": "Nouns ending in -e",
+  "subtitulo": "El puente, la calle, la gente.",
+  "foto": "t09.jpg",
+  "regla": "Nouns ending in -e can be masculine (el puente, el nombre) or feminine (la calle, la gente), so learn the article with the noun. Plural: add -s. La gente is singular: la gente es.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Nouns ending in **-e** have no fixed gender: **el parque, el puente, el nombre** but **la calle, la noche, la gente**. Learn each one with its article."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Plural: just add **-s**: **los puentes, las calles**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**La gente** (_people_) is **singular** and feminine: **la gente es amable**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Masculine",
+            "Feminine"
+          ],
+          "filas": [
+            [
+              "el parque",
+              "la calle"
+            ],
+            [
+              "el puente",
+              "la noche"
+            ],
+            [
+              "el nombre",
+              "la clase"
+            ],
+            [
+              "el viaje",
+              "la llave"
+            ],
+            [
+              "el diente",
+              "la leche"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿Vamos al ==parque== en la ==tarde==?",
+              "en": "Shall we go to the park in the afternoon?"
+            },
+            {
+              "es": "Esta ==calle== no tiene ==nombre==.",
+              "en": "This street has no name."
+            },
+            {
+              "es": "Las ==noches== en Tijuana son frescas.",
+              "en": "Nights in Tijuana are cool."
+            },
+            {
+              "es": "No encuentro las ==llaves== del carro.",
+              "en": "I can't find the car keys."
+            },
+            {
+              "es": "==La gente== de aquí es muy amable.",
+              "en": "People here are very friendly."
+            },
+            {
+              "es": "El ==viaje== a Ensenada es corto.",
+              "en": "The trip to Ensenada is short."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "el calle"
+                },
+                {
+                  "v": "bien",
+                  "t": "la calle"
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "la nombre"
+                },
+                {
+                  "v": "bien",
+                  "t": "el nombre"
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La gente son muy amables."
+                },
+                {
+                  "v": "bien",
+                  "t": "La gente es muy amable."
+                }
+              ],
+              "nota": "**Gente** is singular."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el hijo, la hija",
+              "texto": "Nouns in -o and -a: [[6150|regular masculine and feminine nouns]]."
+            },
+            {
+              "forma": "la flor, las flores",
+              "texto": "Nouns in a consonant: [[6749|nouns ending in a consonant]]."
+            },
+            {
+              "forma": "grande, verde",
+              "texto": "Adjectives in -e: [[6015|adjectives in -e and -a]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Plural of _la noche_?",
+              "r": "las noches",
+              "nota": "Add -s."
+            },
+            {
+              "p": "Fill in (the): ___ calle",
+              "r": "la calle",
+              "nota": "Feminine."
+            },
+            {
+              "p": "Fix it: _La gente están contentos._",
+              "r": "La gente está contenta.",
+              "nota": "Singular, feminine."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6150
+    ],
+    "confunde": [
+      6749
+    ],
+    "sigue": [
+      6015
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6674",
+      "kwiziq": true
+    }
+  ]
+}

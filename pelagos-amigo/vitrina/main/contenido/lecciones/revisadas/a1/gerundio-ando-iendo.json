@@ -1,0 +1,209 @@
+{
+  "tema": 6500,
+  "slug": "gerundio-ando-iendo",
+  "titulo": "Regular gerunds: -ando, -iendo",
+  "subtitulo": "«Hablando, comiendo, viviendo.»",
+  "foto": "t06.jpg",
+  "regla": "To form the gerund (the -ing form), -ar verbs drop -ar and add -ando; -er and -ir verbs drop -er/-ir and add -iendo: hablando, comiendo, viviendo. The gerund never changes for gender or number.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Take off **-ar**, **-er** or **-ir** and add the ending."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Verb",
+            "Ending",
+            "Gerund"
+          ],
+          "filas": [
+            [
+              "habl**ar**",
+              "**-ando**",
+              "habl**ando**"
+            ],
+            [
+              "com**er**",
+              "**-iendo**",
+              "com**iendo**"
+            ],
+            [
+              "viv**ir**",
+              "**-iendo**",
+              "viv**iendo**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The gerund **never changes**: estoy comiendo, ella está comiendo, ellos están comiendo."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It mostly goes after **estar**: **estoy surfeando**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Estoy ==surfeando== en Playas.",
+              "en": "I'm surfing at Playas."
+            },
+            {
+              "es": "Mi mamá está ==cocinando==.",
+              "en": "My mom is cooking."
+            },
+            {
+              "es": "¿Qué estás ==haciendo==?",
+              "en": "What are you doing?"
+            },
+            {
+              "es": "Los niños están ==comiendo== tacos.",
+              "en": "The kids are eating tacos."
+            },
+            {
+              "es": "Estamos ==aprendiendo== jiu-jitsu.",
+              "en": "We're learning jiu-jitsu."
+            },
+            {
+              "es": "Ella está ==escribiendo== un correo.",
+              "en": "She's writing an email."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estoy comando."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estoy comiendo."
+                }
+              ],
+              "nota": "-er: -iendo."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estamos viviando aquí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estamos viviendo aquí."
+                }
+              ],
+              "nota": "-ir: -iendo."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nadando es divertido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nadar es divertido."
+                }
+              ],
+              "nota": "As a subject, use the infinitive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "estoy hablando",
+              "texto": "Use it: [[5092|estar + gerund]]."
+            },
+            {
+              "forma": "leyendo, durmiendo",
+              "texto": "Next: [[6501|irregular gerunds]]."
+            },
+            {
+              "forma": "nadar es bueno",
+              "texto": "-ing as a noun is the infinitive: [[7079|the infinitive as subject]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Gerund of _trabajar_?",
+              "r": "trabajando",
+              "nota": "-ar: -ando."
+            },
+            {
+              "p": "Gerund of _beber_?",
+              "r": "bebiendo",
+              "nota": "-er: -iendo."
+            },
+            {
+              "p": "Fix it: _Estoy escribando._",
+              "r": "Estoy escribiendo.",
+              "nota": "-ir: -iendo."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      7079
+    ],
+    "sigue": [
+      5092,
+      6501
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6500",
+      "kwiziq": true
+    }
+  ]
+}

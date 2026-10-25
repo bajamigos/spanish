@@ -1,0 +1,194 @@
+{
+  "tema": 9621,
+  "slug": "agitese-antes-de-usarse",
+  "titulo": "The passive pronominal imperative in instructions (Agítese antes de usarse)",
+  "subtitulo": "Agítese antes de usarse. Sírvase frío.",
+  "foto": "t09.jpg",
+  "regla": "Formal instructions on labels, recipes and notices use the present subjunctive + se attached: Agítese, Ábrase con cuidado, Sírvase frío, Consérvese en refrigeración. Plural when the thing is plural: Lávense las verduras.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "present subjunctive (usted form)",
+            "+ se"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "A **formal, impersonal** instruction: it's a passive with **se**, written like a command."
+        },
+        {
+          "tipo": "texto",
+          "texto": "You'll see it on **labels**, **medicine**, **recipes**, **signs**: **Consérvese en refrigeración**, **Manténgase fuera del alcance de los niños**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It agrees with the thing: singular **ábrase**, plural **lávense las verduras**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Adding **se** makes the word esdrújula (stress on the third-to-last syllable), so it needs a written accent: **agítese**, **sírvase**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the label is talking to nobody and to everybody."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Ábrase== con cuidado.",
+              "en": "Open carefully."
+            },
+            {
+              "es": "==Extiéndase== sobre la zona afectada.",
+              "en": "Spread over the affected area."
+            },
+            {
+              "es": "==Aplíquese== una hora antes.",
+              "en": "Apply one hour before."
+            },
+            {
+              "es": "==Sírvase== frío.",
+              "en": "Serve cold."
+            },
+            {
+              "es": "==Agítese== antes de usarse.",
+              "en": "Shake before use."
+            },
+            {
+              "es": "==Consérvese== en refrigeración.",
+              "en": "Keep refrigerated."
+            },
+            {
+              "es": "==Manténgase== fuera del alcance de los niños.",
+              "en": "Keep out of reach of children."
+            },
+            {
+              "es": "==Lávense== bien las verduras antes de cocinarlas.",
+              "en": "Wash the vegetables well before cooking."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Agitese"
+                },
+                {
+                  "v": "bien",
+                  "t": "Agítese"
+                }
+              ],
+              "nota": "Accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Lávese las verduras."
+                },
+                {
+                  "v": "bien",
+                  "t": "Lávense las verduras."
+                }
+              ],
+              "nota": "Plural thing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "no fumar",
+              "texto": "[[7258|infinitive for instructions]]."
+            },
+            {
+              "forma": "se venden",
+              "texto": "[[6089|passive se]]."
+            },
+            {
+              "forma": "siéntese",
+              "texto": "[[6961|usted imperative]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Label: _Keep in a cool place._ (mantener)",
+              "r": "Manténgase en un lugar fresco.",
+              "nota": "Subjunctive + se."
+            },
+            {
+              "p": "Label: _Serve hot._",
+              "r": "Sírvase caliente.",
+              "nota": "Accent."
+            },
+            {
+              "p": "Recipe: _Peel the potatoes._ (pelar)",
+              "r": "Pélense las papas.",
+              "nota": "Plural."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6961,
+      6089
+    ],
+    "confunde": [
+      7258
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9621",
+      "kwiziq": true
+    }
+  ]
+}

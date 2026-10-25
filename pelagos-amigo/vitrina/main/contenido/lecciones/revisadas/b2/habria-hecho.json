@@ -1,0 +1,240 @@
+{
+  "tema": 6992,
+  "slug": "habria-hecho",
+  "titulo": "Habría + participle = would have done",
+  "subtitulo": "Yo habría invitado a menos gente.",
+  "foto": "t06.jpg",
+  "regla": "Would have done = haber in the conditional (habría, habrías, habría, habríamos, habrían) + participle. Nothing goes between habría and the participle. In many sentences hubiera can replace habría, but not the other way around.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "habría / habrías / habría / habríamos / habrían",
+            "+ participle"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "English needs _would have_; Spanish just puts **haber** in the **conditional**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Nothing** goes between **habría** and the participle: no pronouns, no **no**, no subject."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In everyday Mexican Spanish you'll very often hear **hubiera** instead of **habría**: **yo hubiera invitado a menos gente**. Both are accepted in that slot."
+        },
+        {
+          "tipo": "texto",
+          "texto": "But **habría** can't replace **hubiera** where the subjunctive is required: **me alegró que te hubieran elegido**, never ~~que te habrían elegido~~."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **habría** + participle is a road not taken."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Yo ==habría invitado== a menos gente a la fiesta.",
+              "en": "I would have invited fewer people to the party."
+            },
+            {
+              "es": "Él no te ==habría querido== tanto como yo.",
+              "en": "He wouldn't have loved you as much as I do."
+            },
+            {
+              "es": "Dicen que ==habrían invertido== su dinero en otra cosa.",
+              "en": "They say they would have invested their money in something else."
+            },
+            {
+              "es": "¿Qué ==habrías hecho== tú en mi lugar?",
+              "en": "What would you have done in my place?"
+            },
+            {
+              "es": "Ustedes ==habrían sido== más felices en Querétaro.",
+              "en": "You would have been happier in Querétaro."
+            },
+            {
+              "es": "A Antonio le ==habría gustado== estudiar medicina.",
+              "en": "Antonio would have liked to study medicine."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hubiera",
+      "titulo": "Habría or hubiera?",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "Si hubieras llegado antes, te habría llevado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Si hubieras llegado antes, te hubiera llevado."
+                }
+              ],
+              "nota": "In the result clause, both work."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Si habrías llegado antes, ..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Si hubieras llegado antes, ..."
+                }
+              ],
+              "nota": "After **si**: only **hubiera**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Qué habrías tú hecho?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Qué habrías hecho tú?"
+                }
+              ],
+              "nota": "Nothing in between."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Él habría no venido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Él no habría venido."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me alegró que te habrían elegido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me alegró que te hubieran elegido."
+                }
+              ],
+              "nota": "Subjunctive needed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "habría hecho",
+              "texto": "Conjugation: [[5186|perfect conditional]], [[5114|irregular participles]]."
+            },
+            {
+              "forma": "podría haber",
+              "texto": "_Could have_: [[6470|poder + haber]]."
+            },
+            {
+              "forma": "debería haber",
+              "texto": "_Should have_: [[5054|deber + haber]]."
+            },
+            {
+              "forma": "si hubiera...",
+              "texto": "[[7078|si + pluperfect subjunctive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I would have called you._",
+              "r": "Te habría llamado. / Te hubiera llamado.",
+              "nota": "habría + participle."
+            },
+            {
+              "p": "In Spanish: _We wouldn't have gone._",
+              "r": "No habríamos ido.",
+              "nota": "no before habría."
+            },
+            {
+              "p": "Fix it: _¿Qué habrían ellos dicho?_",
+              "r": "¿Qué habrían dicho ellos?",
+              "nota": "Nothing in between."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5186
+    ],
+    "confunde": [
+      6470
+    ],
+    "sigue": [
+      7078
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6992",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "tema": 5116,
+  "slug": "tan-adjetivo-como",
+  "titulo": "As … as: tan … como",
+  "subtitulo": "«Amos es tan fuerte como Beto.»",
+  "foto": "t04.jpg",
+  "regla": "To say two things are equal in a quality, use tan + adjective or adverb + como. Tan never changes; the adjective agrees with what it describes.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "tan",
+            "+ adjective / adverb +",
+            "como"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Tan** is fixed. The **adjective** agrees: Ana es **tan alta** como Luis; ellos son **tan altos** como yo."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Works with adverbs too: corre **tan rápido** como tú; habla **tan bien** como su mamá."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Negative: **no … tan … como** = _not as … as_: No es **tan caro como** pensaba."
+        },
+        {
+          "tipo": "texto",
+          "texto": "After **como** use **yo** and **tú**: tan alto como **yo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Tan** only goes before adjectives and adverbs. With nouns and verbs you need **tanto**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Amos es ==tan fuerte como== Beto.",
+              "en": "Amos is as strong as Beto."
+            },
+            {
+              "es": "Esta ola rompe ==tan rápido como== la de ayer.",
+              "en": "This wave breaks as fast as yesterday's."
+            },
+            {
+              "es": "Mi hermana es ==tan alta como== yo.",
+              "en": "My sister is as tall as me."
+            },
+            {
+              "es": "El agua de Rosarito no está ==tan fría como== la de Ensenada.",
+              "en": "The water in Rosarito isn't as cold as in Ensenada."
+            },
+            {
+              "es": "Los jitomates de mi huerto son ==tan rojos como== los del mercado.",
+              "en": "The tomatoes from my garden are as red as the ones at the market."
+            },
+            {
+              "es": "Hablas español ==tan bien como== un tijuanense.",
+              "en": "You speak Spanish as well as someone from Tijuana."
+            },
+            {
+              "es": "No llegué ==tan tarde como== tú.",
+              "en": "I didn't arrive as late as you."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es tan alto que su hermano."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es tan alto como su hermano."
+                }
+              ],
+              "nota": "_As … as_ = **tan … como**. **Tan … que** means _so … that_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es tanto alto como yo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es tan alto como yo."
+                }
+              ],
+              "nota": "Before an adjective: **tan**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella es tan alto como él."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella es tan alta como él."
+                }
+              ],
+              "nota": "The adjective agrees with **ella**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es tan fuerte como mí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es tan fuerte como yo."
+                }
+              ],
+              "nota": "After **como**: **yo**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "más … que",
+              "texto": "Unequal comparisons: [[6210|más / menos … que]]."
+            },
+            {
+              "forma": "tanto como",
+              "texto": "With nouns and verbs: [[5165|tanto como]]."
+            },
+            {
+              "forma": "¡qué … tan …!",
+              "texto": "Tan in exclamations: [[7280|qué + noun + más / tan]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _My board is as long as yours._",
+              "r": "Mi tabla es tan larga como la tuya.",
+              "nota": "larga agrees."
+            },
+            {
+              "p": "In Spanish: _The water isn't as cold as yesterday._",
+              "r": "El agua no está tan fría como ayer.",
+              "nota": "no … tan … como."
+            },
+            {
+              "p": "Fix it: _Corre tan rápido que tú._",
+              "r": "Corre tan rápido como tú.",
+              "nota": "como."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6210
+    ],
+    "confunde": [
+      5165
+    ],
+    "sigue": [
+      7280
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5116",
+      "kwiziq": true
+    }
+  ]
+}

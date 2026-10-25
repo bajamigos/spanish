@@ -1,0 +1,227 @@
+{
+  "tema": 9554,
+  "slug": "recien-preterito",
+  "titulo": "Recién for actions that just happened",
+  "subtitulo": "Recién llegué. Tortillas recién hechas.",
+  "foto": "t08.jpg",
+  "regla": "In Mexico, recién + preterite means just did: Recién llegué = I just arrived (= Acabo de llegar). Recién + past participle means freshly / newly: recién pintado. Recién never changes; the participle agrees.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Recién** + **preterite** = _just_ did something. It goes **right before** the verb."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "recién",
+            "+",
+            "preterite"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It means the same as **acabar de** + infinitive: **Recién llegué** = **Acabo de llegar**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Recién** + **past participle** = _freshly, newly_: **recién hecho**, **recién pintado**, **recién casados**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Recién** never changes. The participle agrees with the noun: **tortillas recién hechas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It always has an accent: **recién**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Recién llegué== a la playa.",
+              "en": "I just got to the beach."
+            },
+            {
+              "es": "==Recién comimos==; no tenemos hambre.",
+              "en": "We just ate; we're not hungry."
+            },
+            {
+              "es": "==Recién terminé== la clase de jiu-jitsu.",
+              "en": "I just finished jiu-jitsu class."
+            },
+            {
+              "es": "==Recién empezó== a llover.",
+              "en": "It just started raining."
+            },
+            {
+              "es": "==Acabo de llegar== a Tijuana.",
+              "en": "I just arrived in Tijuana."
+            },
+            {
+              "es": "Las tortillas están ==recién hechas==.",
+              "en": "The tortillas are freshly made."
+            },
+            {
+              "es": "Cuidado, la pared está ==recién pintada==.",
+              "en": "Careful, the wall is freshly painted."
+            },
+            {
+              "es": "Los ==recién casados== se fueron a Cancún.",
+              "en": "The newlyweds went to Cancún."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Acabo de llegué."
+                },
+                {
+                  "v": "bien",
+                  "t": "Acabo de llegar. / Recién llegué."
+                }
+              ],
+              "nota": "**Acabar de** + infinitive; **recién** + preterite."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Las tortillas están recientes hechas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Las tortillas están recién hechas."
+                }
+              ],
+              "nota": "Use **recién**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Las paredes están recién pintado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Las paredes están recién pintadas."
+                }
+              ],
+              "nota": "The participle agrees."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Recien llegué."
+                },
+                {
+                  "v": "bien",
+                  "t": "Recién llegué."
+                }
+              ],
+              "nota": "Always the accent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "llegué, comí",
+              "texto": "The tense it uses: [[6004|the preterite for completed actions]]."
+            },
+            {
+              "forma": "acabo de llegar",
+              "texto": "The other way to say it: [[6508|acabar de + infinitive]]."
+            },
+            {
+              "forma": "ya comí",
+              "texto": "Already done: [[9263|ya with the preterite]]."
+            },
+            {
+              "forma": "pintado, cansado",
+              "texto": "Participles as describers: [[7000|past participles as adjectives]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish with recién: _I just woke up._",
+              "r": "Recién me desperté.",
+              "nota": "Recién + preterite."
+            },
+            {
+              "p": "Same idea with acabar: _Recién llegué._",
+              "r": "Acabo de llegar.",
+              "nota": "Acabar de + infinitive."
+            },
+            {
+              "p": "In Spanish: _freshly made salsas_",
+              "r": "salsas recién hechas",
+              "nota": "hechas agrees."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6004
+    ],
+    "confunde": [
+      6508
+    ],
+    "sigue": [
+      9263,
+      7000
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9554",
+      "kwiziq": true
+    }
+  ]
+}

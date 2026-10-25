@@ -1,0 +1,278 @@
+{
+  "tema": 7440,
+  "slug": "costar",
+  "titulo": "Costar vs costar a alguien algo",
+  "subtitulo": "Cuesta 200 pesos / Me cuesta levantarme temprano.",
+  "foto": "t06.jpg",
+  "regla": "Costar = to cost (money): cuesta 200 pesos; add an indirect pronoun to say who paid: nos costó. Me cuesta + infinitive = I find it hard to: me cuesta madrugar. It works like gustar.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Costar** (o → ue: **cuesta**, **cuestan**) has two main uses."
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "costar (money)",
+              "texto": "_to cost_: **cuesta 200 pesos**. Add **me, te, le...** to say who paid: **nos costó**."
+            },
+            {
+              "forma": "costar a alguien + infinitive",
+              "texto": "_to find something hard_: **me cuesta creerlo**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "For _finding it hard_, it works like **gustar**: the person is the **indirect pronoun** and the hard thing is the **infinitive**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "(a mí) me / te / le...",
+            "cuesta",
+            "+ infinitive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **me cuesta** = it costs me effort. Instead of pesos, you pay in sweat."
+        }
+      ]
+    },
+    {
+      "id": "dinero",
+      "titulo": "Costar: money",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Esos lentes ==cuestan== 400 pesos.",
+              "en": "Those glasses cost 400 pesos."
+            },
+            {
+              "es": "¿Cuánto ==cuesta== la playera de rayas?",
+              "en": "How much is the striped T-shirt?"
+            },
+            {
+              "es": "La casa ==nos costó== solo un millón y medio.",
+              "en": "The house only cost us one and a half million."
+            },
+            {
+              "es": "¿Cuánto ==te costaron== esos pantalones?",
+              "en": "How much did those pants cost you?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dificil",
+      "titulo": "Costar: finding it hard",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Me cuesta== creer que se haya ido para siempre.",
+              "en": "I find it hard to believe she's gone for good."
+            },
+            {
+              "es": "==Te cuesta== convivir con los demás, ¿verdad?",
+              "en": "You find it hard to get along with others, don't you?"
+            },
+            {
+              "es": "==Les ha costado== mucho adaptarse a ese pueblo tan chiquito.",
+              "en": "They've found it very hard to adapt to that tiny town."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Without a pronoun, it means _people in general_ or _one_ finds it hard:"
+        },
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Cuesta== acostumbrarse a situaciones nuevas.",
+              "en": "It's hard to get used to new situations."
+            },
+            {
+              "es": "==Cuesta== creer que estamos en el siglo XXI.",
+              "en": "It's hard to believe we're in the 21st century."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "negativo",
+      "titulo": "In the negative",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**No me cuesta nada** + infinitive often means _I don't mind, it's no trouble_:"
+        },
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No nos cuesta nada llevarlos a la central. No está lejos.",
+              "en": "We don't mind taking you to the bus station. It's not far."
+            },
+            {
+              "es": "No le cuesta nada llevar los paquetes al correo.",
+              "en": "It's no trouble for him to take the packages to the post office."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "With **skills**, it can still mean _not finding it hard_:"
+        },
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "A mi maestra no le cuesta pronunciar bien en francés.",
+              "en": "My teacher doesn't find it hard to pronounce French well."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo cuesto levantarme."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me cuesta levantarme."
+                }
+              ],
+              "nota": "Like **gustar**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Los zapatos cuesta mucho."
+                },
+                {
+                  "v": "bien",
+                  "t": "Los zapatos cuestan mucho."
+                }
+              ],
+              "nota": "Agrees with the thing."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me costa trabajo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me cuesta trabajo."
+                }
+              ],
+              "nota": "o → ue."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mexico",
+      "titulo": "In Mexico",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "You'll often hear **me cuesta trabajo** + infinitive (_it takes me effort_): **me cuesta trabajo concentrarme**. Same meaning, very common."
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "a mí me gusta",
+              "texto": "[[7032|a mí me gusta]]."
+            },
+            {
+              "forma": "¿a cómo está?",
+              "texto": "Prices that change: [[5984|estar a]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _How much did the tickets cost you?_",
+              "r": "¿Cuánto te costaron los boletos?",
+              "nota": "Agrees with boletos."
+            },
+            {
+              "p": "In Spanish: _I find it hard to wake up early._",
+              "r": "Me cuesta levantarme temprano.",
+              "nota": "me cuesta + infinitive."
+            },
+            {
+              "p": "In Spanish: _It's no trouble for us to help you._",
+              "r": "No nos cuesta nada ayudarte.",
+              "nota": "Negative: no trouble."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7032
+    ],
+    "confunde": [
+      5984
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7440",
+      "kwiziq": true
+    }
+  ]
+}

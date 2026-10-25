@@ -1,0 +1,279 @@
+{
+  "tema": 8193,
+  "slug": "como-cuando-donde-quien",
+  "titulo": "Como / cuando / donde / quien with indicative or subjunctive",
+  "subtitulo": "Hazlo como quieras. Cuando llegue, te llamo.",
+  "foto": "t08.jpg",
+  "regla": "Como, cuando, donde, quien + indicative = a known, specific way / time / place / person. + subjunctive = unknown, open, whatever / whenever / wherever / whoever.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Word",
+            "+ indicative (known)",
+            "+ subjunctive (unknown, open)"
+          ],
+          "filas": [
+            [
+              "como",
+              "the way (that we know)",
+              "however, whichever way"
+            ],
+            [
+              "cuando",
+              "when (habit, past)",
+              "whenever (future)"
+            ],
+            [
+              "donde",
+              "where (specific place)",
+              "wherever"
+            ],
+            [
+              "quien",
+              "who (a known person)",
+              "whoever"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: if you can add _-ever_ in English, it's probably subjunctive."
+        }
+      ]
+    },
+    {
+      "id": "como",
+      "titulo": "Como",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "indicativo",
+                  "t": "Puedes hacer el viaje como quieres."
+                },
+                {
+                  "v": "subjuntivo",
+                  "t": "Puedes hacer el viaje como quieras, en camión o en avión."
+                }
+              ],
+              "nota": "_The way you want (we know it)_ vs _however you want_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "indicativo",
+                  "t": "Cambiamos el contrato como ustedes indicaron."
+                },
+                {
+                  "v": "subjuntivo",
+                  "t": "Cambiamos el contrato como ustedes indiquen."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cuando",
+      "titulo": "Cuando",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "indicativo",
+                  "t": "Hablo con ella cuando llega a casa."
+                },
+                {
+                  "v": "subjuntivo",
+                  "t": "Voy a hablar con ella cuando llegue a casa."
+                }
+              ],
+              "nota": "Habit vs future."
+            },
+            {
+              "filas": [
+                {
+                  "v": "indicativo",
+                  "t": "Le pedí matrimonio cuando estaba más contenta."
+                },
+                {
+                  "v": "subjuntivo",
+                  "t": "Iba a pedirle matrimonio cuando estuviera más contenta."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "donde",
+      "titulo": "Donde",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "indicativo",
+                  "t": "Vamos a comer donde comimos ayer."
+                },
+                {
+                  "v": "subjuntivo",
+                  "t": "Vamos a comer donde tú quieras."
+                }
+              ],
+              "nota": "A known place vs wherever."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quien",
+      "titulo": "Quien",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "indicativo",
+                  "t": "Quien llamó ayer era tu hermano."
+                },
+                {
+                  "v": "subjuntivo",
+                  "t": "A quien llame, dile que no estoy."
+                }
+              ],
+              "nota": "A known person vs whoever."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Te llamo cuando llego. (future)"
+                },
+                {
+                  "v": "bien",
+                  "t": "Te llamo cuando llegue."
+                }
+              ],
+              "nota": "Future: subjunctive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Siéntate donde quieres. (anywhere)"
+                },
+                {
+                  "v": "bien",
+                  "t": "Siéntate donde quieras."
+                }
+              ],
+              "nota": "_Wherever_: subjunctive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "cuando + present subjunctive",
+              "texto": "[[5062|cuando]]."
+            },
+            {
+              "forma": "relative clauses",
+              "texto": "[[7256|relative clauses with indicative or subjunctive]]."
+            },
+            {
+              "forma": "quién / quien",
+              "texto": "[[7082|accents]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Complete: _Puedes venir cuando ___ (querer, tú)._",
+              "r": "quieras",
+              "nota": "Whenever."
+            },
+            {
+              "p": "Complete: _Siempre me llama cuando ___ (salir) del trabajo._",
+              "r": "sale",
+              "nota": "Habit."
+            },
+            {
+              "p": "Complete: ____ (llegar) primero, que abra la puerta._",
+              "r": "Quien llegue",
+              "nota": "Whoever."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5062
+    ],
+    "confunde": [
+      7256
+    ],
+    "sigue": [
+      7256
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8193",
+      "kwiziq": true
+    }
+  ]
+}

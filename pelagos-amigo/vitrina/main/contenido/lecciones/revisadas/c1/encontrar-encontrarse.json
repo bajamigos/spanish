@@ -1,0 +1,191 @@
+{
+  "tema": 7447,
+  "slug": "encontrar-encontrarse",
+  "titulo": "Encontrar vs encontrarse",
+  "subtitulo": "Encontré las llaves. Me encontré a Luis. Me encuentro mejor.",
+  "foto": "t03.jpg",
+  "regla": "Encontrar = to find (something or someone you were looking for), and to find (= consider): Encuentro interesante la idea. Encontrarse (con) alguien = to run into someone by chance. Encontrarse + adjective/adverb = to feel, to be (formal). Encontrarse + place = to be located.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "encontrar algo / a alguien",
+              "texto": "_to find_ after looking: **no encuentro mis lentes**, **encontraron a los niños** (personal **a**)."
+            },
+            {
+              "forma": "encontrar + adjective",
+              "texto": "_to find (consider)_: **encuentro esa teoría muy interesante**."
+            },
+            {
+              "forma": "encontrarse a / con alguien",
+              "texto": "_to run into, bump into_: **me encontré a Luis en el súper**."
+            },
+            {
+              "forma": "encontrarse + bien / mal / adjective",
+              "texto": "_to feel, to be_ (a bit formal): **¿cómo se encuentra?**, **me encuentro cansado**."
+            },
+            {
+              "forma": "encontrarse + place",
+              "texto": "_to be located_ (formal): **el museo se encuentra en el centro**."
+            },
+            {
+              "forma": "encontrarse algo",
+              "texto": "_to come across, find by chance_: **me encontré un billete en la calle**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **encontrar** = you looked; **encontrarse** = it happened to you."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No ==encuentro== mis lentes, ¿los viste?",
+              "en": "I can't find my glasses, have you seen them?"
+            },
+            {
+              "es": "Al final ==encontramos== la solución.",
+              "en": "In the end we found the solution."
+            },
+            {
+              "es": "Daniel ya ==encontró a== los niños; estaban en el parque.",
+              "en": "Daniel found the kids; they were in the park."
+            },
+            {
+              "es": "Ayer ==me encontré a== mi maestra de primaria en el metro.",
+              "en": "Yesterday I ran into my elementary school teacher on the subway."
+            },
+            {
+              "es": "—¿Cómo ==se encuentra== su mamá? —Mucho mejor, gracias.",
+              "en": "—How's your mother feeling? —Much better, thanks."
+            },
+            {
+              "es": "El hotel ==se encuentra== a dos cuadras de la playa.",
+              "en": "The hotel is two blocks from the beach."
+            },
+            {
+              "es": "==Me encontré== cien pesos en la chamarra.",
+              "en": "I found a hundred pesos in my jacket."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "buscar",
+                  "t": "Encontré a Luis (lo estaba buscando)."
+                },
+                {
+                  "v": "casualidad",
+                  "t": "Me encontré a Luis (no lo buscaba)."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Encontré con Ana en la fiesta."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me encontré con Ana en la fiesta."
+                }
+              ],
+              "nota": "**Con** goes with **encontrarse**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "pronominal verbs",
+              "texto": "[[7478|aprovechar / aprovecharse]], [[7480|jugar / jugarse]], [[8948|perder / perderse]]."
+            },
+            {
+              "forma": "personal a",
+              "texto": "[[6870|personal a]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I ran into my ex at the mall._",
+              "r": "Me encontré a mi ex en la plaza.",
+              "nota": "encontrarse."
+            },
+            {
+              "p": "In Spanish: _Did you find the remote?_",
+              "r": "¿Encontraste el control?",
+              "nota": "encontrar."
+            },
+            {
+              "p": "Formal: _The patient is feeling better._",
+              "r": "El paciente se encuentra mejor.",
+              "nota": "encontrarse + adverb."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6870
+    ],
+    "confunde": [],
+    "sigue": [
+      7478,
+      7480
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7447",
+      "kwiziq": true
+    }
+  ]
+}

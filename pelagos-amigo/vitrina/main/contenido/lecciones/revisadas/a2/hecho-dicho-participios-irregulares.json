@@ -1,0 +1,277 @@
+{
+  "tema": 7048,
+  "slug": "hecho-dicho-participios-irregulares",
+  "titulo": "Irregular participles in -to / -cho",
+  "subtitulo": "¿Qué has hecho? Ya te lo he dicho.",
+  "foto": "t05.jpg",
+  "regla": "A handful of common verbs have an irregular past participle ending in -to or -cho instead of -ado/-ido: hecho, dicho, escrito, visto, puesto, roto, vuelto, abierto, muerto, cubierto, resuelto.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Most participles end in **-ado** or **-ido**. These common ones end in **-to** or **-cho**, and you just have to learn them."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Infinitive",
+            "Participle",
+            "Present perfect"
+          ],
+          "filas": [
+            [
+              "hacer",
+              "**hecho**",
+              "he hecho"
+            ],
+            [
+              "decir",
+              "**dicho**",
+              "he dicho"
+            ],
+            [
+              "escribir",
+              "**escrito**",
+              "he escrito"
+            ],
+            [
+              "ver",
+              "**visto**",
+              "he visto"
+            ],
+            [
+              "poner",
+              "**puesto**",
+              "he puesto"
+            ],
+            [
+              "romper",
+              "**roto**",
+              "he roto"
+            ],
+            [
+              "volver",
+              "**vuelto**",
+              "he vuelto"
+            ],
+            [
+              "abrir",
+              "**abierto**",
+              "he abierto"
+            ],
+            [
+              "morir",
+              "**muerto**",
+              "ha muerto"
+            ],
+            [
+              "cubrir",
+              "**cubierto**",
+              "he cubierto"
+            ],
+            [
+              "resolver",
+              "**resuelto**",
+              "he resuelto"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Verbs built on them inherit the irregular form: **deshacer → deshecho**, **describir → descrito**, **devolver → devuelto**, **descubrir → descubierto**, **proponer → propuesto**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Only **hacer** and **decir** (and verbs built on them, like **deshecho**) end in **-cho**: **hecho**, **dicho**. Everything else in the list ends in **-to**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿Qué ==has hecho== hoy?",
+              "en": "What have you done today?"
+            },
+            {
+              "es": "Nunca te ==he dicho== una mentira.",
+              "en": "I've never told you a lie."
+            },
+            {
+              "es": "==He escrito== tres páginas del cuento.",
+              "en": "I've written three pages of the story."
+            },
+            {
+              "es": "¿==Has visto== la nueva temporada?",
+              "en": "Have you seen the new season?"
+            },
+            {
+              "es": "¿Dónde ==has puesto== las llaves?",
+              "en": "Where have you put the keys?"
+            },
+            {
+              "es": "Alguien ==ha roto== la ventana del carro.",
+              "en": "Someone has broken the car window."
+            },
+            {
+              "es": "Mis papás ya ==han vuelto== de Ensenada.",
+              "en": "My parents have already come back from Ensenada."
+            },
+            {
+              "es": "¿Quién ==ha abierto== la puerta del gallinero?",
+              "en": "Who has opened the chicken coop door?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "He hacido la cena."
+                },
+                {
+                  "v": "bien",
+                  "t": "He hecho la cena."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ya te lo he decido."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ya te lo he dicho."
+                }
+              ],
+              "nota": "**Decido** means _I decide_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "He escribido un correo."
+                },
+                {
+                  "v": "bien",
+                  "t": "He escrito un correo."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Han rompido la mesa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Han roto la mesa."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "he hablado, he comido",
+              "texto": "The regular pattern: [[5267|-ar verbs]] and [[5588|-er and -ir verbs]] in the present perfect."
+            },
+            {
+              "forma": "he hecho, he dicho",
+              "texto": "One verb at a time: [[6066|hacer]], [[6240|decir]], [[6670|poner]], [[5112|ver]]."
+            },
+            {
+              "forma": "la puerta está abierta",
+              "texto": "As adjectives, they agree: [[7000|past participles as adjectives]]."
+            },
+            {
+              "forma": "echo vs hecho",
+              "texto": "Same sound, different word: [[10307|echo vs hecho]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I've seen that movie._",
+              "r": "He visto esa película.",
+              "nota": "ver → visto."
+            },
+            {
+              "p": "In Spanish: _They've come back from the beach._",
+              "r": "Han vuelto de la playa.",
+              "nota": "volver → vuelto."
+            },
+            {
+              "p": "Fix it: _¿Quién ha abrido la ventana?_",
+              "r": "¿Quién ha abierto la ventana?",
+              "nota": "abrir → abierto."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5267,
+      5588
+    ],
+    "confunde": [
+      10307
+    ],
+    "sigue": [
+      6066,
+      6240,
+      6670,
+      5112,
+      7000
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7048",
+      "kwiziq": true
+    }
+  ]
+}

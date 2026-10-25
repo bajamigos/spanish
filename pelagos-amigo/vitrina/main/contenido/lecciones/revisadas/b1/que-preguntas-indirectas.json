@@ -1,0 +1,222 @@
+{
+  "tema": 7013,
+  "slug": "que-preguntas-indirectas",
+  "titulo": "Using qué in indirect questions",
+  "subtitulo": "No sé qué carro comprar. Me pregunto qué va a pasar.",
+  "foto": "t02.jpg",
+  "regla": "In indirect questions (no sé, dime, me pregunto...), qué keeps its accent. Qué + noun = which / what + noun, and never changes: no sé qué zapatos ponerme. Qué can also be followed by a verb or an infinitive.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "An **indirect question** is a question inside another sentence, after verbs like **saber**, **decir**, **preguntar(se)**, **decidir**, **no entender**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Qué** keeps its **accent** there, even without question marks."
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "qué + noun",
+              "texto": "_which / what + noun_: **no sé qué carro comprar**. **Qué** never changes, whatever the gender or number of the noun."
+            },
+            {
+              "forma": "qué + verb",
+              "texto": "_what_: **me pregunto qué va a pasar**."
+            },
+            {
+              "forma": "qué + infinitive",
+              "texto": "_what to_: **no sé qué ponerme**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: inside or outside question marks, a question is still a question, so **qué** keeps its hat."
+        }
+      ]
+    },
+    {
+      "id": "sustantivo",
+      "titulo": "Qué + noun",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No sé ==qué carro== voy a comprar.",
+              "en": "I don't know which car I'm going to buy."
+            },
+            {
+              "es": "Dime ==qué casa== te gusta más.",
+              "en": "Tell me which house you like best."
+            },
+            {
+              "es": "Tienes que decidir ==qué vestidos== vas a donar.",
+              "en": "You have to decide which dresses you're going to donate."
+            },
+            {
+              "es": "No saben ==qué faldas== son las más baratas.",
+              "en": "They don't know which skirts are the cheapest."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "verbo",
+      "titulo": "Qué + verb or infinitive",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Todavía no decido ==qué== ponerme para la fiesta de Verónica.",
+              "en": "I still haven't decided what to wear to Verónica's party."
+            },
+            {
+              "es": "Me pregunto ==qué== va a pasar con Miguel ahora.",
+              "en": "I wonder what's going to happen with Miguel now."
+            },
+            {
+              "es": "No entiendo ==qué== quieres decir.",
+              "en": "I don't understand what you mean."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No sé que hacer."
+                },
+                {
+                  "v": "bien",
+                  "t": "No sé qué hacer."
+                }
+              ],
+              "nota": "Indirect question: accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No sé qués zapatos ponerme."
+                },
+                {
+                  "v": "bien",
+                  "t": "No sé qué zapatos ponerme."
+                }
+              ],
+              "nota": "**Qué** never changes."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Dime cuál casa te gusta."
+                },
+                {
+                  "v": "mejor",
+                  "t": "Dime qué casa te gusta."
+                }
+              ],
+              "nota": "**Cuál** + noun is heard in Mexico, but **qué** + noun is the standard."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¿qué?",
+              "texto": "Direct questions: [[9828|qué = what]]."
+            },
+            {
+              "forma": "qué / que",
+              "texto": "[[6675|qué vs que]]."
+            },
+            {
+              "forma": "cuál, cuáles",
+              "texto": "[[6752|cuál / cuáles]]."
+            },
+            {
+              "forma": "lo que",
+              "texto": "_What_ as _the thing that_: [[5087|lo que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I don't know which shoes to buy._",
+              "r": "No sé qué zapatos comprar.",
+              "nota": "qué + noun."
+            },
+            {
+              "p": "In Spanish: _Tell me what you want._",
+              "r": "Dime qué quieres.",
+              "nota": "Accent."
+            },
+            {
+              "p": "In Spanish: _We don't know what to do._",
+              "r": "No sabemos qué hacer.",
+              "nota": "qué + infinitive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      9828
+    ],
+    "confunde": [
+      6675,
+      5087
+    ],
+    "sigue": [
+      6752
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7013",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,249 @@
+{
+  "tema": 9151,
+  "slug": "jugar-tocar",
+  "titulo": "Jugar vs tocar (to play)",
+  "subtitulo": "«Juego fútbol y toco la guitarra.»",
+  "foto": "t10.jpg",
+  "regla": "English _play_ splits in two: jugar for games and sports (jugar fútbol, jugar al ajedrez), tocar for musical instruments and music (tocar la guitarra). Tocar also means _to touch_ and, in me toca, _it's my turn_.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Jugar** = play a **game or sport**. **Tocar** = play an **instrument** or a piece of music."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Pronoun",
+            "jugar (u > ue)",
+            "tocar"
+          ],
+          "filas": [
+            [
+              "yo",
+              "juego",
+              "toco"
+            ],
+            [
+              "tú",
+              "juegas",
+              "tocas"
+            ],
+            [
+              "él / ella / usted",
+              "juega",
+              "toca"
+            ],
+            [
+              "nosotros",
+              "jugamos",
+              "tocamos"
+            ],
+            [
+              "ellos / ustedes",
+              "juegan",
+              "tocan"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "With sports and games: **jugar al fútbol** or **jugar fútbol**. In Mexico you'll mostly hear it **without al**; both are correct."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With instruments: **tocar** + **el / la** + instrument, never **a**: **toco la batería**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Jugar** alone = _to play_ (kids, pets, having fun): **Los niños juegan en el parque**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Tocar** has other uses: _to touch_ (**No toques eso**) and _to be someone's turn_ (**Te toca**)."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Los domingos ==juego== fútbol con mis primos.",
+              "en": "On Sundays I play soccer with my cousins."
+            },
+            {
+              "es": "Mi hermano ==toca== el bajo en una banda.",
+              "en": "My brother plays bass in a band."
+            },
+            {
+              "es": "¿==Juegas al== ajedrez?",
+              "en": "Do you play chess?"
+            },
+            {
+              "es": "==Tocamos== música norteña en las fiestas.",
+              "en": "We play norteño music at parties."
+            },
+            {
+              "es": "Los niños ==juegan== en la arena.",
+              "en": "The kids are playing in the sand."
+            },
+            {
+              "es": "Ella ==toca== el piano desde los seis años.",
+              "en": "She has played the piano since she was six."
+            },
+            {
+              "es": "No ==toques== las plantas, están recién regadas.",
+              "en": "Don't touch the plants, they've just been watered."
+            },
+            {
+              "es": "Ya jugaste tú; ahora me ==toca== a mí.",
+              "en": "You already played; now it's my turn."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Juego la guitarra."
+                },
+                {
+                  "v": "bien",
+                  "t": "Toco la guitarra."
+                }
+              ],
+              "nota": "Instruments: tocar."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Toco básquetbol."
+                },
+                {
+                  "v": "bien",
+                  "t": "Juego básquetbol."
+                }
+              ],
+              "nota": "Sports: jugar."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo jugo tenis."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo juego tenis."
+                }
+              ],
+              "nota": "u > ue: juego."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Toca a la trompeta."
+                },
+                {
+                  "v": "bien",
+                  "t": "Toca la trompeta."
+                }
+              ],
+              "nota": "No a with instruments."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "juego, juegas",
+              "texto": "Conjugation: [[5855|jugar in the present]]."
+            },
+            {
+              "forma": "jugué, toqué",
+              "texto": "Spelling in the past: [[5845|-gar verbs in the preterite]], [[5256|-car verbs in the preterite]]."
+            },
+            {
+              "forma": "al fútbol",
+              "texto": "When you use a + el: [[5090|al and del]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I play the drums._",
+              "r": "Toco la batería.",
+              "nota": "tocar for instruments."
+            },
+            {
+              "p": "In Spanish: _We play volleyball on the beach._",
+              "r": "Jugamos voleibol en la playa.",
+              "nota": "jugar for sports."
+            },
+            {
+              "p": "Fix it: _Mi papá juega el acordeón._",
+              "r": "Mi papá toca el acordeón.",
+              "nota": "Instrument: tocar."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5855,
+      5090
+    ],
+    "confunde": [],
+    "sigue": [
+      5845,
+      5256
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9151",
+      "kwiziq": true
+    }
+  ]
+}

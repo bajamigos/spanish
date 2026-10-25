@@ -1,0 +1,254 @@
+{
+  "tema": 5928,
+  "slug": "conozco-zc",
+  "titulo": "-cer and -cir verbs: c > zc in yo",
+  "subtitulo": "Conozco Tijuana, pero tú conoces Ensenada.",
+  "foto": "t02.jpg",
+  "regla": "Most verbs ending in vowel + -cer or vowel + -cir change c to zc in the yo form of the present only: conozco, parezco, traduzco. Every other person is regular: conoces, conoce, conocemos, conocen.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Verbs ending in a **vowel + -cer** or **vowel + -cir** add a **z** before the c in the **yo** form of the present: **c → zc**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It only happens in **yo**. The other forms are regular."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "conocer",
+            "traducir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**conozco**",
+              "**traduzco**"
+            ],
+            [
+              "tú",
+              "conoces",
+              "traduces"
+            ],
+            [
+              "él, ella, usted",
+              "conoce",
+              "traduce"
+            ],
+            [
+              "nosotros",
+              "conocemos",
+              "traducimos"
+            ],
+            [
+              "ellos, ustedes",
+              "conocen",
+              "traducen"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Common ones: **conocer** (conozco), **reconocer** (reconozco), **parecer** (parezco), **aparecer** (aparezco), **ofrecer** (ofrezco), **merecer** (merezco), **agradecer** (agradezco), **crecer** (crezco), **nacer** (nazco), **obedecer** (obedezco), **conducir** (conduzco), **traducir** (traduzco), **producir** (produzco)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Exceptions: **hacer** → **hago** and **decir** → **digo**. And after a consonant (**vencer**, **convencer**, **ejercer**) it's **c → z**: **venzo**, **convenzo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the **z** sneaks in so the yo form keeps the soft sound before the hard **-co**: cono**z**co."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No ==conozco== a nadie en Mexicali.",
+              "en": "I don't know anyone in Mexicali."
+            },
+            {
+              "es": "Siempre le ==ofrezco== agua a mi compañero después de entrenar.",
+              "en": "I always offer my training partner water after practice."
+            },
+            {
+              "es": "Dicen que me ==parezco== a mi papá.",
+              "en": "They say I look like my dad."
+            },
+            {
+              "es": "==Conduzco== al trabajo por la vía rápida.",
+              "en": "I drive to work on the expressway."
+            },
+            {
+              "es": "Te ==agradezco== mucho la ayuda.",
+              "en": "Thank you so much for your help."
+            },
+            {
+              "es": "==Traduzco== los mensajes de mis clientes al inglés.",
+              "en": "I translate my clients' messages into English."
+            },
+            {
+              "es": "¿Tú ==conoces== a mi primo? Yo no lo ==conozco== bien.",
+              "en": "Do you know my cousin? I don't know him well."
+            },
+            {
+              "es": "En mi jardín ==crecen== chiles y tomates.",
+              "en": "Chiles and tomatoes grow in my garden."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo conoco a tu hermana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo conozco a tu hermana."
+                }
+              ],
+              "nota": "yo needs **zc**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tú conozces la playa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tú conoces la playa."
+                }
+              ],
+              "nota": "Only **yo** changes."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo convenzco a mi jefe."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo convenzo a mi jefe."
+                }
+              ],
+              "nota": "Consonant + -cer: just **z**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo hazco la comida."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo hago la comida."
+                }
+              ],
+              "nota": "**hacer** is irregular: **hago**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "venzo, convenzo",
+              "texto": "Consonant + -cer: [[5929|c > z in -cer/-cir verbs]]."
+            },
+            {
+              "forma": "conduzco",
+              "texto": "More -ducir verbs: [[5653|traducir and conducir]]."
+            },
+            {
+              "forma": "hago, digo",
+              "texto": "The exceptions: [[5708|hacer in the present]]."
+            },
+            {
+              "forma": "conozca",
+              "texto": "The zc spreads to every person: [[6205|c > zc in the present subjunctive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I don't know your brother._",
+              "r": "No conozco a tu hermano.",
+              "nota": "conocer → conozco."
+            },
+            {
+              "p": "In Spanish: _I deserve a break._",
+              "r": "Merezco un descanso.",
+              "nota": "merecer → merezco."
+            },
+            {
+              "p": "Fix it: _Nosotros conozcamos Rosarito._",
+              "r": "Nosotros conocemos Rosarito.",
+              "nota": "Only yo has zc."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5708
+    ],
+    "confunde": [
+      5929
+    ],
+    "sigue": [
+      5653,
+      6205
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5928",
+      "kwiziq": true
+    }
+  ]
+}

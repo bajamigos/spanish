@@ -1,0 +1,227 @@
+{
+  "tema": 5966,
+  "slug": "para-plazo-limite",
+  "titulo": "Para for a deadline (by…)",
+  "subtitulo": "Necesito el reporte para el lunes.",
+  "foto": "t01.jpg",
+  "regla": "To give a deadline (by Monday, by eight o'clock), use para + a point in time, never por. ¿Para cuándo? = by when? A length of time is not a deadline: en dos semanas, por tres horas.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Para** + a point in time = _by_, _for_: the **deadline** or time limit."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "para",
+            "+",
+            "el lunes / mañana / las ocho / diciembre"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Ask for a deadline with **¿para cuándo?** = _by when?_"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Para entonces** = _by then_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Por** + time is not a deadline: it means _during_ (**por la mañana**) or _for_ a length of time (**por tres horas**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "A **length** of time (_in two weeks_) uses **en** or **dentro de**, not **para**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **para** points at a date on the calendar and says _no later than this_."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Necesito el reporte ==para el lunes==.",
+              "en": "I need the report by Monday."
+            },
+            {
+              "es": "¿==Para cuándo== está listo mi carro? —==Para mañana== en la tarde.",
+              "en": "When will my car be ready? —By tomorrow afternoon."
+            },
+            {
+              "es": "La tarea es ==para el viernes==.",
+              "en": "The homework is due Friday."
+            },
+            {
+              "es": "Quiero terminar el huerto ==para la primavera==.",
+              "en": "I want to finish the garden by spring."
+            },
+            {
+              "es": "==Para las ocho== ya estaba en el agua.",
+              "en": "By eight o'clock I was already in the water."
+            },
+            {
+              "es": "Tenemos que cruzar la línea ==para las seis==.",
+              "en": "We have to cross the border by six."
+            },
+            {
+              "es": "==Para entonces== ya voy a tener la cinta morada.",
+              "en": "By then I'll already have my purple belt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Necesito el reporte por el lunes."
+                },
+                {
+                  "v": "bien",
+                  "t": "Necesito el reporte para el lunes."
+                }
+              ],
+              "nota": "Deadline: **para**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Por cuándo es la tarea?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Para cuándo es la tarea?"
+                }
+              ],
+              "nota": "_By when_ = **para cuándo**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Lo termino para dos semanas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Lo termino en dos semanas."
+                }
+              ],
+              "nota": "A length of time, not a date."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Trabajé para tres horas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Trabajé por tres horas."
+                }
+              ],
+              "nota": "Duration, not a deadline."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "para aprender",
+              "texto": "Para for a goal: [[5970|para for purpose]]."
+            },
+            {
+              "forma": "por tres horas",
+              "texto": "How long something lasts: [[7087|durante / por]]."
+            },
+            {
+              "forma": "dentro de una semana",
+              "texto": "_In_ a length of time: [[9511|dentro de]]."
+            },
+            {
+              "forma": "para Navidad",
+              "texto": "Para for a precise moment: [[5978|para for precise time]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I need the money by Friday._",
+              "r": "Necesito el dinero para el viernes.",
+              "nota": "Deadline: para."
+            },
+            {
+              "p": "In Spanish: _By when do you need it?_ (tú)",
+              "r": "¿Para cuándo lo necesitas?",
+              "nota": "para cuándo."
+            },
+            {
+              "p": "Fix it: _Tienes que estar aquí por las nueve._ (no later than nine)",
+              "r": "Tienes que estar aquí para las nueve.",
+              "nota": "Deadline: para."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5970
+    ],
+    "confunde": [
+      7087
+    ],
+    "sigue": [
+      5978,
+      9511
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5966",
+      "kwiziq": true
+    }
+  ]
+}

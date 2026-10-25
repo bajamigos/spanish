@@ -1,0 +1,225 @@
+{
+  "tema": 6077,
+  "slug": "superlativo-isimo",
+  "titulo": "Superlatives with -ísimo: adjectives ending in a vowel, -io, -l and -ar",
+  "subtitulo": "Caro → carísimo, limpio → limpísimo, fácil → facilísimo.",
+  "foto": "t05.jpg",
+  "regla": "-ísimo means extremely: drop the final vowel (caro → carísimo), drop -io (limpio → limpísimo), or just add it after -l and -ar (fácil → facilísimo, popular → popularísimo).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To say _extremely_ + adjective, instead of **muy**, **súper** or **bien**, you can add **-ísimo, -ísima, -ísimos, -ísimas**: **muy caro** = **carísimo**. It agrees with the noun like any adjective."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Adjective ends in",
+            "What to do",
+            "Example"
+          ],
+          "filas": [
+            [
+              "a single vowel",
+              "drop the vowel, add -ísimo",
+              "listo → listísimo, inteligente → inteligentísima"
+            ],
+            [
+              "-io",
+              "drop both vowels",
+              "limpio → limpísimo, sucio → sucísimo"
+            ],
+            [
+              "-l",
+              "just add -ísimo",
+              "fácil → facilísimo, difícil → dificilísimo"
+            ],
+            [
+              "-ar",
+              "just add -ísimo",
+              "popular → popularísimo"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The stress always falls on the **í** of **-ísimo**, so any old accent disappears: **fácil** → **facilísimo**, **rápido** → **rapidísimo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Adjectives ending in **-ble** don't follow this rule: see [[6081|-co, -go, -ble, -z, -or, -n]]."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **-ísimo** steals the accent. Wherever the stress was, it moves to the **í**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi mejor amigo es ==listísimo==.",
+              "en": "My best friend is super smart."
+            },
+            {
+              "es": "María es ==lentísima== para hacer la tarea.",
+              "en": "María is incredibly slow at doing homework."
+            },
+            {
+              "es": "Los conciertos en la calle son ==ruidosísimos==.",
+              "en": "Street concerts are extremely noisy."
+            },
+            {
+              "es": "Aquí venden unas tablas ==carísimas==.",
+              "en": "They sell extremely expensive boards here."
+            },
+            {
+              "es": "Tienes que lavar el carro; está ==sucísimo==.",
+              "en": "You have to wash the car; it's filthy."
+            },
+            {
+              "es": "El examen fue ==facilísimo==.",
+              "en": "The exam was super easy."
+            },
+            {
+              "es": "Ese taco es ==popularísimo== en Tijuana.",
+              "en": "That taco is extremely popular in Tijuana."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Fue fácilísimo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Fue facilísimo."
+                }
+              ],
+              "nota": "The old accent goes away."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Está limpiísimo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Está limpísimo."
+                }
+              ],
+              "nota": "Drop both vowels of **-io**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es muy carísimo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es carísimo."
+                }
+              ],
+              "nota": "**-ísimo** already means _very_."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "riquísimo, larguísimo",
+              "texto": "Spelling changes: [[6081|-co, -go, -ble, -z, -or, -n]]."
+            },
+            {
+              "forma": "el más caro",
+              "texto": "_The most_: [[5056|superlatives with más]]."
+            },
+            {
+              "forma": "bien caro",
+              "texto": "Another way to say _very_: [[8601|bien as an intensifier]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Say **muy rápido** with -ísimo.",
+              "r": "rapidísimo",
+              "nota": "The accent moves to the **í**."
+            },
+            {
+              "p": "Say **muy limpia** with -ísimo.",
+              "r": "limpísima",
+              "nota": "Drop **-io**, agree in feminine."
+            },
+            {
+              "p": "Say **muy difícil** with -ísimo.",
+              "r": "dificilísimo",
+              "nota": "-l: just add it, lose the accent."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5056,
+      5082
+    ],
+    "confunde": [
+      6081
+    ],
+    "sigue": [
+      6081,
+      8601
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6077",
+      "kwiziq": true
+    }
+  ]
+}

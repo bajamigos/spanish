@@ -1,0 +1,208 @@
+{
+  "tema": 5880,
+  "slug": "como-estas",
+  "titulo": "How are you? ¿Cómo estás? / ¿Cómo está?",
+  "subtitulo": "«¿Cómo estás? Bien, gracias, ¿y tú?»",
+  "foto": "t06.jpg",
+  "regla": "Ask ¿Cómo estás? to a tú and ¿Cómo está? to an usted (both from estar). ¿Qué tal? is a relaxed option that works with anyone. Answer Bien, gracias, ¿y tú? / ¿y usted?",
+  "comparada_kwiziq": "2026-10-17",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "To",
+            "Ask",
+            "Bounce it back"
+          ],
+          "filas": [
+            [
+              "tú (friends, family, kids)",
+              "¿Cómo estás?",
+              "¿y tú?"
+            ],
+            [
+              "usted (strangers, older people, formal)",
+              "¿Cómo está?",
+              "¿y usted?"
+            ],
+            [
+              "anyone, relaxed",
+              "¿Qué tal?",
+              "¿y tú? / ¿y usted?"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It's **estar**, not **ser**: you're asking how someone **is doing** right now. Mind the accent: **estás**, **está**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Señor**, **señora**, **don**, **doña** signal **usted**. You can also use **¿Cómo está?** with a first name to show respect: **Doña Carmen, ¿cómo está?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "To a group: **¿Cómo están?**"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Hola, Pepe, ¿==cómo estás==?",
+              "en": "Hi, Pepe, how are you?"
+            },
+            {
+              "es": "Bien, gracias, ¿==y tú==?",
+              "en": "Good, thanks, and you?"
+            },
+            {
+              "es": "Buenos días, señor Ruiz, ¿==cómo está==?",
+              "en": "Good morning, Mr. Ruiz, how are you?"
+            },
+            {
+              "es": "Muy bien, gracias, ¿==y usted==?",
+              "en": "Very well, thanks, and you?"
+            },
+            {
+              "es": "¿==Qué tal==, profe?",
+              "en": "How's it going, teacher?"
+            },
+            {
+              "es": "Hola, muchachos, ¿==cómo están==?",
+              "en": "Hi, guys, how are you?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Cómo eres?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cómo estás?"
+                }
+              ],
+              "nota": "**¿Cómo eres?** = _What are you like?_"
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Cómo estas?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cómo estás?"
+                }
+              ],
+              "nota": "Keep the accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Bien, gracias, ¿y ti?"
+                },
+                {
+                  "v": "bien",
+                  "t": "Bien, gracias, ¿y tú?"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "estoy, estás, está",
+              "texto": "The verb: [[5166|estar in the present]]."
+            },
+            {
+              "forma": "estás / está",
+              "texto": "Choosing the form: [[7230|tú vs usted]]."
+            },
+            {
+              "forma": "¿cómo…?",
+              "texto": "Other questions with cómo: [[10702|how / what… like]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Greet your friend: _How are you?_",
+              "r": "¿Cómo estás?",
+              "nota": "tú: estás."
+            },
+            {
+              "p": "Greet an older neighbor, Doña Lupe.",
+              "r": "Doña Lupe, ¿cómo está?",
+              "nota": "usted: está."
+            },
+            {
+              "p": "Reply to your teacher: _Good, thanks, and you?_",
+              "r": "Bien, gracias, ¿y usted?",
+              "nota": "y usted."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      7230,
+      10702
+    ],
+    "sigue": [
+      5166
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5880",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "tema": 9283,
+  "slug": "contra-la-pared",
+  "titulo": "The preposition contra (against)",
+  "subtitulo": "Recargué la tabla contra la pared.",
+  "foto": "t07.jpg",
+  "regla": "Contra means against: touching or leaning on something, playing or fighting someone, and opposing something. To be against an idea: estar en contra de.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Contra** = **against**: leaning on something, or facing a rival."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It also means **against** a problem: **una crema contra los mosquitos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "To be **against** an idea: **estar en contra de** + noun."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With pronouns: **contra mí**, **contra ti**, **contra él**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Recargué la tabla ==contra== la pared.",
+              "en": "I leaned the board against the wall."
+            },
+            {
+              "es": "El sábado peleo ==contra== un cinta negra.",
+              "en": "On Saturday I fight against a black belt."
+            },
+            {
+              "es": "Los Xolos juegan ==contra== el América.",
+              "en": "The Xolos play against América."
+            },
+            {
+              "es": "Remé ==contra== la corriente.",
+              "en": "I paddled against the current."
+            },
+            {
+              "es": "Esta crema es buena ==contra== los mosquitos.",
+              "en": "This cream is good against mosquitoes."
+            },
+            {
+              "es": "Estoy ==en contra de== la nueva ley.",
+              "en": "I'm against the new law."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estoy en contra la idea."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estoy en contra de la idea."
+                }
+              ],
+              "nota": "**En contra** needs **de**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Juegas contra yo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Juegas contra mí."
+                }
+              ],
+              "nota": "After a preposition: **mí**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "contra mí",
+              "texto": "Pronouns after prepositions: [[6466|prepositions + pronouns]]."
+            },
+            {
+              "forma": "con",
+              "texto": "With, the friendly one: [[7895|the preposition con]]."
+            },
+            {
+              "forma": "hacia",
+              "texto": "Towards: [[9141|the preposition hacia]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We play against Tijuana._",
+              "r": "Jugamos contra Tijuana.",
+              "nota": "contra."
+            },
+            {
+              "p": "Fix it: _Estoy en contra el plan._",
+              "r": "Estoy en contra del plan.",
+              "nota": "de + el = del."
+            },
+            {
+              "p": "In Spanish: _He fights against me._",
+              "r": "Él pelea contra mí.",
+              "nota": "contra mí."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7895
+    ],
+    "confunde": [
+      9141
+    ],
+    "sigue": [
+      6466
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9283",
+      "kwiziq": true
+    }
+  ]
+}

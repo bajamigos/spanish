@@ -1,0 +1,220 @@
+{
+  "tema": 5848,
+  "slug": "sigo-consigo-presente",
+  "titulo": "Seguir and conseguir in the present",
+  "subtitulo": "¿Sigues en la playa?",
+  "foto": "t07.jpg",
+  "regla": "Seguir, conseguir and perseguir change e to i in every person except nosotros, and in yo gu becomes g: sigo, sigues, sigue, seguimos, siguen.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Seguir** (_to follow, to continue, to still be_), **conseguir** (_to get_) and **perseguir** (_to chase_) share one pattern."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**e → i** in the stem, in **every person except nosotros**: **sigues**, but **seguimos**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In **yo**, **gu → g** before **o**: **sigo**, **consigo**. Elsewhere the **u** stays, to keep the hard g before e: **sigues**, **siguen**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "seguir",
+            "conseguir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "sigo",
+              "consigo"
+            ],
+            [
+              "tú",
+              "sigues",
+              "consigues"
+            ],
+            [
+              "él / ella / usted",
+              "sigue",
+              "consigue"
+            ],
+            [
+              "nosotros",
+              "seguimos",
+              "conseguimos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "siguen",
+              "consiguen"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Sigo== a mi entrenador de jiu-jitsu en Instagram.",
+              "en": "I follow my jiu-jitsu coach on Instagram."
+            },
+            {
+              "es": "¿==Sigues== en la playa?",
+              "en": "Are you still at the beach?"
+            },
+            {
+              "es": "El perro ==persigue== al gato.",
+              "en": "The dog chases the cat."
+            },
+            {
+              "es": "No ==consigo== boletos para el concierto.",
+              "en": "I can't get tickets for the concert."
+            },
+            {
+              "es": "==Seguimos== derecho por la avenida.",
+              "en": "We keep going straight down the avenue."
+            },
+            {
+              "es": "Ellos ==consiguen== trabajo en San Diego.",
+              "en": "They get jobs in San Diego."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo siguo las instrucciones."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo sigo las instrucciones."
+                }
+              ],
+              "nota": "No **u** in yo."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tú siges las instrucciones."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tú sigues las instrucciones."
+                }
+              ],
+              "nota": "Keep the **u** before e."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros siguimos aquí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros seguimos aquí."
+                }
+              ],
+              "nota": "No change in **nosotros**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "pido",
+              "texto": "The same e → i change: [[5851|pedir]]."
+            },
+            {
+              "forma": "corrijo",
+              "texto": "e → i plus a spelling change in yo: [[5846|corregir and elegir]]."
+            },
+            {
+              "forma": "sirvo",
+              "texto": "More e → i verbs: [[5554|-ir verbs with e > i]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish, with seguir: _I'm still tired._",
+              "r": "Sigo cansado.",
+              "nota": "yo: sigo."
+            },
+            {
+              "p": "In Spanish: _We get a table._",
+              "r": "Conseguimos una mesa.",
+              "nota": "nosotros: no change."
+            },
+            {
+              "p": "Fix it: _Ella sige la ruta._",
+              "r": "Ella sigue la ruta.",
+              "nota": "Keep the u."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5851
+    ],
+    "confunde": [
+      5846
+    ],
+    "sigue": [
+      5554
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5848",
+      "kwiziq": true
+    }
+  ]
+}

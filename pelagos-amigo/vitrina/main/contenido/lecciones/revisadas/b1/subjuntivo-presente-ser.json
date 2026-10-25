@@ -1,0 +1,263 @@
+{
+  "tema": 5152,
+  "slug": "subjuntivo-presente-ser",
+  "titulo": "Conjugate ser in the present subjunctive",
+  "subtitulo": "It doesn't follow the other -er verbs. ¡Que seas feliz!",
+  "foto": "t05.jpg",
+  "regla": "Ser has the irregular stem se- with regular endings: sea, seas, sea, seamos, sean.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Ser** is irregular in the present subjunctive because **its stem is irregular**. It doesn't follow the same rule as other **-er** verbs: nothing comes out of **soy**. You learn it as it is."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**se-**",
+            "**-a, -as, -a, -amos, -an**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "ser"
+          ],
+          "filas": [
+            [
+              "yo",
+              "sea"
+            ],
+            [
+              "tú",
+              "seas"
+            ],
+            [
+              "él, ella, usted",
+              "sea"
+            ],
+            [
+              "nosotros",
+              "seamos"
+            ],
+            [
+              "ustedes, ellos",
+              "sean"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **sea** looks like the English _sea_. The sea is what it is: it doesn't conjugate like the others."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¡Que ==seas== feliz!",
+              "en": "Be happy! / May you be happy!"
+            },
+            {
+              "es": "No creo que eso ==sea== muy inteligente.",
+              "en": "I don't think that's very smart."
+            },
+            {
+              "es": "Puede que ==seamos== los únicos en el agua.",
+              "en": "We may be the only ones in the water."
+            },
+            {
+              "es": "No creo que ==sea== tan egoísta.",
+              "en": "I don't think she's that selfish."
+            },
+            {
+              "es": "Es probable que ==sean== capaces.",
+              "en": "They're probably capable."
+            },
+            {
+              "es": "No pienso que ==sean== justos.",
+              "en": "I don't think they're fair."
+            },
+            {
+              "es": "Espero que ==sean== responsables con la tabla.",
+              "en": "I hope you're responsible with the board."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The triggers here are doubt (**no creo que**, **no pienso que**), probability (**es probable que**, [[7228|**puede que**]]) and wishes (**espero que**, **que…**)."
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Creo que** states what you think and takes the ordinary present. **No creo que** expresses doubt and takes the subjunctive."
+        },
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "bien",
+                  "t": "Creo que es buena idea."
+                },
+                {
+                  "v": "bien",
+                  "t": "No creo que sea buena idea."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No creo que es buena idea."
+                },
+                {
+                  "v": "bien",
+                  "t": "No creo que sea buena idea."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Espero que eres feliz."
+                },
+                {
+                  "v": "bien",
+                  "t": "Espero que seas feliz."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usos",
+      "titulo": "Sea in other places",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "No creo que sea fácil.",
+              "texto": "After doubt, wishes or probability.",
+              "aqui": true
+            },
+            {
+              "forma": "No seas así.",
+              "texto": "The negative **tú** command. See [[9255|negative commands]]."
+            },
+            {
+              "forma": "Sean puntuales.",
+              "texto": "The **ustedes** command. See [[6961|commands for usted and ustedes]]."
+            },
+            {
+              "forma": "O sea…",
+              "texto": "The everyday filler is **ser** in the subjunctive too. See [[7265|**o sea** and **es decir**]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "soy, eres, es",
+              "texto": "The ordinary present: [[5070|**ser** in the present]]."
+            },
+            {
+              "forma": "esté, estés",
+              "texto": "Its partner: [[5229|**estar** in the subjunctive]]."
+            },
+            {
+              "forma": "vaya, vayas",
+              "texto": "Another irregular stem: [[5231|**ir** in the subjunctive]]."
+            },
+            {
+              "forma": "coma, viva",
+              "texto": "Where the endings come from: [[5151|-er and -ir in the subjunctive]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I don't think it's Beto._",
+              "r": "No creo que sea Beto.",
+              "nota": "**No creo que** is doubt: **sea**."
+            },
+            {
+              "p": "Which one? **Es probable que somos los primeros** or **Es probable que seamos los primeros**.",
+              "r": "Es probable que seamos los primeros.",
+              "nota": "Probability: subjunctive."
+            },
+            {
+              "p": "Wish a friend happiness, starting with **que**.",
+              "r": "¡Que seas feliz!",
+              "nota": "**Que** on its own, as a wish, also takes the subjunctive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5070,
+      5151
+    ],
+    "confunde": [
+      5229
+    ],
+    "sigue": [
+      5231,
+      7228,
+      9255,
+      6961,
+      7265
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5152",
+      "kwiziq": true
+    }
+  ]
+}

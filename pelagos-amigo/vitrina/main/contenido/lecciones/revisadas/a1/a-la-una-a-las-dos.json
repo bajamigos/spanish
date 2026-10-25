@@ -1,0 +1,214 @@
+{
+  "tema": 6665,
+  "slug": "a-la-una-a-las-dos",
+  "titulo": "A la / a las + time: at what time",
+  "subtitulo": "«Me levanto a las cinco.»",
+  "foto": "t08.jpg",
+  "regla": "To say at what time something happens, use a la una for one o'clock and a las + hour for all the others: a las dos, a las ocho y media. Ask with ¿A qué hora…?",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "_At_ + a time = **a** + **la / las** + hour."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Time",
+            "Spanish"
+          ],
+          "filas": [
+            [
+              "at 1:00",
+              "a la una"
+            ],
+            [
+              "at 1:30",
+              "a la una y media"
+            ],
+            [
+              "at 2:00",
+              "a las dos"
+            ],
+            [
+              "at 7:15",
+              "a las siete y cuarto"
+            ],
+            [
+              "at 8:00 p.m.",
+              "a las ocho de la noche"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**La** only for **una** (one hour); **las** for the rest (several hours)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "To ask: **¿A qué hora…?** = _At what time…?_"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Me levanto ==a las cinco== para surfear.",
+              "en": "I get up at five to go surfing."
+            },
+            {
+              "es": "Siempre como ==a la una==.",
+              "en": "I always eat at one."
+            },
+            {
+              "es": "¿==A qué hora== abre la tienda?",
+              "en": "What time does the store open?"
+            },
+            {
+              "es": "La tienda abre ==a las nueve y media==.",
+              "en": "The store opens at nine thirty."
+            },
+            {
+              "es": "La clase empieza ==a las siete== de la tarde.",
+              "en": "Class starts at seven p.m."
+            },
+            {
+              "es": "El partido es ==a las ocho== de la noche.",
+              "en": "The game is at eight p.m."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Llego en las ocho."
+                },
+                {
+                  "v": "bien",
+                  "t": "Llego a las ocho."
+                }
+              ],
+              "nota": "_At_ a time: **a**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Como a las una."
+                },
+                {
+                  "v": "bien",
+                  "t": "Como a la una."
+                }
+              ],
+              "nota": "One hour: **la**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Empieza a ocho."
+                },
+                {
+                  "v": "bien",
+                  "t": "Empieza a las ocho."
+                }
+              ],
+              "nota": "Keep **las**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "es la una, son las dos",
+              "texto": "Saying what time it is: [[7231|telling the time]]."
+            },
+            {
+              "forma": "en la mañana",
+              "texto": "Parts of the day: [[9344|en / a / por + part of the day]]."
+            },
+            {
+              "forma": "la clase es a las siete",
+              "texto": "Events and their time: [[5981|ser for time and dates]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Class starts at nine._",
+              "r": "La clase empieza a las nueve.",
+              "nota": "a las + hour."
+            },
+            {
+              "p": "In Spanish (tú): _What time do you eat?_",
+              "r": "¿A qué hora comes?",
+              "nota": "¿A qué hora…?"
+            },
+            {
+              "p": "Fix it: _Salgo a las una._",
+              "r": "Salgo a la una.",
+              "nota": "una: la."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7231
+    ],
+    "confunde": [
+      5981
+    ],
+    "sigue": [
+      9344
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6665",
+      "kwiziq": true
+    }
+  ]
+}

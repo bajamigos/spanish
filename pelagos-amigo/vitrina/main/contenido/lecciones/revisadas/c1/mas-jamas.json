@@ -1,0 +1,191 @@
+{
+  "tema": 9509,
+  "slug": "mas-jamas",
+  "titulo": "El más... jamás visto = the most... ever seen",
+  "subtitulo": "la novela más exitosa jamás escrita",
+  "foto": "t10.jpg",
+  "regla": "To call something the most extreme of its kind: el / la + más + adjective + jamás + participle = the most... ever + participle: la novela más vendida jamás escrita. Also mejor / peor + noun + jamás + participle. Or with a clause: el más... que jamás + subjunctive (or indicative).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "noun",
+            "+ más + adjective",
+            "+ jamás",
+            "+ participle"
+          ]
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "mejor / peor + noun",
+            "+ jamás",
+            "+ participle"
+          ]
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "... que jamás",
+            "+ verb (often subjunctive)"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Jamás** here means _ever_, not _never_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The participle agrees: **la novela más exitosa jamás escrita**, **las sandías más grandes jamás cultivadas**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "After **que jamás**, the subjunctive is common (**que jamás haya visto**); the indicative also appears (**que jamás he visto**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **jamás** after a superlative opens all of history."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Es el actor ==más cotizado jamás visto== en Hollywood.",
+              "en": "He's the most sought-after actor Hollywood has ever seen."
+            },
+            {
+              "es": "Hablan de la novela ==más exitosa jamás escrita==.",
+              "en": "They're talking about the most successful novel ever written."
+            },
+            {
+              "es": "Vimos las sandías ==más grandes jamás cultivadas== en la región.",
+              "en": "We saw the biggest watermelons ever grown in the region."
+            },
+            {
+              "es": "Llevaba el ==mejor vestido jamás diseñado== por esa casa.",
+              "en": "She was wearing the best dress that house ever designed."
+            },
+            {
+              "es": "Es la persona ==más generosa que jamás haya conocido==.",
+              "en": "She's the most generous person I've ever met."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "menos común",
+                  "t": "la novela más exitosa nunca escrita"
+                },
+                {
+                  "v": "bien",
+                  "t": "la novela más exitosa jamás escrita"
+                }
+              ],
+              "nota": "**Jamás** is the usual choice here; **nunca** also appears."
+            },
+            {
+              "filas": [
+                {
+                  "v": "nunca",
+                  "t": "Jamás he ido a Cancún."
+                },
+                {
+                  "v": "ever",
+                  "t": "el viaje más caro jamás hecho"
+                }
+              ],
+              "nota": "Before a verb: _never_; after a superlative: _ever_."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "superlatives",
+              "texto": "[[5056|the most / the least]], [[7066|the best / the worst]]."
+            },
+            {
+              "forma": "nunca / jamás",
+              "texto": "[[5136|nunca]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _the tallest building ever built_",
+              "r": "el edificio más alto jamás construido",
+              "nota": "jamás + participle."
+            },
+            {
+              "p": "In Spanish: _the best song ever recorded_",
+              "r": "la mejor canción jamás grabada",
+              "nota": "mejor + noun."
+            },
+            {
+              "p": "In Spanish: _the worst movie I've ever seen_",
+              "r": "la peor película que jamás haya visto / que he visto",
+              "nota": "que jamás."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5056,
+      7066
+    ],
+    "confunde": [
+      5136
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9509",
+      "kwiziq": true
+    }
+  ]
+}

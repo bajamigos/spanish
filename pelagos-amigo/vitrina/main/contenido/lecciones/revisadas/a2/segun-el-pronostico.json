@@ -1,0 +1,229 @@
+{
+  "tema": 10028,
+  "slug": "segun-el-pronostico",
+  "titulo": "Según = according to",
+  "subtitulo": "Según el pronóstico, mañana llueve.",
+  "foto": "t09.jpg",
+  "regla": "Según means according to. Put it straight before a noun or a pronoun, with no extra preposition: según el pronóstico, según mi mamá. With pronouns it takes yo and tú: según yo, según tú.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Según** = _according to_. It gives the source of an opinion or a piece of information."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "según",
+            "+",
+            "noun / name / pronoun"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "No preposition after it: **según** el doctor, never **según a** or **según de**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With pronouns, use **yo** and **tú** (not **mí** and **ti**): **según yo**, **según tú**, según él, según ustedes."
+        },
+        {
+          "tipo": "texto",
+          "texto": "In Mexico, **según yo** is very common for _as far as I knew_, often when you turn out to be wrong: _**Según yo**, la fiesta era hoy._"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Según él** or just **según** can sound skeptical: _he claims_, _supposedly_. _**Según** ya viene._ = _Supposedly, he's on his way._"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Alone as an answer, **según** means _it depends_: _—¿Vas a ir? —**Según**._"
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Según== el pronóstico, mañana hay olas de dos metros.",
+              "en": "According to the forecast, there will be two-meter waves tomorrow."
+            },
+            {
+              "es": "==Según== mi mamá, el mole lleva más de veinte ingredientes.",
+              "en": "According to my mom, mole has more than twenty ingredients."
+            },
+            {
+              "es": "==Según== el profesor, el examen es fácil.",
+              "en": "According to the teacher, the exam is easy."
+            },
+            {
+              "es": "==Según tú==, ¿cuál es la mejor taquería de Tijuana?",
+              "en": "According to you, what's the best taco place in Tijuana?"
+            },
+            {
+              "es": "==Según yo==, la clase era a las seis.",
+              "en": "As far as I knew, the class was at six."
+            },
+            {
+              "es": "==Según él==, ya pagó la renta.",
+              "en": "He says he already paid the rent."
+            },
+            {
+              "es": "==Según== las noticias, cerraron la garita.",
+              "en": "According to the news, they closed the border crossing."
+            },
+            {
+              "es": "—¿Vas a la fiesta? —==Según==, si salgo temprano.",
+              "en": "\"Are you going to the party?\" \"Depends, if I get out early.\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Según a mi papá, es fácil."
+                },
+                {
+                  "v": "bien",
+                  "t": "Según mi papá, es fácil."
+                }
+              ],
+              "nota": "No a after según."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Según mí, tienes razón."
+                },
+                {
+                  "v": "bien",
+                  "t": "Según yo, tienes razón."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Según ti, ¿quién ganó?"
+                },
+                {
+                  "v": "bien",
+                  "t": "Según tú, ¿quién ganó?"
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Acordando a las noticias..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Según las noticias..."
+                }
+              ],
+              "nota": "_According to_ is según."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "según tú",
+              "texto": "Pronouns after it: [[7088|entre and según + pronouns]]."
+            },
+            {
+              "forma": "para mí",
+              "texto": "Giving your own opinion: [[5967|para mí = in my opinion]]."
+            },
+            {
+              "forma": "según lo que digas",
+              "texto": "With a verb: [[7846|según / conforme = as, according to]]."
+            },
+            {
+              "forma": "según avanzas",
+              "texto": "_As_, at the same time: [[7850|según / a medida que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _According to the doctor, I'm fine._",
+              "r": "Según el doctor, estoy bien.",
+              "nota": "según + noun."
+            },
+            {
+              "p": "In Spanish: _As far as I knew, it was free._",
+              "r": "Según yo, era gratis.",
+              "nota": "según yo."
+            },
+            {
+              "p": "Fix it: _Según a ella, no hay clase._",
+              "r": "Según ella, no hay clase.",
+              "nota": "No a."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7088
+    ],
+    "confunde": [
+      5967
+    ],
+    "sigue": [
+      7846,
+      7850
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 10028",
+      "kwiziq": true
+    }
+  ]
+}

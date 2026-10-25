@@ -1,0 +1,184 @@
+{
+  "tema": 8918,
+  "slug": "como-si-indicativo",
+  "titulo": "Como si + indicative to express indifference",
+  "subtitulo": "Como si se va a Australia. Me da igual.",
+  "foto": "t07.jpg",
+  "regla": "Como si + indicative (present) shows indifference: I don't care if...: —Antonio se va a Francia. —Bueno, como si se va a Australia. Compare como si + subjunctive = as if.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "como si",
+            "+ present indicative"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It means _for all I care, even if, I don't care if_. It **dismisses** what was said."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Different from **como si** + imperfect subjunctive (_as if_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Often with **me da igual**, **a mí qué**, **¿y?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: indicative **como si** = a shrug."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "—Antonio se va a vivir a Francia. —Bueno, ==como si se va== a Australia.",
+              "en": "—Antonio's moving to France. —Well, he can move to Australia for all I care."
+            },
+            {
+              "es": "—No puedes fumar aquí, hay un letrero. —==Como si hay== tres letreros. Yo fumo donde quiero.",
+              "en": "—You can't smoke here, there's a sign. —There could be three signs. I smoke where I want."
+            },
+            {
+              "es": "—Tengo un hambre... ¿Te importa si me como toda la pizza? —==Como si te comes== también el pastel.",
+              "en": "—I'm starving... Mind if I eat all the pizza? —Eat the cake too, for all I care."
+            },
+            {
+              "es": "—Mañana va a llover. —==Como si== nieva; yo voy a la playa.",
+              "en": "—It's going to rain tomorrow. —It could snow; I'm going to the beach."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "comparar",
+      "titulo": "Indicative or subjunctive?",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "indiferencia",
+                  "t": "Como si se va a Australia."
+                },
+                {
+                  "v": "como si = as if",
+                  "t": "Habla como si fuera de Australia."
+                }
+              ],
+              "nota": "Different meanings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Como si se vaya, me da igual."
+                },
+                {
+                  "v": "bien",
+                  "t": "Como si se va, me da igual."
+                }
+              ],
+              "nota": "Indifference: indicative."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "como si fuera",
+              "texto": "[[6171|como si + imperfect subjunctive]]."
+            },
+            {
+              "forma": "¡como si tú supieras!",
+              "texto": "[[8245|ironic como si]]."
+            },
+            {
+              "forma": "me da igual que",
+              "texto": "[[6185|feelings]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Indifference: _—Dice que te va a demandar._ (Let him!)",
+              "r": "Como si me demanda; no me importa.",
+              "nota": "Indicative."
+            },
+            {
+              "p": "Indicative or subjunctive? _Habla como si ___ (saber) todo._ (as if)",
+              "r": "supiera",
+              "nota": "As if: subjunctive."
+            },
+            {
+              "p": "Indifference: _—Va a hacer frío._ (Even if it freezes!)",
+              "r": "Como si hiela; yo salgo.",
+              "nota": "Indicative."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6171
+    ],
+    "confunde": [
+      8245
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8918",
+      "kwiziq": true
+    }
+  ]
+}

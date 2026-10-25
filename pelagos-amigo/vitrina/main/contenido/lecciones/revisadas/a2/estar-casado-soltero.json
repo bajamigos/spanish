@@ -1,0 +1,259 @@
+{
+  "tema": 6069,
+  "slug": "estar-casado-soltero",
+  "titulo": "Estar for relationship status",
+  "subtitulo": "Estoy soltero. Mi hermana está casada.",
+  "foto": "t08.jpg",
+  "regla": "To say whether someone is married, single, divorced, engaged or widowed, use estar: estoy casado, está soltera. The adjective agrees with the person, and married to is casado con.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Relationship status uses **estar**, not **ser**:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Status",
+            "Masculine",
+            "Feminine"
+          ],
+          "filas": [
+            [
+              "_married_",
+              "está casado",
+              "está casada"
+            ],
+            [
+              "_single_",
+              "está soltero",
+              "está soltera"
+            ],
+            [
+              "_divorced_",
+              "está divorciado",
+              "está divorciada"
+            ],
+            [
+              "_separated_",
+              "está separado",
+              "está separada"
+            ],
+            [
+              "_engaged_",
+              "está comprometido",
+              "está comprometida"
+            ],
+            [
+              "_widowed_",
+              "está viudo",
+              "está viuda"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The adjective **agrees** with the person: **Ella está casada.** **Ellos están divorciados.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "_Married to_ is **casado con**, never **casado a**: **Está casada con un doctor.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "You'll also hear **soy soltero** or **es casado** in Mexico, but **estar** is the safe choice."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Careful: **ser** still names the relationship itself: **Es mi esposa.** **Es mi novio.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: a status is a state you're in today. States live with **estar**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "—¿==Estás casado==? —No, ==estoy soltero==.",
+              "en": "—Are you married? —No, I'm single."
+            },
+            {
+              "es": "Mi hermana ==está casada con== un surfista de Ensenada.",
+              "en": "My sister is married to a surfer from Ensenada."
+            },
+            {
+              "es": "Mis papás ==están divorciados== desde hace diez años.",
+              "en": "My parents have been divorced for ten years."
+            },
+            {
+              "es": "Mi prima ==está comprometida==; se casa en diciembre.",
+              "en": "My cousin is engaged; she's getting married in December."
+            },
+            {
+              "es": "Don Ramón ==está viudo== y vive solo.",
+              "en": "Don Ramón is a widower and lives alone."
+            },
+            {
+              "es": "Ana y Pedro ==están separados==, pero son amigos.",
+              "en": "Ana and Pedro are separated, but they're friends."
+            },
+            {
+              "es": "Mi entrenador ==está casado== y tiene tres hijos.",
+              "en": "My coach is married and has three kids."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella es casada."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella está casada."
+                }
+              ],
+              "nota": "Status → **estar**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mi tía está casado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mi tía está casada."
+                }
+              ],
+              "nota": "Agree with **tía**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Está casado a una maestra."
+                },
+                {
+                  "v": "bien",
+                  "t": "Está casado con una maestra."
+                }
+              ],
+              "nota": "_Married to_ = **casado con**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estamos casado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estamos casados."
+                }
+              ],
+              "nota": "Plural person, plural adjective."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "es mi novia",
+              "texto": "The relationship itself uses ser: [[6449|ser to describe relationships]]."
+            },
+            {
+              "forma": "estoy, estás",
+              "texto": "The verb: [[5166|estar in the present]]."
+            },
+            {
+              "forma": "estoy feliz",
+              "texto": "Other states with estar: [[5980|estar for feelings and emotions]]."
+            },
+            {
+              "forma": "estoy cansado",
+              "texto": "And for the body: [[5983|estar for physical condition]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _My brother is divorced._",
+              "r": "Mi hermano está divorciado.",
+              "nota": "estar + agreement."
+            },
+            {
+              "p": "In Spanish: _She is married to a Mexican._",
+              "r": "Está casada con un mexicano.",
+              "nota": "casada con."
+            },
+            {
+              "p": "Fix it: «Mi hermano está casado a una doctora.»",
+              "r": "Mi hermano está casado con una doctora.",
+              "nota": "casado con."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5166
+    ],
+    "confunde": [
+      6449
+    ],
+    "sigue": [
+      5980,
+      5983
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6069",
+      "kwiziq": true
+    }
+  ]
+}

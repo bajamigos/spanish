@@ -1,0 +1,185 @@
+{
+  "tema": 7261,
+  "slug": "futuro-narrativo",
+  "titulo": "The future or conditional to narrate past events (literary style)",
+  "subtitulo": "En 1910 estallaría la Revolución.",
+  "foto": "t02.jpg",
+  "regla": "In literature, history and journalism, the simple future or the conditional can narrate past events, often what came later: Años después, se convertiría en presidente. Nacerá en 1907 y morirá en 1954. In speech, use the preterite.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "A **stylistic** device: the **conditional** or **future** tells past events, especially what happened **later** from the point of the story."
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "conditional",
+              "texto": "**Años después se casaría con ella.** (_Years later he would marry her._)"
+            },
+            {
+              "forma": "future (historical present style)",
+              "texto": "**Frida nace en 1907 y morirá en 1954.**"
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Not used in everyday speech; there you'd say **se casó**, **murió**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the narrator already knows the ending and peeks ahead."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "El niño, hambriento y sucio, ==continuaría== caminando por el camino solitario...",
+              "en": "The boy, hungry and dirty, kept on walking down the lonely road..."
+            },
+            {
+              "es": "...y Martina ==se llevaría== una gran sorpresa al ver de nuevo a su madre.",
+              "en": "...and Martina was in for a big surprise when she saw her mother again."
+            },
+            {
+              "es": "Años después, ese joven ==se convertiría== en presidente.",
+              "en": "Years later, that young man would become president."
+            },
+            {
+              "es": "Frida Kahlo nace en 1907 y ==morirá== en 1954.",
+              "en": "Frida Kahlo is born in 1907 and will die in 1954."
+            },
+            {
+              "es": "En 1910 ==estallaría== la Revolución.",
+              "en": "In 1910 the Revolution would break out."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "comparar",
+      "titulo": "Literary vs everyday",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "cotidiano",
+                  "t": "Años después se casó con ella."
+                },
+                {
+                  "v": "literario",
+                  "t": "Años después se casaría con ella."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "raro en conversación",
+                  "t": "Ayer comería tacos con Juan."
+                },
+                {
+                  "v": "natural",
+                  "t": "Ayer comí tacos con Juan."
+                }
+              ],
+              "nota": "Everyday: preterite."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "dijo que vendría",
+              "texto": "[[7761|future in the past]]."
+            },
+            {
+              "forma": "imperfect or preterite",
+              "texto": "[[6871|general use]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Literary: _Years later, she would win the Nobel prize._",
+              "r": "Años después, ganaría el premio Nobel.",
+              "nota": "Conditional."
+            },
+            {
+              "p": "Everyday version:",
+              "r": "Años después, ganó el premio Nobel.",
+              "nota": "Preterite."
+            },
+            {
+              "p": "Is _Ayer iría al cine_ normal in conversation for _I went yesterday_?",
+              "r": "No: Ayer fui al cine.",
+              "nota": "Literary only."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7761
+    ],
+    "confunde": [
+      6871
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7261",
+      "kwiziq": true
+    }
+  ]
+}

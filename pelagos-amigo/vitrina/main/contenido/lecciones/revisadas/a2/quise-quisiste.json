@@ -1,0 +1,244 @@
+{
+  "tema": 5246,
+  "slug": "quise-quisiste",
+  "titulo": "Querer in the preterite",
+  "subtitulo": "Quise llamarte, pero no tenía señal.",
+  "foto": "t05.jpg",
+  "regla": "Querer is irregular in the preterite: stem quis- + -e, -iste, -o, -imos, -ieron: quise, quisiste, quiso, quisimos, quisieron. It often means «tried to», and no quiso means «refused».",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Querer** (_to want_) changes its stem to **quis-** in the preterite, spelled with **s**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The endings are **-e, -iste, -o, -imos, -ieron**, with **no written accents**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "querer"
+          ],
+          "filas": [
+            [
+              "yo",
+              "quise"
+            ],
+            [
+              "tú",
+              "quisiste"
+            ],
+            [
+              "él / ella / usted",
+              "quiso"
+            ],
+            [
+              "nosotros",
+              "quisimos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "quisieron"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Because the preterite is one finished moment, **quise** + infinitive often means _I tried to_ (I wanted and acted)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**No quiso** + infinitive means _he refused to_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **quise** = I wanted it and made a move; **no quiso** = he dug in his heels and said no."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Quise== llamarte, pero no tenía señal.",
+              "en": "I tried to call you, but I had no signal."
+            },
+            {
+              "es": "Mi hijo no ==quiso== comer las verduras.",
+              "en": "My son refused to eat his vegetables."
+            },
+            {
+              "es": "==Quisimos== entrar al concierto, pero ya estaba lleno.",
+              "en": "We tried to get into the concert, but it was already full."
+            },
+            {
+              "es": "¿Por qué no ==quisiste== venir con nosotros?",
+              "en": "Why didn't you want to come with us?"
+            },
+            {
+              "es": "Los vecinos no ==quisieron== pagar la reparación de la barda.",
+              "en": "The neighbors refused to pay for fixing the fence."
+            },
+            {
+              "es": "Mi entrenador ==quiso== enseñarme una llave nueva, pero me lastimé el hombro.",
+              "en": "My coach wanted to teach me a new submission, but I hurt my shoulder."
+            },
+            {
+              "es": "Ella ==quiso== sembrar chiles, pero hacía demasiado frío.",
+              "en": "She tried to plant chiles, but it was too cold."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo quisé ir."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo quise ir."
+                }
+              ],
+              "nota": "No accent: **quise**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella querió venir."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella quiso venir."
+                }
+              ],
+              "nota": "Irregular stem **quis-**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ellos no quizieron pagar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ellos no quisieron pagar."
+                }
+              ],
+              "nota": "Spelled with **s**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros quisemos ayudar."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros quisimos ayudar."
+                }
+              ],
+              "nota": "nosotros: **-imos**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "quiero",
+              "texto": "The present first: [[5774|querer in the present]]."
+            },
+            {
+              "forma": "quería",
+              "texto": "The other past: [[6502|querer in the imperfect]]."
+            },
+            {
+              "forma": "pude",
+              "texto": "Same endings: [[5221|poder in the preterite]]."
+            },
+            {
+              "forma": "quise vs quería",
+              "texto": "The meaning difference in depth: [[6867|querer in the preterite vs the imperfect]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I tried to open the door._",
+              "r": "Quise abrir la puerta.",
+              "nota": "quise = tried."
+            },
+            {
+              "p": "In Spanish: _She refused to dance._",
+              "r": "No quiso bailar.",
+              "nota": "no quiso = refused."
+            },
+            {
+              "p": "Fix it: _Nosotros quisemos ayudar._",
+              "r": "Nosotros quisimos ayudar.",
+              "nota": "quisimos."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5774
+    ],
+    "confunde": [
+      6502
+    ],
+    "sigue": [
+      5221,
+      6867
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5246",
+      "kwiziq": true
+    }
+  ]
+}

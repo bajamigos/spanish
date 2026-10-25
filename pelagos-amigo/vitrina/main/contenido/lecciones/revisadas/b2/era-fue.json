@@ -1,0 +1,225 @@
+{
+  "tema": 6864,
+  "slug": "era-fue",
+  "titulo": "Ser in the imperfect vs the preterite",
+  "subtitulo": "Era buen doctor / Fue buen doctor.",
+  "foto": "t03.jpg",
+  "regla": "Era: background description, time frame not important. Fue: the situation is seen as complete, within a limited time, or as a summary of an event (el viaje fue increíble).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Both translate as _was_, but they frame the past differently."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Form",
+            "View",
+            "Example"
+          ],
+          "filas": [
+            [
+              "era",
+              "background, description; when it started or ended doesn't matter. Also _used to be_ / _would be_",
+              "Manuel era un buen doctor."
+            ],
+            [
+              "fue",
+              "a complete, limited period or a finished event summed up",
+              "Manuel fue un buen doctor (durante 30 años)."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Events and their evaluation take **fue**: **la fiesta fue increíble**, **el examen fue difícil**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Time and age in the past take **era**: **eran las seis**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **era** paints the scene; **fue** gives the verdict."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "era",
+                  "t": "Manuel era un buen doctor."
+                },
+                {
+                  "v": "fue",
+                  "t": "Manuel fue un buen doctor."
+                }
+              ],
+              "nota": "**Era**: description. **Fue**: his career is seen as a closed chapter."
+            },
+            {
+              "filas": [
+                {
+                  "v": "era",
+                  "t": "El viaje era muy interesante."
+                },
+                {
+                  "v": "fue",
+                  "t": "El viaje fue muy interesante."
+                }
+              ],
+              "nota": "**Era**: describing it while it was going on. **Fue**: the trip is over, here's the verdict."
+            },
+            {
+              "filas": [
+                {
+                  "v": "era",
+                  "t": "Paloma era la maestra de mi hija."
+                },
+                {
+                  "v": "fue",
+                  "t": "Paloma fue la maestra de mi hija."
+                }
+              ],
+              "nota": "**Fue** frames it as a finished period."
+            }
+          ]
+        },
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Siempre ==eran== como las seis cuando mi papá volvía a casa.",
+              "en": "It was always around six when my dad got home."
+            },
+            {
+              "es": "La boda ==fue== en Valle de Bravo.",
+              "en": "The wedding was in Valle de Bravo. (an event)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Fueron las tres cuando llegué."
+                },
+                {
+                  "v": "bien",
+                  "t": "Eran las tres cuando llegué."
+                }
+              ],
+              "nota": "Clock time: **era**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "menos natural",
+                  "t": "El examen de ayer era muy difícil, pero lo pasé."
+                },
+                {
+                  "v": "mejor",
+                  "t": "El examen de ayer fue muy difícil, pero lo pasé."
+                }
+              ],
+              "nota": "Verdict on a finished event: **fue**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "estaba / estuvo",
+              "texto": "[[6868|estar]]."
+            },
+            {
+              "forma": "tenía / tuvo",
+              "texto": "[[6869|tener]]."
+            },
+            {
+              "forma": "imperfect or preterite?",
+              "texto": "[[6871|general use]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Era or fue? _El concierto ___ espectacular._ (verdict)",
+              "r": "fue",
+              "nota": "Finished event."
+            },
+            {
+              "p": "Era or fue? _Cuando ___ niña, vivía en Puebla._",
+              "r": "era",
+              "nota": "Background."
+            },
+            {
+              "p": "Era or fue? ____ las once de la noche._",
+              "r": "Eran",
+              "nota": "Clock time."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6871
+    ],
+    "confunde": [
+      6868
+    ],
+    "sigue": [
+      6868,
+      6869
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6864",
+      "kwiziq": true
+    }
+  ]
+}

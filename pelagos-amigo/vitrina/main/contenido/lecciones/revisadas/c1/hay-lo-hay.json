@@ -1,0 +1,178 @@
+{
+  "tema": 7443,
+  "slug": "hay-lo-hay",
+  "titulo": "No hay / no lo hay: when the object pronoun can drop",
+  "subtitulo": "—¿Hay tortillas? —No, no hay.",
+  "foto": "t01.jpg",
+  "regla": "Most verbs need lo, la, los, las to refer back to a noun: —¿Viste a tu mamá? —No, no la vi. But with haber, tener, querer (and often llevar, traer, necesitar) in short answers, the pronoun is usually left out, especially when the noun is unspecific: —¿Hay leche? —No, no hay.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Normal verbs **need** the pronoun: **—¿Llamaste al plomero? —Sí, lo llamé.** (never ~~sí, llamé~~)"
+        },
+        {
+          "tipo": "texto",
+          "texto": "With **haber, tener, querer, llevar, traer, necesitar**, short answers usually **drop** it: **—¿Tienes cambio? —Sí, tengo.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Dropping is most natural when the noun is general or uncountable (**leche, dinero, tiempo**). For a specific known thing, keep it: **—¿Tienes mis llaves? —Sí, las tengo.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Both are correct in many cases; the version without the pronoun sounds more casual."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **hay, tengo, quiero** can stand alone; most verbs can't."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "—¿Hay refrescos en el refri? —No, ==no hay==.",
+              "en": "—Are there sodas in the fridge? —No, there aren't."
+            },
+            {
+              "es": "—¿Hay muchos perros en el parque? —No, ==no hay== tantos.",
+              "en": "—Are there lots of dogs in the park? —No, not that many."
+            },
+            {
+              "es": "—¿Tienes dinero para la pizza? —Sí, ==tengo==.",
+              "en": "—Do you have money for the pizza? —Yes, I do."
+            },
+            {
+              "es": "—¿Quién quiere pozole? —¡Yo ==quiero==!",
+              "en": "—Who wants pozole? —I do!"
+            },
+            {
+              "es": "—¿Traen monedas para el estacionamiento? —Sí, ==traemos==.",
+              "en": "—Do you have coins for parking? —Yes, we do."
+            },
+            {
+              "es": "—¿Tienes las llaves del carro? —Sí, ==las tengo==.",
+              "en": "—Do you have the car keys? —Yes, I have them."
+            },
+            {
+              "es": "—¿Viste a tu mamá hoy? —No, ==no la vi==.",
+              "en": "—Did you see your mom today? —No, I didn't."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "—¿Llamaste a Juan? —Sí, llamé."
+                },
+                {
+                  "v": "bien",
+                  "t": "—¿Llamaste a Juan? —Sí, lo llamé."
+                }
+              ],
+              "nota": "**Llamar** needs the pronoun."
+            },
+            {
+              "filas": [
+                {
+                  "v": "casual",
+                  "t": "—¿Hay pan? —No hay."
+                },
+                {
+                  "v": "también",
+                  "t": "—¿Hay pan? —No lo hay."
+                }
+              ],
+              "nota": "Both fine; without **lo** is more common."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "direct object pronouns",
+              "texto": "[[5121|lo, la, los, las]]."
+            },
+            {
+              "forma": "repeating the object",
+              "texto": "[[6934|repetition of direct object pronouns]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Answer: _—¿Tienes tiempo?_ (yes)",
+              "r": "Sí, tengo.",
+              "nota": "Pronoun usually dropped."
+            },
+            {
+              "p": "Answer: _—¿Compraste el pan?_ (yes)",
+              "r": "Sí, lo compré.",
+              "nota": "Comprar needs lo."
+            },
+            {
+              "p": "Answer: _—¿Hay gasolineras por aquí?_ (no)",
+              "r": "No, no hay.",
+              "nota": "haber."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5121
+    ],
+    "confunde": [
+      6934
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7443",
+      "kwiziq": true
+    }
+  ]
+}

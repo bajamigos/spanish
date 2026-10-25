@@ -1,0 +1,231 @@
+{
+  "tema": 5963,
+  "slug": "por-a-traves-caminar-por",
+  "titulo": "Por (not para) for through / along a place",
+  "subtitulo": "«Caminamos por la playa.»",
+  "foto": "t06.jpg",
+  "regla": "Use por + place for movement through, along, across or by way of a place: caminar por la playa, entrar por la ventana, pasar por Rosarito. Para + place gives the destination instead.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Por** + place describes the **route**: the space you move **through**, **along**, **around** or **past**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "movement verb",
+            "+ por +",
+            "place you cross"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Typical verbs: **caminar, pasear, correr, manejar, pasar, entrar, salir, viajar**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Entrar por** / **salir por** = _to go in / out through_ (a door, a window). **Mirar por la ventana** = _to look out the window_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Pasar por** + place = _to go past / by way of_: **pasamos por Rosarito**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Para** + place gives the **end point**: **voy para la playa** = _I'm heading to the beach_; **camino por la playa** = _I walk along the beach_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **por** is the road under your feet; **para** is the sign at the end of it."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Cada mañana ==corro por== el malecón.",
+              "en": "Every morning I run along the boardwalk."
+            },
+            {
+              "es": "==Caminamos por== la playa hasta el muelle.",
+              "en": "We walked along the beach to the pier."
+            },
+            {
+              "es": "El gato ==entró por== la ventana.",
+              "en": "The cat came in through the window."
+            },
+            {
+              "es": "Para ir a Ensenada, ==pasamos por== Rosarito.",
+              "en": "To get to Ensenada, we go through Rosarito."
+            },
+            {
+              "es": "==Fuimos por== la carretera escénica.",
+              "en": "We took the scenic highway."
+            },
+            {
+              "es": "Me gusta ==pasear por== el centro los domingos.",
+              "en": "I like strolling around downtown on Sundays."
+            },
+            {
+              "es": "El agua ==entra por== el techo cuando llueve.",
+              "en": "Water comes in through the roof when it rains."
+            },
+            {
+              "es": "Ella ==miraba por== la ventana del camión.",
+              "en": "She was looking out the bus window."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Caminamos para la playa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Caminamos por la playa."
+                }
+              ],
+              "nota": "**Para** = toward the beach; **por** = along it."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El ladrón entró para la ventana."
+                },
+                {
+                  "v": "bien",
+                  "t": "El ladrón entró por la ventana."
+                }
+              ],
+              "nota": "Through = **por**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Miro en la ventana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Miro por la ventana."
+                }
+              ],
+              "nota": "Looking out of it = **por**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Viajamos a través Baja California."
+                },
+                {
+                  "v": "bien",
+                  "t": "Viajamos por Baja California."
+                }
+              ],
+              "nota": "**A través de** needs **de**; **por** is simpler."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "para la playa",
+              "texto": "The destination: [[5965|para for a destination]]."
+            },
+            {
+              "forma": "por aquí",
+              "texto": "Around somewhere, not moving: [[5964|por for approximate location]]."
+            },
+            {
+              "forma": "hacia",
+              "texto": "Toward, just the direction: [[9141|hacia]]."
+            },
+            {
+              "forma": "por la mañana",
+              "texto": "Por with parts of the day: [[9344|en / a / por + part of the day]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We walked through the park._",
+              "r": "Caminamos por el parque.",
+              "nota": "por = through."
+            },
+            {
+              "p": "In Spanish: _He left through the back door._",
+              "r": "Salió por la puerta de atrás.",
+              "nota": "salir por."
+            },
+            {
+              "p": "Fix it: _Corro para la playa todas las mañanas_ (meaning along it).",
+              "r": "Corro por la playa todas las mañanas.",
+              "nota": "Along = por."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5965
+    ],
+    "confunde": [
+      9141,
+      5964
+    ],
+    "sigue": [
+      9344
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5963",
+      "kwiziq": true
+    }
+  ]
+}

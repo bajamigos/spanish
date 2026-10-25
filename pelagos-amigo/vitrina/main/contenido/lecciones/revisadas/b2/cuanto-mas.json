@@ -1,0 +1,216 @@
+{
+  "tema": 7154,
+  "slug": "cuanto-mas",
+  "titulo": "Cuanto más / mientras más... = the more..., the more...",
+  "subtitulo": "Mientras más practicas, mejor hablas.",
+  "foto": "t02.jpg",
+  "regla": "The more..., the more / less...: cuanto más / menos + ..., más / menos / mejor / peor + .... With nouns, cuanto agrees (cuanta más harina, cuantos más amigos). Mientras más is invariable and very common in Mexico. Future: subjunctive.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "cuanto / mientras + más / menos + ...",
+            ",",
+            "más / menos / mejor / peor + ..."
+          ]
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "+ adjective",
+              "texto": "**Cuanto** doesn't change: **cuanto más rubios, más atractivos**."
+            },
+            {
+              "forma": "+ verb",
+              "texto": "**Cuanto** doesn't change: **cuanto menos hago, más flojo me siento**."
+            },
+            {
+              "forma": "+ noun",
+              "texto": "**Cuanto** agrees: **cuanta más harina**, **cuantos menos árboles**, **cuantas más personas**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Mientras más / menos** means the same, is more colloquial, and **never changes**. In Mexico it's the everyday choice; you'll also hear **entre más**, which is considered too informal for writing."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Indicative for what actually happens; subjunctive for the future: **cuanto más lo miro, más me gusta** / **cuanto más lo mires, más te va a gustar**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Cuanto** has no accent here."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: two scales tied together; push one and the other moves."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Cuanto más== habla, ==menos== atractivo me parece.",
+              "en": "The more he talks, the less attractive I find him."
+            },
+            {
+              "es": "==Cuanto menos== te vea, ==mejor==.",
+              "en": "The less I see you, the better."
+            },
+            {
+              "es": "==Cuanto más== me miras, ==más== me enamoro de ti.",
+              "en": "The more you look at me, the more I fall in love with you."
+            },
+            {
+              "es": "Mis papás, ==cuanto más== grandes, ==más== delicados de salud.",
+              "en": "My parents, the older they get, the more fragile their health."
+            },
+            {
+              "es": "==Cuanta más== harina le eches a la masa, ==más== seca va a quedar.",
+              "en": "The more flour you add to the dough, the drier it'll get."
+            },
+            {
+              "es": "==Cuantas más== personas vengan a mi fiesta, ==más== divertida va a estar.",
+              "en": "The more people come to my party, the more fun it'll be."
+            },
+            {
+              "es": "==Mientras más== tiempo pasamos juntos, ==mejor== nos llevamos.",
+              "en": "The more time we spend together, the better we get along."
+            },
+            {
+              "es": "==Mientras menos== sepan tus papás, ==mejor==.",
+              "en": "The less your parents know, the better."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cuantos más rubios, más atractivos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cuanto más rubios, más atractivos."
+                }
+              ],
+              "nota": "With adjectives: **cuanto**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cuanto más gente, mejor."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cuanta más gente, mejor."
+                }
+              ],
+              "nota": "With nouns: agree."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mientras más lo veas, más te gusta."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mientras más lo veas, más te va a gustar."
+                }
+              ],
+              "nota": "Subjunctive goes with a future result."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tan... como",
+              "texto": "[[5116|comparisons of equality]]."
+            },
+            {
+              "forma": "mientras",
+              "texto": "_While_: [[6994|mientras]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _The more you practice, the better you speak._",
+              "r": "Mientras más practicas, mejor hablas. / Cuanto más practicas, mejor hablas.",
+              "nota": "más..., mejor..."
+            },
+            {
+              "p": "Complete: ___ más dinero tiene, más quiere._",
+              "r": "Cuanto / Mientras",
+              "nota": "dinero is masculine singular."
+            },
+            {
+              "p": "Complete: ___ menos cosas lleves, mejor._ (cuanto)",
+              "r": "Cuantas",
+              "nota": "cosas: feminine plural."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5116
+    ],
+    "confunde": [
+      6994
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7154",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,239 @@
+{
+  "tema": 6208,
+  "slug": "sustantivos-or-masculinos",
+  "titulo": "Nouns ending in -or are masculine",
+  "subtitulo": "El color, el dolor, el amor... pero la flor.",
+  "foto": "t10.jpg",
+  "regla": "Nouns ending in -or are masculine: el color, el dolor, el error. The main exceptions are la flor and la labor. People and professions in -or add -a for women: el doctor, la doctora.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "If a noun ends in **-or**, it's **masculine**: **el** color, **un** error, **el** calor."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Adjectives agree in the masculine: _el dolor **fuerte**_, _un sabor **delicioso**_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The plural adds **-es**: **los colores**, **los errores**, **los motores**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Two common exceptions are **feminine**: **la flor** (and **la coliflor**) and **la labor**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Masculine (-or)",
+            "Exceptions (feminine)"
+          ],
+          "filas": [
+            [
+              "el amor, el color, el dolor",
+              "la flor"
+            ],
+            [
+              "el error, el sabor, el calor",
+              "la coliflor"
+            ],
+            [
+              "el olor, el valor, el motor",
+              "la labor"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "For **people** and **jobs**, -or is the masculine form. Add **-a** for a woman: el doctor → **la doctora**, el profesor → **la profesora**, el entrenador → **la entrenadora**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: _el amor_ is the king of -or. Every -or noun follows him, except the flower."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==El calor== de agosto en Mexicali es brutal.",
+              "en": "The August heat in Mexicali is brutal."
+            },
+            {
+              "es": "Tengo ==un dolor== horrible en la espalda.",
+              "en": "I have a horrible pain in my back."
+            },
+            {
+              "es": "Me encanta ==el olor== de la tierra mojada.",
+              "en": "I love the smell of wet soil."
+            },
+            {
+              "es": "Fue ==un error== pequeño.",
+              "en": "It was a small mistake."
+            },
+            {
+              "es": "¿De qué ==color== es tu tabla? Es ==un color== muy raro.",
+              "en": "What color is your board? It's a very strange color."
+            },
+            {
+              "es": "==El motor== de la nave está dañado.",
+              "en": "The ship's engine is damaged."
+            },
+            {
+              "es": "Planté ==una flor== amarilla junto a los tomates.",
+              "en": "I planted a yellow flower next to the tomatoes."
+            },
+            {
+              "es": "==La entrenadora== nos enseñó una llave nueva.",
+              "en": "The (female) coach taught us a new submission."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La color es bonita."
+                },
+                {
+                  "v": "bien",
+                  "t": "El color es bonito."
+                }
+              ],
+              "nota": "-or: masculine, and the adjective agrees."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tengo una dolor de cabeza."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tengo un dolor de cabeza."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El flor es roja."
+                },
+                {
+                  "v": "bien",
+                  "t": "La flor es roja."
+                }
+              ],
+              "nota": "The big exception."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella es la doctor."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella es la doctora."
+                }
+              ],
+              "nota": "People in -or: add -a."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "el / la",
+              "texto": "Learn first: [[6150|masculine and feminine nouns]], [[6749|nouns ending in a consonant]]."
+            },
+            {
+              "forma": "el problema",
+              "texto": "Another masculine group that looks feminine: [[6728|nouns ending in -ma]]."
+            },
+            {
+              "forma": "la canción",
+              "texto": "A feminine group: [[6068|nouns in -ión, -dad, -umbre, -sis]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _a strong pain_",
+              "r": "un dolor fuerte",
+              "nota": "Masculine."
+            },
+            {
+              "p": "In Spanish: _the flowers and the colors_",
+              "r": "las flores y los colores",
+              "nota": "flor is feminine."
+            },
+            {
+              "p": "Fix it: _Mi hermana es la profesor de inglés._",
+              "r": "Mi hermana es la profesora de inglés.",
+              "nota": "Add -a."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6150,
+      6749
+    ],
+    "confunde": [
+      6728
+    ],
+    "sigue": [
+      6068
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6208",
+      "kwiziq": true
+    }
+  ]
+}

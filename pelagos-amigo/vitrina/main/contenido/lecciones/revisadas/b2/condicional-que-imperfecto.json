@@ -1,0 +1,220 @@
+{
+  "tema": 8580,
+  "slug": "condicional-que-imperfecto",
+  "titulo": "Conditional + que + imperfect subjunctive (wish, advice, feelings)",
+  "subtitulo": "Te recomendaría que descansaras.",
+  "foto": "t10.jpg",
+  "regla": "A main verb in the conditional (me gustaría, estaría bien, te recomendaría, te sugeriría, me sorprendería) + que takes the imperfect subjunctive, for wishes, advice and feelings about a hypothetical future.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "conditional",
+            "+ que +",
+            "imperfect subjunctive"
+          ]
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "wish",
+              "texto": "**me gustaría que, querría que, estaría bien que**"
+            },
+            {
+              "forma": "advice",
+              "texto": "**te recomendaría que, te sugeriría que, les pediría que, te diría que**"
+            },
+            {
+              "forma": "feeling",
+              "texto": "**me sorprendería que, me molestaría que, nos entristecería que**"
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The idea is hypothetical, usually about the future."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **-ría** + **que** + **-ra**. Learn it as one sound."
+        }
+      ]
+    },
+    {
+      "id": "deseo",
+      "titulo": "Wishes",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Me gustaría que ==fueras== amable con mis papás esta noche.",
+              "en": "I'd like you to be nice to my parents tonight."
+            },
+            {
+              "es": "Ella querría que le ==renovaran== el contrato, pero no va a poder ser.",
+              "en": "She'd like them to renew her contract, but it won't happen."
+            },
+            {
+              "es": "Estaría bien que el banco nos ==diera== el préstamo.",
+              "en": "It would be good if the bank gave us the loan."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "consejo",
+      "titulo": "Advice",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "—Mis papás se quieren divorciar. —Pues yo les sugeriría que ==fueran== a terapia.",
+              "en": "—My parents want to divorce. —Well, I'd suggest they go to therapy."
+            },
+            {
+              "es": "Les recomendaría que no se ==sentaran== en la terraza. Hace frío.",
+              "en": "I'd recommend you don't sit on the patio. It's cold."
+            },
+            {
+              "es": "Te diría que ==tuvieras== cuidado con ese chavo.",
+              "en": "I'd tell you to be careful with that guy."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sentimiento",
+      "titulo": "Feelings",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No me sorprendería que lo ==corrieran== del trabajo.",
+              "en": "I wouldn't be surprised if they fired him."
+            },
+            {
+              "es": "Nos pondría tristes que Carla ==regresara== a su país.",
+              "en": "It would make us sad if Carla went back to her country."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Te recomendaría que descanses."
+                },
+                {
+                  "v": "bien",
+                  "t": "Te recomendaría que descansaras."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me sorprendería que lo correrían."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me sorprendería que lo corrieran."
+                }
+              ],
+              "nota": "Never conditional after **que**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "me gustaría que",
+              "texto": "[[7589|wish and feeling in the conditional]]."
+            },
+            {
+              "forma": "sería bueno que",
+              "texto": "[[6990|sería + adjective + que]]."
+            },
+            {
+              "forma": "te recomiendo que",
+              "texto": "[[7903|present version]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I'd suggest you call her._ (tú)",
+              "r": "Te sugeriría que la llamaras.",
+              "nota": "Conditional + -ra."
+            },
+            {
+              "p": "In Spanish: _It would bother me if they came late._",
+              "r": "Me molestaría que llegaran tarde.",
+              "nota": "Feeling."
+            },
+            {
+              "p": "Complete: _Estaría bien que ___ (venir, ustedes) temprano._",
+              "r": "vinieran",
+              "nota": "-ra."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7589
+    ],
+    "confunde": [
+      6990
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8580",
+      "kwiziq": true
+    }
+  ]
+}

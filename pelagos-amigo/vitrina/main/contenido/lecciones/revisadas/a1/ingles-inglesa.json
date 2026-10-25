@@ -1,0 +1,214 @@
+{
+  "tema": 6052,
+  "slug": "ingles-inglesa",
+  "titulo": "Feminine of nationalities ending in -s",
+  "subtitulo": "Él es inglés, ella es inglesa.",
+  "foto": "t09.jpg",
+  "regla": "Nationality and origin adjectives ending in -és add -a for the feminine and lose the written accent: inglés → inglesa, francés → francesa. They are written in lowercase.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Nationalities ending in **-és** add **-a** for the feminine."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The written accent **disappears**: **inglés → inglesa**. The stress doesn't move; the word just doesn't need the accent anymore."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Masculine",
+            "Feminine"
+          ],
+          "filas": [
+            [
+              "inglés",
+              "**inglesa**"
+            ],
+            [
+              "francés",
+              "**francesa**"
+            ],
+            [
+              "japonés",
+              "**japonesa**"
+            ],
+            [
+              "portugués",
+              "**portuguesa**"
+            ],
+            [
+              "irlandés",
+              "**irlandesa**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "In Spanish, nationalities are written in **lowercase**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi vecina es ==inglesa==.",
+              "en": "My neighbor is English."
+            },
+            {
+              "es": "La maestra de cocina es ==francesa==.",
+              "en": "The cooking teacher is French."
+            },
+            {
+              "es": "Me encanta la comida ==japonesa==.",
+              "en": "I love Japanese food."
+            },
+            {
+              "es": "Mi entrenadora es ==portuguesa==.",
+              "en": "My coach is Portuguese."
+            },
+            {
+              "es": "Ella es ==irlandesa==, de Dublín.",
+              "en": "She's Irish, from Dublin."
+            },
+            {
+              "es": "Tengo una guitarra ==holandesa==.",
+              "en": "I have a Dutch guitar."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella es inglés."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella es inglesa."
+                }
+              ],
+              "nota": "Feminine: add **-a**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La comida francésa es rica."
+                },
+                {
+                  "v": "bien",
+                  "t": "La comida francesa es rica."
+                }
+              ],
+              "nota": "Drop the accent."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mi novia es Japonesa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mi novia es japonesa."
+                }
+              ],
+              "nota": "Lowercase."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "soy de",
+              "texto": "Saying where people are from: [[6806|ser for origin and nationality]]."
+            },
+            {
+              "forma": "ingleses, inglesas",
+              "texto": "The plural: [[6053|plural of -s nationalities]]."
+            },
+            {
+              "forma": "canadiense",
+              "texto": "Nationalities ending in -e: [[6802|feminine of -e nationalities]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Feminine of _francés_",
+              "r": "francesa",
+              "nota": "No accent."
+            },
+            {
+              "p": "In Spanish: _My wife is English._",
+              "r": "Mi esposa es inglesa.",
+              "nota": "inglés + a, no accent."
+            },
+            {
+              "p": "Fix it: _La comida japonésa es rica._",
+              "r": "La comida japonesa es rica.",
+              "nota": "Drop the accent."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6806
+    ],
+    "confunde": [
+      6802
+    ],
+    "sigue": [
+      6053
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6052",
+      "kwiziq": true
+    }
+  ]
+}

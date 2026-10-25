@@ -1,0 +1,272 @@
+{
+  "tema": 6135,
+  "slug": "demasiado-muy-adverbios",
+  "titulo": "Demasiado, bastante, un poco, mucho, muy, tan, tanto",
+  "subtitulo": "Entreno demasiado. Es bastante caro.",
+  "foto": "t05.jpg",
+  "regla": "Used as adverbs (with an adjective, an adverb or a verb), demasiado, bastante, un poco, mucho, muy, tan and tanto never change form. Muy and tan go before adjectives and adverbs; mucho and tanto go with verbs; demasiado, bastante and un poco work with both.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "These words say _how much_. As **adverbs** they never change: no gender, no plural."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Word",
+            "Meaning",
+            "+ adjective / adverb",
+            "verb +"
+          ],
+          "filas": [
+            [
+              "muy",
+              "_very_",
+              "muy caro",
+              "—"
+            ],
+            [
+              "mucho",
+              "_a lot_",
+              "—",
+              "como mucho"
+            ],
+            [
+              "tan",
+              "_so_",
+              "tan caro",
+              "—"
+            ],
+            [
+              "tanto",
+              "_so much_",
+              "—",
+              "como tanto"
+            ],
+            [
+              "demasiado",
+              "_too, too much_",
+              "demasiado caro",
+              "como demasiado"
+            ],
+            [
+              "bastante",
+              "_quite, a fair amount_",
+              "bastante caro",
+              "como bastante"
+            ],
+            [
+              "un poco",
+              "_a bit_",
+              "un poco caro",
+              "como un poco"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Muy** and **tan** go **before** an adjective or adverb. With a verb, use **mucho** and **tanto** **after** it."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Demasiado**, **bastante** and **un poco** go before an adjective or after a verb, same form."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Before an adjective they stay masculine singular: **las olas están demasiado grandes**, never _demasiadas grandes_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Small exception: **mucho** goes before **mejor, peor, más, menos**: **mucho mejor**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Entreno ==demasiado== y me duele todo.",
+              "en": "I train too much and everything hurts."
+            },
+            {
+              "es": "Esta tabla es ==bastante== cara.",
+              "en": "This board is quite expensive."
+            },
+            {
+              "es": "Estoy ==un poco== cansado.",
+              "en": "I'm a bit tired."
+            },
+            {
+              "es": "Mi hermano trabaja ==mucho==.",
+              "en": "My brother works a lot."
+            },
+            {
+              "es": "El agua está ==muy== fría hoy.",
+              "en": "The water is very cold today."
+            },
+            {
+              "es": "¡La comida está ==tan== rica!",
+              "en": "The food is so good!"
+            },
+            {
+              "es": "¿Por qué hablas ==tanto==?",
+              "en": "Why do you talk so much?"
+            },
+            {
+              "es": "Las olas están ==demasiado== grandes para mí.",
+              "en": "The waves are too big for me."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estoy mucho cansado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estoy muy cansado."
+                }
+              ],
+              "nota": "Before an adjective: **muy**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Trabajo muy."
+                },
+                {
+                  "v": "bien",
+                  "t": "Trabajo mucho."
+                }
+              ],
+              "nota": "With a verb: **mucho**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Las olas están demasiadas grandes."
+                },
+                {
+                  "v": "bien",
+                  "t": "Las olas están demasiado grandes."
+                }
+              ],
+              "nota": "Adverb: no agreement."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me gusta tan."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me gusta tanto."
+                }
+              ],
+              "nota": "With a verb: **tanto**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "muy vs mucho",
+              "texto": "The first contrast: [[5082|muy vs mucho]]."
+            },
+            {
+              "forma": "demasiadas olas",
+              "texto": "With nouns they agree: [[5127|quantity adjectives]]."
+            },
+            {
+              "forma": "tan alto como",
+              "texto": "Comparing: [[5116|tan … como]]."
+            },
+            {
+              "forma": "poco vs un poco",
+              "texto": "A subtle pair: [[7061|poco and un poco]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _The water is too cold._",
+              "r": "El agua está demasiado fría.",
+              "nota": "No agreement."
+            },
+            {
+              "p": "In Spanish: _I train a lot._",
+              "r": "Entreno mucho.",
+              "nota": "Verb + mucho."
+            },
+            {
+              "p": "Fix it: _Estoy mucho feliz._",
+              "r": "Estoy muy feliz.",
+              "nota": "Muy + adjective."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5082
+    ],
+    "confunde": [
+      5127
+    ],
+    "sigue": [
+      5116,
+      7061
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6135",
+      "kwiziq": true
+    }
+  ]
+}

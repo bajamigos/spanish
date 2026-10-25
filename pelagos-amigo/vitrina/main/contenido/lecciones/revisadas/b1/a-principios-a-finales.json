@@ -1,0 +1,217 @@
+{
+  "tema": 8581,
+  "slug": "a-principios-a-finales",
+  "titulo": "Expressing the beginning and end of a period or a space",
+  "subtitulo": "A principios de mayo, a mediados de abril, a finales del mes; al final de la calle.",
+  "foto": "t05.jpg",
+  "regla": "Time: a principios de (beginning), a mediados de (middle), a finales de (end), plural and with no article. Space: al principio de, en medio de, al final de.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To place something at the beginning, middle or end of a **period of time** (a month, a year, a season), use:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Expression",
+            "Meaning"
+          ],
+          "filas": [
+            [
+              "a principios de",
+              "_at the beginning of_"
+            ],
+            [
+              "a mediados de",
+              "_in the middle of, mid-_"
+            ],
+            [
+              "a finales de",
+              "_at the end of_"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "They're in the **plural** (**principios**, **mediados**, **finales**) and there's **no article** like English _the_: **a principios de mayo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**A comienzos de** also means _at the beginning of_, a bit more formal. **A final de** (singular) is also heard for _at the end of_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "For the beginning or end of a **space** (a street, a hallway, a line), use the singular: **al principio de**, **en medio de**, **al final de**: **al principio de la calle**, **en medio del pasillo**, **al final de la fila**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: time goes plural, space goes singular."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==A principios de== mayo hay fiestas en mi pueblo.",
+              "en": "At the beginning of May there are festivities in my town."
+            },
+            {
+              "es": "==A mediados de== abril termino el contrato.",
+              "en": "I finish the contract in mid-April."
+            },
+            {
+              "es": "Le avisamos del préstamo ==a finales de== este mes.",
+              "en": "We'll let you know about the loan at the end of this month."
+            },
+            {
+              "es": "==A comienzos de== los setenta, Tijuana era muy distinta.",
+              "en": "In the early seventies, Tijuana was very different."
+            },
+            {
+              "es": "==A finales de== agosto regresamos a la rutina.",
+              "en": "At the end of August we go back to our routine."
+            },
+            {
+              "es": "La taquería está ==al final de== la calle.",
+              "en": "The taquería is at the end of the street."
+            },
+            {
+              "es": "Hay un pico ==en medio de== la bahía.",
+              "en": "There's a peak in the middle of the bay."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "A los principios de mayo."
+                },
+                {
+                  "v": "bien",
+                  "t": "A principios de mayo."
+                }
+              ],
+              "nota": "No article."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "A principio de mayo."
+                },
+                {
+                  "v": "bien",
+                  "t": "A principios de mayo."
+                }
+              ],
+              "nota": "Plural for time."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "A finales de la calle."
+                },
+                {
+                  "v": "bien",
+                  "t": "Al final de la calle."
+                }
+              ],
+              "nota": "Space: singular with the article."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "desde… hasta…",
+              "texto": "From… to…: [[7229|desde / de / hasta / a]]."
+            },
+            {
+              "forma": "a los 15 años",
+              "texto": "Ages: [[9770|a / desde / hasta + age]]."
+            },
+            {
+              "forma": "el 4 de mayo",
+              "texto": "Dates: [[6746|expressing dates]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _at the end of the year_",
+              "r": "a finales del año / a finales de año",
+              "nota": "a finales de."
+            },
+            {
+              "p": "In Spanish: _in mid-July_",
+              "r": "a mediados de julio",
+              "nota": "a mediados de."
+            },
+            {
+              "p": "In Spanish: _at the end of the hallway_",
+              "r": "al final del pasillo",
+              "nota": "Space: al final de."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6746
+    ],
+    "confunde": [],
+    "sigue": [
+      7229,
+      9770
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8581",
+      "kwiziq": true
+    }
+  ]
+}

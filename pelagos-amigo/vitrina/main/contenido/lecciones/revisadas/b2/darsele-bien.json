@@ -1,0 +1,199 @@
+{
+  "tema": 8727,
+  "slug": "darsele-bien",
+  "titulo": "Dársele bien / mal algo = to be good / bad at something",
+  "subtitulo": "Se me dan bien los idiomas.",
+  "foto": "t03.jpg",
+  "regla": "Se + me / te / le... + da / dan + bien / mal + thing or infinitive = to be good / bad at: Se me da bien cocinar, se le dan mal las matemáticas. Works like gustar. In Mexico, ser bueno / malo para is more common.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "se + me / te / le / nos / les",
+            "+ da / dan + bien / mal +",
+            "thing / infinitive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It works like **gustar**: the activity is the subject. Singular or infinitive: **da**. Plural: **dan**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Use the article with nouns: **se me da bien el tenis**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Name the person with **a**: **a Francisco se le da mal...**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**In Mexico**, the everyday version is **ser bueno / malo para**: **soy bueno para el tenis**, **soy malísima para las matemáticas**. Both are understood everywhere."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: things come out well or badly for you; it's not quite your fault."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Se me da bien== el tenis.",
+              "en": "I'm good at tennis."
+            },
+            {
+              "es": "==Se me dan mal== las matemáticas.",
+              "en": "I'm bad at math."
+            },
+            {
+              "es": "==Se le da bien== jugar con niños chiquitos.",
+              "en": "She's good at playing with little kids."
+            },
+            {
+              "es": "==Se les dan bien== los instrumentos de cuerda.",
+              "en": "They're good at string instruments."
+            },
+            {
+              "es": "Veo que ==se te da muy mal== el bádminton. ¡Prueba el básquet!",
+              "en": "I can see you're really bad at badminton. Try basketball!"
+            },
+            {
+              "es": "A Francisco ==se le da muy mal== atender a los invitados.",
+              "en": "Francisco is really bad at looking after guests."
+            },
+            {
+              "es": "Soy muy ==bueno para== cocinar.",
+              "en": "I'm very good at cooking. (common in Mexico)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Se me da bien las matemáticas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Se me dan bien las matemáticas."
+                }
+              ],
+              "nota": "Plural thing: **dan**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Me se da bien."
+                },
+                {
+                  "v": "bien",
+                  "t": "Se me da bien."
+                }
+              ],
+              "nota": "**Se** first."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Se me da bien tenis."
+                },
+                {
+                  "v": "bien",
+                  "t": "Se me da bien el tenis."
+                }
+              ],
+              "nota": "Use the article."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "se me olvidó",
+              "texto": "Same pronoun order: [[7060|accidental se]]."
+            },
+            {
+              "forma": "me gusta",
+              "texto": "[[6001|gustar]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I'm good at drawing._",
+              "r": "Se me da bien dibujar. / Soy bueno para dibujar.",
+              "nota": "Infinitive: da."
+            },
+            {
+              "p": "In Spanish: _She's bad at languages._",
+              "r": "Se le dan mal los idiomas.",
+              "nota": "Plural: dan."
+            },
+            {
+              "p": "Fix it: _A mi hermano se le da bien los deportes._",
+              "r": "A mi hermano se le dan bien los deportes.",
+              "nota": "dan."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6001
+    ],
+    "confunde": [
+      7060
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8727",
+      "kwiziq": true
+    }
+  ]
+}

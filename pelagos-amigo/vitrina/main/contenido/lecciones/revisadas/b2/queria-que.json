@@ -1,0 +1,187 @@
+{
+  "tema": 7184,
+  "slug": "queria-que",
+  "titulo": "Querer que + imperfect subjunctive",
+  "subtitulo": "Quería que vinieras conmigo.",
+  "foto": "t09.jpg",
+  "regla": "With querer in the past (quería, quise), the verb after que goes in the imperfect subjunctive: Mis papás querían que estudiara medicina. Different subjects are required; same subject: infinitive.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "quería / quise / había querido",
+            "+ que +",
+            "imperfect subjunctive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The two subjects must be different. Same subject: **quería estudiar**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The action can be past or still to come from that point: **quería que me ayudaras** (then, or later)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **quería que** + **-ra**, as one rhythm."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Yo quería que ==vinieras== conmigo de compras.",
+              "en": "I wanted you to come shopping with me."
+            },
+            {
+              "es": "Mis papás querían que ==estudiara== biología.",
+              "en": "My parents wanted me to study biology."
+            },
+            {
+              "es": "¿Querías que te ==ayudara== con la tarea?",
+              "en": "Did you want me to help you with your homework?"
+            },
+            {
+              "es": "No quiso que lo ==acompañáramos==.",
+              "en": "He didn't want us to go with him."
+            },
+            {
+              "es": "Quería que ==hubieras visto== la cara que puso.",
+              "en": "I wish you'd seen the face he made."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quería que vienes."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quería que vinieras."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quería que vengas. (past story)"
+                },
+                {
+                  "v": "bien",
+                  "t": "Quería que vinieras."
+                }
+              ],
+              "nota": "Past **querer**: imperfect subjunctive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quería que yo fuera. (same person)"
+                },
+                {
+                  "v": "bien",
+                  "t": "Quería ir."
+                }
+              ],
+              "nota": "Same subject: infinitive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "quiero que vengas",
+              "texto": "[[5059|querer que + present subjunctive]]."
+            },
+            {
+              "forma": "me pidió que",
+              "texto": "[[7281|pedir que in the past]]."
+            },
+            {
+              "forma": "me gustaría que",
+              "texto": "[[7589|conditional + -ra]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _She wanted me to call her._",
+              "r": "Quería que la llamara.",
+              "nota": "-ra."
+            },
+            {
+              "p": "In Spanish: _We wanted them to stay._",
+              "r": "Queríamos que se quedaran.",
+              "nota": "quedaran."
+            },
+            {
+              "p": "In Spanish: _I wanted to go._",
+              "r": "Quería ir.",
+              "nota": "Same subject."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5059,
+      5068
+    ],
+    "confunde": [
+      7281
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7184",
+      "kwiziq": true
+    }
+  ]
+}

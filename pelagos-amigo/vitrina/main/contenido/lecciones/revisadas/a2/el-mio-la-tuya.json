@@ -1,0 +1,266 @@
+{
+  "tema": 6139,
+  "slug": "el-mio-la-tuya",
+  "titulo": "Possessive pronouns: el mío, la tuya, el suyo…",
+  "subtitulo": "Mi tabla es azul; la tuya es roja.",
+  "foto": "t03.jpg",
+  "regla": "El mío, la tuya, los suyos, las nuestras replace a possessive + noun (mi tabla → la mía). They agree with the thing owned, not with the owner. After ser the article is usually dropped: es mío.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "A possessive pronoun replaces **possessive + noun**: **mi carro → el mío**, **tu casa → la tuya**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It agrees in gender and number with the **thing owned**, not with the owner."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Owner",
+            "Masc. sing.",
+            "Fem. sing.",
+            "Masc. pl.",
+            "Fem. pl."
+          ],
+          "filas": [
+            [
+              "yo",
+              "el mío",
+              "la mía",
+              "los míos",
+              "las mías"
+            ],
+            [
+              "tú",
+              "el tuyo",
+              "la tuya",
+              "los tuyos",
+              "las tuyas"
+            ],
+            [
+              "él, ella, usted",
+              "el suyo",
+              "la suya",
+              "los suyos",
+              "las suyas"
+            ],
+            [
+              "nosotros, nosotras",
+              "el nuestro",
+              "la nuestra",
+              "los nuestros",
+              "las nuestras"
+            ],
+            [
+              "ellos, ellas, ustedes",
+              "el suyo",
+              "la suya",
+              "los suyos",
+              "las suyas"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "After **ser**, the article usually drops: **Esta tabla es mía. ¿Es tuyo el gi?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**El suyo** can mean _his, hers, yours, theirs_. If it's unclear, say **el de él, la de ella, el de ustedes**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "_A friend of mine_ = **un amigo mío** (no article, after the noun)."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Mi tabla es azul; ==la tuya== es roja.",
+              "en": "My board is blue; yours is red."
+            },
+            {
+              "es": "Tu carro está aquí, pero ¿dónde está ==el mío==?",
+              "en": "Your car is here, but where's mine?"
+            },
+            {
+              "es": "Los vecinos tienen un huerto más grande que ==el nuestro==.",
+              "en": "The neighbors have a bigger garden than ours."
+            },
+            {
+              "es": "Estas llaves no son ==mías==. ¿Son ==tuyas==?",
+              "en": "These keys aren't mine. Are they yours?"
+            },
+            {
+              "es": "Mis hijos van a esta escuela. ¿Y ==los suyos==, señora?",
+              "en": "My kids go to this school. And yours, ma'am?"
+            },
+            {
+              "es": "Mi gi está sucio. ¿Me prestas ==el tuyo==?",
+              "en": "My gi is dirty. Can you lend me yours?"
+            },
+            {
+              "es": "Ana y Luis tienen casas en Rosarito; ==la de ella== tiene vista al mar.",
+              "en": "Ana and Luis have houses in Rosarito; hers has an ocean view."
+            },
+            {
+              "es": "Hoy viene a comer un amigo ==mío==.",
+              "en": "A friend of mine is coming for lunch today."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Esta tabla es mi."
+                },
+                {
+                  "v": "bien",
+                  "t": "Esta tabla es mía."
+                }
+              ],
+              "nota": "**Mi** only goes before a noun."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tu bici es nueva; el mío es viejo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tu bici es nueva; la mía es vieja."
+                }
+              ],
+              "nota": "Agree with **bici**, not with you."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es un amigo de mí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es un amigo mío."
+                }
+              ],
+              "nota": "_Of mine_ = **mío**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mi carro es rojo y suyo es negro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mi carro es rojo y el suyo es negro."
+                }
+              ],
+              "nota": "Keep the article when it's not after **ser**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "mi, tu, su",
+              "texto": "The short forms before a noun: [[6012|possessive adjectives]]."
+            },
+            {
+              "forma": "de Juan",
+              "texto": "Possession with a name: [[7272|de for possession]]."
+            },
+            {
+              "forma": "es de Ana",
+              "texto": "Saying who owns it: [[5986|ser de]]."
+            },
+            {
+              "forma": "un amigo mío",
+              "texto": "The long forms after a noun: [[8388|long-form possessives]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Your house is big; ours is small._",
+              "r": "Tu casa es grande; la nuestra es chica.",
+              "nota": "Agrees with casa."
+            },
+            {
+              "p": "In Spanish: _Are these sandals yours?_ (tú)",
+              "r": "¿Estas sandalias son tuyas?",
+              "nota": "After ser: no article."
+            },
+            {
+              "p": "Fix it: _Mis plantas están secas, pero los tuyos están bien._",
+              "r": "Mis plantas están secas, pero las tuyas están bien.",
+              "nota": "Plantas: feminine plural."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6012,
+      7272
+    ],
+    "confunde": [
+      5986
+    ],
+    "sigue": [
+      8388
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6139",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "tema": 6012,
+  "slug": "mi-tu-su-nuestro",
+  "titulo": "Possessive adjectives: mi, tu, su, nuestro",
+  "subtitulo": "Mis amigos, tu carro, nuestras tablas.",
+  "foto": "t08.jpg",
+  "regla": "My, your, his, her, its, our, their before a noun: mi, tu, su, nuestro. They agree with the thing owned, not the owner: add -s for plural things (mis amigos), and nuestro also changes for gender (nuestra casa). Su means his, her, its, their and your (usted, ustedes).",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Possessive adjectives go **before the noun**. They agree with **the thing owned**, not with the owner."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Owner",
+            "One thing",
+            "Several things"
+          ],
+          "filas": [
+            [
+              "_my_",
+              "**mi** carro",
+              "**mis** carros"
+            ],
+            [
+              "_your_ (tú)",
+              "**tu** carro",
+              "**tus** carros"
+            ],
+            [
+              "_his, her, its, your_ (usted)",
+              "**su** carro",
+              "**sus** carros"
+            ],
+            [
+              "_our_",
+              "**nuestro** carro / **nuestra** casa",
+              "**nuestros** carros / **nuestras** casas"
+            ],
+            [
+              "_their, your_ (ustedes)",
+              "**su** carro",
+              "**sus** carros"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Only **nuestro** changes for gender. **Tu** (_your_) has no accent; **tú** with an accent means _you_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Su** has many owners. Context tells you who."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Mi== tabla es azul.",
+              "en": "My board is blue."
+            },
+            {
+              "es": "==Mis== amigos surfean en Baja.",
+              "en": "My friends surf in Baja."
+            },
+            {
+              "es": "==Tu== mamá cocina muy bien.",
+              "en": "Your mom cooks very well."
+            },
+            {
+              "es": "¿Es ==su== carro, señor?",
+              "en": "Is it your car, sir?"
+            },
+            {
+              "es": "==Nuestra== casa tiene un jardín.",
+              "en": "Our house has a garden."
+            },
+            {
+              "es": "Ana vive con ==sus== papás.",
+              "en": "Ana lives with her parents."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mi amigos son de Tijuana."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mis amigos son de Tijuana."
+                }
+              ],
+              "nota": "Several friends: **mis**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nuestro casa es pequeña."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nuestra casa es pequeña."
+                }
+              ],
+              "nota": "Agrees with **casa**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Tú carro es rojo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Tu carro es rojo."
+                }
+              ],
+              "nota": "_Your_ has no accent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "de Ana",
+              "texto": "Another way to show possession: [[7272|de for possession]]."
+            },
+            {
+              "forma": "el mío, la tuya",
+              "texto": "Without a noun: [[6139|possessive pronouns]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _our boards_",
+              "r": "nuestras tablas",
+              "nota": "Agrees with tablas."
+            },
+            {
+              "p": "In Spanish (talking to a friend): _your keys_",
+              "r": "tus llaves",
+              "nota": "Plural thing: tus."
+            },
+            {
+              "p": "Fix it: _Nuestro casa es pequeña._",
+              "r": "Nuestra casa es pequeña.",
+              "nota": "casa is feminine."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      7272
+    ],
+    "sigue": [
+      6139
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6012",
+      "kwiziq": true
+    }
+  ]
+}

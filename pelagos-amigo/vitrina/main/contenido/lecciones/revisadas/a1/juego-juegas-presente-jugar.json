@@ -1,0 +1,214 @@
+{
+  "tema": 5855,
+  "slug": "juego-juegas-presente-jugar",
+  "titulo": "Jugar in the present",
+  "subtitulo": "Juego futbol los sábados.",
+  "foto": "t09.jpg",
+  "regla": "Jugar (to play a game or sport) changes u to ue in every form except nosotros: juego, juegas, juega, jugamos, juegan. It is the only verb with u > ue.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Jugar** (_to play_ a game or sport) changes **u → ue** in the stem."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Nosotros** keeps the u: **jugamos**. The endings are regular -ar endings."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "jugar"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**juego**"
+            ],
+            [
+              "tú",
+              "**juegas**"
+            ],
+            [
+              "él, ella, usted",
+              "**juega**"
+            ],
+            [
+              "nosotros",
+              "jugamos"
+            ],
+            [
+              "ellos, ustedes",
+              "**juegan**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "It's the only verb with **u → ue**, so it works like o → ue verbs (puedo, cuento). In Mexico you usually say **jugar futbol**, without _a_."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Juego== futbol los sábados.",
+              "en": "I play soccer on Saturdays."
+            },
+            {
+              "es": "¿==Juegas== ajedrez?",
+              "en": "Do you play chess?"
+            },
+            {
+              "es": "Mi sobrino ==juega== videojuegos toda la tarde.",
+              "en": "My nephew plays video games all afternoon."
+            },
+            {
+              "es": "==Jugamos== lotería con mis tíos.",
+              "en": "We play lotería with my aunts and uncles."
+            },
+            {
+              "es": "Los niños ==juegan== en la playa.",
+              "en": "The kids play on the beach."
+            },
+            {
+              "es": "¿A qué hora ==juegan== las Chivas?",
+              "en": "What time do the Chivas play?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo jugo futbol."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo juego futbol."
+                }
+              ],
+              "nota": "u → ue."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros juegamos béisbol."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros jugamos béisbol."
+                }
+              ],
+              "nota": "No change in nosotros."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Juego la guitarra."
+                },
+                {
+                  "v": "bien",
+                  "t": "Toco la guitarra."
+                }
+              ],
+              "nota": "Instruments use **tocar**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "cuento, encuentro",
+              "texto": "The same pattern with o: [[5872|-ar verbs with o > ue]]."
+            },
+            {
+              "forma": "tocar la guitarra",
+              "texto": "Play an instrument: [[9151|jugar vs tocar]]."
+            },
+            {
+              "forma": "hablo, trabajo",
+              "texto": "The base endings: [[5492|regular -ar verbs]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I play basketball._",
+              "r": "Juego básquetbol.",
+              "nota": "yo → juego."
+            },
+            {
+              "p": "Fix it: _Nosotros juegamos cartas._",
+              "r": "Nosotros jugamos cartas.",
+              "nota": "No ue in nosotros."
+            },
+            {
+              "p": "In Spanish: _Does she play tennis?_",
+              "r": "¿Juega tenis?",
+              "nota": "ella → juega."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5492
+    ],
+    "confunde": [
+      9151
+    ],
+    "sigue": [
+      5872
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5855",
+      "kwiziq": true
+    }
+  ]
+}

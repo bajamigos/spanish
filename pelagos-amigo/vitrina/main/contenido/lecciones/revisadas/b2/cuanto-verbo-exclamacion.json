@@ -1,0 +1,191 @@
+{
+  "tema": 5081,
+  "slug": "cuanto-verbo-exclamacion",
+  "titulo": "¡Cuánto + verb! in exclamations",
+  "subtitulo": "¡Cuánto has crecido!",
+  "foto": "t06.jpg",
+  "regla": "¡Cuánto + verb! expresses surprise at how much someone does something: ¡Cuánto has crecido! ¡Cuánto comes! With a verb, cuánto never changes (not cuánta / cuántos).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "¡Cuánto",
+            "+ verb!"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Surprise at **how much** an action happens."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With a verb, it's always **cuánto**: it doesn't agree with anything."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Compare: with a noun, it agrees: **¡cuánta gente!**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **cuánto** + verb = _you sure do... a lot_."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¡==Cuánto aprendo== en la clase de alemán!",
+              "en": "I'm learning so much in German class!"
+            },
+            {
+              "es": "¡==Cuánto has crecido== desde la última vez que te vi!",
+              "en": "You've grown so much since the last time I saw you!"
+            },
+            {
+              "es": "¡==Cuánto vas a viajar== con tu nuevo trabajo!",
+              "en": "You're going to travel so much with your new job!"
+            },
+            {
+              "es": "¡==Cuánto me acuerdo== de ti!",
+              "en": "I think about you so much!"
+            },
+            {
+              "es": "¡==Cuánto sabes==, papá!",
+              "en": "You know so much, Dad!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Cuántos sabes!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Cuánto sabes!"
+                }
+              ],
+              "nota": "With a verb: **cuánto**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Cuánta bailas!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Cuánto bailas!"
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "verbo",
+                  "t": "¡Cuánto comes!"
+                },
+                {
+                  "v": "sustantivo",
+                  "t": "¡Cuánta comida!"
+                }
+              ],
+              "nota": "Nouns make it agree."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¡cuánta gente!",
+              "texto": "[[7027|cuánto + noun]]."
+            },
+            {
+              "forma": "¡qué poco!",
+              "texto": "[[7033|qué poco]]."
+            },
+            {
+              "forma": "¡qué de gente!",
+              "texto": "[[6863|qué de]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Exclaim: _You talk so much!_",
+              "r": "¡Cuánto hablas!",
+              "nota": "cuánto + verb."
+            },
+            {
+              "p": "Exclaim: _It's rained so much!_",
+              "r": "¡Cuánto ha llovido!",
+              "nota": "cuánto."
+            },
+            {
+              "p": "Fix it: _¡Cuánta trabajas!_",
+              "r": "¡Cuánto trabajas!",
+              "nota": "Invariable."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      8703
+    ],
+    "confunde": [
+      7027
+    ],
+    "sigue": [
+      7033
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5081",
+      "kwiziq": true
+    }
+  ]
+}

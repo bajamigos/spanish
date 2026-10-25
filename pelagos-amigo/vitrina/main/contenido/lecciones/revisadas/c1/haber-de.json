@@ -1,0 +1,226 @@
+{
+  "tema": 7151,
+  "slug": "haber-de",
+  "titulo": "Haber de + infinitive: formal obligation, future, and Mexican probability",
+  "subtitulo": "He de admitirlo. Ha de estar en su casa.",
+  "foto": "t01.jpg",
+  "regla": "Haber de + infinitive = must (mild, formal obligation): He de admitir que... It can also mark a future action in literary style: lo que ha de venir. In Mexico, ha de + infinitive very often means a guess: Ha de estar en su casa (He must be at home).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "he / has / ha / hemos / han",
+            "+ de +",
+            "infinitive"
+          ]
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "mild obligation (formal)",
+              "texto": "**He de admitir que es difícil.** Everyday: **tengo que / debo**."
+            },
+            {
+              "forma": "future (literary)",
+              "texto": "**Lo que ha de pasar, pasará.**"
+            },
+            {
+              "forma": "probability (very Mexican)",
+              "texto": "**Ha de estar dormido.** = _He must be asleep._ **Han de ser las tres.** = _It must be about three._"
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The Mexican guess is everyday speech, like **debe de** or the future of probability."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Also common: **has de saber que...** (_you should know that..._)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: in Mexico, **ha de** is a shrug: _probably_."
+        }
+      ]
+    },
+    {
+      "id": "obligacion",
+      "titulo": "Obligation",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==He de== tomar el tren de las diez para llegar a tiempo.",
+              "en": "I must take the ten o'clock train to arrive on time."
+            },
+            {
+              "es": "==Han de== respetar todas las señales de tránsito.",
+              "en": "You must obey all traffic signs."
+            },
+            {
+              "es": "==Hemos de== admitir que es más difícil de lo que pensábamos.",
+              "en": "We must admit it's harder than we thought."
+            },
+            {
+              "es": "==Has de== reconocer que los alumnos merecen un descanso.",
+              "en": "You have to admit the students deserve a break."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "futuro",
+      "titulo": "Future (literary)",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No te preocupes por lo que nunca ==ha de== pasar.",
+              "en": "Don't worry about what will never happen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "probabilidad",
+      "titulo": "Probability (Mexico)",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No contesta; ==ha de estar== dormido.",
+              "en": "He's not answering; he must be asleep."
+            },
+            {
+              "es": "==Han de ser== como las tres.",
+              "en": "It must be around three."
+            },
+            {
+              "es": "==Ha de haber== mucho tráfico.",
+              "en": "There must be a lot of traffic."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "He que admitirlo."
+                },
+                {
+                  "v": "bien",
+                  "t": "He de admitirlo. / Tengo que admitirlo."
+                }
+              ],
+              "nota": "**Haber de**, **tener que**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ha de está en su casa."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ha de estar en su casa."
+                }
+              ],
+              "nota": "Infinitive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "tener que, deber",
+              "texto": "[[5106|tener que]], [[7052|deber / deber de]]."
+            },
+            {
+              "forma": "estará en su casa",
+              "texto": "Another guess: [[5060|future of probability]]."
+            },
+            {
+              "forma": "hay que",
+              "texto": "[[6262|hay que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Mexican guess: _She must be at work._",
+              "r": "Ha de estar en el trabajo.",
+              "nota": "ha de = probably."
+            },
+            {
+              "p": "Formal: _We must recognize the effort._",
+              "r": "Hemos de reconocer el esfuerzo.",
+              "nota": "hemos de."
+            },
+            {
+              "p": "Mexican guess: _They must be tired._",
+              "r": "Han de estar cansados.",
+              "nota": "han de."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5106,
+      7052
+    ],
+    "confunde": [
+      5060
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7151",
+      "kwiziq": true
+    }
+  ]
+}

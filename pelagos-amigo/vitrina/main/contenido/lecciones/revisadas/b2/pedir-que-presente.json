@@ -1,0 +1,205 @@
+{
+  "tema": 7279,
+  "slug": "pedir-que-presente",
+  "titulo": "Pedir que + present subjunctive (asking someone to do something)",
+  "subtitulo": "Te pido que me esperes.",
+  "foto": "t01.jpg",
+  "regla": "To ask someone to do something: (indirect pronoun / a + person) + pedir que + present subjunctive, when pedir is in the present, present perfect or future: Le pido a Laura que venga. Que can't be dropped. Not preguntar.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "English: _ask someone **to do**_. Spanish: **pedir** + **que** + **subjunctive**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "(me, te, le... / a + person) + pedir",
+            "+ que +",
+            "present subjunctive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Use the **present subjunctive** when **pedir** is in the present, present progressive, present perfect, **ir a** or future."
+        },
+        {
+          "tipo": "texto",
+          "texto": "The person you ask gets **a** and usually an indirect pronoun too: **le pido a Laura que...**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Que** is required. And it's **pedir**, never **preguntar** (_to ask a question_)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **pedir** asks for actions; **preguntar** asks for information."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Te pido que ==consideres== mi oferta con calma.",
+              "en": "I'm asking you to think my offer over carefully."
+            },
+            {
+              "es": "Le estoy pidiendo que ==se case== conmigo.",
+              "en": "I'm asking her to marry me."
+            },
+            {
+              "es": "Mi novio siempre me pide que ==sea== paciente con él.",
+              "en": "My boyfriend always asks me to be patient with him."
+            },
+            {
+              "es": "¿Por qué no le pides a tu mamá que te ==preste== dinero para el viaje?",
+              "en": "Why don't you ask your mom to lend you money for the trip?"
+            },
+            {
+              "es": "Gabriel le ha pedido a Luisa que ==se vaya== a vivir con él.",
+              "en": "Gabriel has asked Luisa to move in with him."
+            },
+            {
+              "es": "Le voy a pedir a Clara que me ==invite== un café.",
+              "en": "I'm going to ask Clara to buy me a coffee."
+            },
+            {
+              "es": "En el aeropuerto te van a pedir que ==muestres== el pasaporte.",
+              "en": "At the airport they'll ask you to show your passport."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Te pido esperarme."
+                },
+                {
+                  "v": "bien",
+                  "t": "Te pido que me esperes."
+                }
+              ],
+              "nota": "Different subject: **que** + subjunctive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Mi novio me pregunta que sea paciente."
+                },
+                {
+                  "v": "bien",
+                  "t": "Mi novio me pide que sea paciente."
+                }
+              ],
+              "nota": "**Pedir**, not **preguntar**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Pido mi hermano que me ayude."
+                },
+                {
+                  "v": "bien",
+                  "t": "Le pido a mi hermano que me ayude."
+                }
+              ],
+              "nota": "Add **a**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "pidió que viniera",
+              "texto": "Past: [[7281|pedir + imperfect subjunctive]]."
+            },
+            {
+              "forma": "quiero que",
+              "texto": "[[5059|querer que]]."
+            },
+            {
+              "forma": "te recomiendo que",
+              "texto": "[[7903|advice and orders]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I'm asking you to listen to me._ (tú)",
+              "r": "Te pido que me escuches.",
+              "nota": "pedir que + subjunctive."
+            },
+            {
+              "p": "In Spanish: _Ask Juan to call me._ (tú)",
+              "r": "Pídele a Juan que me llame.",
+              "nota": "a Juan + que."
+            },
+            {
+              "p": "Fix it: _Les pregunto que lleguen temprano._",
+              "r": "Les pido que lleguen temprano.",
+              "nota": "pedir."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5059
+    ],
+    "confunde": [
+      7903
+    ],
+    "sigue": [
+      7281
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7279",
+      "kwiziq": true
+    }
+  ]
+}

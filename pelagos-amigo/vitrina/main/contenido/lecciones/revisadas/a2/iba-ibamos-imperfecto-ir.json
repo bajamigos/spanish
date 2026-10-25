@@ -1,0 +1,245 @@
+{
+  "tema": 5269,
+  "slug": "iba-ibamos-imperfecto-ir",
+  "titulo": "Ir in the imperfect",
+  "subtitulo": "Todos los domingos íbamos a la playa.",
+  "foto": "t03.jpg",
+  "regla": "Ir is irregular in the imperfect: iba, ibas, iba, íbamos, iban. Only nosotros has an accent (íbamos). It is one of only three irregular verbs in the imperfect, with ser and ver.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Ir** (_to go_) is one of only **three irregular verbs** in the imperfect (with **ser** and **ver**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Its forms look like -ar endings on a tiny stem: **ib-** + **-a, -as, -a, -amos, -an**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "Imperfect of ir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**iba**"
+            ],
+            [
+              "tú",
+              "**ibas**"
+            ],
+            [
+              "él, ella, usted",
+              "**iba**"
+            ],
+            [
+              "nosotros, nosotras",
+              "**íbamos**"
+            ],
+            [
+              "ellos, ellas, ustedes",
+              "**iban**"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Only **íbamos** has a written accent. **Yo** and **él** share the form **iba**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Use it for where you **used to go** (habits) and for where you **were going** when something happened."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: _I used to go_ = **iba**. English **would** for a past habit (_every summer we would go…_) is also **íbamos**, never the conditional."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Todos los domingos ==íbamos== a la playa.",
+              "en": "Every Sunday we used to go to the beach."
+            },
+            {
+              "es": "De chavo ==iba== a surfear antes de la escuela.",
+              "en": "As a teenager I used to go surfing before school."
+            },
+            {
+              "es": "¿==Ibas== al gimnasio cuando vivías en el centro?",
+              "en": "Did you use to go to the gym when you lived downtown?"
+            },
+            {
+              "es": "Mi papá ==iba== al trabajo en camión.",
+              "en": "My dad used to go to work by bus."
+            },
+            {
+              "es": "Los veranos ==íbamos== a Ensenada con mis primos.",
+              "en": "In the summers we would go to Ensenada with my cousins."
+            },
+            {
+              "es": "Mis amigos ==iban== al mercado los sábados.",
+              "en": "My friends used to go to the market on Saturdays."
+            },
+            {
+              "es": "Cuando me llamaste, ==iba== en el carro.",
+              "en": "When you called me, I was in the car."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "De niño fui a la playa todos los domingos."
+                },
+                {
+                  "v": "bien",
+                  "t": "De niño iba a la playa todos los domingos."
+                }
+              ],
+              "nota": "A repeated habit: imperfect."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cada verano iríamos a Ensenada."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cada verano íbamos a Ensenada."
+                }
+              ],
+              "nota": "Past-habit **would** = imperfect."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros ibamos al gimnasio."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros íbamos al gimnasio."
+                }
+              ],
+              "nota": "Accent on **í**bamos."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Antes yo iría al mercado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Antes yo iba al mercado."
+                }
+              ],
+              "nota": "No conditional for _used to_."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "voy, vas, va",
+              "texto": "The present: [[5271|ir in the present]]."
+            },
+            {
+              "forma": "fui, fue",
+              "texto": "The preterite: [[5107|ir and ser in the preterite]]."
+            },
+            {
+              "forma": "era, veía",
+              "texto": "The other two irregulars: [[5088|ser]] and [[5268|ver in the imperfect]]."
+            },
+            {
+              "forma": "iba a + infinitive",
+              "texto": "Next step: [[6003|was going to]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _We used to go to the beach every Saturday._",
+              "r": "Íbamos a la playa todos los sábados.",
+              "nota": "íbamos, with accent."
+            },
+            {
+              "p": "In Spanish: _Where did you (tú) use to go after class?_",
+              "r": "¿Adónde ibas después de clase?",
+              "nota": "ibas."
+            },
+            {
+              "p": "Fix it: _Mis primos ivan a Rosarito._",
+              "r": "Mis primos iban a Rosarito.",
+              "nota": "iban, with b."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5271,
+      5088
+    ],
+    "confunde": [
+      5107
+    ],
+    "sigue": [
+      5268,
+      6003
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5269",
+      "kwiziq": true
+    }
+  ]
+}

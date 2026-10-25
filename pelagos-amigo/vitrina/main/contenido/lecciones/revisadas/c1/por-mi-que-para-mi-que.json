@@ -1,0 +1,180 @@
+{
+  "tema": 7155,
+  "slug": "por-mi-que-para-mi-que",
+  "titulo": "Por mí, que... vs para mí que...",
+  "subtitulo": "Por mí, que se casen. Para mí que se van a casar.",
+  "foto": "t01.jpg",
+  "regla": "Por mí (que) + present subjunctive = I don't mind if..., it's fine by me (indifference or even approval): Por mí, que se vayan. Para mí que + indicative = I have a feeling that..., I reckon: Para mí que va a llover. One shows your permission; the other your hunch.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "por mí (que)",
+            "+ present subjunctive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "_I don't care if... / I wouldn't mind if..._: indifference or approval; tone decides."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Also alone: **Por mí, está bien.** = _Fine by me._"
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "para mí que",
+            "+ indicative"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "_I have a feeling that..., I bet..._: a hunch or opinion."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **por mí** = permission; **para mí** = prediction."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Por mí, que se casen==. Yo ya tengo otro en mente.",
+              "en": "As far as I'm concerned, they can get married. I've got someone else in mind."
+            },
+            {
+              "es": "==Por mí, que se casen==. Tengo ganas de ir a una boda.",
+              "en": "I'd love it if they got married. I feel like going to a wedding."
+            },
+            {
+              "es": "==Para mí que se van a casar==. Se ven tan enamorados.",
+              "en": "I bet they're going to get married. They look so in love."
+            },
+            {
+              "es": "—¿Vamos en carro o en metro? —==Por mí==, como quieras.",
+              "en": "—Car or subway? —I don't mind, whatever you want."
+            },
+            {
+              "es": "==Para mí que== ya no viene.",
+              "en": "I have a feeling he's not coming anymore."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Para mí que se casen."
+                },
+                {
+                  "v": "bien",
+                  "t": "Para mí que se casan / se van a casar."
+                }
+              ],
+              "nota": "**Para mí que** takes the indicative."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Por mí que se casan."
+                },
+                {
+                  "v": "bien",
+                  "t": "Por mí, que se casen."
+                }
+              ],
+              "nota": "**Por mí que** takes the subjunctive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "para for opinion",
+              "texto": "[[5967|para mí = in my opinion]]."
+            },
+            {
+              "forma": "que + subjunctive",
+              "texto": "[[7257|¡que + subjunctive!]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _As far as I'm concerned, they can leave._",
+              "r": "Por mí, que se vayan.",
+              "nota": "Subjunctive."
+            },
+            {
+              "p": "In Spanish: _I reckon it's going to rain._",
+              "r": "Para mí que va a llover.",
+              "nota": "Indicative."
+            },
+            {
+              "p": "Which means _I have a hunch_? _Por mí que.../ Para mí que..._",
+              "r": "Para mí que...",
+              "nota": "Prediction."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5967
+    ],
+    "confunde": [
+      7257
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7155",
+      "kwiziq": true
+    }
+  ]
+}

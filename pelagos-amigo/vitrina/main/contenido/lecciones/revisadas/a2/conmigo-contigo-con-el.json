@@ -1,0 +1,247 @@
+{
+  "tema": 6141,
+  "slug": "conmigo-contigo-con-el",
+  "titulo": "Con + pronouns: with me, with you, with him…",
+  "subtitulo": "«¿Vienes conmigo? Sí, voy contigo.»",
+  "foto": "t04.jpg",
+  "regla": "With me is conmigo and with you (tú) is contigo. Every other person uses con + the normal pronoun: con él, con ella, con usted, con nosotros, con ustedes, con ellos.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Con** + **mí** and **con** + **ti** fuse into one word: **conmigo** and **contigo**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "All the other persons are regular: **con** + the same pronoun you use as a subject."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "With…"
+          ],
+          "filas": [
+            [
+              "yo",
+              "**conmigo**"
+            ],
+            [
+              "tú",
+              "**contigo**"
+            ],
+            [
+              "él / ella / usted",
+              "con él / con ella / con usted"
+            ],
+            [
+              "nosotros / nosotras",
+              "con nosotros / con nosotras"
+            ],
+            [
+              "ustedes",
+              "con ustedes"
+            ],
+            [
+              "ellos / ellas",
+              "con ellos / con ellas"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Con mí**, **con ti**, **con yo** and **con tú** don't exist."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **conmigo** says _with_ twice: **con** at the front and **-go** at the end (from Latin _cum_, _with_). Spanish just loves company."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿Quieres ir a surfear ==conmigo==?",
+              "en": "Do you want to go surfing with me?"
+            },
+            {
+              "es": "Sí, voy ==contigo==.",
+              "en": "Yes, I'll go with you."
+            },
+            {
+              "es": "Ana entrena ==con él== los martes.",
+              "en": "Ana trains with him on Tuesdays."
+            },
+            {
+              "es": "¿Puedo hablar ==con usted== un momento?",
+              "en": "Can I talk to you for a moment?"
+            },
+            {
+              "es": "Mis hermanos viven ==con nosotros==.",
+              "en": "My brothers live with us."
+            },
+            {
+              "es": "Mañana voy al cine ==con ellas==.",
+              "en": "Tomorrow I'm going to the movies with them."
+            },
+            {
+              "es": "No te enojes ==conmigo==.",
+              "en": "Don't get mad at me."
+            },
+            {
+              "es": "¿Todo bien ==con ustedes==?",
+              "en": "Is everything OK with you guys?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Vienes con mí?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Vienes conmigo?"
+                }
+              ],
+              "nota": "**con + mí = conmigo**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Quiero bailar con tú."
+                },
+                {
+                  "v": "bien",
+                  "t": "Quiero bailar contigo."
+                }
+              ],
+              "nota": "**con + tú = contigo**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella vive con yo."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella vive conmigo."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Voy al gimnasio contigo y ella."
+                },
+                {
+                  "v": "bien",
+                  "t": "Voy al gimnasio contigo y con ella."
+                }
+              ],
+              "nota": "Repeat **con** for each person."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "con",
+              "texto": "The basic preposition: [[7895|con (with)]]."
+            },
+            {
+              "forma": "para mí, sin ti",
+              "texto": "Other prepositions: [[6466|prepositions + mí, ti, él…]]."
+            },
+            {
+              "forma": "entre tú y yo",
+              "texto": "The exceptions: [[7088|entre and según + pronouns]]."
+            },
+            {
+              "forma": "mi / mí",
+              "texto": "The accent on mí: [[9111|mi vs mí]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Do you want to eat with me?_",
+              "r": "¿Quieres comer conmigo?",
+              "nota": "conmigo."
+            },
+            {
+              "p": "In Spanish: _I'm going to the beach with you (tú)._",
+              "r": "Voy a la playa contigo.",
+              "nota": "contigo."
+            },
+            {
+              "p": "Fix it: _Hablé con ti ayer._",
+              "r": "Hablé contigo ayer.",
+              "nota": "con + ti = contigo."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7895
+    ],
+    "confunde": [
+      6466,
+      9111
+    ],
+    "sigue": [
+      7088
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6141",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "tema": 9582,
+  "slug": "lo-que-mas",
+  "titulo": "Lo que más / menos = what... the most / the least",
+  "subtitulo": "Lo que más me gusta son tus ojos.",
+  "foto": "t01.jpg",
+  "regla": "Lo que más / lo que menos + verb = what... the most / the least: Lo que más me gusta es el mar. Más / menos usually goes right before the verb. No article before más. With an open choice, subjunctive: lo que más te guste.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "lo que",
+            "más / menos",
+            "+ verb"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Más / menos** goes right after **lo que**, before the verb. After the verb is possible but often clumsy."
+        },
+        {
+          "tipo": "texto",
+          "texto": "No article before **más**: never ~~lo que el más~~."
+        },
+        {
+          "tipo": "texto",
+          "texto": "With an open choice (_whatever you like best_), subjunctive: **ponte lo que más te guste**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **lo que más** = the top of your list."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Lo que más== me gusta de ti son tus ojos.",
+              "en": "What I like most about you is your eyes."
+            },
+            {
+              "es": "==Lo que menos== se me antoja ahorita es pasar el fin de semana contigo.",
+              "en": "What I feel like least right now is spending the weekend with you."
+            },
+            {
+              "es": "Tu indiferencia es ==lo que más== me sorprende de todo esto.",
+              "en": "Your indifference is what surprises me most in all this."
+            },
+            {
+              "es": "==Lo que menos== esperaba de ella era ese regalo.",
+              "en": "What I least expected from her was that present."
+            },
+            {
+              "es": "Te presto mi ropa; ponte ==lo que más== te guste.",
+              "en": "I'll lend you my clothes; wear whatever you like best."
+            },
+            {
+              "es": "Podemos ver una peli o ir al cine, ==lo que más== se te antoje.",
+              "en": "We can watch a movie at home or go to the movies, whatever you'd prefer."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Lo que el más me gusta..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Lo que más me gusta..."
+                }
+              ],
+              "nota": "No article."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Lo más que me gusta..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Lo que más me gusta..."
+                }
+              ],
+              "nota": "**Lo que** + **más**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "lo que",
+              "texto": "[[5087|lo que]]."
+            },
+            {
+              "forma": "me gusta",
+              "texto": "[[6001|gustar]]."
+            },
+            {
+              "forma": "el más alto",
+              "texto": "Superlatives with adjectives use the article: **el más alto de la clase**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _What I miss most is the food._",
+              "r": "Lo que más extraño es la comida.",
+              "nota": "lo que más."
+            },
+            {
+              "p": "In Spanish: _What bothers me least is the noise._",
+              "r": "Lo que menos me molesta es el ruido.",
+              "nota": "lo que menos."
+            },
+            {
+              "p": "In Spanish: _Order whatever you like best._ (tú)",
+              "r": "Pide lo que más te guste.",
+              "nota": "Subjunctive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5087
+    ],
+    "confunde": [],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9582",
+      "kwiziq": true
+    }
+  ]
+}

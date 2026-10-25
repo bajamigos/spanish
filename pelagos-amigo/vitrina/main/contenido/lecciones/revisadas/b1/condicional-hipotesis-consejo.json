@@ -1,0 +1,199 @@
+{
+  "tema": 7431,
+  "slug": "condicional-hipotesis-consejo",
+  "titulo": "Using the conditional for wishes, hypotheses and advice",
+  "subtitulo": "Ahorita me comería un helado. Yo que tú, me compraría la roja.",
+  "foto": "t10.jpg",
+  "regla": "The conditional expresses what you would do: wishes and intentions (me comería un taco) and advice (yo que tú, iría). Yo que tú = if I were you.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "The **conditional** (**comería**, **iría**…) expresses something hypothetical, not real, that could happen now or in the future. It's used in two everyday situations:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Use",
+            "Example"
+          ],
+          "filas": [
+            [
+              "a wish or intention",
+              "Ahorita me comería un helado."
+            ],
+            [
+              "advice or a suggestion",
+              "Yo que tú, me compraría la roja."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Yo que tú…**, **yo que él…** means _if I were you, if I were him…_ and it's very common before advice."
+        },
+        {
+          "tipo": "texto",
+          "texto": "You can also ask for advice with it: **¿Cuál comprarías tú?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the conditional is daydreaming out loud, or giving advice from someone else's shoes."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ahorita ==me comería== un helado enorme. Hace mucho calor.",
+              "en": "Right now I'd eat a huge ice cream. It's so hot."
+            },
+            {
+              "es": "Mañana ==me quedaría== en casa y no ==iría== a trabajar.",
+              "en": "Tomorrow I'd stay home and not go to work."
+            },
+            {
+              "es": "==Yo que tú==, ==me pondría== el traje de neopreno. El agua está fría.",
+              "en": "If I were you, I'd put on the wetsuit. The water's cold."
+            },
+            {
+              "es": "==Yo que ella==, ==terminaría== con Eduardo. No la trata bien.",
+              "en": "If I were her, I'd break up with Eduardo. He doesn't treat her well."
+            },
+            {
+              "es": "No me decido. ¿Cuál ==comprarías== tú, la roja o la negra?",
+              "en": "I can't decide. Which one would you buy, the red one or the black one?"
+            },
+            {
+              "es": "Pues yo ==me compraría== la roja. Es más barata.",
+              "en": "Well, I'd buy the red one. It's cheaper."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo que tú, me compro la roja."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo que tú, me compraría la roja."
+                }
+              ],
+              "nota": "After **yo que tú**, the conditional."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Si yo fuera tú, me compraré la roja."
+                },
+                {
+                  "v": "bien",
+                  "t": "Si yo fuera tú, me compraría la roja."
+                }
+              ],
+              "nota": "Hypothesis: conditional."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "hablaría, haría",
+              "texto": "The forms: [[5731|regular]], [[5064|hacer]], [[5772|tener]]."
+            },
+            {
+              "forma": "deberías",
+              "texto": "Advice with **deber**: [[5913|deber to say should]]."
+            },
+            {
+              "forma": "podrías",
+              "texto": "Suggestions with **poder**: [[6713|podría]]."
+            },
+            {
+              "forma": "si tuviera…",
+              "texto": "Full hypotheses: [[5120|si + imperfect subjunctive + conditional]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Advice: _If I were you, I'd rest._",
+              "r": "Yo que tú, descansaría.",
+              "nota": "yo que tú + conditional."
+            },
+            {
+              "p": "A wish: _Right now I'd sleep for ten hours._",
+              "r": "Ahorita dormiría diez horas.",
+              "nota": "conditional."
+            },
+            {
+              "p": "Ask: _What would you do?_ (tú)",
+              "r": "¿Qué harías tú?",
+              "nota": "harías."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5731,
+      5064
+    ],
+    "confunde": [
+      5913
+    ],
+    "sigue": [
+      6713,
+      5120
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7431",
+      "kwiziq": true
+    }
+  ]
+}

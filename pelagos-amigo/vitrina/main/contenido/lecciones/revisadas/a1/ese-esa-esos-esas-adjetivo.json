@@ -1,0 +1,205 @@
+{
+  "tema": 6061,
+  "slug": "ese-esa-esos-esas-adjetivo",
+  "titulo": "That, those: ese, esa, esos, esas",
+  "subtitulo": "«¿Me pasas esa toalla?»",
+  "foto": "t05.jpg",
+  "regla": "Ese, esa, esos, esas mean that / those: something near the listener or a bit away from the speaker. They go before the noun and agree with it in gender and number.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Use **ese** for things near **you** (the listener), or a little away from me."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "singular",
+            "plural"
+          ],
+          "filas": [
+            [
+              "masculine",
+              "ese carro",
+              "esos carros"
+            ],
+            [
+              "feminine",
+              "esa casa",
+              "esas casas"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The masculine singular is **ese**: no **-o**. (**Eso** is neuter and never goes before a noun.)"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **este** is here with me; **ese** is there with you."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿Me pasas ==esa== toalla?",
+              "en": "Can you pass me that towel?"
+            },
+            {
+              "es": "==Ese== perro es de mi vecino.",
+              "en": "That dog is my neighbor's."
+            },
+            {
+              "es": "¿Cuánto cuestan ==esos== tenis?",
+              "en": "How much are those sneakers?"
+            },
+            {
+              "es": "==Esas== tablas son nuevas.",
+              "en": "Those boards are new."
+            },
+            {
+              "es": "¿De quién es ==ese== libro?",
+              "en": "Whose book is that?"
+            },
+            {
+              "es": "Me gusta mucho ==esa== playera.",
+              "en": "I really like that T-shirt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Eso carro es de mi papá."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ese carro es de mi papá."
+                }
+              ],
+              "nota": "Before a noun: **ese**, never **eso**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ese playa está lejos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Esa playa está lejos."
+                }
+              ],
+              "nota": "**Playa** is feminine: **esa**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Eses zapatos son míos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Esos zapatos son míos."
+                }
+              ],
+              "nota": "Plural: **esos**, **esas**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "este, esta",
+              "texto": "Closer: [[5094|este, esta, estos, estas]]."
+            },
+            {
+              "forma": "aquel, aquella",
+              "texto": "Farther away: [[6062|aquel, aquella]]."
+            },
+            {
+              "forma": "eso, ese (alone)",
+              "texto": "Without a noun: [[6060|ese, esa, eso as pronouns]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _those boards_ (tablas)",
+              "r": "esas tablas",
+              "nota": "Feminine plural."
+            },
+            {
+              "p": "Fix it: _Eso libro es mío._",
+              "r": "Ese libro es mío.",
+              "nota": "No -o before a noun."
+            },
+            {
+              "p": "In Spanish: _that dog_ (perro)",
+              "r": "ese perro",
+              "nota": "Masculine singular."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5094
+    ],
+    "confunde": [
+      6060
+    ],
+    "sigue": [
+      6062
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6061",
+      "kwiziq": true
+    }
+  ]
+}

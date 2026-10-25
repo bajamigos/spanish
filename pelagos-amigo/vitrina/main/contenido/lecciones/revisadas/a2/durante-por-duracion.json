@@ -1,0 +1,231 @@
+{
+  "tema": 7087,
+  "slug": "durante-por-duracion",
+  "titulo": "Duration: durante, por or nothing",
+  "subtitulo": "Viví en Ensenada (durante) dos años.",
+  "foto": "t05.jpg",
+  "regla": "To say how long something lasted, put the time right after the verb with no preposition, or use durante. Por is also common in Mexican speech, especially for planned periods. Never para.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "English says _for two years_. Spanish has three options for a **finished** or **planned** period:"
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Option",
+            "Example",
+            "Note"
+          ],
+          "filas": [
+            [
+              "no preposition",
+              "Viví ahí **dos años**.",
+              "the most natural"
+            ],
+            [
+              "**durante**",
+              "Viví ahí **durante** dos años.",
+              "a bit more formal, stresses the whole period"
+            ],
+            [
+              "**por**",
+              "Viví ahí **por** dos años.",
+              "very common in Mexico, especially for plans: Me voy **por** una semana."
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Para** + time is **not** duration. It's a deadline: _para el lunes_ = _by Monday_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Durante** also means _during_ before an event: **durante** la película, **durante** la clase."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Careful with **ongoing** actions (_I've been living here for two years_): Spanish uses **desde hace** + present: _Vivo aquí **desde hace** dos años._"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: in doubt, drop the preposition. _Entrené tres horas_ is always right."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Entrené jiu-jitsu ==tres horas== ayer.",
+              "en": "I trained jiu-jitsu for three hours yesterday."
+            },
+            {
+              "es": "Viví en Ensenada ==durante== dos años.",
+              "en": "I lived in Ensenada for two years."
+            },
+            {
+              "es": "Surfeamos ==toda la mañana==.",
+              "en": "We surfed all morning."
+            },
+            {
+              "es": "Voy a Oaxaca ==por== una semana.",
+              "en": "I'm going to Oaxaca for a week."
+            },
+            {
+              "es": "Estuvo en el hospital ==durante== un mes.",
+              "en": "He was in the hospital for a month."
+            },
+            {
+              "es": "Hablamos ==por== horas.",
+              "en": "We talked for hours."
+            },
+            {
+              "es": "Nadie habló ==durante== la película.",
+              "en": "Nobody talked during the movie."
+            },
+            {
+              "es": "Los tomates necesitan sol ==seis horas== al día.",
+              "en": "Tomatoes need sun for six hours a day."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Viví en Monterrey para tres años."
+                },
+                {
+                  "v": "bien",
+                  "t": "Viví en Monterrey tres años."
+                }
+              ],
+              "nota": "Para + time is a deadline, not a duration."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Vivo aquí durante dos años."
+                },
+                {
+                  "v": "bien",
+                  "t": "Vivo aquí desde hace dos años."
+                }
+              ],
+              "nota": "Still true now: desde hace + present."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estudié para una hora."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estudié una hora."
+                }
+              ],
+              "nota": "Or: durante una hora."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "desde hace",
+              "texto": "Ongoing actions: [[5129|desde hace + present]]."
+            },
+            {
+              "forma": "hace dos años",
+              "texto": "_Ago_, not _for_: [[7063|hace for ago]]."
+            },
+            {
+              "forma": "para el lunes",
+              "texto": "A deadline: [[5966|para for a deadline]]."
+            },
+            {
+              "forma": "llevo dos años",
+              "texto": "The next step: [[7176|llevar + gerund]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I worked there for five years._",
+              "r": "Trabajé ahí cinco años.",
+              "nota": "Or: durante cinco años."
+            },
+            {
+              "p": "In Spanish: _I'm going to Cancún for a week._",
+              "r": "Me voy a Cancún por una semana.",
+              "nota": "Planned: por (or nothing)."
+            },
+            {
+              "p": "Fix it: _Dormí para diez horas._",
+              "r": "Dormí diez horas.",
+              "nota": "Never para."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5129
+    ],
+    "confunde": [
+      7063,
+      5966
+    ],
+    "sigue": [
+      7176
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7087",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "tema": 5125,
+  "slug": "con-lo-que",
+  "titulo": "Preposition + lo que = with / about / for what",
+  "subtitulo": "No sé de lo que hablas. Ten cuidado con lo que deseas.",
+  "foto": "t07.jpg",
+  "regla": "[preposition] + lo que + clause = with / about / for... what: Ten cuidado con lo que deseas. No sé de lo que hablas. The preposition always comes first, never at the end.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "con / de / en / para / por / a...",
+            "+ lo que +",
+            "clause"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Lo que** = _what, the thing that_. When the verb needs a preposition (**hablar de**, **soñar con**, **pensar en**), the preposition goes **before lo que**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Never leave it at the end like English: ~~ten cuidado lo que deseas con~~."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the preposition always leads the way."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==En lo que== a mí respecta, no tengo más preguntas.",
+              "en": "As far as I'm concerned, I have no more questions."
+            },
+            {
+              "es": "Ten cuidado ==con lo que== deseas.",
+              "en": "Be careful what you wish for."
+            },
+            {
+              "es": "No sé ==de lo que== hablas.",
+              "en": "I don't know what you're talking about."
+            },
+            {
+              "es": "Se enojó ==por lo que== le dije el otro día.",
+              "en": "She got mad because of what I told her the other day."
+            },
+            {
+              "es": "Nunca le pones atención ==a lo que== te digo.",
+              "en": "You never pay attention to what I tell you."
+            },
+            {
+              "es": "Eso es ==con lo que== siempre he soñado.",
+              "en": "That's what I've always dreamed of."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No sé lo que hablas de."
+                },
+                {
+                  "v": "bien",
+                  "t": "No sé de lo que hablas."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ten cuidado lo que deseas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ten cuidado con lo que deseas."
+                }
+              ],
+              "nota": "Don't drop the preposition."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "lo que",
+              "texto": "[[5087|lo que]]."
+            },
+            {
+              "forma": "con el que",
+              "texto": "[[5124|preposition + el que]]."
+            },
+            {
+              "forma": "¿de qué?",
+              "texto": "[[8890|preposition + qué]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I'm thinking about what you said._",
+              "r": "Estoy pensando en lo que dijiste.",
+              "nota": "en lo que."
+            },
+            {
+              "p": "In Spanish: _That's not what I'm worried about._",
+              "r": "Eso no es por lo que me preocupo. / Eso no es lo que me preocupa.",
+              "nota": "Preposition first."
+            },
+            {
+              "p": "In Spanish: _It depends on what you want._",
+              "r": "Depende de lo que quieras.",
+              "nota": "de lo que."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5087
+    ],
+    "confunde": [
+      5124
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5125",
+      "kwiziq": true
+    }
+  ]
+}

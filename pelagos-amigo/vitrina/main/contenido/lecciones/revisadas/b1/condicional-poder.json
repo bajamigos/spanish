@@ -1,0 +1,235 @@
+{
+  "tema": 5853,
+  "slug": "condicional-poder",
+  "titulo": "Conjugate poder in the conditional",
+  "subtitulo": "Podría, podrías, podríamos: the future stem podr- with the conditional endings.",
+  "foto": "t09.jpg",
+  "regla": "Poder has the irregular stem podr- in the conditional, with the regular endings: podría, podrías, podría, podríamos, podrían.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "**Poder** (_to be able to_) is irregular in the conditional (**el condicional simple**). It uses the same irregular stem as the future, **podr-**, and the regular conditional endings."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "**podr-**",
+            "**-ía, -ías, -ía, -íamos, -ían**"
+          ]
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "poder"
+          ],
+          "filas": [
+            [
+              "yo",
+              "podría"
+            ],
+            [
+              "tú",
+              "podrías"
+            ],
+            [
+              "él, ella, usted",
+              "podría"
+            ],
+            [
+              "nosotros",
+              "podríamos"
+            ],
+            [
+              "ustedes, ellos",
+              "podrían"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "In English it's usually _could_: **podría** = _I could_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Every form has a written accent on the **í** of the ending."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **poder** drops its **e** to travel light: **podr-**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Yo ==podría== ser bombero.",
+              "en": "I could be a firefighter."
+            },
+            {
+              "es": "Tú ==podrías== tener dinero debajo del colchón.",
+              "en": "You could have money under the mattress."
+            },
+            {
+              "es": "¡Usted ==podría== ser mi hijo!",
+              "en": "You could be my son!"
+            },
+            {
+              "es": "Nosotros ==podríamos== surfear en la tarde.",
+              "en": "We could surf in the afternoon."
+            },
+            {
+              "es": "Ellos ==podrían== comer con nosotros.",
+              "en": "They could eat with us."
+            },
+            {
+              "es": "Ustedes ==podrían== trabajar en mi taller.",
+              "en": "You could work in my shop."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo poderia ayudarte."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo podría ayudarte."
+                }
+              ],
+              "nota": "The **e** falls out: **podr-**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Pudrías abrir la ventana?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Podrías abrir la ventana?"
+                }
+              ],
+              "nota": "Keep the **o** of **poder**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usos",
+      "titulo": "Useful uses",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "¿Podrías ayudarme?",
+              "texto": "Polite requests: [[6713|poder for polite requests]].",
+              "aqui": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "podré",
+              "texto": "The future has the same stem: [[5216|poder in the future]]."
+            },
+            {
+              "forma": "hablaría",
+              "texto": "The regular pattern: [[5731|regular verbs in the conditional]]."
+            },
+            {
+              "forma": "puedo, pude",
+              "texto": "Other tenses: [[5221|poder in the preterite]]."
+            },
+            {
+              "forma": "querría, sabría",
+              "texto": "Other verbs that lose the **e**: [[5055|querer]], [[5915|caber and saber]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Could you open the car?_ (usted)",
+              "r": "¿Podría abrir el carro?",
+              "nota": "podr- + ía."
+            },
+            {
+              "p": "**Poder** with **nosotros**: ___ ir a Rosarito mañana.",
+              "r": "Podríamos ir a Rosarito mañana.",
+              "nota": "podr- + íamos."
+            },
+            {
+              "p": "In Spanish: _They could win._",
+              "r": "Podrían ganar.",
+              "nota": "podr- + ían."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5216,
+      5731
+    ],
+    "confunde": [
+      5216
+    ],
+    "sigue": [
+      6713,
+      5055,
+      5915
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5853",
+      "kwiziq": true
+    }
+  ]
+}

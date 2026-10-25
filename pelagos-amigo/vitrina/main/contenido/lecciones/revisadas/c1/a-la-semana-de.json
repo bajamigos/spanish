@@ -1,0 +1,179 @@
+{
+  "tema": 7803,
+  "slug": "a-la-semana-de",
+  "titulo": "A + time + de + infinitive = within / ... after doing",
+  "subtitulo": "A la semana de empezar, lo corrieron.",
+  "foto": "t07.jpg",
+  "regla": "A + the + time + de + infinitive tells how soon after one thing another happened: A la semana de empezar el trabajo lo corrieron = a week after starting. Spanish uses the definite article (a la semana, a los cinco minutos), and a + el = al.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "a + el / la / los / las",
+            "+ time",
+            "+ de + infinitive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Means _(within) [time] of doing / [time] after doing_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Spanish uses the **definite article**; English uses none or **a**: **a la semana** = _within a week_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**a + el = al**: **al minuto de llegar**, **al año de casarse**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: picture a stopwatch starting at the **de** + infinitive."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==A las dos horas de cancelar== el vuelo, nos ofrecieron otro.",
+              "en": "Two hours after canceling the flight, they offered us another one."
+            },
+            {
+              "es": "==A los cinco minutos de llegar== a la casa, mi hija me llamó.",
+              "en": "Five minutes after getting home, my daughter called me."
+            },
+            {
+              "es": "==A la semana de empezar== el trabajo, lo corrieron.",
+              "en": "A week after starting the job, he got fired."
+            },
+            {
+              "es": "==Al minuto de comenzar== la junta, se fue la luz.",
+              "en": "A minute into the meeting, the power went out."
+            },
+            {
+              "es": "==Al año de casarse==, se mudaron a Monterrey.",
+              "en": "A year after getting married, they moved to Monterrey."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "A semana de empezar..."
+                },
+                {
+                  "v": "bien",
+                  "t": "A la semana de empezar..."
+                }
+              ],
+              "nota": "Don't drop the article."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "A el mes de llegar..."
+                },
+                {
+                  "v": "bien",
+                  "t": "Al mes de llegar..."
+                }
+              ],
+              "nota": "a + el = al."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "después de",
+              "texto": "[[10102|después de + infinitive]]."
+            },
+            {
+              "forma": "dentro de",
+              "texto": "[[9511|dentro de]] for _in [time]_ from now."
+            },
+            {
+              "forma": "al + infinitive",
+              "texto": "[[6175|al + infinitive]] = _when / upon doing_."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Three days after arriving, he got sick._",
+              "r": "A los tres días de llegar, se enfermó.",
+              "nota": "a los + time + de."
+            },
+            {
+              "p": "In Spanish: _Within a month of opening, the restaurant closed._",
+              "r": "Al mes de abrir, el restaurante cerró.",
+              "nota": "al = a + el."
+            },
+            {
+              "p": "Fix it: _A dos semanas de mudarnos..._",
+              "r": "A las dos semanas de mudarnos...",
+              "nota": "Article."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      10102,
+      6175
+    ],
+    "confunde": [
+      9511
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7803",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "tema": 9256,
+  "slug": "subjuntivo-presente-dormir-morir",
+  "titulo": "Conjugate dormir and morir in the present subjunctive (o > u in nosotros)",
+  "subtitulo": "Duerma, durmamos: in nosotros, the o turns into u.",
+  "foto": "t08.jpg",
+  "regla": "Dormir and morir change o > ue in the subjunctive, and in nosotros o > u: duerma, duermas, durmamos, duerman.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Normally, stem-changing verbs keep the infinitive's vowel in **nosotros** in the present subjunctive (**volvamos**, **soñemos**). **Dormir** (_to sleep_) and **morir** (_to die_) don't follow that rule: in **nosotros**, the **o** becomes **u**."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "dormir",
+            "morir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "duerma",
+              "muera"
+            ],
+            [
+              "tú",
+              "duermas",
+              "mueras"
+            ],
+            [
+              "él, ella, usted",
+              "duerma",
+              "muera"
+            ],
+            [
+              "nosotros",
+              "durmamos",
+              "muramos"
+            ],
+            [
+              "ustedes, ellos",
+              "duerman",
+              "mueran"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "So the pattern is **ue** in every form, and **u** in **nosotros**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: even asleep, **nosotros** turns over: from **o** to **u**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No creo que ==durmamos== en este hotel esta noche.",
+              "en": "I don't think we'll sleep in this hotel tonight."
+            },
+            {
+              "es": "Es poco probable que nos ==muramos== de sed.",
+              "en": "It's unlikely we'll die of thirst."
+            },
+            {
+              "es": "Dudo que ==durmamos== más de cuatro horas.",
+              "en": "I doubt we'll sleep more than four hours."
+            },
+            {
+              "es": "¡Abre la ventana! ¿Quieres que nos ==muramos== de calor?",
+              "en": "Open the window! Do you want us to die of heat?"
+            },
+            {
+              "es": "Quiero que ==duermas== bien antes del torneo.",
+              "en": "I want you to sleep well before the tournament."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es mejor que dormamos aquí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es mejor que durmamos aquí."
+                }
+              ],
+              "nota": "**o > u** in nosotros."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Dudo que duermamos."
+                },
+                {
+                  "v": "bien",
+                  "t": "Dudo que durmamos."
+                }
+              ],
+              "nota": "Not **ue** in nosotros: **u**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "durmió, murieron",
+              "texto": "The same **u** in the preterite: [[5266|dormir and morir in the preterite]]."
+            },
+            {
+              "forma": "duermo, dormimos",
+              "texto": "The present: [[5873|o > ue -ir verbs]]."
+            },
+            {
+              "forma": "vuelva, volvamos",
+              "texto": "The usual pattern: [[6227|o > ue -er verbs]]."
+            },
+            {
+              "forma": "pidamos, sintamos",
+              "texto": "Other verbs that change in nosotros: [[5279|e > i]], [[6983|e > ie -ir verbs]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "**Dormir** with **nosotros**: Ojalá que ___ bien.",
+              "r": "Ojalá que durmamos bien.",
+              "nota": "o > u."
+            },
+            {
+              "p": "**Morir** with **ellos**: No quiero que las plantas se ___.",
+              "r": "No quiero que las plantas se mueran.",
+              "nota": "o > ue."
+            },
+            {
+              "p": "In Spanish: _I hope you sleep well._ (tú)",
+              "r": "Espero que duermas bien.",
+              "nota": "o > ue."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5873,
+      6227
+    ],
+    "confunde": [
+      6227
+    ],
+    "sigue": [
+      5266,
+      6983,
+      5279
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9256",
+      "kwiziq": true
+    }
+  ]
+}

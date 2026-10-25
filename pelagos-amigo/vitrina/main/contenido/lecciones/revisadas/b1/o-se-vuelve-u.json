@@ -1,0 +1,191 @@
+{
+  "tema": 7278,
+  "slug": "o-se-vuelve-u",
+  "titulo": "When the conjunction o becomes u",
+  "subtitulo": "Siete u ocho, mujeres u hombres.",
+  "foto": "t01.jpg",
+  "regla": "O (or) becomes u before a word that starts with the sound o (o- or ho-): siete u ocho, mujeres u hombres. Before any other letter, o stays.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Two **o** sounds in a row blur together, so **o** (_or_) changes to **u** when the next word starts with the sound **o**."
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "o-",
+              "texto": "**siete u ocho**, **Cristina u Olga**."
+            },
+            {
+              "forma": "ho-",
+              "texto": "The **h** is silent: **mujeres u hombres**, **ligas u horquillas**."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Before any other sound, **o** stays: **chocolate o fresa**, **Elena o Ana**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **u** steps in so you don't say **o-o**, just like **e** steps in for **y** before **i**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Me quedo siete ==u== ocho días.",
+              "en": "I'm staying seven or eight days."
+            },
+            {
+              "es": "Se va a llamar Cristina ==u== Olga.",
+              "en": "She'll be called Cristina or Olga."
+            },
+            {
+              "es": "El club es para mujeres ==u== hombres.",
+              "en": "The club is for women or men."
+            },
+            {
+              "es": "¿Quieres ligas ==u== horquillas?",
+              "en": "Do you want hair ties or bobby pins?"
+            },
+            {
+              "es": "¿De chocolate ==o== de fresa?",
+              "en": "Chocolate or strawberry?"
+            },
+            {
+              "es": "¿Dulce ==o== truco?",
+              "en": "Trick or treat?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "uno o otro"
+                },
+                {
+                  "v": "bien",
+                  "t": "uno u otro"
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "ayer o hoy"
+                },
+                {
+                  "v": "bien",
+                  "t": "ayer u hoy"
+                }
+              ],
+              "nota": "Careful: **hoy** starts with **ho-**, so **u** is right."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "oro u plata"
+                },
+                {
+                  "v": "bien",
+                  "t": "oro o plata"
+                }
+              ],
+              "nota": "**Plata** doesn't start with **o**: **o** stays."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "padres e hijos",
+              "texto": "The same idea with **y**: [[7277|y becomes e]]."
+            },
+            {
+              "forma": "o... o..., o bien",
+              "texto": "More on **o**: [[8076|o / u / o bien]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Complete: _diez ___ once_",
+              "r": "diez u once",
+              "nota": "once starts with o."
+            },
+            {
+              "p": "Complete: _mujer ___ hombre_",
+              "r": "mujer u hombre",
+              "nota": "ho- sounds like o."
+            },
+            {
+              "p": "Complete: _azul ___ verde_",
+              "r": "azul o verde",
+              "nota": "No change."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [],
+    "confunde": [
+      7277
+    ],
+    "sigue": [
+      8076
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7278",
+      "kwiziq": true
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "tema": 9518,
+  "slug": "dar-de-comer",
+  "titulo": "Dar de + infinitive (comer, beber, cenar...) = to feed, give a drink",
+  "subtitulo": "Hay que darle de comer al perro.",
+  "foto": "t03.jpg",
+  "regla": "Dar (a alguien) de + comer / beber / cenar / desayunar / mamar = to feed, give food or drink to: Tengo que darles de comer a los niños. ¡Se me olvidó darle de comer al perro! Also figurative: le da de comer a medio pueblo (provides a living).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "dar (a alguien)",
+            "+ de +",
+            "comer / beber / cenar / desayunar / almorzar / mamar"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "The person or animal fed is the **indirect object**: **le doy de comer al perro**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Dar de mamar** = _to breastfeed_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Figurative: **ese negocio le da de comer a medio pueblo** = _it provides a living for half the town_."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **dar de comer** = to give (something) _of_ eating."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Tengo que ==darles de comer== a mis hijos.",
+              "en": "I have to feed my kids."
+            },
+            {
+              "es": "Vas a tener que ==darle de beber== a la abuela; no puede agarrar el vaso.",
+              "en": "You'll have to help grandma drink; she can't hold the glass."
+            },
+            {
+              "es": "Ayer, después de ==darles de cenar== a los chiquitos, me puse a ver la tele.",
+              "en": "Yesterday, after giving the little ones dinner, I watched TV."
+            },
+            {
+              "es": "Pa, ¿cuándo me ==das de merendar==?",
+              "en": "Dad, when are you giving me my snack?"
+            },
+            {
+              "es": "La mamá estaba ==dándole de mamar== al bebé.",
+              "en": "The mother was breastfeeding the baby."
+            },
+            {
+              "es": "¡Se me olvidó ==darle de comer== al perro!",
+              "en": "I forgot to feed the dog!"
+            },
+            {
+              "es": "La cooperativa ==le da de comer== a medio pueblo.",
+              "en": "The co-op provides a living for half the town."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Doy comida el perro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Le doy de comer al perro."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Dar de comiendo"
+                },
+                {
+                  "v": "bien",
+                  "t": "Dar de comer"
+                }
+              ],
+              "nota": "Infinitive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "le di a Juan",
+              "texto": "[[7090|repeating indirect pronouns]]."
+            },
+            {
+              "forma": "preposition + infinitive",
+              "texto": "[[6310|infinitive after prepositions]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Did you feed the cat?_",
+              "r": "¿Le diste de comer al gato?",
+              "nota": "dar de comer."
+            },
+            {
+              "p": "In Spanish: _Give the plants water._",
+              "r": "Dales de beber a las plantas. / Riega las plantas.",
+              "nota": "dar de beber."
+            },
+            {
+              "p": "In Spanish: _She's breastfeeding._",
+              "r": "Está dando de mamar.",
+              "nota": "dar de mamar."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      7090
+    ],
+    "confunde": [],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9518",
+      "kwiziq": true
+    }
+  ]
+}

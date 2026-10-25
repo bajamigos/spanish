@@ -1,0 +1,184 @@
+{
+  "tema": 9538,
+  "slug": "salvo-que-a-menos-que",
+  "titulo": "Salvo que, a menos que, a no ser que = unless / except that",
+  "subtitulo": "Voy, a menos que llueva. Todo bien, salvo que llegó tarde.",
+  "foto": "t02.jpg",
+  "regla": "Salvo que / excepto que + indicative = except that (a real fact): Todo salió bien, salvo que el sonido era malo. Salvo que, a menos que, a no ser que + subjunctive = unless (a possible condition): Vamos a la playa, a menos que llueva.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "salvo que / excepto que + indicative",
+              "texto": "_except that, but_: a **real** limitation. **Todo bien, salvo que el sonido era malo.**"
+            },
+            {
+              "forma": "salvo que / a menos que / a no ser que + subjunctive",
+              "texto": "_unless_: a **possible** condition that would change things. **Te veo mañana, a menos que tengas planes.**"
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "**A menos que** and **a no ser que** always take the subjunctive."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Past contexts use the imperfect subjunctive: **dijo que vendría a menos que lloviera**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: indicative = it happened; subjunctive = it might."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Todo salió de maravilla, ==salvo que== la calidad del sonido no era muy buena.",
+              "en": "Everything went great, except that the sound quality wasn't very good."
+            },
+            {
+              "es": "Me encantan los panes de esta panadería, ==salvo que== la dueña es medio antipática.",
+              "en": "I love this bakery's bread, except that the owner is a bit unfriendly."
+            },
+            {
+              "es": "Vamos a la playa el sábado, ==a menos que llueva==.",
+              "en": "We'll go to the beach on Saturday, unless it rains."
+            },
+            {
+              "es": "No te voy a llamar, ==a no ser que== haya una emergencia.",
+              "en": "I won't call you unless there's an emergency."
+            },
+            {
+              "es": "==Salvo que== me digas lo contrario, te espero a las ocho.",
+              "en": "Unless you tell me otherwise, I'll expect you at eight."
+            },
+            {
+              "es": "Dijo que vendría, ==a menos que== tuviera mucho trabajo.",
+              "en": "He said he'd come unless he had a lot of work."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "excepto",
+                  "t": "Todo bien, salvo que llegó tarde."
+                },
+                {
+                  "v": "a menos que",
+                  "t": "Todo bien, salvo que llegue tarde."
+                }
+              ],
+              "nota": "Fact vs possible condition."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "A menos que llueve..."
+                },
+                {
+                  "v": "bien",
+                  "t": "A menos que llueva..."
+                }
+              ],
+              "nota": "Always subjunctive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "con tal de que",
+              "texto": "[[7252|con tal de que]] = _as long as_."
+            },
+            {
+              "forma": "por si",
+              "texto": "[[7526|por si]] = _in case_."
+            },
+            {
+              "forma": "aunque",
+              "texto": "[[5146|aunque]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _I'll go unless you need me._",
+              "r": "Voy, a menos que me necesites.",
+              "nota": "Subjunctive."
+            },
+            {
+              "p": "In Spanish: _The hotel was nice, except that it was far._",
+              "r": "El hotel estaba bonito, salvo que estaba lejos.",
+              "nota": "Indicative = fact."
+            },
+            {
+              "p": "Fix it: _No salgo a no ser que es urgente._",
+              "r": "No salgo a no ser que sea urgente.",
+              "nota": "Subjunctive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5146
+    ],
+    "confunde": [
+      7252,
+      7526
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9538",
+      "kwiziq": true
+    }
+  ]
+}

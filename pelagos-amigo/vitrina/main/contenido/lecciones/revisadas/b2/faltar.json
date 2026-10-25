@@ -1,0 +1,227 @@
+{
+  "tema": 8701,
+  "slug": "faltar",
+  "titulo": "The verb faltar: different meanings",
+  "subtitulo": "Faltan dos días. Le falta sal. Faltó a clase.",
+  "foto": "t02.jpg",
+  "regla": "Faltar: time left until something (faltan dos días para...), something missing or needed (le falta sal, me faltan cinco pesos), not showing up (faltar a clase), and faltar al respeto (to be disrespectful).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "faltar + time + para",
+              "texto": "_time left until_: **faltan dos semanas para mi cumpleaños**. Works like **gustar**: agrees with the time."
+            },
+            {
+              "forma": "faltarle algo a alguien / algo",
+              "texto": "_to be missing, to need, to lack_: **a este guisado le falta sal**, **me faltan cinco pesos**."
+            },
+            {
+              "forma": "faltar a + place / event",
+              "texto": "_to miss, not show up_: **faltó a clase**."
+            },
+            {
+              "forma": "faltarle al respeto a alguien",
+              "texto": "_to disrespect someone_."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Ask how long is left: **¿Cuánto (tiempo) falta para...?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **faltar** is the gap between what you have and what you need."
+        }
+      ]
+    },
+    {
+      "id": "tiempo",
+      "titulo": "Time left",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Faltan== dos semanas para mi cumpleaños.",
+              "en": "My birthday is two weeks away."
+            },
+            {
+              "es": "==Faltan== dos días para que venza esa factura.",
+              "en": "That bill is due in two days."
+            },
+            {
+              "es": "Paciencia, ==falta== un minuto para que empiece la película.",
+              "en": "Be patient, the movie starts in a minute."
+            },
+            {
+              "es": "—Ma, ¿ya llegamos? —No, pero ya ==falta== poco.",
+              "en": "—Mom, are we there yet? —No, but it's not far now."
+            },
+            {
+              "es": "¿Cuánto ==falta== para que termine el curso?",
+              "en": "How long until the course ends?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "necesitar",
+      "titulo": "Missing, needed",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "A este guisado le ==falta== un poco de sal.",
+              "en": "This stew needs a little salt."
+            },
+            {
+              "es": "Tengo que ir al súper. Me ==falta== fruta.",
+              "en": "I have to go to the supermarket. I'm out of fruit."
+            },
+            {
+              "es": "Chavos, para armar la casa de campaña les ==faltan== las estacas.",
+              "en": "Guys, you're missing the stakes to pitch the tent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "otros",
+      "titulo": "Other uses",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Ayer ==faltó a== clase porque estaba enfermo.",
+              "en": "He missed class yesterday because he was sick."
+            },
+            {
+              "es": "No le ==faltes al respeto== a tu abuela.",
+              "en": "Don't be disrespectful to your grandma."
+            },
+            {
+              "es": "¡==No faltaba más==!",
+              "en": "Of course! Don't mention it!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Falta tres días."
+                },
+                {
+                  "v": "bien",
+                  "t": "Faltan tres días."
+                }
+              ],
+              "nota": "Agrees with the time."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo falto sal."
+                },
+                {
+                  "v": "bien",
+                  "t": "Me falta sal."
+                }
+              ],
+              "nota": "Like **gustar**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "sobrar",
+              "texto": "The opposite: [[9106|sobrar]]."
+            },
+            {
+              "forma": "me gusta",
+              "texto": "[[6001|gustar-type verbs]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _Christmas is three weeks away._",
+              "r": "Faltan tres semanas para Navidad.",
+              "nota": "Plural."
+            },
+            {
+              "p": "In Spanish: _I'm ten pesos short._",
+              "r": "Me faltan diez pesos.",
+              "nota": "Me faltan."
+            },
+            {
+              "p": "In Spanish: _She didn't go to work today._",
+              "r": "Hoy faltó al trabajo.",
+              "nota": "faltar a."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6001
+    ],
+    "confunde": [
+      9106
+    ],
+    "sigue": [
+      9106
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 8701",
+      "kwiziq": true
+    }
+  ]
+}

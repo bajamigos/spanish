@@ -1,0 +1,167 @@
+{
+  "tema": 7915,
+  "slug": "si-supiera",
+  "titulo": "¡Si + imperfect subjunctive! = if only / I wish",
+  "subtitulo": "¡Si él supiera cuánto lo quiero!",
+  "foto": "t10.jpg",
+  "regla": "An exclamation with si + imperfect subjunctive and no main clause expresses a wish (if only...): ¡Si me diera una oportunidad! or wondering how someone would react: ¡Si te viera tu abuelo!",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "¡Si",
+            "+ imperfect subjunctive",
+            "...!"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "A **wish** or a **what-would-they-say** moment, without finishing the sentence."
+        },
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "wish",
+              "texto": "**¡Si me diera una oportunidad!** = _If only she'd give me a chance!_ Like **ojalá**."
+            },
+            {
+              "forma": "imagined reaction",
+              "texto": "**¡Si te viera tu abuelo!** = _If your grandpa could see you now!_"
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the sentence trails off because the rest is a sigh."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Si== él ==supiera== cuánto lo quiero...",
+              "en": "If only he knew how much I love him..."
+            },
+            {
+              "es": "==Si== me ==diera== una oportunidad...",
+              "en": "If only she'd give me a chance..."
+            },
+            {
+              "es": "¡Uy, ==si== lo ==agarrara==!",
+              "en": "Oh, if I could just get my hands on him!"
+            },
+            {
+              "es": "¡==Si== me ==vieran== mis papás ahorita!",
+              "en": "If my parents could see me right now!"
+            },
+            {
+              "es": "¡==Si== te ==escuchara== tu abuelo!",
+              "en": "If your grandpa could hear you!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¡Si él sabría cuánto lo quiero!"
+                },
+                {
+                  "v": "bien",
+                  "t": "¡Si él supiera cuánto lo quiero!"
+                }
+              ],
+              "nota": "Imperfect subjunctive, never conditional."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "ojalá + -ra",
+              "texto": "[[9105|ojalá in the past]]."
+            },
+            {
+              "forma": "si tuviera, iría",
+              "texto": "[[5120|hypothetical si]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Wish: _If only I had more time..._",
+              "r": "Si tuviera más tiempo...",
+              "nota": "-ra."
+            },
+            {
+              "p": "Imagined reaction: _If your mom could see you!_",
+              "r": "¡Si te viera tu mamá!",
+              "nota": "viera."
+            },
+            {
+              "p": "Fix it: _¡Si pudiera volar!_ — correct?",
+              "r": "Yes, correct.",
+              "nota": "pudiera."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5120,
+      9105
+    ],
+    "confunde": [
+      9105
+    ],
+    "sigue": []
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7915",
+      "kwiziq": true
+    }
+  ]
+}

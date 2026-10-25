@@ -1,0 +1,205 @@
+{
+  "tema": 5100,
+  "slug": "el-la",
+  "titulo": "The: el, la (singular)",
+  "subtitulo": "El mar, la playa.",
+  "foto": "t10.jpg",
+  "regla": "To say the before a singular noun, use el with masculine nouns and la with feminine nouns.",
+  "comparada_kwiziq": "2026-10-17",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Every Spanish noun is **masculine** or **feminine**. The word for _the_ matches it."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Noun",
+            "The",
+            "Example"
+          ],
+          "filas": [
+            [
+              "masculine",
+              "el",
+              "el carro"
+            ],
+            [
+              "feminine",
+              "la",
+              "la casa"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Learn each noun with its article: **el día**, **el mapa**, **la mano**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**El** (_the_) has no accent. **Él** with an accent means _he_."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==El== mar está frío hoy.",
+              "en": "The sea is cold today."
+            },
+            {
+              "es": "==La== playa está llena.",
+              "en": "The beach is packed."
+            },
+            {
+              "es": "¿Dónde está ==el== baño?",
+              "en": "Where's the bathroom?"
+            },
+            {
+              "es": "==La== maestra es de Monterrey.",
+              "en": "The teacher is from Monterrey."
+            },
+            {
+              "es": "Me gusta ==el== jardín de mi abuela.",
+              "en": "I like my grandma's garden."
+            },
+            {
+              "es": "==La== tabla es de mi hermano.",
+              "en": "The board is my brother's."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "La problema es grande."
+                },
+                {
+                  "v": "bien",
+                  "t": "El problema es grande."
+                }
+              ],
+              "nota": "**Problema** is masculine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "El mano está fría."
+                },
+                {
+                  "v": "bien",
+                  "t": "La mano está fría."
+                }
+              ],
+              "nota": "**Mano** is feminine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Él carro es rojo."
+                },
+                {
+                  "v": "bien",
+                  "t": "El carro es rojo."
+                }
+              ],
+              "nota": "No accent: **él** is _he_."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "un, una",
+              "texto": "_A/an_ instead of _the_: [[5104|un, una]]."
+            },
+            {
+              "forma": "los, las",
+              "texto": "In the plural: [[5101|los, las]]."
+            },
+            {
+              "forma": "él / el",
+              "texto": "With and without the accent: [[10756|él (he) vs el (the)]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _the beach_",
+              "r": "la playa",
+              "nota": "playa is feminine."
+            },
+            {
+              "p": "In Spanish: _the day_",
+              "r": "el día",
+              "nota": "-a, but masculine."
+            },
+            {
+              "p": "Fix it: _La mapa es viejo._",
+              "r": "El mapa es viejo.",
+              "nota": "mapa is masculine."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5104
+    ],
+    "confunde": [
+      10756
+    ],
+    "sigue": [
+      5101
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5100",
+      "kwiziq": true
+    }
+  ]
+}

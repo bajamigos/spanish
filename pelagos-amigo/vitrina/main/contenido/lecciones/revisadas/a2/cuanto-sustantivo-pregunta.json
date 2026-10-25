@@ -1,0 +1,239 @@
+{
+  "tema": 7068,
+  "slug": "cuanto-sustantivo-pregunta",
+  "titulo": "Cuánto + noun: how much, how many",
+  "subtitulo": "¿Cuánto dinero? ¿Cuántas olas?",
+  "foto": "t05.jpg",
+  "regla": "Cuánto + noun asks how much / how many and agrees with the noun: cuánto, cuánta, cuántos, cuántas. Singular for things you can't count, plural for things you can. Always with an accent.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "To ask _how much_ or _how many_ before a noun, use **cuánto**. Here it's an adjective, so it **agrees** with the noun in gender and number."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "",
+            "Singular (how much)",
+            "Plural (how many)"
+          ],
+          "filas": [
+            [
+              "Masculine",
+              "¿cuánto dinero?",
+              "¿cuántos años?"
+            ],
+            [
+              "Feminine",
+              "¿cuánta agua?",
+              "¿cuántas personas?"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Singular for things you can't count (**dinero, agua, tiempo, gente**), plural for things you can (**olas, clases, hermanos**)."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Agua** is feminine (it only takes **el** for sound): **¿cuánta agua?** **Gente** is singular and feminine: **¿cuánta gente?**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "The accent stays in indirect questions too: **No sé cuántos años tiene.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **cuánto** is a mirror. It copies the **-o, -a, -os, -as** of its noun."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "¿==Cuánto== dinero necesitas para la tabla?",
+              "en": "How much money do you need for the board?"
+            },
+            {
+              "es": "¿==Cuánta== agua tomas al día?",
+              "en": "How much water do you drink a day?"
+            },
+            {
+              "es": "¿==Cuántos== años tienes?",
+              "en": "How old are you?"
+            },
+            {
+              "es": "¿==Cuántas== olas agarraste hoy?",
+              "en": "How many waves did you catch today?"
+            },
+            {
+              "es": "¿==Cuánto== tiempo llevas entrenando jiu-jitsu?",
+              "en": "How long have you been training jiu-jitsu?"
+            },
+            {
+              "es": "¿==Cuánta== gente vino a la fiesta?",
+              "en": "How many people came to the party?"
+            },
+            {
+              "es": "¿==Cuántos== hermanos tiene tu novia?",
+              "en": "How many brothers and sisters does your girlfriend have?"
+            },
+            {
+              "es": "No sé ==cuántas== semillas planté.",
+              "en": "I don't know how many seeds I planted."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Cuánto personas?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cuántas personas?"
+                }
+              ],
+              "nota": "Agree: feminine plural."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Cuántos dinero tienes?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cuánto dinero tienes?"
+                }
+              ],
+              "nota": "**Dinero** is uncountable: singular."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Cuánto agua necesitas?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cuánta agua necesitas?"
+                }
+              ],
+              "nota": "**Agua** is feminine."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Cuántas gentes vinieron?"
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Cuánta gente vino?"
+                }
+              ],
+              "nota": "**Gente** is singular."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "dos olas, tres clases",
+              "texto": "[[6664|Numbers with nouns]]."
+            },
+            {
+              "forma": "¿cuánto cuesta?",
+              "texto": "Before a verb it doesn't change: [[9835|cuánto + verb]]."
+            },
+            {
+              "forma": "no sé cuánto",
+              "texto": "[[8703|Cuánto in questions, exclamations and indirect questions]]."
+            },
+            {
+              "forma": "¡cuánta gente!",
+              "texto": "Exclaiming: [[7027|cuánto + noun in exclamations]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _How many classes do you have?_",
+              "r": "¿Cuántas clases tienes?",
+              "nota": "Feminine plural."
+            },
+            {
+              "p": "In Spanish: _How much time do we have?_",
+              "r": "¿Cuánto tiempo tenemos?",
+              "nota": "Masculine singular."
+            },
+            {
+              "p": "Fix it: _¿Cuántos personas vienen?_",
+              "r": "¿Cuántas personas vienen?",
+              "nota": "Copy the noun: -as."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6664
+    ],
+    "confunde": [
+      9835
+    ],
+    "sigue": [
+      8703,
+      7027
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 7068",
+      "kwiziq": true
+    }
+  ]
+}

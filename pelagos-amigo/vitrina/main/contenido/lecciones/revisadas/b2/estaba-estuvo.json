@@ -1,0 +1,204 @@
+{
+  "tema": 6868,
+  "slug": "estaba-estuvo",
+  "titulo": "Estar in the imperfect vs the preterite",
+  "subtitulo": "Estaba deprimida / Estuvo deprimida.",
+  "foto": "t04.jpg",
+  "regla": "Estaba: a state in the past, no interest in when it ended; it may still be true. Estuvo: a state seen as over, often with a time limit (estuvo enfermo una semana).",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Form",
+            "Meaning"
+          ],
+          "filas": [
+            [
+              "estaba",
+              "describes a state at that time; we don't know or care if it's still true"
+            ],
+            [
+              "estuvo",
+              "a state that is over; often with a duration (dos horas, toda la semana)"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **estuvo** puts a lid on it."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "estaba",
+                  "t": "Martina estaba deprimida."
+                },
+                {
+                  "v": "estuvo",
+                  "t": "Martina estuvo deprimida."
+                }
+              ],
+              "nota": "**Estuvo**: she's better now."
+            },
+            {
+              "filas": [
+                {
+                  "v": "estaba",
+                  "t": "Los cuadros estaban en el museo."
+                },
+                {
+                  "v": "estuvo",
+                  "t": "Los cuadros estuvieron en el museo."
+                }
+              ],
+              "nota": "**Estuvieron**: they're not there anymore."
+            }
+          ]
+        },
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Estuve== enfermo toda la semana.",
+              "en": "I was sick all week."
+            },
+            {
+              "es": "¿Dónde ==estuviste== anoche?",
+              "en": "Where were you last night?"
+            },
+            {
+              "es": "Cuando llegué, la puerta ==estaba== abierta.",
+              "en": "When I arrived, the door was open."
+            },
+            {
+              "es": "La fiesta ==estuvo== buenísima.",
+              "en": "The party was great. (it's over)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Estaba en Mazatlán tres semanas."
+                },
+                {
+                  "v": "bien",
+                  "t": "Estuve en Mazatlán tres semanas."
+                }
+              ],
+              "nota": "A closed duration: **estuvo**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Cuando entré, la luz estuvo apagada."
+                },
+                {
+                  "v": "bien",
+                  "t": "Cuando entré, la luz estaba apagada."
+                }
+              ],
+              "nota": "A scene: **estaba**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "era / fue",
+              "texto": "[[6864|ser]]."
+            },
+            {
+              "forma": "estaba / estuve + gerund",
+              "texto": "[[6209|progressives]]."
+            },
+            {
+              "forma": "estuve",
+              "texto": "Conjugation: [[5218|estar in the preterite]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Estaba or estuvo? _Ayer ___ (yo) en casa todo el día._",
+              "r": "estuve",
+              "nota": "Closed duration."
+            },
+            {
+              "p": "Estaba or estuvo? _Cuando la vi, ___ muy cansada._",
+              "r": "estaba",
+              "nota": "State at that moment."
+            },
+            {
+              "p": "In Spanish: _The concert was amazing._ (finished)",
+              "r": "El concierto estuvo increíble.",
+              "nota": "estuvo."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      6871
+    ],
+    "confunde": [
+      6864
+    ],
+    "sigue": [
+      6869
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6868",
+      "kwiziq": true
+    }
+  ]
+}

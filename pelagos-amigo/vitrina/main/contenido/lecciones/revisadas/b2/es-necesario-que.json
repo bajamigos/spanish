@@ -1,0 +1,252 @@
+{
+  "tema": 6226,
+  "slug": "es-necesario-que",
+  "titulo": "The subjunctive with impersonal expressions",
+  "subtitulo": "Es necesario que vengas. Es verdad que viene.",
+  "foto": "t03.jpg",
+  "regla": "Ser + adjective + que (es necesario que, es mejor que, es raro que) and estar bien / mal que take the subjunctive. Expressions of truth or certainty (es verdad que, es cierto que, es un hecho que) take the indicative, unless they're negative.",
+  "comparada_kwiziq": "2026-10-10",
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Impersonal expressions judge or evaluate something: _it's necessary, it's great, it's a shame that..._. The verb after **que** goes in the **subjunctive**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "es + adjective / está bien, mal",
+            "+ que",
+            "+ subjunctive"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Common ones: **es necesario, importante, mejor, normal, raro, increíble, una lástima, genial, aconsejable, imprescindible que**; **está bien / mal que**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Exception**: when the expression states a **truth, certainty or fact**, use the **indicative**: **es verdad que, es cierto que, es obvio que, es un hecho que, está claro que**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "But make those **negative** and you're back to the subjunctive: **no es verdad que**, **no es cierto que**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: opinions and judgments get the subjunctive; facts get the indicative."
+        }
+      ]
+    },
+    {
+      "id": "subjuntivo",
+      "titulo": "With the subjunctive",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Es necesario que Jaime ==estudie== más.",
+              "en": "Jaime needs to study more."
+            },
+            {
+              "es": "Es genial que ==podamos== estacionarnos aquí.",
+              "en": "It's great that we can park here."
+            },
+            {
+              "es": "Es imprescindible que ==hayamos entendido== esta lección.",
+              "en": "It's essential that we've understood this lesson."
+            },
+            {
+              "es": "Es aconsejable que ==dejemos== de fumar.",
+              "en": "It's advisable for us to quit smoking."
+            },
+            {
+              "es": "Está bien que ==ahorres== un poco cada mes.",
+              "en": "It's good that you save a little every month."
+            },
+            {
+              "es": "Está muy mal que no ==dejen== estacionarse aquí.",
+              "en": "It's really bad that they don't let people park here."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "indicativo",
+      "titulo": "With the indicative: facts",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "Es verdad que ==tuvieron== mucho éxito en la campaña.",
+              "en": "It's true that they were very successful in the campaign."
+            },
+            {
+              "es": "Es cierto que Einstein ==desarrolló== la teoría de la relatividad.",
+              "en": "It's true that Einstein developed the theory of relativity."
+            },
+            {
+              "es": "Es un hecho que ==hay== mucha pobreza en el mundo.",
+              "en": "It's a fact that there's a lot of poverty in the world."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "negativo",
+      "titulo": "Negative facts: subjunctive again",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No es cierto que mi hermano ==venga== a la fiesta.",
+              "en": "It's not true that my brother is coming to the party."
+            },
+            {
+              "es": "No es verdad que mis amigos ==tomen== demasiado los sábados.",
+              "en": "It's not true that my friends drink too much on Saturdays."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "infinitivo",
+      "titulo": "Without que",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "If you're speaking about people in general, skip **que** and use the infinitive: **Es necesario estudiar.** (_It's necessary to study._)"
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es importante que llegas temprano."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es importante que llegues temprano."
+                }
+              ]
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Es verdad que sea caro."
+                },
+                {
+                  "v": "bien",
+                  "t": "Es verdad que es caro."
+                }
+              ],
+              "nota": "A fact: indicative."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No es cierto que tiene novia."
+                },
+                {
+                  "v": "bien",
+                  "t": "No es cierto que tenga novia."
+                }
+              ],
+              "nota": "Negative: subjunctive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "es posible que",
+              "texto": "Doubt: [[6235|subjunctive for doubt]]."
+            },
+            {
+              "forma": "no creo que",
+              "texto": "[[6184|negative opinions]]."
+            },
+            {
+              "forma": "sería mejor que",
+              "texto": "In the conditional: [[6990|sería + adjective + que]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "Complete: _Es mejor que ___ (salir, nosotros) temprano._",
+              "r": "salgamos",
+              "nota": "Judgment: subjunctive."
+            },
+            {
+              "p": "Complete: _Es obvio que ___ (estar, él) cansado._",
+              "r": "está",
+              "nota": "Fact: indicative."
+            },
+            {
+              "p": "Complete: _No es verdad que ___ (saber, ella) inglés._",
+              "r": "sepa",
+              "nota": "Negative fact: subjunctive."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5059
+    ],
+    "confunde": [
+      6235
+    ],
+    "sigue": [
+      6990
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 6226",
+      "kwiziq": true
+    }
+  ]
+}

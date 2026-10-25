@@ -1,0 +1,263 @@
+{
+  "tema": 5265,
+  "slug": "sirvio-repitio",
+  "titulo": "Stem-changing -ir verbs (e > i) in the preterite",
+  "subtitulo": "Pedí tacos; el mesero pidió perdón.",
+  "foto": "t01.jpg",
+  "regla": "In the preterite, -ir verbs with e in the stem (pedir, servir, repetir, sentir, preferir…) change e to i only in él/ella/usted and ellos/ellas/ustedes: pidió, pidieron. Yo, tú and nosotros stay regular: pedí, pediste, pedimos.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Many **-ir** verbs with an **e** in the stem change it to **i** in the preterite, but **only** in the **third persons**: **él / ella / usted** and **ellos / ellas / ustedes**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Yo**, **tú** and **nosotros** are completely regular."
+        },
+        {
+          "tipo": "tabla",
+          "encabezados": [
+            "Person",
+            "pedir",
+            "servir",
+            "sentir"
+          ],
+          "filas": [
+            [
+              "yo",
+              "pedí",
+              "serví",
+              "sentí"
+            ],
+            [
+              "tú",
+              "pediste",
+              "serviste",
+              "sentiste"
+            ],
+            [
+              "él / ella / usted",
+              "pidió",
+              "sirvió",
+              "sintió"
+            ],
+            [
+              "nosotros / nosotras",
+              "pedimos",
+              "servimos",
+              "sentimos"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "pidieron",
+              "sirvieron",
+              "sintieron"
+            ]
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Common ones: **pedir**, **servir**, **repetir**, **seguir**, **conseguir**, **vestirse**, **medir**, **competir**, **mentir**, **sentir**, **preferir**, **divertirse**, **sugerir**, **despedirse**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "It doesn't matter what they do in the present (**pido** or **siento**): in the preterite they all change **e → i**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Only **-ir** verbs do this. **-ar** and **-er** verbs never change their stem in the preterite: **pensó**, **entendió**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: the change only happens in the forms that end in **-ió** and **-ieron**: **pidió**, **pidieron**. Where you see those endings, look for the **i**."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "==Pedí== unos tacos de adobada y una horchata.",
+              "en": "I ordered some adobada tacos and a horchata."
+            },
+            {
+              "es": "El mesero nos ==sirvió== la comida muy rápido.",
+              "en": "The waiter served us the food really fast."
+            },
+            {
+              "es": "El profe ==repitió== la técnica tres veces.",
+              "en": "The instructor repeated the technique three times."
+            },
+            {
+              "es": "Mis amigos ==prefirieron== surfear en Baja Malibú.",
+              "en": "My friends preferred to surf at Baja Malibu."
+            },
+            {
+              "es": "Holden ==siguió== la señal hasta Eros.",
+              "en": "Holden followed the signal to Eros."
+            },
+            {
+              "es": "¿==Conseguiste== las semillas de calabaza?",
+              "en": "Did you get the pumpkin seeds?"
+            },
+            {
+              "es": "Ella ==compitió== en el torneo de Mexicali.",
+              "en": "She competed in the Mexicali tournament."
+            },
+            {
+              "es": "Los niños se ==divirtieron== mucho en la playa.",
+              "en": "The kids had a lot of fun at the beach."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ella pedió un café."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ella pidió un café."
+                }
+              ],
+              "nota": "e → **i** in él/ella."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Yo pidí la cuenta."
+                },
+                {
+                  "v": "bien",
+                  "t": "Yo pedí la cuenta."
+                }
+              ],
+              "nota": "**Yo** stays regular."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Nosotros sirvimos la cena."
+                },
+                {
+                  "v": "bien",
+                  "t": "Nosotros servimos la cena."
+                }
+              ],
+              "nota": "**Nosotros** stays regular."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Él sentió frío."
+                },
+                {
+                  "v": "bien",
+                  "t": "Él sintió frío."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "pido, pides",
+              "texto": "The present: [[5554|-ir verbs with e > i in the present]]."
+            },
+            {
+              "forma": "comí, comió",
+              "texto": "The regular base: [[5230|-er and -ir verbs in the preterite]]."
+            },
+            {
+              "forma": "pidió",
+              "texto": "The model verb on its own: [[5920|pedir in the preterite]]."
+            },
+            {
+              "forma": "durmió, murió",
+              "texto": "The o > u twin: [[5266|dormir and morir in the preterite]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish: _She asked for help._",
+              "r": "Pidió ayuda.",
+              "nota": "e → i."
+            },
+            {
+              "p": "In Spanish: _We served the coffee._",
+              "r": "Servimos el café.",
+              "nota": "nosotros: regular."
+            },
+            {
+              "p": "Fix it: _Ellos repetieron la pregunta._",
+              "r": "Ellos repitieron la pregunta.",
+              "nota": "repitieron."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      5554,
+      5230
+    ],
+    "confunde": [
+      5920
+    ],
+    "sigue": [
+      5266
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 5265",
+      "kwiziq": true
+    }
+  ]
+}

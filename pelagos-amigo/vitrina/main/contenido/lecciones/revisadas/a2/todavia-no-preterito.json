@@ -1,0 +1,235 @@
+{
+  "tema": 9265,
+  "slug": "todavia-no-preterito",
+  "titulo": "Todavía no with the preterite",
+  "subtitulo": "Todavía no llegó.",
+  "foto": "t05.jpg",
+  "regla": "In Mexico, todavía no + preterite means _not yet_: todavía no llegó = he hasn't arrived yet. Put todavía no before the verb, or no before the verb and todavía at the end.",
+  "comparada_kwiziq": null,
+  "secciones": [
+    {
+      "id": "regla",
+      "titulo": "The rule",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "English uses the present perfect for _not yet_ (_he hasn't arrived yet_). Mexican Spanish usually uses **todavía no** + the **preterite**."
+        },
+        {
+          "tipo": "formula",
+          "partes": [
+            "todavía no",
+            "+",
+            "preterite"
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Two word orders, same meaning: **Todavía no** comí. / **No** comí **todavía**."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Object pronouns go between **no** and the verb: **Todavía no le dije.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "**Aún no** means the same: **Aún no** llegó."
+        },
+        {
+          "tipo": "texto",
+          "texto": "On its own it's a short answer: ¿Ya comiste? —**Todavía no.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "The present perfect (**todavía no he comido**) is also correct, but less common in Mexico."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: **ya** = _done_; **todavía no** = _not done, but coming_."
+        }
+      ]
+    },
+    {
+      "id": "ejemplos",
+      "titulo": "Examples",
+      "bloques": [
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "El camión ==todavía no llegó==.",
+              "en": "The bus hasn't arrived yet."
+            },
+            {
+              "es": "==Todavía no terminé== la tarea.",
+              "en": "I haven't finished my homework yet."
+            },
+            {
+              "es": "¿Ya comiste? —No, ==todavía no==.",
+              "en": "Have you eaten yet? —No, not yet."
+            },
+            {
+              "es": "==No encontré== trabajo ==todavía==.",
+              "en": "I haven't found a job yet."
+            },
+            {
+              "es": "Los jitomates ==todavía no maduraron==.",
+              "en": "The tomatoes haven't ripened yet."
+            },
+            {
+              "es": "==Aún no me pagaron==.",
+              "en": "They haven't paid me yet."
+            },
+            {
+              "es": "Mi hermano ==todavía no vio== el final de la serie.",
+              "en": "My brother hasn't seen the end of the series yet."
+            },
+            {
+              "es": "==Todavía no le dije== nada a mi jefe.",
+              "en": "I haven't told my boss anything yet."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trampa",
+      "titulo": "The trap",
+      "bloques": [
+        {
+          "tipo": "pares",
+          "lista": [
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "No todavía comí."
+                },
+                {
+                  "v": "bien",
+                  "t": "Todavía no comí."
+                }
+              ],
+              "nota": "**Todavía no** stays together before the verb."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "¿Ya comiste? —No ya."
+                },
+                {
+                  "v": "bien",
+                  "t": "¿Ya comiste? —Todavía no."
+                }
+              ],
+              "nota": "_Not yet_ = **todavía no**."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ya no llegó."
+                },
+                {
+                  "v": "bien",
+                  "t": "Todavía no llegó."
+                }
+              ],
+              "nota": "For _he hasn't arrived yet_: **todavía no**. **Ya no llegó** means _he didn't show up after all_."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Todavía no lo hice todavía."
+                },
+                {
+                  "v": "bien",
+                  "t": "Todavía no lo hice."
+                }
+              ],
+              "nota": "One **todavía** is enough."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parientes",
+      "titulo": "Related rules",
+      "bloques": [
+        {
+          "tipo": "usos",
+          "lista": [
+            {
+              "forma": "ya llegó",
+              "texto": "The opposite: [[9263|ya with the preterite]]."
+            },
+            {
+              "forma": "todavía está aquí",
+              "texto": "Without no it means _still_: [[8618|todavía / aún = still]]."
+            },
+            {
+              "forma": "ya no",
+              "texto": "_Not anymore_: [[7263|ya / ya no]]."
+            },
+            {
+              "forma": "no he comido / no comí",
+              "texto": "Which past to choose: [[9261|present perfect vs preterite]]."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kwiz",
+      "titulo": "Check yourself",
+      "bloques": [
+        {
+          "tipo": "texto",
+          "texto": "Say it out loud, then open the answer."
+        },
+        {
+          "tipo": "mini_kwiz",
+          "lista": [
+            {
+              "p": "In Spanish (Mexico): _The package hasn't arrived yet._",
+              "r": "El paquete todavía no llegó.",
+              "nota": "Todavía no + preterite."
+            },
+            {
+              "p": "Answer \"not yet\": _¿Ya terminaste?_",
+              "r": "Todavía no.",
+              "nota": "Short answer."
+            },
+            {
+              "p": "Fix it: _No todavía pagué la renta._",
+              "r": "Todavía no pagué la renta.",
+              "nota": "Todavía no together."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "enlaces": {
+    "antes": [
+      9263
+    ],
+    "confunde": [
+      8618,
+      7263
+    ],
+    "sigue": [
+      9261
+    ]
+  },
+  "biblioteca": [
+    {
+      "tipo": "Original",
+      "texto": "The Kwiziq lesson, number 9265",
+      "kwiziq": true
+    }
+  ]
+}
