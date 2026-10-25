@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=509faa76a2";
-import * as A from "./almacen.js?v=509faa76a2";
-import * as V from "./videos.js?v=509faa76a2";
-import * as NB from "./nube.js?v=509faa76a2";
-import * as CL from "./clases.js?v=509faa76a2";
-import { abrirPractica } from "./practica.js?v=509faa76a2";
-import * as F from "./fondo.js?v=509faa76a2";
-import * as PD from "./podcasts.js?v=509faa76a2";
+import * as N from "./nucleo.js?v=c68db9ffec";
+import * as A from "./almacen.js?v=c68db9ffec";
+import * as V from "./videos.js?v=c68db9ffec";
+import * as NB from "./nube.js?v=c68db9ffec";
+import * as CL from "./clases.js?v=c68db9ffec";
+import { abrirPractica } from "./practica.js?v=c68db9ffec";
+import * as F from "./fondo.js?v=c68db9ffec";
+import * as PD from "./podcasts.js?v=c68db9ffec";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1915,21 +1915,37 @@ function pintarMalla(dia, cola, modo = "quiz") {
   // de gramática por tipo. Mismo tamaño de cuadrito que el Atlas; la caja se desplaza hacia abajo.
   const porMes = new Map();
   for (const c of todas) { const m = String(c.agregada || hoy).slice(0, 7); if (!porMes.has(m)) porMes.set(m, []); porMes.get(m).push(c); }
-  const meses = [...porMes.entries()];
+  // Los meses con menos de MES_MINIMO tarjetas se juntan con el siguiente (o, al final, con el anterior), para que no
+  // queden rectángulos angostitos sin nombre (su pedido del 25-Oct-2026). El rótulo dice el rango: «feb–mar 26».
+  const MES_MINIMO = 5;
+  const meses = [];
+  let pendiente = null;      // { desde, hasta, lista }
+  for (const [m, lista] of porMes) {
+    const g = pendiente ? { desde: pendiente.desde, hasta: m, lista: [...pendiente.lista, ...lista] } : { desde: m, hasta: m, lista };
+    pendiente = null;
+    if (g.lista.length < MES_MINIMO) { pendiente = g; continue; }
+    meses.push(g);
+  }
+  if (pendiente) { if (meses.length) { const u = meses[meses.length - 1]; u.hasta = pendiente.hasta; u.lista.push(...pendiente.lista); } else meses.push(pendiente); }
+  const nombreMes = (m) => MESES_CHICOS[Number(m.slice(5, 7)) - 1];
+  const rotuloDe = (g) => g.desde === g.hasta ? `${nombreMes(g.desde)} ${g.desde.slice(2, 4)}`
+    : g.desde.slice(0, 4) === g.hasta.slice(0, 4) ? `${nombreMes(g.desde)}–${nombreMes(g.hasta)} ${g.hasta.slice(2, 4)}`
+    : `${nombreMes(g.desde)} ${g.desde.slice(2, 4)}–${nombreMes(g.hasta)} ${g.hasta.slice(2, 4)}`;
   const W = Math.max(200, caja.clientWidth - 10);
-  const lugar = N.acomodarMapa(meses.map(([, l]) => l.length), W, 300, { cabeza: 13, margen: 2, hueco: 2, forma: 1 });
+  const lugar = N.acomodarMapa(meses.map((g) => g.lista.length), W, 300, { cabeza: 13, margen: 2, hueco: 2, forma: 1, siempreRotulo: true });
   const mapa = document.createElement("div");
   mapa.className = "vMapa";
   mapa.style.height = lugar.alto + "px";
   caja.append(mapa);
   const pon = (el, x, y, w, h) => { el.style.left = x + "px"; el.style.top = y + "px"; el.style.width = w + "px"; el.style.height = h + "px"; };
   let bien = 0, mal = 0;
-  meses.forEach(([m, lista], j) => {
+  meses.forEach((gm, j) => {
+    const lista = gm.lista;
     const cj = lugar.cajas[j];
     const g = document.createElement("div");
     g.className = "qaCaja";
     pon(g, cj.x, cj.y, cj.w, cj.h);
-    if (cj.rotulo) { const r = document.createElement("div"); r.className = "qaRot"; r.textContent = `${MESES_CHICOS[Number(m.slice(5, 7)) - 1]} ${m.slice(2, 4)} · ${lista.length}`; g.append(r); }
+    if (cj.rotulo) { const r = document.createElement("div"); r.className = "qaRot"; r.textContent = `${rotuloDe(gm)} · ${lista.length}`; g.append(r); }
     const arriba = cj.rotulo ? 15 : 2;
     lista.forEach((c, i) => {
     const el = document.createElement("i");
@@ -2113,6 +2129,9 @@ document.addEventListener("click", (ev) => {
   ev.preventDefault(); ev.stopPropagation();
   const caja = b.closest("[data-explicas]"), panel = caja && caja.querySelector(".explica");
   if (!panel) return;
+  // Donde hay mapa (el Atlas o tus palabras), tocar un círculo o el 0-3-0 marca sus temas en el mapa y ya no abre
+  // la explicación que lo empujaba hacia abajo (su pedido del 25-Oct-2026).
+  if (document.querySelector("#kwAtlas, #qaMapa, #vMalla") && b.closest(".hoyGrande, .gFila.conNivel")) return;
   const abierto = b.getAttribute("aria-pressed") === "true";
   caja.querySelectorAll("[data-explica]").forEach((x) => x.setAttribute("aria-pressed", "false"));
   if (abierto) { panel.hidden = true; return; }

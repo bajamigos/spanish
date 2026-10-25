@@ -119,9 +119,10 @@ export function cuadricular(valores, W, H) {
  * cuantos: temas de cada tipo, del más grande al más chico. area: los pixeles cuadrados que le tocan a cada tema.
  * Devuelve { alto, cajas: [{ x, y, w, h, rotulo, columnas, filas, cw, ch }] }; cw y ch son el tamaño de cada cuadro.
  */
-export function acomodarMapa(cuantos, W, area, { cabeza = 22, margen = 3, hueco = 2, forma = 1.7 } = {}) {
-  // El rótulo solo va en cajas con lugar: en una de dos o tres temas se comería los cuadros.
-  const conRotulo = (n, caja) => n >= 4 && caja.h >= 52;
+export function acomodarMapa(cuantos, W, area, { cabeza = 22, margen = 3, hueco = 2, forma = 1.7, siempreRotulo = false } = {}) {
+  // El rótulo solo va en cajas con lugar: en una de dos o tres temas se comería los cuadros. Con «siempreRotulo»
+  // (tus palabras por mes, 25-Oct-2026) todas lo llevan.
+  const conRotulo = (n, caja) => siempreRotulo || (n >= 4 && caja.h >= 52);
   // Un tipo con un solo tema pesa como si tuviera dos, para que su cuadro no quede como una rayita.
   const peso = (n) => Math.max(n, 2) * area;
   // Dos pasadas: la segunda le da a cada tipo el lugar de su propio rótulo y de sus márgenes.
