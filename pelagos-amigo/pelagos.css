@@ -1208,3 +1208,49 @@ body.conHoja { overflow: hidden; }
 /* 24-Oct-2026 (su pedido): «Te queda hoy» se ve igual que los cuadros de al lado (Gramática, Vocabulario): va dentro
    de una tarjeta que ya es de vidrio, así que lleva la capa clarita de los cuadros, no otra capa de vidrio entera. */
 .confoto .hoyGrande { background: var(--vidrio-2); border-color: var(--vidrio-borde); }
+/* 24-Oct-2026 (su elección, la «A»): tres botones en fila: Mal, Bien y Fácil (a la caja de 30 días). Y «Deshacer». */
+.tjBotones { grid-template-columns: 1fr 1fr 1fr; }
+.tjBotones #jFacil { border-color: var(--b3); color: var(--b3); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; line-height: 1; }
+.tjBotones #jFacil small { font-size: 14px; font-weight: 600; opacity: .85; }
+.tjDeshacer { margin: 0 0 8px; padding: 6px 12px; border-radius: 10px; background: color-mix(in srgb, var(--ink) 12%, transparent); font-weight: 600; font-size: 15px; display: flex; gap: 10px; align-items: center; }
+.tjDeshacer span { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tjDeshacer .lk { font-weight: 800; }
+
+/* ---- El Atlas en el quiz de gramática, en Limpio (25-Oct-2026) ---- */
+.gFila.conNivel { gap: 8px; }
+.gFila.conNivel .lnCuenta { margin-right: auto; }
+.gFila.conNivel .hoyFila > span:first-child { display: none; }
+.qaNivel { background: var(--ink); color: var(--page); font-weight: 900; border-radius: 6px; padding: 1px 7px; font-size: 15px; flex: none; }
+.qaClave.lnCajas.grandes .lnC { padding: 3px 0 4px; border-top-width: 6px; }
+.qaClave.lnCajas.grandes .lnC b { font-size: 16px; }
+.qaClave.lnCajas.grandes .lnC small { font-size: 11px; }
+.qaClave .lnC:nth-child(1) { border-top-color: var(--k0); } .qaClave .lnC:nth-child(2) { border-top-color: var(--k1); } .qaClave .lnC:nth-child(3) { border-top-color: var(--k2); }
+.qaClave .lnC:nth-child(4) { border-top-color: var(--k3); } .qaClave .lnC:nth-child(5) { border-top-color: var(--k4); } .qaClave .lnC:nth-child(6) { border-top-color: var(--k5); }
+.qaMapa { position: relative; min-height: 60px; }
+.qaCaja { position: absolute; border: 1px solid var(--line); border-radius: 5px; }
+.qaRot { position: absolute; left: 4px; right: 2px; top: 1px; font: 700 9.5px system-ui, sans-serif; opacity: .75; white-space: nowrap; overflow: hidden; }
+.qaC { position: absolute; border-radius: 2px; display: block; cursor: pointer; }
+.qaC.qx { background: color-mix(in srgb, var(--ink) 10%, transparent); }
+.qaC.qk0 { background: var(--k0); } .qaC.qk1 { background: var(--k1); } .qaC.qk2 { background: var(--k2); }
+.qaC.qk3 { background: var(--k3); } .qaC.qk4 { background: var(--k4); } .qaC.qk5 { background: var(--k5); }
+.qaC.qaMarca { outline: 2px solid var(--ink); z-index: 2; }
+.qaC.tocado { outline: 2.5px solid var(--ambar); z-index: 6; }
+.qaC.qaActual { z-index: 3; animation: qaLate 1.1s ease-in-out infinite; }
+@keyframes qaLate { 50% { transform: scale(1.45); box-shadow: 0 0 0 3px var(--page), 0 0 12px 4px var(--ink); } }
+.qaC.qaSubio, .qaC.qaIgual, .qaC.qaBajo { z-index: 4; outline: 2.5px solid var(--ink); }
+.qaC.qaSubio { animation: qaSube 3.2s forwards; } .qaC.qaIgual { animation: qaIgual 3.2s forwards; } .qaC.qaBajo { animation: qaCae 3.2s forwards; }
+@keyframes qaSube { 0% { transform: scale(2.2); box-shadow: 0 0 16px 6px var(--verde); } 30%,100% { transform: scale(1); box-shadow: 0 0 6px 2px var(--verde); } }
+@keyframes qaIgual { 0% { transform: scale(1.8); box-shadow: 0 0 14px 5px var(--ink); } 30%,100% { transform: scale(1); } }
+@keyframes qaCae { 0%,12% { transform: translateX(-3px); } 6%,18% { transform: translateX(3px); box-shadow: 0 0 14px 5px var(--rojo); } 24%,100% { transform: none; box-shadow: 0 0 6px 2px var(--rojo); } }
+.qaRotulo, .qaBurb { position: absolute; left: 0; right: 0; margin: 0 auto; width: max-content; max-width: 96%; text-align: center; z-index: 9; font: 800 13px/1.25 system-ui, sans-serif; padding: 5px 9px; border-radius: 9px; box-shadow: 0 2px 10px rgba(0,0,0,.4); pointer-events: none; }
+.qaRotulo small { display: block; font-weight: 700; font-size: 11.5px; }
+.qaRotulo.arriba { background: #1f7a3a; color: #fff; animation: qaFlotaArriba 3.2s forwards; }
+.qaRotulo.igual { background: var(--page); color: var(--ink); border: 1px solid var(--line); animation: qaFlotaArriba 3.2s forwards; }
+.qaRotulo.abajo { background: #b71c1c; color: #fff; animation: qaFlotaAbajo 3.2s forwards; }
+@keyframes qaFlotaArriba { 0% { opacity: 0; transform: translateY(8px); } 10%,75% { opacity: 1; transform: translateY(-6px); } 100% { opacity: 0; transform: translateY(-14px); } }
+@keyframes qaFlotaAbajo { 0% { opacity: 0; transform: translateY(-12px); } 10%,75% { opacity: 1; transform: translateY(2px); } 100% { opacity: 0; transform: translateY(10px); } }
+.qaBurb { background: #fff; color: #111; font-weight: 600; font-size: 12.5px; }
+.qaDeshacer { display: flex; justify-content: flex-end; margin: 8px 0 0; }
+.qaDeshacer[hidden] { display: none; }
+.qaDesBtn { background: none; border: 1px solid var(--line); color: inherit; border-radius: 999px; padding: 5px 13px; font: 700 14px system-ui, sans-serif; opacity: .9; cursor: pointer; }
+@media (prefers-reduced-motion: reduce) { .qaC.qaActual, .qaC.qaSubio, .qaC.qaIgual, .qaC.qaBajo { animation: none; } .qaRotulo { animation: none; } }
