@@ -20,6 +20,7 @@
   --halo: 0 1px 5px rgba(255,255,255,0.9);
   /* Los seis colores del mapa, del más bajo al más alto, y el color de su letra. */
   /* De rojo a amarillo a verde, como el mapa de Kwiziq (su pedido del 18-Oct-2026). */
+  --kd2: #d9a5a5; --kd1: #d06767; --tkd2: #000000;      /* debe 2 y debe 1: entre el gris de «sin ver» y el rojo (25-Oct-2026) */
   --k0: rgba(198,40,40,0.92); --k1: rgba(239,108,0,0.92); --k2: rgba(249,200,14,0.92); --k3: rgba(192,216,74,0.92); --k4: rgba(106,191,75,0.92); --k5: rgba(46,125,50,0.92);
   --t0: #ffffff; --t1: #000000; --t2: #000000; --t3: #000000; --t4: #000000; --t5: #ffffff;
   /* El mapa de calor: de nada (--c0) al día más caliente (--c4). */
@@ -42,6 +43,7 @@
   --vidrio: rgba(10,10,10,0.5); --vidrio-2: rgba(0,0,0,0.28); --vidrio-mapa: rgba(10,10,10,0.3);
   --vidrio-borde: rgba(255,255,255,0.28); --vidrio-luz: rgba(255,255,255,0.12); --vidrio-sombra: rgba(0,0,0,0.45);
   --halo: 0 1px 6px rgba(0,0,0,0.7);
+  --kd2: #69302e; --kd1: #a63532; --tkd2: #ffffff;
   --k0: rgba(229,57,53,0.9); --k1: rgba(245,124,0,0.9); --k2: rgba(251,200,30,0.9); --k3: rgba(190,215,80,0.9); --k4: rgba(102,187,106,0.9); --k5: rgba(67,196,99,0.9);
   --t0: #ffffff; --t1: #000000; --t2: #000000; --t3: #000000; --t4: #000000; --t5: #000000;
   --c0: rgba(255,255,255,0.09); --c1: #743813; --c2: #c9581c; --c3: #ff9130; --c4: #ffe36e;
@@ -439,7 +441,7 @@ ul.partes li.nova { color: var(--ink-3); border-style: dashed; font-weight: 600;
 .mc { flex: 1 1 0; min-width: 0; min-height: 0; margin: 0; padding: 0; border: 0; border-radius: 4px; overflow: hidden; cursor: pointer;
   font: inherit; font-size: 12px; line-height: 1.15; text-shadow: none; display: flex; align-items: center; justify-content: center; background: var(--vidrio-2); color: var(--ink); }
 .mc.vacio { visibility: hidden; cursor: default; }
-.mc.k0 { background: var(--k0); color: var(--t0); } .mc.k1 { background: var(--k1); color: var(--t1); } .mc.k2 { background: var(--k2); color: var(--t2); }
+.mc.kd2 { background: var(--kd2); color: var(--tkd2); } .mc.kd1 { background: var(--kd1); color: var(--t0); } .mc.k0 { background: var(--k0); color: var(--t0); } .mc.k1 { background: var(--k1); color: var(--t1); } .mc.k2 { background: var(--k2); color: var(--t2); }
 .mc.k3 { background: var(--k3); color: var(--t3); } .mc.k4 { background: var(--k4); color: var(--t4); } .mc.k5 { background: var(--k5); color: var(--t5); }
 .mc b { font-weight: 700; font-variant-numeric: tabular-nums; }
 .mc.g b { font-size: 15px; }
@@ -1233,7 +1235,7 @@ body.conHoja { overflow: hidden; }
 .qaRot { position: absolute; left: 4px; right: 2px; top: 1px; font: 700 9.5px system-ui, sans-serif; opacity: .75; white-space: nowrap; overflow: hidden; }
 .qaC { position: absolute; border-radius: 2px; display: block; cursor: pointer; }
 .qaC.qx { background: color-mix(in srgb, var(--ink) 10%, transparent); }
-.qaC.qk0 { background: var(--k0); } .qaC.qk1 { background: var(--k1); } .qaC.qk2 { background: var(--k2); }
+.qaC.qd2 { background: var(--kd2); } .qaC.qd1 { background: var(--kd1); } .qaC.qk0 { background: var(--k0); } .qaC.qk1 { background: var(--k1); } .qaC.qk2 { background: var(--k2); }
 .qaC.qk3 { background: var(--k3); } .qaC.qk4 { background: var(--k4); } .qaC.qk5 { background: var(--k5); }
 .qaC.qaMarca { outline: 2px solid var(--ink); z-index: 2; }
 .qaC.qaBien { outline: 3px solid #22e06b; outline-offset: 1px; z-index: 3; }
@@ -1310,3 +1312,6 @@ body.qaQuiz #nav { display: none; }
 .resCambios li.resVa { animation: resVa 3.2s both; }
 @keyframes resVa { 0%, 100% { background: transparent; } 8%, 60% { background: color-mix(in srgb, var(--ink) 14%, transparent); } }
 @media (prefers-reduced-motion: reduce) { .resCambios li.resVa { animation: none; } }
+/* El Atlas en la página del quiz y el círculo que manda (25-Oct-2026) */
+.kwAtlas { margin: 12px 0 4px; }
+.hoyC .circ.qaSel { outline: 3px solid var(--ink); outline-offset: 2px; border-radius: 999px; }

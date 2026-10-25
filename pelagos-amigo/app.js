@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=95e251ee65";
-import * as A from "./almacen.js?v=95e251ee65";
-import * as V from "./videos.js?v=95e251ee65";
-import * as NB from "./nube.js?v=95e251ee65";
-import * as CL from "./clases.js?v=95e251ee65";
-import { abrirPractica } from "./practica.js?v=95e251ee65";
-import * as F from "./fondo.js?v=95e251ee65";
-import * as PD from "./podcasts.js?v=95e251ee65";
+import * as N from "./nucleo.js?v=8e533c0320";
+import * as A from "./almacen.js?v=8e533c0320";
+import * as V from "./videos.js?v=8e533c0320";
+import * as NB from "./nube.js?v=8e533c0320";
+import * as CL from "./clases.js?v=8e533c0320";
+import { abrirPractica } from "./practica.js?v=8e533c0320";
+import * as F from "./fondo.js?v=8e533c0320";
+import * as PD from "./podcasts.js?v=8e533c0320";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1258,7 +1258,7 @@ function abreviarRegla(nom) {
 function verMapa(o) {
   const W = Math.max(240, vista.clientWidth - 18);       // lo que queda dentro de la tarjeta
   anchoDelMapa = vista.clientWidth;
-  const cuenta = [0, 0, 0, 0, 0, 0];
+  const cuenta = [0, 0, 0, 0, 0, 0], debeN = { d2: 0, d1: 0 };
   let sinVer = 0;
   const tarjetas = Object.keys(NIVELES).reverse().map((nivel) => {
     const suyos = P.temas.filter((t) => t.nivel === nivel).sort((a, b) => a.orden - b.orden);
@@ -1268,9 +1268,9 @@ function verMapa(o) {
     for (const t of suyos) {
       if (!porTipo.has(t.categoria)) porTipo.set(t.categoria, []);
       porTipo.get(t.categoria).push(t);
-      const v = info(t.id).pct, k = N.colorDe(info(t.id));
+      const v = info(t.id).pct, k = tonoDe(E, t.id);
       if (v !== null) { suma += v; con++; }
-      if (k !== null) cuenta[k]++; else sinVer++;
+      if (k === null) sinVer++; else if (typeof k === "number") cuenta[k]++; else debeN[k]++;
     }
     const tipos = [...porTipo.entries()].sort((a, b) => b[1].length - a[1].length);
     const area = Math.max(1300, Math.min(5200, W * 720 / suyos.length));      // cada nivel ocupa más o menos una pantalla
@@ -1281,13 +1281,13 @@ function verMapa(o) {
       const filas = [];
       for (let i = 0; i < temas.length; i += c.columnas) {
         const fila = temas.slice(i, i + c.columnas).map((t) => {
-          const v = info(t.id).pct, f = N.colorDe(info(t.id));
+          const v = info(t.id).pct, f = tonoDe(E, t.id);
           // Su pedido del 18-Oct: en cada cuadro, el nombre de la regla (aunque sea letra diminuta: en el teléfono se agranda
           // con dos dedos). El porcentaje ya no va en el cuadro: sale al tocarlo. La letra es la más grande que quepa.
           const nom = titulo(t), corto = abreviarRegla(nom);
           const largaPalabra = Math.max(4, ...corto.split(/\s+/).map((w) => w.length));
           const letra = Math.max(1.5, Math.min(9, 0.8 * Math.sqrt((c.cw - 4) * (c.ch - 3) / (0.6 * 1.25 * Math.max(6, corto.length + 4))), (c.cw - 4) / (0.62 * largaPalabra)));
-          return `<button type="button" class="mc mn ${f === null ? "kx" : "k" + f}" data-l="${t.id}" aria-label="${esc(nom)}: ${esc(pct(v))}"><span class="mt"${t.titulo ? "" : ' lang="en"'} data-letra="${letra.toFixed(1)}">${esc(corto)}</span></button>`;
+          return `<button type="button" class="mc mn k${f === null ? "x" : f}" data-l="${t.id}" aria-label="${esc(nom)}: ${esc(pct(v))}"><span class="mt"${t.titulo ? "" : ' lang="en"'} data-letra="${letra.toFixed(1)}">${esc(corto)}</span></button>`;
         });
         while (fila.length < c.columnas) fila.push('<span class="mc vacio"></span>');
         filas.push(`<div class="mfila">${fila.join("")}</div>`);
@@ -1316,7 +1316,7 @@ function verMapa(o) {
       <section class="card" id="clave">
         <h2 class="sr">Qué significa cada color</h2>
         <p class="small">El color es el peldaño del tema: cada cuánto te toca repasarlo. El número es tu porcentaje.</p>
-        <ul class="clave">${N.PELDANOS.map((nombre, i) => `<li><i class="mc k${i}"></i><span>${nombre}</span><b>${cuenta[i]}</b></li>`).join("")}${sinVer ? `<li><i class="mc kx"></i><span>Sin ver</span><b>${sinVer}</b></li>` : ""}</ul>
+        <ul class="clave"><li><i class="mc kd2"></i><span>Fallado: debe 2 aciertos</span><b>${debeN.d2}</b></li><li><i class="mc kd1"></i><span>Fallado: debe 1 acierto</span><b>${debeN.d1}</b></li>${N.PELDANOS.map((nombre, i) => `<li><i class="mc k${i}"></i><span>${nombre}</span><b>${cuenta[i]}</b></li>`).join("")}${sinVer ? `<li><i class="mc kx"></i><span>Sin ver</span><b>${sinVer}</b></li>` : ""}</ul>
       </section>
     </div>
   </div>`,
@@ -3664,6 +3664,7 @@ function verKwiz(o) {
   <section class="card" id="lista">
     <h1 class="h">Tu plan de estudio Pelagos</h1>
     <div class="hoyGrande" data-explicas><p class="small">Te queda hoy</p>${circulosDeHoy("grande")}${panelExplica()}</div>
+    ${ambiente() === "limpio" ? `<div class="qaMapa kwAtlas" id="kwAtlas" data-nivel="${esc(E.enfoque || (deLista[0] || {}).nivel || "A1")}"></div><p class="small" id="kwAtlasDice"></p>` : ""}
     <div class="conCuadro">${deLista.length && !lista.abierto ? `<button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Empezar quiz</button>`
       : abierto ? `<a class="ub grande" href="#${QUIZ}/${esc(abierto.id)}">Seguir el quiz</a>` : "<span></span>"}${conCuadro(hoy)}</div>
     ${abierto ? `<p class="small">Tienes un quiz a medias. Lo que ya contestaste está guardado.${deLista.length && !lista.abierto ? ` <a href="#${QUIZ}/${esc(abierto.id)}">Seguirlo</a>` : ""}</p>` : ""}
@@ -3692,6 +3693,7 @@ function verKwiz(o) {
     </div>
     <p class="small">Hay ${plural(banco.length, "pregunta revisada", "preguntas revisadas")} de ${plural(temasBanco.size, "tema", "temas")}.</p>
   </section>` : ""}`), { titulo: "Quiz de gramática · Pelagos", nav: "gramatica", conserva: o.conserva });
+  pintarAtlasInicio();
   const ats = $("atorados");
   if (ats) ats.addEventListener("click", (ev) => {
     const b = ev.target.closest("[data-seguir]");
@@ -3864,13 +3866,24 @@ document.addEventListener("click", (ev) => {
   if (!(ev.target instanceof Element) || !$("qaMapa")) return;
   const g = ev.target.closest(".gFila.conNivel .lnCuenta, .gFila.conNivel .hoyC");
   if (!g) return;
-  const nuevo = g.classList.contains("hoyC") ? "hoy" : "quiz";
+  // Cada círculo de hoy marca solo los suyos (25-Oct-2026): nuevos, vencidos o fallados que te quedan.
+  const c = ev.target.closest(".hoyC .circ");
+  const nuevo = c ? "hoy" + (c.dataset.explica || "hoy:0").split(":")[1] : "quiz";
   if (nuevo !== qaMarcar) { qaMarcar = nuevo; efectoR = null; pintarAtlasQuiz(); }
 }, true);      // en captura: el que explica los números corta el clic, y este tiene que oírlo antes
 let efectoR = null;          // la última respuesta: { kid, tema, f0, f1, p0, p1, bien, t0 }, para su animación
 const EFECTO_MS = 3200;
 /** El color de un cuadro, como valor de CSS (para el parpadeo entre el color de antes y el de ahora). */
-const colorCss = (f) => (f === null || f === undefined ? "color-mix(in srgb, var(--ink) 10%, transparent)" : `var(--k${f})`);
+// El tono de un tema (su elección del 25-Oct-2026, «mezcla pareja»): el color de su caja, pero un tema rojo que todavía
+// debe aciertos va más apagado, entre el gris de «sin ver» y el rojo: «d2» debe 2, «d1» debe 1. null es sin ver.
+function tonoDe(Ex, id) {
+  const f = N.colorDe(Ex.temas.get(id));
+  const debe = f === 0 ? Ex.debe.get(id) || 0 : 0;
+  return debe >= 2 ? "d2" : debe === 1 ? "d1" : f;
+}
+const rango = (t) => (t === null || t === undefined ? -3 : t === "d2" ? -2 : t === "d1" ? -1 : t);
+const claseTono = (t, pre = "q") => (t === null || t === undefined ? pre + "x" : typeof t === "string" ? pre + t : pre + "k" + t);
+const colorCss = (t) => (t === null || t === undefined ? "color-mix(in srgb, var(--ink) 10%, transparent)" : typeof t === "string" ? `var(--k${t})` : `var(--k${t})`);
 /**
  * Dibuja el Atlas de un nivel dentro de «caja»: un cuadro por tema, acomodados por tipo y en el orden de las lecciones.
  * colorDe(id) da el color (0 a 5, o null); marcar es un Set de temas con borde. Devuelve { celdas: Map(id → { el, y, h }), cuenta, sinVer, total }.
@@ -3896,10 +3909,10 @@ function armarAtlas(caja, nivel, colorDe, marcar = new Set(), como = new Map()) 
     const arriba = c.rotulo ? 15 : 2;
     temas.forEach((t, i) => {
       const f = colorDe(t.id);
-      if (f === null) sinVer++; else cuenta[f]++;
+      if (f === null) sinVer++; else if (typeof f === "number") cuenta[f]++; else cuenta[0]++;
       const el = document.createElement("i");
       // El borde (25-Oct-2026): blanco sin contestar, verde continuo si lo acertaste, rojo de rayitas si lo fallaste.
-      el.className = "qaC " + (f === null ? "qx" : "qk" + f) + (marcar.has(t.id) ? (como.has(t.id) ? (como.get(t.id) ? " qaMarca qaBien" : " qaMarca qaMal") : " qaMarca") : "");
+      el.className = "qaC " + claseTono(f) + (marcar.has(t.id) ? (como.has(t.id) ? (como.get(t.id) ? " qaMarca qaBien" : " qaMarca qaMal") : " qaMarca") : "");
       el.dataset.t = t.id;
       const x = 2 + (i % c.columnas) * (c.cw + 2), y = arriba + Math.floor(i / c.columnas) * (c.ch + 2);
       pon(el, x, y, c.cw, c.ch);
@@ -3919,7 +3932,39 @@ function parpadear(el, f0, f1, dir, retraso = 0) {
   el.classList.add("qaParpadea", dir === "abajo" ? "qaBajo" : dir === "arriba" ? "qaSubio" : "qaIgual");
   el.style.animationDelay = retraso + "ms";
 }
-const direccion = (f0, f1, bien) => (!bien || (f1 !== null && f0 !== null && f1 < f0) ? "abajo" : (f1 ?? -1) > (f0 ?? -1) ? "arriba" : "igual");
+const direccion = (f0, f1, bien) => (!bien || rango(f1) < rango(f0) ? "abajo" : rango(f1) > rango(f0) ? "arriba" : "igual");
+
+/** Los temas de hoy de un grupo: 0 nuevos, 1 vencidos, 2 fallados (los mismos que cuentan los círculos). */
+function temasDeGrupo(i) { const d = N.temasDelDia(P, E); return [d.nuevos, d.vencidos, d.fallados][i] || []; }
+/** Recuadra lo que manda en el Atlas: el 0-3-0 entero («quiz») o un solo círculo («hoy0», «hoy1», «hoy2»). */
+function marcarGrupo(raiz, que) {
+  if (!raiz) return;
+  const cu = raiz.querySelector(".lnCuenta");
+  if (cu) cu.classList.toggle("qaSel", que === "quiz");
+  raiz.querySelectorAll(".hoyC .circ").forEach((c, i) => c.classList.toggle("qaSel", que === "hoy" + i));
+}
+
+// ---- El Atlas en la página del quiz (su pedido del 25-Oct-2026): tu nivel con los temas de tu plan; tocar un círculo
+// de «Te queda hoy» marca los que te quedan de ese grupo, y tocarlo otra vez regresa a tu plan.
+let kwMarcar = "plan";
+function pintarAtlasInicio() {
+  const caja = $("kwAtlas");
+  if (!caja) return;
+  const marcar = new Set(kwMarcar === "plan" ? N.listaDeEstudio(P, E).temas : temasDeGrupo(Number(kwMarcar.slice(3)) || 0));
+  armarAtlas(caja, caja.dataset.nivel, (id) => tonoDe(E, id), marcar);
+  marcarGrupo(caja.closest("section"), kwMarcar);
+  const d = $("kwAtlasDice");
+  if (d) d.textContent = kwMarcar === "plan" ? "Con borde: los temas de tu plan. Toca un círculo para ver los que te quedan de ese grupo."
+    : `Con borde: ${["los nuevos", "los vencidos", "los fallados"][Number(kwMarcar.slice(3))]} que te quedan hoy. Toca el círculo otra vez para volver a tu plan.`;
+}
+document.addEventListener("click", (ev) => {
+  if (!(ev.target instanceof Element) || !$("kwAtlas")) return;
+  const c = ev.target.closest(".hoyGrande .hoyC .circ");
+  if (!c) return;
+  const g = "hoy" + (c.dataset.explica || "hoy:0").split(":")[1];
+  kwMarcar = kwMarcar === g ? "plan" : g;
+  pintarAtlasInicio();
+}, true);
 
 function pintarAtlasQuiz() {
   const caja = $("qaMapa");
@@ -3931,17 +3976,16 @@ function pintarAtlasQuiz() {
   let marcar;
   const como = new Map();
   const porTiempo = (rs) => rs.slice().sort((a, b) => Date.parse(a.cuando) - Date.parse(b.cuando));
-  if (qaMarcar === "hoy") {
+  if (qaMarcar.startsWith("hoy")) {
     const hoy = N.fechaLocal(new Date());
     for (const r of porTiempo((E.todas || []).filter((r) => N.fechaLocal(new Date(r.cuando)) === hoy))) como.set(r.tema, !!r.bien);
-    const d = N.temasDelDia(P, E);
-    marcar = new Set([...d.nuevos, ...d.vencidos, ...d.fallados, ...como.keys()]);
+    marcar = new Set(temasDeGrupo(Number(qaMarcar.slice(3)) || 0));
   } else {
     marcar = new Set(k ? k.preguntas.map((x) => (preguntas.get(N.preguntaDe(x)) || {}).tema) : []);
     if (k) for (const r of porTiempo([...k.resp.values()])) como.set(r.tema, !!r.bien);
   }
-  for (const g of document.querySelectorAll(".gFila.conNivel .lnCuenta, .gFila.conNivel .hoyC")) g.classList.toggle("qaSel", g.classList.contains(qaMarcar === "hoy" ? "hoyC" : "lnCuenta"));
-  const { celdas } = armarAtlas(caja, nivel, (id) => N.colorDe(infoProy(kid, id)), marcar, como);
+  marcarGrupo(document.querySelector(".gFila.conNivel"), qaMarcar);
+  const { celdas } = armarAtlas(caja, nivel, (id) => tonoDe(estadoProyectado(kid), id), marcar, como);
   const fx = efectoR && efectoR.kid === kid && Date.now() - efectoR.t0 < EFECTO_MS ? efectoR : null;
   const cel = fx && celdas.get(fx.tema);
   const yaVa = fx ? -(Date.now() - fx.t0) : 0;
@@ -3958,7 +4002,7 @@ function pintarAtlasQuiz() {
 }
 // ---- El Atlas en el resultado (su elección del 25-Oct-2026): tus temas del quiz, cambiando uno por uno.
 const NOMBRE_COLOR = ["rojo", "naranja", "amarillo", "verde claro", "verde", "verde oscuro"];
-const nombreColor = (f) => (f === null || f === undefined ? "sin ver" : NOMBRE_COLOR[f]);
+const nombreColor = (f) => (f === null || f === undefined ? "sin ver" : f === "d2" ? "debe 2" : f === "d1" ? "debe 1" : NOMBRE_COLOR[f]);
 const PASO_RESULTADO = 1600;      // cada cuánto empieza el siguiente tema
 function pintarAtlasResultado(k) {
   const cuerpo = $("resAtlasCuerpo");
@@ -3975,12 +4019,12 @@ function pintarAtlasResultado(k) {
     const caja = document.createElement("div"); caja.className = "qaMapa resMapa"; caja.dataset.nivel = nv;
     cuerpo.append(caja);
     const deAqui = temas.filter((t) => porId.get(t).nivel === nv);
-    const { celdas } = armarAtlas(caja, nv, (id) => (deAqui.includes(id) ? N.colorDe(antes.temas.get(id)) : N.colorDe(info(id))), new Set(deAqui), bienDe);
+    const { celdas } = armarAtlas(caja, nv, (id) => (deAqui.includes(id) ? tonoDe(antes, id) : tonoDe(E, id)), new Set(deAqui), bienDe);
     for (const t of deAqui) pasos.push({ t, cel: celdas.get(t) });
   }
   const ul = document.createElement("ul"); ul.className = "resCambios";
   pasos.forEach(({ t }) => {
-    const a = antes.temas.get(t) || {}, d = info(t), f0 = N.colorDe(a), f1 = N.colorDe(d), dir = direccion(f0, f1, bienDe.get(t));
+    const a = antes.temas.get(t) || {}, d = info(t), f0 = tonoDe(antes, t), f1 = tonoDe(E, t), dir = direccion(f0, f1, bienDe.get(t));
     const li = document.createElement("li"); li.className = "res" + dir;
     const n = document.createElement("span"); n.className = "resNom"; n.textContent = (dir === "abajo" ? "▼ " : dir === "arriba" ? "▲ " : "● ") + titulo(porId.get(t));
     const c = document.createElement("span"); c.className = "resDe"; c.textContent = `${f0 === f1 ? nombreColor(f1) : nombreColor(f0) + " → " + nombreColor(f1)} · ${pct(a.pct)} → ${pct(d.pct)}`;
@@ -3990,7 +4034,7 @@ function pintarAtlasResultado(k) {
   cuerpo.append(ul);
   // Empieza cuando lo ves: si está abajo de la pantalla, espera a que llegues.
   const arrancar = () => pasos.forEach(({ t, cel }, i) => {
-    const a = antes.temas.get(t), f0 = N.colorDe(a), f1 = N.colorDe(info(t));
+    const f0 = tonoDe(antes, t), f1 = tonoDe(E, t);
     if (cel) parpadear(cel.el, f0, f1, direccion(f0, f1, bienDe.get(t)), 300 + i * PASO_RESULTADO);
     const li = ul.children[i]; li.style.animationDelay = 300 + i * PASO_RESULTADO + "ms"; li.classList.add("resVa");
   });
@@ -4005,10 +4049,11 @@ function burbujaAtlas(el, caja = el && el.closest(".qaMapa")) {
   document.querySelectorAll(".qaMapa .qaC.tocado").forEach((x) => x.classList.remove("tocado"));
   if (!el || !caja) return;
   let b = caja.querySelector(".qaBurb");
-  const t = porId.get(Number(el.dataset.t)), i = caja.dataset.kid ? infoProy(caja.dataset.kid, t.id) : info(t.id), f = N.colorDe(i);
+  const Ex = caja.dataset.kid ? estadoProyectado(caja.dataset.kid) : E;
+  const t = porId.get(Number(el.dataset.t)), i = Ex.temas.get(t.id), f = N.colorDe(i), debe = Ex.debe.get(t.id) || 0;
   if (!b) { b = document.createElement("div"); b.className = "qaBurb"; b.setAttribute("role", "status"); caja.append(b); }
   b.textContent = "";
-  const n = document.createElement("b"); n.textContent = titulo(t); b.append(n, document.createElement("br"), `${pct(i && i.pct)} · ${f === null ? "sin ver" : "toca cada " + N.PELDANOS[f]}`);
+  const n = document.createElement("b"); n.textContent = titulo(t); b.append(n, document.createElement("br"), `${pct(i && i.pct)} · ${f === null ? "sin ver" : "toca cada " + N.PELDANOS[f]}${debe ? ` · debe ${debe === 1 ? "1 acierto" : debe + " aciertos"}` : ""}`);
   el.classList.add("tocado");
   const cy = el.getBoundingClientRect().top - caja.getBoundingClientRect().top;
   b.style.top = (cy < 50 ? cy + el.offsetHeight + 8 : cy - 50) + "px";
@@ -4232,7 +4277,7 @@ function verPregunta(o, kid) {
     if (contestada) return;
     contestada = true;
     const conAtlas = atlasEnQuiz(k);
-    const antes = info(q.tema).pct, nivelAntes = conAtlas ? nivelProy(kid, q.tema) : nivelDeTema(q.tema), colorAntes = conAtlas ? N.colorDe(infoProy(kid, q.tema)) : null;
+    const antes = info(q.tema).pct, nivelAntes = conAtlas ? nivelProy(kid, q.tema) : nivelDeTema(q.tema), colorAntes = conAtlas ? tonoDe(estadoProyectado(kid), q.tema) : null;
     const rid = N.nuevoId("r");
     A.apuntar({
       t: "r", id: rid, kwiz: kid, p: q.id, ...(sig.p !== q.id ? { s: sig.p } : {}), tema: q.tema, cuando: new Date().toISOString(),
@@ -4241,7 +4286,7 @@ function verPregunta(o, kid) {
     recalcular();
     if (!deTutora) moverNivel(nivelAntes, conAtlas ? nivelProy(kid, q.tema) : nivelDeTema(q.tema));
     if (conAtlas) {
-      efectoR = { kid, tema: q.tema, f0: colorAntes, f1: N.colorDe(infoProy(kid, q.tema)), p0: antes, p1: info(q.tema).pct, bien: !!bien, t0: Date.now() };
+      efectoR = { kid, tema: q.tema, f0: colorAntes, f1: tonoDe(estadoProyectado(kid), q.tema), p0: antes, p1: info(q.tema).pct, bien: !!bien, t0: Date.now() };
       rUltima = { ref: rid, kid, tema: q.tema, hasta: Date.now() + DESHACER_MS };
       pintarAtlasQuiz();
       pintarDeshacerR();
