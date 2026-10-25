@@ -545,3 +545,8 @@
 {"t":"r","id":"rmvo0qk6wqxwak4","kwiz":"kmvo0n6nuu7agog","p":"6000-04","tema":6000,"cuando":"2026-10-25T16:04:49.976Z","bien":1,"modo":"tocar","escrito":"traigan","pista":0,"aparato":"compu-mjpcv"}
 {"t":"r","id":"rmvo0r460q5y2jl","kwiz":"kmvo0n6nuu7agog","p":"6007-09","tema":6007,"cuando":"2026-10-25T16:05:15.864Z","bien":1,"modo":"decir","escrito":null,"pista":0,"aparato":"compu-mjpcv"}
 {"t":"r","id":"rmvo0spg3n2n5nz","kwiz":"kmvo0n6nuu7agog","p":"5993-06","tema":5993,"cuando":"2026-10-25T16:06:30.099Z","bien":1,"modo":"tocar","escrito":"haces","pista":0,"aparato":"compu-mjpcv"}
+{"t":"kwiz","id":"kmvo1dnmw0xhi8y","tipo":"lista","cuaderno":null,"tema":null,"cuando":"2026-10-25T16:22:47.528Z","preguntas":["6081-m02","5993-04","6000-01","6077-m05","6076-07"],"aparato":"compu-mjpcv"}
+{"t":"r","id":"rmvo1erxf03vcq5","kwiz":"kmvo1dnmw0xhi8y","p":"6081-m02","tema":6081,"cuando":"2026-10-25T16:23:39.748Z","bien":0,"modo":"tocar","escrito":"largísimo","pista":0,"aparato":"compu-mjpcv"}
+{"t":"r","id":"rmvo1fgmuhvitrk","kwiz":"kmvo1dnmw0xhi8y","p":"5993-04","tema":5993,"cuando":"2026-10-25T16:24:11.767Z","bien":1,"modo":"tocar","escrito":"compiten","pista":0,"aparato":"compu-mjpcv"}
+{"t":"r","id":"rmvo1fo1qed6f4s","kwiz":"kmvo1dnmw0xhi8y","p":"6000-01","tema":6000,"cuando":"2026-10-25T16:24:21.374Z","bien":1,"modo":"tocar","escrito":"tengas","pista":0,"aparato":"compu-mjpcv"}
+{"t":"r","id":"rmvo1fzvidbw1lg","kwiz":"kmvo1dnmw0xhi8y","p":"6077-m05","tema":6077,"cuando":"2026-10-25T16:24:36.702Z","bien":1,"modo":"tocar","escrito":"contentísima","pista":0,"aparato":"compu-mjpcv"}

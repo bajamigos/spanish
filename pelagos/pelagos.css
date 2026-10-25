@@ -1240,10 +1240,18 @@ body.conHoja { overflow: hidden; }
 .qaC.qaActual { z-index: 3; animation: qaLate 1.1s ease-in-out infinite; }
 @keyframes qaLate { 50% { transform: scale(1.45); box-shadow: 0 0 0 3px var(--page), 0 0 12px 4px var(--ink); } }
 .qaC.qaSubio, .qaC.qaIgual, .qaC.qaBajo { z-index: 4; outline: 2.5px solid var(--ink); }
-.qaC.qaSubio { animation: qaSube 3.2s forwards; } .qaC.qaIgual { animation: qaIgual 3.2s forwards; } .qaC.qaBajo { animation: qaCae 3.2s forwards; }
-@keyframes qaSube { 0% { transform: scale(2.2); box-shadow: 0 0 16px 6px var(--verde); } 30%,100% { transform: scale(1); box-shadow: 0 0 6px 2px var(--verde); } }
-@keyframes qaIgual { 0% { transform: scale(1.8); box-shadow: 0 0 14px 5px var(--ink); } 30%,100% { transform: scale(1); } }
-@keyframes qaCae { 0%,12% { transform: translateX(-3px); } 6%,18% { transform: translateX(3px); box-shadow: 0 0 14px 5px var(--rojo); } 24%,100% { transform: none; box-shadow: 0 0 6px 2px var(--rojo); } }
+.qaC.qaSubio { --brillo: var(--verde); } .qaC.qaIgual { --brillo: var(--ink); } .qaC.qaBajo { --brillo: var(--rojo); }
+/* Parpadeo (25-Oct-2026): tres veces entre el color de antes y el de ahora, y se queda en el nuevo con su brillo. */
+.qaC.qaParpadea { animation: qaParpadeo 3.2s both; }
+@keyframes qaParpadeo {
+  0% { background: var(--viejo); transform: scale(1); box-shadow: none; }
+  4%, 9% { background: var(--viejo); transform: scale(1.7); box-shadow: 0 0 14px 5px var(--brillo); } 10% { background: var(--nuevo); }
+  19% { background: var(--nuevo); } 20% { background: var(--viejo); }
+  29% { background: var(--viejo); } 30% { background: var(--nuevo); }
+  39% { background: var(--nuevo); } 40% { background: var(--viejo); }
+  49% { background: var(--viejo); transform: scale(1.7); } 50% { background: var(--nuevo); transform: scale(1.7); box-shadow: 0 0 16px 6px var(--brillo); }
+  65%, 100% { background: var(--nuevo); transform: scale(1); box-shadow: 0 0 6px 2px var(--brillo); }
+}
 .qaRotulo, .qaBurb { position: absolute; left: 0; right: 0; margin: 0 auto; width: max-content; max-width: 96%; text-align: center; z-index: 9; font: 800 13px/1.25 system-ui, sans-serif; padding: 5px 9px; border-radius: 9px; box-shadow: 0 2px 10px rgba(0,0,0,.4); pointer-events: none; }
 .qaRotulo small { display: block; font-weight: 700; font-size: 11.5px; }
 .qaRotulo.arriba { background: #1f7a3a; color: #fff; animation: qaFlotaArriba 3.2s forwards; }
@@ -1255,7 +1263,7 @@ body.conHoja { overflow: hidden; }
 .qaDeshacer { display: flex; justify-content: flex-end; margin: 8px 0 0; }
 .qaDeshacer[hidden] { display: none; }
 .qaDesBtn { background: none; border: 1px solid var(--line); color: inherit; border-radius: 999px; padding: 5px 13px; font: 700 14px system-ui, sans-serif; opacity: .9; cursor: pointer; }
-@media (prefers-reduced-motion: reduce) { .qaC.qaActual { outline: 3px solid var(--ambar); } .qaC.qaActual, .qaC.qaSubio, .qaC.qaIgual, .qaC.qaBajo { animation: none; } .qaRotulo { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .qaC.qaActual { outline: 3px solid var(--ambar); } .qaC.qaActual, .qaC.qaParpadea { animation: none; } .qaC.qaParpadea { background: var(--nuevo); } .qaRotulo { animation: none; } }
 
 /* ---- Quiz con Atlas, más compacto (25-Oct-2026) ---- */
 body.qaQuiz #nav { display: none; }
@@ -1288,3 +1296,13 @@ body.qaQuiz #nav { display: none; }
 .vTambien li:last-child { border-bottom: 0; }
 .vTambien details { margin-top: 4px; }
 .vTambien summary { cursor: pointer; font-weight: 700; padding: 4px 0; }
+/* El Atlas en el resultado del quiz (25-Oct-2026) */
+.resNivel { margin: 10px 0 4px; }
+.resCambios { list-style: none; margin: 10px 0 0; padding: 0; }
+.resCambios li { display: flex; flex-direction: column; gap: 1px; padding: 6px 8px; border-radius: 8px; border-bottom: 1px solid var(--line); }
+.resCambios .resNom { font-weight: 700; }
+.resCambios .resDe { font-size: 14px; opacity: .85; }
+.resCambios li.resarriba .resNom { color: var(--verde); } .resCambios li.resabajo .resNom { color: var(--rojo); }
+.resCambios li.resVa { animation: resVa 3.2s both; }
+@keyframes resVa { 0%, 100% { background: transparent; } 8%, 60% { background: color-mix(in srgb, var(--ink) 14%, transparent); } }
+@media (prefers-reduced-motion: reduce) { .resCambios li.resVa { animation: none; } }

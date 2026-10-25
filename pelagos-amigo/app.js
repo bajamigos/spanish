@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=50723852ed";
-import * as A from "./almacen.js?v=50723852ed";
-import * as V from "./videos.js?v=50723852ed";
-import * as NB from "./nube.js?v=50723852ed";
-import * as CL from "./clases.js?v=50723852ed";
-import { abrirPractica } from "./practica.js?v=50723852ed";
-import * as F from "./fondo.js?v=50723852ed";
-import * as PD from "./podcasts.js?v=50723852ed";
+import * as N from "./nucleo.js?v=eed6d1e962";
+import * as A from "./almacen.js?v=eed6d1e962";
+import * as V from "./videos.js?v=eed6d1e962";
+import * as NB from "./nube.js?v=eed6d1e962";
+import * as CL from "./clases.js?v=eed6d1e962";
+import { abrirPractica } from "./practica.js?v=eed6d1e962";
+import * as F from "./fondo.js?v=eed6d1e962";
+import * as PD from "./podcasts.js?v=eed6d1e962";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -3869,28 +3869,24 @@ document.addEventListener("click", (ev) => {
 }, true);      // en captura: el que explica los números corta el clic, y este tiene que oírlo antes
 let efectoR = null;          // la última respuesta: { kid, tema, f0, f1, p0, p1, bien, t0 }, para su animación
 const EFECTO_MS = 3200;
-function pintarAtlasQuiz() {
-  const caja = $("qaMapa");
-  if (!caja) return;
-  const nivel = caja.dataset.nivel, actual = Number(caja.dataset.tema), kid = caja.dataset.kid;
-  const k = E.kwizzes.get(kid);
-  // Marcados: los temas de este quiz, o (si tocaste los círculos de hoy) los de hoy. Ver qaMarcar.
-  let delQuiz;
-  if (qaMarcar === "hoy") { const d = N.temasDelDia(P, E); delQuiz = new Set([...d.nuevos, ...d.vencidos, ...d.fallados]); }
-  else delQuiz = new Set(k ? k.preguntas.map((x) => (preguntas.get(N.preguntaDe(x)) || {}).tema) : []);
-  for (const g of document.querySelectorAll(".gFila.conNivel .lnCuenta, .gFila.conNivel .hoyC")) g.classList.toggle("qaSel", g.classList.contains(qaMarcar === "hoy" ? "hoyC" : "lnCuenta"));
+/** El color de un cuadro, como valor de CSS (para el parpadeo entre el color de antes y el de ahora). */
+const colorCss = (f) => (f === null || f === undefined ? "color-mix(in srgb, var(--ink) 10%, transparent)" : `var(--k${f})`);
+/**
+ * Dibuja el Atlas de un nivel dentro de «caja»: un cuadro por tema, acomodados por tipo y en el orden de las lecciones.
+ * colorDe(id) da el color (0 a 5, o null); marcar es un Set de temas con borde. Devuelve { celdas: Map(id → { el, y, h }), cuenta, sinVer, total }.
+ */
+function armarAtlas(caja, nivel, colorDe, marcar = new Set()) {
   const suyos = P.temas.filter((t) => t.nivel === nivel).sort((a, b) => a.orden - b.orden);
   const porTipo = new Map();
   for (const t of suyos) { if (!porTipo.has(t.categoria)) porTipo.set(t.categoria, []); porTipo.get(t.categoria).push(t); }
   const tipos = [...porTipo.entries()].sort((a, b) => b[1].length - a[1].length);
   const W = Math.max(200, caja.clientWidth);
   const lugar = N.acomodarMapa(tipos.map(([, l]) => l.length), W, 300, { cabeza: 13, margen: 2, hueco: 2, forma: 1 });
-  const fx = efectoR && efectoR.kid === kid && Date.now() - efectoR.t0 < EFECTO_MS ? efectoR : null;
   const pon = (el, x, y, w, h) => { el.style.left = x + "px"; el.style.top = y + "px"; el.style.width = w + "px"; el.style.height = h + "px"; };
   caja.textContent = "";
   caja.style.height = lugar.alto + "px";
-  const cuenta = [0, 0, 0, 0, 0, 0];
-  let sinVer = 0, rotulo = null;
+  const cuenta = [0, 0, 0, 0, 0, 0], celdas = new Map();
+  let sinVer = 0;
   tipos.forEach(([cat, temas], j) => {
     const c = lugar.cajas[j];
     const g = document.createElement("div");
@@ -3899,52 +3895,117 @@ function pintarAtlasQuiz() {
     if (c.rotulo) { const r = document.createElement("div"); r.className = "qaRot"; r.textContent = CATEGORIAS_CORTAS[cat] || CATEGORIAS[cat] || cat; g.append(r); }
     const arriba = c.rotulo ? 15 : 2;
     temas.forEach((t, i) => {
-      const f = N.colorDe(infoProy(kid, t.id));
+      const f = colorDe(t.id);
       if (f === null) sinVer++; else cuenta[f]++;
       const el = document.createElement("i");
-      el.className = "qaC " + (f === null ? "qx" : "qk" + f) + (delQuiz.has(t.id) ? " qaMarca" : "") + (t.id === actual && !(fx && fx.tema === t.id) ? " qaActual" : "");
+      el.className = "qaC " + (f === null ? "qx" : "qk" + f) + (marcar.has(t.id) ? " qaMarca" : "");
       el.dataset.t = t.id;
       const x = 2 + (i % c.columnas) * (c.cw + 2), y = arriba + Math.floor(i / c.columnas) * (c.ch + 2);
       pon(el, x, y, c.cw, c.ch);
-      if (fx && fx.tema === t.id) {
-        el.classList.add(fx.f1 === null || (fx.f0 !== null && fx.f1 < fx.f0) || !fx.bien ? "qaBajo" : fx.f1 > (fx.f0 ?? -1) ? "qaSubio" : "qaIgual");
-        el.style.animationDelay = -(Date.now() - fx.t0) + "ms";
-        const yAbs = c.y + y;
-        rotulo = { y: yAbs < 46 ? yAbs + c.ch + 8 : yAbs - 44 };
-      }
+      celdas.set(t.id, { el, y: c.y + y, h: c.ch });
       g.append(el);
     });
     caja.append(g);
   });
+  caja.setAttribute("role", "img");
+  caja.setAttribute("aria-label", `Atlas de ${nivel}: ${plural(suyos.length, "tema", "temas")}. ${N.PELDANOS.map((p, i) => `${cuenta[i]} en ${p}`).join(", ")}${sinVer ? `, ${sinVer} sin ver` : ""}. Toca un cuadro para ver su tema.`);
+  return { celdas, cuenta, sinVer, total: suyos.length };
+}
+/** El cambio de un cuadro (su elección del 25-Oct-2026): parpadea entre el color de antes y el de ahora y se queda en el nuevo. */
+function parpadear(el, f0, f1, dir, retraso = 0) {
+  el.style.setProperty("--viejo", colorCss(f0));
+  el.style.setProperty("--nuevo", colorCss(f1));
+  el.classList.add("qaParpadea", dir === "abajo" ? "qaBajo" : dir === "arriba" ? "qaSubio" : "qaIgual");
+  el.style.animationDelay = retraso + "ms";
+}
+const direccion = (f0, f1, bien) => (!bien || (f1 !== null && f0 !== null && f1 < f0) ? "abajo" : (f1 ?? -1) > (f0 ?? -1) ? "arriba" : "igual");
+
+function pintarAtlasQuiz() {
+  const caja = $("qaMapa");
+  if (!caja) return;
+  const nivel = caja.dataset.nivel, actual = Number(caja.dataset.tema), kid = caja.dataset.kid;
+  const k = E.kwizzes.get(kid);
+  // Marcados: los temas de este quiz, o (si tocaste los círculos de hoy) los de hoy. Ver qaMarcar.
+  let marcar;
+  if (qaMarcar === "hoy") { const d = N.temasDelDia(P, E); marcar = new Set([...d.nuevos, ...d.vencidos, ...d.fallados]); }
+  else marcar = new Set(k ? k.preguntas.map((x) => (preguntas.get(N.preguntaDe(x)) || {}).tema) : []);
+  for (const g of document.querySelectorAll(".gFila.conNivel .lnCuenta, .gFila.conNivel .hoyC")) g.classList.toggle("qaSel", g.classList.contains(qaMarcar === "hoy" ? "hoyC" : "lnCuenta"));
+  const { celdas } = armarAtlas(caja, nivel, (id) => N.colorDe(infoProy(kid, id)), marcar);
+  const fx = efectoR && efectoR.kid === kid && Date.now() - efectoR.t0 < EFECTO_MS ? efectoR : null;
+  const cel = fx && celdas.get(fx.tema);
+  const yaVa = fx ? -(Date.now() - fx.t0) : 0;
+  if (cel) parpadear(cel.el, fx.f0, fx.f1, direccion(fx.f0, fx.f1, fx.bien), yaVa);
   // Siempre late el tema de la pregunta. Si es el mismo que se está animando (lo acabas de contestar y vuelve), late al terminar.
+  const act = celdas.get(actual);
   clearTimeout(pintarAtlasQuiz.t);
-  if (fx && fx.tema === actual) pintarAtlasQuiz.t = setTimeout(() => {
-    const el = caja.querySelector(`.qaC[data-t="${actual}"]`);
-    if (el && caja.isConnected) { el.classList.remove("qaSubio", "qaIgual", "qaBajo"); el.style.animationDelay = ""; el.classList.add("qaActual"); }
-  }, Math.max(0, EFECTO_MS - (Date.now() - fx.t0)));
-  if (fx && rotulo) {
-    const dir = !fx.bien ? "abajo" : fx.f1 > (fx.f0 ?? -1) ? "arriba" : "igual";
+  if (act && !(cel && fx.tema === actual)) act.el.classList.add("qaActual");
+  else if (act) pintarAtlasQuiz.t = setTimeout(() => {
+    if (!act.el.isConnected) return;
+    act.el.classList.remove("qaParpadea", "qaSubio", "qaIgual", "qaBajo"); act.el.style.animationDelay = ""; act.el.classList.add("qaActual");
+  }, Math.max(0, EFECTO_MS + yaVa));
+  if (cel) {
+    const dir = direccion(fx.f0, fx.f1, fx.bien);
     const r = document.createElement("div");
     r.className = "qaRotulo " + dir;
     r.setAttribute("role", "status");
     const tm = porId.get(fx.tema);
     r.append((dir === "abajo" ? "▼ " : dir === "arriba" ? "▲ " : "● ") + (tm ? titulo(tm) : ""));
     const sm = document.createElement("small"); sm.textContent = pct(fx.p0) + " → " + pct(fx.p1); r.append(sm);
-    r.style.top = rotulo.y + "px";
-    r.style.animationDelay = -(Date.now() - fx.t0) + "ms";
+    r.style.top = (cel.y < 46 ? cel.y + cel.h + 8 : cel.y - 44) + "px";
+    r.style.animationDelay = yaVa + "ms";
     caja.append(r);
   }
-  caja.setAttribute("role", "img");
-  caja.setAttribute("aria-label", `Atlas de ${nivel}: ${plural(suyos.length, "tema", "temas")}. ${N.PELDANOS.map((p, i) => `${cuenta[i]} en ${p}`).join(", ")}${sinVer ? `, ${sinVer} sin ver` : ""}. Toca un cuadro para ver su tema.`);
 }
+// ---- El Atlas en el resultado (su elección del 25-Oct-2026): tus temas del quiz, cambiando uno por uno.
+const NOMBRE_COLOR = ["rojo", "naranja", "amarillo", "verde claro", "verde", "verde oscuro"];
+const nombreColor = (f) => (f === null || f === undefined ? "sin ver" : NOMBRE_COLOR[f]);
+const PASO_RESULTADO = 1600;      // cada cuánto empieza el siguiente tema
+function pintarAtlasResultado(k) {
+  const cuerpo = $("resAtlasCuerpo");
+  if (!cuerpo) return;
+  // Cómo estaban antes de este quiz: el mismo cálculo sin sus respuestas.
+  const antes = N.calcular(P, A.sucesos().filter((e) => !(e.t === "r" && e.kwiz === k.id)));
+  const temas = [...new Set(k.preguntas.filter((p) => k.resp.has(p)).map((p) => k.resp.get(p).tema))].filter((t) => porId.has(t));
+  const bienDe = new Map();
+  for (const r of k.resp.values()) bienDe.set(r.tema, (bienDe.has(r.tema) ? bienDe.get(r.tema) : true) && !!r.bien);
+  const niveles = [...new Set(temas.map((t) => porId.get(t).nivel))];
+  const pasos = [];
+  for (const nv of niveles) {
+    const h = document.createElement("h3"); h.className = "resNivel"; h.textContent = nv; if (niveles.length > 1) cuerpo.append(h);
+    const caja = document.createElement("div"); caja.className = "qaMapa resMapa"; caja.dataset.nivel = nv;
+    cuerpo.append(caja);
+    const deAqui = temas.filter((t) => porId.get(t).nivel === nv);
+    const { celdas } = armarAtlas(caja, nv, (id) => (deAqui.includes(id) ? N.colorDe(antes.temas.get(id)) : N.colorDe(info(id))), new Set(deAqui));
+    for (const t of deAqui) pasos.push({ t, cel: celdas.get(t) });
+  }
+  const ul = document.createElement("ul"); ul.className = "resCambios";
+  pasos.forEach(({ t }) => {
+    const a = antes.temas.get(t) || {}, d = info(t), f0 = N.colorDe(a), f1 = N.colorDe(d), dir = direccion(f0, f1, bienDe.get(t));
+    const li = document.createElement("li"); li.className = "res" + dir;
+    const n = document.createElement("span"); n.className = "resNom"; n.textContent = (dir === "abajo" ? "▼ " : dir === "arriba" ? "▲ " : "● ") + titulo(porId.get(t));
+    const c = document.createElement("span"); c.className = "resDe"; c.textContent = `${f0 === f1 ? nombreColor(f1) : nombreColor(f0) + " → " + nombreColor(f1)} · ${pct(a.pct)} → ${pct(d.pct)}`;
+    li.append(n, c);
+    ul.append(li);
+  });
+  cuerpo.append(ul);
+  // Empieza cuando lo ves: si está abajo de la pantalla, espera a que llegues.
+  const arrancar = () => pasos.forEach(({ t, cel }, i) => {
+    const a = antes.temas.get(t), f0 = N.colorDe(a), f1 = N.colorDe(info(t));
+    if (cel) parpadear(cel.el, f0, f1, direccion(f0, f1, bienDe.get(t)), 300 + i * PASO_RESULTADO);
+    const li = ul.children[i]; li.style.animationDelay = 300 + i * PASO_RESULTADO + "ms"; li.classList.add("resVa");
+  });
+  if (!("IntersectionObserver" in window)) return arrancar();
+  const ob = new IntersectionObserver((xs) => { if (xs.some((x) => x.isIntersecting)) { ob.disconnect(); arrancar(); } }, { threshold: 0.4 });
+  ob.observe(cuerpo);
+}
+
 // Tocar (o pasar el ratón por) un cuadro dice su tema, tu porcentaje y cada cuánto te toca.
-function burbujaAtlas(el) {
-  const caja = $("qaMapa");
-  if (!caja) return;
+function burbujaAtlas(el, caja = el && el.closest(".qaMapa")) {
+  for (const b of document.querySelectorAll(".qaMapa .qaBurb")) if (!el || b.parentElement !== caja) b.remove();
+  document.querySelectorAll(".qaMapa .qaC.tocado").forEach((x) => x.classList.remove("tocado"));
+  if (!el || !caja) return;
   let b = caja.querySelector(".qaBurb");
-  caja.querySelectorAll(".qaC.tocado").forEach((x) => x.classList.remove("tocado"));
-  if (!el) { if (b) b.remove(); return; }
-  const t = porId.get(Number(el.dataset.t)), i = infoProy(caja.dataset.kid, t.id), f = N.colorDe(i);
+  const t = porId.get(Number(el.dataset.t)), i = caja.dataset.kid ? infoProy(caja.dataset.kid, t.id) : info(t.id), f = N.colorDe(i);
   if (!b) { b = document.createElement("div"); b.className = "qaBurb"; b.setAttribute("role", "status"); caja.append(b); }
   b.textContent = "";
   const n = document.createElement("b"); n.textContent = titulo(t); b.append(n, document.createElement("br"), `${pct(i && i.pct)} · ${f === null ? "sin ver" : "toca cada " + N.PELDANOS[f]}`);
@@ -3953,19 +4014,19 @@ function burbujaAtlas(el) {
   b.style.top = (cy < 50 ? cy + el.offsetHeight + 8 : cy - 50) + "px";
 }
 document.addEventListener("click", (ev) => {
-  if (!(ev.target instanceof Element) || !$("qaMapa")) return;
-  const el = ev.target.closest("#qaMapa .qaC");
+  if (!(ev.target instanceof Element) || !document.querySelector(".qaMapa")) return;
+  const el = ev.target.closest(".qaMapa .qaC");
   if (el) burbujaAtlas(el);                  // tocar otra vez el mismo no la cierra: con ratón, pasar encima ya la abrió
-  else if (!ev.target.closest("#qaMapa")) burbujaAtlas(null);
+  else if (!ev.target.closest(".qaMapa")) burbujaAtlas(null);
 });
 document.addEventListener("pointerover", (ev) => {
   if (ev.pointerType !== "mouse" || !(ev.target instanceof Element)) return;
-  const el = ev.target.closest("#qaMapa .qaC");
+  const el = ev.target.closest(".qaMapa .qaC");
   if (el) burbujaAtlas(el);
 });
 document.addEventListener("pointerout", (ev) => {
-  if (ev.pointerType !== "mouse" || !(ev.target instanceof Element) || !ev.target.closest("#qaMapa")) return;
-  if (!(ev.relatedTarget instanceof Element) || !ev.relatedTarget.closest("#qaMapa")) burbujaAtlas(null);
+  if (ev.pointerType !== "mouse" || !(ev.target instanceof Element) || !ev.target.closest(".qaMapa")) return;
+  if (!(ev.relatedTarget instanceof Element) || !ev.relatedTarget.closest(".qaMapa")) burbujaAtlas(null);
 });
 
 // ---- «Deshacer» en el quiz de gramática (25-Oct-2026): un botoncito abajo, por DESHACER_MS después de contestar.
@@ -4336,6 +4397,7 @@ function verResultado(o, kid) {
     <div class="conCuadro"><button type="button" class="ub grande" data-kwiz='${esc(igual)}'>${k.tipo === "lista" ? "Otro quiz de tu plan" : "Otro quiz igual"}</button>${conCuadro()}</div>
     <div class="go"><a class="ub" href="${(() => { const t = k.tipo === "tutora" ? porId.get(k.tema) : null; return t && t.slug && t.leccion ? "#/leccion/" + esc(t.slug) : "#" + QUIZ; })()}">Cerrar</a>${fallas.length ? `<button type="button" class="ub" id="estudiarFallas">Estudiar las fallas</button>` : ""}</div>
   </section>
+  ${atlasEnQuiz(k) ? `<section class="card" id="resAtlas"><h2>Tus temas en el Atlas</h2><div id="resAtlasCuerpo"></div></section>` : ""}
   <section class="card">
     <h2>Pregunta por pregunta</h2>
     <div class="pairs">${filas.map(({ r, q }) => {
@@ -4372,6 +4434,7 @@ function verResultado(o, kid) {
   </section>` : ""}`),
   { titulo: "Resultado del quiz · Pelagos", nav: "gramatica", conserva: o.conserva, pie: "<p>El número junto al porcentaje es cuánto se movió el tema en este quiz.</p>" });
   fondoDelKwiz(k);     // en el Kwiz con la tutora, el resultado se queda con la escena donde llegaste
+  pintarAtlasResultado(k);
   // Estudiar las fallas: vuelve a tu plan y toca solo las voces de las tutoras de los temas que fallaste (se quedan en tu plan).
   const ef = $("estudiarFallas");
   if (ef) ef.addEventListener("click", () => {
