@@ -1217,3 +1217,5 @@ body.conHoja { overflow: hidden; }
 .pgRitmoTxt b { color: var(--ink); }
 .pgRitmoTxt .rtSi { color: var(--verde); } .pgRitmoTxt .rtNo { color: var(--rojo); }
 .tjAvance { margin-top: 14px; }
+/* 24-Oct-2026 (su pedido): «Te queda hoy» de vidrio, como las demás tarjetas: deja ver la foto borrosa detrás. */
+.confoto .hoyGrande { background: var(--vidrio); border-color: var(--vidrio-borde); -webkit-backdrop-filter: blur(5px) saturate(1.15); backdrop-filter: blur(5px) saturate(1.15); }
