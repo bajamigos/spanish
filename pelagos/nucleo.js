@@ -1298,7 +1298,8 @@ export function armarLista(paquete, estado, hoy = fechaLocal(new Date()), azar =
     else if (debe >= ACIERTOS_PARA_SALIR && elegida === fallada && suyas.length > 1) elegida = suyas[1].id;
     elegidas.push(elegida);
   }
-  return elegidas;
+  // Revueltas (su pedido del 25-Oct-2026): así no sale siempre primero el mismo tema.
+  return barajar(elegidas, azar);
 }
 
 /** Cuántos temas con preguntas hay en cada nivel: { A2: 18, B1: 2 }. Sirve para ofrecer el enfoque. */
