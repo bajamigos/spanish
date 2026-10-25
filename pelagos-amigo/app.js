@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=9f82f6e4e3";
-import * as A from "./almacen.js?v=9f82f6e4e3";
-import * as V from "./videos.js?v=9f82f6e4e3";
-import * as NB from "./nube.js?v=9f82f6e4e3";
-import * as CL from "./clases.js?v=9f82f6e4e3";
-import { abrirPractica } from "./practica.js?v=9f82f6e4e3";
-import * as F from "./fondo.js?v=9f82f6e4e3";
-import * as PD from "./podcasts.js?v=9f82f6e4e3";
+import * as N from "./nucleo.js?v=1b509338b3";
+import * as A from "./almacen.js?v=1b509338b3";
+import * as V from "./videos.js?v=1b509338b3";
+import * as NB from "./nube.js?v=1b509338b3";
+import * as CL from "./clases.js?v=1b509338b3";
+import { abrirPractica } from "./practica.js?v=1b509338b3";
+import * as F from "./fondo.js?v=1b509338b3";
+import * as PD from "./podcasts.js?v=1b509338b3";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1828,6 +1828,9 @@ function pintarMalla(dia, cola, modo = "quiz") {
     el.dataset.mv = c.id;
     caja.append(el);
   }
+  // La caja se desplaza: mientras contestas, la de ahora queda en medio; en el inicio, la primera que te toca; en el final, arriba.
+  const ver = modo === "quiz" ? caja.querySelector("i.late, i.vParpadea") : modo === "inicio" ? [...caja.children].find((x) => pend.has(x.dataset.mv)) : null;
+  caja.scrollTop = ver ? Math.max(0, ver.offsetTop - caja.clientHeight / 2) : 0;
   caja.setAttribute("role", "img");
   caja.setAttribute("aria-label", `Tus ${todas.length} palabras. Hoy: ${plural(bien, "acertada", "acertadas")}, ${plural(mal, "fallada", "falladas")}, ${plural(pend.size, "te queda", "te quedan")}. Toca un cuadro para ver su palabra.`);
 }
@@ -1861,7 +1864,7 @@ document.addEventListener("click", (ev) => {
   const debe = N.debeTarjeta(s);
   b.append(n, document.createElement("br"), (f === null ? "sin ver" : "toca cada " + N.PELDANOS[f]) + (debe ? ` · debe ${debe === 1 ? "1 acierto" : debe + " aciertos"} hoy` : ""));
   el.classList.add("tocado");
-  b.style.top = (el.offsetTop > 50 ? el.offsetTop - 46 : el.offsetTop + el.offsetHeight + 6) + "px";
+  b.style.top = (el.offsetTop - caja.scrollTop > 50 ? el.offsetTop - 46 : el.offsetTop + el.offsetHeight + 6) + "px";
 });
 
 /** La página de inicio de las tarjetas en Limpio (25-Oct-2026): como la de gramática. */
@@ -1898,7 +1901,7 @@ function verFinalVocab(o, dia, masTarde) {
   ${entradas("vocabulario", "quiz")}
   <section class="card" id="tjCero">
     ${barraDeshacer()}
-    ${dia.total ? (r.total ? `<h1 class="h">¡Tanda terminada! ${r.bien} de ${r.total}</h1><p class="small">A la primera: ${r.bien} de ${plural(r.total, "tarjeta", "tarjetas")} de hoy.</p>` : `<h1 class="h">Hoy no te toca nada</h1>`)
+    ${dia.total ? `<h1 class="sr">Vocabulario en cero</h1>`      /* sin «¡Tanda terminada! X de Y» (su pedido del 25-Oct-2026): los círculos ya lo dicen */
       : `<h1 class="h">Todavía no hay vocabulario</h1><p>Cuando haya palabras en el contenido, aquí salen las de cada día.</p>`}
     <div class="hoyGrande" data-explicas><p class="small">Te queda hoy</p>${circulosDeHoy("grande", [dia.grupos.nuevas.length, dia.grupos.vencidas.length, dia.grupos.falladas.length], "vhoy")}${panelExplica()}</div>
     ${mallaHtml()}
@@ -3846,7 +3849,7 @@ function verKwiz(o) {
   ${entradas("gramatica", "quiz")}
   ${tarjetaAtorados()}
   <section class="card" id="lista">
-    <h1 class="h">Tu plan de estudio Pelagos</h1>
+    <h1 class="sr">Tu plan de estudio Pelagos</h1>
     <div class="hoyGrande" data-explicas><p class="small">Te queda hoy</p>${circulosDeHoy("grande")}${panelExplica()}</div>
     ${ambiente() === "limpio" ? `${botonMapa("gram", conAtlasVisible(), "Ver el Atlas")}<div class="qaMapa kwAtlas" id="kwAtlas" data-nivel="${esc(nivelDelPlan(deLista))}"${conAtlasVisible() ? "" : " hidden"}></div><p class="small" id="kwAtlasDice"${conAtlasVisible() ? "" : " hidden"}></p>` : ""}
     <div class="conCuadro">${deLista.length && !lista.abierto ? `<button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Empezar quiz</button>`
