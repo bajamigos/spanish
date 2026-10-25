@@ -5,4 +5,5 @@ export const CONFIG = Object.freeze({
   repo: "bajamigos/Pelagos",
   ramaContenido: "main",      // lecciones, preguntas y portadas
   ramaAvance: "avance",       // tus respuestas, un archivo por aparato y por mes
+  amigo: false,               // true solo en la vitrina para amigos (la arma herramientas/amigo.py)
 });

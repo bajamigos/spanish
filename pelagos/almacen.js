@@ -9,9 +9,15 @@
 // - Lo que contestas entra primero a una fila en este aparato y de ahí sube.
 //   Sin internet, la fila espera y sube sola cuando vuelve.
 // - La llave vive solo en este navegador y solo viaja a la dirección de CONFIG.api.
-import { CONFIG } from "./config.js?v=950937eab9";
+import { CONFIG } from "./config.js?v=0d1587bd70";
 
-const CLAVES = { llave: "pelagos.llave", aparato: "pelagos.aparato", fila: "pelagos.fila." };      // la fila: una clave por suceso
+// ---- El modo amigo (24-Oct-2026): una vitrina pública de Pelagos para enseñársela a un amigo.
+// Sin llave y sin GitHub: lo que la página leería del repositorio lo lee de archivos que vienen junto a ella
+// (la carpeta vitrina/, que arma herramientas/amigo.py), y nada sube. Lo que el amigo contesta se queda en su
+// aparato, en claves aparte, para que nunca se mezcle con tu Pelagos de verdad si los dos abren en el mismo navegador.
+export const esAmigo = () => CONFIG.amigo === true;
+const PREFIJO = esAmigo() ? "pelagos.amigo." : "pelagos.";
+const CLAVES = { llave: PREFIJO + "llave", aparato: PREFIJO + "aparato", fila: PREFIJO + "fila." };      // la fila: una clave por suceso
 const RUTA_SUCESOS = /^sucesos\/([A-Za-z0-9_-]+)\/(\d{4}-\d{2})\.jsonl$/;
 const RUTA_TABLERO = "tablero/hoy.json";
 // Tus clases de Worldsacross (tablero/clases.json) y las fotos de tus tutores (tablero/tutores/), en la misma rama. Solo se leen.
@@ -70,7 +76,7 @@ function quitarChico(clave) {
   try { window.localStorage.removeItem(clave); } catch { /* sin memoria: nada que quitar */ }
 }
 
-export function llave() { return leerChico(CLAVES.llave); }
+export function llave() { return esAmigo() ? "amigo" : leerChico(CLAVES.llave); }
 export function hayLlave() { return !!llave(); }
 
 /** El nombre de este aparato en el repositorio. Se inventa una vez y se queda. */
@@ -94,7 +100,7 @@ function base() {
   if (!basePromesa) {
     basePromesa = new Promise((listo) => {
       try {
-        const r = indexedDB.open("pelagos", 1);
+        const r = indexedDB.open(esAmigo() ? "pelagos-amigo" : "pelagos", 1);
         r.onupgradeneeded = () => r.result.createObjectStore("kv");
         r.onsuccess = () => listo(r.result);
         r.onerror = () => listo(null);
@@ -141,6 +147,7 @@ const REPO = "/repos/" + CONFIG.repo;
 const ruta = (camino) => camino.split("/").map(encodeURIComponent).join("/");
 
 async function api(camino, { metodo = "GET", crudo = false, cuerpo = null, cabeceras = {}, con = llave() } = {}) {
+  if (esAmigo()) return deLaVitrina(camino, metodo);
   if (!con) throw new Fallo("llave", "Falta la llave.");
   let r;
   try {
@@ -168,6 +175,62 @@ async function api(camino, { metodo = "GET", crudo = false, cuerpo = null, cabec
   }
   if (r.status >= 500) throw new Fallo("github", "GitHub no contestó bien. Luego se intenta otra vez.", r.status);
   return r;
+}
+
+/**
+ * Modo amigo: contesta como GitHub, pero con los archivos de la vitrina.
+ *   /contents/<camino>?ref=<rama>  ->  vitrina/<rama>/<camino>
+ *   /git/trees/<rama>              ->  vitrina/arbol.json
+ *   /git/blobs/<sha>               ->  vitrina/blobs/<sha>
+ * Lo que no está en la vitrina no existe (404). Escribir nunca se puede.
+ */
+const VITRINA = "vitrina/";
+async function deLaVitrina(camino, metodo) {
+  if (metodo !== "GET") throw new Fallo("permiso", "En el modo amigo no se guarda nada fuera de este aparato.", 403);
+  const [sinPregunta, pregunta = ""] = camino.split("?");
+  const rama = new URLSearchParams(pregunta).get("ref") || CONFIG.ramaContenido;
+  const resto = sinPregunta.startsWith(REPO + "/") ? sinPregunta.slice(REPO.length + 1) : "";
+  let url = null;
+  if (/^contents\/./.test(resto) && /^[a-z]+$/.test(rama)) url = VITRINA + rama + "/" + resto.slice("contents/".length);
+  else if (/^git\/trees\//.test(resto)) url = VITRINA + "arbol.json";
+  else if (/^git\/blobs\/[0-9a-f]{40}$/.test(resto)) url = VITRINA + "blobs/" + resto.slice("git/blobs/".length);
+  if (!url || url.includes("..")) return new Response(null, { status: 404 });
+  let r;
+  try { r = await fetch(url, { cache: "no-cache", credentials: "omit", referrerPolicy: "no-referrer" }); }
+  catch { throw new Fallo("red", "No hay conexión."); }
+  return r.ok ? r : new Response(null, { status: r.status === 404 ? 404 : r.status });
+}
+
+/** Hoy en este aparato, AAAA-MM-DD. */
+function hoyLocal(d = new Date()) {
+  return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+}
+/**
+ * Modo amigo: el tablero y las clases de muestra se ponen en el día de hoy, para que nunca se vean viejos.
+ * Las clases de muestra traen «dia» (días desde hoy) y «hora» («10:30») en lugar de «inicio».
+ */
+function alDia(tipo, datos) {
+  if (!esAmigo() || !datos || typeof datos !== "object") return datos;
+  const ahora = new Date();
+  if (tipo === "tablero") return { ...datos, dia: hoyLocal(ahora), leido: ahora.toISOString() };
+  if (tipo === "clases" && datos.demo) {
+    const cuando = (x) => {
+      const [h, m] = String(x.hora || "10:00").split(":").map(Number);
+      return new Date(ahora.getFullYear(), ahora.getMonth(), ahora.getDate() + (Number(x.dia) || 0), h || 0, m || 0).toISOString();
+    };
+    const pasar = (l) => (Array.isArray(l) ? l.map(({ dia, hora, ...x }) => ({ ...x, inicio: cuando({ dia, hora }) })) : []);
+    return { ...datos, leido: ahora.toISOString(), libresLeido: ahora.toISOString(), clases: pasar(datos.clases), libres: pasar(datos.libres) };
+  }
+  return datos;
+}
+
+/** Modo amigo: borra lo que el amigo hizo en este aparato (lo suyo, que nunca subió). Lo de la vitrina se queda. */
+export function borrarLoDelAmigo() {
+  if (!esAmigo()) return;
+  const ids = leerFila().map((e) => e.id);
+  sacarDeFila(ids);
+  sinc.cambios++;
+  avisar();
 }
 
 function aBase64(texto) {
@@ -268,7 +331,7 @@ const archivos = new Map();     // ruta -> { sha, texto }
 let tableroActual = null;       // { sha, datos }: el tablero del día, tal como llegó
 
 /** El tablero del día tal como está en el repositorio, o null. La forma la revisa quien lo usa. */
-export function tablero() { return tableroActual ? tableroActual.datos : null; }
+export function tablero() { return tableroActual ? alDia("tablero", tableroActual.datos) : null; }
 /** Cambia cuando llega un tablero nuevo o unas clases nuevas: con eso la página sabe que tiene que volver a pintarse. */
 export function huellaTablero() { return (tableroActual ? tableroActual.sha : "") + "|" + (clasesActual ? clasesActual.sha : "") + "|" + (lecturaActual ? lecturaActual.sha : "") + "|" + (enlacesActual ? enlacesActual.sha : "") + "|" + (historialActual ? historialActual.sha : ""); }
 let lecturaActual = null;       // { sha, datos }: tu registro de lectura, tal como llegó
@@ -280,7 +343,7 @@ let historialActual = null;     // { sha, datos }: todas tus clases terminadas (
 export function historialDeClases() { return historialActual ? historialActual.datos : null; }
 let clasesActual = null;        // { sha, datos }: tus clases de Worldsacross, tal como llegaron
 /** Tus clases tal como están en el repositorio, o null. La forma la revisa quien las usa. */
-export function clases() { return clasesActual ? clasesActual.datos : null; }
+export function clases() { return clasesActual ? alDia("clases", clasesActual.datos) : null; }
 const leidos = new Map();       // ruta -> { sha, lista }   (los sucesos ya separados, para no repetir el trabajo)
 
 function separar(texto) {
@@ -513,7 +576,7 @@ function sacarDeFila(ids) {
 
 const reciente = new Map();          // camino -> cuándo lo guardó esta pestaña
 // Las otras pestañas de este navegador se enteran al momento de lo que una guardó.
-const canal = typeof BroadcastChannel !== "undefined" ? new BroadcastChannel("pelagos") : null;
+const canal = typeof BroadcastChannel !== "undefined" ? new BroadcastChannel(esAmigo() ? "pelagos-amigo" : "pelagos") : null;
 if (canal) {
   canal.onmessage = (ev) => {
     const d = ev.data;
@@ -594,6 +657,7 @@ async function escribir(camino, nuevos) {
 
 /** Sube lo que espera en la fila. Si no se puede, lo deja ahí y vuelve a intentar solo. */
 export function subir() {
+  if (esAmigo()) { avisar(); return Promise.resolve(); }      // en el modo amigo nada sube: se queda en este aparato
   return enTurno(async () => {
     const fila = leerFila();
     if (!fila.length || !hayLlave()) { avisar(); return; }

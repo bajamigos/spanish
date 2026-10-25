@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=950937eab9";
-import * as A from "./almacen.js?v=950937eab9";
-import * as V from "./videos.js?v=950937eab9";
-import * as NB from "./nube.js?v=950937eab9";
-import * as CL from "./clases.js?v=950937eab9";
-import { abrirPractica } from "./practica.js?v=950937eab9";
-import * as F from "./fondo.js?v=950937eab9";
-import * as PD from "./podcasts.js?v=950937eab9";
+import * as N from "./nucleo.js?v=0d1587bd70";
+import * as A from "./almacen.js?v=0d1587bd70";
+import * as V from "./videos.js?v=0d1587bd70";
+import * as NB from "./nube.js?v=0d1587bd70";
+import * as CL from "./clases.js?v=0d1587bd70";
+import { abrirPractica } from "./practica.js?v=0d1587bd70";
+import * as F from "./fondo.js?v=0d1587bd70";
+import * as PD from "./podcasts.js?v=0d1587bd70";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -211,6 +211,7 @@ function bancoPorTema() {
 
 /** Las seis marcas de un tema: lección, tutora (con su nombre), video completo, loop, voz y preguntas. Se leen igual con lector de pantalla. */
 function marcas(t, banco) {
+  if (A.esAmigo()) return "";      // en el modo amigo no se enseña qué le falta a cada lección (tutora, video, loop, voz)
   const n = banco.get(t.id) || 0;
   const tu = tutoraDe(t.id), nombre = tu ? tu.tutora.split(",")[0] : "";
   const video = tieneVideo(t), loop = tieneLoop(t), voz = tieneVoz(t);
@@ -327,8 +328,8 @@ const RUTAS = [
   [/^\/podcasts$/, (o) => { bibModo = "podcasts"; guardar("pelagos.biblioteca", "podcasts"); return verLectura(o); }],
   [/^\/lectura\/ejemplo$/, (o) => verLectura(o, true)],
   [/^\/leccion\/([a-z0-9-]+)$/, verLeccion],
-  [/^\/tutoras$/, (o) => (mudo() ? ir("/gramatica", true) : verTutoras(o))],      // en Limpio no hay tutoras
-  [/^\/tutoras\/(\d+)$/, (o, id) => (mudo() ? ir("/gramatica", true) : verTutora(o, id))],
+  [/^\/tutoras$/, (o) => (mudo() || A.esAmigo() ? ir("/gramatica", true) : verTutoras(o))],      // en Limpio (y en el modo amigo) no hay tutoras
+  [/^\/tutoras\/(\d+)$/, (o, id) => (mudo() || A.esAmigo() ? ir("/gramatica", true) : verTutora(o, id))],
   [/^\/vocabulario$/, verTarjetas],
   [/^\/vocabulario\/acervo$/, verLista],
   [/^\/vocabulario\/agregar$/, verAgregar],
@@ -548,7 +549,8 @@ const LOGO = `<img class="logoFondo" src="logo.png" alt="Pelagos" width="760" he
  */
 const FONDO_LIMPIO = `<div class="fondo fondoLogo"><img class="logoClaro" src="logo-claro.png" alt=""><img class="logoOscuro" src="logo-oscuro.png" alt=""></div>`;
 function fondoDelDia(respaldo = true) {
-  if (ambiente() === "limpio") return { hay: true, html: FONDO_LIMPIO };
+  // En el modo amigo, las páginas de arriba llevan siempre el logo, como en Limpio; las fotos Reef solo salen en los quizzes.
+  if (ambiente() === "limpio" || A.esAmigo()) return { hay: true, html: FONDO_LIMPIO };
   // Mientras suena el repaso en audio, arriba va el loop de la tutora que está hablando.
   // Solo en la página donde empezó el repaso: en las demás, el fondo de siempre (la voz sigue sonando).
   const lt = repaso && repaso.sonando != null && repaso.ruta === window.location.hash && !sinMovimiento() ? loopDeTutora(repaso.sonando) : null;
@@ -783,7 +785,8 @@ function verInicio(o) {
   const gifPremio = !clip && premioFondo && ambiente() !== "limpio" ? ultimaEscena(salaPremio(premioFondo)) : null;      // en Limpio, ni los premios
   // El premio tocado reemplaza al fondo mientras esté prendido: su clip de la tutora del día o, si no hay, su GIF.
   const fondo = clip ? { hay: true, html: `<div class="fondo conPremio"><div class="premioTutora" id="tutoraPremio"></div>${LOGO}</div>` }
-    : gifPremio ? { hay: true, html: `<div class="fondo">${etiquetaEscena(salaPremio(premioFondo), gifPremio)}${LOGO}</div>` } : fondoDelDia(false);
+    : gifPremio ? { hay: true, html: `<div class="fondo">${etiquetaEscena(salaPremio(premioFondo), gifPremio)}${LOGO}</div>` }
+    : fondoDelDia(false);
   const cuadernos = (P.cuadernos || []).map((c) => `
   <section class="card">
     <h2>${esc(c.nombre)}</h2>
@@ -847,7 +850,7 @@ function verInicio(o) {
     <div class="sobre">
       ${entradas("tablero", "hoy")}
       <h1 class="sr">Tablero</h1>
-      ${checkin}
+      ${A.esAmigo() ? "" : checkin}
       ${medidas}
       ${tarjetaBitacora()}
       ${seccionTendencias()}${cuadernos}
@@ -4198,6 +4201,7 @@ function graficaPiezas() {
 }
 
 function textoSinc(s) {
+  if (A.esAmigo()) return s.leyendo ? "Poniendo al día…" : "Modo amigo: lo que haces se queda solo en este aparato.";
   if (s.guardando || (s.pendientes && !s.error)) return "Guardando…";
   if (s.pendientes) {
     const porque = s.error.tipo === "red" ? "No hay conexión." : s.error.message;
@@ -4240,6 +4244,7 @@ function tarjetaSospechosas(aviso = "") {
 }
 
 function verAjustes(o) {
+  if (A.esAmigo()) return verAjustesAmigo(o);
   const s = A.estadoSinc();
   const esIphone = /iPhone|iPad|iPod/i.test(navigator.userAgent);
   poner(`
@@ -4348,6 +4353,72 @@ function verAjustes(o) {
     P = null; E = null;
     ir("/", true);
     pintar();
+  });
+}
+
+/** Ajustes en el modo amigo: colores, ambiente, instalar y borrar lo que hizo el amigo. Nada de llaves ni tutoras. */
+function verAjustesAmigo(o) {
+  const n = A.estadoSinc().pendientes;
+  const esIphone = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+  poner(`
+  <section class="card">
+    <h1 class="h">Ajustes</h1>
+    <h3>Modo amigo</h3>
+    <p>Estás viendo una vitrina de Pelagos: los números son el avance real de quien la hizo, y se actualizan de vez en cuando.</p>
+    <p class="small" id="ajAmigoN">${n ? `Lo tuyo: ${plural(n, "cosa guardada", "cosas guardadas")} solo en este aparato.` : "Todavía no has contestado nada aquí."}</p>
+    <div class="go"><button type="button" class="ub" id="ajAmigoBorrar"${n ? "" : " hidden"}>Borrar lo mío</button></div>
+    <p class="small" id="ajAviso" role="status" hidden></p>
+  </section>
+  ${ayudaLista().length ? `<section class="card" id="ajAyuda">
+    <h2>Cómo funciona</h2>
+    <p class="small">El método y las reglas de Pelagos: la escalera, el plan de cinco temas y el porcentaje.</p>
+    <div class="go"><a class="ub" href="#/ayuda">Abrir «Cómo funciona»</a></div>
+  </section>` : ""}
+  <section class="card" id="ajTema">
+    <h2>Colores</h2>
+    <nav class="jump dos" aria-label="Modo de color">
+      <button type="button" data-tema-ir="claro">Claro</button><button type="button" data-tema-ir="oscuro">Oscuro</button>
+    </nav>
+    <p class="small">Para todas las páginas, en este aparato.</p>
+  </section>
+  <section class="card" id="ajAmbiente">
+    <h2>Ambiente</h2>
+    <nav class="jump dos" aria-label="Ambiente de las fotos">
+      <button type="button" data-ambiente-ir="reef">Reef</button><button type="button" data-ambiente-ir="limpio">Limpio</button>
+    </nav>
+    <p class="small">Reef, con fotos en los quizzes y las tarjetas, o Limpio, sin fotos. En este aparato.</p>
+  </section>
+  ${yaEsApp() ? "" : `<section class="card" id="ajApp">
+    <h2>Pelagos como app</h2>
+    <div class="go"><button type="button" class="ub grande" id="ajInstalar"${ofertaDeInstalar ? "" : " hidden"}>Instalar Pelagos</button></div>
+    <p class="small">${esIphone ? "En Safari: Compartir, «Agregar a inicio»." : "Si no ves el botón: menú del navegador, «Instalar Pelagos»."}</p>
+  </section>`}`, { titulo: "Ajustes · Pelagos", conserva: o.conserva });
+  $("ajAmigoBorrar").addEventListener("click", () => {
+    A.borrarLoDelAmigo();
+    recalcular();
+    $("ajAmigoBorrar").hidden = true;
+    $("ajAmigoN").textContent = "Listo: lo tuyo se borró de este aparato.";
+  });
+  const marcarTema = () => { for (const b of vista.querySelectorAll("[data-tema-ir]")) b.setAttribute("aria-current", b.dataset.temaIr === document.documentElement.dataset.tema ? "page" : "false"); };
+  for (const b of vista.querySelectorAll("[data-tema-ir]")) {
+    b.addEventListener("click", () => { document.documentElement.dataset.tema = b.dataset.temaIr; guardar("pelagos.tema", b.dataset.temaIr); marcarTema(); });
+  }
+  marcarTema();
+  const marcarAmbiente = () => { for (const b of vista.querySelectorAll("[data-ambiente-ir]")) b.setAttribute("aria-current", b.dataset.ambienteIr === ambiente() ? "page" : "false"); };
+  for (const b of vista.querySelectorAll("[data-ambiente-ir]")) {
+    b.addEventListener("click", () => {
+      guardar("pelagos.ambiente", b.dataset.ambienteIr);
+      if (b.dataset.ambienteIr === "limpio") { document.documentElement.dataset.ambiente = "limpio"; callarTodo(); } else delete document.documentElement.dataset.ambiente;
+      marcarAmbiente();
+    });
+  }
+  marcarAmbiente();
+  if ($("ajInstalar")) $("ajInstalar").addEventListener("click", async () => {
+    if (!ofertaDeInstalar) return;
+    const oferta = ofertaDeInstalar;
+    ofertaDeInstalar = null;
+    $("ajInstalar").hidden = true;
+    try { await oferta.prompt(); } catch { /* el navegador ya no la ofrece: queda el menú */ }
   });
 }
 
