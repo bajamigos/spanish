@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=1b509338b3";
-import * as A from "./almacen.js?v=1b509338b3";
-import * as V from "./videos.js?v=1b509338b3";
-import * as NB from "./nube.js?v=1b509338b3";
-import * as CL from "./clases.js?v=1b509338b3";
-import { abrirPractica } from "./practica.js?v=1b509338b3";
-import * as F from "./fondo.js?v=1b509338b3";
-import * as PD from "./podcasts.js?v=1b509338b3";
+import * as N from "./nucleo.js?v=e18a7030af";
+import * as A from "./almacen.js?v=e18a7030af";
+import * as V from "./videos.js?v=e18a7030af";
+import * as NB from "./nube.js?v=e18a7030af";
+import * as CL from "./clases.js?v=e18a7030af";
+import { abrirPractica } from "./practica.js?v=e18a7030af";
+import * as F from "./fondo.js?v=e18a7030af";
+import * as PD from "./podcasts.js?v=e18a7030af";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1811,9 +1811,29 @@ function pintarMalla(dia, cola, modo = "quiz") {
   const actual = caja.dataset.actual;
   const fx = vEfecto && Date.now() - vEfecto.t0 < EFECTO_MS ? vEfecto : null;
   caja.textContent = "";
+  // Por mes (su elección del 25-Oct-2026): un rectángulo por mes en que las agregaste, en orden de fecha, como el Atlas
+  // de gramática por tipo. Mismo tamaño de cuadrito que el Atlas; la caja se desplaza hacia abajo.
+  const porMes = new Map();
+  for (const c of todas) { const m = String(c.agregada || hoy).slice(0, 7); if (!porMes.has(m)) porMes.set(m, []); porMes.get(m).push(c); }
+  const meses = [...porMes.entries()];
+  const W = Math.max(200, caja.clientWidth - 10);
+  const lugar = N.acomodarMapa(meses.map(([, l]) => l.length), W, 300, { cabeza: 13, margen: 2, hueco: 2, forma: 1 });
+  const mapa = document.createElement("div");
+  mapa.className = "vMapa";
+  mapa.style.height = lugar.alto + "px";
+  caja.append(mapa);
+  const pon = (el, x, y, w, h) => { el.style.left = x + "px"; el.style.top = y + "px"; el.style.width = w + "px"; el.style.height = h + "px"; };
   let bien = 0, mal = 0;
-  for (const c of todas) {
+  meses.forEach(([m, lista], j) => {
+    const cj = lugar.cajas[j];
+    const g = document.createElement("div");
+    g.className = "qaCaja";
+    pon(g, cj.x, cj.y, cj.w, cj.h);
+    if (cj.rotulo) { const r = document.createElement("div"); r.className = "qaRot"; r.textContent = `${MESES_CHICOS[Number(m.slice(5, 7)) - 1]} ${m.slice(2, 4)} · ${lista.length}`; g.append(r); }
+    const arriba = cj.rotulo ? 15 : 2;
+    lista.forEach((c, i) => {
     const el = document.createElement("i");
+    pon(el, 2 + (i % cj.columnas) * (cj.cw + 2), arriba + Math.floor(i / cj.columnas) * (cj.ch + 2), cj.cw, cj.ch);
     const t = tonoTj(E.tarjetas.get(c.id), hoy);
     el.className = "v" + (t === null || t === undefined ? "x" : typeof t === "string" ? t : "k" + t) + (modo === "final" || pend.has(c.id) || c.id === actual || (modo === "quiz" && como.has(c.id)) ? "" : " tenue");
     if (como.has(c.id)) { if (como.get(c.id)) bien++; else mal++; if (modo === "quiz") el.classList.add(como.get(c.id) ? "vbien" : "vmal"); }
@@ -1826,11 +1846,14 @@ function pintarMalla(dia, cola, modo = "quiz") {
       el.style.animationDelay = -(Date.now() - fx.t0) + "ms";
     }
     el.dataset.mv = c.id;
-    caja.append(el);
-  }
+    g.append(el);
+    });
+    mapa.append(g);
+  });
   // La caja se desplaza: mientras contestas, la de ahora queda en medio; en el inicio, la primera que te toca; en el final, arriba.
   const ver = modo === "quiz" ? caja.querySelector("i.late, i.vParpadea") : modo === "inicio" ? [...caja.children].find((x) => pend.has(x.dataset.mv)) : null;
-  caja.scrollTop = ver ? Math.max(0, ver.offsetTop - caja.clientHeight / 2) : 0;
+  const yDe = (el) => el.getBoundingClientRect().top - caja.getBoundingClientRect().top + caja.scrollTop;
+  caja.scrollTop = ver ? Math.max(0, yDe(ver) - caja.clientHeight / 2) : 0;
   caja.setAttribute("role", "img");
   caja.setAttribute("aria-label", `Tus ${todas.length} palabras. Hoy: ${plural(bien, "acertada", "acertadas")}, ${plural(mal, "fallada", "falladas")}, ${plural(pend.size, "te queda", "te quedan")}. Toca un cuadro para ver su palabra.`);
 }
@@ -1864,7 +1887,8 @@ document.addEventListener("click", (ev) => {
   const debe = N.debeTarjeta(s);
   b.append(n, document.createElement("br"), (f === null ? "sin ver" : "toca cada " + N.PELDANOS[f]) + (debe ? ` · debe ${debe === 1 ? "1 acierto" : debe + " aciertos"} hoy` : ""));
   el.classList.add("tocado");
-  b.style.top = (el.offsetTop - caja.scrollTop > 50 ? el.offsetTop - 46 : el.offsetTop + el.offsetHeight + 6) + "px";
+  const y = el.getBoundingClientRect().top - caja.getBoundingClientRect().top;      // dentro de la caja que se desplaza
+  b.style.top = (y > 50 ? y + caja.scrollTop - 46 : y + caja.scrollTop + el.offsetHeight + 6) + "px";
 });
 
 /** La página de inicio de las tarjetas en Limpio (25-Oct-2026): como la de gramática. */
