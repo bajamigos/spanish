@@ -898,3 +898,9 @@
 {"t":"tj","id":"tmvo4d515pbn1vk","tarjeta":"ak-1776898634652","cuando":"2026-10-25T17:46:22.265Z","bien":1,"modo":"tocar","aparato":"telefono-jr4ti"}
 {"t":"tj","id":"tmvo4d8pw3w3sua","tarjeta":"ak-1776898634655","cuando":"2026-10-25T17:46:27.044Z","bien":1,"modo":"tocar","aparato":"telefono-jr4ti"}
 {"t":"tj","id":"tmvo4dcsausoeoy","tarjeta":"ak-1776898634657","cuando":"2026-10-25T17:46:32.314Z","bien":1,"modo":"tocar","aparato":"telefono-jr4ti"}
+{"t":"kwiz","id":"kmvo4nqljwjqm7e","tipo":"lista","cuaderno":null,"tema":null,"cuando":"2026-10-25T17:54:36.777Z","preguntas":["6807-02","6803-06","6597-03","6865-03","6752-05"],"aparato":"telefono-jr4ti"}
+{"t":"r","id":"rmvo4o4gxajiwt1","kwiz":"kmvo4nqljwjqm7e","p":"6807-02","tema":6807,"cuando":"2026-10-25T17:54:54.753Z","bien":1,"modo":"decir","escrito":null,"pista":1,"aparato":"telefono-jr4ti"}
+{"t":"r","id":"rmvo4oe1v3nq2p8","kwiz":"kmvo4nqljwjqm7e","p":"6803-06","tema":6803,"cuando":"2026-10-25T17:55:07.172Z","bien":1,"modo":"tocar","escrito":"puede","pista":0,"aparato":"telefono-jr4ti"}
+{"t":"r","id":"rmvo4ondocbo6l5","kwiz":"kmvo4nqljwjqm7e","p":"6597-03","tema":6597,"cuando":"2026-10-25T17:55:19.260Z","bien":1,"modo":"tocar","escrito":"quedándose dormida","pista":0,"aparato":"telefono-jr4ti"}
+{"t":"r","id":"rmvo4ovxx7w2z6l","kwiz":"kmvo4nqljwjqm7e","p":"6865-03","tema":6865,"cuando":"2026-10-25T17:55:30.358Z","bien":1,"modo":"tocar","escrito":"sabe","pista":0,"aparato":"telefono-jr4ti"}
+{"t":"r","id":"rmvo4p6kize9a8a","kwiz":"kmvo4nqljwjqm7e","p":"6752-05","tema":6752,"cuando":"2026-10-25T17:55:44.130Z","bien":0,"modo":"tocar","escrito":"Qué","pista":0,"aparato":"telefono-jr4ti"}

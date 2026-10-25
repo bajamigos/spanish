@@ -9,7 +9,7 @@
 // - Lo que contestas entra primero a una fila en este aparato y de ahí sube.
 //   Sin internet, la fila espera y sube sola cuando vuelve.
 // - La llave vive solo en este navegador y solo viaja a la dirección de CONFIG.api.
-import { CONFIG } from "./config.js?v=6bc06d2c6e";
+import { CONFIG } from "./config.js?v=e2808111ea";
 
 // ---- El modo amigo (24-Oct-2026): una vitrina pública de Pelagos para enseñársela a un amigo.
 // Sin llave y sin GitHub: lo que la página leería del repositorio lo lee de archivos que vienen junto a ella
@@ -30,6 +30,8 @@ const RUTA_ENLACES = "tablero/enlaces.json";
 // El historial de tus clases (24-Oct-2026): clases.json solo trae la última semana; este archivo guarda todas las
 // terminadas para la Bitácora. Forma: { "version": 1, "clases": [ { "inicio", "tutor", "min" } ] }. Solo se lee.
 const RUTA_HISTORIAL = "tablero/clases-historial.json";
+// Tus podcasts de Pocket Casts por día (tablero/podcasts.json, misma rama; 25-Oct-2026: para la gráfica de Escucha). Solo se lee.
+const RUTA_PODCASTS = "tablero/podcasts.json";
 // Un loop de tutora: un GIF o video en escenas/tutora-<lección>/ de la rama de avance.
 const RUTA_LOOP = /^escenas\/tutora-(\d+)\/[a-z0-9-]+\.(gif|mp4|webm)$/;
 let conLoop = new Set();        // lecciones cuya tutora ya tiene loop; se renueva en cada sincronización
@@ -303,6 +305,7 @@ export async function salir() {
   lecturaActual = null;
   enlacesActual = null;
   historialActual = null;
+  podcastsActual = null;
   for (const u of fotosVivas.values()) u.then((x) => x && URL.revokeObjectURL(x)).catch(() => {});
   fotosVivas.clear();
   await kvVaciar();
@@ -333,7 +336,7 @@ let tableroActual = null;       // { sha, datos }: el tablero del día, tal como
 /** El tablero del día tal como está en el repositorio, o null. La forma la revisa quien lo usa. */
 export function tablero() { return tableroActual ? alDia("tablero", tableroActual.datos) : null; }
 /** Cambia cuando llega un tablero nuevo o unas clases nuevas: con eso la página sabe que tiene que volver a pintarse. */
-export function huellaTablero() { return (tableroActual ? tableroActual.sha : "") + "|" + (clasesActual ? clasesActual.sha : "") + "|" + (lecturaActual ? lecturaActual.sha : "") + "|" + (enlacesActual ? enlacesActual.sha : "") + "|" + (historialActual ? historialActual.sha : ""); }
+export function huellaTablero() { return (tableroActual ? tableroActual.sha : "") + "|" + (clasesActual ? clasesActual.sha : "") + "|" + (lecturaActual ? lecturaActual.sha : "") + "|" + (enlacesActual ? enlacesActual.sha : "") + "|" + (historialActual ? historialActual.sha : "") + "|" + (podcastsActual ? podcastsActual.sha : ""); }
 let lecturaActual = null;       // { sha, datos }: tu registro de lectura, tal como llegó
 /** Tu registro de lectura tal como está en el repositorio, o null. La forma la revisa quien lo usa. */
 export function lectura() { return lecturaActual ? lecturaActual.datos : null; }
@@ -341,6 +344,8 @@ let enlacesActual = null;       // { sha, datos }: los enlaces del repaso y la p
 export function enlacesDeClases() { return enlacesActual ? enlacesActual.datos : null; }
 let historialActual = null;     // { sha, datos }: todas tus clases terminadas (para la Bitácora)
 export function historialDeClases() { return historialActual ? historialActual.datos : null; }
+let podcastsActual = null;      // { sha, datos }: minutos de podcasts en español por día, de Pocket Casts
+export function podcastsPorDia() { return podcastsActual && podcastsActual.datos.dias && typeof podcastsActual.datos.dias === "object" ? podcastsActual.datos.dias : {}; }
 let clasesActual = null;        // { sha, datos }: tus clases de Worldsacross, tal como llegaron
 /** Tus clases tal como están en el repositorio, o null. La forma la revisa quien las usa. */
 export function clases() { return clasesActual ? alDia("clases", clasesActual.datos) : null; }
@@ -396,6 +401,8 @@ export async function cargarLocal() {
   enlacesActual = en && typeof en.sha === "string" && en.datos && typeof en.datos === "object" ? en : null;
   const hi = await kvLeer("historial");
   historialActual = hi && typeof hi.sha === "string" && hi.datos && typeof hi.datos === "object" ? hi : null;
+  const pc = await kvLeer("podcastsdias");
+  podcastsActual = pc && typeof pc.sha === "string" && pc.datos && typeof pc.datos === "object" ? pc : null;
   if (!guardado || !guardado.datos) return null;
   try { revisarPaquete(guardado.datos); } catch { return null; }
   return guardado.datos;
@@ -426,7 +433,7 @@ export function sincronizar() {
       else throw new Fallo("github", "GitHub contestó algo raro (" + r.status + ").", r.status);
 
       const t = await api(REPO + "/git/trees/" + encodeURIComponent(CONFIG.ramaAvance) + "?recursive=1");
-      let arbol = [], hojaTablero = null, hojaClases = null, hojaLectura = null, hojaEnlaces = null, hojaHistorial = null;
+      let arbol = [], hojaTablero = null, hojaClases = null, hojaLectura = null, hojaEnlaces = null, hojaHistorial = null, hojaPodcasts = null;
       if (t.ok) {
         const blobs = ((await t.json()).tree || []).filter((x) => x.type === "blob");
         arbol = blobs.filter((x) => RUTA_SUCESOS.test(x.path));
@@ -435,6 +442,7 @@ export function sincronizar() {
         hojaLectura = blobs.find((x) => x.path === RUTA_LECTURA) || null;
         hojaEnlaces = blobs.find((x) => x.path === RUTA_ENLACES) || null;
         hojaHistorial = blobs.find((x) => x.path === RUTA_HISTORIAL) || null;
+        hojaPodcasts = blobs.find((x) => x.path === RUTA_PODCASTS) || null;
         conLoop = new Set(blobs.map((x) => RUTA_LOOP.exec(x.path)).filter(Boolean).map((m) => Number(m[1])));
         await kvPoner("loops", [...conLoop]);
         conVoz = new Set(blobs.map((x) => RUTA_VOZ.exec(x.path)).filter(Boolean).map((m) => Number(m[1])));
@@ -516,6 +524,21 @@ export function sincronizar() {
           if (b.ok) {
             const datos = JSON.parse(await b.text());
             if (datos && typeof datos === "object") { historialActual = { sha: hojaHistorial.sha, datos }; await kvPoner("historial", historialActual); }
+          }
+        } catch (e) {
+          if (e instanceof Fallo && e.tipo === "llave") throw e;
+        }
+      }
+      // Los podcasts por día, igual.
+      if (!hojaPodcasts) {
+        if (t.ok && podcastsActual) { podcastsActual = null; await kvQuitar("podcastsdias"); }
+      } else if (!podcastsActual || podcastsActual.sha !== hojaPodcasts.sha) {
+        try {
+          const b = await api(REPO + "/git/blobs/" + encodeURIComponent(hojaPodcasts.sha), { crudo: true });
+          if (b.ok) {
+            const datos = JSON.parse(await b.text());
+            // Solo los minutos por día: los episodios no hacen falta aquí.
+            if (datos && typeof datos === "object") { podcastsActual = { sha: hojaPodcasts.sha, datos: { dias: datos.dias || {} } }; await kvPoner("podcastsdias", podcastsActual); }
           }
         } catch (e) {
           if (e instanceof Fallo && e.tipo === "llave") throw e;

@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=3ff73b91b8";
-import * as A from "./almacen.js?v=3ff73b91b8";
-import * as V from "./videos.js?v=3ff73b91b8";
-import * as NB from "./nube.js?v=3ff73b91b8";
-import * as CL from "./clases.js?v=3ff73b91b8";
-import { abrirPractica } from "./practica.js?v=3ff73b91b8";
-import * as F from "./fondo.js?v=3ff73b91b8";
-import * as PD from "./podcasts.js?v=3ff73b91b8";
+import * as N from "./nucleo.js?v=2b7890fb19";
+import * as A from "./almacen.js?v=2b7890fb19";
+import * as V from "./videos.js?v=2b7890fb19";
+import * as NB from "./nube.js?v=2b7890fb19";
+import * as CL from "./clases.js?v=2b7890fb19";
+import { abrirPractica } from "./practica.js?v=2b7890fb19";
+import * as F from "./fondo.js?v=2b7890fb19";
+import * as PD from "./podcasts.js?v=2b7890fb19";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -2196,7 +2196,25 @@ function verLectura(o, ejemplo = false) {
     const Pd = L ? L.podcasts : [];
     const fichaP = (x) => `<li><div class="libro">${cartel(x, "portadaChica")}<span class="libroTitulo">${esc(x.titulo)}</span></div></li>`;
     cabeza = `${podHoy}<p class="lecturaHoy">${L && L.podcastsHoras !== null ? L.podcastsHoras.toLocaleString("es-MX") + " horas de podcasts." : "Tus podcasts."}</p><p class="small">${plural(Pd.length, "podcast", "podcasts")}, por tus estrellas.</p>`;
-    cuerpo = [3, 2, 1].map((n) => repisa("pod" + n, `${"★".repeat(n)} <span class="sr">${plural(n, "estrella", "estrellas")}</span>`, Pd.filter((x) => x.nota === n), fichaP)).join("") +
+    // Minutos de podcasts por día (su pedido del 25-Oct-2026), los mismos 14 días que la de los libros:
+    // Pocket Casts (de tu tablero) más lo que escuchas aquí en Pelagos.
+    const pc = A.podcastsPorDia(), dentro = ejemplo ? new Map() : PD.escuchado().dias;
+    const porDiaPod = ultimos.map((d) => {
+      const [a, m, dd] = d.split("-").map(Number);
+      const deFuera = new Map(((pc[d] || {}).programas || []).map((x) => [x.programa, x.min]));
+      if (d === hoy && T && T.dia === hoy) for (const x of T.podcasts || []) deFuera.set(x.programa, Math.max(deFuera.get(x.programa) || 0, x.min));
+      const progs = [...deFuera.entries()].filter(([, v]) => v > 0);
+      const aqui = dentro.get(d);
+      if (aqui) for (const [k, v] of aqui.programas) if (v > 0) progs.push([(PD.programa(k) || { nombre: k }).nombre + " (en Pelagos)", v]);
+      const v = Math.round(progs.reduce((x, [, y]) => x + y, 0));
+      return { dia: d, corto: INI[new Date(a, m - 1, dd).getDay()], sub: String(dd), valor: v, hoy: d === hoy,
+        detalle: `${mayuscula(diaLargo(d))}: ${v ? horasMin(v) : "nada"}${progs.length ? " (" + progs.map(([n, y]) => `${n}, ${horasMin(Math.round(y))}`).join("; ") + ")" : ""}.` };
+    });
+    const totalPod = porDiaPod.reduce((a, b) => a + b.valor, 0);
+    const mejorPod = porDiaPod.reduce((a, b) => (b.valor > a.valor ? b : a), porDiaPod[0]);
+    const grafPod = graficaBarras({ id: "grafPod", titulo: "Minutos de podcasts por día", barras: porDiaPod,
+      resumen: totalPod ? `En 14 días: ${horasMin(totalPod)} de podcasts en español. Tu mejor día: ${diaLargo(mejorPod.dia)}, con ${horasMin(mejorPod.valor)}.` : "En 14 días todavía no hay minutos de podcasts." });
+    cuerpo = grafPod + [3, 2, 1].map((n) => repisa("pod" + n, `${"★".repeat(n)} <span class="sr">${plural(n, "estrella", "estrellas")}</span>`, Pd.filter((x) => x.nota === n), fichaP)).join("") +
       repisa("podSin", "Sin estrellas", Pd.filter((x) => !x.nota), fichaP);
   } else {
     cabeza = `<p class="lecturaHoy">${esc(lineaHoy)}</p>${podMin ? `<p class="small">De eso, ${esc(horasMin(podMin))} de podcasts en español.</p>` : ""}<p class="small">${esc(lineaSemana)}</p>`;
