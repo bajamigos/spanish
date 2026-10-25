@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=f185dc19f0";
-import * as A from "./almacen.js?v=f185dc19f0";
-import * as V from "./videos.js?v=f185dc19f0";
-import * as NB from "./nube.js?v=f185dc19f0";
-import * as CL from "./clases.js?v=f185dc19f0";
-import { abrirPractica } from "./practica.js?v=f185dc19f0";
-import * as F from "./fondo.js?v=f185dc19f0";
-import * as PD from "./podcasts.js?v=f185dc19f0";
+import * as N from "./nucleo.js?v=be988122c7";
+import * as A from "./almacen.js?v=be988122c7";
+import * as V from "./videos.js?v=be988122c7";
+import * as NB from "./nube.js?v=be988122c7";
+import * as CL from "./clases.js?v=be988122c7";
+import { abrirPractica } from "./practica.js?v=be988122c7";
+import * as F from "./fondo.js?v=be988122c7";
+import * as PD from "./podcasts.js?v=be988122c7";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1137,6 +1137,32 @@ const LETRAS_DIA = ["D", "L", "M", "M", "J", "V", "S"];
  */
 const semanaNivelMemo = new Map();
 /** La curva fija de abajo en gramática (25-Oct-2026): tu puntaje del nivel en los últimos 7 días, como la del vocabulario. */
+/**
+ * La curva chiquita (su pedido del 25-Oct-2026): en el renglón de «Ocultar» mientras contestas, en lugar de la curva
+ * flotante. Tu número, cuánto subió hoy y los 7 puntos de la semana. cual: "voc" o un nivel de gramática ("B1").
+ */
+function curvaMini(cual) {
+  if (!P || !E || !cual) return "";
+  const hoy = N.fechaLocal(new Date());
+  const S = cual === "voc" ? N.semanaVocab(P, A.sucesos(), hoy, E, semanaMemo) : N.semanaNivel(P, A.sucesos(), hoy, cual, semanaNivelMemo);
+  const v = S.puntaje, hoyV = v[6], dif = Math.round((hoyV - v[5]) * 10) / 10;
+  const W = 72, H = 22, X0 = 4, X1 = W - 5, Y0 = 4, Y1 = H - 4;
+  let lo = Math.min(...v), hi = Math.max(...v);
+  if (hi - lo < 2) { const m = (hi + lo) / 2; lo = m - 1; hi = m + 1; }
+  const xs = v.map((_, i) => X0 + (i * (X1 - X0)) / 6), ys = v.map((y) => Y1 - ((y - lo) / (hi - lo)) * (Y1 - Y0));
+  const pts = xs.map((x, i) => `${x.toFixed(1)},${ys[i].toFixed(1)}`).join(" ");
+  const nombre = cual === "voc" ? "dominio" : cual;
+  const dicho = `${cual === "voc" ? "Tu dominio del vocabulario" : "Tu puntaje de " + cual}: ${hoyV} por ciento, ${dif >= 0 ? "subió " + dif : "bajó " + -dif} hoy.`;
+  return `<div class="miniCurva" id="miniCurva" data-cual="${esc(cual)}" role="img" aria-label="${esc(dicho)}">
+    <b>${esc(String(hoyV))}%</b><span class="mcN">${esc(nombre)}</span><span class="mcD ${dif > 0 ? "si" : dif < 0 ? "no" : ""}">${dif > 0 ? "+" : dif < 0 ? "−" : "±"}${esc(String(Math.abs(dif)))} hoy</span>
+    <svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true"><polyline class="mcL" points="${pts}"></polyline>${xs.map((x, i) => `<circle class="${i === 6 ? "mcHoy" : "mcDia"}" cx="${x.toFixed(1)}" cy="${ys[i].toFixed(1)}" r="${i === 6 ? 3.4 : 2}"></circle>`).join("")}</svg>
+  </div>`;
+}
+/** Vuelve a pintar la curva chiquita (al contestar). */
+function refrescarMini() {
+  const m = $("miniCurva");
+  if (m) m.outerHTML = curvaMini(m.dataset.cual);
+}
 function curvaNivel(nivel) {
   if (!P || !E || !nivel) return "";
   const S = N.semanaNivel(P, A.sucesos(), N.fechaLocal(new Date()), nivel, semanaNivelMemo);
@@ -1785,7 +1811,7 @@ function verTarjetas(o) {
       <div class="over">
         <p class="lead sr"><span id="tjFaltan">${enAdelanto ? faltan : (cola.length === 1 ? "Falta 1" : "Faltan " + cola.length)}</span><span id="tjAviso">Dilo en español</span></p>
         <div data-explicas>${cabeza}${panelExplica()}</div>
-        ${limpio ? mallaHtml(c.id) : ""}
+        ${limpio ? mallaHtml(c.id, curvaMini("voc")) : ""}
         ${renglonConLapiz("frente", c.frente, "h1", "cue", ' id="cue"')}
         ${(() => { const at = N.tarjetasAtascadas(E).get(c.id); return at ? `<p class="tjAtas">Atascada · fallada en ${at.fallos} quizzes esta semana · <button type="button" class="lk" data-v="${esc(c.id)}">Ver su ficha</button></p>` : ""; })()}
       </div>
@@ -1798,7 +1824,7 @@ function verTarjetas(o) {
       <p class="tjToca" id="tjToca">Toca para ver la respuesta</p>
       <div class="tjBotones" id="tjBotones" role="group" aria-label="¿La supiste?" hidden><button type="button" class="ub" id="jMal">Mal</button><button type="button" class="ub" id="jBien">Bien</button><button type="button" class="ub" id="jFacil" aria-label="Fácil: a 30 días">Fácil<small>30 días</small></button></div>
     </div>
-    ${curvaVocab()}
+    ${limpio ? "" : curvaVocab()}
   </section>`,
   { titulo: "Quiz de vocabulario · Pelagos", nav: "vocabulario" });
   enPregunta = true;
@@ -1833,6 +1859,7 @@ function verTarjetas(o) {
     recalcular();
     enTarjetaDe = null;
     pintarMalla(N.tarjetasDelDia(P, E, hoy), cola.slice(1));
+    refrescarMini();
     // Los puntitos enseñan si la tarjeta subió o se cayó, y luego sale la siguiente (o «Vocabulario en cero»).
     const de = nivelDe(antes), a = nivelDe(E.tarjetas.get(c.id));
     moverNivel(de, a);
@@ -1855,8 +1882,8 @@ function verTarjetas(o) {
 // las demás tenues; las que ya hiciste hoy, verdes o rojas; la de ahora late. Se puede esconder (se recuerda).
 const conMalla = () => ambiente() === "limpio" && guardado("pelagos.vocMalla") !== "0";
 /** El botón para esconder o mostrar un mapa (el Atlas o tus palabras), igual en gramática y vocabulario (25-Oct-2026). */
-const botonMapa = (cual, visible, nombre) => `<div class="mapaCab"><button type="button" class="lk mapaBtn" data-mapa="${cual}" aria-expanded="${visible}">${visible ? "Ocultar ▴" : nombre + " ▾"}</button></div>`;
-const mallaHtml = (actual = "") => botonMapa("voc", conMalla(), "Ver tus palabras") + `<div class="vMalla" id="vMalla" data-actual="${esc(actual)}"${conMalla() ? "" : " hidden"}></div>`;
+const botonMapa = (cual, visible, nombre, mini = "") => `<div class="mapaCab">${mini}<button type="button" class="lk mapaBtn" data-mapa="${cual}" aria-expanded="${visible}">${visible ? "Ocultar ▴" : nombre + " ▾"}</button></div>`;
+const mallaHtml = (actual = "", mini = "") => botonMapa("voc", conMalla(), "Ver tus palabras", mini) + `<div class="vMalla" id="vMalla" data-actual="${esc(actual)}"${conMalla() ? "" : " hidden"}></div>`;
 let mallaArgs = null;
 let vEfecto = null;          // la última que calificaste: { id, f0, bien, t0 }, para su parpadeo
 /** El tono de una tarjeta: el color de su caja, o «d2»/«d1» si la fallaste hoy y todavía debe aciertos (como gramática). */
@@ -2001,7 +2028,7 @@ function verPaginaVocab(o, dia, restan, masTarde) {
     ${r.malas.length ? `<details class="vCostaron"><summary>Te costaron ${r.malas.length}</summary><ul class="resCambios">${r.malas.map((id) => { const t = tarjetas.get(id); return t ? `<li class="resabajo"><span class="resNom">▼ ${esc(t.reverso)}</span><span class="resDe">${esc(t.frente)}</span></li>` : ""; }).join("")}</ul></details>` : ""}
     <div class="tjAvance"><h2 class="tdSub">Tu avance</h2>${graficaVocab()}</div>
   </section>
-  ${curvaVocab()}`), { titulo: "Vocabulario · Pelagos", nav: "vocabulario", conserva: o.conserva });
+`), { titulo: "Vocabulario · Pelagos", nav: "vocabulario", conserva: o.conserva });
   pintarMalla(dia, restan, quedan ? "inicio" : "final");
 }
 
@@ -3972,7 +3999,7 @@ function verKwiz(o) {
     </div>
     <p class="small">Hay ${plural(banco.length, "pregunta revisada", "preguntas revisadas")} de ${plural(temasBanco.size, "tema", "temas")}.</p>
   </section>` : ""}
-  ${ambiente() === "limpio" ? curvaNivel(nivelDelPlan(deLista)) : ""}`), { titulo: "Quiz de gramática · Pelagos", nav: "gramatica", conserva: o.conserva });
+`), { titulo: "Quiz de gramática · Pelagos", nav: "gramatica", conserva: o.conserva });
   pintarAtlasInicio();
   const ats = $("atorados");
   if (ats) ats.addEventListener("click", (ev) => {
@@ -4118,7 +4145,7 @@ function lineaDeGramatica(k, temaActual) {
   // 25-Oct-2026 (más compacto): el ‹ junto al nivel y sin las cajas de días (el Atlas ya enseña cómo se reparten).
   return h.replace('<div class="gFila">', `<div class="gFila conNivel"><button type="button" class="ub menuBtn qaAtras" aria-label="Menú" aria-haspopup="dialog" aria-expanded="false">☰</button><span class="qaNivel">${esc(nv)}</span>`)
     .replace(/<span class="lnCajas grandes"[^>]*>.*?<\/span><\/span>\s*/s, "")
-    .replace(/<\/div>\s*$/, `${botonMapa("gram", conAtlasVisible(), "Ver el Atlas")}<div class="qaMapa" id="qaMapa" data-nivel="${esc(nv)}" data-tema="${temaActual}" data-kid="${esc(k.id)}"${conAtlasVisible() ? "" : " hidden"}></div></div>`);
+    .replace(/<\/div>\s*$/, `${botonMapa("gram", conAtlasVisible(), "Ver el Atlas", curvaMini(nv))}<div class="qaMapa" id="qaMapa" data-nivel="${esc(nv)}" data-tema="${temaActual}" data-kid="${esc(k.id)}"${conAtlasVisible() ? "" : " hidden"}></div></div>`);
 }
 
 // ---------------------------------------------------------------- El Atlas en el quiz (su idea del 25-Oct-2026)
@@ -4479,7 +4506,6 @@ function verPregunta(o, kid) {
         <span id="malaHecho" hidden></span>
       </div>
     </div>
-    ${atlasEnQuiz(k) ? curvaNivel((porId.get(q.tema) || {}).nivel) : ""}
   </section>`),
   {
     titulo: `Pregunta ${sig.orden} de ${sig.total} · Pelagos`, nav: "gramatica",
@@ -4575,6 +4601,7 @@ function verPregunta(o, kid) {
     });
     recalcular();
     if (!deTutora) moverNivel(nivelAntes, conAtlas ? nivelProy(kid, q.tema) : nivelDeTema(q.tema));
+    refrescarMini();
     if (conAtlas) {
       efectoR = { kid, tema: q.tema, f0: colorAntes, f1: tonoDe(estadoProyectado(kid), q.tema), p0: antes, p1: info(q.tema).pct, bien: !!bien, t0: Date.now() };
       rUltima = { ref: rid, kid, tema: q.tema, hasta: Date.now() + DESHACER_MS };
@@ -4770,7 +4797,7 @@ function verResultado(o, kid) {
     ${renglon("Se quedan", cambios.quedan, "Ninguno.")}
     <p class="small">Sale el tema que aciertas. El que fallas se queda hasta que lo aciertes dos veces seguidas.</p>
   </section>` : ""}
-  ${atlasEnQuiz(k) ? curvaNivel(nivelDelPlan(temas)) : ""}`),
+`),
   { titulo: "Resultado del quiz · Pelagos", nav: "gramatica", conserva: o.conserva, pie: "<p>El número junto al porcentaje es cuánto se movió el tema en este quiz.</p>" });
   fondoDelKwiz(k);     // en el Kwiz con la tutora, el resultado se queda con la escena donde llegaste
   pintarAtlasResultado(k);
