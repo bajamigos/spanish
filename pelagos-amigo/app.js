@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=8e533c0320";
-import * as A from "./almacen.js?v=8e533c0320";
-import * as V from "./videos.js?v=8e533c0320";
-import * as NB from "./nube.js?v=8e533c0320";
-import * as CL from "./clases.js?v=8e533c0320";
-import { abrirPractica } from "./practica.js?v=8e533c0320";
-import * as F from "./fondo.js?v=8e533c0320";
-import * as PD from "./podcasts.js?v=8e533c0320";
+import * as N from "./nucleo.js?v=fd590efcf8";
+import * as A from "./almacen.js?v=fd590efcf8";
+import * as V from "./videos.js?v=fd590efcf8";
+import * as NB from "./nube.js?v=fd590efcf8";
+import * as CL from "./clases.js?v=fd590efcf8";
+import { abrirPractica } from "./practica.js?v=fd590efcf8";
+import * as F from "./fondo.js?v=fd590efcf8";
+import * as PD from "./podcasts.js?v=fd590efcf8";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -4144,6 +4144,7 @@ function verPregunta(o, kid) {
         ${q.glosa ? `<p class="sub">(${esc(q.glosa)})</p>` : ""}
         ${conPista && atlasEnQuiz(k) ? `<p class="sub" id="pista">${esc(q.pista)}</p>`
           : conPista ? `<div class="hrow"><button type="button" class="chip" id="pistaBtn">Pista</button><span class="sub" id="pista" hidden>${esc(q.pista)}</span></div>` : ""}
+        ${atlasEnQuiz(k) ? `<div class="qaDeshacer" id="rDeshacer" data-kid="${esc(kid)}" hidden><button type="button" class="qaDesBtn" id="rDeshacerBtn">↶ Deshacer</button></div>` : ""}
       </div>
     </header>
     <div class="card" id="controles">
@@ -4190,7 +4191,6 @@ function verPregunta(o, kid) {
         <span id="malaHecho" hidden></span>
       </div>
     </div>
-    ${atlasEnQuiz(k) ? `<div class="qaDeshacer" id="rDeshacer" data-kid="${esc(kid)}" hidden><button type="button" class="qaDesBtn" id="rDeshacerBtn">↶ Deshacer</button></div>` : ""}
   </section>`),
   {
     titulo: `Pregunta ${sig.orden} de ${sig.total} · Pelagos`, nav: "gramatica",
@@ -4252,6 +4252,7 @@ function verPregunta(o, kid) {
     texto("vSosp", sx ? `Esta pregunta ya te salió mal ${sx.fallas} veces, pero el resto del tema lo llevas ${sx.restoBien} de ${sx.restoDe}. Quedó en tus preguntas sospechosas (en Ajustes). Si crees que está mal, retírala aquí abajo.` : "");
     $("vJuicio").hidden = !d.juicio;
     $("vSeguir").hidden = !!d.juicio;
+
     $("vMala").hidden = !!d.juicio;
     $("controles").hidden = escribir || !!d.juicio;
     if (escribir) {
@@ -4438,6 +4439,7 @@ function verResultado(o, kid) {
   poner((k.tipo === "tutora" ? (h) => `<div class="hoy"><div class="sobre">${h}</div></div>` : conFondo)(`${k.tipo === "tutora" && ambiente() !== "limpio" ? '<div class="kwTutora"><div class="hero"><div class="tutoraVideo" id="tutoraVideo"></div></div></div>' : ""}
   <section class="card">
     <h1 class="h">${k.tipo === "tutora" ? (k.bien >= N.ACIERTOS_TUTORA ? `¡${N.ACIERTOS_TUTORA} de ${N.ACIERTOS_TUTORA}! Llegaste al final` : `${k.bien} buenas: te faltaron ${N.ACIERTOS_TUTORA - k.bien}`) : `${k.bien} de ${k.total}`}</h1>
+    ${atlasEnQuiz(k) ? `<div class="qaDeshacer" id="rDeshacer" data-kid="${esc(kid)}" hidden><button type="button" class="qaDesBtn" id="rDeshacerBtn">↶ Deshacer la última</button></div>` : ""}
     <p>${TIPOS_KWIZ[k.tipo] || "Quiz"} · ${cuando(k.terminado)}</p>
     ${barra(k.total ? 100 * k.bien / k.total : 0, " gorda")}
     ${k.tipo === "tutora" ? "" : `<div class="hoyGrande" data-explicas><p class="small">Te queda hoy</p>${circulosDeHoy("grande")}${panelExplica()}</div>`}
@@ -4482,6 +4484,7 @@ function verResultado(o, kid) {
   { titulo: "Resultado del quiz · Pelagos", nav: "gramatica", conserva: o.conserva, pie: "<p>El número junto al porcentaje es cuánto se movió el tema en este quiz.</p>" });
   fondoDelKwiz(k);     // en el Kwiz con la tutora, el resultado se queda con la escena donde llegaste
   pintarAtlasResultado(k);
+  pintarDeshacerR();
   // Estudiar las fallas: vuelve a tu plan y toca solo las voces de las tutoras de los temas que fallaste (se quedan en tu plan).
   const ef = $("estudiarFallas");
   if (ef) ef.addEventListener("click", () => {
