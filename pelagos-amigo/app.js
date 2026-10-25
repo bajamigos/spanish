@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=05ef6e6615";
-import * as A from "./almacen.js?v=05ef6e6615";
-import * as V from "./videos.js?v=05ef6e6615";
-import * as NB from "./nube.js?v=05ef6e6615";
-import * as CL from "./clases.js?v=05ef6e6615";
-import { abrirPractica } from "./practica.js?v=05ef6e6615";
-import * as F from "./fondo.js?v=05ef6e6615";
-import * as PD from "./podcasts.js?v=05ef6e6615";
+import * as N from "./nucleo.js?v=6bc06d2c6e";
+import * as A from "./almacen.js?v=6bc06d2c6e";
+import * as V from "./videos.js?v=6bc06d2c6e";
+import * as NB from "./nube.js?v=6bc06d2c6e";
+import * as CL from "./clases.js?v=6bc06d2c6e";
+import { abrirPractica } from "./practica.js?v=6bc06d2c6e";
+import * as F from "./fondo.js?v=6bc06d2c6e";
+import * as PD from "./podcasts.js?v=6bc06d2c6e";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1629,6 +1629,7 @@ vista.addEventListener("click", (ev) => {
   if (!(ev.target instanceof Element) || !ev.target.closest("#tjDeshacerBtn") || !tjUltima) return;
   ev.stopPropagation();
   A.apuntar({ t: "tjdeshacer", id: N.nuevoId("td"), ref: tjUltima.ref, cuando: new Date().toISOString() });
+  vEfecto = null;
   tjVolver = tjUltima.tarjeta;
   tjUltima = null;
   recalcular();
@@ -1685,7 +1686,8 @@ function verTarjetas(o) {
       <div class="over">
         <p class="lead sr"><span id="tjFaltan">${enAdelanto ? faltan : (cola.length === 1 ? "Falta 1" : "Faltan " + cola.length)}</span><span id="tjAviso">Dilo en español</span></p>
         ${barraDeshacer()}
-        <div data-explicas>${lineaDeVocabulario(dia, c.id, antes)}${panelExplica()}</div>
+        <div data-explicas>${(() => { const h = lineaDeVocabulario(dia, c.id, antes); return conMalla() ? h.replace(/<span class="lnCajas grandes"[^>]*>.*?<\/span><\/span>\s*/s, "") : h; })()}${panelExplica()}</div>
+        ${ambiente() === "limpio" ? `<div class="vMallaCab"><button type="button" class="lk vMallaBtn" id="vMallaBtn" aria-expanded="${conMalla()}">${conMalla() ? "Ocultar tus palabras" : "Ver tus palabras"}</button></div>${conMalla() ? `<div class="vMalla" id="vMalla" data-actual="${esc(c.id)}"></div>` : ""}` : ""}
         ${renglonConLapiz("frente", c.frente, "h1", "cue", ' id="cue"')}
         ${(() => { const at = N.tarjetasAtascadas(E).get(c.id); return at ? `<p class="tjAtas">Atascada · fallada en ${at.fallos} quizzes esta semana · <button type="button" class="lk" data-v="${esc(c.id)}">Ver su ficha</button></p>` : ""; })()}
       </div>
@@ -1702,6 +1704,7 @@ function verTarjetas(o) {
   { titulo: "Quiz de vocabulario · Pelagos", nav: "vocabulario" });
   enPregunta = true;
   enTarjetaDe = c.id;
+  pintarMalla(dia, cola);
 
   // Dos toques seguidos no deben contar dos veces: el segundo toque de «Bien» no destapa la tarjeta nueva,
   // y el toque que destapa no califica si cae justo donde aparecen los botones.
@@ -1727,8 +1730,10 @@ function verTarjetas(o) {
     const ev = { t: "tj", id: N.nuevoId("t"), tarjeta: c.id, cuando: new Date().toISOString(), bien: bien ? 1 : 0, modo: "tocar", ...(enAdelanto ? { adelanto: 1 } : {}), ...(facil ? { facil: 1 } : {}) };
     A.apuntar(ev);
     tjUltima = { ref: ev.id, tarjeta: c.id, palabra: c.reverso, como: facil ? "Fácil" : bien ? "Bien" : "Mal", hasta: Date.now() + DESHACER_MS };
+    vEfecto = { id: c.id, f0: N.colorDe(antes), bien: !!bien, t0: Date.now() };
     recalcular();
     enTarjetaDe = null;
+    pintarMalla(N.tarjetasDelDia(P, E, hoy), cola.slice(1));
     // Los puntitos enseñan si la tarjeta subió o se cayó, y luego sale la siguiente (o «Vocabulario en cero»).
     const de = nivelDe(antes), a = nivelDe(E.tarjetas.get(c.id));
     moverNivel(de, a);
@@ -1745,6 +1750,70 @@ function verTarjetas(o) {
   $("jMal").addEventListener("click", () => calificar(false));
   $("jFacil").addEventListener("click", () => calificar(true, false, true));
 }
+
+// ---- Tus palabras en el quiz de vocabulario (su elección del 25-Oct-2026, «lo de hoy brilla»), solo en Limpio.
+// Todas tus tarjetas en cuadritos, de la más vieja a la más nueva (siempre en el mismo lugar). Las de hoy a todo color,
+// las demás tenues; las que ya hiciste hoy, verdes o rojas; la de ahora late. Se puede esconder (se recuerda).
+const conMalla = () => ambiente() === "limpio" && guardado("pelagos.vocMalla") !== "0";
+let vEfecto = null;          // la última que calificaste: { id, f0, bien, t0 }, para su parpadeo
+function pintarMalla(dia, cola) {
+  const caja = $("vMalla");
+  if (!caja) return;
+  const hoy = N.fechaLocal(new Date());
+  const pend = new Set([...dia.pendientes, ...cola]);
+  const como = new Map();
+  for (const [id, s] of E.tarjetas) if (s.ultima && N.fechaLocal(new Date(s.ultima)) === hoy && !pend.has(id)) {
+    const h = s.historia && s.historia[s.historia.length - 1];
+    como.set(id, h ? !!h.bien : true);
+  }
+  const todas = mazo().filter((c) => { const s = E.tarjetas.get(c.id); return !(s && s.quitada); })
+    .sort((a, b) => String(a.agregada || "").localeCompare(String(b.agregada || "")) || (a.id < b.id ? -1 : 1));
+  const actual = caja.dataset.actual;
+  const fx = vEfecto && Date.now() - vEfecto.t0 < EFECTO_MS ? vEfecto : null;
+  caja.textContent = "";
+  for (const c of todas) {
+    const el = document.createElement("i");
+    const f = N.colorDe(E.tarjetas.get(c.id));
+    el.className = como.has(c.id) ? (como.get(c.id) ? "vb" : "vm") : (f === null ? "vx" : "vk" + f) + (pend.has(c.id) ? "" : " tenue");
+    if (c.id === actual && !(fx && fx.id === actual)) el.classList.add("late");
+    if (fx && fx.id === c.id) {
+      el.style.setProperty("--viejo", colorCss(fx.f0));
+      el.style.setProperty("--nuevo", fx.bien ? "var(--verdeMalla)" : "var(--rojoMalla)");
+      el.style.setProperty("--brillo", fx.bien ? "var(--verde)" : "var(--rojo)");
+      el.classList.add("vParpadea");
+      el.style.animationDelay = -(Date.now() - fx.t0) + "ms";
+    }
+    el.dataset.mv = c.id;
+    caja.append(el);
+  }
+  const hechas = [...como.values()];
+  caja.setAttribute("role", "img");
+  caja.setAttribute("aria-label", `Tus ${todas.length} palabras. Hoy: ${plural(hechas.filter(Boolean).length, "acertada", "acertadas")}, ${plural(hechas.filter((x) => !x).length, "fallada", "falladas")}, ${plural(pend.size, "te queda", "te quedan")}. Toca un cuadro para ver su palabra.`);
+}
+// Tocar un cuadrito dice su palabra (no destapa la tarjeta). Ocultar / Ver tus palabras.
+document.addEventListener("click", (ev) => {
+  if (!(ev.target instanceof Element)) return;
+  if (ev.target.closest("#vMallaBtn")) {
+    guardar("pelagos.vocMalla", conMalla() ? "0" : "1");
+    enTarjetaDe = null;
+    pintar();
+    return;
+  }
+  const caja = $("vMalla");
+  if (!caja) return;
+  const el = ev.target.closest("#vMalla i");
+  caja.querySelectorAll("i.tocado").forEach((x) => x.classList.remove("tocado"));
+  let b = caja.querySelector(".vBurb");
+  if (!el) { if (b && !ev.target.closest("#vMalla")) b.remove(); return; }
+  const t = tarjetas.get(el.dataset.mv), s = E.tarjetas.get(el.dataset.mv), f = N.colorDe(s);
+  if (!t) return;
+  if (!b) { b = document.createElement("div"); b.className = "vBurb"; b.setAttribute("role", "status"); caja.append(b); }
+  b.textContent = "";
+  const n = document.createElement("b"); n.textContent = t.reverso;
+  b.append(n, document.createElement("br"), f === null ? "sin ver" : "toca cada " + N.PELDANOS[f]);
+  el.classList.add("tocado");
+  b.style.top = (el.offsetTop > 50 ? el.offsetTop - 46 : el.offsetTop + el.offsetHeight + 6) + "px";
+});
 
 /** La «Línea C» del quiz de vocabulario: lo que queda HOY por grupo, los puntitos de esta tarjeta y tus cajas. */
 function lineaDeVocabulario(dia, id, antes) {
@@ -4936,7 +5005,7 @@ document.addEventListener("click", (ev) => {
   if (glosa) { abrirGlosa(glosa.dataset.glosa); return; }
   const palabra = objetivo.closest("[data-v]");
   if (palabra && P && E) { abrirPalabra(palabra.dataset.v); return; }
-  if (toque && !hoja.hasAttribute("open") && !objetivo.closest("a, button, summary, input, label, dialog")) { toque(); return; }
+  if (toque && !hoja.hasAttribute("open") && !objetivo.closest("a, button, summary, input, label, dialog, .vMalla")) { toque(); return; }
   const prem = objetivo.closest("[data-premio]");
   if (prem) {
     ev.preventDefault();
