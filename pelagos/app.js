@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=99e68706a4";
-import * as A from "./almacen.js?v=99e68706a4";
-import * as V from "./videos.js?v=99e68706a4";
-import * as NB from "./nube.js?v=99e68706a4";
-import * as CL from "./clases.js?v=99e68706a4";
-import { abrirPractica } from "./practica.js?v=99e68706a4";
-import * as F from "./fondo.js?v=99e68706a4";
-import * as PD from "./podcasts.js?v=99e68706a4";
+import * as N from "./nucleo.js?v=29faa0e46a";
+import * as A from "./almacen.js?v=29faa0e46a";
+import * as V from "./videos.js?v=29faa0e46a";
+import * as NB from "./nube.js?v=29faa0e46a";
+import * as CL from "./clases.js?v=29faa0e46a";
+import { abrirPractica } from "./practica.js?v=29faa0e46a";
+import * as F from "./fondo.js?v=29faa0e46a";
+import * as PD from "./podcasts.js?v=29faa0e46a";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1667,10 +1667,10 @@ function verTarjetas(o) {
   const limpio = ambiente() === "limpio", enTanda = /^#\/vocabulario\/tanda/.test(window.location.hash);
   if (limpio && enTanda && !dia.pendientes.length && !restan.length) return ir("/vocabulario", true);
   // En Limpio (25-Oct-2026, igual que gramática): primero la página de inicio, con «Empezar tarjetas».
-  if (limpio && !enTanda && (dia.pendientes.length || restan.length)) return verInicioVocab(o, dia, restan);
+  // En Limpio, Vocabulario siempre es la misma página (25-Oct-2026): solo cambia el botón.
+  if (limpio && !enTanda) return verPaginaVocab(o, dia, restan, N.tarjetasAdelante(P, E, hoy));
   if (!dia.pendientes.length && !restan.length) {
     const masTarde = N.tarjetasAdelante(P, E, hoy);
-    if (limpio) return verFinalVocab(o, dia, masTarde);
     // El letrero «Vocabulario en cero · Hoy repasaste…» se quitó el 22-Oct-2026 (su pedido): el cuadro ya lo dice.
     return poner(conFondo(`
     ${entradas("vocabulario", "quiz")}
@@ -1891,21 +1891,6 @@ document.addEventListener("click", (ev) => {
   b.style.top = (y > 50 ? y + caja.scrollTop - 46 : y + caja.scrollTop + el.offsetHeight + 6) + "px";
 });
 
-/** La página de inicio de las tarjetas en Limpio (25-Oct-2026): como la de gramática. */
-function verInicioVocab(o, dia, restan) {
-  const g = dia.grupos, n = restan.length ? restan.length : dia.pendientes.length;
-  poner(conFondo(`
-  ${entradas("vocabulario", "quiz")}
-  <section class="card" id="tjInicio">
-    <h1 class="sr">Tus tarjetas de hoy</h1>
-    <div class="hoyGrande" data-explicas><p class="small">Te queda hoy</p>${circulosDeHoy("grande", [g.nuevas.length, g.vencidas.length, g.falladas.length], "vhoy")}${panelExplica()}</div>
-    ${mallaHtml()}
-    <p class="small">A todo color: ${restan.length ? "las de tu adelanto" : `las ${n} de hoy`}. Toca un cuadrito para ver su palabra.</p>
-    <div class="go"><a class="ub grande" href="#/vocabulario/tanda" id="tjEmpezar">${restan.length ? "Seguir el adelanto" : dia.hechasHoy ? "Seguir tus tarjetas" : "Empezar tarjetas"}</a></div>
-  </section>
-  ${curvaVocab()}`), { titulo: "Vocabulario · Pelagos", nav: "vocabulario", conserva: o.conserva });
-  pintarMalla(dia, restan, "inicio");
-}
 /** Las de hoy, a la primera: { total, bien, malas: [ids] } — la primera calificación de hoy de cada tarjeta. */
 function hoyALaPrimera(hoy) {
   let total = 0, bien = 0;
@@ -1918,23 +1903,33 @@ function hoyALaPrimera(hoy) {
   }
   return { total, bien, malas };
 }
-/** El final de la tanda en Limpio (25-Oct-2026): como el resultado de gramática. */
-function verFinalVocab(o, dia, masTarde) {
+/**
+ * La página de Vocabulario en Limpio (25-Oct-2026), igual que la del Quiz de gramática y siempre con lo mismo: los círculos
+ * de hoy, tus palabras, el botón que toque (Empezar, Seguir o Adelantar), «Te costaron» y Tu avance.
+ */
+function verPaginaVocab(o, dia, restan, masTarde) {
   const hoy = N.fechaLocal(new Date()), r = hoyALaPrimera(hoy);
+  const quedan = restan.length || dia.pendientes.length;
+  const g = dia.grupos;
+  const boton = quedan
+    ? `<a class="ub grande" href="#/vocabulario/tanda" id="tjEmpezar">${restan.length ? "Seguir el adelanto" : dia.hechasHoy ? "Seguir tus tarjetas" : "Empezar tarjetas"}</a>`
+    : masTarde.length ? `<button type="button" class="ub grande" id="tjAdelantar">Adelantar ${masTarde.length}</button>` : "";
   poner(conFondo(`
   ${entradas("vocabulario", "quiz")}
-  <section class="card" id="tjCero">
+  <section class="card" id="${quedan ? "tjInicio" : "tjCero"}">
     ${barraDeshacer()}
-    ${dia.total ? `<h1 class="sr">Vocabulario en cero</h1>`      /* sin «¡Tanda terminada! X de Y» (su pedido del 25-Oct-2026): los círculos ya lo dicen */
+    ${dia.total ? `<h1 class="sr">${quedan ? "Tus tarjetas de hoy" : "Vocabulario en cero"}</h1>`
       : `<h1 class="h">Todavía no hay vocabulario</h1><p>Cuando haya palabras en el contenido, aquí salen las de cada día.</p>`}
-    <div class="hoyGrande" data-explicas><p class="small">Te queda hoy</p>${circulosDeHoy("grande", [dia.grupos.nuevas.length, dia.grupos.vencidas.length, dia.grupos.falladas.length], "vhoy")}${panelExplica()}</div>
+    <div class="hoyGrande" data-explicas><p class="small">Te queda hoy</p>${circulosDeHoy("grande", [g.nuevas.length, g.vencidas.length, g.falladas.length], "vhoy")}${panelExplica()}</div>
     ${mallaHtml()}
+    <p class="small">${quedan ? (restan.length ? "A todo color: las de tu adelanto." : `A todo color: ${plural(quedan, "la que te queda", "las " + quedan + " que te quedan")} hoy.`) + " " : ""}Toca un cuadrito para ver su palabra.</p>
+    ${boton ? `<div class="go">${boton}</div>` : ""}
+    ${!quedan && masTarde.length ? `<p class="small">Estudia ahora ${plural(masTarde.length, "palabra que toca", "palabras que tocan")} más adelante. La que aciertes sube su escalón desde hoy; la que falles vuelve a salir hoy.</p>` : ""}
     ${r.malas.length ? `<details class="vCostaron"><summary>Te costaron ${r.malas.length}</summary><ul class="resCambios">${r.malas.map((id) => { const t = tarjetas.get(id); return t ? `<li class="resabajo"><span class="resNom">▼ ${esc(t.reverso)}</span><span class="resDe">${esc(t.frente)}</span></li>` : ""; }).join("")}</ul></details>` : ""}
-    ${masTarde.length ? `<div class="go"><button type="button" class="ub grande" id="tjAdelantar">Adelantar ${masTarde.length}</button></div><p class="small">Estudia ahora ${plural(masTarde.length, "palabra que toca", "palabras que tocan")} más adelante. La que aciertes sube su escalón desde hoy; la que falles vuelve a salir hoy.</p>` : ""}
     <div class="tjAvance"><h2 class="tdSub">Tu avance</h2>${graficaVocab()}</div>
   </section>
   ${curvaVocab()}`), { titulo: "Vocabulario · Pelagos", nav: "vocabulario", conserva: o.conserva });
-  pintarMalla(dia, [], "final");
+  pintarMalla(dia, restan, quedan ? "inicio" : "final");
 }
 
 /** La «Línea C» del quiz de vocabulario: lo que queda HOY por grupo, los puntitos de esta tarjeta y tus cajas. */
