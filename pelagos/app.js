@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=dc96254722";
-import * as A from "./almacen.js?v=dc96254722";
-import * as V from "./videos.js?v=dc96254722";
-import * as NB from "./nube.js?v=dc96254722";
-import * as CL from "./clases.js?v=dc96254722";
-import { abrirPractica } from "./practica.js?v=dc96254722";
-import * as F from "./fondo.js?v=dc96254722";
-import * as PD from "./podcasts.js?v=dc96254722";
+import * as N from "./nucleo.js?v=353f780ee4";
+import * as A from "./almacen.js?v=353f780ee4";
+import * as V from "./videos.js?v=353f780ee4";
+import * as NB from "./nube.js?v=353f780ee4";
+import * as CL from "./clases.js?v=353f780ee4";
+import { abrirPractica } from "./practica.js?v=353f780ee4";
+import * as F from "./fondo.js?v=353f780ee4";
+import * as PD from "./podcasts.js?v=353f780ee4";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -3902,7 +3902,7 @@ function pintarAtlasQuiz() {
       const f = N.colorDe(infoProy(kid, t.id));
       if (f === null) sinVer++; else cuenta[f]++;
       const el = document.createElement("i");
-      el.className = "qaC " + (f === null ? "qx" : "qk" + f) + (delQuiz.has(t.id) ? " qaMarca" : "") + (t.id === actual && !fx ? " qaActual" : "");
+      el.className = "qaC " + (f === null ? "qx" : "qk" + f) + (delQuiz.has(t.id) ? " qaMarca" : "") + (t.id === actual && !(fx && fx.tema === t.id) ? " qaActual" : "");
       el.dataset.t = t.id;
       const x = 2 + (i % c.columnas) * (c.cw + 2), y = arriba + Math.floor(i / c.columnas) * (c.ch + 2);
       pon(el, x, y, c.cw, c.ch);
@@ -3916,6 +3916,12 @@ function pintarAtlasQuiz() {
     });
     caja.append(g);
   });
+  // Siempre late el tema de la pregunta. Si es el mismo que se está animando (lo acabas de contestar y vuelve), late al terminar.
+  clearTimeout(pintarAtlasQuiz.t);
+  if (fx && fx.tema === actual) pintarAtlasQuiz.t = setTimeout(() => {
+    const el = caja.querySelector(`.qaC[data-t="${actual}"]`);
+    if (el && caja.isConnected) { el.classList.remove("qaSubio", "qaIgual", "qaBajo"); el.style.animationDelay = ""; el.classList.add("qaActual"); }
+  }, Math.max(0, EFECTO_MS - (Date.now() - fx.t0)));
   if (fx && rotulo) {
     const dir = !fx.bien ? "abajo" : fx.f1 > (fx.f0 ?? -1) ? "arriba" : "igual";
     const r = document.createElement("div");
