@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=7045fb7ec9";
-import * as A from "./almacen.js?v=7045fb7ec9";
-import * as V from "./videos.js?v=7045fb7ec9";
-import * as NB from "./nube.js?v=7045fb7ec9";
-import * as CL from "./clases.js?v=7045fb7ec9";
-import { abrirPractica } from "./practica.js?v=7045fb7ec9";
-import * as F from "./fondo.js?v=7045fb7ec9";
-import * as PD from "./podcasts.js?v=7045fb7ec9";
+import * as N from "./nucleo.js?v=f2a81db27c";
+import * as A from "./almacen.js?v=f2a81db27c";
+import * as V from "./videos.js?v=f2a81db27c";
+import * as NB from "./nube.js?v=f2a81db27c";
+import * as CL from "./clases.js?v=f2a81db27c";
+import { abrirPractica } from "./practica.js?v=f2a81db27c";
+import * as F from "./fondo.js?v=f2a81db27c";
+import * as PD from "./podcasts.js?v=f2a81db27c";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -549,7 +549,8 @@ const LOGO = `<img class="logoFondo" src="logo.png" alt="Pelagos" width="760" he
  */
 const FONDO_LIMPIO = `<div class="fondo fondoLogo"><img class="logoClaro" src="logo-claro.png" alt=""><img class="logoOscuro" src="logo-oscuro.png" alt=""></div>`;
 function fondoDelDia(respaldo = true) {
-  if (ambiente() === "limpio") return { hay: true, html: FONDO_LIMPIO };
+  // En el modo amigo, las páginas de arriba llevan siempre el logo, como en Limpio; las fotos Reef solo salen en los quizzes.
+  if (ambiente() === "limpio" || A.esAmigo()) return { hay: true, html: FONDO_LIMPIO };
   // Mientras suena el repaso en audio, arriba va el loop de la tutora que está hablando.
   // Solo en la página donde empezó el repaso: en las demás, el fondo de siempre (la voz sigue sonando).
   const lt = repaso && repaso.sonando != null && repaso.ruta === window.location.hash && !sinMovimiento() ? loopDeTutora(repaso.sonando) : null;
@@ -785,7 +786,7 @@ function verInicio(o) {
   // El premio tocado reemplaza al fondo mientras esté prendido: su clip de la tutora del día o, si no hay, su GIF.
   const fondo = clip ? { hay: true, html: `<div class="fondo conPremio"><div class="premioTutora" id="tutoraPremio"></div>${LOGO}</div>` }
     : gifPremio ? { hay: true, html: `<div class="fondo">${etiquetaEscena(salaPremio(premioFondo), gifPremio)}${LOGO}</div>` }
-    : A.esAmigo() ? { hay: true, html: FONDO_LIMPIO } : fondoDelDia(false);      // modo amigo: en el Tablero, solo el logo
+    : fondoDelDia(false);
   const cuadernos = (P.cuadernos || []).map((c) => `
   <section class="card">
     <h2>${esc(c.nombre)}</h2>
@@ -4278,7 +4279,7 @@ function verAjustesAmigo(o) {
     <nav class="jump dos" aria-label="Ambiente de las fotos">
       <button type="button" data-ambiente-ir="reef">Reef</button><button type="button" data-ambiente-ir="limpio">Limpio</button>
     </nav>
-    <p class="small">Reef, con fotos de fondo, o Limpio, sin fotos. En este aparato.</p>
+    <p class="small">Reef, con fotos en los quizzes y las tarjetas, o Limpio, sin fotos. En este aparato.</p>
   </section>
   ${yaEsApp() ? "" : `<section class="card" id="ajApp">
     <h2>Pelagos como app</h2>
