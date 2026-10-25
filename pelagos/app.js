@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=8f199480ac";
-import * as A from "./almacen.js?v=8f199480ac";
-import * as V from "./videos.js?v=8f199480ac";
-import * as NB from "./nube.js?v=8f199480ac";
-import * as CL from "./clases.js?v=8f199480ac";
-import { abrirPractica } from "./practica.js?v=8f199480ac";
-import * as F from "./fondo.js?v=8f199480ac";
-import * as PD from "./podcasts.js?v=8f199480ac";
+import * as N from "./nucleo.js?v=f519d0b854";
+import * as A from "./almacen.js?v=f519d0b854";
+import * as V from "./videos.js?v=f519d0b854";
+import * as NB from "./nube.js?v=f519d0b854";
+import * as CL from "./clases.js?v=f519d0b854";
+import { abrirPractica } from "./practica.js?v=f519d0b854";
+import * as F from "./fondo.js?v=f519d0b854";
+import * as PD from "./podcasts.js?v=f519d0b854";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -906,8 +906,6 @@ function avanceNivel(id = "") {
     <div class="grafNivel"${id ? ` id="${id}"` : ""}>${graficaNivel(tendNivel)}</div>
   </div>`;
 }
-const DIAS_CORTOS = ["D", "L", "M", "M", "J", "V", "S"];
-const diaTend = (d, hoy) => (d === hoy ? "Hoy" : DIAS_CORTOS[new Date(d + "T12:00:00").getDay()]);
 // 24-Oct-2026: en las gráficas de línea, al pasar el ratón (o tocar) un punto sale su valor y su fecha.
 const DIAS_TIP = ["dom", "lun", "mar", "mié", "jue", "vie", "sáb"];
 function fechaTip(d, hoy) {
@@ -952,23 +950,6 @@ document.addEventListener("click", (ev) => {
   if (pt) { mostrarBurbuja(pt); burbujaFija = true; } else if (burbujaFija) esconderBurbuja();
 });
 window.addEventListener("hashchange", esconderBurbuja);
-/** Una línea chiquita de 7 puntos. serie: números; etiqueta: lo que dice el lector de pantalla. */
-function lineaTend(serie, dias, clase, etiqueta, alto = 80, unidad = "tarjetas") {
-  if (serie.length < 2) return "";
-  const hoy = dias[dias.length - 1];
-  const lo = Math.min(...serie), hi = Math.max(...serie), rango = hi - lo || 1;
-  const x = (i) => 20 + i * (300 / Math.max(1, serie.length - 1));
-  const y = (v) => Math.round((alto - 14 - ((v - lo) / rango) * (alto - 36)) * 10) / 10;
-  const ult = serie.length - 1;
-  return `<svg class="tdLinea ${clase}" viewBox="0 0 340 ${alto}" width="100%" role="img" aria-label="${esc(etiqueta)}">
-    <polyline points="${serie.map((v, i) => x(i) + "," + y(v)).join(" ")}" fill="none" stroke-width="3" stroke-linejoin="round"/>
-    ${serie.map((v, i) => `<circle cx="${x(i)}" cy="${y(v)}" r="${i === ult ? 6 : 3.5}"/>`).join("")}
-    ${serie.map((v, i) => puntoTip(x(i), y(v), `${fechaTip(dias[i], hoy)} · ${v} ${unidad}`)).join("")}
-    <text class="tdIni" x="${x(0)}" y="${y(serie[0]) - 10}" text-anchor="middle">${serie[0]}</text>
-    <text class="tdFin" x="${x(ult)}" y="${y(serie[ult]) - 12}" text-anchor="middle">${serie[ult]}</text>
-    ${dias.map((d, i) => `<text class="tdDia" x="${x(i)}" y="${alto - 1}" text-anchor="middle">${diaTend(d, hoy)}</text>`).join("")}
-  </svg>`;
-}
 /** Un tema que se movió: su nombre y una pista de 0 a 100 con el aro (antes), el punto (ahora) y la raya de tu meta. */
 function pistaTema(x, meta) {
   const t = porId.get(x.tema);
@@ -982,7 +963,6 @@ function pistaTema(x, meta) {
       <i class="tdAro" data-x="${a}"></i><i class="tdPunto" data-x="${b}"></i><i class="tdMeta" data-x="${meta}"></i>
     </span>${cierra}`;
 }
-const CAJA_DIAS = ["1 día", "2 días", "5 días", "12 días", "30 días", "75 días"];
 // ---- Tu avance por nivel, como la gráfica de Kwiziq: temas cubiertos (línea) y tu puntaje (área).
 let progCache = null, tendNivel = null;
 function progresoHoy() {
@@ -4349,6 +4329,15 @@ function verAjustes(o) {
   }
   marcarAmbiente();
   // La tutora del día: «Siguiente» la cambia por la que sigue en la fila, hoy y en todos tus aparatos.
+  // Si sus escenas todavía no llegan al abrir Ajustes, el renglón se pone al día solo cuando llegan.
+  if (!tutoraDelDiaId()) {
+    let vueltas = 0;
+    const reloj = setInterval(() => {
+      const r = $("ajTutoraHoy");
+      if (!r || ++vueltas > 60) { clearInterval(reloj); return; }
+      if (tutoraDelDiaId()) { r.textContent = nombreTutoraDelDia(); clearInterval(reloj); }
+    }, 500);
+  }
   $("ajTutoraSigue").addEventListener("click", () => {
     if (!tutoraDelDiaId()) { $("ajTutoraAviso").textContent = "Todavía no hay tutoras listas para el fondo."; return; }
     A.apuntar({ t: "saltotutora", id: N.nuevoId("st"), dia: N.fechaLocal(new Date()), cuando: new Date().toISOString() });
@@ -4452,6 +4441,7 @@ const AYUDA_DE = [
   [/^\/gramatica(\/[a-z0-9]+)?(\/bajo)?$/, "porcentaje"],
   [/^\/(leccion|tutoras)(\/|$)/, "tutoras"],
   [/^\/vocabulario/, "tarjetas"],
+  [/^\/podcasts$/, "podcasts"],
   [/^\/(clases|bitacora|lectura)?$/, "tablero"],
 ];
 

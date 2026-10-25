@@ -516,7 +516,6 @@ ul.clave b { font-variant-numeric: tabular-nums; }
 /* La curva del quiz de vocabulario (22-Oct-2026): tu dominio de hoy en grande y un punto por cada uno de los últimos
    7 días. Va fija abajo, debajo de los botones, para que la veas mientras repasas. */
 .tjCurva { position: fixed; z-index: 4; left: 50%; bottom: calc(6px + env(safe-area-inset-bottom)); transform: translateX(-50%); width: min(calc(100% - 32px), 408px); box-sizing: border-box; height: 64px; padding: 6px 10px; display: flex; align-items: center; gap: 10px; border-radius: 14px; border: 1px solid var(--vidrio-borde); background: var(--vidrio); -webkit-backdrop-filter: blur(6px) saturate(1.15); backdrop-filter: blur(6px) saturate(1.15); cursor: auto; }
-.tjCurva.enCero { position: static; transform: none; width: 100%; margin-top: 4px; }
 .tjCurvaNum { margin: 0; display: flex; flex-direction: column; min-width: 78px; line-height: 1.1; }
 .tjCurvaNum b { font-size: 24px; font-weight: 800; color: var(--ink); }
 .tjCurvaNum span { font-size: 13px; color: var(--ink-2); }
@@ -1012,13 +1011,6 @@ button.lnN[aria-pressed="true"] { outline: 3px solid currentColor; outline-offse
 .tdFila { display: flex; justify-content: space-between; gap: 10px; margin: 0; font-size: 15px; }
 .tdFila b { white-space: nowrap; }
 .tdNv { color: var(--ink-2); }
-.tdLinea polyline { stroke: var(--ink); }
-.tdLinea circle { fill: var(--ink); }
-.tdLinea.si polyline { stroke: var(--si); } .tdLinea.si circle, .tdLinea.si .tdFin { fill: var(--si); }
-.tdLinea.c5 polyline { stroke: var(--b4); } .tdLinea.c5 circle, .tdLinea.c5 .tdFin { fill: var(--b4); }
-.tdLinea.c4 polyline { stroke: var(--b3); } .tdLinea.c4 circle, .tdLinea.c4 .tdFin { fill: var(--b3); }
-.tdLinea text { font-size: 12px; fill: var(--ink-2); }
-.tdLinea .tdFin { font-size: 13px; font-weight: 700; }
 .tdTemas { display: flex; flex-direction: column; gap: 6px; }
 .tdTema { display: flex; flex-direction: column; gap: 6px; padding: 8px 0; min-height: 44px; color: var(--ink); text-decoration: none; background: none; border: 0; font: inherit; text-align: left; width: 100%; cursor: pointer; }
 .tdPista { position: relative; display: block; height: 18px; }
@@ -1030,10 +1022,6 @@ button.lnN[aria-pressed="true"] { outline: 3px solid currentColor; outline-offse
 .tdMeta { top: 0; bottom: 0; width: 2px; margin-left: -1px; background: var(--ink); }
 .tdPista.sube .tdTramo, .tdPista.sube .tdPunto { background: var(--si); } .tdPista.sube .tdAro { border-color: var(--si); }
 .tdPista.baja .tdTramo, .tdPista.baja .tdPunto { background: var(--no); } .tdPista.baja .tdAro { border-color: var(--no); }
-.tdCaja { display: flex; flex-direction: column; gap: 2px; }
-.tdPalabras { display: flex; flex-direction: column; }
-.tdPalabra { display: flex; justify-content: space-between; gap: 12px; min-height: 44px; align-items: center; padding: 0; background: none; border: 0; border-bottom: 1px solid var(--line); font: inherit; font-size: 15px; color: var(--ink); text-align: left; cursor: pointer; }
-.tdPalabra:last-child { border-bottom: 0; }
 .tdPeriodo { margin: 0; }
 .tdDet summary { list-style: none; display: flex; align-items: center; gap: 8px; min-height: 44px; cursor: pointer; }
 .tdDet summary::-webkit-details-marker { display: none; }
