@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=eed6d1e962";
-import * as A from "./almacen.js?v=eed6d1e962";
-import * as V from "./videos.js?v=eed6d1e962";
-import * as NB from "./nube.js?v=eed6d1e962";
-import * as CL from "./clases.js?v=eed6d1e962";
-import { abrirPractica } from "./practica.js?v=eed6d1e962";
-import * as F from "./fondo.js?v=eed6d1e962";
-import * as PD from "./podcasts.js?v=eed6d1e962";
+import * as N from "./nucleo.js?v=3a50ac7fcf";
+import * as A from "./almacen.js?v=3a50ac7fcf";
+import * as V from "./videos.js?v=3a50ac7fcf";
+import * as NB from "./nube.js?v=3a50ac7fcf";
+import * as CL from "./clases.js?v=3a50ac7fcf";
+import { abrirPractica } from "./practica.js?v=3a50ac7fcf";
+import * as F from "./fondo.js?v=3a50ac7fcf";
+import * as PD from "./podcasts.js?v=3a50ac7fcf";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -3943,18 +3943,7 @@ function pintarAtlasQuiz() {
     if (!act.el.isConnected) return;
     act.el.classList.remove("qaParpadea", "qaSubio", "qaIgual", "qaBajo"); act.el.style.animationDelay = ""; act.el.classList.add("qaActual");
   }, Math.max(0, EFECTO_MS + yaVa));
-  if (cel) {
-    const dir = direccion(fx.f0, fx.f1, fx.bien);
-    const r = document.createElement("div");
-    r.className = "qaRotulo " + dir;
-    r.setAttribute("role", "status");
-    const tm = porId.get(fx.tema);
-    r.append((dir === "abajo" ? "▼ " : dir === "arriba" ? "▲ " : "● ") + (tm ? titulo(tm) : ""));
-    const sm = document.createElement("small"); sm.textContent = pct(fx.p0) + " → " + pct(fx.p1); r.append(sm);
-    r.style.top = (cel.y < 46 ? cel.y + cel.h + 8 : cel.y - 44) + "px";
-    r.style.animationDelay = yaVa + "ms";
-    caja.append(r);
-  }
+  // Sin etiqueta encima (su pedido del 25-Oct-2026): el parpadeo del cuadro basta.
 }
 // ---- El Atlas en el resultado (su elección del 25-Oct-2026): tus temas del quiz, cambiando uno por uno.
 const NOMBRE_COLOR = ["rojo", "naranja", "amarillo", "verde claro", "verde", "verde oscuro"];
@@ -4097,7 +4086,8 @@ function verPregunta(o, kid) {
         <h1 class="cue" id="cue"${q.tipo === "escribir" ? ' lang="en"' : ""}>${hueco(q.frase)}</h1>
         ${(() => { const at = deTutora ? null : N.temasAtascados(E).get(q.tema); return at && tema ? `<p class="tjAtas">Atascado · fallado en ${at.fallos} quizzes esta semana${tema.slug && tema.leccion ? ` · <a class="lk" href="#/leccion/${esc(tema.slug)}">Ver la lección</a>` : ""}</p>` : ""; })()}
         ${q.glosa ? `<p class="sub">(${esc(q.glosa)})</p>` : ""}
-        ${conPista ? `<div class="hrow"><button type="button" class="chip" id="pistaBtn">Pista</button><span class="sub" id="pista" hidden>${esc(q.pista)}</span></div>` : ""}
+        ${conPista && atlasEnQuiz(k) ? `<p class="sub" id="pista">${esc(q.pista)}</p>`
+          : conPista ? `<div class="hrow"><button type="button" class="chip" id="pistaBtn">Pista</button><span class="sub" id="pista" hidden>${esc(q.pista)}</span></div>` : ""}
       </div>
     </header>
     <div class="card" id="controles">
@@ -4158,7 +4148,8 @@ function verPregunta(o, kid) {
   if (deTutora) fondoDelKwiz(k);
   else esperarLoopDePregunta(kid, sig.p, q.tema, k);
 
-  let pista = false, contestada = false, ultimoEscrito = null, modo = "escribir";
+  // En Limpio la pista ya está a la vista (25-Oct-2026), así que se apunta como vista.
+  let pista = conPista && atlasEnQuiz(k), contestada = false, ultimoEscrito = null, modo = "escribir";
   const texto = (id, valor) => { const e = $(id); e.hidden = !valor; e.textContent = valor || ""; };
 
   function veredicto(d) {
