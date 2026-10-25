@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=29faa0e46a";
-import * as A from "./almacen.js?v=29faa0e46a";
-import * as V from "./videos.js?v=29faa0e46a";
-import * as NB from "./nube.js?v=29faa0e46a";
-import * as CL from "./clases.js?v=29faa0e46a";
-import { abrirPractica } from "./practica.js?v=29faa0e46a";
-import * as F from "./fondo.js?v=29faa0e46a";
-import * as PD from "./podcasts.js?v=29faa0e46a";
+import * as N from "./nucleo.js?v=c1f1bfad2d";
+import * as A from "./almacen.js?v=c1f1bfad2d";
+import * as V from "./videos.js?v=c1f1bfad2d";
+import * as NB from "./nube.js?v=c1f1bfad2d";
+import * as CL from "./clases.js?v=c1f1bfad2d";
+import { abrirPractica } from "./practica.js?v=c1f1bfad2d";
+import * as F from "./fondo.js?v=c1f1bfad2d";
+import * as PD from "./podcasts.js?v=c1f1bfad2d";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1835,7 +1835,7 @@ function pintarMalla(dia, cola, modo = "quiz") {
     const el = document.createElement("i");
     pon(el, 2 + (i % cj.columnas) * (cj.cw + 2), arriba + Math.floor(i / cj.columnas) * (cj.ch + 2), cj.cw, cj.ch);
     const t = tonoTj(E.tarjetas.get(c.id), hoy);
-    el.className = "v" + (t === null || t === undefined ? "x" : typeof t === "string" ? t : "k" + t) + (modo === "final" || pend.has(c.id) || c.id === actual || (modo === "quiz" && como.has(c.id)) ? "" : " tenue");
+    el.className = "v" + (t === null || t === undefined ? "x" : typeof t === "string" ? t : "k" + t);      // todas a todo color, nada tenue (su pedido del 25-Oct-2026)
     if (como.has(c.id)) { if (como.get(c.id)) bien++; else mal++; if (modo === "quiz") el.classList.add(como.get(c.id) ? "vbien" : "vmal"); }
     if (c.id === actual && !(fx && fx.id === actual)) el.classList.add("late");
     if (fx && fx.id === c.id) {
@@ -1922,7 +1922,7 @@ function verPaginaVocab(o, dia, restan, masTarde) {
       : `<h1 class="h">Todavía no hay vocabulario</h1><p>Cuando haya palabras en el contenido, aquí salen las de cada día.</p>`}
     <div class="hoyGrande" data-explicas><p class="small">Te queda hoy</p>${circulosDeHoy("grande", [g.nuevas.length, g.vencidas.length, g.falladas.length], "vhoy")}${panelExplica()}</div>
     ${mallaHtml()}
-    <p class="small">${quedan ? (restan.length ? "A todo color: las de tu adelanto." : `A todo color: ${plural(quedan, "la que te queda", "las " + quedan + " que te quedan")} hoy.`) + " " : ""}Toca un cuadrito para ver su palabra.</p>
+    <p class="small">Toca un cuadrito para ver su palabra.</p>
     ${boton ? `<div class="go">${boton}</div>` : ""}
     ${!quedan && masTarde.length ? `<p class="small">Estudia ahora ${plural(masTarde.length, "palabra que toca", "palabras que tocan")} más adelante. La que aciertes sube su escalón desde hoy; la que falles vuelve a salir hoy.</p>` : ""}
     ${r.malas.length ? `<details class="vCostaron"><summary>Te costaron ${r.malas.length}</summary><ul class="resCambios">${r.malas.map((id) => { const t = tarjetas.get(id); return t ? `<li class="resabajo"><span class="resNom">▼ ${esc(t.reverso)}</span><span class="resDe">${esc(t.frente)}</span></li>` : ""; }).join("")}</ul></details>` : ""}
