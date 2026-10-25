@@ -1471,3 +1471,30 @@ export function ritmoNivel(paquete, sucesos, nivel) {
   const fin = base >= meta ? desde : sumarDias(desde, Math.ceil((meta - base) / porDia) - 1);
   return { desde, base, meta, total: ids.length, porDia, fin, enDia: (d) => (d < ayer ? null : Math.min(meta, base + porDia * diasEntre(ayer, d))) };
 }
+
+/**
+ * La curva de 7 días de un nivel de gramática (25-Oct-2026, para la curva fija de abajo del quiz, como la del vocabulario):
+ * para cada uno de los últimos 7 días, el puntaje del nivel con la misma cuenta que progresoNiveles (la suma de los
+ * porcentajes de sus temas entre todos sus temas). «memo» (un Map) guarda los días que ya no cambian.
+ * Devuelve { dias, puntaje }.
+ */
+export function semanaNivel(paquete, sucesos, hoy, nivel, memo = new Map()) {
+  const lista = (sucesos || []).filter((e) => e && typeof e === "object").map((e) => ({ e, dia: fechaLocal(new Date(ms(e))) }));
+  const sa = lista.filter((x) => x.e.t === "sinarranque").sort((a, b) => ms(a.e) - ms(b.e)).pop();
+  if (sa && !(sa.e.deshacer === 1 || sa.e.deshacer === true)) lista.unshift({ e: { t: "sinarranque", id: "sa-retro", cuando: "2000-01-01T00:00:00Z" }, dia: "2000-01-01" });
+  const ids = (paquete.temas || []).filter((t) => t.nivel === nivel).map((t) => t.id);
+  const dias = [];
+  for (let i = 6; i >= 0; i--) dias.push(sumarDias(hoy, -i));
+  const puntaje = dias.map((dia) => {
+    const hasta = lista.filter((x) => x.dia <= dia);
+    const clave = dia + "|" + nivel + "|" + hasta.length + "|" + (sa ? ms(sa.e) : 0);
+    if (memo.has(clave)) return memo.get(clave);
+    const E = calcular(paquete, hasta.map((x) => x.e));
+    let suma = 0;
+    for (const id of ids) { const t = E.temas.get(id); if (t) suma += t.pct ?? 0; }
+    const v = ids.length ? Math.round((10 * suma) / ids.length) / 10 : 0;
+    memo.set(clave, v);
+    return v;
+  });
+  return { dias, puntaje };
+}

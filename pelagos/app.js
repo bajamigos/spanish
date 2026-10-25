@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=f4611c105b";
-import * as A from "./almacen.js?v=f4611c105b";
-import * as V from "./videos.js?v=f4611c105b";
-import * as NB from "./nube.js?v=f4611c105b";
-import * as CL from "./clases.js?v=f4611c105b";
-import { abrirPractica } from "./practica.js?v=f4611c105b";
-import * as F from "./fondo.js?v=f4611c105b";
-import * as PD from "./podcasts.js?v=f4611c105b";
+import * as N from "./nucleo.js?v=28280f2757";
+import * as A from "./almacen.js?v=28280f2757";
+import * as V from "./videos.js?v=28280f2757";
+import * as NB from "./nube.js?v=28280f2757";
+import * as CL from "./clases.js?v=28280f2757";
+import { abrirPractica } from "./practica.js?v=28280f2757";
+import * as F from "./fondo.js?v=28280f2757";
+import * as PD from "./podcasts.js?v=28280f2757";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -251,7 +251,8 @@ function poner(html, { titulo: t = "Pelagos", pie = "", nav = "", conserva = fal
   ponerSignoAyuda();
   vestir(vista);
   document.body.classList.toggle("conandrea", !!vista.querySelector(".hoy.confoto"));
-  document.body.classList.toggle("qaQuiz", !!vista.querySelector(".kw.conAtlas"));      // quiz con Atlas: el ‹ va junto al nivel      // con el retrato al fondo, la página entera se oscurece
+  document.body.classList.toggle("qaQuiz", !!vista.querySelector(".kw.conAtlas"));
+  document.body.classList.toggle("conCurva", !!vista.querySelector(".tjCurva"));      // la curva fija de abajo no tapa lo último      // quiz con Atlas: el ‹ va junto al nivel      // con el retrato al fondo, la página entera se oscurece
   if (conserva) {
     window.scrollTo(0, arriba);
     if (conFoco && $(conFoco)) $(conFoco).focus({ preventScroll: true });
@@ -332,6 +333,7 @@ const RUTAS = [
   [/^\/tutoras$/, (o) => (mudo() || A.esAmigo() ? ir("/gramatica", true) : verTutoras(o))],      // en Limpio (y en el modo amigo) no hay tutoras
   [/^\/tutoras\/(\d+)$/, (o, id) => (mudo() || A.esAmigo() ? ir("/gramatica", true) : verTutora(o, id))],
   [/^\/vocabulario$/, verTarjetas],
+  [/^\/vocabulario\/tanda$/, verTarjetas],          // 25-Oct-2026: en Limpio, contestar va aparte de la página de inicio
   [/^\/vocabulario\/acervo$/, verLista],
   [/^\/vocabulario\/agregar$/, verAgregar],
   [/^\/ajustes$/, verAjustes],
@@ -1060,10 +1062,17 @@ const LETRAS_DIA = ["D", "L", "M", "M", "J", "V", "S"];
  * La curva del quiz de vocabulario (su elección del 22-Oct-2026, boceto 3 con un punto por día): tu puntaje de hoy
  * en grande, cuánto subió desde ayer y los últimos 7 días, uno por punto. Se vuelve a pintar con cada palabra.
  */
-function curvaVocab() {
+const semanaNivelMemo = new Map();
+/** La curva fija de abajo en gramática (25-Oct-2026): tu puntaje del nivel en los últimos 7 días, como la del vocabulario. */
+function curvaNivel(nivel) {
+  if (!P || !E || !nivel) return "";
+  const S = N.semanaNivel(P, A.sucesos(), N.fechaLocal(new Date()), nivel, semanaNivelMemo);
+  return curvaVocab({ S, etiqueta: nivel, de: "de " + nivel });
+}
+function curvaVocab({ S: S0 = null, etiqueta = "dominio", de = "del vocabulario" } = {}) {
   if (!P || !E) return "";
   const hoy = N.fechaLocal(new Date());
-  const S = N.semanaVocab(P, A.sucesos(), hoy, E, semanaMemo);
+  const S = S0 || N.semanaVocab(P, A.sucesos(), hoy, E, semanaMemo);
   const v = S.puntaje, hoyV = v[6], dif = Math.round((hoyV - v[5]) * 10) / 10;
   const W = 280, H = 52, X0 = 10, X1 = W - 12, Y0 = 8, Y1 = 34;
   let lo = Math.min(...v), hi = Math.max(...v);
@@ -1073,9 +1082,9 @@ function curvaVocab() {
   const num = (x) => String(x);
   const letras = S.dias.map((d, i) => (i === 6 ? "Hoy" : LETRAS_DIA[new Date(d + "T12:00:00").getDay()]));
   const nombres = S.dias.map((d, i) => (i === 6 ? "hoy" : DIAS_LARGOS_V[new Date(d + "T12:00:00").getDay()]));
-  const dicho = `Tu dominio del vocabulario: ${num(hoyV)} por ciento, ${dif >= 0 ? "subió " + num(dif) : "bajó " + num(-dif)} desde ayer. Los últimos siete días: ${v.map((y, i) => nombres[i] + " " + num(y)).join(", ")}.`;
+  const dicho = `Tu dominio ${de}: ${num(hoyV)} por ciento, ${dif >= 0 ? "subió " + num(dif) : "bajó " + num(-dif)} desde ayer. Los últimos siete días: ${v.map((y, i) => nombres[i] + " " + num(y)).join(", ")}.`;
   return `<aside class="tjCurva" aria-label="Tu curva de dominio">
-    <p class="tjCurvaNum"><b>${esc(num(hoyV))}%</b><span>dominio</span><span class="${dif > 0 ? "si" : dif < 0 ? "no" : ""}">${dif > 0 ? "+" : dif < 0 ? "−" : "±"}${esc(num(Math.abs(dif)))} hoy</span></p>
+    <p class="tjCurvaNum"><b>${esc(num(hoyV))}%</b><span>${esc(etiqueta)}</span><span class="${dif > 0 ? "si" : dif < 0 ? "no" : ""}">${dif > 0 ? "+" : dif < 0 ? "−" : "±"}${esc(num(Math.abs(dif)))} hoy</span></p>
     <svg class="tjCurvaSvg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="${esc(dicho)}">
       <path class="tjCurvaArea" d="M${pts.join(" L")} L${X1},${Y1 + 4} L${X0},${Y1 + 4} Z"></path>
       <path class="tjCurvaLinea" d="M${pts.join(" L")}"></path>
@@ -1655,8 +1664,13 @@ function verTarjetas(o) {
   if (adelanto && adelanto.dia !== hoy) adelanto = null;                                  // la tanda es de hoy nada más
   const restan = adelanto ? adelanto.ids.filter((id) => { const s = E.tarjetas.get(id); return s && !s.quitada && !(s.ultima && s.ultima >= adelanto.desde); }) : [];
   if (adelanto && !restan.length) adelanto = null;
+  const limpio = ambiente() === "limpio", enTanda = /^#\/vocabulario\/tanda/.test(window.location.hash);
+  if (limpio && enTanda && !dia.pendientes.length && !restan.length) return ir("/vocabulario", true);
+  // En Limpio (25-Oct-2026, igual que gramática): primero la página de inicio, con «Empezar tarjetas».
+  if (limpio && !enTanda && (dia.pendientes.length || restan.length)) return verInicioVocab(o, dia, restan);
   if (!dia.pendientes.length && !restan.length) {
     const masTarde = N.tarjetasAdelante(P, E, hoy);
+    if (limpio) return verFinalVocab(o, dia, masTarde);
     // El letrero «Vocabulario en cero · Hoy repasaste…» se quitó el 22-Oct-2026 (su pedido): el cuadro ya lo dice.
     return poner(conFondo(`
     ${entradas("vocabulario", "quiz")}
@@ -1682,22 +1696,30 @@ function verTarjetas(o) {
   const total = enAdelanto ? adelanto.ids.length : dia.hechasHoy + dia.pendientes.length;
   const faltan = (enAdelanto ? "Adelanto: " : "") + (cola.length === 1 ? (enAdelanto ? "falta 1" : "Falta 1") : (enAdelanto ? "faltan " : "Faltan ") + cola.length);
 
+  // En Limpio: sin título ni pestañas, el mismo renglón que gramática (‹ · Voc · círculos de hoy), la rayita bajo el
+  // círculo del grupo de esta tarjeta, el ↶ Deshacer en la esquina de la tarjeta y tus palabras escondibles.
+  const g = dia.grupos, grupoDe = g.nuevas.includes(c.id) ? 0 : g.vencidas.includes(c.id) ? 1 : g.falladas.includes(c.id) ? 2 : -1;
+  const cabeza = limpio
+    ? `<div class="lineaG"><div class="gFila conNivel"><a class="ub atras qaAtras" href="#/vocabulario" aria-label="Volver al inicio de Vocabulario">‹</a><span class="qaNivel">Voc</span><span class="qaEspacio"></span><span class="hoyFila"><span>Hoy</span>${circulosDeHoy("medio", [g.nuevas.length, g.vencidas.length, g.falladas.length], "vhoy").replace(new RegExp(`class="circ g${grupoDe}"`), `class="circ g${grupoDe} cur"`)}</span></div></div>`
+    : lineaDeVocabulario(dia, c.id, antes).replace('<div class="gFila"><span></span>', `<div class="gFila">${botonDeshacerTj()}`);
+  const desTj = limpio ? botonDeshacerTj() : "";
   poner(`
-  ${entradas("vocabulario", "quiz")}
-  <section class="kw tj">
+  ${limpio ? "" : entradas("vocabulario", "quiz")}
+  <section class="kw tj${limpio ? " conAtlas" : ""}">
     <header class="hero kwh tjh">
       <div class="ratio"></div>
       ${foto ? `<img data-foto="${esc(foto.nombre)}"${foto.vocab ? ' data-vocab="1"' : ""} alt="">` : ""}
       <div class="over">
         <p class="lead sr"><span id="tjFaltan">${enAdelanto ? faltan : (cola.length === 1 ? "Falta 1" : "Faltan " + cola.length)}</span><span id="tjAviso">Dilo en español</span></p>
-        <div data-explicas>${(() => { const h = lineaDeVocabulario(dia, c.id, antes).replace('<div class="gFila"><span></span>', `<div class="gFila">${botonDeshacerTj()}`); return conMalla() ? h.replace(/<span class="lnCajas grandes"[^>]*>.*?<\/span><\/span>\s*/s, "") : h; })()}${panelExplica()}</div>
-        ${ambiente() === "limpio" ? `<div class="vMallaCab"><button type="button" class="lk vMallaBtn" id="vMallaBtn" aria-expanded="${conMalla()}">${conMalla() ? "Ocultar tus palabras" : "Ver tus palabras"}</button></div>${conMalla() ? `<div class="vMalla" id="vMalla" data-actual="${esc(c.id)}"></div>` : ""}` : ""}
+        <div data-explicas>${cabeza}${panelExplica()}</div>
+        ${limpio ? mallaHtml(c.id) : ""}
         ${renglonConLapiz("frente", c.frente, "h1", "cue", ' id="cue"')}
         ${(() => { const at = N.tarjetasAtascadas(E).get(c.id); return at ? `<p class="tjAtas">Atascada · fallada en ${at.fallos} quizzes esta semana · <button type="button" class="lk" data-v="${esc(c.id)}">Ver su ficha</button></p>` : ""; })()}
       </div>
       <div class="rule tjResp" id="tjResp" tabindex="-1" aria-live="polite" hidden>
         <ul class="exs"><li class="ex">${renglonConLapiz("reverso", c.reverso, "span", "es", ' id="vResp"')}</li></ul>
       </div>
+      ${desTj && desTj !== "<span></span>" ? `<div class="qaDeshacer">${desTj}</div>` : ""}
     </header>
     <div class="tjZona">
       <p class="tjToca" id="tjToca">Toca para ver la respuesta</p>
@@ -1759,10 +1781,15 @@ function verTarjetas(o) {
 // Todas tus tarjetas en cuadritos, de la más vieja a la más nueva (siempre en el mismo lugar). Las de hoy a todo color,
 // las demás tenues; las que ya hiciste hoy, verdes o rojas; la de ahora late. Se puede esconder (se recuerda).
 const conMalla = () => ambiente() === "limpio" && guardado("pelagos.vocMalla") !== "0";
+/** El botón para esconder o mostrar un mapa (el Atlas o tus palabras), igual en gramática y vocabulario (25-Oct-2026). */
+const botonMapa = (cual, visible, nombre) => `<div class="mapaCab"><button type="button" class="lk mapaBtn" data-mapa="${cual}" aria-expanded="${visible}">${visible ? "Ocultar ▴" : nombre + " ▾"}</button></div>`;
+const mallaHtml = (actual = "") => botonMapa("voc", conMalla(), "Ver tus palabras") + `<div class="vMalla" id="vMalla" data-actual="${esc(actual)}"${conMalla() ? "" : " hidden"}></div>`;
+let mallaArgs = null;
 let vEfecto = null;          // la última que calificaste: { id, f0, bien, t0 }, para su parpadeo
 function pintarMalla(dia, cola) {
+  mallaArgs = [dia, cola];
   const caja = $("vMalla");
-  if (!caja) return;
+  if (!caja || caja.hidden) return;
   const hoy = N.fechaLocal(new Date());
   const pend = new Set([...dia.pendientes, ...cola]);
   const como = new Map();
@@ -1797,10 +1824,17 @@ function pintarMalla(dia, cola) {
 // Tocar un cuadrito dice su palabra (no destapa la tarjeta). Ocultar / Ver tus palabras.
 document.addEventListener("click", (ev) => {
   if (!(ev.target instanceof Element)) return;
-  if (ev.target.closest("#vMallaBtn")) {
-    guardar("pelagos.vocMalla", conMalla() ? "0" : "1");
-    enTarjetaDe = null;
-    pintar();
+  const mb = ev.target.closest(".mapaBtn");
+  if (mb) {
+    // Esconder o mostrar sin volver a pintar la página (no se pierde lo que estás contestando).
+    const voc = mb.dataset.mapa === "voc", clave = voc ? "pelagos.vocMalla" : "pelagos.gramAtlas";
+    const ver = guardado(clave) === "0";
+    guardar(clave, ver ? "1" : "0");
+    const caja = voc ? $("vMalla") : $("qaMapa") || $("kwAtlas");
+    mb.setAttribute("aria-expanded", String(ver));
+    mb.textContent = ver ? "Ocultar ▴" : (voc ? "Ver tus palabras" : "Ver el Atlas") + " ▾";
+    if (caja) { caja.hidden = !ver; const dice = $("kwAtlasDice"); if (dice) dice.hidden = !ver; }
+    if (ver) { if (voc && mallaArgs) pintarMalla(...mallaArgs); else if (!voc) { pintarAtlasQuiz(); pintarAtlasInicio(); } }
     return;
   }
   const caja = $("vMalla");
@@ -1818,6 +1852,51 @@ document.addEventListener("click", (ev) => {
   el.classList.add("tocado");
   b.style.top = (el.offsetTop > 50 ? el.offsetTop - 46 : el.offsetTop + el.offsetHeight + 6) + "px";
 });
+
+/** La página de inicio de las tarjetas en Limpio (25-Oct-2026): como la de gramática. */
+function verInicioVocab(o, dia, restan) {
+  const g = dia.grupos, n = restan.length ? restan.length : dia.pendientes.length;
+  poner(conFondo(`
+  ${entradas("vocabulario", "quiz")}
+  <section class="card" id="tjInicio">
+    <h1 class="sr">Tus tarjetas de hoy</h1>
+    <div class="hoyGrande" data-explicas><p class="small">Te queda hoy</p>${circulosDeHoy("grande", [g.nuevas.length, g.vencidas.length, g.falladas.length], "vhoy")}${panelExplica()}</div>
+    ${mallaHtml()}
+    <p class="small">A todo color: ${restan.length ? "las de tu adelanto" : `las ${n} de hoy`}. Toca un cuadrito para ver su palabra.</p>
+    <div class="go"><a class="ub grande" href="#/vocabulario/tanda" id="tjEmpezar">${restan.length ? "Seguir el adelanto" : dia.hechasHoy ? "Seguir tus tarjetas" : "Empezar tarjetas"}</a></div>
+  </section>
+  ${curvaVocab()}`), { titulo: "Vocabulario · Pelagos", nav: "vocabulario", conserva: o.conserva });
+  pintarMalla(dia, restan);
+}
+/** Las de hoy, a la primera: { total, bien, malas: [ids] } — la primera calificación de hoy de cada tarjeta. */
+function hoyALaPrimera(hoy) {
+  let total = 0, bien = 0;
+  const malas = [];
+  for (const [id, s] of E.tarjetas) {
+    const h = (s.historia || []).find((x) => x.cuando && N.fechaLocal(new Date(x.cuando)) === hoy);
+    if (!h) continue;
+    total++;
+    if (h.bien) bien++; else malas.push(id);
+  }
+  return { total, bien, malas };
+}
+/** El final de la tanda en Limpio (25-Oct-2026): como el resultado de gramática. */
+function verFinalVocab(o, dia, masTarde) {
+  const hoy = N.fechaLocal(new Date()), r = hoyALaPrimera(hoy);
+  poner(conFondo(`
+  ${entradas("vocabulario", "quiz")}
+  <section class="card" id="tjCero">
+    ${barraDeshacer()}
+    ${dia.total ? (r.total ? `<h1 class="h">¡Tanda terminada! ${r.bien} de ${r.total}</h1><p class="small">A la primera: ${r.bien} de ${plural(r.total, "tarjeta", "tarjetas")} de hoy.</p>` : `<h1 class="h">Hoy no te toca nada</h1>`)
+      : `<h1 class="h">Todavía no hay vocabulario</h1><p>Cuando haya palabras en el contenido, aquí salen las de cada día.</p>`}
+    ${mallaHtml()}
+    ${r.malas.length ? `<h2 class="tdSub">Te costaron hoy</h2><ul class="resCambios">${r.malas.map((id) => { const t = tarjetas.get(id); return t ? `<li class="resabajo"><span class="resNom">▼ ${esc(t.reverso)}</span><span class="resDe">${esc(t.frente)}</span></li>` : ""; }).join("")}</ul>` : ""}
+    ${masTarde.length ? `<div class="go"><button type="button" class="ub grande" id="tjAdelantar">Adelantar ${masTarde.length}</button></div><p class="small">Estudia ahora ${plural(masTarde.length, "palabra que toca", "palabras que tocan")} más adelante. La que aciertes sube su escalón desde hoy; la que falles vuelve a salir hoy.</p>` : ""}
+    <div class="tjAvance"><h2 class="tdSub">Tu avance</h2>${graficaVocab()}</div>
+  </section>
+  ${curvaVocab()}`), { titulo: "Vocabulario · Pelagos", nav: "vocabulario", conserva: o.conserva });
+  pintarMalla(dia, []);
+}
 
 /** La «Línea C» del quiz de vocabulario: lo que queda HOY por grupo, los puntitos de esta tarjeta y tus cajas. */
 function lineaDeVocabulario(dia, id, antes) {
@@ -1938,7 +2017,7 @@ document.addEventListener("click", (ev) => {
   const hoy = N.fechaLocal(new Date()), ids = N.tarjetasAdelante(P, E, hoy);
   if (!ids.length) return;
   adelanto = { dia: hoy, desde: new Date().toISOString(), ids };
-  pintar();
+  if (ambiente() === "limpio") ir("/vocabulario/tanda"); else pintar();
 });
 
 const TANDA = 300;            // cuántas palabras se pintan de un jalón
@@ -3757,7 +3836,7 @@ function verKwiz(o) {
   <section class="card" id="lista">
     <h1 class="h">Tu plan de estudio Pelagos</h1>
     <div class="hoyGrande" data-explicas><p class="small">Te queda hoy</p>${circulosDeHoy("grande")}${panelExplica()}</div>
-    ${ambiente() === "limpio" ? `<div class="qaMapa kwAtlas" id="kwAtlas" data-nivel="${esc(nivelDelPlan(deLista))}"></div><p class="small" id="kwAtlasDice"></p>` : ""}
+    ${ambiente() === "limpio" ? `${botonMapa("gram", conAtlasVisible(), "Ver el Atlas")}<div class="qaMapa kwAtlas" id="kwAtlas" data-nivel="${esc(nivelDelPlan(deLista))}"${conAtlasVisible() ? "" : " hidden"}></div><p class="small" id="kwAtlasDice"${conAtlasVisible() ? "" : " hidden"}></p>` : ""}
     <div class="conCuadro">${deLista.length && !lista.abierto ? `<button type="button" class="ub grande" data-kwiz='{"tipo":"lista"}'>Empezar quiz</button>`
       : abierto ? `<a class="ub grande" href="#${QUIZ}/${esc(abierto.id)}">Seguir el quiz</a>` : "<span></span>"}${conCuadro(hoy)}</div>
     ${abierto ? `<p class="small">Tienes un quiz a medias. Lo que ya contestaste está guardado.${deLista.length && !lista.abierto ? ` <a href="#${QUIZ}/${esc(abierto.id)}">Seguirlo</a>` : ""}</p>` : ""}
@@ -3785,7 +3864,8 @@ function verKwiz(o) {
         <span class="nm ancho">${esc(c.nombre)}</span><span class="pc">${N.TOTAL}</span><span class="sm ancho">Solo sus temas: ${c.con} con preguntas</span></button>`).join("")}
     </div>
     <p class="small">Hay ${plural(banco.length, "pregunta revisada", "preguntas revisadas")} de ${plural(temasBanco.size, "tema", "temas")}.</p>
-  </section>` : ""}`), { titulo: "Quiz de gramática · Pelagos", nav: "gramatica", conserva: o.conserva });
+  </section>` : ""}
+  ${ambiente() === "limpio" ? curvaNivel(nivelDelPlan(deLista)) : ""}`), { titulo: "Quiz de gramática · Pelagos", nav: "gramatica", conserva: o.conserva });
   pintarAtlasInicio();
   const ats = $("atorados");
   if (ats) ats.addEventListener("click", (ev) => {
@@ -3931,7 +4011,7 @@ function lineaDeGramatica(k, temaActual) {
   // 25-Oct-2026 (más compacto): el ‹ junto al nivel y sin las cajas de días (el Atlas ya enseña cómo se reparten).
   return h.replace('<div class="gFila">', `<div class="gFila conNivel"><a class="ub atras qaAtras" href="#/" aria-label="Volver al Tablero">‹</a><span class="qaNivel">${esc(nv)}</span>`)
     .replace(/<span class="lnCajas grandes"[^>]*>.*?<\/span><\/span>\s*/s, "")
-    .replace(/<\/div>\s*$/, `<div class="qaMapa" id="qaMapa" data-nivel="${esc(nv)}" data-tema="${temaActual}" data-kid="${esc(k.id)}"></div></div>`);
+    .replace(/<\/div>\s*$/, `${botonMapa("gram", conAtlasVisible(), "Ver el Atlas")}<div class="qaMapa" id="qaMapa" data-nivel="${esc(nv)}" data-tema="${temaActual}" data-kid="${esc(k.id)}"${conAtlasVisible() ? "" : " hidden"}></div></div>`);
 }
 
 // ---------------------------------------------------------------- El Atlas en el quiz (su idea del 25-Oct-2026)
@@ -3939,6 +4019,7 @@ function lineaDeGramatica(k, temaActual) {
 // en el orden de las lecciones), así cada tema está siempre en el mismo lugar. Los temas de este quiz llevan borde, el de
 // la pregunta late, y al contestar el cuadro cambia de color y sube (o baja) su nombre con el cambio de porcentaje.
 const atlasEnQuiz = (k) => ambiente() === "limpio" && k && k.tipo !== "tutora";
+const conAtlasVisible = () => guardado("pelagos.gramAtlas") !== "0";
 // Las cajas de los temas se mueven al cerrar el quiz (al terminarlo o dejarlo). El Atlas enseña desde ya cómo quedan:
 // se calcula como si dejaras el quiz en este momento, con lo que ya contestaste.
 let proyCache = { n: -1, kid: null, E: null };
@@ -4049,7 +4130,7 @@ function nivelDelPlan(deLista) {
 }
 function pintarAtlasInicio() {
   const caja = $("kwAtlas");
-  if (!caja) return;
+  if (!caja || caja.hidden) return;
   const marcar = new Set(kwMarcar === "plan" ? N.listaDeEstudio(P, E).temas : temasDeGrupo(Number(kwMarcar.slice(3)) || 0));
   armarAtlas(caja, caja.dataset.nivel, (id) => tonoDe(E, id), marcar);
   marcarGrupo(caja.closest("section"), kwMarcar);
@@ -4068,7 +4149,7 @@ document.addEventListener("click", (ev) => {
 
 function pintarAtlasQuiz() {
   const caja = $("qaMapa");
-  if (!caja) return;
+  if (!caja || caja.hidden) return;
   const nivel = caja.dataset.nivel, actual = Number(caja.dataset.tema), kid = caja.dataset.kid;
   const k = E.kwizzes.get(kid);
   // Marcados: los temas de este quiz, o (si tocaste los círculos de hoy) los de hoy. Ver qaMarcar.
@@ -4291,6 +4372,7 @@ function verPregunta(o, kid) {
         <span id="malaHecho" hidden></span>
       </div>
     </div>
+    ${atlasEnQuiz(k) ? curvaNivel((porId.get(q.tema) || {}).nivel) : ""}
   </section>`),
   {
     titulo: `Pregunta ${sig.orden} de ${sig.total} · Pelagos`, nav: "gramatica",
@@ -4580,7 +4662,8 @@ function verResultado(o, kid) {
     ${renglon("Entran", cambios.entran, cambios.salen.length ? "Ninguno nuevo." : "Ninguno: no hubo lugar.")}
     ${renglon("Se quedan", cambios.quedan, "Ninguno.")}
     <p class="small">Sale el tema que aciertas. El que fallas se queda hasta que lo aciertes dos veces seguidas.</p>
-  </section>` : ""}`),
+  </section>` : ""}
+  ${atlasEnQuiz(k) ? curvaNivel(nivelDelPlan(temas)) : ""}`),
   { titulo: "Resultado del quiz · Pelagos", nav: "gramatica", conserva: o.conserva, pie: "<p>El número junto al porcentaje es cuánto se movió el tema en este quiz.</p>" });
   fondoDelKwiz(k);     // en el Kwiz con la tutora, el resultado se queda con la escena donde llegaste
   pintarAtlasResultado(k);
