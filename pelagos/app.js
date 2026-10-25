@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=0d1587bd70";
-import * as A from "./almacen.js?v=0d1587bd70";
-import * as V from "./videos.js?v=0d1587bd70";
-import * as NB from "./nube.js?v=0d1587bd70";
-import * as CL from "./clases.js?v=0d1587bd70";
-import { abrirPractica } from "./practica.js?v=0d1587bd70";
-import * as F from "./fondo.js?v=0d1587bd70";
-import * as PD from "./podcasts.js?v=0d1587bd70";
+import * as N from "./nucleo.js?v=d683d652e5";
+import * as A from "./almacen.js?v=d683d652e5";
+import * as V from "./videos.js?v=d683d652e5";
+import * as NB from "./nube.js?v=d683d652e5";
+import * as CL from "./clases.js?v=d683d652e5";
+import { abrirPractica } from "./practica.js?v=d683d652e5";
+import * as F from "./fondo.js?v=d683d652e5";
+import * as PD from "./podcasts.js?v=d683d652e5";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -994,37 +994,75 @@ function progresoHoy() {
 const MESES_CHICOS = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
 const fechaChica = (d) => `${Number(d.slice(8, 10))} ${MESES_CHICOS[Number(d.slice(5, 7)) - 1]}`;
 /** La gráfica de avance (como la de Kwiziq): rejilla de 0 a 100%, el área verde de tu puntaje y la línea de lo cubierto.
- *  d: { dias, linea: [%], area: [%] }, rotulos: { linea, area }, etiqueta: lo que dice el lector de pantalla, nums: el pie. */
-function graficaAvance(d, rotulos, etiqueta, nums) {
+ *  d: { dias, linea: [%], area: [%] }, rotulos: { linea, area }, etiqueta: lo que dice el lector de pantalla, nums: el pie.
+ *  24-Oct-2026 (su elección, la «B»): hoy va a ¾ del ancho y el último cuarto son los días que vienen. Con «rt» (el ritmo
+ *  del plan, de N.ritmoVocab o N.ritmoNivel) sale la línea punteada, la raya del 100% y dos renglones: cuándo terminas
+ *  a ese ritmo y cuánto vas adelante o atrás. rt: { r, real, denom, unidad, todo } (denom: el 100% de la gráfica). */
+function graficaAvance(d, rotulos, etiqueta, nums, rt = null) {
   const n = d.dias.length, W = 340, H = 200, iz = 34, de = 330, ar = 12, ab = 170;
   if (!n) return "";
-  const x = (i) => Math.round((n < 2 ? de : iz + (i * (de - iz)) / (n - 1)) * 10) / 10;
+  const ult = n - 1, d0 = d.dias[0], hoyD = d.dias[ult];
+  const pasados = N.diasEntre(d0, hoyD), futuros = Math.max(1, Math.round(Math.max(1, pasados) / 3)), dN = N.sumarDias(hoyD, futuros);
+  const xHoy = Math.round((iz + (de - iz) * 0.75) * 10) / 10;
+  const x = (dia) => Math.round((pasados > 0 ? iz + ((xHoy - iz) * N.diasEntre(d0, dia)) / pasados : xHoy) * 10) / 10;
+  const xf = (dia) => Math.round((xHoy + ((de - xHoy) * N.diasEntre(hoyD, dia)) / futuros) * 10) / 10;     // los días que vienen
+  const xx = (dia) => (dia <= hoyD ? x(dia) : xf(dia));
   const y = (v) => Math.round((ab - (Math.min(100, v) / 100) * (ab - ar)) * 10) / 10;
-  const ult = n - 1;
-  const area = `${x(0)},${ab} ${d.area.map((v, i) => x(i) + "," + y(v)).join(" ")} ${x(ult)},${ab}`;
+  const area = `${x(d0)},${ab} ${d.area.map((v, i) => x(d.dias[i]) + "," + y(v)).join(" ")} ${x(hoyD)},${ab}`;
   const rejilla = [0, 25, 50, 75, 100].map((v) => `<line class="pgRej" x1="${iz}" y1="${y(v)}" x2="${de}" y2="${y(v)}"/><text class="pgEje" x="${iz - 4}" y="${y(v) + 4}" text-anchor="end">${v}%</text>`).join("");
+  let ritmo = "", meta = "", texto = "";
+  if (rt && rt.r) {
+    const pts = [];
+    for (let dia = d0 < N.sumarDias(rt.r.desde, -1) ? N.sumarDias(rt.r.desde, -1) : d0; dia <= dN; dia = N.sumarDias(dia, 1)) {
+      const c = rt.r.enDia(dia);
+      if (c !== null) pts.push(xx(dia) + "," + y((100 * c) / rt.denom));
+    }
+    if (pts.length > 1) ritmo = `<polyline class="pgRitmo" points="${pts.join(" ")}"/>`;
+    meta = `<line class="pgMeta" x1="${iz}" y1="${y((100 * (rt.r.meta || rt.r.total)) / rt.denom)}" x2="${de}" y2="${y((100 * (rt.r.meta || rt.r.total)) / rt.denom)}"/>`;
+    const tope = rt.r.meta || rt.r.total, aHoy = rt.r.enDia(hoyD), dif = rt.real - aHoy;
+    const linea1 = rt.real >= tope ? `Ya cubriste ${rt.todo}.`
+      : `Ritmo del plan (${rt.r.porDia} al día desde el ${fechaChica(rt.r.desde)}): ${rt.todo} el <b>${fechaChica(rt.r.fin)}</b>.`;
+    const linea2 = rt.real >= tope ? "" : dif === 0 ? `<br>Hoy vas justo al ritmo (${rt.real} de ${aHoy}).`
+      : `<br>Hoy vas <b class="${dif > 0 ? "rtSi" : "rtNo"}">${Math.abs(dif)} ${rt.unidad} ${dif > 0 ? "adelante" : "atrás"}</b> (${rt.real} de ${aHoy}).`;
+    texto = `<p class="pgRitmoTxt">${linea1}${linea2}</p>`;
+  }
   return `<figure class="pg">
-    <div class="pgLey"><span><i class="pgLLinea" aria-hidden="true"></i>${rotulos.linea}</span><span><i class="pgLArea" aria-hidden="true"></i>${rotulos.area}</span></div>
+    <div class="pgLey"><span><i class="pgLLinea" aria-hidden="true"></i>${rotulos.linea}</span><span><i class="pgLArea" aria-hidden="true"></i>${rotulos.area}</span>${ritmo ? `<span><i class="pgLRitmo" aria-hidden="true"></i>Ritmo</span>` : ""}</div>
     <svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="${esc(etiqueta)}">
       ${rejilla}
+      <rect class="pgFuturo" x="${xHoy}" y="${ar}" width="${de - xHoy}" height="${ab - ar}"/>
+      ${meta}
       <polygon class="pgArea" points="${area}"/>
-      <polyline class="pgLinea" points="${d.linea.map((v, i) => x(i) + "," + y(v)).join(" ")}"/>
-      ${d.linea.map((v, i) => `<circle class="pgPunto" cx="${x(i)}" cy="${y(v)}" r="${i === ult ? 5 : 3}"/>`).join("")}
-      ${d.linea.map((v, i) => puntoTip(x(i), y(v), `${fechaTip(d.dias[i], d.dias[ult])} · ${rotulos.linea}: ${v}% · ${rotulos.area}: ${d.area[i]}%`)).join("")}
-      ${n > 1 ? `<text class="pgEje" x="${x(0)}" y="${H - 8}" text-anchor="start">${fechaChica(d.dias[0])}</text>` : ""}
-      <text class="pgEje" x="${x(ult)}" y="${H - 8}" text-anchor="end">Hoy</text>
+      ${ritmo}
+      <polyline class="pgLinea" points="${d.linea.map((v, i) => x(d.dias[i]) + "," + y(v)).join(" ")}"/>
+      ${d.linea.map((v, i) => `<circle class="pgPunto" cx="${x(d.dias[i])}" cy="${y(v)}" r="${i === ult ? 5 : 3}"/>`).join("")}
+      ${d.linea.map((v, i) => puntoTip(x(d.dias[i]), y(v), `${fechaTip(d.dias[i], hoyD)} · ${rotulos.linea}: ${v}% · ${rotulos.area}: ${d.area[i]}%`)).join("")}
+      <line class="pgHoy" x1="${xHoy}" y1="${ar - 4}" x2="${xHoy}" y2="${ab}"/>
+      ${n > 1 ? `<text class="pgEje" x="${x(d0)}" y="${H - 14}" text-anchor="start">${fechaChica(d0)}</text>` : ""}
+      <text class="pgEje pgEjeHoy" x="${xHoy}" y="${H - 14}" text-anchor="middle">Hoy</text>
+      <text class="pgEje" x="${de}" y="${H - 14}" text-anchor="end">${fechaChica(dN)}</text>
     </svg>
+    ${texto}
     <figcaption class="pgNums">${nums}</figcaption>
   </figure>`;
+}
+let ritmoCache = new Map();
+/** El ritmo del plan, guardado mientras no cambien tus sucesos (calcularlo cuesta: recorre tus sucesos dos veces). */
+function ritmoDe(clave, fn) {
+  const k = N.fechaLocal(new Date()) + "|" + A.sucesos().length + "|" + clave;
+  if (!ritmoCache.has(k)) { if (ritmoCache.size > 20) ritmoCache = new Map(); ritmoCache.set(k, fn()); }
+  return ritmoCache.get(k);
 }
 /** La gráfica de un nivel de gramática: temas cubiertos y tu puntaje del nivel. */
 function graficaNivel(nivel) {
   const R = progresoHoy(), X = R.niveles[nivel];
   if (!X) return "";
   const u = R.dias.length - 1, c = X.cubiertos[u], p = X.puntaje[u];
+  const r = ritmoDe("nivel:" + nivel, () => N.ritmoNivel(P, A.sucesos(), nivel));
+  const rt = r ? { r, real: X.n[u], denom: X.total, unidad: "temas", todo: r.meta === r.total ? "todo " + nivel : `los ${r.meta} temas con preguntas` } : null;
   return graficaAvance({ dias: R.dias, linea: X.cubiertos, area: X.puntaje }, { linea: "Temas cubiertos", area: "Tu puntaje" },
     `${nivel}: has cubierto ${X.n[u]} de ${X.total} temas (${c}%). Tu puntaje del nivel: ${p}%. Desde el ${fechaChica(R.dias[0])}: cubiertos de ${X.cubiertos[0]}% a ${c}%, puntaje de ${X.puntaje[0]}% a ${p}%.`,
-    `<p><span class="tdGrande">${c}%</span><span class="small">cubiertos · ${X.n[u]} de ${X.total} temas</span></p><p><span class="tdGrande si">${p}%</span><span class="small">tu puntaje del nivel</span></p>`);
+    `<p><span class="tdGrande">${c}%</span><span class="small">cubiertos · ${X.n[u]} de ${X.total} temas</span></p><p><span class="tdGrande si">${p}%</span><span class="small">tu puntaje del nivel</span></p>`, rt);
 }
 let vocCache = null;
 function progresoVocabHoy() {
@@ -1070,35 +1108,24 @@ function graficaVocab() {
   const V = progresoVocabHoy();
   if (!V.dias.length) return "";
   const u = V.dias.length - 1, c = V.vistas[u], p = V.puntaje[u];
-  return graficaAvance({ dias: V.dias, linea: V.vistas, area: V.puntaje }, { linea: "Tarjetas vistas", area: "Tu puntaje" },
+  const r = ritmoDe("vocab", () => N.ritmoVocab(A.sucesos(), V.total));
+  const rt = r ? { r, real: V.n[u], denom: V.total, unidad: "palabras", todo: "todas" } : null;
+  return graficaAvance({ dias: V.dias, linea: V.vistas, area: V.puntaje }, { linea: "Palabras vistas", area: "Tu dominio" },
     `Vocabulario: has visto ${V.n[u]} de tus ${V.total} tarjetas (${c}%). Tu puntaje: ${p}%. Desde el ${fechaChica(V.dias[0])}: vistas de ${V.vistas[0]}% a ${c}%, puntaje de ${V.puntaje[0]}% a ${p}%.`,
-    `<p><span class="tdGrande">${c}%</span><span class="small">vistas · ${V.n[u]} de ${V.total} tarjetas</span></p><p><span class="tdGrande si">${p}%</span><span class="small">tu puntaje</span></p>`);
+    `<p><span class="tdGrande">${c}%</span><span class="small">vistas · ${V.n[u]} de ${V.total} palabras</span></p><p><span class="tdGrande si">${p}%</span><span class="small">tu dominio</span></p>`, rt);
 }
 function seccionTendencias() {
   if (!P || !E) return "";
   // ---- Los últimos 7 días.
   const T = tendenciasHoy();
-  const dif = (a, b) => { const d = b - a; return d > 0 ? "+" + d : d < 0 ? "−" + Math.abs(d) : "±0"; };
   const temas = (l, vacio) => (l.length ? `<div class="tdTemas">${l.map((x) => pistaTema(x, T.metaPct)).join("")}</div>` : `<p class="small">${vacio}</p>`);
-  const caja = (k, nombre) => {
-    const s = T.cajas[k], a = T.cajasBase[k], b = s[s.length - 1];
-    return `<div class="tdCaja"><p class="tdFila"><b>Caja de ${nombre}</b><b>${a} → ${b} <span class="tdGris">(${dif(a, b)})</span></b></p>
-      ${lineaTend(s, T.dias, "c" + k, `Tarjetas en la caja de ${nombre} cada día: ${s.join(", ")}.`)}</div>`;
-  };
-  const palabra = (x, texto) => {
-    const c = tarjetas.get(x.id), sv = E.tarjetas.get(x.id);
-    if (!c) return "";
-    const v = N.tarjetaVista(c, sv);
-    return `<button type="button" class="tdPalabra" data-v="${esc(x.id)}"><span lang="es-MX">${esc(v.reverso)}</span><span class="tdGris">${texto(x)}</span></button>`;
-  };
-  const cajaDe = (e) => (e < 0 ? "nueva" : CAJA_DIAS[e]);
   return `<section class="card tend" id="tendencias" aria-labelledby="tendT">
     <h2 id="tendT">Tu avance</h2>
     <h3 class="tdSub">Gramática por nivel</h3>
     ${avanceNivel("tdGrafNivel")}
     <h3 class="tdSub">Vocabulario</h3>
     ${graficaVocab()}
-    <p class="small">La línea es qué parte de tu mazo ya viste${E.reinicioTj ? " desde el reinicio" : ""}; lo verde, qué tan arriba van tus tarjetas en la escalera (la caja de 75 días es 100%; las que no has visto cuentan 0).</p>
+    <p class="small">La línea es qué parte de tus palabras ya viste${E.reinicioTj ? " desde el reinicio" : ""}; lo verde, qué tan arriba van tus palabras en la escalera (la caja de 75 días es 100%; las que no has visto cuentan 0).</p>
     <details class="tdDet" data-tdet="subieron"${tendAbiertas.has("subieron") ? " open" : ""}>
       <summary><h3 class="tdSub">Los que más subieron <span class="tdGris">· ${T.subieron.length} en 7 días</span></h3></summary>
       <p class="small">Aro: hace 7 días. Punto: hoy. Raya: tu meta, ${T.metaPct}%.</p>
@@ -1107,17 +1134,6 @@ function seccionTendencias() {
     <details class="tdDet" data-tdet="bajaron"${tendAbiertas.has("bajaron") ? " open" : ""}>
       <summary><h3 class="tdSub">Los que más bajaron <span class="tdGris">· ${T.bajaron.length} en 7 días</span></h3></summary>
       ${temas(T.bajaron, "Ninguno bajó esta semana.")}
-    </details>
-    <h3 class="tdSub">Vocabulario: tus cajas grandes</h3>
-    ${caja(5, "75 días")}${caja(4, "30 días")}
-    <p class="small">Las que suben a la de 75 vienen de la de 30: si la de 30 baja mientras la de 75 sube, vas bien.</p>
-    <details class="tdDet" data-tdet="quedaron"${tendAbiertas.has("quedaron") ? " open" : ""}>
-      <summary><h3 class="tdSub">Se te quedaron <span class="tdGris">· ${T.subieronCaja} subieron de caja</span></h3></summary>
-      ${T.quedaron.length ? `<div class="tdPalabras">${T.quedaron.map((x) => palabra(x, (y) => "ya va a " + cajaDe(y.ahora))).join("")}</div>` : `<p class="small">Ninguna esta semana.</p>`}
-    </details>
-    <details class="tdDet" data-tdet="olvidadas"${tendAbiertas.has("olvidadas") ? " open" : ""}>
-      <summary><h3 class="tdSub">Se te olvidaron <span class="tdGris">· ${T.olvidadasN}</span></h3></summary>
-      ${T.olvidadas.length ? `<div class="tdPalabras">${T.olvidadas.map((x) => palabra(x, (y) => `de ${cajaDe(y.antes)} a ${cajaDe(y.ahora)}`)).join("")}</div>` : `<p class="small">Ninguna. ¡Así se hace!</p>`}
     </details>
   </section>`;
 }
@@ -1639,7 +1655,7 @@ function verTarjetas(o) {
     <section class="card" id="tjCero">
       ${dia.total ? `<h1 class="sr">Vocabulario en cero</h1>` : `<h1 class="h">Todavía no hay vocabulario</h1><p>Cuando haya palabras en el contenido, aquí salen las de cada día.</p>`}
       <div class="conCuadro">${masTarde.length ? `<button type="button" class="ub grande" id="tjAdelantar">Adelantar ${masTarde.length}</button>` : "<span></span>"}<div class="unCuadro" role="list" aria-label="Tu vocabulario de hoy">${cuadroVocabulario(hoy)}</div></div>
-      ${curvaVocab().replace('class="tjCurva"', 'class="tjCurva enCero"')}
+      <div class="tjAvance"><h2 class="tdSub">Tu avance</h2>${graficaVocab()}</div>
       ${masTarde.length ? `<p class="small">Estudia ahora ${plural(masTarde.length, "palabra que toca", "palabras que tocan")} más adelante. La que aciertes sube su escalón desde hoy; la que falles vuelve a salir hoy.</p>` : ""}
     </section>`), { titulo: "Quiz de vocabulario · Pelagos", nav: "vocabulario", conserva: o.conserva });
     return;

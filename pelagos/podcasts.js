@@ -4,8 +4,8 @@
 // apagada, y con Media Session sale en la pantalla bloqueada con sus botones.
 // Lo que escuchas se apunta como suceso «pod» (cada 2 minutos de escucha, al pausar y al terminar): de ahí salen
 // «dónde te quedaste» (en cualquier aparato) y los minutos que suman a tu Escucha, también si lo escuchas a medias.
-import * as N from "./nucleo.js?v=0d1587bd70";
-import * as A from "./almacen.js?v=0d1587bd70";
+import * as N from "./nucleo.js?v=d683d652e5";
+import * as A from "./almacen.js?v=d683d652e5";
 
 const PC = "https://static.pocketcasts.com/discover/images/400/";
 export const PROGRAMAS = [
