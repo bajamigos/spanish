@@ -1,12 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=be988122c7";
-import * as A from "./almacen.js?v=be988122c7";
-import * as V from "./videos.js?v=be988122c7";
-import * as NB from "./nube.js?v=be988122c7";
-import * as CL from "./clases.js?v=be988122c7";
-import { abrirPractica } from "./practica.js?v=be988122c7";
-import * as F from "./fondo.js?v=be988122c7";
-import * as PD from "./podcasts.js?v=be988122c7";
+import * as N from "./nucleo.js?v=9ea6bf3c2b";
+import * as A from "./almacen.js?v=9ea6bf3c2b";
+import * as V from "./videos.js?v=9ea6bf3c2b";
+import * as NB from "./nube.js?v=9ea6bf3c2b";
+import * as CL from "./clases.js?v=9ea6bf3c2b";
+import { abrirPractica } from "./practica.js?v=9ea6bf3c2b";
+import * as F from "./fondo.js?v=9ea6bf3c2b";
+import * as PD from "./podcasts.js?v=9ea6bf3c2b";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -1799,7 +1799,7 @@ function verTarjetas(o) {
   // círculo del grupo de esta tarjeta, el ↶ Deshacer en la esquina de la tarjeta y tus palabras escondibles.
   const g = dia.grupos, grupoDe = g.nuevas.includes(c.id) ? 0 : g.vencidas.includes(c.id) ? 1 : g.falladas.includes(c.id) ? 2 : -1;
   const cabeza = limpio
-    ? `<div class="lineaG"><div class="gFila conNivel"><button type="button" class="ub menuBtn qaAtras" aria-label="Menú" aria-haspopup="dialog" aria-expanded="false">☰</button><span class="qaNivel">Voc</span><span class="qaEspacio"></span><span class="hoyFila"><span>Hoy</span>${circulosDeHoy("medio", [g.nuevas.length, g.vencidas.length, g.falladas.length], "vhoy").replace(new RegExp(`class="circ g${grupoDe}"`), `class="circ g${grupoDe} cur"`)}</span></div></div>`
+    ? `<div class="lineaG"><div class="gFila conNivel"><button type="button" class="ub menuBtn qaAtras" aria-label="Menú" aria-haspopup="dialog" aria-expanded="false">☰</button><span class="qaNivel">Vocab</span><span class="qaEspacio"></span><span class="hoyFila"><span>Hoy</span>${circulosDeHoy("medio", [g.nuevas.length, g.vencidas.length, g.falladas.length], "vhoy").replace(new RegExp(`class="circ g${grupoDe}"`), `class="circ g${grupoDe} cur"`)}</span></div></div>`
     : lineaDeVocabulario(dia, c.id, antes).replace('<div class="gFila"><span></span>', `<div class="gFila">${botonDeshacerTj()}`);
   const desTj = limpio ? botonDeshacerTj() : "";
   poner(`

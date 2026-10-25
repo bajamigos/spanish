@@ -971,3 +971,16 @@
 {"t":"tj","id":"tmvoegfod3mhiu7","tarjeta":"ak-1777314566805","cuando":"2026-10-25T22:28:52.189Z","bien":1,"modo":"tocar","aparato":"telefono-jr4ti"}
 {"t":"r","id":"rmvoeo5f1tmnc6d","kwiz":"kmvoebrhekkid17","p":"6961-02","tema":6961,"cuando":"2026-10-25T22:34:52.144Z","bien":1,"modo":"tocar","escrito":"apaguen","pista":0,"aparato":"telefono-jr4ti"}
 {"t":"r","id":"rmvoeon6sthisad","kwiz":"kmvoebrhekkid17","p":"6752-05","tema":6752,"cuando":"2026-10-25T22:35:15.173Z","bien":1,"modo":"tocar","escrito":"Cuál","pista":0,"aparato":"telefono-jr4ti"}
+{"t":"kwiz","id":"kmvoewcze1wbbo3","tipo":"lista","cuaderno":null,"tema":null,"cuando":"2026-10-25T22:41:15.194Z","preguntas":["6994-07","7000-03","6983-07","6979-07","6989-03"],"aparato":"telefono-jr4ti"}
+{"t":"r","id":"rmvoex3n7adr8an","kwiz":"kmvoewcze1wbbo3","p":"6994-07","tema":6994,"cuando":"2026-10-25T22:41:49.748Z","bien":1,"modo":"tocar","escrito":"invites","pista":0,"aparato":"telefono-jr4ti"}
+{"t":"r","id":"rmvoexsr6pe06p4","kwiz":"kmvoewcze1wbbo3","p":"7000-03","tema":7000,"cuando":"2026-10-25T22:42:22.291Z","bien":1,"modo":"decir","escrito":null,"pista":1,"aparato":"telefono-jr4ti"}
+{"t":"r","id":"rmvoeyi6rgjh1of","kwiz":"kmvoewcze1wbbo3","p":"6983-07","tema":6983,"cuando":"2026-10-25T22:42:55.251Z","bien":1,"modo":"tocar","escrito":"advirtamos","pista":0,"aparato":"telefono-jr4ti"}
+{"t":"r","id":"rmvoeysog1zudsz","kwiz":"kmvoewcze1wbbo3","p":"6979-07","tema":6979,"cuando":"2026-10-25T22:43:08.849Z","bien":1,"modo":"tocar","escrito":"Lo","pista":0,"aparato":"telefono-jr4ti"}
+{"t":"r","id":"rmvoez2ss4wtyh2","kwiz":"kmvoewcze1wbbo3","p":"6989-03","tema":6989,"cuando":"2026-10-25T22:43:21.964Z","bien":1,"modo":"tocar","escrito":"habíamos entrenado","pista":0,"aparato":"telefono-jr4ti"}
+{"t":"tj","id":"tmvof197m4y3gty","tarjeta":"ak-1777328109804","cuando":"2026-10-25T22:45:03.586Z","bien":1,"modo":"tocar","adelanto":1,"aparato":"telefono-jr4ti"}
+{"t":"tj","id":"tmvof1gv1i4zu5r","tarjeta":"ak-1777331792964","cuando":"2026-10-25T22:45:13.501Z","bien":0,"modo":"tocar","adelanto":1,"aparato":"telefono-jr4ti"}
+{"t":"tj","id":"tmvof1s5z2t7026","tarjeta":"ak-1777331923569","cuando":"2026-10-25T22:45:28.151Z","bien":1,"modo":"tocar","adelanto":1,"facil":1,"aparato":"telefono-jr4ti"}
+{"t":"tj","id":"tmvof257d8dn6ek","tarjeta":"ak-1777400926757","cuando":"2026-10-25T22:45:45.049Z","bien":0,"modo":"tocar","adelanto":1,"aparato":"telefono-jr4ti"}
+{"t":"tj","id":"tmvof2nbmfgk6f7","tarjeta":"ak-1777401116908","cuando":"2026-10-25T22:46:08.530Z","bien":0,"modo":"tocar","adelanto":1,"aparato":"telefono-jr4ti"}
+{"t":"tj","id":"tmvof2ype9bsnzw","tarjeta":"ak-1777476147537","cuando":"2026-10-25T22:46:23.282Z","bien":0,"modo":"tocar","adelanto":1,"aparato":"telefono-jr4ti"}
+{"t":"tj","id":"tmvof346ioreyyb","tarjeta":"ak-1777477695951","cuando":"2026-10-25T22:46:30.378Z","bien":0,"modo":"tocar","adelanto":1,"aparato":"telefono-jr4ti"}
