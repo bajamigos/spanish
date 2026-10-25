@@ -1,11 +1,12 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=a4a662a77f";
-import * as A from "./almacen.js?v=a4a662a77f";
-import * as V from "./videos.js?v=a4a662a77f";
-import * as NB from "./nube.js?v=a4a662a77f";
-import * as CL from "./clases.js?v=a4a662a77f";
-import { abrirPractica } from "./practica.js?v=a4a662a77f";
-import * as F from "./fondo.js?v=a4a662a77f";
+import * as N from "./nucleo.js?v=c9524d0065";
+import * as A from "./almacen.js?v=c9524d0065";
+import * as V from "./videos.js?v=c9524d0065";
+import * as NB from "./nube.js?v=c9524d0065";
+import * as CL from "./clases.js?v=c9524d0065";
+import { abrirPractica } from "./practica.js?v=c9524d0065";
+import * as F from "./fondo.js?v=c9524d0065";
+import * as PD from "./podcasts.js?v=c9524d0065";
 
 const $ = (id) => document.getElementById(id);
 const vista = $("vista");
@@ -323,6 +324,7 @@ const RUTAS = [
   [/^\/bitacora$/, verCalor],
   [/^\/clases$/, verClases],
   [/^\/lectura$/, (o) => verLectura(o)],
+  [/^\/podcasts$/, (o) => { bibModo = "podcasts"; guardar("pelagos.biblioteca", "podcasts"); return verLectura(o); }],
   [/^\/lectura\/ejemplo$/, (o) => verLectura(o, true)],
   [/^\/leccion\/([a-z0-9-]+)$/, verLeccion],
   [/^\/tutoras$/, (o) => (mudo() ? ir("/gramatica", true) : verTutoras(o))],      // en Limpio no hay tutoras
@@ -801,11 +803,13 @@ function verInicio(o) {
   const gv = tj !== null ? N.tarjetasDelDia(P, E, hoy).grupos : null;
   if (tj !== null) cuadros.push(cuadro("Vocabulario", tjHechas, tjHechas + tj, "cards", tj === 0 ? "Cumplido" : "Por repasar", tj === 0, "#/vocabulario", sello("tarjetas"), "",
     circulosDeHoy("chico", [gv.nuevas.length, gv.vencidas.length, gv.falladas.length], "vhoy")));
-  for (const m of T ? T.medidas : []) {
-    if (tarjetas.size && /anki/i.test(m.nombre)) continue;        // con tarjetas propias, las de fuera ya no se enseñan
+  for (const m0 of T ? T.medidas : []) {
+    if (tarjetas.size && /anki/i.test(m0.nombre)) continue;        // con tarjetas propias, las de fuera ya no se enseñan
+    const escucha = ESCUCHA.test(m0.nombre);      // se enseña como «Escucha», venga como venga del tablero
+    // A la Escucha de hoy se le suman los podcasts que escuchaste en Pelagos (24-Oct-2026), enteros o a medias.
+    const m = escucha && T.dia === hoy ? { ...m0, valor: m0.valor + podMinDe(hoy) } : m0;
     const hecho = m.de === 0 ? m.valor === 0 : m.valor >= m.de;
     const falta = Math.round((m.de - m.valor) * 10) / 10;
-    const escucha = ESCUCHA.test(m.nombre);      // se enseña como «Escucha», venga como venga del tablero
     const habla = /^clase/i.test(m.nombre);      // las clases se enseñan como «Habla», en «clases» (pedido del 23-Oct-2026)
     cuadros.push(cuadro(escucha ? "Escucha" : habla ? "Habla" : m.nombre, m.valor, m.de, habla ? m.unidad || (m.de === 1 ? "clase" : "clases") : m.unidad, hecho ? "Cumplido" : m.de === 0 ? "Meta: cero" : `Faltan ${falta}`, hecho,
       /^clase/i.test(m.nombre) ? "#/clases" : escucha ? "#/lectura" : "", sello("medida:" + m.nombre)));
@@ -1870,7 +1874,7 @@ const mudo = () => ambiente() === "limpio";
 {
   const tocar = HTMLMediaElement.prototype.play;
   HTMLMediaElement.prototype.play = function () {
-    if (!mudo()) return tocar.call(this);
+    if (!mudo() || (this.dataset && this.dataset.podcast)) return tocar.call(this);    // tus podcasts sí suenan: los pides tú (24-Oct-2026)
     this.muted = true;
     if (this instanceof HTMLAudioElement) { this.pause(); return Promise.reject(new DOMException("Pelagos está en Limpio: sin sonido.", "NotAllowedError")); }
     return tocar.call(this);
@@ -1934,6 +1938,7 @@ function granTotal() {
   const dias = new Map(L.dias);
   const T = N.leerTablero(A.tablero()), er = T && T.dia === hoy ? T.medidas.find((m) => ESCUCHA.test(m.nombre)) : null;
   if (er) dias.set(hoy, Math.max(dias.get(hoy) || 0, er.valor));
+  for (const [d, x] of PD.escuchado().dias) dias.set(d, (dias.get(d) || 0) + x.min);
   let min = 0;
   for (const [d, m] of dias) if (d > corte) min += m;
   for (const [d, n] of E.actividadGram) if (d > corte) min += n * 10;
@@ -1959,6 +1964,7 @@ function verLectura(o, ejemplo = false) {
   const dias = new Map(L ? L.dias : []);
   const er = T && T.dia === hoy ? T.medidas.find((m) => ESCUCHA.test(m.nombre)) : null;
   if (er) dias.set(hoy, Math.max(dias.get(hoy) || 0, Math.round(er.valor)));
+  if (!ejemplo) for (const [d, x] of PD.escuchado().dias) dias.set(d, (dias.get(d) || 0) + x.min);
   const libros = L ? L.libros : [];
   // «Leyendo ahora» es el de ElevenReader (se abre con un toque); los demás van a sus estantes.
   const ahora = libros.find((b) => b.estado === "leyendo" && b.url) || libros.find((b) => b.estado === "leyendo") || null;
@@ -1973,7 +1979,9 @@ function verLectura(o, ejemplo = false) {
   for (let i = 13; i >= 0; i--) ultimos.push(N.fechaLocal(new Date(d0.getFullYear(), d0.getMonth(), d0.getDate() - i)));
   const minHoy = dias.get(hoy) || 0;
   // Los podcasts en español de hoy (Pocket Casts), que ya vienen sumados en la Escucha.
-  const pods = T && T.dia === hoy ? T.podcasts : [];
+  const pods = (T && T.dia === hoy ? T.podcasts : []).slice();
+  const enPelagos = ejemplo ? null : PD.escuchado().dias.get(hoy);
+  if (enPelagos) for (const [k, min] of enPelagos.programas) if (min > 0) pods.push({ programa: (PD.programa(k) || { nombre: k }).nombre + " (en Pelagos)", min });
   const podMin = pods.reduce((a, x) => a + x.min, 0);
   const podHoy = pods.length ? `<p class="lecturaHoy">Hoy escuchaste</p><ul class="podHoy">${pods.map((x) => `<li>${esc(x.programa)}: ${esc(horasMin(x.min))}</li>`).join("")}</ul>` : "";
   const lineaHoy = minHoy >= meta ? `Hoy: ${minHoy} de ${meta} min. Meta cumplida.` : `Hoy: ${minHoy} de ${meta} min. Te faltan ${meta - minHoy}.`;
@@ -2090,7 +2098,7 @@ function verLectura(o, ejemplo = false) {
     const Pd = L ? L.podcasts : [];
     const fichaP = (x) => `<li><div class="libro">${cartel(x, "portadaChica")}<span class="libroTitulo">${esc(x.titulo)}</span></div></li>`;
     cabeza = `${podHoy}<p class="lecturaHoy">${L && L.podcastsHoras !== null ? L.podcastsHoras.toLocaleString("es-MX") + " horas de podcasts." : "Tus podcasts."}</p><p class="small">${plural(Pd.length, "podcast", "podcasts")}, por tus estrellas.</p>`;
-    cuerpo = [3, 2, 1].map((n) => repisa("pod" + n, `${"★".repeat(n)} <span class="sr">${plural(n, "estrella", "estrellas")}</span>`, Pd.filter((x) => x.nota === n), fichaP)).join("") +
+    cuerpo = seccionPodcasts() + [3, 2, 1].map((n) => repisa("pod" + n, `${"★".repeat(n)} <span class="sr">${plural(n, "estrella", "estrellas")}</span>`, Pd.filter((x) => x.nota === n), fichaP)).join("") +
       repisa("podSin", "Sin estrellas", Pd.filter((x) => !x.nota), fichaP);
   } else {
     cabeza = `<p class="lecturaHoy">${esc(lineaHoy)}</p>${podMin ? `<p class="small">De eso, ${esc(horasMin(podMin))} de podcasts en español.</p>` : ""}<p class="small">${esc(lineaSemana)}</p>`;
@@ -2110,7 +2118,7 @@ function verLectura(o, ejemplo = false) {
         ${ejemplo ? `<p class="lecturaEjemplo">Datos inventados, solo para ver cómo se ve. <a href="#/lectura">Volver a tus datos</a></p>` : ""}
         ${cabeza}
       </section>
-      ${L ? cuerpo : `<section class="card"><p class="small">Todavía no llega tu registro de lectura. La tarea del Tablero lo trae en su próxima pasada.</p></section>`}
+      ${L || modo === "podcasts" ? cuerpo : `<section class="card"><p class="small">Todavía no llega tu registro de lectura. La tarea del Tablero lo trae en su próxima pasada.</p></section>`}
     </div>
   </div>`, { titulo: "Biblioteca · Pelagos", nav: "inicio", conserva: o.conserva });
   vista.querySelector("#serModo")?.addEventListener("click", (ev) => {
@@ -2181,6 +2189,162 @@ function abrirObra(obra, aviso = "") {
 }
 
 const mayuscula = (t) => t.charAt(0).toUpperCase() + t.slice(1);
+// ---------------------------------------------------------------- Tus podcasts (24-Oct-2026)
+/** Minutos de podcast escuchados en Pelagos ese día (enteros o a medias, de todos tus aparatos). */
+const podMinDe = (dia) => { const x = PD.escuchado().dias.get(dia); return x ? x.min : 0; };
+const mmss = (s) => {
+  s = Math.max(0, Math.round(s || 0));
+  const h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), x = String(s % 60).padStart(2, "0");
+  return h ? `${h}:${String(m).padStart(2, "0")}:${x}` : `${m}:${x}`;
+};
+const minutosDichos = (s) => { const m = Math.round((s || 0) / 60); return m >= 60 ? horasMin(m) : m + " min"; };
+let podProg = null;
+function fechaEp(ms) {
+  if (!ms) return "";
+  const d = N.fechaLocal(new Date(ms)), hoy = N.fechaLocal(new Date());
+  if (d === hoy) return "hoy";
+  const ayer = N.fechaLocal(new Date(Date.now() - 864e5));
+  return d === ayer ? "ayer" : fechaTip(d, hoy);
+}
+/** Cómo vas en un episodio: «Nuevo», «Vas en 12 de 48 min» o «Escuchado». */
+function estadoEp(ep) {
+  const p = PD.posicion(ep.id);
+  if (!p || (!p.fin && p.pos < 30)) return { texto: "Nuevo", clase: "nuevo" };
+  if (p.fin) return { texto: "Escuchado", clase: "visto" };
+  const dur = p.dur || ep.dur;
+  return { texto: dur ? `Vas en ${Math.round(p.pos / 60)} de ${Math.round(dur / 60)} min` : `Vas en ${Math.round(p.pos / 60)} min`, clase: "medias" };
+}
+function filaEp(ep) {
+  const pr = PD.programa(ep.prog), est = estadoEp(ep), cur = PD.cargado(), es = cur && cur.id === ep.id, suena = es && PD.sonando();
+  const datos = [pr ? pr.nombre : "", fechaEp(ep.fecha), ep.dur ? minutosDichos(ep.dur) : ""].filter(Boolean).join(" · ");
+  return `<li><button type="button" class="podEp${es ? " actual" : ""}" data-podep="${esc(ep.id)}" aria-pressed="${suena}"
+      aria-label="${esc((suena ? "Pausar: " : es ? "Seguir: " : "Escuchar: ") + ep.titulo + ". " + datos + ". " + est.texto + ".")}">
+    ${pr ? `<img class="podPortada" src="${esc(pr.portada)}" alt="" referrerpolicy="no-referrer" loading="lazy">` : ""}
+    <span class="podDatos"><span class="podTit">${esc(ep.titulo)}</span><span class="small">${esc(datos)}</span>
+      <span class="podEstado ${est.clase}">${suena ? "Sonando" : es ? "En pausa · " + esc(est.texto) : esc(est.texto)}</span></span>
+  </button></li>`;
+}
+function listaPodcasts() {
+  const c = PD.episodios();
+  if (!c) return `<p class="small">Leyendo tus podcasts…</p>`;
+  if (!podProg) podProg = guardado("pelagos.podprog") || "todos";
+  const eps = podProg === "todos" ? c.eps.slice(0, 30) : c.eps.filter((e) => e.prog === podProg);
+  return eps.length ? `<ul class="podLista">${eps.map(filaEp).join("")}</ul>` : `<p class="small">No llegaron episodios de este programa.</p>`;
+}
+function estadoPodcasts() {
+  const c = PD.episodios();
+  if (!c) return "";
+  const hace = Math.round((Date.now() - c.cuando) / 60000);
+  const falla = c.fallaron && c.fallaron.length ? ` No se pudo leer: ${c.fallaron.map((k) => (PD.programa(k) || { nombre: k }).nombre).join(", ")}.` : "";
+  return `Actualizado ${hace < 1 ? "ahorita" : "hace " + horasMin(hace)}.${falla}`;
+}
+function seccionPodcasts() {
+  if (!podProg) podProg = guardado("pelagos.podprog") || "todos";
+  PD.actualizar().then(() => { const l = $("podLista"); if (l) { l.innerHTML = listaPodcasts(); const e = $("podAct"); if (e) e.textContent = estadoPodcasts(); } }).catch(() => {});
+  return `<section class="card" id="podNuevos" aria-labelledby="podT">
+    <h2 id="podT">Escucha aquí</h2>
+    <p class="small">Los episodios nuevos de tus podcasts. Tócalo para escucharlo; sigue donde te quedaste, también en el otro aparato. Lo que escuches, entero o a medias, suma a tu Escucha.</p>
+    <label class="small" for="podProg">Programa</label>
+    <select id="podProg" class="campo podSel">
+      <option value="todos"${podProg === "todos" ? " selected" : ""}>Todos, lo más nuevo</option>
+      ${PD.PROGRAMAS.map((p) => `<option value="${p.clave}"${podProg === p.clave ? " selected" : ""}>${esc(p.nombre)}</option>`).join("")}
+    </select>
+    <div id="podLista">${listaPodcasts()}</div>
+    <p class="small" id="podAct">${esc(estadoPodcasts())}</p>
+    <div class="go"><button type="button" class="ub" id="podLeer">Buscar episodios nuevos</button></div>
+  </section>`;
+}
+vista.addEventListener("click", (ev) => {
+  const t = ev.target instanceof Element ? ev.target : null;
+  const b = t && t.closest("[data-podep]");
+  if (b) {
+    const c = PD.episodios(), ep = c && c.eps.find((e) => e.id === b.dataset.podep);
+    if (ep) PD.tocar(ep);
+    return;
+  }
+  if (t && t.closest("#podLeer")) {
+    const e = $("podAct"); if (e) e.textContent = "Buscando…";
+    PD.actualizar(true).then(() => { const l = $("podLista"); if (l) l.innerHTML = listaPodcasts(); const e2 = $("podAct"); if (e2) e2.textContent = estadoPodcasts(); });
+  }
+});
+vista.addEventListener("change", (ev) => {
+  if (!(ev.target instanceof HTMLSelectElement) || ev.target.id !== "podProg") return;
+  podProg = ev.target.value; guardar("pelagos.podprog", podProg);
+  const l = $("podLista"); if (l) l.innerHTML = listaPodcasts();
+});
+
+// La barra del reproductor: abajo, en todas las páginas, mientras haya un episodio cargado.
+let podBarra = null, podClaveLista = "";
+function armarBarra() {
+  const d = document.createElement("div");
+  d.className = "podBarra"; d.id = "podBarra"; d.hidden = true;
+  d.setAttribute("role", "region"); d.setAttribute("aria-label", "Reproductor de podcasts");
+  d.innerHTML = `
+    <div class="podBarraArriba">
+      <img class="podBarraPortada" alt="" referrerpolicy="no-referrer">
+      <a class="podBarraTxt" href="#/podcasts"><span class="podBarraTit"></span><span class="podBarraProg small"></span></a>
+      <button type="button" class="podX" aria-label="Cerrar el reproductor">✕</button>
+    </div>
+    <input type="range" class="podRango" min="0" max="1" step="1" value="0" aria-label="Dónde vas">
+    <div class="podTiempos small"><span class="podPos">0:00</span><span class="podFalta"></span></div>
+    <div class="podBotones">
+      <button type="button" class="podAtras" aria-label="Atrás 15 segundos">−15</button>
+      <button type="button" class="podPlay" aria-label="Pausa"></button>
+      <button type="button" class="podAdelante" aria-label="Adelante 30 segundos">+30</button>
+      <button type="button" class="podVel" aria-label="Velocidad"></button>
+    </div>
+    <p class="podError small" role="alert" hidden>No se pudo cargar este episodio. Prueba otra vez en un rato.</p>`;
+  document.body.appendChild(d);
+  d.querySelector(".podAtras").addEventListener("click", () => PD.saltar(-15));
+  d.querySelector(".podAdelante").addEventListener("click", () => PD.saltar(30));
+  d.querySelector(".podPlay").addEventListener("click", () => (PD.sonando() ? PD.pausa() : PD.seguir()));
+  d.querySelector(".podVel").addEventListener("click", () => PD.cambiarVelocidad());
+  d.querySelector(".podX").addEventListener("click", () => PD.cerrar());
+  const r = d.querySelector(".podRango");
+  r.addEventListener("input", () => { r.dataset.moviendo = "1"; d.querySelector(".podPos").textContent = mmss(Number(r.value)); });
+  r.addEventListener("change", () => { delete r.dataset.moviendo; PD.ir(Number(r.value)); });
+  return d;
+}
+const velTexto = (v) => String(v) + "×";
+function pintarBarra() {
+  const ep = PD.cargado();
+  if (!podBarra) { if (!ep) return; podBarra = armarBarra(); }
+  podBarra.hidden = !ep;
+  document.body.classList.toggle("conPod", !!ep);
+  // La lista de episodios se vuelve a pintar solo cuando cambia qué suena (no a cada segundo: no le quita el foco al lector).
+  const clave = ep ? ep.id + "|" + PD.sonando() : "";
+  if (clave !== podClaveLista) {
+    podClaveLista = clave;
+    const l = $("podLista");
+    if (l) {
+      const foco = document.activeElement instanceof HTMLElement && document.activeElement.dataset.podep;
+      l.innerHTML = listaPodcasts();
+      if (foco) l.querySelector(`[data-podep="${CSS.escape(foco)}"]`)?.focus();
+    }
+  }
+  if (!ep) return;
+  const pr = PD.programa(ep.prog), { pos, dur } = PD.tiempo(), suena = PD.sonando();
+  const img = podBarra.querySelector(".podBarraPortada");
+  if (pr && img.getAttribute("src") !== pr.portada) img.src = pr.portada;
+  podBarra.querySelector(".podBarraTit").textContent = ep.titulo;
+  podBarra.querySelector(".podBarraProg").textContent = pr ? pr.nombre : "";
+  const play = podBarra.querySelector(".podPlay");
+  play.textContent = suena ? "❚❚" : "▶";
+  play.setAttribute("aria-label", suena ? "Pausa" : "Seguir");
+  const r = podBarra.querySelector(".podRango");
+  if (!r.dataset.moviendo) {
+    r.max = String(Math.max(1, Math.round(dur)));
+    r.value = String(Math.round(pos));
+    r.setAttribute("aria-valuetext", `${minutosDichos(pos)} de ${minutosDichos(dur)}`);
+    podBarra.querySelector(".podPos").textContent = mmss(pos);
+  }
+  podBarra.querySelector(".podFalta").textContent = dur ? "−" + mmss(dur - pos) : "";
+  podBarra.querySelector(".podVel").textContent = velTexto(PD.vel());
+  podBarra.querySelector(".podVel").setAttribute("aria-label", "Velocidad: " + velTexto(PD.vel()) + ". Toca para cambiarla.");
+  podBarra.querySelector(".podError").hidden = !PD.fallo();
+}
+PD.alCambiar(pintarBarra);
+
 let bibModo = null, serModo = null;      // qué enseña la Biblioteca: libros, series o podcasts (se recuerda en este aparato)
 
 /**

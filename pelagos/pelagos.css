@@ -1122,3 +1122,31 @@ button.lnN[aria-pressed="true"] { outline: 3px solid currentColor; outline-offse
 .ptTip.on { fill: color-mix(in srgb, var(--ink) 18%, transparent) !important; }
 .ptBurbuja { position: absolute; z-index: 50; max-width: min(360px, calc(100vw - 16px)); padding: 8px 12px; border-radius: 10px; background: var(--ink); color: var(--page); font-size: 16px; line-height: 1.3; font-weight: 600; pointer-events: none; box-shadow: 0 4px 14px rgba(0,0,0,.35); }
 .ptBurbuja[hidden] { display: none; }
+
+/* 24-Oct-2026: tus podcasts. La lista de episodios y la barra del reproductor (abajo, en todas las páginas). */
+.podSel { width: 100%; margin: 4px 0 12px; }
+.podLista { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.podEp { display: flex; gap: 12px; align-items: flex-start; width: 100%; text-align: left; padding: 10px; border-radius: 12px;
+  border: 1px solid var(--line); background: transparent; color: inherit; font: inherit; cursor: pointer; }
+.podEp.actual { border-color: var(--ink); background: color-mix(in srgb, var(--ink) 8%, transparent); }
+.podPortada { width: 56px; height: 56px; border-radius: 8px; flex: none; object-fit: cover; }
+.podDatos { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.podTit { font-weight: 700; font-size: 17px; line-height: 1.3; }
+.podEstado { font-size: 14px; font-weight: 600; color: var(--ink-2); }
+.podEstado.nuevo { color: var(--si); }
+.podBarra { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; background: var(--card); border-top: 1px solid var(--line);
+  padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); box-shadow: 0 -6px 18px rgba(0,0,0,.35); }
+.podBarra[hidden] { display: none; }
+.podBarra > * { max-width: 640px; margin-left: auto; margin-right: auto; }
+.podBarraArriba { display: flex; gap: 10px; align-items: center; }
+.podBarraPortada { width: 44px; height: 44px; border-radius: 6px; flex: none; object-fit: cover; }
+.podBarraTxt { display: flex; flex-direction: column; min-width: 0; flex: 1; color: inherit; text-decoration: none; }
+.podBarraTit { font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.podX { min-width: 44px; min-height: 44px; border: 0; background: transparent; color: var(--ink-2); font-size: 20px; cursor: pointer; }
+.podRango { display: block; width: 100%; margin: 8px auto 0; accent-color: var(--ink); height: 28px; }
+.podTiempos { display: flex; justify-content: space-between; }
+.podBotones { display: flex; justify-content: center; gap: 14px; margin-top: 4px; }
+.podBotones button { min-width: 56px; min-height: 52px; border-radius: 26px; border: 1px solid var(--line); background: transparent;
+  color: var(--ink); font: 700 18px/1 system-ui, sans-serif; cursor: pointer; }
+.podBotones .podPlay { min-width: 72px; background: var(--ink); color: var(--page); border-color: var(--ink); font-size: 22px; }
+body.conPod .app { padding-bottom: 210px; }
