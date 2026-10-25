@@ -324,6 +324,8 @@ export function calcular(paquete, sucesos) {
   // «Deshacer» (24-Oct-2026): un suceso «tjdeshacer» anula la calificación «tj» que nombra en «ref». Nada se borra.
   const deshechos = new Set();
   for (const e of lista) if (e.t === "tjdeshacer" && typeof e.ref === "string") deshechos.add(e.ref);
+  // Lo mismo en gramática (25-Oct-2026): «rdeshacer» anula la respuesta «r» de «ref»; la pregunta vuelve a quedar sin contestar.
+  for (const e of lista) if (e.t === "rdeshacer" && typeof e.ref === "string") deshechos.add(e.ref);
   for (const e of lista) {
     if (e.t === "tj") {
       const c = tarjetas.get(e.tarjeta);
@@ -399,6 +401,7 @@ export function calcular(paquete, sucesos) {
         terminado: null, bien: 0, total: 0, pendientes: [], dejado: false,
       });
     } else if (e.t === "r" && e.p && e.kwiz) {
+      if (deshechos.has(e.id)) continue;
       if (e.s && !String(e.s).startsWith(e.p + "~")) continue;
       const clave = e.kwiz + "|" + (e.s || e.p);       // una sola respuesta por pregunta (o por su vuelta «~2») en cada kwiz: vale la primera
       if (dadas.has(clave)) continue;
