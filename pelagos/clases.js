@@ -21,14 +21,15 @@
 //         "actividad": "debate" | "conversacion", "gramatica": true | false, "leccion": { "tema", "titulo", "url" } | null }
 //   Al confirmar escoges la actividad (el debate que propone Worldsacross o conversación libre) y si va una lección de
 //   gramática (la sugerida es tu tema B2 más bajo; la pone la página con ponerSugerencia).
-//   (y { "t": "cancelarPedido", "id": "pc-…" } para quitarlo). La tarea de cada media hora lo reserva en Worldsacross
+//   (y { "t": "cancelarPedido", "id": "pc-…" } para quitarlo; desde el 26-Oct-2026 también quita del calendario un pedido
+//   que no se pudo, con el botón «Quitar del calendario» de su ficha). La tarea de cada media hora lo reserva en Worldsacross
 //   y lo contesta en clases.json: "pedidos": [ { "id": "pc-…", "estado": "reservada" | "no se pudo", "nota": "…" } ].
 // - Revisar quién está libre un día (22-Oct-2026): debajo de cada fecha, de hoy a 7 días, hay un botón «Revisar».
 //   Apunta { "t": "pedirHuecos", "id": "ph-…", "dia": "2026-10-22", "cuando": "…" }. Una tarea lo atiende en su
 //   siguiente corrida (a los 10, 25, 40 o 55), revisa en Worldsacross las horas que le quedan a ese día (de 8 am a 4 pm,
 //   unos diez minutos) y lo contesta en clases.json: "huecosPedidos": [ { "id": "ph-…", "estado": "hecho" | "no se pudo",
 //   "nota": "…", "contestado": "…" } ], con los «libres» de ese día ya al día. Mientras tanto el día dice «Revisando…».
-import * as A from "./almacen.js?v=5a2076ef12";
+import * as A from "./almacen.js?v=217a0d2491";
 
 export const HORA0 = 6, HORA1 = 21, PX = 56;      // la cuadrícula: de 6 am a 9 pm, 56 px por hora
 const ATRAS = 7, ADELANTE = 13;                    // hasta dónde se puede deslizar, en días desde hoy
@@ -419,7 +420,7 @@ function abrir(e) {
   const libre = e.clase.startsWith("libre"), pendiente = e.clase === "libre pedida";
   const estado = pendiente ? `Ya se la pediste a Andrea: ${e.pedido.tutor}, ${ACTIVIDADES[e.pedido.actividad].split(" (")[0].toLowerCase()}${e.pedido.leccion ? " y gramática: " + e.pedido.leccion : ""}. La reserva en la próxima media hora.`
     : e.pedido?.ocupada ? `Esta hora ya se ocupó: ${e.pedido.tutor} ya no sale libre a esta hora. Cancela el pedido y escoge otro tutor u otra hora.`
-    : e.clase === "libre fallida" ? `No se pudo reservar a ${e.pedido.tutor}${e.pedido.respuesta.nota ? ": " + e.pedido.respuesta.nota.replace(/\.?$/, ".") : "."} Escoge otro tutor u otra hora.`
+    : e.clase === "libre fallida" ? `No se pudo reservar a ${e.pedido.tutor}${e.pedido.respuesta.nota ? ": " + e.pedido.respuesta.nota.replace(/\.?$/, ".") : "."} Escoge otro tutor u otra hora, o quítala del calendario.`
     : libre ? "Tu favorito tiene este hueco libre" : e.hecha ? "Hecha ✓"
     : e.confirmada ? (e.sigue ? "La que sigue · " : "") + "Confirmada ✓" + (e.confirmada instanceof Date ? ` (Worldsacross, ${diaCorto(e.confirmada)} a las ${hora12(e.confirmada)})` : "")
     : (e.sigue ? (e.cuando ? "La que sigue: empieza " + e.cuando + " · " : "La que sigue · ") : "") + "Confirmada ✓";
@@ -436,6 +437,7 @@ function abrir(e) {
     <div class="acts" id="clActs">
       ${pendiente || e.pedido?.ocupada ? `<button type="button" class="ub" data-cancelar>Cancelar el pedido</button>`
         : libre ? [e.tutor, ...(e.otros || [])].filter((t) => e.clase !== "libre fallida" || t !== e.pedido.tutor).map((t) => `<button type="button" class="ub grande" data-pedir="${esc(t)}">Reservar con ${esc(t.split(" ")[0])}</button>`).join("") : ""}
+      ${e.clase === "libre fallida" && !e.pedido?.ocupada ? `<button type="button" class="ub" data-cancelar>Quitar del calendario</button>` : ""}
       ${e.hecha || libre ? "" : `<a class="ub grande" href="${WA}" target="_blank" rel="noopener noreferrer">Entrar a la clase</a>`}
       ${!libre && e.practica ? `<a class="ub grande" data-practica href="${esc(e.practica)}" target="_blank" rel="noopener noreferrer">Practicar</a>` : ""}
       ${!libre && e.repaso ? `<a class="ub" data-repaso href="${esc(e.repaso)}" target="_blank" rel="noopener noreferrer">Escuchar el repaso</a>` : ""}

@@ -9,7 +9,7 @@
 // - Lo que contestas entra primero a una fila en este aparato y de ahí sube.
 //   Sin internet, la fila espera y sube sola cuando vuelve.
 // - La llave vive solo en este navegador y solo viaja a la dirección de CONFIG.api.
-import { CONFIG } from "./config.js?v=5a2076ef12";
+import { CONFIG } from "./config.js?v=217a0d2491";
 
 // ---- El modo amigo (24-Oct-2026): una vitrina pública de Pelagos para enseñársela a un amigo.
 // Sin llave y sin GitHub: lo que la página leería del repositorio lo lee de archivos que vienen junto a ella
