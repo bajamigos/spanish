@@ -1,15 +1,15 @@
 // La lista de vocabulario · Tus podcasts: sacado de app.js el 25-Oct-2026, sin cambios.
-import * as N from "./nucleo.js?v=217a0d2491";
-import * as A from "./almacen.js?v=217a0d2491";
-import * as CL from "./clases.js?v=217a0d2491";
-import * as PD from "./podcasts.js?v=217a0d2491";
-import { E, ESCUCHA, P, colorTarjeta, conFondo, diaLargo, fondoDelDia, fotosVocab, guardado, guardar, info, ir, mazo, meta, pintar, poner, porId, recalcular, tarjetas, vestir } from "./app.js?v=217a0d2491";
-import { pararRepaso, repaso } from "./tutoras.js?v=217a0d2491";
-import { $, MESES, NIVELES, vista } from "./base.js?v=217a0d2491";
-import { ancho, barra, cuando, entradas, esc, fecha, fechaCorta, marcas, pct, plural, titulo } from "./texto.js?v=217a0d2491";
-import { fechaTip } from "./tendencias.js?v=217a0d2491";
-import { cerrarHoja } from "./ayuda.js?v=217a0d2491";
-import { MESES_CORTOS } from "./mapas.js?v=217a0d2491";
+import * as N from "./nucleo.js?v=f3879af2e7";
+import * as A from "./almacen.js?v=f3879af2e7";
+import * as CL from "./clases.js?v=f3879af2e7";
+import * as PD from "./podcasts.js?v=f3879af2e7";
+import { E, ESCUCHA, P, colorTarjeta, conFondo, diaLargo, fondoDelDia, fotosVocab, guardado, guardar, info, ir, mazo, meta, pintar, poner, porId, recalcular, tarjetas, vestir } from "./app.js?v=f3879af2e7";
+import { pararRepaso, repaso } from "./tutoras.js?v=f3879af2e7";
+import { $, MESES, NIVELES, vista } from "./base.js?v=f3879af2e7";
+import { ancho, barra, cuando, entradas, esc, fecha, fechaCorta, marcas, pct, plural, titulo } from "./texto.js?v=f3879af2e7";
+import { fechaTip } from "./tendencias.js?v=f3879af2e7";
+import { cerrarHoja } from "./ayuda.js?v=f3879af2e7";
+import { MESES_CORTOS } from "./mapas.js?v=f3879af2e7";
 
 // ---------------------------------------------------------------- La lista de vocabulario
 
@@ -98,7 +98,7 @@ function verClases(o) {
   CL.ponerSugerencia(b2 ? { tema: b2.t.id, titulo: b2.t.titulo || b2.t.titulo_kwiziq, pct: b2.pct, url: "https://spanish.kwiziq.com/revision/grammar/" + b2.t.slug_kwiziq } : null);
   // 23-Oct-2026: la misma cabeza que Gramática, Vocabulario y Escucha: la foto del día arriba y el título «Habla».
   const fondo = fondoDelDia();
-  poner(`<div class="hoy clases${fondo.hay ? " confoto" : ""}">${fondo.html}<div class="sobre"><p class="secTitulo" role="heading" aria-level="2">Habla</p>${CL.htmlClases(A.clases(), new Date(), CL.pedidosDe(A.sucesos()), CL.pedidosHuecosDe(A.sucesos()))}</div></div>`,
+  poner(`<div class="hoy clases${fondo.hay ? " confoto" : ""}">${fondo.html}<div class="sobre"><p class="secTitulo" role="heading" aria-level="2">Habla</p>${CL.htmlClases(A.clases(), new Date(), CL.pedidosDe(A.sucesos()), CL.pedidosHuecosDe(A.sucesos()), CL.limpiadoDe(A.sucesos()))}</div></div>`,
     { titulo: "Clases · Pelagos", nav: "inicio", conserva: o.conserva });
   CL.montar(vista, () => pintar({ conserva: true }));
 }

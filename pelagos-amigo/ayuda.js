@@ -1,10 +1,10 @@
 // Cómo funciona · Vista previa: sacado de app.js el 25-Oct-2026, sin cambios.
-import * as N from "./nucleo.js?v=d5603222f7";
-import * as A from "./almacen.js?v=d5603222f7";
-import { DESHACER_MS, E, P, info, meta, poner, porId, verNoExiste } from "./app.js?v=d5603222f7";
-import { $, CATEGORIAS, KWIZIQ } from "./base.js?v=d5603222f7";
-import { ancho, esc, pct, plural, titulo, tono } from "./texto.js?v=d5603222f7";
-import { activarGrafica, hojaV, htmlGrafica } from "./acervo.js?v=d5603222f7";
+import * as N from "./nucleo.js?v=a3a09147f6";
+import * as A from "./almacen.js?v=a3a09147f6";
+import { DESHACER_MS, E, P, info, meta, poner, porId, verNoExiste } from "./app.js?v=a3a09147f6";
+import { $, CATEGORIAS, KWIZIQ } from "./base.js?v=a3a09147f6";
+import { ancho, esc, pct, plural, titulo, tono } from "./texto.js?v=a3a09147f6";
+import { activarGrafica, hojaV, htmlGrafica } from "./acervo.js?v=a3a09147f6";
 
 // ---------------------------------------------------------------- Cómo funciona (la ayuda, 16-Oct-2026)
 //

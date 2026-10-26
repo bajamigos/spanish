@@ -1,11 +1,11 @@
 // Texto: sacado de app.js el 25-Oct-2026, sin cambios.
-import * as N from "./nucleo.js?v=217a0d2491";
-import * as A from "./almacen.js?v=217a0d2491";
-import * as V from "./videos.js?v=217a0d2491";
-import { E, ICONO_BOCINA, ICONO_NO, ICONO_SI, P, info, meta, pintar, porId } from "./app.js?v=217a0d2491";
-import { MESES, SECCIONES } from "./base.js?v=217a0d2491";
-import { nombreCorto, repaso, tutoraDe } from "./tutoras.js?v=217a0d2491";
-import { mudo } from "./acervo.js?v=217a0d2491";
+import * as N from "./nucleo.js?v=f3879af2e7";
+import * as A from "./almacen.js?v=f3879af2e7";
+import * as V from "./videos.js?v=f3879af2e7";
+import { E, ICONO_BOCINA, ICONO_NO, ICONO_SI, P, info, meta, pintar, porId } from "./app.js?v=f3879af2e7";
+import { MESES, SECCIONES } from "./base.js?v=f3879af2e7";
+import { nombreCorto, repaso, tutoraDe } from "./tutoras.js?v=f3879af2e7";
+import { mudo } from "./acervo.js?v=f3879af2e7";
 
 // ---------------------------------------------------------------- Texto
 

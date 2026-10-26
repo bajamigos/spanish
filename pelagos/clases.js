@@ -22,14 +22,15 @@
 //   Al confirmar escoges la actividad (el debate que propone Worldsacross o conversación libre) y si va una lección de
 //   gramática (la sugerida es tu tema B2 más bajo; la pone la página con ponerSugerencia).
 //   (y { "t": "cancelarPedido", "id": "pc-…" } para quitarlo; desde el 26-Oct-2026 también quita del calendario un pedido
-//   que no se pudo, con el botón «Quitar del calendario» de su ficha). La tarea de cada media hora lo reserva en Worldsacross
+//   que no se pudo, con el botón «Quitar del calendario» de su ficha). «Limpiar», junto a «Hoy», apunta
+//   { "t": "limpiarAvisos", "id": "la-…", "cuando": "…" }: quita los pedidos muertos y esconde los avisos de antes. La tarea de cada media hora lo reserva en Worldsacross
 //   y lo contesta en clases.json: "pedidos": [ { "id": "pc-…", "estado": "reservada" | "no se pudo", "nota": "…" } ].
 // - Revisar quién está libre un día (22-Oct-2026): debajo de cada fecha, de hoy a 7 días, hay un botón «Revisar».
 //   Apunta { "t": "pedirHuecos", "id": "ph-…", "dia": "2026-10-22", "cuando": "…" }. Una tarea lo atiende en su
 //   siguiente corrida (a los 10, 25, 40 o 55), revisa en Worldsacross las horas que le quedan a ese día (de 8 am a 4 pm,
 //   unos diez minutos) y lo contesta en clases.json: "huecosPedidos": [ { "id": "ph-…", "estado": "hecho" | "no se pudo",
 //   "nota": "…", "contestado": "…" } ], con los «libres» de ese día ya al día. Mientras tanto el día dice «Revisando…».
-import * as A from "./almacen.js?v=217a0d2491";
+import * as A from "./almacen.js?v=f3879af2e7";
 
 export const HORA0 = 6, HORA1 = 21, PX = 56;      // la cuadrícula: de 6 am a 9 pm, 56 px por hora
 const ATRAS = 7, ADELANTE = 13;                    // hasta dónde se puede deslizar, en días desde hoy
@@ -148,6 +149,18 @@ export function pedidosDe(sucesos) {
     lista.push({ id: e.id, ini, min: Number.isFinite(e.min) ? e.min : 50, tutor: e.tutor.slice(0, 60), cuando: e.cuando || "", actividad, leccion });
   }
   return lista;
+}
+
+/** «Limpiar» (su pedido del 26-Oct-2026): la hora del último { "t": "limpiarAvisos" }, o null. Los avisos de pedidos y
+ *  revisiones de antes de esa hora ya no salen arriba; los pedidos siguen vivos (si uno falla después, sí avisa). */
+export function limpiadoDe(sucesos) {
+  let t = null;
+  for (const e of sucesos || []) {
+    if (!e || e.t !== "limpiarAvisos" || typeof e.cuando !== "string") continue;
+    const d = new Date(e.cuando);
+    if (!Number.isNaN(d.getTime()) && (!t || d > t)) t = d;
+  }
+  return t;
 }
 
 /** «8:00 am», «12:30 pm». */
@@ -279,7 +292,7 @@ export function armarClases(L, ahora = new Date(), corr = 0, pedidos = [], hueco
 }
 
 /** El calendario (sin el fondo ni las entradas de arriba: esos los pone la página). */
-export function htmlClases(datos, ahora = new Date(), pedidos = [], huecos = []) {
+export function htmlClases(datos, ahora = new Date(), pedidos = [], huecos = [], limpio = null) {
   const L = leerClases(datos);
   if (!L) {
     return `<section class="card"><h1 class="h">Clases</h1>
@@ -288,6 +301,11 @@ export function htmlClases(datos, ahora = new Date(), pedidos = [], huecos = [])
   }
   const C = armarClases(L, ahora, corrimiento, pedidos, huecos);
   const s = C.semana;
+  // Lo que «Limpiar» ya despejó no vuelve a salir: pedidos y revisiones de antes de esa hora.
+  const nuevo = (cuando) => !limpio || !cuando || new Date(cuando) > limpio;
+  const pendientes = C.pendientes.filter((p) => nuevo(p.cuando)), revisando = C.revisando.filter((x) => nuevo(x.cuando));
+  const hayAvisos = pendientes.length + revisando.length + C.ocupados.length + C.fallidos.length > 0;
+  porLimpiar = [...C.ocupados, ...C.fallidos].map((p) => p.id);
   const horas = [];
   for (let h = HORA0; h <= HORA1; h++) horas.push(`<span data-top="${(h - HORA0) * PX - 8}">${h % 12 || 12} ${h < 12 ? "AM" : "PM"}</span>`);
   const viejo = L.leido && ahora - L.leido > 3 * 3600000 ? `<p class="small viejo">Leído ${mismoDia(L.leido, ahora) ? "hoy" : "el " + L.leido.getDate() + " de " + MESES[L.leido.getMonth()]} a las ${hora12(L.leido)}: puede que falte algo nuevo.</p>` : "";
@@ -322,10 +340,11 @@ export function htmlClases(datos, ahora = new Date(), pedidos = [], huecos = [])
           <button type="button" class="ub" data-ir="-1" aria-label="Días anteriores"${C.alInicio ? " disabled" : ""}>‹</button>
           <button type="button" class="ub" data-ir="0">Hoy</button>
           <button type="button" class="ub" data-ir="1" aria-label="Días siguientes"${C.alFinal ? " disabled" : ""}>›</button>
+          ${hayAvisos ? `<button type="button" class="ub" data-limpiar aria-label="Limpiar los avisos de arriba">Limpiar</button>` : ""}
         </div>
       </div>
-      ${C.pendientes.length ? `<p class="clPedidos">${C.pendientes.length === 1 ? "1 clase pedida" : C.pendientes.length + " clases pedidas"}: Andrea la${C.pendientes.length === 1 ? "" : "s"} reserva en la próxima media hora.</p>` : ""}
-      ${C.revisando.map((x) => `<p class="clPedidos">Revisando quién está libre ${esc(diaDicho(x.dia, ahora))}${x.cuando ? ` (lo pediste a las ${esc(hora12(x.cuando))})` : ""}: Andrea lo empieza en unos quince minutos y tarda como diez.</p>`).join("")}
+      ${pendientes.length ? `<p class="clPedidos">${pendientes.length === 1 ? "1 clase pedida" : pendientes.length + " clases pedidas"}: Andrea la${pendientes.length === 1 ? "" : "s"} reserva en la próxima media hora.</p>` : ""}
+      ${revisando.map((x) => `<p class="clPedidos">Revisando quién está libre ${esc(diaDicho(x.dia, ahora))}${x.cuando ? ` (lo pediste a las ${esc(hora12(x.cuando))})` : ""}: Andrea lo empieza en unos quince minutos y tarda como diez.</p>`).join("")}
       ${C.ocupados.map((p) => `<p class="clNoSePudo">Esta hora ya se ocupó: <b>${esc(p.tutor)}</b>, ${esc(cuandoLargo(p, ahora))}. Pide otra hora u otro tutor.</p>`).join("")}
       ${C.fallidos.map((p) => `<p class="clNoSePudo">No se pudo reservar a <b>${esc(p.tutor)}</b>, ${esc(cuandoLargo(p, ahora))}${p.nota ? `: ${esc(p.nota)}` : "."}</p>`).join("")}
       ${dispo}
@@ -369,6 +388,7 @@ export function ponerSugerencia(s) {
 const ACTIVIDADES = { debate: "Debate (el tema que propone Worldsacross)", conversacion: "Conversación libre" };
 
 /** Lo que el HTML no puede traer escrito (lugares y fotos) y lo que se toca. `repintar` vuelve a pintar la página. */
+let porLimpiar = [];        // los pedidos muertos que «Limpiar» quita (los pone htmlClases)
 export function montar(raiz, repintar) {
   repintarAhora = repintar;
   for (const e of raiz.querySelectorAll(".clCuerpo [data-top]")) e.style.top = e.dataset.top + "px";
@@ -380,6 +400,17 @@ export function montar(raiz, repintar) {
     repintar();
   };
   for (const b of raiz.querySelectorAll("[data-ir]")) b.addEventListener("click", () => ir(Number(b.dataset.ir)));
+  // «Limpiar»: los pedidos que ya no se pudieron (o cuya hora se ocupó) se quitan, también del calendario; los avisos de
+  // pedidos y revisiones en curso se esconden, pero esos pedidos siguen vivos.
+  const limpiar = raiz.querySelector("[data-limpiar]");
+  if (limpiar) limpiar.addEventListener("click", () => {
+    const cuando = new Date().toISOString();
+    for (const id of porLimpiar) A.apuntar({ t: "cancelarPedido", id, cuando });
+    A.apuntar({ t: "limpiarAvisos", id: "la-" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6), cuando });
+    repintar();
+    const hoy = raiz.querySelector("[data-ir='0']");
+    if (hoy) hoy.focus();
+  });
   // «Revisar»: apunta el pedido y la página dice «Revisando…» hasta que la tarea lo conteste.
   for (const b of raiz.querySelectorAll("[data-huecos]")) b.addEventListener("click", (ev) => {
     ev.stopPropagation();
