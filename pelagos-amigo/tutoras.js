@@ -1,13 +1,13 @@
 // Las tutoras · Repaso en audio: sacado de app.js el 25-Oct-2026, sin cambios.
-import * as N from "./nucleo.js?v=eb9cd93858";
-import * as A from "./almacen.js?v=eb9cd93858";
-import * as V from "./videos.js?v=eb9cd93858";
-import * as NB from "./nube.js?v=eb9cd93858";
-import { abrirPractica } from "./practica.js?v=eb9cd93858";
-import { E, P, conFondo, esMovimiento, escenasPorSala, guardado, guardar, info, pintar, poner, porId, recalcular, verNoExiste } from "./app.js?v=eb9cd93858";
-import { bancoPorTema, barra, cuando, entradas, esBajo, esc, pct, plural, titulo } from "./texto.js?v=eb9cd93858";
-import { ambiente, mudo } from "./acervo.js?v=eb9cd93858";
-import { $, NIVELES, vista } from "./base.js?v=eb9cd93858";
+import * as N from "./nucleo.js?v=c6252b2378";
+import * as A from "./almacen.js?v=c6252b2378";
+import * as V from "./videos.js?v=c6252b2378";
+import * as NB from "./nube.js?v=c6252b2378";
+import { abrirPractica } from "./practica.js?v=c6252b2378";
+import { E, P, conFondo, esMovimiento, escenasPorSala, guardado, guardar, info, pintar, poner, porId, recalcular, verNoExiste } from "./app.js?v=c6252b2378";
+import { bancoPorTema, barra, cuando, entradas, esBajo, esc, pct, plural, titulo } from "./texto.js?v=c6252b2378";
+import { ambiente, mudo } from "./acervo.js?v=c6252b2378";
+import { $, NIVELES, vista } from "./base.js?v=c6252b2378";
 
 // ---------------------------------------------------------------- Las tutoras
 

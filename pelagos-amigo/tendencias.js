@@ -1,13 +1,13 @@
 // Tus tendencias: sacado de app.js el 25-Oct-2026, sin cambios.
-import * as N from "./nucleo.js?v=eb9cd93858";
-import * as A from "./almacen.js?v=eb9cd93858";
-import * as V from "./videos.js?v=eb9cd93858";
-import * as F from "./fondo.js?v=eb9cd93858";
-import { E, P, botonNivel, conFondo, info, ir, meta, poner, porId, resumenNiveles, verNoExiste, videoDeTutora } from "./app.js?v=eb9cd93858";
-import { $, CATEGORIAS, NIVELES, vista } from "./base.js?v=eb9cd93858";
-import { bancoPorTema, botonTema, entradas, esBajo, esc, marcas, plural, revisarVideos, temasAtascadosAhora, titulo } from "./texto.js?v=eb9cd93858";
-import { nombreTutora, tutoraDe } from "./tutoras.js?v=eb9cd93858";
-import { mudo, palabras, paraBuscar } from "./acervo.js?v=eb9cd93858";
+import * as N from "./nucleo.js?v=c6252b2378";
+import * as A from "./almacen.js?v=c6252b2378";
+import * as V from "./videos.js?v=c6252b2378";
+import * as F from "./fondo.js?v=c6252b2378";
+import { E, P, botonNivel, conFondo, info, ir, meta, poner, porId, resumenNiveles, verNoExiste, videoDeTutora } from "./app.js?v=c6252b2378";
+import { $, CATEGORIAS, NIVELES, vista } from "./base.js?v=c6252b2378";
+import { bancoPorTema, botonTema, entradas, esBajo, esc, marcas, plural, revisarVideos, temasAtascadosAhora, titulo } from "./texto.js?v=c6252b2378";
+import { nombreTutora, tutoraDe } from "./tutoras.js?v=c6252b2378";
+import { mudo, palabras, paraBuscar } from "./acervo.js?v=c6252b2378";
 
 // ---------------------------------------------------------------- Tus tendencias (Tablero, 16-Oct-2026)
 // En lugar del promedio por nivel, que casi no se mueve: lo que subió y bajó en los últimos 7 días,

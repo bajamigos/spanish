@@ -1,11 +1,11 @@
 // La lección: sacado de app.js el 25-Oct-2026, sin cambios.
-import * as N from "./nucleo.js?v=12530d1ce8";
-import * as A from "./almacen.js?v=12530d1ce8";
-import { ancho, barra, contrastesDe, esc, fecha, marca, pct, plural, titulo } from "./texto.js?v=12530d1ce8";
-import { E, LOGO, P, esMovimiento, escenasPorSala, etiquetaEscena, imagenDeArriba, info, meta, movimientoEnTodo, poner, porId, porSlug, recalcular, sinMovimiento, turnoDePintar, verLlave, verNoExiste } from "./app.js?v=12530d1ce8";
-import { CATEGORIAS, GRUPOS, KWIZIQ, NIVELES, vista } from "./base.js?v=12530d1ce8";
-import { ambiente, escalonDeTema, fotoDeLeccion, mudo } from "./acervo.js?v=12530d1ce8";
-import { botonEscena, conectarEscenas, tutoraDe } from "./tutoras.js?v=12530d1ce8";
+import * as N from "./nucleo.js?v=5a2076ef12";
+import * as A from "./almacen.js?v=5a2076ef12";
+import { ancho, barra, contrastesDe, esc, fecha, marca, pct, plural, titulo } from "./texto.js?v=5a2076ef12";
+import { E, LOGO, P, esMovimiento, escenasPorSala, etiquetaEscena, imagenDeArriba, info, meta, movimientoEnTodo, poner, porId, porSlug, recalcular, sinMovimiento, turnoDePintar, verLlave, verNoExiste } from "./app.js?v=5a2076ef12";
+import { CATEGORIAS, GRUPOS, KWIZIQ, NIVELES, vista } from "./base.js?v=5a2076ef12";
+import { ambiente, escalonDeTema, fotoDeLeccion, mudo } from "./acervo.js?v=5a2076ef12";
+import { botonEscena, conectarEscenas, tutoraDe } from "./tutoras.js?v=5a2076ef12";
 
 // ---------------------------------------------------------------- La lección
 

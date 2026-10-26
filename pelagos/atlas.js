@@ -1,13 +1,13 @@
 // El Atlas en el quiz: sacado de app.js el 25-Oct-2026, sin cambios.
-import * as N from "./nucleo.js?v=12530d1ce8";
-import * as A from "./almacen.js?v=12530d1ce8";
-import { ambiente, juegoDeFotos } from "./acervo.js?v=12530d1ce8";
-import { DESHACER_MS, E, LOGO, P, arrancar, cargarVideosFondo, conCuadro, conFondo, esperarLoopDePregunta, etiquetaMovimiento, fijarEnPregunta, fijarTeclas, fondoDelKwiz, guardado, guardar, imagenDeArriba, info, ir, lineaDeGramatica, loopDePregunta, nivelDeTema, pintar, poner, porId, preguntas, recalcular, sinMovimiento, verNoExiste } from "./app.js?v=12530d1ce8";
-import { $, CATEGORIAS, CATEGORIAS_CORTAS, QUIZ, TIPOS_KWIZ, vista } from "./base.js?v=12530d1ce8";
-import { barra, cuando, esBajo, esc, fecha, hueco, pct, plural, titulo } from "./texto.js?v=12530d1ce8";
-import { circulosDeHoy, moverNivel, panelExplica } from "./hoy.js?v=12530d1ce8";
-import { refrescarMini } from "./tendencias.js?v=12530d1ce8";
-import { empezarRepaso, tutoraDe } from "./tutoras.js?v=12530d1ce8";
+import * as N from "./nucleo.js?v=5a2076ef12";
+import * as A from "./almacen.js?v=5a2076ef12";
+import { ambiente, juegoDeFotos } from "./acervo.js?v=5a2076ef12";
+import { DESHACER_MS, E, LOGO, P, arrancar, cargarVideosFondo, conCuadro, conFondo, esperarLoopDePregunta, etiquetaMovimiento, fijarEnPregunta, fijarTeclas, fondoDelKwiz, guardado, guardar, imagenDeArriba, info, ir, lineaDeGramatica, loopDePregunta, nivelDeTema, pintar, poner, porId, preguntas, recalcular, sinMovimiento, verNoExiste } from "./app.js?v=5a2076ef12";
+import { $, CATEGORIAS, CATEGORIAS_CORTAS, QUIZ, TIPOS_KWIZ, vista } from "./base.js?v=5a2076ef12";
+import { barra, cuando, esBajo, esc, fecha, hueco, pct, plural, titulo } from "./texto.js?v=5a2076ef12";
+import { circulosDeHoy, moverNivel, panelExplica } from "./hoy.js?v=5a2076ef12";
+import { refrescarMini } from "./tendencias.js?v=5a2076ef12";
+import { empezarRepaso, tutoraDe } from "./tutoras.js?v=5a2076ef12";
 
 // ---------------------------------------------------------------- El Atlas en el quiz (su idea del 25-Oct-2026)
 // En Limpio, arriba de cada pregunta: todos los temas del nivel en chiquito, con el mismo acomodo del Atlas (por tipo y

@@ -1332,8 +1332,8 @@ body.qaQuiz #nav { display: none; }
 .vMalla .vd2 { background: var(--kd2); } .vMalla .vd1 { background: var(--kd1); }
 /* El marco (25-Oct-2026): verde continuo si hoy la acertaste, rojo de rayitas si la fallaste. Delgado, para no pesar. */
 /* Por dentro del cuadro (box-shadow inset): con cuadritos tan pegados, un marco por fuera se junta con el de al lado. */
-.vMalla .vbien { box-shadow: inset 0 0 0 3px var(--verdeMalla); }
-.vMalla .vmal { box-shadow: inset 0 0 0 3px var(--rojoMalla); }
+.vMalla .vbien { box-shadow: inset 0 0 0 1.5px var(--verdeMalla); }      /* marco delgado (su elección del 25-Oct-2026): el relleno se ve */
+.vMalla .vmal { box-shadow: inset 0 0 0 1.5px var(--rojoMalla); }
 .vMalla .tenue { opacity: .22; }
 .vMalla .late { z-index: 3; animation: qaLate 1.1s ease-in-out infinite; }
 .vMalla .vParpadea { z-index: 4; animation: qaParpadeo 3.2s both; }
