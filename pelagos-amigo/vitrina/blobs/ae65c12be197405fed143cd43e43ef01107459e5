@@ -1,25 +1,20 @@
 {
  "version": 1,
- "dia": "2026-10-25",
- "leido": "2026-10-26T05:18:02Z",
+ "dia": "2026-10-26",
+ "leido": "2026-10-27T01:14:49Z",
  "medidas": [
   {
    "nombre": "Escucha",
-   "valor": 11,
+   "valor": 4,
    "de": 60,
    "unidad": "min"
   },
   {
    "nombre": "Clase",
-   "valor": 0,
+   "valor": 5,
    "de": 1,
    "unidad": ""
   }
  ],
- "podcasts": [
-  {
-   "programa": "Diego Ruzzarin",
-   "min": 3
-  }
- ]
+ "podcasts": []
 }

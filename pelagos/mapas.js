@@ -1,11 +1,11 @@
 // El mapa de árbol · El mapa de calor: sacado de app.js el 25-Oct-2026, sin cambios.
-import * as N from "./nucleo.js?v=f3879af2e7";
-import * as A from "./almacen.js?v=f3879af2e7";
-import { $, CATEGORIAS, CATEGORIAS_CORTAS, NIVELES, vista } from "./base.js?v=f3879af2e7";
-import { E, P, diaLargo, fondoDelDia, guardado, guardar, info, pintar, poner, tarjetas } from "./app.js?v=f3879af2e7";
-import { tonoDe } from "./atlas.js?v=f3879af2e7";
-import { ancho, entradas, esc, fecha, hueco, pct, plural, titulo } from "./texto.js?v=f3879af2e7";
-import { granTotal } from "./acervo.js?v=f3879af2e7";
+import * as N from "./nucleo.js?v=02005bcb89";
+import * as A from "./almacen.js?v=02005bcb89";
+import { $, CATEGORIAS, CATEGORIAS_CORTAS, NIVELES, vista } from "./base.js?v=02005bcb89";
+import { E, P, diaLargo, fondoDelDia, guardado, guardar, info, pintar, poner, tarjetas } from "./app.js?v=02005bcb89";
+import { tonoDe } from "./atlas.js?v=02005bcb89";
+import { ancho, entradas, esc, fecha, hueco, pct, plural, titulo } from "./texto.js?v=02005bcb89";
+import { granTotal } from "./acervo.js?v=02005bcb89";
 
 // ---------------------------------------------------------------- El mapa de árbol
 

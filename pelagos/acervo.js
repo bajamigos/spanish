@@ -1,15 +1,15 @@
 // La lista de vocabulario · Tus podcasts: sacado de app.js el 25-Oct-2026, sin cambios.
-import * as N from "./nucleo.js?v=f3879af2e7";
-import * as A from "./almacen.js?v=f3879af2e7";
-import * as CL from "./clases.js?v=f3879af2e7";
-import * as PD from "./podcasts.js?v=f3879af2e7";
-import { E, ESCUCHA, P, colorTarjeta, conFondo, diaLargo, fondoDelDia, fotosVocab, guardado, guardar, info, ir, mazo, meta, pintar, poner, porId, recalcular, tarjetas, vestir } from "./app.js?v=f3879af2e7";
-import { pararRepaso, repaso } from "./tutoras.js?v=f3879af2e7";
-import { $, MESES, NIVELES, vista } from "./base.js?v=f3879af2e7";
-import { ancho, barra, cuando, entradas, esc, fecha, fechaCorta, marcas, pct, plural, titulo } from "./texto.js?v=f3879af2e7";
-import { fechaTip } from "./tendencias.js?v=f3879af2e7";
-import { cerrarHoja } from "./ayuda.js?v=f3879af2e7";
-import { MESES_CORTOS } from "./mapas.js?v=f3879af2e7";
+import * as N from "./nucleo.js?v=02005bcb89";
+import * as A from "./almacen.js?v=02005bcb89";
+import * as CL from "./clases.js?v=02005bcb89";
+import * as PD from "./podcasts.js?v=02005bcb89";
+import { E, ESCUCHA, P, colorTarjeta, conFondo, diaLargo, fondoDelDia, fotosVocab, guardado, guardar, info, ir, mazo, meta, pintar, poner, porId, recalcular, tarjetas, vestir } from "./app.js?v=02005bcb89";
+import { pararRepaso, repaso } from "./tutoras.js?v=02005bcb89";
+import { $, MESES, NIVELES, vista } from "./base.js?v=02005bcb89";
+import { ancho, barra, cuando, entradas, esc, fecha, fechaCorta, marcas, pct, plural, titulo } from "./texto.js?v=02005bcb89";
+import { fechaTip } from "./tendencias.js?v=02005bcb89";
+import { cerrarHoja } from "./ayuda.js?v=02005bcb89";
+import { MESES_CORTOS } from "./mapas.js?v=02005bcb89";
 
 // ---------------------------------------------------------------- La lista de vocabulario
 
@@ -93,7 +93,9 @@ function fotoDeLaTarjeta(id, hoy, antes) {
 function verClases(o) {
   if (!o.conserva) CL.aHoy();
   // La lección que se sugiere al pedir una clase: tu tema B2 más bajo (regla del 13-Oct-2026: por ahora, B2).
-  const b2 = (P.temas || []).filter((t) => t.nivel === "B2" && t.slug_kwiziq).map((t) => ({ t, pct: info(t.id).pct }))
+  // Solo temas que siguen en el quiz: uno retirado (26-Oct-2026: «debe de haber», que en México suena raro) no se sugiere.
+  const vivos = new Set((P.preguntas || []).filter((q) => q.estado === "revisada" && !(E && E.retiradas.has(q.id))).map((q) => q.tema));
+  const b2 = (P.temas || []).filter((t) => t.nivel === "B2" && t.slug_kwiziq && vivos.has(t.id)).map((t) => ({ t, pct: info(t.id).pct }))
     .filter((x) => x.pct !== null && x.pct !== undefined).sort((a, b) => a.pct - b.pct)[0];
   CL.ponerSugerencia(b2 ? { tema: b2.t.id, titulo: b2.t.titulo || b2.t.titulo_kwiziq, pct: b2.pct, url: "https://spanish.kwiziq.com/revision/grammar/" + b2.t.slug_kwiziq } : null);
   // 23-Oct-2026: la misma cabeza que Gramática, Vocabulario y Escucha: la foto del día arriba y el título «Habla».
