@@ -2,9 +2,9 @@
   "tema": 7151,
   "slug": "haber-de",
   "titulo": "Haber de + infinitive: formal obligation, future, and Mexican probability",
-  "subtitulo": "He de admitirlo. Ha de estar en su casa.",
+  "subtitulo": "He de admitirlo. Ha de estar en su casa. Ha de haber salido.",
   "foto": "t01.jpg",
-  "regla": "Haber de + infinitive = must (mild, formal obligation): He de admitir que... It can also mark a future action in literary style: lo que ha de venir. In Mexico, ha de + infinitive very often means a guess: Ha de estar en su casa (He must be at home).",
+  "regla": "Haber de + infinitive = must (mild, formal obligation): He de admitir que... It can also mark a future action in literary style: lo que ha de venir. In Mexico, ha de + infinitive very often means a guess: Ha de estar en su casa (He must be at home). To guess about the past, Mexico uses ha de haber + participle: Ha de haber salido (He must have gone out).",
   "comparada_kwiziq": "2026-10-10",
   "secciones": [
     {
@@ -33,12 +33,16 @@
             {
               "forma": "probability (very Mexican)",
               "texto": "**Ha de estar dormido.** = _He must be asleep._ **Han de ser las tres.** = _It must be about three._"
+            },
+            {
+              "forma": "probability about the past (very Mexican)",
+              "texto": "**Ha de haber salido.** = _He must have gone out._ **Han de haber llegado.** = _They must have arrived._"
             }
           ]
         },
         {
           "tipo": "texto",
-          "texto": "The Mexican guess is everyday speech, like **debe de** or the future of probability."
+          "texto": "The Mexican guess is everyday speech, like the future of probability (**estará**, **habrá salido**)."
         },
         {
           "tipo": "texto",
@@ -116,6 +120,53 @@
       ]
     },
     {
+      "id": "pasado",
+      "titulo": "Guessing the past (Mexico)",
+      "bloques": [
+        {
+          "tipo": "formula",
+          "partes": [
+            "ha / han de",
+            "+ haber +",
+            "participle"
+          ]
+        },
+        {
+          "tipo": "ejemplos",
+          "lista": [
+            {
+              "es": "No contesta; ya ==ha de haber salido==.",
+              "en": "He's not answering; he must have gone out already."
+            },
+            {
+              "es": "El piso está mojado; ==ha de haber llovido== en la noche.",
+              "en": "The floor is wet; it must have rained during the night."
+            },
+            {
+              "es": "Hay platos sucios: los niños ==han de haber desayunado== aquí.",
+              "en": "There are dirty dishes: the kids must have had breakfast here."
+            },
+            {
+              "es": "No encuentro mis llaves; las ==he de haber dejado== en el carro.",
+              "en": "I can't find my keys; I must have left them in the car."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+          "texto": "Usually there is a clue first (no contesta, el piso está mojado), then the guess."
+        },
+        {
+          "tipo": "texto",
+          "texto": "Also very common in Mexico: **seguro** or **a lo mejor** + preterite: **Seguro llovió.**"
+        },
+        {
+          "tipo": "texto",
+          "texto": "Tip: ha de haber = must have. Think of a detective reading footprints: the clue, then **ha de haber**."
+        }
+      ]
+    },
+    {
       "id": "trampa",
       "titulo": "The trap",
       "bloques": [
@@ -147,6 +198,32 @@
                 }
               ],
               "nota": "Infinitive."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Ha de haber salió."
+                },
+                {
+                  "v": "bien",
+                  "t": "Ha de haber salido."
+                }
+              ],
+              "nota": "**Haber** stays as it is, then the participle."
+            },
+            {
+              "filas": [
+                {
+                  "v": "mal",
+                  "t": "Han de han llegado."
+                },
+                {
+                  "v": "bien",
+                  "t": "Han de haber llegado."
+                }
+              ],
+              "nota": "Only the first **haber** changes: **ha** / **han**."
             }
           ]
         }
@@ -170,6 +247,10 @@
             {
               "forma": "hay que",
               "texto": "[[6262|hay que]]."
+            },
+            {
+              "forma": "habrá salido",
+              "texto": "Guess about the past with the [[7266|future perfect]]; or [[9544|a lo mejor]] + preterite."
             }
           ]
         }
@@ -200,6 +281,16 @@
               "p": "Mexican guess: _They must be tired._",
               "r": "Han de estar cansados.",
               "nota": "han de."
+            },
+            {
+              "p": "Mexican guess: _He must have gone out._",
+              "r": "Ha de haber salido.",
+              "nota": "ha de haber + participle."
+            },
+            {
+              "p": "Mexican guess: _They must have eaten already._",
+              "r": "Ya han de haber comido.",
+              "nota": "han de haber."
             }
           ]
         }
@@ -212,7 +303,8 @@
       7052
     ],
     "confunde": [
-      5060
+      5060,
+      7266
     ],
     "sigue": []
   },
