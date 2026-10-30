@@ -1,15 +1,15 @@
 // La lista de vocabulario · Tus podcasts: sacado de app.js el 25-Oct-2026, sin cambios.
-import * as N from "./nucleo.js?v=02005bcb89";
-import * as A from "./almacen.js?v=02005bcb89";
-import * as CL from "./clases.js?v=02005bcb89";
-import * as PD from "./podcasts.js?v=02005bcb89";
-import { E, ESCUCHA, P, colorTarjeta, conFondo, diaLargo, fondoDelDia, fotosVocab, guardado, guardar, info, ir, mazo, meta, pintar, poner, porId, recalcular, tarjetas, vestir } from "./app.js?v=02005bcb89";
-import { pararRepaso, repaso } from "./tutoras.js?v=02005bcb89";
-import { $, MESES, NIVELES, vista } from "./base.js?v=02005bcb89";
-import { ancho, barra, cuando, entradas, esc, fecha, fechaCorta, marcas, pct, plural, titulo } from "./texto.js?v=02005bcb89";
-import { fechaTip } from "./tendencias.js?v=02005bcb89";
-import { cerrarHoja } from "./ayuda.js?v=02005bcb89";
-import { MESES_CORTOS } from "./mapas.js?v=02005bcb89";
+import * as N from "./nucleo.js?v=8dd83ab9d9";
+import * as A from "./almacen.js?v=8dd83ab9d9";
+import * as CL from "./clases.js?v=8dd83ab9d9";
+import * as PD from "./podcasts.js?v=8dd83ab9d9";
+import { E, ESCUCHA, P, colorTarjeta, conFondo, diaLargo, fondoDelDia, fotosVocab, guardado, guardar, info, ir, mazo, meta, pintar, poner, porId, recalcular, tarjetas, vestir } from "./app.js?v=8dd83ab9d9";
+import { pararRepaso, repaso } from "./tutoras.js?v=8dd83ab9d9";
+import { $, MESES, NIVELES, vista } from "./base.js?v=8dd83ab9d9";
+import { ancho, barra, cuando, entradas, esc, fecha, fechaCorta, marcas, pct, plural, titulo } from "./texto.js?v=8dd83ab9d9";
+import { fechaTip } from "./tendencias.js?v=8dd83ab9d9";
+import { cerrarHoja } from "./ayuda.js?v=8dd83ab9d9";
+import { MESES_CORTOS } from "./mapas.js?v=8dd83ab9d9";
 
 // ---------------------------------------------------------------- La lista de vocabulario
 

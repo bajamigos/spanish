@@ -1388,3 +1388,20 @@ body:not(.qaQuiz) .vista > p:first-child, body:not(.qaQuiz) .vista > nav:first-c
 .miniCurva .mcHoy { fill: var(--verde); }
 .miniCurva, .miniCurva * , .mapaBtn { white-space: nowrap; }
 .miniCurva { gap: 5px; } .miniCurva b { font-size: 15px; }
+
+/* «Crea tu frase» y «Tus ejemplos» (su idea del 30-Oct-2026) */
+.cfTag { display: inline-block; margin: 0 0 8px; padding: 3px 12px; border-radius: 999px; font-size: 13px; font-weight: 700; background: var(--k4); color: #0b0b0b; }
+.cfRegla { margin: 6px 0; font-size: 15px; }
+.cfPista { margin: 4px 0; font-size: 14px; opacity: .85; }
+.cfCampo { display: block; width: 100%; box-sizing: border-box; min-height: 96px; margin: 6px 0 8px; padding: 10px; font: inherit; font-size: 17px; line-height: 1.4; color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: 10px; resize: vertical; }
+.cfNota { margin: 8px 0 0; font-size: 13px; opacity: .8; }
+.cfEj { list-style: none; padding: 0; margin: 8px 0 12px; }
+.cfEj li { padding: 8px 0; border-top: 1px solid var(--line); }
+.cfEj li:first-child { border-top: 0; }
+.cfEst { font-size: 12.5px; font-weight: 700; opacity: .8; white-space: nowrap; }
+.cfMal { text-decoration-color: var(--rojo); text-decoration-thickness: 2px; opacity: .85; }
+.cfBien { font-weight: 700; color: var(--rojo); font-style: italic; }
+.mc.fr1, .mc.fr2 { position: relative; }
+.mc.fr1::after, .mc.fr2::after { content: ""; position: absolute; right: 2px; top: 2px; width: 6px; height: 6px; border-radius: 50%; pointer-events: none; }
+.mc.fr1::after { background: var(--page); box-shadow: 0 0 0 1.5px var(--ink); }
+.mc.fr2::after { background: var(--ink); box-shadow: 0 0 0 1.5px var(--page); }

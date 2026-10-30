@@ -28,7 +28,11 @@ export const LISTA = 5;
 export const NUEVOS_TEMAS_AL_DIA = 5;           // la cuota de temas nuevos de gramática por día (su regla del 22-Oct-2026)
 export const KWIZZES_AL_DIA = 5;                 // la medida diaria de kwizzes
 export const ACIERTOS_PARA_SALIR = 2;
-export const ESCALON_FACIL = 4;                   // «Ya me la sé» la manda a la caja de 30 días (ESCALONES[4])
+export const ESCALON_FACIL = 4;
+// «Crea tu frase» (su idea del 30-Oct-2026): cuando un tema llega a la caja de 30 días (4 aciertos seguidos sin fallar),
+// en el quiz te toca escribir tu propia frase con esa regla. «Ahora no» la salta hasta que el tema suba otra caja.
+export const ESCALON_FRASE = 4;
+export const FRASE_MAX = 400;                   // «Ya me la sé» la manda a la caja de 30 días (ESCALONES[4])
 export const PESO_FACIL = 3;                      // y cuenta como 3 aciertos en su porcentaje (su pedido del 24-Oct-2026)
 export const NUEVAS_AL_DIA = 20;                 // cuántas tarjetas nuevas entran al día, como mucho
 
@@ -308,6 +312,9 @@ export function calcular(paquete, sucesos) {
   let sinArranque = false;     // true: ningún tema trae su porcentaje de Kwiziq; solo cuenta lo que contestas aquí          // cuándo reiniciaste tu vocabulario, o 0        // las tarjetas que agregaste a mano: no vienen en el contenido, viven en tus sucesos
   const porVer = new Map();    // estrenos que tocaste en la Biblioteca para verlos: «tv:123» o «movie:456» -> cuándo; «porver» con quitar los saca
   const notas = new Map();     // tus notas sobre las tutoras (y lo que sea): id -> { id, sobre, texto, cuando }; «notaq» quita una
+  const frases = new Map();    // tus frases (30-Oct-2026): id -> { id, tema, texto, cuando, origen, kwiz, revision: { estado, corregida, nota } | null }
+  const fraseOmitida = new Map();   // tema -> caja en la que dijiste «Ahora no»
+  const revisiones = [];       // { frase, estado, corregida, nota }: las pone Claude al revisar
 
   // Cuánto estudiaste cada día: lo que ya traías contado de antes (tu mazo de Anki) más lo que contestas aquí,
   // sea vocabulario o gramática. Es lo que pinta el mapa de calor.
@@ -379,6 +386,15 @@ export function calcular(paquete, sucesos) {
       if (typeof e.obra === "string" && /^(tv|movie):\d{1,10}$/.test(e.obra)) {
         if (e.quitar) porVer.delete(e.obra); else porVer.set(e.obra, e.cuando || "");
       }
+    } else if (e.t === "frase") {
+      const texto = typeof e.texto === "string" ? e.texto.replace(/\r/g, "").trim().slice(0, FRASE_MAX) : "";
+      if (typeof e.id === "string" && Number.isFinite(Number(e.tema)) && texto && !frases.has(e.id))
+        frases.set(e.id, { id: e.id, tema: Number(e.tema), texto, cuando: e.cuando || "", origen: e.origen === "leccion" ? "leccion" : "quiz", kwiz: typeof e.kwiz === "string" ? e.kwiz : null, revision: null });
+    } else if (e.t === "fraseOmitir") {
+      if (Number.isFinite(Number(e.tema))) fraseOmitida.set(Number(e.tema), { escalon: Number(e.escalon) | 0, kwiz: typeof e.kwiz === "string" ? e.kwiz : null });
+    } else if (e.t === "fraseRevisada") {
+      if (typeof e.frase === "string" && (e.estado === "bien" || e.estado === "corregida"))
+        revisiones.push({ frase: e.frase, estado: e.estado, corregida: typeof e.corregida === "string" ? e.corregida.slice(0, FRASE_MAX) : "", nota: typeof e.nota === "string" ? e.nota.slice(0, 600) : "" });
     } else if (e.t === "notaq") {
       if (typeof e.nota === "string") notas.delete(e.nota);
     } else if (e.t === "ftj") {
@@ -491,8 +507,30 @@ export function calcular(paquete, sucesos) {
   }
 
   const sospechosas = sospechosasDe(respuestas, retiradas, absueltas);
+  for (const r of revisiones) { const f = frases.get(r.frase); if (f) f.revision = { estado: r.estado, corregida: r.corregida, nota: r.nota }; }
 
-  return { sinArranque, reinicioTj, sospechosas, absueltas, destrabes, destrabesTj, todas: respuestas, temas, kwizzes, retiradas, ultimaVez, respuestas: respuestas.length, porTema, parametros, debe, fallada, enfoque, tarjetas, fotosTarjeta, agregadas, actividad, actividadVoc, actividadGram, notas, porVer };
+  return { sinArranque, reinicioTj, sospechosas, absueltas, destrabes, destrabesTj, todas: respuestas, temas, kwizzes, retiradas, ultimaVez, respuestas: respuestas.length, porTema, parametros, debe, fallada, enfoque, tarjetas, fotosTarjeta, agregadas, actividad, actividadVoc, actividadGram, notas, porVer, frases, fraseOmitida };
+}
+
+/**
+ * «Crea tu frase» (30-Oct-2026): el tema de este kwiz que ya está en la caja de 30 días o más, que todavía no tiene frase
+ * tuya y que no saltaste en esta misma caja. Uno por kwiz (el primero en el orden del kwiz), o null. El Kwiz con la tutora no.
+ */
+export function fraseQueToca(paquete, estado, kwizId) {
+  const k = estado.kwizzes.get(kwizId);
+  if (!k || k.tipo === "tutora" || !k.terminado) return null;
+  const conFrase = new Set([...(estado.frases || new Map()).values()].map((f) => f.tema));
+  const ya = [...(estado.frases || new Map()).values()].some((f) => f.kwiz === kwizId)
+    || [...(estado.fraseOmitida || new Map()).values()].some((o) => o.kwiz === kwizId);
+  if (ya) return null;
+  for (const t of temasDeKwiz(paquete, k)) {
+    const i = estado.temas.get(t);
+    if (!i || (i.escalon | 0) < ESCALON_FRASE || conFrase.has(t)) continue;
+    const om = (estado.fraseOmitida || new Map()).get(t);
+    if (om && om.escalon >= (i.escalon | 0)) continue;
+    return t;
+  }
+  return null;
 }
 
 // ---------------------------------------------------------------- Preguntas sospechosas y temas atorados (16-Oct-2026)

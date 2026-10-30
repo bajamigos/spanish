@@ -1,13 +1,13 @@
 // El Atlas en el quiz: sacado de app.js el 25-Oct-2026, sin cambios.
-import * as N from "./nucleo.js?v=02005bcb89";
-import * as A from "./almacen.js?v=02005bcb89";
-import { ambiente, juegoDeFotos } from "./acervo.js?v=02005bcb89";
-import { DESHACER_MS, E, LOGO, P, arrancar, cargarVideosFondo, conCuadro, conFondo, esperarLoopDePregunta, etiquetaMovimiento, fijarEnPregunta, fijarTeclas, fondoDelKwiz, guardado, guardar, imagenDeArriba, info, ir, lineaDeGramatica, loopDePregunta, nivelDeTema, pintar, poner, porId, preguntas, recalcular, sinMovimiento, verNoExiste } from "./app.js?v=02005bcb89";
-import { $, CATEGORIAS, CATEGORIAS_CORTAS, QUIZ, TIPOS_KWIZ, vista } from "./base.js?v=02005bcb89";
-import { barra, cuando, esBajo, esc, fecha, hueco, pct, plural, titulo } from "./texto.js?v=02005bcb89";
-import { circulosDeHoy, moverNivel, panelExplica } from "./hoy.js?v=02005bcb89";
-import { refrescarMini } from "./tendencias.js?v=02005bcb89";
-import { empezarRepaso, tutoraDe } from "./tutoras.js?v=02005bcb89";
+import * as N from "./nucleo.js?v=8dd83ab9d9";
+import * as A from "./almacen.js?v=8dd83ab9d9";
+import { ambiente, juegoDeFotos } from "./acervo.js?v=8dd83ab9d9";
+import { DESHACER_MS, E, LOGO, P, arrancar, cargarVideosFondo, conCuadro, conFondo, esperarLoopDePregunta, etiquetaMovimiento, fijarEnPregunta, fijarTeclas, fondoDelKwiz, guardado, guardar, imagenDeArriba, info, ir, lineaDeGramatica, loopDePregunta, nivelDeTema, pintar, poner, porId, preguntas, recalcular, sinMovimiento, verNoExiste } from "./app.js?v=8dd83ab9d9";
+import { $, CATEGORIAS, CATEGORIAS_CORTAS, QUIZ, TIPOS_KWIZ, vista } from "./base.js?v=8dd83ab9d9";
+import { barra, cuando, esBajo, esc, fecha, hueco, pct, plural, titulo } from "./texto.js?v=8dd83ab9d9";
+import { circulosDeHoy, moverNivel, panelExplica } from "./hoy.js?v=8dd83ab9d9";
+import { refrescarMini } from "./tendencias.js?v=8dd83ab9d9";
+import { empezarRepaso, tutoraDe } from "./tutoras.js?v=8dd83ab9d9";
 
 // ---------------------------------------------------------------- El Atlas en el quiz (su idea del 25-Oct-2026)
 // En Limpio, arriba de cada pregunta: todos los temas del nivel en chiquito, con el mismo acomodo del Atlas (por tipo y
@@ -238,7 +238,7 @@ function verPregunta(o, kid) {
   const k = E.kwizzes.get(kid);
   if (!k) return verNoExiste();
   const sig = N.siguiente(E, kid);
-  if (!sig) return k.terminado ? ir(QUIZ + "/" + kid + "/resultado", true) : verNoExiste(k.dejado ? "Ese quiz lo dejaste sin contestar nada." : "Ese quiz se quedó sin preguntas.");
+  if (!sig) return k.terminado ? ir(finDeQuiz(kid), true) : verNoExiste(k.dejado ? "Ese quiz lo dejaste sin contestar nada." : "Ese quiz se quedó sin preguntas.");
   const q = preguntas.get(N.preguntaDe(sig.p));
   const tema = porId.get(q.tema);
   // Escalera de formatos: según la caja del tema, la de opciones se contesta escribiendo lo que falta,
@@ -405,7 +405,7 @@ function verPregunta(o, kid) {
   function avanzar() {
     clearTimeout(solo);
     fijarEnPreguntaDe(null);
-    if (N.siguiente(E, kid)) pintar(); else ir(QUIZ + "/" + kid + "/resultado");
+    if (N.siguiente(E, kid)) pintar(); else ir(finDeQuiz(kid));
   }
 
   function apuntarRespuesta(bien, extra = {}) {
@@ -544,6 +544,58 @@ let saltoPorOpcion = 0;
 /** Cuánto se queda a la vista el «Bien» antes de pasar sola a la siguiente pregunta. */
 const PAUSA_ACIERTO = 900;
 
+// ---- «Crea tu frase» (su idea del 30-Oct-2026): al terminar un quiz, si uno de sus temas ya está en la caja de 30 días
+// y todavía no tiene frase tuya, te toca escribir una con esa regla. No cuenta para tu avance: se guarda para revisión.
+const PISTAS_FRASE = ["algo que te pasó en tu clase de hoy", "algo que te pasó surfeando", "algo de Tijuana", "algo de tu huerto o tu casa",
+  "algo del jiu-jitsu", "algo de lo que estás escuchando", "algo de tu semana", "algo que quieres hacer pronto"];
+/** A dónde va un quiz que se acabó: a «Crea tu frase» si le toca, si no al resultado. */
+function finDeQuiz(kid) {
+  return QUIZ + "/" + kid + (!A.esAmigo() && N.fraseQueToca(P, E, kid) ? "/frase" : "/resultado");
+}
+function verFrase(o, kid) {
+  if (o.conserva && $("cfCampo")) { fijarEnPregunta(true); return; }      // lo que escribes no se borra si llega algo de otro aparato
+  const k = E.kwizzes.get(kid);
+  if (!k) return verNoExiste();
+  const id = N.fraseQueToca(P, E, kid);
+  if (!id) return ir(QUIZ + "/" + kid + "/resultado", true);
+  const t = porId.get(id), i = E.temas.get(id);
+  const pista = PISTAS_FRASE[(id + kid.length) % PISTAS_FRASE.length];
+  poner(`
+  <section class="card cfCard">
+    <p class="cfTag">Crea tu frase · ya lo llevas a ${esc(N.PELDANOS[Math.min(i.escalon | 0, N.PELDANOS.length - 1)])}</p>
+    <h1 class="cue" id="cfT" tabindex="-1">${esc(titulo(t))}</h1>
+    ${t.regla ? `<p class="cfRegla" lang="en">${esc(t.regla)}</p>` : ""}
+    <p class="cfPista">Pista: ${esc(pista)}.</p>
+    ${t.slug && t.leccion ? `<p class="small"><a class="lk" href="#/leccion/${esc(t.slug)}">Ver la lección</a></p>` : ""}
+  </section>
+  <section class="card" id="controles">
+    <label class="small" for="cfCampo">Tu frase en español, con esta regla</label>
+    <textarea id="cfCampo" class="cfCampo" lang="es" maxlength="${N.FRASE_MAX}" autocapitalize="sentences" spellcheck="false"></textarea>
+    <div class="teclas" role="group" aria-label="Letras con acento">${["á", "é", "í", "ó", "ú", "ñ", "ü", "¿", "¡"].map((c) => `<button type="button" class="tecla" data-c="${c}">${c}</button>`).join("")}</div>
+    <div class="acts"><button type="button" class="ub grande" id="cfGuardar">Guardar para revisión</button><button type="button" class="ub" id="cfAhoraNo">Ahora no</button></div>
+    <p class="cfNota" id="cfNota">No cuenta para tu avance. Te llega la corrección y, si queda bien, entra a tu lección y a tu quiz. «Ahora no» la deja hasta que el tema suba otra caja.</p>
+  </section>`, { titulo: "Crea tu frase · Pelagos", nav: "gramatica" });
+  fijarEnPregunta(true);
+  const campo = $("cfCampo");
+  for (const b of document.querySelectorAll("#controles .tecla")) b.addEventListener("click", () => {
+    const a = campo.selectionStart ?? campo.value.length, z = campo.selectionEnd ?? a;
+    campo.value = campo.value.slice(0, a) + b.dataset.c + campo.value.slice(z);
+    campo.focus(); campo.setSelectionRange(a + 1, a + 1);
+  });
+  const seguir = () => { recalcular(); ir(QUIZ + "/" + kid + "/resultado", true); };
+  $("cfGuardar").addEventListener("click", () => {
+    const texto = campo.value.trim();
+    if (!texto) { $("cfNota").textContent = "Escribe tu frase primero, o toca «Ahora no»."; campo.focus(); return; }
+    A.apuntar({ t: "frase", id: N.nuevoId("fr"), tema: id, texto, kwiz: kid, escalon: i.escalon | 0, origen: "quiz", cuando: new Date().toISOString() });
+    seguir();
+  });
+  $("cfAhoraNo").addEventListener("click", () => {
+    A.apuntar({ t: "fraseOmitir", id: N.nuevoId("fo"), tema: id, kwiz: kid, escalon: i.escalon | 0, cuando: new Date().toISOString() });
+    seguir();
+  });
+  $("cfT").focus({ preventScroll: true });
+}
+
 function verResultado(o, kid) {
   const k = E.kwizzes.get(kid);
   if (!k) return verNoExiste();
@@ -675,4 +727,5 @@ function conectarAtlas() {
   });
 }
 
+export { verFrase };
 export { EFECTO_MS, NOMBRE_COLOR, PASO_RESULTADO, PAUSA_ACIERTO, armarAtlas, atlasEnQuiz, burbujaAtlas, claseTono, colorCss, conAtlasVisible, conectarAtlas, direccion, efectoR, enPreguntaDe, estadoProyectado, fijarEnPreguntaDe, infoProy, kwMarcar, marcarGrupo, nivelDelPlan, nivelProy, nombreColor, parpadear, pintarAtlasInicio, pintarAtlasQuiz, pintarAtlasResultado, pintarDeshacerR, proyCache, qaMarcar, rUltima, rango, saltoPorOpcion, temasDeGrupo, tonoDe, verPregunta, verResultado };

@@ -1,11 +1,11 @@
 // El mapa de árbol · El mapa de calor: sacado de app.js el 25-Oct-2026, sin cambios.
-import * as N from "./nucleo.js?v=244e9483b9";
-import * as A from "./almacen.js?v=244e9483b9";
-import { $, CATEGORIAS, CATEGORIAS_CORTAS, NIVELES, vista } from "./base.js?v=244e9483b9";
-import { E, P, diaLargo, fondoDelDia, guardado, guardar, info, pintar, poner, tarjetas } from "./app.js?v=244e9483b9";
-import { tonoDe } from "./atlas.js?v=244e9483b9";
-import { ancho, entradas, esc, fecha, hueco, pct, plural, titulo } from "./texto.js?v=244e9483b9";
-import { granTotal } from "./acervo.js?v=244e9483b9";
+import * as N from "./nucleo.js?v=451b336671";
+import * as A from "./almacen.js?v=451b336671";
+import { $, CATEGORIAS, CATEGORIAS_CORTAS, NIVELES, vista } from "./base.js?v=451b336671";
+import { E, P, diaLargo, fondoDelDia, guardado, guardar, info, pintar, poner, tarjetas } from "./app.js?v=451b336671";
+import { tonoDe } from "./atlas.js?v=451b336671";
+import { ancho, entradas, esc, fecha, hueco, pct, plural, titulo } from "./texto.js?v=451b336671";
+import { granTotal } from "./acervo.js?v=451b336671";
 
 // ---------------------------------------------------------------- El mapa de árbol
 
@@ -22,6 +22,14 @@ function abreviarRegla(nom) {
   let x = String(nom || "");
   for (const [re, por] of ABREVIAS) x = x.replace(re, por);
   return x.trim();
+}
+
+/** En la clave del Atlas: tus frases por revisar y los temas que ya tienen frase tuya (30-Oct-2026), si hay. */
+function clavesFrase() {
+  const est = new Map();
+  for (const f of (E.frases || new Map()).values()) est.set(f.tema, Math.max(est.get(f.tema) || 0, f.revision ? 2 : 1));
+  const n1 = [...est.values()].filter((x) => x === 1).length, n2 = [...est.values()].filter((x) => x === 2).length;
+  return (n1 ? `<li><i class="mc kx fr1"></i><span>Frase por revisar</span><b>${n1}</b></li>` : "") + (n2 ? `<li><i class="mc kx fr2"></i><span>Con frase tuya</span><b>${n2}</b></li>` : "");
 }
 
 function verMapa(o) {
@@ -42,6 +50,8 @@ function verMapa(o) {
       if (k === null) sinVer++; else if (typeof k === "number") cuenta[k]++; else debeN[k]++;
     }
     const tipos = [...porTipo.entries()].sort((a, b) => b[1].length - a[1].length);
+    const frasesPorTema = new Map();
+    for (const fx of (E.frases || new Map()).values()) frasesPorTema.set(fx.tema, Math.max(frasesPorTema.get(fx.tema) || 0, fx.revision ? 2 : 1));
     const area = Math.max(1300, Math.min(5200, W * 720 / suyos.length));      // cada nivel ocupa más o menos una pantalla
     const lugar = N.acomodarMapa(tipos.map(([, temas]) => temas.length), W, area);
     const cajas = tipos.map(([categoria, temas], k) => {
@@ -56,7 +66,8 @@ function verMapa(o) {
           const nom = titulo(t), corto = abreviarRegla(nom);
           const largaPalabra = Math.max(4, ...corto.split(/\s+/).map((w) => w.length));
           const letra = Math.max(1.5, Math.min(9, 0.8 * Math.sqrt((c.cw - 4) * (c.ch - 3) / (0.6 * 1.25 * Math.max(6, corto.length + 4))), (c.cw - 4) / (0.62 * largaPalabra)));
-          return `<button type="button" class="mc mn k${f === null ? "x" : f}" data-l="${t.id}" aria-label="${esc(nom)}: ${esc(pct(v))}"><span class="mt"${t.titulo ? "" : ' lang="en"'} data-letra="${letra.toFixed(1)}">${esc(corto)}</span></button>`;
+          const fr = frasesPorTema.get(t.id) || 0;      // 1 = frase por revisar, 2 = ya tiene frase tuya (30-Oct-2026)
+          return `<button type="button" class="mc mn k${f === null ? "x" : f}${fr ? " fr" + fr : ""}" data-l="${t.id}" aria-label="${esc(nom)}: ${esc(pct(v))}${fr === 2 ? ", con frase tuya" : fr === 1 ? ", frase por revisar" : ""}"><span class="mt"${t.titulo ? "" : ' lang="en"'} data-letra="${letra.toFixed(1)}">${esc(corto)}</span></button>`;
         });
         while (fila.length < c.columnas) fila.push('<span class="mc vacio"></span>');
         filas.push(`<div class="mfila">${fila.join("")}</div>`);
@@ -85,7 +96,7 @@ function verMapa(o) {
       <section class="card" id="clave">
         <h2 class="sr">Qué significa cada color</h2>
         <p class="small">El color es el peldaño del tema: cada cuánto te toca repasarlo. El número es tu porcentaje.</p>
-        <ul class="clave"><li><i class="mc kd2"></i><span>Fallado: debe 2 aciertos</span><b>${debeN.d2}</b></li><li><i class="mc kd1"></i><span>Fallado: debe 1 acierto</span><b>${debeN.d1}</b></li>${N.PELDANOS.map((nombre, i) => `<li><i class="mc k${i}"></i><span>${nombre}</span><b>${cuenta[i]}</b></li>`).join("")}${sinVer ? `<li><i class="mc kx"></i><span>Sin ver</span><b>${sinVer}</b></li>` : ""}</ul>
+        <ul class="clave"><li><i class="mc kd2"></i><span>Fallado: debe 2 aciertos</span><b>${debeN.d2}</b></li><li><i class="mc kd1"></i><span>Fallado: debe 1 acierto</span><b>${debeN.d1}</b></li>${N.PELDANOS.map((nombre, i) => `<li><i class="mc k${i}"></i><span>${nombre}</span><b>${cuenta[i]}</b></li>`).join("")}${sinVer ? `<li><i class="mc kx"></i><span>Sin ver</span><b>${sinVer}</b></li>` : ""}${clavesFrase()}</ul>
       </section>
     </div>
   </div>`,

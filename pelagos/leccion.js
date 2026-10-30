@@ -1,13 +1,44 @@
 // La lección: sacado de app.js el 25-Oct-2026, sin cambios.
-import * as N from "./nucleo.js?v=02005bcb89";
-import * as A from "./almacen.js?v=02005bcb89";
-import { ancho, barra, contrastesDe, esc, fecha, marca, pct, plural, titulo } from "./texto.js?v=02005bcb89";
-import { E, LOGO, P, esMovimiento, escenasPorSala, etiquetaEscena, imagenDeArriba, info, meta, movimientoEnTodo, poner, porId, porSlug, recalcular, sinMovimiento, turnoDePintar, verLlave, verNoExiste } from "./app.js?v=02005bcb89";
-import { CATEGORIAS, GRUPOS, KWIZIQ, NIVELES, vista } from "./base.js?v=02005bcb89";
-import { ambiente, escalonDeTema, fotoDeLeccion, mudo } from "./acervo.js?v=02005bcb89";
-import { botonEscena, conectarEscenas, tutoraDe } from "./tutoras.js?v=02005bcb89";
+import * as N from "./nucleo.js?v=8dd83ab9d9";
+import * as A from "./almacen.js?v=8dd83ab9d9";
+import { ancho, barra, contrastesDe, esc, fecha, marca, pct, plural, titulo } from "./texto.js?v=8dd83ab9d9";
+import { E, LOGO, P, esMovimiento, escenasPorSala, etiquetaEscena, imagenDeArriba, info, meta, movimientoEnTodo, poner, porId, porSlug, recalcular, sinMovimiento, turnoDePintar, verLlave, verNoExiste } from "./app.js?v=8dd83ab9d9";
+import { CATEGORIAS, GRUPOS, KWIZIQ, NIVELES, vista } from "./base.js?v=8dd83ab9d9";
+import { ambiente, escalonDeTema, fotoDeLeccion, mudo } from "./acervo.js?v=8dd83ab9d9";
+import { botonEscena, conectarEscenas, tutoraDe } from "./tutoras.js?v=8dd83ab9d9";
 
 // ---------------------------------------------------------------- La lección
+
+// ---- «Tus ejemplos» (su idea del 30-Oct-2026): tus frases con esta regla, con su revisión, y «Mi ejemplo» para agregar otra.
+function seccionTusEjemplos(id) {
+  const suyas = [...(E.frases || new Map()).values()].filter((f) => f.tema === id).sort((a, b) => String(a.cuando).localeCompare(String(b.cuando)));
+  if (A.esAmigo()) return "";        // tus frases son tuyas: en el modo amigo no salen
+  const amigo = false;
+  const una = (f) => {
+    const r = f.revision;
+    if (!r) return `<li>${esc(f.texto)} <span class="cfEst">⏳ por revisar</span></li>`;
+    if (r.estado === "bien") return `<li>${esc(f.texto)} <span class="cfEst">✓ revisada</span>${r.nota ? `<p class="small">${esc(r.nota)}</p>` : ""}</li>`;
+    return `<li><s class="cfMal">${esc(f.texto)}</s><br><span class="cfBien">${esc(r.corregida)}</span> <span class="cfEst">✎ corregida</span>${r.nota ? `<p class="small">${esc(r.nota)}</p>` : ""}</li>`;
+  };
+  return `<section class="card" id="tusEjemplos">
+    <h2>Tus ejemplos</h2>
+    ${suyas.length ? `<ul class="cfEj">${suyas.map(una).join("")}</ul>` : `<p class="small">Todavía no tienes frases tuyas con esta regla.</p>`}
+    ${amigo ? "" : `<label class="small" for="miEj">Mi ejemplo</label>
+    <textarea id="miEj" class="cfCampo" lang="es" maxlength="${N.FRASE_MAX}" placeholder="Escribe tu propia frase con esta regla"></textarea>
+    <div class="acts"><button type="button" class="ub" id="miEjGuardar" data-tema="${id}">Guardar para revisión</button></div>
+    <p class="cfNota" id="miEjNota">Te llega la corrección y, si queda bien, también entra a tu quiz.</p>`}
+  </section>`;
+}
+vista.addEventListener("click", (ev) => {
+  const b = ev.target instanceof Element ? ev.target.closest("#miEjGuardar") : null;
+  if (!b) return;
+  const campo = document.getElementById("miEj"), texto = campo ? campo.value.trim() : "";
+  if (!texto) { document.getElementById("miEjNota").textContent = "Escribe tu frase primero."; if (campo) campo.focus(); return; }
+  A.apuntar({ t: "frase", id: N.nuevoId("fr"), tema: Number(b.dataset.tema), texto, origen: "leccion", cuando: new Date().toISOString() });
+  recalcular();
+  const sec = document.getElementById("tusEjemplos");
+  if (sec) { sec.outerHTML = seccionTusEjemplos(Number(b.dataset.tema)); document.getElementById("miEjNota").textContent = "Guardada. Queda por revisar."; }
+});
 
 function bloque(b) {
   switch (b.tipo) {
@@ -108,6 +139,7 @@ function pintarLeccion(tema, lec, conserva = false) {
   </header>
   <nav class="jump" aria-label="Partes de la lección">${saltos.map(([id, nombre]) => `<button type="button" data-ir="${id}">${nombre}</button>`).join("")}</nav>
   ${secciones.map((s) => `<section class="card" id="${esc(s.id)}"><h2>${esc(s.titulo)}</h2>${(s.bloques || []).map(bloque).join("")}</section>`).join("")}
+  ${seccionTusEjemplos(tema.id)}
   ${banco ? `
   <section class="card" id="practica">
     <h2>Quiz de este tema</h2>

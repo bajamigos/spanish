@@ -1,22 +1,22 @@
 // Las páginas de Pelagos. Todo se arma en el navegador: no hay servidor propio.
-import * as N from "./nucleo.js?v=02005bcb89";
-import * as A from "./almacen.js?v=02005bcb89";
-import * as V from "./videos.js?v=02005bcb89";
-import * as NB from "./nube.js?v=02005bcb89";
-import * as CL from "./clases.js?v=02005bcb89";
-import { abrirPractica } from "./practica.js?v=02005bcb89";
-import * as F from "./fondo.js?v=02005bcb89";
-import * as PD from "./podcasts.js?v=02005bcb89";
-import { $, MESES, NIVELES, QUIZ, vista } from "./base.js?v=02005bcb89";
-import { bancoPorTema, barra, botonTema, entradas, esBajo, esc, hueco, pct, plural, revisarVideos, tieneLoop, tieneVideo, titulo } from "./texto.js?v=02005bcb89";
-import { abrirGrafica, abrirGraficaTema, abrirPalabra, activarLapices, adelanto, ambiente, bibModo, callarTodo, conectarAcervo, fijarAdelanto, fijarBibModo, fotoDeLaTarjeta, hojaV, mudo, podMinDe, portadaDelDia, renglonConLapiz, verAgregar, verClases, verLectura, verLista } from "./acervo.js?v=02005bcb89";
-import { abrirGlosa, abrirHoja, ayudaLista, cerrarHoja, hoja, ponerSignoAyuda, verAyuda, verPaginaAyuda } from "./ayuda.js?v=02005bcb89";
-import { acomodarBitacora, conectarMapas, tarjetaBitacora, verCalor, verMapa } from "./mapas.js?v=02005bcb89";
-import { MESES_CHICOS, avanceNivel, conectarTendencias, curvaMini, curvaVocab, graficaVocab, mostrarClipPremio, prepararTendencias, refrescarMini, seccionTendencias, verBiblioteca, verNivel } from "./tendencias.js?v=02005bcb89";
-import { EFECTO_MS, atlasEnQuiz, colorCss, conAtlasVisible, conectarAtlas, enPreguntaDe, estadoProyectado, fijarEnPreguntaDe, nivelDelPlan, nivelProy, pintarAtlasInicio, pintarAtlasQuiz, verPregunta, verResultado } from "./atlas.js?v=02005bcb89";
-import { leccionPintada, verLeccion } from "./leccion.js?v=02005bcb89";
-import { avisoRepaso, botonesRepaso, callar, cerrarVideos, conectarTutoras, datosNube, empezarRepaso, enlaceNube, loopDeTutora, nombreCorto, nombreTutora, pararRepaso, repaso, tocarRepaso, tutoraDe, verTutora, verTutoras } from "./tutoras.js?v=02005bcb89";
-import { circulosDeHoy, conectarHoy, moverNivel, panelExplica } from "./hoy.js?v=02005bcb89";
+import * as N from "./nucleo.js?v=8dd83ab9d9";
+import * as A from "./almacen.js?v=8dd83ab9d9";
+import * as V from "./videos.js?v=8dd83ab9d9";
+import * as NB from "./nube.js?v=8dd83ab9d9";
+import * as CL from "./clases.js?v=8dd83ab9d9";
+import { abrirPractica } from "./practica.js?v=8dd83ab9d9";
+import * as F from "./fondo.js?v=8dd83ab9d9";
+import * as PD from "./podcasts.js?v=8dd83ab9d9";
+import { $, MESES, NIVELES, QUIZ, vista } from "./base.js?v=8dd83ab9d9";
+import { bancoPorTema, barra, botonTema, entradas, esBajo, esc, hueco, pct, plural, revisarVideos, tieneLoop, tieneVideo, titulo } from "./texto.js?v=8dd83ab9d9";
+import { abrirGrafica, abrirGraficaTema, abrirPalabra, activarLapices, adelanto, ambiente, bibModo, callarTodo, conectarAcervo, fijarAdelanto, fijarBibModo, fotoDeLaTarjeta, hojaV, mudo, podMinDe, portadaDelDia, renglonConLapiz, verAgregar, verClases, verLectura, verLista } from "./acervo.js?v=8dd83ab9d9";
+import { abrirGlosa, abrirHoja, ayudaLista, cerrarHoja, hoja, ponerSignoAyuda, verAyuda, verPaginaAyuda } from "./ayuda.js?v=8dd83ab9d9";
+import { acomodarBitacora, conectarMapas, tarjetaBitacora, verCalor, verMapa } from "./mapas.js?v=8dd83ab9d9";
+import { MESES_CHICOS, avanceNivel, conectarTendencias, curvaMini, curvaVocab, graficaVocab, mostrarClipPremio, prepararTendencias, refrescarMini, seccionTendencias, verBiblioteca, verNivel } from "./tendencias.js?v=8dd83ab9d9";
+import { EFECTO_MS, atlasEnQuiz, colorCss, conAtlasVisible, conectarAtlas, enPreguntaDe, estadoProyectado, fijarEnPreguntaDe, nivelDelPlan, nivelProy, pintarAtlasInicio, pintarAtlasQuiz, verFrase, verPregunta, verResultado } from "./atlas.js?v=8dd83ab9d9";
+import { leccionPintada, verLeccion } from "./leccion.js?v=8dd83ab9d9";
+import { avisoRepaso, botonesRepaso, callar, cerrarVideos, conectarTutoras, datosNube, empezarRepaso, enlaceNube, loopDeTutora, nombreCorto, nombreTutora, pararRepaso, repaso, tocarRepaso, tutoraDe, verTutora, verTutoras } from "./tutoras.js?v=8dd83ab9d9";
+import { circulosDeHoy, conectarHoy, moverNivel, panelExplica } from "./hoy.js?v=8dd83ab9d9";
 // ---- (base.js) el atajo $, la vista y los nombres fijos
 // ---------------------------------------------------------------- Lo que la página sabe
 
@@ -232,6 +232,7 @@ const RUTAS = [
   [/^\/gramatica\/quiz$/, verKwiz],
   [/^\/gramatica\/quiz\/([A-Za-z0-9_-]+)$/, verPregunta],
   [/^\/gramatica\/quiz\/([A-Za-z0-9_-]+)\/resultado$/, verResultado],
+  [/^\/gramatica\/quiz\/([A-Za-z0-9_-]+)\/frase$/, verFrase],
   [/^\/gramatica\/atlas$/, verMapa],
   [/^\/gramatica\/([a-z0-9]+)(\/bajo|\/atascados)?$/, verNivel],
   [/^\/gramatica\/([a-z0-9]+)\/mision$/, (o, clave) => ir("/gramatica/" + clave, true)],   // el filtro «Misión activa» se quitó con el Recorrido
