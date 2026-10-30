@@ -1405,3 +1405,37 @@ body:not(.qaQuiz) .vista > p:first-child, body:not(.qaQuiz) .vista > nav:first-c
 .mc.fr1::after, .mc.fr2::after { content: ""; position: absolute; right: 2px; top: 2px; width: 6px; height: 6px; border-radius: 50%; pointer-events: none; }
 .mc.fr1::after { background: var(--page); box-shadow: 0 0 0 1.5px var(--ink); }
 .mc.fr2::after { background: var(--ink); box-shadow: 0 0 0 1.5px var(--page); }
+
+/* 30-Oct-2026 (su pedido): el reproductor es un iPod de tamaño completo, como el 90 % de la pantalla.
+   Sube y se baja igual que antes (velo, agarradera, deslizar hacia abajo); la pantalla enseña lo mismo, más grande. */
+.podPanel { background: none; max-width: none; padding: 0 0 calc(10px + env(safe-area-inset-bottom)); }
+.podAgarra { margin: 0 auto 4px; height: 22px; }
+.podAgarra::after { background: rgba(255,255,255,.8); }
+.podAp { --ipW: min(90vw, 480px); --ipH: min(calc(100vh - 70px), 88vh, calc(var(--ipW) * 1.9));
+  width: var(--ipW); height: var(--ipH); box-sizing: border-box; padding: calc(var(--ipW) * .06); border-radius: calc(var(--ipW) * .1);
+  display: flex; flex-direction: column; align-items: stretch; }
+@supports (height: 1dvh) { .podAp { --ipH: min(calc(100dvh - 70px), 88dvh, calc(var(--ipW) * 1.9)); } }
+.podAp::before { border-radius: inherit; }
+.podPant { flex: 0 0 46%; height: auto; min-height: 0; display: flex; flex-direction: column; border-width: 5px; border-radius: 10px; }
+.podPantBarra { font-size: clamp(12px, calc(var(--ipW) * .042), 17px); padding: 6px 10px; }
+.podPila { width: 24px; height: 11px; }
+.podVSonando { flex: 1; display: flex; flex-direction: column; justify-content: space-evenly; min-height: 0; }
+.podPantFila { gap: 14px; padding: 10px 12px; }
+.podPantCov { width: calc(var(--ipW) * .34); height: calc(var(--ipW) * .34); border-width: 3px; }
+.podPantTit { font-size: clamp(15px, calc(var(--ipW) * .056), 24px); -webkit-line-clamp: 4; }
+.podPantProg { font-size: clamp(12px, calc(var(--ipW) * .04), 17px); }
+.podRango { height: 20px; margin: 6px 12px 4px; width: calc(100% - 24px); }
+.podRango::-webkit-slider-runnable-track { height: 16px; }
+.podRango::-webkit-slider-thumb { height: 24px; width: 8px; margin-top: -6px; }
+.podPantT { font-size: clamp(13px, calc(var(--ipW) * .046), 19px); padding: 0 12px 6px; }
+.podVLista { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.podVLista[hidden] { display: none; }
+.podPantLista { height: auto; flex: 1; }
+.podFilaL { font-size: clamp(13px, calc(var(--ipW) * .044), 18px); padding: 9px 12px; }
+.podRueda { width: min(calc(var(--ipW) * .76), calc(var(--ipH) * .44)); height: auto; aspect-ratio: 1; margin: auto; flex: none; }
+.podRueda button { font-size: clamp(17px, calc(var(--ipW) * .06), 26px); }
+.podRueda .podVel { top: 4%; width: 38%; height: 22%; font-size: clamp(15px, calc(var(--ipW) * .05), 22px); }
+.podRueda .podMenu { bottom: 4%; width: 38%; height: 22%; font-size: clamp(22px, calc(var(--ipW) * .07), 32px); }
+.podRueda .podAtras { left: 2%; width: 27%; height: 32%; }
+.podRueda .podAdelante { right: 2%; width: 27%; height: 32%; }
+.podRueda .podCentro { inset: 31.5%; font-size: clamp(26px, calc(var(--ipW) * .08), 36px); }

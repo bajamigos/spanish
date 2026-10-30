@@ -1,8 +1,8 @@
 // Lo que te queda hoy: sacado de app.js el 25-Oct-2026, sin cambios.
-import * as N from "./nucleo.js?v=451b336671";
-import { E, P } from "./app.js?v=451b336671";
-import { esc, titulo } from "./texto.js?v=451b336671";
-import { $ } from "./base.js?v=451b336671";
+import * as N from "./nucleo.js?v=c6b013146d";
+import { E, P } from "./app.js?v=c6b013146d";
+import { esc, titulo } from "./texto.js?v=c6b013146d";
+import { $ } from "./base.js?v=c6b013146d";
 
 // ---------------------------------------------------------------- Lo que te queda hoy (su idea del 22-Oct-2026)
 // Su regla: rayitas para «este quiz» (la línea de arriba del quiz) y círculos para «hoy».
